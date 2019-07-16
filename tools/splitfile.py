@@ -1,10 +1,10 @@
 import sys
 import re
 
-src_file = "../temp/" + sys.argv[1]
+src_file = "../temp/" + sys.argv[1] + "/" + sys.argv[1] + ".md"
 
 header_regex = re.compile("^#[ ]+")
-filename_regex = re.compile("/")
+filename_regex = re.compile("[/:]+")
 number_regex = re.compile("#+ +[0-9.]+ ")
 
 
@@ -29,7 +29,8 @@ def main():
                 "", header_regex.sub("", line))) + ".md"
             if len(file_name) > 3:
                 # Create a new file with the same name as the heading
-                new_file = open("../temp/" + file_name, "w")
+                new_file = open(
+                    "../temp/" + sys.argv[1] + "/" + file_name, "w")
                 new_file.write(line)
         else:
             try:

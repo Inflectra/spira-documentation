@@ -5,7 +5,7 @@ import re
 import sys
 
 #src_folder = "../input"
-src_folder = "../temp"
+src_folder = "../temp/" + sys.argv[1]
 dst_folder = "../temp/" + sys.argv[1]
 
 link_regex = re.compile(
@@ -32,7 +32,7 @@ def process_all():
 
 def process(file_name):
     print(file_name)
-    with open(dst_folder + "/" + file_name, "w+", encoding='utf-8') as output:
+    with open(dst_folder + "/" + re.compile("_OLD").sub("", file_name), "w+", encoding='utf-8') as output:
         with open(src_folder + "/" + file_name, encoding='utf-8') as input:
             count = 0
             for line in input:
@@ -50,7 +50,7 @@ def process(file_name):
                     if l.startswith("[Top](file") or l.startswith("[Previous](file") or l.startswith("[Next](file"):
                         continue
                     l = link_regex.sub("../\\1/", l)
-                    l = img_regex.sub("(./img/\\1\\2", l)
+                    # l = img_regex.sub("(./img/\\1\\2", l)
                     l = size_regex.sub("\n", l)
                     l = size1_regex.sub("\n", l)
                     l = size2_regex.sub("\n", l)
