@@ -1,2 +1,76 @@
 site_name: Spira
-theme: readthedocs
+
+theme: 
+  name: mkdocs
+  custom_dir: inflectra_mkdocs
+nav:
+- VCS: 
+  - Git: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with Git.md
+  - Mercurial: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with Mercurial.md
+  - Perforce: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with Perforce.md
+  - Subversion: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with Subversion.md
+  - TFS: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with TFS.md
+  - VSS: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with VSS.md
+  - CVS: SpiraPlan-Team_Version_Control_Integration_Guide\Integrating with CVS.md
+- Testing:
+  - UnitJS: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating UnitJS & NodeJS.md
+  - JUnit: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with JUnit.md
+  - MS-Test: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with MS-Test.md
+  - NUnit: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with NUnit.md
+  - PHPUnit: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with PHPUnit.md
+  - Perl TAP: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with Perl TAP.md
+  - PyTest: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with PyTest.md
+  - PyUnit: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with PyUnit.md
+  - Ruby TestUnit: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with Ruby TestUnit.md
+  - Selenium: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with Selenium.md
+  - TestNG: SpiraTest-Team_Automated_Testing_Integration_Guide\Integrating with TestNG.md
+- Email:
+  - Configuring: SpiraTestPlanTeam_Email_Integration_Guide\Configuring the Email Integration Service.md
+  - Installing: SpiraTestPlanTeam_Email_Integration_Guide\Installing the Email Integration Service.md
+  - Using: SpiraTestPlanTeam_Email_Integration_Guide\Using the Email Integration Service with SpiraTeam.md
+- Bug Tracking:
+  - Setup: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Setting up Data Synchronization.md
+  - Axosoft: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with Axosoft 14+.md
+  - GitHub: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with GitHub.md
+  - GitLab: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with GitLab.md
+  - ServiceNow: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with ServiceNow.md
+  - OnTime: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with OnTime 11.md
+  - VersionOne: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using Spira with VersionOne.md
+  - ClearQuest: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with ClearQuest.md
+  - RTC: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with IBM RTC.md
+  - JIRA 3, 4: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with JIRA 3  4.md
+  - JIRA 5+: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with JIRA 5+.md
+  - Mantis: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with Mantis.md
+  - Redmine: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTeam with Redmine.md
+  - Bugzilla: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTest with Bugzilla.md
+  - FogBugz: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTest with FogBugz.md
+  - MS-TFS: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTest with MS-TFS.md
+- Help Desk:
+  - Introduction: SpiraTestPlanTeam_Help_Desk_Integration_Guide\Introduction.md
+  - KronoDesk: SpiraTestPlanTeam_Help_Desk_Integration_Guide\KronoDesk.md
+  - Zendesk: SpiraTestPlanTeam_Help_Desk_Integration_Guide\Zendesk.md
+- IDE Integration:
+  - Eclipse: SpiraTestPlanTeam_IDE_Integration_Guide\Eclipse  Mylyn.md
+  - Jetbrains: SpiraTestPlanTeam_IDE_Integration_Guide\Jetbrains IDEs.md
+  - Visual Studio 2005-2008: SpiraTestPlanTeam_IDE_Integration_Guide\Visual Studio 2005 - 2008.md
+  - Visual Studio 2010: SpiraTestPlanTeam_IDE_Integration_Guide\Visual Studio 2010.md
+  - Visual Studio Code: SpiraTestPlanTeam_IDE_Integration_Guide\Visual Studio Code.md
+  - Visual Studio: SpiraTestPlanTeam_IDE_Integration_Guide\Visual Studio.md
+- Migration: 
+  - Google Sheets: SpiraTestPlanTeam_Migration_and_Integration_Guide\Importing from Google Sheets.md
+  - Excel (Office 365): SpiraTestPlanTeam_Migration_and_Integration_Guide\Importing from Microsoft Excel (Office365).md
+  - Excel: SpiraTestPlanTeam_Migration_and_Integration_Guide\Importing from Microsoft Excel.md
+  - Microsoft Project: SpiraTestPlanTeam_Migration_and_Integration_Guide\Importing from Microsoft Project.md
+  - Word: SpiraTestPlanTeam_Migration_and_Integration_Guide\Importing from Microsoft Word.md
+  - HP ALM: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from HP ALM.md
+  - HP QualityCenter: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from HP QualityCenter.md
+  - MS Test Manager: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from MS Test Manager.md
+  - TestLink: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from TestLink.md
+  - TestRail: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from TestRail.md
+  - Backup and Migration: SpiraTestPlanTeam_Migration_and_Integration_Guide\Project Backup and Migration.md
+- Requirements:
+  - RequisitePro: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\4B1. Importing From RequisitePro.md
+  - DOORS: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From DOORS.md
+  - EnterpriseArchitect: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From EnterpriseArchitect.md
+  - Jama Contour: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From Jama Contour.md
+  - VersionOne: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From VersionOne.md
