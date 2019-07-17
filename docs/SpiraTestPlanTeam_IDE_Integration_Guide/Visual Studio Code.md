@@ -16,7 +16,6 @@ already installed our plugin from the store.
 ## Logging in
 
 Open the command palette and type in \'credentials\' as shown:
-
 ![Command Palette
 Credentials](img/Visual_Studio_Code_42.png)
 
@@ -27,18 +26,14 @@ Hit return to begin the Spira authentication process. You should see an
 input box that asks you to type the base URL of your Spira service. This
 should access the \'root\' directory of your Spira, not including the
 ending slash. An example is provided below:
-
 ![Spira
 URL](img/Visual_Studio_Code_43.png)
-
-
 
 
 Hit return when you typed in your URL to move on to the next step. You
 will be prompted to enter your Spira username, which you use when
 signing into your Spira subscription. See the example below for
 assistance.
-
 ![Spira
 Username](img/Visual_Studio_Code_44.png)
 
@@ -50,7 +45,6 @@ step. You will be prompted to enter your RSS Token, which must be
 enabled in your user profile to work.
 
 Here is the location of the RSS Token in your profile:
-
 ![Spira
 Profile](img/Visual_Studio_Code_45.png)
 
@@ -81,7 +75,6 @@ Click on the new icon to open the Spira panel where you can see all of
 the Tasks, Requirements, and Incidents that are assigned to you. You can
 expand/collapse any of the different types of items. You should now see
 a view similar to this:
-
 ![Spira
 Panel](img/Visual_Studio_Code_48.png)
 
@@ -90,7 +83,6 @@ Panel](img/Visual_Studio_Code_48.png)
 
 Clicking on one of the different items, \'Cannot log into the
 application\' for instance will bring up a view similar to this:
-
 ![Spira
 Information](img/Visual_Studio_Code_49.png)
 

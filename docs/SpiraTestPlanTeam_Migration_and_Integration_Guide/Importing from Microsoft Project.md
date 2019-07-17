@@ -43,7 +43,7 @@ will be given the opportunity to install them when you first run the
 installation package.
 
 Once you have the MS-Project Add-In installed, the second thing you may
-want to download is the **[SampleProjectFile.mpp]{.underline}**
+want to download is the **SampleProjectFile.mpp**
 MS-Project plan. This project file contains a fully-populated project
 plan and is a good sample to test the import/export before using a real
 project plan.

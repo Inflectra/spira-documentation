@@ -1,6 +1,17 @@
 # Spira Platform Documentation
-
+Here you will find the documentation for the entire Spira suite of products. This is still a work in progress, so please report any inconsistencies or issues to [support@inflectra.com](mailto:support@inflectra.com)
 ## Introduction
+### **NEEDS UPDATING!**
+SpiraTeam® is an integrated Application Lifecycle Management (ALM)
+system that manages your project\'s requirements, releases, test cases,
+issues and tasks in one unified environment:
+
+SpiraTeam® contains all of the features provided by SpiraTest^®^ - our
+highly acclaimed quality assurance system and SpiraPlan® - our
+agile-enabled project management solution. With integrated customizable
+dashboards of key project information, SpiraTeam® allows you to take
+control of your entire project lifecycle and synchronize the hitherto
+separate worlds of development and testing.
 
 ## Legal Notices
 

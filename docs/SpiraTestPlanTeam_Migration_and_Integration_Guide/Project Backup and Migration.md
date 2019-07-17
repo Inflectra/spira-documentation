@@ -27,7 +27,7 @@ you three main options: Export, Import, and Transfer:
 ## Project Export
 
 Clicking the Export button will start the Export wizard, allowing you to
-save the project to a file.\
+save the project to a file.
 ![](img/Project_Backup_and_Migration_54.png)
 
 
@@ -166,26 +166,27 @@ the project will be imported into the new system.
 
 ## Data Transferred
 
-***Data***               ***SpiraTeam v3.2***   
-**Exported**           **Imported**
-Incidents                                      
-Requirements                                   
-Tasks                                          
-Releases                                       
-Test Cases                                     
-Test Sets                                      
-Test Runs                                      
-Custom Properties                              
-Custom Lists                                   
-Document Files                                 
-Document Folders                               
-Document Types                                 
-Comments / Resolutions                         
-Datasync Mappings                              
-Automation Hosts                               
-Automation Engines                             
-Project Roles                                  
-Project Users                                  ^1^
+                 
+| ***SpiraTeam v3.2***     |  **Exported**     |      **Imported** |
+| ----------               | ----------        | ------------ |
+| Incidents                | ✓                 |            ✓ |
+| Requirements             | ✓                 |            ✓ |
+| Tasks                    | ✓                 |            ✓ |
+| Releases                 | ✓                 |            ✓ |
+| Test Cases               | ✓                 |            ✓ |
+| Test Sets                | ✓                 |            ✓ |
+| Test Runs                | ✓                 |            ✓ |
+| Custom Properties        | ✓                 |            ✓ |
+| Custom Lists             | ✓                 |            ✓ |
+| Document Files           | ✓                 |            ✓ |
+| Document Folders         | ✓                 |            ✓ |
+| Document Types           | ✓                 |            
+| Comments / Resolutions   | ✓                 |            ✓ |
+| Datasync Mappings        | ✓                 |            
+| Automation Hosts         | ✓                 |            ✓ |
+| Automation Engines       | ✓                 |            ✓ |
+| Project Roles            | ✓                 |            
+| Project Users            | ✓                 |            ✓^1^ |
 
 The table on the left shows what data is backed up and restored. Future
 versions of the Migration tool and SpiraTeam may support exporting and

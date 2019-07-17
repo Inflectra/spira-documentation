@@ -28,16 +28,17 @@ Click on the **"Download Template"** button to begin the download. If
 you are using a desktop version of Excel open the file as you would any
 other workbook.
 
-![](img/Importing_from_Microsoft_Excel_(Office365)_21.png)
 
 
 If you are using Excel Online, you will
 need to upload the file to your **OneDrive**. You can get to OneDrive\
 quickly by clicking on the menu icon in the top left corner of Excel
-Online and selecting OneDrive.\
+Online and selecting OneDrive.
 You should now see the following in your Excel Window:
 
-**\
+![](img/Importing_from_Microsoft_Excel_(Office365)_21.png)
+
+**
 At this point please click on "File" and "Save As". Create a new copy of
 the template and name it after the project you plan on working on.
 Remember to do this before making any changes to the template or logging
@@ -70,16 +71,17 @@ SpiraTeam
 
 -   **Your API key:** The API key associated with your SpiraTeam account
 
-![](img/Importing_from_Microsoft_Excel_(Office365)_23.png)
 
 
-\
+
 You will be notified if there is an issue with your url or the user
 information you provided. If your log in is successful, you will see the
 following screen where you can select a SpiraTeam project to load
-information from:\
-\
-\
+information from:
+
+![](img/Importing_from_Microsoft_Excel_(Office365)_23.png)
+
+
 Select a project and an artifact to populate the fields in the template
 that have drop down lists associated with them (e.g. users, releases,
 components, etc.) and populate the list of custom fields associated with
@@ -112,7 +114,7 @@ values in the template:
 ![](img/Importing_from_Microsoft_Excel_(Office365)_25.png)
 
 
-\
+
 If you were to send these new requirements to your existing project,
 they would show up in SpiraTeam like this:
 
@@ -155,6 +157,4 @@ any other worksheet in Excel.
 When you have finished sending requirements to SpiraTeam, click on **Log
 Out** to disconnect and return to the log in screen.
 
-**\
-**
 

@@ -19,17 +19,15 @@ Downloads" section of the Inflectra website. Once you have obtained the
 Windows Installer package, simply double-click on the package to begin
 the installation wizard which should display the following welcome page:
 
-> ![](img/Migrating_from_TestLink_79.png)
-
-> 
+ ![](img/Migrating_from_TestLink_79.png)
+ 
 
 
 Click the \<Next\> button, accept the software license, then click
 \<Next\> again to choose the folder to install the migration tool to:
 
-> ![](img/Migrating_from_TestLink_80.png)
-
-> 
+ ![](img/Migrating_from_TestLink_80.png)
+ 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -45,9 +43,9 @@ time by going to Start \> Programs \> Inflectra \> SpiraTest \> Tools \>
 TestLink Importer. This will launch the migration tool application
 itself:
 
-> ![](img/Migrating_from_TestLink_81.png)
+![](img/Migrating_from_TestLink_81.png)
 
-> 
+
 
 
 The first thing you need to do is to enter the URL for the instance of
@@ -67,9 +65,9 @@ button and the list of projects will be populated. Select TestLink
 project that you want to ***import from*** then click the \<Next\>
 button to move to the next page in the import wizard:
 
-> ![](img/Migrating_from_TestLink_83.png)
+![](img/Migrating_from_TestLink_83.png)
 
-> 
+
 
 
 This page allows you to enter the URL, user name and password that you
@@ -91,9 +89,8 @@ from TestLink into SpiraTest. Note that the importer will automatically
 create a new project in SpiraTest to hold all the artifacts with the
 same name as that used in TestLink.
 
-> ![](img/Migrating_from_TestLink_84.png)
-
-> 
+ ![](img/Migrating_from_TestLink_84.png)
+ 
 
 
 During the import process, as each of the types of artifact are
@@ -123,7 +120,7 @@ Now looks like this in SpiraTest (v5.4):
 ![](img/Migrating_from_TestLink_86.png)
 
 
-\
+
 *Should the import fail for any reason, there will be a log file created
 on the Desktop of the person doing the import. The filename is usually:
 **Spira\_TestLink\_Import.log**.*

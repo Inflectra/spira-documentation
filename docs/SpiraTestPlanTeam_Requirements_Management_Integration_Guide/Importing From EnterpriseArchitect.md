@@ -4,21 +4,21 @@ This section outlines how to use the included Importer for importing
 Requirements, Features, and Screens from a Sparx Enterprise Architect
 (EA) project file into SpiraTeam.
 
-## 19B2.1. Installing the Importer
+## Installing the Importer
 
 This section outlines how to install the importer onto a desktop so that
 you can then import requirements and use cases from EA into SpiraTest.
 It assumes that you already have a working installation of SpiraTest
 v3.0 or later and a working installation of Enterprise Architect.
 
-**[Important]{.underline}: You must install the integration adapter on
+**Important: You must install the integration adapter on
 the same desktop that has the installed copy of Enterprise Architect**.
 
 You can download the Importer from the Inflectra's website under
 "Downloads and Add-Ons". When downloaded, double-click the MSI file.
 Follow the instructions in the MSI file to install the importer.
 
-## 20B2.2. Importing from an EA Project File
+## Importing from an EA Project File
 
 Now that you have installed the integration adapter, you can launch it
 at any time by going to Start \> Programs \> SpiraTeam \> Tools \>
@@ -32,10 +32,7 @@ the second screen:
 
 
 Click the folder button
-(![img\_Folder](img/Importing_From_EnterpriseArchitect_11.png)
-
-
-) to open the file open dialog. In this
+(![img\_Folder](img/Importing_From_EnterpriseArchitect_11.png)) to open the file open dialog. In this
 dialog, select the Enterprise Architect Project file (\*.EAP) that you
 want to use for importing. If the file has access credentials required,
 enter the username and password needed to access the file.
@@ -150,66 +147,22 @@ are imported. All three types are imported into Requirements within
 SpiraTeam, and most fields are brought over into SpiraTeam from EA.
 Mapping for fields are as follows:
 
-+-----------------------------------+-----------------------------------+
 | **Enterprise Architect Field**    | **SpiraTeam Field**               |
-+===================================+===================================+
+|-----------------------------------|-----------------------------------|
 | Short Description / Name          | Name                              |
-+-----------------------------------+-----------------------------------+
 | Notes                             | Description (with HTML)           |
-+-----------------------------------+-----------------------------------+
-| Priority                          | Importance:                       |
-|                                   |                                   |
-|                                   |   **[EA Value]{.underline}**   ** |
-|                                   | [SpiraTeam Value]{.underline}**   |
-|                                   |   ---------------------------- -- |
-|                                   | --------------------------------- |
-|                                   |   High                         Hi |
-|                                   | gh                                |
-|                                   |   Medium                       Me |
-|                                   | dium                              |
-|                                   |   Low                          Lo |
-|                                   | w                                 |
-+-----------------------------------+-----------------------------------+
+| Priority                          | Importance: <br> **EA Value** : **SpiraTeam Value** <br>  High : High <br> Medium : Medium  <br> Low : Low |
 | Status                            | Status:                           |
-|                                   |                                   |
-|                                   |   **[EA Value]{.underline}**   ** |
-|                                   | [SpiraTeam Value]{.underline}**   |
-|                                   |   ---------------------------- -- |
-|                                   | --------------------------------- |
-|                                   |   Approved                     Ac |
-|                                   | cepted                            |
-|                                   |   Implemented                  In |
-|                                   |  Progress                         |
-|                                   |   Validated                    Co |
-|                                   | mpleted                           |
-|                                   |   Mandatory                    Re |
-|                                   | quested                           |
-|                                   |   Proposed                     Re |
-|                                   | quested                           |
-|                                   |   (None)                       Re |
-|                                   | quested                           |
-+-----------------------------------+-----------------------------------+
-|                                   | Author (not transferred, always   |
-|                                   | set to user who ran the import    |
-|                                   | last)                             |
-+-----------------------------------+-----------------------------------+
+|                                   |   **EA Value** : **SpiraTeam Value** <br> Approved : Accepted <br> Implemented: In Progress <br> Validated : Completed <br> Mandatory : Requested <br> Proposed : Requested <br> (None) : Requested
+|                                   | Author (not transferred, always set to user who ran the import last) |
 |                                   | Release (not transferred)         |
-+-----------------------------------+-----------------------------------+
 |                                   | Owner (not transferred)           |
-+-----------------------------------+-----------------------------------+
 |                                   | Planned Effort (not transferred)  |
-+-----------------------------------+-----------------------------------+
 | Alias                             | Custom Text Property \#1          |
-+-----------------------------------+-----------------------------------+
-| Element Type ('Requirement',      | Custom Text Property \#2          |
-| 'Feature', 'Screen', etc)         |                                   |
-+-----------------------------------+-----------------------------------+
+| Element Type ('Requirement', 'Feature', 'Screen', etc) | Custom Text Property \#2          |
 | Phase                             | Custom Text Property \#3          |
-+-----------------------------------+-----------------------------------+
 | Version                           | Custom Text Property \#4          |
-+-----------------------------------+-----------------------------------+
 | Difficulty                        | Custom Text Property \#5          |
-+-----------------------------------+-----------------------------------+
 
 When a mapping is made, a Tagged Value is saved into the EAP file with
 the name of SPIRA::Mapping. The number of the value is the requirement

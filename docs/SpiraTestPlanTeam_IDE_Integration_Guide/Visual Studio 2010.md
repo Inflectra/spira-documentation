@@ -43,22 +43,13 @@ SpiraTeam projects and display them.
 
 To add, remove, and assign a SpiraTeam project to the open solution,
 click the Configuration Button in the Tool Window
-(![imgProject](img/Visual_Studio_2010_56.png)
-
-
-), which will open the configuration
+(![imgProject](img/Visual_Studio_2010_56.png)), which will open the configuration
 dialog:
-
 ![](img/Visual_Studio_2010_57.png)
 
 
-
-
 Click the New button
-(![imgAdd](img/Visual_Studio_2010_58.png)
-
-
-) to link to a new SpiraTeam project. The
+(![imgAdd](img/Visual_Studio_2010_58.png)) to link to a new SpiraTeam project. The
 "new SpiraTeam Project" dialog will open. In the fields, enter in the
 following:
 
@@ -67,11 +58,9 @@ following:
 > <https://server1/SpiraTeam/>\
 > Do not put "login.aspx" or any other page address in this field.
 
--   **User ID**: Your user ID you use to log into the SpiraTeam
-> application.
+-   **User ID**: Your user ID you use to log into the SpiraTeam application.
 
--   **Password**: Your password you use to log into the SpiraTeam
-> application.
+-   **Password**: Your password you use to log into the SpiraTeam application.
 
 Once entered, click the "Get Projects" button. The add-in will connect
 to the server and get a list of projects that you are assigned to.
@@ -79,14 +68,8 @@ Select the SpiraTeam project that you want to add, and click the "Save"
 button. Your project will appear in the dialog in the format of "Project
 Name \[Server\]". With a project selected in the left box, you can also
 Edit
-(![imgEdit](img/Visual_Studio_2010_59.png)
-
-
-) and Delete
-(![imgDelete](img/Visual_Studio_2010_60.png)
-
-
-) the project.
+(![imgEdit](img/Visual_Studio_2010_59.png)) and Delete
+(![imgDelete](img/Visual_Studio_2010_60.png)) the project.
 
 With a solution loaded, you can select any number of SpiraTeam projects
 and assign them to the open Solution, by highlighting them, and clicking
@@ -102,28 +85,19 @@ display.
 Once a solution is opened and there is a SpiraTeam project assigned, you
 can view the project's contents. At this time, the add-in will display
 the following items:
-
 ![imgFolderIncident](img/Visual_Studio_2010_61.png)
-
-
 ![imgIncident](img/Visual_Studio_2010_62.png)
 
 
  **Incidents**: Assigned to you and
 unassigned.
-
 ![imgFolderTask](img/Visual_Studio_2010_63.png)
-
-
 ![imgTask](img/Visual_Studio_2010_64.png)
 
 
  **Tasks**: Assigned to you and
 unassigned.
-
 ![imgFolderRequirement](img/Visual_Studio_2010_65.png)
-
-
 ![imgRequirement](img/Visual_Studio_2010_66.png)
 
 
@@ -132,25 +106,18 @@ unassigned.
 
 By default, the Project Explorer will not show closed and completed
 items. However, by clicking the 'View Closed'
-(![imgShowCompleted](img/Visual_Studio_2010_67.png)
-
-
-) button in the toolbar, the Project
+(![imgShowCompleted](img/Visual_Studio_2010_67.png)) button in the toolbar, the Project
 Explorer will be updated to show closed and completed items as well.
 
 Double-clicking on a node (or clicking on the item's arrow) will open
 that item up and show all the sub-items:
-
 ![shot1](img/Visual_Studio_2010_68.png)
 
 
 
 
 Clicking the Refresh
-(![imgRefresh](img/Visual_Studio_2010_69.png)
-
-
-) button on the toolbar will refresh the
+(![imgRefresh](img/Visual_Studio_2010_69.png)) button on the toolbar will refresh the
 highlighted item in the tree, and all sub-items contained within it.
 SpiraTeam projects in the Project Explorer.
 
@@ -220,12 +187,6 @@ If you try to save an item without all required fields, an error will be
 displayed, and the field in error will be highlighted in red.
 
 ![shot2](img/Visual_Studio_2010_70.png)
-
-
-
-
-Details screen for an Incident
-
 ## Troubleshooting
 
 The add-in is designed to capture all errors so that when something

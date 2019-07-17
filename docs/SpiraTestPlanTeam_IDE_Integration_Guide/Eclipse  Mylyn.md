@@ -72,9 +72,8 @@ appropriate Eclipse views. To do this, go to Window \> Show View \>
 "Other..." and then under the Tasks section, display both the Task
 Repositories view and the Task List view:
 
-> ![](img/Eclipse__Mylyn_18.png)
-
-> 
+ ![](img/Eclipse__Mylyn_18.png)
+ 
 
 
 Once you have chosen to select the Task Repositories, the following tab
@@ -261,7 +260,7 @@ the Requirement:
 **Workflow Transitions** -- these are the blue hyperlinks displayed
 directly above the \[Submit\] button in the actions tab. These allow you
 to ***change the status of the Requirement*** and when clicked, the
-fields in the Attributes section will change based on the new status.\
+fields in the Attributes section will change based on the new status.
 *Note: changing the Type of the Requirement will disable the workflow
 transition hyperlinks until \[Submit\] is clicked.*
 
@@ -340,7 +339,7 @@ the Task:
 **Workflow Transitions** -- these are the blue hyperlinks displayed
 directly above the \[Submit\] button in the actions tab. These allow you
 to ***change the status of the Task*** and when clicked, the fields in
-the Attributes section will change based on the new status.\
+the Attributes section will change based on the new status.
 *Note: changing the Type of the Task will disable the workflow
 transition hyperlinks until \[Submit\] is clicked.*
 
@@ -424,7 +423,7 @@ the Incident to the SpiraTeam Server.
 **Workflow Transitions** -- these are the blue hyperlinks displayed
 directly above the \[Submit\] button in the actions tab. These allow you
 to ***change the status of the Incident*** and when clicked, the fields
-in the Attributes section will change based on the new status.\
+in the Attributes section will change based on the new status.
 *Note: changing the Type of the Incident will disable the workflow
 transition hyperlinks until \[Submit\] is clicked.*
 

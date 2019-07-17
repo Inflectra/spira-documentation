@@ -46,7 +46,6 @@ nav:
   - FogBugz: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTest with FogBugz.md
   - MS-TFS: SpiraTestPlanTeam_External_Bug_Tracking_Integration_Guide\Using SpiraTest with MS-TFS.md
 - Help Desk:
-  - Introduction: SpiraTestPlanTeam_Help_Desk_Integration_Guide\Introduction.md
   - KronoDesk: SpiraTestPlanTeam_Help_Desk_Integration_Guide\KronoDesk.md
   - Zendesk: SpiraTestPlanTeam_Help_Desk_Integration_Guide\Zendesk.md
 - IDE Integration:
@@ -69,7 +68,7 @@ nav:
   - TestRail: SpiraTestPlanTeam_Migration_and_Integration_Guide\Migrating from TestRail.md
   - Backup and Migration: SpiraTestPlanTeam_Migration_and_Integration_Guide\Project Backup and Migration.md
 - Requirements:
-  - RequisitePro: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\4B1. Importing From RequisitePro.md
+  - RequisitePro: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From RequisitePro.md
   - DOORS: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From DOORS.md
   - EnterpriseArchitect: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From EnterpriseArchitect.md
   - Jama Contour: SpiraTestPlanTeam_Requirements_Management_Integration_Guide\Importing From Jama Contour.md

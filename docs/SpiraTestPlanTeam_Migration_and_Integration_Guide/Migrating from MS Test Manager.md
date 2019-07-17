@@ -18,17 +18,15 @@ Downloads" section of the Inflectra website. Once you have obtained the
 Windows Installer package, simply double-click on the package to begin
 the installation wizard which should display the following welcome page:
 
-> ![](img/Migrating_from_MS_Test_Manager_64.png)
-
-> 
+ ![](img/Migrating_from_MS_Test_Manager_64.png)
+ 
 
 
 Click the \<Next\> button, accept the software license, then click
 \<Next\> again to choose the folder to install the migration tool to:
 
-> ![](img/Migrating_from_MS_Test_Manager_65.png)
-
-> 
+ ![](img/Migrating_from_MS_Test_Manager_65.png)
+ 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -43,9 +41,8 @@ Now that you have installed the migration tool, you can launch it at any
 time by going to Start \> Programs \> SpiraTest \> Tools \> MTM
 Importer. This will launch the migration tool application itself:
 
-> ![](img/Migrating_from_MS_Test_Manager_66.png)
-
-> 
+ ![](img/Migrating_from_MS_Test_Manager_66.png)
+ 
 
 
 The first thing you need to do is to enter the URL for the instance of
@@ -65,9 +62,8 @@ from MTM (users, test runs, attachments or test sets) -- test cases are
 always imported. Once you have chosen the project and/or test plan,
 click the \<Next\> button to go to the SpiraTest configuration screen.
 
-> ![](img/Migrating_from_MS_Test_Manager_67.png)
-
-> 
+ ![](img/Migrating_from_MS_Test_Manager_67.png)
+ 
 
 
 This page allows you to enter the URL, user name and password that you
@@ -83,9 +79,8 @@ from MTM into SpiraTest. Note that the importer will automatically
 create a new project in SpiraTest to hold all the artifacts with the
 same name as that used in MTM.
 
-> ![](img/Migrating_from_MS_Test_Manager_68.png)
-
-> 
+ ![](img/Migrating_from_MS_Test_Manager_68.png)
+ 
 
 
 During the import process, as each of the types of artifact are
@@ -97,16 +92,11 @@ password that was used for the import to view the imported project.
 
 The migration tool will import the following artifacts:
 
-Users (but not their roles and permissions)
-
-Test Plans and their associated Test Suites
-
-Test Cases and their associated steps, including any shared test steps
-
-Test Runs and their associated test results
-
-Test Sets and the association with the test cases
-
-Any attachments associated with the requirements, test cases, test sets
+* Users (but not their roles and permissions)
+* Test Plans and their associated Test Suites
+* Test Cases and their associated steps, including any shared test steps
+* Test Runs and their associated test results
+* Test Sets and the association with the test cases
+* Any attachments associated with the requirements, test cases, test sets
 or design steps.
 

@@ -47,7 +47,7 @@ accessible over HTTPS
 -   Zendesk agents must be using a modern browser (IE10 or later)
 
 -   A SpiraTeam admin account whose username and API-key
-(**[not]{.underline}** password) can be saved inside the Zendesk app
+(**not** password) can be saved inside the Zendesk app
 settings
 
 ### Initial Configuration of SpiraTeam
@@ -68,9 +68,8 @@ to validate any calls it receives.
 Log in as a project-level administrator to SpiraTeam, go to the
 Administration home page and scroll to System \> Security Settings.
 
-> ![](img/Zendesk_16.png)
-
-> 
+ ![](img/Zendesk_16.png)
+ 
 
 
 At the bottom of the Security Settings page, enter the Zendesk subdomain
@@ -84,7 +83,7 @@ the changes to take effect. The url should be in the format of:
 
 
 
-**[Important]{.underline}:** if this field is left blank, NO domains
+**Important:** if this field is left blank, NO domains
 will be allowed to interact with SpiraTeam via CORs. If an asterisk (\*)
 is entered, ALL domains will be able to do so (not recommended).
 
@@ -101,9 +100,8 @@ individual SpiraTeam logins.
 Go to the Administration home page and scroll to Users \> View / Edit
 Users.
 
-> ![](img/Zendesk_18.png)
-
-> 
+ ![](img/Zendesk_18.png)
+ 
 
 
 Click the \<Add User\> button on the bottom right of the page.
@@ -122,9 +120,8 @@ Fill in the required fields (see below), and make sure that:
 
 Click \<Insert\> to add the new user.
 
-> ![](img/Zendesk_19.png)
-
-> 
+ ![](img/Zendesk_19.png)
+ 
 
 
 ### Install and Configure the SpiraTeam App in Zendesk
@@ -146,17 +143,15 @@ Once the application is installed, enter required information in the
 settings page of the app. Go to Admin \> Apps \> Manage in Zendesk to
 see the list of installed applications.
 
-> ![](img/Zendesk_21.png)
-
-> 
+ ![](img/Zendesk_21.png)
+ 
 
 
 Make sure the application is enabled. Right click on the app's gear icon
 to change settings
 
-> ![](img/Zendesk_22.png)
+![](img/Zendesk_22.png)
 
-> 
 
 
 In the settings screen, make sure all input boxes are correctly filled
@@ -165,9 +160,8 @@ above, as well as the address of SpiraTeam. Make sure that the API key
 is an alphanumeric string contained within curly braces -- { }. Click
 \<Update\>.
 
-> ![](img/Zendesk_24.png)
-
-> 
+ ![](img/Zendesk_24.png)
+ 
 
 
 ### Connecting Zendesk to SpiraTeam
@@ -179,21 +173,17 @@ Zendesk window) and locate the SpiraTeam app. You should see a screen
 like that below, giving you a welcome message on the successful
 connection of Zendesk to SpiraTeam.
 
-> ![](img/Zendesk_25.png)
+![](img/Zendesk_25.png)
 
-> 
 
 
 If you instead see a message like that below (note that you will also
 see a Zendesk service notification), please check your network settings,
 and double check through the steps outline above.
 
-> ![](img/Zendesk_26.png)
-
-> 
-![](img/Zendesk_27.png)
-
-> 
+ ![](img/Zendesk_26.png)
+ 
+![](img/Zendesk_27.png) 
 
 
 ### Connecting SpiraTeam to Zendesk
@@ -212,9 +202,8 @@ In SpiraTeam, navigate to a project Zendesk will need access to. Go to
 the SpiraTeam administration panel and then Integration \> Data
 Synchronization.
 
-> ![](img/Zendesk_28.png)
+![](img/Zendesk_28.png)
 
-> 
 
 
 This will show you the list of current external tools that can
@@ -231,9 +220,8 @@ value for External Key (this is a required field but because SpiraTeam
 does not write to Zendesk it is never used by the app). Click
 \<Update\>.
 
-> ![](img/Zendesk_30.png)
-
-> 
+ ![](img/Zendesk_30.png)
+ 
 
 
 **NOTES**:
@@ -256,9 +244,8 @@ public.
 
 ## When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.
 
-> ![](img/Zendesk_26.png)
-
-> 
+ ![](img/Zendesk_26.png)
+ 
 
 
 In order to log an incident, the agent must decide which project the
@@ -267,9 +254,8 @@ down list. If an agent is unsure which project to select, we recommend
 that they discuss the issue with the development team first. Select a
 project and click \<Go\>.
 
-> ![](img/Zendesk_31.png)
-
-> 
+ ![](img/Zendesk_31.png)
+ 
 
 
 Zendesk will load fields specific to that project, including any custom
@@ -309,9 +295,8 @@ attachments stored with the ticket.
 If Zendesk is not successful, a warning notification will be displayed
 (see below), and the agent is asked to attempt again.
 
-> ![](img/Zendesk_36.png)
-
-> 
+ ![](img/Zendesk_36.png)
+ 
 
 
 ## Reviewing the Incident in SpiraTeam
@@ -350,9 +335,8 @@ that the agent can clearly see whether an issue is resolved or not.
 Hovering over a particular incident pops up the description to give the
 agent quick access to additional information.
 
-> ![](img/Zendesk_40.png)
+![](img/Zendesk_40.png)
 
-> 
 
 
 Finally, clicking on any incident will display a modal pop up table with
@@ -368,49 +352,5 @@ Also shown on this table is the Last Updated date of the incident.
 Hovering over the data will display a tooltip with the time of the
 update.
 
-> ![](img/Zendesk_42.png)
-
-> 
-
-
-####  Legal Notices
-
-This publication is provided as is without warranty of any kind, either
-express or implied, including, but not limited to, the implied
-warranties of merchantability, fitness for a particular purpose, or
-non-infringement.
-
-This publication could include technical inaccuracies or typographical
-errors. Changes are periodically added to the information contained
-herein; these changes will be incorporated in new editions of the
-publication. Inflectra Corporation may make improvements and/or changes
-in the product(s) and/or program(s) and/or service(s) described in this
-publication at any time.
-
-The sections in this guide that discuss internet web security are
-provided as suggestions and guidelines. Internet security is constantly
-evolving field, and our suggestions are no substitute for an up-to-date
-understanding of the vulnerabilities inherent in deploying internet or
-web applications, and Inflectra cannot be held liable for any losses due
-to breaches of security, compromise of data or other cyber-attacks that
-may result from following our recommendations.
-
-SpiraTest®, SpiraPlan®, SpiraTeam® and Inflectra® are registered
-trademarks of Inflectra Corporation in the United States of America and
-other countries. Microsoft^®^, Windows^®^, Explorer^®^ and Microsoft
-Project^®^ are registered trademarks of Microsoft Corporation. All other
-trademarks and product names are property of their respective holders.
-
-Please send comments and questions to:
-
-> Technical Publications
->
-> Inflectra Corporation
->
-> 8121 Georgia Ave, Suite 504
->
-> Silver Spring, MD 20910-4957
->
-> U.S.A.
->
-> 6H[*support\@inflectra.com*](mailto:support@inflectra.com)
+ ![](img/Zendesk_42.png)
+ 

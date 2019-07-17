@@ -19,17 +19,15 @@ Downloads" section of the Inflectra website. Once you have obtained the
 Windows Installer package, simply double-click on the package to begin
 the installation wizard which should display the following welcome page:
 
-> ![](img/Migrating_from_TestRail_74.png)
-
-> 
+ ![](img/Migrating_from_TestRail_74.png)
+ 
 
 
 Click the \<Next\> button, accept the software license, then click
 \<Next\> again to choose the folder to install the migration tool to:
 
-> ![](img/Migrating_from_TestRail_75.png)
+![](img/Migrating_from_TestRail_75.png)
 
-> 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -45,9 +43,8 @@ time by going to Start \> Programs \> Inflectra \> SpiraTest \> Tools \>
 TestRail Importer. This will launch the migration tool application
 itself:
 
-> ![](img/Migrating_from_TestRail_76.png)
-
-> 
+ ![](img/Migrating_from_TestRail_76.png)
+ 
 
 
 The first thing you need to do is to enter the URL for the instance of
@@ -61,9 +58,8 @@ project that you want to ***import from*** You can also choose to not
 import certain artifacts from TestRail (e.g. Milestones, etc.) then
 click the \<Next\> button to move to the next page in the import wizard:
 
-> ![](img/Migrating_from_TestRail_77.png)
-
-> 
+ ![](img/Migrating_from_TestRail_77.png)
+ 
 
 
 This page allows you to enter the URL, user name and password that you
@@ -85,9 +81,8 @@ from TestRail into SpiraTest. Note that the importer will automatically
 create a new project in SpiraTest to hold all the artifacts with the
 same name as that used in TestRail.
 
-> ![](img/Migrating_from_TestRail_78.png)
+![](img/Migrating_from_TestRail_78.png)
 
-> 
 
 
 During the import process, as each of the types of artifact are

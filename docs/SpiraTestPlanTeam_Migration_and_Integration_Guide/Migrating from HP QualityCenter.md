@@ -18,17 +18,15 @@ Downloads" section of the Inflectra website. Once you have obtained the
 Windows Installer package, simply double-click on the package to begin
 the installation wizard which should display the following welcome page:
 
-> ![](img/Migrating_from_HP_QualityCenter_47.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_47.png)
+ 
 
 
 Click the \<Next\> button, accept the software license, then click
 \<Next\> again to choose the folder to install the migration tool to:
 
-> ![](img/Migrating_from_HP_QualityCenter_48.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_48.png)
+ 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -44,9 +42,8 @@ time by going to Start \> Programs \> SpiraTest \> Tools \>
 QualityCenter Importer. This will launch the migration tool application
 itself:
 
-> ![](img/Migrating_from_HP_QualityCenter_49.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_49.png)
+ 
 
 
 The first thing you need to do is to enter the URL for the instance of
@@ -63,9 +60,8 @@ will be populated.
 Select the QualityCenter domain and project that you want to ***import
 from*** and click the \<Login\> button:
 
-> ![](img/Migrating_from_HP_QualityCenter_50.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_50.png)
+ 
 
 
 Assuming that the user name selected has permission to access this
@@ -74,9 +70,8 @@ login was successful. Now choose the types of artifact you want to
 import and then click the \<Next\> button to move to the next page in
 the import wizard:
 
-> ![](img/Migrating_from_HP_QualityCenter_51.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_51.png)
+ 
 
 
 This page allows you to enter the URL, user name and password that you
@@ -92,9 +87,8 @@ from QualityCenter into SpiraTest. Note that the importer will
 automatically create a new project in SpiraTest to hold all the
 artifacts with the same name as that used in QualityCenter.
 
-> ![](img/Migrating_from_HP_QualityCenter_52.png)
-
-> 
+ ![](img/Migrating_from_HP_QualityCenter_52.png)
+ 
 
 
 During the import process, as each of the types of artifact are

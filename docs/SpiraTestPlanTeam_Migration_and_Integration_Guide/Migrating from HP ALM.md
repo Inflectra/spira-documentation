@@ -21,17 +21,14 @@ Downloads" section of the Inflectra website. Once you have obtained the
 Windows Installer package, simply double-click on the package to begin
 the installation wizard which should display the following welcome page:
 
-> ![](img/Migrating_from_HP_ALM_69.png)
-
-> 
+ ![](img/Migrating_from_HP_ALM_69.png)
 
 
 Click the \<Next\> button, accept the software license, then click
 \<Next\> again to choose the folder to install the migration tool to:
 
-> ![](img/Migrating_from_HP_ALM_70.png)
-
-> 
+ ![](img/Migrating_from_HP_ALM_70.png)
+ 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -46,9 +43,8 @@ Now that you have installed the migration tool, you can launch it at any
 time by going to Start \> Programs \> Inflectra \> SpiraTest \> Tools \>
 HP ALM Importer. This will launch the migration tool application itself:
 
-> ![](img/Migrating_from_HP_ALM_71.png)
+![](img/Migrating_from_HP_ALM_71.png)
 
-> 
 
 
 The first thing you need to do is to enter the URL for the instance of
@@ -67,9 +63,8 @@ login was successful. Now choose the types of artifact you want to
 import and then click the \<Next\> button to move to the next page in
 the import wizard:
 
-> ![](img/Migrating_from_HP_ALM_72.png)
-
-> 
+ ![](img/Migrating_from_HP_ALM_72.png)
+ 
 
 
 This page allows you to enter the URL, user name and password that you
@@ -91,9 +86,8 @@ from HP ALM into SpiraTest. Note that the importer will automatically
 create a new project in SpiraTest to hold all the artifacts with the
 same name as that used in HP ALM.
 
-> ![](img/Migrating_from_HP_ALM_73.png)
-
-> 
+ ![](img/Migrating_from_HP_ALM_73.png)
+ 
 
 
 During the import process, as each of the types of artifact are

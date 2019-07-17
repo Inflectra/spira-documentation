@@ -5,7 +5,7 @@ Requirements, Features, and Use Cases from projects residing in Jama
 Contour™ projects into equivalent projects in SpiraTest®, SpiraPlan® or
 SpiraTeam® (hereafter referred to as SpiraTeam).
 
-## 19B3.1. Installing the Importer
+## Installing the Importer
 
 This section outlines how to install the importer onto a workstation so
 that you can then import requirements and use cases from Contour into
@@ -68,7 +68,7 @@ Then the requirements imported into SpiraTeam will appear like:
 
 
 Note: At this time, change request and defect items are
-**[not]{.underline}** imported from Contour projects.
+**not** imported from Contour projects.
 
 If you have a requirement already in SpiraTeam, and want the Contour
 requirements to appear inside it, then you need to enter the requirement
@@ -149,63 +149,19 @@ Contour. All the various types in Contour are imported as Requirements
 into SpiraTeam. In addition, the following fields are brought over into
 SpiraTeam from Contour according to the following mapping table:
 
-+-----------------------------------+-----------------------------------+
 | **Jama Contour Field**            | **SpiraTeam Field**               |
-+===================================+===================================+
+|-----------------------------------|-----------------------------------|
 | Name                              | Name                              |
-+-----------------------------------+-----------------------------------+
 | Description                       | Description (with HTML)           |
-+-----------------------------------+-----------------------------------+
-| Priority                          | Importance:                       |
-|                                   |                                   |
-|                                   |   **[Contour Value]{.underline}** |
-|                                   |    **[SpiraTeam Value]{.underline |
-|                                   | }**                               |
-|                                   |   ------------------------------- |
-|                                   | -- ------------------------------ |
-|                                   | -----                             |
-|                                   |   High                            |
-|                                   |    High                           |
-|                                   |   Medium                          |
-|                                   |    Medium                         |
-|                                   |   Low                             |
-|                                   |    Low                            |
-+-----------------------------------+-----------------------------------+
-| Status                            | Status:                           |
-|                                   |                                   |
-|                                   |   **[Contour Value]{.underline}** |
-|                                   |    **[SpiraTeam Value]{.underline |
-|                                   | }**                               |
-|                                   |   ------------------------------- |
-|                                   | -- ------------------------------ |
-|                                   | -----                             |
-|                                   |   Draft                           |
-|                                   |    Requested                      |
-|                                   |   Approved                        |
-|                                   |    Accepted                       |
-|                                   |   Completed                       |
-|                                   |    Completed                      |
-|                                   |   Rejected                        |
-|                                   |    Rejected                       |
-|                                   |   (None)                          |
-|                                   |    Requested                      |
-+-----------------------------------+-----------------------------------+
-|                                   | Author (not transferred, always   |
-|                                   | set to user who ran the import    |
-|                                   | last)                             |
-+-----------------------------------+-----------------------------------+
+| Priority                          | Importance: <br>  **Contour Value** : **SpiraTeam Value** <br> High : High <br> Medium : Medium <br> Low : Low |
+| Status                            | Status: <br>  **Contour Value** : **SpiraTeam Value** <br> Draft : Requested <br> Approved : Accepted <br> Completed : Completed <br> Rejected : Rejected <br> (None) : Requested |
+|                                   | Author (not transferred, always set to user who ran the import last) |
 | Release                           | Release / Iteration               |
-+-----------------------------------+-----------------------------------+
 |                                   | Owner (not transferred)           |
-+-----------------------------------+-----------------------------------+
 |                                   | Planned Effort (not transferred)  |
-+-----------------------------------+-----------------------------------+
 | Item Type                         | Custom Text Property \#1          |
-+-----------------------------------+-----------------------------------+
 | Document Key                      | Custom Text Property \#2          |
-+-----------------------------------+-----------------------------------+
 | Item Type Category                | Custom Text Property \#3          |
-+-----------------------------------+-----------------------------------+
 
 Using this adapter, you can manage the appropriate artifacts in Contour
 and then periodically re-run the import application to update SpiraTeam.

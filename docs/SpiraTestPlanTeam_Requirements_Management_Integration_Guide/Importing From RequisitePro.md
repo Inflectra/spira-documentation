@@ -1,10 +1,10 @@
-# 4B1. Importing From RequisitePro
+# Importing From RequisitePro
 
 This section outlines how to use the included Integration Adapter for
 importing Requirements, and Use Cases from IBM Rational^®^
 RequisitePro^®^ into SpiraTest^®^.
 
-## 19B1.1. Installing the Integration Adapter
+## Installing the Integration Adapter
 
 This section outlines how to install the integration adapter for
 RequisitePro onto a workstation so that you can then import requirements
@@ -21,23 +21,21 @@ download the Integration Adapter Windows Installer package (.msi). This
 process is described in the *SpiraTest Administration Guide* in more
 detail.
 
-**[Important]{.underline}: You must install the integration adapter on
+**Important: You must install the integration adapter on
 the same workstation that has the installed copy of RequisitePro**. Once
 you have obtained the Windows Installer package, simply double-click on
 the package to begin the installation wizard which should display the
 following welcome page:
 
-> ![](img/4B1._Importing_From_RequisitePro_5.png)
-
-> 
+ ![](img/Importing_From_RequisitePro_5.png)
+ 
 
 
 Click the \<Next\> button to choose the folder to install the
 integration adapter to:
 
-> ![](img/4B1._Importing_From_RequisitePro_6.png)
-
-> 
+ ![](img/Importing_From_RequisitePro_6.png)
+ 
 
 
 Choose the folder to install to, and then decide whether the application
@@ -46,15 +44,13 @@ user. Then click the \<Next\> button to start the installation process.
 It will confirm if you want to proceed, click \<Next\> then wait for it
 to finish.
 
-## 20B1.2. Importing From RequisitePro
+## Importing From RequisitePro
 
 Now that you have installed the integration adapter, you can launch it
 at any time by going to Start \> Programs \> SpiraTest \> Tools \>
 RequisitePro Adapter. This will launch the import application itself:
 
-> ![](img/4B1._Importing_From_RequisitePro_7.png)
-
-> 
+![](img/Importing_From_RequisitePro_7.png)
 
 
 The first thing you need to do is to click the \<Browse\> button and
@@ -71,9 +67,7 @@ project, you will be prompted with a message box indicating that the
 login was successful. Now click the \<Next\> button to move to the next
 page in the import wizard:
 
-> ![](img/4B1._Importing_From_RequisitePro_8.png)
-
-> 
+ ![](img/Importing_From_RequisitePro_8.png)
 
 
 This page allows you to enter the URL, user name and password that you
@@ -90,9 +84,8 @@ sees a particular project file, it will create a new project in
 SpiraTest to hold all the artifacts with the same name as that used in
 RequisitePro.
 
-> ![](img/4B1._Importing_From_RequisitePro_9.png)
+![](img/Importing_From_RequisitePro_9.png)
 
-> 
 
 
 During the import process, as each of the types of artifact are
@@ -102,7 +95,7 @@ the \<Done\> button will be enabled. Clicking this button closed the
 importer. You should now log into SpiraTest using the same user name and
 password that was used for the import to view the imported project.
 
-## 21B1.3. Using RequisitePro w/ SpiraTest
+## Using RequisitePro with SpiraTest
 
 Once you have completed this initial import, you will now have two
 systems that can be used together to manage your project's lifecycle.

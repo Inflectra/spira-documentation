@@ -45,8 +45,8 @@ contains some example requirements and test cases that be exported into
 SpiraTeam. Also the documents make good templates if you're looking for
 a way to standardize the import of requirements and test cases. There
 are two versions of the document available -
-**[SampleWordDocument.doc]{.underline}** for Word 2003 and
-**[SampleWordDocument.docx]{.underline}** for Word 2007 and later.
+**SampleWordDocument.doc** for Word 2003 and
+**SampleWordDocument.docx** for Word 2007 and later.
 
 Once you have downloaded the template, please double-click on it to open
 it up in MS-Word. You will notice that there is an additional toolbar
@@ -83,7 +83,7 @@ Please enter the following information into the dialog box:
 
 -   **Spira URL:** Please enter the web address that you use to access
 SpiraTeam® in your browser. This is usually of the form
-[http://\<hostname\>/SpiraTeam]{.underline}. Make sure that you
+http://\<hostname\>/SpiraTeam. Make sure that you
 remove any suffixes from the address (e.g. Default.aspx).
 
 -   **User Name:** Please enter the username that you use for logging in
@@ -230,7 +230,7 @@ means that you need to add a header rows.
 
 If there is an error during the import of either requirements or test
 cases, the error message will be stored in a text file called
-**Spira\_WordImport.log** that can be found on the desktop of the user
+**Spira_WordImport.log** that can be found on the desktop of the user
 running the import:
 
 ![](img/Importing_from_Microsoft_Word_41.png)

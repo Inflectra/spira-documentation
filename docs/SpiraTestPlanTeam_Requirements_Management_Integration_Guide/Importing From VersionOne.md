@@ -5,7 +5,7 @@ Iterations/Sprints, Epics and Stories/Backlog Items from projects
 residing in VersionOne projects into equivalent projects in SpiraTest®,
 SpiraPlan® or SpiraTeam® (hereafter referred to as SpiraTeam).
 
-## 19B4.1. Installing the Importer
+## Installing the Importer
 
 This section outlines how to install the importer onto a workstation so
 that you can then import requirements and use cases from VersionOne into
@@ -66,7 +66,7 @@ import is finished, the SpiraTeam requirements will be nested
 underneath.
 
 Note: At this time, change request and defect items are
-**[not]{.underline}** imported from VersionOne projects.
+**not** imported from VersionOne projects.
 
 Once the fields have been populated, click *Next* to get to the summary
 screen.
@@ -137,59 +137,18 @@ requirements in SpiraTeam. In addition, the following fields are brought
 over into SpiraTeam from VersionOne according to the following mapping
 table:
 
-+-----------------------------------+-----------------------------------+
 | **VersionOne Field**              | **SpiraTeam Field**               |
-+===================================+===================================+
+|-----------------------------------|-----------------------------------|
 | Name                              | Name                              |
-+-----------------------------------+-----------------------------------+
 | Description                       | Description (with HTML)           |
-+-----------------------------------+-----------------------------------+
-| Priority                          | Importance:                       |
-|                                   |                                   |
-|                                   |   **[VersionOne Value]{.underline |
-|                                   | }**   **[SpiraTeam Value]{.underl |
-|                                   | ine}**                            |
-|                                   |   ------------------------------- |
-|                                   | ----- --------------------------- |
-|                                   | --------                          |
-|                                   |   High                            |
-|                                   |       High                        |
-|                                   |   Medium                          |
-|                                   |       Medium                      |
-|                                   |   Low                             |
-|                                   |       Low                         |
-+-----------------------------------+-----------------------------------+
-| Status                            | Status:                           |
-|                                   |                                   |
-|                                   |   **[VersionOne Value]{.underline |
-|                                   | }**   **[SpiraTeam Value]{.underl |
-|                                   | ine}**                            |
-|                                   |   ------------------------------- |
-|                                   | ----- --------------------------- |
-|                                   | --------                          |
-|                                   |   Future                          |
-|                                   |       Requested                   |
-|                                   |   Accepted                        |
-|                                   |       Accepted                    |
-|                                   |   Done                            |
-|                                   |       Completed                   |
-|                                   |   In Progress                     |
-|                                   |       In Progress                 |
-+-----------------------------------+-----------------------------------+
-|                                   | Author (not transferred, always   |
-|                                   | set to user who ran the import    |
-|                                   | last)                             |
-+-----------------------------------+-----------------------------------+
+| Priority                          | Importance: <br> **VersionOne Value** : **SpiraTeam Value** <br> High : High <br> Medium : Medium <br> Low : Low |
+| Status                            | Status: <br> **VersionOne Value** : **SpiraTeam Value** <br> Future : Requested <br> Accepted : Accepted <br> Done : Completed <br> In Progress : In Progress  |
+|                                   | Author (not transferred, always set to user who ran the import last) |
 | Iteration/Sprint                  | Release / Iteration               |
-+-----------------------------------+-----------------------------------+
 |                                   | Owner (not transferred)           |
-+-----------------------------------+-----------------------------------+
 | Estimate                          | Planned Effort (not transferred)  |
-+-----------------------------------+-----------------------------------+
 | VersionOne ID                     | Custom Text Property TEXT\_01     |
-+-----------------------------------+-----------------------------------+
 | VersionOne Display ID             | Custom Text Property TEXT\_02     |
-+-----------------------------------+-----------------------------------+
 
 Using this adapter, you can manage the appropriate artifacts in
 VersionOne and then periodically re-run the import application to update

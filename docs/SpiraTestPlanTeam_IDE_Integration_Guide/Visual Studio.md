@@ -60,11 +60,9 @@ In the fields, enter in the following:
 > <https://server1/SpiraTeam/>\
 > Do not put "login.aspx" or any other page address in this field.
 
--   **User ID**: Your user ID you use to log into the SpiraTeam
-> application.
+-   **User ID**: Your user ID you use to log into the SpiraTeam application.
 
--   **Password**: Your password you use to log into the SpiraTeam
-> application.
+-   **Password**: Your password you use to log into the SpiraTeam application.
 
 Once entered, click the "Get Projects" button. The add-in will connect
 to the server and get a list of projects that you are assigned to.

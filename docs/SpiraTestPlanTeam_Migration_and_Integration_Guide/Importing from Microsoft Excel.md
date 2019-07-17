@@ -49,9 +49,9 @@ to download is the **SpiraImportTemplate** Excel Sheet. This spreadsheet
 contains the necessary pre-formatted columns that are needed for the
 Add-In to easily recognize the data and know how to handle it. There are
 *three* versions of the template available -
-**[SpiraImportTemplate.xls]{.underline}** for the Excel 2003 Add-In,
-**[SpiraImportTemplate.xlsx]{.underline}** for the Excel 2007 Add-In and
-**[SpiraImportTemplate2010.xslx]{.underline}** for the Excel 2010
+**SpiraImportTemplate.xls** for the Excel 2003 Add-In,
+**SpiraImportTemplate.xlsx** for the Excel 2007 Add-In and
+**SpiraImportTemplate2010.xslx** for the Excel 2010
 Add-In.
 
 Once you have downloaded the template, please double-click on it to open
@@ -62,14 +62,10 @@ SpiraTeam:
 ![](img/Importing_from_Microsoft_Excel_5.png)
 
 
-
-
 If you are using the MS-Excel 2007 or 2010 Add-In, you will see a
 modified version of the toolbar that makes use of the MS-Office Ribbon:
 
 ![](img/Importing_from_Microsoft_Excel_6.png)
-
-
 
 
 This toolbar allows you to connect to SpiraTeam, and perform the
@@ -83,13 +79,11 @@ specify the information used to connect to your instance of SpiraTeam:
 ![](img/Importing_from_Microsoft_Excel_7.png)
 
 
-
-
 Please enter the following information into the dialog box:
 
 -   **Spira URL:** Please enter the web address that you use to access
 SpiraTeam® in your browser. This is usually of the form
-[http://\<hostname\>/SpiraTeam]{.underline}. Make sure that you
+http://\<hostname\>/SpiraTeam. Make sure that you
 remove any suffixes from the address (e.g. Default.aspx).
 
 -   **User Name:** Please enter the username that you use for logging in
@@ -120,12 +114,9 @@ importing / exporting:
 ![](img/Importing_from_Microsoft_Excel_8.png)
 
 
-
-
 Or
 
 ![](img/Importing_from_Microsoft_Excel_9.png)
-
 
 
 
@@ -179,7 +170,6 @@ in the Excel sheet:
 
 
 
-
 Next if you want to import the list of existing Releases from SpiraTeam,
 you should click on the \[Clear\] icon to first remove the sample
 information from the spreadsheet, then click \[Import\] to load the list
@@ -197,134 +187,27 @@ SpiraTeam.
 The various columns that can be imported, and the rules for entering
 data are listed below:
 
-+-----------------------------------+-----------------------------------+
 | **Field name**                    | **Description**                   |
-+===================================+===================================+
-| Rel \#                            | Stores the ID of the release.     |
-|                                   | Should be left blank for new      |
-|                                   | items being added to SpiraTeam    |
-+-----------------------------------+-----------------------------------+
-| **Release Name**                  | The name of the release. This     |
-|                                   | field supports indentation, so    |
-|                                   | you need to use Excel's ability   |
-|                                   | to Indent text fields to indicate |
-|                                   | how the items in the release      |
-|                                   | hierarchy are organized           |
-+-----------------------------------+-----------------------------------+
-| Release Description               | The long description of the       |
-|                                   | release. If you want it           |
-|                                   | formatted, you need to add HTML   |
-|                                   | tags such as \<b\> for bold       |
-+-----------------------------------+-----------------------------------+
-| **Version Number**                | The version number for the        |
-|                                   | release; acts as the short name   |
-+-----------------------------------+-----------------------------------+
-| **Active**                        | Whether this release is active or |
-|                                   | not. Should be set to either Y/N  |
-+-----------------------------------+-----------------------------------+
-| **Iteration**                     | Whether this release is an        |
-|                                   | Iteration or not. Should be set   |
-|                                   | to either Y/N                     |
-+-----------------------------------+-----------------------------------+
-| Creator                           | The user that should listed as    |
-|                                   | the release's creator. Needs to   |
-|                                   | be the ID of the user (e.g. user  |
-|                                   | US00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| **Start Date**                    | The date that work on the release |
-|                                   | is scheduled to start             |
-+-----------------------------------+-----------------------------------+
-| **End Date**                      | The date that work on the release |
-|                                   | is scheduled to end               |
-+-----------------------------------+-----------------------------------+
-| **\# Resources**                  | The number of people / resources  |
-|                                   | that are scheduled to work on the |
-|                                   | release.                          |
-+-----------------------------------+-----------------------------------+
-| Non-Wk Days                       | The number of non-working days    |
-|                                   | that should be subtracted from    |
-|                                   | the \# available hours for work   |
-|                                   | performed on the release.         |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003/2007 Add-In       |                                   |
-| Specific Fields**                 |                                   |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| **Status**                        | The status of the release. It     |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list            |
-+-----------------------------------+-----------------------------------+
-| **Type**                          | The type of the release (major,   |
-|                                   | minor, iteration or phase). It    |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list            |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
-| Comment                           | The description of a comment that |
-|                                   | should be appended to the item.   |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold. *Note that this   |
-|                                   | field always appends, so if you   |
-|                                   | want to add two comments, just    |
-|                                   | enter the first value and click   |
-|                                   | \[Export\], then replace it with  |
-|                                   | the second value and click        |
-|                                   | \[Export\]*                       |
-+-----------------------------------+-----------------------------------+
+|-----------------------------------|-----------------------------------|
+| Rel \#                            | Stores the ID of the release. Should be left blank for new items being added to SpiraTeam  |
+| **Release Name**   | The name of the release. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the release hierarchy are organized     |
+| Release Description    | The long description of the release. If you want it formatted, you need to add HTML tags such as \<b\> for bold  |
+| **Version Number**   | The version number for the release; acts as the short name   |
+| **Active**     | Whether this release is active or not. Should be set to either Y/N  |
+| **Iteration**       | Whether this release is an Iteration or not. Should be set to either Y/N    |
+| Creator                           | The user that should listed as the release's creator. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)                                |
+| **Start Date**                    | The date that work on the release is scheduled to start             |
+| **End Date**                      | The date that work on the release is scheduled to end               |
+| **\# Resources**                  | The number of people / resources that are scheduled to work on the release. |
+| Non-Wk Days  | The number of non-working days that should be subtracted from the \# available hours for work performed on the release.      |
+| **MS-Excel 2003/2007 Add-In Specific Fields**     |    |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project     |
+| LIST-01 -- LIST-10   | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.   |
+| **MS-Excel 2010 Add-In Specific Fields**     |         |
+| **Status**    | The status of the release. It needs to be one of the values from the dropdown list  |
+| **Type**  | The type of the release (major, minor, iteration or phase). It needs to be one of the values from the dropdown list |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text         <br> -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*                       |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -355,150 +238,27 @@ of SpiraTeam.
 The various columns that can be imported, and the rules for entering
 data are listed below:
 
-+-----------------------------------+-----------------------------------+
-| Req \#                            | Stores the ID of the requirement. |
-|                                   | Should be left blank for new      |
-|                                   | items being added to SpiraTeam    |
-+===================================+===================================+
-| **Requirement Name**              | The name of the requirement. This |
-|                                   | field supports indentation, so    |
-|                                   | you need to use Excel's ability   |
-|                                   | to Indent text fields to indicate |
-|                                   | how the items in the requirement  |
-|                                   | hierarchy are organized           |
-+-----------------------------------+-----------------------------------+
-| Requirement Description           | The long description of the       |
-|                                   | requirement. If you want it       |
-|                                   | formatted, you need to add HTML   |
-|                                   | tags such as \<b\> for bold       |
-+-----------------------------------+-----------------------------------+
-| Importance                        | The importance / priority of the  |
-|                                   | requirement. It needs to be one   |
-|                                   | of the values from the dropdown   |
-|                                   | list.                             |
-+-----------------------------------+-----------------------------------+
-| Status                            | The status of the requirement. It |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list. If this   |
-|                                   | is not specified, the requirement |
-|                                   | will default to the "Requested"   |
-|                                   | status.                           |
-+-----------------------------------+-----------------------------------+
-| Author                            | The user that should listed as    |
-|                                   | the requirement's author. Needs   |
-|                                   | to be the ID of the user (e.g.    |
-|                                   | user US00005 would be entered as  |
-|                                   | just 5)                           |
-+-----------------------------------+-----------------------------------+
-| Owner                             | The user that should listed as    |
-|                                   | the requirement's owner. Needs to |
-|                                   | be the ID of the user (e.g. user  |
-|                                   | US00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003/2007 Add-In       |                                   |
-| Specific Fields**                 |                                   |
-+-----------------------------------+-----------------------------------+
-| Release \#                        | The release that this requirement |
-|                                   | is scheduled for. Needs to be the |
-|                                   | ID of the release (e.g. release   |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Release Version                   | The release/iteration that this   |
-|                                   | requirement is scheduled for.     |
-|                                   | Needs to be the version number of |
-|                                   | the release (e.g. 1.0.1.1)        |
-+-----------------------------------+-----------------------------------+
-| **Type**                          | The type of the requirement. It   |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Estimate                          | The estimate (in points) of the   |
-|                                   | requirement. It should be a       |
-|                                   | decimal number with one decimal   |
-|                                   | place (e.g. 1.0, 2.5, etc.)       |
-+-----------------------------------+-----------------------------------+
-| Component                         | This should be the Name of the    |
-|                                   | Component the requirement is      |
-|                                   | assigned-to. E.g. \"Component 1\" |
-+-----------------------------------+-----------------------------------+
-| Linked Requirements               | Comma-separated list of           |
-|                                   | requirement IDs (without the RQ   |
-|                                   | prefix) that this requirement     |
-|                                   | should be linked to (e.g. 204,    |
-|                                   | 891)                              |
-|                                   |                                   |
-|                                   | Note: This field only Exports to  |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
-| Comment                           | The description of a comment that |
-|                                   | should be appended to the item.   |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold. *Note that this   |
-|                                   | field always appends, so if you   |
-|                                   | want to add two comments, just    |
-|                                   | enter the first value and click   |
-|                                   | \[Export\], then replace it with  |
-|                                   | the second value and click        |
-|                                   | \[Export\]*                       |
-+-----------------------------------+-----------------------------------+
+| **Field name**                    | **Description**                   |
+|-----------------------------------|-----------------------------------|
+| Req \#   | Stores the ID of the requirement. Should be left blank for new items being added to SpiraTeam    |
+| **Requirement Name**              | The name of the requirement. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the requirement hierarchy are organized   |
+| Requirement Description           | The long description of the requirement. If you want it formatted, you need to add HTML tags such as <b\> for bold       |
+| Importance                        | The importance / priority of the requirement. It needs to be one of the values from the dropdown list.    |
+| Status                            | The status of the requirement. It needs to be one of the values from the dropdown list. If this is not specified, the requirement will default to the "Requested" status.   |
+| Author                            | The user that should listed as the requirement's author. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)    |
+| Owner                             | The user that should listed as the requirement's owner. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5) |
+| **MS-Excel 2003/2007 Add-In Specific Fields**                 |                                   |
+| Release \#                        | The release that this requirement is scheduled for. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                                |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project       |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.     |
+| **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
+| Release Version                   | The release/iteration that this requirement is scheduled for. Needs to be the version number of the release (e.g. 1.0.1.1)        |
+| **Type**                          | The type of the requirement. It needs to be one of the values from the dropdown list. |
+| Estimate                          | The estimate (in points) of the requirement. It should be a decimal number with one decimal place (e.g. 1.0, 2.5, etc.)  |
+| Component                         | This should be the Name of the Component the requirement is assigned-to. E.g. \"Component 1\" |
+| Linked Requirements               | Comma-separated list of requirement IDs (without the RQ prefix) that this requirement    should be linked to (e.g. 204, 891) Note: This field only Exports to Spira and not the other way around   |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br> -   **Text** -- enter the text, include HTML tags if rich-text <br> -   **Decimal** -- enter the number (e.g. 1.0)  <br> -   **Integer** -- enter the number (e.g. 2)  <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"    |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]* |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -529,125 +289,24 @@ SpiraTeam.
 The various columns that can be imported, and the rules for entering
 data are listed below:
 
-+-----------------------------------+-----------------------------------+
-| TX \#                             | Stores the ID of the test set.    |
-|                                   | Should be left blank for new      |
-|                                   | items being added to SpiraTeam    |
-+===================================+===================================+
-| **Test Set Name**                 | The name of the test set. This    |
-|                                   | field supports indentation, so    |
-|                                   | you need to use Excel's ability   |
-|                                   | to Indent text fields to indicate |
-|                                   | how the items in the test set     |
-|                                   | hierarchy are organized           |
-+-----------------------------------+-----------------------------------+
-| Test Set Description              | The long description of the test  |
-|                                   | set. If you want it formatted,    |
-|                                   | you need to add HTML tags such as |
-|                                   | \<b\> for bold                    |
-+-----------------------------------+-----------------------------------+
-| **Folder**                        | Whether this item is a folder or  |
-|                                   | not. Should be set to either Y/N  |
-+-----------------------------------+-----------------------------------+
-| **Status**                        | The status of the test set. It    |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Creator                           | The user that should listed as    |
-|                                   | the test set's creator. Needs to  |
-|                                   | be the ID of the user (e.g. user  |
-|                                   | US00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| Owner                             | The user that should listed as    |
-|                                   | the test set's owner. Needs to be |
-|                                   | the ID of the user (e.g. user     |
-|                                   | US00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| Planned Date                      | The date that the test set needs  |
-|                                   | to be completed by.               |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003/2007 Add-In       |                                   |
-| Specific Fields**                 |                                   |
-+-----------------------------------+-----------------------------------+
-| Release \#                        | The release that this test set is |
-|                                   | scheduled for. Needs to be the ID |
-|                                   | of the release (e.g. release      |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Release Version                   | The release/iteration that this   |
-|                                   | test set is scheduled for. Needs  |
-|                                   | to be the version number of the   |
-|                                   | release (e.g. 1.0.1.1)            |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
-| Comment                           | The description of a comment that |
-|                                   | should be appended to the item.   |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold. *Note that this   |
-|                                   | field always appends, so if you   |
-|                                   | want to add two comments, just    |
-|                                   | enter the first value and click   |
-|                                   | \[Export\], then replace it with  |
-|                                   | the second value and click        |
-|                                   | \[Export\]*                       |
-+-----------------------------------+-----------------------------------+
+| **Field name**                    | **Description**                   |
+|-----------------------------------|-----------------------------------|
+| TX \#                             | Stores the ID of the test set. Should be left blank for new items being added to SpiraTeam    |
+| **Test Set Name**                 | The name of the test set. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the test set hierarchy are organized    |
+| Test Set Description              | The long description of the test set. If you want it formatted, you need to add HTML tags such as \<b\> for bold      |
+| **Folder**                        | Whether this item is a folder or not. Should be set to either Y/N  |
+| **Status**                        | The status of the test set. It needs to be one of the values from the dropdown list.   |
+| Creator                           | The user that should listed as the test set's creator. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)      |
+| Owner                             | The user that should listed as the test set's owner. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)      |
+| Planned Date                      | The date that the test set needs to be completed by.               |
+| **MS-Excel 2003/2007 Add-In Specific Fields**                 |                                   |
+| Release \#                        | The release that this test set is scheduled for. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)  |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.        |
+| **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
+| Release Version                   | The release/iteration that this test set is scheduled for. Needs to be the version number of the release (e.g. 1.0.1.1)            |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text         <br> -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe)  <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with  the second value and click \[Export\]*   |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -679,218 +338,33 @@ your instance of SpiraTeam.
 The various columns that can be imported, and the rules for entering
 data are listed below:
 
-+-----------------------------------+-----------------------------------+
-| Test \#                           | Stores the ID of the test case.   |
-|                                   | Should be left blank for new      |
-|                                   | items being added to SpiraTeam    |
-+===================================+===================================+
-| **Test Case Name**                | The name of the test case. This   |
-|                                   | field supports indentation, so    |
-|                                   | you need to use Excel's ability   |
-|                                   | to Indent text fields to indicate |
-|                                   | how the items in the test case    |
-|                                   | hierarchy are organized           |
-+-----------------------------------+-----------------------------------+
-| Test Case Description             | The long description of the test  |
-|                                   | case. If you want it formatted,   |
-|                                   | you need to add HTML tags such as |
-|                                   | \<b\> for bold                    |
-+-----------------------------------+-----------------------------------+
-| Priority                          | The priority of the test case. It |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Owner                             | The user that should listed as    |
-|                                   | the test case's owner. Needs to   |
-|                                   | be the ID of the user (e.g. user  |
-|                                   | US00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| Row Type                          | This is used to tell the Add-In   |
-|                                   | what type of row this is. You     |
-|                                   | should enter "FOLDER" if this row |
-|                                   | is a test folder, "TestCase" if   |
-|                                   | it is a test case and             |
-|                                   | "\>TestStep" if it is a test step |
-|                                   | belonging to a test case. These   |
-|                                   | values should be selected from    |
-|                                   | the dropdown list.\               |
-|                                   | *Note: You should make sure that  |
-|                                   | test step rows are located        |
-|                                   | directly underneath the test case |
-|                                   | they are a part of.*              |
-+-----------------------------------+-----------------------------------+
-| Step \#                           | Stores the ID of the test step.   |
-|                                   | Should be left blank for new test |
-|                                   | steps being added to a test case  |
-+-----------------------------------+-----------------------------------+
-| **Test Step Description**         | The description of the test step. |
-|                                   | This should contain the           |
-|                                   | description of the actions that   |
-|                                   | the tester needs to take. If you  |
-|                                   | want it formatted, you need to    |
-|                                   | add HTML tags such as \<b\> for   |
-|                                   | bold                              |
-+-----------------------------------+-----------------------------------+
-| **Expected Result**               | The expected result of the test   |
-|                                   | step. This should contain the     |
-|                                   | description of what the tester    |
-|                                   | should see if the step succeeds.  |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold                    |
-+-----------------------------------+-----------------------------------+
-| Sample Data                       | The sample date for the test      |
-|                                   | step. This should contain any     |
-|                                   | sample data that the tester can   |
-|                                   | use when testing the step. If you |
-|                                   | want it formatted, you need to    |
-|                                   | add HTML tags such as \<b\> for   |
-|                                   | bold                              |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003/2007 Add-In       |                                   |
+| **Field name**                    | **Description**                   |
+|-----------------------------------|-----------------------------------|
+| Test \#                           | Stores the ID of the test case. Should be left blank for new items being added to SpiraTeam    |
+| **Test Case Name**                | The name of the test case. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the test case hierarchy are organized           |
+| Test Case Description             | The long description of the test case. If you want it formatted, you need to add HTML tags such as \<b\> for bold                    |
+| Priority                          | The priority of the test case. It needs to be one of the values from the dropdown list. |
+| Owner                             | The user that should listed as the test case's owner. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)                                |
+| Row Type                          | This is used to tell the Add-In what type of row this is. You should enter "FOLDER" if this row is a test folder, "TestCase" if it is a test case and "\>TestStep" if it is a test step belonging to a test case. These values should be selected from the dropdown list. *Note: You should make sure that  test step rows are located        directly underneath the test case they are a part of.*              |
+| Step \#                           | Stores the ID of the test step. Should be left blank for new test steps being added to a test case  |
+| **Test Step Description**         | The description of the test step. This should contain the description of the actions that the tester needs to take. If you want it formatted, you need to add HTML tags such as \<b\> for bold   |
+| **Expected Result**               | The expected result of the test step. This should contain the description of what the tester should see if the step succeeds. If you want it formatted, you need to add HTML tags such as \<b\> for bold    |
+| Sample Data                       | The sample date for the test step. This should contain any sample data that the tester can use when testing the step. If you want it formatted, you need to add HTML tags such as \<b\> for bold    |
+| **MS-Excel 2003/2007 Add-In**       |                                   |
 | Specific Fields**                 |                                   |
-+-----------------------------------+-----------------------------------+
-| Requirement                       | The requirement that this test    |
-|                                   | case should be mapped to. Needs   |
-|                                   | to be the ID of the requirement   |
-|                                   | (e.g. requirement RQ00005 would   |
-|                                   | be entered as just 5). *Note that |
-|                                   | this field always appends, so if  |
-|                                   | you want to add a test case to    |
-|                                   | two requirements, run the export  |
-|                                   | twice, once for each              |
-|                                   | requirement.\                     |
-|                                   | *Note: This field only Exports to |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| Release                           | The release that this test case   |
-|                                   | should be mapped to. Needs to be  |
-|                                   | the ID of the release (e.g.       |
-|                                   | release RL00005 would be entered  |
-|                                   | as just 5). *Note that this field |
-|                                   | always appends, so if you want to |
-|                                   | add a test case to two releases,  |
-|                                   | run the export twice, once for    |
-|                                   | each release.\                    |
-|                                   | *Note: This field only Exports to |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| Test Set                          | The test set that this test case  |
-|                                   | should be added to. Needs to be   |
-|                                   | the ID of the test set (e.g. test |
-|                                   | set TX00005 would be entered as   |
-|                                   | just 5). *Note that this field    |
-|                                   | always appends, so if you want to |
-|                                   | add a test case to two test sets, |
-|                                   | run the export twice, once for    |
-|                                   | each test set.\                   |
-|                                   | *Note: This field only Exports to |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Type                              | The type of the test case. It     |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Status                            | The status of the test case. It   |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Requirement                       | The requirement(s) that this test |
-|                                   | case should be mapped to. Needs   |
-|                                   | to be a comma-separated list of   |
-|                                   | requirement IDs (e.g.             |
-|                                   | requirements RQ00005 and RQ00008  |
-|                                   | would be entered as just "5,8").\ |
-|                                   | Note: This field only Exports to  |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| Release                           | The release(s) that this test     |
-|                                   | case should be mapped to. Needs   |
-|                                   | to be a comma-separated list of   |
-|                                   | release version numbers (e.g.     |
-|                                   | releases 1.1.0.0 and 1.2.0.0      |
-|                                   | would be entered as               |
-|                                   | "1.1.0.0,1.2.0.0").\              |
-|                                   | Note: This field only Exports to  |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| Test Set                          | The test set(s) that this test    |
-|                                   | case should be added to. Needs to |
-|                                   | be a comma-separated list of test |
-|                                   | set IDs (e.g. test sets TX00005   |
-|                                   | and TX00008 would be entered as   |
-|                                   | just "5,8").\                     |
-|                                   | Note: This field only Exports to  |
-|                                   | Spira and not the other way       |
-|                                   | around                            |
-+-----------------------------------+-----------------------------------+
-| Components                        | This should be a comma-separated  |
-|                                   | list of the Name of the           |
-|                                   | Components the test case is       |
-|                                   | assigned-to.                      |
-|                                   |                                   |
-|                                   | E.g. Component 1, Component 2     |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
+| Requirement                       | The requirement that this test case should be mapped to. Needs to be the ID of the requirement (e.g. requirement RQ00005 would be entered as just 5). *Note that this field always appends, so if you want to add a test case to two requirements, run the export twice, once for each requirement.  *Note: This field only Exports to Spira and not the other way around |
+| Release                           | The release that this test case should be mapped to. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5). *Note that this field always appends, so if you want to add a test case to two releases, run the export twice, once for each release. *Note: This field only Exports to Spira and not the other way around                            |
+| Test Set                          | The test set that this test case should be added to. Needs to be the ID of the test set (e.g. test set TX00005 would be entered as just 5). *Note that this field always appends, so if you want to add a test case to two test sets, run the export twice, once for each test set. *Note: This field only Exports to Spira and not the other way       around                            |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
+| **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
+| Type                              | The type of the test case. It needs to be one of the values from the dropdown list.           |
+| Status                            | The status of the test case. It needs to be one of the values from the dropdown list.           |
+| Requirement                       | The requirement(s) that this test case should be mapped to. Needs to be a comma-separated list of requirement IDs (e.g. requirements RQ00005 and RQ00008 would be entered as just "5,8"). Note: This field only Exports to Spira and not the other way around                            |
+| Release                           | The release(s) that this test case should be mapped to. Needs to be a comma-separated list of release version numbers (e.g. releases 1.1.0.0 and 1.2.0.0 would be entered as "1.1.0.0,1.2.0.0"). Note: This field only Exports to Spira and not the other way around                            |
+| Test Set                          | The test set(s) that this test case should be added to. Needs to be a comma-separated list of test set IDs (e.g. test sets TX00005 and TX00008 would be entered as just "5,8"). Note: This field only Exports to  Spira and not the other way around              |
+| Components                        | This should be a comma-separated list of the Name of the Components the test case is       assigned-to. E.g. Component 1, Component 2     |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text          <br> -   **Decimal** -- enter the number (e.g. 1.0)  <br> -   **Integer** -- enter the number (e.g. 2)  <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -921,234 +395,45 @@ SpiraTeam.
 The various columns that can be imported/exported, and the rules for
 entering data are listed below:
 
-+-----------------------------------+-----------------------------------+
-| Inc \#                            | Stores the ID of the incident.    |
-|                                   | Should be left blank for new      |
-|                                   | items being added to SpiraTeam    |
-+===================================+===================================+
+
+| **Field name**                    | **Description**                   |
+|-----------------------------------|-----------------------------------|
+| Inc \#                            | Stores the ID of the incident. Should be left blank for new items being added to SpiraTeam    |
 | **Incident Name**                 | The name of the incident.         |
-+-----------------------------------+-----------------------------------+
-| **Incident Description**          | The long description of the       |
-|                                   | incident. If you want it          |
-|                                   | formatted, you need to add HTML   |
-|                                   | tags such as \<b\> for bold       |
-+-----------------------------------+-----------------------------------+
-| **Type**                          | The type of the incident. It      |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| **Status**                        | The status of the incident. It    |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Priority                          | The priority of the incident. It  |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Severity                          | The severity of the incident. It  |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Detector                          | The user that found the incident. |
-|                                   | Needs to be the ID of the user    |
-|                                   | (e.g. user US00005 would be       |
-|                                   | entered as just 5). If left       |
-|                                   | blank, it will default to the     |
-|                                   | user logged in through the        |
-|                                   | Add-In.                           |
-+-----------------------------------+-----------------------------------+
-| Owner                             | The user that the incident should |
-|                                   | be assigned to Needs to be the ID |
-|                                   | of the user (e.g. user US00005    |
-|                                   | would be entered as just 5)       |
-+-----------------------------------+-----------------------------------+
-| Detected Date                     | The date that the incident was    |
-|                                   | found. If this field is not       |
-|                                   | populated, the current date is    |
-|                                   | used instead                      |
-+-----------------------------------+-----------------------------------+
-| Closed Date                       | The date that the incident was    |
-|                                   | closed. Do not enter a value in   |
-|                                   | this field if the incident is not |
-|                                   | in a closed status.               |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| **% Complete**                    | The completion percentage of the  |
-|                                   | incident                          |
-+-----------------------------------+-----------------------------------+
-| Detected Release                  | The release that this incident    |
-|                                   | was found in. Needs to be the ID  |
-|                                   | of the release (e.g. release      |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| Resolved Release                  | The release that this incident is |
-|                                   | scheduled to be fixed in. Needs   |
-|                                   | to be the ID of the release (e.g. |
-|                                   | release RL00005 would be entered  |
-|                                   | as just 5)                        |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| Resolution                        | The description of a              |
-|                                   | resolution/comment that should be |
-|                                   | appended to the incident. If you  |
-|                                   | want it formatted, you need to    |
-|                                   | add HTML tags such as \<b\> for   |
-|                                   | bold. *Note that this field       |
-|                                   | always appends, so if you want to |
-|                                   | add two comments, just enter the  |
-|                                   | first value and click \[Export\], |
-|                                   | then replace it with the second   |
-|                                   | value and click \[Export\]*       |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2007 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Detected Release                  | The release that this incident    |
-|                                   | was found in. Needs to be the ID  |
-|                                   | of the release (e.g. release      |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5)                                |
-+-----------------------------------+-----------------------------------+
-| Resolved Release                  | The release that this incident is |
-|                                   | scheduled to be fixed in. Needs   |
-|                                   | to be the ID of the release (e.g. |
-|                                   | release RL00005 would be entered  |
-|                                   | as just 5)                        |
-+-----------------------------------+-----------------------------------+
-| Est. Effort                       | The estimated effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Act. Effort                       | The actual effort associated with |
-|                                   | the task (entered as a whole      |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Rem. Effort                       | The remaining effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| Resolution                        | The description of a              |
-|                                   | resolution/comment that should be |
-|                                   | appended to the incident. If you  |
-|                                   | want it formatted, you need to    |
-|                                   | add HTML tags such as \<b\> for   |
-|                                   | bold. *Note that this field       |
-|                                   | always appends, so if you want to |
-|                                   | add two comments, just enter the  |
-|                                   | first value and click \[Export\], |
-|                                   | then replace it with the second   |
-|                                   | value and click \[Export\]*       |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Detected Release                  | The release/iteration that this   |
-|                                   | incident was found in. Needs to   |
-|                                   | be the version number of the      |
-|                                   | release (e.g. 1.0.1.1)            |
-+-----------------------------------+-----------------------------------+
-| Resolved Release                  | The release/iteration that this   |
-|                                   | is planned to be fixed in. Needs  |
-|                                   | to be the version number of the   |
-|                                   | release (e.g. 1.0.1.1)            |
-+-----------------------------------+-----------------------------------+
-| Components                        | This should be a comma-separated  |
-|                                   | list of the Name of the           |
-|                                   | Components the incident is        |
-|                                   | assigned-to.                      |
-|                                   |                                   |
-|                                   | E.g. Component 1, Component 2     |
-+-----------------------------------+-----------------------------------+
-| Est. Effort                       | The estimated effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Act. Effort                       | The actual effort associated with |
-|                                   | the task (entered as a whole      |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Rem. Effort                       | The remaining effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
-| Comment                           | The description of a comment that |
-|                                   | should be appended to the         |
-|                                   | incident. If you want it          |
-|                                   | formatted, you need to add HTML   |
-|                                   | tags such as \<b\> for bold.      |
-|                                   | *Note that this field always      |
-|                                   | appends, so if you want to add    |
-|                                   | two comments, just enter the      |
-|                                   | first value and click \[Export\], |
-|                                   | then replace it with the second   |
-|                                   | value and click \[Export\]*       |
-+-----------------------------------+-----------------------------------+
+| **Incident Description**          | The long description of the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold       |
+| **Type**                          | The type of the incident. It needs to be one of the values from the dropdown list.           |
+| **Status**                        | The status of the incident. It needs to be one of the values from the dropdown list.           |
+| Priority                          | The priority of the incident. It needs to be one of the values from the dropdown list.           |
+| Severity                          | The severity of the incident. It needs to be one of the values from the dropdown list.           |
+| Detector                          | The user that found the incident. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5). If left blank, it will default to the user logged in through the Add-In.          |
+| Owner                             | The user that the incident should be assigned to Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)       |
+| Detected Date                     | The date that the incident was found. If this field is not populated, the current date is used instead                      |
+| Closed Date                       | The date that the incident was closed. Do not enter a value in this field if the incident is not in a closed status.               |
+| **MS-Excel 2003 Add-In Specific Fields**                          |                                   |
+| **% Complete**                    | The completion percentage of the incident                          |
+| Detected Release                  | The release that this incident was found in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                                |
+| Resolved Release                  | The release that this incident is scheduled to be fixed in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                        |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
+| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
+| **MS-Excel 2007 Add-In Specific Fields**                          |                                   |
+| Detected Release                  | The release that this incident was found in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                                |
+| Resolved Release                  | The release that this incident is scheduled to be fixed in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                        |
+| Est. Effort                       | The estimated effort associated with the task (entered as a whole number of minutes)                |
+| Act. Effort                       | The actual effort associated with number of minutes)                |
+| Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
+| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
+| **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
+| Detected Release                  | The release/iteration that this incident was found in. Needs to be the version number of the release (e.g. 1.0.1.1)            |
+| Resolved Release                  | The release/iteration that this is planned to be fixed in. Needs to be the version number of the release (e.g. 1.0.1.1)            |
+| Components                        | This should be a comma-separated list of the Name of the Components the incident is assigned-to. E.g. Component 1, Component 2     |
+| Est. Effort                       | The estimated effort associated with the task (entered as a whole number of minutes)                |
+| Act. Effort                       | The actual effort associated with the task (entered as a whole number of minutes)                |
+| Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br>  -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br>  -   **Text** -- enter the text, include HTML tags if rich-text            <br> -   **Decimal** -- enter the number (e.g. 1.0)   <br> -   **Integer** -- enter the number (e.g. 2)  <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user  <br>  -   **Boolean** -- Enter either "True" or "False"             |
+| Comment                           | The description of a comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -1178,170 +463,37 @@ and the new items will be added to your instance of SpiraTeam.
 The various columns that can be imported, and the rules for entering
 data are listed below:
 
-+-----------------------------------+-----------------------------------+
-| Task \#                           | Stores the ID of the task. Should |
-|                                   | be left blank for new items being |
-|                                   | added to SpiraTeam                |
-+===================================+===================================+
+
+| **Field name**                    | **Description**                   |
+|-----------------------------------|-----------------------------------|
+| Task \#                           | Stores the ID of the task. Should be left blank for new items being added to SpiraTeam                |
 | **Task Name**                     | The name of the task.             |
-+-----------------------------------+-----------------------------------+
-| Task Description                  | The long description of the task. |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold                    |
-+-----------------------------------+-----------------------------------+
-| **Status**                        | The status of the task. It needs  |
-|                                   | to be one of the values from the  |
-|                                   | dropdown list.                    |
-+-----------------------------------+-----------------------------------+
-| Priority                          | The priority of the task. It      |
-|                                   | needs to be one of the values     |
-|                                   | from the dropdown list.           |
-+-----------------------------------+-----------------------------------+
-| Requirement                       | The requirement that this task    |
-|                                   | should be associated with. Needs  |
-|                                   | to be the ID of the requirement   |
-|                                   | (e.g. requirement RQ00005 would   |
-|                                   | be entered as just 5).            |
-+-----------------------------------+-----------------------------------+
-| Owner                             | The user that the task should be  |
-|                                   | assigned to Needs to be the ID of |
-|                                   | the user (e.g. user US00005 would |
-|                                   | be entered as just 5)             |
-+-----------------------------------+-----------------------------------+
-| Start Date                        | The date that work on the task is |
-|                                   | scheduled to start                |
-+-----------------------------------+-----------------------------------+
-| End Date                          | The date that work on the task is |
-|                                   | scheduled to end                  |
-+-----------------------------------+-----------------------------------+
-| Est. Effort                       | The estimated effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Act. Effort                       | The actual effort associated with |
-|                                   | the task (entered as a whole      |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2003 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| **% Complete**                    | The completion percentage of the  |
-|                                   | task                              |
-+-----------------------------------+-----------------------------------+
-| Release \#                        | The release/iteration that this   |
-|                                   | task is scheduled for. Needs to   |
-|                                   | be the ID of the                  |
-|                                   | release/iteration (e.g. release   |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5).                               |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
+| Task Description                  | The long description of the task. If you want it formatted, you need to add HTML tags such as \<b\> for bold                    |
+| **Status**                        | The status of the task. It needs to be one of the values from the dropdown list.                    |
+| Priority                          | The priority of the task. It needs to be one of the values from the dropdown list.           |
+| Requirement                       | The requirement that this task should be associated with. Needs to be the ID of the requirement (e.g. requirement RQ00005 would be entered as just 5).            |
+| Owner                             | The user that the task should be assigned to Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)             |
+| Start Date                        | The date that work on the task is scheduled to start                |
+| End Date                          | The date that work on the task is scheduled to end                  |
+| Est. Effort                       | The estimated effort associated with the task (entered as a whole number of minutes)                |
+| Act. Effort                       | The actual effort associated with the task (entered as a whole number of minutes)                |
+| **MS-Excel 2003 Add-In Specific Fields**                          |                                   |
+| **% Complete**                    | The completion percentage of the task                              |
+| Release \#                        | The release/iteration that this task is scheduled for. Needs to be the ID of the release/iteration (e.g. release RL00005 would be entered as just 5).                               |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
 | **MS-Excel 2007 Add-In Specific   |                                   |
 | Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Rem. Effort                       | The remaining effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Release \#                        | The release/iteration that this   |
-|                                   | task is scheduled for. Needs to   |
-|                                   | be the ID of the                  |
-|                                   | release/iteration (e.g. release   |
-|                                   | RL00005 would be entered as just  |
-|                                   | 5).                               |
-+-----------------------------------+-----------------------------------+
-| TEXT-01 -- TEXT-10                | The ten (10) custom text          |
-|                                   | properties available in the       |
-|                                   | project                           |
-+-----------------------------------+-----------------------------------+
-| LIST-01 -- LIST-10                | The ten (10) drop-down list       |
-|                                   | properties available in the       |
-|                                   | project. You need to enter the ID |
-|                                   | value of the custom property not  |
-|                                   | the display name. E.g. if you     |
-|                                   | have a custom property with ID =  |
-|                                   | PV00005 you would enter just 5 in |
-|                                   | these boxes.                      |
-+-----------------------------------+-----------------------------------+
-| **MS-Excel 2010 Add-In Specific   |                                   |
-| Fields**                          |                                   |
-+-----------------------------------+-----------------------------------+
-| Type                              | The type of the task. It needs to |
-|                                   | be one of the values from the     |
-|                                   | dropdown list.                    |
-+-----------------------------------+-----------------------------------+
-| Rem. Effort                       | The remaining effort associated   |
-|                                   | with the task (entered as a whole |
-|                                   | number of minutes)                |
-+-----------------------------------+-----------------------------------+
-| Release Version                   | The release/iteration that this   |
-|                                   | task is scheduled for. Needs to   |
-|                                   | be the version number of the      |
-|                                   | release (e.g. 1.0.1.1)            |
-+-----------------------------------+-----------------------------------+
-| CUS-01 -- CUS-30                  | The thirty (30) custom fields     |
-|                                   | defined in the project. The value |
-|                                   | entered depends on the type of    |
-|                                   | custom property:                  |
-|                                   |                                   |
-|                                   | -   **List** -- provide the       |
-|                                   |     numeric ID of the custom list |
-|                                   |     value (e.g. PV00005 would be  |
-|                                   |     entered as just "5")          |
-|                                   |                                   |
-|                                   | -   **MultiList** -- provide a    |
-|                                   |     comma-separated list of the   |
-|                                   |     numeric IDs of the custom     |
-|                                   |     list values (e.g. PV00005 and |
-|                                   |     PV00003 would be entered as   |
-|                                   |     just "5,3")                   |
-|                                   |                                   |
-|                                   | -   **Text** -- enter the text,   |
-|                                   |     include HTML tags if          |
-|                                   |     rich-text                     |
-|                                   |                                   |
-|                                   | -   **Decimal** -- enter the      |
-|                                   |     number (e.g. 1.0)             |
-|                                   |                                   |
-|                                   | -   **Integer** -- enter the      |
-|                                   |     number (e.g. 2)               |
-|                                   |                                   |
-|                                   | -   **Date** -- enter the number  |
-|                                   |     in the current local time     |
-|                                   |     format (e.g. m/d/yyyy for the |
-|                                   |     US, d/m/yyyy for Europe)      |
-|                                   |                                   |
-|                                   | -   **User** -- enter the ID of   |
-|                                   |     the user                      |
-|                                   |                                   |
-|                                   | -   **Boolean** -- Enter either   |
-|                                   |     "True" or "False"             |
-+-----------------------------------+-----------------------------------+
-| Comment                           | The description of a comment that |
-|                                   | should be appended to the task.   |
-|                                   | If you want it formatted, you     |
-|                                   | need to add HTML tags such as     |
-|                                   | \<b\> for bold. Note that this    |
-|                                   | field always appends, so if you   |
-|                                   | want to add two comments, just    |
-|                                   | enter the first value and click   |
-|                                   | \[Export\], then replace it with  |
-|                                   | the second value and click        |
-|                                   | \[Export\]                        |
-+-----------------------------------+-----------------------------------+
+| Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
+| Release \#                        | The release/iteration that this task is scheduled for. Needs to be the ID of the release/iteration (e.g. release RL00005 would be entered as just 5).                               |
+| TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
+| LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
+| **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
+| Type                              | The type of the task. It needs to be one of the values from the dropdown list.                    |
+| Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
+| Release Version                   | The release/iteration that this  task is scheduled for. Needs to  be the version number of the release (e.g. 1.0.1.1)            |
+| CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text                  <br>  -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
+| Comment                           | The description of a comment that should be appended to the task. If you want it formatted, you need to add HTML tags such as \<b\> for bold. Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]                        |
 
 Note: the columns that are required are listed in **bold** type.
 
