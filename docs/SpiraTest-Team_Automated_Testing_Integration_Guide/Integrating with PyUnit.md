@@ -46,6 +46,7 @@ PyUnit test fixtures with SpiraTest.
 The typical code structure for a PyUnit test fixture coded in Python is
 as follows:
 
+```python
 import random
 
 import unittest
@@ -90,6 +91,7 @@ suite =
 unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
 
 testResult = unittest.TextTestRunner(verbosity=2).run(suite)
+```
 
 The Python class is marked as a PyUnit test fixture by inheriting from
 the unittest.TestCase base class, and the individual test methods are
@@ -113,6 +115,7 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PyUnit test fixture for SpiraTest to
 record the PyUnit test run are illustrated below:
 
+```python
 import random
 
 import unittest
@@ -182,6 +185,7 @@ spiraTestExtension.password = \"PleaseChange\"
 
 spiraTestExtension.recordResults(TestSequenceFunctions, testResult,
 releaseId, testSetId)
+```
 
 Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
@@ -253,6 +257,6 @@ error was, together with the associated code stack-trace:
 
 Congratulations... You are now able to run PyUnit automated tests and
 have the results be recorded within SpiraTest. The sample test fixture
-[testsequencefunctions.py]{.underline} is provided with the
+testsequencefunctions.py is provided with the
 installation.
 

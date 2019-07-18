@@ -83,7 +83,7 @@ Please enter the following information into the dialog box:
 
 -   **Spira URL:** Please enter the web address that you use to access
 SpiraTeam® in your browser. This is usually of the form
-[http://\<hostname\>/SpiraTeam]{.underline}. Make sure that you
+http://\<hostname\>/SpiraTeam. Make sure that you
 remove any suffixes from the address (e.g. Default.aspx).
 
 -   **User Name:** Please enter the username that you use for logging in

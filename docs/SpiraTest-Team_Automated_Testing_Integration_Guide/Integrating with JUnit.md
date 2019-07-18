@@ -31,7 +31,7 @@ section will assume that you are using the pre-compiled JAR-file.
 
 Once you have downloaded the Zip archive, you need to uncompress it into
 a folder of your choice on your local system. Assuming that you
-uncompressed it to the [C:\\Program Files\\JUnit Extension]{.underline}
+uncompressed it to the C:\\Program Files\\JUnit Extension
 folder, you should have the following folder structure created:
 
 C:\\Program Files\\JUnit Extension
@@ -73,76 +73,78 @@ JUnit test fixtures with SpiraTest.
 The typical code structure for a JUnit test fixture coded in Java is as
 follows:
 
-**package** com.inflectra.spiratest.addons.junitextension.samples;\
-\
-**import** org.junit.jupiter.api.BeforeEach;\
-**import** org.junit.jupiter.api.Test;\
-**import static** org.junit.jupiter.api.Assertions.assertEquals;\
-**import static** org.junit.jupiter.api.Assertions.assertTrue;\
-\
-\
-*/\*\*\
-\* Some simple tests using the ability to return results back to
-SpiraTest\
-\*\
-\* **\@author** Inflectra Corporation\
-\* **\@version** 4.0.0\
-\*/\
-***public class** SimpleTest {\
-**protected int** fValue1;\
-**protected int** fValue2;\
-\
-*/\*\*\
-\* Sets up the unit test\
-\*/\
-*\@BeforeEach\
-**public void** setUp() {\
-fValue1 = 2;\
-fValue2 = 3;\
-}\
-\
-*/\*\*\
-\* Tests the addition of the two values\
-\*/\
-*\@Test\
-**public void** testAdd() {\
-**double** result = fValue1 + fValue2;\
-\
-*// forced failure result == 5\
-*assertTrue(result == 6);\
-}\
-\
-*/\*\*\
-\* Tests division by zero\
-\*/\
-*\@Test\
-**public void** testDivideByZero() {\
-**int** zero = 0;\
-**int** result = 8 / zero;\
-}\
-\
-*/\*\*\
-\* Tests two equal values\
-\*/\
-*\@Test\
-**public void** testEquals() {\
-assertEquals(12, 12);\
-assertEquals(12L, 12L);\
-assertEquals(**new** Long(12), **new** Long(12));\
-\
-assertEquals(12, 13, **\"Size\"**);\
-assertEquals(12.0, 11.99, 0.0, **\"Capacity\"**);\
-}\
-\
-*/\*\*\
-\* Tests success\
-\*/\
-*\@Test\
-**public void** testSuccess() {\
-*//Successful test\
-*assertEquals(12, 12);\
-}\
+```Java
+package com.inflectra.spiratest.addons.junitextension.samples;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ *
+ * @author Inflectra Corporation
+ * @version 4.0.0
+ */
+public class SimpleTest {
+    protected int fValue1;
+    protected int fValue2;
+
+    /**
+     * Sets up the unit test
+     */
+    @BeforeEach
+    public void setUp() {
+        fValue1 = 2;
+        fValue2 = 3;
+    }
+
+    /**
+     * Tests the addition of the two values
+     */
+    @Test
+    public void testAdd() {
+        double result = fValue1 + fValue2;
+
+        // forced failure result == 5
+        assertTrue(result == 6);
+    }
+
+    /**
+     * Tests division by zero
+     */
+    @Test
+    public void testDivideByZero() {
+        int zero = 0;
+        int result = 8 / zero;
+    }
+
+    /**
+     * Tests two equal values
+     */
+    @Test
+    public void testEquals() {
+        assertEquals(12, 12);
+        assertEquals(12L, 12L);
+        assertEquals(new Long(12), new Long(12));
+
+        assertEquals(12, 13, "Size");
+        assertEquals(12.0, 11.99, 0.0, "Capacity");
+    }
+
+    /**
+     * Tests success
+     */
+    @Test
+    public void testSuccess() {
+        //Successful test
+        assertEquals(12, 12);
+    }
 }
+
+```
 
 The Java class is marked as a JUnit test fixture by applying the
 \@BeforeEach attribute to the setup method, and the \@Test attribute to
@@ -165,100 +167,102 @@ and therefore have no defined test steps. In either case, the changes
 that need to be made to the JUnit test fixture for SpiraTest to record
 the JUnit test run are illustrated below:
 
-**package** com.inflectra.spiratest.addons.junitextension.samples;\
-\
-**import** com.inflectra.spiratest.addons.junitextension.\*;\
-\
-**import** org.junit.jupiter.api.BeforeEach;\
-**import** org.junit.jupiter.api.Test;\
-**import static** org.junit.jupiter.api.Assertions.assertEquals;\
-**import static** org.junit.jupiter.api.Assertions.assertTrue;\
-\
-\
-*/\*\*\
-\* Some simple tests using the ability to return results back to
-SpiraTest\
-\*\
-\* **\@author** Inflectra Corporation\
-\* **\@version** 4.0.0\
-\*/\
-*\@SpiraTestConfiguration(\
-*//following are REQUIRED\
-*url = **\"http://doctor/SpiraPlan\"**,\
-login = **\"fredbloggs\"**,\
-rssToken **= \"{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}\",**\
-projectId = 1,\
-*//following are OPTIONAL\
-*releaseId = 7,\
-testSetId = 1\
-)\
-\
-**public class** SimpleTest {\
-**protected int** fValue1;\
-**protected int** fValue2;\
-\
-*/\*\*\
-\* Sets up the unit test\
-\*/\
-*\@BeforeEach\
-**public void** setUp() {\
-fValue1 = 2;\
-fValue2 = 3;\
-}\
-\
-*/\*\*\
-\* Tests the addition of the two values\
-\*/\
-*\@Test\
-\@SpiraTestCase(testCaseId = 22)\
-**public void** testAdd() {\
-**double** result = fValue1 + fValue2;\
-\
-*// forced failure result == 5\
-*assertTrue(result == 6);\
-}\
-\
-*/\*\*\
-\* Tests division by zero\
-\*/\
-*\@Test\
-\@SpiraTestCase(testCaseId = 22)\
-**public void** testDivideByZero() {\
-**int** zero = 0;\
-**int** result = 8 / zero;\
-}\
-\
-*/\*\*\
-\* Tests two equal values\
-\*/\
-*\@Test\
-\@SpiraTestCase(testCaseId = 22)\
-**public void** testEquals() {\
-assertEquals(12, 12);\
-assertEquals(12L, 12L);\
-assertEquals(**new** Long(12), **new** Long(12));\
-\
-assertEquals(12, 13, **\"Size\"**);\
-assertEquals(12.0, 11.99, 0.0, **\"Capacity\"**);\
-}\
-\
-*/\*\*\
-\* Tests success\
-\*/\
-*\@Test\
-\@SpiraTestCase(testCaseId = 22)\
-**public void** testSuccess() {\
-*//Successful test\
-*assertEquals(12, 12);\
-}\
+```Java
+package com.inflectra.spiratest.addons.junitextension.samples;
+
+import com.inflectra.spiratest.addons.junitextension.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ *
+ * @author Inflectra Corporation
+ * @version 4.0.0
+ */
+@SpiraTestConfiguration(
+        //following are REQUIRED
+        url = "http://doctor/SpiraPlan",
+        login = "fredbloggs",
+        rssToken = "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}",
+        projectId = 1,
+        //following are OPTIONAL
+        releaseId = 7,
+        testSetId = 1
+)
+
+public class SimpleTest {
+    protected int fValue1;
+    protected int fValue2;
+
+    /**
+     * Sets up the unit test
+     */
+    @BeforeEach
+    public void setUp() {
+        fValue1 = 2;
+        fValue2 = 3;
+    }
+
+    /**
+     * Tests the addition of the two values
+     */
+    @Test
+    @SpiraTestCase(testCaseId = 22)
+    public void testAdd() {
+        double result = fValue1 + fValue2;
+
+        // forced failure result == 5
+        assertTrue(result == 6);
+    }
+
+    /**
+     * Tests division by zero
+     */
+    @Test
+    @SpiraTestCase(testCaseId = 22)
+    public void testDivideByZero() {
+        int zero = 0;
+        int result = 8 / zero;
+    }
+
+    /**
+     * Tests two equal values
+     */
+    @Test
+    @SpiraTestCase(testCaseId = 22)
+    public void testEquals() {
+        assertEquals(12, 12);
+        assertEquals(12L, 12L);
+        assertEquals(new Long(12), new Long(12));
+
+        assertEquals(12, 13, "Size");
+        assertEquals(12.0, 11.99, 0.0, "Capacity");
+    }
+
+    /**
+     * Tests success
+     */
+    @Test
+    @SpiraTestCase(testCaseId = 22)
+    public void testSuccess() {
+        //Successful test
+        assertEquals(12, 12);
+    }
 }
+```
+
 
 The overall class is marked with a new \@SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
 **URL** - The URL to the instance of SpiraTest being accessed. This
-needs to start with [http://]{.underline} or [https://]{.underline}.
+needs to start with http:// or https://.
 
 **Login** - A valid username for the instance of SpiraTest.
 
@@ -349,7 +353,7 @@ section will assume that you are using the pre-compiled JAR-file.
 
 Once you have downloaded the Zip archive, you need to uncompress it into
 a folder of your choice on your local system. Assuming that you
-uncompressed it to the [C:\\Program Files\\JUnit Extension]{.underline}
+uncompressed it to the C:\\Program Files\\JUnit Extension
 folder, you should have the following folder structure created:
 
 C:\\Program Files\\JUnit Extension
@@ -391,187 +395,113 @@ JUnit test fixtures with SpiraTest.
 The typical code structure for a JUnit test fixture coded in Java is as
 follows:
 
+```Java
 package com.inflectra.spiratest.addons.junitextension.samples;
 
-import static org.junit.Assert.\*;
-
+import static org.junit.Assert.*;
 import junit.framework.JUnit4TestAdapter;
-
 import org.junit.Before;
-
 import org.junit.Test;
+import org.junit.runner.*;
+import org.junit.runner.notification.*;
 
-import org.junit.runner.\*;
+import java.util.*;
 
-import org.junit.runner.notification.\*;
-
-import java.util.\*;
-
-/\*\*
-
-\* Some simple tests using JUnit 4
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
+/**
+ * Some simple tests using JUnit 4
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
 public class SimpleTest
-
 {
+	protected int fValue1;
+	protected int fValue2;
 
-protected int fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	@Before
+	public void setUp()
+	{
+		fValue1= 2;
+		fValue2= 3;
+	}
 
-protected int fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	@Test
+	public void testAdd()
+	{
+		double result = fValue1 + fValue2;
 
-/\*\*
+		// forced failure result == 5
+		assertTrue (result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+	@Test
+	public void testDivideByZero()
+	{
+		int zero = 0;
+		int result = 8 / zero;
+		result++; // avoid warning for not using result
+	}
 
-\*/
+	/**
+	 * Tests two equal values
+	 */
+	@Test
 
-\@Before
+	public void testEquals()
+	{
+		assertEquals(12, 12);
+		assertEquals(12L, 12L);
+		assertEquals(new Long(12), new Long(12));
 
-public void setUp()
+		assertEquals("Size", 12, 13);
+		assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-{
+	/**
+	 * Tests success
+	 */
+	@Test
+	public void testSuccess()
+	{
+		//Successful test
+		assertEquals(12, 12);
+	}
 
-fValue1= 2;
+	/**
+	 * Entry point for command line execution
+	 * 
+	 * @param args	The command line arguments
+	 */
+	public static void main (String[] args)
+	{
+		//Instantiate the JUnit core
+		JUnitCore core = new JUnitCore();
 
-fValue2= 3;
+		//Finally run the test fixture
+		core.run (SimpleTest.class);
+	}
 
+	/**
+	 * Entry point for JUnit 4.x runners
+	 * 
+	 * @return		Handle to the test framework
+	 */
+	public static junit.framework.Test suite() 
+	{
+		return new JUnit4TestAdapter(SimpleTest.class);
+	}
 }
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-\@Test
-
-public void testAdd()
-
-{
-
-double result = fValue1 + fValue2;
-
-// forced failure result == 5
-
-assertTrue (result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-\@Test
-
-public void testDivideByZero()
-
-{
-
-int zero = 0;
-
-int result = 8 / zero;
-
-result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-\@Test
-
-public void testEquals()
-
-{
-
-assertEquals(12, 12);
-
-assertEquals(12L, 12L);
-
-assertEquals(new Long(12), new Long(12));
-
-assertEquals(\"Size\", 12, 13);
-
-assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
-}
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-\@Test
-
-public void testSuccess()
-
-{
-
-//Successful test
-
-assertEquals(12, 12);
-
-}
-
-/\*\*
-
-\* Entry point for command line execution
-
-\*
-
-\* \@param args The command line arguments
-
-\*/
-
-public static void main (String\[\] args)
-
-{
-
-//Instantiate the JUnit core
-
-JUnitCore core = new JUnitCore();
-
-//Finally run the test fixture
-
-core.run (SimpleTest.class);
-
-}
-
-/\*\*
-
-\* Entry point for JUnit 4.x runners
-
-\*
-
-\* \@return Handle to the test framework
-
-\*/
-
-public static junit.framework.Test suite()
-
-{
-
-return new JUnit4TestAdapter(SimpleTest.class);
-
-}
-
-}
+```
 
 The Java class is marked as a JUnit test fixture by applying the
 \@Before attribute to the setup method, and the \@Test attribute to each
@@ -594,225 +524,136 @@ and therefore have no defined test steps. In either case, the changes
 that need to be made to the JUnit test fixture for SpiraTest to record
 the JUnit test run are illustrated below:
 
+```Java
 package com.inflectra.spiratest.addons.junitextension.samples;
 
-import static org.junit.Assert.\*;
-
+import static org.junit.Assert.*;
 import junit.framework.JUnit4TestAdapter;
-
 import org.junit.Before;
-
 import org.junit.Test;
+import org.junit.runner.*;
+import org.junit.runner.notification.*;
 
-import org.junit.runner.\*;
+import com.inflectra.spiratest.addons.junitextension.*;
 
-import org.junit.runner.notification.\*;
+import java.util.*;
 
-import com.inflectra.spiratest.addons.junitextension.\*;
-
-import java.util.\*;
-
-/\*\*
-
-\* Some simple tests using the ability to return results back to
-SpiraTest
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-\@SpiraTestConfiguration(
-
-url=\"http://sandman/SpiraTest\",
-
-login=\"fredbloggs\",
-
-password=\"fredbloggs\",
-
-projectId=1,
-
-releaseId=1,
-
-testSetId=1
-
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+@SpiraTestConfiguration(
+	url="http://sandman/SpiraTest",
+	login="fredbloggs",
+	password="fredbloggs",
+	projectId=1,
+	releaseId=1,
+	testSetId=1
 )
-
 public class SimpleTest
-
 {
+	protected int fValue1;
+	protected int fValue2;
 
-protected int fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	@Before
+	public void setUp()
+	{
+		fValue1= 2;
+		fValue2= 3;
+	}
 
-protected int fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	@Test
+	@SpiraTestCase(testCaseId=5)
+	public void testAdd()
+	{
+		double result = fValue1 + fValue2;
 
-/\*\*
+		// forced failure result == 5
+		assertTrue (result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+	@Test
+	@SpiraTestCase(testCaseId=5)
+	public void testDivideByZero()
+	{
+		int zero = 0;
+		int result = 8 / zero;
+		result++; // avoid warning for not using result
+	}
 
-\*/
+	/**
+	 * Tests two equal values
+	 */
+	@Test
+	@SpiraTestCase(testCaseId=6)
+	public void testEquals()
+	{
+		assertEquals(12, 12);
+		assertEquals(12L, 12L);
+		assertEquals(new Long(12), new Long(12));
 
-\@Before
+		assertEquals("Size", 12, 13);
+		assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-public void setUp()
+	/**
+	 * Tests success
+	 */
+	@Test
+	@SpiraTestCase(testCaseId=6)
+	public void testSuccess()
+	{
+		//Successful test
+		assertEquals(12, 12);
+	}
 
-{
+	/**
+	 * Entry point for command line execution
+	 * 
+	 * @param args	The command line arguments
+	 */
+	public static void main (String[] args)
+	{
+		//Instantiate the JUnit core
+		JUnitCore core = new JUnitCore();
 
-fValue1= 2;
+		//Add the custom SpiraTest listener
+		core.addListener(new SpiraTestListener());
 
-fValue2= 3;
+		//Finally run the test fixture
+		core.run (SimpleTest.class);
+	}
 
+	/**
+	 * Entry point for JUnit 4.x runners
+	 * 
+	 * @return		Handle to the test framework
+	 */
+	public static junit.framework.Test suite() 
+	{
+		return new JUnit4TestAdapter(SimpleTest.class);
+	}
 }
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-\@Test
-
-\@SpiraTestCase(testCaseId=5)
-
-public void testAdd()
-
-{
-
-double result = fValue1 + fValue2;
-
-// forced failure result == 5
-
-assertTrue (result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-\@Test
-
-\@SpiraTestCase(testCaseId=5)
-
-public void testDivideByZero()
-
-{
-
-int zero = 0;
-
-int result = 8 / zero;
-
-result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-\@Test
-
-\@SpiraTestCase(testCaseId=6)
-
-public void testEquals()
-
-{
-
-assertEquals(12, 12);
-
-assertEquals(12L, 12L);
-
-assertEquals(new Long(12), new Long(12));
-
-assertEquals(\"Size\", 12, 13);
-
-assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
-}
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-\@Test
-
-\@SpiraTestCase(testCaseId=6)
-
-public void testSuccess()
-
-{
-
-//Successful test
-
-assertEquals(12, 12);
-
-}
-
-/\*\*
-
-\* Entry point for command line execution
-
-\*
-
-\* \@param args The command line arguments
-
-\*/
-
-public static void main (String\[\] args)
-
-{
-
-//Instantiate the JUnit core
-
-JUnitCore core = new JUnitCore();
-
-//Add the custom SpiraTest listener
-
-core.addListener(new SpiraTestListener());
-
-//Finally run the test fixture
-
-core.run (SimpleTest.class);
-
-}
-
-/\*\*
-
-\* Entry point for JUnit 4.x runners
-
-\*
-
-\* \@return Handle to the test framework
-
-\*/
-
-public static junit.framework.Test suite()
-
-{
-
-return new JUnit4TestAdapter(SimpleTest.class);
-
-}
-
-}
+```
 
 The overall class is marked with a new \@SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
 **URL** - The URL to the instance of SpiraTest being accessed. This
-needs to start with [http://]{.underline} or [https://]{.underline}.
+needs to start with http:// or https://.
 
 **Login** - A valid username for the instance of SpiraTest.
 

@@ -119,21 +119,22 @@ bug-tracking tool. Right-click on this link and save the Zip compressed
 folder to the hard-drive of the server where Spira is installed.
 
 Open up the compressed folder and extract the DLL assembly files and
-place them in the [C:\\Program Files (x86)\\SpiraTeam\\Bin]{.underline}
+place them in the C:\\Program Files (x86)\\SpiraTeam\\Bin
 folder (it may be SpiraTest or SpiraPlan depending on which product
 you're running). This folder should already contain the
-[DataSyncService.exe]{.underline} and
-[DataSyncService.exe.config]{.underline} files that are the primary
+DataSyncService.exe and
+DataSyncService.exe.config files that are the primary
 files used for managing the data synchronization between Spira and other
 systems.
 
 ### Configuring the Synchronization Service
 
 To configure the integration service, please open up the
-[DataSyncService.exe.config]{.underline} file located in [C:\\Program
-Files (x86)\\SpiraTeam\\Bin]{.underline} with a text editor such as
+DataSyncService.exe.config file located in C:\\Program
+Files (x86)\\SpiraTeam\\Bin with a text editor such as
 Notepad. Once open, it should look like:
 
+```xml
 \<?xml version=\"1.0\" encoding=\"utf-8\"?\>
 
 \<configuration\>
@@ -199,6 +200,7 @@ requirePermission=\"false\" /\>
 \</applicationSettings\>
 
 \</configuration\>
+```
 
 The sections that need to be verified and possibly changed are marked in
 yellow above. You need to check the following information:
@@ -211,7 +213,7 @@ the number, the longer it will take for data to be synchronized, but the
 lower the network and server overhead.
 
 The base URL to your instance Spira. It is typically of the form
-[http://\<server name\>/SpiraTeam]{.underline}. Make sure that when you
+http://\<server name\>/SpiraTeam. Make sure that when you
 enter this URL on a browser on the server itself, the application login
 page appears.
 

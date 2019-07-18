@@ -240,6 +240,6 @@ stack-trace:
 
 Congratulations... You are now able to run Test::Unit automated tests
 and have the results be recorded within SpiraTest. The sample test suite
-[ts\_examples.rb]{.underline} together with two test cases (tc\_adder
+ts\_examples.rb together with two test cases (tc\_adder
 and tc\_subtracter) is provided with the installation.
 

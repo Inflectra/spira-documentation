@@ -356,7 +356,7 @@ you're using the option to have JIRA also synchronize some issue types
 as requirements, then you'll need to also configure the Requirement
 Importance, Type, Component and Status fields.
 
-[a) Incident Type]{.underline}
+a) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -382,7 +382,7 @@ configuration helper:
 
 
 
-[b) Incident Status]{.underline}
+b) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -416,7 +416,7 @@ configuration helper:
 
 
 
-[c) Incident Priority]{.underline}
+c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -441,7 +441,7 @@ Jira configuration helper:
 
 
 
-[d) Incident Component (Optional)]{.underline}
+d) Incident Component (Optional)
 
 Click on the "Component" hyperlink under Incident Standard Fields to
 bring up the Incident component mapping configuration screen:
@@ -468,7 +468,7 @@ configuration helper:
 
 
 
-[e) Incident Severity (Optional)]{.underline}
+e) Incident Severity (Optional)
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -506,7 +506,7 @@ Fields tab of the Jira Configuration Helper:
 
 
 
-[e) Requirement Status (Optional)]{.underline}
+e) Requirement Status (Optional)
 
 Click on the "Status" hyperlink under Requirement Standard Fields to
 bring up the Requirement status mapping configuration screen:
@@ -531,7 +531,7 @@ configuration helper:
 
 
 
-[f) Requirement Importance (Optional)]{.underline}
+f) Requirement Importance (Optional)
 
 Click on the "Importance" hyperlink under Requirement Standard Fields to
 bring up the Requirement Importance mapping configuration screen:
@@ -556,7 +556,7 @@ Jira configuration helper:
 
 
 
-[g) Requirement Type (Optional)]{.underline}
+g) Requirement Type (Optional)
 
 Click on the "Type" hyperlink under Requirement Standard Fields to bring
 up the Requirement type mapping configuration screen:
@@ -582,7 +582,7 @@ configuration helper:
 
 
 
-[h) Requirement Component (Optional)]{.underline}
+h) Requirement Component (Optional)
 
 Click on the "Component" hyperlink under Requirement Standard Fields to
 bring up the Requirement component mapping configuration screen:
@@ -628,7 +628,7 @@ of mapping that you might want to enter:
 
 
 
-[a) Scalar Custom Properties]{.underline}
+a) Scalar Custom Properties
 
 This refers to custom properties that have a simple user-entered value
 and don't need to have their specific options mapped between SpiraTeam
@@ -658,7 +658,7 @@ Configuration Helper:
 
 
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 This refers to custom properties that are either of type **List** or
 **Multi-List**. Click on the hyperlink of the list custom property under
@@ -692,7 +692,7 @@ custom field value as specified in JIRA:
 
 
 
-[c) JIRA's Resolution Field]{.underline}
+c) JIRA's Resolution Field
 
 If you would like the values of the JIRA '**Resolution'** field to be
 synchronized back to SpiraTeam, then you will need to fill out this
@@ -720,7 +720,7 @@ are configured in JIRA. The external ID can be found by looking at the
 URL inside JIRA which choosing to View/Edit the resolution
 name/description.
 
-[d) JIRA's Environment Field]{.underline}
+d) JIRA's Environment Field
 
 If your instance of JIRA requires that all new issues are submitted with
 an 'Environment' description specified, then you will need to fill out
@@ -741,7 +741,7 @@ All you need to do on this screen is enter the word "**Environment**" in
 the External Key textbox and the data-sync plug-in will know that this
 custom property is mapped to the built-in Environment field in JIRA.
 
-[e) JIRA's Security Level Field]{.underline}
+e) JIRA's Security Level Field
 
 If your instance of JIRA requires that all new issues are submitted with
 a 'Security Level' then you will need to fill out this section. You
@@ -763,7 +763,7 @@ that are configured in JIRA. The external ID can be found by looking at
 the URL inside JIRA which choosing to View/Edit the security level
 name/description.
 
-[f) JIRA's Issue Key Field]{.underline}
+f) JIRA's Issue Key Field
 
 It can be convenient to create a SpiraTeam custom property to store the
 JIRA Issue Key (the ID used to identify an issue in JIRA). This allows

@@ -43,7 +43,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_Subversion_4.png)
 
 
@@ -71,12 +71,12 @@ blank unless specified by support.
 
 -   **Custom 02-04:** These three fields are used to specify the
 **standard Subversion** layout, where there are specific folders
-for the Trunk, Branches and Tags:\
-\
+for the Trunk, Branches and Tags:
+
 ![](img/Integrating_with_Subversion_5.png)
 
 
-\
+
 If you want to use the Branches feature in SpiraTeam, you need
 to populate all three fields:
 
@@ -99,7 +99,7 @@ SubversionProvider listed as an available plug-in.
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the
 SubversionProvider. You will get a screen listing all the same
-configuration settings:\
+configuration settings:
 ![](img/Integrating_with_Subversion_6.png)
 
 
@@ -237,7 +237,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.\
+them under the Associations tab for a revision detail.
 If you forget to add the association during the commit, you can use the
 'Add Association' option within SpiraTeam to add the association after
 the fact.

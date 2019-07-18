@@ -120,7 +120,7 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to Axosoft. This is
-typically something like: [https://mysite.axosoft.com]{.underline}.
+typically something like: https://mysite.axosoft.com.
 
 -   **Login** -- this should be set to the login that you use to access
 Axosoft through its web interface
@@ -137,14 +137,14 @@ when comparing date-time stamps.
 -   **Auto-Map Users** -- This changes the way that the plugin maps
 users in SpiraTeam to those in Axosoft:
 
--   **Auto-Map = True\
+-   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in Axosoft. If this is the case then you
 do not need to perform the user-mapping task outlined in section
 10.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False\
+-   **Auto-Map = False
 **With this setting, users in SpiraTeam and Axosoft are free to
 have different usernames because you specify the corresponding
 Axosoft login for each user as outlined in section 10.2.2.
@@ -203,11 +203,11 @@ To enable this project for data-synchronization with Axosoft, you need
 to enter:
 
 **External Key** -- This should be set to the **name** of the project
-token in Axosoft:\
+token in Axosoft:
 ![](img/Using_Spira_with_Axosoft_14+_161.png)
 
 
-\
+
 If you have a sub-project, you need to include both the parent and
 sub-project names separated by a forward slash (/), e.g.
 MyProject/SubProject1.
@@ -291,7 +291,7 @@ From this screen, you need to click on Priority, Severity and Status in
 turn to configure their values (Axosoft doesn't support different defect
 types):
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -322,7 +322,7 @@ of the status inside Axosoft. If you change the name of a status in
 Axosoft, you'll need to update the value in the data-mapping
 configuration as well.*
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -344,7 +344,7 @@ of the priority inside Axosoft. If you change the name of a priority in
 Axosoft, you'll need to update the value in the data-mapping
 configuration as well.*
 
-[c) Incident Severity]{.underline}
+c) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -385,7 +385,7 @@ that you might want to enter:
 
 
 
-[a) Scalar Custom Properties]{.underline}
+a) Scalar Custom Properties
 
 This refers to custom properties that have a simple user-entered value
 and don't need to have their specific options mapped between SpiraTeam
@@ -407,7 +407,7 @@ You need to lookup the display name of the custom field in Axosoft that
 matches this custom property in SpiraTeam. Once you have entered the id
 of the custom field, click \[Update\].
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.

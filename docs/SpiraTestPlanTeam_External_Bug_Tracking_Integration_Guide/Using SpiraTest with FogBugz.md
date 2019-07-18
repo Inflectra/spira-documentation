@@ -173,7 +173,7 @@ FogBugz:
 
 >
 > Then hover the mouse over the project name. The project ID will be
-> displayed in the URL line as ixProject=X where X is the numeric ID of
+> displayed in the URL line as ixProject-X where X is the numeric ID of
 > the project.
 
 **Active Flag** -- Set this to 'Yes' so that SpiraTeam knows that you
@@ -215,7 +215,7 @@ found in FogBugz by going to Settings \> Users:
 
 
 Then hover the mouse over the user's name. The user ID will be displayed
-in the URL line as ixPerson=X where X is the numeric ID of the user.
+in the URL line as ixPerson-X where X is the numeric ID of the user.
 
 Back in SpiraTeam, click \[Update\] once you've entered the appropriate
 user ID in the mapping box. You should now repeat for the other users
@@ -263,7 +263,7 @@ viewing the releases:
 
 
 Then hover the mouse over the release name. The release ID will be
-displayed in the URL line as ixFixFor=X where X is the numeric ID of the
+displayed in the URL line as ixFixFor-X where X is the numeric ID of the
 release.
 
 ### Configuring the Standard Field Mapping
@@ -281,7 +281,7 @@ Project Mappings" for the FogBugzDataSync plug-in entry:
 From this screen, you need to click on Priority, Status and Type in turn
 to configure their values:
 
-[a) Incident Type]{.underline}
+a) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -296,26 +296,22 @@ provides you with the ability to enter the matching FogBugz case
 category ID for each one. You can map multiple SpiraTeam fields to the
 same FogBugz fields (e.g. Bug and Incident in SpiraTeam are both
 equivalent to Bug in FogBugz), in which case only one of the two values
-can be listed as Primary = Yes as that's the value that's used on the
+can be listed as Primary - Yes as that's the value that's used on the
 reverse synchronization (from FogBugz \> SpiraTeam).
 
 The values for the category ID are fixed for FogBugz and should be:
 
-+-------------------+-----------------+
 | **Category Name** | **Category ID** |
-+===================+=================+
+|-------------------|-----------------|
 | Bug               | > 1             |
-+-------------------+-----------------+
 | Feature           | > 2             |
-+-------------------+-----------------+
 | Inquiry           | > 3             |
-+-------------------+-----------------+
 
 So, depending on which types have been configured in SpiraTeam, you'll
 need to adjust the mapping so that the appropriate SpiraTeam types
 correspond to the equivalent FogBugz category.
 
-[b) Incident Status]{.underline}
+b) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -330,7 +326,7 @@ provides you with the ability to enter the matching FogBugz case status
 ID for each one. You can map multiple SpiraTeam fields to the same
 FogBugz fields (e.g. New, Open, Assigned, and Reopen in SpiraTeam are
 all equivalent to Active in FogBugz), in which case only one of the four
-values can be listed as Primary = Yes as that's the value that's used on
+values can be listed as Primary - Yes as that's the value that's used on
 the reverse synchronization (from FogBugz \> SpiraTeam).
 
 We recommend that you always point the New, Open, Assigned and Reopen
@@ -350,41 +346,25 @@ Guide*).
 
 The status IDs in FogBugz are fixed and should be:
 
-+---------------+-----------------------------+
+
 | **Status ID** | **Status Name**             |
-+---------------+-----------------------------+
+|---------------|-----------------------------|
 | > 1           | Active                      |
-+---------------+-----------------------------+
 | > 2           | Resolved (Fixed)            |
-+---------------+-----------------------------+
 | > 3           | Resolved (Not Reproducible) |
-+---------------+-----------------------------+
 | > 4           | Resolved (Duplicate)        |
-+---------------+-----------------------------+
 | > 5           | Resolved (Postponed)        |
-+---------------+-----------------------------+
 | > 6           | Resolved (Won\'t Fix)       |
-+---------------+-----------------------------+
 | > 7           | Resolved (By Design)        |
-+---------------+-----------------------------+
 | > 8           | Resolved (Implemented)      |
-+---------------+-----------------------------+
 | > 9           | Resolved (Won\'t Implement) |
-+---------------+-----------------------------+
 | > 10          | Resolved (Already Exists)   |
-+---------------+-----------------------------+
 | > 11          | Resolved (Responded)        |
-+---------------+-----------------------------+
 | > 12          | Resolved (Won\'t Respond)   |
-+---------------+-----------------------------+
 | > 13          | Resolved (SPAM)             |
-+---------------+-----------------------------+
 | > 14          | Resolved (Waiting For Info) |
-+---------------+-----------------------------+
 | > 15          | Resolved (Completed)        |
-+---------------+-----------------------------+
 | > 16          | Resolved (Canceled)         |
-+---------------+-----------------------------+
 
 **In addition to these statuses, FogBugz also has the concept of a
 'Closed' case which is one where the case has been assigned to the
@@ -394,7 +374,7 @@ instead of a numeric ID and that will tell the plug-in to associate that
 SpiraTest status with the special condition of a FogBugz case that is
 assigned to the 'closed' user.**
 
-[c) Incident Priority]{.underline}
+c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -408,7 +388,7 @@ The table lists each of the incident priorities available in SpiraTeam
 and provides you with the ability to enter the matching FogBugz priority
 ID for each one. You can map multiple SpiraTeam fields to the same
 FogBugz fields, in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
+as Primary - Yes as that's the value that's used on the reverse
 synchronization (from FogBugz \> SpiraTeam).
 
 Since both applications allow you to customize the priority list, we
@@ -446,7 +426,7 @@ that you typically will want to enter:
 
 
 
-[a) FogBugz's Computer Field]{.underline}
+a) FogBugz's Computer Field
 
 You first need to create an incident custom property in SpiraTeam of
 type 'TEXT' that will be used to store the Computer description within
@@ -465,7 +445,7 @@ All you need to do on this screen is enter the word "Computer" in the
 External Key textbox and the data-sync plug-in will know that this
 custom property is mapped to the built-in Computer field in FogBugz.
 
-[b) FogBugz's Version Field]{.underline}
+b) FogBugz's Version Field
 
 You first need to create an incident custom property in SpiraTeam of
 type 'TEXT' that will be used to store the Version description within
@@ -484,7 +464,7 @@ All you need to do on this screen is enter the word "Version" in the
 External Key textbox and the data-sync plug-in will know that this
 custom property is mapped to the built-in Version field in FogBugz.
 
-[c) FogBugz's Area Field]{.underline}
+c) FogBugz's Area Field
 
 You first need to create an incident custom property in SpiraTeam of
 type 'LIST' that will be used to store the list of project areas within
@@ -517,13 +497,13 @@ Settings \> Projects and viewing the areas in the project:
 
 
 Then hover the mouse over the area name. The area ID will be displayed
-in the URL line as ixArea=X where X is the numeric ID of the area.
+in the URL line as ixArea-X where X is the numeric ID of the area.
 
-[d) FogBugz's Parent Case Field]{.underline}
+d) FogBugz's Parent Case Field
 
 FogBugz lets you link a new case with an existing 'parent' case. You can
 make this possible from within SpiraTeam by simply creating a new custom
-text property and mapping to the special **External Key** = **Parent**:
+text property and mapping to the special **External Key** - **Parent**:
 
 ![](img/Using_SpiraTest_with_FogBugz_121.png)
 

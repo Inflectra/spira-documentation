@@ -62,7 +62,7 @@ purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should be the base URL of the Redmine
 installation. As an example, for the public demo installation of
-Redmine, it would be: [http://demo.redmine.org]{.underline}
+Redmine, it would be: http://demo.redmine.org
 
 -   **Login** -- this should be set to a valid login to the Redmine
 installation -- the login needs to have permissions to create and
@@ -83,14 +83,14 @@ time-zones here.
 -   **Auto-Map Users** -- This changes the way that the plugin maps
 users in SpiraTeam to those in Redmine:
 
--   **Auto-Map = True\
+-   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in Redmine. If this is the case then you
 do not need to perform the user-mapping task outlined in section
 11.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False\
+-   **Auto-Map = False
 **With this setting, users in SpiraTeam and Redmine are free to
 have different usernames because you specify the corresponding
 Redmine name for each user as outlined in section 11.2.2.
@@ -229,7 +229,7 @@ Project Mappings" for the RedmineDataSync plug-in entry:
 From this screen, you need to click on Priority, Type and Status in turn
 to configure their values:
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -247,7 +247,7 @@ to "In Progress" (ID=2) in Redmine), in which case only one of the two
 values can be listed as Primary = Yes as that's the value that's used on
 the reverse synchronization (from Redmine \> SpiraTeam).
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -264,7 +264,7 @@ Redmine fields, in which case only one of the two values can be listed
 as Primary = Yes as that's the value that's used on the reverse
 synchronization (from Redmine \> SpiraTeam).
 
-[c) Incident Type]{.underline}
+c) Incident Type
 
 Incident types in SpiraTeam are equivalent to Trackers in Redmine. Click
 on the "Type" hyperlink under Incident Standard Fields to bring up the
@@ -307,7 +307,7 @@ information for:
 We will consider the two different types of mapping that you might want
 to enter.
 
-[a) Scalar Custom Properties]{.underline}
+a) Scalar Custom Properties
 
 This refers to custom properties that have a simple user-entered value
 and don't need to have their specific options mapped between SpiraTeam
@@ -329,7 +329,7 @@ You need to enter the ID of the custom field in Redmine that matches
 this custom property in SpiraTeam. Once you have entered the id of the
 custom field, click \[Update\].
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 This refers to custom properties that are either of type **List** or
 **Multi-List**. Click on the hyperlink of the list custom property under

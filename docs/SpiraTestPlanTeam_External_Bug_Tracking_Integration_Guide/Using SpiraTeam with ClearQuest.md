@@ -51,11 +51,11 @@ link and save the Zip compressed folder to the hard-drive of the server
 where SpiraTeam is installed.
 
 Open up the compressed folder and extract the
-[ClearQuestDataSync.dll]{.underline} file and place it in the
-[C:\\Program Files\\SpiraTeam\\Bin]{.underline} folder (it may be
+ClearQuestDataSync.dll file and place it in the
+C:\\Program Files\\SpiraTeam\\Bin folder (it may be
 SpiraTest or SpiraPlan depending on which product you're running). This
-folder should already contain the [DataSyncService.exe]{.underline} and
-[DataSyncService.exe.config]{.underline} files that are the primary
+folder should already contain the DataSyncService.exe and
+DataSyncService.exe.config files that are the primary
 files used for managing the data synchronization between SpiraTeam and
 other systems.
 
@@ -75,10 +75,11 @@ be used instead of the server-based DataSyncService.*
 ### Configuring the Service
 
 To configure the integration service, please open up the
-[DataSyncService.exe.config]{.underline} file located in [C:\\Program
-Files\\SpiraTeam\\Bin]{.underline} with a text editor such as Notepad.
+DataSyncService.exe.config file located in C:\\Program
+Files\\SpiraTeam\\Bin with a text editor such as Notepad.
 Once open, it should look like:
 
+```xml
 \<?xml version=\"1.0\" encoding=\"utf-8\"?\>
 
 \<configuration\>
@@ -144,6 +145,7 @@ requirePermission=\"false\" /\>
 \</applicationSettings\>
 
 \</configuration\>
+```
 
 The sections that need to be verified and possibly changed are marked in
 yellow above. You need to check the following information:
@@ -156,7 +158,7 @@ the number, the longer it will take for data to be synchronized, but the
 lower the network and server overhead.
 
 The base URL to your instance SpiraTeam. It is typically of the form
-[http://\<server name\>/SpiraTeam]{.underline}. Make sure that when you
+http://\<server name\>/SpiraTeam. Make sure that when you
 enter this URL on a browser on the server itself, the application login
 page appears.
 
@@ -370,7 +372,7 @@ Project Mappings" for the ClearQuestDataSync plug-in entry:
 From this screen, you need to click on Priority, Severity and Status in
 turn to configure their values:
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -388,7 +390,7 @@ equivalent to Opened in ClearQuest), in which case only one of the two
 values can be listed as Primary = Yes as that's the value that's used on
 the reverse synchronization (from ClearQuest \> SpiraTeam).
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -405,7 +407,7 @@ same ClearQuest fields, in which case only one of the two values can be
 listed as Primary = Yes as that's the value that's used on the reverse
 synchronization (from ClearQuest \> SpiraTeam).
 
-[c) Incident Severity]{.underline}
+c) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -441,7 +443,7 @@ that you might want to enter:
 
 
 
-[a) Text Custom Properties]{.underline}
+a) Text Custom Properties
 
 Click on the hyperlink of the text custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -462,7 +464,7 @@ choosing to View/Edit the Custom Field. The URL will include the
 section: **id=X** where X is the numeric ID of the Custom Field inside
 ClearQuest.*
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.

@@ -89,9 +89,9 @@ integrating with.
 
 -   **Login** -- this should be set to a valid user that has permissions
 to access the TFS installation. The login needs to have permissions
-to create and view work items and iterations within TFS.\
-[Note: Do not include the Windows Active Directory Domain in this
-field if you are using a Windows domain user.]{.underline}
+to create and view work items and iterations within TFS.
+Note: Do not include the Windows Active Directory Domain in this
+field if you are using a Windows domain user.
 
 -   **Password** -- this should be set to the password of the user
 specified above.
@@ -126,21 +126,21 @@ and password that SpiraTeam will use to connect to VSO:
 The remaining fields work differently depending on which version of the
 TFS plugin you are using (2012, 2010 or 2005/2008):
 
-[a) TFS 2012 Plugin]{.underline}
+a) TFS 2012 Plugin
 
 Please fill out the fields as follows:
 
 -   **Auto-Map Users** -- This changes the way the plugin maps users in
 SpiraTeam to those in TFS:
 
--   **Auto-Map = True\
+-   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in TFS. If this is the case then you do
 not need to perform the user-mapping task outlined in section
 5.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False\
+-   **Auto-Map = False
 **With this setting, users in SpiraTeam and TFS are free to have
 different usernames because you specify the corresponding TFS
 name for each user as outlined in 5.2.2.
@@ -179,7 +179,7 @@ work item types that you want to synchronize as SpiraTeam
 Requirements as opposed to Incidents. Normally you would want to
 list at least the TFS "User Story" work item type in this field.
 
-[b) TFS 2010 Plugin]{.underline}
+b) TFS 2010 Plugin
 
 Please fill out the fields as follows:
 
@@ -219,7 +219,7 @@ will be added to that field of the work item.
 -   **Custom 05** -- this is not used by this version of the plugin and
 can be ignored.
 
-[c) TFS 2005/2008 Plugin]{.underline}
+c) TFS 2005/2008 Plugin
 
 Please fill out the fields as follows:
 
@@ -393,9 +393,9 @@ releases.
 
 The TFS Iteration ID is not visible in the TFS user interface, but can
 instead be located by opening up the SQL Server that it's installed on,
-opening the '[TfsWorkItemTracking']{.underline} database (in TFS 2010 it
+opening the 'TfsWorkItemTracking' database (in TFS 2010 it
 will named after your project collection instead) and locating the
-'[TreeNodes]{.underline}' table:
+'TreeNodes' table:
 
 ![](img/Using_SpiraTest_with_MS-TFS_86.png)
 
@@ -421,7 +421,7 @@ Project Mappings" for the MsTfsDataSync plug-in entry:
 From this screen, you need to click on Priority, Severity, Status and
 Type in turn to configure their values:
 
-[a) Incident Type]{.underline}
+a) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -438,7 +438,7 @@ Administration \> Edit Incident Statuses screen you first make all
 incident types inactive except *Risk, Issue* and *Bug* since only those
 types make sense to synchronize with TFS.
 
-[b) Incident Status]{.underline}
+b) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -450,7 +450,7 @@ up the Incident status mapping configuration screen:
 
 The table lists each of the incident statuses available in SpiraTeam and
 provides you with the ability to enter the matching TFS work item
-**[State + Reason]{.underline}** for each one. Since TFS uses separate
+**State + Reason** for each one. Since TFS uses separate
 State (Active, Resolved, Closed) and Reason (Fixed, Duplicate, Not
 Fixed, etc.) codes and SpiraTeam uses a single status code, you need to
 concatenate the TFS State and Reason together with a 'plus' (+) sign so
@@ -471,7 +471,7 @@ switched to the "Active+New" status in TFS which will then be synched
 back to "Open" in SpiraTeam. That way you'll be able to see at a glance
 which incidents have been synched with TFS and those that haven't.
 
-[c) Incident Priority]{.underline}
+c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -487,7 +487,7 @@ value for each one. To make this easier, we recommend that inside the
 Administration \> Edit Incident Priorities screen you first make any
 statuses not used in TFS inactive in SpiraTeam.
 
-[d) Incident Severity (TFS 2012 plugin only)]{.underline}
+d) Incident Severity (TFS 2012 plugin only)
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident Severity mapping configuration screen:
@@ -520,7 +520,7 @@ information for:
 
 
 
-[a) TFS's Area Field]{.underline}
+a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -548,9 +548,9 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the ID of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
-it's installed on, opening the '[TfsWorkItemTracking']{.underline}
+it's installed on, opening the 'TfsWorkItemTracking'
 database (in TFS 2010 and later it will named after your project
-collection instead) and locating the '[TreeNodes]{.underline}' table:
+collection instead) and locating the 'TreeNodes' table:
 
 ![](img/Using_SpiraTest_with_MS-TFS_93.png)
 
@@ -561,7 +561,7 @@ Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
 
-[b) TFS Custom Fields]{.underline}
+b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom
@@ -614,7 +614,7 @@ on the "View Project Mappings" for the MsTfsDataSync plug-in entry:
 From this screen, you need to click on Priority and Status in turn to
 configure their values:
 
-[a) Task Status]{.underline}
+a) Task Status
 
 Click on the "Status" hyperlink under Task Standard Fields to bring up
 the Task status mapping configuration screen:
@@ -637,7 +637,7 @@ Blocked, Completed and Deferred in SpiraTeam are all equivalent to State
 Primary = Yes as that's the value that's used on the reverse
 synchronization (from TFS \> SpiraTeam).
 
-[b) Task Priority (TFS 2012 Plugin Only)]{.underline}
+b) Task Priority (TFS 2012 Plugin Only)
 
 Click on the "Priority" hyperlink under Task Standard Fields to bring up
 the Task Priority mapping configuration screen:
@@ -668,7 +668,7 @@ information for:
 
 
 
-[a) TFS's Area Field]{.underline}
+a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -696,9 +696,9 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the ID of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
-it's installed on, opening the '[TfsWorkItemTracking']{.underline}
+it's installed on, opening the 'TfsWorkItemTracking'
 database (in TFS 2010 and later it will named after your project
-collection instead) and locating the '[TreeNodes]{.underline}' table:
+collection instead) and locating the 'TreeNodes' table:
 
 ![](img/Using_SpiraTest_with_MS-TFS_93.png)
 
@@ -709,7 +709,7 @@ Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
 
-[b) TFS Custom Fields]{.underline}
+b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom
@@ -762,7 +762,7 @@ MsTfsDataSync plug-in entry:
 From this screen, you need to click on Importance and Status in turn to
 configure their values:
 
-[a) Requirement Status]{.underline}
+a) Requirement Status
 
 Click on the "Status" hyperlink under Requirement Standard Fields to
 bring up the Requirement status mapping configuration screen:
@@ -784,7 +784,7 @@ case only one of the values can be listed as Primary = Yes as that's the
 value that's used on the reverse synchronization (from TFS \>
 SpiraTeam).
 
-[b) Requirement Importance]{.underline}
+b) Requirement Importance
 
 Click on the "Importance" hyperlink under Requirement Standard Fields to
 bring up the Requirement Importance mapping configuration screen:
@@ -816,7 +816,7 @@ data-mapping information for:
 
 
 
-[a) TFS's Area Field]{.underline}
+a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -844,9 +844,9 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the ID of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
-it's installed on, opening the '[TfsWorkItemTracking']{.underline}
+it's installed on, opening the 'TfsWorkItemTracking'
 database (in TFS 2010 and later it will named after your project
-collection instead) and locating the '[TreeNodes]{.underline}' table:
+collection instead) and locating the 'TreeNodes' table:
 
 ![](img/Using_SpiraTest_with_MS-TFS_93.png)
 
@@ -857,7 +857,7 @@ Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
 
-[b) TFS Custom Fields]{.underline}
+b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom

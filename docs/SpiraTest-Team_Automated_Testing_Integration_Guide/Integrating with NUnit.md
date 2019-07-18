@@ -32,108 +32,65 @@ properly installed.
 
 For this example, we will be using the following sample test fixture:
 
+```C#
 using NUnit.Framework;
 
 namespace SampleTestSuite
-
 {
-
-\[TestFixture\]
-
-class SampleTest
-
-{
-
-int One, Two;
-
-\[SetUp\]
-
-protected void SetUp()
-
-{
-
-One = 1;
-
-Two = 2;
-
+    [TestFixture]
+    class SampleTest
+    {
+        int One, Two;
+        [SetUp]
+        protected void SetUp()
+        {
+            One = 1;
+            Two = 2;
+        }
+        [Test]
+        public void TestAdd()
+        {
+            int Result = One + Two;
+            //will succeed
+            Assert.AreEqual(Result, 3);
+        }
+        [Test]
+        public void TestMultiply()
+        {
+            int Result = One * Two;
+            //will fail
+            Assert.AreEqual(Result, 3);
+        }
+        [Test]
+        public void TestConcat()
+        {
+            string Result = string.Concat(One, Two);
+            //will fail
+            Assert.AreEqual(Result, "21");
+        }   
+    }
 }
-
-\[Test\]
-
-public void TestAdd()
-
-{
-
-int Result = One + Two;
-
-//will succeed
-
-Assert.AreEqual(Result, 3);
-
-}
-
-\[Test\]
-
-public void TestMultiply()
-
-{
-
-int Result = One \* Two;
-
-//will fail
-
-Assert.AreEqual(Result, 3);
-
-}
-
-\[Test\]
-
-public void TestConcat()
-
-{
-
-string Result = string.Concat(One, Two);
-
-//will fail
-
-Assert.AreEqual(Result, \"21\");
-
-}
-
-}
-
-}
+```
 
 In your test root directory (the directory with your *.nunit* file),
 create a new file called *SpiraConfig.json*, and populate it like so:
-
+```JSON
 {
+  "credentials": {
+    "url": "localhost/SpiraPlan",
+    "username": "fredbloggs",
+    "token": "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}",
+    "project_id": 1,
 
-\"credentials\": {
-
-\"url\": \"localhost/SpiraPlan\",
-
-\"username\": \"fredbloggs\",
-
-\"token\": \"{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}\",
-
-\"project\_id\": 1,
-
-\"release\_id\": 5,
-
-\"test\_set\_id\": 1
-
-},
-
-\"test\_cases\": {
-
-\"default\": 20,
-
-\"TestMultiply\": 22
-
+    "release_id": 5,
+    "test_set_id": 1
+  },
+  "test_cases": {
+    "default": 20,
+    "TestMultiply":  22
+  }
 }
-
-}
+```
 
 For the plugin to work, you must have both settings groups (credentials
 and test\_cases) with the following in the credentials group:
@@ -160,7 +117,7 @@ Under the test\_cases group, put the following:
 **default** -- The default test case ID for functions without an
 assigned test case
 
-**\<method name\>** - Used to override the default setting for a
+**<method name\>** - Used to override the default setting for a
 method's test case ID in SpiraPlan. Only include the method name,
 without the parentheses.
 
@@ -209,18 +166,17 @@ computer (e.g. C:\\Temp).
 
 Next, you should copy the add-in libraries to the folder NUnit expects
 to find them in. First, if you are running any instances of the NUnit
-GUI, close them. Then, copy the [SpiraTestNUnitAddIn.dll]{.underline}
+GUI, close them. Then, copy the SpiraTestNUnitAddIn.dll
 assembly from its location in the temporary folder to the NUnit Add-In
-folder (typically [C:\\Program Files\\NUnit
-2.5.5\\bin\\net-2.0\\addins]{.underline}).
+folder (typically C:\\Program Files\\NUnit
+2.5.5\\bin\\net-2.0\\addins).
 
 Now you can restart the NUnit GUI application. To check that the add-in
 was loaded successfully, click on Tools \> Addins... to bring up the
 list of loaded add-ins:
 
-> ![](img/Integrating_with_NUnit_7.png)
-
-> 
+ ![](img/Integrating_with_NUnit_7.png)
+ 
 
 
 You should see an entry marked "SpiraTest Addin" listed with its
@@ -232,99 +188,62 @@ closing and reopening NUnit.
 The typical code structure for an NUnit test fixture coded in C\# is as
 follows:
 
+```C#
 using System;
-
 using NUnit.Framework;
 
 namespace Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite
-
 {
+	/// <summary>
+	/// Sample test fixture that tests the NUnit SpiraTest integration
+	/// </summary>
+	[TestFixture]
+	public class SampleTestFixture
+	{
+		[SetUp]
+		public void Init()
+		{
+			//Do Nothing
+		}
 
-/// \<summary\>
+		/// <summary>
+		/// Sample test that asserts a failure
+		/// </summary>
+		[Test]
+		public void _01_SampleFailure()
+		{
+			//Failure Assertion
+			Assert.AreEqual (1, 0);
+		}	
 
-/// Sample test fixture that tests the NUnit SpiraTest integration
+		/// <summary>
+		/// Sample test that succeeds
+		/// </summary>
+		[Test]
+		public void _02_SamplePass()
+		{
+			//Successful assertion
+			Assert.AreEqual (1, 1);
+		}	
 
-/// \</summary\>
-
-\[TestFixture\]
-
-public class SampleTestFixture
-
-{
-
-\[SetUp\]
-
-public void Init()
-
-{
-
-//Do Nothing
-
+		/// <summary>
+		/// Sample test that fails
+		/// </summary>
+		[Test]
+		public void _03_SampleIgnore()
+		{
+			//Failure Assertion
+			Assert.AreEqual (1, 0);
+		}	
+	}
 }
-
-/// \<summary\>
-
-/// Sample test that asserts a failure
-
-/// \</summary\>
-
-\[Test\]
-
-public void \_01\_SampleFailure()
-
-{
-
-//Failure Assertion
-
-Assert.AreEqual (1, 0);
-
-}
-
-/// \<summary\>
-
-/// Sample test that succeeds
-
-/// \</summary\>
-
-\[Test\]
-
-public void \_02\_SamplePass()
-
-{
-
-//Successful assertion
-
-Assert.AreEqual (1, 1);
-
-}
-
-/// \<summary\>
-
-/// Sample test that fails
-
-/// \</summary\>
-
-\[Test\]
-
-public void \_03\_SampleIgnore()
-
-{
-
-//Failure Assertion
-
-Assert.AreEqual (1, 0);
-
-}
-
-}
-
-}
+```
 
 The .NET class is marked as an NUnit test fixture by applying the
 \[TestFixture\] attribute to the class as a whole, and the \[Test\]
 attribute to each of the test assertion methods individually --
 highlighted in yellow above. When you open up the class in NUnit and
-click the \<Run\> button it loads all the test classes marked with
+click the <Run\> button it loads all the test classes marked with
 \[TestFixture\] and executes all the methods marked with \[Test\] in
 turn.
 
@@ -342,140 +261,83 @@ and therefore have no defined test steps. In either case, the changes
 that need to be made to the NUnit test fixture for SpiraTest to record
 the NUnit test run are illustrated below:
 
+```C#
 using System;
-
 using NUnit.Framework;
-
 using Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework;
 
 namespace Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite
-
 {
-
-/// \<summary\>
-
-/// Sample test fixture that tests the NUnit SpiraTest integration
-
-/// \</summary\>
-
-\[
-
-TestFixture,
-
-SpiraTestConfiguration (
-
-\"http://\<server name\>/SpiraTest\",
-
-\"\<username\>\",
-
-\"\<password\>\",
-
-\<project id\>,
-
-\<release id\>,
-
-\<test set id\>,
-
-\<runner name\>
-
+	/// <summary>
+	/// Sample test fixture that tests the NUnit SpiraTest integration
+	/// </summary>
+	[
+	TestFixture,
+	SpiraTestConfiguration (
+     "http://<server name>/SpiraTest",
+     "<username>",
+     "<password>",
+     <project id>,
+     <release id>,
+     <test set id>,
+     <runner name>
 )
+	]
+	public class SampleTestFixture
+	{
+		[SetUp]
+		public void Init()
+		{
+			//Do Nothing
+		}
 
-\]
+		/// <summary>
+		/// Sample test that asserts a failure
+		/// </summary>
+		[
+		Test,
+		SpiraTestCase (<test case id>)
+		]
+		public void _01_SampleFailure()
+		{
+			//Failure Assertion
+			Assert.AreEqual (1, 0);
+		}	
 
-public class SampleTestFixture
+		/// <summary>
+		/// Sample test that succeeds
+		/// </summary>
+		[
+		Test,
+		SpiraTestCase (<test case id>))
+		]
+		public void _02_SamplePass()
+		{
+			//Successful assertion
+			Assert.AreEqual (1, 1);
+		}	
 
-{
-
-\[SetUp\]
-
-public void Init()
-
-{
-
-//Do Nothing
-
+		/// <summary>
+		/// Sample test that does not log to SpiraTest
+		/// </summary>
+		[
+		Test
+		]
+		public void _03_SampleIgnore()
+		{
+			//Failure Assertion
+			Assert.AreEqual (1, 0);
+		}	
+	}
 }
-
-/// \<summary\>
-
-/// Sample test that asserts a failure
-
-/// \</summary\>
-
-\[
-
-Test,
-
-SpiraTestCase (\<test case id\>)
-
-\]
-
-public void \_01\_SampleFailure()
-
-{
-
-//Failure Assertion
-
-Assert.AreEqual (1, 0);
-
-}
-
-/// \<summary\>
-
-/// Sample test that succeeds
-
-/// \</summary\>
-
-\[
-
-Test,
-
-SpiraTestCase (\<test case id\>))
-
-\]
-
-public void \_02\_SamplePass()
-
-{
-
-//Successful assertion
-
-Assert.AreEqual (1, 1);
-
-}
-
-/// \<summary\>
-
-/// Sample test that does not log to SpiraTest
-
-/// \</summary\>
-
-\[
-
-Test
-
-\]
-
-public void \_03\_SampleIgnore()
-
-{
-
-//Failure Assertion
-
-Assert.AreEqual (1, 0);
-
-}
-
-}
-
-}
+```
 
 The overall class is marked with a new \[SpiraTestConfiguration\]
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
 **URL** - The URL to the instance of SpiraTest being accessed. This
-needs to start with [http://]{.underline} or [https://]{.underline}.
+needs to start with http:// or https://.
 
 **User Name** - A valid username for the instance of SpiraTest.
 
@@ -507,7 +369,7 @@ the corresponding test case in SpiraTest. The Test Case ID can be found
 on the test cases list page (click the "Test Cases" tab).
 
 For these attributes to be available in your test fixture, you also need
-to add a reference to the [SpiraTestFramework.dll]{.underline} assembly.
+to add a reference to the SpiraTestFramework.dll assembly.
 This assembly can be found in the temporary folder that you extracting
 the add-in to. It is recommended that you move this file from the
 temporary folder into a permanent folder located within your .NET

@@ -70,7 +70,7 @@ named "DOORS Requirements" with a number of RQ1920, then put 1920 into
 the *Root Requirement* field and run the import. When import is
 finished, the SpiraTeam requirements will be nested underneath.
 
-Note: At this time, Link Modules are **[not]{.underline}** imported from
+Note: At this time, Link Modules are **not** imported from
 DOORS databases.
 
 Once the fields have been populated, click *Next* to get to the summary

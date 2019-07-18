@@ -47,7 +47,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_TFS_24.png)
 
 
@@ -106,7 +106,7 @@ listed as an available plug-in.
 
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the TfsProvider.
-You will get a screen listing all the same configuration settings:\
+You will get a screen listing all the same configuration settings:
 ![](img/Integrating_with_TFS_25.png)
 
 
@@ -169,7 +169,7 @@ repository. The file details page displays the details on the selected
 revision. By default, it will be the most recent revision, unless you
 clicked to view the file details from a revision. By clicking on the
 file name, you can download the specified revision of the file to your
-local machine. This does *[not]{.underline}* do a TFS checkout; you are
+local machine. This does *not* do a TFS checkout; you are
 merely downloading the file to your local machine.
 
 ![](img/Integrating_with_TFS_28.png)
@@ -300,29 +300,29 @@ installed. Once this installation has been completed, you need to tell
 Visual Studio to add the custom check-in policy:
 
 1.  Inside Visual Studio, go to Team \> Team Project Settings \> Source
-Control to open up the Source Code extensions dialog box:\
-\
+Control to open up the Source Code extensions dialog box:
+
 ![](img/Integrating_with_TFS_33.png)
 
 
 
 
 2.  Click on the Check-in Policy tab to list the various check-in
-policies:\
-\
+policies:
+
 ![](img/Integrating_with_TFS_34.png)
 
 
 
 
-3.  Click on the \[Add...\] button to add a new check-in policy:\
+3.  Click on the \[Add...\] button to add a new check-in policy:
 ![](img/Integrating_with_TFS_35.png)
 
 
 
 
 4.  Select the SpiraTeam/Plan TFS check-in Policy and click \[OK\]. This
-will bring up the SpiraTeam custom policy configuration dialog box:\
+will bring up the SpiraTeam custom policy configuration dialog box:
 ![](img/Integrating_with_TFS_36.png)
 
 

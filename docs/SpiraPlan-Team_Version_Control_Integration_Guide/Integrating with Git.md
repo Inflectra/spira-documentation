@@ -54,7 +54,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_Git_16.png)
 
 
@@ -72,8 +72,8 @@ used for any project.
 repository for any project accessing the plug-in, unless
 overridden in the Project Settings:
 
--   For example:\
-git://github.com/henon/GitSharp.git\
+-   For example:
+git://github.com/henon/GitSharp.git
 http://github.com/user/repo.git
 
 -   **Login / Password**: The user id and the password of the user
@@ -97,7 +97,7 @@ listed as an available plug-in.
 
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the GitProvider.
-You will get a screen listing all the same configuration settings:\
+You will get a screen listing all the same configuration settings:
 ![](img/Integrating_with_Git_17.png)
 
 

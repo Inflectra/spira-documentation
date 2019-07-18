@@ -31,7 +31,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_VSS_37.png)
 
 
@@ -67,7 +67,7 @@ listed as an available plug-in.
 
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the VssProvider.
-You will get a screen listing all the same configuration settings:\
+You will get a screen listing all the same configuration settings:
 ![](img/Integrating_with_VSS_38.png)
 
 
@@ -115,7 +115,7 @@ repository. The file details page displays the details on the selected
 revision. By default, it will be the most recent revision, unless you
 clicked to view the file details from a revision. By clicking on the
 file name, you can download the specified revision of the file to your
-local machine. This does *[not]{.underline}* do a VSS checkout; you are
+local machine. This does *not* do a VSS checkout; you are
 merely downloading the file to your local machine.
 
 ![](img/Integrating_with_VSS_40.png)

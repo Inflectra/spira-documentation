@@ -61,8 +61,8 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the JIRA
-installation's web-service API. This is typically [http://\<jira
-server name\>/rpc/soap/jirasoapservice-v2]{.underline}.
+installation's web-service API. This is typically http://\<jira
+server name\>/rpc/soap/jirasoapservice-v2.
 
 -   **Login** -- this should be set to a valid login to the JIRA
 installation. The login needs to have permissions to create and view
@@ -83,7 +83,7 @@ time-zones here.
 The remaining fields work differently depending on which version of the
 plugin you are using (JIRA 3.x or JIRA 4.x):
 
-[a) JIRA 3.x Plugin]{.underline}
+a) JIRA 3.x Plugin
 
 Please fill out the fields as follows:
 
@@ -97,24 +97,24 @@ will be discussed below in section 3.2.
 -   **Custom 02 -- 05** -- these are not currently used by the plug-in
 and should be left blank.
 
-[b) JIRA 4.x Plugin]{.underline}
+b) JIRA 4.x Plugin
 
 Please fill out the fields as follows:
 
 -   **Auto-Map Users** -- This changes the way that the plugin maps
 users in SpiraTeam to those in JIRA:
 
--   **Auto-Map = True\
+-   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in JIRA. If this is the case then you do
 not need to perform the user-mapping task outlined in section
 3.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False\
+-   **Auto-Map = False
 **With this setting, users in SpiraTeam and JIRA are free to
 have different usernames because you specify the corresponding
-JIRA name for each user as outlined in section 3.2.2.**\
+JIRA name for each user as outlined in section 3.2.2.**
 **
 
 -   **Custom 01** -- This is used to specify a JIRA custom property that
@@ -145,8 +145,8 @@ attachments.
 will attempt to resynchronize all incidents/issues from 1/1/1900.
 Sometimes that causes the JIRA API to timeout or exceed the maximum
 allowed number of results if there are a large number of existing
-issues in JIRA.\
-\
+issues in JIRA.
+
 You can set this field to a specific year (e.g. 1995) or year and
 month (e.g. 2010-11) to restrict how far back the system will look
 for existing issues. If you leave this field blank it will use the
@@ -287,7 +287,7 @@ Project Mappings" for the JiraDataSync plug-in entry:
 From this screen, you need to click on Priority, Severity, Status and
 Type in turn to configure their values:
 
-[a) Incident Type]{.underline}
+a) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -309,7 +309,7 @@ JIRA), in which case only one of the two values can be listed as Primary
 choosing to View/Edit the Issue Type. The URL will include the section:
 **id=X** where X is the numeric ID of the Issue Type inside JIRA.*
 
-[b) Incident Status]{.underline}
+b) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -340,7 +340,7 @@ choosing to View/Edit the Issue Status. The URL will include the
 section: **id=X** where X is the numeric ID of the Issue Status inside
 JIRA.*
 
-[c) Incident Priority]{.underline}
+c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -361,7 +361,7 @@ synchronization (from JIRA \> SpiraTeam).
 choosing to View/Edit the Priority. The URL will include the section:
 **id=X** where X is the numeric ID of the Priority inside JIRA.*
 
-[d) Incident Severity (Optional)]{.underline}
+d) Incident Severity (Optional)
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -415,7 +415,7 @@ that you might want to enter:
 
 
 
-[a) Text Custom Properties]{.underline}
+a) Text Custom Properties
 
 Click on the hyperlink of the text custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -436,7 +436,7 @@ choosing to View/Edit the Custom Field. The URL will include the
 section: **id=X** where X is the numeric ID of the Custom Field inside
 JIRA.*
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -460,7 +460,7 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the full name (not the id this time) of the
 custom field value as specified in JIRA.
 
-[c) JIRA's Component Field]{.underline}
+c) JIRA's Component Field
 
 If your instance of JIRA requires that all new issues are submitted with
 a 'Component' then you will need to fill out this section. You first
@@ -487,7 +487,7 @@ are configured in JIRA. The external ID can be found by looking at the
 URL inside JIRA which choosing to View/Edit the component
 name/description.
 
-[d) JIRA's Resolution Field]{.underline}
+d) JIRA's Resolution Field
 
 If you would like the values of the JIRA '**Resolution'** field to be
 synchronized back to SpiraTeam, then you will need to fill out this
@@ -515,7 +515,7 @@ are configured in JIRA. The external ID can be found by looking at the
 URL inside JIRA which choosing to View/Edit the resolution
 name/description.
 
-[e) JIRA's Environment Field]{.underline}
+e) JIRA's Environment Field
 
 If your instance of JIRA requires that all new issues are submitted with
 an 'Environment' description specified, then you will need to fill out
@@ -536,7 +536,7 @@ All you need to do on this screen is enter the word "**Environment**" in
 the External Key textbox and the data-sync plug-in will know that this
 custom property is mapped to the built-in Environment field in JIRA.
 
-[f) JIRA's Security Level Field (JIRA 4.x Plug-In Only)]{.underline}
+f) JIRA's Security Level Field (JIRA 4.x Plug-In Only)
 
 If your instance of JIRA requires that all new issues are submitted with
 a 'Security Level' then you will need to fill out this section. You
@@ -558,7 +558,7 @@ that are configured in JIRA. The external ID can be found by looking at
 the URL inside JIRA which choosing to View/Edit the security level
 name/description.
 
-[g) JIRA's Issue Key Field (JIRA 4.x Plug-In Only)]{.underline}
+g) JIRA's Issue Key Field (JIRA 4.x Plug-In Only)
 
 It can be convenient to create a SpiraTeam custom property to store the
 JIRA Issue Key (the ID used to identify an issue in JIRA). This allows

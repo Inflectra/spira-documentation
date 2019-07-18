@@ -56,10 +56,11 @@ sure you have both virtual directories listed in IIS before continuing.
 
 Once you have installed the OnTime SDK, you need to navigate to the
 location that it was installed (typically
-[C:\\inetpub\\wwwroot\\OnTimeSdk]{.underline}) and open up the
+C:\\inetpub\\wwwroot\\OnTimeSdk) and open up the
 Web.Config file in Notepad and locate the "**appSettings**" part of the
 file:
 
+```xml
 \<appSettings\>
 
 \<add key=\"ConnectionString\"
@@ -73,6 +74,7 @@ value=\"{66ACD352-16C0-4485-8498-8C461BE7CE44}\"/\>
 \<add key=\"EnableDataCache\" value=\"False\"/\>
 
 \</appSettings\>
+```
 
 You need to make sure that you fill out the ConnectionString that points
 to the Microsoft SQL Server database that OnTime is connecting to. Also
@@ -91,11 +93,11 @@ link and save the Zip compressed folder to the hard-drive of the server
 where SpiraTeam is installed.
 
 Open up the compressed folder and extract the
-[OnTimeDataSync.dll]{.underline} file and place it in the [C:\\Program
-Files\\SpiraTeam\\Bin]{.underline} folder (it may be SpiraTest or
+OnTimeDataSync.dll file and place it in the C:\\Program
+Files\\SpiraTeam\\Bin folder (it may be SpiraTest or
 SpiraPlan depending on which product you're running). This folder should
-already contain the [DataSyncService.exe]{.underline} and
-[DataSyncService.exe.config]{.underline} files that are the primary
+already contain the DataSyncService.exe and
+DataSyncService.exe.config files that are the primary
 files used for managing the data synchronization between SpiraTeam and
 other systems.
 
@@ -109,10 +111,11 @@ be used instead of the server-based DataSyncService.
 ### Configuring the Service
 
 To configure the integration service, please open up the
-[DataSyncService.exe.config]{.underline} file located in [C:\\Program
-Files\\SpiraTeam\\Bin]{.underline} with a text editor such as Notepad.
+DataSyncService.exe.config file located in C:\\Program
+Files\\SpiraTeam\\Bin with a text editor such as Notepad.
 Once open, it should look like:
 
+``xml
 \<?xml version=\"1.0\" encoding=\"utf-8\"?\>
 
 \<configuration\>
@@ -178,6 +181,7 @@ requirePermission=\"false\" /\>
 \</applicationSettings\>
 
 \</configuration\>
+```
 
 The sections that need to be verified and possibly changed are marked in
 yellow above. You need to check the following information:
@@ -190,7 +194,7 @@ the number, the longer it will take for data to be synchronized, but the
 lower the network and server overhead.
 
 The base URL to your instance SpiraTeam. It is typically of the form
-[http://\<server name\>/SpiraTeam]{.underline}. Make sure that when you
+http://\<server name\>/SpiraTeam. Make sure that when you
 enter this URL on a browser on the server itself, the application login
 page appears.
 
@@ -247,8 +251,8 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the OnTime SDK.
-This is typically something like: [http://\<OnTime server
-name\>/OnTimeSdk]{.underline}. You may need to check in the IIS
+This is typically something like: http://\<OnTime server
+name\>/OnTimeSdk. You may need to check in the IIS
 Management Console of the OnTime server to verify the virtual
 directory name.
 
@@ -320,11 +324,11 @@ enter:
 **External Key** -- This should be set to the numeric ID of the project
 token in OnTime. You can find this in OnTime by selecting the project in
 the project explorer inside OnTime and then clicking the Edit icon. This
-brings up the project details screen:\
+brings up the project details screen:
 ![](img/Using_Spira_with_OnTime_11_202.png)
 
 
-\
+
 The ID of the project is the value listed in the browser URL directly
 after the "ProjectId=" text. In the example above, the project ID would
 be 3.
@@ -422,7 +426,7 @@ From this screen, you need to click on Priority, Severity and Status in
 turn to configure their values (OnTime doesn't support different defect
 types):
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -453,7 +457,7 @@ of the status inside OnTime. If you change the name of a status in
 OnTime, you'll need to update the value in the data-mapping
 configuration as well.*
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -475,7 +479,7 @@ of the priority inside OnTime. If you change the name of a priority in
 OnTime, you'll need to update the value in the data-mapping
 configuration as well.*
 
-[c) Incident Severity]{.underline}
+c) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -516,7 +520,7 @@ that you might want to enter:
 
 
 
-[a) Text Custom Properties]{.underline}
+a) Text Custom Properties
 
 Click on the hyperlink of the text custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -532,7 +536,7 @@ You need to lookup the display name of the custom field in OnTime that
 matches this custom property in SpiraTeam. Once you have entered the id
 of the custom field, click \[Update\].
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -553,7 +557,7 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the full name of the custom field value as
 specified in OnTime.
 
-[c) OnTime's Replication Procedures Field]{.underline}
+c) OnTime's Replication Procedures Field
 
 If you want new defects in OnTime to be loaded with the "replication
 prodcedures" standard text field populated, then you will need to fill
@@ -573,8 +577,8 @@ configuration screen:
 All you need to do on this screen is enter the word
 "ReplicationProcedures" in the External Key textbox and the data-sync
 plug-in will know that this custom property is mapped to the built-in
-Replication Procedures field in OnTime. *Note that there is [no
-space]{.underline}* between the words Replication and Procedures!!
+Replication Procedures field in OnTime. *Note that there is no
+space* between the words Replication and Procedures!!
 
 Once you have updated the various mapping sections, you are now ready to
 start the service.

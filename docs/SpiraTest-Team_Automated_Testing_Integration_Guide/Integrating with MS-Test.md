@@ -31,8 +31,8 @@ section will assume that you are using the pre-compiled assembly.
 
 Once you have downloaded the Zip archive, you need to uncompress it into
 a folder of your choice on your local system. Assuming that you
-uncompressed it to the [C:\\Program Files\\SpiraTest\\MSTest
-Extension]{.underline} folder, you should have the following folder
+uncompressed it to the C:\\Program Files\\SpiraTest\\MSTest
+Extension folder, you should have the following folder
 structure created:
 
 C:\\Program Files\\SpiraTest\\MSTest Extension
@@ -49,7 +49,7 @@ Extension\\SpiraTestMSExtension\\Properties
 C:\\Program Files\\SpiraTest\\MSTest
 Extension\\SpiraTestMSExtension\\Web References
 
-The pre-built assembly [SpiraTestMSTestExtension.dll]{.underline} is
+The pre-built assembly SpiraTestMSTestExtension.dll is
 located in the root folder, the source-code for the extension can be
 found in the "SpiraTestMSExtension" subfolder, and the sample test
 fixture can be found in the "SampleMSTest" subfolder.
@@ -66,154 +66,90 @@ The typical code structure for a Visual Studio Team System Test
 
 ```C#
  using System;
-
- using System.Threading;
-
- using Microsoft.VisualStudio.TestTools.UnitTesting;
-
- namespace
- Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
-
- {
-
- /// \<summary\>
-
- /// Sample test fixture that tests the SpiraTest integration
-
- /// Written by Paul Tissue. Packed by Inflectra Corporation
-
- /// \</summary\>
-
- \[
-
- TestClass
-
- \]
-
- public class SpiraTestCaseAttributeTest
-
- {
-
- /// \<summary\>
-
- /// Test fixture state
-
- /// \</summary\>
-
- protected static int testFixtureState = 1;
-
- /// \<summary\>
-
- /// Constructor method
-
- /// \</summary\>
-
- public SpiraTestCaseAttributeTest()
-
- {
-
- //Delegates to base
-
- //Set the state to 2
-
- testFixtureState = 2;
-
- }
-
- /// \<summary\>
-
- /// Sample test that asserts a failure and overrides the default
- configuration
-
- /// \</summary\>
-
- \[
-
- TestMethod
-
- \]
-
- public void SampleFail()
-
- {
-
- //Verify the state
-
- Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
- persisted\");
-
- //Failure Assertion
-
- Assert.AreEqual(1, 0, \"Failed as Expected\");
-
- }
-
- /// \<summary\>
-
- /// Sample test that succeeds - uses the default configuration
-
- /// \</summary\>
-
- \[
-
- TestMethod
-
- \]
-
- public void SamplePass()
-
- {
-
- //Verify the state
-
- Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
- persisted\");
-
- //Successful assertion
-
- Assert.AreEqual(1, 1, \"Passed as Expected\");
-
- }
-
- /// \<summary\>
-
- /// Sample test that does not log to SpiraTest
-
- /// \</summary\>
-
- \[
-
- TestMethod,
-
- ExpectedException(typeof(AssertFailedException))
-
- \]
-
- public void SampleIgnore()
-
- {
-
- //Verify the state
-
- Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
- persisted\");
-
- //Failure Assertion
-
- Assert.AreEqual(1, 0, \"Failed as Expected\");
-
- }
-
- }
-
- }
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
+{
+    /// <summary>
+    /// Sample test fixture that tests the SpiraTest integration
+    /// Written by Paul Tissue. Packed by Inflectra Corporation
+    /// </summary>
+    [
+    TestClass
+    ]
+    public class SpiraTestCaseAttributeTest
+    {
+        /// <summary>
+        /// Test fixture state
+        /// </summary>
+        protected static int testFixtureState = 1;
+
+        /// <summary>
+        /// Constructor method
+        /// </summary>
+        public SpiraTestCaseAttributeTest()
+        {
+            //Delegates to base
+
+            //Set the state to 2
+            testFixtureState = 2;
+        }
+
+        /// <summary>
+        /// Sample test that asserts a failure and overrides the default configuration
+        /// </summary>
+        [
+        TestMethod
+        ]
+        public void SampleFail()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, "Failed as Expected");
+        }
+
+        /// <summary>
+        /// Sample test that succeeds - uses the default configuration
+        /// </summary>
+        [
+        TestMethod
+        ]
+        public void SamplePass()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Successful assertion
+            Assert.AreEqual(1, 1, "Passed as Expected");
+        }
+
+        /// <summary>
+        /// Sample test that does not log to SpiraTest
+        /// </summary>
+        [
+        TestMethod,
+        ExpectedException(typeof(AssertFailedException))
+        ]
+        public void SampleIgnore()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, "Failed as Expected");
+        }
+    }
+}
 ```
 
 The .NET class is marked as a MS-Test unit test fixture by applying the
 \[TestClass\] attribute to the class as a whole, and the \[TestMethod\]
 attribute to each of the test assertion methods individually -- shown
-above. When you open up the class in Visual Studio and click [Tests \>
-Run \> Run All Tests in Solution]{.underline} it loads all the test
+above. When you open up the class in Visual Studio and click Tests \>
+Run \> Run All Tests in Solution it loads all the test
 classes marked with \[TestClass\] and executes all the methods marked
 with \[TestMethod\] in turn.
 
@@ -231,159 +167,94 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the MS-Test test fixture for SpiraTest
 to record the MS-Test test run are illustrated below:
 
-> using System;
->
-> using System.Threading;
->
-> using Microsoft.VisualStudio.TestTools.UnitTesting;
->
-> namespace
-> Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
->
-> {
->
-> /// \<summary\>
->
-> /// Sample test fixture that tests the SpiraTest integration
->
-> /// Written by Paul Tissue. Packed by Inflectra Corporation
->
-> /// \</summary\>
->
-> \[
->
-> TestClass
->
-> \]
->
-> public class SpiraTestCaseAttributeTest : MSTestExtensionsTestFixture
->
-> {
->
-> /// \<summary\>
->
-> /// Test fixture state
->
-> /// \</summary\>
->
-> protected static int testFixtureState = 1;
->
-> /// \<summary\>
->
-> /// Constructor method
->
-> /// \</summary\>
->
-> public SpiraTestCaseAttributeTest()
->
-> {
->
-> //Delegates to base
->
-> //Set the state to 2
->
-> testFixtureState = 2;
->
-> }
->
-> /// \<summary\>
->
-> /// Sample test that asserts a failure and overrides the default
-> configuration
->
-> /// \</summary\>
->
-> \[
->
-> TestMethod,
->
-> SpiraTestCase(5),
->
-> SpiraTestConfiguration(\"http://localhost/SpiraTest\", \"fredbloggs\",
-> \"fredbloggs\", 1, 1, 2)
->
-> \]
->
-> public void SampleFail()
->
-> {
->
-> //Verify the state
->
-> Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
-> persisted\");
->
-> //Failure Assertion
->
-> Assert.AreEqual(1, 0, \"Failed as Expected\");
->
-> }
->
-> /// \<summary\>
->
-> /// Sample test that succeeds - uses the default configuration
->
-> /// \</summary\>
->
-> \[
->
-> TestMethod,
->
-> SpiraTestCase(6)
->
-> \]
->
-> public void SamplePass()
->
-> {
->
-> //Verify the state
->
-> Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
-> persisted\");
->
-> //Successful assertion
->
-> Assert.AreEqual(1, 1, \"Passed as Expected\");
->
-> }
->
-> /// \<summary\>
->
-> /// Sample test that does not log to SpiraTest
->
-> /// \</summary\>
->
-> \[
->
-> TestMethod,
->
-> ExpectedException(typeof(AssertFailedException))
->
-> \]
->
-> public void SampleIgnore()
->
-> {
->
-> //Verify the state
->
-> Assert.AreEqual(2, testFixtureState, \"\*Real Error\*: State not
-> persisted\");
->
-> //Failure Assertion
->
-> Assert.AreEqual(1, 0, \"Failed as Expected\");
->
-> }
->
-> }
->
-> }
+```C#
+using System;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
+{
+    /// <summary>
+    /// Sample test fixture that tests the SpiraTest integration
+    /// Written by Paul Tissue. Packed by Inflectra Corporation
+    /// </summary>
+    [
+    TestClass
+    ]
+    public class SpiraTestCaseAttributeTest : MSTestExtensionsTestFixture
+    {
+        /// <summary>
+        /// Test fixture state
+        /// </summary>
+        protected static int testFixtureState = 1;
+
+        /// <summary>
+        /// Constructor method
+        /// </summary>
+        public SpiraTestCaseAttributeTest()
+        {
+            //Delegates to base
+
+            //Set the state to 2
+            testFixtureState = 2;
+        }
+
+        /// <summary>
+        /// Sample test that asserts a failure and overrides the default configuration
+        /// </summary>
+        [
+        TestMethod,
+        SpiraTestCase(5),
+        SpiraTestConfiguration("http://localhost/SpiraTest", "fredbloggs", "fredbloggs", 1, 1, 2)
+        ]
+        public void SampleFail()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, "Failed as Expected");
+        }
+
+        /// <summary>
+        /// Sample test that succeeds - uses the default configuration
+        /// </summary>
+        [
+        TestMethod,
+        SpiraTestCase(6)
+        ]
+        public void SamplePass()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Successful assertion
+            Assert.AreEqual(1, 1, "Passed as Expected");
+        }
+
+        /// <summary>
+        /// Sample test that does not log to SpiraTest
+        /// </summary>
+        [
+        TestMethod,
+        ExpectedException(typeof(AssertFailedException))
+        ]
+        public void SampleIgnore()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, "*Real Error*: State not persisted");
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, "Failed as Expected");
+        }
+    }
+}
+```
 
 And the following settings need to be added to the .config file
 associated with the test fixture assembly:
 
+```xml
 \<?xml version=\"1.0\"?\>
 
 \<configuration\>
@@ -453,12 +324,13 @@ requirePermission=\"false\" /\>
 \</Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings\>
 
 \</applicationSettings\>
+```
 
 Firstly the settings in the .config file indicate the following
 information to the test fixture:
 
 The URL to the instance of SpiraTest being accessed. This needs to start
-with [http://]{.underline} or [https://]{.underline}.
+with http:// or https://.
 
 A valid username and password for the instance of SpiraTest.
 

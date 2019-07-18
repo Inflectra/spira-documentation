@@ -130,7 +130,7 @@ hyperlink to change the current project.
 To enable this project for data-synchronization with RTC, you need to
 enter:
 
-**External Key** -- This should be set to the [display name]{.underline}
+**External Key** -- This should be set to the display name
 of the project in RTC that will be mapped to the specific SpiraTeam
 project.
 
@@ -163,7 +163,7 @@ Project Mappings" for the RtcDataSync plug-in entry:
 From this screen, you need to click on Status and Type in turn to
 configure their values:
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -181,7 +181,7 @@ Complete in RTC), in which case only one of the two values can be listed
 as Primary = Yes as that's the value that's used on the reverse
 synchronization (from RTC \> SpiraTeam).
 
-[b) Incident Type]{.underline}
+b) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -215,7 +215,7 @@ to enter:
 
 
 
-[a) Text Custom Properties]{.underline}
+a) Text Custom Properties
 
 Click on the hyperlink of the text custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -232,7 +232,7 @@ RTC that matches this custom property in SpiraTeam from the RTC
 documentation. Once you have entered the name of the custom field, click
 \[Update\].
 
-[b) List Custom Properties]{.underline}
+b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom
 Properties to bring up the custom property mapping configuration screen.
@@ -252,8 +252,7 @@ property. Then you need enter the possible values in RTC for the custom
 property, mapping each one to the corresponding SpiraTeam custom
 property value.
 
-**Once you have updated the various mapping sections, you are now ready
-to use the service.\
+**Once you have updated the various mapping sections, you are now ready to use the service.
 **
 
 ## Using SpiraTeam with RTC

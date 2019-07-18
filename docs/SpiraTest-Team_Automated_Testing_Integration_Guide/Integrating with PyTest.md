@@ -33,6 +33,7 @@ working tests configured.
 
 Here is a sample test file:
 
+```python
 import pytest
 
 \# Function we are testing
@@ -58,12 +59,14 @@ assert add(2, 1) == 2
 def test\_add\_3():
 
 assert add(4, 1) == 6
+```
 
 Note how test\_add\_2 is used in the configuration file discussed below.
 
 In your test root folder (the folder you run the pytest command from),
 create a file named "spira.cfg" with the following:
 
+```cfg
 \[credentials\]
 
 \# Following are required
@@ -91,6 +94,7 @@ default = 20
 \# Test case for a specific function
 
 test\_add\_2 = 22
+```
 
 For the plugin to work, you must have both settings groups (credentials
 and test\_cases) with the following in the credentials group:
@@ -117,7 +121,7 @@ Under the test\_cases group, put the following:
 **default** -- The default test case ID for functions without an
 assigned test case
 
-**\<function name\>** - Used to override the default setting for a
+**<function name\>** - Used to override the default setting for a
 function's test case ID in SpiraTest. Only include the function name,
 without the parentheses.
 

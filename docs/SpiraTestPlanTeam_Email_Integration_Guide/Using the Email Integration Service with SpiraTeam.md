@@ -30,9 +30,9 @@ default project.)
 3.  The user will receive an automated email from the system letting
 them know that the incident was created:
 
-> SpiraTeam\
-> Incident "[Need New Security Settings updated in
-> Documentation]{.underline}" in project \"Project1\" has been changed.
+> SpiraTeam
+> Incident "Need New Security Settings updated in
+> Documentation" in project \"Project1\" has been changed.
 >
 > Please log into SpiraTeam to view this Incident\'s details.
 

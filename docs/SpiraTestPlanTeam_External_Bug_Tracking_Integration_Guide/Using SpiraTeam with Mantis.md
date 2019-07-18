@@ -284,7 +284,7 @@ datasync\_artifact](img/Using_SpiraTeam_with_Mantis_129.png)
 From this screen, you need to set up the Priority, Severity, Status, and
 Type fields:
 
-[a) Incident Type]{.underline}
+a) Incident Type
 
 The Incident Type field is optional and can be linked to the Mantis
 Category selection.
@@ -326,7 +326,7 @@ will be primary. For issues coming from Mantis into SpiraTeam, the one
 marked Primary will be used, and for issues being created in Mantis, the
 same category will be used to create the issue.
 
-[b) Incident Status]{.underline}
+b) Incident Status
 
 The Incident Status is an optional field to be linked to the Mantis
 field by the same name.
@@ -363,7 +363,7 @@ both applications, this field will likely be case-sensitive.
 You can map multiple SpiraTeam fields to the same Mantis fields, just
 like the Incident Type above.
 
-[c) Incident Priority & Severity]{.underline}
+c) Incident Priority & Severity
 
 The Incident Priority and Severity are optional fields that are linked
 to Mantis fields by the same name.

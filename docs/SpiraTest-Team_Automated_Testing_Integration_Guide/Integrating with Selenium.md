@@ -33,114 +33,66 @@ between them.
 Supplied with the SpiraTest NUnit add-in is a sample test for using
 Selenium with SpiraTest:
 
+```C#
 using System;
-
 using NUnit.Framework;
-
 using Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework;
-
 using Selenium;
 
 namespace SeleniumSampleTest
-
 {
+	/// <summary>
+	/// Sample test fixture that tests the NUnit SpiraTest integration with the
+	/// Selenium-RC .NET Driver
+	/// </summary>
+	[
+	TestFixture,
+	SpiraTestConfiguration("http://localhost/SpiraTest", "fredbloggs", "fredbloggs", 1, 1, 2, SpiraTestConfigurationAttribute.RunnerName.Selenium)
+	]
+	public class GoogleTest
+	{
+		private static ISelenium selenium;
 
-/// \<summary\>
+		[SetUp]
+		public void SetupTest()
+		{
+			//Instantiate the selenium .NET proxy
+			selenium = new DefaultSelenium("localhost", 4444, "*iexplore", "http://www.google.com");
+			selenium.Start();
+		}
 
-/// Sample test fixture that tests the NUnit SpiraTest integration with
-the
+		[TearDown]
+		public void TeardownTest()
+		{
+			selenium.Stop();
+		}
 
-/// Selenium-RC .NET Driver
+		/// <summary>
+		/// Sample test that searches on Google, passes correctly
+		/// </summary>
+		[
+		Test,
+		SpiraTestCase (5)
+		]
+		public void GoogleSearch()
+		{
+			//Opens up Google
+			selenium.Open("http://www.google.com/webhp");
 
-/// \</summary\>
+			//Verifies that the title matches
+			Assert.AreEqual("Google", selenium.GetTitle());
+			selenium.Type("q", "Selenium OpenQA");
 
-\[
-
-TestFixture,
-
-SpiraTestConfiguration(\"http://localhost/SpiraTest\", \"fredbloggs\",
-\"fredbloggs\", 1, 1, 2,
-SpiraTestConfigurationAttribute.RunnerName.Selenium)
-
-\]
-
-public class GoogleTest
-
-{
-
-private static ISelenium selenium;
-
-\[SetUp\]
-
-public void SetupTest()
-
-{
-
-//Instantiate the selenium .NET proxy
-
-selenium = new DefaultSelenium(\"localhost\", 4444, \"\*iexplore\",
-\"http://www.google.com\");
-
-selenium.Start();
-
+			//Verifies that it can find the Selenium website
+			Assert.AreEqual("Selenium OpenQA", selenium.GetValue("q"));
+			selenium.Click("btnG");
+			selenium.WaitForPageToLoad("5000");
+			Assert.IsTrue(selenium.IsTextPresent("www.openqa.org"));
+			Assert.AreEqual("Selenium OpenQA - Google Search", selenium.GetTitle());
+		}	
+	}
 }
-
-\[TearDown\]
-
-public void TeardownTest()
-
-{
-
-selenium.Stop();
-
-}
-
-/// \<summary\>
-
-/// Sample test that searches on Google, passes correctly
-
-/// \</summary\>
-
-\[
-
-Test,
-
-SpiraTestCase (5)
-
-\]
-
-public void GoogleSearch()
-
-{
-
-//Opens up Google
-
-selenium.Open(\"http://www.google.com/webhp\");
-
-//Verifies that the title matches
-
-Assert.AreEqual(\"Google\", selenium.GetTitle());
-
-selenium.Type(\"q\", \"Selenium OpenQA\");
-
-//Verifies that it can find the Selenium website
-
-Assert.AreEqual(\"Selenium OpenQA\", selenium.GetValue(\"q\"));
-
-selenium.Click(\"btnG\");
-
-selenium.WaitForPageToLoad(\"5000\");
-
-Assert.IsTrue(selenium.IsTextPresent(\"www.openqa.org\"));
-
-Assert.AreEqual(\"Selenium OpenQA - Google Search\",
-selenium.GetTitle());
-
-}
-
-}
-
-}
+```
 
 The details of the sample itself are described in more detail on the
 Selenium website, and you can see that we have added the SpiraTest
@@ -172,116 +124,71 @@ Selenium website, and you can see that we have added the SpiraTest
 specific attributes onto the test case and test methods to indicate that
 they need to report back to SpiraTest.
 
+```Java
 package com.inflectra.spiratest.addons.testnglistener.samples;
 
-import org.testng.annotations.\*;
+import org.testng.annotations.*;
+import static org.testng.AssertJUnit.*;
+import com.thoughtworks.selenium.*;
 
-import static org.testng.AssertJUnit.\*;
+import com.inflectra.spiratest.addons.testnglistener.*;
 
-import com.thoughtworks.selenium.\*;
-
-import com.inflectra.spiratest.addons.testnglistener.\*;
-
-/\*\*
-
-\* A sample Selenium test using the ability to return results back to
-SpiraTest
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-\@SpiraTestConfiguration(
-
-url=\"http://localhost/SpiraTest\",
-
-login=\"fredbloggs\",
-
-password=\"fredbloggs\",
-
+/**
+ * A sample Selenium test using the ability to return results back to SpiraTest
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+@SpiraTestConfiguration(
+url="http://localhost/SpiraTest",
+login="fredbloggs",
+password="fredbloggs",
 projectId=1,
-
 releaseId=1,
-
 testSetId=-1
-
 runner=RunnerName.Selenium
-
 )
-
-\@Test(groups={\"seleniumtest\"})
-
+@Test(groups={"seleniumtest"})
 public class SeleniumTest
-
 {
+    private Selenium selenium;
 
-private Selenium selenium;
+	@BeforeClass
+    public void setUp()
+	{
+		//Instantiate the selenium Java proxy
+        String url = "http://www.google.com";
+        selenium = new DefaultSelenium("localhost", 4444, "*firefox", url);
+        selenium.start();
+    }
 
-\@BeforeClass
+	@AfterClass
+    protected void tearDown()
+	{
+        selenium.stop();
+    }
 
-public void setUp()
+	// Sample test that searches on Google, passes correctly
+	@Test(groups={"seleniumtest"})
+	@SpiraTestCase(testCaseId=5)
+    public void testGoogle()
+	{
+		//Opens up Google
+        selenium.open("http://www.google.com/webhp?hl=en");
 
-{
+		//Verifies that the title matches
+        assertEquals("Google", selenium.getTitle());
+        selenium.type("q", "Selenium OpenQA");
 
-//Instantiate the selenium Java proxy
-
-String url = \"http://www.google.com\";
-
-selenium = new DefaultSelenium(\"localhost\", 4444, \"\*firefox\", url);
-
-selenium.start();
-
+		//Verifies that it can find the Selenium website
+        assertEquals("Selenium OpenQA", selenium.getValue("q"));
+        selenium.click("btnG");
+        selenium.waitForPageToLoad("5000");
+        assertEquals("Selenium OpenQA - Google Search", selenium.getTitle());
+    }
 }
-
-\@AfterClass
-
-protected void tearDown()
-
-{
-
-selenium.stop();
-
-}
-
-// Sample test that searches on Google, passes correctly
-
-\@Test(groups={\"seleniumtest\"})
-
-\@SpiraTestCase(testCaseId=5)
-
-public void testGoogle()
-
-{
-
-//Opens up Google
-
-selenium.open(\"http://www.google.com/webhp?hl=en\");
-
-//Verifies that the title matches
-
-assertEquals(\"Google\", selenium.getTitle());
-
-selenium.type(\"q\", \"Selenium OpenQA\");
-
-//Verifies that it can find the Selenium website
-
-assertEquals(\"Selenium OpenQA\", selenium.getValue(\"q\"));
-
-selenium.click(\"btnG\");
-
-selenium.waitForPageToLoad(\"5000\");
-
-assertEquals(\"Selenium OpenQA - Google Search\", selenium.getTitle());
-
-}
-
-}
+```
 
 However there is one change that has been made to the
 *SpiraTestConfiguration* attribute applied to the test fixture -- an
@@ -303,96 +210,59 @@ distinguish between them.
 Supplied with the SpiraTest PyUnit extension is a sample test for using
 Selenium with SpiraTest:
 
+```python
 from selenium import selenium
-
 import unittest
-
 import sys, time
-
 import spiratestextension
 
-\# A sample Selenium test using the ability to return results back to
-SpiraTest
-
-\#
-
-\# Author Inflectra Corporation
-
-\# Version 2.3.0
-
-\#
-
+#	A sample Selenium test using the ability to return results back to SpiraTest
+#
+#	Author		Inflectra Corporation
+#	Version		2.3.0
+#
 class TestSeleniumSample(unittest.TestCase):
 
-seleniumHost = \'localhost\'
+    seleniumHost = 'localhost'
+    seleniumPort = str(4444)
+    browserStartCommand = "*firefox"
+    browserURL = "http://www.google.com"
 
-seleniumPort = str(4444)
+    def setUp(self):
+        print "Using selenium server at " + self.seleniumHost + ":" + self.seleniumPort
+        self.selenium = selenium(self.seleniumHost, self.seleniumPort, self.browserStartCommand, self.browserURL)
+        self.selenium.start()
 
-browserStartCommand = \"\*firefox\"
-
-browserURL = \"http://www.google.com\"
-
-def setUp(self):
-
-print \"Using selenium server at \" + self.seleniumHost + \":\" +
-self.seleniumPort
-
-self.selenium = selenium(self.seleniumHost, self.seleniumPort,
-self.browserStartCommand, self.browserURL)
-
-self.selenium.start()
-
-def testGoogle\_\_4(self):
-
-selenium = self.selenium
-
-selenium.open(\"http://www.google.com/webhp?hl=en\")
-
-\#Verifies that the title matches
-
-self.assertEqual (\"Google\", selenium.get\_title())
-
-selenium.type(\"q\", \"Selenium OpenQA\")
-
-\#Verifies that it can find the Selenium website
-
-self.assertEqual(\"Selenium OpenQA\", selenium.get\_value(\"q\"))
-
-selenium.click(\"btnG\")
-
-selenium.wait\_for\_page\_to\_load(\"5000\")
-
-self.assertEqual(\"Selenium OpenQA - Google Search\",
-selenium.get\_title())
-
-def tearDown(self):
-
-self.selenium.stop()
-
+    def testGoogle__4(self):
+        selenium = self.selenium
+        selenium.open("http://www.google.com/webhp?hl=en")
+        
+        #Verifies that the title matches
+        self.assertEqual ("Google", selenium.get_title())
+        selenium.type("q", "Selenium OpenQA")
+        
+        #Verifies that it can find the Selenium website
+        self.assertEqual("Selenium OpenQA", selenium.get_value("q"))
+        selenium.click("btnG")
+        selenium.wait_for_page_to_load("5000")
+        self.assertEqual("Selenium OpenQA - Google Search", selenium.get_title())
+        
+    def tearDown(self):
+        self.selenium.stop()
+        
 suite = unittest.TestLoader().loadTestsFromTestCase(TestSeleniumSample)
-
 testResult = unittest.TextTestRunner(verbosity=2).run(suite)
-
 releaseId = 1
-
 testSetId = -1
-
 spiraTestExtension = spiratestextension.SpiraTestExtension()
-
 spiraTestExtension.projectId = 1
-
-spiraTestExtension.server = \"localhost\"
-
+spiraTestExtension.server = "localhost"
 spiraTestExtension.port = 80
-
-spiraTestExtension.path = \"SpiraTest\"
-
-spiraTestExtension.userName = \"fredbloggs\"
-
-spiraTestExtension.password = \"fredbloggs\"
-
-spiraTestExtension.recordResults(TestSeleniumSample, testResult,
-releaseId, testSetId, \"Selenium\")
+spiraTestExtension.path = "SpiraTest"
+spiraTestExtension.userName = "fredbloggs"
+spiraTestExtension.password = "fredbloggs"
+spiraTestExtension.recordResults(TestSeleniumSample, testResult, releaseId, testSetId, "Selenium")
+```
 
 The details of the sample itself are described in more detail on the
 Selenium website, and you can see that we have added the SpiraTest

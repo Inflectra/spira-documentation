@@ -33,7 +33,7 @@ SpiraTest.
 
 The typical code structure for a Perl TAP test harness is as follows:
 
-[a) The sample test harness - SampleHarness.pl]{.underline}
+a) The sample test harness - SampleHarness.pl
 
 > \#this is a test case that tests addition operations
 >
@@ -51,7 +51,7 @@ The typical code structure for a Perl TAP test harness is as follows:
 >
 > \$harness-\>runtests(\@tests);
 
-[b) One of the sample test fixtures -- Sample1Test.pl]{.underline}
+b) One of the sample test fixtures -- Sample1Test.pl
 
 > \#!/usr/bin/perl -w
 >

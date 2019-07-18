@@ -36,7 +36,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_CVS_43.png)
 
 
@@ -91,7 +91,7 @@ listed as an available plug-in.
 
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the CvsProvider.
-You will get a screen listing all the same configuration settings:\
+You will get a screen listing all the same configuration settings:
 ![](img/Integrating_with_CVS_44.png)
 
 

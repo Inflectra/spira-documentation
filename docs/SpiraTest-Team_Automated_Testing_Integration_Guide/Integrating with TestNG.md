@@ -31,8 +31,8 @@ section will assume that you are using the pre-compiled JAR-file.
 
 Once you have downloaded the Zip archive, you need to uncompress it into
 a folder of your choice on your local system. Assuming that you
-uncompressed it to the [C:\\Program
-Files\\SpiraTestListener]{.underline} folder, you should have the
+uncompressed it to the C:\\Program
+Files\\SpiraTestListener folder, you should have the
 following folder structure created:
 
 C:\\Program Files\\SpiraTestListener
@@ -74,140 +74,85 @@ TestNG test fixtures with SpiraTest.
 The typical code structure for a TestNG test fixture coded in Java is as
 follows:
 
+```Java
 package com.inflectra.spiratest.addons.testnglistener.samples;
 
-import org.testng.annotations.\*;
+import org.testng.annotations.*;
+import static org.testng.AssertJUnit.*;
 
-import static org.testng.AssertJUnit.\*;
+import java.util.*;
 
-import java.util.\*;
-
-/\*\*
-
-\* Some simple tests using the ability to return results back to
-SpiraTest
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+@Test(groups={"unittest"})
 public class SimpleTest
-
 {
+	protected int fValue1;
+	protected int fValue2;
 
-protected int fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	@BeforeClass
+	public void setUp()
+	{
+		fValue1= 2;
+		fValue2= 3;
+	}
 
-protected int fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	@Test(groups={"unittest"})
+	public void testAdd()
+	{
+		double result = fValue1 + fValue2;
 
-/\*\*
+		// forced failure result == 5
+		assertTrue (result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+	@Test(groups={"unittest"})
+	public void testDivideByZero()
+	{
+		int zero = 0;
+		int result = 8 / zero;
+		result++; // avoid warning for not using result
+	}
 
-\*/
+	/**
+	 * Tests two equal values
+	 */
+	@Test(groups={"unittest"})
+	public void testEquals()
+	{
+		assertEquals(12, 12);
+		assertEquals(12L, 12L);
+		assertEquals(new Long(12), new Long(12));
 
-\@BeforeClass
+		assertEquals("Size", 12, 13);
+		assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-public void setUp()
-
-{
-
-fValue1= 2;
-
-fValue2= 3;
-
+	/**
+	 * Tests success
+	 */
+	@Test(groups={"unittest"})
+	public void testSuccess()
+	{
+		//Successful test
+		assertEquals(12, 12);
+	}
 }
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-public void testAdd()
-
-{
-
-double result = fValue1 + fValue2;
-
-// forced failure result == 5
-
-assertTrue (result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-public void testDivideByZero()
-
-{
-
-int zero = 0;
-
-int result = 8 / zero;
-
-result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-public void testEquals()
-
-{
-
-assertEquals(12, 12);
-
-assertEquals(12L, 12L);
-
-assertEquals(new Long(12), new Long(12));
-
-assertEquals(\"Size\", 12, 13);
-
-assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
-}
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-public void testSuccess()
-
-{
-
-//Successful test
-
-assertEquals(12, 12);
-
-}
-
-}
+```
 
 The Java class is marked as a TestNG test fixture by applying the \@Test
 attribute to the class definition, and the \@Test attribute to each of
@@ -231,173 +176,106 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the TestNG test fixture for SpiraTest to
 record the TestNG test run are illustrated below:
 
+```Java
 package com.inflectra.spiratest.addons.testnglistener.samples;
 
-import org.testng.annotations.\*;
+import org.testng.annotations.*;
+import static org.testng.AssertJUnit.*;
 
-import static org.testng.AssertJUnit.\*;
+import com.inflectra.spiratest.addons.testnglistener.*;
 
-import com.inflectra.spiratest.addons.testnglistener.\*;
+import java.util.*;
 
-import java.util.\*;
-
-/\*\*
-
-\* Some simple tests using the ability to return results back to
-SpiraTest
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-\@SpiraTestConfiguration(
-
-url=\"http://localhost/SpiraTest\",
-
-login=\"fredbloggs\",
-
-password=\"fredbloggs\",
-
-projectId=1,
-
-releaseId=1,
-
-testSetId
-
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+@SpiraTestConfiguration(
+	url="http://localhost/SpiraTest",
+	login="fredbloggs",
+	password="fredbloggs",
+	projectId=1,
+	releaseId=1,
+	testSetId
 )
-
-\@Test(groups={\"unittest\"})
-
+@Test(groups={"unittest"})
 public class SimpleTest
-
 {
+	protected int fValue1;
+	protected int fValue2;
 
-protected int fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	@BeforeClass
+	public void setUp()
+	{
+		fValue1= 2;
+		fValue2= 3;
+	}
 
-protected int fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	@Test(groups={"unittest"})
+	@SpiraTestCase(testCaseId=5)
+	public void testAdd()
+	{
+		double result = fValue1 + fValue2;
 
-/\*\*
+		// forced failure result == 5
+		assertTrue (result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+	@Test(groups={"unittest"})
+	@SpiraTestCase(testCaseId=5)
+	public void testDivideByZero()
+	{
+		int zero = 0;
+		int result = 8 / zero;
+		result++; // avoid warning for not using result
+	}
 
-\*/
+	/**
+	 * Tests two equal values
+	 */
+	@Test(groups={"unittest"})
+	@SpiraTestCase(testCaseId=6)
+	public void testEquals()
+	{
+		assertEquals(12, 12);
+		assertEquals(12L, 12L);
+		assertEquals(new Long(12), new Long(12));
 
-\@BeforeClass
+		assertEquals("Size", 12, 13);
+		assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-public void setUp()
-
-{
-
-fValue1= 2;
-
-fValue2= 3;
-
+	/**
+	 * Tests success
+	 */
+	@Test(groups={"unittest"})
+	@SpiraTestCase(testCaseId=6)
+	public void testSuccess()
+	{
+		//Successful test
+		assertEquals(12, 12);
+	}
 }
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-\@SpiraTestCase(testCaseId=5)
-
-public void testAdd()
-
-{
-
-double result = fValue1 + fValue2;
-
-// forced failure result == 5
-
-assertTrue (result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-\@SpiraTestCase(testCaseId=5)
-
-public void testDivideByZero()
-
-{
-
-int zero = 0;
-
-int result = 8 / zero;
-
-result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-\@SpiraTestCase(testCaseId=6)
-
-public void testEquals()
-
-{
-
-assertEquals(12, 12);
-
-assertEquals(12L, 12L);
-
-assertEquals(new Long(12), new Long(12));
-
-assertEquals(\"Size\", 12, 13);
-
-assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
-}
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-\@Test(groups={\"unittest\"})
-
-\@SpiraTestCase(testCaseId=6)
-
-public void testSuccess()
-
-{
-
-//Successful test
-
-assertEquals(12, 12);
-
-}
-
-}
+```
 
 The overall class is marked with a new \@SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
 **URL** - The URL to the instance of SpiraTest being accessed. This
-needs to start with [http://]{.underline} or [https://]{.underline}
+needs to start with http:// or https://
 
 **Login** - A valid username for the instance of SpiraTest.
 

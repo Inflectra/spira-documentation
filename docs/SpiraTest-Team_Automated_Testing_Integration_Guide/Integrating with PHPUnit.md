@@ -38,181 +38,111 @@ your PHPUnit test fixtures with SpiraTest.
 The typical code structure for a PHPUnit test suite and test case coded
 in PHP is as follows:
 
-[a) Sample Test Suite]{.underline}
+a) Sample Test Suite
+```PHP
+<?php
+/**
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+ 
+ require_once 'PHPUnit/Framework.php';
+ require_once 'PHPUnit/TextUI/ResultPrinter.php';
+ require_once './SimpleTest.php';
 
-\<?php
+ // Create a test suite that contains the tests
+ // from the ArrayTest class
+  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+ 
+ // Create a test result and attach the default console text listener
+ $result = new PHPUnit_Framework_TestResult;
+ $textPrinter = new PHPUnit_TextUI_ResultPrinter;
+ $result->addListener($textPrinter);
+ 
+ // Run the tests and print the results
+ $result = $suite->run($result);
+ $textPrinter->printResult($result);
 
-/\*\*
+ ?>
 
-\*
+b) Sample Test Case
+<?php
+require_once 'PHPUnit/Framework/TestCase.php';
 
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-require\_once \'PHPUnit/Framework.php\';
-
-require\_once \'PHPUnit/TextUI/ResultPrinter.php\';
-
-require\_once \'./SimpleTest.php\';
-
-// Create a test suite that contains the tests
-
-// from the ArrayTest class
-
-\$suite = new PHPUnit\_Framework\_TestSuite(\'SimpleTest\');
-
-// Create a test result and attach the default console text listener
-
-\$result = new PHPUnit\_Framework\_TestResult;
-
-\$textPrinter = new PHPUnit\_TextUI\_ResultPrinter;
-
-\$result-\>addListener(\$textPrinter);
-
-// Run the tests and print the results
-
-\$result = \$suite-\>run(\$result);
-
-\$textPrinter-\>printResult(\$result);
-
-?\>
-
-[b) Sample Test Case]{.underline}
-
-\<?php
-
-require\_once \'PHPUnit/Framework/TestCase.php\';
-
-/\*\*
-
-\* Some simple tests
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.2.0
-
-\*
-
-\*/
-
-class SimpleTest extends PHPUnit\_Framework\_TestCase
-
+/**
+ * Some simple tests
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.2.0
+ *
+ */
+ 
+class SimpleTest extends PHPUnit_Framework_TestCase
 {
+	protected $fValue1;
+	protected $fValue2;
 
-protected \$fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	protected function setUp()
+	{
+		$this->fValue1= 2;
+		$this->fValue2= 3;
+	}
 
-protected \$fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	public function testAdd()
+	{
+		$result = $this->fValue1 + $this->fValue2;
 
-/\*\*
+		// forced failure result == 5
+		$this->assertTrue ($result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+   	/*
+	public function testDivideByZero()
+	{
+		$zero = 0;
+		$result = 8 / $zero;
+		$result++; // avoid warning for not using result
+	}
 
-\*/
-
-protected function setUp()
-
-{
-
-\$this-\>fValue1= 2;
-
-\$this-\>fValue2= 3;
-
-}
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-public function testAdd()
-
-{
-
-\$result = \$this-\>fValue1 + \$this-\>fValue2;
-
-// forced failure result == 5
-
-\$this-\>assertTrue (\$result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-/\*
-
-public function testDivideByZero()
-
-{
-
-\$zero = 0;
-
-\$result = 8 / \$zero;
-
-\$result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-/\*
-
+	/**
+	 * Tests two equal values
+	 */
+   	/*
 public function testEquals()
+	{
+		$this->assertEquals(12, 12);
+		$this->assertEquals(12.0, 12.0);
+    		$num1 = 12;
+    		$num2 = 12;
+		$this->assertEquals($num1, $num2);
 
-{
+		$this->assertEquals("Size", 12, 13);
+		$this->assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-\$this-\>assertEquals(12, 12);
-
-\$this-\>assertEquals(12.0, 12.0);
-
-\$num1 = 12;
-
-\$num2 = 12;
-
-\$this-\>assertEquals(\$num1, \$num2);
-
-\$this-\>assertEquals(\"Size\", 12, 13);
-
-\$this-\>assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
+	/**
+	 * Tests success
+	 */
+  	/*
+	public function testSuccess()
+	{
+		//Successful test
+		$this->assertEquals(12, 12);
+	}
 }
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-/\*
-
-public function testSuccess()
-
-{
-
-//Successful test
-
-\$this-\>assertEquals(12, 12);
-
-}
-
-}
-
-?\>
+?>
+```
 
 The PHP class is marked as a PHPUnit test case by inheriting from the
 *PHPUnit\_Framework\_TestCase* base class, and the individual test
@@ -236,213 +166,131 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PHPUnit test case and test suite for
 SpiraTest to record the PHPUnit test run are illustrated below:\
 \
-[a) Sample Test Suite]{.underline}
+a) Sample Test Suite
 
-\<?php
+```PHP
+<?php
+/**
+ * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.3.0
+ *
+ */
+ 
+ require_once 'PHPUnit/Framework.php';
+ require_once 'PHPUnit/TextUI/ResultPrinter.php';
+ require_once './SimpleTest.php';
+ require_once '../SpiraListener/Listener.php';
+ 
+ // Create a test suite that contains the tests
+ // from the ArrayTest class
+  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+ 
+ //Set the timezone identifier to match that used by the SpiraTest server
+ date_default_timezone_set ("US/Eastern");
+ 
+ //Create a new SpiraTest listener instance and specify the connection info
+ $spiraListener = new SpiraListener_Listener;
+ $spiraListener->setBaseUrl ('http://localhost/SpiraTeam');
+ $spiraListener->setUserName ('fredbloggs');
+ $spiraListener->setPassword ('fredbloggs');
+ $spiraListener->setProjectId (1);
+ $spiraListener->setReleaseId (1);
+ $spiraListener->setTestSetId (1);
+ 
+ // Create a test result and attach the SpiraTest listener
+ // object as an observer to it (as well as the default console text listener)
+ $result = new PHPUnit_Framework_TestResult;
+ $textPrinter = new PHPUnit_TextUI_ResultPrinter;
+ $result->addListener($textPrinter);
+ $result->addListener($spiraListener);
+ 
+ // Run the tests and print the results
+ $result = $suite->run($result);
+ $textPrinter->printResult($result);
 
-/\*\*
+ ?>
+```
 
-\* Passes a list of tests to be executed to PHPUnit and adds the custom
-SpiraTest Listener
+b) Sample Test Case
 
-\*
+```PHP
+<?php
+require_once 'PHPUnit/Framework/TestCase.php';
 
-\* \@author Inflectra Corporation
-
-\* \@version 2.3.0
-
-\*
-
-\*/
-
-require\_once \'PHPUnit/Framework.php\';
-
-require\_once \'PHPUnit/TextUI/ResultPrinter.php\';
-
-require\_once \'./SimpleTest.php\';
-
-require\_once \'../SpiraListener/Listener.php\';
-
-// Create a test suite that contains the tests
-
-// from the ArrayTest class
-
-\$suite = new PHPUnit\_Framework\_TestSuite(\'SimpleTest\');
-
-//Set the timezone identifier to match that used by the SpiraTest server
-
-date\_default\_timezone\_set (\"US/Eastern\");
-
-//Create a new SpiraTest listener instance and specify the connection
-info
-
-\$spiraListener = new SpiraListener\_Listener;
-
-\$spiraListener-\>setBaseUrl (\'http://localhost/SpiraTeam\');
-
-\$spiraListener-\>setUserName (\'fredbloggs\');
-
-\$spiraListener-\>setPassword (\'fredbloggs\');
-
-\$spiraListener-\>setProjectId (1);
-
-\$spiraListener-\>setReleaseId (1);
-
-\$spiraListener-\>setTestSetId (1);
-
-// Create a test result and attach the SpiraTest listener
-
-// object as an observer to it (as well as the default console text
-listener)
-
-\$result = new PHPUnit\_Framework\_TestResult;
-
-\$textPrinter = new PHPUnit\_TextUI\_ResultPrinter;
-
-\$result-\>addListener(\$textPrinter);
-
-\$result-\>addListener(\$spiraListener);
-
-// Run the tests and print the results
-
-\$result = \$suite-\>run(\$result);
-
-\$textPrinter-\>printResult(\$result);
-
-?\>
-
-[b) Sample Test Case]{.underline}
-
-\<?php
-
-require\_once \'PHPUnit/Framework/TestCase.php\';
-
-/\*\*
-
-\* Some simple tests using the ability to return results back to
-SpiraTest
-
-\*
-
-\* \@author Inflectra Corporation
-
-\* \@version 2.2.0
-
-\*
-
-\*/
-
-class SimpleTest extends PHPUnit\_Framework\_TestCase
-
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ * 
+ * @author		Inflectra Corporation
+ * @version		2.2.0
+ *
+ */
+ 
+class SimpleTest extends PHPUnit_Framework_TestCase
 {
+	protected $fValue1;
+	protected $fValue2;
 
-protected \$fValue1;
+	/**
+	 * Sets up the unit test
+	 */
+	protected function setUp()
+	{
+		$this->fValue1= 2;
+		$this->fValue2= 3;
+	}
 
-protected \$fValue2;
+	/**
+	 * Tests the addition of the two values
+	 */
+	public function testAdd__2()
+	{
+		$result = $this->fValue1 + $this->fValue2;
 
-/\*\*
+		// forced failure result == 5
+		$this->assertTrue ($result == 6);
+	}
 
-\* Sets up the unit test
+	/**
+	 * Tests division by zero
+	 */
+   	/*
+	public function testDivideByZero__3()
+	{
+		$zero = 0;
+		$result = 8 / $zero;
+		$result++; // avoid warning for not using result
+	}
 
-\*/
+	/**
+	 * Tests two equal values
+	 */
+   	/*
+public function testEquals__4()
+	{
+		$this->assertEquals(12, 12);
+		$this->assertEquals(12.0, 12.0);
+    		$num1 = 12;
+    		$num2 = 12;
+		$this->assertEquals($num1, $num2);
 
-protected function setUp()
+		$this->assertEquals("Size", 12, 13);
+		$this->assertEquals("Capacity", 12.0, 11.99, 0.0);
+	}
 
-{
-
-\$this-\>fValue1= 2;
-
-\$this-\>fValue2= 3;
-
+	/**
+	 * Tests success
+	 */
+  	/*
+	public function testSuccess__5()
+	{
+		//Successful test
+		$this->assertEquals(12, 12);
+	}
 }
-
-/\*\*
-
-\* Tests the addition of the two values
-
-\*/
-
-public function testAdd\_\_2()
-
-{
-
-\$result = \$this-\>fValue1 + \$this-\>fValue2;
-
-// forced failure result == 5
-
-\$this-\>assertTrue (\$result == 6);
-
-}
-
-/\*\*
-
-\* Tests division by zero
-
-\*/
-
-/\*
-
-public function testDivideByZero\_\_3()
-
-{
-
-\$zero = 0;
-
-\$result = 8 / \$zero;
-
-\$result++; // avoid warning for not using result
-
-}
-
-/\*\*
-
-\* Tests two equal values
-
-\*/
-
-/\*
-
-public function testEquals\_\_4()
-
-{
-
-\$this-\>assertEquals(12, 12);
-
-\$this-\>assertEquals(12.0, 12.0);
-
-\$num1 = 12;
-
-\$num2 = 12;
-
-\$this-\>assertEquals(\$num1, \$num2);
-
-\$this-\>assertEquals(\"Size\", 12, 13);
-
-\$this-\>assertEquals(\"Capacity\", 12.0, 11.99, 0.0);
-
-}
-
-/\*\*
-
-\* Tests success
-
-\*/
-
-/\*
-
-public function testSuccess\_\_5()
-
-{
-
-//Successful test
-
-\$this-\>assertEquals(12, 12);
-
-}
-
-}
-
-?\>
+?>
+```
 
 Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
@@ -484,80 +332,50 @@ with a specific test set, just use the value -1 to indicate N/A.
 
 The SpiraListener\_Listener class can also be called with the parameters
 as the constructor arguments:
-
-//Create a new SpiraTest listener instance and specify the connection
-info
-
-\$spiraListener = new SpiraListener\_Listener (
-
-\'http://localhost/SpiraTeam\',
-
-\'fredbloggs\',
-
-\'fredbloggs\',
-
-1,
-
-1,
-
-1);
+```php
+//Create a new SpiraTest listener instance and specify the connection info
+ $spiraListener = new SpiraListener_Listener (
+'http://localhost/SpiraTeam',
+ 	'fredbloggs',
+ 'fredbloggs',
+ 	1,
+ 	1,
+ 	1);
+```
 
 You can also attach the listener to the class declaratively by adding it
 to the phpunit.xml configuration file instead of adding through PHP
 code:
 
-\<phpunit\>
+```xml
+<phpunit>
+  <listeners>
+    <listener class="SpiraListener_Listener" file="../SpiraListener/Listener.php">
+          <arguments>
+              <!-- URL -->
+              <string>http://localhost/SpiraTeam</string>
+              <!-- User Name -->
+              <string>fredbloggs</string>
+              <!-- User Password -->
+              <string>fredbloggs</string>
+              <!-- Project ID -->
+              <integer>1</integer>
+              <!-- Release ID -->
+              <integer>1</integer>
+              <!-- Test Set ID -->
+              <integer>1</integer>
+            </arguments>
+    </listener>
+  </listeners>
+  <testsuites>
+    <testsuite name="Sample Suite">
+      <directory>.</directory>
+      <file>./SampleSuite.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
 
-\<listeners\>
-
-\<listener class=\"SpiraListener\_Listener\"
-file=\"../SpiraListener/Listener.php\"\>
-
-\<arguments\>
-
-\<!\-- URL \--\>
-
-\<string\>http://localhost/SpiraTeam\</string\>
-
-\<!\-- User Name \--\>
-
-\<string\>fredbloggs\</string\>
-
-\<!\-- User Password \--\>
-
-\<string\>fredbloggs\</string\>
-
-\<!\-- Project ID \--\>
-
-\<integer\>1\</integer\>
-
-\<!\-- Release ID \--\>
-
-\<integer\>1\</integer\>
-
-\<!\-- Test Set ID \--\>
-
-\<integer\>1\</integer\>
-
-\</arguments\>
-
-\</listener\>
-
-\</listeners\>
-
-\<testsuites\>
-
-\<testsuite name=\"Sample Suite\"\>
-
-\<directory\>.\</directory\>
-
-\<file\>./SampleSuite.php\</file\>
-
-\</testsuite\>
-
-\</testsuites\>
-
-\</phpunit\>
+```
 
 Now all you need to do is save your code, launch PHPUnit, run the test
 suite as you would normally do, and when you view the test cases in
@@ -580,6 +398,6 @@ error was, together with the associated code stack-trace:
 
 Congratulations... You are now able to run PHPUnit automated tests and
 have the results be recorded within SpiraTest. The sample test suite
-[SampleSuite.php]{.underline} and sample test case SampleTest.php are
+SampleSuite.php and sample test case SampleTest.php are
 provided with the installation in the Samples subfolder.
 

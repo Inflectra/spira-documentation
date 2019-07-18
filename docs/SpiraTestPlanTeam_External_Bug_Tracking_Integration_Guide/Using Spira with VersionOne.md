@@ -88,7 +88,7 @@ purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to V1. This is
 typically something like:
-[https://www1.v1host.com/CompanyName]{.underline}.
+https://www1.v1host.com/CompanyName.
 
 -   **Login** -- this should be set to the login that you use to access
 V1 through its web interface
@@ -105,14 +105,14 @@ when comparing date-time stamps.
 -   **Auto-Map Users** -- This changes the way that the plugin maps
 users in SpiraTeam to those in V1:
 
--   **Auto-Map = True\
+-   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in V1. If this is the case then you do
 not need to perform the user-mapping task outlined in section
 12.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False\
+-   **Auto-Map = False
 **With this setting, users in SpiraTeam and V1are free to have
 different usernames because you specify the corresponding
 V1login for each user as outlined in section 12.2.2.
@@ -168,13 +168,13 @@ To enable this project for data-synchronization with V1, you need to
 enter:
 
 **External Key** -- This should be set to the **name** of the project in
-V1:\
-\
+V1:
+
 ![](img/Using_Spira_with_VersionOne_186.png)
 
 
-.\
-If you have sub-projects, you can map to one of those using the syntax:\
+
+If you have sub-projects, you can map to one of those using the syntax:
 **Project/SubProject**
 
 **Active Flag** -- Set this to 'Yes' so that SpiraTeam knows that you
@@ -254,7 +254,7 @@ Project Mappings" for the V1DataSync plug-in entry:
 From this screen, you need to click on Status, Priority, Type in turn to
 configure their values (V1 doesn't support different defect severities):
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -284,7 +284,7 @@ incidents have been synched with V1 and those that haven't.
 the status inside V1. If you change the name of a status in V1, you'll
 need to update the value in the data-mapping configuration as well.*
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -306,7 +306,7 @@ the priority inside V1. If you change the name of a priority in V1,
 you'll need to update the value in the data-mapping configuration as
 well.*
 
-[c) Incident Type]{.underline}
+c) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -343,7 +343,7 @@ From this screen, you need to click on Priority, Severity and Status in
 turn to configure their values (V1 doesn't support different defect
 types):
 
-[a) Requirement Status]{.underline}
+a) Requirement Status
 
 Click on the "Status" hyperlink under Requirement Standard Fields to
 bring up the Requirement status mapping configuration screen:
@@ -365,7 +365,7 @@ reverse synchronization (from V1 \> SpiraTeam).
 the status inside V1. If you change the name of a status in V1, you'll
 need to update the value in the data-mapping configuration as well.*
 
-[b) Requirement Importance]{.underline}
+b) Requirement Importance
 
 Click on the "Importance" hyperlink under Requirement Standard Fields to
 bring up the Requirement Importance mapping configuration screen:
@@ -387,7 +387,7 @@ the priority inside V1. If you change the name of a priority in V1,
 you'll need to update the value in the data-mapping configuration as
 well.*
 
-[c) Requirement Type]{.underline}
+c) Requirement Type
 
 Click on the "Type" hyperlink under Requirement Standard Fields to bring
 up the requirement type mapping configuration screen:

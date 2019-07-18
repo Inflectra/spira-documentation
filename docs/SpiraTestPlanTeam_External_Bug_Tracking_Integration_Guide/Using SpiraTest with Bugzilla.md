@@ -61,8 +61,8 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the Bugzilla
-installation's web-service API. This is typically [http://\<Bugzilla
-server name\>/xmlrpc.cgi]{.underline}
+installation's web-service API. This is typically http://\<Bugzilla
+server name\>/xmlrpc.cgi
 
 -   **Login** -- this should be set to a valid login to the Bugzilla
 installation -- typically an email address. The login needs to have
@@ -224,7 +224,7 @@ Project Mappings" for the BugzillaDataSync plug-in entry:
 From this screen, you need to click on Priority, Severity and Status in
 turn to configure their values:
 
-[a) Incident Status]{.underline}
+a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -250,7 +250,7 @@ switched to the NEW status in Bugzilla which will then be synched back
 to "Open" in SpiraTeam. That way you'll be able to see at a glance which
 incidents have been synched with Bugzilla and those that haven't.
 
-[b) Incident Priority]{.underline}
+b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -267,7 +267,7 @@ Bugzilla fields, in which case only one of the two values can be listed
 as Primary = Yes as that's the value that's used on the reverse
 synchronization (from Bugzilla \> SpiraTeam).
 
-[c) Incident Severity]{.underline}
+c) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident severity mapping configuration screen:
@@ -306,7 +306,7 @@ types of mapping that you might want to enter in turn:
 
 
 
-[a) Bugzilla's Component Field]{.underline}
+a) Bugzilla's Component Field
 
 If your instance of Bugzilla requires that all new bugs are submitted
 with a 'Component' then you will need to fill out this section. You
@@ -332,7 +332,7 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the Bugzilla name of the various Components
 that are configured in Bugzilla.
 
-[b) Bugzilla's Operating System Field]{.underline}
+b) Bugzilla's Operating System Field
 
 If your instance of Bugzilla requires that all new issues are submitted
 with an 'Operating System' then you will need to fill out this section.
@@ -358,7 +358,7 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the Bugzilla name of the various Operating
 System values that are configured in Bugzilla.
 
-[c) Bugzilla's Hardware Field]{.underline}
+c) Bugzilla's Hardware Field
 
 If your instance of Bugzilla requires that all new issues are submitted
 with a 'Hardware' value then you will need to fill out this section. You
@@ -384,7 +384,7 @@ Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the Bugzilla name of the various Hardware
 platforms that are configured in Bugzilla.
 
-[d) Bugzilla's Resolution Field (Optional)]{.underline}
+d) Bugzilla's Resolution Field (Optional)
 
 When incidents in SpiraTeam are updated with changes made in Bugzilla,
 the value of the Bugzilla resolution field (FIXED, INVALID, WONTFIX,

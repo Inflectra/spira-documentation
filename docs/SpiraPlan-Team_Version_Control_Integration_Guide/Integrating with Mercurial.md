@@ -38,7 +38,7 @@ Administration page and click on the "Version Control" link under
 **System**.
 
 -   Click the "Add" button to enter the Plug-in details page. The fields
-required are as follows:\
+required are as follows:
 ![](img/Integrating_with_Mercurial_48.png)
 
 
@@ -56,8 +56,8 @@ used for any project.
 repository for any project accessing the plug-in, unless
 overridden in the Project Settings:
 
--   For example:\
-<https://bitbucket.org/aragost/javahg>\
+-   For example:
+<https://bitbucket.org/aragost/javahg>
 ssh://example.com/hg/
 
 -   **Login / Password**: The user id and the password of the user
@@ -80,7 +80,7 @@ listed as an available plug-in.
 -   Verify that you are in the correct project using the drop-down at
 top, and click on the "Project Settings" link for the
 MercurialProvider. You will get a screen listing all the same
-configuration settings:\
+configuration settings:
 ![](img/Integrating_with_Mercurial_49.png)
 
 

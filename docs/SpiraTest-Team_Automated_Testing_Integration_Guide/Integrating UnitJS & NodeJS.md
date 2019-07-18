@@ -18,6 +18,7 @@ mapping uncaught exceptions to the correct test cases.
 
 An example UnitJS test running Mocha looks something like:
 
+```javascript
 var test = require(\'unit.js\');
 
 describe(\'Example Test\', function(){
@@ -159,6 +160,7 @@ example.badMethod();
 });
 
 });
+```
 
 In this sample, we have one test suite "Example Test" that has two tests
 -- "sample pass" and "sample fail" inside it. When you run this test
@@ -206,6 +208,7 @@ node ./node\_modules/mocha/bin/mocha .\\test\\example2.js \--reporter
 For the second part, you need to add the following code to your test
 suite at the top:
 
+```javascript
 var SpiraReporter = require(\'../reporter/SpiraReporter.js\');
 
 //set the SpiraTest options
@@ -231,7 +234,7 @@ host: \'127.0.0.1\',
 vdir: \'spira\'
 
 };
-
+```
 The first line simply adds a reference to the SpiraTest Mocha reporter
 module.
 
@@ -322,47 +325,3 @@ Congratulations... You are now able to run UnitJS automated tests using
 Mocha and the SpiraTest custom reporter and have the results be recorded
 within SpiraTest. The sample test suites **example.js** and
 **example2.js** are provided with the installation.
-
-####  Legal Notices
-
-This publication is provided as is without warranty of any kind, either
-express or implied, including, but not limited to, the implied
-warranties of merchantability, fitness for a particular purpose, or
-non-infringement.
-
-This publication could include technical inaccuracies or typographical
-errors. Changes are periodically added to the information contained
-herein; these changes will be incorporated in new editions of the
-publication. Inflectra Corporation may make improvements and/or changes
-in the product(s) and/or program(s) and/or service(s) described in this
-publication at any time.
-
-The sections in this guide that discuss internet web security are
-provided as suggestions and guidelines. Internet security is constantly
-evolving field, and our suggestions are no substitute for an up-to-date
-understanding of the vulnerabilities inherent in deploying internet or
-web applications, and Inflectra cannot be held liable for any losses due
-to breaches of security, compromise of data or other cyber-attacks that
-may result from following our recommendations.
-
-SpiraTest^®^, SpiraPlan^®^, SpiraTeam^®^ and Inflectra^®^ are registered
-trademarks of Inflectra Corporation in the United States of America and
-other countries. Microsoft^®^, Windows^®^, Explorer^®^ and Microsoft
-Project^®^ are registered trademarks of Microsoft Corporation. QuickTest
-Pro^®^ is a registered trademark of Hewlett-Packard Development Company,
-L.P. All other trademarks and product names are property of their
-respective holders.
-
-Please send comments and questions to:
-
-> Technical Publications
->
-> Inflectra Corporation
->
-> 8121 Georgia Ave, Suite 504
->
-> Silver Spring, MD 20910-4957
->
-> U.S.A.
->
-> [*support\@inflectra.com*](mailto:support@inflectra.com)
