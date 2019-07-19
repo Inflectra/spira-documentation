@@ -14,8 +14,8 @@ In addition, if you are using JIRA 4.x or higher, any issues logged
 directly into JIRA will get imported into SpiraTeam so that they can be
 linked to test cases and requirements.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 
@@ -92,7 +92,7 @@ Please fill out the fields as follows:
 -   **Custom 01** -- This is used to specify a JIRA custom property that
 should be mapped to the built-in SpiraTeam Incident Severity field
 (which does not exist in JIRA). This can be left empty for now and
-will be discussed below in section 3.2.
+will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 
 -   **Custom 02 -- 05** -- these are not currently used by the plug-in
 and should be left blank.
@@ -107,20 +107,19 @@ users in SpiraTeam to those in JIRA:
 -   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in JIRA. If this is the case then you do
-not need to perform the user-mapping task outlined in section
-3.2.2. This is a big time-saver if you can guarantee that all
+not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
 -   **Auto-Map = False
 **With this setting, users in SpiraTeam and JIRA are free to
 have different usernames because you specify the corresponding
-JIRA name for each user as outlined in section 3.2.2.**
+JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).**
 **
 
 -   **Custom 01** -- This is used to specify a JIRA custom property that
 should be mapped to the built-in SpiraTeam Incident Severity field
 (which does not exist in JIRA). This can be left empty for now and
-will be discussed below in section 3.2.
+will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 
 -   **Custom 02** -- This should be set to the word "True" if you want
 to have the new issues submitted to JIRA be submitted using a
@@ -167,16 +166,11 @@ JIRA (for example).
 
 The following mapping information needs to be setup in SpiraTeam:
 
-The mapping of the project identifiers for the projects that need to be
-synchronized
-
-The mapping of users in the system
-
-The mapping of releases (equivalent to JIRA versions) in the system
-
-The mapping of the various standard fields in the system
-
-The mapping of the various custom properties in the system
+- The mapping of the project identifiers for the projects that need to be synchronized
+- The mapping of users in the system
+- The mapping of releases (equivalent to JIRA versions) in the system
+- The mapping of the various standard fields in the system
+- The mapping of the various custom properties in the system
 
 Each of these is explained in turn below:
 

@@ -13,8 +13,8 @@ additional notes entered in Mantis be reflected back in SpiraTeam. In
 addition, any new issues logged into mantis will get imported into
 SpiraTeam so that they can be linked to test cases and requirements.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 

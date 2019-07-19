@@ -15,9 +15,9 @@ the installation file from Microsoft:
 Visual Studio Express versions cannot support Add-Ins, you must at least
 have the standard version of the IDE for the Add-In to appear in the
 menu bar.
+ ![](img/Visual_Studio_2005_-_2008_71.png)
 
-## ![](img/Visual_Studio_2005_-_2008_71.png)
-7.1. Installing the Visual Studio Add-In
+## Installing the Visual Studio Add-In
 
 Download and execute the Add-In installation file from the Inflectra
 website. The add-in will be automatically added to VS's menu bar.

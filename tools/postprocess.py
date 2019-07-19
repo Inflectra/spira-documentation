@@ -17,6 +17,7 @@ size_regex = re.compile(
 
 size1_regex = re.compile(r"{width=\"[0-9\.]+in\"", re.IGNORECASE)
 size2_regex = re.compile(r"height=\"[0-9\.]+in\"}", re.IGNORECASE)
+underline_regex = re.compile(r"\[.+]{.underline}")
 
 
 def main():
@@ -54,6 +55,13 @@ def process(file_name):
                     l = size_regex.sub("\n", l)
                     l = size1_regex.sub("\n", l)
                     l = size2_regex.sub("\n", l)
+                    # Remove {.underline} and associated brackets from the text
+                    result = underline_regex.search(line)
+                    if result:
+                        start_index = line.index(result.group(0))
+                        end_index = line.index("{.underline}")
+                        string = line[start_index + 1:end_index - 1]
+                        l = underline_regex.sub(string, line)
                     output.write(l)
                     count += 1
 

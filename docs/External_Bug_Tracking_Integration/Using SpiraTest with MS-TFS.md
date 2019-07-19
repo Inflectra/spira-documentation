@@ -20,8 +20,8 @@ these new tasks into TFS as task work items where the development team
 can manage their lifecycle, with schedule and progress changes in TFS
 being reflected back in SpiraTeam.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ► Note: Only the MS-TFS 2012+ Plug-In is Available on the Inflectra
 Cloud-Based DataSync Service.

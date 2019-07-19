@@ -59,8 +59,7 @@ import from. You also need to select a valid username and password for
 that project. Once you have done this, click the \<Login\> button to
 verify that the project file can be opened.
 
-The button marked \<Clear Project Cache\> will be explained later on in
-section 4.
+The button marked \<Clear Project Cache\> will be explained later on.
 
 Assuming that the user name selected has permission to access this
 project, you will be prompted with a message box indicating that the

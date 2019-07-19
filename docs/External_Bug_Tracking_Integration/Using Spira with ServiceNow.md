@@ -4,8 +4,8 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan
 (hereafter referred to as SpiraPlan) in conjunction with tables in
 ServiceNow.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ServiceNow tables are a highly configurable system that can now be used
 in conjunction with SpiraPlan. This integration service enables two-way

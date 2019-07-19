@@ -14,8 +14,8 @@ In addition, any issues logged directly into Redmine will get imported
 into SpiraTeam so that they can be linked to test cases and
 requirements.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 
@@ -86,14 +86,12 @@ users in SpiraTeam to those in Redmine:
 -   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in Redmine. If this is the case then you
-do not need to perform the user-mapping task outlined in section
-11.2.2. This is a big time-saver if you can guarantee that all
-usernames are the same in both systems.
+do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
 
 -   **Auto-Map = False
 **With this setting, users in SpiraTeam and Redmine are free to
 have different usernames because you specify the corresponding
-Redmine name for each user as outlined in section 11.2.2.
+Redmine name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).
 
 -   **Custom 01** -- This should be set to the word "**false**" if you
 want to have the plugin restrict synchronization to not create any

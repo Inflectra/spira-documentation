@@ -12,8 +12,8 @@ Once the incidents are loaded into Axosoft as defects, the development
 team can then manage the lifecycle of these defects in Axosoft, and have
 the status changes in Axosoft be reflected back in SpiraTeam.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 
@@ -140,14 +140,13 @@ users in SpiraTeam to those in Axosoft:
 -   **Auto-Map = True
 **With this setting, all users in SpiraTeam need to have the
 same username as those in Axosoft. If this is the case then you
-do not need to perform the user-mapping task outlined in section
-10.2.2. This is a big time-saver if you can guarantee that all
+do not need to perform the user-mapping task outlined in [Configuring the User Mapping](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
 -   **Auto-Map = False
 **With this setting, users in SpiraTeam and Axosoft are free to
 have different usernames because you specify the corresponding
-Axosoft login for each user as outlined in section 10.2.2.
+Axosoft login for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).
 
 -   **Custom 01** -- This should contain the **Client ID** value from
 the Axosoft API Key screen

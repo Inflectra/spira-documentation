@@ -16,8 +16,8 @@ SpiraTeam as either new incidents or new requirements (depending on
 their type) so that they can be used as part of the planning and testing
 lifecycle.
 
-► STOP! Please make sure you have first read the Instructions in Section
-1 before proceeding!
+**STOP! Please make sure you have first read the Instructions in 
+[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 
@@ -33,10 +33,10 @@ The JIRA 5.x plugin supports JIRA 5.0 or later and SpiraTeam v4.0 or
 later
 
 The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or
-later *(see section 3)*
+later *(see [Using SpiraTeam with JIRA 3 / 4](../Using%20SpiraTeam%20with%20JIRA%203%20%204/))*
 
 The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or
-later *(see section 3)*
+later *(see [Using SpiraTeam with JIRA 3 / 4](../Using%20SpiraTeam%20with%20JIRA%203%20%204/))*
 
 If you have an earlier version of SpiraTeam, you will need to upgrade to
 at least v2.3 before trying to integrate with JIRA.
@@ -117,19 +117,18 @@ users in SpiraTeam to those in JIRA:
 -   **Auto-Map = True\
 **With this setting, all users in SpiraTeam need to have the
 same username as those in JIRA. If this is the case then you do
-not need to perform the user-mapping task outlined in section
-2.2.2. This is a big time-saver if you can guarantee that all
+not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
 -   **Auto-Map = False\
 **With this setting, users in SpiraTeam and JIRA are free to
 have different usernames because you specify the corresponding
-JIRA name for each user as outlined in section 2.2.2.
+JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
 -   **Custom 01** -- This is used to specify a JIRA custom property that
 should be mapped to the built-in SpiraTeam Incident Severity field
 (which does not exist in JIRA). This can be left empty for now and
-will be discussed below in section 2.2.
+will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 
 -   **Custom 02** -- This should be set to the word "True" if you want
 to have the new issues submitted to JIRA be submitted using a

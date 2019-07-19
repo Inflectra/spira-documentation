@@ -1,80 +1,102 @@
-site_name: Spira
+site_name: SpiraDocs
+
+repo_name: Inflectra
+repo_url: https://www.inflectra.com
+site_url: https://spiradoc.inflectra.com/
 
 theme: 
   name: mkdocs
   custom_dir: inflectra_mkdocs
 nav:
-- VCS: 
-  - Git: Version_Control_Integration\Integrating with Git.md
-  - Mercurial: Version_Control_Integration\Integrating with Mercurial.md
-  - Perforce: Version_Control_Integration\Integrating with Perforce.md
-  - Subversion: Version_Control_Integration\Integrating with Subversion.md
-  - TFS: Version_Control_Integration\Integrating with TFS.md
-  - VSS: Version_Control_Integration\Integrating with VSS.md
-  - CVS: Version_Control_Integration\Integrating with CVS.md
-- Testing:
-  - UnitJS: Unit_Testing_Integration\Integrating UnitJS & NodeJS.md
-  - JUnit: Unit_Testing_Integration\Integrating with JUnit.md
-  - MS-Test: Unit_Testing_Integration\Integrating with MS-Test.md
-  - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
-  - PHPUnit: Unit_Testing_Integration\Integrating with PHPUnit.md
-  - Perl TAP: Unit_Testing_Integration\Integrating with Perl TAP.md
-  - PyTest: Unit_Testing_Integration\Integrating with PyTest.md
-  - PyUnit: Unit_Testing_Integration\Integrating with PyUnit.md
-  - Ruby TestUnit: Unit_Testing_Integration\Integrating with Ruby TestUnit.md
-  - Selenium: Unit_Testing_Integration\Integrating with Selenium.md
-  - TestNG: Unit_Testing_Integration\Integrating with TestNG.md
-- Email:
-  - Configuring: Email_Integration\Configuring the Email Integration Service.md
-  - Installing: Email_Integration\Installing the Email Integration Service.md
-  - Using: Email_Integration\Using the Email Integration Service with SpiraTeam.md
-- Bug Tracking:
-  - Setup: External_Bug_Tracking_Integration\Setting up Data Synchronization.md
-  - Axosoft: External_Bug_Tracking_Integration\Using Spira with Axosoft 14+.md
-  - GitHub: External_Bug_Tracking_Integration\Using Spira with GitHub.md
-  - GitLab: External_Bug_Tracking_Integration\Using Spira with GitLab.md
-  - ServiceNow: External_Bug_Tracking_Integration\Using Spira with ServiceNow.md
-  - OnTime: External_Bug_Tracking_Integration\Using Spira with OnTime 11.md
-  - VersionOne: External_Bug_Tracking_Integration\Using Spira with VersionOne.md
-  - ClearQuest: External_Bug_Tracking_Integration\Using SpiraTeam with ClearQuest.md
-  - RTC: External_Bug_Tracking_Integration\Using SpiraTeam with IBM RTC.md
-  - JIRA 3, 4: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 3  4.md
-  - JIRA 5+: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 5+.md
-  - Mantis: External_Bug_Tracking_Integration\Using SpiraTeam with Mantis.md
-  - Redmine: External_Bug_Tracking_Integration\Using SpiraTeam with Redmine.md
-  - Bugzilla: External_Bug_Tracking_Integration\Using SpiraTest with Bugzilla.md
-  - FogBugz: External_Bug_Tracking_Integration\Using SpiraTest with FogBugz.md
-  - MS-TFS: External_Bug_Tracking_Integration\Using SpiraTest with MS-TFS.md
-- Help Desk:
-  - KronoDesk: Help_Desk_Integration\KronoDesk.md
-  - Zendesk: Help_Desk_Integration\Zendesk.md
-- IDE Integration:
-  - Eclipse: IDE_Integration\Eclipse  Mylyn.md
-  - Jetbrains: IDE_Integration\Jetbrains IDEs.md
-  - Visual Studio 2005-2008: IDE_Integration\Visual Studio 2005 - 2008.md
-  - Visual Studio 2010: IDE_Integration\Visual Studio 2010.md
-  - Visual Studio Code: IDE_Integration\Visual Studio Code.md
-  - Visual Studio: IDE_Integration\Visual Studio.md
-- Migration: 
-  - Google Sheets: Migration_and_Integration\Importing from Google Sheets.md
-  - Excel (Office 365): Migration_and_Integration\Importing from Microsoft Excel (Office365).md
-  - Excel: Migration_and_Integration\Importing from Microsoft Excel.md
-  - Microsoft Project: Migration_and_Integration\Importing from Microsoft Project.md
-  - Word: Migration_and_Integration\Importing from Microsoft Word.md
-  - HP ALM: Migration_and_Integration\Migrating from HP ALM.md
-  - HP QualityCenter: Migration_and_Integration\Migrating from HP QualityCenter.md
-  - MS Test Manager: Migration_and_Integration\Migrating from MS Test Manager.md
-  - TestLink: Migration_and_Integration\Migrating from TestLink.md
-  - TestRail: Migration_and_Integration\Migrating from TestRail.md
-  - Backup and Migration: Migration_and_Integration\Project Backup and Migration.md
-- Requirements:
-  - RequisitePro: Requirements_Management_Integration\Importing From RequisitePro.md
-  - DOORS: Requirements_Management_Integration\Importing From DOORS.md
-  - EnterpriseArchitect: Requirements_Management_Integration\Importing From EnterpriseArchitect.md
-  - Jama Contour: Requirements_Management_Integration\Importing From Jama Contour.md
-  - VersionOne: Requirements_Management_Integration\Importing From VersionOne.md
-- Build Servers:
-  - Atlassian Bamboo: Build_Server_Integration\Atlassian Bamboo.md
-  - Jenkins/Hudson: Build_Server_Integration\Jenkins  Hudson.md
-  - JetBrains TeamCity: Build_Server_Integration\JetBrains TeamCity.md
-  - Azure DevOps Pipelines: Build_Server_Integration\Microsoft Azure DevOps Pipelines.md
+- User Manual:
+  - Functionality Overview: Spira_User_Manual\Functionality Overview.md
+  - User/Product Management: Spira_User_Manual\User Product Management.md
+  - Requirements Management: Spira_User_Manual\Requirements Management.md
+  - Test Case Management: Spira_User_Manual\Test Case Management.md
+  - Incident Tracking: Spira_User_Manual\Incident Tracking.md
+  - Release Management: Spira_User_Manual\Release Management.md
+  - Task Tracking: Spira_User_Manual\Task Tracking.md
+  - Resource Tracking: Spira_User_Manual\Resource Tracking.md
+  - Document Management: Spira_User_Manual\Document Management.md
+  - Reports Center: Spira_User_Manual\Reports Center.md
+  - Source Code: Spira_User_Manual\Source Code.md
+  - Planning Board: Spira_User_Manual\Planning Board.md
+  - Mobile Access: Spira_User_Manual\Mobile Access.md
+  - Program Management: Spira_User_Manual\Program Management.md
+  - Risk Management: Spira_User_Manual\Risks Management.md
+  - 'Appendix 1: Keyboard Shortcuts': Spira_User_Manual\Appendix 1 Keyboard Shortcuts.md
+- AddOns and Integrations:
+  - Testing:
+    - UnitJS: Unit_Testing_Integration\Integrating UnitJS & NodeJS.md
+    - JUnit: Unit_Testing_Integration\Integrating with JUnit.md
+    - MS-Test: Unit_Testing_Integration\Integrating with MS-Test.md
+    - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
+    - PHPUnit: Unit_Testing_Integration\Integrating with PHPUnit.md
+    - Perl TAP: Unit_Testing_Integration\Integrating with Perl TAP.md
+    - PyTest: Unit_Testing_Integration\Integrating with PyTest.md
+    - PyUnit: Unit_Testing_Integration\Integrating with PyUnit.md
+    - Ruby TestUnit: Unit_Testing_Integration\Integrating with Ruby TestUnit.md
+    - Selenium: Unit_Testing_Integration\Integrating with Selenium.md
+    - TestNG: Unit_Testing_Integration\Integrating with TestNG.md
+  - IDE Integration:
+    - Visual Studio Code: IDE_Integration\Visual Studio Code.md
+    - Visual Studio: IDE_Integration\Visual Studio.md
+    - Jetbrains: IDE_Integration\Jetbrains IDEs.md
+    - Eclipse: IDE_Integration\Eclipse  Mylyn.md
+    - Visual Studio 2010: IDE_Integration\Visual Studio 2010.md
+    - Visual Studio 2005-2008: IDE_Integration\Visual Studio 2005 - 2008.md
+  - Bug Tracking:
+    - Setup: External_Bug_Tracking_Integration\Setting up Data Synchronization.md
+    - Axosoft: External_Bug_Tracking_Integration\Using Spira with Axosoft 14+.md
+    - GitHub: External_Bug_Tracking_Integration\Using Spira with GitHub.md
+    - GitLab: External_Bug_Tracking_Integration\Using Spira with GitLab.md
+    - ServiceNow: External_Bug_Tracking_Integration\Using Spira with ServiceNow.md
+    - OnTime: External_Bug_Tracking_Integration\Using Spira with OnTime 11.md
+    - VersionOne: External_Bug_Tracking_Integration\Using Spira with VersionOne.md
+    - ClearQuest: External_Bug_Tracking_Integration\Using SpiraTeam with ClearQuest.md
+    - RTC: External_Bug_Tracking_Integration\Using SpiraTeam with IBM RTC.md
+    - JIRA 3, 4: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 3  4.md
+    - JIRA 5+: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 5+.md
+    - MS-TFS: External_Bug_Tracking_Integration\Using SpiraTest with MS-TFS.md
+    - Mantis: External_Bug_Tracking_Integration\Using SpiraTeam with Mantis.md
+    - Redmine: External_Bug_Tracking_Integration\Using SpiraTeam with Redmine.md
+    - Bugzilla: External_Bug_Tracking_Integration\Using SpiraTest with Bugzilla.md
+    - FogBugz: External_Bug_Tracking_Integration\Using SpiraTest with FogBugz.md
+  - VCS: 
+    - Git: Version_Control_Integration\Integrating with Git.md
+    - Mercurial: Version_Control_Integration\Integrating with Mercurial.md
+    - Subversion: Version_Control_Integration\Integrating with Subversion.md
+    - Perforce: Version_Control_Integration\Integrating with Perforce.md
+    - TFS: Version_Control_Integration\Integrating with TFS.md
+    - VSS: Version_Control_Integration\Integrating with VSS.md
+    - CVS: Version_Control_Integration\Integrating with CVS.md
+  - Email:
+    - Installing: Email_Integration\Installing the Email Integration Service.md
+    - Configuring: Email_Integration\Configuring the Email Integration Service.md
+    - Using: Email_Integration\Using the Email Integration Service with SpiraTeam.md
+  - Help Desk:
+    - KronoDesk: Help_Desk_Integration\KronoDesk.md
+    - Zendesk: Help_Desk_Integration\Zendesk.md
+  - Migration: 
+    - Google Sheets: Migration_and_Integration\Importing from Google Sheets.md
+    - Excel (Office 365): Migration_and_Integration\Importing from Microsoft Excel (Office365).md
+    - Excel: Migration_and_Integration\Importing from Microsoft Excel.md
+    - Microsoft Project: Migration_and_Integration\Importing from Microsoft Project.md
+    - Word: Migration_and_Integration\Importing from Microsoft Word.md
+    - HP ALM: Migration_and_Integration\Migrating from HP ALM.md
+    - HP QualityCenter: Migration_and_Integration\Migrating from HP QualityCenter.md
+    - MS Test Manager: Migration_and_Integration\Migrating from MS Test Manager.md
+    - TestLink: Migration_and_Integration\Migrating from TestLink.md
+    - TestRail: Migration_and_Integration\Migrating from TestRail.md
+    - Backup and Migration: Migration_and_Integration\Project Backup and Migration.md
+  - Build Servers:
+    - Atlassian Bamboo: Build_Server_Integration\Atlassian Bamboo.md
+    - Jenkins/Hudson: Build_Server_Integration\Jenkins  Hudson.md
+    - JetBrains TeamCity: Build_Server_Integration\JetBrains TeamCity.md
+    - Azure DevOps Pipelines: Build_Server_Integration\Microsoft Azure DevOps Pipelines.md
+  - Requirements:
+    - RequisitePro: Requirements_Management_Integration\Importing From RequisitePro.md
+    - DOORS: Requirements_Management_Integration\Importing From DOORS.md
+    - EnterpriseArchitect: Requirements_Management_Integration\Importing From EnterpriseArchitect.md
+    - Jama Contour: Requirements_Management_Integration\Importing From Jama Contour.md
+    - VersionOne: Requirements_Management_Integration\Importing From VersionOne.md

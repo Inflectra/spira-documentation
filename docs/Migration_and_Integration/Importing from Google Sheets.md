@@ -222,7 +222,7 @@ does not create an incorrect hierarchy
 ## Get data From SpiraPlan
 
 To get all the data for the specified project and artifact from
-SpiraPlan, instead of going through the steps outlined in 4.4 to 4.6
+SpiraPlan, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into SpiraPlan](#import-into-spiraplan)
 above, click the \[ Get From SpiraPlan \] button. This will first load
 up the template on the current sheet then automatically retrieve all
 data from SpiraPlan and add it to the sheet.
