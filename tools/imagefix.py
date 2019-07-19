@@ -14,7 +14,7 @@ import sys
 
 src_folder = "../temp/" + sys.argv[1]
 dst_folder = "../temp/" + sys.argv[1] + "/img"
-img_regex = re.compile(r"image[0-9]+.png", re.IGNORECASE)
+img_regex = re.compile(r"image[0-9]+[.pngjpeg]+", re.IGNORECASE)
 data: list
 
 # Names of images used in this file
@@ -31,6 +31,7 @@ def main():
         if(result):
             image_names.append(result.group(0))
 
+    print(str(image_names))
     if not os.path.isdir(dst_folder):
         os.mkdir(dst_folder)
     process_all()
@@ -52,6 +53,7 @@ def process(f_name):
     # Name of the new file, subbing out spaces for underscores
     new_name = (sys.argv[2] + f_name.replace("image", "_")).replace(" ", "_")
     dst_file = dst_folder + "/" + new_name
+    print(dst_file)
     shutil.copyfile("../temp/" + sys.argv[1] + "/media/" + f_name, dst_file)
     # Replace link in file with new filename
     data[:] = [l.replace(sys.argv[1] + "/media/" + f_name, "img/" + new_name)
