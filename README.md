@@ -11,9 +11,6 @@ TODO: Bug tracking, email, automated testing, version control
 
 REGEX:
 \< to <
-\[ to [
-\] to ]
-\# to #
 \_ to _
 \" to "
 \' to '

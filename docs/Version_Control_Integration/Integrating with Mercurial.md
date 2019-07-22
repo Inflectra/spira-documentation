@@ -161,7 +161,7 @@ Associations. The Files tab lists all files that were a part of this
 commit, with their full path, size, latest revision and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See section 7.2.4 for
+Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
 information on how to link a revision with a Mercurial changeset:
 
 ![](img/Integrating_with_Mercurial_42.png)

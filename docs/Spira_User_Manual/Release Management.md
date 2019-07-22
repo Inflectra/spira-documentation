@@ -81,8 +81,8 @@ exact task progress information, position the mouse pointer over the
 bar-chart and the number of associated tasks, along with the details of
 how many are in each status will be displayed as a "tooltip".
 
-Clicking on a release's hyperlink will take you to the release details
-page for the item in question (see [Release Details](#release-details)).
+Clicking on a release's hyperlink will take you to the [release details](#release-details)
+page for the item in question.
 
 ### Filtering
 
@@ -295,8 +295,7 @@ icons in the toolbar
 
 ## Release Details
 
-When you click on release item in the release list described in section
-7.1, you are taken to the release details page illustrated below:
+When you click on release item in the [release list](#release-list), you are taken to the release details page illustrated below:
 
 ![](img/Release_Management_263.png)
 
@@ -549,7 +548,7 @@ indicating what changes and enhancements have been made in the release.
 
 Regardless of the mode, each incident is listed together with the type,
 status, priority, name, owner, detector, detection date and a link to
-the actual incident details (see [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details)):
+the actual [incident details](../Incident%20Tracking/#incident-details):
 
 ![](img/Release_Management_268.png)
 
@@ -592,7 +591,7 @@ Each of the requirements and associated tasks is displayed together with
 its name, description (by hovering the mouse over the name), priority,
 progress indicator, current owner, estimated effort, actual effort,
 producted effort and numeric task identifier. Clicking on a requirement
-will bring up the requirement details page (see [Requirements Management > Requirement Details](../Requirements%20Management/#requirement-details)). Clicking
+will bring up the [requirement details page](../Requirements%20Management/#requirement-details). Clicking
 the triangle by a requirement will expand/collapse its list of tasks.
 Clicking on a task name will bring up the Task Details page which is
 described in more detail in [Task Tracking > Task Details](../Task%20Tracking/#task-details). This allows you to edit the
@@ -684,7 +683,7 @@ release. Each test run is listed together with the date of execution,
 the name of the test case, the name of the tester, the release/version
 of the system that the test was executed against, the name of the test
 set (if applicable), the overall execution status for the test case in
-that run and a link to the actual test run details (see [Test Case Management > Test Run Details](../Test%20Case%20Management/#test-run-details)). In
+that run and a link to the actual [test run details](../Test%20Case%20Management/#test-run-details). In
 addition, you can choose to display any of the custom properties
 associated with the test run.
 

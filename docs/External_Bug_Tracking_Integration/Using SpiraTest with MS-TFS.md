@@ -593,7 +593,7 @@ names, you can run the following SQL query against your TFS database:
 SELECT Name, ReferenceName FROM Fields ORDER BY Name
 
 We have included a list of fields in the Agile process template in
-section 5.5 of this guide as a helpful reference.
+[TFS Field Reference](#tfs-field-reference) as a helpful reference.
 
 Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the name of the field values as they appear
@@ -740,7 +740,7 @@ names, you can run the following SQL query against your TFS database:
 SELECT Name, ReferenceName FROM Fields ORDER BY Name
 
 We have included a list of fields in the Agile process template in
-section 5.5 of this guide as a helpful reference.
+[TFS Field Reference](#tfs-field-reference) as a helpful reference.
 
 Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the name of the field values as they appear
@@ -889,7 +889,7 @@ names, you can run the following SQL query against your TFS database:
 SELECT Name, ReferenceName FROM Fields ORDER BY Name
 
 We have included a list of fields in the Agile process template in
-section 5.5 of this guide as a helpful reference.
+[TFS Field Reference](#tfs-field-reference) as a helpful reference.
 
 Next for each of the Property Values in the table (in the lower half of
 the page) you need to enter the name of the field values as they appear

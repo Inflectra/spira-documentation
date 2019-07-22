@@ -3,7 +3,7 @@
 This application allows an entire project to be exported to a backup
 file, for archiving and offline storage of SpiraTeam projects. The base
 minimum SpiraTeam version required is 3.2 (014), and there is some data
-that is not backed up, see the section 5.5 for details. Also there are
+that is [not backed up](#data-transferred). Also there are
 separate versions of the backup and migration tool for SpiraTeam v3.2,
 v4.x and v5.x, and you need to use the appropriate version that matches
 your installations.

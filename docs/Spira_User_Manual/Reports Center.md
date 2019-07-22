@@ -20,8 +20,8 @@ other members of the product, that have been marked (by that user) as
 The bottom left-hand main pane displays a list of the printable reports
 available in the system, categorized by the artifact they primarily
 relate to (requirements, test cases, incidents and releases). Clicking
-on any of the report hyperlinks will take you to the configuration page
-for the report in question (see [Reports Configuration](#reports-configuration) below for details).
+on any of the report hyperlinks will take you to the [configuration page](#reports-configuration)
+for the report in question below for details).
 
 The right-hand pane is a dashboard that contains the set of graph
 widgets configured by the current user. By default the dashboard will
@@ -37,7 +37,7 @@ reporting dashboard:
 
 
 
-Each of the graphs is described in more detail in sections 11.7 -- 11.9.
+Each of the graphs is described in more detail in [Summary Graphs](#summary-graphs) to [Date-Range Graphs](#date-range-graphs).
 
 ## Reports Configuration
 
@@ -118,7 +118,7 @@ the product.
 
 Once you have selected the format, elements and filters, clicking the
 "***Create Report***" button launches the report in a new
-window. Each of the reports is described in sections 11.2 -- 11.6 below:
+window. Each of the reports is described in [Requirement Reports](#requirement-reports) to [Release Reports](#release-reports) below:
 
 ## Requirement Reports
 

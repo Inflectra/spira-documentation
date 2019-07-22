@@ -107,7 +107,7 @@ Project Configuration" tab for that Project:
 
 
 In this page you can check the URL of the SpiraTeam Server. If it is
-wrong, you can change it in the Spira Global Settings menu (see [Setting-Up the SpiraTeam TeamCity Plug-in](#setting-up-the-spirateam-teamcity-plug-in)). It is also possible to check the Project ID associated with
+wrong, you can change it in the [Spira Global Settings menu](#setting-up-the-spirateam-teamcity-plug-in). It is also possible to check the Project ID associated with
 the project in TeamCity. This information can be useful for
 debugging/checking reasons.
 

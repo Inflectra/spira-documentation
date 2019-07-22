@@ -14,7 +14,7 @@ or later and a working version of HP ALM 11.5 or later. If you have an
 earlier version of SpiraTest you will need to upgrade to at least v4.0
 before trying to migrate projects. If you are using HP QualityCenter
 10.0 or older, please refer to the migration tool for this version in
-section 4 of this document.
+[Using the HP QualityCenter Migration Tool](#using-the-hp-qualitycenter-migration-tool).
 
 The Windows installation package can be downloaded from the 'Add-Ons &
 Downloads" section of the Inflectra website. Once you have obtained the

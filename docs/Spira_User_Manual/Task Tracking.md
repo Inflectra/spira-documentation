@@ -30,8 +30,7 @@ flexibility when it comes to viewing and searching tasks.
 In addition, you can view a more detailed description of the task by
 positioning the mouse pointer over the task name hyperlink and waiting
 for the popup "tooltip" to appear. If you click on the task name
-hyperlink, you will be taken to the task details page described in
-section 8.2. Clicking on any of the pagination links at the bottom of
+hyperlink, you will be taken to the [task details page](#task-details) Clicking on any of the pagination links at the bottom of
 the page will advance you to the next set of tasks in the list according
 to the applied filter and sort-order. There is also a drop-down-list at
 the bottom of the page which allows you to specify how many rows should
@@ -620,8 +619,7 @@ has a dependency on the one being linked to.
 
 ## Task Board
 
-The task board is an alternative to the task list page (described in
-section 8.1) designed to let you view the tasks planned for the current
+The task board is an alternative to the [task list page](#task-list) designed to let you view the tasks planned for the current
 product. You can access this feature by clicking on the **Board** icon
 in the top-right of the Tasks list page. You can switch back to the Task
 list page by clicking on the **Table** view.

@@ -213,8 +213,7 @@ commit, with their full path and the action that was performed on them
 for this commit. Possible values are Added, Modified, or Deleted.
 
 The Associations tab shows any artifact (Incident, Task, Requirement,
-Test Case, Test Set, etc.) that the log message references. See section
-2.2.4 for information on how to link a revision with a Subversion
+Test Case, Test Set, etc.) that the log message references. See [Linking Artifacts](#linking-artifacts) for information on how to link a revision with a Subversion
 Commit:
 
 ![](img/Integrating_with_Subversion_15.png)

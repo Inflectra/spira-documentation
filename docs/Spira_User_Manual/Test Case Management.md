@@ -52,8 +52,7 @@ You can place test folders and test cases into test folders. All of the
 items in the list have a name, together with the most recent execution
 status (passed, failed or not-run), and owner, author, execution date,
 active flag and test case number. Clicking on a test case's hyperlink
-will take you to the test case details page for the item in question
-(see [Test Case Details](#test-case-details)).
+will take you to the [test case details](#test-case-details) page for the item in question.
 
 It is important to understand that only test cases are assigned a status
 themselves; the test folders instead display a test execution bar graph
@@ -97,7 +96,7 @@ Clicking on the "***Execute Tests***" button (accessed
 from the "Tools" menu or context menu) executes all the test cases
 selected, together with all the test cases contained with any selected
 test folders. The test execution functionality of SpiraPlan® is
-explained in more detail in section 5.3.
+explained in more detail in [Test Step Details](#test-step-details).
 
 ### Refresh
 
@@ -361,8 +360,7 @@ icons in the toolbar.
 
 ## Test Case Details
 
-When you click on a test case item in the test case list described in
-section 5.1, you are taken to the test case details page illustrated
+When you click on a test case item in the [test case list](#test-case-list), you are taken to the test case details page illustrated
 below:
 
 ![](img/Test_Case_Management_136.png)
@@ -453,7 +451,7 @@ create a replica of the current test case by clicking
 
 Clicking the "***Execute***" button will immediately
 prepare the current test case for execution and then take you to the
-test execution screen (see [Execute Test Cases](#execute-test-cases))
+[test execution screen](#execute-test-cases)
 
 Using the "***Email***" button on the toolbar, you can
 send an email containing details of the test case by either specifying
@@ -878,7 +876,7 @@ test run is listed together with the date of execution, the name of the
 test case, the name of the test set (if applicable), the name of the
 tester, the release/version of the system that the test was executed
 against, the overall execution status for the test case in that run and
-a link to the actual test run details (see [Test Run Details](#test-run-details)). In addition,
+a link to the actual [test run details](#test-run-details). In addition,
 you can choose to display any of the custom properties associated with
 the test run.
 
@@ -1050,7 +1048,7 @@ unwanted changes.
 In this tab, the main pane displays the test sets that contain the
 current test case. Each test set is listed together with its name,
 release, the date of last execution, the owner, the status, the
-execution status, and a link to the actual test set details (see [Test Set Details](#test-set-details)). In addition, you can choose to display any of the custom
+execution status, and a link to the actual [test set details](#test-set-details). In addition, you can choose to display any of the custom
 properties associated with the test set.
 
 ![](img/Test_Case_Management_158.png)
@@ -1315,8 +1313,7 @@ boxes and click the 'Save' button to add them to the current test step:
 This section describes how a tester can follow the steps defined for a
 series of test cases and record what actually happened in the process.
 In addition, recorded failures of test cases can be used to
-automatically generate new incidents that will be added to the incident
-tracking module (see [Incident Tracking](../Incident%20Tracking/)).
+automatically generate new incidents that will be added to the [incident tracking module](../Incident%20Tracking/).
 
 You start test case execution in SpiraPlan by either:
 
@@ -1361,10 +1358,9 @@ properties, click the "***Next***" button to begin
 executing test steps. By default you will see the default test execution
 module, shown below.
 
-There is a second test execution view: the exploratory test execution
-module. This has much in common with standard test execution but differs
-in a number of important ways. It is discussed in more detail at section
-5.4.7. You will automatically see this module if the following three
+There is a second test execution view: the [exploratory test execution
+module](#exploratory-test-execution). This has much in common with standard test execution but differs
+in a number of important ways. You will automatically see this module if the following three
 conditions are met;
 
 1.  you are executing a single test case (not a test set or a test case
@@ -1530,7 +1526,7 @@ execution area on that test step or test case.
 
 **Progressing through steps using the inspector**: when the inspector is
 visible (in split or mini display mode), on properly setting a status
-for a test step (see 5.4.3 for further details), the next test step is
+for a test step (see [Viewing and Recording Execution Details](#viewing-and-recording-execution-details) for further details), the next test step is
 automatically loaded into the inspector. If you were on step 3 of 5, you
 would be moved to step 4. If you were on the last step of a test case,
 you will be moved to the next test case, if one is available.
@@ -1718,7 +1714,7 @@ information needed for the new incident is automatically populated from
 the test step details. The newly created incident will also be linked to
 the test step, allowing traceability from within the incidents module.
 The functionality for managing incidents is described in more detail in
-section 6.
+[Incident Tracking](../Incident%20Tracking/).
 
 If the inspector is visible, go to the "Incidents" tab. This will show
 any already linked incidents, show a detailed form for creating a new
@@ -2713,7 +2709,7 @@ Comment***" button.
 
 ### Overview - Parameters
 
-As discussed in section 5.2.2.10. test cases can have parameters
+As discussed in [Parameters](#parameters). test cases can have parameters
 associated with them. This enables one test case to be called several
 times and have different parameters passed in each case, making the
 operation different. E.g. you could have a generic "login to
@@ -2799,7 +2795,7 @@ table will select ever test case in the currently selected folder). Once
 you have selected the desired items, click the
 "***Save***" button to add them to the test set.
 
-As discussed above in section 5.8.4, test cases can have parameters
+As discussed above in [Overview - Parameters](#overview-parameters), test cases can have parameters
 defined with specific values. These are created on the Test Case details
 page (see [Parameters](#parameters)). If you need to specify different values
 for a parameter for different test cases in the test set, you can
@@ -2839,8 +2835,7 @@ This tab displays the list of all the test runs executed against the
 test set. Each test run is listed together with the date of execution,
 the name of the test case, the name of the tester, the release/version
 of the system that the test was executed against, the overall execution
-status for the test case in that run and a link to the actual test run
-details (see [Test Run Details](#test-run-details)). In addition, you can choose to display any of
+status for the test case in that run and a link to the [actual test run details](#test-run-details). In addition, you can choose to display any of
 the custom properties associated with the test run.
 
 ![](img/Test_Case_Management_227.png)
@@ -2999,8 +2994,7 @@ automation hosts.
 In addition, you can view a more detailed description of the automation
 host by positioning the mouse pointer over the host name hyperlink and
 waiting for the popup "tooltip" to appear. If you click on the host name
-hyperlink, you will be taken to the automation host details page
-described in section 5.10. Clicking on any of the pagination links at
+hyperlink, you will be taken to the [automation host details page](#automation-host-details). Clicking on any of the pagination links at
 the bottom of the page will advance you to the next set of hosts in the
 list according to the applied filter and sort-order. There is also a
 drop-down-list at the bottom of the page which allows you to specify how
@@ -3139,8 +3133,7 @@ automation host. Each test run is listed together with the date of
 execution, the name of the test case, the name of the tester, the
 release/version of the system that the test was executed against, the
 name of the test set (if applicable), the overall execution status for
-the test case in that run and a link to the actual test run details (see
-section 5.6). In addition, you can choose to display any of the custom
+the test case in that run and a link to the actual [test run details](#test-run-details). In addition, you can choose to display any of the custom
 properties associated with the test run.
 
 ![](img/Test_Case_Management_232.png)
@@ -3271,8 +3264,8 @@ test configuration is active.
 In addition, you can view a more detailed description of the test
 configuration by positioning the mouse pointer over the host name
 hyperlink and waiting for the popup "tooltip" to appear. If you click on
-the host name hyperlink, you will be taken to the test configuration
-details page described in section 5.12. Clicking on any of the
+the host name hyperlink, you will be taken to the [test configuration
+details page](#test-configuration-details). Clicking on any of the
 pagination links at the bottom of the page will advance you to the next
 set of hosts in the list according to the applied filter and sort-order.
 There is also a drop-down-list at the bottom of the page which allows

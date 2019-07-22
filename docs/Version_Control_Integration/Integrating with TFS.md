@@ -222,7 +222,7 @@ Associations. The Files tab lists all files that were a part of this
 revision, with their full path, latest revision and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See section 5.2.4 for
+Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
 information on how to link a revision with a TFS check-in or other
 action:
 
@@ -280,7 +280,7 @@ integration from working:
 
 ## Enforcing Associations with a Custom Policy
 
-As described in section 5.2.4 above, you can easily associate check-ins
+As described in [Linking Artifacts](#linking-artifacts) above, you can easily associate check-ins
 of code in TFS with relevant SpiraTeam artifacts by adding the
 appropriate artifact identifier in the commit messages.
 

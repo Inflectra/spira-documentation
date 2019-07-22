@@ -5,7 +5,7 @@ SpiraPlan® can be used to manage key product artifacts during the
 software development lifecycle. In addition to managing the defects
 raised during the execution of test cases in the test management module,
 the Incident Tracker is also a powerful risk/issue/bug tracking system
-in its own right. When coupled with the product dashboard (see  [User/Product Management > Product Home](../User%20Product%20Management/#product-home)) it is a powerful tool for representing all the key risks and issues
+in its own right. When coupled with the [product dashboard](../User%20Product%20Management/#product-home) it is a powerful tool for representing all the key risks and issues
 associated with a product in a single, graphical format.
 
 Unlike a standalone bug/issue tracking tool however, you can trace the

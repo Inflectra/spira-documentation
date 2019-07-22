@@ -1,7 +1,6 @@
 # Integrating with JUnit
 
-The directions for using JUnit 5 are 3.1-3.2, with the JUnit 4
-directions being 3.3-3.4
+The directions for using JUnit 5 and JUnit 4 are in different sections below:
 
 ## Installing the JUnit 5 Extension
 
@@ -335,7 +334,7 @@ inside SpiraTest. It assumes that you already have a working
 installation of SpiraTest v3.0 or later. If you have an earlier version
 of SpiraTest you will need to upgrade to at least v3.0 before trying to
 use this extension. You will also need to have version 4.0 of JUnit. To
-use version 5.0 of JUnit, please visit section 3.1.
+use version 5.0 of JUnit, please visit [Installing the JUnit 5 Extension](#installing-the-junit-5-extension)
 
 To obtain the version of the JUnit extension that is compatible with
 your version of SpiraTest, you simply need to log-in as a project-level

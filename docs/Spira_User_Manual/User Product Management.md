@@ -26,8 +26,8 @@ prevent this, and to stay logged-in to SpiraPlan® regardless of browser
 window closing or inactivity, select the "Keep me logged in" check-box
 before clicking the ***Log In*** button. Note that this
 setting is specific to each individual computer you are logging-in from,
-and that it will be reset when you explicitly log-out with the log-out
-link (described in more detail in section 3.3).
+and that it will be reset when you explicitly log-out with the [log-out
+link](#global-navigation).
 
 If for any reason you are unable to login with the provided
 username/password combination, and error message will be displayed. If
@@ -103,8 +103,8 @@ screenshot below).
 
 Note that once you have successfully logged-in and chosen a product,
 SpiraPlan® remembers this selection, and on subsequent log-ins will
-automatically select that product, and highlight it for you in the "My
-Products" list (see 3.2.1 below).
+automatically select that product, and highlight it for you in the ["My
+Products" list](#my-products).
 
 Your homepage contains all the information relevant to
 you---consolidated onto a single page for you to take immediate action.
@@ -123,7 +123,7 @@ having to setup email notifications or being logged into SpiraPlan
 continuously. If you don't see an RSS icon next to the widgets on your
 My Page it means that you have not enabled RSS newsfeeds in your
 profile. For more details on configuring your RSS preferences, please
-refer to section 3.6 (My Profile).
+refer to [My Profile](#my-profile).
 
 Initially the page is loaded in 'view mode' which means that the various
 'widgets' on the page are displayed with minimum visual clutter (no
@@ -208,7 +208,7 @@ on the global navigation bar to the right of the "Search" box.
 
 If you are a program member, the name of the program will also be
 displayed as a hyperlink. In which case, clicking on the program
-hyperlink will take you to the Program dashboard (see [Program Home](#program-home)).
+hyperlink will take you to the [Program dashboard](#program-home).
 
 ### My Saved Searches
 
@@ -249,10 +249,10 @@ or not-run) and date of last execution. This enables you to see how
 recently the tests have been run, and whether they need to be re-run.
 
 If you click on the test-name hyperlink, you will be taken to the
-details page for this test-case (see [Test Case Management > Test Case Details](../Test%20Case%20Management/#test-case-details)) and the product that
+[details page for this test-case](../Test%20Case%20Management/#test-case-details) and the product that
 the test-case belongs to will be made your current product. If you click
 on the play button to its right you will launch the test-case in the
-test-case execution module (see [Test Case Management > Execute Test Case(s)](../Test%20Case%20Management/#execute-test-cases)) so that you can easily
+[test-case execution module](../Test%20Case%20Management/#execute-test-cases) so that you can easily
 retest failed cases.
 
 ### My Assigned Test Sets
@@ -267,10 +267,11 @@ product it belongs to, the number of remaining test cases to be
 executed, and the date by which all the tests need to have been run.
 
 If you click on the test-set name hyperlink, you will be taken to the
-details page for this test-set (see [Test Case Management > Test Run Details](../Test%20Case%20Management/#test-run-details)) and the product that
+[details page for this test-set](../Test%20Case%20Management/#test-run-details) and the product that
 the test-set belongs to will be made your current product. If you click
-on the play button to its right you will launch the test-cases contained
-within the test-set in the test-case execution module (see [Test Case Management > Execute Test Case(s)](../Test%20Case%20Management/#execute-test-cases))
+on the play button to its right you will 
+[launch the test-cases](../Test%20Case%20Management/#execute-test-cases) contained
+within the test-set in the test-case execution module
 so that you can easily carry out your assigned testing task.
 
 ### My Pending Test Runs
@@ -314,8 +315,8 @@ section highlights the open incidents you need to manage, ranked by
 importance/priority and categorized by type, with the open date
 displayed to give you a sense of the age of the incident.
 
-Clicking on the incident name hyperlink takes you to the incident
-details page (see [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details)) that describes the incident in more
+Clicking on the incident name hyperlink takes you to the 
+[incident details page](../Incident%20Tracking/#incident-details)) that describes the incident in more
 detail, and allows you to add new information or change its status to
 indicate actions taken. In addition, if you position the mouse pointer
 over the name of the incident, a more detailed description is displayed
@@ -330,8 +331,8 @@ but since you were the originator -- either by executing a test case or
 just logging a standalone incident -- you can watch them to make sure
 that they are resolved in a timely manner.
 
-Clicking on the incident name hyperlink takes you to the incident
-details page (see [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details)) that describes the incident in more
+Clicking on the incident name hyperlink takes you to the 
+[incident details page](../Incident%20Tracking/#incident-details)) that describes the incident in more
 detail, and allows you to add new information or change its status to
 indicate actions taken. In addition, if you position the mouse pointer
 over the name of the incident, a more detailed description is displayed
@@ -353,7 +354,7 @@ have listed as a personal contact:
 Each user is displayed along with their graphical avatar, department and
 a colored indicator that lets you know if they are online or not. If
 they are online you can then send them an instant message (which will be
-described later in section 3.3. To remove an existing contact, just
+described later in [Global Navigation](#global-navigation). To remove an existing contact, just
 click on the 'Remove' button. To add a new user, simply locate them in
 the Tracking \> Resources page and then use the \<Add As Contact\>
 button.
@@ -418,8 +419,8 @@ menus available in the global navigation are show below:
 - **Product Icon** (shown as SpiraPlan above): this will always take you
 to "My Page" as discussed above
 - **Workspace Icon**: this shows you the type of workspace you are on, for
-example a program or a product. Clicking it will take you to that
-workspace's homepage (described in section 3.4, and 3.5)
+example a [program](#program-home) or a [product](#product-home). Clicking it will take you to that
+workspace's homepage
 - **Workspace Selector**: this shows the name of the current workspace.
 Clicking it will show all your available workspaces and clicking any of
 these will change you to that workspace
@@ -429,36 +430,31 @@ available artifacts and clicking any of these will change you to that
 artifacts main page. For product workspaces these artifacts are grouped
 as follows:
     - Planning
-
-        - Requirements (described in Section 4)
-        - Planning Board (described in Section 13)
-        - Releases (described in Section 7)
-        - Documents (described in Section 10)
-
+        - [Requirements](../Requirements%20Management/)
+        - [Planning Board](../Planning%20Board/)
+        - [Releases](../Release%20Management/)
+        - [Documents](../Document%20Management/)
     - Testing
-
-        - Test Cases (described in Section 5)
-        - Test Sets (described in Section 5.7)
-        - Test Runs (described in Section 5.5)
-        - Automation Hosts (described in Section 5.9)
-
+        - [Test Cases](../Test%20Case%20Management/)
+        - [Test Sets](../Test%20Case%20Management/#test-set-list)
+        - [Test Runs](../Test%20Case%20Management/#test-run-list)
+        - [Automation Hosts](../Test%20Case%20Management/#automation-host-list)
     - Tracking
+        - [Incidents](../Incident%20Tracking/)
+        - [Tasks](../Task%20Tracking/)
+        - [Risks](../Risks%20Management/)
+        - [Resources](../Resource%20Tracking/)
+        - [Source Code](../Source%20Code/)
 
-        - Incidents (described in Section 6)
-        - Tasks (described in Section 8)
-        - Risks (described in Section 14)
-        - Resources (described in Section 9)
-        - Source Code (described in Section 12)
-
-- **Reporting** (described in section 11)
+- [**Reporting**](../Reports%20Center/)
 - **User Profile Icon**
 
-    - My Profile (described in Section 3.6)
-    - My Timecard (described in Section 3.7)
-    - Documentation (described in Section 3.3.3)
-    - Show on boarding tours (described in Section 3.3.5)
-    - Keyboard shortcuts (described in Appendix 1.2.3)
-    - Log Out (described in Section 3.3.2)
+    - [My Profile](#my-profile)
+    - [My Timecard](#my-timecard)
+    - [Documentation](#documentation)
+    - [Show on boarding tours](#show-onboarding-tours)
+    - [Keyboard shortcuts](../Appendix%201%20Keyboard%20Shortcuts/)
+    - [Log Out](#log-out)
 
 - **Administration Icon**: This is visible if you are a system
 administrator, or if you are an owner/administrator of the current
@@ -528,8 +524,7 @@ narrowed accordingy:
 ### Log Out
 
 Clicking on the "Log Out" link will immediately log you out of your
-current session and return you to the login page illustrated in section
-3.1. If you had set the "Keep Me Logged In" option during your previous
+current session and return you to the [login page](#login-screen). If you had set the "Keep Me Logged In" option during your previous
 login, that setting will be reset; so if you want to avoid having to
 keep logging-in, you'll need to re-check that box during your next
 log-in.
@@ -827,8 +822,7 @@ bugs lurking within is not yet fully known.
 If you position the mouse pointer over any of the four bars, the color
 of the bar changes slightly and the underlying raw data is displayed as
 a tooltip, together with the percentage equivalent. Clicking on the any
-of the bars in the chart will take you to the requirements list page
-(see [Requirements Management > Requirements List](../Requirements%20Management/#requirements-list)) with the corresponding filters set.
+of the bars in the chart will take you to the [requirements list page](../Requirements%20Management/#requirements-list) with the corresponding filters set.
 
 When you filter the product home by release/sprint, this widget will
 filter the requirements coverage graph to only include ***requirements
@@ -847,8 +841,9 @@ sorted by the requirements that have the most open incidents first. This
 section is useful for determining the parts of the application that have
 the most instability, as you can look at the requirements that have
 yielded the greatest number of incidents. Clicking on any of the
-requirements hyperlinks will take you to the detail page for the
-requirement in question (see [Requirements Management > Requirement Details](../Requirements%20Management/#requirements-details)). *You can configure in the
+requirements hyperlinks will take you to the 
+[detail page](../Requirements%20Management/#requirements-details) for the
+requirement in question. *You can configure in the
 settings whether to include requirements with no open incidents, and
 also how many rows of data to display.*
 
@@ -880,7 +875,7 @@ product, in order of decreasing priority. Note that items not given a
 priority are listed at the top, since critical risks could be lurking in
 that list, and the product manager will want to immediately review these
 to assign priorities. Clicking on the risk item hyperlink will take you
-to the incident details page for the risk in question (see [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details)).
+to the [incident details page](../Incident%20Tracking/#incident-details) for the risk in question.
 *You can configure in the settings whether to use Priority or Severity
 for the display, and also how many rows of data to display.*
 
@@ -943,7 +938,7 @@ re-execution, it will be considered a failure only.
 If you position the mouse pointer over any of the five bars, the color
 of the bar changes slightly and the underlying raw data is displayed as
 a tooltip, together with the percentage equivalent. Clicking on any of
-the bars will bring up the product test case list (see [Test Case Management > Test Case List](../Test%20Case%20Management/#test-case-list)) with
+the bars will bring up the [product test case list](../Test%20Case%20Management/#test-case-list) with
 the appropriate filter applied.
 
 In addition to the bar-chart, there is also a display of the total
@@ -1040,7 +1035,7 @@ successfully in all environments.
 If you position the mouse pointer over any of the five bars, the color
 of the bar changes slightly and the underlying raw data is displayed as
 a tooltip, together with the percentage equivalent. Clicking on any of
-the bars brings up the product test set list (see [Test Case Management > Test Run Details](../Test%20Case%20Management/#test-run-details)) page with
+the bars brings up the [product test set list](../Test%20Case%20Management/#test-run-details) page with
 the appropriate filter applied. In addition to the bar-chart, there is
 also a display of (up to) the *five most overdue test sets in the
 product*.
@@ -1119,7 +1114,7 @@ or sprint is selected then the widget will not display any data.
 
 This widget lets you quickly view four different graphs used when
 measuring the progress of requirements in an agile methodology. They are
-described in more detail in Reports section (11.8) of this manual.
+described in more detail in [Reports](../Reports%20Center/#snapshot-graphs).
 
 1.  **Requirement Velocity** -- this graph shows the actual velocity
 delivered in each product release and/or sprint compared to the

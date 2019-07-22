@@ -47,8 +47,7 @@ page at one time.
 
 The bottom left-hand pane contains a list of the most recent revisions,
 together with the option to view the overall revision log for the
-product, clicking on that will display the revision log page (see
-section 12.3 for details).
+product, clicking on that will display the [revision log page](#source-code-revision-list).
 
 Above the main right-hand pane, there is the **branch selector**. This
 lets you choose which branch in the source code repository is being
@@ -92,8 +91,7 @@ particular file in the version control system. Clicking on the "Source
 Code File" hyperlink will open the file in a separate window, and
 depending on the type of file, it may display in the page or prompt you
 to download it to your local computer. The "Latest Revision" hyperlink
-allows you to view details of the latest revision (see [Source Code Revision Details](#source-code-revision-details)
-below).
+allows you to view [details of the latest revision](#source-code-revision-details).
 
 The lower part of the main pane can be switched between the three
 different views by clicking the appropriate tab. Initially the pane will
@@ -133,8 +131,8 @@ Each revision in the list is displayed with its name, the name of the
 person who made the revision, a description of what was changed, the
 date the change was made and two flags that denote whether the content
 was changed and/or if any of the properties of the file were changed.
-Clicking on the revision name will take you to the appropriate revision
-details page (see [Source Code Revision Details](#source-code-revision-details)).
+Clicking on the revision name will take you to the [appropriate revision
+details page](#source-code-revision-details).
 
 ### Associations
 
@@ -181,8 +179,8 @@ Each revision in the list is displayed with its name, a description of
 what changed in the revision, the name of the person who committed the
 revision, and whether the revision was a change of the actual content,
 or just a change of the properties of the content. Clicking on the
-hyperlink for the revision name will take you to the Revision Details
-page for that revision (see [Source Code Revision Details](#source-code-revision-details)).
+hyperlink for the revision name will take you to the [Revision Details page](#source-code-revision-details) 
+for that revision.
 
 Above the main right-hand pane, there is the **branch selector**. This
 lets you choose which branch in the source code repository is being
@@ -236,7 +234,7 @@ Each file in the list is displayed with its name, the file-size, who
 made changes to the file, what action was performed on the file (added,
 deleted, replaced, updated, etc.) and the most recent revision that
 exists for that file. Clicking on the filename will take you to the
-appropriate file details page (see [Source Code File Details](#source-code-file-details)), and clicking on the
+appropriate [file details page](#source-code-file-details), and clicking on the
 revision hyperlink will take you the appropriate revision.
 
 ### Associations

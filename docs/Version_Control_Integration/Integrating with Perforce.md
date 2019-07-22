@@ -1,8 +1,9 @@
 # Integrating with Perforce
 
-## Installing the Perforce Plug-In To install the Perforce Version Control plug-in, follow these steps:
+## Installing the Perforce Plug-In
+ To install the Perforce Version Control plug-in, follow these steps:
 
--   ## Copy the following files to the folder named "VersionControl" in the SpiraTeam installation folder:
+-   Copy the following files to the folder named "VersionControl" in the SpiraTeam installation folder:
 
 -   Inflectra.Global.dll
 
@@ -140,7 +141,7 @@ change, with their full path and the action that was performed on them
 for this change. Possible values are Added, Modified, Deleted, or Other.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See section 2.2.4 for
+Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
 information on how to link a revision with a Perforce change:
 
 ![](img/Integrating_with_Perforce_58.png)
@@ -174,7 +175,7 @@ working:
 -   SpiraTeam will not display the login page, and there is an error
 > (either on the page or in the Application Event Log) that says
 > "Could not load file or assembly." This simply means that not all
-> of the required DLL libraries (listed above in 3.1) are present in
+> of the [required DLL libraries](#installing-the-perforce-plug-in) are present in
 > the \\VersionControl directory inside of the installation. It
 > could also mean that the IIS Application Pool is not set to allow
 > 32-bit applications. (At this time, there are no 64-bit DLLs

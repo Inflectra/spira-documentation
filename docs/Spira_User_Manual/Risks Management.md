@@ -34,8 +34,8 @@ with useful charts to get an at-a-glance view of risks for this product.
 In addition, you can view a more detailed description of the risk (along
 with any mitigations) by positioning the mouse pointer over the incident
 name hyperlink and waiting for the popup "tooltip" to appear. If you
-click on the risk name hyperlink, you will be taken to the risk details
-page described in section 16.2. Clicking on any of the pagination links
+click on the risk name hyperlink, you will be taken to the [risk details](#risk-details)
+page. Clicking on any of the pagination links
 at the bottom of the page will advance you to the next set of risks in
 the list according to the applied filter and sort-order. There is also a
 drop-down-list at the bottom of the page which allows you to specify how
@@ -89,8 +89,8 @@ selected component.
 ### New Risk
 
 Clicking on the "***New Risk***" button takes you to the
-new risk screen. This is essentially the same screen as the risk details
-screen shown in section 16.2 except, depending on how the workflow has
+new risk screen. This is essentially the same screen as the [risk details](#risk-details)
+screen except, depending on how the workflow has
 been configured for your product, certain fields may be disabled. For
 more details on setting and up configuring workflow for your product,
 please refer to the *SpiraTest Administration Guide*.
@@ -189,8 +189,7 @@ Tools menu.
 
 ## Risk Details
 
-When you click on a risk item in the risks list described in section
-16.1, you are taken to the risk details page illustrated below:
+When you click on a risk item in the [risks list](#risks-list), you are taken to the risk details page illustrated below:
 
 ![](img/Risks_Management_460.png)
 
@@ -439,7 +438,7 @@ Each of the tasks is displayed together with, by default, its name,
 description (by hovering the mouse over the name), progress, priority,
 start-date, current owner, estimated effort, producted effort and
 numeric task identifier. Clicking on the task name will bring up the
-Task Details page which is described in more detail in section 8.2. This
+[Task Details page](../Task%20Tracking/#task-details). This
 allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:

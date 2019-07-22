@@ -102,12 +102,9 @@ available for data-synchronization.
 The steps that need to be performed to configure integration are as
 follows:
 
-Download appropriate plug-in for Spira from our website
-
-Configure the DataSync Service
-
-Start the service and proceed to the plugin specific section of this
-manual
+- Download appropriate plug-in for Spira from our website
+- Configure the DataSync Service
+- Start the service and proceed to the plugin specific section of this manual
 
 ### Download the Data-Sync Plug-In
 

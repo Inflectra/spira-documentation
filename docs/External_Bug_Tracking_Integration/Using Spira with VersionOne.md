@@ -115,7 +115,7 @@ usernames are the same in both systems.
 -   **Auto-Map = False
 **With this setting, users in SpiraTeam and V1are free to have
 different usernames because you specify the corresponding
-V1login for each user as outlined in section 12.2.2.
+V1login for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).
 
 -   **Custom 01** -- this should be set to "True" if you want the plugin
 to log warnings about missing user mappings

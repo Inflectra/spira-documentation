@@ -6,9 +6,9 @@ This section outlines how to install the SpiraTest Extension for PHPUnit
 onto a workstation so that you can then run automated PHPUnit tests
 against a PHP application and have the results be recorded as test runs
 inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v2.3 or later, and a working PHP development
+installation of SpiraTest v3 or later, and a working PHP development
 environment. If you have an earlier version of SpiraTest you will need
-to upgrade to at least v2.3 before trying to use this extension.
+to upgrade to at least v3 before trying to use this extension.
 
 To obtain the latest version of the SpiraTest PHPUnit extension you
 simply need to go to <http://www.inflectra.com/SpiraTest/Downloads.aspx>
@@ -44,7 +44,7 @@ a) Sample Test Suite
 /**
  * 
  * @author		Inflectra Corporation
- * @version		2.3.0
+ * @version		0
  *
  */
  
@@ -75,7 +75,7 @@ require_once 'PHPUnit/Framework/TestCase.php';
  * Some simple tests
  * 
  * @author		Inflectra Corporation
- * @version		2.2.0
+ * @version		0
  *
  */
  
@@ -122,13 +122,13 @@ class SimpleTest extends PHPUnit_Framework_TestCase
 public function testEquals()
 	{
 		$this->assertEquals(12, 12);
-		$this->assertEquals(12.0, 12.0);
+		$this->assertEquals(10, 10);
     		$num1 = 12;
     		$num2 = 12;
 		$this->assertEquals($num1, $num2);
 
 		$this->assertEquals("Size", 12, 13);
-		$this->assertEquals("Capacity", 12.0, 11.99, 0.0);
+		$this->assertEquals("Capacity", 10, 199, 0);
 	}
 
 	/**
@@ -174,7 +174,7 @@ a) Sample Test Suite
  * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener
  * 
  * @author		Inflectra Corporation
- * @version		2.3.0
+ * @version		0
  *
  */
  
@@ -223,7 +223,7 @@ require_once 'PHPUnit/Framework/TestCase.php';
  * Some simple tests using the ability to return results back to SpiraTest
  * 
  * @author		Inflectra Corporation
- * @version		2.2.0
+ * @version		0
  *
  */
  
@@ -270,13 +270,13 @@ class SimpleTest extends PHPUnit_Framework_TestCase
 public function testEquals__4()
 	{
 		$this->assertEquals(12, 12);
-		$this->assertEquals(12.0, 12.0);
+		$this->assertEquals(10, 10);
     		$num1 = 12;
     		$num2 = 12;
 		$this->assertEquals($num1, $num2);
 
 		$this->assertEquals("Size", 12, 13);
-		$this->assertEquals("Capacity", 12.0, 11.99, 0.0);
+		$this->assertEquals("Capacity", 10, 199, 0);
 	}
 
 	/**
@@ -382,7 +382,7 @@ suite as you would normally do, and when you view the test cases in
 SpiraTest, you should see a PHPUnit automated test run displayed in the
 list of executed test runs:
 
-![](img/Integrating_with_PHPUnit_23.png)
+![](img/Integrating_with_PHPUnit_2png)
 
 
 
@@ -391,7 +391,7 @@ Clicking on one of the PHPUnit test runs will bring up a screen that
 provides information regarding what PHPUnit test method failed, what the
 error was, together with the associated code stack-trace:
 
-![](img/Integrating_with_PHPUnit_24.png)
+![](img/Integrating_with_PHPUnit_2png)
 
 
 

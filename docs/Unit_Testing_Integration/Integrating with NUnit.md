@@ -1,8 +1,6 @@
 # Integrating with NUnit
 
-The installation directions for the NUnit 3 unit testing tool are
-covered in sections 2.1-2.2 while NUnit 2.x is covered in sections
-2.3-2.4
+The installation directions for NUnit 3 and NUnit 2.x are covered in different sections below:
 
 ## Installing the NUnit 3 Add-In
 
