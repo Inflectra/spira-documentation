@@ -1,6 +1,6 @@
-## Product: Users
+# Product: Users
 
-### Product Membership
+## Product Membership
 
 The following screen is displayed when you choose the "Product
 Membership" link from the Administration menu:

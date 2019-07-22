@@ -1,9 +1,9 @@
-## Template: Requirements
+# Template: Requirements
 
 This section contains administrative options that are specific to the
 requirements functionality in the system.
 
-### Importance
+## Importance
 
 The following screen is displayed when you choose the "Importance" link
 from the Requirements section of the administration menu:
@@ -29,7 +29,7 @@ appearing in any drop-down-lists, change its active flag to "No" and
 click "Save". To add a new requirement importance, click the "Add"
 button and a new row will be added to the list which you can now edit.
 
-### Types
+## Types
 
 The following screen is displayed when you choose the "Types" link from
 the Requirements section of the administration menu:
@@ -66,7 +66,7 @@ that a new requirement will be set to unless changed by the creator of
 the requirement. Note that you must have at least one active requirement
 type, and you cannot set an inactive type as the default.
 
-### Workflows
+## Workflows
 
 Clicking on the "Workflow" link under the Requirements heading, brings
 up the list of defined requirement workflows for the current template. A
@@ -94,7 +94,7 @@ Note: You cannot make a workflow inactive that is currently linked to a
 requirement type. This is important as all requirement types need to be
 linked to an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the 'Steps' button of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -119,7 +119,7 @@ the step or transition respectively. To delete an existing transition,
 click the 'x button after the transition name, and to add a new
 transition, click the 'Add Transition' button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -163,7 +163,7 @@ regardless of ownership status.
 > You can set any of these conditions by changing the drop-down list
 > and/or check-boxes and clicking the appropriate "Save" button.
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the requirement status name link from either of the
 previous screens, you are taken to the workflow step details screen:

@@ -1,4 +1,4 @@
-## Template: Documents
+# Template: Documents
 
 SpiraPlan® includes a built-in web-based document management system that
 allows you to upload and share documents between product team members.
@@ -10,7 +10,7 @@ The set of administrative options located under the "Documents" heading
 allow the Template Owner to configure how the documents are organized in
 their particular template.
 
-### Document Types
+## Document Types
 
 When users upload documents into a SpiraPlan product, they are required
 to specify the type of document that is being uploaded. The list of
@@ -37,7 +37,7 @@ designated as the default type. The default type is the option that will
 be initially selected when a user uploads a file / URL to the template's
 product(s).
 
-### Document Statuses
+## Document Statuses
 
 The following screen is displayed when you choose the "Statuses" link
 from the Documents section of the administration menu:
@@ -68,7 +68,7 @@ first created, and acts as the first step in the document workflow. Note
 that you must have at least one active incident status, and you cannot
 set a document status as the default.
 
-### Document Workflows
+## Document Workflows
 
 Clicking on the "Workflows" link in the Administration menu Documents
 section brings up the list of defined document workflows for the current
@@ -101,7 +101,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to a document type. This is important as all document types need to be
 linked to an active workflow at all times.
 
-#### Workflow Details
+### Workflow Details
 
 Clicking on the "Steps" button of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -127,7 +127,7 @@ the step or transition respectively. To delete an existing transition,
 click the "x" button after the transition name, and to add a new
 transition, click the "Add Transition" button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -153,7 +153,7 @@ Each transition has a series of conditions which need to be satisfied
 for a user to actually execute the transition (i.e. move the document
 from the originating status to the destination status).
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the document status name link from either of the
 previous screens, you are taken to the workflow step details screen:

@@ -1,6 +1,6 @@
-## Product: Planning
+# Product: Planning
 
-### Edit Components
+## Edit Components
 
 SpiraPlan lets you define a list of Components for each product. These
 components represent the main functional areas of the system and
@@ -39,7 +39,7 @@ component, click the 'Delete' option next to its name. Once deleted, an
 item can be undeleted by changing the display to 'All' and then clicking
 'Undelete'.
 
-### Planning Options
+## Planning Options
 
 The Planning Options page lets you configure the schedule and calendar
 options for the various product estimation and planning modules. The
@@ -101,8 +101,8 @@ into hours based on the current team velocity (how much time it takes on
 average to accomplish one story point). As the product progresses, the
 team velocity will change, so you can click on the \[Suggest\] button to
 have the system calculate how many hours each existing story point has
-taken to implement in the product and provide that as a recommendation:\
-\
+taken to implement in the product and provide that as a recommendation:
+
 ![](img/Product_Planning_112.png)
 
 

@@ -1,6 +1,6 @@
-## System
+# System
 
-### General Settings
+## General Settings
 
 The general settings page allows you to configure SpiraPlan® to better
 match your environment and setup. In the current version, you can
@@ -76,7 +76,7 @@ feature. This option lets you disable the integrated instant
 messenger. In addition, you can specify how long (in days) instant
 messages are retained in the system.
 
--   **Event Log Retention** -- As described in section 3.3.7, SpiraPlan
+-   **Event Log Retention** -- As described in  [Event Log](#event-log), SpiraPlan
 comes with a built-in diagnostic event log. By default the system
 will only retain the last 30-days of events to avoid wasting storage
 space. You can adjust the retention period in this section to match
@@ -89,7 +89,7 @@ Free Text Indexing featured enabled in SQL Server, otherwise you
 will cause SpiraPlan to display error messages when users try and
 use the global search.
 
-### File Type Icons
+## File Type Icons
 
 The "File Types List" administration page allows you to view all the
 different filetypes that are recognized by SpiraPlan and add or edit the
@@ -116,7 +116,7 @@ browser handles the file type) and the path to the icon image. Once you
 are satisfied with the values, you can click on the "Save" button to
 confirm the changes.
 
-### License Details
+## License Details
 
 The license details page displays the information about the installed
 license for the particular instance of SpiraPlan® being used. This will
@@ -148,9 +148,9 @@ passed its expiration date, or where the license key doesn't match the
 organization name) an error will be displayed describing the specific
 issue with the information you entered. If you are unable to get the
 system to work with the license key information, please contact
-Inflectra^®^ customer support at: <support@inflectra.com>.
+Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
-### LDAP Configuration
+## LDAP Configuration
 
 As described previously, you can configure SpiraPlan® to use an external
 LDAP server for importing new user profiles into the system, and for
@@ -167,59 +167,59 @@ Administration navigation:
 You need to fill out the various configuration settings for your LDAP
 server, each of which is explained in more detail below:
 
-**LDAP Host\
+**LDAP Host
 **This should contain the name of the LDAP server that you want
 SpiraPlan to connect to together with the port number if it's not the
 default of 389.
 
-**Use Secure Sockets Layer (SSL)\
+**Use Secure Sockets Layer (SSL)
 **You should select this check-box if your LDAP server requires use of
 the LDAPS secure protocol. Leave unchecked for unencrypted LDAP
 communication.
 
-**Base DN\
+**Base DN
 **This should be the distinguished name of the object inside your LDAP
 server that contains the list of user accounts. This varies by the type
 of LDAP server, please consult your LDAP server documentation for more
 details.
 
-**Bind DN\
+**Bind DN
 **This should be the distinguished name of the user inside your LDAP
 server that will be used to authenticate against when importing users.
 If not provided, SpiraPlan® will try and authenticate with the LDAP
 server anonymously.
 
-**Bind Password\
+**Bind Password
 **The is the password of the user specified in the Bind DN field above.
 
-**Login Attribute\
+**Login Attribute
 **When SpiraPlan® imports users from the LDAP server it needs to know
 the user attribute inside the LDAP server that it should use to generate
 the SpiraPlan® user-name. For most LDAP servers the appropriate
 attribute would be "uid". However for Windows ActiveDirectory, the
 attribute "sAMAccountName" should be used instead.
 
-**First Name Attribute\
+**First Name Attribute
 **Providing this optional attribute will allow SpiraPlan® to
 automatically populate the first name field of the imported user instead
 of simply using the username as a placeholder.
 
-**Last Name Attribute\
+**Last Name Attribute
 **Providing this optional attribute will allow SpiraPlan® to
 automatically populate the last name field of the imported user instead
 of simply using the username as a placeholder.
 
-**Middle Initial Attribute\
+**Middle Initial Attribute
 **Providing this optional attribute will allow SpiraPlan® to
 automatically populate the middle initial field of the imported user
 instead of simply leaving it blank.
 
-**Email Address Attribute\
+**Email Address Attribute
 **Providing this optional attribute will allow SpiraPlan® to
 automatically populate the email address field of the imported user
-instead of simply using the username\@spiratest.com as a placeholder.
+instead of simply using the username@spiratest.com as a placeholder.
 
-**Sample User\
+**Sample User
 **You can optionally enter a sample user and password to test that the
 user is correctly authenticated against the server. You can update the
 LDAP configuration without setting this, but if you do provide a sample
@@ -228,7 +228,7 @@ authentication succeeds. If you choose to enter it, the user's name
 should be the fully-distinguished name of the user (e.g. CN=Sample User,
 CN=Users, OU=Headquarters, DC=MyCompany, DC=Com).
 
-### Security Settings
+## Security Settings
 
 The "Security Settings" administration page lets you specify the various
 security settings within SpiraPlan to match your organization's policies
@@ -288,7 +288,7 @@ they login without choosing the 'Keep Me Logged-In' option.
 
 **Keep Me Logged-In Expiration** - This specifies the amount of time (in
 minutes) after which a user will be logged out due to inactivity if they
-have chosen to login with the \'Keep Me Logged-In\' option. This should
+have chosen to login with the 'Keep Me Logged-In' option. This should
 normally be longer than the previous setting.
 
 **Allowed Domains -** This should contain the list of other web domains
@@ -297,12 +297,11 @@ instance. You can specify a comma separated list of base URLs (e.g.
 https://www.domain1.com, http://www.domain2.com) or an asterisk (\*) to
 denote all domains are allowed (not recommended).
 
-### TaraVault®
+## TaraVault®
 
 *This section refers to the functionality available to hosted/cloud
 customers of SpiraPlan. If you are using the on-premise version of
-SpiraPlan, please refer to section **3.4.2** (Version Control
-Integration) instead.*
+SpiraPlan, please refer to [Version Control Integration](../System%20Integration/#version-control-integration-on-premise-customers-only) instead.*
 
 TaraVault® is the hosted source code repository and software
 configuration management (SCM) system provided by Inflectra. When you
@@ -390,7 +389,7 @@ click on the \[Clear Cache\] button.
 To add new SCM users to the TaraVault product, click on the 'Add Users'
 link to add new SCM users to the product.
 
-### Event Log
+## Event Log
 
 The "System Event Log" administration page lets you view all of the
 errors, warning and other diagnostic messages that have been logged in
@@ -416,7 +415,7 @@ The popup dialog box will display the full error message log and stack
 trace in a moveable dialog box. This information should be provided to
 Inflectra customer support if you log a help desk ticket.
 
-### Testing Settings
+## Testing Settings
 
 Clicking on the "Testing Settings" link brings up a list of options that
 the administrator can configure regarding testing. Select from the
@@ -449,7 +448,7 @@ step on the creation of any test case
 -   **Worx Integration** -- Integrating with the Worx desktop
 application
 
-### Email Configuration
+## Email Configuration
 
 The Email Configuration page is split into two sections. The first
 section covers email notification details, and the second section
@@ -513,7 +512,7 @@ notifications:
 
 -   **SSL Connection:** Yes
 
--   **User Name:** "account"\@gmail.com
+-   **User Name:** "account"@gmail.com
 
 -   **Password:** "account password"
 

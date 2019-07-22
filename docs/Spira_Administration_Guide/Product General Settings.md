@@ -1,6 +1,6 @@
-## Product: General Settings
+# Product: General Settings
 
-### Product History Changes
+## Product History Changes
 
 This page displays a list, by default in chronological order, of changes
 made to items within the selected product.
@@ -60,7 +60,7 @@ section on reverting below.
 -   *Purge All*: This button will permanently purge all deleted items
 from the database. Once items are purged, they cannot be restored.
 
-#### History Details Screen
+### History Details Screen
 
 The history details screen displays information on the selected change
 set:
@@ -87,7 +87,7 @@ label will be displayed (as above in the example screenshot), the View
 Item links will be disabled, and a new option, "Purge" will appear on
 the toolbar.
 
-#### Purging Items
+### Purging Items
 
 Items that have been deleted by any user still remain in the database,
 but do not affect statistics or reports, and do not show up in reports
@@ -110,7 +110,7 @@ depending on how many deleted items are in your database, and it is
 recommended that the database files be compressed in SQL Management
 Studio afterwards to free up space and compress clustered indexes.
 
-#### Reverting Items
+### Reverting Items
 
 Reverting an artifact will attempt to reset all fields back to the
 selected change set, reverting all changes made after the selected
@@ -128,7 +128,7 @@ other types will be ignored. When selecting multiple items, you can
 select more than a single change set for a specific artifact, the
 artifact will be rolled back to the earliest change set selected.
 
-### Product Associations
+## Product Associations
 
 By default, all products in SpiraPlan are completely self-contained.
 Artifacts in one product can only be linked or associated with artifacts
@@ -172,7 +172,7 @@ This updates the association list.
 
 To remove an association, simply select its checkbox and click 'Remove'.
 
-### Product Data Tools
+## Product Data Tools
 
 This page contains several different data management tools that can be
 used to identify certain data issues in the system and correct them.
@@ -217,7 +217,7 @@ Error message instead of the Green OK. If that happens, just click on
 the appropriate "Correct" button and the system will correct the indent
 levels for you.
 
-### Source Code
+## Source Code
 
 Clicking on the Source Code link in the administration menu will, if a
 source code provider has been set up by a system administrator, show a

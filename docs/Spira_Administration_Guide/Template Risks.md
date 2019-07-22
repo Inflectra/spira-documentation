@@ -1,9 +1,9 @@
-## Template: Risks
+# Template: Risks
 
 This section contains administrative options that are specific to the
 risk functionality in the system.
 
-### Edit Types
+## Edit Types
 
 The following screen is displayed when you choose the "Types" link from
 the Incidents section of the administration menu:
@@ -34,7 +34,7 @@ be set to unless changed by the creator of the risk. Note that you must
 have at least one active risk type, and you cannot set an inactive type
 as the default.
 
-### Edit Statuses
+## Edit Statuses
 
 The following screen is displayed when you choose the "Statuses" link
 from the Risks section of the administration menu:
@@ -65,7 +65,7 @@ and acts as the first step in the risk workflow. Note that you must have
 at least one active status, and you cannot set an inactive status as the
 default.
 
-### Impact
+## Impact
 
 The following screen is displayed when you choose the "Impact" link from
 the Risks section of the administration menu. The impact of a risk
@@ -89,7 +89,7 @@ drop-down-lists, change its active flag to "No" and click "Save". To add
 a new impact, click the "Add" button and a new row will be added to the
 list which you can now edit.
 
-### Probability
+## Probability
 
 The following screen is displayed when you choose the "Probability" link
 from the Risks section of the administration menu:
@@ -112,7 +112,7 @@ appearing in any drop-down-lists, change its active flag to "No" and
 click "Save". To add a new risk probability, click the "Add" button and
 a new row will be added to the list which you can now edit.
 
-### Risk Workflows
+## Risk Workflows
 
 Clicking on the "Workflows" link in the Administration menu brings up
 the list of defined risk workflows for the current template. A workflow
@@ -143,7 +143,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to a risk type. This is important as all risk types need to be linked to
 an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the "Steps" button of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -168,7 +168,7 @@ the step or transition respectively. To delete an existing transition,
 click the "x" button after the transition name, and to add a new
 transition, click the "Add Transition" button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -194,7 +194,7 @@ Each transition has a series of conditions which need to be satisfied
 for a user to actually execute the transition (i.e. move the incident
 from the originating status to the destination status).
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the incident status name link from either of the
 previous screens, you are taken to the workflow step details screen:

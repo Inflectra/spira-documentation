@@ -1,6 +1,6 @@
-## System: Workspaces
+# System: Workspaces
 
-### View/Edit Products
+## View/Edit Products
 
 The following screen is displayed when you choose the "View/Edit
 Products" link from the administration menu:
@@ -88,7 +88,7 @@ and active status. Once you have made the necessary changes, click the
 "Save" button to commit them. If you decide that you want to ignore the
 changes, click the "Cancel" button and the changes will be discarded.
 
-### View/Edit Programs
+## View/Edit Programs
 
 The following screen is displayed when you choose the "View/Edit
 Programs" link from the Administration menu:
@@ -226,7 +226,7 @@ take you to the details page for that product:
 
 
 
-### View/Edit Templates
+## View/Edit Templates
 
 The following screen is displayed when you choose the "View/Edit
 Templates" link from the administration menu:
@@ -254,7 +254,7 @@ Neither of these actions will be possible if any product (active or
 inactive) is controlled by the template*.*
 
 To add a new template to the system, you need to create a new template
-when creating a new product (as described in section 3.1.1 above). To
+when creating a new product (as described in [View/Edit Products](#viewedit-products)). To
 edit the details of an existing template, click the "Edit" button in the
 right hand column of the template list box, and you will be taken to the
 following screen that allows you modify the template details:

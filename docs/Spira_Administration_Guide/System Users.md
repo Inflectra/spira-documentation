@@ -1,6 +1,6 @@
-## System: Users
+# System: Users
 
-### View / Edit Users
+## View / Edit Users
 
 The following screen is displayed when you choose the "View/Edit Users"
 link from the Administration menu:
@@ -123,9 +123,9 @@ more details on using the data-mapping tab.
 If you click on the TaraVault membership tab, you can choose whether or
 not the user has access the linked TaraVault source code repository.
 This service is only available for hosted/cloud instances of SpiraPlan,
-and more details can be found in section 3.3.4 of this guide.
+and more details can be found in [LDAP Configuration](../System/#ldap-configuration).
 
-### Importing LDAP Users
+## Importing LDAP Users
 
 If your organization already has an LDAP compatible user management
 system in place (e.g. Windows Active Directory, Novell eDirectory,
@@ -143,8 +143,8 @@ following screen:
 
 
 
-This screen lists all the users available in the LDAP server that [have
-not been already imported]{.underline} into SpiraPlan®. The users are
+This screen lists all the users available in the LDAP server that have
+not been already imported into SpiraPlan®. The users are
 listed by name along with their login, email address and fully
 distinguished LDAP name (DN). You can narrow down the list by entering
 partial name matches in any of the fields displayed and clicking
@@ -155,7 +155,7 @@ Select the checkbox of any users you want to import and click "Import"
 to complete the operation. These users can now login to SpiraPlan® and
 use their existing LDAP login and password information.
 
-### Active Sessions
+## Active Sessions
 
 Often an administrator of the system will want to know how many users
 are currently logged into the system, especially on installations
@@ -177,10 +177,9 @@ try and perform an operation in the system. **Warning: You
 should make sure that the user is not actively using the system to
 prevent any unsaved data being lost**.
 
-### Pending Requests
+## Pending Requests
 
-If you have enabled the ability for users to register for new SpiraPlan
-accounts themselves (see section 3.3.6 -- Security Settings), clicking
+If you have enabled the ability for users to [register for new SpiraPlan accounts themselves](../System/#security-settings), clicking
 on the "Pending Requests" administration option allows you to view a
 list of all the outstanding requests for new user accounts:
 
@@ -199,7 +198,7 @@ into the system.
 **Delete** -- clicking this option will delete the pending user request
 from the system.
 
-### View / Edit Roles
+## View / Edit Roles
 
 There are six (6) default product roles that a user may be assigned to a
 product with:

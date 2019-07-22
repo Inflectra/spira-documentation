@@ -43,13 +43,13 @@ a) The sample test harness - SampleHarness.pl
 >
 > \#instantiate the harness
 >
-> my \$harness = TAP::Harness -\>new;
+> my $harness = TAP::Harness -\>new;
 >
 > \#define the list of tests to be executed
 >
 > my @tests = ("SampleTest1.pl", "SampleTest2.pl");
 >
-> \$harness-\>runtests(@tests);
+> $harness-\>runtests(@tests);
 
 b) One of the sample test fixtures -- Sample1Test.pl
 
@@ -108,7 +108,7 @@ b) One of the sample test fixtures -- Sample1Test.pl
 >
 > \# Here is an example of a test that throws an ERROR
 >
-> is(\$notdeclared, 1, "Undeclared variable test");
+> is($notdeclared, 1, "Undeclared variable test");
 
 The TAP test cases in the sample code use the Test::More library which
 provides the necessary assertion methods for testing results from the
@@ -134,38 +134,38 @@ harness (illustrated in yellow below):
 >
 > \#instantiate the harness
 >
-> my \$harness =
+> my $harness =
 > Inflectra::SpiraTest::Addons::SpiraHarness::Harness-\>new;
 >
 > \#specify the spiratest custom harness properties
 >
-> \$spira\_args = {};
+> $spira\_args = {};
 >
-> \$spira\_args-\>{"base\_url"} = "http://localhost/SpiraTest";
+> $spira\_args-\>{"base\_url"} = "http://localhost/SpiraTest";
 >
-> \$spira\_args-\>{"user\_name"} = "fredbloggs";
+> $spira\_args-\>{"user\_name"} = "fredbloggs";
 >
-> \$spira\_args-\>{"password"} = "fredbloggs";
+> $spira\_args-\>{"password"} = "fredbloggs";
 >
-> \$spira\_args-\>{"project\_id"} = 1;
+> $spira\_args-\>{"project\_id"} = 1;
 >
-> \$spira\_args-\>{"release\_id"} = 1;
+> $spira\_args-\>{"release\_id"} = 1;
 >
-> \$spira\_args-\>{"test\_set\_id"} = 1;
+> $spira\_args-\>{"test\_set\_id"} = 1;
 >
-> \$harness-\>{"spira\_args"} = \$spira\_args;
+> $harness-\>{"spira\_args"} = $spira\_args;
 >
 > \#define the list of tests and their SpiraTest Mapping
 >
 > \#Hash is of the format: TestFile =\> Test Case ID
 >
-> my \$tests = {};
+> my $tests = {};
 >
-> \$tests-\>{"SampleTest1.pl"} = 2;
+> $tests-\>{"SampleTest1.pl"} = 2;
 >
-> \$tests-\>{"SampleTest2.pl"} = 3;
+> $tests-\>{"SampleTest2.pl"} = 3;
 >
-> \$harness-\>runtests(\$tests);
+> $harness-\>runtests($tests);
 
 Firstly you need to use the SpiraTest specific harness rather than the
 general TAP::Harness library. This new class is actually a subclass of

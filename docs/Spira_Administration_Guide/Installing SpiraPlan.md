@@ -147,8 +147,8 @@ that can be configured on the server:
 
 
 
-Make sure that the following features are enabled within the \'Internet
-Information Services\' folder:
+Make sure that the following features are enabled within the 'Internet
+Information Services' folder:
 
 - Web Management Tools
 - IIS Management Console
@@ -168,9 +168,9 @@ Information Services\' folder:
 - HTTP Redirection
 - Static Content
 
-In the same panel (\'Turn Windows Features on or off\') you also need to
-check that the following features are enabled in the \'.NET Framework
-4.6 Advanced Services\' folder:
+In the same panel ('Turn Windows Features on or off') you also need to
+check that the following features are enabled in the '.NET Framework
+4.6 Advanced Services' folder:
 
 ![Image](img/Installing_SpiraPlan_13.png)
 
@@ -289,7 +289,7 @@ Control Panel \> Administrative Tools \> Internet Information Services
 
 
 You should see a section called "ASP.NET" occupying the top third of the
-IIS screen. If not, then you need to go back to section 2.1.4 and make
+IIS screen. If not, then you need to go back to [Ensure that ASP.NET is installed](#ensure-that-aspnet-is-installed) and make
 sure that you chose the option to install ASP.NET when installing IIS.
 
 ## Installing the Software
@@ -297,9 +297,9 @@ sure that you chose the option to install ASP.NET when installing IIS.
 Now that all the prerequisites have been correctly installed, you are
 now ready to install SpiraPlan® onto your system. To perform the
 installation, you will need the installation package downloaded from the
-Inflectra^®^ website, the name of the organization that the software is
+Inflectra<sup>®</sup> website, the name of the organization that the software is
 licensed to, and the actual license key code which will be available in
-the customer area of the Inflectra^®^ website.
+the customer area of the Inflectra<sup>®</sup> website.
 
 To start the installation, double-click on the SpiraPlan® installation
 package (it will have a filename in the form of
@@ -330,7 +330,7 @@ If installing a fresh installation or upgrading, after making your
 selection the next screen provides a copy of the SpiraPlan® End User
 License Agreement (EULA). Please read this carefully as it describes the
 legal contract between you -- the user of the software -- and
-Inflectra^®^ Corporation, the developer and publisher. Once you have
+Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have
 read the agreement and understood your rights and obligations, select
 the radio button marked "I accept the terms in the License Agreement"
 and click the "Next" button.
@@ -373,7 +373,7 @@ installer will warn you of any discrepancies, and will not allow you to
 proceed until valid information has been provided.
 
 If for any reason you are unable to get the provided license key to
-work, please contact Inflectra^®^ customer support immediately and they
+work, please contact Inflectra<sup>®</sup> customer support immediately and they
 will resolve the issue.
 
 ### Choosing an Installation Location \[Advanced only\]
@@ -488,7 +488,7 @@ Congratulations! You have successfully installed SpiraPlan® onto your
 system. If you type <http://localhost/SpiraTeam> into your browser you
 should see the SpiraPlan® login page, as illustrated in the *SpiraPlan®
 User Manual*. If for any reason you don't see the login page, please
-refer to *Appendix A -- Troubleshooting IIS* or contact Inflectra^®^
+refer to *Appendix A -- Troubleshooting IIS* or contact Inflectra<sup>®</sup>
 Technical Support using one of the methods described at our website
 <http://www.inflectra.com/Support>.
 

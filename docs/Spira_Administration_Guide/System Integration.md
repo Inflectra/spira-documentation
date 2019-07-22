@@ -1,6 +1,6 @@
-## System: Integration
+# System: Integration
 
-### Data Synchronization
+## Data Synchronization
 
 SpiraPlan® is capable of synchronizing its data with a variety of other
 systems, including but not limited to requirements management systems
@@ -35,11 +35,11 @@ Windows service, click the button to reset the last-sync date, and then
 start the service. This will ensure that the resetting doesn't happen
 mid-sync.
 
-### Version Control Integration (On-Premise Customers Only)
+## Version Control Integration (On-Premise Customers Only)
 
 *This section refers to the functionality available to on-premise
 customers of SpiraPlan. If you are using the cloud / hosted version of
-SpiraPlan, please refer to section **3.3.6.** (TaraVault Configuration)
+SpiraPlan, please refer to [TaraVault Configuration](../System/#taravault)
 instead.*
 
 SpiraPlan® is capable of integrating with a variety of Version Control
@@ -70,7 +70,7 @@ only, and can be deleted from a production system by clicking on the
 "Delete" button to the right of it.
 
 To add a new version control provider, click the "Add" button to enter
-the Plug-in details page. The fields required are as follows:\
+the Plug-in details page. The fields required are as follows:
 ![](img/System_Integration_77.png)
 
 
@@ -124,7 +124,7 @@ To do this, click on the "Product Settings" button next to the provider
 in question, which will take you to the screen discussed in 3.6.4.
 below.
 
-### Test Automation
+## Test Automation
 
 SpiraPlan® can be used to manage the development, scheduling and
 execution of automated unit, functional and load tests written using a

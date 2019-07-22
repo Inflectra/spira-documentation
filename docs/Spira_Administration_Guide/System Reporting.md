@@ -1,4 +1,4 @@
-## System: Reporting
+# System: Reporting
 
 SpiraPlan has a powerful set of reports and charts available out of the
 box that cover most product's needs. However, there is often a need to
@@ -6,7 +6,7 @@ be able to generate custom reports and graphs that are specific to your
 organization. In this section, you can create custom graphs and reports
 for your users to use.
 
-### Edit Reports
+## Edit Reports
 
 The "Edit Reports" administration page lets you create custom reports in
 the system that your users can run in the various products they have
@@ -126,351 +126,182 @@ Template. You can learn more about XSLT at the W3Schools website
 is to first run the "Raw XML" format report from the main SpiraPlan
 reports center. An example XML report is partially shown below:
 
-"?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?"
-
-"Report"
-
-"Title"
-
-Requirements Detailed Report
-
-"/Title"
-
-"ProductData"
-
-"Product"
-
-"ProjectId"1"/ProjectId"
-
-"ProjectGroupId"2"/ProjectGroupId"
-
-"Name"Library Information System"/Name"
-
-"Description"Sample application that allows users to manage books,
-authors and lending records for a typical branch library"/Description"
-
-"Website"www.libraryinformationsystem.org"/Website"
-
-"CreationDate"2005-11-30T19:00:00"/CreationDate"
-
-"ActiveYn"Y"/ActiveYn"
-
-"WorkingHours"8"/WorkingHours"
-
-"WorkingDays"5"/WorkingDays"
-
-"NonWorkingHours"0"/NonWorkingHours"
-
-"TimeTrackIncidentsYn"Y"/TimeTrackIncidentsYn"
-
-"TimeTrackTasksYn"Y"/TimeTrackTasksYn"
-
-"EffortIncidentsYn"Y"/EffortIncidentsYn"
-
-"EffortTasksYn"Y"/EffortTasksYn"
-
-"TasksAutoCreateYn"Y"/TasksAutoCreateYn"
-
-"ReqDefaultEffort"480"/ReqDefaultEffort"
-
-"TaskDefaultEffort"360"/TaskDefaultEffort"
-
-"ProductGroupName"Internal Products"/ProductGroupName"
-
-"/Product"
-
-"/ProductData"
-
-"RequirementData"
-
-"Requirement"
-
-"RequirementId"1"/RequirementId"
-
-"ProjectId"1"/ProjectId"
-
-"ScopeLevelId"3"/ScopeLevelId"
-
-"AuthorId"2"/AuthorId"
-
-"Name"Functional System Requirements"/Name"
-
-"CreationDate"2003-11-30T19:00:00"/CreationDate"
-
-"LastUpdateDate"2003-11-30T19:00:00"/LastUpdateDate"
-
-"IndentLevel"AAA"/IndentLevel"
-
-"ExpandedYn"Y"/ExpandedYn"
-
-"VisibleYn"Y"/VisibleYn"
-
-"SummaryYn"Y"/SummaryYn"
-
-"AttachmentsYn"N"/AttachmentsYn"
-
-"CoverageCountTotal"21"/CoverageCountTotal"
-
-"CoverageCountPassed"10"/CoverageCountPassed"
-
-"CoverageCountFailed"3"/CoverageCountFailed"
-
-"CoverageCountCaution"1"/CoverageCountCaution"
-
-"CoverageCountBlocked"1"/CoverageCountBlocked"
-
-"PlannedEffort"8700"/PlannedEffort"
-
-"TaskEstimatedEffort"11400"/TaskEstimatedEffort"
-
-"TaskActualEffort"7570"/TaskActualEffort"
-
-"TaskProductedEffort"3855"/TaskProductedEffort"
-
-"TaskRemainingEffort"11485"/TaskRemainingEffort"
-
-"TaskCount"42"/TaskCount"
-
-"TaskPercentOnTime"59"/TaskPercentOnTime"
-
-"TaskPercentLateFinish"6"/TaskPercentLateFinish"
-
-"TaskPercentNotStart"7"/TaskPercentNotStart"
-
-"TaskPercentLateStart"28"/TaskPercentLateStart"
-
-"ScopeLevelName"In Progress"/ScopeLevelName"
-
-"AuthorName"Fred Bloggs"/AuthorName"
-
-"HasDiscussionChanged"false"/HasDiscussionChanged"
-
-"IsDeleted"false"/IsDeleted"
-
-"CustomProperties"
-
-"CustomProperty"
-
-"Alias"URL"/Alias"
-
-"Name"Custom\_01"/Name"
-
-"Type"Text"/Type"
-
-"/CustomProperty"
-
-"CustomProperty"
-
-"Alias"Difficulty"/Alias"
-
-"Name"Custom\_02"/Name"
-
-"Type"List"/Type"
-
-"/CustomProperty"
-
-"CustomProperty"
-
-"Alias"Requirement Type"/Alias"
-
-"Name"Custom\_03"/Name"
-
-"Type"List"/Type"
-
-"/CustomProperty"
-
-"CustomProperty"
-
-"Alias"Notes"/Alias"
-
-"Name"Custom\_04"/Name"
-
-"Type"Text"/Type"
-
-"/CustomProperty"
-
-"CustomProperty"
-
-"Alias"Review Date"/Alias"
-
-"Name"Custom\_05"/Name"
-
-"Type"Date"/Type"
-
-"/CustomProperty"
-
-"CustomProperty"
-
-"Alias"Decimal"/Alias"
-
-"Name"Custom\_06"/Name"
-
-"Type"Decimal"/Type"
-
-"/CustomProperty"
-
-"/CustomProperties"
-
-"Discussions /"
-
-"TestCases /"
-
-"Tasks /"
-
-"Attachments /"
-
-"History"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"1"/ChangeTypeId"
-
-"ChangeTypeName"Modified"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"2"/ChangeTypeId"
-
-"ChangeTypeName"Deleted"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"3"/ChangeTypeId"
-
-"ChangeTypeName"Added"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"4"/ChangeTypeId"
-
-"ChangeTypeName"Purged"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"5"/ChangeTypeId"
-
-"ChangeTypeName"Rollback"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"6"/ChangeTypeId"
-
-"ChangeTypeName"Undelete"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"7"/ChangeTypeId"
-
-"ChangeTypeName"Imported"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"HistoryChangeSetType"
-
-"ChangeTypeId"8"/ChangeTypeId"
-
-"ChangeTypeName"Exported"/ChangeTypeName"
-
-"/HistoryChangeSetType"
-
-"/History"
-
-"Requirements /"
-
-"Incidents /"
-
-"SourceCodeRevisions /"
-
-"/Requirement"
-
-"/RequirementData"
-
-"/Report"
+```xml
+“?xml version="1.0" encoding="UTF-8" standalone="yes"?”
+“Report”
+  “Title”
+    Requirements Detailed Report
+  “/Title”
+  “ProductData”
+    “Product”
+      “ProjectId”1”/ProjectId”
+      “ProjectGroupId”2”/ProjectGroupId”
+      “Name”Library Information System”/Name”
+      “Description”Sample application that allows users to manage books, authors and lending records for a typical branch library”/Description”
+      “Website”www.libraryinformationsystem.org”/Website”
+      “CreationDate”2005-11-30T19:00:00”/CreationDate”
+      “ActiveYn”Y”/ActiveYn”
+      “WorkingHours”8”/WorkingHours”
+      “WorkingDays”5”/WorkingDays”
+      “NonWorkingHours”0”/NonWorkingHours”
+      “TimeTrackIncidentsYn”Y”/TimeTrackIncidentsYn”
+      “TimeTrackTasksYn”Y”/TimeTrackTasksYn”
+      “EffortIncidentsYn”Y”/EffortIncidentsYn”
+      “EffortTasksYn”Y”/EffortTasksYn”
+      “TasksAutoCreateYn”Y”/TasksAutoCreateYn”
+      “ReqDefaultEffort”480”/ReqDefaultEffort”
+      “TaskDefaultEffort”360”/TaskDefaultEffort”
+      “ProductGroupName”Internal Products”/ProductGroupName”
+    “/Product”
+  “/ProductData”
+  “RequirementData”
+    “Requirement”
+      “RequirementId”1”/RequirementId”
+      “ProjectId”1”/ProjectId”
+      “ScopeLevelId”3”/ScopeLevelId”
+      “AuthorId”2”/AuthorId”
+      “Name”Functional System Requirements”/Name”
+      “CreationDate”2003-11-30T19:00:00”/CreationDate”
+      “LastUpdateDate”2003-11-30T19:00:00”/LastUpdateDate”
+      “IndentLevel”AAA”/IndentLevel”
+      “ExpandedYn”Y”/ExpandedYn”
+      “VisibleYn”Y”/VisibleYn”
+      “SummaryYn”Y”/SummaryYn”
+      “AttachmentsYn”N”/AttachmentsYn”
+      “CoverageCountTotal”21”/CoverageCountTotal”
+      “CoverageCountPassed”10”/CoverageCountPassed”
+      “CoverageCountFailed”3”/CoverageCountFailed”
+      “CoverageCountCaution”1”/CoverageCountCaution”
+      “CoverageCountBlocked”1”/CoverageCountBlocked”
+      “PlannedEffort”8700”/PlannedEffort”
+      “TaskEstimatedEffort”11400”/TaskEstimatedEffort”
+      “TaskActualEffort”7570”/TaskActualEffort”
+      “TaskProductedEffort”3855”/TaskProductedEffort”
+      “TaskRemainingEffort”11485”/TaskRemainingEffort”
+      “TaskCount”42”/TaskCount”
+      “TaskPercentOnTime”59”/TaskPercentOnTime”
+      “TaskPercentLateFinish”6”/TaskPercentLateFinish”
+      “TaskPercentNotStart”7”/TaskPercentNotStart”
+      “TaskPercentLateStart”28”/TaskPercentLateStart”
+      “ScopeLevelName”In Progress”/ScopeLevelName”
+      “AuthorName”Fred Bloggs”/AuthorName”
+      “HasDiscussionChanged”false”/HasDiscussionChanged”
+      “IsDeleted”false”/IsDeleted”
+      “CustomProperties”
+        “CustomProperty”
+          “Alias”URL”/Alias”
+          “Name”Custom_01”/Name”
+          “Type”Text”/Type”
+        “/CustomProperty”
+        “CustomProperty”
+          “Alias”Difficulty”/Alias”
+          “Name”Custom_02”/Name”
+          “Type”List”/Type”
+        “/CustomProperty”
+        “CustomProperty”
+          “Alias”Requirement Type”/Alias”
+          “Name”Custom_03”/Name”
+          “Type”List”/Type”
+        “/CustomProperty”
+        “CustomProperty”
+          “Alias”Notes”/Alias”
+          “Name”Custom_04”/Name”
+          “Type”Text”/Type”
+        “/CustomProperty”
+        “CustomProperty”
+          “Alias”Review Date”/Alias”
+          “Name”Custom_05”/Name”
+          “Type”Date”/Type”
+        “/CustomProperty”
+        “CustomProperty”
+          “Alias”Decimal”/Alias”
+          “Name”Custom_06”/Name”
+          “Type”Decimal”/Type”
+        “/CustomProperty”
+      “/CustomProperties”
+      “Discussions /”
+      “TestCases /”
+      “Tasks /”
+      “Attachments /”
+      “History”
+        “HistoryChangeSetType”
+          “ChangeTypeId”1”/ChangeTypeId”
+          “ChangeTypeName”Modified”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”2”/ChangeTypeId”
+          “ChangeTypeName”Deleted”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”3”/ChangeTypeId”
+          “ChangeTypeName”Added”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”4”/ChangeTypeId”
+          “ChangeTypeName”Purged”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”5”/ChangeTypeId”
+          “ChangeTypeName”Rollback”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”6”/ChangeTypeId”
+          “ChangeTypeName”Undelete”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”7”/ChangeTypeId”
+          “ChangeTypeName”Imported”/ChangeTypeName”
+        “/HistoryChangeSetType”
+        “HistoryChangeSetType”
+          “ChangeTypeId”8”/ChangeTypeId”
+          “ChangeTypeName”Exported”/ChangeTypeName”
+        “/HistoryChangeSetType”
+      “/History”
+      “Requirements /”
+      “Incidents /”
+      “SourceCodeRevisions /”
+    “/Requirement”
+  “/RequirementData”
+“/Report”
+```
 
 This XML data is then converted by the XSLT template into HTML format so
 that it can be included into the final generated report. An example
 fragment of the XSLT template looks like:
 
-"?xml version=\"1.0\" encoding=\"utf-8\"?"
-
-"xsl:stylesheet version=\"1.0\"
-xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"
-xmlns:msxsl=\"urn:schemas-microsoft-com:xslt\"
-exclude-result-prefixes=\"msxsl\""
-
-"xsl:template match=\"/RequirementData\""
-
-"xsl:for-each select=\"Requirement\""
-
-"div"
-
-"xsl:attribute name=\"style\""
-
-padding-left: "xsl:value-of
-select=\"string-length(IndentLevel)\*2\"/"px;
-
-"/xsl:attribute"
-
-"xsl:if test=\"SummaryYn=\'Y\'\""
-
-"div class=\"Title2\""
-
-RQ:"xsl:value-of select=\"RequirementId\"/" - "xsl:value-of
-select=\"Name\"/"
-
-"/div"
-
-"div class=\"Description\""
-
-"xsl:value-of select=\"Description\" disable-output-escaping=\"yes\"/"
-
-"/div"
-
-"br /"
-
-"/xsl:if"
-
-"xsl:if test=\"SummaryYn=\'N\'\""
-
-"xsl:attribute name=\"style\""
-
-padding-left: "xsl:value-of
-select=\"string-length(IndentLevel)\*2\"/"px;
-
-"/xsl:attribute"
-
-"div class=\"Title3\""
-
-RQ:"xsl:value-of select=\"RequirementId\"/" - "xsl:value-of
-select=\"Name\"/"
-
-"/div"
-
-"p"
-
-"xsl:value-of select=\"Description\" disable-output-escaping=\"yes\"/"
-
-"/p"
-
-"/xsl:if"
-
-"/div"
-
-"/xsl:for-each"
-
-"/xsl:template"
+```xml
+“?xml version="1.0" encoding="utf-8"?”
+“xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"“
+  “xsl:template match="/RequirementData"“
+    “xsl:for-each select="Requirement"“
+      “div”
+        “xsl:attribute name="style"“
+          padding-left: “xsl:value-of select="string-length(IndentLevel)*2"/”px;
+        “/xsl:attribute”
+        “xsl:if test="SummaryYn='Y'"“
+          “div class="Title2"“
+            RQ:”xsl:value-of select="RequirementId"/” - “xsl:value-of select="Name"/”
+          “/div”
+          “div class="Description"“
+            “xsl:value-of select="Description" disable-output-escaping="yes"/”
+          “/div”
+          “br /”
+        “/xsl:if”
+        “xsl:if test="SummaryYn='N'"“
+          “xsl:attribute name="style"“
+            padding-left: “xsl:value-of select="string-length(IndentLevel)*2"/”px;
+          “/xsl:attribute”
+          “div class="Title3"“
+            RQ:”xsl:value-of select="RequirementId"/” - “xsl:value-of select="Name"/”
+          “/div”
+          “p”
+            “xsl:value-of select="Description" disable-output-escaping="yes"/”
+          “/p”
+        “/xsl:if”
+      “/div”
+    “/xsl:for-each”
+  “/xsl:template”
+```
 
 So using a combination of XSLT and the Raw XML report format, you can
 generate a customized view of the standard report section that will be
@@ -524,7 +355,7 @@ have selected the "Requirements" reportable entity. This will
 automatically populate the following query in the **Query** editor:
 
 select value R from SpiraTestEntities.R\_Requirements as R where
-R.PROJECT\_ID = \${ProjectId}
+R.PROJECT\_ID = ${ProjectId}
 
 This query tells SpiraPlan to select all of the rows in the
 R\_Requirements collection that are in the current product and include
@@ -535,7 +366,7 @@ data. That will help you decide which columns are important for your
 report. You can then adjust the query to only include those columns:
 
 select R.REQUIREMENT\_ID, R.NAME from SpiraTestEntities.R\_Requirements
-as R where R.PROJECT\_ID = \${ProjectId}
+as R where R.PROJECT\_ID = ${ProjectId}
 
 In this modified query, we have replaced the keyword **value** with the
 specific column names. When you use the "Preview Results" option on this
@@ -560,35 +391,35 @@ You can now click the \[Save\] button to save your changes to the
 report.
 
 You may have noticed that we had a special token in the query
-**\${ProjectId}**, this token will be evaluated during the generation of
+**${ProjectId}**, this token will be evaluated during the generation of
 the report and ensures that only items in the current product are
 included. If you want to include all the items in a specific Program,
-you should instead use the token **\${ProjectGroupId}**. If you don't
+you should instead use the token **${ProjectGroupId}**. If you don't
 use either token, the report will include all the items in the entire
 system, across all products and groups.
 
 For example:
 
 -   select value R from SpiraTestEntities.R\_Requirements as R where
-R.PROJECT\_ID = \${ProjectId}\
+R.PROJECT\_ID = ${ProjectId}
 **will display all the requirements in the specific product**
 
 -   select value R from SpiraTestEntities.R\_Requirements as R where
-R.PROJECT\_GROUP\_ID = \${ProjectGroupId}\
+R.PROJECT\_GROUP\_ID = ${ProjectGroupId}
 **will display all the requirements in the specific program**
 
--   select value R from SpiraTestEntities.R\_Requirements as R\
+-   select value R from SpiraTestEntities.R\_Requirements as R
 **will display all the requirements in the entire system**
 
 For more information on creating custom report queries, please refer to
 the knowledge base articles on the Inflectra customer support website:
 <http://www.inflectra.com/Support>.
 
-*Warning: If you create a report that doesn't have either \${ProjectId}
-or \${ProjectGroupId} in the WHERE clause you could end up displaying
+*Warning: If you create a report that doesn't have either ${ProjectId}
+or ${ProjectGroupId} in the WHERE clause you could end up displaying
 data to a user that shouldn't have permission to see that data.*
 
-### Edit Graphs
+## Edit Graphs
 
 The "Edit Graphs" administration page lets you create custom graphs and
 charts in the system that your users can run in the various products
@@ -662,7 +493,7 @@ This will automatically populate the following query in the **Query**
 editor:
 
 select value R from SpiraTestEntities.R\_TestRuns as R where
-R.PROJECT\_ID = \${ProjectId}
+R.PROJECT\_ID = ${ProjectId}
 
 This query tells SpiraPlan to select all of the rows in the R\_TestRuns
 collection that are in the current product and include all of the
@@ -682,7 +513,7 @@ select R.EXECUTION\_STATUS\_NAME, COUNT (R.TEST\_RUN\_ID) as COUNT
 
 from SpiraTestEntities.R\_TestRuns as R
 
-where R.PROJECT\_ID = \${ProjectId}
+where R.PROJECT\_ID = ${ProjectId}
 
 group by R.EXECUTION\_STATUS\_NAME
 
@@ -736,7 +567,7 @@ Once you are happy with your custom graph, click the **Save** button to
 commit the changes. If the Active flag is set to "Yes" then the graph
 will be available for end users to use.
 
-*Warning: If you create a graph that doesn't have either \${ProjectId}
-or \${ProjectGroupId} in the WHERE clause you could end up displaying
+*Warning: If you create a graph that doesn't have either ${ProjectId}
+or ${ProjectGroupId} in the WHERE clause you could end up displaying
 data to a user that shouldn't have permission to see that data.*
 

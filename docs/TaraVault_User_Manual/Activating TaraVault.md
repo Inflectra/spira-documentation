@@ -6,7 +6,7 @@ our secure cloud, integrated with our SpiraTeam® application lifecycle
 management system.
 
 This guide outlines how to activate and use TaraVault® with a
-cloud-based instance of SpiraPlan^®^ or SpiraTeam^®^. The guide covers
+cloud-based instance of SpiraPlan<sup>®</sup> or SpiraTeam<sup>®</sup>. The guide covers
 the general activation process in additional to specific sections
 dedicated to the two supported SCM technologies -- *Git or*
 *Subversion*.

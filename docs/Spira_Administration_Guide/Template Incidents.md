@@ -1,4 +1,4 @@
-## Template: Incidents
+# Template: Incidents
 
 In addition to being able to create custom properties and values for
 incidents (same as for all artifacts in SpiraPlan®), you can also change
@@ -6,7 +6,7 @@ the values populated in many of the standard fields used in the incident
 tracker -- types, statuses, priorities and severities. The process for
 changing each of these is described below:
 
-### Edit Types
+## Edit Types
 
 The following screen is displayed when you choose the "Types" link from
 the Incidents section of the administration menu:
@@ -42,7 +42,7 @@ This is the type that a new incident will be set to unless changed by
 the creator of the incident. Note that you must have at least one active
 incident type, and you cannot set an inactive type as the default.
 
-### Edit Statuses
+## Edit Statuses
 
 The following screen is displayed when you choose the "Statuses" link
 from the Incidents section of the administration menu:
@@ -74,7 +74,7 @@ first created, and acts as the first step in the incident workflow. Note
 that you must have at least one active incident status, and you cannot
 set an inactive status as the default.
 
-### Priorities
+## Priorities
 
 The following screen is displayed when you choose the "Priorities" link
 from the Incidents section of the administration menu:
@@ -97,7 +97,7 @@ active flag to "No" and click "Save". To add a new incident priority,
 click the "Add" button and a new row will be added to the list which you
 can now edit.
 
-### Severities
+## Severities
 
 The following screen is displayed when you choose the "Severities" link
 from the Incidents section of the administration menu:
@@ -120,7 +120,7 @@ active flag to "No" and click "Save". To add a new incident severity,
 click the "Add" button and a new row will be added to the list which you
 can now edit.
 
-### Incident Workflows
+## Incident Workflows
 
 Clicking on the "Workflows" link in the Administration menu brings up
 the list of defined incident workflows for the current template. A
@@ -168,7 +168,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to an incident type. This is important as all incident types need to be
 linked to an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the "Steps" button of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -194,7 +194,7 @@ the step or transition respectively. To delete an existing transition,
 click the "x" button after the transition name, and to add a new
 transition, click the "Add Transition" button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -273,7 +273,7 @@ Not-Reproducible.
 > You can set any of these conditions by changing the drop-down list
 > and/or check-boxes and clicking the appropriate "Save" button.
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the incident status name link from either of the
 previous screens, you are taken to the workflow step details screen:

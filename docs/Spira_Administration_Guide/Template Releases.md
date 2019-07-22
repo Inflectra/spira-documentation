@@ -1,6 +1,6 @@
-## Template: Releases
+# Template: Releases
 
-### Release Workflows
+## Release Workflows
 
 Clicking on the "Release Workflows" link under the Planning heading,
 brings up the list of defined release workflows for the current
@@ -36,7 +36,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to a release type. This is important as all release types need to be
 linked to an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the 'Steps' hyperlink of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -61,7 +61,7 @@ the step or transition respectively. To delete an existing transition,
 click the 'x button after the transition name, and to add a new
 transition, click the 'Add Transition' button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -110,7 +110,7 @@ regardless of ownership status.
 > You can set any of these conditions by changing the drop-down list
 > and/or check-boxes and clicking the appropriate "Save" button.
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the release status name link from either of the
 previous screens, you are taken to the workflow step details screen:

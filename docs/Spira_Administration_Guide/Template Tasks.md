@@ -1,9 +1,9 @@
-## Template: Tasks
+# Template: Tasks
 
 This section contains administrative options that are specific to the
 task functionality in the system.
 
-### Priority
+## Priority
 
 The following screen is displayed when you choose the "Priority" link
 from the Tasks section of the administration menu:
@@ -29,7 +29,7 @@ in any drop-down-lists, change its active flag to "No" and click "Save".
 To add a new task priority, click the "Add" button and a new row will be
 added to the list which you can now edit.
 
-### Types
+## Types
 
 The following screen is displayed when you choose the "Types" link from
 the Tasks section of the administration menu:
@@ -60,7 +60,7 @@ be set to unless changed by the creator of the task. Note that you must
 have at least one active type, and you cannot set an inactive type as
 the default.
 
-### Task Workflows
+## Task Workflows
 
 Clicking on the "Task Workflows" link under the Planning heading, brings
 up the list of defined task workflows for the current template. A
@@ -88,7 +88,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to a task type. This is important as all task types need to be linked to
 an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the 'Steps' hyperlink of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -113,7 +113,7 @@ the step or transition respectively. To delete an existing transition,
 click the 'x button after the transition name, and to add a new
 transition, click the 'Add Transition' button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -162,7 +162,7 @@ of ownership status.
 > You can set any of these conditions by changing the drop-down list
 > and/or check-boxes and clicking the appropriate "Save" button.
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the task status name link from either of the previous
 screens, you are taken to the workflow step details screen:

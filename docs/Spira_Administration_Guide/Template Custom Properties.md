@@ -1,4 +1,4 @@
-## Template: Custom Properties
+# Template: Custom Properties
 
 SpiraPlan allows you to customize all of the artifacts in the system
 (requirements, test cases, incidents, etc.) by adding user-defined
@@ -58,7 +58,7 @@ can select from.
 entered in, even if the workflow is configured to have the field
 disabled!
 
-### Edit Custom Lists
+## Edit Custom Lists
 
 If you are planning on having any list based custom properties in your
 template, then you first need to create and populate the custom template
@@ -126,7 +126,7 @@ To remove a custom list from the template, just click on the "Remove"
 button next to the custom list and the list and all its associated
 values will be deleted from the template.
 
-### Edit Custom Properties
+## Edit Custom Properties
 
 This option is used to actually define the custom properties associated
 with each artifact type in the template. The following screen is

@@ -1,9 +1,9 @@
-## Template: Test Cases
+# Template: Test Cases
 
 This section contains administrative options that are specific to the
 testing functionality in the system.
 
-### Priority
+## Priority
 
 The following screen is displayed when you choose the "Priority" link
 from the Test Cases section of the administration menu:
@@ -29,7 +29,7 @@ appearing in any drop-down-lists, change its active flag to "No" and
 click "Save". To add a new test case priority, click the "Add" button
 and a new row will be added to the list which you can now edit.
 
-### Types
+## Types
 
 The following screen is displayed when you choose the "Types" link from
 the Test Cases section of the administration menu:
@@ -68,7 +68,7 @@ that a new test case will be set to unless changed by the creator of the
 test case. Note that you must have at least one active test case type,
 and you cannot set an inactive type as the default.
 
-### Test Case Workflows
+## Test Case Workflows
 
 Clicking on the "Workflows" link under the Test Cases section, brings up
 the list of defined test case workflows for the current template. A
@@ -96,7 +96,7 @@ similarly you cannot make a workflow inactive that is currently linked
 to a test case type. This is important as all test case types need to be
 linked to an active workflow at all times.
 
-#### Edit Workflow Details
+### Edit Workflow Details
 
 Clicking on the 'Steps' button of a workflow brings up the following
 screen that lists all the workflow steps and workflow transitions that
@@ -122,7 +122,7 @@ the step or transition respectively. To delete an existing transition,
 click the 'x button after the transition name, and to add a new
 transition, click the 'Add Transition' button in the Operations column.
 
-#### Edit Workflow Transition
+### Edit Workflow Transition
 
 When you click on the transition name link from the previous screen, you
 are taken to the workflow transition details screen:
@@ -171,7 +171,7 @@ regardless of ownership status.
 > You can set any of these conditions by changing the drop-down list
 > and/or check-boxes and clicking the appropriate "Save" button.
 
-#### Edit Workflow Step
+### Edit Workflow Step
 
 When you click on the test case status name link from either of the
 previous screens, you are taken to the workflow step details screen:

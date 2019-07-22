@@ -18,3 +18,4 @@
     - \\@ to @
     - ^®^ to <sup>®</sup>
     - ^1^ to <sup>1</sup>
+    - \$ to $

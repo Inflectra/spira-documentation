@@ -45,7 +45,7 @@ of it, rather than simply a VCS.
 Another major difference between Git and Subversion is that Git has
 built-in support for 'branches' instead of relying on a specific folder
 structure. In Git, Branches are used to develop features isolated from
-each other. The master branch is the \"default\" branch when you create
+each other. The master branch is the "default" branch when you create
 a repository. You can then use other branches for development and merge
 them back to the master branch upon completion.
 
@@ -392,7 +392,7 @@ Linking an artifact is quite simple. To maintain the readability of Git
 commit messages, we adopted a square bracket token. The token is in the
 format of:
 
-**\[\<artifact identifier\>:\<artifact id\>\]**
+**\[<artifact identifier\>:<artifact id\>\]**
 
 The first half, the Artifact Identifier, is a two-letter code that is
 used throughout SpiraTeam, and is visible on almost every page in the
