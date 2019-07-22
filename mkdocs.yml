@@ -25,6 +25,41 @@ nav:
   - Program Management: Spira_User_Manual\Program Management.md
   - Risk Management: Spira_User_Manual\Risks Management.md
   - 'Appendix 1: Keyboard Shortcuts': Spira_User_Manual\Appendix 1 Keyboard Shortcuts.md
+- Quick Start Guides:
+  - SpiraPlan:
+    - Logging In: SpiraPlan_Quick_Start_Guide\Logging In and Selecting a Product.md
+    - Define the Requirements: SpiraPlan_Quick_Start_Guide\Define the Requirements.md
+    - Create Release & Iteration Plan: SpiraPlan_Quick_Start_Guide\Create the Release and Iteration Plan.md
+    - Adding Requirement Tasks: SpiraPlan_Quick_Start_Guide\Adding Requirement Tasks.md
+    - Adding Test Cases: SpiraPlan_Quick_Start_Guide\Adding the Test Cases.md
+    - Planning the Sprint: SpiraPlan_Quick_Start_Guide\Planning the Sprint.md
+    - Assigning Requirements & Tasks: SpiraPlan_Quick_Start_Guide\Assigning the Requirements & Tasks.md
+    - Scheduling Testing Activities: SpiraPlan_Quick_Start_Guide\Scheduling the Testing Activities.md
+    - Running Tests and Logging Incidents: SpiraPlan_Quick_Start_Guide\Running Tests and Logging Incidents.md
+    - Triaging Issues and Defects: SpiraPlan_Quick_Start_Guide\Triaging Issues and Defects.md
+    - Reviewing Your Product: SpiraPlan_Quick_Start_Guide\Reviewing Your Product.md
+    - Reviewing A Program: SpiraPlan_Quick_Start_Guide\Reviewing A Program.md
+  - SpiraTeam: 
+    - Logging In: SpiraTeam_Quick_Start_Guide\Logging In and Selecting a Product.md
+    - Define the Requirements: SpiraTeam_Quick_Start_Guide\Define the Requirements.md
+    - Create Release & Iteration Plan: SpiraTeam_Quick_Start_Guide\Create the Release and Iteration Plan.md
+    - Adding Requirement Tasks: SpiraTeam_Quick_Start_Guide\Adding Requirement Tasks.md
+    - Adding Test Cases: SpiraTeam_Quick_Start_Guide\Adding the Test Cases.md
+    - Planning the Sprint: SpiraTeam_Quick_Start_Guide\Planning the Sprint.md
+    - Assigning Requirements & Tasks: SpiraTeam_Quick_Start_Guide\Assigning the Requirements & Tasks.md
+    - Scheduling Testing Activities: SpiraTeam_Quick_Start_Guide\Scheduling the Testing Activities.md
+    - Running Tests and Logging Incidents: SpiraTeam_Quick_Start_Guide\Running Tests and Logging Incidents.md
+    - Triaging Issues and Defects: SpiraTeam_Quick_Start_Guide\Triaging Issues and Defects.md
+    - Reviewing Your Product: SpiraTeam_Quick_Start_Guide\Reviewing Your Product.md
+  - SpiraTest:
+    - Logging In: SpiraTest_Quick_Start_Guide\Logging in and Selecting a Product.md
+    - Define the Requirements: SpiraTest_Quick_Start_Guide\Define the Requirements.md
+    - Create Release & Iteration Plan: SpiraTest_Quick_Start_Guide\Create the Release and Iteration Plan.md
+    - Build the Test Plan: SpiraTest_Quick_Start_Guide\Build the Test Plan.md
+    - Scheduling Testing Activities: SpiraTest_Quick_Start_Guide\Scheduling the Testing Activities.md
+    - Running Tests and Logging Incidents: SpiraTest_Quick_Start_Guide\Running Tests and Logging Incidents.md
+    - Triaging Issues and Defects: SpiraTest_Quick_Start_Guide\Triaging Issues and Defects.md
+    - Reviewing Your Product: SpiraTest_Quick_Start_Guide\Reviewing Your Product.md
 - Spira Admin Guide:
   - Installing Spira: Spira_Administration_Guide\Installing SpiraPlan.md
   - System Administration: Spira_Administration_Guide\System Administration.md

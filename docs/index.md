@@ -91,6 +91,12 @@ web applications, and Inflectra cannot be held liable for any losses due
 to breaches of security, compromise of data or other cyber-attacks that
 may result from following our recommendations.
 
+The section of the manual that describes modifying the Windows System
+Registry ("Registry") should only be attempted by experienced Windows
+administrators who are familiar with its organization and contents.
+Inflectra^®^ cannot be held liable for any losses due to damage to the
+system registry made by inexperienced personnel.
+
 Spira™, TaraVault<sup>®</sup>, SpiraPlan<sup>®</sup>, SpiraTeam<sup>®</sup>, SpiraTest<sup>®</sup> and Inflectra<sup>®</sup> are
 either trademarks or registered trademarks of Inflectra Corporation in
 the United States of America and other countries. Microsoft<sup>®</sup>, Windows<sup>®</sup>, Explorer<sup>®</sup>, Microsoft
