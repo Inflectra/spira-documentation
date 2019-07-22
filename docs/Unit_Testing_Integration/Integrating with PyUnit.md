@@ -77,7 +77,7 @@ self.assert\_(element in self.seq)
 
 def testfail(self):
 
-self.assertEqual(1, 2, \"1==2 Should fail\")
+self.assertEqual(1, 2, "1==2 Should fail")
 
 def testsample(self):
 
@@ -148,7 +148,7 @@ self.assert\_(element in self.seq)
 
 def testfail\_\_4(self):
 
-self.assertEqual(1, 2, \"1==2 Should fail\")
+self.assertEqual(1, 2, "1==2 Should fail")
 
 def testsample\_\_5(self):
 
@@ -171,17 +171,17 @@ spiraTestExtension = spiratestextension.SpiraTestExtension()
 
 spiraTestExtension.projectId = 1
 
-spiraTestExtension.server = \"localhost\"
+spiraTestExtension.server = "localhost"
 
 spiraTestExtension.port = 80
 
 spiraTestExtension.ssl = False
 
-spiraTestExtension.path = \"SpiraTest\"
+spiraTestExtension.path = "SpiraTest"
 
-spiraTestExtension.userName = \"fredbloggs\"
+spiraTestExtension.userName = "fredbloggs"
 
-spiraTestExtension.password = \"PleaseChange\"
+spiraTestExtension.password = "PleaseChange"
 
 spiraTestExtension.recordResults(TestSequenceFunctions, testResult,
 releaseId, testSetId)

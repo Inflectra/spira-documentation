@@ -47,32 +47,32 @@ a) The sample test harness - SampleHarness.pl
 >
 > \#define the list of tests to be executed
 >
-> my \@tests = (\"SampleTest1.pl\", \"SampleTest2.pl\");
+> my @tests = ("SampleTest1.pl", "SampleTest2.pl");
 >
-> \$harness-\>runtests(\@tests);
+> \$harness-\>runtests(@tests);
 
 b) One of the sample test fixtures -- Sample1Test.pl
 
 > \#!/usr/bin/perl -w
 >
-> \# Specify our plan, how many tests we\'re writing
+> \# Specify our plan, how many tests we're writing
 >
 > use Test::More tests =\> 9;
 >
-> \# or alternately, if we don\'t know how many:
+> \# or alternately, if we don't know how many:
 >
 > \# use Test::More qw(no\_plan);
 >
-> \# Check that our module compiles and can be \"use\"d.
+> \# Check that our module compiles and can be "use"d.
 >
-> BEGIN { use\_ok( \'Inflectra::SpiraTest::Addons::Samples::TestMe\' );
+> BEGIN { use\_ok( 'Inflectra::SpiraTest::Addons::Samples::TestMe' );
 > }
 >
 > \# Check our module can be required. Very similar test to that above.
 >
-> require\_ok( \'Inflectra::SpiraTest::Addons::Samples::TestMe\' );
+> require\_ok( 'Inflectra::SpiraTest::Addons::Samples::TestMe' );
 >
-> \# There are a number of ways to generate the \"ok\" tests. These are:
+> \# There are a number of ways to generate the "ok" tests. These are:
 >
 > \# ok: first argument is true, second argument is name of test.
 >
@@ -92,23 +92,23 @@ b) One of the sample test fixtures -- Sample1Test.pl
 >
 > \# Here are some examples that should PASS
 >
-> ok( add(1,1) == 2, \"Basic addition is working\");
+> ok( add(1,1) == 2, "Basic addition is working");
 >
-> is ( subtract(2,1), 1, \"Basic subtraction is working\");
+> is ( subtract(2,1), 1, "Basic subtraction is working");
 >
-> isnt( multiply(2,2), 5, \"Basic multiplication doesn\'t fail\");
+> isnt( multiply(2,2), 5, "Basic multiplication doesn't fail");
 >
 > \# Here are some examples that should FAIL
 >
-> ok( add(1,1) == 3, \"Basic addition is working\");
+> ok( add(1,1) == 3, "Basic addition is working");
 >
-> is ( subtract(2,1), 0, \"Basic subtraction is working\");
+> is ( subtract(2,1), 0, "Basic subtraction is working");
 >
-> isnt( multiply(2,2), 4, \"Basic multiplication doesn\'t fail\");
+> isnt( multiply(2,2), 4, "Basic multiplication doesn't fail");
 >
 > \# Here is an example of a test that throws an ERROR
 >
-> is(\$notdeclared, 1, \"Undeclared variable test\");
+> is(\$notdeclared, 1, "Undeclared variable test");
 
 The TAP test cases in the sample code use the Test::More library which
 provides the necessary assertion methods for testing results from the
@@ -141,19 +141,19 @@ harness (illustrated in yellow below):
 >
 > \$spira\_args = {};
 >
-> \$spira\_args-\>{\"base\_url\"} = \"http://localhost/SpiraTest\";
+> \$spira\_args-\>{"base\_url"} = "http://localhost/SpiraTest";
 >
-> \$spira\_args-\>{\"user\_name\"} = \"fredbloggs\";
+> \$spira\_args-\>{"user\_name"} = "fredbloggs";
 >
-> \$spira\_args-\>{\"password\"} = \"fredbloggs\";
+> \$spira\_args-\>{"password"} = "fredbloggs";
 >
-> \$spira\_args-\>{\"project\_id\"} = 1;
+> \$spira\_args-\>{"project\_id"} = 1;
 >
-> \$spira\_args-\>{\"release\_id\"} = 1;
+> \$spira\_args-\>{"release\_id"} = 1;
 >
-> \$spira\_args-\>{\"test\_set\_id\"} = 1;
+> \$spira\_args-\>{"test\_set\_id"} = 1;
 >
-> \$harness-\>{\"spira\_args\"} = \$spira\_args;
+> \$harness-\>{"spira\_args"} = \$spira\_args;
 >
 > \#define the list of tests and their SpiraTest Mapping
 >
@@ -161,9 +161,9 @@ harness (illustrated in yellow below):
 >
 > my \$tests = {};
 >
-> \$tests-\>{\"SampleTest1.pl\"} = 2;
+> \$tests-\>{"SampleTest1.pl"} = 2;
 >
-> \$tests-\>{\"SampleTest2.pl\"} = 3;
+> \$tests-\>{"SampleTest2.pl"} = 3;
 >
 > \$harness-\>runtests(\$tests);
 

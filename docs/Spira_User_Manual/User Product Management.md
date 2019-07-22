@@ -356,7 +356,7 @@ a colored indicator that lets you know if they are online or not. If
 they are online you can then send them an instant message (which will be
 described later in [Global Navigation](#global-navigation). To remove an existing contact, just
 click on the 'Remove' button. To add a new user, simply locate them in
-the Tracking \> Resources page and then use the \<Add As Contact\>
+the Tracking \> Resources page and then use the <Add As Contact\>
 button.
 
 ### My Saved Reports
@@ -662,7 +662,7 @@ at a glance. It contains summary-level information for all types of
 artifact (requirements, test cases, incidents, etc.) that you can use to
 drill-down into the appropriate section of the application.
 
-You will see a small "i\" in a circle at the top right of every chart.
+You will see a small "i" in a circle at the top right of every chart.
 Hovering or clicking on this will show you information about that chart.
 
 In addition to viewing the product home page, you can choose to filter
@@ -1222,7 +1222,7 @@ that make up the group. It contains summary-level metrics for all types
 of artifact (requirements, test cases, tasks, incidents, etc.) that you
 can use to drill-down into the appropriate product for more details.
 
-You will see a small "i\" in a circle at the top right of every chart.
+You will see a small "i" in a circle at the top right of every chart.
 Hovering or clicking on this will show you information about that chart.
 
 In a similar manner to the 'My Page', the Program Home dashboard is
@@ -1398,7 +1398,7 @@ profile:
 You can change your user information including your first-name,
 last-name, middle-initial, avatar icon, department and your choice of
 start-page. Clicking the "***Save***" button will commit
-the changes, whereas clicking \<Cancel\> returns you back to either
+the changes, whereas clicking <Cancel\> returns you back to either
 "Product Home" or "My Page" depending on whether you have a product
 currently selected or not.
 

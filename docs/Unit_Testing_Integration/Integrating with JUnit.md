@@ -146,11 +146,11 @@ public class SimpleTest {
 ```
 
 The Java class is marked as a JUnit test fixture by applying the
-\@BeforeEach attribute to the setup method, and the \@Test attribute to
+@BeforeEach attribute to the setup method, and the @Test attribute to
 each of the test assertion methods individually -- highlighted in yellow
 above. When you open up the class in a JUnit runner or execute from the
 command line it loads all the test classes and executes all the methods
-marked with \@Test in turn.
+marked with @Test in turn.
 
 Each of the Assert statements is used to test the state of the
 application after executing some sample code that calls the
@@ -256,7 +256,7 @@ public class SimpleTest {
 ```
 
 
-The overall class is marked with a new \@SpiraTestConfiguration
+The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
@@ -286,7 +286,7 @@ value associated with the test set.
 
 In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
-\@SpiraTestCase attribute to the test method together with the ID of the
+@SpiraTestCase attribute to the test method together with the ID of the
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).
 
@@ -503,11 +503,11 @@ public class SimpleTest
 ```
 
 The Java class is marked as a JUnit test fixture by applying the
-\@Before attribute to the setup method, and the \@Test attribute to each
+@Before attribute to the setup method, and the @Test attribute to each
 of the test assertion methods individually -- highlighted in yellow
 above. When you open up the class in a JUnit runner or execute from the
 command line it loads all the test classes and executes all the methods
-marked with \@Test in turn.
+marked with @Test in turn.
 
 Each of the Assert statements is used to test the state of the
 application after executing some sample code that calls the
@@ -647,7 +647,7 @@ public class SimpleTest
 }
 ```
 
-The overall class is marked with a new \@SpiraTestConfiguration
+The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
@@ -676,7 +676,7 @@ value associated with the test set.
 
 In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
-\@SpiraTestCase attribute to the test method together with the ID of the
+@SpiraTestCase attribute to the test method together with the ID of the
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).
 

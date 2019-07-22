@@ -139,8 +139,8 @@ items into edit mode.
 When you have made your updates, you can either click
 "***Update***" to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ### Editing a Test Folder
 
@@ -198,7 +198,7 @@ screen-shot below:
 To filter the list by any of the displayed columns, you either choose an
 item from the appropriate drop-down list or enter a free-text phrase
 (depending on the type of field) then click "***Filter***"
-or press the \<ENTER\> key to apply the different filters. Note that the
+or press the <ENTER\> key to apply the different filters. Note that the
 name field is searched using a "LIKE" comparison, so that searching for
 "database" would include any item with the word database in the name.
 The other freetext fields need to be exact matches (e.g. dates, test
@@ -221,7 +221,7 @@ sometimes you want to see the execution information for the displayed
 test cases for different releases. If you select a release or sprint
 from the dropdown marked "All Releases" on the right above the table,
 then the execution information for that specific release will be
-displayed. If the dropdown is set to \"all releases\", then it shows
+displayed. If the dropdown is set to "all releases", then it shows
 only the most recent execution information. In both cases, all test
 cases (as per any filter) are listed.
 
@@ -1658,7 +1658,7 @@ are created.
 
 Once all the test steps have passed, you will be automatically be taken
 to the first step in the next test; if it is the last test case being
-executed, the \<Finish\> button will be displayed instead.
+executed, the <Finish\> button will be displayed instead.
 
 If the actual results differ from those expected, you need to enter a
 description of the actual result observed and click one of the
@@ -2021,7 +2021,7 @@ product owner.
 You can easily filter and sort the list of test runs. To filter the list
 by any of the visible fields, you simply choose an item from the
 appropriate drop-down list, and for the other fields, you enter a
-free-text phrase then click \<Filter\> or press the \<ENTER\> key to
+free-text phrase then click <Filter\> or press the <ENTER\> key to
 apply the different filters. Note that the name field is searched using
 a "LIKE" comparison, so that searching for "database" would include any
 item with the word database in the name.
@@ -2163,7 +2163,7 @@ reported from the NUnit automated test runner is illustrated below:
 
 Details on how to use SpiraPlan® in conjunction with an automated
 testing tool are provided in the *SpiraPlan® Automated Testing
-Integration Guide,* which can be downloaded from the Inflectra^®^
+Integration Guide,* which can be downloaded from the Inflectra<sup>®</sup>
 website.
 
 ### Attachments
@@ -2204,7 +2204,7 @@ your computer and attached to the artifact.
 To attach a web-link (URL) to the artifact, you need to choose "URL" as
 the type and then enter the fully qualified URL (e.g.
 [http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the \<Upload\> button to attach the
+optional description and then click the <Upload\> button to attach the
 web-link.
 
 To attach a screenshot to the artifact, you need to choose "Screenshot"
@@ -2404,8 +2404,8 @@ Filters and it will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***" to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ### Show / Hide Columns
 
@@ -2424,7 +2424,7 @@ product owner.
 You can easily filter the list of test sets. To filter the list by any
 of the displayed columns, you either choose an item from the appropriate
 drop-down list or enter a free-text phrase (depending on the type of
-field) then click "***Filter***" or press the \<ENTER\>
+field) then click "***Filter***" or press the <ENTER\>
 key to apply the different filters. Note that the Name field is searched
 using a "LIKE" comparison, so that searching for "database" would
 include any item with the word database in the name. The other free-text
@@ -2448,7 +2448,7 @@ sometimes you want to see the execution information for the displayed
 test sets for different releases. If you select a release or sprint from
 the dropdown marked "All Releases" on the right above the table, then
 the execution information for that specific release will be displayed.
-If the dropdown is set to \"all releases\", then it shows only the most
+If the dropdown is set to "all releases", then it shows only the most
 recent execution information. In both cases, all test sets (as per any
 filter) are listed.
 
@@ -3011,7 +3011,7 @@ each host computer to identify itself to SpiraPlan.
 You can easily filter and sort the list of automation hosts. To filter
 the list by one of the displayed fields, you simply choose an item from
 the appropriate drop-down list or enter a free-text phrase then click
-"***Filter***" or press the \<ENTER\> key to apply the
+"***Filter***" or press the <ENTER\> key to apply the
 different filters. Note that the name field is searched using a "LIKE"
 comparison, so that searching for "database" would include any item with
 the word database in the name. The other freetext fields need to be
@@ -3082,8 +3082,8 @@ Filters and it will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***"to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ## Automation Host Details
 
@@ -3277,7 +3277,7 @@ accommodate different user preferences.
 You can easily filter and sort the list of automation hosts. To filter
 the list by one of the displayed fields, you simply choose an item from
 the appropriate drop-down list or enter a free-text phrase then click
-"***Filter***" or press the \<ENTER\> key to apply the
+"***Filter***" or press the <ENTER\> key to apply the
 different filters. Note that the name field is searched using a "LIKE"
 comparison, so that searching for "database" would include any item with
 the word database in the name. The other freetext fields need to be
@@ -3332,8 +3332,8 @@ Filters and it will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***"to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ## Test Configuration Details
 

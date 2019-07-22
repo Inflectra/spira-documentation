@@ -27,17 +27,17 @@ nav:
   - 'Appendix 1: Keyboard Shortcuts': Spira_User_Manual\Appendix 1 Keyboard Shortcuts.md
 - AddOns and Integrations:
   - Testing:
-    - UnitJS: Unit_Testing_Integration\Integrating UnitJS & NodeJS.md
-    - JUnit: Unit_Testing_Integration\Integrating with JUnit.md
-    - MS-Test: Unit_Testing_Integration\Integrating with MS-Test.md
     - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
-    - PHPUnit: Unit_Testing_Integration\Integrating with PHPUnit.md
-    - Perl TAP: Unit_Testing_Integration\Integrating with Perl TAP.md
-    - PyTest: Unit_Testing_Integration\Integrating with PyTest.md
-    - PyUnit: Unit_Testing_Integration\Integrating with PyUnit.md
-    - Ruby TestUnit: Unit_Testing_Integration\Integrating with Ruby TestUnit.md
-    - Selenium: Unit_Testing_Integration\Integrating with Selenium.md
+    - JUnit: Unit_Testing_Integration\Integrating with JUnit.md
     - TestNG: Unit_Testing_Integration\Integrating with TestNG.md
+    - Selenium: Unit_Testing_Integration\Integrating with Selenium.md
+    - PyUnit: Unit_Testing_Integration\Integrating with PyUnit.md
+    - PyTest: Unit_Testing_Integration\Integrating with PyTest.md
+    - MS-Test: Unit_Testing_Integration\Integrating with MS-Test.md
+    - 'Ruby Test::Unit': Unit_Testing_Integration\Integrating with Ruby TestUnit.md
+    - Perl TAP: Unit_Testing_Integration\Integrating with Perl TAP.md
+    - PHPUnit: Unit_Testing_Integration\Integrating with PHPUnit.md
+    - UnitJS & NodeJS: Unit_Testing_Integration\Integrating UnitJS & NodeJS.md
   - IDE Integration:
     - Visual Studio Code: IDE_Integration\Visual Studio Code.md
     - Visual Studio: IDE_Integration\Visual Studio.md
@@ -45,23 +45,23 @@ nav:
     - Eclipse: IDE_Integration\Eclipse  Mylyn.md
     - Visual Studio 2010: IDE_Integration\Visual Studio 2010.md
     - Visual Studio 2005-2008: IDE_Integration\Visual Studio 2005 - 2008.md
-  - Bug Tracking:
+  - Bug Tracking/DataSync:
     - Setup: External_Bug_Tracking_Integration\Setting up Data Synchronization.md
+    - JIRA 5+: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 5+.md
+    - JIRA 3, 4: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 3  4.md
+    - Bugzilla: External_Bug_Tracking_Integration\Using SpiraTest with Bugzilla.md
+    - MS-TFS: External_Bug_Tracking_Integration\Using SpiraTest with MS-TFS.md
+    - FogBugz: External_Bug_Tracking_Integration\Using SpiraTest with FogBugz.md
+    - Mantis: External_Bug_Tracking_Integration\Using SpiraTeam with Mantis.md
+    - ClearQuest: External_Bug_Tracking_Integration\Using SpiraTeam with ClearQuest.md
+    - RTC: External_Bug_Tracking_Integration\Using SpiraTeam with IBM RTC.md
     - Axosoft: External_Bug_Tracking_Integration\Using Spira with Axosoft 14+.md
+    - Redmine: External_Bug_Tracking_Integration\Using SpiraTeam with Redmine.md
+    - VersionOne: External_Bug_Tracking_Integration\Using Spira with VersionOne.md
+    - OnTime: External_Bug_Tracking_Integration\Using Spira with OnTime 11.md
     - GitHub: External_Bug_Tracking_Integration\Using Spira with GitHub.md
     - GitLab: External_Bug_Tracking_Integration\Using Spira with GitLab.md
     - ServiceNow: External_Bug_Tracking_Integration\Using Spira with ServiceNow.md
-    - OnTime: External_Bug_Tracking_Integration\Using Spira with OnTime 11.md
-    - VersionOne: External_Bug_Tracking_Integration\Using Spira with VersionOne.md
-    - ClearQuest: External_Bug_Tracking_Integration\Using SpiraTeam with ClearQuest.md
-    - RTC: External_Bug_Tracking_Integration\Using SpiraTeam with IBM RTC.md
-    - JIRA 3, 4: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 3  4.md
-    - JIRA 5+: External_Bug_Tracking_Integration\Using SpiraTeam with JIRA 5+.md
-    - MS-TFS: External_Bug_Tracking_Integration\Using SpiraTest with MS-TFS.md
-    - Mantis: External_Bug_Tracking_Integration\Using SpiraTeam with Mantis.md
-    - Redmine: External_Bug_Tracking_Integration\Using SpiraTeam with Redmine.md
-    - Bugzilla: External_Bug_Tracking_Integration\Using SpiraTest with Bugzilla.md
-    - FogBugz: External_Bug_Tracking_Integration\Using SpiraTest with FogBugz.md
   - VCS: 
     - Git: Version_Control_Integration\Integrating with Git.md
     - Mercurial: Version_Control_Integration\Integrating with Mercurial.md
@@ -78,25 +78,25 @@ nav:
     - KronoDesk: Help_Desk_Integration\KronoDesk.md
     - Zendesk: Help_Desk_Integration\Zendesk.md
   - Migration: 
-    - Google Sheets: Migration_and_Integration\Importing from Google Sheets.md
-    - Excel (Office 365): Migration_and_Integration\Importing from Microsoft Excel (Office365).md
     - Excel: Migration_and_Integration\Importing from Microsoft Excel.md
+    - Excel (Office 365): Migration_and_Integration\Importing from Microsoft Excel (Office365).md
+    - Google Sheets: Migration_and_Integration\Importing from Google Sheets.md
+    - Microsoft Word: Migration_and_Integration\Importing from Microsoft Word.md
     - Microsoft Project: Migration_and_Integration\Importing from Microsoft Project.md
-    - Word: Migration_and_Integration\Importing from Microsoft Word.md
-    - HP ALM: Migration_and_Integration\Migrating from HP ALM.md
     - HP QualityCenter: Migration_and_Integration\Migrating from HP QualityCenter.md
+    - Project Backup and Migration: Migration_and_Integration\Project Backup and Migration.md
     - MS Test Manager: Migration_and_Integration\Migrating from MS Test Manager.md
-    - TestLink: Migration_and_Integration\Migrating from TestLink.md
+    - HP ALM: Migration_and_Integration\Migrating from HP ALM.md
     - TestRail: Migration_and_Integration\Migrating from TestRail.md
-    - Backup and Migration: Migration_and_Integration\Project Backup and Migration.md
+    - TestLink: Migration_and_Integration\Migrating from TestLink.md
   - Build Servers:
-    - Atlassian Bamboo: Build_Server_Integration\Atlassian Bamboo.md
     - Jenkins/Hudson: Build_Server_Integration\Jenkins  Hudson.md
     - JetBrains TeamCity: Build_Server_Integration\JetBrains TeamCity.md
     - Azure DevOps Pipelines: Build_Server_Integration\Microsoft Azure DevOps Pipelines.md
+    - Atlassian Bamboo: Build_Server_Integration\Atlassian Bamboo.md
   - Requirements:
     - RequisitePro: Requirements_Management_Integration\Importing From RequisitePro.md
-    - DOORS: Requirements_Management_Integration\Importing From DOORS.md
     - EnterpriseArchitect: Requirements_Management_Integration\Importing From EnterpriseArchitect.md
     - Jama Contour: Requirements_Management_Integration\Importing From Jama Contour.md
     - VersionOne: Requirements_Management_Integration\Importing From VersionOne.md
+    - DOORS: Requirements_Management_Integration\Importing From DOORS.md

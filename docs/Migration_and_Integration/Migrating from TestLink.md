@@ -23,8 +23,8 @@ the installation wizard which should display the following welcome page:
  
 
 
-Click the \<Next\> button, accept the software license, then click
-\<Next\> again to choose the folder to install the migration tool to:
+Click the <Next\> button, accept the software license, then click
+<Next\> again to choose the folder to install the migration tool to:
 
  ![](img/Migrating_from_TestLink_80.png)
  
@@ -32,8 +32,8 @@ Click the \<Next\> button, accept the software license, then click
 
 Choose the folder to install to, and then decide whether the application
 should be accessible by all users on the workstation or just the current
-user. Then click the \<Install\> button to start the installation
-process. It will confirm if you want to proceed, click \<Next\> then
+user. Then click the <Install\> button to start the installation
+process. It will confirm if you want to proceed, click <Next\> then
 wait for it to finish.
 
 ## Using the TestLink Migration Tool
@@ -60,9 +60,9 @@ page:
 
 
 
-Once you have entered this information, click the \<Authenticate\>
+Once you have entered this information, click the <Authenticate\>
 button and the list of projects will be populated. Select TestLink
-project that you want to ***import from*** then click the \<Next\>
+project that you want to ***import from*** then click the <Next\>
 button to move to the next page in the import wizard:
 
 ![](img/Migrating_from_TestLink_83.png)
@@ -72,7 +72,7 @@ button to move to the next page in the import wizard:
 
 This page allows you to enter the URL, user name and password that you
 want to use to access the instance of SpiraTest that you want to
-***import to*** and click \<Login\>. Typically, the URL is of the form
+***import to*** and click <Login\>. Typically, the URL is of the form
 (https://xxxx.spiraservice.net). The version of the importer being used
 must be compatible with the version of SpiraTest you're importing into;
 if not you will receive an error message.
@@ -83,7 +83,7 @@ password meets the minimum complexity requirements of your SpiraTest
 installation or the import will fail with an error message indicating
 the password is not allowed.
 
-Assuming that the login was successful, click the \<Start Import\>
+Assuming that the login was successful, click the <Start Import\>
 button to actually begin the process of importing the various artifacts
 from TestLink into SpiraTest. Note that the importer will automatically
 create a new project in SpiraTest to hold all the artifacts with the
@@ -96,7 +96,7 @@ same name as that used in TestLink.
 During the import process, as each of the types of artifact are
 imported, the progress display will change (as illustrated above). Once
 the import has finished, you will receive a message to that effect and
-the \<Done\> button will be enabled. Clicking this button closed the
+the <Done\> button will be enabled. Clicking this button closed the
 importer. You should now log into SpiraTest using the same user name and
 password that was used for the import to view the imported project.
 

@@ -61,7 +61,7 @@ the screen-shot below:
 To filter the list by incident type, status, priority, owner or detector
 name, you simply choose an item from the appropriate drop-down list, and
 for the other fields, you enter a free-text phrase then click
-"***Filter***" or press the \<ENTER\> key to apply the
+"***Filter***" or press the <ENTER\> key to apply the
 different filters. Note that the name field is searched using a "LIKE"
 comparison, so that searching for "database" would include any item with
 the word database in the name. The other freetext fields need to be
@@ -164,8 +164,8 @@ Filters and it will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***" to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ### Cloning Incidents
 

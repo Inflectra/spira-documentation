@@ -61,19 +61,12 @@ Web.Config file in Notepad and locate the "**appSettings**" part of the
 file:
 
 ```xml
-\<appSettings\>
-
-\<add key=\"ConnectionString\"
-value=\"server=SERVER;database=OnTime;uid=USER;pwd=PASSWORD;\"/\>
-
-\<add key=\"SecurityToken\"
-value=\"{66ACD352-16C0-4485-8498-8C461BE7CE44}\"/\>
-
-\<add key=\"WebServicesUser\" value=\"1\"/\>
-
-\<add key=\"EnableDataCache\" value=\"False\"/\>
-
-\</appSettings\>
+ <appSettings>
+    <add key="ConnectionString" value="server=SERVER;database=OnTime;uid=USER;pwd=PASSWORD;"/>
+    <add key="SecurityToken" value="{66ACD352-16C0-4485-8498-8C461BE7CE44}"/>
+    <add key="WebServicesUser" value="1"/>
+    <add key="EnableDataCache" value="False"/>
+  </appSettings>
 ```
 
 You need to make sure that you fill out the ConnectionString that points
@@ -116,71 +109,71 @@ Files\\SpiraTeam\\Bin with a text editor such as Notepad.
 Once open, it should look like:
 
 ``xml
-\<?xml version=\"1.0\" encoding=\"utf-8\"?\>
+<?xml version="1.0" encoding="utf-8"?\>
 
-\<configuration\>
+<configuration\>
 
-\<configSections\>
+<configSections\>
 
-\<sectionGroup name=\"applicationSettings\"
-type=\"System.Configuration.ApplicationSettingsGroup, System,
-Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" \>
+<sectionGroup name="applicationSettings"
+type="System.Configuration.ApplicationSettingsGroup, System,
+Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" \>
 
-\<section
-name=\"Inflectra.SpiraTest.DataSyncService.Properties.Settings\"
-type=\"System.Configuration.ClientSettingsSection, System,
-Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"
-requirePermission=\"false\" /\>
+<section
+name="Inflectra.SpiraTest.DataSyncService.Properties.Settings"
+type="System.Configuration.ClientSettingsSection, System,
+Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+requirePermission="false" /\>
 
-\</sectionGroup\>
+</sectionGroup\>
 
-\</configSections\>
+</configSections\>
 
-\<applicationSettings\>
+<applicationSettings\>
 
-\<Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
+<Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
 
-\<setting name=\"PollingInterval\" serializeAs=\"String\"\>
+<setting name="PollingInterval" serializeAs="String"\>
 
-\<value\>600000\</value\>
+<value\>600000</value\>
 
-\</setting\>
+</setting\>
 
-\<setting name=\"WebServiceUrl\" serializeAs=\"String\"\>
+<setting name="WebServiceUrl" serializeAs="String"\>
 
-\<value\>http://localhost/SpiraTeam\</value\>
+<value\>http://localhost/SpiraTeam</value\>
 
-\</setting\>
+</setting\>
 
-\<setting name=\"Login\" serializeAs=\"String\"\>
+<setting name="Login" serializeAs="String"\>
 
-\<value\>fredbloggs\</value\>
+<value\>fredbloggs</value\>
 
-\</setting\>
+</setting\>
 
-\<setting name=\"Password\" serializeAs=\"String\"\>
+<setting name="Password" serializeAs="String"\>
 
-\<value\>fredbloggs\</value\>
+<value\>fredbloggs</value\>
 
-\</setting\>
+</setting\>
 
-\<setting name=\"EventLogSource\" serializeAs=\"String\"\>
+<setting name="EventLogSource" serializeAs="String"\>
 
-\<value\>SpiraTeam Data Sync Service\</value\>
+<value\>SpiraTeam Data Sync Service</value\>
 
-\</setting\>
+</setting\>
 
-\<setting name=\"TraceLogging\" serializeAs=\"String\"\>
+<setting name="TraceLogging" serializeAs="String"\>
 
-\<value\>False\</value\>
+<value\>False</value\>
 
-\</setting\>
+</setting\>
 
-\</Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
+</Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
 
-\</applicationSettings\>
+</applicationSettings\>
 
-\</configuration\>
+</configuration\>
 ```
 
 The sections that need to be verified and possibly changed are marked in
@@ -194,7 +187,7 @@ the number, the longer it will take for data to be synchronized, but the
 lower the network and server overhead.
 
 The base URL to your instance SpiraTeam. It is typically of the form
-http://\<server name\>/SpiraTeam. Make sure that when you
+http://<server name\>/SpiraTeam. Make sure that when you
 enter this URL on a browser on the server itself, the application login
 page appears.
 
@@ -251,7 +244,7 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the OnTime SDK.
-This is typically something like: http://\<OnTime server
+This is typically something like: http://<OnTime server
 name\>/OnTimeSdk. You may need to check in the IIS
 Management Console of the OnTime server to verify the virtual
 directory name.

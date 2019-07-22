@@ -56,7 +56,7 @@ SpiraTeam® log in credentials.
 
 -   **Spira URL** : Please enter the web address that you use to access
 SpiraTeam® in your browser. This is usually of the form
-http://\<hostname\>/SpiraTeam. Make sure that you remove any
+http://<hostname\>/SpiraTeam. Make sure that you remove any
 suffixes from the address (e.g. Default.aspx).
 
 <!-- -->
@@ -78,10 +78,10 @@ braces i.e {ExampleRSS}.
 -   The string of numbers *including the brackets* listed in the
 RSS Token text box is your token.
 
--   If you don\'t see an RSS Token in that box, then click on
-\'Enable RSS Feeds\' so that it is checked.
+-   If you don't see an RSS Token in that box, then click on
+'Enable RSS Feeds' so that it is checked.
 
--   Click the button \'Generate New\' to get a new RSS token.
+-   Click the button 'Generate New' to get a new RSS token.
 
 -   Click \[Update\] to save your changes
 

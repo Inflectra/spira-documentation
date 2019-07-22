@@ -115,7 +115,7 @@ and access your profile:
 
 
 Click on the Security Option. Then in the user security menu, choose the
-option to enter \'Alternate Credentials\'. You need to now enter a login
+option to enter 'Alternate Credentials'. You need to now enter a login
 and password that SpiraTeam will use to connect to VSO:
 
 ![](img/Using_SpiraTest_with_MS-TFS_80.png)

@@ -61,7 +61,7 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the JIRA
-installation's web-service API. This is typically http://\<jira
+installation's web-service API. This is typically http://<jira
 server name\>/rpc/soap/jirasoapservice-v2.
 
 -   **Login** -- this should be set to a valid login to the JIRA

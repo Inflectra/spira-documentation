@@ -45,29 +45,29 @@ coded in Ruby is as follows:
 
 > \#this is a test case that tests addition operations
 >
-> class TC\_Adder \< Test::Unit::TestCase
+> class TC\_Adder < Test::Unit::TestCase
 >
 > def setup
 >
-> \@adder = Adder.new(5)
+> @adder = Adder.new(5)
 >
 > end
 >
 > def test\_add
 >
-> assert\_equal(7, \@adder.add(2), \"Should have added correctly\")
+> assert\_equal(7, @adder.add(2), "Should have added correctly")
 >
 > end
 >
 > def test\_addfail
 >
-> assert\_equal(7, \@adder.add(3), \"Test failure\")
+> assert\_equal(7, @adder.add(3), "Test failure")
 >
 > end
 >
 > def teardown
 >
-> \@adder = nil
+> @adder = nil
 >
 > end
 >
@@ -81,7 +81,7 @@ coded in Ruby is as follows:
 >
 > suite = Test::Unit::TestSuite.new
 >
-> suite \<\< TC\_Adder.suite
+> suite << TC\_Adder.suite
 >
 > return suite
 >
@@ -115,29 +115,29 @@ for SpiraTest to record the Test::Unit test run are illustrated below:
 
 > \#this is a test case that tests addition operations
 >
-> class TC\_Adder \< Test::Unit::TestCase
+> class TC\_Adder < Test::Unit::TestCase
 >
 > def setup
 >
-> \@adder = Adder.new(5)
+> @adder = Adder.new(5)
 >
 > end
 >
 > def test\_add\_\_2
 >
-> assert\_equal(7, \@adder.add(2), \"Should have added correctly\")
+> assert\_equal(7, @adder.add(2), "Should have added correctly")
 >
 > end
 >
 > def test\_addfail\_\_3
 >
-> assert\_equal(7, \@adder.add(3), \"Test failure\")
+> assert\_equal(7, @adder.add(3), "Test failure")
 >
 > end
 >
 > def teardown
 >
-> \@adder = nil
+> @adder = nil
 >
 > end
 >
@@ -151,7 +151,7 @@ for SpiraTest to record the Test::Unit test run are illustrated below:
 >
 > suite = Test::Unit::TestSuite.new
 >
-> suite \<\< TC\_Adder.suite
+> suite << TC\_Adder.suite
 >
 > return suite
 >
@@ -166,7 +166,7 @@ for SpiraTest to record the Test::Unit test run are illustrated below:
 > testSetId = -1
 >
 > testRunner = Test::Unit::SpiraTest::TestRunner.new(TS\_Examples,
-> \"http://servername/SpiraTest\", \"fredbloggs\", \"fredbloggs\",
+> "http://servername/SpiraTest", "fredbloggs", "fredbloggs",
 > projectId, releaseId, testSetId)
 >
 > testRunner.start

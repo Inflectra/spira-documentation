@@ -54,7 +54,7 @@ used for any project.
 for any project accessing the plug-in, unless overridden in the
 Project Settings. Please use the following format:
 
--   \<cvs repository url\>:/cvsroot/\<repository path\>
+-   <cvs repository url\>:/cvsroot/<repository path\>
 
 -   For example:
 sharpcvslib.cvs.sourceforge.net:/cvsroot/sharpcvslib
@@ -186,7 +186,7 @@ Linking an artifact is quite simple. To maintain the readability of CVS
 commit messages, we adopted a square bracket token. The token is in the
 format of:
 
-**\[\<artifact identifier\>:\<artifact id\>\]**
+**\[<artifact identifier\>:<artifact id\>\]**
 
 The first half, the Artifact Identifier, is a two-letter code that is
 used throughout SpiraTeam, and is visible on almost every page in the

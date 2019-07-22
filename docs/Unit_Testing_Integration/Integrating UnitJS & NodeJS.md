@@ -19,67 +19,67 @@ mapping uncaught exceptions to the correct test cases.
 An example UnitJS test running Mocha looks something like:
 
 ```javascript
-var test = require(\'unit.js\');
+var test = require('unit.js');
 
-describe(\'Example Test\', function(){
+describe('Example Test', function(){
 
-it(\'sample pass\', function(){
+it('sample pass', function(){
 
 // just for example of tested value
 
-var example = \'hello world\';
+var example = 'hello world';
 
 test
 
 .string(example)
 
-.startsWith(\'hello\')
+.startsWith('hello')
 
 .match(/\[a-z\]/)
 
-.given(example = \'you are welcome\')
+.given(example = 'you are welcome')
 
 .string(example)
 
-.endsWith(\'welcome\')
+.endsWith('welcome')
 
-.contains(\'you\')
+.contains('you')
 
-.when(\'\"example\" becomes an object\', function(){
+.when('"example" becomes an object', function(){
 
 example = {
 
-message: \'hello world\',
+message: 'hello world',
 
-name: \'Nico\',
+name: 'Nico',
 
-job: \'developper\',
+job: 'developper',
 
-from: \'France\'
+from: 'France'
 
 };
 
 })
 
-.then(\'test the \"example\" object\', function(){
+.then('test the "example" object', function(){
 
 test
 
 .object(example)
 
-.hasValue(\'developper\')
+.hasValue('developper')
 
-.hasProperty(\'name\')
+.hasProperty('name')
 
-.hasProperty(\'from\', \'France\')
+.hasProperty('from', 'France')
 
-.contains({message: \'hello world\'})
+.contains({message: 'hello world'})
 
 ;
 
 })
 
-.if(example = \'bad value\')
+.if(example = 'bad value')
 
 .error(function(){
 
@@ -91,63 +91,63 @@ example.badMethod();
 
 });
 
-it(\'sample fail\', function(){
+it('sample fail', function(){
 
 // just for example of tested value
 
-var example = \'not hello world\';
+var example = 'not hello world';
 
 test
 
 .string(example)
 
-.startsWith(\'hello\')
+.startsWith('hello')
 
 .match(/\[a-z\]/)
 
-.given(example = \'you are welcome\')
+.given(example = 'you are welcome')
 
 .string(example)
 
-.endsWith(\'welcome\')
+.endsWith('welcome')
 
-.contains(\'you\')
+.contains('you')
 
-.when(\'\"example\" becomes an object\', function(){
+.when('"example" becomes an object', function(){
 
 example = {
 
-message: \'hello world\',
+message: 'hello world',
 
-name: \'Nico\',
+name: 'Nico',
 
-job: \'developper\',
+job: 'developper',
 
-from: \'France\'
+from: 'France'
 
 };
 
 })
 
-.then(\'test the \"example\" object\', function(){
+.then('test the "example" object', function(){
 
 test
 
 .object(example)
 
-.hasValue(\'developper\')
+.hasValue('developper')
 
-.hasProperty(\'name\')
+.hasProperty('name')
 
-.hasProperty(\'from\', \'France\')
+.hasProperty('from', 'France')
 
-.contains({message: \'hello world\'})
+.contains({message: 'hello world'})
 
 ;
 
 })
 
-.if(example = \'bad value\')
+.if(example = 'bad value')
 
 .error(function(){
 
@@ -209,7 +209,7 @@ For the second part, you need to add the following code to your test
 suite at the top:
 
 ```javascript
-var SpiraReporter = require(\'../reporter/SpiraReporter.js\');
+var SpiraReporter = require('../reporter/SpiraReporter.js');
 
 //set the SpiraTest options
 
@@ -223,15 +223,15 @@ releaseId: 1,
 
 testSetId: null,
 
-login: \'fredbloggs\',
+login: 'fredbloggs',
 
-apiKey: \'{7A05FD06-83C3-4436-B37F-51BCF0060483}\',
+apiKey: '{7A05FD06-83C3-4436-B37F-51BCF0060483}',
 
-protocol: \'http\',
+protocol: 'http',
 
-host: \'127.0.0.1\',
+host: '127.0.0.1',
 
-vdir: \'spira\'
+vdir: 'spira'
 
 };
 ```

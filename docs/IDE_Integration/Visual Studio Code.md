@@ -15,7 +15,7 @@ already installed our plugin from the store.
 
 ## Logging in
 
-Open the command palette and type in \'credentials\' as shown:
+Open the command palette and type in 'credentials' as shown:
 ![Command Palette
 Credentials](img/Visual_Studio_Code_42.png)
 
@@ -24,7 +24,7 @@ Credentials](img/Visual_Studio_Code_42.png)
 
 Hit return to begin the Spira authentication process. You should see an
 input box that asks you to type the base URL of your Spira service. This
-should access the \'root\' directory of your Spira, not including the
+should access the 'root' directory of your Spira, not including the
 ending slash. An example is provided below:
 ![Spira
 URL](img/Visual_Studio_Code_43.png)
@@ -81,8 +81,8 @@ Panel](img/Visual_Studio_Code_48.png)
 
 
 
-Clicking on one of the different items, \'Cannot log into the
-application\' for instance will bring up a view similar to this:
+Clicking on one of the different items, 'Cannot log into the
+application' for instance will bring up a view similar to this:
 ![Spira
 Information](img/Visual_Studio_Code_49.png)
 
@@ -108,13 +108,13 @@ refresh manually as shown below:
 
 ### Refreshing Manually
 
-Running \'Spira - Refresh\' in the command palette or hitting alt+s,
+Running 'Spira - Refresh' in the command palette or hitting alt+s,
 alt+r by default on windows will refresh manually.
 
 ## Creating a new Task
 
-You can easily create a new task in VS Code by running \'Spira - Create
-New Task\' in the command palette or by hitting alt+s, alt+t on windows.
+You can easily create a new task in VS Code by running 'Spira - Create
+New Task' in the command palette or by hitting alt+s, alt+t on windows.
 This will take any highlighted text and dump it into the name prompt.
 Feel free to change the name if you like.
 
@@ -141,7 +141,7 @@ a popup in the bottom right telling you it was a success!
 
 By default, the panel will refresh every 60 seconds, but this can easily
 be changed or disabled altogether through settings. To change this, open
-up your settings and search for \'spira\' as shown below:
+up your settings and search for 'spira' as shown below:
 
 ![Spira Refresh
 Setting](img/Visual_Studio_Code_52.png)
@@ -154,7 +154,7 @@ Setting](img/Visual_Studio_Code_52.png)
 If you like, you can prevent displaying a particular item type. This can
 be particularly useful if you only want to view your assigned tasks,
 which should also decrease load times. To accomplish this, simply search
-\'spira\' in settings and switch any of the \'showType\' settings to
+'spira' in settings and switch any of the 'showType' settings to
 false. See the image below for an example:
 
 ![Disable

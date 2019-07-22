@@ -186,7 +186,7 @@ the project will be imported into the new system.
 | Automation Hosts         | ✓                 |            ✓ |
 | Automation Engines       | ✓                 |            ✓ |
 | Project Roles            | ✓                 |            
-| Project Users            | ✓                 |            ✓^1^ |
+| Project Users            | ✓                 |            ✓<sup>1</sup> |
 
 The table on the left shows what data is backed up and restored. Future
 versions of the Migration tool and SpiraTeam may support exporting and
@@ -202,6 +202,6 @@ file; you must re-run the export.
 
 ***Notes:***
 
-^1^Users imported back into v3.2 will be marked Active, even if they
-were originally inactive.**4B**
+<sup>1</sup>Users imported back into v3.2 will be marked Active, even if they
+were originally inactive.
 

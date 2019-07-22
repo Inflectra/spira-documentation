@@ -61,7 +61,7 @@ following fields:
 
 -   **Your Team's Spira Url:** The web address that you use to access
 SpiraTeam® in your browser. This is usually in the form
-***https://\<hostname\>/SpiraTeam.com***. Make sure to remove any
+***https://<hostname\>/SpiraTeam.com***. Make sure to remove any
 suffixes from the address (e.g. /Default/aspx). The url **must** be
 an https address, if your url does not begin with https:// it will
 not work.

@@ -126,7 +126,7 @@ window. Each of the reports is described in [Requirement Reports](#requirement-r
 
 This report displays all of the requirements defined for the current
 product in the order they appear in the requirements list. The
-requirement\'s details and coverage status are displayed in a summary
+requirement's details and coverage status are displayed in a summary
 list form:
 
 ![](img/Reports_Center_344.png)
@@ -175,7 +175,7 @@ requirements:**
 ### Test Case Summary Report
 
 This report displays all of the test cases defined for the current
-product in the order they appear in the test case list. The test case\'s
+product in the order they appear in the test case list. The test case's
 details and execution status are displayed in a summary grid form with
 the test steps optionally displayed:
 
@@ -187,7 +187,7 @@ the test steps optionally displayed:
 ### Test Case Detailed Report
 
 This report displays all of the test cases defined for the current
-product in the order they appear in the test case list. The test case\'s
+product in the order they appear in the test case list. The test case's
 details and execution status are displayed, along with sub-tables
 containing the list of test steps, test runs, attached documents, the
 change history, and a list of any associated open incidents:
@@ -200,7 +200,7 @@ change history, and a list of any associated open incidents:
 ### Test Set Summary Report
 
 This report displays all of the test sets defined for the current
-product in the order they appear in the test set list. The test set\'s
+product in the order they appear in the test set list. The test set's
 details and execution status are displayed in a summary list form:
 
 ![](img/Reports_Center_350.png)
@@ -211,7 +211,7 @@ details and execution status are displayed in a summary list form:
 ### Test Set Detailed Report
 
 This report displays all of the test sets defined for the current
-product in the order they appear in the test set list. The test set\'s
+product in the order they appear in the test set list. The test set's
 details and execution status are displayed, along with sub-tables
 containing the list of test cases, test runs, attached documents, and
 the change history:
@@ -241,7 +241,7 @@ attached documents.
 ### Test Run Summary Report
 
 This report displays all of the test runs defined for the current
-product. The test run\'s details and execution status are displayed in a
+product. The test run's details and execution status are displayed in a
 summary grid form:
 
 ![](img/Reports_Center_353.png)
@@ -250,7 +250,7 @@ summary grid form:
 ### Test Run Detailed Report
 
 This report displays all of the test runs defined for the current
-product in date order (most recent first). The test run\'s details and
+product in date order (most recent first). The test run's details and
 execution status are displayed, along with sub-tables containing the
 list of test run steps, and a list of any associated open incidents:
 
@@ -272,7 +272,7 @@ list of mapped releases, incidents and test sets:
 ### Incident Summary Report
 
 This report displays all of the incidents tracked for the current
-product. The incident\'s details are displayed in a summary list form:
+product. The incident's details are displayed in a summary list form:
 
 ![](img/Reports_Center_356.png)
 
@@ -296,7 +296,7 @@ requirements/incidents and the change history:
 ### Task Summary Report
 
 This report displays all of the tasks tracked for the current product.
-The task\'s details are displayed in a summary list form:
+The task's details are displayed in a summary list form:
 
 ![](img/Reports_Center_358.png)
 
@@ -306,7 +306,7 @@ The task\'s details are displayed in a summary list form:
 ### Task Detailed Report
 
 This report displays all of the tasks tracked for the current product.
-The task\'s details are displayed, along with a tabular list of attached
+The task's details are displayed, along with a tabular list of attached
 documents and the change history:
 
 ![](img/Reports_Center_359.png)
@@ -320,7 +320,7 @@ documents and the change history:
 
 This report displays all of the releases and sprints defined for the
 current product in the order they appear in the release/sprint
-hierarchy. The release\'s details are displayed in a summary list form:
+hierarchy. The release's details are displayed in a summary list form:
 
 ![](img/Reports_Center_360.png)
 
@@ -331,7 +331,7 @@ hierarchy. The release\'s details are displayed in a summary list form:
 
 This report displays all of the releases and sprints defined for the
 current product in the order they appear in the release/sprint
-hierarchy. The release\'s details are displayed, along with sub-tables
+hierarchy. The release's details are displayed, along with sub-tables
 containing the list of requirements added, mapped test cases, test runs
 executed, incidents resolved, attached documents, scheduled tasks and
 the change history:

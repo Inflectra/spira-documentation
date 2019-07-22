@@ -83,7 +83,7 @@ Please enter the following information into the dialog box:
 
 -   **Spira URL:** Please enter the web address that you use to access
 SpiraTeam® in your browser. This is usually of the form
-http://\<hostname\>/SpiraTeam. Make sure that you
+http://<hostname\>/SpiraTeam. Make sure that you
 remove any suffixes from the address (e.g. Default.aspx).
 
 -   **User Name:** Please enter the username that you use for logging in
@@ -191,7 +191,7 @@ data are listed below:
 |-----------------------------------|-----------------------------------|
 | Rel \#                            | Stores the ID of the release. Should be left blank for new items being added to SpiraTeam  |
 | **Release Name**   | The name of the release. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the release hierarchy are organized     |
-| Release Description    | The long description of the release. If you want it formatted, you need to add HTML tags such as \<b\> for bold  |
+| Release Description    | The long description of the release. If you want it formatted, you need to add HTML tags such as <b\> for bold  |
 | **Version Number**   | The version number for the release; acts as the short name   |
 | **Active**     | Whether this release is active or not. Should be set to either Y/N  |
 | **Iteration**       | Whether this release is an Iteration or not. Should be set to either Y/N    |
@@ -207,7 +207,7 @@ data are listed below:
 | **Status**    | The status of the release. It needs to be one of the values from the dropdown list  |
 | **Type**  | The type of the release (major, minor, iteration or phase). It needs to be one of the values from the dropdown list |
 | CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text         <br> -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
-| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*                       |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*                       |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -255,10 +255,10 @@ data are listed below:
 | Release Version                   | The release/iteration that this requirement is scheduled for. Needs to be the version number of the release (e.g. 1.0.1.1)        |
 | **Type**                          | The type of the requirement. It needs to be one of the values from the dropdown list. |
 | Estimate                          | The estimate (in points) of the requirement. It should be a decimal number with one decimal place (e.g. 1.0, 2.5, etc.)  |
-| Component                         | This should be the Name of the Component the requirement is assigned-to. E.g. \"Component 1\" |
+| Component                         | This should be the Name of the Component the requirement is assigned-to. E.g. "Component 1" |
 | Linked Requirements               | Comma-separated list of requirement IDs (without the RQ prefix) that this requirement    should be linked to (e.g. 204, 891) Note: This field only Exports to Spira and not the other way around   |
 | CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br> -   **Text** -- enter the text, include HTML tags if rich-text <br> -   **Decimal** -- enter the number (e.g. 1.0)  <br> -   **Integer** -- enter the number (e.g. 2)  <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"    |
-| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]* |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]* |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -293,7 +293,7 @@ data are listed below:
 |-----------------------------------|-----------------------------------|
 | TX \#                             | Stores the ID of the test set. Should be left blank for new items being added to SpiraTeam    |
 | **Test Set Name**                 | The name of the test set. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the test set hierarchy are organized    |
-| Test Set Description              | The long description of the test set. If you want it formatted, you need to add HTML tags such as \<b\> for bold      |
+| Test Set Description              | The long description of the test set. If you want it formatted, you need to add HTML tags such as <b\> for bold      |
 | **Folder**                        | Whether this item is a folder or not. Should be set to either Y/N  |
 | **Status**                        | The status of the test set. It needs to be one of the values from the dropdown list.   |
 | Creator                           | The user that should listed as the test set's creator. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)      |
@@ -306,7 +306,7 @@ data are listed below:
 | **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
 | Release Version                   | The release/iteration that this test set is scheduled for. Needs to be the version number of the release (e.g. 1.0.1.1)            |
 | CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text         <br> -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe)  <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
-| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with  the second value and click \[Export\]*   |
+| Comment                           | The description of a comment that should be appended to the item. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with  the second value and click \[Export\]*   |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -342,14 +342,14 @@ data are listed below:
 |-----------------------------------|-----------------------------------|
 | Test \#                           | Stores the ID of the test case. Should be left blank for new items being added to SpiraTeam    |
 | **Test Case Name**                | The name of the test case. This field supports indentation, so you need to use Excel's ability to Indent text fields to indicate how the items in the test case hierarchy are organized           |
-| Test Case Description             | The long description of the test case. If you want it formatted, you need to add HTML tags such as \<b\> for bold                    |
+| Test Case Description             | The long description of the test case. If you want it formatted, you need to add HTML tags such as <b\> for bold                    |
 | Priority                          | The priority of the test case. It needs to be one of the values from the dropdown list. |
 | Owner                             | The user that should listed as the test case's owner. Needs to be the ID of the user (e.g. user US00005 would be entered as just 5)                                |
 | Row Type                          | This is used to tell the Add-In what type of row this is. You should enter "FOLDER" if this row is a test folder, "TestCase" if it is a test case and "\>TestStep" if it is a test step belonging to a test case. These values should be selected from the dropdown list. *Note: You should make sure that  test step rows are located        directly underneath the test case they are a part of.*              |
 | Step \#                           | Stores the ID of the test step. Should be left blank for new test steps being added to a test case  |
-| **Test Step Description**         | The description of the test step. This should contain the description of the actions that the tester needs to take. If you want it formatted, you need to add HTML tags such as \<b\> for bold   |
-| **Expected Result**               | The expected result of the test step. This should contain the description of what the tester should see if the step succeeds. If you want it formatted, you need to add HTML tags such as \<b\> for bold    |
-| Sample Data                       | The sample date for the test step. This should contain any sample data that the tester can use when testing the step. If you want it formatted, you need to add HTML tags such as \<b\> for bold    |
+| **Test Step Description**         | The description of the test step. This should contain the description of the actions that the tester needs to take. If you want it formatted, you need to add HTML tags such as <b\> for bold   |
+| **Expected Result**               | The expected result of the test step. This should contain the description of what the tester should see if the step succeeds. If you want it formatted, you need to add HTML tags such as <b\> for bold    |
+| Sample Data                       | The sample date for the test step. This should contain any sample data that the tester can use when testing the step. If you want it formatted, you need to add HTML tags such as <b\> for bold    |
 | **MS-Excel 2003/2007 Add-In**       |                                   |
 | Specific Fields**                 |                                   |
 | Requirement                       | The requirement that this test case should be mapped to. Needs to be the ID of the requirement (e.g. requirement RQ00005 would be entered as just 5). *Note that this field always appends, so if you want to add a test case to two requirements, run the export twice, once for each requirement.  *Note: This field only Exports to Spira and not the other way around |
@@ -400,7 +400,7 @@ entering data are listed below:
 |-----------------------------------|-----------------------------------|
 | Inc \#                            | Stores the ID of the incident. Should be left blank for new items being added to SpiraTeam    |
 | **Incident Name**                 | The name of the incident.         |
-| **Incident Description**          | The long description of the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold       |
+| **Incident Description**          | The long description of the incident. If you want it formatted, you need to add HTML tags such as <b\> for bold       |
 | **Type**                          | The type of the incident. It needs to be one of the values from the dropdown list.           |
 | **Status**                        | The status of the incident. It needs to be one of the values from the dropdown list.           |
 | Priority                          | The priority of the incident. It needs to be one of the values from the dropdown list.           |
@@ -415,7 +415,7 @@ entering data are listed below:
 | Resolved Release                  | The release that this incident is scheduled to be fixed in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                        |
 | TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
 | LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
-| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
+| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
 | **MS-Excel 2007 Add-In Specific Fields**                          |                                   |
 | Detected Release                  | The release that this incident was found in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                                |
 | Resolved Release                  | The release that this incident is scheduled to be fixed in. Needs to be the ID of the release (e.g. release RL00005 would be entered as just 5)                        |
@@ -424,7 +424,7 @@ entering data are listed below:
 | Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
 | TEXT-01 -- TEXT-10                | The ten (10) custom text properties available in the project                           |
 | LIST-01 -- LIST-10                | The ten (10) drop-down list properties available in the project. You need to enter the ID value of the custom property not the display name. E.g. if you have a custom property with ID - PV00005 you would enter just 5 in these boxes.                      |
-| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
+| Resolution                        | The description of a resolution/comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
 | **MS-Excel 2010 Add-In Specific Fields**                          |                                   |
 | Detected Release                  | The release/iteration that this incident was found in. Needs to be the version number of the release (e.g. 1.0.1.1)            |
 | Resolved Release                  | The release/iteration that this is planned to be fixed in. Needs to be the version number of the release (e.g. 1.0.1.1)            |
@@ -433,7 +433,7 @@ entering data are listed below:
 | Act. Effort                       | The actual effort associated with the task (entered as a whole number of minutes)                |
 | Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
 | CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br>  -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br>  -   **Text** -- enter the text, include HTML tags if rich-text            <br> -   **Decimal** -- enter the number (e.g. 1.0)   <br> -   **Integer** -- enter the number (e.g. 2)  <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user  <br>  -   **Boolean** -- Enter either "True" or "False"             |
-| Comment                           | The description of a comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as \<b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
+| Comment                           | The description of a comment that should be appended to the incident. If you want it formatted, you need to add HTML tags such as <b\> for bold. *Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]*       |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -468,7 +468,7 @@ data are listed below:
 |-----------------------------------|-----------------------------------|
 | Task \#                           | Stores the ID of the task. Should be left blank for new items being added to SpiraTeam                |
 | **Task Name**                     | The name of the task.             |
-| Task Description                  | The long description of the task. If you want it formatted, you need to add HTML tags such as \<b\> for bold                    |
+| Task Description                  | The long description of the task. If you want it formatted, you need to add HTML tags such as <b\> for bold                    |
 | **Status**                        | The status of the task. It needs to be one of the values from the dropdown list.                    |
 | Priority                          | The priority of the task. It needs to be one of the values from the dropdown list.           |
 | Requirement                       | The requirement that this task should be associated with. Needs to be the ID of the requirement (e.g. requirement RQ00005 would be entered as just 5).            |
@@ -493,7 +493,7 @@ data are listed below:
 | Rem. Effort                       | The remaining effort associated with the task (entered as a whole number of minutes)                |
 | Release Version                   | The release/iteration that this  task is scheduled for. Needs to  be the version number of the release (e.g. 1.0.1.1)            |
 | CUS-01 -- CUS-30                  | The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   **List** -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br> -   **MultiList** -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   **Text** -- enter the text, include HTML tags if rich-text                  <br>  -   **Decimal** -- enter the number (e.g. 1.0) <br> -   **Integer** -- enter the number (e.g. 2) <br> -   **Date** -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   **User** -- enter the ID of the user <br> -   **Boolean** -- Enter either "True" or "False"             |
-| Comment                           | The description of a comment that should be appended to the task. If you want it formatted, you need to add HTML tags such as \<b\> for bold. Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]                        |
+| Comment                           | The description of a comment that should be appended to the task. If you want it formatted, you need to add HTML tags such as <b\> for bold. Note that this field always appends, so if you want to add two comments, just enter the first value and click \[Export\], then replace it with the second value and click \[Export\]                        |
 
 Note: the columns that are required are listed in **bold** type.
 
@@ -527,7 +527,7 @@ You can now disconnect from the network and perform the testing
 activities offline. Enter the following entries into the spreadsheet:
 
 Status          The execution status of that test step. It should be selected drop the dropdown list. The allowed values are: Failed / Passed / Blocked / Caution.
-Actual Result   The long description of the actual result experienced during testing. If you want it formatted, you need to add HTML tags such as \<b\> for bold
+Actual Result   The long description of the actual result experienced during testing. If you want it formatted, you need to add HTML tags such as <b\> for bold
 Incident Name   If you want to log an incident associated with the test failure, enter the name of the incident here. The description of the incident will be pre-populated with the Test Step Description, Expected Result, and Actual Result.
 
 Once you have finished testing and are connected back on the network,

@@ -206,7 +206,7 @@ Linking an artifact is quite simple. To maintain the readability of Git
 commit messages, we adopted a square bracket token. The token is in the
 format of:
 
-**\[\<artifact identifier\>:\<artifact id\>\]**
+**\[<artifact identifier\>:<artifact id\>\]**
 
 The first half, the Artifact Identifier, is a two-letter code that is
 used throughout SpiraTeam, and is visible on almost every page in the

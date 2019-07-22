@@ -32,9 +32,9 @@ them know that the incident was created:
 
 > SpiraTeam
 > Incident "Need New Security Settings updated in
-> Documentation" in project \"Project1\" has been changed.
+> Documentation" in project "Project1" has been changed.
 >
-> Please log into SpiraTeam to view this Incident\'s details.
+> Please log into SpiraTeam to view this Incident's details.
 
 <https://localhost/spirateam/6/Incident/2196.aspx>
 

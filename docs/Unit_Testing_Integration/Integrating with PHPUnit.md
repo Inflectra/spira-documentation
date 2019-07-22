@@ -374,7 +374,6 @@ code:
     </testsuite>
   </testsuites>
 </phpunit>
-
 ```
 
 Now all you need to do is save your code, launch PHPUnit, run the test

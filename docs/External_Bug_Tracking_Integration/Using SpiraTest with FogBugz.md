@@ -354,13 +354,13 @@ The status IDs in FogBugz are fixed and should be:
 | > 3           | Resolved (Not Reproducible) |
 | > 4           | Resolved (Duplicate)        |
 | > 5           | Resolved (Postponed)        |
-| > 6           | Resolved (Won\'t Fix)       |
+| > 6           | Resolved (Won't Fix)       |
 | > 7           | Resolved (By Design)        |
 | > 8           | Resolved (Implemented)      |
-| > 9           | Resolved (Won\'t Implement) |
+| > 9           | Resolved (Won't Implement) |
 | > 10          | Resolved (Already Exists)   |
 | > 11          | Resolved (Responded)        |
-| > 12          | Resolved (Won\'t Respond)   |
+| > 12          | Resolved (Won't Respond)   |
 | > 13          | Resolved (SPAM)             |
 | > 14          | Resolved (Waiting For Info) |
 | > 15          | Resolved (Completed)        |

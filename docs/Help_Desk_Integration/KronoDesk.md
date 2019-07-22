@@ -1,6 +1,6 @@
 # KronoDesk
 
-This section outlines how to integrate KronoDesk^®^ into SpiraTeam^®^.
+This section outlines how to integrate KronoDesk<sup>®</sup> into SpiraTeam<sup>®</sup>.
 This will enable KronoDesk agents to log incidents emerging from a
 ticket directly from the KronoDesk interface into SpiraTeam. They will
 also be able to see and review any SpiraTeam incidents already linked to

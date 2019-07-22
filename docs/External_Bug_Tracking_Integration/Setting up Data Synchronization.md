@@ -132,71 +132,37 @@ Files (x86)\\SpiraTeam\\Bin with a text editor such as
 Notepad. Once open, it should look like:
 
 ```xml
-\<?xml version=\"1.0\" encoding=\"utf-8\"?\>
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<configSections>
+  <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+   <section name="Inflectra.SpiraTest.DataSyncService.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </sectionGroup>
+ </configSections>
+ <applicationSettings>
+  <Inflectra.SpiraTest.DataSyncService.Properties.Settings>
+   <setting name="PollingInterval" serializeAs="String">
+    <value>600000</value>
+   </setting>
+   <setting name="WebServiceUrl" serializeAs="String">
+    <value>http://localhost/SpiraTeam</value>
+   </setting>
+   <setting name="Login" serializeAs="String">
+    <value>fredbloggs</value>
+   </setting>
+   <setting name="Password" serializeAs="String">
+    <value>fredbloggs</value>
+   </setting>
+   <setting name="EventLogSource" serializeAs="String">
+    <value>SpiraTeam Data Sync Service</value>
+   </setting>
+   <setting name="TraceLogging" serializeAs="String">
+    <value>False</value>
+   </setting>
+  </Inflectra.SpiraTest.DataSyncService.Properties.Settings>
+ </applicationSettings>
+</configuration>
 
-\<configuration\>
-
-\<configSections\>
-
-\<sectionGroup name=\"applicationSettings\"
-type=\"System.Configuration.ApplicationSettingsGroup, System,
-Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" \>
-
-\<section
-name=\"Inflectra.SpiraTest.DataSyncService.Properties.Settings\"
-type=\"System.Configuration.ClientSettingsSection, System,
-Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"
-requirePermission=\"false\" /\>
-
-\</sectionGroup\>
-
-\</configSections\>
-
-\<applicationSettings\>
-
-\<Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
-
-\<setting name=\"PollingInterval\" serializeAs=\"String\"\>
-
-\<value\>600000\</value\>
-
-\</setting\>
-
-\<setting name=\"WebServiceUrl\" serializeAs=\"String\"\>
-
-\<value\>http://localhost/SpiraTeam\</value\>
-
-\</setting\>
-
-\<setting name=\"Login\" serializeAs=\"String\"\>
-
-\<value\>fredbloggs\</value\>
-
-\</setting\>
-
-\<setting name=\"Password\" serializeAs=\"String\"\>
-
-\<value\>fredbloggs\</value\>
-
-\</setting\>
-
-\<setting name=\"EventLogSource\" serializeAs=\"String\"\>
-
-\<value\>SpiraTeam Data Sync Service\</value\>
-
-\</setting\>
-
-\<setting name=\"TraceLogging\" serializeAs=\"String\"\>
-
-\<value\>False\</value\>
-
-\</setting\>
-
-\</Inflectra.SpiraTest.DataSyncService.Properties.Settings\>
-
-\</applicationSettings\>
-
-\</configuration\>
 ```
 
 The sections that need to be verified and possibly changed are marked in
@@ -210,7 +176,7 @@ the number, the longer it will take for data to be synchronized, but the
 lower the network and server overhead.
 
 The base URL to your instance Spira. It is typically of the form
-http://\<server name\>/SpiraTeam. Make sure that when you
+http://<server name\>/SpiraTeam. Make sure that when you
 enter this URL on a browser on the server itself, the application login
 page appears.
 

@@ -1,8 +1,8 @@
 # Importing From RequisitePro
 
 This section outlines how to use the included Integration Adapter for
-importing Requirements, and Use Cases from IBM Rational^®^
-RequisitePro^®^ into SpiraTest^®^.
+importing Requirements, and Use Cases from IBM Rational<sup>®</sup>
+RequisitePro<sup>®</sup> into SpiraTest<sup>®</sup>.
 
 ## Installing the Integration Adapter
 
@@ -31,7 +31,7 @@ following welcome page:
  
 
 
-Click the \<Next\> button to choose the folder to install the
+Click the <Next\> button to choose the folder to install the
 integration adapter to:
 
  ![](img/Importing_From_RequisitePro_6.png)
@@ -40,8 +40,8 @@ integration adapter to:
 
 Choose the folder to install to, and then decide whether the application
 should be accessible by all users on the workstation or just the current
-user. Then click the \<Next\> button to start the installation process.
-It will confirm if you want to proceed, click \<Next\> then wait for it
+user. Then click the <Next\> button to start the installation process.
+It will confirm if you want to proceed, click <Next\> then wait for it
 to finish.
 
 ## Importing From RequisitePro
@@ -53,17 +53,17 @@ RequisitePro Adapter. This will launch the import application itself:
 ![](img/Importing_From_RequisitePro_7.png)
 
 
-The first thing you need to do is to click the \<Browse\> button and
+The first thing you need to do is to click the <Browse\> button and
 select the Rational RequisitePro project file (.rqs) that you want to
 import from. You also need to select a valid username and password for
-that project. Once you have done this, click the \<Login\> button to
+that project. Once you have done this, click the <Login\> button to
 verify that the project file can be opened.
 
-The button marked \<Clear Project Cache\> will be explained later on.
+The button marked <Clear Project Cache\> will be explained later on.
 
 Assuming that the user name selected has permission to access this
 project, you will be prompted with a message box indicating that the
-login was successful. Now click the \<Next\> button to move to the next
+login was successful. Now click the <Next\> button to move to the next
 page in the import wizard:
 
  ![](img/Importing_From_RequisitePro_8.png)
@@ -71,12 +71,12 @@ page in the import wizard:
 
 This page allows you to enter the URL, user name and password that you
 want to use to access the instance of SpiraTest that you want to
-***import to*** and click \<Login\>. Typically the URL is of the form
-(http://\<server name\>/SpiraTest). The version of the importer being
+***import to*** and click <Login\>. Typically the URL is of the form
+(http://<server name\>/SpiraTest). The version of the importer being
 used must be compatible with the version of SpiraTest you're importing
 into; if not you will receive an error message.
 
-Assuming that the login was successful, click the \<Start Import\>
+Assuming that the login was successful, click the <Start Import\>
 button to actually begin the process of importing the various artifacts
 from RequisitePro into SpiraTest. Note that the first time the importer
 sees a particular project file, it will create a new project in
@@ -90,7 +90,7 @@ RequisitePro.
 During the import process, as each of the types of artifact are
 imported, the progress display will change (as illustrated above). Once
 the import has finished, you will receive a message to that effect and
-the \<Done\> button will be enabled. Clicking this button closed the
+the <Done\> button will be enabled. Clicking this button closed the
 importer. You should now log into SpiraTest using the same user name and
 password that was used for the import to view the imported project.
 
@@ -131,7 +131,7 @@ without the changes being overwritten on the next import cycle.
 
 Finally, should you want to start again and re-import a project from
 scratch that has already been imported once before, you should choose
-the \<Clear Project Cache\> button on the first screen which will remove
+the <Clear Project Cache\> button on the first screen which will remove
 all the stored history of all previously loaded projects. ***This option
 is irreversible and should be performed with care.***
 

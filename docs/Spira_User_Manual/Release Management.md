@@ -97,7 +97,7 @@ screen-shot below:
 To filter the list by any of the displayed columns, you either choose an
 item from the appropriate drop-down list or enter a free-text phrase
 (depending on the type of field) and click "***Filter***"
-or press the \<ENTER\> key. Note that the name field is searched using a
+or press the <ENTER\> key. Note that the name field is searched using a
 "LIKE" comparison, so that searching for "database" would include any
 item with the word database in the name. The other freetext fields need
 to be exact matches (e.g. dates, release numbers). Clicking on Filter \>
@@ -185,8 +185,8 @@ Filters and it will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***" to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ### Show Level
 

@@ -154,13 +154,13 @@ public class SimpleTest
 }
 ```
 
-The Java class is marked as a TestNG test fixture by applying the \@Test
-attribute to the class definition, and the \@Test attribute to each of
+The Java class is marked as a TestNG test fixture by applying the @Test
+attribute to the class definition, and the @Test attribute to each of
 the test assertion methods individually -- highlighted in yellow above.
 In addition, special setup methods are marked with annotations such as
-\@BeforeClass. When you open up the class in a TestNG runner or execute
+@BeforeClass. When you open up the class in a TestNG runner or execute
 from the command line it loads all the test classes and executes all the
-methods marked with \@Test in turn.
+methods marked with @Test in turn.
 
 Each of the Assert statements is used to test the state of the
 application after executing some sample code that calls the
@@ -270,7 +270,7 @@ public class SimpleTest
 }
 ```
 
-The overall class is marked with a new \@SpiraTestConfiguration
+The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
@@ -299,7 +299,7 @@ value associated with the test set.
 
 In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
-\@SpiraTestCase attribute to the test method together with the ID of the
+@SpiraTestCase attribute to the test method together with the ID of the
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).
 
@@ -316,10 +316,10 @@ specified as a command argument. E.g. for our sample test, you would use
 the following command:
 
 java\
--classpath \" C:\\Program
+-classpath " C:\\Program
 Files\\Selenium-RC-1.0.0\\selenium-remote-control-1.0.0\\selenium-java-client-driver-1.0.0\\selenium-java-client-driver.jar;C:\\Program
 Files\\SpiraTestListener\\TestNGListener.jar;C:\\Program
-Files\\TestNG-5.7\\testng-5.7\\testng-5.7-jdk15.jar\" org.testng.TestNG\
+Files\\TestNG-5.7\\testng-5.7\\testng-5.7-jdk15.jar" org.testng.TestNG\
 -listener
 com.inflectra.spiratest.addons.testnglistener.SpiraTestListener
 com\\inflectra\\spiratest\\addons\\testnglistener\\samples\\unittests.xml

@@ -101,7 +101,7 @@ Build belongs to. (e.g. for Project PR00001 just enter 1)
 
 -   **Release Version Number** -- The version number of the SpiraTeam
 Release/Iteration that the Build belongs to. (e.g. for Release
-RL0004 with version number 1.0.0.0 you\'d enter just 1.0.0.0)
+RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
 
 After filling this boxes with appropriate information, click on *Add*
 button. Bamboo will then try to connect to the SpiraTeam Server, and

@@ -119,7 +119,7 @@ Build belongs to. (e.g. for Project PR00001 just enter 1)
 
 -   **Release Version Number** -- The version number of the SpiraTeam
 Release/Iteration that the Build belongs to. (e.g. for Release
-RL0004 with version number 1.0.0.0 you\'d enter just 1.0.0.0)
+RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
 
 Once you have entered in the Project ID and Release version number,
 click the \[Save\] button and the plugin will connect to SpiraTeam and

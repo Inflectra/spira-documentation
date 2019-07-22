@@ -9,7 +9,7 @@ SpiraTest® is our powerful and easy to use requirements, test and defect
 management system, ideal for quality assurance teams.
 
 SpiraTeam® is our integrated Application Lifecycle Management (ALM)
-system that manages your product\'s requirements, releases, test cases,
+system that manages your product's requirements, releases, test cases,
 issues and tasks in one unified environment.
 
 SpiraPlan® expands on the features in SpiraTeam® to provide a complete
@@ -41,11 +41,9 @@ documented depending on the severity.
 Typically, these activities require people to use at least three
 different types of software:
 
-Requirements Management
-
-Test Script Management
-
-Defect / Issue / Bug Tracking
+- Requirements Management
+- Test Script Management
+- Defect / Issue / Bug Tracking
 
 However, this stove-piped approach has many limitations and drawbacks,
 most importantly the fact that there is no *traceability* between the
@@ -95,8 +93,8 @@ may result from following our recommendations.
 
 SpiraTest®, SpiraPlan®, SpiraTeam® and Inflectra® are registered
 trademarks of Inflectra Corporation in the United States of America and
-other countries. Microsoft^®^, Windows^®^, Explorer^®^ and Microsoft
-Project^®^ are registered trademarks of Microsoft Corporation. iOS, iPod, iPad and
+other countries. Microsoft<sup>®</sup>, Windows<sup>®</sup>, Explorer<sup>®</sup> and Microsoft
+Project<sup>®</sup> are registered trademarks of Microsoft Corporation. iOS, iPod, iPad and
 iPhone are registered trademarks of Apple Corporation, Android® is a
 registered trademark of Google Corporation, and Kindle Fire® is a
 registered trademark of Amazon LLC. All other

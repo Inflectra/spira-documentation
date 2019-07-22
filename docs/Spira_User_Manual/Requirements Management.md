@@ -71,7 +71,7 @@ how many are in each status will be displayed as a "tooltip".
 
 ### Insert
 
-Clicking on the \<Insert\> icon inserts a requirement *above* the
+Clicking on the <Insert\> icon inserts a requirement *above* the
 currently selected requirement -- i.e. the one whose check-box has been
 selected, at the same level in the hierarchy. If you want to insert a
 requirement below an existing item, you can use the Insert \> Child
@@ -152,8 +152,8 @@ will switch all the selected items into edit mode.
 When you have made your updates, you can either click
 "***Save***" to commit the changes, or
 "***Cancel***" to revert back to the original information.
-Alternatively, pressing the \<ENTER\> key will commit the changes and
-pressing the \<ESCAPE\> key will cancel the changes.
+Alternatively, pressing the <ENTER\> key will commit the changes and
+pressing the <ESCAPE\> key will cancel the changes.
 
 ### Show Level
 
@@ -176,8 +176,8 @@ screen-shot below:
 
 To filter the list by any of the displayed columns, you either choose an
 item from the appropriate drop-down list or enter a free-text phrase
-(depending on the type of field) then click the \<Filter\> icon or press
-the \<ENTER\> key to apply the different filters. Note that the name
+(depending on the type of field) then click the <Filter\> icon or press
+the <ENTER\> key to apply the different filters. Note that the name
 field is searched using a "LIKE" comparison, so that searching for
 "database" would include any item with the word database in the name.
 The other freetext fields need to be exact matches (e.g. dates,
