@@ -8,7 +8,7 @@ theme:
   name: mkdocs
   custom_dir: inflectra_mkdocs
 nav:
-- User Manual:
+- Spira User Manual:
   - Functionality Overview: Spira_User_Manual\Functionality Overview.md
   - User/Product Management: Spira_User_Manual\User Product Management.md
   - Requirements Management: Spira_User_Manual\Requirements Management.md
@@ -25,6 +25,8 @@ nav:
   - Program Management: Spira_User_Manual\Program Management.md
   - Risk Management: Spira_User_Manual\Risks Management.md
   - 'Appendix 1: Keyboard Shortcuts': Spira_User_Manual\Appendix 1 Keyboard Shortcuts.md
+- Spira Admin Guide:
+  - Installing Spira: Spira_Administration_Guide\Installing SpiraPlan.md
 - AddOns and Integrations:
   - Testing:
     - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
@@ -100,3 +102,8 @@ nav:
     - Jama Contour: Requirements_Management_Integration\Importing From Jama Contour.md
     - VersionOne: Requirements_Management_Integration\Importing From VersionOne.md
     - DOORS: Requirements_Management_Integration\Importing From DOORS.md
+- TaraVault:
+  - Activating: TaraVault_User_Manual\Activating TaraVault.md
+  - Provisioning Projects & Users: TaraVault_User_Manual\Provisioning Projects & Users.md
+  - Using Git: TaraVault_User_Manual\Using Git.md
+  - Using Subversion: TaraVault_User_Manual\Using Subversion.md
