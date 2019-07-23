@@ -1,5 +1,5 @@
 # Spira Platform Documentation
-Here you will find the documentation for the entire Spira suite of products. This is still a work in progress, so please report any inconsistencies or issues to [support@inflectra.com](mailto:support@inflectra.com)
+Here you will find the documentation for the entire Spira suite of products. 
 # Introduction
 
 The Spira™ family of applications from Inflectra® are a powerful set of
@@ -15,10 +15,6 @@ issues and tasks in one unified environment.
 SpiraPlan® expands on the features in SpiraTeam® to provide a complete
 Enterprise Agile Planning® solution that lets you manage risks,
 products, programs and the entire organization with ease.
-
-This user manual outlines the features and functionality available in
-all three Spira™ products, and demonstrates how to use the system on a
-typical product.
 
 ## Quality Assurance
 
