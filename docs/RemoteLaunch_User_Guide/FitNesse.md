@@ -20,7 +20,7 @@ and RemoteLaunch.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 Download and extract the FitNesseEngine.zip file from the
@@ -38,7 +38,7 @@ Administration page and click on the "Test Automation" link under
 **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/FitNesse_80.png)
 
 
@@ -109,27 +109,27 @@ section located in the "Overview" tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the FitNesse Automation Engine that you
+- **Automation Engine** - Choose the FitNesse Automation Engine that you
 created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked for FitNesse tests.
+- **Script Type** -- This should be set to Linked for FitNesse tests.
 
-**Filename** -- This needs to be the relative URL of the FitNesse test
+- **Filename** -- This needs to be the relative URL of the FitNesse test
 case. I.e. if the FitNesse URL is
 <http://myserver/FitNesse.UserGuide.TwoMinuteExample> and the base URL
 setup in RemoteLaunch is <http://myserver> then the "filename" would be
 just FitNesse.UserGuide.TwoMinuteExample.
 
-**Document Type** -- You can choose which document type the automated
+- **Document Type** -- You can choose which document type the automated
 test script will be categorized under.
 
-**Document Folder** -- You can choose which document folder the
+- **Document Folder** -- You can choose which document folder the
 automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used when you are using the linked test
+- **Test Script** -- *This is not used when you are using the linked test
 script option*
 
 Once you are happy with the values, click \[Save\] to update the test

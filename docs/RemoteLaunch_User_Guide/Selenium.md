@@ -26,7 +26,7 @@ and version 1.0 of Selenium-Remote Control.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 - Download and extract the SeleniumAutomationEngine.zip file

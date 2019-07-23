@@ -23,7 +23,7 @@ and RemoteLaunch.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 Download and extract the CommandLineAutomationEngine.zip
@@ -37,7 +37,7 @@ Administration page and click on the "Test Automation" link under
 **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/Command-Line_58.png)
 
 
@@ -186,7 +186,7 @@ special SpiraTeam ID values:
 
         - \[ProjectId\] -- the ID of the project
 
-    - An example filename would be:\
+    - An example filename would be:
 C:\\Temp\\TestApp.exe\|-arg1 -arg2 "-arg3=${filename}"\|
 
 - **Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
@@ -225,74 +225,74 @@ tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the Command-Line Automation Engine that
+- **Automation Engine** - Choose the Command-Line Automation Engine that
 you created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked for this case
+- **Script Type** -- This should be set to Linked for this case
 
-**Filename** -- This needs to consist of the following sections
+- **Filename** -- This needs to consist of the following sections
 separated by a pipe (\|) character:
 
-The full path to the command-line tool. To make this easier across
+    - The full path to the command-line tool. To make this easier across
 different machines, you can use several constants for standard Windows
 locations:
 
-\[MyDocuments\] -- The user's "My Documents" folder. The user indicated
+        - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated
 is the user that ran RemoteLaunch.
 
-\[CommonDocuments\] -- The Public Document's folder.
+        - \[CommonDocuments\] -- The Public Document's folder.
 
-\[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
+        - \[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
 the user that ran RemoteLaunch.
 
-\[ProgramFiles\] -- Translated to the Program Files directory. For
+        - \[ProgramFiles\] -- Translated to the Program Files directory. For
 64-bit machines, it's the 64-bit directory.
 
-\[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
+        - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-Any arguments for the command-line tool, including the filepath of the
+    - Any arguments for the command-line tool, including the filepath of the
 test script file that the command-line tool will be executing. In
 addition, you can use the following additional tokens for some of the
 special SpiraTeam ID values:
 
-\[TestCaseId\] -- the ID of the test case
+        - \[TestCaseId\] -- the ID of the test case
 
-\[TestSetId\] -- the ID of the test set
+        - \[TestSetId\] -- the ID of the test set
 
-\[ReleaseId\] -- the ID of the release (if specified)
+        - \[ReleaseId\] -- the ID of the release (if specified)
 
-\[ProjectId\] -- the ID of the project
+        - \[ProjectId\] -- the ID of the project
 
-The mask for converting any parameter values from SpiraTeam into valid
+    - The mask for converting any parameter values from SpiraTeam into valid
 command line arguments. If parameters are not accepted by the
 command-line tool, you can leave this section out.
 
-The mask can include any symbols together with "name" to refer to the
+        - The mask can include any symbols together with "name" to refer to the
 parameter name and "value" to refer to the parameter value.
 
-Example 1: If you want parameters to provided in the form:\
--param1=value1 --param2=value2\
-you would use the following mask:\
+        - Example 1: If you want parameters to provided in the form:
+-param1=value1 --param2=value2
+you would use the following mask:
 -name=value
 
-Example 2: If you want parameters to provided in the form:\
-/param1:value1 /param2:value2\
-you would use the following mask:\
+        - Example 2: If you want parameters to provided in the form:
+/param1:value1 /param2:value2
+you would use the following mask:
 /name:value
 
-An example filename would be:\
+    - An example filename would be:
 C:\\Temp\\TestApp.exe\|-arg1 -arg2\|-name=value
 
-**Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
+- **Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
 which document type the automated test script will be categorized under.
 
-**Document Folder** -- If using SpiraTeam (not SpiraTest) you can choose
+- **Document Folder** -- If using SpiraTeam (not SpiraTest) you can choose
 which document folder the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used when you are using the linked test
+- **Test Script** -- *This is not used when you are using the linked test
 script option*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -388,20 +388,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/Command-Line_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/Command-Line_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/Command-Line_27.png)
 
 
@@ -409,7 +409,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/Command-Line_19.png)
 
 

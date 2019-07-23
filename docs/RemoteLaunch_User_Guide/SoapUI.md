@@ -22,38 +22,38 @@ and an instance of SoapUI or SoapUI Pro running on a Windows® platform.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
-Download and extract the SoapUIEngine.zip file from the
+- Download and extract the SoapUIEngine.zip file from the
 Inflectra website.
 
-## Extract the file "soapUIEngine.dll" from the compressed archive into the "extensions" sub-folder of the RemoteLaunch installation. {#extract-the-file-soapuiengine.dll-from-the-compressed-archive-into-the-extensions-sub-folder-of-the-remotelaunch-installation. .ListParagraph}
+- Extract the file "soapUIEngine.dll" from the compressed archive into the "extensions" sub-folder of the RemoteLaunch installation. 
 
-Log in to SpiraTeam as a system administrator and go into SpiraTeam main
+- Log in to SpiraTeam as a system administrator and go into SpiraTeam main
 Administration page and click on the "Test Automation" link under
 **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/SoapUI_71.png)
 
 
 
 
--   **Name**: This is the short display name of the automation
-engine. It can be anything that is meaningful to your users.
-**Description**: This is the long description of the automation
-engine. It can be anything that is meaningful to your users.
-(Optional)
+    -   **Name**: This is the short display name of the automation
+    engine. It can be anything that is meaningful to your users.
+    **Description**: This is the long description of the automation
+    engine. It can be anything that is meaningful to your users.
+    (Optional)
 
--   **Active**: If checked, the engine is active and able to be used
-for any project.
+    -   **Active**: If checked, the engine is active and able to be used
+    for any project.
 
--   **Token**: This needs to be the assigned unique token for the
-automation engine and is used to tell RemoteLaunch which engine
-to actually use for a given test case. For soapUI this should be
-**SoapUI**.
+    -   **Token**: This needs to be the assigned unique token for the
+    automation engine and is used to tell RemoteLaunch which engine
+    to actually use for a given test case. For soapUI this should be
+    **SoapUI**.
 
 -   Once you have finished, click the "Insert & Close" button and you
 will be taken back to the Test Automation list page, with SoapUI
@@ -110,55 +110,53 @@ section of the Test Case Overview tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the SoapUI Automation Engine that you
+- **Automation Engine** - Choose the SoapUI Automation Engine that you
 created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked for this case
+- **Script Type** -- This should be set to Linked for this case
 
-**Filename** -- This needs to be the full path to the SoapUi test
+- **Filename** -- This needs to be the full path to the SoapUi test
 project XML file or composite folder together with the test suite name
 and test case name separated by the pipe (\|) symbol. You can also pass
 custom command line switches as an optional final segment
 
-For standard tests, you use the format:\
-\
-Project XML File\|Test Suite Name\|Test Case Name\|Switches
+    - For standard tests, you use the format:
+    > Project XML File\|Test Suite Name\|Test Case Name\|Switches
 
-For composite folder tests, you use the format:\
-\
-Test Folder\|Test Suite Name\|Test Case Name\|Switches
+    - For composite folder tests, you use the format:
+    > Test Folder\|Test Suite Name\|Test Case Name\|Switches
 
-For example if the test suite was named "Requirements Testing" and the
-test case was named "Get Requirements" you'd use:\
-\[MyDocuments\]\\SpiraTest-4-0-Web-Service-soapui-project.xml\|Requirements
-Testing\|Get Requirements
+    - For example if the test suite was named "Requirements Testing" and the
+test case was named "Get Requirements" you'd use:
+    > \[MyDocuments\]\\SpiraTest-4-0-Web-Service-soapui-project.xml\|Requirements
+    > Testing\|Get Requirements
 
-To make this easier across different machines, you can use several
+    - To make this easier across different machines, you can use several
 constants for standard Windows locations:
 
-\[MyDocuments\] -- The user's "My Documents" folder. The user indicated
+        - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated
 is the user that ran RemoteLaunch.
 
-\[CommonDocuments\] -- The Public Document's folder.
+        - \[CommonDocuments\] -- The Public Document's folder.
 
-\[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
+        - \[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
 the user that ran RemoteLaunch.
 
-\[ProgramFiles\] -- Translated to the Program Files directory. For
+        - \[ProgramFiles\] -- Translated to the Program Files directory. For
 64-bit machines, it's the 64-bit directory.
 
-\[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
+        - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-**Document Type** -- You can choose which document type the automated
+- **Document Type** -- You can choose which document type the automated
 test script will be categorized under.
 
-**Document Folder** -- You can choose which document folder the
+- **Document Folder** -- You can choose which document folder the
 automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used when you are using the linked test
+- **Test Script** -- *This is not used when you are using the linked test
 script option*
 
 Note: The example filename shown above was taken from a test project in
@@ -263,20 +261,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/SoapUI_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/SoapUI_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/SoapUI_27.png)
 
 
@@ -284,7 +282,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/SoapUI_19.png)
 
 

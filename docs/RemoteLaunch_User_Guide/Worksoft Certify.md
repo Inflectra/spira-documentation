@@ -20,7 +20,7 @@ version 10.0 of Worksoft Certify.*
 
 This section assumes that you already have a working installation of
 SpiraTeam and have installed RemoteLaunch on the various test automation
-hosts following the instructions in Section 1 (above). Once those
+hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/). Once those
 prerequisites are in place, please follow these steps:
 
 -   Download and extract the WorksoftCertifyEngine.zip
@@ -36,7 +36,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/Worksoft_Certify_137.png)
 
 
@@ -59,8 +59,8 @@ should always be **WorksoftCertify**.
 
 -   Once you have finished, click the "Insert & Close" button and you
 will be taken back to the Test Automation list page, with Worksoft
-Certify listed as an available automation engine:\
-\
+Certify listed as an available automation engine:
+
 ![](img/Worksoft_Certify_138.png)
 
 
@@ -122,35 +122,35 @@ section of the main "Overview" tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the **Worksoft Certify** Automation
+- **Automation Engine** - Choose the **Worksoft Certify** Automation
 Engine that you created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 Worksoft Certify only supports referencing Worksoft Certify projects and
 not physically uploading the tests into SpiraTeam.
 
-**Filename** -- This needs to contain the following elements at the very
+- **Filename** -- This needs to contain the following elements at the very
 least:
 
-**/Process="xxxxx"** needs to specify the name of the Worksoft Certify
+    - **/Process="xxxxx"** needs to specify the name of the Worksoft Certify
 process
 
-**/Project="xxxxx"** needs to specify the name of the Worksoft Certify
+    - **/Project="xxxxx"** needs to specify the name of the Worksoft Certify
 project
 
-You can also add other Worksoft Certify command line options -
+    - You can also add other Worksoft Certify command line options -
 <http://community.worksoft.com/Knowledge-Base/Worksoft-Products/Worksoft-Certify/certify-command-line-options.html>
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the Worksoft Certify Engine
+- **Test Script** -- *This is not used with the Worksoft Certify Engine
 since it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -296,11 +296,12 @@ execution steps:
 Each of the SpiraTeam execution status values corresponds the matching
 status inside Worksoft Certify as illustrated below:
 
-**Worksoft Certify Status**   **SpiraTeam Status**
-Passed                        Passed
-Failed                        Failed
-Aborted                       Blocked
-Skipped                       N/A
+| **Worksoft Certify Status** |  **SpiraTeam Status** |
+| --------- | --------- |
+| Passed                      |  Passed |
+| Failed                      |  Failed |
+| Aborted                     |  Blocked |
+| Skipped                     |  N/A |
 
 In addition, the detailed test report from Worksoft Certify is available
 in the large text-box below. It will contain messages such as:

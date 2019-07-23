@@ -8,7 +8,7 @@ theme:
   name: mkdocs
   custom_dir: inflectra_mkdocs
 nav:
-- Spira User Manual:
+- User Manual:
   - Functionality Overview: Spira_User_Manual\Functionality Overview.md
   - User/Product Management: Spira_User_Manual\User Product Management.md
   - Requirements Management: Spira_User_Manual\Requirements Management.md
@@ -60,7 +60,7 @@ nav:
     - Running Tests and Logging Incidents: SpiraTest_Quick_Start_Guide\Running Tests and Logging Incidents.md
     - Triaging Issues and Defects: SpiraTest_Quick_Start_Guide\Triaging Issues and Defects.md
     - Reviewing Your Product: SpiraTest_Quick_Start_Guide\Reviewing Your Product.md
-- Spira Admin Guide:
+- Admin Guide:
   - Installing Spira: Spira_Administration_Guide\Installing SpiraPlan.md
   - System Administration: Spira_Administration_Guide\System Administration.md
   - System:
@@ -83,7 +83,33 @@ nav:
     - Risks: Spira_Administration_Guide\Template Risks.md
     - Custom Properties: Spira_Administration_Guide\Template Custom Properties.md
     - Notifications: Spira_Administration_Guide\Template Notifications.md
-- AddOns and Integrations:
+- Optional Features:
+  - TaraVault:
+    - Activating: TaraVault_User_Manual\Activating TaraVault.md
+    - Provisioning Projects & Users: TaraVault_User_Manual\Provisioning Projects & Users.md
+    - Using Git: TaraVault_User_Manual\Using Git.md
+    - Using Subversion: TaraVault_User_Manual\Using Subversion.md
+  - RemoteLaunch:
+    - Guide: RemoteLaunch_User_Guide\RemoteLaunch Guide.md
+    - HP UFT/QTP: RemoteLaunch_User_Guide\HP UFT  QTP.md
+    - SmarteScript: RemoteLaunch_User_Guide\SmarteScript.md
+    - TestComplete: RemoteLaunch_User_Guide\TestComplete.md
+    - Selenium: RemoteLaunch_User_Guide\Selenium.md
+    - Squish: RemoteLaunch_User_Guide\Squish.md
+    - Command-Line: RemoteLaunch_User_Guide\Command-Line.md
+    - LoadRunner: RemoteLaunch_User_Guide\LoadRunner.md
+    - SoapUI: RemoteLaunch_User_Guide\SoapUI.md
+    - FitNesse: RemoteLaunch_User_Guide\FitNesse.md
+    - NeoLoad: RemoteLaunch_User_Guide\NeoLoad.md
+    - TestPartner: RemoteLaunch_User_Guide\TestPartner.md
+    - BadBoy: RemoteLaunch_User_Guide\BadBoy.md
+    - JMeter: RemoteLaunch_User_Guide\JMeter.md
+    - Ranorex: RemoteLaunch_User_Guide\Ranorex.md
+    - Rational Functional Tester: RemoteLaunch_User_Guide\Rational Functional Tester.md
+    - TestingAnywhere: RemoteLaunch_User_Guide\TestingAnywhere.md
+    - Worksoft Certify: RemoteLaunch_User_Guide\Worksoft Certify.md
+    - ZAPTEST: RemoteLaunch_User_Guide\ZAPTEST.md
+- Integrations:
   - Testing:
     - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
     - JUnit: Unit_Testing_Integration\Integrating with JUnit.md
@@ -158,28 +184,3 @@ nav:
     - Jama Contour: Requirements_Management_Integration\Importing From Jama Contour.md
     - VersionOne: Requirements_Management_Integration\Importing From VersionOne.md
     - DOORS: Requirements_Management_Integration\Importing From DOORS.md
-  - TaraVault:
-    - Activating: TaraVault_User_Manual\Activating TaraVault.md
-    - Provisioning Projects & Users: TaraVault_User_Manual\Provisioning Projects & Users.md
-    - Using Git: TaraVault_User_Manual\Using Git.md
-    - Using Subversion: TaraVault_User_Manual\Using Subversion.md
-  - RemoteLaunch:
-    - Guide: RemoteLaunch_User_Guide\RemoteLaunch Guide.md
-    - HP UFT/QTP: RemoteLaunch_User_Guide\HP UFT  QTP.md
-    - SmarteScript: RemoteLaunch_User_Guide\SmarteScript.md
-    - TestComplete: RemoteLaunch_User_Guide\TestComplete.md
-    - Selenium: RemoteLaunch_User_Guide\Selenium.md
-    - Squish: RemoteLaunch_User_Guide\Squish.md
-    - Command-Line: RemoteLaunch_User_Guide\Command-Line.md
-    - LoadRunner: RemoteLaunch_User_Guide\LoadRunner.md
-    - SoapUI: RemoteLaunch_User_Guide\SoapUI.md
-    - FitNesse: RemoteLaunch_User_Guide\FitNesse.md
-    - NeoLoad: RemoteLaunch_User_Guide\NeoLoad.md
-    - TestPartner: RemoteLaunch_User_Guide\TestPartner.md
-    - BadBoy: RemoteLaunch_User_Guide\BadBoy.md
-    - JMeter: RemoteLaunch_User_Guide\JMeter.md
-    - Ranorex: RemoteLaunch_User_Guide\Ranorex.md
-    - Rational Functional Tester: RemoteLaunch_User_Guide\Rational Functional Tester.md
-    - TestingAnywhere: RemoteLaunch_User_Guide\TestingAnywhere.md
-    - Worksoft Certify: RemoteLaunch_User_Guide\Worksoft Certify.md
-    - ZAPTEST: RemoteLaunch_User_Guide\ZAPTEST.md

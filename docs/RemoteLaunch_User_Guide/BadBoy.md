@@ -19,7 +19,7 @@ and version 2.1 of Badboy.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the BadboyAutomationEngine.zip
@@ -37,7 +37,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/BadBoy_101.png)
 
 
@@ -102,41 +102,41 @@ tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the Badboy Automation Engine that you
+- **Automation Engine** - Choose the Badboy Automation Engine that you
 created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 Badboy only supports referencing Badboy test script files and not
 physically uploading the test scripts into SpiraTeam.
 
-**Filename** -- This needs to be the full path to the Badboy test
+- **Filename** -- This needs to be the full path to the Badboy test
 script. To make this easier across different machines, you can use
 several constants for standard Windows locations (see example in
 screenshot):
 
-\[MyDocuments\] -- The user's "My Documents" folder. The user indicated
+    - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated
 is the user that ran RemoteLaunch.
 
-\[CommonDocuments\] -- The Public Document's folder.
+    - \[CommonDocuments\] -- The Public Document's folder.
 
-\[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
+    - \[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
 the user that ran RemoteLaunch.
 
-\[ProgramFiles\] -- Translated to the Program Files directory. For
+    - \[ProgramFiles\] -- Translated to the Program Files directory. For
 64-bit machines, it's the 64-bit directory.
 
-\[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
+    - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the Badboy Engine since it
+- **Test Script** -- *This is not used with the Badboy Engine since it
 only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -233,20 +233,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/BadBoy_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/BadBoy_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/BadBoy_27.png)
 
 
@@ -254,7 +254,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/BadBoy_19.png)
 
 
@@ -317,41 +317,39 @@ Name indicates the name of the test inside Badboy and the execution
 status corresponds the matching status inside Badboy as illustrated
 below:
 
-**Badboy Status**   **SpiraTeam Status**
-Succeeded           Passed
-Failure             Failed
-Warning             Caution
-Assertion           Failed
-Timeout             Blocked
+| **Badboy Status**  | **SpiraTeam Status** |
+| ------------- | --------------- |
+| Succeeded          | Passed |
+| Failure            | Failed |
+| Warning            | Caution |
+| Assertion          | Failed |
+| Timeout            | Blocked |
 
-In addition, the detailed test report from Badboy is available in the
-large text-box below. It will contain messages such as:
+In addition, the detailed test report from Badboy is below. It will contain messages such as:
 
-+-----------------------------------------------------------------------+
-| Suite: Test Suite 1                                                   |
-|                                                                       |
-| ==============================================                        |
-|                                                                       |
-| Test: Test 3                                                          |
-|                                                                       |
-| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\ |
-| -\-\-\-\-\-\-\-\-\-\--                                                |
-|                                                                       |
-| 12 played, 12 succeeded, 0 failures, 0 assertions, 0 warnings, 0      |
-| timeouts\                                                             |
-| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\ |
-| -\-\-\-\-\-\-\-\-\-\--                                                |
-|                                                                       |
-| Step: Step 2                                                          |
-|                                                                       |
-| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\ |
-| -\-\-\-\-\-\-\-\-\-\--                                                |
-|                                                                       |
-| 12 played, 12 succeeded, 0 failures, 0 assertions, 0 warnings, 0      |
-| timeouts\                                                             |
-| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\ |
-| -\-\-\-\-\-\-\-\-\-\--                                                |
-+-----------------------------------------------------------------------+
+> Suite: Test Suite 1                                                   
+>                                                                       
+> ==============================================                        
+>                                                                       
+> Test: Test 3                                                          
+>                                                                       
+> \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- 
+> -\-\-\-\-\-\-\-\-\-\--                                                
+>                                                                       
+> 12 played, 12 succeeded, 0 failures, 0 assertions, 0 warnings, 0      
+> timeouts                                                          
+> \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- 
+> -\-\-\-\-\-\-\-\-\-\--                                                
+>                                                                       
+> Step: Step 2                                                          
+>                                                                       
+> \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- 
+> -\-\-\-\-\-\-\-\-\-\--                                                
+>                                                                       
+> 12 played, 12 succeeded, 0 failures, 0 assertions, 0 warnings, 0      
+> timeouts                                                        
+> \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+> -\-\-\-\-\-\-\-\-\-\--                                                
 
 Congratulations... You are now able to run Badboy automated functional
 tests and have the results be recorded within SpiraTest / SpiraTeam.

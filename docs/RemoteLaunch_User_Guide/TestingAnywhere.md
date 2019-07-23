@@ -21,7 +21,7 @@ and RemoteLaunch.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the TestingAnywhereEngine.zip
@@ -61,9 +61,8 @@ should simply be **TestingAnywhere**.
 will be taken back to the Test Automation list page, with
 TestingAnywhere listed as an available automation engine.
 
-> ![](img/TestingAnywhere_129.png)
-
-> 
+ ![](img/TestingAnywhere_129.png)
+ 
 
 
 ### Advanced Settings
@@ -76,9 +75,8 @@ RemoteLaunch configuration page.
 The TestingAnywhere engine adds its own tab to this page which allows
 you to configure how TestingAnywhere operates:
 
-> ![](img/TestingAnywhere_130.png)
-
-> 
+ ![](img/TestingAnywhere_130.png)
+ 
 
 
 The following fields can be specified on this screen:
@@ -120,26 +118,26 @@ and scroll down to the "Automation" section:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the TestingAnywhere Automation Engine
+- **Automation Engine** - Choose the TestingAnywhere Automation Engine
 that you created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 TestingAnywhere only supports referencing TestingAnywhere test script
 files and not physically uploading the test scripts into SpiraTeam.
 
-**Filename** -- This needs to consist of the relative location of the
+- **Filename** -- This needs to consist of the relative location of the
 TestingAnywhere test script to the test script root folder.
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the TestingAnywhere Engine
+- **Test Script** -- *This is not used with the TestingAnywhere Engine
 since it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test

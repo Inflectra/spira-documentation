@@ -18,7 +18,7 @@ SpiraTest/Team and has been tested against version 5.0 of NeoLoad.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the NeoLoadEngine.zip file from
@@ -32,7 +32,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/NeoLoad_88.png)
 
 
@@ -115,26 +115,23 @@ marked as blocked and skipped.
 -   **Filename** -- This needs to be the full path to the NeoLoad
 project file (\*.nlp) file followed by the name of the NeoLoad
 scenario. The two components need to be separated by a pipe (\|)
-character.\
-\
-Certain tokens are allowed to be able to specify common locations
+character. <br>Certain tokens are allowed to be able to specify common locations
 across different operating systems. Note that the tokens are
 case-sensitive, and there are no spaces in them. A list of tokens
 are:
+    -   \[MyDocuments\] -- The user's "My Documents" folder. The user
+    indicated is the user that ran RemoteLaunch.
 
--   \[MyDocuments\] -- The user's "My Documents" folder. The user
-indicated is the user that ran RemoteLaunch.
+    -   \[CommonDocuments\] -- The Public Document's folder.
 
--   \[CommonDocuments\] -- The Public Document's folder.
+    -   \[DesktopDirectory\] -- The user's Desktop folder. The user
+    indicated is the user that ran RemoteLaunch.
 
--   \[DesktopDirectory\] -- The user's Desktop folder. The user
-indicated is the user that ran RemoteLaunch.
+    -   \[ProgramFiles\] -- Translated to the Program Files directory.
+    For 64-bit machines, it's the 64-bit directory.
 
--   \[ProgramFiles\] -- Translated to the Program Files directory.
-For 64-bit machines, it's the 64-bit directory.
-
--   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files
-directory.
+    -   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files
+    directory.
 
 -   **Document Type** -- You can choose which document type the
 automated scenario will be categorized under.

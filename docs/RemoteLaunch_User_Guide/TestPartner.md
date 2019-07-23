@@ -20,7 +20,7 @@ and version 6.0 of* TestPartner*.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 Download and extract the TestPartnerAutomationEngine.zip
@@ -35,7 +35,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/TestPartner_96.png)
 
 
@@ -83,33 +83,33 @@ tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the TestPartner Automation Engine that
+- **Automation Engine** - Choose the TestPartner Automation Engine that
 you created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 TestPartner only supports referencing TestPartner test scripts (stored
 in the internal database) and not physically uploading the test scripts
 into SpiraTeam.
 
-**Filename** -- This needs contain the project and test name from
+- **Filename** -- This needs contain the project and test name from
 TestPartner with the appropriate parameter name describing which is the
 project name and which is the test name. The test name can be either a
 test script of a visual test. The syntax is:
 
-**-visualtest <test name\> -project <project name\>** or
+    - **-visualtest <test name\> -project <project name\>** or
 
-**-testscript <script name\> -project <project name\>**
+    - **-testscript <script name\> -project <project name\>**
 
-**Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
+- **Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
 which document type the automated test script will be categorized under.
 
-**Document Folder** -- If using SpiraTeam (not SpiraTest) you can choose
+- **Document Folder** -- If using SpiraTeam (not SpiraTest) you can choose
 which document folder the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the TestPartner Engine since
+- **Test Script** -- *This is not used with the TestPartner Engine since
 it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test

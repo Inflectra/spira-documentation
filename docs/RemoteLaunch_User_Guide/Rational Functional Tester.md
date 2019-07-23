@@ -20,7 +20,7 @@ SpiraTest/Team.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the RFTEngine.zip file from the
@@ -38,7 +38,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/Rational_Functional_Tester_120.png)
 
 
@@ -63,9 +63,8 @@ always be **RFTAutomationEngine**.
 will be taken back to the Test Automation list page, with RFT listed
 as an available automation engine.
 
-> ![](img/Rational_Functional_Tester_121.png)
+![](img/Rational_Functional_Tester_121.png)
 
-> 
 
 
 ### Advanced Settings
@@ -119,33 +118,33 @@ tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the RFT Automation Engine that you
+- **Automation Engine** - Choose the RFT Automation Engine that you
 created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 RFT only supports referencing RFT test script files and not physically
 uploading the test scripts into SpiraTeam.
 
-**Filename** -- This needs to consist of the following three components
+- **Filename** -- This needs to consist of the following three components
 separated by a pipe (\|) character (see the screenshot for an example):
 
-The name of the RFT project that the test is mapped to
+    - The name of the RFT project that the test is mapped to
 
-The name of the RFT script in the project that the test is mapped to
+    - The name of the RFT script in the project that the test is mapped to
 
-Either "java" or "net" depending on whether you have a Java or .NET test
+    - Either "java" or "net" depending on whether you have a Java or .NET test
 script
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the RFT Engine since it only
+- **Test Script** -- *This is not used with the RFT Engine since it only
 supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -307,45 +306,44 @@ from RFT together with any messages or other information. The Test Name
 indicates the name of the test inside RFT and the execution status
 corresponds the matching status inside RFT as illustrated below:
 
-**RFT Status**   **SpiraTeam Status**
-PASS             Passed
-FAIL             Failed
-WARNING          Caution
+| **RFT Status**  | **SpiraTeam Status** |
+| ------------ | ----------- |
+| PASS            | Passed |
+| FAIL            | Failed |
+| WARNING         | Caution |
 
 In addition, the detailed test report from RFT is available in the large
 text-box below. It will contain messages such as:
 
-+-----------------------------------------------------------------------+
-| 07-Nov-2011 03:00:05.004 PM: Script Start - INFORMATION - Script      |
-| start \[Script1\]                                                     |
-|                                                                       |
-| 07-Nov-2011 03:00:05.035 PM: Simplified Script Group - INFORMATION -  |
-| firefox.exe: self improvement - QuickStart Tutorials for Rational     |
-| Functional Tester (RFT) - Stack Overflow - Mozilla Firefox            |
-|                                                                       |
-| 07-Nov-2011 03:00:05.035 PM: Timer Start - INFORMATION - Start timer: |
-| firefoxexeselfimprovementQuickSta\_1                                  |
-|                                                                       |
-| 07-Nov-2011 03:00:25.535 PM: General - WARNING - Object Recognition   |
-| is weak (above the warning threshold)                                 |
-|                                                                       |
-| 07-Nov-2011 03:00:49.488 PM: General - FAIL - Script1.testMain had an |
-| unhandled exception.                                                  |
-|                                                                       |
-| 07-Nov-2011 03:00:49.488 PM: Script End - FAIL - Script end           |
-| \[Script1\]                                                           |
-|                                                                       |
-| Exception occurred during playback of script \[Script1\]              |
-| \[CRFCN0019E: RationalTestScriptException on line 49 of script        |
-| Script1 - com.rational.test.ft.ObjectNotFoundException: CRFCN0661W:   |
-| The recognition score of the found object does not qualify the object |
-| as a match.                                                           |
-|                                                                       |
-| Looking for \[GuiSubitemTestObject(Name: goToAWebSitetext, Map:       |
-| GoToAWebSite)\], best failing candidate score was \[22500\] with best |
-| failing description \[{.class=.Text, .name=Go to a Web Site,          |
-| .classIndex=0}\].\].                                                  |
-+-----------------------------------------------------------------------+
+> 07-Nov-2011 03:00:05.004 PM: Script Start - INFORMATION - Script      
+> start \[Script1\]                                                     
+>                                                                       
+> 07-Nov-2011 03:00:05.035 PM: Simplified Script Group - INFORMATION -  
+> firefox.exe: self improvement - QuickStart Tutorials for Rational     
+> Functional Tester (RFT) - Stack Overflow - Mozilla Firefox            
+>                                                                       
+> 07-Nov-2011 03:00:05.035 PM: Timer Start - INFORMATION - Start timer: 
+> firefoxexeselfimprovementQuickSta\_1                                  
+>                                                                       
+> 07-Nov-2011 03:00:25.535 PM: General - WARNING - Object Recognition   
+> is weak (above the warning threshold)                                 
+>                                                                       
+> 07-Nov-2011 03:00:49.488 PM: General - FAIL - Script1.testMain had an 
+> unhandled exception.                                                  
+>                                                                       
+> 07-Nov-2011 03:00:49.488 PM: Script End - FAIL - Script end           
+> \[Script1\]                                                           
+>                                                                       
+> Exception occurred during playback of script \[Script1\]              
+> \[CRFCN0019E: RationalTestScriptException on line 49 of script        
+> Script1 - com.rational.test.ft.ObjectNotFoundException: CRFCN0661W:   
+> The recognition score of the found object does not qualify the object 
+> as a match.                                                           
+>                                                                       
+> Looking for \[GuiSubitemTestObject(Name: goToAWebSitetext, Map:       
+> GoToAWebSite)\], best failing candidate score was \[22500\] with best 
+> failing description \[{.class=.Text, .name=Go to a Web Site,          
+> .classIndex=0}\].\].                                                  
 
 Congratulations... You are now able to run RFT automated functional
 tests and have the results be recorded within SpiraTest / SpiraTeam.

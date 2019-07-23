@@ -19,7 +19,7 @@ and version 2.5 of JMeter.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the JMeterEngine.zip file from
@@ -37,7 +37,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/JMeter_106.png)
 
 
@@ -106,53 +106,53 @@ tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the JMeter Automation Engine that you
+- **Automation Engine** - Choose the JMeter Automation Engine that you
 created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 JMeter only supports referencing JMeter test script files and not
 physically uploading the test scripts into SpiraTeam.
 
-**Filename** -- This consists of the following elements:
+- **Filename** -- This consists of the following elements:
 
-The full path to the JMeter test script. To make this easier across
+    - The full path to the JMeter test script. To make this easier across
 different machines, you can use several constants for standard Windows
 locations (see example in screenshot):
 
-\[MyDocuments\] -- The user's "My Documents" folder. The user indicated
+        - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated
 is the user that ran RemoteLaunch.
 
-\[CommonDocuments\] -- The Public Document's folder.
+        - \[CommonDocuments\] -- The Public Document's folder.
 
-\[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
+        - \[DesktopDirectory\] -- The user's Desktop folder. The user indicated is
 the user that ran RemoteLaunch.
 
-\[ProgramFiles\] -- Translated to the Program Files directory. For
+        - \[ProgramFiles\] -- Translated to the Program Files directory. For
 64-bit machines, it's the 64-bit directory.
 
-\[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
+        - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-Optionally you can include JMeter command-line arguments by separating
+    - Optionally you can include JMeter command-line arguments by separating
 them with a pipe (\|) character.
 
-Examples of Filenames you can enter in SpiraTeam include:
+    - Examples of Filenames you can enter in SpiraTeam include:
 
-\[MyDocuments\]JMeter\\JMeter-SampleScript.jmx
+        - \[MyDocuments\]JMeter\\JMeter-SampleScript.jmx
 
-\[MyDocuments\]JMeter\\JMeter-SampleScript.jmx\|-P 81
+        - \[MyDocuments\]JMeter\\JMeter-SampleScript.jmx\|-P 81
 
-\[MyDocuments\]JMeter\\JMeter-SampleScript.jmx\|-P 81 -H 192.168.117.25
+        - \[MyDocuments\]JMeter\\JMeter-SampleScript.jmx\|-P 81 -H 192.168.117.25
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the JMeter Engine since it
+- **Test Script** -- *This is not used with the JMeter Engine since it
 only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -248,20 +248,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/JMeter_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/JMeter_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/JMeter_27.png)
 
 
@@ -269,7 +269,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/JMeter_19.png)
 
 
@@ -327,24 +327,17 @@ from JMeter together with any messages or other information. The Test
 Name indicates the name of the test inside JMeter and the execution
 status corresponds the rules described above.
 
-In addition, the detailed test report from JMeter is available in the
-large text-box below. It will contain messages such as:
+In addition, the detailed test report from JMeter is below. It will contain messages such as:
 
-+-----------------------------------------------------------------------+
-| Response Assertion (http://www.inflectra.com/): failure=true,         |
-| error=false, message='Test failed: text expected to contain          |
-| /(?i)Purchase Our Products Online/'                                  |
-|                                                                       |
-| Response Assertion (http://www.inflectra.com/SpiraTest/Default.aspx): |
-| failure=true, error=false, message='Test failed: text expected to    |
-| contain /(?i)Purchase Our Products Online/'                          |
-|                                                                       |
-| Response Assertion (http://www.inflectra.com/Purchase/Default.aspx):  |
-| failure=false, error=false, message=''                              |
-|                                                                       |
-| Response Assertion (https://www.inflectra.com/Purchase/Default.aspx): |
-| failure=false, error=false, message=''                              |
-+-----------------------------------------------------------------------+
+> Response Assertion (http://www.inflectra.com/): failure=true, error=false, 
+> message='Test failed: text expected to contain /(?i)Purchase Our Products Online/'
+> Response Assertion (http://www.inflectra.com/SpiraTest/Default.aspx): failure=true, 
+> error=false, message='Test failed: text expected to contain /(?i)Purchase Our Products Online/'
+> Response Assertion (http://www.inflectra.com/Purchase/Default.aspx): failure=false, 
+> error=false, message=''
+> Response Assertion (https://www.inflectra.com/Purchase/Default.aspx): failure=false, 
+> error=false, message=''
+
 
 Congratulations... You are now able to run JMeter automated functional
 tests and have the results be recorded within SpiraTest / SpiraTeam.

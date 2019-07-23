@@ -22,7 +22,7 @@ and version 3.0 of Ranorex.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the RanorexAutomationEngine.zip
@@ -41,7 +41,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/Ranorex_111.png)
 
 
@@ -64,8 +64,8 @@ always be **RanorexEngine**.
 
 -   Once you have finished, click the "Insert & Close" button and you
 will be taken back to the Test Automation list page, with Ranorex
-listed as an available automation engine:\
-\
+listed as an available automation engine:
+
 ![](img/Ranorex_112.png)
 
 
@@ -260,20 +260,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/Ranorex_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/Ranorex_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/Ranorex_27.png)
 
 
@@ -281,7 +281,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/Ranorex_19.png)
 
 

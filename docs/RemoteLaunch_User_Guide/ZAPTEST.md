@@ -19,7 +19,7 @@ version 11.0 of ZAPTEST.*
 
 This section assumes that you already have a working installation of
 SpiraTeam and have installed RemoteLaunch on the various test automation
-hosts following the instructions in Section 1 (above). Once those
+hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/). Once those
 prerequisites are in place, please follow these steps:
 
 -   Download and extract the ZapTestEngine.zip file from
@@ -35,7 +35,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/ZAPTEST_148.png)
 
 
@@ -58,8 +58,8 @@ always be **ZapTest**.
 
 -   Once you have finished, click the "Insert & Close" button and you
 will be taken back to the Test Automation list page, with ZAPTEST
-listed as an available automation engine:\
-\
+listed as an available automation engine:
+
 ![](img/ZAPTEST_149.png)
 
 
@@ -113,26 +113,26 @@ section of the main "Overview" tab:
 
 You need to enter the following fields:
 
-**Automation Engine** - Choose the **ZapTest** Automation Engine that
+- **Automation Engine** - Choose the **ZapTest** Automation Engine that
 you created in the previous section from the drop-down list.
 
-**Script Type** -- This should be set to Linked as the integration with
+- **Script Type** -- This should be set to Linked as the integration with
 ZAPTEST only supports referencing ZAPTEST script files and not
 physically uploading the tests into SpiraTeam.
 
-**Filename** -- This needs to contain the full path to a location on the
+- **Filename** -- This needs to contain the full path to a location on the
 computer running ZAPTEST where the test script can be found.
 
-**Document Type** -- This allows you to choose which document type the
+- **Document Type** -- This allows you to choose which document type the
 automated test script will be categorized under.
 
-**Document Folder** --This allows you to choose which document folder
+- **Document Folder** --This allows you to choose which document folder
 the automated test script will be stored in.
 
-**Version** -- The version of the test script (1.0 is used if no value
+- **Version** -- The version of the test script (1.0 is used if no value
 specified)
 
-**Test Script** -- *This is not used with the ZapTest Engine since it
+- **Test Script** -- *This is not used with the ZapTest Engine since it
 only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test
@@ -279,11 +279,12 @@ will be detailed steps displayed that match the ZAPTEST execution steps:
 Each of the SpiraTeam execution status values corresponds the matching
 status inside Worksoft Certify as illustrated below:
 
-**ZAPTEST Status**   **SpiraTeam Status**
-Passed               Passed
-Failed               Failed
-Warning              Caution
-Information          N/A
+| **ZAPTEST Status** |  **SpiraTeam Status** |
+| --------- | -------- |
+| Passed             |  Passed |
+| Failed             |  Failed |
+| Warning            |  Caution |
+| Information        |  N/A |
 
 In addition, the detailed test report from ZAPTEST is available in the
 large text-box below. It will contain messages such as:
@@ -296,52 +297,3 @@ large text-box below. It will contain messages such as:
 Congratulations... You are now able to run ZAPTEST automated functional
 tests and have the results be recorded within SpiraTest, SpiraTeam, or
 SpiraPlan.
-
-Legal Notices
-
-This publication is provided as is without warranty of any kind, either
-express or implied, including, but not limited to, the implied
-warranties of merchantability, fitness for a particular purpose, or
-non-infringement.
-
-This publication could include technical inaccuracies or typographical
-errors. Changes are periodically added to the information contained
-herein; these changes will be incorporated in new editions of the
-publication. Inflectra Corporation may make improvements and/or changes
-in the product(s) and/or program(s) and/or service(s) described in this
-publication at any time.
-
-The sections in this guide that discuss internet web security are
-provided as suggestions and guidelines. Internet security is constantly
-evolving field, and our suggestions are no substitute for an up-to-date
-understanding of the vulnerabilities inherent in deploying internet or
-web applications, and Inflectra cannot be held liable for any losses due
-to breaches of security, compromise of data or other cyber-attacks that
-may result from following our recommendations.
-
-SpiraTest®, SpiraPlan®, SpiraTeam®, RemoteLaunch®, RemoteLaunchX™ and
-Inflectra® are either trademarks or registered trademarks of Inflectra
-Corporation in the United States of America and other countries.
-Microsoft®, Windows®, Explorer® and Microsoft Project® are registered
-trademarks of Microsoft Corporation. QuickTest Pro® is a registered
-trademark of Hewlett-Packard Development Company, L.P. All other
-trademarks and product names are property of their respective holders.
-
-Please send comments and questions to:
-
-> Technical Publications
->
-> Inflectra Corporation
->
-> 8121 Georgia Ave, Suite 504
->
-> Silver Spring, MD 20910-4957
->
-> U.S.A.
->
-> [*support@inflectra.com*](mailto:support@inflectra.com)
-
-[^1]: *Selenium RC Home Page*. OpenQA. 2010
-<http://selenium-rc.openqa.org\>
-
-[^2]: http://en.wikipedia.org/wiki/SoapUI

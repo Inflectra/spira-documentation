@@ -15,7 +15,7 @@ previous released versions.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in Section 1 (above).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the LoadRunner11Engine.zip file
@@ -29,7 +29,7 @@ main Administration page and click on the "Test Automation" link
 under **Integration**.
 
 -   Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:\
+details page. The fields required are as follows:
 ![](img/LoadRunner_66.png)
 
 
@@ -85,19 +85,19 @@ specify common locations across different operating systems. Note
 that the tokens are case-sensitive, and there are no spaces in them.
 A list of tokens are:
 
--   \[MyDocuments\] -- The user's "My Documents" folder. The user
-indicated is the user that ran RemoteLaunch.
+    -   \[MyDocuments\] -- The user's "My Documents" folder. The user
+    indicated is the user that ran RemoteLaunch.
 
--   \[CommonDocuments\] -- The Public Document's folder.
+    -   \[CommonDocuments\] -- The Public Document's folder.
 
--   \[DesktopDirectory\] -- The user's Desktop folder. The user
-indicated is the user that ran RemoteLaunch.
+    -   \[DesktopDirectory\] -- The user's Desktop folder. The user
+    indicated is the user that ran RemoteLaunch.
 
--   \[ProgramFiles\] -- Translated to the Program Files directory.
-For 64-bit machines, it's the 64-bit directory.
+    -   \[ProgramFiles\] -- Translated to the Program Files directory.
+    For 64-bit machines, it's the 64-bit directory.
 
--   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files
-directory.
+    -   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files
+    directory.
 
 -   **Document Type** -- If using SpiraTeam (not SpiraTest) you can
 choose which document type the automated scenario will be
@@ -203,20 +203,20 @@ If you have parameterized test cases inside the automated test set you
 can set their values in three different ways:
 
 -   **Test Set Parameter Values** -- this lets you set the same value of
-a parameter for all the test cases in the test set:\
+a parameter for all the test cases in the test set:
 ![](img/LoadRunner_17.png)
 
 
 
 
 -   **Test Case Parameter Values** -- this lets you set a specific value
-for a parameter for a particular test case in the test set:\
+for a parameter for a particular test case in the test set:
 ![](img/LoadRunner_18.png)
 
 
-\
+
 You set these values, by right-clicking on a row and choosing "Edit
-Parameters":\
+Parameters":
 ![](img/LoadRunner_27.png)
 
 
@@ -224,7 +224,7 @@ Parameters":\
 
 -   **Test Configurations** -- this lets you create a data grid of
 possible test parameters and execute the test set multiple times,
-once for each unique combination:\
+once for each unique combination:
 ![](img/LoadRunner_19.png)
 
 
