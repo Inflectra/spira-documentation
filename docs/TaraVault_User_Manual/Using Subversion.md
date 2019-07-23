@@ -55,7 +55,8 @@ we get started in the next section.
 ## Getting Started with Subversion
 
 This section assumes that you have already provisioned at least one
-Subversion project in TaraVault following the steps in section 2 and 3.
+Subversion project in TaraVault following the steps in [Activating TaraVault](../Activating%20TaraVault/) and 
+[Provisioning Projects & Users](../Provisioning%20Projects%20&%20Users/).
 So you should now have a TaraVault user/password and a Subversion
 project with a connection URL:
 

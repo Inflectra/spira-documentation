@@ -24,8 +24,8 @@ alphanumeric only.
 
 -   **Project Type** -- this is the type of SCM repository you wish to
 use. Currently the choices are between Subversion and Git. We
-discuss the differences between Subversion (also known as SVN) and
-Git in sections 4 and 5 respectively.
+discuss the differences between [Subversion](../Using%20Subversion/) (also known as SVN) and
+[Git](../Using%20Git/) in the next two pages.
 Note: once you choose the repository type for a project it cannot be
 changed without deleting the entire repository, so make sure you
 understand the differences between the two technologies beforehand.
@@ -41,8 +41,7 @@ your choice, click 'Activate' to enable this project for TaraVault:
 
 The system will then populate the 'Client Connection' section with the
 URL that you need to use to connect to this TaraVault project from your
-Subversion or Git client (this is described in more detail in sections 4
-and 5 respectively). In addition, it will display a list of users that
+Subversion or Git client (this is described in more detail in the following pages). In addition, it will display a list of users that
 are enabled for this project.
 
 ## Managing Users

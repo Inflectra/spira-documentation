@@ -63,23 +63,26 @@ nav:
 - Spira Admin Guide:
   - Installing Spira: Spira_Administration_Guide\Installing SpiraPlan.md
   - System Administration: Spira_Administration_Guide\System Administration.md
-  - 'System: Workspaces': Spira_Administration_Guide\System Workspaces.md
-  - 'System: Users': Spira_Administration_Guide\System Users.md
-  - System: Spira_Administration_Guide\System.md
-  - 'System: Integration': Spira_Administration_Guide\System Integration.md
-  - 'System Reporting': Spira_Administration_Guide\System Reporting.md
-  - 'Product: General Settings': Spira_Administration_Guide\Product General Settings.md
-  - 'Product: Users': Spira_Administration_Guide\Product Users.md
-  - 'Product: Planning': Spira_Administration_Guide\Product Planning.md
-  - 'Template: Requirements': Spira_Administration_Guide\Template Requirements.md
-  - 'Template: Releases': Spira_Administration_Guide\Template Releases.md
-  - 'Template: Documents': Spira_Administration_Guide\Template Documents.md
-  - 'Template: Test Cases': Spira_Administration_Guide\Template Test Cases.md
-  - 'Template: Incidents': Spira_Administration_Guide\Template Incidents.md
-  - 'Template: Tasks': Spira_Administration_Guide\Template Tasks.md
-  - 'Template: Risks': Spira_Administration_Guide\Template Risks.md
-  - 'Template: Custom Properties': Spira_Administration_Guide\Template Custom Properties.md
-  - 'Template: Notifications': Spira_Administration_Guide\Template Notifications.md
+  - System:
+    - Workspaces: Spira_Administration_Guide\System Workspaces.md
+    - Users: Spira_Administration_Guide\System Users.md
+    - System: Spira_Administration_Guide\System.md
+    - Integration: Spira_Administration_Guide\System Integration.md
+    - Reporting: Spira_Administration_Guide\System Reporting.md
+  - Product: 
+    - General Settings: Spira_Administration_Guide\Product General Settings.md
+    - Users: Spira_Administration_Guide\Product Users.md
+    - Planning: Spira_Administration_Guide\Product Planning.md
+  - Template:
+    - Requirements: Spira_Administration_Guide\Template Requirements.md
+    - Releases: Spira_Administration_Guide\Template Releases.md
+    - Documents: Spira_Administration_Guide\Template Documents.md
+    - Test Cases: Spira_Administration_Guide\Template Test Cases.md
+    - Incidents: Spira_Administration_Guide\Template Incidents.md
+    - Tasks: Spira_Administration_Guide\Template Tasks.md
+    - Risks: Spira_Administration_Guide\Template Risks.md
+    - Custom Properties: Spira_Administration_Guide\Template Custom Properties.md
+    - Notifications: Spira_Administration_Guide\Template Notifications.md
 - AddOns and Integrations:
   - Testing:
     - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
