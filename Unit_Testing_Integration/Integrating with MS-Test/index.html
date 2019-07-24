@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with MS-Test/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>MS-Test - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Functionality Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/User Product Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Requirements Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Test Case Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Incident Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Release Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Task Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Resource Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Document Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Reports Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Source Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Planning Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Mobile Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Program Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Risks Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Appendix 1 Keyboard Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing A Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Build the Test Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/Installing SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/System Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product General Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Test Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Custom Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Activating TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Provisioning Projects & Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/RemoteLaunch Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/HP UFT  QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Rational Functional Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Worksoft Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Integrating with NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating with JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating with TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../Integrating with Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../Integrating with PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating with PyTest/">PyTest</a>
+</li>
+            
+<li class="active">
+    <a href="./">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../Integrating with Ruby TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../Integrating with Perl TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../Integrating with PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating UnitJS & NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Jetbrains IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Eclipse  Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2005 - 2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Setting up Data Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 3  4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with IBM RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with Axosoft 14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with OnTime 11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email_Integration/Installing the Email Integration Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Configuring the Email Integration Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Using the Email Integration Service with SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help_Desk_Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help_Desk_Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel (Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Google Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Project Backup and Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from MS Test Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build_Server_Integration/Jenkins  Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/JetBrains TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Microsoft Azure DevOps Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Atlassian Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From Jama Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Integrating with PyTest/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Integrating with Ruby TestUnit/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#integrating-with-ms-test">Integrating with MS-Test</a></li>
+        <li class="second-level"><a href="#installing-the-ms-test-extension">Installing the MS-Test Extension</a></li>
+        
+        <li class="second-level"><a href="#using-ms-test-with-spiratest">Using MS-Test with SpiraTest</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="integrating-with-ms-test">Integrating with MS-Test</h1>
+<p>This section describes how to use SpiraTest in conjunction with the unit
+testing features provided by Microsoft Visual Studio Team System (MS
+VSTS) Test -- commonly known as MS-Test.</p>
+<h2 id="installing-the-ms-test-extension">Installing the MS-Test Extension</h2>
+<p>This section outlines how to install the SpiraTest extension for
+Microsoft Visual Studio Team System Test (MS-Test) onto a workstation so
+that you can then run automated MS-Test tests against a .NET application
+and have the results be recorded as test runs inside SpiraTest. It
+assumes that you already have a working installation of SpiraTest v2.3
+or later. If you have an earlier version of SpiraTest you will need to
+upgrade to at least v2.3 before trying to use this add-in. You will also
+need to have either Visual Studio Team System 2005 or later or Visual
+Studio 2008 Professional or later, since earlier versions do not come
+with the test automation features.</p>
+<p>To obtain the latest version of the SpiraTest extension, you can either
+access the administration section of SpiraTest, and click on the Add-Ins
+&amp; Downloads link or simply visit the Inflectra corporate downloads
+webpage (<a href="http://www.inflectra.com/Products/Downloads.aspx">http://www.inflectra.com/Products/Downloads.aspx</a>) and then
+download the compressed archive (.zip) that contains the extension and
+associated sample files.</p>
+<p>The MS-Test extension is provided as a compressed zipfile that includes
+both the binaries (packaged as a .NET dll assembly) and the source code
+(stored in a Visual Studio project folder structure). The rest of this
+section will assume that you are using the pre-compiled assembly.</p>
+<p>Once you have downloaded the Zip archive, you need to uncompress it into
+a folder of your choice on your local system. Assuming that you
+uncompressed it to the C:\Program Files\SpiraTest\MSTest
+Extension folder, you should have the following folder
+structure created:</p>
+<p>C:\Program Files\SpiraTest\MSTest Extension</p>
+<p>C:\Program Files\SpiraTest\MSTest Extension\SampleMSTest</p>
+<p>C:\Program Files\SpiraTest\MSTest Extension\SampleMSTest\Properties</p>
+<p>C:\Program Files\SpiraTest\MSTest Extension\SpiraTestMSExtension</p>
+<p>C:\Program Files\SpiraTest\MSTest
+Extension\SpiraTestMSExtension\Properties</p>
+<p>C:\Program Files\SpiraTest\MSTest
+Extension\SpiraTestMSExtension\Web References</p>
+<p>The pre-built assembly SpiraTestMSTestExtension.dll is
+located in the root folder, the source-code for the extension can be
+found in the "SpiraTestMSExtension" subfolder, and the sample test
+fixture can be found in the "SampleMSTest" subfolder.</p>
+<p>Now to use the extension within your test cases, you need to first make
+sure that the SpiraTestMSTestExtension.dll assembly is added to the
+project references. Once you have completed this step, you are now ready
+to begin using your MS-Test test fixtures with SpiraTest.</p>
+<h2 id="using-ms-test-with-spiratest">Using MS-Test with SpiraTest</h2>
+<p>The typical code structure for a Visual Studio Team System Test
+(MS-Test) test fixture coded in C# is as follows:</p>
+<pre><code class="C#"> using System;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
+{
+    /// &lt;summary&gt;
+    /// Sample test fixture that tests the SpiraTest integration
+    /// Written by Paul Tissue. Packed by Inflectra Corporation
+    /// &lt;/summary&gt;
+    [
+    TestClass
+    ]
+    public class SpiraTestCaseAttributeTest
+    {
+        /// &lt;summary&gt;
+        /// Test fixture state
+        /// &lt;/summary&gt;
+        protected static int testFixtureState = 1;
+
+        /// &lt;summary&gt;
+        /// Constructor method
+        /// &lt;/summary&gt;
+        public SpiraTestCaseAttributeTest()
+        {
+            //Delegates to base
+
+            //Set the state to 2
+            testFixtureState = 2;
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that asserts a failure and overrides the default configuration
+        /// &lt;/summary&gt;
+        [
+        TestMethod
+        ]
+        public void SampleFail()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that succeeds - uses the default configuration
+        /// &lt;/summary&gt;
+        [
+        TestMethod
+        ]
+        public void SamplePass()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Successful assertion
+            Assert.AreEqual(1, 1, &quot;Passed as Expected&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that does not log to SpiraTest
+        /// &lt;/summary&gt;
+        [
+        TestMethod,
+        ExpectedException(typeof(AssertFailedException))
+        ]
+        public void SampleIgnore()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>The .NET class is marked as a MS-Test unit test fixture by applying the
+[TestClass] attribute to the class as a whole, and the [TestMethod]
+attribute to each of the test assertion methods individually -- shown
+above. When you open up the class in Visual Studio and click Tests >
+Run > Run All Tests in Solution it loads all the test
+classes marked with [TestClass] and executes all the methods marked
+with [TestMethod] in turn.</p>
+<p>Each of the Assert statements is used to test the state of the
+application after executing some sample code that calls the
+functionality being tested. If the condition in the assertion is true,
+then execution of the test continues, if it is false, then a failure is
+logged and MS-Test moves on to the next test method.</p>
+<p>So, to use SpiraTest with MS-Test, each of the test cases written for
+execution by MS-Test needs to have a corresponding test case in
+SpiraTest. These can be either existing test cases that have manual test
+steps or they can be new test cases designed specifically for automated
+testing and therefore have no defined test steps. In either case, the
+changes that need to be made to the MS-Test test fixture for SpiraTest
+to record the MS-Test test run are illustrated below:</p>
+<pre><code class="C#">using System;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
+{
+    /// &lt;summary&gt;
+    /// Sample test fixture that tests the SpiraTest integration
+    /// Written by Paul Tissue. Packed by Inflectra Corporation
+    /// &lt;/summary&gt;
+    [
+    TestClass
+    ]
+    public class SpiraTestCaseAttributeTest : MSTestExtensionsTestFixture
+    {
+        /// &lt;summary&gt;
+        /// Test fixture state
+        /// &lt;/summary&gt;
+        protected static int testFixtureState = 1;
+
+        /// &lt;summary&gt;
+        /// Constructor method
+        /// &lt;/summary&gt;
+        public SpiraTestCaseAttributeTest()
+        {
+            //Delegates to base
+
+            //Set the state to 2
+            testFixtureState = 2;
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that asserts a failure and overrides the default configuration
+        /// &lt;/summary&gt;
+        [
+        TestMethod,
+        SpiraTestCase(5),
+        SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2)
+        ]
+        public void SampleFail()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that succeeds - uses the default configuration
+        /// &lt;/summary&gt;
+        [
+        TestMethod,
+        SpiraTestCase(6)
+        ]
+        public void SamplePass()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Successful assertion
+            Assert.AreEqual(1, 1, &quot;Passed as Expected&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Sample test that does not log to SpiraTest
+        /// &lt;/summary&gt;
+        [
+        TestMethod,
+        ExpectedException(typeof(AssertFailedException))
+        ]
+        public void SampleIgnore()
+        {
+            //Verify the state
+            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+
+            //Failure Assertion
+            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>And the following settings need to be added to the .config file
+associated with the test fixture assembly:</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;configuration&gt;
+  &lt;configSections&gt;
+    &lt;sectionGroup name=&quot;applicationSettings&quot; type=&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; &gt;
+      &lt;section name=&quot;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&quot; type=&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; requirePermission=&quot;false&quot; /&gt;
+    &lt;/sectionGroup&gt;
+  &lt;/configSections&gt;
+  &lt;applicationSettings&gt;
+    &lt;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;
+      &lt;setting name=&quot;Url&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;http://localhost/SpiraTest&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;Login&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;fredbloggs&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;Password&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;fredbloggs&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;ProjectId&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;1&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;ReleaseId&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;1&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;TestSetId&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;1&lt;/value&gt;
+      &lt;/setting&gt;
+      &lt;setting name=&quot;RecordTestRun&quot; serializeAs=&quot;String&quot;&gt;
+        &lt;value&gt;True&lt;/value&gt;
+      &lt;/setting&gt;
+    &lt;/Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;
+  &lt;/applicationSettings&gt;
+</code></pre>
+
+<p>Firstly the settings in the .config file indicate the following
+information to the test fixture:</p>
+<p>The URL to the instance of SpiraTest being accessed. This needs to start
+with http:// or https://.</p>
+<p>A valid username and password for the instance of SpiraTest.</p>
+<p>The ID of the project (this can be found on the project homepage in the
+"Project Overview" section)</p>
+<p>(Optional) The ID of the release to associate the test-run with. This
+can be found on the releases list page (click on the Planning >
+Releases tab)</p>
+<p>(Optional) The ID of the test set to associate the test-run with. This
+can be found on the test set list page (click on the Testing > Test
+Sets tab)</p>
+<p>A flag that tells MS-Test whether or not to record the results in
+SpiraTest.</p>
+<p>Next, the test fixture class needs to be derived from the
+<em>MSTestExtensionsTestFixture</em> base class so that the test runner knows
+that the test class will be reporting back to SpiraTest.</p>
+<p>In addition, each of the individual test methods needs to be mapped to a
+specific test case within SpiraTest. This is done by adding a
+[SpiraTestCase] attribute to the test method together with the ID of
+the corresponding test case in SpiraTest. The Test Case ID can be found
+on the test cases list page (click the "Test Cases" tab).</p>
+<p>In addition you can also override the default SpiraTest configuration
+settings from the .config file by adding the [SpiraTestConfiguration]
+attribute directly to the test method and specifying the SpiraTest URL,
+authentication information, project id, release id (optional) and test
+set id (optional). An example of this is shown above for the
+SampleFail() method.</p>
+<p>Now all you need to do is compile your code, launch Visual Studio, run
+the test fixtures as you would normally do, and when you view the test
+cases in SpiraTest, you should see a MSTest automated test run displayed
+in the list of executed test runs:</p>
+<p><img alt="" src="../img/Integrating_with_MS-Test_17.png" /></p>
+<p>Clicking on one of the MSTest test runs will bring up a screen that
+provides information regarding what MSTest test method failed, what the
+error was, together with the associated code stack-trace:</p>
+<p><img alt="" src="../img/Integrating_with_MS-Test_18.png" /></p>
+<p>Congratulations. You are now able to run MSTest automated tests and have
+the results be recorded within SpiraTest. The sample test project
+SampleMSTest is provided with the installation.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

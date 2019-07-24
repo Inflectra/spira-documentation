@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Functionality Overview/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/User Product Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Requirements Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Test Case Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Incident Tracking/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Release Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Task Tracking/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Resource Tracking/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Document Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Reports Center/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Source Code/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Planning Board/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Mobile Access/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Program Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Risks Management/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_User_Manual/Appendix 1 Keyboard Shortcuts/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Define the Requirements/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Adding the Test Cases/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Planning the Sprint/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Reviewing Your Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraPlan_Quick_Start_Guide/Reviewing A Program/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Define the Requirements/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Adding the Test Cases/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Planning the Sprint/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTeam_Quick_Start_Guide/Reviewing Your Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Define the Requirements/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Build the Test Plan/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/SpiraTest_Quick_Start_Guide/Reviewing Your Product/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Installing SpiraPlan/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System Administration/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System Workspaces/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System Users/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System Integration/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/System Reporting/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Product General Settings/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Product Users/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Product Planning/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Requirements/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Releases/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Documents/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Test Cases/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Incidents/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Tasks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Risks/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Custom Properties/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Spira_Administration_Guide/Template Notifications/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/TaraVault_User_Manual/Activating TaraVault/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/TaraVault_User_Manual/Provisioning Projects & Users/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/TaraVault_User_Manual/Using Git/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/TaraVault_User_Manual/Using Subversion/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/RemoteLaunch Guide/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/HP UFT  QTP/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/SmarteScript/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/TestComplete/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Selenium/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Squish/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Command-Line/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/LoadRunner/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/SoapUI/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/FitNesse/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/NeoLoad/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/TestPartner/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/BadBoy/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/JMeter/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Ranorex/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Rational Functional Tester/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/TestingAnywhere/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/Worksoft Certify/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/RemoteLaunch_User_Guide/ZAPTEST/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with NUnit/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with JUnit/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with TestNG/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with Selenium/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with PyUnit/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with PyTest/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with MS-Test/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with Ruby TestUnit/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with Perl TAP/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with PHPUnit/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating UnitJS & NodeJS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Visual Studio Code/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Visual Studio/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Jetbrains IDEs/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Eclipse  Mylyn/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Visual Studio 2010/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/IDE_Integration/Visual Studio 2005 - 2008/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Setting up Data Synchronization/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 5+/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 3  4/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTest with Bugzilla/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTest with FogBugz/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with Mantis/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with ClearQuest/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with IBM RTC/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with Axosoft 14+/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTeam with Redmine/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with VersionOne/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with OnTime 11/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with GitHub/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with GitLab/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using Spira with ServiceNow/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with Git/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with Mercurial/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with Subversion/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with Perforce/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with TFS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with VSS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with CVS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Email_Integration/Installing the Email Integration Service/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Email_Integration/Configuring the Email Integration Service/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Email_Integration/Using the Email Integration Service with SpiraTeam/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Help_Desk_Integration/KronoDesk/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Help_Desk_Integration/Zendesk/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Importing from Microsoft Excel/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Importing from Microsoft Excel (Office365)/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Importing from Google Sheets/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Importing from Microsoft Word/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Importing from Microsoft Project/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Migrating from HP QualityCenter/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Project Backup and Migration/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Migrating from MS Test Manager/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Migrating from HP ALM/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Migrating from TestRail/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Migration_and_Integration/Migrating from TestLink/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Build_Server_Integration/Jenkins  Hudson/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Build_Server_Integration/JetBrains TeamCity/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Build_Server_Integration/Microsoft Azure DevOps Pipelines/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Build_Server_Integration/Atlassian Bamboo/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Requirements_Management_Integration/Importing From RequisitePro/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Requirements_Management_Integration/Importing From EnterpriseArchitect/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Requirements_Management_Integration/Importing From Jama Contour/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Requirements_Management_Integration/Importing From VersionOne/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/Requirements_Management_Integration/Importing From DOORS/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>

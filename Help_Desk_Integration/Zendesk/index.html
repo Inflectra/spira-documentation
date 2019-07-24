@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Help_Desk_Integration/Zendesk/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Zendesk - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Functionality Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/User Product Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Requirements Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Test Case Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Incident Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Release Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Task Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Resource Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Document Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Reports Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Source Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Planning Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Mobile Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Program Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Risks Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Appendix 1 Keyboard Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing A Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Build the Test Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/Installing SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/System Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product General Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Test Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Custom Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Activating TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Provisioning Projects & Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/RemoteLaunch Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/HP UFT  QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Rational Functional Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Worksoft Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Ruby TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Perl TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating UnitJS & NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Jetbrains IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Eclipse  Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2005 - 2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Setting up Data Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 3  4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with IBM RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with Axosoft 14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with OnTime 11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email_Integration/Installing the Email Integration Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Configuring the Email Integration Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Using the Email Integration Service with SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../KronoDesk/">KronoDesk</a>
+</li>
+            
+<li class="active">
+    <a href="./">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel (Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Google Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Project Backup and Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from MS Test Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build_Server_Integration/Jenkins  Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/JetBrains TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Microsoft Azure DevOps Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Atlassian Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From Jama Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../KronoDesk/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../../Migration_and_Integration/Importing from Microsoft Excel/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#zendesk">Zendesk</a></li>
+        <li class="second-level"><a href="#overview-to-get-up-and-running">Overview to Get Up and Running</a></li>
+        
+        <li class="second-level"><a href="#installing-the-spirateam-app">Installing the SpiraTeam app</a></li>
+        
+        <li class="third-level"><a href="#summary-of-requirements">Summary of requirements</a></li>
+        <li class="third-level"><a href="#initial-configuration-of-spirateam">Initial Configuration of SpiraTeam</a></li>
+        <li class="third-level"><a href="#install-and-configure-the-spirateam-app-in-zendesk">Install and Configure the SpiraTeam App in Zendesk</a></li>
+        <li class="third-level"><a href="#connecting-zendesk-to-spirateam">Connecting Zendesk to SpiraTeam</a></li>
+        <li class="third-level"><a href="#connecting-spirateam-to-zendesk">Connecting SpiraTeam to Zendesk</a></li>
+        <li class="second-level"><a href="#creating-an-incident-in-spirateam">Creating an Incident in SpiraTeam</a></li>
+        
+        <li class="second-level"><a href="#when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen">When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.</a></li>
+        
+        <li class="second-level"><a href="#reviewing-the-incident-in-spirateam">Reviewing the Incident in SpiraTeam</a></li>
+        
+        <li class="second-level"><a href="#reviewing-spirateam-incidents-linked-to-a-zendesk-ticket">Reviewing SpiraTeam Incidents Linked to a Zendesk Ticket</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="zendesk">Zendesk</h1>
+<p>This section outlines how to integrate Zendesk into SpiraTeam<sup>®</sup>. This
+will enable Zendesk agents to log incidents emerging from a ticket
+directly from the Zendesk interface into SpiraTeam<sup>®</sup>. They will also be
+able to see and review any SpiraTeam<sup>®</sup> incidents already linked to
+existing Zendesk tickets. The integration is in the form of a Zendesk
+app, available for free, from the Zendesk marketplace.</p>
+<h3 id="overview-to-get-up-and-running">Overview to Get Up and Running</h3>
+<ul>
+<li>
+<p>Use SpiraTeam version 5+ and Zendesk, using modern browsers</p>
+</li>
+<li>
+<p>Create a new administrator in SpiraTeam (called something like
+"Zendesk")</p>
+</li>
+<li>
+<p>Make sure the Zendesk user has an api-key</p>
+</li>
+<li>
+<p>Install the SpiraTeam app from the Zendesk marketplace</p>
+</li>
+<li>
+<p>Configure the app with url, username, and api-key information</p>
+</li>
+<li>
+<p>Make sure SpiraTeam allows Zendesk to connect to it</p>
+</li>
+<li>
+<p>Get Zendesk to connect to Spirateam (perform an initial handshake)</p>
+</li>
+<li>
+<p>Make sure each relevant SpiraTeam project is set up to work with
+Zendesk</p>
+</li>
+</ul>
+<h2 id="installing-the-spirateam-app">Installing the SpiraTeam app</h2>
+<p>This section outlines the steps required to ensure that the links
+between Zendesk and Spirateam will work correctly.</p>
+<h3 id="summary-of-requirements">Summary of requirements</h3>
+<p>There are a number of elements needed for both applications to
+successfully communicate:</p>
+<ul>
+<li>
+<p>A working installation of SpiraTeam v5.0 or later</p>
+</li>
+<li>
+<p>The SpiraTeam server must have an authenticated certificate and be
+accessible over HTTPS</p>
+</li>
+<li>
+<p>A working account with Zendesk</p>
+</li>
+<li>
+<p>Zendesk agents must be using a modern browser (IE10 or later)</p>
+</li>
+<li>
+<p>A SpiraTeam admin account whose username and API-key
+(<strong>not</strong> password) can be saved inside the Zendesk app
+settings</p>
+</li>
+</ul>
+<h3 id="initial-configuration-of-spirateam">Initial Configuration of SpiraTeam</h3>
+<p>Zendesk and SpiraTeam need to communicate and post data to one another
+cross domain. To ensure effective security SpiraTeam therefore needs to
+be accessible via HTTPS (i.e. using a certificate). If this is not
+already in place, contact your network administration for support.</p>
+<p><strong>Note</strong>: all SpiraTeam hosted accounts are already accessible via HTTPS
+(only).</p>
+<p>Zendesk and SpiraTeam communicate through a security protocol called
+CORs to ensure that each application only receives data from trusted
+domains. The subdomain of your Zendesk account is required by SpiraTeam
+to validate any calls it receives.</p>
+<p>Log in as a project-level administrator to SpiraTeam, go to the
+Administration home page and scroll to System > Security Settings.</p>
+<p><img alt="" src="../img/Zendesk_16.png" /></p>
+<p>At the bottom of the Security Settings page, enter the Zendesk subdomain
+in the "Allowed Domains" text box, making sure to include the full url
+(i.e including https:// before the domain address). Click &lt;Update> for
+the changes to take effect. The url should be in the format of:
+"<strong>https://yoursubdomain.zendesk.com</strong>"</p>
+<p><img alt="" src="../img/Zendesk_17.png" /></p>
+<p><strong>Important:</strong> if this field is left blank, NO domains
+will be allowed to interact with SpiraTeam via CORs. If an asterisk (*)
+is entered, ALL domains will be able to do so (not recommended).</p>
+<p>The Zendesk app uses the details of a SpiraTeam user to authenticate
+with SpiraTeam. This needs to be, for the initial setup, a user with
+administrator privileges. We recommend creating a specific user account
+(such as "Zendesk"), so that the only incidents created by that account
+can be traced back to Zendesk.</p>
+<p><strong>Note</strong>: all tickets logged with Zendesk will be marked as originating
+from this user. This means that the Zendesk team do not need to have
+individual SpiraTeam logins.</p>
+<p>Go to the Administration home page and scroll to Users > View / Edit
+Users.</p>
+<p><img alt="" src="../img/Zendesk_18.png" /></p>
+<p>Click the &lt;Add User> button on the bottom right of the page.</p>
+<p>Fill in the required fields (see below), and make sure that:</p>
+<ul>
+<li>
+<p>System Administrator is set to "Yes"</p>
+</li>
+<li>
+<p>Active is set to "Yes"</p>
+</li>
+<li>
+<p>Locked Out is set to "No"</p>
+</li>
+<li>
+<p>RSS Token is enabled</p>
+</li>
+<li>
+<p>That an RSS Token is displayed</p>
+</li>
+</ul>
+<p>Click &lt;Insert> to add the new user.</p>
+<p><img alt="" src="../img/Zendesk_19.png" /></p>
+<h3 id="install-and-configure-the-spirateam-app-in-zendesk">Install and Configure the SpiraTeam App in Zendesk</h3>
+<p>First, find an install the free SpiraTeam App from within Zendesk. Only
+administrators on Zendesk can install apps. Navigate to the Admin panel,
+and select Marketplace from the Apps menu. Search for "SpiraTeam" in the
+search field on the right, or browse by "Issues Tracking".</p>
+<p>You can also browse the <a href="https://www.zendesk.com/apps">Zendesk app
+website</a>.</p>
+<p><img alt="" src="../img/Zendesk_20.png" /></p>
+<p>Once the application is installed, enter required information in the
+settings page of the app. Go to Admin > Apps > Manage in Zendesk to
+see the list of installed applications.</p>
+<p><img alt="" src="../img/Zendesk_21.png" /></p>
+<p>Make sure the application is enabled. Right click on the app's gear icon
+to change settings</p>
+<p><img alt="" src="../img/Zendesk_22.png" /></p>
+<p>In the settings screen, make sure all input boxes are correctly filled
+in. Enter the username and API key that you created inside SpiraTeam
+above, as well as the address of SpiraTeam. Make sure that the API key
+is an alphanumeric string contained within curly braces -- { }. Click
+&lt;Update>.</p>
+<p><img alt="" src="../img/Zendesk_24.png" /></p>
+<h3 id="connecting-zendesk-to-spirateam">Connecting Zendesk to SpiraTeam</h3>
+<p>Zendesk should now be able to communicate fully with SpiraTeam. In order
+for SpiraTeam to be informed that you are using the Zendesk app, simply
+navigate to any ticket, click on the app sidebar (on the right of the
+Zendesk window) and locate the SpiraTeam app. You should see a screen
+like that below, giving you a welcome message on the successful
+connection of Zendesk to SpiraTeam.</p>
+<p><img alt="" src="../img/Zendesk_25.png" /></p>
+<p>If you instead see a message like that below (note that you will also
+see a Zendesk service notification), please check your network settings,
+and double check through the steps outline above.</p>
+<p><img alt="" src="../img/Zendesk_26.png" /></p>
+<p><img alt="" src="../img/Zendesk_27.png" /> </p>
+<h3 id="connecting-spirateam-to-zendesk">Connecting SpiraTeam to Zendesk</h3>
+<p>Zendesk can now retrieve information form SpiraTeam. For Zendesk to be
+able to write all the information it needs to SpiraTeam, you need to
+grant Zendesk access in each relevant project (i.e. any project that a
+Zendesk agent may need to submit an incident about).</p>
+<p>If you wish, at this time you can change the account of the dedicated
+"Zendesk" user to no longer be an administrator. Make sure proper
+permissions are set so that the user has full access to incidents in all
+relevant projects.</p>
+<p>In SpiraTeam, navigate to a project Zendesk will need access to. Go to
+the SpiraTeam administration panel and then Integration > Data
+Synchronization.</p>
+<p><img alt="" src="../img/Zendesk_28.png" /></p>
+<p>This will show you the list of current external tools that can
+synchronize custom data directly with SpiraTeam. Zendesk should appear
+as the last "Plug-In" in the table.</p>
+<p><img alt="" src="../img/Zendesk_29.png" /></p>
+<p>Click on &lt;View Project Mappings>. Set Active to "Yes". Type in any
+value for External Key (this is a required field but because SpiraTeam
+does not write to Zendesk it is never used by the app). Click
+&lt;Update>.</p>
+<p><img alt="" src="../img/Zendesk_30.png" /></p>
+<p><strong>NOTES</strong>:</p>
+<ul>
+<li>
+<p>The screen will return with a selection of configurable fields below
+the Update button. No changes here are required.</p>
+</li>
+<li>
+<p>There is no need to enter the &lt;Edit> screen for the mapping.
+Indeed, settings here are automatically generated by the Zendesk app
+and should not be altered.</p>
+</li>
+</ul>
+<p><strong>Repeat the above steps for every project Zendesk will need access
+to.</strong></p>
+<h2 id="creating-an-incident-in-spirateam">Creating an Incident in SpiraTeam</h2>
+<p>Zendesk agents are able to create an incident from within Zendesk that
+is logged directly into SpiraTeam. The app should not be visible to the
+public.</p>
+<h2 id="when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen">When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.</h2>
+<p><img alt="" src="../img/Zendesk_26.png" /></p>
+<p>In order to log an incident, the agent must decide which project the
+issue relates to. SpiraTeam will list all active projects in the drop
+down list. If an agent is unsure which project to select, we recommend
+that they discuss the issue with the development team first. Select a
+project and click &lt;Go>.</p>
+<p><img alt="" src="../img/Zendesk_31.png" /></p>
+<p>Zendesk will load fields specific to that project, including any custom
+properties or components. By default, as a minimum, the app collects
+Incident Type, Priority, Release, and Owner lists, all of which are
+required to be filled in, along with a subject field and a note.</p>
+<p>By default, the subject field will be the same as the ticket's current
+subject, but the agent can change this to make as clear as possible to
+the developer -- changing the subject in the SpiraTeam app will NOT
+change the subject of the ticket itself.</p>
+<p>The Notes to Developers is initially left blank, so that the agent can
+provide meaningful information. If the agent wants to include the
+comment history of the ticket after their own notes, click &lt;Add comment
+history to description>. NOTE: clicking this repeatedly will paste in
+the comment history multiple times.</p>
+<p>When a project has additional fields (such as components or custom
+properties), these are also displayed. The app provides a split view of
+the fields -- those that are required and those that are optional. The
+tab at the top of the app lets agents switch between both.</p>
+<p>If the agent wishes to cancel logging the incident, or has chosen the
+wrong project, click the &lt;Back> button.</p>
+<p>Once the form has been filled in, click &lt;Log Incident>. If any of the
+fields have been left blank a notification will display and the form
+will not be processed. Once everything has been entered correctly,
+Zendesk attempts to send the form to SpiraTeam, along with links to any
+attachments stored with the ticket.</p>
+<p>If Zendesk is not successful, a warning notification will be displayed
+(see below), and the agent is asked to attempt again.</p>
+<p><img alt="" src="../img/Zendesk_36.png" /></p>
+<h2 id="reviewing-the-incident-in-spirateam">Reviewing the Incident in SpiraTeam</h2>
+<p>Back in SpiraTeam the new incident should be visible within the main
+incident log. Details about the incident can be altered as needed,
+without risk of breaking the connection with Zendesk.</p>
+<p>NOTE: On the incidents screen, you should notice a new field on the
+Overview page, called "Zendesk ID". This is the ID of the specific
+Zendesk ticket. Editing this field will break the connection and is not
+advised.</p>
+<p><img alt="" src="../img/Zendesk_37.png" /></p>
+<h2 id="reviewing-spirateam-incidents-linked-to-a-zendesk-ticket">Reviewing SpiraTeam Incidents Linked to a Zendesk Ticket</h2>
+<p>As soon as the incident has been successfully logged to SpiraTeam, the
+app in Zendesk will return to the screen showing lists of projects, in
+case another incident needs to be logged.</p>
+<p>In addition, information about any incidents linked to the ticket are
+clearly shown, including the most up to date status from SpiraTeam so
+that the agent can clearly see whether an issue is resolved or not.</p>
+<p><img alt="" src="../img/Zendesk_38.png" /></p>
+<p><img alt="" src="../img/Zendesk_39.png" /></p>
+<p>Hovering over a particular incident pops up the description to give the
+agent quick access to additional information.</p>
+<p><img alt="" src="../img/Zendesk_40.png" /></p>
+<p>Finally, clicking on any incident will display a modal pop up table with
+fuller details about all linked incidents, including the incident ID to
+help the agent follow up as needed with the developers.</p>
+<p><img alt="" src="../img/Zendesk_41.png" /></p>
+<p>Also shown on this table is the Last Updated date of the incident.
+Hovering over the data will display a tooltip with the time of the
+update.</p>
+<p><img alt="" src="../img/Zendesk_42.png" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

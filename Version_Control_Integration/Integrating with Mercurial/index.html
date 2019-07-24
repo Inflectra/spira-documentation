@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Version_Control_Integration/Integrating with Mercurial/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Mercurial - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Functionality Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/User Product Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Requirements Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Test Case Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Incident Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Release Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Task Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Resource Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Document Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Reports Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Source Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Planning Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Mobile Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Program Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Risks Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Appendix 1 Keyboard Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing A Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Build the Test Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/Installing SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/System Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product General Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Test Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Custom Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Activating TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Provisioning Projects & Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/RemoteLaunch Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/HP UFT  QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Rational Functional Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Worksoft Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Ruby TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Perl TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating UnitJS & NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Jetbrains IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Eclipse  Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2005 - 2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Setting up Data Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 3  4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with IBM RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with Axosoft 14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with OnTime 11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Integrating with Git/">Git</a>
+</li>
+            
+<li class="active">
+    <a href="./">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../Integrating with Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../Integrating with Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../Integrating with TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../Integrating with VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../Integrating with CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email_Integration/Installing the Email Integration Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Configuring the Email Integration Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Using the Email Integration Service with SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help_Desk_Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help_Desk_Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel (Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Google Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Project Backup and Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from MS Test Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build_Server_Integration/Jenkins  Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/JetBrains TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Microsoft Azure DevOps Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Atlassian Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From Jama Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Integrating with Git/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Integrating with Subversion/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#integrating-with-mercurial">Integrating with Mercurial</a></li>
+        <li class="second-level"><a href="#installing-the-mercurial-plug-in-to-install-the-mercurial-version-control-plug-in-follow-these-steps">Installing the Mercurial Plug-In To install the Mercurial Version Control plug-in, follow these steps:</a></li>
+        
+        <li class="second-level"><a href="#using-mercurial-with-spirateam">Using Mercurial with SpiraTeam</a></li>
+        
+        <li class="third-level"><a href="#viewing-the-repository-tree">Viewing the Repository Tree</a></li>
+        <li class="third-level"><a href="#viewing-file-details">Viewing File Details</a></li>
+        <li class="third-level"><a href="#revision-details">Revision Details</a></li>
+        <li class="third-level"><a href="#linking-artifacts">Linking Artifacts</a></li>
+        <li class="second-level"><a href="#troubleshooting">Troubleshooting</a></li>
+        
+        <li class="second-level"><a href="#data-purging">Data Purging</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="integrating-with-mercurial">Integrating with Mercurial</h1>
+<p>Mercurial is a Distributed Version Control System (DVCS) system that
+keeps track of software revisions and allows many developers to work on
+a given project without necessarily being connected to a common network
+since it doesn't rely on a central repository, but instead distributes
+copies of the entire source code repository to each user's workstation.</p>
+<p>The SpiraTeam plug-in for Mercurial allows users of SpiraPlan or
+SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a
+Mercurial repository and view revisions linked to SpiraTeam artifacts.</p>
+<p>The plug-in will download a read-only working-copy of the Mercurial
+repository onto the SpiraTeam server and use that for displaying the
+list of files/folders. The list of revisions will be queried dynamically
+from this local repository on an as-needed basis. The plug-in also
+performs 'pull' requests from the specified remote repository to ensure
+that the local repository remains up to date.</p>
+<p>The rest of this section outlines how to install and use the plug-in
+with SpiraTeam.</p>
+<p><em>Note: The plug-in will allow users to download and view different
+revisions of files and view revision logs, but no changes to the
+repository are allowed through the plug-in.</em></p>
+<h2 id="installing-the-mercurial-plug-in-to-install-the-mercurial-version-control-plug-in-follow-these-steps">Installing the Mercurial Plug-In To install the Mercurial Version Control plug-in, follow these steps:</h2>
+<ul>
+<li>
+<p>Copy the following files from the plug-in zip-archive into the
+"VersionControl" sub-folder of the SpiraTeam installation:</p>
+</li>
+<li>
+<p>MercurialProvider.dll</p>
+</li>
+<li>
+<p>Mercurial.Net.dll</p>
+</li>
+<li>
+<p>Log in as the Administrator and go into SpiraTeam main
+Administration page and click on the "Version Control" link under
+<strong>System</strong>.</p>
+</li>
+<li>
+<p>Click the "Add" button to enter the Plug-in details page. The fields
+required are as follows:
+<img alt="" src="../img/Integrating_with_Mercurial_48.png" /></p>
+</li>
+<li>
+<p><strong>Name</strong>: The name must be "MercurialProvider".</p>
+</li>
+<li>
+<p><strong>Description</strong>: The description is for your use only, and does
+not affect operation of the plug-in.</p>
+</li>
+<li>
+<p><strong>Active</strong>: If checked, the plug-in is active and able to be
+used for any project.</p>
+</li>
+<li>
+<p><strong>Connection Info</strong>: This field holds the clone URL of the
+repository for any project accessing the plug-in, unless
+overridden in the Project Settings:</p>
+</li>
+<li>
+<p>For example:
+<a href="https://bitbucket.org/aragost/javahg">https://bitbucket.org/aragost/javahg</a>
+ssh://example.com/hg/</p>
+</li>
+<li>
+<p><strong>Login / Password</strong>: The user id and the password of the user
+to use while accessing and retrieving information from the
+remote Mercurial repository. If you are accessing a public
+repository anonymously, just use "<em>anonymous</em>" for both username
+and password and it will be handled correctly.</p>
+</li>
+<li>
+<p><strong>Custom 01 --</strong> This needs to contain the path on the SpiraTeam
+server where the Mercurial executable (Hg.exe) can be found. If
+left blank, it will attempt to automatically discover Mercurial
+from the Windows %PATH% environment variable.</p>
+</li>
+<li>
+<p><strong>Custom 02 -- Custom 05</strong> -- Not used by this plugin.</p>
+</li>
+<li>
+<p>When finished, click the "Insert" button and you will be taken back
+to the Version Control integration list page, with MercurialProvider
+listed as an available plug-in.</p>
+</li>
+<li>
+<p>Verify that you are in the correct project using the drop-down at
+top, and click on the "Project Settings" link for the
+MercurialProvider. You will get a screen listing all the same
+configuration settings:
+<img alt="" src="../img/Integrating_with_Mercurial_49.png" /></p>
+</li>
+<li>
+<p>Be sure to change the Active field to Yes, or the repository
+will not be available for the current project.</p>
+</li>
+<li>
+<p>Any other settings entered on this page will override - and have
+the same use as - the general settings that you created above.
+You would use these settings if you will have more than one
+project access different code repositories.</p>
+</li>
+<li>
+<p>Initial setup is complete, click on the "Source Code" menu under the
+Tracking tab to navigate and browse the source code repository.</p>
+</li>
+</ul>
+<h2 id="using-mercurial-with-spirateam">Using Mercurial with SpiraTeam</h2>
+<p>While being able to browse the source code repository can be useful in
+itself, the real strength comes from linking artifacts in SpiraTeam -
+including Incidents, Requirements, and Tasks - to revisions checked into
+the software repository.</p>
+<h3 id="viewing-the-repository-tree">Viewing the Repository Tree</h3>
+<p>View the source code tree by selecting the "Source Code" link under the
+Tracking tab. You will get a screen similar to:</p>
+<p><img alt="" src="../img/Integrating_with_Mercurial_50.png" /></p>
+<p>The folder tree of the repository is on the left, and files in the
+current selected directory will be listed in the right table. Note that
+this view will always show the current (TIP) branch of the repository.
+The file view will display the filename, the current revision number of
+the file and the date of the last commit. You can filter and sort on any
+of the columns, as well.</p>
+<h3 id="viewing-file-details">Viewing File Details</h3>
+<p>To view the file details, click on a file in the right-hand side of the
+repository. The file details page displays the details on the selected
+revision. By default, it will be the TIP branch, unless you clicked to
+view the file details from a revision. By clicking on the file name, you
+can download the specified revision of the file to your local machine.
+This does not do a Mercurial clone or pull; you are merely downloading
+the file to your local machine.</p>
+<p><img alt="" src="../img/Integrating_with_Mercurial_51.png" /></p>
+<p>Underneath the file details is a list of all the revisions (Mercurial
+changesets) that this file belongs in, or was committed to, who
+performed the commit, and the log message for the commit. Throughout
+SpiraTeam, revisions are indicated by the
+<img alt="Revision" src="../img/Integrating_with_Mercurial_12.png" /></p>
+<p>icon.</p>
+<h3 id="revision-details">Revision Details</h3>
+<p>By clicking on a revision in SpiraTeam, you will be taken to the
+revision details page.</p>
+<p><img alt="" src="../img/Integrating_with_Mercurial_52.png" /></p>
+<p>The revision details screen shows the log for the changeset, the commit
+date and author. At the bottom of the page are two tabs, Files and
+Associations. The Files tab lists all files that were a part of this
+commit, with their full path, size, latest revision and date of edit.</p>
+<p>The Associations tab shows any artifact (Incident, Requirement, Test
+Case, Test Set) that the log message references. See <a href="#linking-artifacts">Linking Artifacts</a> for
+information on how to link a revision with a Mercurial changeset:</p>
+<p><img alt="" src="../img/Integrating_with_Mercurial_42.png" /></p>
+<h3 id="linking-artifacts">Linking Artifacts</h3>
+<p>Linking an artifact is quite simple. To maintain the readability of
+Mercurial changeset messages, we adopted a square bracket token. The
+token is in the format of:</p>
+<p><strong>[&lt;artifact identifier>:&lt;artifact id>]</strong></p>
+<p>The first half, the Artifact Identifier, is a two-letter code that is
+used throughout SpiraTeam, and is visible on almost every page in the
+application. For example, a requirement's identifier is "<strong>RQ</strong>".
+Incidents are "<strong>IN</strong>", and test cases are "<strong>TC</strong>". The artifact ID is
+the number of the artifact. So by creating a commit message that reads:</p>
+<p>SpiraTeam will automatically detect tokens and will include links to
+them under the Associations tab for a revision detail.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>While integration with Mercurial is sophisticated behind the scenes, as
+a user you will only receive a couple of errors that will prevent the
+integration from working:</p>
+<ul>
+<li>
+<p>When you first load the list of folders and files for a repository</p>
+<blockquote>
+<p>it may take several minutes to load as it's cloning the entire
+repository from the remote Mercurial server to the SpiraTeam
+server. This delay will not occur on subsequent views of the page.</p>
+</blockquote>
+</li>
+<li>
+<p>SpiraTeam will not display the login page, and there is an error</p>
+<blockquote>
+<p>(either on the page or in the Application Event Log) that says
+"Could not load file or assembly.". If this error occurs, it is
+most likely that the MercurialProvider.dll or some of its
+dependent assemblies were not correctly placed in the
+VersionControl folder of the SpiraTeam installation.</p>
+</blockquote>
+</li>
+<li>
+<p>SpiraTeam reports that the login information is incorrect. In this</p>
+<blockquote>
+<p>case, double check the Version Control settings, both for the
+Project (which overrides the general settings) and the general
+settings. Project settings will over-ride the general settings. Be
+sure to use a user that has access to all nodes in the tree
+starting from the root repository location.</p>
+</blockquote>
+</li>
+<li>
+<p>If you are taken back to the repository screen and given a message</p>
+<blockquote>
+<p>saying that the requested file was deleted from the system, this
+means that an attempt was made to view details on a file that is
+no longer part of the TIP branch. This can happen when a file is
+deleted or renamed, and this is a normal condition in the code
+repository, not necessarily an error with Mercurial or SpiraTeam.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="data-purging">Data Purging</h2>
+<p>Since the integration with Mercurial requires that a working copy of the
+Mercurial repository be stored on the SpiraTeam server, you may decide
+at some point to unlink a disused Mercurial repository from SpiraTeam to
+save disk-space. However unlinking the repository through the SpiraTeam
+web interface will not remove the working copy of the repository from
+the server.</p>
+<p>To permanently remove a repository from the SpiraTeam server, you need
+to locate the following path:</p>
+<ul>
+<li>
+<p><strong>(Windows XP, 2003)</strong> - C:\Documents and Settings\All
+Users\Application Data</p>
+</li>
+<li>
+<p><strong>(Windows 2008, 7, Vista)</strong> -- C:\ProgramData</p>
+</li>
+</ul>
+<p>If you look inside this folder, you will see a subfolder called
+"Inflectra", and under that will be a subfolder called
+"MercurialProvider". If you open up this subfolder, you will see a list
+of all the Mercurial repositories that have been accessed through
+SpiraTeam. To purge a module, just select it and choose the Delete
+Folder option in Windows.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

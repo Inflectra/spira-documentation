@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>MS-TFS - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Functionality Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/User Product Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Requirements Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Test Case Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Incident Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Release Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Task Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Resource Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Document Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Reports Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Source Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Planning Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Mobile Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Program Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Risks Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_User_Manual/Appendix 1 Keyboard Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing A Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Build the Test Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/Installing SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/System Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product General Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Test Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Custom Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Activating TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Provisioning Projects & Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/RemoteLaunch Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/HP UFT  QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Rational Functional Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Worksoft Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Ruby TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Perl TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating UnitJS & NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Jetbrains IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Eclipse  Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2005 - 2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Setting up Data Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with JIRA 5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with JIRA 3  4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTest with Bugzilla/">Bugzilla</a>
+</li>
+            
+<li class="active">
+    <a href="./">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTest with FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with IBM RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with Axosoft 14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../Using SpiraTeam with Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with OnTime 11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../Using Spira with ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email_Integration/Installing the Email Integration Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Configuring the Email Integration Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Using the Email Integration Service with SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help_Desk_Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help_Desk_Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel (Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Google Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Project Backup and Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from MS Test Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build_Server_Integration/Jenkins  Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/JetBrains TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Microsoft Azure DevOps Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Atlassian Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From Jama Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Using SpiraTest with Bugzilla/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Using SpiraTest with FogBugz/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#using-spiratest-with-ms-tfs">Using SpiraTest with MS-TFS</a></li>
+        <li class="second-level"><a href="#configuring-the-plug-in">Configuring the Plug-In</a></li>
+        
+        <li class="second-level"><a href="#configuring-the-data-mapping">Configuring the Data Mapping</a></li>
+        
+        <li class="third-level"><a href="#configuring-the-project-mapping">Configuring the Project Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-user-mapping">Configuring the User Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-release-mapping">Configuring the Release Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-standard-incident-field-mapping">Configuring the Standard Incident Field Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-incident-custom-property-mapping">Configuring the Incident Custom Property Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-standard-task-field-mapping">Configuring the Standard Task Field Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-task-custom-property-mapping">Configuring the Task Custom Property Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-standard-requirement-field-mapping-2012-plugin-only">Configuring the Standard Requirement Field Mapping (2012 Plugin Only)</a></li>
+        <li class="third-level"><a href="#configuring-the-requirement-custom-property-mapping-2012-plugin-only">Configuring the Requirement Custom Property Mapping (2012 Plugin Only)</a></li>
+        <li class="second-level"><a href="#using-spirateam-with-tfs">Using SpiraTeam with TFS</a></li>
+        
+        <li class="second-level"><a href="#troubleshooting">Troubleshooting</a></li>
+        
+        <li class="second-level"><a href="#tfs-field-reference">TFS Field Reference</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="using-spiratest-with-ms-tfs">Using SpiraTest with MS-TFS</h1>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
+(hereafter referred to as SpiraTeam) in conjunction with the work item
+tracking functionality of Microsoft Visual Studio Team Services
+(MS-VSTS), Visual Studio Online (VSO), or Microsoft Team Foundation
+Server (TFS) hereafter referred to as TFS.</p>
+<p>The built-in integration service allows the quality assurance team to
+manage their requirements and test cases in SpiraTeam, execute test runs
+in SpiraTest, and then have the new incidents generated during the run
+be automatically loaded into TFS. Once the incidents are loaded into TFS
+as work items, the development team can then manage the lifecycle of
+these work items in TFS, and have the status changes in TFS be reflected
+back in SpiraTeam.</p>
+<p>Similarly, as the requirements are decomposed into discrete project
+tasks in SpiraTeam, the integration service will automatically load
+these new tasks into TFS as task work items where the development team
+can manage their lifecycle, with schedule and progress changes in TFS
+being reflected back in SpiraTeam.</p>
+<p><strong>STOP! Please make sure you have first read the Instructions in 
+<a href="../Setting%20up%20Data%20Synchronization/">Setup</a> before proceeding!</strong></p>
+<p>► Note: Only the MS-TFS 2012+ Plug-In is Available on the Inflectra
+Cloud-Based DataSync Service.</p>
+<h2 id="configuring-the-plug-in">Configuring the Plug-In</h2>
+<p>The next step is to configure the plug-in within SpiraTeam so that the
+system knows how to access the TFS server. To start the configuration,
+please open up SpiraTeam in a web browser, log in using a valid account
+that has System-Administration level privileges and click on the System
+> Data Synchronization administration option from the left-hand
+navigation:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_77.png" /></p>
+<p>This screen lists all the plug-ins already configured in the system.
+Depending on whether you chose the option to include sample data in your
+installation or not, you will see either an empty screen or a list of
+sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>MsTfsDataSync</strong> you should click on
+its "Edit" link. If you don't see such an entry in the list, please
+click on the [Add] button instead. In either case you will be taken to
+the following screen where you can enter or modify the TFS
+Data-Synchronization plug-in:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_78.png" /></p>
+<p>You need to fill out the following fields for the TFS Plug-in to operate
+correctly:</p>
+<ul>
+<li>
+<p><strong>Name</strong> -- this needs to be set to <strong>MsTfsDataSync</strong>.</p>
+</li>
+<li>
+<p><strong>Caption</strong> -- this is the display name of the plugin. Normally you
+can use something generic such as "Microsoft TFS", however if you
+have multiple TFS instances you might want to name it something
+specific such as "TFS External". If you don't enter a value, the
+display name will be "MsTfsDataSync"</p>
+</li>
+<li>
+<p><strong>Description</strong> -- this should be set to a description of the
+plug-in. This is an optional field that is used for documentation
+purposes and is not actually used by the system.</p>
+</li>
+<li>
+<p><strong>Connection Info</strong> -- this should the URL that you use for
+connecting Visual Studio to the Team Foundation Server.</p>
+</li>
+<li>
+<p><strong>For Visual Studio Online</strong>, it is of the format
+<a href="https://mycompany.visualstudio.com">https://mycompany.visualstudio.com</a>. See our special <a href="https://www.inflectra.com/Support/KnowledgeBase/KB213.aspx">KB213
+regarding Visual Studio
+Online</a>.</p>
+</li>
+<li>
+<p><strong>For TFS 2010+</strong> it is of the format
+<a href="http://servername:8080/tfs/collectionname">http://servername:8080/tfs/collectionname</a> where
+"collectionname" is the name of the project collection you're
+integrating with.</p>
+</li>
+<li>
+<p><strong>For TFS 2005/2008</strong> it is of the format
+<a href="http://servername:8080">http://servername:8080</a>.</p>
+</li>
+<li>
+<p><strong>Login</strong> -- this should be set to a valid user that has permissions
+to access the TFS installation. The login needs to have permissions
+to create and view work items and iterations within TFS.
+Note: Do not include the Windows Active Directory Domain in this
+field if you are using a Windows domain user.</p>
+</li>
+<li>
+<p><strong>Password</strong> -- this should be set to the password of the user
+specified above.</p>
+</li>
+<li>
+<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
+find that work items being changed in TFS are not being updated in
+SpiraTeam, try increasing the value as this will tell the
+data-synchronization plug-in to add on the time offset (in hours)
+when comparing date-time stamps. Also if your TFS installation is
+running on a server set to a different time-zone, then you should
+add in the number of hours difference between the servers'
+time-zones here.</p>
+</li>
+</ul>
+<p>If you are using Visual Studio Online (VSO) instead of a local TFS
+instance, you will need to login to the instance of Visual Studio Online
+and access your profile:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_79.png" /></p>
+<p>Click on the Security Option. Then in the user security menu, choose the
+option to enter 'Alternate Credentials'. You need to now enter a login
+and password that SpiraTeam will use to connect to VSO:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_80.png" /></p>
+<p>The remaining fields work differently depending on which version of the
+TFS plugin you are using (2012, 2010 or 2005/2008):</p>
+<p>a) TFS 2012 Plugin</p>
+<p>Please fill out the fields as follows:</p>
+<ul>
+<li>
+<p><strong>Auto-Map Users</strong> -- This changes the way the plugin maps users in
+SpiraTeam to those in TFS:</p>
+</li>
+<li>
+<p><strong>Auto-Map = True
+</strong>With this setting, all users in SpiraTeam need to have the
+same username as those in TFS. If this is the case then you do
+not need to perform the user-mapping task outlined in section
+5.2.2. This is a big time-saver if you can guarantee that all
+usernames are the same in both systems.</p>
+</li>
+<li>
+<p><strong>Auto-Map = False
+</strong>With this setting, users in SpiraTeam and TFS are free to have
+different usernames because you specify the corresponding TFS
+name for each user as outlined in 5.2.2.</p>
+</li>
+<li>
+<p><strong>Custom 01</strong> -- This is used to specify the Windows Active
+Directory Domain that the Windows user specified above is a member
+of. If you are running TFS on a Windows workgroup, just use the
+server name and make sure that the Windows user above is a user on
+that server itself. If you are using a Window Live ID, just leave
+this field blank</p>
+</li>
+<li>
+<p><strong>Custom 02</strong> -- This field should contain a comma-separated list of
+work item types that you want to synchronize as SpiraTeam Tasks as
+opposed to Incidents. Normally you would want to list at least the
+TFS "Task" work item type in this field.</p>
+</li>
+<li>
+<p><strong>Custom 03</strong> -- If you would like the system to display the
+SpiraTeam artifact ID (e.g. IN5 for incidents or TK36 for tasks) in
+a custom field inside TFS, you should just enter the name of the
+appropriate TFS field from your process template (e.g.
+Spira.IncidentId) and then when the incident or task is added to
+TFS, the corresponding SpiraTeam ID will be added to that field of
+the work item.</p>
+</li>
+<li>
+<p><strong>Custom 04</strong> - Depending on your TFS process template, the
+data-synchronization plugin may not be allowed to set the detector
+of the incident inside TFS. If you would like the system to display
+the detector of the incident (as recorded in SpiraTeam) in a custom
+field inside TFS, you should just enter the name of the appropriate
+TFS field from your process template (e.g. Spira.Detector) and then
+when the incident is added to TFS, the corresponding detector's name
+will be added to that field of the work item.</p>
+</li>
+<li>
+<p><strong>Custom 05</strong> -- This field should contain a comma-separated list of
+work item types that you want to synchronize as SpiraTeam
+Requirements as opposed to Incidents. Normally you would want to
+list at least the TFS "User Story" work item type in this field.</p>
+</li>
+</ul>
+<p>b) TFS 2010 Plugin</p>
+<p>Please fill out the fields as follows:</p>
+<ul>
+<li>
+<p><strong>Auto-Map Users</strong> -- this is not used by this version of the plugin
+and can be ignored.</p>
+</li>
+<li>
+<p><strong>Custom 01</strong> -- This is used to specify the Windows Active
+Directory Domain that the Windows user specified above is a member
+of. If you are running TFS on a Windows workgroup, just use the
+server name and make sure that the Windows user above is a user on
+that server itself.</p>
+</li>
+<li>
+<p><strong>Custom 02</strong> -- This is used to specify if you want to synchronize
+Incidents, Tasks or Both. By default this field is blank, meaning
+synchronize both types of artifact. However if you enter in
+"<em>Incidents</em>" into this field it will tell the system to only
+synchronize incidents, and if you enter "<em>Tasks</em>" it will tell the
+system to only synchronize tasks.</p>
+</li>
+<li>
+<p><strong>Custom 03</strong> -- If you would like the system to display the
+SpiraTeam artifact ID (e.g. IN5 for incidents or TK36 for tasks) in
+a custom field inside TFS, you should just enter the name of the
+appropriate TFS field from your process template (e.g.
+Spira.IncidentId) and then when the incident or task is added to
+TFS, the corresponding SpiraTeam ID will be added to that field of
+the work item.</p>
+</li>
+<li>
+<p><strong>Custom 04</strong> - Depending on your TFS process template, the
+data-synchronization plugin may not be allowed to set the detector
+of the incident inside TFS. If you would like the system to display
+the detector of the incident (as recorded in SpiraTeam) in a custom
+field inside TFS, you should just enter the name of the appropriate
+TFS field from your process template (e.g. Spira.Detector) and then
+when the incident is added to TFS, the corresponding detector's name
+will be added to that field of the work item.</p>
+</li>
+<li>
+<p><strong>Custom 05</strong> -- this is not used by this version of the plugin and
+can be ignored.</p>
+</li>
+</ul>
+<p>c) TFS 2005/2008 Plugin</p>
+<p>Please fill out the fields as follows:</p>
+<ul>
+<li>
+<p><strong>Auto-Map Users</strong> -- this is not used by this version of the plugin
+and can be ignored.</p>
+</li>
+<li>
+<p><strong>Custom 01</strong> -- This is used to specify the Windows Active
+Directory Domain that the Windows user specified above is a member
+of. If you are running TFS on a Windows workgroup, just use the
+server name and make sure that the Windows user above is a user on
+that server itself.</p>
+</li>
+<li>
+<p><strong>Custom 02</strong> -- This is used to specify if you want to synchronize
+Incidents, Tasks or Both. By default this field is blank, meaning
+synchronize both types of artifact. However if you enter in
+"<em>Incidents</em>" into this field it will tell the system to only
+synchronize incidents, and if you enter "<em>Tasks</em>" it will tell the
+system to only synchronize tasks.</p>
+</li>
+<li>
+<p><strong>Custom 03</strong> -- this is not used by this version of the plugin and
+can be ignored.</p>
+</li>
+<li>
+<p><strong>Custom 04</strong> -- this is not used by this version of the plugin and
+can be ignored.</p>
+</li>
+<li>
+<p><strong>Custom 05</strong> -- this is not used by this version of the plugin and
+can be ignored.</p>
+</li>
+</ul>
+<h2 id="configuring-the-data-mapping">Configuring the Data Mapping</h2>
+<p>Next, you need to configure the data mapping between SpiraTeam and TFS.
+This allows the various projects, users, releases, incident types,
+statuses, priorities and custom property values used in the two
+applications to be related to each other. This is important, as without
+a correct mapping, there is no way for the integration service to know
+that a "Not Reproducible" incident in SpiraTeam is the same as a "Closed
++ Cannot Reproduce" bug work item in TFS (for example).</p>
+<p>The following mapping information needs to be setup in SpiraTeam:</p>
+<p>The mapping of the project identifiers for the projects that need to be
+synchronized</p>
+<p>The mapping of <em>users</em> in the system</p>
+<p>The mapping of <em>releases</em> (equivalent to TFS iterations) in the system</p>
+<p>The mapping of the various standard <em>incident</em> fields in the system</p>
+<p>The mapping of the various custom <em>incident</em> properties in the system</p>
+<p>The mapping of the various standard <em>requirement</em> fields in the system
+(if synching requirements)</p>
+<p>The mapping of the various custom <em>requirement</em> properties in the system
+(if synching requirements)</p>
+<p>The mapping of the various standard <em>task</em> fields in the system (if
+synching tasks)</p>
+<p>The mapping of the various custom <em>task</em> properties in the system (if
+synching tasks)</p>
+<p><em>Note: If using SpiraTest, you do not need to setup the last two sets of
+mappings as Tasks are not available in SpiraTest.</em></p>
+<h3 id="configuring-the-project-mapping">Configuring the Project Mapping</h3>
+<p>From the data synchronization administration page, you need to click on
+the "View Project Mappings" hyperlink next to the TFS plug-in name. This
+will take you to the data-mapping home page for the currently selected
+project:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_81.png" /></p>
+<p>If the project name does not match the name of the project you want to
+configure the data-mapping for, click on the "(Change Project)"
+hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with TFS, you need to
+enter:</p>
+<p><strong>External Key</strong> -- This should be set to the name of the project in TFS
+as visible from the Visual Studio Team Explorer:</p>
+<blockquote>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_82.png" /></p>
+</blockquote>
+<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
+want to synchronize data for this project. Once the project has been
+completed, setting the value to "No" will stop data synchronization,
+reducing network utilization.</p>
+<p>Click [Update] to confirm these settings. Once you have enabled the
+project for data-synchronization, you can now enter the other data
+mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when
+creating a new project, you should choose the option to "Create Project
+from Existing Project" rather than "Use Default Template" so that all
+the project mappings get copied across to the new project.</em></strong></p>
+<h3 id="configuring-the-user-mapping">Configuring the User Mapping</h3>
+<p>To configure the mapping of users in the two systems, you need to go to
+Administration > Users > View Edit Users, which will bring up the list
+of users in the system. Then click on the "Edit" button for a particular
+user that will be editing work items in TFS:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_83.png" /></p>
+<p>You will notice that in the special <strong>Data Mapping</strong> tab, there is a
+list of all the configured data-synchronization plug-ins. In the text
+box next to the TFS Data-Sync plug-in you need to enter the full name of
+this Windows User (not the login). This is the name of the user as they
+appear inside work items within TFS:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_84.png" /></p>
+<p>This will allow the data-synchronization plug-in to know which user in
+SpiraTeam match which equivalent user in TFS. Click [Update] once
+you've entered the appropriate login name. You should now repeat for the
+other users who will be active in both systems.</p>
+<p><em>If you have set the "Auto-Map Users" option in the TFS 2012 plugin, you
+can skip this section completely.</em></p>
+<h3 id="configuring-the-release-mapping">Configuring the Release Mapping</h3>
+<p>When the data-synchronization service runs, when it comes across a
+release/iteration in SpiraTeam that it has not seen before, it will
+create a corresponding "Iteration" in TFS. Similarly if it comes across
+a new Iteration in TFS that it has not seen before, it will create a new
+Release/Iteration in SpiraTeam. Therefore when using both systems
+together, it is recommended that you only enter new Releases/Iterations
+in one system and let the data-synchronization service add them to the
+other system.</p>
+<p>However you may start out with the situation where you already have
+pre-existing Releases/Iterations in both systems that you need to
+associate in the data-mapping. If you don't do this, you may find that
+duplicates get created when you first enable the data-synchronization
+service. Therefore for any Releases/Iterations that already exist in
+BOTH systems please navigate to Planning > Releases and click on the
+Release/Iteration in question. Make sure you have the 'Overview' tab
+visible and expand the "Details" section of the release/iteration:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_85.png" /></p>
+<p>In addition to the standard fields and custom properties configured for
+Releases, you will see an additional text property called
+"<strong>MsTfsDataSync ID</strong>" that is used to store the mapped external
+identifier for the equivalent Version in TFS. You need to locate the ID
+of the equivalent Iteration in TFS, enter it into this text-box and
+click [Save]. You should now repeat for all the other pre-existing
+releases.</p>
+<p>The TFS Iteration ID is not visible in the TFS user interface, but can
+instead be located by opening up the SQL Server that it's installed on,
+opening the 'TfsWorkItemTracking' database (in TFS 2010 it
+will named after your project collection instead) and locating the
+'TreeNodes' table:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_86.png" /></p>
+<p>Once you have found the matching Iteration (by name), the numeric value
+stored in the ID column (the one on the left) is the value that needs to
+get added as the MsTfsDataSync ID inside SpiraTeam.</p>
+<h3 id="configuring-the-standard-incident-field-mapping">Configuring the Standard Incident Field Mapping</h3>
+<p>Now that the projects, user and releases have been mapped correctly, we
+need to configure the standard incident fields. To do this, go to
+Administration > System > Data Synchronization and click on the "View
+Project Mappings" for the MsTfsDataSync plug-in entry:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>From this screen, you need to click on Priority, Severity, Status and
+Type in turn to configure their values:</p>
+<p>a) Incident Type</p>
+<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up
+the Incident type mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_88.png" /></p>
+<p>The table lists each of the incident types available in SpiraTeam and
+provides you with the ability to enter the matching TFS work item type
+name for each one. To make this easier, we recommend that inside the
+Administration > Edit Incident Statuses screen you first make all
+incident types inactive except <em>Risk, Issue</em> and <em>Bug</em> since only those
+types make sense to synchronize with TFS.</p>
+<p>b) Incident Status</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
+up the Incident status mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_89.png" /></p>
+<p>The table lists each of the incident statuses available in SpiraTeam and
+provides you with the ability to enter the matching TFS work item
+<strong>State + Reason</strong> for each one. Since TFS uses separate
+State (Active, Resolved, Closed) and Reason (Fixed, Duplicate, Not
+Fixed, etc.) codes and SpiraTeam uses a single status code, you need to
+concatenate the TFS State and Reason together with a 'plus' (+) sign so
+that the system knows that the incident status in SpiraTeam corresponds
+to that specific combination.</p>
+<p>You can map multiple SpiraTeam fields to the same TFS fields (e.g. New
+and Open in SpiraTeam are both equivalent to 'Active+New' in TFS), in
+which case only one of the two values can be listed as Primary = Yes as
+that's the value that's used on the reverse synchronization (from TFS >
+SpiraTeam).</p>
+<p>We recommend that you always point the New and Open statuses inside
+SpiraTeam to point to the "Active+New" TFS state+reason, and make Open
+in SpiraTeam the Primary status of the two. This is recommended so that
+as new incidents in SpiraTeam get synched over to TFS, they will get
+switched to the "Active+New" status in TFS which will then be synched
+back to "Open" in SpiraTeam. That way you'll be able to see at a glance
+which incidents have been synched with TFS and those that haven't.</p>
+<p>c) Incident Priority</p>
+<p>Click on the "Priority" hyperlink under Incident Standard Fields to
+bring up the Incident Priority mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_90.png" /></p>
+<p>The table lists each of the incident priorities available in SpiraTeam
+and provides you with the ability to enter the matching TFS priority
+value for each one. To make this easier, we recommend that inside the
+Administration > Edit Incident Priorities screen you first make any
+statuses not used in TFS inactive in SpiraTeam.</p>
+<p>d) Incident Severity (TFS 2012 plugin only)</p>
+<p>Click on the "Severity" hyperlink under Incident Standard Fields to
+bring up the Incident Severity mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_91.png" /></p>
+<p>The table lists each of the incident severities available in SpiraTeam
+and provides you with the ability to enter the matching TFS severity
+value for each one. To make this easier, we recommend that inside the
+Administration > Edit Incident Severities screen you first make any
+statuses not used in TFS inactive in SpiraTeam.</p>
+<h3 id="configuring-the-incident-custom-property-mapping">Configuring the Incident Custom Property Mapping</h3>
+<p>Now that the various SpiraTeam standard incident fields have been mapped
+correctly, we need to configure the custom property mappings. This is
+used for both custom properties in SpiraTeam that map to custom fields
+in TFS and also for custom properties in SpiraTeam that are used to map
+to standard fields in TFS (e.g. Area) that don't exist in SpiraTeam.</p>
+<p>From the View/Edit Project Data Mapping screen, you need to click on the
+name of the Incident Custom Property that you want to add data-mapping
+information for:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>a) TFS's Area Field</p>
+<p>First you need to go to Administration > Edit Custom Lists and create a
+new custom list that contains all the different Areas that are being
+used in TFS.</p>
+<p>Then you need to go to Administration > Edit Custom Properties and add
+a new <em>list</em> custom property onto the Incident artifact type called
+'Area' and link it to the Area custom list you created in the previous
+step. This will now be available for mapping.</p>
+<p>Now, back in the data-mapping page, click on the 'Area' hyperlink under
+Incident Custom Properties to bring up the custom property mapping
+configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_92.png" /></p>
+<p>First you need to enter the word "Area" as the External Key of the
+custom property. This tells the data-sync plug-in that the custom
+property in SpiraTeam should be mapped to built-in Area field in TFS.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the ID of the various Areas that are
+configured in TFS. The TFS Area ID is not visible in the TFS user
+interface, but can instead be located by opening up the SQL Server that
+it's installed on, opening the 'TfsWorkItemTracking'
+database (in TFS 2010 and later it will named after your project
+collection instead) and locating the 'TreeNodes' table:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_93.png" /></p>
+<p>Once you have found the matching Area (by name), the numeric value
+stored in the ID column (the one on the left) is the value that needs to
+get added as the External Key inside SpiraTeam.</p>
+<p>b) TFS Custom Fields</p>
+<p>If the custom field in TFS is a list field, first you need to go to
+Administration > Edit Custom Lists in SpiraTeam and create a new custom
+list that contains all the different values that are being used in TFS.</p>
+<p>Then for both list-fields and value-fields you need to go to
+Administration > Edit Custom Properties and add a new custom property
+onto the Incident artifact type with the name of the appropriate TFS
+field (e.g. Triage, Rank, etc.) and if a list-field, link it to the
+custom list you created in the previous step. The custom property will
+now be available for data-mapping.</p>
+<p>Now, back in the data-synchronization data-mapping page, click on the
+hyperlink under Incident Custom Properties that corresponds to the
+custom property to bring up the custom property mapping configuration
+screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_94.png" /></p>
+<p>First you need to enter the full <strong>Reference Name</strong> of the TFS field as
+the External Key of the custom property. This tells the data-sync
+plug-in that the custom property in SpiraTeam should be mapped to this
+specific field in TFS. To see a list of fields and their reference
+names, you can run the following SQL query against your TFS database:</p>
+<p>SELECT Name, ReferenceName FROM Fields ORDER BY Name</p>
+<p>We have included a list of fields in the Agile process template in
+<a href="#tfs-field-reference">TFS Field Reference</a> as a helpful reference.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the name of the field values as they appear
+in TFS as the External Key.</p>
+<h3 id="configuring-the-standard-task-field-mapping">Configuring the Standard Task Field Mapping</h3>
+<p>Now that the projects, user, releases and incident fields have been
+mapped correctly, we need to configure the standard task fields. To do
+this, go to Administration > System > Data Synchronization and click
+on the "View Project Mappings" for the MsTfsDataSync plug-in entry:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>From this screen, you need to click on Priority and Status in turn to
+configure their values:</p>
+<p>a) Task Status</p>
+<p>Click on the "Status" hyperlink under Task Standard Fields to bring up
+the Task status mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_95.png" /></p>
+<p>The table lists each of the task statuses available in SpiraTeam and
+provides you with the ability to enter the matching TFS work item State
+for each one. Unlike the mapping for incidents (see above) SpiraTeam
+does not track the reason codes associated with the tasks in MS TFS, so
+you only need to map the State names from TFS with the task status
+names.</p>
+<p>You can map multiple SpiraTeam fields to the same TFS fields (e.g.
+Blocked, Completed and Deferred in SpiraTeam are all equivalent to State
+= Closed in TFS), in which case only one of the values can be listed as
+Primary = Yes as that's the value that's used on the reverse
+synchronization (from TFS > SpiraTeam).</p>
+<p>b) Task Priority (TFS 2012 Plugin Only)</p>
+<p>Click on the "Priority" hyperlink under Task Standard Fields to bring up
+the Task Priority mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_96.png" /></p>
+<p>The table lists each of the task priorities available in SpiraTeam and
+provides you with the ability to enter the matching TFS priority value
+for each one.</p>
+<h3 id="configuring-the-task-custom-property-mapping">Configuring the Task Custom Property Mapping</h3>
+<p>Now that the various SpiraTeam standard task fields have been mapped
+correctly, we need to configure the custom property mappings. This is
+used for both custom properties in SpiraTeam that map to custom fields
+in TFS and also for custom properties in SpiraTeam that are used to map
+to standard fields in TFS (e.g. Area) that don't exist in SpiraTeam.</p>
+<p>From the View/Edit Project Data Mapping screen, you need to click on the
+name of the Task Custom Property that you want to add data-mapping
+information for:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>a) TFS's Area Field</p>
+<p>First you need to go to Administration > Edit Custom Lists and create a
+new custom list that contains all the different Areas that are being
+used in TFS.</p>
+<p>Then you need to go to Administration > Edit Custom Properties and add
+a new <em>list</em> custom property onto the Task artifact type called 'Area'
+and link it to the Area custom list you created in the previous step.
+This will now be available for mapping.</p>
+<p>Now, back in the data-mapping page, click on the 'Area' hyperlink under
+Task Custom Properties to bring up the custom property mapping
+configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_97.png" /></p>
+<p>First you need to enter the word "Area" as the External Key of the
+custom property. This tells the data-sync plug-in that the custom
+property in SpiraTeam should be mapped to built-in Area field in TFS.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the ID of the various Areas that are
+configured in TFS. The TFS Area ID is not visible in the TFS user
+interface, but can instead be located by opening up the SQL Server that
+it's installed on, opening the 'TfsWorkItemTracking'
+database (in TFS 2010 and later it will named after your project
+collection instead) and locating the 'TreeNodes' table:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_93.png" /></p>
+<p>Once you have found the matching Area (by name), the numeric value
+stored in the ID column (the one on the left) is the value that needs to
+get added as the External Key inside SpiraTeam.</p>
+<p>b) TFS Custom Fields</p>
+<p>If the custom field in TFS is a list field, first you need to go to
+Administration > Edit Custom Lists in SpiraTeam and create a new custom
+list that contains all the different values that are being used in TFS.</p>
+<p>Then for both list-fields and value-fields you need to go to
+Administration > Edit Custom Properties and add a new custom property
+onto the Task artifact type with the name of the appropriate TFS field
+(e.g. Discipline, Stack Rank, etc.) and if a list-field, link it to the
+custom list you created in the previous step. The custom property will
+now be available for data-mapping.</p>
+<p>Now, back in the data-synchronization data-mapping page, click on the
+hyperlink under Task Custom Properties that corresponds to the custom
+property to bring up the custom property mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_98.png" /></p>
+<p>First you need to enter the full <strong>Reference Name</strong> of the TFS field as
+the External Key of the custom property. This tells the data-sync
+plug-in that the custom property in SpiraTeam should be mapped to this
+specific field in TFS. To see a list of fields and their reference
+names, you can run the following SQL query against your TFS database:</p>
+<p>SELECT Name, ReferenceName FROM Fields ORDER BY Name</p>
+<p>We have included a list of fields in the Agile process template in
+<a href="#tfs-field-reference">TFS Field Reference</a> as a helpful reference.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the name of the field values as they appear
+in TFS as the External Key.</p>
+<h3 id="configuring-the-standard-requirement-field-mapping-2012-plugin-only">Configuring the Standard Requirement Field Mapping (2012 Plugin Only)</h3>
+<p>Now that the projects, user, releases, incident and task fields have
+been mapped correctly, we need to configure the standard requirement
+fields. To do this, go to Administration > System > Data
+Synchronization and click on the "View Project Mappings" for the
+MsTfsDataSync plug-in entry:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>From this screen, you need to click on Importance and Status in turn to
+configure their values:</p>
+<p>a) Requirement Status</p>
+<p>Click on the "Status" hyperlink under Requirement Standard Fields to
+bring up the Requirement status mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_99.png" /></p>
+<p>The table lists each of the requirement statuses available in SpiraTeam
+and provides you with the ability to enter the matching TFS work item
+State for each one. Unlike the mapping for incidents (see above)
+SpiraTeam does not track the reason codes associated with the
+requirements in MS TFS, so you only need to map the State names from TFS
+with the requirement status names.</p>
+<p>You can map multiple SpiraTeam fields to the same TFS fields, in which
+case only one of the values can be listed as Primary = Yes as that's the
+value that's used on the reverse synchronization (from TFS >
+SpiraTeam).</p>
+<p>b) Requirement Importance</p>
+<p>Click on the "Importance" hyperlink under Requirement Standard Fields to
+bring up the Requirement Importance mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_100.png" /></p>
+<p>The table lists each of the requirement importance values available in
+SpiraTeam and provides you with the ability to enter the matching TFS
+work item priority value for each one.</p>
+<h3 id="configuring-the-requirement-custom-property-mapping-2012-plugin-only">Configuring the Requirement Custom Property Mapping (2012 Plugin Only)</h3>
+<p>Now that the various SpiraTeam standard requirement fields have been
+mapped correctly, we need to configure the custom property mappings.
+This is used for both custom properties in SpiraTeam that map to custom
+fields in TFS and also for custom properties in SpiraTeam that are used
+to map to standard fields in TFS (e.g. Area) that don't exist in
+SpiraTeam.</p>
+<p>From the View/Edit Project Data Mapping screen, you need to click on the
+name of the Requirement Custom Property that you want to add
+data-mapping information for:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_87.png" /></p>
+<p>a) TFS's Area Field</p>
+<p>First you need to go to Administration > Edit Custom Lists and create a
+new custom list that contains all the different Areas that are being
+used in TFS.</p>
+<p>Then you need to go to Administration > Edit Custom Properties and add
+a new <em>list</em> custom property onto the Requirement artifact type called
+'Area' and link it to the Area custom list you created in the previous
+step. This will now be available for mapping.</p>
+<p>Now, back in the data-mapping page, click on the 'Area' hyperlink under
+Requirement Custom Properties to bring up the custom property mapping
+configuration screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_101.png" /></p>
+<p>First you need to enter the word "Area" as the External Key of the
+custom property. This tells the data-sync plug-in that the custom
+property in SpiraTeam should be mapped to built-in Area field in TFS.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the ID of the various Areas that are
+configured in TFS. The TFS Area ID is not visible in the TFS user
+interface, but can instead be located by opening up the SQL Server that
+it's installed on, opening the 'TfsWorkItemTracking'
+database (in TFS 2010 and later it will named after your project
+collection instead) and locating the 'TreeNodes' table:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_93.png" /></p>
+<p>Once you have found the matching Area (by name), the numeric value
+stored in the ID column (the one on the left) is the value that needs to
+get added as the External Key inside SpiraTeam.</p>
+<p>b) TFS Custom Fields</p>
+<p>If the custom field in TFS is a list field, first you need to go to
+Administration > Edit Custom Lists in SpiraTeam and create a new custom
+list that contains all the different values that are being used in TFS.</p>
+<p>Then for both list-fields and value-fields you need to go to
+Administration > Edit Custom Properties and add a new custom property
+onto the Requirement artifact type with the name of the appropriate TFS
+field (e.g. Risk, Stack Rank, etc.) and if a list-field, link it to the
+custom list you created in the previous step. The custom property will
+now be available for data-mapping.</p>
+<p>Now, back in the data-synchronization data-mapping page, click on the
+hyperlink under Requirement Custom Properties that corresponds to the
+custom property to bring up the custom property mapping configuration
+screen:</p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_102.png" /></p>
+<p>First you need to enter the full <strong>Reference Name</strong> of the TFS field as
+the External Key of the custom property. This tells the data-sync
+plug-in that the custom property in SpiraTeam should be mapped to this
+specific field in TFS. To see a list of fields and their reference
+names, you can run the following SQL query against your TFS database:</p>
+<p>SELECT Name, ReferenceName FROM Fields ORDER BY Name</p>
+<p>We have included a list of fields in the Agile process template in
+<a href="#tfs-field-reference">TFS Field Reference</a> as a helpful reference.</p>
+<p>Next for each of the Property Values in the table (in the lower half of
+the page) you need to enter the name of the field values as they appear
+in TFS as the External Key.</p>
+<p><strong>Once you have updated the various mapping sections, you are now ready
+to start the service.</strong></p>
+<h2 id="using-spirateam-with-tfs">Using SpiraTeam with TFS</h2>
+<p>Now that the integration service has been configured and the service
+started, initially any incidents already created in SpiraTeam for the
+specified projects will be imported into TFS and any requirements, tasks
+or bugs already created in TFS will be imported into SpiraTeam. At this
+point we recommend opening the Windows Event Viewer and choosing the
+Application Log. In this log any error messages raised by the SpiraTeam
+Data Sync Service will be displayed. If you see any error messages at
+this point, we recommend immediately stopping the SpiraTeam service and
+checking the various mapping entries. If you cannot see any work items
+with the mapping information, we recommend sending a copy of the event
+log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>)
+who will help you troubleshoot the problem.</p>
+<p>To use SpiraTeam with TFS on an ongoing basis, we recommend the
+following general processes be followed:</p>
+<p>When running tests in SpiraTest or SpiraTeam, defects found should be
+logged through the Test Execution Wizard as normal.</p>
+<p>Once an incident has been created during the running of the test, it
+will now be populated across into TFS as a work item of type
+corresponding to the types setup in the incident type mappings.</p>
+<p>At this point, the incident can be worked on in either system, with
+changes being synchronized to the other system. However in general we
+recommend that the QA/Testing team use SpiraTeam and the development
+team use TFS. E.g. the developers will mark the bugs as resolved in MSTS
+once they have completed fixing them and the QA team will either reopen
+or close then in SpiraTeam once they have had a change to verify the
+resolution.</p>
+<p>You are now able to perform test coverage and incident reporting inside
+SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam
+and the incidents managed collaboratively between SpiraTest/SpiraTeam
+and TFS.</p>
+<p>You can create project requirements and associated tasks in either
+SpiraTeam or TFS, however the synchronization service is only
+unidirectional for requirements and tasks, so when you create or update
+a requirement or task in TFS, the change will be reflected in SpiraTeam,
+but not the other way around.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>In most cases once you have started the service, once it's up and
+running you will not see any error or warning messages from the
+Data-Sync service. However, if you have new users created in SpiraTeam
+that have not been mapped to users in TFS, when you assign incidents,
+requirements or tasks to those items, you may see warning messages in
+the Event Viewer letting you know which users needs to be mapped.</p>
+<h2 id="tfs-field-reference">TFS Field Reference</h2>
+<p>The following fields are available in TFS for data-mapping when using
+the TFS agile process template:</p>
+<p><strong>Display Name</strong>                                          <strong>Reference Name</strong>
+Accepted By                                               Microsoft.VSTS.CodeReview.AcceptedBy
+Accepted Date                                             Microsoft.VSTS.CodeReview.AcceptedDate
+Activated By                                              Microsoft.VSTS.Common.ActivatedBy
+Activated Date                                            Microsoft.VSTS.Common.ActivatedDate
+Activity                                                  Microsoft.VSTS.Common.Activity
+Application Launch Instructions                           Microsoft.VSTS.Feedback.ApplicationLaunchInstructions
+Application Start Information                             Microsoft.VSTS.Feedback.ApplicationStartInformation
+Application Type                                          Microsoft.VSTS.Feedback.ApplicationType
+Area ID                                                   System.AreaId
+Area Level 1                                              System.AreaLevel1
+Area Level 2                                              System.AreaLevel2
+Area Level 3                                              System.AreaLevel3
+Area Level 4                                              System.AreaLevel4
+Area Level 5                                              System.AreaLevel5
+Area Level 6                                              System.AreaLevel6
+Area Level 7                                              System.AreaLevel7
+Area Path                                                 System.AreaPath
+Assigned To                                               System.AssignedTo
+Associated Context                                        Microsoft.VSTS.CodeReview.Context
+Associated Context Code                                   Microsoft.VSTS.CodeReview.ContextCode
+Associated Context Owner                                  Microsoft.VSTS.CodeReview.ContextOwner
+Associated Context Type                                   Microsoft.VSTS.CodeReview.ContextType
+Attached File Count                                       System.AttachedFileCount
+Attached Files                                            System.AttachedFiles
+Authorized As                                             System.AuthorizedAs
+Authorized Date                                           System.AuthorizedDate
+Automated Test Id                                         Microsoft.VSTS.TCM.AutomatedTestId
+Automated Test Name                                       Microsoft.VSTS.TCM.AutomatedTestName
+Automated Test Storage                                    Microsoft.VSTS.TCM.AutomatedTestStorage
+Automated Test Type                                       Microsoft.VSTS.TCM.AutomatedTestType
+Automation status                                         Microsoft.VSTS.TCM.AutomationStatus
+BIS Links                                                 System.BISLinks
+Changed By                                                System.ChangedBy
+Changed Date                                              System.ChangedDate
+Changed Set                                               System.ChangedSet
+Closed By                                                 Microsoft.VSTS.Common.ClosedBy
+Closed Date                                               Microsoft.VSTS.Common.ClosedDate
+Closed Status                                             Microsoft.VSTS.CodeReview.ClosedStatus
+Closed Status Code                                        Microsoft.VSTS.CodeReview.ClosedStatusCode
+Closing Comment                                           Microsoft.VSTS.CodeReview.ClosingComment
+Completed Work                                            Microsoft.VSTS.Scheduling.CompletedWork
+Created By                                                System.CreatedBy
+Created Date                                              System.CreatedDate
+Description                                               System.Description
+Due Date                                                  Microsoft.VSTS.Scheduling.DueDate
+External Link Count                                       System.ExternalLinkCount
+Finish Date                                               Microsoft.VSTS.Scheduling.FinishDate
+Found In                                                  Microsoft.VSTS.Build.FoundIn
+History                                                   System.History
+Hyperlink Count                                           System.HyperLinkCount
+ID                                                        System.Id
+InAdminOnlyTreeFlag                                       System.InAdminOnlyTreeFlag
+InDeletedTreeFlag                                         System.InDeletedTreeFlag
+Integration Build                                         Microsoft.VSTS.Build.IntegrationBuild
+Issue                                                     Microsoft.VSTS.Common.Issue
+Iteration ID                                              System.IterationId
+Iteration Level 1                                         System.IterationLevel1
+Iteration Level 2                                         System.IterationLevel2
+Iteration Level 3                                         System.IterationLevel3
+Iteration Level 4                                         System.IterationLevel4
+Iteration Level 5                                         System.IterationLevel5
+Iteration Level 6                                         System.IterationLevel6
+Iteration Level 7                                         System.IterationLevel7
+Iteration Path                                            System.IterationPath
+Link Type                                                 System.Links.LinkType
+Linked Files                                              System.LinkedFiles
+Local Data Source                                         Microsoft.VSTS.TCM.LocalDataSource
+Node Name                                                 System.NodeName
+Node Type                                                 System.NodeType
+Not a field                                               System.NotAField
+Original Estimate                                         Microsoft.VSTS.Scheduling.OriginalEstimate
+Parameters                                                Microsoft.VSTS.TCM.Parameters
+PersonID                                                  System.PersonId
+Priority                                                  Microsoft.VSTS.Common.Priority
+ProjectID                                                 System.ProjectId
+Rating                                                    Microsoft.VSTS.Common.Rating
+Reason                                                    System.Reason
+Related Link Count                                        System.RelatedLinkCount
+Related Links                                             System.RelatedLinks
+Remaining Work                                            Microsoft.VSTS.Scheduling.RemainingWork
+Repro Steps                                               Microsoft.VSTS.TCM.ReproSteps
+Resolved By                                               Microsoft.VSTS.Common.ResolvedBy
+Resolved Date                                             Microsoft.VSTS.Common.ResolvedDate
+Resolved Reason                                           Microsoft.VSTS.Common.ResolvedReason
+Rev                                                       System.Rev
+Reviewed By                                               Microsoft.VSTS.Common.ReviewedBy
+Revised Date                                              System.RevisedDate
+Risk                                                      Microsoft.VSTS.Common.Risk
+Severity                                                  Microsoft.VSTS.Common.Severity
+Stack Rank                                                Microsoft.VSTS.Common.StackRank
+Start Date                                                Microsoft.VSTS.Scheduling.StartDate
+State                                                     System.State
+State Change Date                                         Microsoft.VSTS.Common.StateChangeDate
+State Code                                                Microsoft.VSTS.Common.StateCode
+Steps                                                     Microsoft.VSTS.TCM.Steps
+Story Points                                              Microsoft.VSTS.Scheduling.StoryPoints
+System Info                                               Microsoft.VSTS.TCM.SystemInfo
+Tags                                                      System.Tags
+Team Project                                              System.TeamProject
+TF Server                                                 System.TFServer
+Title                                                     System.Title
+Tree                                                      System.Tree
+Watermark                                                 System.Watermark
+WEF_BD66C4E18FB54884A18B2299E91ADE1B_Extension Marker   WEF_BD66C4E18FB54884A18B2299E91ADE1B_System.ExtensionMarker
+WEF_BD66C4E18FB54884A18B2299E91ADE1B_Kanban Column      WEF_BD66C4E18FB54884A18B2299E91ADE1B_Kanban.Column
+Work Item Form                                            System.WorkItemForm
+Work Item FormID                                          System.WorkItemFormId
+Work Item Type                                            System.WorkItemType
+WorkItem                                                  System.WorkItem
+WorkItemLink                                              System.WorkItemLink
+WorkItemTypeExtension                                     System.WorkItemTypeExtension</p>
+<p>For a full list of the available TFS fields in the different process
+templates, please refer to:
+<a href="http://msdn.microsoft.com/en-us/library/vstudio/dd997792.aspx">http://msdn.microsoft.com/en-us/library/vstudio/dd997792.aspx</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

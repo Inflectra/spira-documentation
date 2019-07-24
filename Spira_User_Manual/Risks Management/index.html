@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Spira_User_Manual/Risks Management/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Risk Management - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Functionality Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../User Product Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../Requirements Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../Test Case Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../Incident Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Release Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../Task Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Resource Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Document Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../Reports Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../Source Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../Planning Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../Mobile Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../Program Management/">Program Management</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../Appendix 1 Keyboard Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan_Quick_Start_Guide/Reviewing A Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Logging In and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding Requirement Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Adding the Test Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Planning the Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Assigning the Requirements & Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Logging in and Selecting a Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Define the Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Create the Release and Iteration Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Build the Test Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Scheduling the Testing Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Running Tests and Logging Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Triaging Issues and Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest_Quick_Start_Guide/Reviewing Your Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/Installing SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira_Administration_Guide/System Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/System Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product General Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Product Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Test Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Custom Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira_Administration_Guide/Template Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Activating TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Provisioning Projects & Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault_User_Manual/Using Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/RemoteLaunch Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/HP UFT  QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Rational Functional Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/Worksoft Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch_User_Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Ruby TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with Perl TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating with PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit_Testing_Integration/Integrating UnitJS & NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Jetbrains IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Eclipse  Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE_Integration/Visual Studio 2005 - 2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Setting up Data Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with JIRA 3  4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTest with FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with IBM RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with Axosoft 14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using SpiraTeam with Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with OnTime 11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External_Bug_Tracking_Integration/Using Spira with ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version_Control_Integration/Integrating with CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email_Integration/Installing the Email Integration Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Configuring the Email Integration Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email_Integration/Using the Email Integration Service with SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help_Desk_Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help_Desk_Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Excel (Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Google Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Importing from Microsoft Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Project Backup and Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from MS Test Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from HP ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration_and_Integration/Migrating from TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build_Server_Integration/Jenkins  Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/JetBrains TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Microsoft Azure DevOps Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build_Server_Integration/Atlassian Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From Jama Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements_Management_Integration/Importing From DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Program Management/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Appendix 1 Keyboard Shortcuts/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#risks-management">Risks Management</a></li>
+        <li class="second-level"><a href="#risks-list">Risks List</a></li>
+        
+        <li class="third-level"><a href="#sorting-and-filtering">Sorting and Filtering</a></li>
+        <li class="third-level"><a href="#new-risk">New Risk</a></li>
+        <li class="third-level"><a href="#delete">Delete</a></li>
+        <li class="third-level"><a href="#refresh">Refresh</a></li>
+        <li class="third-level"><a href="#show-hide-columns">Show / Hide Columns</a></li>
+        <li class="third-level"><a href="#edit">Edit</a></li>
+        <li class="third-level"><a href="#cloning-risks">Cloning Risks</a></li>
+        <li class="third-level"><a href="#exporting-risks">Exporting Risks</a></li>
+        <li class="third-level"><a href="#printing-items">Printing Items</a></li>
+        <li class="second-level"><a href="#risk-details">Risk Details</a></li>
+        
+        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
+        <li class="third-level"><a href="#followers">Followers</a></li>
+        <li class="third-level"><a href="#overview-detailed-information">Overview -- Detailed Information</a></li>
+        <li class="third-level"><a href="#overview-mitigations">Overview -- Mitigations</a></li>
+        <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
+        <li class="third-level"><a href="#tasks">Tasks</a></li>
+        <li class="third-level"><a href="#attachments">Attachments</a></li>
+        <li class="third-level"><a href="#history">History</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="risks-management">Risks Management</h1>
+<p>This section outlines the risk management features of SpiraPlan® (not
+available in SpiraTest or SpiraTeam) and how they can be used to help
+understand, track, and mitigate risks across your products. The expected
+principle ways of managing risks is through assigning values to each
+risk's probability and impact. These two fields, multiplied together,
+represent the potential (negative) exposure from the risk: a highly
+likely risk that would have a large impact has a higher exposure (and
+should be managed with a higher priority) than an unlikely risk which
+will not have much real world impact.</p>
+<h2 id="risks-list">Risks List</h2>
+<p>When you click on the Tracking > Risks global navigation link, you will
+initially be taken to the risks list screen illustrated below:</p>
+<p><img alt="" src="../img/Risks_Management_456.png" /></p>
+<p>The risk list screen displays all the risks entered for the current
+product, in a filterable, sortable grid. The grid displays the risk
+number together with fields such as risk type (schedule, financial,
+etc.), status (open, evaluated, etc.), probability, impact, and exposure
+(calculated from the probability and impact). The choice of columns
+displayed is configurable per-user, per-product, giving extensive
+flexibility when it comes to viewing and searching risks.</p>
+<p>The sidebar on the left gives you quick access to saved filters, along
+with useful charts to get an at-a-glance view of risks for this product.</p>
+<p>In addition, you can view a more detailed description of the risk (along
+with any mitigations) by positioning the mouse pointer over the incident
+name hyperlink and waiting for the popup "tooltip" to appear. If you
+click on the risk name hyperlink, you will be taken to the <a href="#risk-details">risk details</a>
+page. Clicking on any of the pagination links
+at the bottom of the page will advance you to the next set of risks in
+the list according to the applied filter and sort-order. There is also a
+drop-down-list at the bottom of the page which allows you to specify how
+many rows should be displayed in each page, helping accommodate
+different user preferences.</p>
+<h3 id="sorting-and-filtering">Sorting and Filtering</h3>
+<p>You can easily filter and sort the list of risks as illustrated in the
+screen-shot below:</p>
+<p><img alt="" src="../img/Risks_Management_457.png" /></p>
+<p>To filter the list by a field like type, probability, impact, or status
+choose an item from the appropriate drop-down list. For exposure you can
+search for a specific number range, and for the other fields, you enter
+a free-text phrase then click "<strong><em>Filter</em></strong>" or press the
+&lt;ENTER> key to apply the different filters. Note that the name field
+is searched using a "LIKE" comparison, so that searching for "database"
+would include any item with the word database in the name. The other
+freetext fields need to be exact matches (e.g. dates, risk numbers).</p>
+<p>To change the column that is sorted, or to change the direction of the
+current sort, click on the up/down arrow icon in the appropriate column.
+The currently sorted column is indicated by the darker arrow. In the
+screen-shot above, we are filtering on Exposures between 6 and 15
+(inclusive), and sorting by ascending name.</p>
+<p>Clicking on Filter > Clear Filter removes any set filters and expands
+the risk list to display all risks for the current product, and clicking
+on Filter > Save Filter allows you to save the filter to your 'My Page'
+for use in the future. The list of saved filters can also be retrieved
+by clicking Filter > Retrieve Filter.</p>
+<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong>
+that can be applied in a single-click:</p>
+<ul>
+<li>
+<p>The topmost section displays any saved risk filters created by the
+current user or that are shared with the current user (the former
+are designated with an icon representing a single person, the latter
+a group of people)</p>
+</li>
+<li>
+<p><strong>Components</strong> -- This section lists the components defined for the
+current product. Clicking on any of the components in the list will
+filter the risks to only show those that are associated with the
+selected component.</p>
+</li>
+</ul>
+<h3 id="new-risk">New Risk</h3>
+<p>Clicking on the "<strong><em>New Risk</em></strong>" button takes you to the
+new risk screen. This is essentially the same screen as the <a href="#risk-details">risk details</a>
+screen except, depending on how the workflow has
+been configured for your product, certain fields may be disabled. For
+more details on setting and up configuring workflow for your product,
+please refer to the <em>SpiraTest Administration Guide</em>.</p>
+<h3 id="delete">Delete</h3>
+<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the risk(s)
+whose check-boxes have been selected in the risk list.</p>
+<h3 id="refresh">Refresh</h3>
+<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the
+list of risks; this is useful when new risks are being added by other
+users, and you want to make sure you have the most up-to-date list
+displayed.</p>
+<h3 id="show-hide-columns">Show / Hide Columns</h3>
+<p>This drop-down list allows you to change the fields that are displayed
+in the risk list as columns for the current product. To show a column
+that is not already displayed, select that column from the list of
+"Show..." column names and to hide an existing column, select that
+column from the list of "Hide..." column names. This is stored on a
+per-product basis, so you can have different display settings for each
+product you are a member of. The fields can be any of the built-in
+fields or any of the custom properties set up by the product owner.</p>
+<h3 id="edit">Edit</h3>
+<p>Each risk in the list has an "<strong><em>Edit</em></strong>" button display
+in its right-most column. When you click this button or <em>double-click</em>
+on any of the cells in the row, you change the item from "View" mode to
+"Edit" mode. The various columns are made editable, and
+"<strong><em>Save</em></strong>" buttons are
+displayed in the last column:</p>
+<p><img alt="" src="../img/Risks_Management_458.png" /></p>
+<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the
+"<strong><em>Save</em></strong>" buttons are
+only displayed on the first row, and you can make changes to all the
+editable rows and then update the changes by clicking the one
+"<strong><em>Save</em></strong>" button. Also, if you want to make the same
+change to multiple rows (e.g. to change five risks from "Resolved"
+status to "Closed"), you can click on the "fill" icon to the right of
+the editable item, which will propagate the new value to all editable
+items in the same column.</p>
+<p>If you want to edit lots of items, first select their checkboxes and
+then click the "<strong><em>Edit</em></strong>" button on the same row as the
+Filters and it will switch all the selected items into edit mode.</p>
+<p>When you have made your updates, you can either click
+"<strong><em>Save</em></strong>" to commit the changes, or
+"<strong><em>Cancel</em></strong>" to revert back to the original information.
+Alternatively, pressing the &lt;ENTER> key will commit the changes and
+pressing the &lt;ESCAPE> key will cancel the changes.</p>
+<h3 id="cloning-risks">Cloning Risks</h3>
+<p>To create a clone of an existing risk or set of risks, select the
+check-boxes of the risks you want to copy and then click Edit >
+"<strong><em>Clone</em></strong>". This will make a copy of the current risk
+with its name suffixed with '... - Copy' to distinguish itself from the
+original. Any file attachments and mitigations will also be copied along
+with the risk itself.</p>
+<h3 id="exporting-risks">Exporting Risks</h3>
+<p>To export a risk or set of risks from the current product to another
+product in the system, select the check-boxes of the risk(s) you want to
+export and then click the Tools > "<strong><em>Export to
+Product</em></strong>". This will then bring up a list of possible
+destination products:</p>
+<p><img alt="" src="../img/Risks_Management_459.png" /></p>
+<p>Once you have chosen the destination product and clicked the
+"<strong><em>Export</em></strong>" button, the risks will be exported from the
+current product to the destination product. Any file attachments will
+also be copied to the destination product along with the risks.</p>
+<h3 id="printing-items">Printing Items</h3>
+<p>To quickly print a single risk or list of risks you can select the
+items' checkboxes and then click Tools > Print Items. This will display
+a popup window containing a printable version of the selected items. You
+can also save the report in a variety of common formats from the same
+Tools menu.</p>
+<h2 id="risk-details">Risk Details</h2>
+<p>When you click on a risk item in the <a href="#risks-list">risks list</a>, you are taken to the risk details page illustrated below:</p>
+<p><img alt="" src="../img/Risks_Management_460.png" /></p>
+<p>This page is made up of <em>three</em> areas;</p>
+<ol>
+<li>
+<p>the left pane displays the risks list navigation;</p>
+</li>
+<li>
+<p>the right pane's header, which displays: the operations toolbar; the
+editable name of the selected risk; and the info bar (with a shaded
+background), which also contains the workflow status transitions
+(see below); and</p>
+</li>
+<li>
+<p>the right pane's tabbed interface with rich information related to
+the risk.</p>
+</li>
+</ol>
+<p>Please note that on smaller screen sizes the navigation pane is not
+displayed. While the navigation pane has a link to take you back to the
+risks list, on mobile devices a 'back' button is shown on the left of
+the operations toolbar.</p>
+<p>The navigation pane can be collapsed by clicking on the "-" button, or
+expanded by clicking anywhere on the gray title area. On desktops the
+user can also control the exact width of the navigation pane by dragging
+and dropping a red handle that appears on hovering at the rightmost edge
+of the navigation pane.</p>
+<p>The navigation pane shows a list of the peer risks to the one selected.
+This list is useful as a navigation shortcut; you can quickly view the
+coverage information of all the peer risks by clicking on the navigation
+links without having to first return to the risks list page. The
+navigation list can be switched between three different modes:</p>
+<ul>
+<li>
+<p>The list of risks matching the current filter</p>
+</li>
+<li>
+<p>The list of all risks, irrespective of the current filter</p>
+</li>
+<li>
+<p>The list of risks assigned to the current user</p>
+</li>
+</ul>
+<p>On the main right-hand side of the page, which of the fields for the
+currently selected risk are available and which are required will depend
+on your stage in the risk workflow. For example, an identified risk
+might not require a "Release" whereas an evaluated risk could well do.
+The types of change allowed and the fields that are
+enabled/visible/required will depend on how your product administrator
+has set up the system for you. Administrators should refer to the
+<em>SpiraPlan Administration Guide</em> for details on configuring the risk
+workflows to better meet their needs.</p>
+<p>Depending on the user's role and whether they are listed as the owner or
+author of the risk, displayed in the info bar beneath the risk name is
+the current workflow status and an "operations" button which, when
+clicked, will show a set of allowed workflow operations:</p>
+<p><img alt="" src="../img/Risks_Management_461.png" /></p>
+<p>These workflow transitions allow the user to move the risk from one
+status to another. For example, when the risk is in the Open status, you
+may be given options to:</p>
+<p><strong>Close Risk</strong> -- changes status to "Closed"</p>
+<p><strong>Reject Risk</strong> -- changes the status to "Rejected"</p>
+<p>After changing the status of the risk by clicking on the workflow link,
+you can then fill in any additional fields that are now enabled and/or
+required. Once you've made the changes to the appropriate fields, you
+can either click "<strong><em>Save</em></strong>", "<strong><em>Save and
+Close</em></strong>", or "<strong><em>*</em>*" to commit
+the changes or "</strong><em>Refresh<strong><em>" to discard the changes and
+reload the risk from the database. In addition, you can print the
+current risk by clicking "</em></strong>Print</em>**", which will display
+a printable version of the page in a separate window.</p>
+<p>Please note that if digital signatures have been enabled for a
+particular workflow operation (and therefore a digital signature is
+required to confirm the status change. Workflow operations requiring a
+digital signature are marked with a padlock icon:</p>
+<p><img alt="" src="../img/Risks_Management_462.png" /></p>
+<p>On attempting to save changes made after clicking a workflow operation
+that requires a digital signature you will be presented with the
+following popup:</p>
+<p><img alt="" src="../img/Risks_Management_463.png" /></p>
+<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can
+send an email containing details of the risk to an email address or
+another user on the system:</p>
+<p><img alt="" src="../img/Risks_Management_97.png" /></p>
+<p>You can specify the subject line for the email, and either a list of
+email addresses, separated by semicolons, or an existing product user
+.The content of the email is specified in the System Administration --
+Notification Templates.</p>
+<p>To be notified of any changes made to the current artifact via email,
+click the "<strong><em>Subscribe</em></strong>" button. If you already
+subscribed, the button will instead let you
+"<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that
+particular artifact. Depending on your role, you may also see a dropdown
+arrow to the right of this button. This will let you subscribe others in
+the product to this artifact.</p>
+<p>The bottom part of the right pane can be switched between four views:
+"Overview", "Tasks", "Attachments", "History", each of which will be
+described in more detail below.</p>
+<h3 id="overview-details">Overview - Details</h3>
+<p>The Overview tab is divided into a number of different sections. Each of
+these can be collapsed or expanded by clicking on the title of that
+section. It displays the description, fields and comments associated
+with the risk.</p>
+<p>The top part of this tab displays the various standard fields and custom
+properties associated with the risk. Fields (both standard and custom)
+are grouped under the collapsible headings (marked by orange text and
+underline) in the screenshot below. For instance, all fields regarding
+dates are grouped together in the "Dates and Times" area.</p>
+<p><img alt="" src="../img/Risks_Management_464.png" /></p>
+<h3 id="followers">Followers</h3>
+<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can
+quickly follow the item, and receive updates on certain changes to it.
+Depending on your role, you may also see a dropdown to this button,
+which let's you add another product member as a follower to this item.</p>
+<p><img alt="" src="../img/Risks_Management_99.png" /></p>
+<p><img alt="" src="../img/Risks_Management_100.png" /></p>
+<p>You can also quickly see who is following an incident under the "People"
+section in the Overview tab.</p>
+<p><img alt="" src="../img/Risks_Management_101.png" /></p>
+<p>To view information about the follower, or to unfollow them from the
+item, hover over their avatar to display a user profile card.</p>
+<p><img alt="" src="../img/Risks_Management_102.png" /></p>
+<h3 id="overview-detailed-information">Overview -- Detailed Information</h3>
+<p>The Detailed Information section contains the long, formatted
+description of the risk, as well as any rich text custom fields. You can
+enter rich text or paste in from a word processing program or web page
+into these fields. Clicking on the shaded areas of one of these detailed
+fields will display the rich text toolbar.</p>
+<p><img alt="" src="../img/Risks_Management_465.png" /></p>
+<h3 id="overview-mitigations">Overview -- Mitigations</h3>
+<p>The mitigations section is where you can enter information about any
+plans or ideas about how the risk in question can be mitigated, in other
+words how its impact or probability can and/or will be lowered. The list
+of mitigations displays the position number, and the description, and
+date fields.</p>
+<p><img alt="" src="../img/Risks_Management_466.png" /></p>
+<p>Clicking on the "<strong><em>Add</em></strong>" button inserts a new
+mitigation <em>before</em> the currently selected (by means of the check-box)
+step. Clicking the "<strong><em>Add</em></strong>" button without selecting an
+existing step will insert a new mitigation at the end of the list. When
+a new mitigation is inserted, its fields are displayed in "Edit" mode,
+so the description and review date fields are editable, allowing you to
+enter the data:</p>
+<p><img alt="" src="../img/Risks_Management_467.png" /></p>
+<p>To move the mitigations around in the list, click and hold on the
+mitigation you want to move and drag it to the location desired.</p>
+<p>If at least one mitigation is selected (using the checkboxes on the
+left-hand side), then clicking "<strong><em>Clone</em></strong>" will clone
+those mitigations and add them to the bottom of the list.</p>
+<h3 id="overview-comments">Overview - Comments</h3>
+<p>The Comments section allows you to add and view discussions relating to
+the risk:</p>
+<p><img alt="" src="../img/Risks_Management_468.png" /></p>
+<p>Existing comments are displayed in order underneath the textbox in date
+order (either newest first or oldest first). To add a new comment, enter
+it into the textbox, and click the "<strong><em>Add Comment</em></strong>"
+button.</p>
+<h3 id="tasks">Tasks</h3>
+<p>This tab shows the list of product tasks that need to be completed for
+the risk to be properly managed/mitigated:</p>
+<p><img alt="" src="../img/Risks_Management_469.png" /></p>
+<p>Each of the tasks is displayed together with, by default, its name,
+description (by hovering the mouse over the name), progress, priority,
+start-date, current owner, estimated effort, producted effort and
+numeric task identifier. Clicking on the task name will bring up the
+<a href="../Task%20Tracking/#task-details">Task Details page</a>. This
+allows you to edit the details of an existing task.</p>
+<p>You can perform the following actions on a task from this screen:</p>
+<p><strong>New Task</strong> -- inserts a new task in the task list with a default set
+of values. The task will be associated with the current risk.</p>
+<p><strong>Remove</strong> -- removes the task from this risk without actually deleting
+the task</p>
+<p><strong>Refresh</strong> -- updates the list of tasks from the server, useful if
+other people are adding tasks to this risk at the same time.</p>
+<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to
+the list of tasks</p>
+<p><strong>Clear Filters</strong> -- Clears the current filter, so that all tasks
+associated with the current risk are shown.</p>
+<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
+of the task allows you to edit the task inline directly on this screen.
+Only columns visible will be editable.</p>
+<p><strong>Show/Hide Columns</strong> -- Allows you to choose which Task columns are
+visible</p>
+<p>Note that if you create a new task on the risks page, the component,
+release/sprint, and owner are automatically copied from the parent risk.
+You can change these suggested values before clicking
+"<strong><em>Save</em></strong>"</p>
+<h3 id="attachments">Attachments</h3>
+<p>The attachment tab displays the list of documents, screenshots or
+web-links (URLs) that have been "attached" to the risk. The documents
+can be in any format, though SpiraPlan® will only display icons for
+certain known types.</p>
+<p><img alt="" src="../img/Risks_Management_470.png" /></p>
+<p>The attachment list includes the filename/URL that was originally
+uploaded together with the file-size (in KB), name of the person who
+attached it and the date uploaded. In addition, if you position the
+pointer over the filename and hold it there for a few seconds, a
+detailed description is displayed as a tooltip.</p>
+<p>To actually view the document, click on the filename hyperlink and a new
+web browser window will open. Depending on the type of file, this window
+will either display the document / web-page or prompt you for a place to
+save it on your local computer. To remove an existing attachment from a
+risk, simply click the "<strong><em>Remove</em></strong>" button and the
+attachment will be removed from the list. Using the standard filter/sort
+options you can also sort and filter the list of attachments to make it
+more manageable.</p>
+<p>If you are using SpiraPlan or SpiraTeam (but not SpiraTest) you can also
+choose to include file attachments stored in a linked version control
+system (e.g. Subversion, CVS, Perforce, etc.) by selecting the "Include
+Source Code Documents" option.</p>
+<p>To attach a new document to the risk, you need to first click the
+"<strong><em>Add New</em></strong>" button to display the new attachment
+dialog box:</p>
+<p><img alt="g4169" src="../img/Risks_Management_114.png" /></p>
+<p>There are three different types of item that can be attached to a risk:</p>
+<p>To upload a file, choose "File" as the type and then click the Browse
+button and select the file from your local computer, optionally enter a
+detailed description then click the "<strong><em>Upload</em></strong>" button.
+The document will be copied from your computer and attached to the
+artifact.</p>
+<p>To attach a web-link (URL) to the artifact, you need to choose "URL" as
+the type and then enter the fully qualified URL (e.g.
+<a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an
+optional description and then click the "<strong><em>Upload</em></strong>"
+button to attach the web-link.</p>
+<p>To attach a screenshot to the artifact, you need to choose "Screenshot"
+as the type and then copy the image to your computer's clipboard (e.g.
+on Windows computers, the PRINT SCREEN button captures the current page
+and adds to the clipboard). Once the image is in the clipboard, paste it
+into the editor using CTRL+V (or the equivalent keystroke for your
+operating system) and the item will appear in the preview window. You
+can then fill in the other fields and click "<strong><em>Upload</em></strong>"
+to attach the image.</p>
+<p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
+doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
+automatically, then you will need to manually add the file extension to
+the filename before uploading if you want it to be displayed with the
+correct icon in the attachment list.</p>
+<p>You can also associate an existing document (that's already stored in
+SpiraTeam) with the risk. To do that, click on the "<strong><em>Add
+Existing</em></strong>" button to bring up the add file association
+dialog box:</p>
+<p><img alt="" src="../img/Risks_Management_115.png" /></p>
+<p><img alt="" src="../img/Risks_Management_116.png" /></p>
+<p>You can then choose to either associate a document stored in the
+SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
+but not SpiraTest) from the linked source code repository. In either
+case you first select the appropriate folder, and then pick the
+document(s) from the file list on the right. In the case of a source
+code file association you can also add a comment.</p>
+<h3 id="history">History</h3>
+<p>This tab displays the list of changes that have been performed on the
+risk artifact since its creation. An example risk change history is
+depicted below:</p>
+<p><img alt="" src="../img/Risks_Management_471.png" /></p>
+<p>The change history displays the date that each change was made, together
+with the fields that were changed, the old and new values and the person
+who made the change. This allows a complete audit trail to be maintained
+of all changes in the system. In addition, if you are logged in as a
+product administrator you can also click on the "Admin View" hyperlink
+to revert any unwanted changes.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
