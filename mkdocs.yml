@@ -1,4 +1,5 @@
 site_name: SpiraDocs
+copyright: © Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |
 
 repo_name: Inflectra
 repo_url: https://www.inflectra.com
@@ -109,6 +110,7 @@ nav:
     - TestingAnywhere: RemoteLaunch_User_Guide\TestingAnywhere.md
     - Worksoft Certify: RemoteLaunch_User_Guide\Worksoft Certify.md
     - ZAPTEST: RemoteLaunch_User_Guide\ZAPTEST.md
+  - SpiraCapture: SpiraCapture\User_Guide.md
 - Integrations:
   - Testing:
     - NUnit: Unit_Testing_Integration\Integrating with NUnit.md
