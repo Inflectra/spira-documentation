@@ -344,3 +344,17 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
+
+
+
+/* CUSTOM CSS FOR PAGE STYLING */
+.table-with-icons + table img {
+    width: 16px;
+    height: auto;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+.table-with-icons + table td {
+    margin: 4px 8px;
+}

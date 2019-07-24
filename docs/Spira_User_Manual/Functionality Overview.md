@@ -295,6 +295,8 @@ In addition, certain artifacts in the system are displayed with an icon
 that helps distinguish them from each other, and provides additional
 context on the state of the artifact:
 
+<div class="table-with-icons"> </div>
+
 | Icon                                   | Artifact Description |
 | ----                                   | -------------------- |
 | ![](img/Functionality_Overview_7.png)  |    Program |
@@ -323,4 +325,5 @@ context on the state of the artifact:
 | ![](img/Functionality_Overview_30.png) |    Product User |
 | ![](img/Functionality_Overview_31.png) |    Build |
 | ![](img/Functionality_Overview_32.png) |    Artifact has an Attachment |
+
 
