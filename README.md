@@ -1,3 +1,6 @@
+# Deploying to GitHub Pages
+In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
+
 # Converting docx to MD
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
 2. [Install Pandoc](https://pandoc.org/installing.html)
