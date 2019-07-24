@@ -446,6 +446,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://spiradoc.inflectra.com/SpiraCapture/User_Guide/</loc>
+     <lastmod>2019-07-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://spiradoc.inflectra.com/Unit_Testing_Integration/Integrating with NUnit/</loc>
      <lastmod>2019-07-24</lastmod>
      <changefreq>daily</changefreq>
