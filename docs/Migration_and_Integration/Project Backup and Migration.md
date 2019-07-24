@@ -62,8 +62,7 @@ cannot cancel or change any options. To change an option, click the
 'Back' button at any time before starting the process to go back a
 screen.
 
-![ready to
-export](img/Project_Backup_and_Migration_57.png)
+![ready to export](img/Project_Backup_and_Migration_57.png)
 
 
 

@@ -25,8 +25,7 @@ account that has System-Administration level privileges and click on the
 System \> Data Synchronization administration option from the left-hand
 navigation:
 
-![Description:
-datasync](img/Using_SpiraTeam_with_Mantis_122.png)
+![Description: datasync](img/Using_SpiraTeam_with_Mantis_122.png)
 
 
 
@@ -42,8 +41,7 @@ click on the \[Add\] button instead. In either case you will be taken to
 the following screen where you can enter or modify the Mantis
 Data-Synchronization plug-in:
 
-![Description:
-datasync\_setup](img/Using_SpiraTeam_with_Mantis_123.png)
+![Description: datasync\_setup](img/Using_SpiraTeam_with_Mantis_123.png)
 
 
 
@@ -154,8 +152,7 @@ synchronization administration page you need to click on the "View
 Project Mappings" hyperlink next to the Mantis plug-in name. This will
 take you to the data-mapping overview page:
 
-![Description:
-datasync\_setupproj](img/Using_SpiraTeam_with_Mantis_124.png)
+![Description: datasync\_setupproj](img/Using_SpiraTeam_with_Mantis_124.png)
 
 
 
@@ -171,8 +168,7 @@ enter:
 Mantis. To get the ID of the Project in Mantis, log in as an
 administrator and go to Manage -\> Manage Projects:
 
-> ![Description:
-> man\_project](img/Using_SpiraTeam_with_Mantis_125.png)
+> ![Description: man\_project](img/Using_SpiraTeam_with_Mantis_125.png)
 
 > 
 
@@ -203,8 +199,7 @@ Administration \> Users \> View Edit Users, which will bring up the list
 of users in the system. Then click on the "Edit" button for a particular
 user that will be editing issues in Mantis:
 
-![Description:
-datasync\_user](img/Using_SpiraTeam_with_Mantis_126.png)
+![Description: datasync\_user](img/Using_SpiraTeam_with_Mantis_126.png)
 
 
 
@@ -253,8 +248,7 @@ version is the string that is in the
 The Mantis Release ID can be found by going to **Manage -\> Manage
 Projects -\> Versions** and viewing a release's details:
 
-![Description:
-version](img/Using_SpiraTeam_with_Mantis_128.png)
+![Description: version](img/Using_SpiraTeam_with_Mantis_128.png)
 
 
 
@@ -275,8 +269,7 @@ need to configure the standard incident fields. To do this, go to
 Administration \> System \> Data Synchronization and click on the "View
 Project Mappings" for the MantisDataSync plug-in entry:
 
-![Description:
-datasync\_artifact](img/Using_SpiraTeam_with_Mantis_129.png)
+![Description: datasync\_artifact](img/Using_SpiraTeam_with_Mantis_129.png)
 
 
 
@@ -298,8 +291,7 @@ installation. If you do not have any Categories set-up, then issues will
 not transfer over and error messages will be logged.) For existing
 issues, updates to this field will not be transferred.
 
-![Description:
-datasync\_type](img/Using_SpiraTeam_with_Mantis_130.png)
+![Description: datasync\_type](img/Using_SpiraTeam_with_Mantis_130.png)
 
 
 
@@ -308,8 +300,7 @@ The table lists each of the incident types available in SpiraTeam and
 provides you with the ability to enter the matching Mantis Category for
 each one. The value to put in External ID is the Category text:
 
-![Description:
-category](img/Using_SpiraTeam_with_Mantis_131.png)
+![Description: category](img/Using_SpiraTeam_with_Mantis_131.png)
 
 
 
@@ -339,8 +330,7 @@ has an Owner in SpiraTeam, then the default for the new issue in Mantis
 is 'assigned'. For existing issues, updates to the field will not be
 transferred over.
 
-![Description:
-datasync\_status](img/Using_SpiraTeam_with_Mantis_132.png)
+![Description: datasync\_status](img/Using_SpiraTeam_with_Mantis_132.png)
 
 
 
@@ -350,8 +340,7 @@ provides you with the ability to enter the matching Mantis Category for
 each one. The values to put in External Key is any one of the Status
 values in Mantis. By default in Mantis, the available statuses are:
 
-![Description:
-status](img/Using_SpiraTeam_with_Mantis_133.png)
+![Description: status](img/Using_SpiraTeam_with_Mantis_133.png)
 
 
 
@@ -374,8 +363,7 @@ undefined (unset). For issues coming from SpiraTeam into Mantis, the
 default priority of 'normal' and severity of 'minor' is used. For
 existing issues, updates to the field will not be transferred over.
 
-![Description:
-priority](img/Using_SpiraTeam_with_Mantis_134.png)
+![Description: priority](img/Using_SpiraTeam_with_Mantis_134.png)
 
 
 
@@ -386,14 +374,12 @@ each one. (The table for Severities has the same functionality.) The
 values to put in External Key are any one of the Priority (or Severity)
 values in Mantis. By default in Mantis, the available values are:
 
-![Description:
-priority](img/Using_SpiraTeam_with_Mantis_135.png)
+![Description: priority](img/Using_SpiraTeam_with_Mantis_135.png)
 
 
 
 
-![Description:
-severity](img/Using_SpiraTeam_with_Mantis_136.png)
+![Description: severity](img/Using_SpiraTeam_with_Mantis_136.png)
 
 
 
@@ -465,8 +451,7 @@ below\]
 
 In the External Key field, put the name of your custom field in Mantis:
 
-![Description:
-custom1](img/Using_SpiraTeam_with_Mantis_137.png)
+![Description: custom1](img/Using_SpiraTeam_with_Mantis_137.png)
 
 
 

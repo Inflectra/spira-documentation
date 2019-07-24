@@ -381,7 +381,7 @@ suite as you would normally do, and when you view the test cases in
 SpiraTest, you should see a PHPUnit automated test run displayed in the
 list of executed test runs:
 
-![](img/Integrating_with_PHPUnit_2png)
+![](img/Integrating_with_PHPUnit_23.png)
 
 
 
@@ -390,7 +390,7 @@ Clicking on one of the PHPUnit test runs will bring up a screen that
 provides information regarding what PHPUnit test method failed, what the
 error was, together with the associated code stack-trace:
 
-![](img/Integrating_with_PHPUnit_2png)
+![](img/Integrating_with_PHPUnit_24.png)
 
 
 

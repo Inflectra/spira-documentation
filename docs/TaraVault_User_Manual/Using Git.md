@@ -15,8 +15,7 @@ file-based changes. These systems (CVS, Subversion, Perforce, Bazaar,
 and so on) think of the information they keep as a set of files and the
 changes made to each file over time.
 
-![Storing data as changes to a base version of each
-file.](img/Using_Git_46.png)
+![Storing data as changes to a base version of each file.](img/Using_Git_46.png)
 
 
 
@@ -30,8 +29,7 @@ changed, Git doesn't store the file again, just a link to the previous
 identical file it has already stored. Git thinks about its data more
 like a stream of snapshots:
 
-![Git stores data as snapshots of the project over
-time.](img/Using_Git_47.png)
+![Git stores data as snapshots of the project over time.](img/Using_Git_47.png)
 
 
 

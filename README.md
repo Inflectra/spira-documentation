@@ -1,3 +1,4 @@
+# Converting docx to MD
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
 2. [Install Pandoc](https://pandoc.org/installing.html)
 3. In the tools directory, paste the .docx files you would like to convert. Note that only .docx files will be converted - if you have a .doc or another format, either save it as a docx or convert it manually
@@ -20,3 +21,18 @@
     - ^®^ to <sup>®</sup>
     - ^1^ to <sup>1</sup>
     - \$ to $
+
+# Delete Unused Pictures
+From the tools directory, run the command `python .\unusedimgs.py`. This will generate a list of commands you can paste into the console to delete the file. ***PLEASE READ LIMITATIONS BEFORE YOU PROCEED AND DELETE IMAGES***
+## Limitations
+- If an image name has a parenthesis in it (like `Importing_from_Microsoft_Excel_(Office365)_24.png`), the script will print it out no matter what. Please review them before you delete in case they are actually used.
+- If the image reference is across multiple lines (like the example below), the image will be printed out. Please move the reference to one line and run the command again and it should disappear.
+
+```
+...
+
+![Git stores data as snapshots of the project over
+time.](img/Using_Git_47.png)
+
+...
+```

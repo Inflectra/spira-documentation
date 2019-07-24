@@ -33,8 +33,7 @@ Administration. You will need Bamboo administrator privileges to access
 this configuration page. Under Add-ons, click on the *Manage Add-ons*
 link and then on *Upload Add-on* on the left:
 
-![Figure
-01](img/Atlassian_Bamboo_33.jpeg)
+![Figure 01](img/Atlassian_Bamboo_33.jpeg)
 
 
 
@@ -46,16 +45,14 @@ the .zip archive downloaded from the Inflectra website. Then, click on
 After the installation of the SpiraTeam Add-on, you should see a welcome
 screen:
 
-![Figure
-02](img/Atlassian_Bamboo_34.jpeg)
+![Figure 02](img/Atlassian_Bamboo_34.jpeg)
 
 
 
 
 ## You will then be able to see the SpiraTeam Add-on in the User Installed Add-ons list :
 
-![Figure
-03](img/Atlassian_Bamboo_35.jpeg)
+![Figure 03](img/Atlassian_Bamboo_35.jpeg)
 
 
 
@@ -71,8 +68,7 @@ receive notifications, click on Edit
 (![](img/Atlassian_Bamboo_36.png) icon). In the Plan Configuration screen,
 go to the *Notifications* tab and click on Add Notification:
 
-![Figure
-04](img/Atlassian_Bamboo_37.jpeg)
+![Figure 04](img/Atlassian_Bamboo_37.jpeg)
 
 
 
@@ -81,8 +77,7 @@ In the Add a new notification pop-up, select the appropriate event you
 want to receive notifications, and in the Recipient type box, select
 *SpiraTeam*:
 
-![Figure
-05](img/Atlassian_Bamboo_38.jpeg)
+![Figure 05](img/Atlassian_Bamboo_38.jpeg)
 
 
 
@@ -118,8 +113,7 @@ reported back into SpiraTeam. For example when the 'Plan1' build of
 TestProject 1 illustrated in the figure bellow is executed, it will
 report in Bamboo:
 
-![Figure
-06](img/Atlassian_Bamboo_39.jpeg)
+![Figure 06](img/Atlassian_Bamboo_39.jpeg)
 
 
 
@@ -127,8 +121,7 @@ report in Bamboo:
 The corresponding build entry will also be created in SpiraTeam under
 the specified project and release/iteration:
 
-![Figure
-07](img/Atlassian_Bamboo_40.jpeg)
+![Figure 07](img/Atlassian_Bamboo_40.jpeg)
 
 
 
@@ -137,8 +130,7 @@ If you have configured your Project Home to include the list of recent
 builds, the build information will also be displayed on the Project Home
 dashboard:
 
-![Figure
-08](img/Atlassian_Bamboo_41.jpeg)
+![Figure 08](img/Atlassian_Bamboo_41.jpeg)
 
 
 
@@ -146,8 +138,7 @@ dashboard:
 Clicking on either of the hyperlinks will allow you to navigate to the
 Build details page inside SpiraTeam:
 
-![Figure
-09](img/Atlassian_Bamboo_42.jpeg)
+![Figure 09](img/Atlassian_Bamboo_42.jpeg)
 
 
 

@@ -16,8 +16,7 @@ already installed our plugin from the store.
 ## Logging in
 
 Open the command palette and type in 'credentials' as shown:
-![Command Palette
-Credentials](img/Visual_Studio_Code_42.png)
+![Command Palette Credentials](img/Visual_Studio_Code_42.png)
 
 
 
@@ -26,16 +25,14 @@ Hit return to begin the Spira authentication process. You should see an
 input box that asks you to type the base URL of your Spira service. This
 should access the 'root' directory of your Spira, not including the
 ending slash. An example is provided below:
-![Spira
-URL](img/Visual_Studio_Code_43.png)
+![Spira URL](img/Visual_Studio_Code_43.png)
 
 
 Hit return when you typed in your URL to move on to the next step. You
 will be prompted to enter your Spira username, which you use when
 signing into your Spira subscription. See the example below for
 assistance.
-![Spira
-Username](img/Visual_Studio_Code_44.png)
+![Spira Username](img/Visual_Studio_Code_44.png)
 
 
 
@@ -45,16 +42,14 @@ step. You will be prompted to enter your RSS Token, which must be
 enabled in your user profile to work.
 
 Here is the location of the RSS Token in your profile:
-![Spira
-Profile](img/Visual_Studio_Code_45.png)
+![Spira Profile](img/Visual_Studio_Code_45.png)
 
 
 
 
 Here is a sample image of a (fake) RSS Token:
 
-![Spira
-Token](img/Visual_Studio_Code_46.png)
+![Spira Token](img/Visual_Studio_Code_46.png)
 
 
 
@@ -65,8 +60,7 @@ You should see a new icon on the left menu where the explorer, search
 bar, version control, etc are expanded from. Alternatively, you can
 expand the view by pressing alt+s Here is an image of the Spira icon:
 
-![Spira Panel
-Icon](img/Visual_Studio_Code_47.png)
+![Spira Panel Icon](img/Visual_Studio_Code_47.png)
 
 
 
@@ -75,16 +69,14 @@ Click on the new icon to open the Spira panel where you can see all of
 the Tasks, Requirements, and Incidents that are assigned to you. You can
 expand/collapse any of the different types of items. You should now see
 a view similar to this:
-![Spira
-Panel](img/Visual_Studio_Code_48.png)
+![Spira Panel](img/Visual_Studio_Code_48.png)
 
 
 
 
 Clicking on one of the different items, 'Cannot log into the
 application' for instance will bring up a view similar to this:
-![Spira
-Information](img/Visual_Studio_Code_49.png)
+![Spira Information](img/Visual_Studio_Code_49.png)
 
 
 
@@ -118,16 +110,14 @@ New Task' in the command palette or by hitting alt+s, alt+t on windows.
 This will take any highlighted text and dump it into the name prompt.
 Feel free to change the name if you like.
 
-![Task
-Name](img/Visual_Studio_Code_50.png)
+![Task Name](img/Visual_Studio_Code_50.png)
 
 
 
 
 Hit return and select a project from the dropdown as shown below:
 
-![Project
-Selection](img/Visual_Studio_Code_51.png)
+![Project Selection](img/Visual_Studio_Code_51.png)
 
 
 
@@ -143,8 +133,7 @@ By default, the panel will refresh every 60 seconds, but this can easily
 be changed or disabled altogether through settings. To change this, open
 up your settings and search for 'spira' as shown below:
 
-![Spira Refresh
-Setting](img/Visual_Studio_Code_52.png)
+![Spira Refresh Setting](img/Visual_Studio_Code_52.png)
 
 
 
@@ -157,8 +146,7 @@ which should also decrease load times. To accomplish this, simply search
 'spira' in settings and switch any of the 'showType' settings to
 false. See the image below for an example:
 
-![Disable
-Artifacts](img/Visual_Studio_Code_53.png)
+![Disable Artifacts](img/Visual_Studio_Code_53.png)
 
 
 
