@@ -10,89 +10,89 @@ theme:
   custom_dir: inflectra_mkdocs
 nav:
 - User Manual:
-  - Functionality Overview: Spira-User-Manual\Functionality Overview.md
-  - User/Product Management: Spira-User-Manual\User Product Management.md
-  - Requirements Management: Spira-User-Manual\Requirements Management.md
-  - Test Case Management: Spira-User-Manual\Test Case Management.md
-  - Incident Tracking: Spira-User-Manual\Incident Tracking.md
-  - Release Management: Spira-User-Manual\Release Management.md
-  - Task Tracking: Spira-User-Manual\Task Tracking.md
-  - Resource Tracking: Spira-User-Manual\Resource Tracking.md
-  - Document Management: Spira-User-Manual\Document Management.md
-  - Reports Center: Spira-User-Manual\Reports Center.md
-  - Source Code: Spira-User-Manual\Source Code.md
-  - Planning Board: Spira-User-Manual\Planning Board.md
-  - Mobile Access: Spira-User-Manual\Mobile Access.md
-  - Program Management: Spira-User-Manual\Program Management.md
-  - Risk Management: Spira-User-Manual\Risks Management.md
-  - 'Appendix 1: Keyboard Shortcuts': Spira-User-Manual\Appendix 1 Keyboard Shortcuts.md
+  - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
+  - User/Product Management: Spira-User-Manual\User-Product-Management.md
+  - Requirements Management: Spira-User-Manual\Requirements-Management.md
+  - Test Case Management: Spira-User-Manual\Test-Case-Management.md
+  - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
+  - Release Management: Spira-User-Manual\Release-Management.md
+  - Task Tracking: Spira-User-Manual\Task-Tracking.md
+  - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
+  - Document Management: Spira-User-Manual\Document-Management.md
+  - Reports Center: Spira-User-Manual\Reports-Center.md
+  - Source Code: Spira-User-Manual\Source-Code.md
+  - Planning Board: Spira-User-Manual\Planning-Board.md
+  - Mobile Access: Spira-User-Manual\Mobile-Access.md
+  - Program Management: Spira-User-Manual\Program-Management.md
+  - Risk Management: Spira-User-Manual\Risks-Management.md
+  - 'Appendix 1: Keyboard Shortcuts': Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
 - Quick Start Guides:
   - SpiraPlan:
-    - Logging In: SpiraPlan-Quick-Start-Guide\Logging In and Selecting a Product.md
-    - Define the Requirements: SpiraPlan-Quick-Start-Guide\Define the Requirements.md
-    - Create Release & Iteration Plan: SpiraPlan-Quick-Start-Guide\Create the Release and Iteration Plan.md
-    - Adding Requirement Tasks: SpiraPlan-Quick-Start-Guide\Adding Requirement Tasks.md
-    - Adding Test Cases: SpiraPlan-Quick-Start-Guide\Adding the Test Cases.md
-    - Planning the Sprint: SpiraPlan-Quick-Start-Guide\Planning the Sprint.md
-    - Assigning Requirements & Tasks: SpiraPlan-Quick-Start-Guide\Assigning the Requirements & Tasks.md
-    - Scheduling Testing Activities: SpiraPlan-Quick-Start-Guide\Scheduling the Testing Activities.md
-    - Running Tests and Logging Incidents: SpiraPlan-Quick-Start-Guide\Running Tests and Logging Incidents.md
-    - Triaging Issues and Defects: SpiraPlan-Quick-Start-Guide\Triaging Issues and Defects.md
-    - Reviewing Your Product: SpiraPlan-Quick-Start-Guide\Reviewing Your Product.md
-    - Reviewing A Program: SpiraPlan-Quick-Start-Guide\Reviewing A Program.md
+    - Logging In: SpiraPlan-Quick-Start-Guide\Logging-In-and-Selecting-a-Product.md
+    - Define the Requirements: SpiraPlan-Quick-Start-Guide\Define-the-Requirements.md
+    - Create Release & Iteration Plan: SpiraPlan-Quick-Start-Guide\Create-the-Release-and-Iteration-Plan.md
+    - Adding Requirement Tasks: SpiraPlan-Quick-Start-Guide\Adding-Requirement-Tasks.md
+    - Adding Test Cases: SpiraPlan-Quick-Start-Guide\Adding-the-Test-Cases.md
+    - Planning the Sprint: SpiraPlan-Quick-Start-Guide\Planning-the-Sprint.md
+    - Assigning Requirements & Tasks: SpiraPlan-Quick-Start-Guide\Assigning-the-Requirements-&-Tasks.md
+    - Scheduling Testing Activities: SpiraPlan-Quick-Start-Guide\Scheduling-the-Testing-Activities.md
+    - Running Tests and Logging Incidents: SpiraPlan-Quick-Start-Guide\Running-Tests-and-Logging-Incidents.md
+    - Triaging Issues and Defects: SpiraPlan-Quick-Start-Guide\Triaging-Issues-and-Defects.md
+    - Reviewing Your Product: SpiraPlan-Quick-Start-Guide\Reviewing-Your-Product.md
+    - Reviewing A Program: SpiraPlan-Quick-Start-Guide\Reviewing-A-Program.md
   - SpiraTeam: 
-    - Logging In: SpiraTeam-Quick-Start-Guide\Logging In and Selecting a Product.md
-    - Define the Requirements: SpiraTeam-Quick-Start-Guide\Define the Requirements.md
-    - Create Release & Iteration Plan: SpiraTeam-Quick-Start-Guide\Create the Release and Iteration Plan.md
-    - Adding Requirement Tasks: SpiraTeam-Quick-Start-Guide\Adding Requirement Tasks.md
-    - Adding Test Cases: SpiraTeam-Quick-Start-Guide\Adding the Test Cases.md
-    - Planning the Sprint: SpiraTeam-Quick-Start-Guide\Planning the Sprint.md
-    - Assigning Requirements & Tasks: SpiraTeam-Quick-Start-Guide\Assigning the Requirements & Tasks.md
-    - Scheduling Testing Activities: SpiraTeam-Quick-Start-Guide\Scheduling the Testing Activities.md
-    - Running Tests and Logging Incidents: SpiraTeam-Quick-Start-Guide\Running Tests and Logging Incidents.md
-    - Triaging Issues and Defects: SpiraTeam-Quick-Start-Guide\Triaging Issues and Defects.md
-    - Reviewing Your Product: SpiraTeam-Quick-Start-Guide\Reviewing Your Product.md
+    - Logging In: SpiraTeam-Quick-Start-Guide\Logging-In-and-Selecting-a-Product.md
+    - Define the Requirements: SpiraTeam-Quick-Start-Guide\Define-the-Requirements.md
+    - Create Release & Iteration Plan: SpiraTeam-Quick-Start-Guide\Create-the-Release-and-Iteration-Plan.md
+    - Adding Requirement Tasks: SpiraTeam-Quick-Start-Guide\Adding-Requirement-Tasks.md
+    - Adding Test Cases: SpiraTeam-Quick-Start-Guide\Adding-the-Test-Cases.md
+    - Planning the Sprint: SpiraTeam-Quick-Start-Guide\Planning-the-Sprint.md
+    - Assigning Requirements & Tasks: SpiraTeam-Quick-Start-Guide\Assigning-the-Requirements-&-Tasks.md
+    - Scheduling Testing Activities: SpiraTeam-Quick-Start-Guide\Scheduling-the-Testing-Activities.md
+    - Running Tests and Logging Incidents: SpiraTeam-Quick-Start-Guide\Running-Tests-and-Logging-Incidents.md
+    - Triaging Issues and Defects: SpiraTeam-Quick-Start-Guide\Triaging-Issues-and-Defects.md
+    - Reviewing Your Product: SpiraTeam-Quick-Start-Guide\Reviewing-Your-Product.md
   - SpiraTest:
-    - Logging In: SpiraTest-Quick-Start-Guide\Logging in and Selecting a Product.md
-    - Define the Requirements: SpiraTest-Quick-Start-Guide\Define the Requirements.md
-    - Create Release & Iteration Plan: SpiraTest-Quick-Start-Guide\Create the Release and Iteration Plan.md
-    - Build the Test Plan: SpiraTest-Quick-Start-Guide\Build the Test Plan.md
-    - Scheduling Testing Activities: SpiraTest-Quick-Start-Guide\Scheduling the Testing Activities.md
-    - Running Tests and Logging Incidents: SpiraTest-Quick-Start-Guide\Running Tests and Logging Incidents.md
-    - Triaging Issues and Defects: SpiraTest-Quick-Start-Guide\Triaging Issues and Defects.md
-    - Reviewing Your Product: SpiraTest-Quick-Start-Guide\Reviewing Your Product.md
+    - Logging In: SpiraTest-Quick-Start-Guide\Logging-in-and-Selecting-a-Product.md
+    - Define the Requirements: SpiraTest-Quick-Start-Guide\Define-the-Requirements.md
+    - Create Release & Iteration Plan: SpiraTest-Quick-Start-Guide\Create-the-Release-and-Iteration-Plan.md
+    - Build the Test Plan: SpiraTest-Quick-Start-Guide\Build-the-Test-Plan.md
+    - Scheduling Testing Activities: SpiraTest-Quick-Start-Guide\Scheduling-the-Testing-Activities.md
+    - Running Tests and Logging Incidents: SpiraTest-Quick-Start-Guide\Running-Tests-and-Logging-Incidents.md
+    - Triaging Issues and Defects: SpiraTest-Quick-Start-Guide\Triaging-Issues-and-Defects.md
+    - Reviewing Your Product: SpiraTest-Quick-Start-Guide\Reviewing-Your-Product.md
 - Admin Guide:
-  - Installing Spira: Spira-Administration-Guide\Installing SpiraPlan.md
-  - System Administration: Spira-Administration-Guide\System Administration.md
+  - Installing Spira: Spira-Administration-Guide\Installing-SpiraPlan.md
+  - System Administration: Spira-Administration-Guide\System-Administration.md
   - System:
-    - Workspaces: Spira-Administration-Guide\System Workspaces.md
-    - Users: Spira-Administration-Guide\System Users.md
+    - Workspaces: Spira-Administration-Guide\System-Workspaces.md
+    - Users: Spira-Administration-Guide\System-Users.md
     - System: Spira-Administration-Guide\System.md
-    - Integration: Spira-Administration-Guide\System Integration.md
-    - Reporting: Spira-Administration-Guide\System Reporting.md
+    - Integration: Spira-Administration-Guide\System-Integration.md
+    - Reporting: Spira-Administration-Guide\System-Reporting.md
   - Product: 
-    - General Settings: Spira-Administration-Guide\Product General Settings.md
-    - Users: Spira-Administration-Guide\Product Users.md
-    - Planning: Spira-Administration-Guide\Product Planning.md
+    - General Settings: Spira-Administration-Guide\Product-General-Settings.md
+    - Users: Spira-Administration-Guide\Product-Users.md
+    - Planning: Spira-Administration-Guide\Product-Planning.md
   - Template:
-    - Requirements: Spira-Administration-Guide\Template Requirements.md
-    - Releases: Spira-Administration-Guide\Template Releases.md
-    - Documents: Spira-Administration-Guide\Template Documents.md
-    - Test Cases: Spira-Administration-Guide\Template Test Cases.md
-    - Incidents: Spira-Administration-Guide\Template Incidents.md
-    - Tasks: Spira-Administration-Guide\Template Tasks.md
-    - Risks: Spira-Administration-Guide\Template Risks.md
-    - Custom Properties: Spira-Administration-Guide\Template Custom Properties.md
-    - Notifications: Spira-Administration-Guide\Template Notifications.md
+    - Requirements: Spira-Administration-Guide\Template-Requirements.md
+    - Releases: Spira-Administration-Guide\Template-Releases.md
+    - Documents: Spira-Administration-Guide\Template-Documents.md
+    - Test Cases: Spira-Administration-Guide\Template-Test-Cases.md
+    - Incidents: Spira-Administration-Guide\Template-Incidents.md
+    - Tasks: Spira-Administration-Guide\Template-Tasks.md
+    - Risks: Spira-Administration-Guide\Template-Risks.md
+    - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
+    - Notifications: Spira-Administration-Guide\Template-Notifications.md
 - Optional Features:
   - TaraVault:
-    - Activating: TaraVault-User-Manual\Activating TaraVault.md
-    - Provisioning Projects & Users: TaraVault-User-Manual\Provisioning Projects & Users.md
-    - Using Git: TaraVault-User-Manual\Using Git.md
-    - Using Subversion: TaraVault-User-Manual\Using Subversion.md
+    - Activating: TaraVault-User-Manual\Activating-TaraVault.md
+    - Provisioning Projects & Users: TaraVault-User-Manual\Provisioning-Projects-&-Users.md
+    - Using Git: TaraVault-User-Manual\Using-Git.md
+    - Using Subversion: TaraVault-User-Manual\Using-Subversion.md
   - RemoteLaunch:
-    - Guide: RemoteLaunch-User-Guide\RemoteLaunch Guide.md
-    - HP UFT/QTP: RemoteLaunch-User-Guide\HP UFT  QTP.md
+    - Guide: RemoteLaunch-User-Guide\RemoteLaunch-Guide.md
+    - HP UFT/QTP: RemoteLaunch-User-Guide\HP-UFT--QTP.md
     - SmarteScript: RemoteLaunch-User-Guide\SmarteScript.md
     - TestComplete: RemoteLaunch-User-Guide\TestComplete.md
     - Selenium: RemoteLaunch-User-Guide\Selenium.md
@@ -106,83 +106,83 @@ nav:
     - BadBoy: RemoteLaunch-User-Guide\BadBoy.md
     - JMeter: RemoteLaunch-User-Guide\JMeter.md
     - Ranorex: RemoteLaunch-User-Guide\Ranorex.md
-    - Rational Functional Tester: RemoteLaunch-User-Guide\Rational Functional Tester.md
+    - Rational Functional Tester: RemoteLaunch-User-Guide\Rational-Functional-Tester.md
     - TestingAnywhere: RemoteLaunch-User-Guide\TestingAnywhere.md
-    - Worksoft Certify: RemoteLaunch-User-Guide\Worksoft Certify.md
+    - Worksoft Certify: RemoteLaunch-User-Guide\Worksoft-Certify.md
     - ZAPTEST: RemoteLaunch-User-Guide\ZAPTEST.md
   - SpiraCapture: SpiraCapture\User-Guide.md
 - Integrations:
   - Testing:
-    - NUnit: Unit-Testing-Integration\Integrating with NUnit.md
-    - JUnit: Unit-Testing-Integration\Integrating with JUnit.md
-    - TestNG: Unit-Testing-Integration\Integrating with TestNG.md
-    - Selenium: Unit-Testing-Integration\Integrating with Selenium.md
-    - PyUnit: Unit-Testing-Integration\Integrating with PyUnit.md
-    - PyTest: Unit-Testing-Integration\Integrating with PyTest.md
-    - MS-Test: Unit-Testing-Integration\Integrating with MS-Test.md
-    - 'Ruby Test::Unit': Unit-Testing-Integration\Integrating with Ruby TestUnit.md
-    - Perl TAP: Unit-Testing-Integration\Integrating with Perl TAP.md
-    - PHPUnit: Unit-Testing-Integration\Integrating with PHPUnit.md
-    - UnitJS & NodeJS: Unit-Testing-Integration\Integrating UnitJS & NodeJS.md
+    - NUnit: Unit-Testing-Integration\Integrating-with-NUnit.md
+    - JUnit: Unit-Testing-Integration\Integrating-with-JUnit.md
+    - TestNG: Unit-Testing-Integration\Integrating-with-TestNG.md
+    - Selenium: Unit-Testing-Integration\Integrating-with-Selenium.md
+    - PyUnit: Unit-Testing-Integration\Integrating-with-PyUnit.md
+    - PyTest: Unit-Testing-Integration\Integrating-with-PyTest.md
+    - MS-Test: Unit-Testing-Integration\Integrating-with-MS-Test.md
+    - 'Ruby Test::Unit': Unit-Testing-Integration\Integrating-with-Ruby-TestUnit.md
+    - Perl TAP: Unit-Testing-Integration\Integrating-with-Perl-TAP.md
+    - PHPUnit: Unit-Testing-Integration\Integrating-with-PHPUnit.md
+    - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
   - IDE Integration:
-    - Visual Studio Code: IDE-Integration\Visual Studio Code.md
-    - Visual Studio: IDE-Integration\Visual Studio.md
-    - Jetbrains: IDE-Integration\Jetbrains IDEs.md
-    - Eclipse: IDE-Integration\Eclipse  Mylyn.md
-    - Visual Studio 2010: IDE-Integration\Visual Studio 2010.md
-    - Visual Studio 2005-2008: IDE-Integration\Visual Studio 2005 - 2008.md
+    - Visual Studio Code: IDE-Integration\Visual-Studio-Code.md
+    - Visual Studio: IDE-Integration\Visual-Studio.md
+    - Jetbrains: IDE-Integration\Jetbrains-IDEs.md
+    - Eclipse: IDE-Integration\Eclipse--Mylyn.md
+    - Visual Studio 2010: IDE-Integration\Visual-Studio-2010.md
+    - Visual Studio 2005-2008: IDE-Integration\Visual-Studio-2005---2008.md
   - Bug Tracking/DataSync:
-    - Setup: External-Bug-Tracking-Integration\Setting up Data Synchronization.md
-    - JIRA 5+: External-Bug-Tracking-Integration\Using SpiraTeam with JIRA 5+.md
-    - JIRA 3, 4: External-Bug-Tracking-Integration\Using SpiraTeam with JIRA 3  4.md
-    - Bugzilla: External-Bug-Tracking-Integration\Using SpiraTest with Bugzilla.md
-    - MS-TFS: External-Bug-Tracking-Integration\Using SpiraTest with MS-TFS.md
-    - FogBugz: External-Bug-Tracking-Integration\Using SpiraTest with FogBugz.md
-    - Mantis: External-Bug-Tracking-Integration\Using SpiraTeam with Mantis.md
-    - ClearQuest: External-Bug-Tracking-Integration\Using SpiraTeam with ClearQuest.md
-    - RTC: External-Bug-Tracking-Integration\Using SpiraTeam with IBM RTC.md
-    - Axosoft: External-Bug-Tracking-Integration\Using Spira with Axosoft 14+.md
-    - Redmine: External-Bug-Tracking-Integration\Using SpiraTeam with Redmine.md
-    - VersionOne: External-Bug-Tracking-Integration\Using Spira with VersionOne.md
-    - OnTime: External-Bug-Tracking-Integration\Using Spira with OnTime 11.md
-    - GitHub: External-Bug-Tracking-Integration\Using Spira with GitHub.md
-    - GitLab: External-Bug-Tracking-Integration\Using Spira with GitLab.md
-    - ServiceNow: External-Bug-Tracking-Integration\Using Spira with ServiceNow.md
+    - Setup: External-Bug-Tracking-Integration\Setting-up-Data-Synchronization.md
+    - JIRA 5+: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
+    - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
+    - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
+    - MS-TFS: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
+    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
+    - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
+    - ClearQuest: External-Bug-Tracking-Integration\Using-SpiraTeam-with-ClearQuest.md
+    - RTC: External-Bug-Tracking-Integration\Using-SpiraTeam-with-IBM-RTC.md
+    - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
+    - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
+    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
+    - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
+    - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
+    - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
+    - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
   - VCS: 
-    - Git: Version-Control-Integration\Integrating with Git.md
-    - Mercurial: Version-Control-Integration\Integrating with Mercurial.md
-    - Subversion: Version-Control-Integration\Integrating with Subversion.md
-    - Perforce: Version-Control-Integration\Integrating with Perforce.md
-    - TFS: Version-Control-Integration\Integrating with TFS.md
-    - VSS: Version-Control-Integration\Integrating with VSS.md
-    - CVS: Version-Control-Integration\Integrating with CVS.md
+    - Git: Version-Control-Integration\Integrating-with-Git.md
+    - Mercurial: Version-Control-Integration\Integrating-with-Mercurial.md
+    - Subversion: Version-Control-Integration\Integrating-with-Subversion.md
+    - Perforce: Version-Control-Integration\Integrating-with-Perforce.md
+    - TFS: Version-Control-Integration\Integrating-with-TFS.md
+    - VSS: Version-Control-Integration\Integrating-with-VSS.md
+    - CVS: Version-Control-Integration\Integrating-with-CVS.md
   - Email:
-    - Installing: Email-Integration\Installing the Email Integration Service.md
-    - Configuring: Email-Integration\Configuring the Email Integration Service.md
-    - Using: Email-Integration\Using the Email Integration Service with SpiraTeam.md
+    - Installing: Email-Integration\Installing-the-Email-Integration-Service.md
+    - Configuring: Email-Integration\Configuring-the-Email-Integration-Service.md
+    - Using: Email-Integration\Using-the-Email-Integration-Service-with-SpiraTeam.md
   - Help Desk:
     - KronoDesk: Help-Desk-Integration\KronoDesk.md
     - Zendesk: Help-Desk-Integration\Zendesk.md
   - Migration: 
-    - Excel: Migration-and-Integration\Importing from Microsoft Excel.md
-    - Excel (Office 365): Migration-and-Integration\Importing from Microsoft Excel (Office365).md
-    - Google Sheets: Migration-and-Integration\Importing from Google Sheets.md
-    - Microsoft Word: Migration-and-Integration\Importing from Microsoft Word.md
-    - Microsoft Project: Migration-and-Integration\Importing from Microsoft Project.md
-    - HP QualityCenter: Migration-and-Integration\Migrating from HP QualityCenter.md
-    - Project Backup and Migration: Migration-and-Integration\Project Backup and Migration.md
-    - MS Test Manager: Migration-and-Integration\Migrating from MS Test Manager.md
-    - HP ALM: Migration-and-Integration\Migrating from HP ALM.md
-    - TestRail: Migration-and-Integration\Migrating from TestRail.md
-    - TestLink: Migration-and-Integration\Migrating from TestLink.md
+    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
+    - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
+    - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
+    - Microsoft Word: Migration-and-Integration\Importing-from-Microsoft-Word.md
+    - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
+    - HP QualityCenter: Migration-and-Integration\Migrating-from-HP-QualityCenter.md
+    - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
+    - MS Test Manager: Migration-and-Integration\Migrating-from-MS-Test-Manager.md
+    - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
+    - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
+    - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
   - Build Servers:
-    - Jenkins/Hudson: Build-Server-Integration\Jenkins  Hudson.md
-    - JetBrains TeamCity: Build-Server-Integration\JetBrains TeamCity.md
-    - Azure DevOps Pipelines: Build-Server-Integration\Microsoft Azure DevOps Pipelines.md
-    - Atlassian Bamboo: Build-Server-Integration\Atlassian Bamboo.md
+    - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
+    - JetBrains TeamCity: Build-Server-Integration\JetBrains-TeamCity.md
+    - Azure DevOps Pipelines: Build-Server-Integration\Microsoft-Azure-DevOps-Pipelines.md
+    - Atlassian Bamboo: Build-Server-Integration\Atlassian-Bamboo.md
   - Requirements:
-    - RequisitePro: Requirements-Management-Integration\Importing From RequisitePro.md
-    - EnterpriseArchitect: Requirements-Management-Integration\Importing From EnterpriseArchitect.md
-    - Jama Contour: Requirements-Management-Integration\Importing From Jama Contour.md
-    - VersionOne: Requirements-Management-Integration\Importing From VersionOne.md
-    - DOORS: Requirements-Management-Integration\Importing From DOORS.md
+    - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
+    - EnterpriseArchitect: Requirements-Management-Integration\Importing-From-EnterpriseArchitect.md
+    - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
+    - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
+    - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
