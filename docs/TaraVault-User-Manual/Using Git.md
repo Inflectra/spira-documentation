@@ -377,7 +377,7 @@ Associations. The Files tab lists all files that were a part of this
 commit, with their full path, size, latest revision and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See [Source Code Associations](../../Spira_User_Manual/Source%20Code/#associations_1)
+Case, Test Set) that the log message references. See [Source Code Associations](../../Spira-User-Manual/Source%20Code/#associations_1)
 
 ![](img/Using_Git_72.png)
 
