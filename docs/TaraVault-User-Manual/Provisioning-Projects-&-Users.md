@@ -24,8 +24,8 @@ alphanumeric only.
 
 -   **Project Type** -- this is the type of SCM repository you wish to
 use. Currently the choices are between Subversion and Git. We
-discuss the differences between [Subversion](../Using%20Subversion/) (also known as SVN) and
-[Git](../Using%20Git/) in the next two pages.
+discuss the differences between [Subversion](../Using-Subversion/) (also known as SVN) and
+[Git](../Using-Git/) in the next two pages.
 Note: once you choose the repository type for a project it cannot be
 changed without deleting the entire repository, so make sure you
 understand the differences between the two technologies beforehand.

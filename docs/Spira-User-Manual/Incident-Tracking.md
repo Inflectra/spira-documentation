@@ -5,7 +5,7 @@ SpiraPlan® can be used to manage key product artifacts during the
 software development lifecycle. In addition to managing the defects
 raised during the execution of test cases in the test management module,
 the Incident Tracker is also a powerful risk/issue/bug tracking system
-in its own right. When coupled with the [product dashboard](../User%20Product%20Management/#product-home) it is a powerful tool for representing all the key risks and issues
+in its own right. When coupled with the [product dashboard](../User-Product-Management/#product-home) it is a powerful tool for representing all the key risks and issues
 associated with a product in a single, graphical format.
 
 Unlike a standalone bug/issue tracking tool however, you can trace the
@@ -13,7 +13,7 @@ incidents/defects back to the test case and the underlying requirement
 that generated them, giving the product manager unprecedented power in
 analyzing the "in-process" quality of a system during its lifecycle.
 This power is clearly illustrated in the "Requirement Incident Count"
-pane in the Product Home dashboard (see [User/Product Management > Requirements Coverage](../User%20Product%20Management/#requirements-coverage)).
+pane in the Product Home dashboard (see [User/Product Management > Requirements Coverage](../User-Product-Management/#requirements-coverage)).
 
 ## Incident List
 
@@ -41,7 +41,7 @@ In addition, you can view a more detailed description of the incident
 (along with a resolution if any) by positioning the mouse pointer over
 the incident name hyperlink and waiting for the popup "tooltip" to
 appear. If you click on the incident name hyperlink, you will be taken
-to the incident details page described in [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details). Clicking on any
+to the incident details page described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details). Clicking on any
 of the pagination links at the bottom of the page will advance you to
 the next set of incidents in the list according to the applied filter
 and sort-order. There is also a drop-down-list at the bottom of the page
@@ -104,7 +104,7 @@ release/sprint**.
 
 Clicking on the "***New Incident***" button takes you to
 the new incident screen. This is essentially the same screen as the
-incident details screen shown in [Incident Details](../Incident%20Tracking/#incident-details) except, depending on how
+incident details screen shown in [Incident Details](../Incident-Tracking/#incident-details) except, depending on how
 the workflow has been configured for your product, certain fields may be
 disabled. For more details on setting and up configuring workflow for
 your product, please refer to the *SpiraTest Administration Guide*.

@@ -1313,7 +1313,7 @@ boxes and click the 'Save' button to add them to the current test step:
 This section describes how a tester can follow the steps defined for a
 series of test cases and record what actually happened in the process.
 In addition, recorded failures of test cases can be used to
-automatically generate new incidents that will be added to the [incident tracking module](../Incident%20Tracking/).
+automatically generate new incidents that will be added to the [incident tracking module](../Incident-Tracking/).
 
 You start test case execution in SpiraPlan by either:
 
@@ -1714,7 +1714,7 @@ information needed for the new incident is automatically populated from
 the test step details. The newly created incident will also be linked to
 the test step, allowing traceability from within the incidents module.
 The functionality for managing incidents is described in more detail in
-[Incident Tracking](../Incident%20Tracking/).
+[Incident Tracking](../Incident-Tracking/).
 
 If the inspector is visible, go to the "Incidents" tab. This will show
 any already linked incidents, show a detailed form for creating a new
@@ -2143,7 +2143,7 @@ Each of the incidents listed will reflect the most up-to-date
 information regarding that incident, including its type, status,
 priority, name, assigned owner, detection date and who first detected
 it. Clicking on the incident name will take you to the details page for
-that incident, which is described in [Incident Tracking > Incident Details](../Incident%20Tracking/#incident-details).
+that incident, which is described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details).
 
 ### Console Output
 

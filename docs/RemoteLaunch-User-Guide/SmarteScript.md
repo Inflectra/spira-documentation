@@ -20,7 +20,7 @@ and version 5.0 of SmarteScript.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch%20Guide/).
+test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch-Guide/).
 Once those prerequisites are in place, please follow these steps:
 
 Download and extract the SmarteScriptAutomationEngine.zip

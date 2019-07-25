@@ -147,7 +147,7 @@ Associations. The Files tab lists all files that were a part of this
 revision, with their full path, latest revision and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See [Requirements Management > Overview - Scenario](../Requirements%20Management/#overview-scenario) for
+Case, Test Set) that the log message references. See [Requirements Management > Overview - Scenario](../Requirements-Management/#overview-scenario) for
 information on how to link a revision with a VSS check-in or other
 action:
 

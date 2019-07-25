@@ -21,7 +21,7 @@ SpiraTeam add-ons webpage:
 
 
 Please do not use the version in the Visual Studio gallery, that is the
-newer [Visual Studio 2012 extension](../Visual%20Studio/) which is not
+newer [Visual Studio 2012 extension](../Visual-Studio/) which is not
 compatible with Visual Studio 2010.
 
 ## Adding and Assigning SpiraTeam Projects

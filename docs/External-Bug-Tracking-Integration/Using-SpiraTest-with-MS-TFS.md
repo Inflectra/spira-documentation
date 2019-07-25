@@ -21,7 +21,7 @@ can manage their lifecycle, with schedule and progress changes in TFS
 being reflected back in SpiraTeam.
 
 **STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
+[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
 
 ► Note: Only the MS-TFS 2012+ Plug-In is Available on the Inflectra
 Cloud-Based DataSync Service.

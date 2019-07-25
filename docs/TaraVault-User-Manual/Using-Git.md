@@ -58,7 +58,7 @@ repositories includes knowing how to add remote repositories, remove
 remotes that are no longer valid, manage various remote branches and
 define them as being tracked or not, and more.
 
-This is in stark contrast to [Subversion](../Using%20Subversion/) where
+This is in stark contrast to [Subversion](../Using-Subversion/) where
 every commit and update is being performed directly on the central
 TaraVault remote repository. So when you make changes to your local
 repository, the will need to explicitly synchronized with TaraVault for
@@ -72,8 +72,8 @@ other users to see them, and for them to appear in Spira:
 ## Getting Started with Git
 
 This section assumes that you have already provisioned at least one Git
-project in TaraVault following the steps in [Activating TaraVault](../Activating%20TaraVault/) and 
-[Provisioning Projects & Users](../Provisioning%20Projects%20&%20Users/). So you
+project in TaraVault following the steps in [Activating TaraVault](../Activating-TaraVault/) and 
+[Provisioning Projects & Users](../Provisioning-Projects-&-Users/). So you
 should now have a TaraVault user/password and a Git project with a
 connection URL:
 
@@ -377,7 +377,7 @@ Associations. The Files tab lists all files that were a part of this
 commit, with their full path, size, latest revision and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See [Source Code Associations](../../Spira-User-Manual/Source%20Code/#associations_1)
+Case, Test Set) that the log message references. See [Source Code Associations](../../Spira-User-Manual/Source-Code/#associations_1)
 
 ![](img/Using_Git_72.png)
 

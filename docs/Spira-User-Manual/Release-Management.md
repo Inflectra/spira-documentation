@@ -548,7 +548,7 @@ indicating what changes and enhancements have been made in the release.
 
 Regardless of the mode, each incident is listed together with the type,
 status, priority, name, owner, detector, detection date and a link to
-the actual [incident details](../Incident%20Tracking/#incident-details):
+the actual [incident details](../Incident-Tracking/#incident-details):
 
 ![](img/Release_Management_268.png)
 
@@ -591,10 +591,10 @@ Each of the requirements and associated tasks is displayed together with
 its name, description (by hovering the mouse over the name), priority,
 progress indicator, current owner, estimated effort, actual effort,
 producted effort and numeric task identifier. Clicking on a requirement
-will bring up the [requirement details page](../Requirements%20Management/#requirement-details). Clicking
+will bring up the [requirement details page](../Requirements-Management/#requirement-details). Clicking
 the triangle by a requirement will expand/collapse its list of tasks.
 Clicking on a task name will bring up the Task Details page which is
-described in more detail in [Task Tracking > Task Details](../Task%20Tracking/#task-details). This allows you to edit the
+described in more detail in [Task Tracking > Task Details](../Task-Tracking/#task-details). This allows you to edit the
 details of an existing task.
 
 You can perform the following actions on a task from this screen:
@@ -683,7 +683,7 @@ release. Each test run is listed together with the date of execution,
 the name of the test case, the name of the tester, the release/version
 of the system that the test was executed against, the name of the test
 set (if applicable), the overall execution status for the test case in
-that run and a link to the actual [test run details](../Test%20Case%20Management/#test-run-details). In
+that run and a link to the actual [test run details](../Test-Case-Management/#test-run-details). In
 addition, you can choose to display any of the custom properties
 associated with the test run.
 

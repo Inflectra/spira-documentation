@@ -17,7 +17,7 @@ their type) so that they can be used as part of the planning and testing
 lifecycle.
 
 **STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
+[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 
@@ -33,10 +33,10 @@ The JIRA 5.x plugin supports JIRA 5.0 or later and SpiraTeam v4.0 or
 later
 
 The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or
-later *(see [Using SpiraTeam with JIRA 3 / 4](../Using%20SpiraTeam%20with%20JIRA%203%20%204/))*
+later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
 
 The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or
-later *(see [Using SpiraTeam with JIRA 3 / 4](../Using%20SpiraTeam%20with%20JIRA%203%20%204/))*
+later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
 
 If you have an earlier version of SpiraTeam, you will need to upgrade to
 at least v2.3 before trying to integrate with JIRA.

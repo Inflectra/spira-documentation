@@ -45,7 +45,7 @@ Remember to do this before making any changes to the template or logging
 in to avoid overwriting your original template.**
 
 For a full description list of the template fields, please refer to the
-table in [Excel](../Importing%20from%20Microsoft%20Excel/#importing-exporting-data). The only differences are the (temporary)
+table in [Excel](../Importing-from-Microsoft-Excel/#importing-exporting-data). The only differences are the (temporary)
 exclusion of the linked requirements and comments fields, as well as the
 30 "CUS-01" style custom fields. This add-in will load your custom field
 names dynamically. To do this, you must now log in.
@@ -100,7 +100,7 @@ you should see the custom fields associated with your project in the
 custom fields section of the template (it will be empty if your project
 has no custom fields for requirements). You **must** know what data the
 custom field will accept. For a list of acceptable data types for
-different fields, refer to the template field chart in [Excel](../Importing%20from%20Microsoft%20Excel/#importing-exporting-data).
+different fields, refer to the template field chart in [Excel](../Importing-from-Microsoft-Excel/#importing-exporting-data).
 
 ![](img/Importing_from_Microsoft_Excel_(Office365)_24.png)
 

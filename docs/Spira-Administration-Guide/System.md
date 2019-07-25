@@ -301,7 +301,7 @@ denote all domains are allowed (not recommended).
 
 *This section refers to the functionality available to hosted/cloud
 customers of SpiraPlan. If you are using the on-premise version of
-SpiraPlan, please refer to [Version Control Integration](../System%20Integration/#version-control-integration-on-premise-customers-only) instead.*
+SpiraPlan, please refer to [Version Control Integration](../System-Integration/#version-control-integration-on-premise-customers-only) instead.*
 
 TaraVault® is the hosted source code repository and software
 configuration management (SCM) system provided by Inflectra. When you

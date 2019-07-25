@@ -13,7 +13,7 @@ team can then manage the lifecycle of these defects in Axosoft, and have
 the status changes in Axosoft be reflected back in SpiraTeam.
 
 **STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting%20up%20Data%20Synchronization/) before proceeding!**
+[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 

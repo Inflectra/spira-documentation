@@ -358,7 +358,7 @@ fields.
 ## Requirement Details
 
 When you click on a requirement item in the requirements list described
-in [Requirements Management > Requirements List](../Requirements%20Management/#requirements-list), you are taken to the requirement details page
+in [Requirements Management > Requirements List](../Requirements-Management/#requirements-list), you are taken to the requirement details page
 illustrated below:
 
 ![](img/Requirements_Management_93.png)
@@ -669,7 +669,7 @@ Each of the tasks is displayed together with, by default, its name,
 description (by hovering the mouse over the name), progress, priority,
 start-date, current owner, estimated effort, producted effort and
 numeric task identifier. Clicking on the task name will bring up the
-[Task Details page](../Task%20Tracking/#task-details). This
+[Task Details page](../Task-Tracking/#task-details). This
 allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:

@@ -10,7 +10,7 @@ devices from desktops, to tablets, to smartphones. This guide is written
 using desktop conventions (e.g. using 'click' throughout where 'tap'
 would apply on mobile devices) but the functionality remains very
 similar throughout the application across all devices and platforms. See
-[Mobile Access](../Mobile%20Access/) for more information.
+[Mobile Access](../Mobile-Access/) for more information.
 
 ## Requirements Management
 
