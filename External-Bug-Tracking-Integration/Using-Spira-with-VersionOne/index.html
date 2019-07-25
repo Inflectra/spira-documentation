@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>VersionOne - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Incident-Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Release-Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li class="active">
+    <a href="./">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Using-SpiraTeam-with-Redmine/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Using-Spira-with-OnTime-11/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#using-spira-with-versionone">Using Spira with VersionOne</a></li>
+        <li class="second-level"><a href="#configuring-the-plug-in">Configuring the Plug-In</a></li>
+        
+        <li class="third-level"><a href="#configuring-the-plug-in_1">Configuring the Plug-In</a></li>
+        <li class="second-level"><a href="#configuring-the-data-mapping">Configuring the Data Mapping</a></li>
+        
+        <li class="third-level"><a href="#configuring-the-project-mapping">Configuring the Project Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-user-mapping">Configuring the User Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-releaseiteration-mapping">Configuring the Release/Iteration Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-incident-field-mapping">Configuring the Incident Field Mapping</a></li>
+        <li class="third-level"><a href="#configuring-the-requirement-field-mapping">Configuring the Requirement Field Mapping</a></li>
+        <li class="third-level"><a href="#mapping-a-custom-property-to-the-v1-display-id">Mapping a Custom Property to the V1 Display ID</a></li>
+        <li class="second-level"><a href="#using-spirateam-with-v1">Using SpiraTeam with V1</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="using-spira-with-versionone">Using Spira with VersionOne</h1>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
+(hereafter referred to as SpiraTeam) in conjunction with the Version One
+(V1) project management system from Collabnet (hereafter called V1).</p>
+<p>The built-in integration service allows the quality assurance team to
+manage their requirements and test cases in SpiraTeam, execute test runs
+in SpiraTeam, and then have the new incidents generated during the run
+be automatically loaded into V1 as new defects. In addition, user
+stories in V1 will be automatically added into SpiraTeam as new
+requirements that you can write test plans for.</p>
+<p>Once the incidents are loaded into V1 as defects, the development team
+can then manage the lifecycle of these defects in V1, and have the
+status changes in V1 be reflected back in SpiraTeam.</p>
+<p><strong>STOP! Please make sure you have first read the Instructions in 
+<a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
+<h2 id="configuring-the-plug-in">Configuring the Plug-In</h2>
+<p>This section outlines how to configure the integration service to
+connect to V1. It assumes that you already have a working installation
+of SpiraTeam v5.0 or later and an existing provisioned instance of V1.
+If you have an earlier version of SpiraTeam, you will need to upgrade to
+at least v5.0 before trying to integrate with V1.</p>
+<p>The steps that need to be performed to configure integration with V1 are
+as follows:</p>
+<p>Setup the plug-in in SpiraTeam to point to the correct instance of V1</p>
+<p>Configure the data field mappings between SpiraTeam and V1</p>
+<p>Start synchronization and verify data transfer</p>
+<h3 id="configuring-the-plug-in_1">Configuring the Plug-In</h3>
+<p>The next step is to configure the plug-in within SpiraTeam so that the
+system knows how to access the V1 instance. To start the configuration,
+please open up SpiraTeam in a web browser, log in using a valid account
+that has System-Administration level privileges and click on the System
+> Data Synchronization administration option from the left-hand
+navigation:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_182.png" /></p>
+<p>This screen lists all the plug-ins already configured in the system.
+Depending on whether you chose the option to include sample data in your
+installation or not, you will see either an empty screen or a list of
+sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>VersionOneDataSync</strong> you should click
+on its "Edit" link. If you don't see such an entry in the list, please
+click on the [Add] button instead. In either case you will be taken to
+the following screen where you can enter or modify the V1
+Data-Synchronization plug-in:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_183.png" /></p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_184.png" /></p>
+<p>You need to fill out the following fields for the V1 Plug-in to operate
+correctly:</p>
+<ul>
+<li>
+<p><strong>Name</strong> -- this needs to be set to <strong>VersionOneDataSync</strong>. This
+needs to match the name of the plug-in DLL assembly that was copied
+into the C:\Program Files (x86)\SpiraTeam\Bin folder (minus the
+.dll file extension). If you renamed the OnTimeDataSync.dll file for
+any reason, then you need to change the name here to match.</p>
+</li>
+<li>
+<p><strong>Caption</strong> -- this is the display name of the V1 plugin and it can
+be meaningful name such as "Version One", "V1", or "V1 Instance 1".</p>
+</li>
+<li>
+<p><strong>Description</strong> -- this should be set to a description of the
+plug-in. This is an optional field that is used for documentation
+purposes and is not actually used by the system.</p>
+</li>
+<li>
+<p><strong>Connection Info</strong> -- this should the full URL to V1. This is
+typically something like:
+https://www1.v1host.com/CompanyName.</p>
+</li>
+<li>
+<p><strong>Login</strong> -- this should be set to the login that you use to access
+V1 through its web interface</p>
+</li>
+<li>
+<p><strong>Password</strong> -- this should be set to the password that you use to
+access V1 through its web interface</p>
+</li>
+<li>
+<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
+find that defects being changed in V1 are not being updated in
+SpiraTeam, try increasing the value as this will tell the
+data-synchronization plug-in to add on the time offset (in hours)
+when comparing date-time stamps.</p>
+</li>
+<li>
+<p><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps
+users in SpiraTeam to those in V1:</p>
+</li>
+<li>
+<p><strong>Auto-Map = True
+</strong>With this setting, all users in SpiraTeam need to have the
+same username as those in V1. If this is the case then you do
+not need to perform the user-mapping task outlined in section
+12.2.2. This is a big time-saver if you can guarantee that all
+usernames are the same in both systems.</p>
+</li>
+<li>
+<p><strong>Auto-Map = False
+</strong>With this setting, users in SpiraTeam and V1are free to have
+different usernames because you specify the corresponding
+V1login for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>.</p>
+</li>
+<li>
+<p><strong>Custom 01</strong> -- this should be set to "True" if you want the plugin
+to log warnings about missing user mappings</p>
+</li>
+<li>
+<p><strong>Custom 02-05</strong> -- these are not currently used by the V1 data-sync
+plug-in and can be left blank.</p>
+</li>
+</ul>
+<h2 id="configuring-the-data-mapping">Configuring the Data Mapping</h2>
+<p>Next, you need to configure the data mapping between SpiraTeam and V1.
+This allows the various projects, users, releases, incident statuses,
+priorities, severities and custom property values used in the two
+applications to be related to each other. This is important, as without
+a correct mapping, there is no way for the integration service to know
+that an "Open" incident in SpiraTeam is the same as an "Open" defect in
+V1 (for example).</p>
+<p>The following mapping information needs to be setup in SpiraTeam:</p>
+<p>The mapping of the project identifiers for the projects that need to be
+synchronized</p>
+<p>The mapping of users in the system</p>
+<p>The mapping of releases in the system</p>
+<p>The mapping of the various incident standard fields in the system</p>
+<p>The mapping of the various requirement standard fields in the system</p>
+<p>Each of these is explained in turn below:</p>
+<h3 id="configuring-the-project-mapping">Configuring the Project Mapping</h3>
+<p>From the data synchronization administration page, you need to click on
+the "View Project Mappings" hyperlink next to the V1 plug-in name. This
+will take you to the data-mapping home page for the currently selected
+project:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_185.png" /></p>
+<p>If the project name does not match the name of the project you want to
+configure the data-mapping for, click on the "(Change Project)"
+hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with V1, you need to
+enter:</p>
+<p><strong>External Key</strong> -- This should be set to the <strong>name</strong> of the project in
+V1:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_186.png" /></p>
+<p>If you have sub-projects, you can map to one of those using the syntax:
+<strong>Project/SubProject</strong></p>
+<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
+want to synchronize data for this project. Once the project has been
+completed, setting the value to "No" will stop data synchronization,
+reducing network utilization.</p>
+<p>Click [Update] to confirm these settings. Once you have enabled the
+project for data-synchronization, you can now enter the other data
+mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when
+creating a new project, you should choose the option to "Create Project
+from Existing Project" rather than "Use Default Template" so that all
+the project mappings get copied across to the new project.</em></strong></p>
+<h3 id="configuring-the-user-mapping">Configuring the User Mapping</h3>
+<p>(This section can be skipped if you enabled the 'AutoMap Users' option
+earlier).</p>
+<p>To configure the mapping of users in the two systems, you need to go to
+Administration > Users > View Edit Users, which will bring up the list
+of users in the system. Then click on the "Edit" button for a particular
+user that will be editing defects in V1:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_187.png" /></p>
+<p>You will notice that in the <strong>Data Mapping</strong> tab for the user is a list
+of all the configured data-synchronization plug-ins. In the text box
+next to the V1 Data-Sync plug-in you need to enter the <strong>Login Name</strong>
+for this username in V1. This will allow the data-synchronization
+plug-in to know which user in SpiraTeam match which equivalent user in
+V1. Click [Update] once you've entered the appropriate login name. You
+should now repeat for the other users who will be active in both
+systems.</p>
+<h3 id="configuring-the-releaseiteration-mapping">Configuring the Release/Iteration Mapping</h3>
+<p>When the data-synchronization service runs, when it comes across a new
+Release or Sprint/Timebox in V1 that it has not seen before, it will
+create a new Release or Iteration in SpiraTeam. Therefore, when using
+both systems together, it is recommended that you only enter new
+Releases in V1 and let the data-synchronization service add them to
+SpiraTeam.</p>
+<p>To see this mapping, inside SpiraTeam, navigate to Planning > Releases
+and click on the Release/Iteration in question. Make sure you have the
+'Overview' tab visible and expand the "Details" section of the
+release/iteration:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_188.png" /></p>
+<p>In addition to the standard fields and custom properties configured for
+Releases, you will see an additional text property called "<strong>V1DataSync
+ID</strong>" that is used to store the mapped external identifier for the
+equivalent Version in V1.</p>
+<h3 id="configuring-the-incident-field-mapping">Configuring the Incident Field Mapping</h3>
+<p>Now that the projects, user and releases have been mapped correctly, we
+need to configure the standard incident fields. To do this, go to
+Administration > System > Data Synchronization and click on the "View
+Project Mappings" for the V1DataSync plug-in entry:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_189.png" /></p>
+<p>From this screen, you need to click on Status, Priority, Type in turn to
+configure their values (V1 doesn't support different defect severities):</p>
+<p>a) Incident Status</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
+up the Incident status mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_190.png" /></p>
+<p>The table lists each of the incident statuses available in SpiraTeam and
+provides you with the ability to enter the matching V1 defect status
+names for each one. You can map multiple SpiraTeam fields to the same V1
+fields (e.g. New and Open in SpiraTeam are both equivalent to Future in
+V1), in which case only one of the two values can be listed as Primary =
+Yes as that's the value that's used on the reverse synchronization (from
+V1 > SpiraTeam).</p>
+<p>We recommend that you always point the New and Open statuses inside
+SpiraTeam to point to the "Future" status inside V1 and make Open in
+SpiraTeam the Primary status of the two. This is recommended so that as
+new incidents in SpiraTeam get synched over to V1, they will get
+switched to the Future status in V1 which will then be synched back to
+"Open" in SpiraTeam. That way you'll be able to see at a glance which
+incidents have been synched with V1 and those that haven't.</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the status inside V1. If you change the name of a status in V1, you'll
+need to update the value in the data-mapping configuration as well.</em></p>
+<p>b) Incident Priority</p>
+<p>Click on the "Priority" hyperlink under Incident Standard Fields to
+bring up the Incident Priority mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_191.png" /></p>
+<p>The table lists each of the incident priorities available in SpiraTeam
+and provides you with the ability to enter the matching V1 priority name
+for each one. You can map multiple SpiraTeam fields to the same V1
+fields, in which case only one of the two values can be listed as
+Primary = Yes as that's the value that's used on the reverse
+synchronization (from V1 > SpiraTeam).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the priority inside V1. If you change the name of a priority in V1,
+you'll need to update the value in the data-mapping configuration as
+well.</em></p>
+<p>c) Incident Type</p>
+<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up
+the Incident type mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_192.png" /></p>
+<p>The table lists each of the incident types available in SpiraTeam and
+provides you with the ability to enter the matching V1 defect type name
+for each one. You can map multiple SpiraTeam fields to the same V1
+fields, in which case only one of the two values can be listed as
+Primary = Yes as that's the value that's used on the reverse
+synchronization (from V1 > SpiraTeam).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the defect type inside V1. If you change the name of a defect type in
+V1, you'll need to update the value in the data-mapping configuration as
+well.</em></p>
+<h3 id="configuring-the-requirement-field-mapping">Configuring the Requirement Field Mapping</h3>
+<p>Next, we need to configure the standard requirement fields. To do this,
+go to Administration > System > Data Synchronization and click on the
+"View Project Mappings" for the V1DataSync plug-in entry:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_193.png" /></p>
+<p>From this screen, you need to click on Priority, Severity and Status in
+turn to configure their values (V1 doesn't support different defect
+types):</p>
+<p>a) Requirement Status</p>
+<p>Click on the "Status" hyperlink under Requirement Standard Fields to
+bring up the Requirement status mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_194.png" /></p>
+<p>The table lists each of the requirement statuses available in SpiraTeam
+and provides you with the ability to enter the matching V1 user story
+status names for each one. You can map multiple SpiraTeam fields to the
+same V1 fields (e.g. Requested and Planned in SpiraTeam are both
+equivalent to Future in V1), in which case only one of the two values
+can be listed as Primary = Yes as that's the value that's used on the
+reverse synchronization (from V1 > SpiraTeam).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the status inside V1. If you change the name of a status in V1, you'll
+need to update the value in the data-mapping configuration as well.</em></p>
+<p>b) Requirement Importance</p>
+<p>Click on the "Importance" hyperlink under Requirement Standard Fields to
+bring up the Requirement Importance mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_195.png" /></p>
+<p>The table lists each of the requirement importances available in
+SpiraTeam and provides you with the ability to enter the matching V1
+user story priority name for each one. You can map multiple SpiraTeam
+fields to the same V1 fields, in which case only one of the two values
+can be listed as Primary = Yes as that's the value that's used on the
+reverse synchronization (from V1 > SpiraTeam).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the priority inside V1. If you change the name of a priority in V1,
+you'll need to update the value in the data-mapping configuration as
+well.</em></p>
+<p>c) Requirement Type</p>
+<p>Click on the "Type" hyperlink under Requirement Standard Fields to bring
+up the requirement type mapping configuration screen:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_196.png" /></p>
+<p>The table lists each of the requirement types available in SpiraTeam and
+provides you with the ability to enter the matching V1 user story type
+name for each one. You can map multiple SpiraTeam fields to the same V1
+fields, in which case only one of the two values can be listed as
+Primary = Yes as that's the value that's used on the reverse
+synchronization (from V1 > SpiraTeam).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of
+the user story type inside V1. If you change the name of a user story
+type in V1, you'll need to update the value in the data-mapping
+configuration as well.</em></p>
+<h3 id="mapping-a-custom-property-to-the-v1-display-id">Mapping a Custom Property to the V1 Display ID</h3>
+<p>Version One has two unique IDs for all artifacts, a display ID (e.g.
+D-23232) and a physical ID (Defect:11291). Now the built in Data Sync ID
+in SpiraTeam will contain the physical ID of the V1 artifact.</p>
+<p>However, if you also want to see the V1 display IDs in SpiraTeam, you
+can map a custom property to the special <strong>V1DisplayId</strong> external key.
+This can be done for requirements:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_197.png" /></p>
+<p>And for incidents:</p>
+<p><img alt="" src="../img/Using_Spira_with_VersionOne_198.png" /></p>
+<p>Once you have updated the various mapping sections, you are now ready to
+use the service.</p>
+<h2 id="using-spirateam-with-v1">Using SpiraTeam with V1</h2>
+<p>Now that the integration service has been configured and the service
+started, initially any incidents created in SpiraTeam for the specified
+projects will be imported into V1 and vice versa. In addition, any
+existing user stories in V1 will get added to SpiraTeam as requirements.</p>
+<p>At this point we recommend opening the Windows Event Viewer and choosing
+the Application Log. In this log any error messages raised by the
+SpiraTeam Data Sync Service will be displayed. If you see any error
+messages at this point, we recommend immediately stopping the SpiraTeam
+service and checking the various mapping entries. If you cannot see any
+defects with the mapping information, we recommend sending a copy of the
+event log message(s) to Inflectra customer services
+(<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
+<p>To use SpiraTeam with V1 on an ongoing basis, we recommend the following
+general processes be followed:</p>
+<p>When running tests in SpiraTeam, defects found should be logged through
+the 'Add Incident' option as normal.</p>
+<p>Developers can log new defects into either SpiraTeam or V1. In either
+case they will get loaded into the other system.</p>
+<p>Once created in one of the systems and successfully replicated to the
+other system, the incident should not be modified again inside SpiraTeam</p>
+<p>User stories created in V1 will get added to SpiraTeam as requirements.
+You can now write test cases and associate them in SpiraTeam with these
+requirements.</p>
+<p>As the defect progresses through the V1 workflow, changes to the status,
+priority, severity, and resolution will be updated automatically in
+SpiraTeam. In essence, SpiraTeam acts as a read-only viewer of these
+incidents.</p>
+<p>You are now able to perform test coverage and incident reporting inside
+SpiraTeam using the requirements and test cases managed by SpiraTeam and
+the incidents managed on behalf of SpiraTeam inside V1.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

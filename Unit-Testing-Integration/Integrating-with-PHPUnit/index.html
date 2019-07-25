@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-with-PHPUnit/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>PHPUnit - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Incident-Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Release-Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li class="active">
+    <a href="./">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Integrating-with-Perl-TAP/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Integrating-UnitJS-&-NodeJS/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#integrating-with-phpunit">Integrating with PHPUnit</a></li>
+        <li class="second-level"><a href="#installing-the-phpunit-extension">Installing the PHPUnit Extension</a></li>
+        
+        <li class="second-level"><a href="#using-phpunit-with-spiratest">Using PHPUnit with SpiraTest</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="integrating-with-phpunit">Integrating with PHPUnit</h1>
+<h2 id="installing-the-phpunit-extension">Installing the PHPUnit Extension</h2>
+<p>This section outlines how to install the SpiraTest Extension for PHPUnit
+onto a workstation so that you can then run automated PHPUnit tests
+against a PHP application and have the results be recorded as test runs
+inside SpiraTest. It assumes that you already have a working
+installation of SpiraTest v3 or later, and a working PHP development
+environment. If you have an earlier version of SpiraTest you will need
+to upgrade to at least v3 before trying to use this extension.</p>
+<p>To obtain the latest version of the SpiraTest PHPUnit extension you
+simply need to go to <a href="http://www.inflectra.com/SpiraTest/Downloads.aspx">http://www.inflectra.com/SpiraTest/Downloads.aspx</a>
+page and download the PHPUnit Extension compressed archive (.zip). This
+process is described in the <em>SpiraTest Administration Guide</em> in more
+detail.</p>
+<p>The PHPUnit extension is provided as a set of PHP source files that can
+be imported into your existing unit tests to add the SpiraTest reporting
+functionality. Once you have downloaded the Zip archive, you simply need
+to uncompress it into a folder of your choice on your local system (e.g.
+C:\Program Files\SpiraTest\PHPUnit Extension)</p>
+<p>Now to use the extension within your test cases, you need to first make
+sure that the folder is added to the PHP <em>include_path</em>. The method for
+doing this is dependent on the platform you're using, so please refer to
+the documentation on <a href="http://www.junit.org">php.org</a> for details on the
+appropriate method for your platform. Alternatively you can copy the
+PHPUnit extension files to the root of the PHP installation and then
+just include the extension files using the root folder syntax.</p>
+<p>Once you have completed these steps, you are now ready to begin using
+your PHPUnit test fixtures with SpiraTest.</p>
+<h2 id="using-phpunit-with-spiratest">Using PHPUnit with SpiraTest</h2>
+<p>The typical code structure for a PHPUnit test suite and test case coded
+in PHP is as follows:</p>
+<p>a) Sample Test Suite</p>
+<pre><code class="PHP">&lt;?php
+/**
+ * 
+ * @author      Inflectra Corporation
+ * @version     0
+ *
+ */
+
+ require_once 'PHPUnit/Framework.php';
+ require_once 'PHPUnit/TextUI/ResultPrinter.php';
+ require_once './SimpleTest.php';
+
+ // Create a test suite that contains the tests
+ // from the ArrayTest class
+  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+
+ // Create a test result and attach the default console text listener
+ $result = new PHPUnit_Framework_TestResult;
+ $textPrinter = new PHPUnit_TextUI_ResultPrinter;
+ $result-&gt;addListener($textPrinter);
+
+ // Run the tests and print the results
+ $result = $suite-&gt;run($result);
+ $textPrinter-&gt;printResult($result);
+
+ ?&gt;
+
+b) Sample Test Case
+&lt;?php
+require_once 'PHPUnit/Framework/TestCase.php';
+
+/**
+ * Some simple tests
+ * 
+ * @author      Inflectra Corporation
+ * @version     0
+ *
+ */
+
+class SimpleTest extends PHPUnit_Framework_TestCase
+{
+    protected $fValue1;
+    protected $fValue2;
+
+    /**
+     * Sets up the unit test
+     */
+    protected function setUp()
+    {
+        $this-&gt;fValue1= 2;
+        $this-&gt;fValue2= 3;
+    }
+
+    /**
+     * Tests the addition of the two values
+     */
+    public function testAdd()
+    {
+        $result = $this-&gt;fValue1 + $this-&gt;fValue2;
+
+        // forced failure result == 5
+        $this-&gt;assertTrue ($result == 6);
+    }
+
+    /**
+     * Tests division by zero
+     */
+    /*
+    public function testDivideByZero()
+    {
+        $zero = 0;
+        $result = 8 / $zero;
+        $result++; // avoid warning for not using result
+    }
+
+    /**
+     * Tests two equal values
+     */
+    /*
+public function testEquals()
+    {
+        $this-&gt;assertEquals(12, 12);
+        $this-&gt;assertEquals(10, 10);
+            $num1 = 12;
+            $num2 = 12;
+        $this-&gt;assertEquals($num1, $num2);
+
+        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);
+        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);
+    }
+
+    /**
+     * Tests success
+     */
+    /*
+    public function testSuccess()
+    {
+        //Successful test
+        $this-&gt;assertEquals(12, 12);
+    }
+}
+?&gt;
+</code></pre>
+
+<p>The PHP class is marked as a PHPUnit test case by inheriting from the
+<em>PHPUnit_Framework_TestCase</em> base class, and the individual test
+methods are identified by using the 'test' prefix, with special setUp()
+and tearDown() methods reserved for the respective purposes. When you
+open up the class in a PHPUnit runner or execute from the command line
+it loads all the test classes and executes all the methods marked with
+'test...' in turn.</p>
+<p>Each of the Assert statements is used to test the state of the
+application after executing some sample code that calls the
+functionality being tested. If the condition in the assertion is true,
+then execution of the test continues, if it is false, then a failure is
+logged and PHPUnit moves on to the next test method.</p>
+<p>So, to use SpiraTest with PHPUnit, each of the test cases written for
+execution by PHPUnit needs to have a corresponding test case in
+SpiraTest. These can be either existing test cases that have manual test
+steps or they can be new test cases designed specifically for automated
+testing and therefore have no defined test steps. In either case, the
+changes that need to be made to the PHPUnit test case and test suite for
+SpiraTest to record the PHPUnit test run are illustrated below:</p>
+<p>a) Sample Test Suite</p>
+<pre><code class="PHP">&lt;?php
+/**
+ * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener
+ * 
+ * @author      Inflectra Corporation
+ * @version     0
+ *
+ */
+
+ require_once 'PHPUnit/Framework.php';
+ require_once 'PHPUnit/TextUI/ResultPrinter.php';
+ require_once './SimpleTest.php';
+ require_once '../SpiraListener/Listener.php';
+
+ // Create a test suite that contains the tests
+ // from the ArrayTest class
+  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+
+ //Set the timezone identifier to match that used by the SpiraTest server
+ date_default_timezone_set (&quot;US/Eastern&quot;);
+
+ //Create a new SpiraTest listener instance and specify the connection info
+ $spiraListener = new SpiraListener_Listener;
+ $spiraListener-&gt;setBaseUrl ('http://localhost/SpiraTeam');
+ $spiraListener-&gt;setUserName ('fredbloggs');
+ $spiraListener-&gt;setPassword ('fredbloggs');
+ $spiraListener-&gt;setProjectId (1);
+ $spiraListener-&gt;setReleaseId (1);
+ $spiraListener-&gt;setTestSetId (1);
+
+ // Create a test result and attach the SpiraTest listener
+ // object as an observer to it (as well as the default console text listener)
+ $result = new PHPUnit_Framework_TestResult;
+ $textPrinter = new PHPUnit_TextUI_ResultPrinter;
+ $result-&gt;addListener($textPrinter);
+ $result-&gt;addListener($spiraListener);
+
+ // Run the tests and print the results
+ $result = $suite-&gt;run($result);
+ $textPrinter-&gt;printResult($result);
+
+ ?&gt;
+</code></pre>
+
+<p>b) Sample Test Case</p>
+<pre><code class="PHP">&lt;?php
+require_once 'PHPUnit/Framework/TestCase.php';
+
+/**
+ * Some simple tests using the ability to return results back to SpiraTest
+ * 
+ * @author      Inflectra Corporation
+ * @version     0
+ *
+ */
+
+class SimpleTest extends PHPUnit_Framework_TestCase
+{
+    protected $fValue1;
+    protected $fValue2;
+
+    /**
+     * Sets up the unit test
+     */
+    protected function setUp()
+    {
+        $this-&gt;fValue1= 2;
+        $this-&gt;fValue2= 3;
+    }
+
+    /**
+     * Tests the addition of the two values
+     */
+    public function testAdd__2()
+    {
+        $result = $this-&gt;fValue1 + $this-&gt;fValue2;
+
+        // forced failure result == 5
+        $this-&gt;assertTrue ($result == 6);
+    }
+
+    /**
+     * Tests division by zero
+     */
+    /*
+    public function testDivideByZero__3()
+    {
+        $zero = 0;
+        $result = 8 / $zero;
+        $result++; // avoid warning for not using result
+    }
+
+    /**
+     * Tests two equal values
+     */
+    /*
+public function testEquals__4()
+    {
+        $this-&gt;assertEquals(12, 12);
+        $this-&gt;assertEquals(10, 10);
+            $num1 = 12;
+            $num2 = 12;
+        $this-&gt;assertEquals($num1, $num2);
+
+        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);
+        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);
+    }
+
+    /**
+     * Tests success
+     */
+    /*
+    public function testSuccess__5()
+    {
+        //Successful test
+        $this-&gt;assertEquals(12, 12);
+    }
+}
+?&gt;
+</code></pre>
+
+<p>Firstly, each of the individual test methods is appended with two
+underscores followed by the ID of the corresponding test case in
+SpiraTest. So for example testSuccess() is now testSuccess__5() as it
+maps to test case TC00005 inside SpiraTest.</p>
+<p>Second, in the Test Suite class, the PHPUnit TestResult object is passed
+an additional PHPUnit listener (in addition to the default one). This
+special listener class intercepts the results from the test run during
+execution and uses it to generate the web-service messages that are sent
+to SpiraTest to communicate the test results.</p>
+<p>The following attributes need to be set on the instance of the
+<em>SpiraListener_Listener</em>() object so that the extension can access the
+SpiraTest repository:</p>
+<p><strong>baseUrl</strong> -- The base URL used to access your instance of SpiraTest
+(e.g. <a href="http://myserver/SpiraTest">http://myserver/SpiraTest</a>). It should include the protocol (e.g.
+http/https), the server-name, the port number (if not 80/443) and the
+virtual directory (if there is one).</p>
+<p><strong>userName</strong> - A valid username for the instance of SpiraTest that has
+access to the project specified above</p>
+<p><strong>password</strong> - A valid password for the user specified above</p>
+<p><strong>projectId</strong> -- The ID of the project inside SpiraTest (this can be
+found on the project homepage in the "Project Overview" section)</p>
+<p><strong>releaseId</strong> - The ID of the SpiraTest release to associate the test
+run with. This can be found on the releases list page (click on the
+Planning > Releases tab). If you don't want to associate the test run
+with a specific release, just use the value -1 to indicate N/A.</p>
+<p><strong>testSetId</strong> - The ID of the SpiraTest test set to associate the test
+run with. This can be found on the test set list page (click on the
+Testing > Test Sets tab). If you don't want to associate the test run
+with a specific test set, just use the value -1 to indicate N/A.</p>
+<p>The SpiraListener_Listener class can also be called with the parameters
+as the constructor arguments:</p>
+<pre><code class="php">//Create a new SpiraTest listener instance and specify the connection info
+ $spiraListener = new SpiraListener_Listener (
+'http://localhost/SpiraTeam',
+    'fredbloggs',
+ 'fredbloggs',
+    1,
+    1,
+    1);
+</code></pre>
+
+<p>You can also attach the listener to the class declaratively by adding it
+to the phpunit.xml configuration file instead of adding through PHP
+code:</p>
+<pre><code class="xml">&lt;phpunit&gt;
+  &lt;listeners&gt;
+    &lt;listener class=&quot;SpiraListener_Listener&quot; file=&quot;../SpiraListener/Listener.php&quot;&gt;
+          &lt;arguments&gt;
+              &lt;!-- URL --&gt;
+              &lt;string&gt;http://localhost/SpiraTeam&lt;/string&gt;
+              &lt;!-- User Name --&gt;
+              &lt;string&gt;fredbloggs&lt;/string&gt;
+              &lt;!-- User Password --&gt;
+              &lt;string&gt;fredbloggs&lt;/string&gt;
+              &lt;!-- Project ID --&gt;
+              &lt;integer&gt;1&lt;/integer&gt;
+              &lt;!-- Release ID --&gt;
+              &lt;integer&gt;1&lt;/integer&gt;
+              &lt;!-- Test Set ID --&gt;
+              &lt;integer&gt;1&lt;/integer&gt;
+            &lt;/arguments&gt;
+    &lt;/listener&gt;
+  &lt;/listeners&gt;
+  &lt;testsuites&gt;
+    &lt;testsuite name=&quot;Sample Suite&quot;&gt;
+      &lt;directory&gt;.&lt;/directory&gt;
+      &lt;file&gt;./SampleSuite.php&lt;/file&gt;
+    &lt;/testsuite&gt;
+  &lt;/testsuites&gt;
+&lt;/phpunit&gt;
+</code></pre>
+
+<p>Now all you need to do is save your code, launch PHPUnit, run the test
+suite as you would normally do, and when you view the test cases in
+SpiraTest, you should see a PHPUnit automated test run displayed in the
+list of executed test runs:</p>
+<p><img alt="" src="../img/Integrating_with_PHPUnit_23.png" /></p>
+<p>Clicking on one of the PHPUnit test runs will bring up a screen that
+provides information regarding what PHPUnit test method failed, what the
+error was, together with the associated code stack-trace:</p>
+<p><img alt="" src="../img/Integrating_with_PHPUnit_24.png" /></p>
+<p>Congratulations... You are now able to run PHPUnit automated tests and
+have the results be recorded within SpiraTest. The sample test suite
+SampleSuite.php and sample test case SampleTest.php are
+provided with the installation in the Samples subfolder.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

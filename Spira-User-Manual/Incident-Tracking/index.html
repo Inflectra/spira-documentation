@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Incident-Tracking/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Incident Tracking - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Release-Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Test-Case-Management/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Release-Management/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#incident-tracking">Incident Tracking</a></li>
+        <li class="second-level"><a href="#incident-list">Incident List</a></li>
+        
+        <li class="third-level"><a href="#sorting-and-filtering">Sorting and Filtering</a></li>
+        <li class="third-level"><a href="#new-incident">New Incident</a></li>
+        <li class="third-level"><a href="#delete">Delete</a></li>
+        <li class="third-level"><a href="#refresh">Refresh</a></li>
+        <li class="third-level"><a href="#show-hide-columns">Show / Hide Columns</a></li>
+        <li class="third-level"><a href="#edit">Edit</a></li>
+        <li class="third-level"><a href="#cloning-incidents">Cloning Incidents</a></li>
+        <li class="third-level"><a href="#exporting-incidents">Exporting Incidents</a></li>
+        <li class="third-level"><a href="#creating-requirement-from-incidents">Creating Requirement from Incidents</a></li>
+        <li class="third-level"><a href="#printing-items">Printing Items</a></li>
+        <li class="second-level"><a href="#incident-details">Incident Details</a></li>
+        
+        <li class="third-level"><a href="#editing-an-existing-incident">Editing an Existing Incident</a></li>
+        <li class="third-level"><a href="#inserting-a-new-incident">Inserting a New Incident</a></li>
+        <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
+        <li class="third-level"><a href="#overview-dates-and-times">Overview -- Dates and Times</a></li>
+        <li class="third-level"><a href="#attachments">Attachments</a></li>
+        <li class="third-level"><a href="#history">History</a></li>
+        <li class="third-level"><a href="#associations">Associations</a></li>
+        <li class="third-level"><a href="#creating-a-requirement-from-an-incident">Creating a Requirement from an Incident</a></li>
+        <li class="third-level"><a href="#emailing-the-incident">Emailing the Incident</a></li>
+        <li class="third-level"><a href="#incident-followers">Incident Followers</a></li>
+        <li class="second-level"><a href="#incident-board">Incident Board</a></li>
+        
+        <li class="third-level"><a href="#incidents-by-priority">Incidents -- By Priority</a></li>
+        <li class="third-level"><a href="#incidents-by-status">Incidents -- By Status</a></li>
+        <li class="third-level"><a href="#incidents-by-person">Incidents - By Person</a></li>
+        <li class="third-level"><a href="#incidents-by-release">Incidents - By Release</a></li>
+        <li class="third-level"><a href="#incidents-by-sprint">Incidents - By Sprint</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="incident-tracking">Incident Tracking</h1>
+<p>This section outlines how the incident/defect tracking features of
+SpiraPlan® can be used to manage key product artifacts during the
+software development lifecycle. In addition to managing the defects
+raised during the execution of test cases in the test management module,
+the Incident Tracker is also a powerful risk/issue/bug tracking system
+in its own right. When coupled with the <a href="../User-Product-Management/#product-home">product dashboard</a> it is a powerful tool for representing all the key risks and issues
+associated with a product in a single, graphical format.</p>
+<p>Unlike a standalone bug/issue tracking tool however, you can trace the
+incidents/defects back to the test case and the underlying requirement
+that generated them, giving the product manager unprecedented power in
+analyzing the "in-process" quality of a system during its lifecycle.
+This power is clearly illustrated in the "Requirement Incident Count"
+pane in the Product Home dashboard (see <a href="../User-Product-Management/#requirements-coverage">User/Product Management &gt; Requirements Coverage</a>).</p>
+<h2 id="incident-list">Incident List</h2>
+<p>When you click on the Tracking > Incidents global navigation link, you
+will initially be taken to the incidents list screen illustrated below:</p>
+<p><img alt="" src="../img/Incident_Tracking_238.png" /></p>
+<p>The incident list screen displays all the incidents entered for the
+current product, in a filterable, sortable grid. The grid displays the
+incident number together with fields such as incident type (bug, issue,
+risk, etc.), status (new, open, etc.), priority, name, assigned owner,
+detection date, detector, closed date, etc. The choice of columns
+displayed is configurable per-user, per-product, giving extensive
+flexibility when it comes to viewing and searching incidents.</p>
+<p>The sidebar on the left gives you quick access to saved filters, along
+with some useful charts to get an at-a-glance view of incidents for this
+product.</p>
+<p>In addition, you can view a more detailed description of the incident
+(along with a resolution if any) by positioning the mouse pointer over
+the incident name hyperlink and waiting for the popup "tooltip" to
+appear. If you click on the incident name hyperlink, you will be taken
+to the incident details page described in <a href="../Incident-Tracking/#incident-details">Incident Tracking &gt; Incident Details</a>. Clicking on any
+of the pagination links at the bottom of the page will advance you to
+the next set of incidents in the list according to the applied filter
+and sort-order. There is also a drop-down-list at the bottom of the page
+which allows you to specify how many rows should be displayed in each
+page, helping accommodate different user preferences.</p>
+<h3 id="sorting-and-filtering">Sorting and Filtering</h3>
+<p>You can easily filter and sort the list of incidents as illustrated in
+the screen-shot below:</p>
+<p><img alt="" src="../img/Incident_Tracking_239.png" /></p>
+<p>To filter the list by incident type, status, priority, owner or detector
+name, you simply choose an item from the appropriate drop-down list, and
+for the other fields, you enter a free-text phrase then click
+"<strong><em>Filter</em></strong>" or press the &lt;ENTER> key to apply the
+different filters. Note that the name field is searched using a "LIKE"
+comparison, so that searching for "database" would include any item with
+the word database in the name. The other freetext fields need to be
+exact matches (e.g. dates, incident numbers). There are also several
+aggregate filters that are used to filter on multiple values at once
+(e.g. filtering status on (All Open) will return any incident that is in
+one of the open statuses -- new, open, assigned, reopen).</p>
+<p>To change the column that is sorted, or to change the direction of the
+current sort, simply click on the up/down arrow icon in the appropriate
+column. The currently sorted column is indicated by the darker arrow. In
+the screen-shot above, we are filtering on type=bug and sorting by
+decreasing priority.</p>
+<p>Clicking on Filter > Clear Filter removes any set filters and expands
+the incident list to display all incidents for the current product, and
+clicking on Filter > Save Filter allows you to save the filter to your
+'My Page' for use in the future. The list of saved filters can also be
+retrieved by clicking Filter > Retrieve Filter.</p>
+<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong>
+that can be applied in a single-click:</p>
+<ul>
+<li>
+<p>The topmost section displays any saved incident filters created by
+the current user or that are shared with the current user (the
+former are designated with an icon representing a single person, the
+latter a group of people)</p>
+</li>
+<li>
+<p><strong>Components</strong> -- This section lists the components defined for the
+current product. Clicking on any of the components in the list will
+filter the incidents to only show those that are associated with the
+selected component.</p>
+</li>
+<li>
+<p><strong>Releases</strong> -- This section lists the releases and sprints defined
+for the current product. Clicking on any of the releases or sprints
+in the list will filter the incident by that <strong>resolved
+release/sprint</strong>.</p>
+</li>
+</ul>
+<h3 id="new-incident">New Incident</h3>
+<p>Clicking on the "<strong><em>New Incident</em></strong>" button takes you to
+the new incident screen. This is essentially the same screen as the
+incident details screen shown in <a href="../Incident-Tracking/#incident-details">Incident Details</a> except, depending on how
+the workflow has been configured for your product, certain fields may be
+disabled. For more details on setting and up configuring workflow for
+your product, please refer to the <em>SpiraTest Administration Guide</em>.</p>
+<h3 id="delete">Delete</h3>
+<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the
+incidents whose check-boxes have been selected in the incident list.</p>
+<h3 id="refresh">Refresh</h3>
+<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the
+list of incidents; this is useful when new incidents are being added by
+other users, and you want to make sure you have the most up-to-date list
+displayed.</p>
+<h3 id="show-hide-columns">Show / Hide Columns</h3>
+<p>This drop-down list allows you to change the fields that are displayed
+in the incident list as columns for the current product. To show a
+column that is not already displayed, simply select that column from the
+list of "Show..." column names and to hide an existing column, simply
+select that column from the list of "Hide..." column names. This is
+stored on a per-product basis, so you can have different display
+settings for each product that you are a member of. The fields can be
+any of the built-in fields or any of the custom properties set up by the
+product owner.</p>
+<h3 id="edit">Edit</h3>
+<p>Each incident in the list has an "<strong><em>Edit</em></strong>" button
+display in its right-most column. When you click this button or just
+<em>double-click</em> on any of the cells in the row, you change the item from
+"View" mode to "Edit" mode. The various columns are made editable, and
+"<strong><em>Save</em></strong>" buttons are
+displayed in the last column:</p>
+<p><img alt="" src="../img/Incident_Tracking_240.png" /></p>
+<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the
+"<strong><em>Save</em></strong>" buttons are
+only displayed on the first row, and you can make changes to all the
+editable rows and then update the changes by clicking the one
+"<strong><em>Save</em></strong>" button. Also, if you want to make the same
+change to multiple rows (e.g. to change five incidents from "Resolved"
+status to "Closed"), you can click on the "fill" icon to the right of
+the editable item, which will propagate the new value to all editable
+items in the same column.</p>
+<p>If you want to edit lots of items, first select their checkboxes and
+then click the "<strong><em>Edit</em></strong>" button on the same row as the
+Filters and it will switch all the selected items into edit mode.</p>
+<p>When you have made your updates, you can either click
+"<strong><em>Save</em></strong>" to commit the changes, or
+"<strong><em>Cancel</em></strong>" to revert back to the original information.
+Alternatively, pressing the &lt;ENTER> key will commit the changes and
+pressing the &lt;ESCAPE> key will cancel the changes.</p>
+<h3 id="cloning-incidents">Cloning Incidents</h3>
+<p>To create a clone of an existing incident or set of incidents, simply
+select the check-boxes of the incidents you want to copy and then click
+"<strong><em>Clone</em></strong>". This will make a copy of the current
+incident with its name prefixed 'Copy of ....' to distinguish itself
+from the original. Any file attachments will also be copied along with
+the incident itself.</p>
+<h3 id="exporting-incidents">Exporting Incidents</h3>
+<p>To export an incident or set of incidents from the current product to
+another product in the system, select the check-boxes of the incident(s)
+you want to export and then click the Tools > "<strong><em>Export to
+Product</em></strong>". This will then bring up a list of possible
+destination products:</p>
+<p><img alt="" src="../img/Incident_Tracking_241.png" /></p>
+<p>Once you have chosen the destination product and clicked the
+"<strong><em>Export</em></strong>" button, the incidents will be exported from
+the current product to the destination product. Any file attachments
+will also be copied to the destination product along with the
+incidents.</p>
+<h3 id="creating-requirement-from-incidents">Creating Requirement from Incidents</h3>
+<p>Sometimes you may have a situation where an enhancement has been logged
+in the incident tracker and now that it has been approved, it needs to
+be converted into a formal requirement so that test cases and tasks can
+be generated from it. To aid this process, there is a shortcut that
+allows you to create new requirement from selected incidents and have it
+be automatically added to the requirements list. When that is performed
+an association is automatically added that links this new requirement to
+the original incident.</p>
+<p>To activate this feature, select the checkboxes of the incidents you
+want to convert and then click Tools > Convert Into Requirements.</p>
+<h3 id="printing-items">Printing Items</h3>
+<p>To quickly print a single incident or list of incidents you can select
+the items' checkboxes and then click Tools > Print Items. This will
+display a popup window containing a printable version of the selected
+items. You can also save the report in a variety of common formats from
+the same Tools menu.</p>
+<h2 id="incident-details">Incident Details</h2>
+<p>When you click on an incident item in the incident list, or click the
+"<strong><em>New Incident</em></strong>" button (as described in <a href="#incident-list">Incident List</a>),
+you are taken to the incident details page illustrated below:</p>
+<p><img alt="" src="../img/Incident_Tracking_242.png" /></p>
+<p>This page is made up of three areas:</p>
+<ul>
+<li>
+<p>the left pane is the navigation window where you can quickly jump to
+other incidents;</p>
+</li>
+<li>
+<p>the upper part of the right pane contains the incident name and key
+information about it (it's ID number, and what type of incident it
+is), as well as the current status (see below); and</p>
+</li>
+<li>
+<p>the bottom part of the right pane displays different information
+associated with the incident across a number of tabs.</p>
+</li>
+</ul>
+<p>The navigation pane consists of a link that will take you back to the
+incidents list, as well as a list of the peer incidents to the one
+selected. This latter list is useful as a navigation shortcut; you can
+quickly view the peer incidents by clicking on the navigation links
+without having to first return to the incidents list page. The
+navigation list can be switched between four different modes:</p>
+<ul>
+<li>
+<p>The list of incidents matching the current filter</p>
+</li>
+<li>
+<p>The list of all incidents, irrespective of the current filter</p>
+</li>
+<li>
+<p>The list of incidents assigned to the current user</p>
+</li>
+<li>
+<p>The list of incidents detected/found by the current user</p>
+</li>
+</ul>
+<p>In addition to the left hand navigation, you can enter a specific
+incident number in the text-box in the toolbar and click the
+"<strong><em>Find</em></strong>" button. In the same toolbar, there is also a
+shortcut for creating a copy of the current by clicking the
+"<strong><em>Clone</em></strong>" button.</p>
+<h3 id="editing-an-existing-incident">Editing an Existing Incident</h3>
+<p>If you are editing an existing incident, the fields that are available
+and the fields that are required will depend on your stage in the
+incident workflow. For example an open incident might not require a
+"Resolved Version" whereas a resolved incident may well. The types of
+change allowed and the email notifications that are sent will depend on
+how your product administrator has setup the system for you.
+Administrators should refer to the <em>SpiraPlan Administration Guide</em> for
+details on configuring the incident workflows to meet their needs.</p>
+<p>Depending on the user's role and whether they are listed as the owner or
+detector of the incident or not, the dropdown next to the incident's
+current status shows the allowed workflow operations:</p>
+<p><img alt="" src="../img/Incident_Tracking_243.png" /></p>
+<p>These workflow transitions allow the user to move the incident from one
+status to another. For example when the incident is in the Assigned
+status, you will be given the options to:</p>
+<p><strong>Resolve the Incident</strong> -- changes status to "Resolved"</p>
+<p><strong>Unable to Reproduce</strong> -- changes the status to "Not Reproducible"</p>
+<p><strong>Duplicate Incident</strong> - changes the status to "Duplicate"</p>
+<p>After changing the status of the incident by clicking on the link, you
+can then fill in the additional fields that are now enabled and/or
+required. Once you've made the changes to the appropriate incident
+fields, you can click "<strong><em>Save</em></strong>" or one of the options
+from the "<strong><em>Save</em></strong>" dropdown list to commit the changes
+or "<strong><em>Refresh</em></strong>" to discard the changes and reload the
+incident from the database.</p>
+<p>Please note that if digital signatures have been enabled for a
+particular workflow operation (and therefore a digital signature is
+required to confirm the status change. Workflow operations requiring a
+digital signature are marked with a padlock icon as in the example
+below:</p>
+<p><img alt="" src="../img/Incident_Tracking_244.png" /></p>
+<p>On attempting to save changes made after clicking a workflow operation
+that requires a digital signature you will be presented with a popup
+similar to the one below (which is for a requirement):</p>
+<p><img alt="" src="../img/Incident_Tracking_138.png" /></p>
+<p>You can print the current incident by clicking Tools > Print, which
+will display a printable version of the page in a separate window.
+Alternatively, you can export the incident to a number of formats by
+selecting the appropriate option from the Tools menu.</p>
+<h3 id="inserting-a-new-incident">Inserting a New Incident</h3>
+<p>If you are creating a new incident, the fields that are available and
+the fields that are required will depend on how your product has been
+for configured. For example, some products may require that all
+incidents be started with Status=New and Type=Incident, others may allow
+you to specify the incident type. The types of change allowed will
+depend on how your product administrator has setup the system for you.
+Administrators should refer to the <em>SpiraPlan Administration Guide</em> for
+details on configuring the incident workflows to meet their needs.</p>
+<p>Once you've filled out the appropriate incident fields, you can either
+click "<strong><em>Save</em></strong>" or one of the options from the
+"<strong><em>Save</em></strong>" dropdown list to commit the changes or click
+on "<strong><em>Back to Incident List</em></strong>" to discard the insertion
+and return back to the incident list.</p>
+<h3 id="overview-comments">Overview - Comments</h3>
+<p>The Comments section allows users to add and view discussions related to
+the incident:</p>
+<p><img alt="" src="../img/Incident_Tracking_245.png" /></p>
+<p>Existing comments are displayed by date (either newest-first or
+oldest-first) above the text box. To add a comment to the incident,
+enter your text into the textbox, then click the "<strong><em>Add
+Comment</em></strong>" button to save.</p>
+<h3 id="overview-dates-and-times">Overview -- Dates and Times</h3>
+<p>This section displays the general schedule and completion status of the
+specific incident. You can enter/edit the start-date, closed-date (i.e.
+the due-date), estimate, actual and remaining effort. From these values,
+the system will display the calculated percent completion, progress
+indicator and producted final effort. Any custom date fields set up by
+the system administrator or product owner will also appear in this
+section (as shown below with the Review Date field).</p>
+<p><img alt="" src="../img/Incident_Tracking_246.png" /></p>
+<h3 id="attachments">Attachments</h3>
+<p>In this tab, the lower section of the screen displays the list of
+documents, screenshots or web links (URLs) that have been "attached" to
+the incident. The documents can be in any format, though SpiraPlan® will
+only display the icon for certain known types.</p>
+<p><img alt="" src="../img/Incident_Tracking_247.png" /></p>
+<p>The attachment list includes the filename that was originally uploaded
+together with the file-size (in KB), name of the person who attached it
+and the date uploaded. In addition, if you position the pointer over the
+filename and hold it there for a few seconds, a detailed description is
+displayed as a tooltip.</p>
+<p>To actually view the document, simply click on the filename hyperlink
+and a new web browser window will open. Depending on the type of file,
+this window will either display the document or prompt you for a place
+to save it on your local computer. To delete an existing attachment from
+an incident, click the "<strong><em>Remove</em></strong>" button and the
+attachment will be removed from the list.</p>
+<p>To attach a new document to the incident, you need to first click the
+"<strong><em>Add New</em></strong>" link to display the new attachment dialog
+box:</p>
+<p><img alt="g4169" src="../img/Incident_Tracking_114.png" /></p>
+<p>There are three different types of item that can be attached to an
+incident:</p>
+<p>To upload a file, choose "File" as the type and then click the Browse
+button and select the file from your local computer, optionally enter a
+detailed description then click the "<strong><em>Upload</em></strong>" button.
+The document will be copied from your computer and attached to the
+artifact.</p>
+<p>To attach a web-link (URL) to the artifact, you need to choose "URL" as
+the type and then enter the fully qualified URL (e.g.
+<a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an
+optional description and then click the "<strong><em>Upload</em></strong>"
+button to attach the web-link.</p>
+<p>To attach a screenshot to the artifact, you need to choose "Screenshot"
+as the type and then copy the image to your computer's clipboard (e.g.
+on Windows computers, the PRINT SCREEN button captures the current page
+and adds to the clipboard). Once the image is in the clipboard, paste it
+into the editor using CTRL+V (or the equivalent keystroke for your
+operating system) and the item will appear in the preview window. You
+can then fill in the other fields and click "<strong><em>Upload</em></strong>"
+to attach the image.</p>
+<p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
+doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
+automatically, then you will need to manually add the file extension to
+the filename before uploading if you want it to be displayed with the
+correct icon in the attachment list.</p>
+<p>You can also associate an existing document (that's already stored in
+SpiraTeam) with the incident. To do that, click on the "<strong><em>Add
+Existing</em></strong>" button to bring up the add file association
+dialog box:</p>
+<p><img alt="g4197" src="../img/Incident_Tracking_156.png" /></p>
+<p>You can then choose to either associate a document stored in the
+SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
+but not SpiraTest) from the linked source code repository. In either
+case you first select the appropriate folder, and then pick the
+document(s) from the file list on the right. In the case of a source
+code file association you can also add a comment.</p>
+<h3 id="history">History</h3>
+<p>This tab displays the list of changes that have been performed on the
+incident artifact since its creation. An example incident change history
+is depicted below:</p>
+<p><img alt="" src="../img/Incident_Tracking_248.png" /></p>
+<p>The change history displays the date that each change was made, together
+with the fields that were changed, the old and new values and the person
+who made the change. This allows a complete audit trail to be maintained
+of all changes in the system.</p>
+<h3 id="associations">Associations</h3>
+<p>This tab displays a list of any requirements, tasks, test runs, test
+steps or other incidents that are associated with this incident:</p>
+<p><img alt="" src="../img/Incident_Tracking_249.png" /></p>
+<p>The incidents and tasks in this list are ones that a user has decided
+are relevant to the current one and has created a direct link between
+them. In the case of requirements and test cases, the association can be
+either due to the creator of an incident directly linking the incident
+to the requirement or test step, or it can be the result of a tester
+executing a test-run and creating an incident during the test run. In
+this latter case, the check-box to the left of the association will be
+unavailable as the link is not editable.</p>
+<p>Each association is displayed with the type of association (related-to,
+vs. a dependency), name of the artifact being linked-to, type of
+artifact (requirement, incident, etc.), the name of the person who
+created the association, a comment that describes why the association
+was made, and the product of the linked artifact. In the case of an
+indirect association due to a test run, the comment will contain the
+name of the test run.</p>
+<p>You can perform the following actions on an association from this
+screen:</p>
+<p><strong>Delete</strong> -- removes the selected association to the other artifact.
+This will only delete the association, not the linked artifact itself.</p>
+<p><strong>Refresh</strong> -- updates the list of associations from the server, useful
+if other people are adding associations to this incident at the same
+time.</p>
+<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to
+the list of associations</p>
+<p><strong>Clear Filter</strong> -- Clears the current filter, so that all associations
+for the current incident are shown.</p>
+<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
+of the associations allows you to edit the association type and comment
+fields inline directly on this screen.</p>
+<p>To create a new association, click the "<strong><em>Add</em></strong>" button
+to display the "Add New Association" panel:</p>
+<p><img alt="" src="../img/Incident_Tracking_250.png" /></p>
+<p>Once you have selected the appropriate artifact type, you will then be
+able to browse or search for the specific artifact you want to link to.
+You can also enter the ID of the artifact directly (if known). In either
+case you can also add a comment that explains the rationale for the
+association. If you're adding an association to a test step, the test
+steps are grouped in their test cases. You can browse the list of test
+cases within each test case folder.</p>
+<p><img alt="" src="../img/Incident_Tracking_251.png" /></p>
+<h3 id="creating-a-requirement-from-an-incident">Creating a Requirement from an Incident</h3>
+<p>Sometimes you may have a situation where an enhancement has been logged
+in the incident tracker and now that it has been approved, it needs to
+be converted into a formal requirement so that test cases and tasks can
+be generated from it. To aid this process, there is a button on the
+Associations tab that allows you to create a new requirement from the
+current incident and have it be automatically added to the requirements
+list. When that is performed an association is automatically added that
+links this new requirement to the original incident.</p>
+<h3 id="emailing-the-incident">Emailing the Incident</h3>
+<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can
+send an email containing details of the incident to an email address or
+another user on the system:</p>
+<p><img alt="" src="../img/Incident_Tracking_217.png" /></p>
+<p>You can specify the subject line for the email, and either a list of
+email addresses, separated by semicolons, or an existing product user.
+The content of the email is specified in the System Administration --
+Notification Templates.</p>
+<p>To be notified of any changes made to the current artifact via email,
+click the "<strong><em>Subscribe</em></strong>" button. If you already
+subscribed, the button will instead let you
+"<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that
+particular artifact.</p>
+<h3 id="incident-followers">Incident Followers</h3>
+<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can
+quickly follow the incident, and receive updates on certain changes to
+it. Depending on your role, you may also see a dropdown to this button,
+which let's you add another product member as a follower to this
+incident.</p>
+<p><img alt="" src="../img/Incident_Tracking_99.png" /></p>
+<p><img alt="" src="../img/Incident_Tracking_100.png" /></p>
+<p>You can also quickly see who is following an incident under the "People"
+section in the Overview tab.</p>
+<p><img alt="" src="../img/Incident_Tracking_101.png" /></p>
+<p>To view information about the follower, or to unfollow them from the
+incident, hover over their avatar to display a user profile card.</p>
+<p><img alt="" src="../img/Incident_Tracking_102.png" /></p>
+<h2 id="incident-board">Incident Board</h2>
+<p>The incident board is an alternative to the <a href="#incident-list">incident list</a> page designed to let you view the incidents
+planned for the current product. You can access this feature by clicking
+on the <strong>Board</strong> icon in the top-right of the Incidents list page. You
+can switch back to the Incident list page by clicking on the <strong>Table</strong>
+view.</p>
+<p>The incident board has the following different display modes:</p>
+<ul>
+<li>
+<p>All Releases</p>
+</li>
+<li>
+<p>By Release</p>
+</li>
+<li>
+<p>By Priority</p>
+</li>
+<li>
+<p>By Status</p>
+</li>
+<li>
+<p>By Person</p>
+</li>
+<li>
+<p>Release</p>
+</li>
+<li>
+<p>By Sprint</p>
+</li>
+<li>
+<p>By Priority</p>
+</li>
+<li>
+<p>By Status</p>
+</li>
+<li>
+<p>By Person</p>
+</li>
+<li>
+<p>Sprint</p>
+</li>
+<li>
+<p>By Priority</p>
+</li>
+<li>
+<p>By Status</p>
+</li>
+<li>
+<p>By Person</p>
+</li>
+</ul>
+<p>Each of these views is described below:</p>
+<h3 id="incidents-by-priority">Incidents -- By Priority</h3>
+<p>This view is designed to let you see the list of planned incidents
+organized by priority. Each of the possible priority values is displayed
+on the left-hand side and the incidents displayed in the same row on the
+right:</p>
+<p><img alt="" src="../img/Incident_Tracking_252.png" /></p>
+<p>The top section will contain the list of incidents that are not assigned
+a priority, with the other sections containing the incidents that have
+been assigned to the specific priority.</p>
+<h3 id="incidents-by-status">Incidents -- By Status</h3>
+<p>This view is designed to let you see the incidents in the current
+product / release / sprint organized by their status. Each incident
+status (not started, in progress, completed, blocked, deferred) is
+displayed as a heading, with the incidents displayed in the same column
+underneath:</p>
+<p><img alt="" src="../img/Incident_Tracking_253.png" /></p>
+<p>You can click on the expand/collapse icons to hide any resources that
+are not relevant.</p>
+<p>Depending on the view (all releases, release, or sprint), there may be
+sections with the release and sprint name. You can drag and drop the
+incidents between statuses or to/from the release/sprint backlog. Any
+incidents not assigned to a release/sprint will be listed in the
+(Unassigned Items) section at the top.</p>
+<p><img alt="" src="../img/Incident_Tracking_254.png" /></p>
+<h3 id="incidents-by-person">Incidents - By Person</h3>
+<p>This view is designed to let you see the incidents in the current
+product / release / sprint organized by resource / person. Each of the
+users that is a member of the current product is displayed as a heading,
+with the incidents displayed in the same column underneath:</p>
+<p><img alt="" src="../img/Incident_Tracking_255.png" /></p>
+<p>You can click on the expand/collapse icons to hide any resources that
+are not relevant. The system will display a progress bar for each
+resource to illustrate the allocation for that resource. Any resource
+that has a progress bar that is completely green has been fully
+scheduled and should not have any additional incidents assigned. If the
+progress bar for that resource turns red, it means that they have been
+over-scheduled and you need to reassign some of the incidents.</p>
+<p>Depending on the view (all releases, release, or sprint), there may be
+sections with the release and sprint name; they contain incidents that
+are scheduled for the current release or sprint but have not yet been
+assigned to a resource. You can drag and drop the incidents between
+resources or to/from the release/sprint backlog. Any incidents not
+assigned to a resource and release/sprint will be listed in the
+(Unassigned Items) section at the top.</p>
+<h3 id="incidents-by-release">Incidents - By Release</h3>
+<p>This view is only available when you are displaying the incident board
+for 'all releases'. Each of the active releases defined for the current
+product is displayed as a heading, with the incidents displayed in the
+same column underneath</p>
+<p><img alt="" src="../img/Incident_Tracking_256.png" /></p>
+<p>You can drag and drop the incidents between the different releases. Once
+the incident has been added to the release, the utilized effort for the
+release will increase, and the available effort will decrease by the
+same amount.</p>
+<p>Note: The system will allow you to assign more incidents to a release
+than it is possible to complete, however this will result in a negative
+value for 'available effort'. If this happens, the "Available Effort"
+value will be displayed in red, and you need to rebalance the items,
+extend the release length or add product personnel resources to the
+release.</p>
+<p>Clicking on the release hyperlinks in the headers will switch the
+incident board into the release view.</p>
+<h3 id="incidents-by-sprint">Incidents - By Sprint</h3>
+<p>This view is only available when you are displaying the incident board
+for a specific release. Each of the sprints defined for the current
+release is displayed as a heading, with the incidents displayed in the
+same column underneath. This view is commonly used in <strong>Scrum</strong>
+products:</p>
+<p><img alt="" src="../img/Incident_Tracking_257.png" /></p>
+<p>You can drag and drop the incidents between the different sprints. Once
+the incident has been added to the sprint, the utilized effort for the
+sprint will increase, and the available effort will decrease by the same
+amount.</p>
+<p>Note: The system will allow you to assign more incidents to a sprint
+than it is possible to complete, however this will result in a negative
+value for 'available effort'. If this happens, the "Available Effort"
+value will be displayed in red, and you need to rebalance the items,
+extend the sprint length or add product personnel resources to the
+sprint.</p>
+<p>Clicking on the sprint hyperlinks in the headers will switch the
+incident board into the sprint view.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/IDE-Integration/Visual-Studio-2005---2008/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Visual Studio 2005-2008 - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Incident-Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Release-Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li class="active">
+    <a href="./">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Visual-Studio-2010/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#visual-studio-2005-2008">Visual Studio 2005 - 2008</a></li>
+        <li class="second-level"><a href="#installing-the-visual-studio-add-in">Installing the Visual Studio Add-In</a></li>
+        
+        <li class="second-level"><a href="#adding-and-assigning-spirateam-projects">Adding and Assigning SpiraTeam Projects</a></li>
+        
+        <li class="second-level"><a href="#viewing-spirateam-project-artifacts">Viewing SpiraTeam Project Artifacts</a></li>
+        
+        <li class="second-level"><a href="#viewing-artifact-details">Viewing Artifact Details</a></li>
+        
+        <li class="second-level"><a href="#data-concurrency-warnings">Data Concurrency Warnings</a></li>
+        
+        <li class="second-level"><a href="#troubleshooting">Troubleshooting</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="visual-studio-2005-2008">Visual Studio 2005 - 2008</h1>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
+(hereafter referred to as SpiraTeam) in conjunction with the Visual
+Studio (VS) integrated development environment (IDE) for viewing
+Requirements, completing Tasks and fixing Incidents.</p>
+<p>The Add-In will operate in Visual Studio 2005 and 2008 but does require
+that the .NET framework version 3.5 SP1 is installed. It is normally
+installed with Visual Studio 2008 SP1 and Visual Studio 2010, but can be
+separately installed on a system with Visual Studio 2005 by downloading
+the installation file from Microsoft:
+<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=ab99342f-5d1a-413d-8319-81da479ab0d7">http://www.microsoft.com/downloads/details.aspx?FamilyID=ab99342f-5d1a-413d-8319-81da479ab0d7</a></p>
+<p>Visual Studio Express versions cannot support Add-Ins, you must at least
+have the standard version of the IDE for the Add-In to appear in the
+menu bar.
+ <img alt="" src="../img/Visual_Studio_2005_-_2008_71.png" /></p>
+<h2 id="installing-the-visual-studio-add-in">Installing the Visual Studio Add-In</h2>
+<p>Download and execute the Add-In installation file from the Inflectra
+website. The add-in will be automatically added to VS's menu bar.</p>
+<h2 id="adding-and-assigning-spirateam-projects">Adding and Assigning SpiraTeam Projects</h2>
+<p>To view the Project Explorer, select "SpiraTeam Project Explorer" from
+the View menu. The tool window will open, and can be docked with any
+existing tool windows. When a solution is loaded that hasn't had any
+SpiraTeam projects assigned to it -- or if no solution is open -- the
+dialog will report so. If you have already assigned SpiraTeam projects
+to the open solution, they will each be loaded in a tree format in the
+tool window.</p>
+<p>Visual Studio will remember the docking and location of the window, so
+that if you close it you can re-open it by selecting the menu option a
+second time. The window will re-open in the last position before it was
+closed.</p>
+<p>Once the Project Explorer is open, click the "Configuration" button
+(<img alt="imgSettings" src="../img/Visual_Studio_2005_-_2008_72.png" />) in the Project Explorer's toolbar to
+open the SpiraTeam project dialog. Note that if you have no solution
+open, you can add, remove, and edit SpiraTeam projects, but you can only
+assign them to a solution when that solution is open:</p>
+<p><img alt="AssignProjects" src="../img/Visual_Studio_2005_-_2008_73.png" /></p>
+<p><img alt="" src="../img/Visual_Studio_2005_-_2008_74.png" /></p>
+<p>Click the New button
+(<img alt="imgAdd" src="../img/Visual_Studio_2005_-_2008_58.png" /></p>
+<p>) to link to a new SpiraTeam project. The
+"new SpiraTeam Project" dialog will open. In the fields, enter in the
+following:</p>
+<ul>
+<li>
+<p><strong>Server URL</strong>: The root address of your SpiraTeam installation. For example:</p>
+<blockquote>
+<p><a href="https://server1/SpiraTeam/">https://server1/SpiraTeam/</a>
+Do not put "login.aspx" or any other page address in this field.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>User ID</strong>: Your user ID you use to log into the SpiraTeam application.</p>
+</li>
+<li>
+<p><strong>Password</strong>: Your password you use to log into the SpiraTeam application.</p>
+</li>
+</ul>
+<p>Once entered, click the "Get Projects" button. The add-in will connect
+to the server and get a list of projects that you are assigned to.
+Select the SpiraTeam project that you want to add, and click the "Save"
+button. Your project will appear in the dialog in the format of "Project
+Name [Server]". With a project selected in the left box, you can also
+Edit
+(<img alt="imgEdit" src="../img/Visual_Studio_2005_-_2008_59.png" />) and Delete 
+(<img alt="imgDelete" src="../img/Visual_Studio_2005_-_2008_60.png" />
+) the project.</p>
+<p>With a solution loaded, you can select any number of SpiraTeam projects
+and assign them to the open Solution, by highlighting them, and clicking
+the "Add >" button. All projects assigned to the open solution will
+appear in the right side.</p>
+<p>Clicking "Save" will return you to the IDE, and if you made any changes
+in the configuration, the Project Explorer will refresh and update its
+display.</p>
+<h2 id="viewing-spirateam-project-artifacts">Viewing SpiraTeam Project Artifacts</h2>
+<p><img alt="" src="../img/Visual_Studio_2005_-_2008_75.png" /></p>
+<p>Once a solution is opened and there is a SpiraTeam
+project assigned, you can view the project's contents. At this time, the
+add-in will display the following items:
+<img alt="imgFolderIncident" src="../img/Visual_Studio_2005_-_2008_61.png" />
+<img alt="imgIncident" src="../img/Visual_Studio_2005_-_2008_62.png" /></p>
+<p><strong>Incidents</strong>: Assigned to you,
+unassigned.
+<img alt="imgFolderTask" src="../img/Visual_Studio_2005_-_2008_63.png" />
+<img alt="imgTask" src="../img/Visual_Studio_2005_-_2008_64.png" /></p>
+<p><strong>Tasks</strong>: Assigned to you, unassigned.
+<img alt="imgFolderRequirement" src="../img/Visual_Studio_2005_-_2008_65.png" />
+<img alt="imgRequirement" src="../img/Visual_Studio_2005_-_2008_66.png" /></p>
+<p><strong>Requirements</strong>: Assigned to you.</p>
+<p>By default, the Project Explorer will not show closed and completed
+items. However, by clicking the 'View Closed'
+(<img alt="imgShowCompleted" src="../img/Visual_Studio_2005_-_2008_67.png" />) button in the toolbar, the Project
+Explorer will be updated to show closed and completed items as well.</p>
+<p>Double-clicking on a node (or clicking on the item's arrow) will open
+that item up and show all the sub-items.</p>
+<p>Clicking the Refresh
+(<img alt="imgRefresh" src="../img/Visual_Studio_2005_-_2008_69.png" />) button on the toolbar will refresh the
+SpiraTeam projects in the Project Explorer. Double-clicking an artifact
+will open its details in the main tabbed document area for viewing and
+editing.</p>
+<h2 id="viewing-artifact-details">Viewing Artifact Details</h2>
+<p>By double-clicking an artifact in the Project Explorer, you can open the
+details for the item in the main tabbed-document view. All the details
+screens are very similar, here is the Incident Details view for
+reference:</p>
+<p><img alt="Details" src="../img/Visual_Studio_2005_-_2008_76.png" /></p>
+<p>The top of the window has the "Save" button, and any informational or
+warning messages will appear to the right of the Save button. The rest
+of the window has detail fields relating to the item, and depending on
+the current workflow, some fields may be required or disabled. (Note
+that at this time, Requirements are read-only.)</p>
+<p>Once you make changes to the artifact, changes are saved to the server
+when the "Save" button is clicked.</p>
+<p><em>Note that due to platform architecture differences, the HTML
+description may not appear and save exactly as entered, and there is no
+'Source HTML' view. If visual integrity/layout is important, then we
+recommend editing the description and resolution fields in SpiraTeam's
+Web user interface instead.</em></p>
+<h2 id="data-concurrency-warnings">Data Concurrency Warnings</h2>
+<p>When trying to save an artifact, you may get a warning at the top of the
+window stating that the item was modified by another user. This error is
+telling you that changes were made to the item after the data on your
+screen was pulled from the server.</p>
+<p>When this happens, you may see some fields highlighted in yellow or red.
+The colors represent data collisions:</p>
+<ul>
+<li>
+<p>Yellow -- Any field highlighted yellow is a field that you tried to
+change that wasn't changed by the other user.</p>
+</li>
+<li>
+<p>Red -- Any field highlighted in red is a field that both you and the
+other user tried to change.</p>
+</li>
+<li>
+<p>No Highlight -- Fields without a highlight were possibly changed by
+the other user, but you did not make any changes to those fields.</p>
+</li>
+</ul>
+<p>When a concurrency issue occurs, the new data is loaded from the server,
+losing your changes due to possible workflow collisions. Simply review
+the changed data and make your changes accordingly.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>The add-in is designed to capture all errors so that when something
+unexpected happens, work isn't lost. In most situations where an error
+occurs, a notification will be displayed of the error. In the Project
+Explorer, hover the mouse over the error node to get a full description
+of the error. Errors will also be logged to the desktop's Application
+Event Log.</p>
+<p>A common symptom of an internal error is a blank or empty Details screen
+-- if this occurs when opening an artifact, save all your open work and
+restart Visual Studio. Contact support with the Application Event Log
+and inform them of the issue.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

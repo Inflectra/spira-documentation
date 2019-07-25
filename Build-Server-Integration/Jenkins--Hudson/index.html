@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Build-Server-Integration/Jenkins--Hudson/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Jenkins/Hudson - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Incident-Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Release-Management/">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../../Migration-and-Integration/Migrating-from-TestLink/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../JetBrains-TeamCity/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#jenkins-hudson">Jenkins / Hudson</a></li>
+        <li class="second-level"><a href="#overview">Overview</a></li>
+        
+        <li class="second-level"><a href="#installing-the-spirateam-plug-in-for-jenkins">Installing the SpiraTeam Plug-in for Jenkins</a></li>
+        
+        <li class="second-level"><a href="#setting-up-the-spirateam-jenkins-plug-in">Setting-Up the SpiraTeam Jenkins Plug-in</a></li>
+        
+        <li class="second-level"><a href="#configuring-a-jenkins-job">Configuring a Jenkins Job</a></li>
+        
+        <li class="second-level"><a href="#viewing-the-build-results-in-spirateam">Viewing the Build Results in SpiraTeam</a></li>
+        
+        <li class="second-level"><a href="#working-with-source-code-changesets">Working with Source Code Changesets</a></li>
+        
+        <li class="second-level"><a href="#scheduling-test-sets-upon-successful-builds">Scheduling Test Sets Upon Successful Builds</a></li>
+        
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="jenkins-hudson">Jenkins / Hudson</h1>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
+(hereafter referred to as SpiraTeam) in conjunction with either the
+Jenkins or Hudson (hereafter referred to as Jenkins) continuous
+integration build servers. It assumes that you already have a working
+installation of SpiraTest, SpiraPlan or SpiraTeam v3.2 or later and a
+working installation of Jenkins/Hudson v1.405 or later. If you have an
+earlier version of SpiraTeam, you will need to upgrade to at least v3.2.</p>
+<h2 id="overview">Overview</h2>
+<p>Jenkins provides continuous integration services for software
+development, primarily in the Java programming language. It is a
+server-based system running in a servlet container such as Apache
+Tomcat. It supports SCM tools including CVS, Subversion, Git, Mercurial,
+Perforce and Clearcase, and can execute Apache Ant and Apache Maven
+based projects as well as arbitrary shell scripts and Windows batch
+commands.</p>
+<p>When you use the SpiraTeam plugin for Jenkins, it will allow you to
+associate each Jenkins project with a corresponding project and release
+in SpiraTeam. Then, each time Jenkins creates a new build, a new build
+artifact will be created in SpiraTeam. Each build in SpiraTeam will be
+automatically linked to the incidents fixed, source code revisions
+committed, and any SpiraTeam tokens in the Jenkins changelog will be
+parsed and turned into SpiraTeam artifact hyperlinks.</p>
+<h2 id="installing-the-spirateam-plug-in-for-jenkins">Installing the SpiraTeam Plug-in for Jenkins</h2>
+<p>Go to the Inflectra website and open up the page that lists the various
+downloads available for SpiraTeam
+(<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this
+page will be the SpiraTeam Plug-In for Jenkins. Right-click on this link
+and save the Zip compressed folder to a temporary location. Open up the
+compressed folder and extract the spira-plugin.hpi file
+contained inside.</p>
+<p>Now open up a web browser and connect to your Jenkins server:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_4.png" /></p>
+<p>Click on the "Manage Jenkins" hyperlink, following by the
+"Manage Plugins" hyperlink. That will bring up the page
+that displays all the currently loaded plugins. Click on the "Advanced"
+tab:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_5.png" /></p>
+<p>Now you can click on the [Browse] button next to the section that lets
+you upload a new plugin to the server. Navigate to where you saved the
+spira-plugin.hpi plugin file and upload the SpiraTeam plugin into
+Jenkins. Once that has completed, click on the "Installed" tab to
+display the list of installed plugins:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_6.png" /></p>
+<p>You will see an option to Restart Jenkins and load any recently added
+plugins. Click on this button and Jenkins will automatically restart
+once all pending jobs have been completed. Once Jenkins has restarted,
+you will now see the SpiraTeam plugin listed as one of the installed
+plugins:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_7.png" /></p>
+<h2 id="setting-up-the-spirateam-jenkins-plug-in">Setting-Up the SpiraTeam Jenkins Plug-in</h2>
+<p>Now that the plugin has been installed, you need to go back to the
+Jenkins homepage and click on the "Manage Jenkins"
+hyperlink followed by the "Configure System" hyperlink.
+This will bring up the main Jenkins configuration page. Scroll down to
+find the "<strong>Spira Integeration</strong>" section:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_8.png" /></p>
+<p>Enter in the <strong>URL</strong> you use to access your instance of SpiraTeam,
+together with a valid <strong>username</strong> and <strong>password</strong>. Once you have
+entered the values, click on the [Test Connection] button to verify
+that Jenkins can connect to SpiraTeam successfully.</p>
+<p>Once it has connected successfully, click the [Save] button at the
+bottom of the screen to save your connection settings.</p>
+<h2 id="configuring-a-jenkins-job">Configuring a Jenkins Job</h2>
+<p>Now that you have setup the global SpiraTeam settings in Jenkins, next
+you need to associate each of your Jenkins Jobs with their corresponding
+SpiraTeam Project and Release/Iteration. To do this, click on the name
+of the Jenkins Job and then click on the "Configure" hyperlink for that
+Job:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_9.png" /></p>
+<p>Under the section "<strong>Build Environment</strong>" select the checkbox marked
+"<strong>Enable Spira Integration</strong>". That will display the SpiraTeam
+configuration panel for this Job:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_10.png" /></p>
+<p>Now you need to enter the following values:</p>
+<ul>
+<li>
+<p><strong>Project ID</strong> -- The numeric ID of the SpiraTeam Project that the
+Build belongs to. (e.g. for Project PR00001 just enter 1)</p>
+</li>
+<li>
+<p><strong>Release Version Number</strong> -- The version number of the SpiraTeam
+Release/Iteration that the Build belongs to. (e.g. for Release
+RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)</p>
+</li>
+</ul>
+<p>Once you have entered in the Project ID and Release version number,
+click the [Verify Release] button and the plugin will connect to
+SpiraTeam and verify that the project exists, that the current user can
+connect to that project, and that the specified release/iteration exists
+in the project.</p>
+<p>Once it has verified successfully, click the [Save] button at the
+bottom of the screen to save your Job configuration settings. You are
+now ready to use Jenkins with SpiraTeam.</p>
+<h2 id="viewing-the-build-results-in-spirateam">Viewing the Build Results in SpiraTeam</h2>
+<p>Now that you have associated your Jenkins job with a specific SpiraTeam
+project and release/iteration, you can now use Jenkins to manage your
+software builds and have the results of the build be reported back into
+SpiraTeam. For example when the 'Build JUnit' job illustrated in the
+previous section is executed, it will report back the following result
+in Jenkins:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_11.png" /></p>
+<p>The corresponding build entry will also be created in SpiraTeam under
+the specified project and release/iteration:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_12.png" /></p>
+<p>If you have configured your Project Home to include the list of recent
+builds, the build information will also be displayed on the Project Home
+dashboard:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_13.png" /></p>
+<p>Clicking on either of the hyperlinks will allow you to navigate to the
+Build details page inside SpiraTeam:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_14.png" /></p>
+<p>This page will display the status (success / failure) and details of the
+build (from the Jenkins Console Output) together with a list of the
+associated incidents, test runs and source code revisions. The following
+section will explain how to use your Source Code Management (SCM) system
+to take advantage of the SpiraTeam plugin and automatically link
+incidents and source code revisions to the build information.</p>
+<h2 id="working-with-source-code-changesets">Working with Source Code Changesets</h2>
+<p>When your developers commit changes to your application's source into
+the SCM repository, they should make sure to link the commit to the
+appropriate artifacts in SpiraTeam. For example they may want to record
+that the revision fixes a specific incident or implements a specific
+feature (requirement).</p>
+<p>Linking an artifact is very simple. All the developer needs to do is
+enter the artifact token in the following format:</p>
+<p><strong>[PREFIX:ID]</strong></p>
+<p>The first half, the Artifact Identifier, is a two-letter code that is
+used throughout SpiraTeam, and is visible on almost every page in the
+application. For example, a requirement's identifier is "<strong>RQ</strong>".
+Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the
+number of the artifact. So by creating a commit message that reads:</p>
+<p>SpiraTeam will automatically detect the tokens and will include links to
+them under the Associations tab for each revision detail in SpiraTeam.</p>
+<p>In addition, when Jenkins creates the next build (that includes this
+revision), the plugin will automatically parse the revision message and
+convert the tokens into hyperlinks to the corresponding SpiraTeam
+artifact. That way, when developers view the build changelog in Jenkins,
+it will automatically include links to the SpiraTeam items:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_15.png" /></p>
+<p>Meanwhile, inside SpiraTeam, the system will use the same information to
+automatically link the list of associated revisions to the build record:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_16.png" /></p>
+<p>If the commit message contains Incident tokens, the plugin will also
+automatically link those incidents to the appropriate build:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_17.png" /></p>
+<p>Similarly when you view the list of incidents inside SpiraTeam you will
+now be able to sort and filter the list by the associated build:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_18.png" /></p>
+<p>Congratulations! You are now able to use SpiraTeam and Jenkins to be
+able to manage your builds and have the build status integrated into
+your SpiraTeam project dashboard.</p>
+<h2 id="scheduling-test-sets-upon-successful-builds">Scheduling Test Sets Upon Successful Builds</h2>
+<p>One additional feature of the integration with SpiraTest and SpiraTeam
+(hereafter just SpiraTest) is the ability to have SpiraTest
+automatically schedule the execution of a test set whenever a build
+passes.</p>
+<p>To do that, make sure the Test Set is associated with the SpiraTest
+release or iteration that is being built and then set the <strong>Schedule on
+Build</strong> field to "Yes" and optionally enter in the delay (after the
+build succeeds) that you want the test set to be scheduled for:</p>
+<p><img alt="" src="../img/Jenkins__Hudson_19.png" /></p>
+<p>This means that you don't need to separately manage your build schedule
+in Jenkins and your test automation schedule in SpiraTest.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

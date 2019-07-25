@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Release-Management/">
+
+<link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Release Management - SpiraDocs</title>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/base.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="../../js/jquery-1.10.2.min.js" defer></script>
+<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<a class="navbar-brand" href="../..">SpiraDocs</a>
+
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Functionality-Overview/">Functionality Overview</a>
+</li>
+                                    
+<li >
+    <a href="../User-Product-Management/">User/Product Management</a>
+</li>
+                                    
+<li >
+    <a href="../Requirements-Management/">Requirements Management</a>
+</li>
+                                    
+<li >
+    <a href="../Test-Case-Management/">Test Case Management</a>
+</li>
+                                    
+<li >
+    <a href="../Incident-Tracking/">Incident Tracking</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Release Management</a>
+</li>
+                                    
+<li >
+    <a href="../Task-Tracking/">Task Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Resource-Tracking/">Resource Tracking</a>
+</li>
+                                    
+<li >
+    <a href="../Document-Management/">Document Management</a>
+</li>
+                                    
+<li >
+    <a href="../Reports-Center/">Reports Center</a>
+</li>
+                                    
+<li >
+    <a href="../Source-Code/">Source Code</a>
+</li>
+                                    
+<li >
+    <a href="../Planning-Board/">Planning Board</a>
+</li>
+                                    
+<li >
+    <a href="../Mobile-Access/">Mobile Access</a>
+</li>
+                                    
+<li >
+    <a href="../Program-Management/">Program Management</a>
+</li>
+                                    
+<li >
+    <a href="../Risks-Management/">Risk Management</a>
+</li>
+                                    
+<li >
+    <a href="../Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraPlan</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+            
+<li >
+    <a href="../../SpiraPlan-Quick-Start-Guide/Reviewing-A-Program/">Reviewing A Program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTeam</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Logging-In-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-Requirement-Tasks/">Adding Requirement Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Adding-the-Test-Cases/">Adding Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Planning-the-Sprint/">Planning the Sprint</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Assigning-the-Requirements-&-Tasks/">Assigning Requirements & Tasks</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTeam-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">SpiraTest</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Logging-in-and-Selecting-a-Product/">Logging In</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Define-the-Requirements/">Define the Requirements</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Create-the-Release-and-Iteration-Plan/">Create Release & Iteration Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Build-the-Test-Plan/">Build the Test Plan</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Scheduling-the-Testing-Activities/">Scheduling Testing Activities</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Running-Tests-and-Logging-Incidents/">Running Tests and Logging Incidents</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Triaging-Issues-and-Defects/">Triaging Issues and Defects</a>
+</li>
+            
+<li >
+    <a href="../../SpiraTest-Quick-Start-Guide/Reviewing-Your-Product/">Reviewing Your Product</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
+</li>
+                                    
+<li >
+    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">System</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System/">System</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Product</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Template</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
+</li>
+            
+<li >
+    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">TaraVault</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
+</li>
+            
+<li >
+    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">RemoteLaunch</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
+</li>
+            
+<li >
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
+</li>
+            
+<li >
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">IDE Integration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
+</li>
+            
+<li >
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bug Tracking/DataSync</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">JIRA 5+</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">MS-TFS</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
+</li>
+            
+<li >
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">VCS</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
+</li>
+            
+<li >
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Email</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
+</li>
+            
+<li >
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Help Desk</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
+</li>
+            
+<li >
+    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Migration</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
+</li>
+            
+<li >
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build Servers</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
+</li>
+            
+<li >
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Requirements</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
+</li>
+            
+<li >
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+<li >
+  <a rel="next" href="../Incident-Tracking/" >
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li >
+  <a rel="prev" href="../Task-Tracking/" ><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+                            <li>
+                                <a href="https://www.inflectra.com">Inflectra</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a
+                href="#release-management">Release Management</a></li>
+        <li class="second-level"><a href="#release-list">Release List</a></li>
+        
+        <li class="third-level"><a href="#filtering">Filtering</a></li>
+        <li class="third-level"><a href="#insert">Insert</a></li>
+        <li class="third-level"><a href="#delete">Delete</a></li>
+        <li class="third-level"><a href="#indent">Indent</a></li>
+        <li class="third-level"><a href="#outdent">Outdent</a></li>
+        <li class="third-level"><a href="#refresh">Refresh</a></li>
+        <li class="third-level"><a href="#edit">Edit</a></li>
+        <li class="third-level"><a href="#show-level">Show Level</a></li>
+        <li class="third-level"><a href="#show-hide-columns">Show / Hide Columns</a></li>
+        <li class="third-level"><a href="#copying-releasessprints">Copying Releases/Sprints</a></li>
+        <li class="third-level"><a href="#moving-releasessprints">Moving Releases/Sprints</a></li>
+        <li class="third-level"><a href="#exporting-releasessprints">Exporting Releases/Sprints</a></li>
+        <li class="third-level"><a href="#creating-test-sets-from-releases">Creating Test Sets from Releases</a></li>
+        <li class="third-level"><a href="#printing-or-saving-items">Printing or Saving Items</a></li>
+        <li class="third-level"><a href="#right-click-context-menu">Right-Click Context Menu</a></li>
+        <li class="second-level"><a href="#release-details">Release Details</a></li>
+        
+        <li class="third-level"><a href="#overview-details">Overview -- Details</a></li>
+        <li class="third-level"><a href="#followers">Followers</a></li>
+        <li class="third-level"><a href="#overview-detailed-information">Overview -- Detailed Information</a></li>
+        <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
+        <li class="third-level"><a href="#overview-builds">Overview - Builds</a></li>
+        <li class="third-level"><a href="#incidents">Incidents</a></li>
+        <li class="third-level"><a href="#reqs-tasks">Reqs &amp; Tasks</a></li>
+        <li class="third-level"><a href="#test-cases">Test Cases</a></li>
+        <li class="third-level"><a href="#test-runs">Test Runs</a></li>
+        <li class="third-level"><a href="#attachments">Attachments</a></li>
+        <li class="third-level"><a href="#view-history">View History</a></li>
+        <li class="second-level"><a href="#build-details">Build Details</a></li>
+        
+        <li class="third-level"><a href="#associations">Associations</a></li>
+        <li class="third-level"><a href="#revisions">Revisions</a></li>
+        <li class="third-level"><a href="#incidents_1">Incidents</a></li>
+        <li class="third-level"><a href="#test-runs_1">Test Runs</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="release-management">Release Management</h1>
+<p>This section outlines how to use the Release Management features of
+SpiraPlan® to manage different versions of the system being tested in a
+particular product. This is an optional feature of the system, and you
+can manage the testing for a product successfully without tracking
+individual releases. Typically, when you develop a system, it is
+important to ensure that features introduced in successive versions do
+not impair existing functionality - this is known as <em>regression
+testing</em>.</p>
+<p>In such situations, you will want to be able to execute the same set of
+test scripts against multiple versions of the system and be able to
+track failures by version. A feature that works correctly in version 1.0
+may fail in version 1.1, and the maintenance team may be testing the
+existing lifecycle of v1.0 in parallel with the development team testing
+v1.1. Therefore, by developing a master set of releases/versions in the
+Release Management module, you can have the different testing teams
+correctly assign their testing actions to the appropriate version.</p>
+<p>There are two types of release artifact in SpiraPlan® - major product
+releases that are displayed with the blue release icon and represent
+major versions of the system, and release Sprints (aka builds) that are
+displayed with a yellow icon and represent intermediate builds/sprints
+of the system. <em>Note: Sprints can be contained within a Release, but not
+the other way round.</em></p>
+<p>The main differences between releases and sprints are as follows:</p>
+<p>Releases are independent versions of the system being tested and as
+such, you can map a requirement directly to a release, indicating the
+release of the system that the requirement will be fulfilled in.</p>
+<p>When you report on a release (e.g. on the product home or in one of the
+reports) any child sprints are automatically taken into account, and
+test runs and incidents that are related to the child builds/sprints
+will get included in the release reports. Child releases on the other
+hand are not aggregated up into the parent release.</p>
+<h2 id="release-list">Release List</h2>
+<p>When you click on the Planning > Releases global navigation link, you
+will initially be taken to the release list screen illustrated below:</p>
+<p><img alt="" src="../img/Release_Management_258.png" /></p>
+<p>The release list will contain all the releases and sprints associated
+with current product. When you create a new product, this list will
+initially be empty, and you will have to use the
+"<strong><em>Insert</em></strong>" button to start adding releases and sprints
+to the product. The hierarchical organization of releases in the list is
+configurable, so you can organize the various releases in the way that
+makes most sense for a particular product. Typically you have the major
+releases as the top-level items, with sub-releases, builds and sprints
+as the lower-level items.</p>
+<p>All of the releases in the list have a release-name, together with the
+assigned version number for that release, the start-date and end-date
+for the release, the number of estimated product personnel working on
+that release, the planned effort for the release, the total effort
+currently scheduled (as tasks), the available effort for new tasking,
+the release id, the type of each release, its status, and a set of
+custom properties defined by the product owner.</p>
+<p>For those releases that have test cases mapped against them, the
+execution status of the various test cases associated with the release
+is displayed in aggregate for each item as a graphical bar diagram. If
+you position the mouse over the execution status indicator you will see
+the detailed execution information displayed as a tooltip.</p>
+<p>For those releases that have at least one requirement task associated
+with them, they will display a block graph that illustrates the relative
+numbers of task that are on-schedule (green), late-starting (yellow),
+late-finishing (red) or just not-started (grey). These values are
+weighted by the effort of the task, so that larger, more complex tasks
+will be change the graph more than the smaller tasks. To determine the
+exact task progress information, position the mouse pointer over the
+bar-chart and the number of associated tasks, along with the details of
+how many are in each status will be displayed as a "tooltip".</p>
+<p>Clicking on a release's hyperlink will take you to the <a href="#release-details">release details</a>
+page for the item in question.</p>
+<h3 id="filtering">Filtering</h3>
+<p>You can easily filter the list of releases as illustrated in the
+screen-shot below:</p>
+<p><img alt="" src="../img/Release_Management_259.png" /></p>
+<p>To filter the list by any of the displayed columns, you either choose an
+item from the appropriate drop-down list or enter a free-text phrase
+(depending on the type of field) and click "<strong><em>Filter</em></strong>"
+or press the &lt;ENTER> key. Note that the name field is searched using a
+"LIKE" comparison, so that searching for "database" would include any
+item with the word database in the name. The other freetext fields need
+to be exact matches (e.g. dates, release numbers). Clicking on Filter >
+Clear Filters clears all the set filters and displays all the releases
+for the product.</p>
+<p>In addition, if you have a set of filters that you plan on using on a
+regular basis, you can choose the option Filter > Save Filter to add
+the current filter to the list of saved filters that appear on your 'My
+Page'. The list of saved filters can also be retrieved by clicking
+Filter > Retrieve Filter.</p>
+<h3 id="insert">Insert</h3>
+<p>The "<strong><em>Insert</em></strong>" button has an attached dropdown menu
+that allows you to choose whether to insert a release or sprint (if you
+just click "<strong><em>Insert</em></strong>" it defaults to inserting a
+release). In either case, it will insert the new release / sprint
+<em>above</em> the currently selected item -- i.e. the one whose check-box has
+been selected, at the same level in the hierarchy. If you want to insert
+a release/sprint below a summary item, you need to insert it first, then
+indent it with the "<strong><em>Indent</em></strong>" button. If you insert a
+release without first selecting an existing release from the list, the
+new release will simply be inserted at the end of the list.</p>
+<p>Once the new release has been inserted, the item is switched to "Edit"
+mode so that you can change the default name, active flag, version
+number and creator.</p>
+<h3 id="delete">Delete</h3>
+<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the
+releases whose check-boxes have been selected. If any of the releases
+have child releases/sprint, then the child releases and sprints are also
+deleted.</p>
+<h3 id="indent">Indent</h3>
+<p>Clicking on the "<strong><em>Indent</em></strong>" button indents all the
+releases whose check-boxes have been selected. Note: you cannot indent a
+release or sprint if it is <em>below</em> a sprint, as sprints are not allowed
+to have child items.</p>
+<h3 id="outdent">Outdent</h3>
+<p>Clicking on the "<strong><em>Outdent</em></strong>" button de-indents all the
+releases whose check-boxes have been selected.</p>
+<h3 id="refresh">Refresh</h3>
+<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the
+release list. This is useful as other people may be modifying the list
+of releases at the same time as you, and after stepping away from the
+computer for a short-time, you should click this button to make sure you
+are viewing the most current release list for the product.</p>
+<h3 id="edit">Edit</h3>
+<p>Each release/sprint in the list has an "<strong><em>Edit</em></strong>" button
+display in its right-most column. When you click this button or click on
+any of the cells in the row, you change the item from "View" mode to
+"Edit" mode. The various columns are made editable, and
+"<strong><em>Save</em></strong>" buttons are
+displayed in the last column:</p>
+<p><img alt="" src="../img/Release_Management_260.png" /></p>
+<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the
+"<strong><em>Save</em></strong>" buttons are
+only displayed on the first row, and you can make changes to all the
+editable rows and then update the changes by clicking the one
+"<strong><em>Save</em></strong>" button. Also, if you want to make the same
+change to multiple rows (e.g. to change five releases from "active" to
+"inactive"), you can click on the "fill" icon to the right of the
+editable item, which will propagate the new value to all editable items
+in the same column.</p>
+<p>If you want to edit lots of items, first select their checkboxes and
+then click the "<strong><em>Edit</em></strong>" button on the same row as the
+Filters and it will switch all the selected items into edit mode.</p>
+<p>When you have made your updates, you can either click
+"<strong><em>Save</em></strong>" to commit the changes, or
+"<strong><em>Cancel</em></strong>" to revert back to the original information.
+Alternatively, pressing the &lt;ENTER> key will commit the changes and
+pressing the &lt;ESCAPE> key will cancel the changes.</p>
+<h3 id="show-level">Show Level</h3>
+<p>Choosing an indent level from the 'Show Level' drop down box allows you
+to quickly and easily view the entire release list at a specific indent
+level. For example you may want to see all releases drilled-down to the
+<em>third</em> level of detail. To do this you would simply choose 'Level 3'
+from the list, and the releases will be expanded / collapsed
+accordingly.</p>
+<h3 id="show-hide-columns">Show / Hide Columns</h3>
+<p>This drop-down list allows you to change the fields that are displayed
+in the release list as columns for the current product. To show a column
+that is not already displayed, simply select that column from the list
+of "Show..." column names and to hide an existing column, simply select
+that column from the list of "Hide..." column names. This is stored on a
+per-product basis, so you can have different display settings for each
+product that you are a member of. The fields can be any of the built-in
+fields or any of the custom properties set up by the product owner.</p>
+<h3 id="copying-releasessprints">Copying Releases/Sprints</h3>
+<p>To copy a release/sprint or set of releases/sprints, simply select the
+check-boxes of the release/sprint you want to copy and then select the
+Edit > Copy Items menu option. This will copy the current
+release/sprint selection to the clipboard. Then you should select the
+place where you want the releases/sprints to be inserted and choose the
+Edit > Paste Items option.</p>
+<p>The releases/sprints will now be copied into the destination location
+you specified. The name of the copied releases/sprints will be prefixed
+with "Copy of..." to distinguish them from the originals. Note that
+copied releases/sprints will also include the test mapping information
+from the originals.</p>
+<h3 id="moving-releasessprints">Moving Releases/Sprints</h3>
+<p>To move a release/sprint in the hierarchy, there are two options:</p>
+<ol>
+<li>
+<p>Click on the release/sprint you want to move and drag the icon to
+the location you want it moved. An empty space will appear to show
+you where it will be inserted. Once you have the requirement
+positioned at the correct place that you want it inserted, just
+release the mouse button. To move multiple items simply select their
+checkboxes and then drag-and-drop one of the selected items</p>
+</li>
+<li>
+<p>Alternatively you can simply select the check-boxes of the
+release/sprint you want to move and then select the Edit > Cut
+Items menu option. This will cut the current release/sprint
+selection to the clipboard. Then you should select the place where
+you want the release/sprint to be inserted and choose the Edit >
+Paste Items option. The release/sprint will now be moved into the
+destination location you specified.</p>
+</li>
+</ol>
+<h3 id="exporting-releasessprints">Exporting Releases/Sprints</h3>
+<p>To export releases/sprints from the current product to another product
+in the system, select the check-boxes of the releases/sprints you want
+to export and then click the Tools > Export to Product item. This will
+then bring up a list of possible destination products:</p>
+<p><img alt="" src="../img/Release_Management_261.png" /></p>
+<p>Once you have chosen the destination product and clicked the
+"<strong><em>Export</em></strong>" button, the releases/sprints will be
+exported from the current product to the destination product. Any file
+attachments will also be copied to the destination product along with
+the release/sprint.</p>
+<h3 id="creating-test-sets-from-releases">Creating Test Sets from Releases</h3>
+<p>As a shortcut you can click the Tools > Create Test Set option to
+create a new test set for each of selected releases. The created test
+sets will include all of the test cases associated with a release. This
+is useful in regression testing when you have created a new release and
+want to be able to quickly assign a tester to ensure that all the
+functionality in the release works as expected.</p>
+<h3 id="printing-or-saving-items">Printing or Saving Items</h3>
+<p>To quickly print a single release/sprint or list of releases/sprints you
+can select the items' checkboxes and then click Tools > Print Items.
+This will display a popup window containing a printable version of the
+selected items. You can also save the report in a variety of common
+formats from the same Tools menu.</p>
+<h3 id="right-click-context-menu">Right-Click Context Menu</h3>
+<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for
+accessing some of the most commonly used functions, so that you don't
+need to move your mouse up to the toolbar each time. To access the
+context menu, right-click on any of the rows in the release list and the
+following menu will be displayed:</p>
+<p><img alt="" src="../img/Release_Management_262.png" /></p>
+<p>You can now choose any of these options as an alternative to using the
+icons in the toolbar</p>
+<h2 id="release-details">Release Details</h2>
+<p>When you click on release item in the <a href="#release-list">release list</a>, you are taken to the release details page illustrated below:</p>
+<p><img alt="" src="../img/Release_Management_263.png" /></p>
+<p>This page is made up of <em>three</em> areas;</p>
+<ol>
+<li>
+<p>the left pane displays the releases list navigation;</p>
+</li>
+<li>
+<p>the right pane's header, which displays: the operations toolbar; the
+editable name of the selected release; and the info bar (with a
+shaded background), which also contains the workflow status
+transitions (see below); and</p>
+</li>
+<li>
+<p>the right pane's tabbed interface with rich information related to
+the release.</p>
+</li>
+</ol>
+<p>Please note that on smaller screen sizes the navigation pane is not
+displayed. While the navigation pane has a link to take you back to the
+releases list, on mobile devices a 'back' button is shown on the left of
+the operations toolbar.</p>
+<p>The navigation pane can be collapsed by clicking on the "-" button, or
+expanded by clicking anywhere on the gray title area. On desktops the
+user can also control the exact width of the navigation pane by dragging
+and dropping a red handle that appears on hovering at the rightmost edge
+of the navigation pane.</p>
+<p>The navigation pane consists of a link that will take you back to the
+release list, as well as a list of the other releases in the current
+product. This latter list is useful as a navigation shortcut; you can
+quickly view the test run information of all the other releases by
+clicking on the navigation links without having to first return to the
+release list page. The navigation list can be switched between two
+different modes:</p>
+<ul>
+<li>
+<p>The list of releases matching the current filter</p>
+</li>
+<li>
+<p>The list of all releases, irrespective of the current filter</p>
+</li>
+</ul>
+<p>If you are editing an existing item, the fields that are available and
+the fields that are required will depend on your stage in its workflow.
+The types of change allowed and the email notifications that are sent
+will depend on how your product administrator has setup the system for
+you. Administrators should refer to the <em>SpiraPlan Administration Guide</em>
+for details on configuring workflows to meet their needs.</p>
+<p>Depending on the user's role and whether they are listed as the owner or
+author of the requirement, displayed in the info bar beneath the
+requirement name is the current workflow status and an "operations"
+button which, when clicked, will show a set of allowed workflow
+operations.</p>
+<p><img alt="" src="../img/Release_Management_264.png" /></p>
+<p>Releases can have the following statuses: planned, in progress,
+completed, closed, deferred, and cancelled. Note that releases marked as
+closed, deferred, or cancelled cannot be associated with other artifacts
+-- for example an incident's resolved release cannot by a cancelled
+release.</p>
+<p>Workflow transitions allow the user to move the item from one status to
+another. For example when the release is in the In Progress status, you
+will be given the options to:</p>
+<p><strong>Cancel Release</strong> -- changes status to "Cancelled"</p>
+<p><strong>Defer Release</strong> -- changes the status to "Deferred"</p>
+<p><strong>Finish Release</strong> - changes the status to "Completed"</p>
+<p>Please note that if digital signatures have been enabled for a
+particular workflow operation (and therefore a digital signature is
+required to confirm the status change. Workflow operations requiring a
+digital signature are marked with a padlock icon as in the example
+below:</p>
+<p><img alt="" src="../img/Release_Management_265.png" /></p>
+<p>On attempting to save changes made after clicking a workflow operation
+that requires a digital signature you will be presented with a popup
+similar to the one below (which is for a requirement):</p>
+<p><img alt="" src="../img/Release_Management_138.png" /></p>
+<p>The top part of the right pane allows you to view and/or edit the
+details of the particular release. In addition you can delete the
+current artifact by choosing "<strong><em>Delete</em></strong>", discard any
+changes made by clicking "<strong><em>Refresh</em></strong>", or print or
+export it by clicking one of the options from the Tools dropdown menu.
+The lower part of the right pane can be in one of eight possible modes
+that can be selected: "Overview", "Incidents", "Reqs &amp; Tasks", "Test
+Cases", "Test Runs", "Attachments", and "History". Each of the different
+views is described separately below.</p>
+<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can
+send an email containing details of the release to an email address or
+another user on the system:</p>
+<p><img alt="" src="../img/Release_Management_97.png" /></p>
+<p>You can specify the subject line for the email, and either a list of
+email addresses, separated by semicolons, or an existing product user
+.The content of the email is specified in the System Administration --
+Notification Templates.</p>
+<p>To be notified of any changes made to the current artifact via email,
+click the "<strong><em>Subscribe</em></strong>" button. If you already
+subscribed, the button will instead let you
+"<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that
+particular artifact. Depending on your role, you may also see a dropdown
+arrow to the right of this button. This will let you subscribe others in
+the product to this artifact.</p>
+<p>The bottom part of the right pane can be switched between six views:
+"Overview", "Incidents", "Requirements and Tasks", "Test Cases", "Test
+Runs", "Attachments", and "History", each of which will be described in
+more detail below.</p>
+<h3 id="overview-details">Overview -- Details</h3>
+<p>The Overview tab is divided into a number of different sections. Each of
+these can be collapsed or expanded by clicking on the title of that
+section. It displays the description, fields and comments associated
+with the requirement.</p>
+<p>The top part of this tab displays the various standard fields and custom
+properties associated with the requirement. Fields (both standard and
+custom) are grouped under the collapsible headings (marked by orange
+text and underline) in the screenshot below. For instance, all fields
+regarding dates are grouped together in the "Dates and Times" area.</p>
+<p><img alt="" src="../img/Release_Management_266.png" /></p>
+<p>When you make changes to the release/sprint's start-date, end-date,
+number of product personnel resources, or number of non-working <em>person</em>
+days, the system will automatically calculate how many hours of effort
+(planned effort) are available in the release/sprint for assigning
+tasks. As you begin assigning tasks -- either through the Tasks tab or
+the Sprint Planning screen -- the total estimated effort of the tasks is
+subtracted from this planned effort to give the "available effort".</p>
+<h3 id="followers">Followers</h3>
+<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can
+quickly follow the item, and receive updates on certain changes to it.
+Depending on your role, you may also see a dropdown to this button,
+which let's you add another product member as a follower to this item.</p>
+<p><img alt="" src="../img/Release_Management_99.png" /></p>
+<p><img alt="" src="../img/Release_Management_100.png" /></p>
+<p>You can also quickly see who is following an incident under the "People"
+section in the Overview tab.</p>
+<p><img alt="" src="../img/Release_Management_101.png" /></p>
+<p>To view information about the follower, or to unfollow them from the
+item, hover over their avatar to display a user profile card.</p>
+<p><img alt="" src="../img/Release_Management_102.png" /></p>
+<h3 id="overview-detailed-information">Overview -- Detailed Information</h3>
+<p>The Detailed Information section contains the long, formatted
+description of the requirement, as well as any rich text custom fields.
+You can enter rich text or paste in from a word processing program or
+web page into these fields. Clicking on the shaded areas of one of these
+detailed fields will display the rich text toolbar.</p>
+<h3 id="overview-comments">Overview - Comments</h3>
+<p>The Comments tab shows the current discussion thread for this release:</p>
+<p><img alt="" src="../img/Release_Management_104.png" /></p>
+<p>All existing comments are listed in order by entered date (either
+newest-first or oldest-first). To create a new comment, enter the text
+into the text box, and then click the "<strong><em>Add Comment</em></strong>"
+button.</p>
+<h3 id="overview-builds">Overview - Builds</h3>
+<p>This section displays the list of builds associated with the current
+release/sprint. Each build is listed together with its name, creation
+date, status (whether the build succeeded or failed), and last updated
+date. Clicking on the hyperlink for the build name will open up the
+<a href="#build-details">Build Details page</a>.</p>
+<p><img alt="" src="../img/Release_Management_267.png" /></p>
+<p>You can also filter the results by choosing items from the filter
+options displayed in the sub-header row of each field and clicking the
+"<strong><em>Apply Filter</em></strong>" button. In addition, you can quickly
+sort the list by clicking on one of the directional arrow icons
+displayed in the header row of the appropriate field.</p>
+<h3 id="incidents">Incidents</h3>
+<p>This tab displays the incidents associated with the selected release.
+The incident list can be one of three modes:</p>
+<p>Detected in this Release -- this will display a list of
+all the incidents that were detected during the testing of the selected
+release. This is useful in determining if there are open incidents
+associated with a release that need to be dealt with.</p>
+<p>Resolved in this Release -- This will display a list of
+all the incidents that have been reportedly resolved in this release.
+This is useful for double-checking that all the resolved incidents for a
+release have indeed been fixed.</p>
+<p>Verified in this Release -- This will display a list of
+the incidents that have been verified as being fixed in this release.
+This is useful for generating release notes for a specific release
+indicating what changes and enhancements have been made in the release.</p>
+<p>Regardless of the mode, each incident is listed together with the type,
+status, priority, name, owner, detector, detection date and a link to
+the actual <a href="../Incident-Tracking/#incident-details">incident details</a>:</p>
+<p><img alt="" src="../img/Release_Management_268.png" /></p>
+<p>To change between the three modes outlined above, select the desired
+mode from the drop-down list contained within the header of the incident
+list table.</p>
+<p>You can perform the following actions:</p>
+<p><strong>Refresh</strong> -- updates the list of incidents from the server, useful if
+other people are adding incidents to this release at the same time.</p>
+<p>You can <strong>filter</strong> the results by choosing items from the filter options
+displayed in the sub-header row of each field and clicking the
+"<strong><em>Filter</em></strong>" button. In addition, you can quickly sort
+the list by clicking on one of the directional arrow icons displayed in
+the header row of the appropriate field.</p>
+<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
+of the incident allows you to edit the incident inline directly on this
+screen. This functionality is limited to product owners.</p>
+<p><strong>Show/Hide Columns</strong> -- Allows you to choose which incident columns are
+visible</p>
+<h3 id="reqs-tasks">Reqs &amp; Tasks</h3>
+<p>This tab displays the list of requirements and their associated child
+tasks that need to be completed for the release/sprint to be completed:</p>
+<p><img alt="" src="../img/Release_Management_269.png" /></p>
+<p>Each of the requirements and associated tasks is displayed together with
+its name, description (by hovering the mouse over the name), priority,
+progress indicator, current owner, estimated effort, actual effort,
+producted effort and numeric task identifier. Clicking on a requirement
+will bring up the <a href="../Requirements-Management/#requirement-details">requirement details page</a>. Clicking
+the triangle by a requirement will expand/collapse its list of tasks.
+Clicking on a task name will bring up the Task Details page which is
+described in more detail in <a href="../Task-Tracking/#task-details">Task Tracking &gt; Task Details</a>. This allows you to edit the
+details of an existing task.</p>
+<p>You can perform the following actions on a task from this screen:</p>
+<p><strong>Insert Task</strong> -- inserts a new task in the task list under the
+specified requirement, with a default set of values. The task will be
+associated with the specified requirement and current release/sprint. If
+no requirement is selected, the task will only be associated with the
+current release/sprint</p>
+<p><strong>Delete</strong> -- deletes the task from the product.</p>
+<p><strong>Refresh</strong> -- updates the list of requirements and tasks from the
+server, useful if other people are adding requirements and/or tasks to
+this release/sprint at the same time.</p>
+<p>You can <strong>filter</strong> the results by choosing items from the filter options
+displayed in the sub-header row of each field and clicking the
+"<strong><em>Filter</em></strong>" button. In addition, you can quickly sort
+the list by clicking on one of the directional arrow icons displayed in
+the header row of the appropriate field.</p>
+<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
+of the requirement or task allows you to edit the item inline directly
+on this screen. Only columns visible will be editable.</p>
+<p><strong>Show Level</strong> -- Allows you to quickly expand/collapse all the
+requirements in the list.</p>
+<h3 id="test-cases">Test Cases</h3>
+<p>This tab shows the test coverage information for the release in
+question:</p>
+<p><img alt="" src="../img/Release_Management_270.png" /></p>
+<p>The tab displays a grid containing the test cases already mapped to this
+release. You can filter that list by the test case type, name, status,
+execution status, execution date, priority, product name and ID. You can
+remove an existing test case by selecting its check box and clicking the
+'Delete' button. This doesn't delete the test case, just removes it from
+the release.</p>
+<p>Hovering the mouse over the names of the test cases will display a
+"tooltip" consisting of the test case name, place in the folder
+structure and a detailed description.</p>
+<p>To add a new test case to the release, simply click on the 'Add' button:</p>
+<p><img alt="" src="../img/Release_Management_271.png" /></p>
+<p>You can search for a test case by its ID if you know it (make sure to
+include the "TC" prefix):</p>
+<p><img alt="" src="../img/Release_Management_272.png" /></p>
+<p>Otherwise, you can search for the test cases by choosing a folder from
+the dropdown and/or entering a partial name match:</p>
+<p><img alt="" src="../img/Release_Management_273.png" /></p>
+<p>One you have found the desired test case(s), simply select their check
+boxes and click the 'Save' button to add them to the current release.</p>
+<p>Finally, as a shortcut you can click the "<strong><em>Create Test Set from This
+Release</em></strong>" link to create a new test set from this
+release, that will include all of the test cases associated with this
+release. This is useful in regression testing when you have created a
+new release and want to be able to quickly assign a tester to ensure
+that all the functionality in the release works as expected.</p>
+<h3 id="test-runs">Test Runs</h3>
+<p>This view displays the list of all the test runs executed against the
+release. Each test run is listed together with the date of execution,
+the name of the test case, the name of the tester, the release/version
+of the system that the test was executed against, the name of the test
+set (if applicable), the overall execution status for the test case in
+that run and a link to the actual <a href="../Test-Case-Management/#test-run-details">test run details</a>. In
+addition, you can choose to display any of the custom properties
+associated with the test run.</p>
+<p><img alt="" src="../img/Release_Management_274.png" /></p>
+<p>The "Show/hide columns" drop-down list allows you to change the fields
+that are displayed in the test run list as columns. To show a column
+that is not already displayed, simply select that column from the list
+of "Show..." column names and to hide an existing column, simply select
+that column from the list of "Hide..." column names. The displayed
+columns can be any standard field or custom property.</p>
+<p>You can also filter the results by choosing items from the filter
+options displayed in the sub-header row of each field and clicking the
+"<strong><em>Filter</em></strong>" link. In addition, you can quickly sort the
+list by clicking on one of the directional arrow icons displayed in the
+header row of the appropriate field.</p>
+<h3 id="attachments">Attachments</h3>
+<p>In this mode, the lower section of the screen displays the list of
+documents that have been "attached" to the release. The documents can be
+in any format, though SpiraPlan® will only display the icon for certain
+known types.</p>
+<p><img alt="" src="../img/Release_Management_275.png" /></p>
+<p>The attachment list includes the filename that was originally uploaded
+together with the file-size (in KB), name of the person who attached it
+and the date uploaded. In addition, if you position the pointer over the
+filename and hold it there for a few seconds, a detailed description is
+displayed as a tooltip.</p>
+<p>To actually view the document, simply click on the filename hyperlink
+and a new web browser window will open. Depending on the type of file,
+this window will either display the document or prompt you for a place
+to save it on your local computer. To delete an existing attachment from
+an incident, click the "<strong><em>Remove</em></strong>" button and the
+attachment will be removed from the list.</p>
+<p>To attach a new document to the release, you need to first click the
+"<strong><em>Add New</em></strong>" link to display the new attachment dialog
+box:</p>
+<p><img alt="g4169" src="../img/Release_Management_114.png" /></p>
+<p>There are three different types of item that can be attached to a
+release:</p>
+<p>To upload a file, choose "File" as the type and then click the Browse
+button and select the file from your local computer, optionally enter a
+detailed description then click the "<strong><em>Upload</em></strong>" button.
+The document will be copied from your computer and attached to the
+artifact.</p>
+<p>To attach a web-link (URL) to the artifact, you need to choose "URL" as
+the type and then enter the fully qualified URL (e.g.
+<a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an
+optional description and then click the "<strong><em>Upload</em></strong>"
+button to attach the web-link.</p>
+<p>To attach a screenshot to the artifact, you need to choose "Screenshot"
+as the type and then copy the image to your computer's clipboard (e.g.
+on Windows computers, the PRINT SCREEN button captures the current page
+and adds to the clipboard). Once the image is in the clipboard, paste it
+into the editor using CTRL+V (or the equivalent keystroke for your
+operating system) and the item will appear in the preview window. You
+can then fill in the other fields and click "<strong><em>Upload</em></strong>"
+to attach the image.</p>
+<p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
+doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
+automatically, then you will need to manually add the file extension to
+the filename before uploading if you want it to be displayed with the
+correct icon in the attachment list.</p>
+<p>You can also associate an existing document (that's already stored in
+SpiraTeam) with the incident. To do that, click on the "<strong><em>Add
+Existing</em></strong>" button to bring up the add file association
+dialog box:</p>
+<p><img alt="g4197" src="../img/Release_Management_156.png" /></p>
+<p>You can then choose to either associate a document stored in the
+SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
+but not SpiraTest) from the linked source code repository. In either
+case you first select the appropriate folder, and then pick the
+document(s) from the file list on the right. In the case of a source
+code file association you can also add a comment.</p>
+<h3 id="view-history">View History</h3>
+<p>In this mode, the main pane displays the list of changes that have been
+performed on the release artifact since its creation. An example release
+change history is depicted below:</p>
+<p><img alt="" src="../img/Release_Management_276.png" /></p>
+<p>The change history displays the date that each change was made, together
+with the fields that were changed, the old and new values and the person
+who made the change. This allows a complete audit trail to be maintained
+of all changes in the system. In addition, if you are logged in as a
+product administrator you can also click on the "Admin View" button to
+revert any unwanted changes.</p>
+<h2 id="build-details">Build Details</h2>
+<p>When you click on a build entry in the build list, you are taken to the
+build details page illustrated below:</p>
+<p><img alt="" src="../img/Release_Management_277.png" /></p>
+<p>This page is made up of three areas; the left pane is the navigation
+window, the upper part of the right pane contains the build detailed
+information itself, and the bottom part of the right pane displays
+different information associated with the build.</p>
+<p>The navigation pane consists of a link that will take you back to the
+build list, as well as a list of the other builds that belong to the
+same release/sprint as the current one. The top part of the right pane
+allows you to view the details of the build including a detailed
+description of why it succeeded or failed. Since builds are populated
+from an external Continuous Integration server the build information
+will always be read-only inside the SpiraPlan user interface.</p>
+<p>The lower part of the right pane contains tabs that can display
+different information associated with the build. Each of the tabs --
+"Associations", "Incidents", "Revisions", and "Test Runs" - is described
+separately below.</p>
+<h3 id="associations">Associations</h3>
+<p>This tab displays a list of SpiraPlan artifacts that have been
+associated with any of the source code revisions that were included in the current build:</p>
+<p><img alt="" src="../img/Release_Management_278.png" /></p>
+<h3 id="revisions">Revisions</h3>
+<p>This tab displays a list of the source code revisions that were included
+in the current build. The grid can be sorted and filtered by using the
+appropriate controls:</p>
+<p><img alt="" src="../img/Release_Management_279.png" /></p>
+<h3 id="incidents_1">Incidents</h3>
+<p>This tab displays the list of incidents that have been fixed in the
+current build. The grid can be sorted and filtered by using the
+appropriate controls:</p>
+<p><img alt="" src="../img/Release_Management_280.png" /></p>
+<h3 id="test-runs_1">Test Runs</h3>
+<p>This tab displays a list of all the tests that have been executed
+against the current build. The grid can be sorted and filtered by using
+the appropriate controls:</p>
+<p><img alt="" src="../img/Release_Management_281.png" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+<hr>
+<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
