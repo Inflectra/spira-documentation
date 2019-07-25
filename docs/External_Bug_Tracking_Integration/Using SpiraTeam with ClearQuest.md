@@ -212,13 +212,13 @@ to synchronize normally.
 -   **Custom 02** -- Sometimes you don't want all the incidents in
 SpiraTeam to be added to ClearQuest. You can optionally enter a
 filter definition in this box to restrict the incidents that get
-synchronized. The filter uses the following syntax:\
-\
+synchronized. The filter uses the following syntax:
+
 \[Property\]=\[Value\|\*\]:\[Property\]=\[Value\|\*\]\
-\
+
 For example, to limit the incidents to only have those where List01
-= 5 and Text08 = "Hello" and Text05 is not blank you would use:\
-\
+= 5 and Text08 = "Hello" and Text05 is not blank you would use:
+
 List01=5:Text08=Hello:Text05=\*
 
 -   **Custom 03** -- ClearQuest doesn't have a built-in Detected in

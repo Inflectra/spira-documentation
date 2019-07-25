@@ -56,8 +56,8 @@ a cog), which will open the configuration dialog:
 In the fields, enter in the following:
 
 -   **Server URL**: The root address of your SpiraTeam installation. For
-> example:\
-> <https://server1/SpiraTeam/>\
+> example:
+> <https://server1/SpiraTeam/>
 > Do not put "login.aspx" or any other page address in this field.
 
 -   **User ID**: Your user ID you use to log into the SpiraTeam application.

@@ -164,8 +164,8 @@ SpiraTest. These can be either existing test cases that have manual test
 steps or they can be new test cases designed specifically for automated
 testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PHPUnit test case and test suite for
-SpiraTest to record the PHPUnit test run are illustrated below:\
-\
+SpiraTest to record the PHPUnit test run are illustrated below:
+
 a) Sample Test Suite
 
 ```PHP

@@ -17,6 +17,7 @@ task changes status during the product lifecycle.
 
 When you click on the Tracking \> Tasks global navigation link, you will
 initially be taken to the tasks list screen illustrated below:
+
 ![](img/Task_Tracking_282.png)
 
 
@@ -64,6 +65,7 @@ passed.
 SpiraPlan lets you group product tasks into different folders to make
 organization easier. In the left-hand **Quick Filters** panel, the
 system displays the various task folders defined in the product:
+
 ![](img/Task_Tracking_288.png)
 
 
@@ -72,6 +74,7 @@ system displays the various task folders defined in the product:
 If you are a product administrator, you will see the 'Edit' and 'Add'
 buttons beneath the folder tree, this lets you add, edit and delete task
 folders in the product. To add a new folder, click the 'Add' button:
+
 ![](img/Task_Tracking_289.png)
 
 
@@ -102,6 +105,7 @@ highlighted to show where the task will be placed.
 
 You can easily filter and sort the list of tasks as illustrated in the
 screen-shot below:
+
 ![](img/Task_Tracking_291.png)
 
 
@@ -412,13 +416,13 @@ progress
 
 **Remaining Effort** -- This is the estimate for how it will take from
 the current state to complete the task. The % complete is calculated
-from this value in conjunction with the estimated effort:\
+from this value in conjunction with the estimated effort:
 % Complete = 100% - (Remaining Effort / Estimated Effort)
 
 **Producted Effort** -- This is value that the system is producting it
 will take to complete the task. This is calculated from the Actual
-Effort and Remaining Effort:\
-\
+Effort and Remaining Effort:
+
 Producted Effort = (Actual Effort + Remaining Effort)
 
 **Note**: If the actual effort is not specified, the producted effort

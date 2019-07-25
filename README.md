@@ -1,6 +1,16 @@
 # Deploying to GitHub Pages
 In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
 
+# Converting MD to PDF
+1. Install [MiTeX](https://miktex.org/howto/install-miktex)
+2. Install pyyaml with `pip install pyyaml`
+3. In the tools directory, run the command `python .\createpdf.py`
+
+## Possible Issues
+- If a line starts with a file/folder URI (ex. C:\WINDOWS), the script will error out. 
+Just find the ofending line in the markdown and format it in some way 
+(wrapping it with grave marks (\`) to make it format as code works well.)
+
 # Converting docx to MD
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
 2. [Install Pandoc](https://pandoc.org/installing.html)

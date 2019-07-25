@@ -61,7 +61,7 @@ manually add the .NET 4.6 components to the factory configuration.
 
 To see which version of the Microsoft .NET framework installed, open up
 Windows Explorer® and navigate to
-C:\WINDOWS\Microsoft.NET\Framework and then the
+`C:\WINDOWS\Microsoft.NET\Framework` and then the
 subfolders listed will indicate which version(s) of the framework you
 have installed:
 

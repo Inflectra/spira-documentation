@@ -89,10 +89,10 @@ installation being connected to (including any custom port numbers).
 Entering this URL into a web browser should bring up the JIRA login
 page.
 
--   For JIRA cloud customers, it is typically of the form:\
+-   For JIRA cloud customers, it is typically of the form:
 <https://mycompany.atlassian.net>
 
--   For JIRA server customers, it is typically of the form:\
+-   For JIRA server customers, it is typically of the form:
 <http://myserver:8080>
 
 -   **Login** -- this should be set to a valid login to the JIRA
@@ -167,8 +167,8 @@ blank, all JIRA issue types will be synchronized with incidents.
 link type that you want SpiraTeam incident associations to use. If
 you leave this blank, incident associations in SpiraTeam will not be
 imported into JIRA. You can get the list of issue link types from
-the following screen in JIRA:\
-\
+the following screen in JIRA:
+
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
 
@@ -256,11 +256,11 @@ To enable this project for data-synchronization with JIRA, you need to
 enter:
 
 **External Key** -- This should be set to the name of the project
-**Key** in JIRA. Typically, this is a short acronym for the project:\
+**Key** in JIRA. Typically, this is a short acronym for the project:
 ![](img/Using_SpiraTeam_with_JIRA_5+_23.png)
 
 
-\
+
 **Active Flag** -- Set this to 'Yes' so that SpiraTeam knows that you
 want to synchronize data for this project. Once the project has been
 completed, setting the value to "No" will stop data synchronization,

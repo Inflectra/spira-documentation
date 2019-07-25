@@ -44,7 +44,7 @@ this URL is used to generate links to pages in the application.
 
 -   **Attachments Folder** - By default when SpiraPlan® is installed,
 the document attachments uploaded in the system get stored inside
-    the C:\Program Files\SpiraPlan\Attachments folder
+    the `C:\Program Files\SpiraPlan\Attachments` folder
 located inside the main SpiraPlan® installation root. However you
 may want to have the documents stored on a remotely mounted drive or
 on a different hard disk partition. In which case you can simply
