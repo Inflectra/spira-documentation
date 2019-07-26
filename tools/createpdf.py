@@ -1,6 +1,7 @@
 """
 Convert markdown files to PDF automatically. Some formatting may be weird, 
 but it should work for the most part
+YAML Config file containing the header should be the same name as the entry in convert in tools directory
 """
 
 import yaml
@@ -8,6 +9,7 @@ import shutil
 import subprocess
 
 # Heading names in the YAML file to convert to PDF
+# Top level item under nav to convert the entire folder
 convert = ["User Manual", "Admin Guide"]
 docs_location = "../docs/"
 
@@ -26,12 +28,16 @@ def main():
                 folder_to_copy = docs_location + folder
                 # Copy the files, we will delete them once we're done
                 shutil.copytree(folder_to_copy, folder)
+                shutil.copyfile(heading + ".yml", folder +
+                                "\\" + heading + ".yml")
                 # Print the command being run
                 print("pandoc -s \"" + "\" \"".join(files).replace(folder + "\\", "") +
-                      "\" -o " + folder + ".pdf")
+                      "\" -o " + folder + ".pdf" + " --metadata-file \"" + heading + ".yml\"" +
+                      " -V geometry:margin=1in")
                 # Actually convert the files in order
                 subprocess.call("pandoc -s \"" + "\" \"".join(files).replace(folder + "\\", "") +
-                                "\" -o " + folder + ".pdf", cwd=folder)
+                                "\" -o " + folder + ".pdf" + " --metadata-file \"" + heading + ".yml\"" +
+                                " -V geometry:margin=1in", cwd=folder)
                 # Copy the new PDF to the root of the tools directory
                 shutil.copyfile(folder + "/" + folder +
                                 ".pdf", folder + ".pdf")

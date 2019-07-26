@@ -1,0 +1,9 @@
+---
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyfoot{}
+    \fancyhead[LO,LE]{SpiraPlan v6 Administration Guide}
+    \fancyfoot[LO,LE]{© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |}
+    \fancyfoot[RO,RE]{\thepage}
+---

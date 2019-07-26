@@ -4,7 +4,12 @@ In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should 
 # Converting MD to PDF
 1. Install [MiTeX](https://miktex.org/howto/install-miktex)
 2. Install pyyaml with `pip install pyyaml`
-3. In the tools directory, run the command `python .\createpdf.py`
+3. Review the `convert` array in `createpdf.py`, which will automatically convert toplevel items in the `nav` in `mkdocs.yml` to a PDF. Each toplevel entry will get its own PDF. 
+4. Review `Admin Guide.yml` and `User Manual.yml` in the tools directory. These contain the formatting for the header and footer
+    - `\fancyhead[LO,LE]{SpiraPlan Administration Guide}` will put `SpiraPlan Administration Guide` in the top 
+    (`fancyhead`) left (`[L*,L*]`) of odd and even pages (`[*O,*E]`)
+    - `\fancyfooter` works the same
+5. In the tools directory, run the command `python .\createpdf.py`
 
 ## Possible Issues
 - If a line starts with a file/folder URI (ex. C:\WINDOWS), the script will error out. 

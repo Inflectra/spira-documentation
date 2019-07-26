@@ -1,18 +1,13 @@
-# Downloading and installing
-## 
-
-
-
 # Getting Started
 ### Turning on the application
 If the Spira_expolorer icon doesn't appear at the top right of your screen, you will need to proceed to the chrome://extensions page and make sure the bottom right is lit up blue, if not click it to turn on the application. 
 
-![](Pictures/Turning_on_application.png "Turn on the Popup")
+![](Pictures/Turning_on_application.PNG "Turn on the Popup")
 
 ### Starting to record
 To start the recording you will need to click on the icon in the top right, which should bring up a popup menu. 
 
-  ![](Pictures/Popup_when_First_Opened.png)
+  ![](Pictures/Popup_when_First_Opened.PNG)
 
    As seen above you should now see a Start recording button to record the current tab. **Note** *this will only record the current tab you are in if you would like to record other tabs simply repeat this step* **Warning** *you will need to refresh any opened tabs before the extension to record them*
 
@@ -55,7 +50,7 @@ The Url is the root address of the application.
 ### API key/RSS Token 
 Is found by going to your profile page and scrolling down 
 
-![](Pictures/Enabling_RSS.png)
+![](Pictures/Enabling_RSS.PNG)
 
  **Note** *This can be disabled be you or your administrator make sure you have it enabled if you would like to use this feature see warnings section below*
 ### Selecting a product 
@@ -83,13 +78,13 @@ If you are requiring fields that are not default, aka Custom fields in Spira you
 ### Enabling API key/RSS token 
 This should intially be enabled but you can check by going to your profile and scrolling down 
 
-![](Pictures/Enabling_RSS.png) 
+![](Pictures/Enabling_RSS.PNG) 
 
 **If Disabled** *Please talk to your system administrator*
 ### Keystrokes
 SpiraCapture will record keystrokes on any native HTML element that you can enter text into. This means form elements, and also elements that have contentEditable set to true
 ### I-frames
-Spira Capture will not interact with I-frames.  You must manually take screenshots if you want information from them.
+SpiraCapture will not interact with I-frames.  You must manually take screenshots if you want information from them.
 # Terminology 
 
 ## Data types 
