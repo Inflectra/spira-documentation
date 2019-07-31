@@ -895,14 +895,14 @@
 <h1 id="getting-started">Getting Started</h1>
 <h3 id="turning-on-the-application">Turning on the application</h3>
 <p>If the Spira_expolorer icon doesn't appear at the top right of your screen, you will need to proceed to the chrome://extensions page and make sure the bottom right is lit up blue, if not click it to turn on the application. </p>
-<p><img alt="" src="Pictures/Turning_on_application.PNG" title="Turn on the Popup" /></p>
+<p><img alt="" src="../img/turning-on-application.png" title="Turn on the Popup" /></p>
 <h3 id="starting-to-record">Starting to record</h3>
 <p>To start the recording you will need to click on the icon in the top right, which should bring up a popup menu. </p>
-<p><img alt="" src="Pictures/Popup_when_First_Opened.PNG" /></p>
+<p><img alt="" src="../img/popup-when-first-opened.png" /></p>
 <p>As seen above you should now see a Start recording button to record the current tab. <strong>Note</strong> <em>this will only record the current tab you are in if you would like to record other tabs simply repeat this step</em> <strong>Warning</strong> <em>you will need to refresh any opened tabs before the extension to record them</em></p>
 <h2 id="popup-once-recording">Popup once recording</h2>
 <p>It should be clear that the popup is recording on a individual tab based on the icon this is the recording icon   </p>
-<p><img alt="" src="../Pictures/recording.png" /></p>
+<p><img alt="" src="../img/recording.png" /></p>
 <h3 id="take-screenshot">Take ScreenShot</h3>
 <p>Take screenshot will capture the current tab you have open. This is here to allow you to manually make sure something is recorded.</p>
 <h3 id="current-step">Current Step</h3>
@@ -929,13 +929,15 @@
 <h3 id="clear-data-and-stop-recording">Clear Data and stop Recording</h3>
 <p>Closes the current data table page, clears all data in chrome storage, and stops recording all tabs.</p>
 <h2 id="sending-data-to-spira">Sending data to Spira</h2>
+<p>To send data to Spira you first have to connect SpiraCapture to your Spira application.
+<img alt="" src="../img/logging-in-to-spira.png" /></p>
 <h3 id="username">Username</h3>
-<p>Username is simply the username you have in Spira. </p>
+<p>Username is simply the username you have in Spira.</p>
 <h3 id="url">Url</h3>
 <p>The Url is the root address of the application.</p>
 <h3 id="api-keyrss-token">API key/RSS Token</h3>
 <p>Is found by going to your profile page and scrolling down </p>
-<p><img alt="" src="Pictures/Enabling_RSS.PNG" /></p>
+<p><img alt="" src="../img/enabling-rss.png" /></p>
 <p><strong>Note</strong> <em>This can be disabled be you or your administrator make sure you have it enabled if you would like to use this feature see warnings section below</em></p>
 <h3 id="selecting-a-product">Selecting a product</h3>
 <p>The dropdown will show all projects you currently have access to in Spira.</p>
@@ -945,6 +947,7 @@
 <p>This is the intial name for the incident in Spira. <strong>Warning</strong> <em>This field is required you will not be able to make a incident without it</em></p>
 <h3 id="send-data-to-spira">Send data to Spira</h3>
 <p>This creates the incident in Spira. </p>
+<p><img alt="" src="../img/logging-an-incident-in-spira.png" /></p>
 <h1 id="warnings">Warnings</h1>
 <h2 id="version">Version</h2>
 <p>To be able to create incidents in Spira must have version 6.1 or higher</p>
@@ -959,7 +962,7 @@
 <p>If you are requiring fields that are not default, aka Custom fields in Spira you will not be able to create incidents from the data table. Please talk to your system administrator.</p>
 <h3 id="enabling-api-keyrss-token">Enabling API key/RSS token</h3>
 <p>This should intially be enabled but you can check by going to your profile and scrolling down </p>
-<p><img alt="" src="Pictures/Enabling_RSS.PNG" /> </p>
+<p><img alt="" src="../img/enabling-rss.png" /> </p>
 <p><strong>If Disabled</strong> <em>Please talk to your system administrator</em></p>
 <h3 id="keystrokes">Keystrokes</h3>
 <p>SpiraCapture will record keystrokes on any native HTML element that you can enter text into. This means form elements, and also elements that have contentEditable set to true</p>
@@ -968,7 +971,7 @@
 <h1 id="terminology">Terminology</h1>
 <h2 id="data-types">Data types</h2>
 <h3 id="steps">Steps</h3>
-<p>Steps are the structure of the data table.  Steps over time will create themselves to help you organize you data, every 10 minutes there will be a new step with the same name but the number since the last manual step add on to the end. </p>
+<p>Steps are the structure of the data table.  Steps over time will create themselves to help you organize you data, every 10 minutes there will be a new step with the same name but the number since the last manual step add on to the end.</p>
 <h3 id="clicks">Clicks</h3>
 <p>Clicks are recorded with an accompaning screenshot and a description of where you clicked. They are recorded on any page that is being recorded.  <strong>Note</strong> <em>Currently their is no distiction between single and double clicks</em></p>
 <h3 id="keystrokes_1">KeyStrokes</h3>
