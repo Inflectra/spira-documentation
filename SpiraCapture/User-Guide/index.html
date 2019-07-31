@@ -24,7 +24,16 @@
 <script src="../../js/jquery-1.10.2.min.js" defer></script>
 <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
 <script src="/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script> 
+<script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-1302007-6', 'https://spiradoc.inflectra.com/');
+            ga('send', 'pageview');
+        </script> 
     </head>
 
     <body>
@@ -886,10 +895,10 @@
 <h1 id="getting-started">Getting Started</h1>
 <h3 id="turning-on-the-application">Turning on the application</h3>
 <p>If the Spira_expolorer icon doesn't appear at the top right of your screen, you will need to proceed to the chrome://extensions page and make sure the bottom right is lit up blue, if not click it to turn on the application. </p>
-<p><img alt="" src="../Pictures/Turning_on_application.PNG" title="Turn on the Popup" /></p>
+<p><img alt="" src="Pictures/Turning_on_application.PNG" title="Turn on the Popup" /></p>
 <h3 id="starting-to-record">Starting to record</h3>
 <p>To start the recording you will need to click on the icon in the top right, which should bring up a popup menu. </p>
-<p><img alt="" src="../Pictures/Popup_when_First_Opened.PNG" /></p>
+<p><img alt="" src="Pictures/Popup_when_First_Opened.PNG" /></p>
 <p>As seen above you should now see a Start recording button to record the current tab. <strong>Note</strong> <em>this will only record the current tab you are in if you would like to record other tabs simply repeat this step</em> <strong>Warning</strong> <em>you will need to refresh any opened tabs before the extension to record them</em></p>
 <h2 id="popup-once-recording">Popup once recording</h2>
 <p>It should be clear that the popup is recording on a individual tab based on the icon this is the recording icon   </p>
@@ -926,7 +935,7 @@
 <p>The Url is the root address of the application.</p>
 <h3 id="api-keyrss-token">API key/RSS Token</h3>
 <p>Is found by going to your profile page and scrolling down </p>
-<p><img alt="" src="../Pictures/Enabling_RSS.PNG" /></p>
+<p><img alt="" src="Pictures/Enabling_RSS.PNG" /></p>
 <p><strong>Note</strong> <em>This can be disabled be you or your administrator make sure you have it enabled if you would like to use this feature see warnings section below</em></p>
 <h3 id="selecting-a-product">Selecting a product</h3>
 <p>The dropdown will show all projects you currently have access to in Spira.</p>
@@ -950,7 +959,7 @@
 <p>If you are requiring fields that are not default, aka Custom fields in Spira you will not be able to create incidents from the data table. Please talk to your system administrator.</p>
 <h3 id="enabling-api-keyrss-token">Enabling API key/RSS token</h3>
 <p>This should intially be enabled but you can check by going to your profile and scrolling down </p>
-<p><img alt="" src="../Pictures/Enabling_RSS.PNG" /> </p>
+<p><img alt="" src="Pictures/Enabling_RSS.PNG" /> </p>
 <p><strong>If Disabled</strong> <em>Please talk to your system administrator</em></p>
 <h3 id="keystrokes">Keystrokes</h3>
 <p>SpiraCapture will record keystrokes on any native HTML element that you can enter text into. This means form elements, and also elements that have contentEditable set to true</p>
