@@ -4,6 +4,7 @@ copyright: © Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | e
 repo_name: Inflectra
 repo_url: https://www.inflectra.com
 site_url: https://spiradoc.inflectra.com/
+google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
 
 theme: 
   name: mkdocs
