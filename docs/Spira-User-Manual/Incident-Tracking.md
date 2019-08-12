@@ -611,33 +611,25 @@ view.
 
 The incident board has the following different display modes:
 
--   All Releases
+-   **All Releases**
 
--   By Release
+    -   By Release
+    -   By Priority
+    -   By Status
+    -   By Person
 
--   By Priority
+-   **Release**
 
--   By Status
+    -   By Sprint
+    -   By Priority
+    -   By Status
+    -   By Person
 
--   By Person
+-   **Sprint**
 
--   Release
-
--   By Sprint
-
--   By Priority
-
--   By Status
-
--   By Person
-
--   Sprint
-
--   By Priority
-
--   By Status
-
--   By Person
+    -   By Priority
+    -   By Status
+    -   By Person
 
 Each of these views is described below:
 
