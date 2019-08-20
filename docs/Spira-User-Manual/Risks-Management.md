@@ -229,6 +229,11 @@ Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 You can associate other risks, incidents, test cases, and requirements to a risk from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
+- **Risks associated with requirements**: document and track all the risks associated with a specific feature or requirement in SpiraPlan. For example, a new authentication module might have security risks associated with it, or a new reporting feature might have technical risks associated with it. This is one of the most important associations you can create in SpiraPlan, since it lets you document the risks associated with changes you plan on making.
+- **Risks associated with test cases**: this is useful when one of the outcomes of the risk analysis and treatment is the need to perform tests to determine the probability or impact. For example, a risk around system performance might be linked to series of performance, load and stress tests that you need to carry out to understand how serious the risk is. 
+- **Risks associated with incidents**: this is useful for two main purposes. First, you may have an identified risk that comes to pass and is now actually an issue rather than a risk. In this case you will close the risk and convert it to an issue, which will remain linked to the original risk. Second, whenever you make a change to the system, from a bug being fixed, enhancement being implement or change request being acted upon, you will have a risk of side effects. In this case, you will want to link the risk to the incident.
+- **Risks associated with other risks**: this can be used for cases where one risk is dependent on another (if this happens, then that could also happen) or if they are just connected (this technical risk is similar to this other technical risk).
+
 ### History
 
 Read about [how the history tab works](Application-Wide.md#history)

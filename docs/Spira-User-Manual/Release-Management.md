@@ -584,14 +584,21 @@ tasks that need to be completed for the release/sprint to be completed:
 
 ![](img/Release_Management_269.png)
 
-
-
-
 Each of the requirements and associated tasks is displayed together with
-its name, description (by hovering the mouse over the name), priority,
-progress indicator, current owner, estimated effort, actual effort,
-producted effort and numeric task identifier. Clicking on a requirement
-will bring up the [requirement details page](../Requirements-Management/#requirement-details). Clicking
+its:
+
+- name
+- description (by hovering the mouse over the name)
+- priority
+- progress indicator
+- current owner
+- estimated effort
+- actual effort
+- producted effort
+- story points (requirements only)
+- and numeric task identifier
+
+Clicking on a requirement will bring up the [requirement details page](../Requirements-Management/#requirement-details). Clicking
 the triangle by a requirement will expand/collapse its list of tasks.
 Clicking on a task name will bring up the Task Details page which is
 described in more detail in [Task Tracking > Task Details](../Task-Tracking/#task-details). This allows you to edit the

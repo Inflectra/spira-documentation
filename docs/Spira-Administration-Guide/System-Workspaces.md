@@ -25,7 +25,7 @@ through the different pages by clicking the page numbers at the bottom
 of the product list.
 
 To permanently delete a product, click the "Delete" button to
-the right of the product details. This is irreversible and will delete
+the right of the product details. Doing so will show a popup where the admin will be required to correctly type the name of the selected product. Product deletion is irreversible and will delete
 all the artifacts associated with the product. If you want to
 temporarily delete a product, set its Active flag to 'No' instead. To
 make a copy of a product to reuse its test cases, releases, test sets

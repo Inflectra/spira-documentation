@@ -633,9 +633,6 @@ underneath. This view is commonly used in **Scrum** products:
 
 ![](img/Task_Tracking_311.png)
 
-
-
-
 You can drag and drop the tasks between the different sprints. Once the
 task has been added to the sprint, the utilized effort for the sprint
 will increase, and the available effort will decrease by the same
@@ -650,3 +647,11 @@ the sprint length or add product personnel resources to the sprint.
 Clicking on the sprint hyperlinks in the headers will switch the task
 board into the sprint view.
 
+
+### Tasks - By Requirement
+
+This option is only available when you are displaying the task board for a specific release or sprint. 
+
+In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.
+
+![](img/task-board-by-requirement.png)

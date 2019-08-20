@@ -85,7 +85,9 @@ each story card. It adds the long description, a progress bar
 indicator (that indicates what percentage of the item has been
 completed) and for requirement artifacts it includes the number of
 tasks (red background) and number of test cases (yellow background)
-in the two small boxes under the user:
+in the two small boxes under the user.
+
+Numerical rankings are also shown. The ranking numbers go from left to right and top to bottom. They indicate the relative ordering and priority of the various story cards and defects.
 
 ![](img/Planning_Board_409.png)
 
