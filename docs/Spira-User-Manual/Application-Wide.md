@@ -1,0 +1,218 @@
+# Common Elements Across the Application
+
+There are lots of different artifact in the application (described [here](Functionality-Overview.md)). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. While each artifact is different and behaves differently, many parts to how you interact with these artifacts are the same. 
+
+## Artifact List Pages
+
+When you first visit an artifact section in the app (by clicking on the relevant link in the global navigation bar), you will be taken to the artifact list page. This may look something like below (this image is of the requirements list page) with a grid of data - each row representing a single artifact, and often a sidebar on the left with charts or links:
+
+![](img/Requirements_Management_83.png)
+
+### Filtering
+
+You can easily filter the list of artifacts as illustrated in the screen-shot below:
+
+![](img/Requirements_Management_86.png)
+
+To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click the <Filter\> icon or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, requirement numbers). In the screen-shot above, we are filtering on Status = Requested.
+
+In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. If you would like to share the filter with other members of the product, choose the "Share with other members of the product" option. The list of saved filters can also be retrieved by clicking Filter \>
+Retrieve Filter:
+
+![](img/Requirements_Management_87.png)
+
+### Show / Hide Columns
+
+This drop-down list allows you to change the fields that are displayed in the artifact list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
+
+### Right-Click Context Menu
+
+SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the artifacts list and the following menu will be displayed (the one below is specific to requirements - different artifacts have different options in the *context menu*):
+
+![](img/Requirements_Management_90.png)
+
+## Artifact Details Pages
+
+To view details about a specific artifact, you need to go to the artifact's detail page. Clicking on an item on the artifact list page will open the corresponding detail page.
+
+Most of these details pages are made up of *three* areas;
+
+1.  the left pane with artifact list navigation options and information
+
+2.  the right pane's header, which displays: the operations toolbar; the editable name of the selected artifact; and the info bar (with a shaded background), which also contains the workflow status transitions
+
+3.  the right pane's tabbed interface with rich information related to the artifact
+
+Please note that on smaller screen sizes the left navigation pane is not displayed. While the navigation pane has a link to take you back to the artifact list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
+
+The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.
+
+The navigation pane often shows a list of the peer artifacts to the one selected. This list is useful as a navigation shortcut.
+
+### Workflows
+
+A number of artifacts can be controlled using workflows (these include requirements, releases, test cases, documents, risks, incidents, and tasks). Depending on the user's role and whether they are listed as the owner or author of the artifact, displayed in the info bar beneath the artifact name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations (below we are looking at that for a requirement):
+
+![](img/Requirements_Management_94.png)
+
+These workflow transitions specify, given a starting status, which statuses you can move the artifact to. After changing the status of the artifact by clicking on the workflow link, you can fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate artifact fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "***Print***", which will display a printable version of the page in a separate window.
+
+Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:
+
+![](img/Requirements_Management_95.png)
+
+On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with a popup like the one below:
+
+![](img/Requirements_Management_96.png)
+
+### Emailing and Following
+
+Using the "***Email***" button on the toolbar, you can send an email containing details of the artifact to an email address or another user on the system:
+
+![](img/Requirements_Management_97.png)
+
+You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration --
+Notification Templates.
+
+To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.
+
+The bottom part of the right pane can be switched between six views:
+"Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.
+
+### Followers
+
+Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
+
+![](img/Requirements_Management_99.png)
+
+![](img/Requirements_Management_100.png)
+
+You can also quickly see who is following an incident under the "People" section in the Overview tab.
+
+![](img/Requirements_Management_101.png)
+
+To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.
+
+![](img/Requirements_Management_102.png)
+
+
+### Overview
+
+The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. This tab displays information about all the main fields of the artifact, as well as descriptions, comments, and other information.
+
+Many artifacts have a comments section that allows you to add and view discussions relating to the artifact:
+
+![](img/Requirements_Management_104.png)
+
+Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
+
+
+### Attachments
+
+The attachment tab displays the list of documents, screenshots or web-links (URLs) that have been "attached" to the artifact. The documents can be in any format, though SpiraPlan® will only display icons for certain known types.
+
+![](img/Requirements_Management_113.png)
+
+The attachment list includes the filename/URL that was originally uploaded together with the file-size (in KB), name of the person who attached it and the date uploaded. In addition, if you position the pointer over the filename and hold it there for a few seconds, a detailed description is displayed as a tooltip.
+
+To actually view the document, click on the filename hyperlink and a new web browser window will open. Depending on the type of file, this window will either display the document / web-page or prompt you for a place to save it on your local computer. To remove an existing attachment from an artifact, click the "***Remove***" button and the attachment will be removed from the list. Using the standard filter/sort options you can also sort and filter the list of attachments to make it more manageable.
+
+If you are using SpiraPlan or SpiraTeam (but not SpiraTest) you can also choose to include file attachments stored in a linked version control system (e.g. Git, Subversion, CVS, Perforce, etc.) by selecting the "Include Source Code Documents" option.
+
+To attach a new document to the artifact, you need to first click the "***Add New***" button to display the new attachment dialog box:
+
+![g4169](img/Requirements_Management_114.png)
+
+
+There are three different types of item that can be attached to an artifact:
+
+To upload a file, choose "File" as the type and then click the Browse button and select the file from your local computer, optionally enter a detailed description then click the "***Upload***" button. The document will be copied from your computer and attached to the artifact.
+
+To attach a web-link (URL) to the artifact, you need to choose "URL" as the type and then enter the fully qualified URL (e.g.
+[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an optional description and then click the "***Upload***" button to attach the web-link.
+
+To attach a screenshot to the artifact, you need to choose "Screenshot" as the type and then copy the image to your computer's clipboard (e.g. on Windows computers, the PRINT SCREEN button captures the current page and adds to the clipboard). Once the image is in the clipboard, paste it into the editor using CTRL+V (or the equivalent keystroke for your operating system) and the item will appear in the preview window. You can then fill in the other fields and click "***Upload***" to attach the image.
+
+Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.
+
+You can also associate an existing document (that's already stored in SpiraPlan) with the artifact. To do that, click on the "***Add Existing***" button to bring up the add file association dialog box:
+
+![](img/Requirements_Management_115.png)
+
+
+![](img/Requirements_Management_116.png)
+
+You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
+
+
+### History
+
+This tab displays the list of changes that have been performed on the artifact since its creation. An example change history for a requirement is shown below:
+
+![](img/Requirements_Management_117.png)
+
+The change history displays the date that each change was made, together with the fields that were changed, the old and new values and the person
+who made the change. This allows a complete audit trail to be maintained of all changes in the system. In addition, if you are logged in as a product administrator you can also click on the "Admin View" hyperlink to revert any unwanted changes.
+
+
+### Associations
+
+You can associate artifacts to one another. For instance, you can associate (or link) one requirement to another requirement, or a test case to a risk. The following artifacts have association tabs:
+
+- Documents
+- Incidents
+- Requirements
+- Risks
+- Tasks
+- Test cases (in SpiraTeam and SpiraPlan only)
+
+From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.
+
+![](img/Requirements_Management_118.png)
+
+The requirements and risks in this list are those a user has decided are relevant to the current artifact. They therefore created a direct link between them.
+
+Each association is displayed with the:
+
+- type of association (related-to, dependency, etc)
+- name of the artifact being linked-to
+- type of artifact (requirement, incident, etc.)
+- name of the person who created the association
+- a comment that describes why the association was made. In the case of an indirect association (eg when a link to an incident is added to a requirement during a test run), the comment will contain the name of the specific artifact that created that indirect association.
+
+In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any revisions that are linked to this artifact.
+
+You can perform the following actions on the list of associations:
+
+1. **Delete** -- removes the selected association to the other artifact. This will only delete the association, not the linked artifact itself.
+2. **Refresh** -- updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.
+3. **Filter / Apply Filter** -- Applies the entries in the filter boxes to the list of associations
+4. **Clear Filters** -- Clears the current filter, so that all associations for the current requirement are shown.
+5. **Edit** -- Clicking the "***Edit***" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.
+
+To create a new association, click the "***Add***" button to display the add association panel (below is an example from requirements):
+
+![](img/Requirements_Management_119.png)
+
+If you know the ID of the artifact you want to associate, you can enter its ID prefixed by the appropriate token (eg "RQ" for requirement):
+
+![](img/Requirements_Management_120.png)
+
+Otherwise choose the Artifact Type (and Product if making a cross-product association) from the dropdowns:
+
+![](img/Requirements_Management_121.png)
+
+You can narrow down your search by entering a keyword:
+
+![](img/Requirements_Management_122.png)
+
+Artifacts that have folders let you choose a folder to narrow your search. When attempting to add an association to a requirement, you can choose a package from the list to narrow down the results:
+
+![](img/Requirements_Management_123.png)
+
+Once you have a list of artifacts, select the checkboxes of the items you want to associate with the current artifact and click the 'Save' button.
+
+You can add a comment that explains the rationale for the association and choose the type of association being created:
+
+-   **Related-to:** this is used to specify that the two artifacts are simply related
+-   **Depends-on:** this is used to specify that the current artifact has a dependency on the one being linked to.

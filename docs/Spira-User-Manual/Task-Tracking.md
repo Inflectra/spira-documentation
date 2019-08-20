@@ -481,145 +481,16 @@ then click the "***Add Comment***" button.
 
 ### Attachments
 
-This tab displays the list of documents that have been "attached" to the
-task. The documents can be in any format, though SpiraPlan® will only
-display the icon for certain known types.
-
-![](img/Task_Tracking_300.png)
-
-
-
-
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To remove an existing attachment from
-a task, click the "***Remove***" button and the attachment
-will be removed from the list.
-
-To attach a new document or web link to the task, you need to click the
-"***Add New***" button to open the "Add Attachment" dialog
-box. There are three different types of item that can be attached to a
-task:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the task. To do that, click the "***Add
-Existing***" button to bring up the add file association
-dialog box. You can then choose to either associate a document stored in
-the SpiraPlan Documents repository or (in the case of
-SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code
-repository. In either case you first select the appropriate folder, and
-then pick the document(s) from the file list on the right. In the case
-of a source code file association you can also add a comment.
-
-### History
-
-This tab displays the list of changes that have been performed on the
-task since its creation. An example task change history is depicted
-below:
-
-![](img/Task_Tracking_301.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" hyperlink
-to revert any unwanted changes.
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 ### Associations
 
-In this mode, the main pane displays a list of any incidents, source
-code revisions or other tasks that are associated with this task:
+You can associate other tasks, incidents, and source code to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
-![](img/Task_Tracking_302.png)
+### History
 
+Read about [how the history tab works](Application-Wide.md#history)
 
-
-
-Each association is displayed with the type of association (related-to,
-vs. a dependency), name of the artifact being linked-to, type of
-artifact (task, incident, etc.), the name of the person who created the
-association, and a comment that describes why the association was made.
-
-You can perform the following actions:
-
-**Remove** -- removes the selected association to the other artifact.
-This will only delete the association, not the linked artifact itself.
-
-**Refresh** -- updates the list of associations from the server, useful
-if other people are adding associations to this task at the same time.
-
-**Apply Filter** -- Applies the entries in the filter boxes to the list
-of associations
-
-**Clear Filters** -- Clears the current filter, so that all associations
-for the current task are shown.
-
-**Edit** -- Clicking the "***Edit***" button to the right
-of the associations allows you to edit the association type and comment
-fields inline directly on this screen.
-
-To create a new association, click the "***Add***" button
-to display the add association panel:
-![](img/Task_Tracking_119.png)
-If you know the ID of the item you want to associate, you can enter its
-ID prefixed by the appropriate token ("TK" for task or "IN" for
-incident):
-![](img/Task_Tracking_303.png)
-Otherwise you should choose the Artifact Type. You can narrow down your
-search by entering a keyword.
-![](img/Task_Tracking_304.png)
-
-
-Once you have a list of artifacts, you should select the checkboxes of
-the items you want to associate with the current task and click the
-'Save' button.
-
-You can add a comment that explains the rationale for the association
-and choose the type of association being created:
-
--   **Related-to:** this is used to specify that the two artifacts are
-simply related
-
--   **Depends-on:** this is used to specify that the current artifact
-has a dependency on the one being linked to.
 
 ## Task Board
 

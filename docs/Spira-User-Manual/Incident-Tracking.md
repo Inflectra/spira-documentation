@@ -373,165 +373,22 @@ section (as shown below with the Review Date field).
 
 ### Attachments
 
-In this tab, the lower section of the screen displays the list of
-documents, screenshots or web links (URLs) that have been "attached" to
-the incident. The documents can be in any format, though SpiraPlan® will
-only display the icon for certain known types.
-
-![](img/Incident_Tracking_247.png)
-
-
-
-
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To delete an existing attachment from
-an incident, click the "***Remove***" button and the
-attachment will be removed from the list.
-
-To attach a new document to the incident, you need to first click the
-"***Add New***" link to display the new attachment dialog
-box:
-
-![g4169](img/Incident_Tracking_114.png)
-
-
-
-
-There are three different types of item that can be attached to an
-incident:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the incident. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![g4197](img/Incident_Tracking_156.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
-
-### History
-
-This tab displays the list of changes that have been performed on the
-incident artifact since its creation. An example incident change history
-is depicted below:
-
-![](img/Incident_Tracking_248.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system.
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 ### Associations
 
-This tab displays a list of any requirements, tasks, test runs, test
-steps or other incidents that are associated with this incident:
+You can associate other incidents, requirements, test steps, tasks, and risks to an incident from this tab. 
 
-![](img/Incident_Tracking_249.png)
+The incidents and tasks in this list are ones that a user has decided are relevant to the current one and has created a direct link between
+them. In the case of requirements and test cases, the association can be either due to the creator of an incident directly linking the incident
+to the requirement or test step, or it can be the result of a tester executing a test-run and creating an incident during the test run. In
+this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
 
+Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
-The incidents and tasks in this list are ones that a user has decided
-are relevant to the current one and has created a direct link between
-them. In the case of requirements and test cases, the association can be
-either due to the creator of an incident directly linking the incident
-to the requirement or test step, or it can be the result of a tester
-executing a test-run and creating an incident during the test run. In
-this latter case, the check-box to the left of the association will be
-unavailable as the link is not editable.
+### History
 
-Each association is displayed with the type of association (related-to,
-vs. a dependency), name of the artifact being linked-to, type of
-artifact (requirement, incident, etc.), the name of the person who
-created the association, a comment that describes why the association
-was made, and the product of the linked artifact. In the case of an
-indirect association due to a test run, the comment will contain the
-name of the test run.
-
-You can perform the following actions on an association from this
-screen:
-
-**Delete** -- removes the selected association to the other artifact.
-This will only delete the association, not the linked artifact itself.
-
-**Refresh** -- updates the list of associations from the server, useful
-if other people are adding associations to this incident at the same
-time.
-
-**Filter / Apply Filter** -- Applies the entries in the filter boxes to
-the list of associations
-
-**Clear Filter** -- Clears the current filter, so that all associations
-for the current incident are shown.
-
-**Edit** -- Clicking the "***Edit***" button to the right
-of the associations allows you to edit the association type and comment
-fields inline directly on this screen.
-
-To create a new association, click the "***Add***" button
-to display the "Add New Association" panel:
-
-![](img/Incident_Tracking_250.png)
-
-
-
-
-Once you have selected the appropriate artifact type, you will then be
-able to browse or search for the specific artifact you want to link to.
-You can also enter the ID of the artifact directly (if known). In either
-case you can also add a comment that explains the rationale for the
-association. If you're adding an association to a test step, the test
-steps are grouped in their test cases. You can browse the list of test
-cases within each test case folder.
-
-![](img/Incident_Tracking_251.png)
-
-
+Read about [how the history tab works](Application-Wide.md#history)
 
 
 ### Creating a Requirement from an Incident

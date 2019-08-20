@@ -12,6 +12,7 @@ theme:
 nav:
 - User Manual:
   - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
+  - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
   - User/Product Management: Spira-User-Manual\User-Product-Management.md
   - Requirements Management: Spira-User-Manual\Requirements-Management.md
   - Test Case Management: Spira-User-Manual\Test-Case-Management.md

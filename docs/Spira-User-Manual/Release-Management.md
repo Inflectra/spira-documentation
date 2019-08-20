@@ -705,104 +705,16 @@ options displayed in the sub-header row of each field and clicking the
 list by clicking on one of the directional arrow icons displayed in the
 header row of the appropriate field.
 
+
 ### Attachments
 
-In this mode, the lower section of the screen displays the list of
-documents that have been "attached" to the release. The documents can be
-in any format, though SpiraPlan® will only display the icon for certain
-known types.
-
-![](img/Release_Management_275.png)
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
+### History
 
+Read about [how the history tab works](Application-Wide.md#history)
 
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To delete an existing attachment from
-an incident, click the "***Remove***" button and the
-attachment will be removed from the list.
-
-To attach a new document to the release, you need to first click the
-"***Add New***" link to display the new attachment dialog
-box:
-
-![g4169](img/Release_Management_114.png)
-
-
-
-
-There are three different types of item that can be attached to a
-release:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the incident. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![g4197](img/Release_Management_156.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
-
-### View History
-
-In this mode, the main pane displays the list of changes that have been
-performed on the release artifact since its creation. An example release
-change history is depicted below:
-
-![](img/Release_Management_276.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" button to
-revert any unwanted changes.
 
 ## Build Details
 

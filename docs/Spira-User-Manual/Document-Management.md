@@ -330,54 +330,11 @@ button to confirm the changes.
 Note: This option is only available for File attachments. To change a
 URL attachment, you can simply edit the Filename field directly.
 
-### Document Associations
 
-This view displays a list of the artifacts in the current product that
-are associated with the current document. If you originally uploaded the
-document as an attachment to a requirement, test case, etc. then an
-initial association will be already listed, otherwise it will be empty.
+### Associations
 
-![](img/Document_Management_331.png)
-
-
-
-
-From this screen you can either remove an existing artifact association
-or add a new association from the current document to a pre-existing
-artifact in the system. To add the association, click on the **Add**
-button in the toolbar:
-
-![](img/Document_Management_332.png)
-
-
-
-
-Then, you need to select the type of artifact being associated
-(requirement, test case, incident, etc.) and then enter in the name or
-ID (with the artifact prefix) of the artifact to search on:
-
-![](img/Document_Management_333.png)
-
-
-
-
-Once you have selected the items you want to associate, simply click the
-'Save' button to associate them with the current document.
+You can associate a document to many other artifacts in the system from this tab. If you originally uploaded the document as an attachment to an artifact, then the initial association will be already listed. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 ### History
 
-This tab displays the list of changes that have been performed on the
-document since its creation.
-
-![](img/Document_Management_334.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" hyperlink
-to revert any unwanted changes.
-
+Read about [how the history tab works](Application-Wide.md#history)

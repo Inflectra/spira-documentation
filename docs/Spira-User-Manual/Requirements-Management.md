@@ -15,9 +15,6 @@ screen illustrated below:
 
 ![](img/Requirements_Management_83.png)
 
-
-
-
 The requirements list consists of a hierarchical arrangement of the
 various requirements and functionalities that need to be provided by the
 system in question. The structure is very similar to the Work Breakdown
@@ -193,8 +190,6 @@ The list of saved filters can also be retrieved by clicking Filter \>
 Retrieve Filter:
 
 ![](img/Requirements_Management_87.png)
-
-
 
 
 As a shortcut, the left hand panel includes a set of **Quick Filters**
@@ -721,212 +716,16 @@ field to generate the task's estimated effort.
 
 ### Attachments
 
-The attachment tab displays the list of documents, screenshots or
-web-links (URLs) that have been "attached" to the requirement. The
-documents can be in any format, though SpiraPlan® will only display
-icons for certain known types.
-
-![](img/Requirements_Management_113.png)
-
-
-
-
-The attachment list includes the filename/URL that was originally
-uploaded together with the file-size (in KB), name of the person who
-attached it and the date uploaded. In addition, if you position the
-pointer over the filename and hold it there for a few seconds, a
-detailed description is displayed as a tooltip.
-
-To actually view the document, click on the filename hyperlink and a new
-web browser window will open. Depending on the type of file, this window
-will either display the document / web-page or prompt you for a place to
-save it on your local computer. To remove an existing attachment from a
-requirement, simply click the "***Remove***" button and
-the attachment will be removed from the list. Using the standard
-filter/sort options you can also sort and filter the list of attachments
-to make it more manageable.
-
-If you are using SpiraPlan or SpiraTeam (but not SpiraTest) you can also
-choose to include file attachments stored in a linked version control
-system (e.g. Git, Subversion, CVS, Perforce, etc.) by selecting the "Include
-Source Code Documents" option.
-
-To attach a new document to the requirement, you need to first click the
-"***Add New***" button to display the new attachment
-dialog box:
-
-![g4169](img/Requirements_Management_114.png)
-
-
-
-
-There are three different types of item that can be attached to a
-requirement:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the requirement. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![](img/Requirements_Management_115.png)
-
-
-![](img/Requirements_Management_116.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 ### History
 
-This tab displays the list of changes that have been performed on the
-requirement artifact since its creation. An example requirement change
-history is depicted below:
-
-![](img/Requirements_Management_117.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" hyperlink
-to revert any unwanted changes.
+Read about [how the history tab works](Application-Wide.md#history)
 
 ### Associations
 
-This displays a list of any incidents, source code revisions or other
-requirements that are associated with this requirement:
+You can associate other requirements, source code commits, incidents, or risks to a requirement from this tab.
 
-![](img/Requirements_Management_118.png)
+The associated requirements and risks are those a user has decided are relevant to the current requirement and has created a direct link between them. In the case of incidents, the association can be either due to the creator of an incident directly linking the incident to the requirement, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
 
-
-
-
-The requirements in this list are those a user has decided are relevant
-to the current one and has created a direct link between them. In the
-case of incidents, the association can be either due to the creator of
-an incident directly linking the incident to the requirement, or it can
-be the result of a tester executing a test-run and creating an incident
-during the test run. In this latter case, the check-box to the left of
-the association will be unavailable as the link is not editable.
-
-Each association is displayed with the type of association (related-to,
-vs. a dependency), name of the artifact being linked-to, type of
-artifact (requirement, incident, etc.), the name of the person who
-created the association, and a comment that describes why the
-association was made. In the case of an indirect association due to a
-test run, the comment will contain the name of the test run.
-
-In addition, when using SpiraPlan or SpiraTeam, the system automatically
-scans the source code repository for any revisions that are linked to
-this artifact.
-
-You can perform the following actions on an association from this
-screen:
-
-**Delete** -- removes the selected association to the other artifact.
-This will only delete the association, not the linked artifact itself.
-
-**Refresh** -- updates the list of associations from the server, useful
-if other people are adding associations to this requirement at the same
-time.
-
-**Filter / Apply Filter** -- Applies the entries in the filter boxes to
-the list of associations
-
-**Clear Filters** -- Clears the current filter, so that all associations
-for the current requirement are shown.
-
-**Edit** -- Clicking the "***Edit***" button to the right
-of the associations allows you to edit the association type and comment
-fields inline directly on this screen.
-
-To create a new association, click the "***Add***" button
-to display the add association panel:
-
-![](img/Requirements_Management_119.png)
-
-
-
-
-If you know the ID of the requirement or incident you want to associate,
-you can enter its ID prefixed by the appropriate token ("RQ" for
-requirement or "IN" for incident):
-
-![](img/Requirements_Management_120.png)
-
-
-
-
-Otherwise you should choose the Artifact Type (and Product if making a
-cross-product association):
-
-![](img/Requirements_Management_121.png)
-
-
-
-
-You can narrow down your search by entering a keyword:
-
-![](img/Requirements_Management_122.png)
-
-
-
-
-For requirements, you can also choose a package from the list to narrow
-down the results:
-
-![](img/Requirements_Management_123.png)
-
-
-
-
-Once you have a list of artifacts, you should select the checkboxes of
-the items you want to associate with the current requirement and click
-the 'Save' button.
-
-You can add a comment that explains the rationale for the association
-and choose the type of association being created:
-
--   **Related-to:** this is used to specify that the two artifacts are
-simply related
-
--   **Depends-on:** this is used to specify that the current artifact
-has a dependency on the one being linked to.
-
+Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)

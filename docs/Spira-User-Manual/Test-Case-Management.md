@@ -1069,16 +1069,11 @@ options displayed in the sub-header row of each field and clicking the
 the list by clicking on one of the directional arrow icons displayed in
 the header row of the appropriate field.
 
-### Tasks
+### Associations
 
-This tab is only available to SpiraPlan users. It displayes a table view
-of any tasks that have been associated to the test case. The only way to
-link a task to a test case is via test execution of a test case with a
-type set to "Exploratory".
+You can associate tasks and risks to a test case from this tab (which is only available to SpiraTeam and SpiraPlan users). Apart from creating links to an existing task from this tab, any tasks created during exploratory test execution will also be shown here.
 
-![](img/Test_Case_Management_159.png)
-
-
+Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 
 ## Test Step Details
@@ -1164,87 +1159,15 @@ by choosing the item from the scrolling selection box, or searching for
 them by name or ID. Before adding the chosen incidents you can add a
 comment that explains the rationale for the association.
 
+
 ### Attachments
 
-This tab displays the list of documents that have been "attached" to the
-test step. The documents can be in any format, though SpiraPlan® will
-only display an icon for certain known types.
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
-![](img/Test_Case_Management_163.png)
-
-
-
-
-To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To delete an existing attachment from
-a test case, simply click the "***Delete***" button and
-the attachment will be removed from the list.
-
-To attach a new document to the test step, you need to first click the
-"***Add New***" link to display the new attachment dialog
-box:
-
-![g4169](img/Test_Case_Management_114.png)
-
-
-
-
-There are three different types of item that can be attached to a
-requirement:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the requirement. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![g4197](img/Test_Case_Management_156.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
 
 ### History
 
-This tab displays the list of changes that have been performed on the
-test step artifact since its creation. An example test step change
-history is depicted below:
-
-![](img/Test_Case_Management_164.png)
+Read about [how the history tab works](Application-Wide.md#history)
 
 
 
@@ -2166,71 +2089,16 @@ testing tool are provided in the *SpiraPlan® Automated Testing
 Integration Guide,* which can be downloaded from the Inflectra<sup>®</sup>
 website.
 
+
 ### Attachments
 
-This tab shows the list of documents that have been "attached" to the
-test run. The documents can be in any format, though SpiraPlan® will
-only display the icon for certain known types.
-
-![](img/Test_Case_Management_207.png)
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
+### History
 
+Read about [how the history tab works](Application-Wide.md#history)
 
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To view the document, click on the filename hyperlink and a new web
-browser window will open. Depending on the type of file, this window
-will either display the document or prompt you for a place to save it on
-your local computer. To remove an existing attachment from a test run,
-check its checkbox then click the "***Remove***" button
-and the attachment will be removed from the list.
-
-To attach a new document or web link to the test run, you need to click
-on the "Add New" hyperlink to open the "***Add
-Attachment***" dialog box. There are three different types
-of item that can be attached to a test run:
-
-To upload a file, choose "File" as the type and then click the
-"***Browse***" button and select the file from your local
-computer, optionally enter a detailed description then click the
-"***Upload***" button. The document will be copied from
-your computer and attached to the artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the <Upload\> button to attach the
-web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the test run. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box. You can then choose to either associate a document stored in
-the SpiraPlan Documents repository or (in the case of
-SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code
-repository. In either case you first select the appropriate folder, and
-then pick the document(s) from the file list on the right. In the case
-of a source code file association you can also add a comment.
 
 ### Incidents
 
@@ -2271,26 +2139,6 @@ been logged during the execution of the test.
 
 ![](img/Test_Case_Management_209.png)
 
-
-
-
-### History
-
-This tab displays the list of changes, if any, that have been performed
-on the requirement artifact since its creation. An example requirement
-change history is depicted below:
-
-![](img/Test_Case_Management_210.png)
-
-
-
-
-The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "***Admin
-View***" button to revert any unwanted changes.
 
 ## Test Set List
 
@@ -2856,86 +2704,16 @@ options displayed in the sub-header row of each field and clicking the
 the list by clicking on one of the directional arrow icons displayed in
 the header row of the appropriate field.
 
+
 ### Attachments
 
-This tab displays the list of documents that have been "attached" to the
-test set. The documents can be in any format, though SpiraPlan® will
-only display the icon for certain known types.
-
-![](img/Test_Case_Management_228.png)
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
+### History
 
+Read about [how the history tab works](Application-Wide.md#history)
 
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To actually view the document, click on the filename hyperlink and a new
-web browser window will open. Depending on the type of file, this window
-will either display the document or prompt you for a place to save it on
-your local computer. To remove an existing attachment from a test set,
-select an attachment using the checkbox and click the
-"***Remove***" button. The attachment will be removed from
-the list.
-
-To attach a new document to the test set, you need to first click the
-"***Add New***" link to display the new attachment dialog
-box:
-
-![g4169](img/Test_Case_Management_114.png)
-
-
-
-
-There are three different types of item that can be attached to a
-requirement:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the test set. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![g4197](img/Test_Case_Management_156.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
 
 ### Incidents
 
@@ -2947,19 +2725,6 @@ of the set.
 
 ![](img/Test_Case_Management_229.png)
 
-
-
-
-### History
-
-This tab displays the list of changes that have been performed on the
-test set artifact since its creation. The change history displays the
-date that each change was made, together with the fields that were
-changed, the old and new values and the person who made the change. This
-allows a complete audit trail to be maintained of all changes in the
-system. In addition, if you are logged in as a product administrator you
-can also click on the "***Admin View***" button to revert
-any unwanted changes.
 
 ## Automation Host List
 
@@ -3154,91 +2919,16 @@ options displayed in the sub-header row of each field and clicking the
 the list by clicking on one of the directional arrow icons displayed in
 the header row of the appropriate field.
 
+
 ### Attachments
 
-In this tab, the main pane displays the list of documents that have been
-"attached" to the automation host. The documents can be in any format,
-though SpiraPlan® will only display an icon for certain known types.
+Read about [how the attachments tab works](Application-Wide.md#attachments)
 
-The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.
-
-To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To delete an existing attachment from
-a test case, simply click the "***Remove***" button and
-the attachment will be removed from the list.
-
-To attach a new document to the test case, you need to first click the
-"***Add New***" link to display the new attachment dialog
-box:
-
-![g4169](img/Test_Case_Management_114.png)
-
-
-
-
-There are three different types of item that can be attached to an
-incident:
-
-To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "***Upload***" button.
-The document will be copied from your computer and attached to the
-artifact.
-
-To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-[http://mywebsite.com?Document=1](http://mywebsite.com/?Document=1)), an
-optional description and then click the "***Upload***"
-button to attach the web-link.
-
-To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "***Upload***"
-to attach the image.
-
-Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.
-
-You can also associate an existing document (that's already stored in
-SpiraTeam) with the automation host. To do that, click on the "***Add
-Existing***" button to bring up the add file association
-dialog box:
-
-![g4197](img/Test_Case_Management_156.png)
-
-
-
-
-You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.
 
 ### History
 
-In this mode, the main pane displays the list of changes that have been
-performed on the automation host artifact since its creation. The change
-history displays the date that each change was made, together with the
-fields that were changed, the old and new values and the person who made
-the change. This allows a complete audit trail to be maintained of all
-changes in the system. In addition, if you are logged in as a product
-administrator you can also click on the "***Admin View***"
-button to revert any unwanted changes.
+Read about [how the history tab works](Application-Wide.md#history)
+
 
 ## Test Configurations List
 

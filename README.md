@@ -1,3 +1,7 @@
+# Running a local test server
+In the master branch, run `mkdocs serve`. The web server should be available at localhost:8000
+
+
 # Deploying to GitHub Pages
 In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
 

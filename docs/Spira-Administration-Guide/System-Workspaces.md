@@ -7,16 +7,13 @@ Products" link from the administration menu:
 
 ![](img/System_Workspaces_33.png)
 
-
-
-
 This screen displays the list of products in the system (both inactive
 and active) together with their program, template, date of creation, and
 active status. Clicking on either the "View" link in the right-hand
 column or the name of the product will change the currently selected
 product to one clicked.
 
-You can filter the list of products by either choosing an active status,
+By default the table shows you only the active products, but you can select a different option from the dropdown above the table. You can filter the list of products by either choosing an active status,
 program, or entering a portion of the name or date into the appropriate
 text box. When you click the "Filter" button, the list of products will
 be filtered by the criteria you entered. You can clear the filter
@@ -27,7 +24,7 @@ list of products is paginated into groups of fifteen (15). You can step
 through the different pages by clicking the page numbers at the bottom
 of the product list.
 
-To permanently delete a product, you should click the "Delete" button to
+To permanently delete a product, click the "Delete" button to
 the right of the product details. This is irreversible and will delete
 all the artifacts associated with the product. If you want to
 temporarily delete a product, set its Active flag to 'No' instead. To
@@ -41,8 +38,6 @@ of the product list, and a new screen will be displayed that allows you
 to enter the new product information:
 
 ![](img/System_Workspaces_34.png)
-
-
 
 
 You need to:
@@ -79,8 +74,6 @@ will be taken to the following screen that allows you modify the product
 details:
 
 ![](img/System_Workspaces_35.png)
-
-
 
 
 On this screen you can edit the name, description, program, website URL
