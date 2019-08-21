@@ -164,12 +164,12 @@ In SpiraTeam and SpiraPlan, there are four additional requirement list views. Th
 
 1. Sorted List
 2. Agile Board
-3. Documents View
-4. Mindmap
+3. Documents View (beta)
+4. Mindmap (beta)
 
 You can pick between each of these views using the view selection button group at the top right of any requirement list page. 
 
-![](img/requirement-list-selector.png)
+![](img/requirements-list-selector.png)
 
 Note: you can only view requirements from the current product in these four additional views, whether or not you are sharing requirements from other products with this product.
 
@@ -208,7 +208,7 @@ You can now choose any of these options as an alternative to using the icons in 
 This view is similar to the existing [Planning Board](Planning-Board.md) but only displays requirements, whereas the primary planning board will also include incidents / defects. This gives the requirements page consistency with the tasks and incidents pages that already have a Grid / Board view selector option.
 
 
-## Requirements Document View (beta)
+## Requirements Document View
 
 This view also offers a hierarchical organization of the first 5000 requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. The new view has a sidebar that lets you quickly jump to a section in the requirements document as well as simply scroll through all of the items.
 
@@ -229,7 +229,7 @@ For each requirement, the following information is displayed:
 ![](img/requirements-documents-view.png)
 
 
-## Requirements Mindmap (beta)
+## Requirements Mindmap
 
 This mindmap displays the first 5,000 requirements in a product as a connected tree view / mindmap. The root node shows the name of the product on the left hand side. The top most level nodes are connected to the left of this, with their successive children shown from left to right. 
 
