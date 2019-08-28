@@ -68,6 +68,10 @@
 </li>
                                     
 <li >
+    <a href="../Application-Wide/">Common Elements Across the Application</a>
+</li>
+                                    
+<li >
     <a href="../User-Product-Management/">User/Product Management</a>
 </li>
                                     
@@ -724,8 +728,8 @@
         <li class="third-level"><a href="#followers">Followers</a></li>
         <li class="third-level"><a href="#overview-comments">Overview -- Comments</a></li>
         <li class="third-level"><a href="#attachments">Attachments</a></li>
-        <li class="third-level"><a href="#history">History</a></li>
         <li class="third-level"><a href="#associations">Associations</a></li>
+        <li class="third-level"><a href="#history">History</a></li>
         <li class="second-level"><a href="#task-board">Task Board</a></li>
         
         <li class="third-level"><a href="#tasks-by-priority">Tasks -- By Priority</a></li>
@@ -733,6 +737,7 @@
         <li class="third-level"><a href="#tasks-by-person">Tasks - By Person</a></li>
         <li class="third-level"><a href="#tasks-by-release">Tasks - By Release</a></li>
         <li class="third-level"><a href="#tasks-by-sprint">Tasks - By Sprint</a></li>
+        <li class="third-level"><a href="#tasks-by-requirement">Tasks - By Requirement</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -1112,113 +1117,11 @@ item, hover over their avatar to display a user profile card.</p>
 textbox. To enter a new comment, enter the text into the textbox, and
 then click the "<strong><em>Add Comment</em></strong>" button.</p>
 <h3 id="attachments">Attachments</h3>
-<p>This tab displays the list of documents that have been "attached" to the
-task. The documents can be in any format, though SpiraPlan® will only
-display the icon for certain known types.</p>
-<p><img alt="" src="../img/Task_Tracking_300.png" /></p>
-<p>The attachment list includes the filename that was originally uploaded
-together with the file-size (in KB), name of the person who attached it
-and the date uploaded. In addition, if you position the pointer over the
-filename and hold it there for a few seconds, a detailed description is
-displayed as a tooltip.</p>
-<p>To actually view the document, simply click on the filename hyperlink
-and a new web browser window will open. Depending on the type of file,
-this window will either display the document or prompt you for a place
-to save it on your local computer. To remove an existing attachment from
-a task, click the "<strong><em>Remove</em></strong>" button and the attachment
-will be removed from the list.</p>
-<p>To attach a new document or web link to the task, you need to click the
-"<strong><em>Add New</em></strong>" button to open the "Add Attachment" dialog
-box. There are three different types of item that can be attached to a
-task:</p>
-<p>To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "<strong><em>Upload</em></strong>" button.
-The document will be copied from your computer and attached to the
-artifact.</p>
-<p>To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-<a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an
-optional description and then click the "<strong><em>Upload</em></strong>"
-button to attach the web-link.</p>
-<p>To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "<strong><em>Upload</em></strong>"
-to attach the image.</p>
-<p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.</p>
-<p>You can also associate an existing document (that's already stored in
-SpiraTeam) with the task. To do that, click the "<strong><em>Add
-Existing</em></strong>" button to bring up the add file association
-dialog box. You can then choose to either associate a document stored in
-the SpiraPlan Documents repository or (in the case of
-SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code
-repository. In either case you first select the appropriate folder, and
-then pick the document(s) from the file list on the right. In the case
-of a source code file association you can also add a comment.</p>
-<h3 id="history">History</h3>
-<p>This tab displays the list of changes that have been performed on the
-task since its creation. An example task change history is depicted
-below:</p>
-<p><img alt="" src="../img/Task_Tracking_301.png" /></p>
-<p>The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" hyperlink
-to revert any unwanted changes.</p>
+<p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="associations">Associations</h3>
-<p>In this mode, the main pane displays a list of any incidents, source
-code revisions or other tasks that are associated with this task:</p>
-<p><img alt="" src="../img/Task_Tracking_302.png" /></p>
-<p>Each association is displayed with the type of association (related-to,
-vs. a dependency), name of the artifact being linked-to, type of
-artifact (task, incident, etc.), the name of the person who created the
-association, and a comment that describes why the association was made.</p>
-<p>You can perform the following actions:</p>
-<p><strong>Remove</strong> -- removes the selected association to the other artifact.
-This will only delete the association, not the linked artifact itself.</p>
-<p><strong>Refresh</strong> -- updates the list of associations from the server, useful
-if other people are adding associations to this task at the same time.</p>
-<p><strong>Apply Filter</strong> -- Applies the entries in the filter boxes to the list
-of associations</p>
-<p><strong>Clear Filters</strong> -- Clears the current filter, so that all associations
-for the current task are shown.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
-of the associations allows you to edit the association type and comment
-fields inline directly on this screen.</p>
-<p>To create a new association, click the "<strong><em>Add</em></strong>" button
-to display the add association panel:
-<img alt="" src="../img/Task_Tracking_119.png" />
-If you know the ID of the item you want to associate, you can enter its
-ID prefixed by the appropriate token ("TK" for task or "IN" for
-incident):
-<img alt="" src="../img/Task_Tracking_303.png" />
-Otherwise you should choose the Artifact Type. You can narrow down your
-search by entering a keyword.
-<img alt="" src="../img/Task_Tracking_304.png" /></p>
-<p>Once you have a list of artifacts, you should select the checkboxes of
-the items you want to associate with the current task and click the
-'Save' button.</p>
-<p>You can add a comment that explains the rationale for the association
-and choose the type of association being created:</p>
-<ul>
-<li>
-<p><strong>Related-to:</strong> this is used to specify that the two artifacts are
-simply related</p>
-</li>
-<li>
-<p><strong>Depends-on:</strong> this is used to specify that the current artifact
-has a dependency on the one being linked to.</p>
-</li>
-</ul>
+<p>You can associate other tasks, incidents, and source code to a task from this tab. Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
+<h3 id="history">History</h3>
+<p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
 <h2 id="task-board">Task Board</h2>
 <p>The task board is an alternative to the <a href="#task-list">task list page</a> designed to let you view the tasks planned for the current
 product. You can access this feature by clicking on the <strong>Board</strong> icon
@@ -1331,7 +1234,11 @@ for 'available effort'. If this happens, the "Available Effort" value
 will be displayed in red, and you need to rebalance the items, extend
 the sprint length or add product personnel resources to the sprint.</p>
 <p>Clicking on the sprint hyperlinks in the headers will switch the task
-board into the sprint view.</p></div>
+board into the sprint view.</p>
+<h3 id="tasks-by-requirement">Tasks - By Requirement</h3>
+<p>This option is only available when you are displaying the task board for a specific release or sprint. </p>
+<p>In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.</p>
+<p><img alt="" src="../img/task-board-by-requirement.png" /></p></div>
         </div>
 
         <footer class="col-md-12">

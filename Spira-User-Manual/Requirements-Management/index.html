@@ -68,6 +68,10 @@
 </li>
                                     
 <li >
+    <a href="../Application-Wide/">Common Elements Across the Application</a>
+</li>
+                                    
+<li >
     <a href="../User-Product-Management/">User/Product Management</a>
 </li>
                                     
@@ -725,6 +729,18 @@
         <li class="third-level"><a href="#focus-on-branch">Focus-On Branch</a></li>
         <li class="third-level"><a href="#right-click-context-menu">Right-Click Context Menu</a></li>
         <li class="third-level"><a href="#viewing-requirements-from-shared-products">Viewing Requirements from Shared Products</a></li>
+        <li class="second-level"><a href="#requirements-additional-list-views">Requirements Additional List Views</a></li>
+        
+        <li class="second-level"><a href="#requirements-sorted-list">Requirements Sorted List</a></li>
+        
+        <li class="third-level"><a href="#toolbar">Toolbar</a></li>
+        <li class="third-level"><a href="#right-click-context-menu_1">Right-Click Context Menu</a></li>
+        <li class="second-level"><a href="#requirements-agile-board">Requirements Agile Board</a></li>
+        
+        <li class="second-level"><a href="#requirements-document-view">Requirements Document View</a></li>
+        
+        <li class="second-level"><a href="#requirements-mindmap">Requirements Mindmap</a></li>
+        
         <li class="second-level"><a href="#requirement-details">Requirement Details</a></li>
         
         <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
@@ -737,282 +753,161 @@
         <li class="third-level"><a href="#attachments">Attachments</a></li>
         <li class="third-level"><a href="#history">History</a></li>
         <li class="third-level"><a href="#associations">Associations</a></li>
+        <li class="third-level"><a href="#use-case-diagrams">Use Case Diagrams</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="requirements-management">Requirements Management</h1>
-<p>This section outlines how the requirements management features of
-SpiraPlan® can be used to develop a requirements / scope matrix for a
-product, and how you can map any existing test-cases to the
-requirements. Typically when starting a product, developing the
-requirements list is the first activity after the Administrator has set
-up the product in the system.</p>
+<p>This section outlines how the requirements management features of SpiraPlan® can be used to develop a requirements / scope matrix for a product, and how you can map any existing test-cases to the requirements. Typically when starting a product, developing the requirements list is the first activity after the Administrator has set up the product in the system.</p>
 <h2 id="requirements-list">Requirements List</h2>
-<p>When you click on the Planning > Requirements link on the global
-navigation bar, you will initially be taken to the requirements list
-screen illustrated below:</p>
+<p>When you click on the Planning > Requirements link on the global navigation bar, you will initially be taken to the requirements list screen illustrated below:</p>
 <p><img alt="" src="../img/Requirements_Management_83.png" /></p>
-<p>The requirements list consists of a hierarchical arrangement of the
-various requirements and functionalities that need to be provided by the
-system in question. The structure is very similar to the Work Breakdown
-Structure (WBS) developed in Microsoft Product®, and users of that
-software package will find this very familiar to use. When you create a
-new product, this list will initially be empty, and you will have to
-start using the "<strong><em>Insert</em></strong>" button to start adding
-requirements.</p>
-<p>Requirements come in two main flavors: summary items shown in
-<strong>bold-type</strong>, and detail items shown in normal-type with a hyperlink.
-When you indent a requirement under an existing requirement, the parent
-is changed from a detail-item to a summary-item, and when you outdent a
-child item, its parent will return to a detail-item (assuming it has no
-other children). This behavior is important to understand, as only
-detail items are assigned a status themselves; the summary items simply
-display an aggregate of the worst-case assessment of their children's
-status. Both summary and detail items can be mapped against test-cases
-for test-coverage, in addition the summary items display an aggregate
-coverage status.</p>
-<p>Each requirement is displayed along with its importance/priority (ranked
-from "Critical" to "Low"), its completion status (from "Requested" to
-"Completed"), the version of the software that the requirement is
-planned for, and graphical indicators that represents its test coverage
-status and its task progress.</p>
-<p>For those requirements that have no test-cases covering them (i.e.
-validating that the requirement works as expected) the indicator
-consists of a white solid bar, bearing the legend "Not Covered". For
-those requirements that have <em>at least one</em> test-case mapped against
-them, they will display a block graph that illustrates the last
-execution status of each of the mapped test-cases. Thus if the
-requirement is covered by two test cases, one of which passed, and one
-of which wasn't run, the graph will display a green bar (50% passed) and
-an equal length gray bar (50% not run). To determine the exact
-requirements coverage information, position the mouse pointer over the
-bar-chart, and the number of covering tests, along with the pass / fail
-/ blocked / caution / not-run breakdown will be displayed as a
-"tooltip".</p>
-<p>For those requirements that have at least one task associated with them,
-they will display a block graph that illustrates the relative numbers of
-task that are on-schedule (green), late-starting (yellow),
-late-finishing (red) or just not-started (grey). These values are
-weighted by the effort of the task, so that larger, more complex tasks
-will be change the graph more than the smaller tasks. To determine the
-exact task progress information, position the mouse pointer over the
-bar-chart and the number of associated tasks, along with the details of
-how many are in each status will be displayed as a "tooltip".</p>
+<p>The requirements list consists of a hierarchical arrangement of the various requirements and functionalities that need to be provided by the system in question. The structure is very similar to the Work Breakdown Structure (WBS) developed in Microsoft Product®, and users of that software package will find this very familiar to use. When you create a new product, this list will initially be empty, and you will have to start using the "<strong><em>Insert</em></strong>" button to start adding requirements.</p>
+<p>Requirements come in two main flavors: summary items shown in <strong>bold-type</strong>, and detail items shown in normal-type with a hyperlink. When you indent a requirement under an existing requirement, the parent is changed from a detail-item to a summary-item, and when you outdent a child item, its parent will return to a detail-item (assuming it has no other children). This behavior is important to understand, as only detail items are assigned a status themselves; the summary items simply display an aggregate of the worst-case assessment of their children's status. Both summary and detail items can be mapped against test-cases for test-coverage, in addition the summary items display an aggregate coverage status.</p>
+<p>Each requirement is displayed along with its importance/priority (ranked from "Critical" to "Low"), its completion status (from "Requested" to "Completed"), the version of the software that the requirement is planned for, and graphical indicators that represents its test coverage status and its task progress.</p>
+<p>For those requirements that have no test-cases covering them (i.e. validating that the requirement works as expected) the indicator consists of a white solid bar, bearing the legend "Not Covered". For those requirements that have <em>at least one</em> test-case mapped against them, they will display a block graph that illustrates the last execution status of each of the mapped test-cases. Thus if the requirement is covered by two test cases, one of which passed, and one of which wasn't run, the graph will display a green bar (50% passed) and an equal length gray bar (50% not run). To determine the exact requirements coverage information, position the mouse pointer over the bar-chart, and the number of covering tests, along with the pass / fail / blocked / caution / not-run breakdown will be displayed as a "tooltip".</p>
+<p>For those requirements that have at least one task associated with them, they will display a block graph that illustrates the relative numbers of task that are on-schedule (green), late-starting (yellow), late-finishing (red) or just not-started (grey). These values are weighted by the effort of the task, so that larger, more complex tasks will be change the graph more than the smaller tasks. To determine the exact task progress information, position the mouse pointer over the bar-chart and the number of associated tasks, along with the details of how many are in each status will be displayed as a "tooltip".</p>
 <h3 id="insert">Insert</h3>
-<p>Clicking on the &lt;Insert> icon inserts a requirement <em>above</em> the
-currently selected requirement -- i.e. the one whose check-box has been
-selected, at the same level in the hierarchy. If you want to insert a
-requirement below an existing item, you can use the Insert > Child
-Requirement option instead. If you insert a requirement without first
-selecting an existing requirement from the list, the new requirement
-will simply be added at the end of the list. Note that if the full list
-of requirements are paginated, the new requirement will be at the bottom
-of the last page.</p>
-<p>Once the new requirement has been inserted, the item is switched to
-"Edit" mode so that you can rename the default name and choose a
-priority, status and/or author.</p>
+<p>Clicking on the &lt;Insert> icon inserts a requirement <em>above</em> the currently selected requirement -- i.e. the one whose check-box has been selected, at the same level in the hierarchy. If you want to insert a requirement below an existing item, you can use the Insert > Child Requirement option instead. If you insert a requirement without first selecting an existing requirement from the list, the new requirement will simply be added at the end of the list. Note that if the full list of requirements are paginated, the new requirement will be at the bottom of the last page.</p>
+<p>Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.</p>
 <h3 id="delete">Delete</h3>
-<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the
-requirements whose check-boxes have been selected. If any of the items
-are summary items, the child requirements are also deleted. If all the
-children are deleted from a summary item, it changes back into a
-non-summary item.</p>
+<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the requirements whose check-boxes have been selected. If any of the items are summary items, the child requirements are also deleted. If all the children are deleted from a summary item, it changes back into a non-summary item.</p>
 <h3 id="indent">Indent</h3>
-<p>Clicking on the "<strong><em>Indent</em></strong>" button indents all the
-requirements whose check-boxes have been selected. If any of the items
-are made children of a requirement that had no previous children, it
-will be changed from a detail item into a summary item.</p>
+<p>Clicking on the "<strong><em>Indent</em></strong>" button indents all the requirements whose check-boxes have been selected. If any of the items are made children of a requirement that had no previous children, it will be changed from a detail item into a summary item.</p>
 <h3 id="outdent">Outdent</h3>
-<p>Clicking on the "<strong><em>Outdent</em></strong>" button de-indents all the
-requirements whose check-boxes have been selected. If any of the items
-were the only children of a summary requirement item, then that item
-will be changed back from a summary item to a detail item.</p>
+<p>Clicking on the "<strong><em>Outdent</em></strong>" button de-indents all the requirements whose check-boxes have been selected. If any of the items were the only children of a summary requirement item, then that item will be changed back from a summary item to a detail item.</p>
 <h3 id="refresh">Refresh</h3>
-<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the
-requirements list (not the entire page). This is useful as other people
-may be modifying the list of requirements at the same time as you, and
-after stepping away from the computer for a short-time, you should click
-this button to make sure you are viewing the most current requirements
-list for the product.</p>
+<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the requirements list (not the entire page). This is useful as other people may be modifying the list of requirements at the same time as you, and after stepping away from the computer for a short-time, you should click this button to make sure you are viewing the most current requirements list for the product.</p>
 <h3 id="edit">Edit</h3>
-<p>Each requirement in the list has an "<strong>Edit</strong>" button display in its
-right-most column. When you click this button or just <em>double-click</em> on
-any of the cells in the row, you change the item from "View" mode to
-"Edit" mode. The various columns are made editable, and
-"<strong><em>Update</em></strong>" buttons are
-displayed in the last column:</p>
+<p>Each requirement in the list has an "<strong>Edit</strong>" button display in its right-most column. When you click this button or just <em>double-click</em> on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "<strong><em>Update</em></strong>" buttons are displayed in the last column:</p>
 <p><img alt="" src="../img/Requirements_Management_84.png" /></p>
-<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the
-"<strong><em>Update</em></strong>" buttons
-are only displayed on the first row selected. You can make changes to
-all the editable rows and then update the changes by clicking the one
-"<strong><em>Update</em></strong>" button. Also, if you want to make the same
-change to multiple rows (e.g. to change five requirements from "In
-Progress" status to "Completed"), you can click on the "fill" icon to
-the right of the editable item, which will propagate the new value to
-all editable items in the same column.</p>
+<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Update</em></strong>" buttons are only displayed on the first row selected. You can make changes to all the editable rows and then update the changes by clicking the one "<strong><em>Update</em></strong>" button. Also, if you want to make the same change to multiple rows (e.g. to change five requirements from "In Progress" status to "Completed"), you can click on the "fill" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.</p>
 <p><img alt="" src="../img/Requirements_Management_85.png" /></p>
-<p>If you want to edit lots of items, first select their checkboxes and
-then click the [Edit] button on the same row as the Filters and it
-will switch all the selected items into edit mode.</p>
-<p>When you have made your updates, you can either click
-"<strong><em>Save</em></strong>" to commit the changes, or
-"<strong><em>Cancel</em></strong>" to revert back to the original information.
-Alternatively, pressing the &lt;ENTER> key will commit the changes and
-pressing the &lt;ESCAPE> key will cancel the changes.</p>
+<p>If you want to edit lots of items, first select their checkboxes and then click the [Edit] button on the same row as the Filters and it will switch all the selected items into edit mode.</p>
+<p>When you have made your updates, you can either click "<strong><em>Save</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
 <h3 id="show-level">Show Level</h3>
-<p>Choosing an indent level from the 'Show Level' drop down box allows you
-to quickly and easily view the entire requirements list at a specific
-indent level. For example you may want to see all requirements
-drilled-down to the <em>third</em> level of detail. To do this you would simply
-choose 'Level 3' from the list, and the requirements will be expanded /
-collapsed accordingly.</p>
+<p>Choosing an indent level from the 'Show Level' drop down box allows you to quickly and easily view the entire requirements list at a specific indent level. For example you may want to see all requirements drilled-down to the <em>third</em> level of detail. To do this you would simply choose 'Level 3' from the list, and the requirements will be expanded / collapsed accordingly.</p>
 <h3 id="filtering">Filtering</h3>
-<p>You can easily filter the list of requirements as illustrated in the
-screen-shot below:</p>
+<p>You can easily filter the list of requirements as illustrated in the screen-shot below:</p>
 <p><img alt="" src="../img/Requirements_Management_86.png" /></p>
-<p>To filter the list by any of the displayed columns, you either choose an
-item from the appropriate drop-down list or enter a free-text phrase
-(depending on the type of field) then click the &lt;Filter> icon or press
-the &lt;ENTER> key to apply the different filters. Note that the name
-field is searched using a "LIKE" comparison, so that searching for
-"database" would include any item with the word database in the name.
-The other freetext fields need to be exact matches (e.g. dates,
-requirement numbers). In the screen-shot above, we are filtering on
-Status = Requested.</p>
-<p>In addition, if you have a set of filters that you plan on using on a
-regular basis, you can choose the option Filter > Save Filter to add
-the current filter to the list of saved filters that appear on your 'My
-Page'. If you would like to share the filter with other members of the
-product, choose the "Share with other members of the product" option.
-The list of saved filters can also be retrieved by clicking Filter >
-Retrieve Filter:</p>
+<p>To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click the &lt;Filter> icon or press the &lt;ENTER> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, requirement numbers). In the screen-shot above, we are filtering on Status = Requested.</p>
+<p>In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter > Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. If you would like to share the filter with other members of the product, choose the "Share with other members of the product" option. The list of saved filters can also be retrieved by clicking Filter > Retrieve Filter:</p>
 <p><img alt="" src="../img/Requirements_Management_87.png" /></p>
-<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong>
-that can be applied in a single-click:</p>
+<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong> that can be applied in a single-click:</p>
 <ul>
 <li>
-<p><strong>The topmost section</strong> -- This displays any saved requirement
-filters created by the current user alongside any 'shared' filters.
-The latter are marked with an icon showing a group of people.</p>
+<p><strong>The topmost section</strong> -- This displays any saved requirement filters created by the current user alongside any 'shared' filters. The latter are marked with an icon showing a group of people.</p>
 </li>
 <li>
-<p><strong>Components</strong> -- This section lists the components defined for the
-current product. Clicking on any of the components in the list will
-filter the requirements to only show those that belong to the
-selected component.</p>
+<p><strong>Components</strong> -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the requirements to only show those that belong to the selected component.</p>
 </li>
 <li>
-<p><strong>Releases</strong> -- This section lists the releases and sprints defined
-for the current product. Clicking on any of the releases or sprints
-in the list will filter the requirements by that release/sprint.</p>
+<p><strong>Releases</strong> -- This section lists the releases and sprints defined for the current product. Clicking on any of the releases or sprints in the list will filter the requirements by that release/sprint.</p>
 </li>
 </ul>
 <h3 id="show-hide-columns">Show / Hide Columns</h3>
-<p>This drop-down list allows you to change the fields that are displayed
-in the requirement list as columns for the current product. To show a
-column that is not already displayed, simply select that column from the
-list of "Show..." column names and to hide an existing column, simply
-select that column from the list of "Hide..." column names. This is
-stored on a per-product basis, so you can have different display
-settings for each product that you are a member of. The fields can be
-any of the built-in fields or any of the custom properties set up by the
-product owner.</p>
+<p>This drop-down list allows you to change the fields that are displayed in the requirement list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
 <h3 id="copying-requirements">Copying Requirements</h3>
-<p>To copy a requirement or set of requirements, simply select the
-check-boxes of the requirements you want to copy and then select the
-Edit > Copy Items menu option. This will copy the current requirements
-selection to the clipboard. Then you should select the place where you
-want the requirements to be inserted and choose the Edit > Paste Items
-option.</p>
-<p>The requirements will now be copied into the destination location you
-specified. The name of the copied requirements will be prefixed with
-"Copy of..." to distinguish them from the originals. Note that copied
-requirements will also include the test coverage information from the
-originals.</p>
+<p>To copy a requirement or set of requirements, simply select the check-boxes of the requirements you want to copy and then select the Edit > Copy Items menu option. This will copy the current requirements selection to the clipboard. Then you should select the place where you want the requirements to be inserted and choose the Edit > Paste Items option.</p>
+<p>The requirements will now be copied into the destination location you specified. The name of the copied requirements will be prefixed with "Copy of..." to distinguish them from the originals. Note that copied requirements will also include the test coverage information from the originals.</p>
 <h3 id="moving-requirements">Moving Requirements</h3>
-<p>To move a requirement in the requirements hierarchy, there are two
-options:</p>
+<p>To move a requirement in the requirements hierarchy, there are two options:</p>
 <ol>
-<li>Click on the requirement you want to move and then drag it to the
-location you want it moved. An empty space will appear to show you
-where it will be inserted:</li>
+<li>Click on the requirement you want to move and then drag it to the location you want it moved. An empty space will appear to show you where it will be inserted:</li>
 </ol>
 <p><img alt="" src="../img/Requirements_Management_88.png" /></p>
-<p>Once you have the requirement positioned at the correct place that you
-want it inserted, just release the mouse button. To move multiple items
-simply select their checkboxes and then drag-and-drop one of the
-selected items.</p>
+<p>Once you have the requirement positioned at the correct place that you want it inserted, just release the mouse button. To move multiple items simply select their checkboxes and then drag-and-drop one of the selected items.</p>
 <ol>
-<li>Alternatively, you can select the check-boxes of the requirements
-you want to move and then select the Edit > Cut menu option. This
-will cut the current requirements selection to the clipboard. Then
-you should select the place where you want the requirements to be
-inserted and choose the Edit > Paste option. The requirements will
-now be moved into the destination location you specified.</li>
+<li>Alternatively, you can select the check-boxes of the requirements you want to move and then select the Edit > Cut menu option. This will cut the current requirements selection to the clipboard. Then you should select the place where you want the requirements to be inserted and choose the Edit > Paste option. The requirements will now be moved into the destination location you specified.</li>
 </ol>
 <h3 id="exporting-requirements">Exporting Requirements</h3>
-<p>To export a requirement or set of requirements from the current product
-to another product in the system, all you need to do is select the
-check-boxes of the requirement(s) you want to export and then click the
-Tools > <strong><em>Export To Product</em></strong> button. This will then
-bring up a list of possible destination products:</p>
+<p>To export a requirement or set of requirements from the current product to another product in the system, all you need to do is select the check-boxes of the requirement(s) you want to export and then click the Tools > <strong><em>Export To Product</em></strong> button. This will then bring up a list of possible destination products:</p>
 <p><img alt="" src="../img/Requirements_Management_89.png" /></p>
-<p>Once you have chosen the destination product and clicked the
-"<strong><em>Export</em></strong>" button, the requirements will be exported
-from the current product to the destination product. Any file
-attachments will also be copied to the destination product along with
-the requirements.</p>
+<p>Once you have chosen the destination product and clicked the "<strong><em>Export</em></strong>" button, the requirements will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the requirements.</p>
 <h3 id="creating-test-cases-from-requirements">Creating Test Cases from Requirements</h3>
-<p>To quickly create test cases from a group of requirements, all you need
-to do is select the check-boxes of the appropriate requirements and then
-click Tools > <strong><em>Create Test Cases</em></strong>. This will then
-create new test cases based on the selected requirements.</p>
+<p>To quickly create test cases from a group of requirements, all you need to do is select the check-boxes of the appropriate requirements and then click Tools > <strong><em>Create Test Cases</em></strong>. This will then create new test cases based on the selected requirements.</p>
 <h3 id="creating-a-test-set-from-requirements">Creating a Test Set from Requirements</h3>
-<p>To quickly create a new test set from a group of requirements, all you
-need to do is select the check-boxes of the appropriate requirements and
-then click Tools > <strong><em>Create Test Set</em></strong>. This will then
-create new test set containing the test cases that are already mapped to
-the selected requirement(s).</p>
+<p>To quickly create a new test set from a group of requirements, all you need to do is select the check-boxes of the appropriate requirements and then click Tools > <strong><em>Create Test Set</em></strong>. This will then create new test set containing the test cases that are already mapped to the selected requirement(s).</p>
 <h3 id="printing-items">Printing Items</h3>
-<p>To quickly print a single requirement or list of requirements you can
-select the items' checkboxes and then click Tools > <strong><em>Print
-Items</em></strong>. This will open a new window containing a
-printable version of the selected items.</p>
+<p>To quickly print a single requirement or list of requirements you can select the items' checkboxes and then click Tools > <strong><em>Print Items</em></strong>. This will open a new window containing a printable version of the selected items.</p>
 <h3 id="focus-on-branch">Focus-On Branch</h3>
-<p>Sometimes you will a list of filtered requirements displayed and you
-would like to view all of the items that in the same branch of the
-requirements tree, even those that don't match the current filter. To
-view the branch, select the checkbox of the branch and then click Tools
-> <strong><em>Focus on</em></strong>, and the system will clear the current
-filters and then expand just the selected branch.</p>
+<p>Sometimes you will a list of filtered requirements displayed and you would like to view all of the items that in the same branch of the requirements tree, even those that don't match the current filter. To view the branch, select the checkbox of the branch and then click Tools > <strong><em>Focus on</em></strong>, and the system will clear the current filters and then expand just the selected branch.</p>
 <h3 id="right-click-context-menu">Right-Click Context Menu</h3>
-<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for
-accessing some of the most commonly used functions, so that you don't
-need to move your mouse up to the toolbar each time. To access the
-context menu, right-click on any of the rows in the requirements list
-and the following menu will be displayed:</p>
+<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the requirements list and the following menu will be displayed:</p>
 <p><img alt="" src="../img/Requirements_Management_90.png" /></p>
-<p>You can now choose any of these options as an alternative to using the
-icons in the toolbar.</p>
+<p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
 <h3 id="viewing-requirements-from-shared-products">Viewing Requirements from Shared Products</h3>
-<p>If you are displaying the requirements list for a product has required
-shared from other products, you will see the option on the top-right to
-view the requirements from the shared product(s):</p>
+<p>If you are displaying the requirements list for a product has required shared from other products, you will see the option on the top-right to view the requirements from the shared product(s):</p>
 <p><img alt="" src="../img/Requirements_Management_91.png" /></p>
-<p>If you choose the option to show the requirement from 'All Products' and
-not just the current product, the shared products are displayed, grouped
-under the name of the product they are being shared from:</p>
+<p>If you choose the option to show the requirement from 'All Products' and not just the current product, the shared products are displayed, grouped under the name of the product they are being shared from:</p>
 <p><img alt="" src="../img/Requirements_Management_92.png" /></p>
-<p>Note: Any requirements shared from other products will be read-only and
-won't display any of their custom properties. However you can
-expand/collapse these shared requirements and filter using the standard
-fields.</p>
+<p>Note: Any requirements shared from other products will be read-only and won't display any of their custom properties. However you can expand/collapse these shared requirements and filter using the standard fields.</p>
+<h2 id="requirements-additional-list-views">Requirements Additional List Views</h2>
+<p>In SpiraTeam and SpiraPlan, there are four additional requirement list views. They are designed to better serve the needs of the Business Analyst community who often need different views of requirements than the project teams and project managers. These views are:</p>
+<ol>
+<li>Sorted List</li>
+<li>Agile Board</li>
+<li>Documents View (beta)</li>
+<li>Mindmap (beta)</li>
+</ol>
+<p>You can pick between each of these views using the view selection button group at the top right of any requirement list page. </p>
+<p><img alt="" src="../img/requirements-list-selector.png" /></p>
+<p>Note: you can only view requirements from the current product in these four additional views, whether or not you are sharing requirements from other products with this product.</p>
+<h2 id="requirements-sorted-list">Requirements Sorted List</h2>
+<p><img alt="" src="../img/requirements-sorted-list.png" /></p>
+<p>This view lets you view the requirements in a flat, sortable list that does not show the requirements hierarchy. You can still see the hierarchy of an item by hovering the mouse over its name to display the tooltip.</p>
+<p>This view lets you sort on any of the fields and also filter by the type of requirement, including whether it is an Epic (package) or not.</p>
+<p>One major benefit of this view is that when you filter by a field, you only get the items that are a direct match, unlike in the hierarchical grid view, where you also get its parents displayed. It can be useful when displaying a list of just the Epics and nothing else.</p>
+<h3 id="toolbar">Toolbar</h3>
+<ul>
+<li><strong>Add</strong>: Click this to add a new requirement. It will appear in this view based on the sorting used. In the main requirement hierarchy, it will be be added at the bottom of the requirement list, at the root level (ie fully outdented). Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.</li>
+<li><strong>Delete</strong>: Clicking this button deletes all the requirements selected. If any are summary items, their child requirements are also deleted. If all the children are deleted from a summary item, it changes back into a non-summary item.</li>
+<li><strong>Refresh</strong>: Clicking this button reloads the requirements list (not the entire page).</li>
+<li><strong>Edit</strong>: this works the same way as on the requirements hierarchy list - see <a href="#edit">above</a>.</li>
+<li><strong>Filter</strong>: this works the same way as on the requirements hierarchy list - see <a href="#filtering">above</a>.</li>
+<li><strong>Show / Hide Columns</strong>: this works the same way as on the requirements hierarchy list - see <a href="#show-hide-columns">above</a></li>
+<li><strong>Clone</strong>: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.</li>
+<li><strong>Tools</strong>: this dropdown allows to <a href="#exporting-requirements">export requirements</a>, <a href="create-a-test-cases-from-requirements">create test cases</a> or <a href="create-a-test-set-from-requirements">create test sets</a> from requirements, or to <a href="#printing-items">print items</a>.</li>
+</ul>
+<h3 id="right-click-context-menu_1">Right-Click Context Menu</h3>
+<p>To access the context menu, right-click on any of the rows in the requirements sorted list and the following menu will be displayed:</p>
+<p><img alt="" src="../img/requirements-sorted-list-context-menu.png" /></p>
+<p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
+<h2 id="requirements-agile-board">Requirements Agile Board</h2>
+<p>This view is similar to the existing <a href="../Planning-Board/">Planning Board</a> but only displays requirements, whereas the primary planning board will also include incidents / defects. This gives the requirements page consistency with the tasks and incidents pages that already have a Grid / Board view selector option.</p>
+<h2 id="requirements-document-view">Requirements Document View</h2>
+<p>This view also offers a hierarchical organization of the first 5000 requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. The new view has a sidebar that lets you quickly jump to a section in the requirements document as well as simply scroll through all of the items.</p>
+<p>The document is paginated, showing up to 250 requirements on each page.</p>
+<p>For each requirement, the following information is displayed:</p>
+<ul>
+<li>icon</li>
+<li>name</li>
+<li>ID</li>
+<li>status</li>
+<li>type</li>
+<li>importance</li>
+<li>owner</li>
+<li>description</li>
+<li><a href="#use-case-diagram">use case diagram</a> (if the requirement has steps)</li>
+</ul>
+<p><img alt="" src="../img/requirements-documents-view.png" /></p>
+<h2 id="requirements-mindmap">Requirements Mindmap</h2>
+<p>This mindmap displays the first 5,000 requirements in a product as a connected tree view / mindmap. The root node shows the name of the product on the left hand side. The top most level nodes are connected to the left of this, with their successive children shown from left to right. </p>
+<p><img alt="" src="../img/requirements-mind-map.png" /></p>
+<p>For each requirement the map displays the  name and ID of the requirement, with a tooltip that shows the description and any comments. Each node is color coded by its priority / importance value.</p>
+<p>Clicking on the node will take you to the details page for that requirement.</p>
+<p>As well as showing the primary hierarchy, there is an option to turn on the display of requirement associations. This will let you see all of the associations as dotted lines. For associations that denote dependencies there is an arrow and dotted line that shows the direction of the dependency. For simple relationship  (relates to) associations, there is a dotted line without an arrow. The system will display either the comment or type of association, depending what was entered when the association was created.</p>
+<p><img alt="" src="../img/requirements-mind-map-associations.png" /></p>
+<p>There are several other display options:</p>
+<ul>
+<li><strong>refresh</strong>: to redraw the mindmap</li>
+<li><strong>levels dropdown</strong>: lets you select how deep into the mindmap you wish to view. To only show the topmost level requirements, select level 1; to select the top two levels, select level 2, or view everything by selecting "all levels"</li>
+<li><strong>zoom</strong>: you can change the zoom between 25% and 100% using the plus and minus buttons. To reset the zoom, click the magnifying glass</li>
+</ul>
+<p>Note: this view is unfortunately not compatible with Internet Explorer 11.</p>
 <h2 id="requirement-details">Requirement Details</h2>
-<p>When you click on a requirement item in the requirements list described
-in <a href="../Requirements-Management/#requirements-list">Requirements Management &gt; Requirements List</a>, you are taken to the requirement details page
-illustrated below:</p>
+<p>When you click on a requirement item in the requirements list described in <a href="../Requirements-Management/#requirements-list">Requirements Management &gt; Requirements List</a>, you are taken to the requirement details page illustrated below:</p>
 <p><img alt="" src="../img/Requirements_Management_93.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
 <ol>
@@ -1020,31 +915,15 @@ illustrated below:</p>
 <p>the left pane displays the requirements list navigation;</p>
 </li>
 <li>
-<p>the right pane's header, which displays: the operations toolbar; the
-editable name of the selected requirement; and the info bar (with a
-shaded background), which also contains the workflow status
-transitions (see below); and</p>
+<p>the right pane's header, which displays: the operations toolbar; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
 </li>
 <li>
-<p>the right pane's tabbed interface with rich information related to
-the requirement.</p>
+<p>the right pane's tabbed interface with rich information related to the requirement.</p>
 </li>
 </ol>
-<p>Please note that on smaller screen sizes the navigation pane is not
-displayed. While the navigation pane has a link to take you back to the
-requirements list, on mobile devices a 'back' button is shown on the
-left of the operations toolbar.</p>
-<p>The navigation pane can be collapsed by clicking on the "-" button, or
-expanded by clicking anywhere on the gray title area. On desktops the
-user can also control the exact width of the navigation pane by dragging
-and dropping a red handle that appears on hovering at the rightmost edge
-of the navigation pane.</p>
-<p>The navigation pane shows a list of the peer requirements to the one
-selected. This list is useful as a navigation shortcut; you can quickly
-view the coverage information of all the peer requirements by clicking
-on the navigation links without having to first return to the
-requirements list page. The navigation list can be switched between
-three different modes:</p>
+<p>Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the requirements list, on mobile devices a 'back' button is shown on the left of the operations toolbar.</p>
+<p>The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.</p>
+<p>The navigation pane shows a list of the peer requirements to the one selected. This list is useful as a navigation shortcut; you can quickly view the coverage information of all the peer requirements by clicking on the navigation links without having to first return to the requirements list page. The navigation list can be switched between three different modes:</p>
 <ul>
 <li>
 <p>The list of requirements matching the current filter</p>
@@ -1056,334 +935,93 @@ three different modes:</p>
 <p>The list of requirements assigned to the current user</p>
 </li>
 </ul>
-<p>On the main right hand side of the page, which of the fields for the
-currently selected requirement are available and which are required will
-depend on your stage in the requirement workflow. For example, a
-requested requirement might not require a "Release" whereas a planned
-requirement could well do. The types of change allowed and the fields
-that are enabled/visible/required will depend on how your product
-administrator has set up the system for you. Administrators should refer
-to the <em>SpiraPlan Administration Guide</em> for details on configuring the
-requirement workflows to better meet their needs.</p>
-<p>Depending on the user's role and whether they are listed as the owner or
-author of the requirement, displayed in the info bar beneath the
-requirement name is the current workflow status and an "operations"
-button which, when clicked, will show a set of allowed workflow
-operations:</p>
+<p>On the main right hand side of the page, which of the fields for the currently selected requirement are available and which are required will depend on your stage in the requirement workflow. For example, a requested requirement might not require a "Release" whereas a planned requirement could well do. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the system for you. Administrators should refer to the <em>SpiraPlan Administration Guide</em> for details on configuring the requirement workflows to better meet their needs.</p>
+<p>Depending on the user's role and whether they are listed as the owner or author of the requirement, displayed in the info bar beneath the requirement name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations:</p>
 <p><img alt="" src="../img/Requirements_Management_94.png" /></p>
-<p>These workflow transitions allow the user to move the requirement from
-one status to another. For example when the requirement is in the
-Developed status, you will be given the options to:</p>
+<p>These workflow transitions allow the user to move the requirement from one status to another. For example when the requirement is in the Developed status, you will be given the options to:</p>
 <p><strong>Continue Development</strong> -- changes status to "In-Progress"</p>
 <p><strong>Mark as Completed</strong> -- changes the status to "Completed"</p>
 <p><strong>Mark as Tested</strong>- changes the status to "Tested"</p>
-<p>After changing the status of the requirement by clicking on the workflow
-link, you can then fill in the additional fields that are now enabled
-and/or required. Once you've made the changes to the appropriate
-requirement fields, you can either click "<strong><em>Save</em></strong>",
-"<strong><em>Save and Close</em></strong>", or "<strong><em>Save and
-New</em></strong>" to commit the changes or
-"<strong><em>Refresh</em></strong>" to discard the changes and reload the
-requirement from the database. In addition you can print the current
-requirement by clicking "<strong><em>Print</em></strong>", which will display
-a printable version of the page in a separate window.</p>
-<p>Please note that if digital signatures have been enabled for a
-particular workflow operation (and therefore a digital signature is
-required to confirm the status change. Workflow operations requiring a
-digital signature are marked with a padlock icon:</p>
+<p>After changing the status of the requirement by clicking on the workflow link, you can then fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate requirement fields, you can either click "<strong><em>Save</em></strong>", "<strong><em>Save and Close</em></strong>", or "<strong><em>Save and New</em></strong>" to commit the changes or "<strong><em>Refresh</em></strong>" to discard the changes and reload the requirement from the database. In addition you can print the current requirement by clicking "<strong><em>Print</em></strong>", which will display a printable version of the page in a separate window.</p>
+<p>Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:</p>
 <p><img alt="" src="../img/Requirements_Management_95.png" /></p>
-<p>On attempting to save changes made after clicking a workflow operation
-that requires a digital signature you will be presented with the
-following popup:</p>
+<p>On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with the following popup:</p>
 <p><img alt="" src="../img/Requirements_Management_96.png" /></p>
-<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can
-send an email containing details of the requirement to an email address
-or another user on the system:</p>
+<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can send an email containing details of the requirement to an email address or another user on the system:</p>
 <p><img alt="" src="../img/Requirements_Management_97.png" /></p>
-<p>You can specify the subject line for the email, and either a list of
-email addresses, separated by semicolons, or an existing product user
-.The content of the email is specified in the System Administration --
-Notification Templates.</p>
-<p>To be notified of any changes made to the current artifact via email,
-click the "<strong><em>Subscribe</em></strong>" button. If you already
-subscribed, the button will instead let you
-"<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that
-particular artifact. Depending on your role, you may also see a dropdown
-arrow to the right of this button. This will let you subscribe others in
-the product to this artifact.</p>
-<p>The bottom part of the right pane can be switched between six views:
-"Overview", "Test Coverage", "Tasks", "Attachments", "History" and
-"Associations", each of which will be described in more detail below.</p>
+<p>You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration -- Notification Templates.</p>
+<p>To be notified of any changes made to the current artifact via email, click the "<strong><em>Subscribe</em></strong>" button. If you already subscribed, the button will instead let you "<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.</p>
+<p>The bottom part of the right pane can be switched between six views: "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.</p>
 <h3 id="overview-details">Overview - Details</h3>
-<p>The Overview tab is divided into a number of different sections. Each of
-these can be collapsed or expanded by clicking on the title of that
-section. It displays the description, fields and comments associated
-with the requirement.</p>
-<p>The top part of this tab displays the various standard fields and custom
-properties associated with the requirement. Fields (both standard and
-custom) are grouped under the collapsible headings (marked by orange
-text and underline) in the screenshot below. For instance, all fields
-regarding dates are grouped together in the "Dates and Times" area.</p>
+<p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
+<p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Requirements_Management_98.png" /></p>
 <h3 id="followers">Followers</h3>
-<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can
-quickly follow the item, and receive updates on certain changes to it.
-Depending on your role, you may also see a dropdown to this button,
-which let's you add another product member as a follower to this item.</p>
+<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.</p>
 <p><img alt="" src="../img/Requirements_Management_99.png" /></p>
 <p><img alt="" src="../img/Requirements_Management_100.png" /></p>
-<p>You can also quickly see who is following an incident under the "People"
-section in the Overview tab.</p>
+<p>You can also quickly see who is following an incident under the "People" section in the Overview tab.</p>
 <p><img alt="" src="../img/Requirements_Management_101.png" /></p>
-<p>To view information about the follower, or to unfollow them from the
-item, hover over their avatar to display a user profile card.</p>
+<p>To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.</p>
 <p><img alt="" src="../img/Requirements_Management_102.png" /></p>
 <h3 id="overview-detailed-information">Overview -- Detailed Information</h3>
-<p>The Detailed Information section contains the long, formatted
-description of the requirement, as well as any rich text custom fields.
-You can enter rich text or paste in from a word processing program or
-web page into these fields. Clicking on the shaded areas of one of these
-detailed fields will display the rich text toolbar.</p>
+<p>The Detailed Information section contains the long, formatted description of the requirement, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Requirements_Management_103.png" /></p>
 <h3 id="overview-comments">Overview - Comments</h3>
-<p>The Comments section allows you to add and view discussions relating to
-the requirement:</p>
+<p>The Comments section allows you to add and view discussions relating to the requirement:</p>
 <p><img alt="" src="../img/Requirements_Management_104.png" /></p>
-<p>Existing comments are displayed in order underneath the textbox in date
-order (either newest first or oldest first). To add a new comment, enter
-it into the textbox, and click the "<strong><em>Add Comment</em></strong>"
-button.</p>
+<p>Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "<strong><em>Add Comment</em></strong>" button.</p>
 <h3 id="overview-scenario">Overview -- Scenario</h3>
-<p>If you are editing a 'Use Case' type of requirement, there will be a
-special 'Scenario' section where you can enter in the scenario steps
-that define the use case:</p>
+<p>If you are editing a 'Use Case' type of requirement, there will be a special 'Scenario' section where you can enter in the scenario steps that define the use case:</p>
 <p><img alt="" src="../img/Requirements_Management_105.png" /></p>
-<p>This section displays the various steps that a user would perform when
-carrying out the defined use case. The list of use case steps displays
-the position number, and the description. If a test case is created from
-this use-case, the steps will be used to create the test steps.</p>
-<p>Clicking on the "<strong><em>Insert Step</em></strong>" button inserts a new
-step <em>before</em> the currently selected (by means of the check-box) step.
-Clicking the "<strong><em>Insert Step</em></strong>" button without selecting
-an existing step will insert a new step at the end of the list. When a
-new step is inserted, the fields are displayed in "Edit" mode, so the
-description, field is editable, allowing you to enter the data:</p>
+<p>This section displays the various steps that a user would perform when carrying out the defined use case. The list of use case steps displays the position number, and the description. If a test case is created from this use-case, the steps will be used to create the test steps.</p>
+<p>Clicking on the "<strong><em>Insert Step</em></strong>" button inserts a new step <em>before</em> the currently selected (by means of the check-box) step. Clicking the "<strong><em>Insert Step</em></strong>" button without selecting an existing step will insert a new step at the end of the list. When a new step is inserted, the fields are displayed in "Edit" mode, so the description, field is editable, allowing you to enter the data:</p>
 <p><img alt="" src="../img/Requirements_Management_106.png" /></p>
-<p>To move the steps in the list, click on the step you want to move and
-drag it to the location you want it moved.</p>
+<p>To move the steps in the list, click on the step you want to move and drag it to the location you want it moved.</p>
 <h3 id="test-coverage">Test Coverage</h3>
-<p>This tab shows the test coverage information for the requirement in
-question:</p>
+<p>This tab shows the test coverage information for the requirement in question:</p>
 <p><img alt="" src="../img/Requirements_Management_107.png" /></p>
-<p>The tab displays a grid containing the test cases already mapped to this
-requirement. You can filter that list by the test case type, name,
-status, execution status, execution date, priority, product name and ID.
-You can remove an existing test case by selecting its check box and
-clicking the 'Delete' button. This doesn't delete the test case, just
-removes it from the requirement.</p>
-<p>Hovering the mouse over the names of the test cases will display a
-"tooltip" consisting of the test case name, place in the folder
-structure and a detailed description.</p>
-<p>To add a new test case to the requirement, simply click on the 'Add'
-button:</p>
+<p>The tab displays a grid containing the test cases already mapped to this requirement. You can filter that list by the test case type, name, status, execution status, execution date, priority, product name and ID. You can remove an existing test case by selecting its check box and clicking the 'Delete' button. This doesn't delete the test case, just removes it from the requirement.</p>
+<p>Hovering the mouse over the names of the test cases will display a "tooltip" consisting of the test case name, place in the folder structure and a detailed description.</p>
+<p>To add a new test case to the requirement, simply click on the 'Add' button:</p>
 <p><img alt="" src="../img/Requirements_Management_108.png" /></p>
-<p>You can search for a test case by its ID if you know it (make sure to
-include the "TC" prefix):</p>
+<p>You can search for a test case by its ID if you know it (make sure to include the "TC" prefix):</p>
 <p><img alt="" src="../img/Requirements_Management_109.png" /></p>
-<p>Otherwise, you can search for the test cases by choosing a folder from
-the dropdown and/or entering a partial name match:</p>
+<p>Otherwise, you can search for the test cases by choosing a folder from the dropdown and/or entering a partial name match:</p>
 <p><img alt="" src="../img/Requirements_Management_110.png" /></p>
-<p>One you have found the desired test case(s), simply select their check
-boxes and click the 'Save' button to add them to the current
-requirement:</p>
+<p>One you have found the desired test case(s), simply select their check boxes and click the 'Save' button to add them to the current requirement:</p>
 <p><img alt="" src="../img/Requirements_Management_111.png" /></p>
-<p>Finally, as a shortcut you can click the "<strong><em>Create Test Case from This
-Requirement</em></strong>" button to create a new test case in the
-list of covered test cases that will be automatically linked to this
-requirement. This is useful when you have created a new requirement and
-want to generate an initial covering test to be fleshed-out later.</p>
+<p>Finally, as a shortcut you can click the "<strong><em>Create Test Case from This Requirement</em></strong>" button to create a new test case in the list of covered test cases that will be automatically linked to this requirement. This is useful when you have created a new requirement and want to generate an initial covering test to be fleshed-out later.</p>
 <h3 id="tasks">Tasks</h3>
-<p>This tab shows the list of product tasks that need to be completed for
-the requirement to be satisfied:</p>
+<p>This tab shows the list of product tasks that need to be completed for the requirement to be satisfied:</p>
 <p><img alt="" src="../img/Requirements_Management_112.png" /></p>
-<p>Each of the tasks is displayed together with, by default, its name,
-description (by hovering the mouse over the name), progress, priority,
-start-date, current owner, estimated effort, producted effort and
-numeric task identifier. Clicking on the task name will bring up the
-<a href="../Task-Tracking/#task-details">Task Details page</a>. This
-allows you to edit the details of an existing task.</p>
+<p>Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, producted effort and numeric task identifier. Clicking on the task name will bring up the <a href="../Task-Tracking/#task-details">Task Details page</a>. This allows you to edit the details of an existing task.</p>
 <p>You can perform the following actions on a task from this screen:</p>
-<p><strong>New Task</strong> -- inserts a new task in the task list with a default set
-of values. The task will be associated with the current requirement.</p>
-<p><strong>Remove</strong> -- removes the task from this requirement without actually
-deleting the task</p>
-<p><strong>Refresh</strong> -- updates the list of tasks from the server, useful if
-other people are adding tasks to this requirement at the same time.</p>
-<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to
-the list of tasks</p>
-<p><strong>Clear Filters</strong> -- Clears the current filter, so that all tasks
-associated with the current requirement are shown.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
-of the task allows you to edit the task inline directly on this screen.
-Only columns visible will be editable.</p>
-<p><strong>Show/Hide Columns</strong> -- Allows you to choose which Task columns are
-visible</p>
-<p>The system has a series of shortcuts that simplify the editing of
-requirements and tasks:</p>
-<p>If you create a new task on the requirements page, the priority,
-release/sprint and owner are automatically copied from the parent
-requirement. You can change these suggested values before clicking
-"<strong><em>Save</em></strong>"</p>
-<p>When you assign a release/sprint to a requirement, its status
-automatically changes to "Planned"</p>
-<p>When at least one task assigned to the requirement changes from "Not
-Started" to "In Progress", the parent requirement automatically switches
-from "Planned" to "In Progress"</p>
-<p>When all the tasks under the requirement are completed, the parent
-requirement will switch to the "Completed" status.</p>
-<p>If you manually move a requirement that has <em>no associated tasks</em> from
-"Planned" to "In Progress", the system will automatically generate one
-task under the requirement and use the requirement's planned effort
-field to generate the task's estimated effort.</p>
+<p><strong>New Task</strong> -- inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.</p>
+<p><strong>Remove</strong> -- removes the task from this requirement without actually deleting the task</p>
+<p><strong>Refresh</strong> -- updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.</p>
+<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to the list of tasks</p>
+<p><strong>Clear Filters</strong> -- Clears the current filter, so that all tasks associated with the current requirement are shown.</p>
+<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.</p>
+<p><strong>Show/Hide Columns</strong> -- Allows you to choose which Task columns are visible</p>
+<p>The system has a series of shortcuts that simplify the editing of requirements and tasks:</p>
+<p>If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "<strong><em>Save</em></strong>"</p>
+<p>When you assign a release/sprint to a requirement, its status automatically changes to "Planned"</p>
+<p>When at least one task assigned to the requirement changes from "Not Started" to "In Progress", the parent requirement automatically switches from "Planned" to "In Progress"</p>
+<p>When all the tasks under the requirement are completed, the parent requirement will switch to the "Completed" status.</p>
+<p>If you manually move a requirement that has <em>no associated tasks</em> from "Planned" to "In Progress", the system will automatically generate one task under the requirement and use the requirement's planned effort field to generate the task's estimated effort.</p>
 <h3 id="attachments">Attachments</h3>
-<p>The attachment tab displays the list of documents, screenshots or
-web-links (URLs) that have been "attached" to the requirement. The
-documents can be in any format, though SpiraPlan® will only display
-icons for certain known types.</p>
-<p><img alt="" src="../img/Requirements_Management_113.png" /></p>
-<p>The attachment list includes the filename/URL that was originally
-uploaded together with the file-size (in KB), name of the person who
-attached it and the date uploaded. In addition, if you position the
-pointer over the filename and hold it there for a few seconds, a
-detailed description is displayed as a tooltip.</p>
-<p>To actually view the document, click on the filename hyperlink and a new
-web browser window will open. Depending on the type of file, this window
-will either display the document / web-page or prompt you for a place to
-save it on your local computer. To remove an existing attachment from a
-requirement, simply click the "<strong><em>Remove</em></strong>" button and
-the attachment will be removed from the list. Using the standard
-filter/sort options you can also sort and filter the list of attachments
-to make it more manageable.</p>
-<p>If you are using SpiraPlan or SpiraTeam (but not SpiraTest) you can also
-choose to include file attachments stored in a linked version control
-system (e.g. Git, Subversion, CVS, Perforce, etc.) by selecting the "Include
-Source Code Documents" option.</p>
-<p>To attach a new document to the requirement, you need to first click the
-"<strong><em>Add New</em></strong>" button to display the new attachment
-dialog box:</p>
-<p><img alt="g4169" src="../img/Requirements_Management_114.png" /></p>
-<p>There are three different types of item that can be attached to a
-requirement:</p>
-<p>To upload a file, choose "File" as the type and then click the Browse
-button and select the file from your local computer, optionally enter a
-detailed description then click the "<strong><em>Upload</em></strong>" button.
-The document will be copied from your computer and attached to the
-artifact.</p>
-<p>To attach a web-link (URL) to the artifact, you need to choose "URL" as
-the type and then enter the fully qualified URL (e.g.
-<a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an
-optional description and then click the "<strong><em>Upload</em></strong>"
-button to attach the web-link.</p>
-<p>To attach a screenshot to the artifact, you need to choose "Screenshot"
-as the type and then copy the image to your computer's clipboard (e.g.
-on Windows computers, the PRINT SCREEN button captures the current page
-and adds to the clipboard). Once the image is in the clipboard, paste it
-into the editor using CTRL+V (or the equivalent keystroke for your
-operating system) and the item will appear in the preview window. You
-can then fill in the other fields and click "<strong><em>Upload</em></strong>"
-to attach the image.</p>
-<p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that
-doesn't put file extensions on filenames (e.g. .xls for an Excel sheet)
-automatically, then you will need to manually add the file extension to
-the filename before uploading if you want it to be displayed with the
-correct icon in the attachment list.</p>
-<p>You can also associate an existing document (that's already stored in
-SpiraTeam) with the requirement. To do that, click on the "<strong><em>Add
-Existing</em></strong>" button to bring up the add file association
-dialog box:</p>
-<p><img alt="" src="../img/Requirements_Management_115.png" /></p>
-<p><img alt="" src="../img/Requirements_Management_116.png" /></p>
-<p>You can then choose to either associate a document stored in the
-SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam
-but not SpiraTest) from the linked source code repository. In either
-case you first select the appropriate folder, and then pick the
-document(s) from the file list on the right. In the case of a source
-code file association you can also add a comment.</p>
+<p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="history">History</h3>
-<p>This tab displays the list of changes that have been performed on the
-requirement artifact since its creation. An example requirement change
-history is depicted below:</p>
-<p><img alt="" src="../img/Requirements_Management_117.png" /></p>
-<p>The change history displays the date that each change was made, together
-with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained
-of all changes in the system. In addition, if you are logged in as a
-product administrator you can also click on the "Admin View" hyperlink
-to revert any unwanted changes.</p>
+<p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
 <h3 id="associations">Associations</h3>
-<p>This displays a list of any incidents, source code revisions or other
-requirements that are associated with this requirement:</p>
-<p><img alt="" src="../img/Requirements_Management_118.png" /></p>
-<p>The requirements in this list are those a user has decided are relevant
-to the current one and has created a direct link between them. In the
-case of incidents, the association can be either due to the creator of
-an incident directly linking the incident to the requirement, or it can
-be the result of a tester executing a test-run and creating an incident
-during the test run. In this latter case, the check-box to the left of
-the association will be unavailable as the link is not editable.</p>
-<p>Each association is displayed with the type of association (related-to,
-vs. a dependency), name of the artifact being linked-to, type of
-artifact (requirement, incident, etc.), the name of the person who
-created the association, and a comment that describes why the
-association was made. In the case of an indirect association due to a
-test run, the comment will contain the name of the test run.</p>
-<p>In addition, when using SpiraPlan or SpiraTeam, the system automatically
-scans the source code repository for any revisions that are linked to
-this artifact.</p>
-<p>You can perform the following actions on an association from this
-screen:</p>
-<p><strong>Delete</strong> -- removes the selected association to the other artifact.
-This will only delete the association, not the linked artifact itself.</p>
-<p><strong>Refresh</strong> -- updates the list of associations from the server, useful
-if other people are adding associations to this requirement at the same
-time.</p>
-<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to
-the list of associations</p>
-<p><strong>Clear Filters</strong> -- Clears the current filter, so that all associations
-for the current requirement are shown.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right
-of the associations allows you to edit the association type and comment
-fields inline directly on this screen.</p>
-<p>To create a new association, click the "<strong><em>Add</em></strong>" button
-to display the add association panel:</p>
-<p><img alt="" src="../img/Requirements_Management_119.png" /></p>
-<p>If you know the ID of the requirement or incident you want to associate,
-you can enter its ID prefixed by the appropriate token ("RQ" for
-requirement or "IN" for incident):</p>
-<p><img alt="" src="../img/Requirements_Management_120.png" /></p>
-<p>Otherwise you should choose the Artifact Type (and Product if making a
-cross-product association):</p>
-<p><img alt="" src="../img/Requirements_Management_121.png" /></p>
-<p>You can narrow down your search by entering a keyword:</p>
-<p><img alt="" src="../img/Requirements_Management_122.png" /></p>
-<p>For requirements, you can also choose a package from the list to narrow
-down the results:</p>
-<p><img alt="" src="../img/Requirements_Management_123.png" /></p>
-<p>Once you have a list of artifacts, you should select the checkboxes of
-the items you want to associate with the current requirement and click
-the 'Save' button.</p>
-<p>You can add a comment that explains the rationale for the association
-and choose the type of association being created:</p>
-<ul>
-<li>
-<p><strong>Related-to:</strong> this is used to specify that the two artifacts are
-simply related</p>
-</li>
-<li>
-<p><strong>Depends-on:</strong> this is used to specify that the current artifact
-has a dependency on the one being linked to.</p>
-</li>
-</ul></div>
+<p>You can associate other requirements, source code commits, incidents, or risks to a requirement from this tab.</p>
+<p>The associated requirements and risks are those a user has decided are relevant to the current requirement and has created a direct link between them. In the case of incidents, the association can be either due to the creator of an incident directly linking the incident to the requirement, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.</p>
+<p>Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
+<h3 id="use-case-diagrams">Use Case Diagrams</h3>
+<p>Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.</p>
+<p><img alt="" src="../img/requirements-use-case-diagram.png" /></p>
+<p>You still write the scenario in the main <a href="#overview-scenario">Overview tab</a> as a list of steps, however that list of steps will render as a diagram on this tab. Every step is displayed in the diagram. To make the diagram easier to read, only the first part of the step description is rendered in the diagram.</p></div>
         </div>
 
         <footer class="col-md-12">
