@@ -547,9 +547,6 @@ first you need to click on the "Custom Values" tab in the Excel sheet:
 
 ![](img/Importing_from_Microsoft_Excel_18.png)
 
-
-
-
 Next if you want to import the list of existing custom list values from
 SpiraTeam, you should click on the \[Clear\] icon to first remove the
 sample information from the spreadsheet, then click \[Import\] to load
@@ -558,12 +555,12 @@ all have the "Value \#" column populated so that the system knows to
 update them rather than insert them when you subsequently click
 \[Export\].
 
-If you want to simply export a list of custom list values from a
-spreadsheet, then you need to either enter the custom list ID and value
+If you want to export a list of custom list values from a
+spreadsheet you first need to make sure that a list exists in the right template in Spira. You can only edit a list that already exists in Spira. Then you need to either enter the custom list ID and value
 name into this specially formatted spreadsheet or cut and paste them in
 from another existing Excel sheet that you've been using to manage the
 values previously. Then click \[Export\] and the new items will be added
-to your instance of SpiraTeam.
+to your instance of SpiraTeam. NOTE: These values are initially added as inactive on the list. You will need to log into Spira to make the list values required active.
 
 The various columns that can be imported, and the rules for entering
 data are listed below:
