@@ -1,9 +1,10 @@
 # Running a local test server
 In the master branch, run `mkdocs serve`. The web server should be available at localhost:8000
-
+ 
 
 # Deploying to GitHub Pages
 In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
+ 
 
 # Converting MD to PDF
 1. Install [MiTeX](https://miktex.org/howto/install-miktex)
@@ -14,11 +15,13 @@ In the master branch, run `mkdocs gh-deploy` and that's it! Your changes should 
     (`fancyhead`) left (`[L*,L*]`) of odd and even pages (`[*O,*E]`)
     - `\fancyfooter` works the same
 5. In the tools directory, run the command `python .\createpdf.py`
+ 
 
 ## Possible Issues
 - If a line starts with a file/folder URI (ex. C:\WINDOWS), the script will error out. 
 Just find the ofending line in the markdown and format it in some way 
 (wrapping it with grave marks (\`) to make it format as code works well.)
+ 
 
 # Converting docx to MD
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
@@ -29,6 +32,7 @@ Just find the ofending line in the markdown and format it in some way
 6. Review the files for weirdness (more information below)
 7. Put all the new files in mkdocs.yml where you would like. The `nav` property will generate the top navbar in the structure you define. Run `mkdocs serve` to test it out, which can be viewed at http://127.0.0.1:8000/
 
+ 
 
 ## Conversion Problems
 - Table formatting is generally a huge pain and needs to be done manually
@@ -43,9 +47,11 @@ Just find the ofending line in the markdown and format it in some way
     - ^®^ to <sup>®</sup>
     - ^1^ to <sup>1</sup>
     - \$ to $
+ 
 
 # Delete Unused Pictures
-From the tools directory, run the command `python .\unusedimgs.py`. This will generate a list of commands you can paste into the console to delete the file. ***PLEASE READ LIMITATIONS BEFORE YOU PROCEED AND DELETE IMAGES***
+From the tools directory, run the command `python .\unusedimgs.py`. This will generate a list of commands you can paste into the console to delete the file. ***PLEASE READ LIMITATIONS BEFORE YOU PROCEED AND DELETE IMAGES*** 
+
 ## Limitations
 - If an image name has a parenthesis in it (like `Importing_from_Microsoft_Excel_(Office365)_24.png`), the script will print it out no matter what. Please review them before you delete in case they are actually used.
 - If the image reference is across multiple lines (like the example below), the image will be printed out. Please move the reference to one line and run the command again and it should disappear.
@@ -58,3 +64,9 @@ time.](img/Using_Git_47.png)
 
 ...
 ```
+ 
+
+# REGEXes to tidy up the markdown files
+* To combine paragraphs split across multiple lines: `([A-Za-z",\. 0-9\(\)])\n([A-Za-z"\(\)])` => `$1 $2`
+* To get rid of extra line breaks: `\n\n\n` => `\n\n` and run until it can't be run anymore
+* To add spacing before headings: `\n#` => `\n\n#`
