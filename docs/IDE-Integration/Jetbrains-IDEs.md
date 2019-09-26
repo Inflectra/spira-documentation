@@ -23,7 +23,7 @@ After your IDE has restarted, go to View \> Tool Windows \> SpiraTeam to open up
 
 Click on the "View Credentials" button and put in your log-in credentials. Please note that you can obtain the RSS Token by going to your user profile inside SpiraTeam. If the RSS Token is blank, make sure to enable RSS, and click Save. 
 
-**NOTE: this plugin lets users create artifacts in Spira, so please make sure that the user has create permissions for incidents and tasks before entering the credentials.**
+**NOTE: this plugin lets users create artifacts in Spira, so please make sure that the user has create permissions for incidents and tasks to make full use of it.**
 
 ![](img/Jetbrains_IDEs_9.png)
 
