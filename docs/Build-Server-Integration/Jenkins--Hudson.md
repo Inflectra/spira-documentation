@@ -100,7 +100,7 @@ bottom of the screen to save your connection settings.
 
 Now that you have setup the global SpiraTeam settings in Jenkins, next
 you need to associate each of your Jenkins Jobs with their corresponding
-SpiraTeam Project and Release/Iteration. To do this, click on the name
+SpiraTeam Project and Release/Sprint. To do this, click on the name
 of the Jenkins Job and then click on the "Configure" hyperlink for that
 Job:
 
@@ -123,15 +123,15 @@ Now you need to enter the following values:
 -   **Project ID** -- The numeric ID of the SpiraTeam Project that the
 Build belongs to. (e.g. for Project PR00001 just enter 1)
 
--   **Release Version Number** -- The version number of the SpiraTeam
-Release/Iteration that the Build belongs to. (e.g. for Release
+-   **Release Version Number** -- The **active** version number of the SpiraTeam
+Release/Sprint that the Build belongs to. (e.g. for Release
 RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
 
 Once you have entered in the Project ID and Release version number,
 click the \[Verify Release\] button and the plugin will connect to
 SpiraTeam and verify that the project exists, that the current user can
-connect to that project, and that the specified release/iteration exists
-in the project.
+connect to that project, and that the specified release/sprint exists
+in the project, and that the release/sprint is currently active.
 
 Once it has verified successfully, click the \[Save\] button at the
 bottom of the screen to save your Job configuration settings. You are
@@ -140,7 +140,7 @@ now ready to use Jenkins with SpiraTeam.
 ## Viewing the Build Results in SpiraTeam
 
 Now that you have associated your Jenkins job with a specific SpiraTeam
-project and release/iteration, you can now use Jenkins to manage your
+project and release/sprint, you can now use Jenkins to manage your
 software builds and have the results of the build be reported back into
 SpiraTeam. For example when the 'Build JUnit' job illustrated in the
 previous section is executed, it will report back the following result
@@ -152,7 +152,7 @@ in Jenkins:
 
 
 The corresponding build entry will also be created in SpiraTeam under
-the specified project and release/iteration:
+the specified project and release/sprint:
 
 ![](img/Jenkins__Hudson_12.png)
 
@@ -251,7 +251,7 @@ automatically schedule the execution of a test set whenever a build
 passes.
 
 To do that, make sure the Test Set is associated with the SpiraTest
-release or iteration that is being built and then set the **Schedule on
+release or sprint that is being built and then set the **Schedule on
 Build** field to "Yes" and optionally enter in the delay (after the
 build succeeds) that you want the test set to be scheduled for:
 
