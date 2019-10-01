@@ -84,7 +84,7 @@ Spira instance:
 If you click on any of the 'Manage' buttons you will be taken to your
 Spira instance where you can complete the plugin configuration:
 
-![](img/Setting_up_Data_Synchronization_9.png)
+![](../Spira-Administration-Guide/img/System_Integration_Data_Synchronization_List.png)
 
 
 
