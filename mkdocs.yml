@@ -37,15 +37,19 @@ nav:
   - System Administration: Spira-Administration-Guide\System-Administration.md
   - System:
     - Workspaces: Spira-Administration-Guide\System-Workspaces.md
+    - System Home page: Spira-Administration-Guide\System-Home.md
     - Users: Spira-Administration-Guide\System-Users.md
     - System: Spira-Administration-Guide\System.md
     - Integration: Spira-Administration-Guide\System-Integration.md
     - Reporting: Spira-Administration-Guide\System-Reporting.md
   - Product: 
+    - Home page: Spira-Administration-Guide\Product-Home.md
     - General Settings: Spira-Administration-Guide\Product-General-Settings.md
     - Users: Spira-Administration-Guide\Product-Users.md
     - Planning: Spira-Administration-Guide\Product-Planning.md
+    - Changing Templates: Spira-Administration-Guide\Product-Changing-Template.md
   - Template:
+    - Home page: Spira-Administration-Guide\Template-Home.md
     - Requirements: Spira-Administration-Guide\Template-Requirements.md
     - Releases: Spira-Administration-Guide\Template-Releases.md
     - Documents: Spira-Administration-Guide\Template-Documents.md
