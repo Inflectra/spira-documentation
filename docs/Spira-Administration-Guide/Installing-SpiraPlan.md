@@ -218,7 +218,7 @@ If installing a fresh installation or upgrading, after making your selection the
 
 ![](img/Installing_SpiraPlan_21.png)
 
-The next page of the wizard will display a list of the required pre-requisites and whether the installer could find them or not. The checks here are not fool-proof (in particular where a question mark is shown) so it is recommended to manually check the prerequisites in full as described above. The system will not require all prerequisites to be met before allowing the installation but may not cause the application to display correctly.
+The next page of the wizard will display a list of the required pre-requisites and whether the installer could find them or not. The checks here are not fool-proof (in particular where a question mark is shown) so it is recommended to manually check the prerequisites in full as described above. The system will not require all prerequisites to be met before allowing the installation, but the application may display incorrectly if any are missing.
 
 ![](img/Installing_SpiraPlan_22.png)
 
@@ -250,7 +250,7 @@ Choose which web site to install Spira int using the available dropdown, which s
 
 **Virtual Directory \[advanced only\]**
 
-If installing in advanced mode, then you can also on this screen you will able to change the name of the web-site URL that will be user to access the system. By default, users would need to type into their browsers: http://"server name"/\[product name\]. Should you want to have a different name change the name in the Virtual Directory box, otherwise simply accept the default name and click "Next". Note: The installer will check to make sure that the name you have chosen is not already in use, and will warn you if it is.
+If installing in advanced mode, then on this screen you will able to change the name of the web-site URL that will be used to access the system. By default, users would need to type into their browsers: http://"server name"/\[product name\]. Should you want to have a different name change the name in the Virtual Directory box, otherwise simply accept the default name and click "Next". Note: The installer will check to make sure that the name you have chosen is not already in use, and will warn you if it is.
 
 
 ### Connecting to the Database
@@ -289,14 +289,12 @@ Once you have confirmed that everything is correct, click the
 Click the "Finish" button to complete the installation.
 
 Congratulations! You have successfully installed SpiraPlan® onto your system. If you type <http://localhost/SpiraTeam> into your browser you should see the SpiraPlan® login page, as illustrated in the *SpiraPlan®
-User Manual*. If for any reason you don't see the login page, please refer to *Appendix A -- Troubleshooting IIS* or contact Inflectra<sup>®</sup>
+User Manual*. If for any reason you don't see the login page, please contact Inflectra<sup>®</sup>
 Technical Support using one of the methods described at our website
-<http://www.inflectra.com/Support>.
+<http://www.inflectra.com/Support>. 
 
 
 ### Upgrading
-
-Upgrading an existing installation is performed by executing the same
 
 To upgrade an existing installation, execute the same installer, and on the Installation Type screen, select the "Upgrade" button:
 
