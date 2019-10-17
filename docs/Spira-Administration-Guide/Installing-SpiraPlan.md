@@ -13,8 +13,12 @@ The minimum hardware and software requirements for running the SpiraPlan® syste
 | **Memory:**             | 4 GB, 8 GB recommended                            |
 | **Operating System:**   | Windows Server 2019 (recommended) <br> Windows Server 2016 (recommended)              <br> Windows Server 2012 R1 & R2 <br> Windows Server 2008 R1 & R2 <br>Windows 10, 8, 7 (for demoing)                    |
 | **Database:**           | Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition <br> Microsoft SQL Server 2014           <br> Microsoft SQL Server 2014 Express Edition <br> Microsoft SQL Server 2012 <br> Microsoft SQL Server 2012 Express Edition <br> Microsoft SQL Server 2008 R2 <br> Microsoft SQL Server 2008 R2 Express Edition      |
-| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.6 or higher              |
-<td colspan="2"><b>Client Requirements</b></td>  
+| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.6 or higher |
+
+---
+
+| **Client Requirements** |                                                   |
+|-------------------------|---------------------------------------------------| 
 | **Web Browser:**        | Microsoft Edge <br> Internet Explorer 11.0+ <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera                                             |
 | **Other Components:**   | Microsoft Excel 2003+ (optional) <br> Microsoft Word 2003+ (optional) <br> Microsoft Project 2003+ (optional)                |
 
