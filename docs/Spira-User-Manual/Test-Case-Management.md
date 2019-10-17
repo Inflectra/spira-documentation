@@ -237,6 +237,12 @@ The test cases will now be copied to the destination you specified. The
 name of the copied test cases will be prefixed with "Copy of..." to
 distinguish them from the originals.
 
+### Blocking and Unblocking Test Cases
+
+To designate one or more test cases as blocked, select the check-boxes of the
+test cases and then select the Edit \> Block Test Cases menu
+option.  This temporarily blocks test cases so that testers know they are not available for testing. Unlike actually executing the test cases and recording an execution status, no test run is recorded and summary metrics (such as requirements test coverage and test set status) are not updated. Likewise, to unblock test cases, select their check-boxes and then select the Edit \> Unblock Test Cases menu option. This changes their Execution Status from Blocked to Not Run. The Edit menu will be enabled if the current user has Test Case \> Bulk Edit permission.   
+
 ### Moving Test Cases or Folders
 
 There are two options for moving test cases or folders:
