@@ -783,10 +783,17 @@
 <td><strong>Web Server:</strong></td>
 <td>Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.6 or higher</td>
 </tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
 <tr>
-<td><td colspan="2"><b>Client Requirements</b></td></td>
-<td></td>
+<th><strong>Client Requirements</strong></th>
+<th></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td><strong>Web Browser:</strong></td>
 <td>Microsoft Edge <br> Internet Explorer 11.0+ <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera</td>
@@ -952,7 +959,7 @@ Control Panel > Administrative Tools > Internet Information Services (IIS) Manag
 <h3 id="reviewing-the-license-agreement-and-prerequisites">Reviewing the License Agreement and Prerequisites</h3>
 <p>If installing a fresh installation or upgrading, after making your selection the next screen provides a copy of the SpiraPlan® End User License Agreement (EULA). Please read this carefully as it describes the legal contract between you -- the user of the software -- and Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have read the agreement and understood your rights and obligations, select the radio button marked "I accept the terms in the License Agreement" and click the "Next" button.</p>
 <p><img alt="" src="../img/Installing_SpiraPlan_21.png" /></p>
-<p>The next page of the wizard will display a list of the required pre-requisites and whether the installer could find them or not. The checks here are not fool-proof (in particular where a question mark is shown) so it is recommended to manually check the prerequisites in full as described above. The system will not require all prerequisites to be met before allowing the installation but may not cause the application to display correctly.</p>
+<p>The next page of the wizard will display a list of the required pre-requisites and whether the installer could find them or not. The checks here are not fool-proof (in particular where a question mark is shown) so it is recommended to manually check the prerequisites in full as described above. The system will not require all prerequisites to be met before allowing the installation, but the application may display incorrectly if any are missing.</p>
 <p><img alt="" src="../img/Installing_SpiraPlan_22.png" /></p>
 <h3 id="license-information">License Information</h3>
 <p>The next stage of the wizard (for installing and upgrading) is entering license information:</p>
@@ -967,7 +974,7 @@ Control Panel > Administrative Tools > Internet Information Services (IIS) Manag
 <p><img alt="" src="../img/Installing_SpiraPlan_24.png" /></p>
 <p>Choose which web site to install Spira int using the available dropdown, which should list all available web sites in IIS on this machine. The Default Web Site will be preselected and is the best option in most circumstances.</p>
 <p><strong>Virtual Directory [advanced only]</strong></p>
-<p>If installing in advanced mode, then you can also on this screen you will able to change the name of the web-site URL that will be user to access the system. By default, users would need to type into their browsers: http://"server name"/[product name]. Should you want to have a different name change the name in the Virtual Directory box, otherwise simply accept the default name and click "Next". Note: The installer will check to make sure that the name you have chosen is not already in use, and will warn you if it is.</p>
+<p>If installing in advanced mode, then on this screen you will able to change the name of the web-site URL that will be used to access the system. By default, users would need to type into their browsers: http://"server name"/[product name]. Should you want to have a different name change the name in the Virtual Directory box, otherwise simply accept the default name and click "Next". Note: The installer will check to make sure that the name you have chosen is not already in use, and will warn you if it is.</p>
 <h3 id="connecting-to-the-database">Connecting to the Database</h3>
 <p>SpiraPlan has an application (installed into a default folder on your system), a website (configured above), and a database. The next screen tells the installer how to connect to the database server on your system.</p>
 <p><img alt="" src="../img/Installing_SpiraPlan_25.png" /></p>
@@ -987,11 +994,10 @@ typically we recommend installing the sample products for evaluation installatio
 <strong>"Install"</strong> button to actually begin the process of installing SpiraPlan® onto your system. The installer will then display a progress bar as the installation proceeds. Once the installation is complete, the installer will provide confirmation, or display information about any problems it encountered.</p>
 <p>Click the "Finish" button to complete the installation.</p>
 <p>Congratulations! You have successfully installed SpiraPlan® onto your system. If you type <a href="http://localhost/SpiraTeam">http://localhost/SpiraTeam</a> into your browser you should see the SpiraPlan® login page, as illustrated in the <em>SpiraPlan®
-User Manual</em>. If for any reason you don't see the login page, please refer to <em>Appendix A -- Troubleshooting IIS</em> or contact Inflectra<sup>®</sup>
+User Manual</em>. If for any reason you don't see the login page, please contact Inflectra<sup>®</sup>
 Technical Support using one of the methods described at our website
-<a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>.</p>
+<a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>. </p>
 <h3 id="upgrading">Upgrading</h3>
-<p>Upgrading an existing installation is performed by executing the same</p>
 <p>To upgrade an existing installation, execute the same installer, and on the Installation Type screen, select the "Upgrade" button:</p>
 <p><img alt="" src="../img/Installing_SpiraPlan_20.png" /></p>
 <p>You will then be asked to agree to the EULA, it will verify any missing prerequisites in case system requirements have changed, and then ask to verify your License Key. This key should match the new version you are upgrading to, not the existing version installed on the server.</p>

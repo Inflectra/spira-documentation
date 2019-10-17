@@ -736,6 +736,7 @@
         <li class="third-level"><a href="#show-hide-columns">Show / Hide Columns</a></li>
         <li class="third-level"><a href="#filtering">Filtering</a></li>
         <li class="third-level"><a href="#copying-test-cases">Copying Test Cases</a></li>
+        <li class="third-level"><a href="#blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases</a></li>
         <li class="third-level"><a href="#moving-test-cases-or-folders">Moving Test Cases or Folders</a></li>
         <li class="third-level"><a href="#exporting-test-cases">Exporting Test Cases</a></li>
         <li class="third-level"><a href="#adding-test-cases-to-a-release-test-set-or-requirement">Adding Test Cases to a Release, Test Set or Requirement</a></li>
@@ -1032,6 +1033,10 @@ choose the Edit > Paste Items option.</p>
 <p>The test cases will now be copied to the destination you specified. The
 name of the copied test cases will be prefixed with "Copy of..." to
 distinguish them from the originals.</p>
+<h3 id="blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases</h3>
+<p>To designate one or more test cases as blocked, select the check-boxes of the
+test cases and then select the Edit > Block Test Cases menu
+option.  This temporarily blocks test cases so that testers know they are not available for testing. Unlike actually executing the test cases and recording an execution status, no test run is recorded and summary metrics (such as requirements test coverage and test set status) are not updated. Likewise, to unblock test cases, select their check-boxes and then select the Edit > Unblock Test Cases menu option. This changes their Execution Status from Blocked to Not Run. The Edit menu will be enabled if the current user has Test Case > Bulk Edit permission.   </p>
 <h3 id="moving-test-cases-or-folders">Moving Test Cases or Folders</h3>
 <p>There are two options for moving test cases or folders:</p>
 <ol>
