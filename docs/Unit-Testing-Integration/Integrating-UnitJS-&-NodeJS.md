@@ -2,12 +2,12 @@
 
 UnitJS is an assertion library for JavaScript, running on Node.js or a
 web browser. It works with various test runner and unit testing
-frameworks, including Mocha, Jasmine, Karma, Protractor, and QUnit.
+frameworks, including Mocha, Karma, Protractor, and QUnit.
 
 SpiraTest currently includes a pre-built extension for the MochaJS test
 runner and our sample code illustrates it working with UnitJS. However,
 we supply the source code to the extension, so you can easily adapt it
-for other runners such as Jasmine and Protractor.
+for other runners such as Protractor.
 
 ## Using the SpiraTest MochaJS Reporter
 
