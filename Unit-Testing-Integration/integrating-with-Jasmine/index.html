@@ -737,7 +737,7 @@
 </ul>
 <p>The <a href="https://www.npmjs.com/package/jasmine-spiratest">Spira Reporter for Jasmine</a> will integrate JasmineJS with Spira. It will create a test run in Spira for each test spec executed in Jasmine.</p>
 <h2 id="setting-up-the-integration">Setting up the integration</h2>
-<p>Install the integration by running <code>npm i jasmine-spiratest</code> in the root directory of your tests. Inside each test spec file, import the SpiraReporter with <code>var SpiraReporter = require('jasmine-spiratest')</code> then put the line <code>jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));</code> where spiraCredentials is an object of the format below. You can see a full sample test spec below.</p>
+<p>Install the integration by running <code>npm i jasmine-spiratest</code> in the root directory of your tests. Inside each test spec file, import the SpiraReporter with <code>var SpiraReporter = require('jasmine-spiratest')</code> then put the line <code>jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));</code> where spiraCredentials is an object of the format below. You can see a full sample test spec at the bottom of this page.</p>
 <pre><code>{
     &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
     &quot;username&quot;: &quot;fredbloggs&quot;,
