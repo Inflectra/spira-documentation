@@ -7,10 +7,10 @@
 
 
 
-<link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">
+<link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/integrating-with-Jasmine/">
 
 <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>UnitJS & NodeJS - SpiraDocs</title>
+        <title>Integrating with Jasmine - SpiraDocs</title>
 <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
 <link href="../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../css/base.css" rel="stylesheet">
@@ -377,7 +377,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -425,8 +425,8 @@
     <a href="../Integrating-with-PHPUnit/">PHPUnit</a>
 </li>
             
-<li class="active">
-    <a href="./">UnitJS & NodeJS</a>
+<li >
+    <a href="../Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
 </li>
     </ul>
   </li>
@@ -704,14 +704,6 @@
     <i class="fa fa-search"></i>
   </a>
 </li>
-<li >
-  <a rel="next" href="../Integrating-with-PHPUnit/" >
-    <i class="fa fa-arrow-left"></i></a>
-</li>
-<li >
-  <a rel="prev" href="../../IDE-Integration/Visual-Studio-Code/" ><i
-      class="fa fa-arrow-right"></i></a>
-</li>
                             <li>
                                 <a href="https://www.inflectra.com">Inflectra</a>
                             </li>
@@ -724,317 +716,127 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a
-                href="#integrating-unitjs-nodejs">Integrating UnitJS &amp; NodeJS</a></li>
-        <li class="second-level"><a href="#using-the-spiratest-mochajs-reporter">Using the SpiraTest MochaJS Reporter</a></li>
+                href="#integrating-with-jasmine">Integrating with Jasmine</a></li>
+        <li class="second-level"><a href="#setting-up-the-integration">Setting up the integration</a></li>
+        
+        <li class="second-level"><a href="#using-the-spiratest-reporter">Using the SpiraTest Reporter</a></li>
+        
+        <li class="second-level"><a href="#sample-test-spec-with-spiratest-integration">Sample Test Spec with SpiraTest Integration</a></li>
         
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="integrating-unitjs-nodejs">Integrating UnitJS &amp; NodeJS</h1>
-<p>UnitJS is an assertion library for JavaScript, running on Node.js or a
-web browser. It works with various test runner and unit testing
-frameworks, including Mocha, Karma, Protractor, and QUnit.</p>
-<p>SpiraTest currently includes a pre-built extension for the MochaJS test
-runner and our sample code illustrates it working with UnitJS. However,
-we supply the source code to the extension, so you can easily adapt it
-for other runners such as Protractor.</p>
-<h2 id="using-the-spiratest-mochajs-reporter">Using the SpiraTest MochaJS Reporter</h2>
-<p>Mocha is a feature-rich JavaScript test framework running on Node.js and
-in the browser, making asynchronous testing simple and fun. Mocha tests
-run serially, allowing for flexible and accurate reporting, while
-mapping uncaught exceptions to the correct test cases.</p>
-<p>An example UnitJS test running Mocha looks something like:</p>
-<pre><code class="javascript">var test = require('unit.js');
-
-describe('Example Test', function(){
-
-it('sample pass', function(){
-
-// just for example of tested value
-
-var example = 'hello world';
-
-test
-
-.string(example)
-
-.startsWith('hello')
-
-.match(/\[a-z\]/)
-
-.given(example = 'you are welcome')
-
-.string(example)
-
-.endsWith('welcome')
-
-.contains('you')
-
-.when('&quot;example&quot; becomes an object', function(){
-
-example = {
-
-message: 'hello world',
-
-name: 'Nico',
-
-job: 'developper',
-
-from: 'France'
-
-};
-
-})
-
-.then('test the &quot;example&quot; object', function(){
-
-test
-
-.object(example)
-
-.hasValue('developper')
-
-.hasProperty('name')
-
-.hasProperty('from', 'France')
-
-.contains({message: 'hello world'})
-
-;
-
-})
-
-.if(example = 'bad value')
-
-.error(function(){
-
-example.badMethod();
-
-})
-
-;
-
-});
-
-it('sample fail', function(){
-
-// just for example of tested value
-
-var example = 'not hello world';
-
-test
-
-.string(example)
-
-.startsWith('hello')
-
-.match(/\[a-z\]/)
-
-.given(example = 'you are welcome')
-
-.string(example)
-
-.endsWith('welcome')
-
-.contains('you')
-
-.when('&quot;example&quot; becomes an object', function(){
-
-example = {
-
-message: 'hello world',
-
-name: 'Nico',
-
-job: 'developper',
-
-from: 'France'
-
-};
-
-})
-
-.then('test the &quot;example&quot; object', function(){
-
-test
-
-.object(example)
-
-.hasValue('developper')
-
-.hasProperty('name')
-
-.hasProperty('from', 'France')
-
-.contains({message: 'hello world'})
-
-;
-
-})
-
-.if(example = 'bad value')
-
-.error(function(){
-
-example.badMethod();
-
-})
-
-;
-
-});
-
-});
+<h1 id="integrating-with-jasmine">Integrating with Jasmine</h1>
+<p>Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.</p>
+<p>Some key features of Jasmine are:</p>
+<ul>
+<li>Fast- Low overhead, jasmine-core has no external dependencies.</li>
+<li>Batteries Included - Comes out of the box with everything you need to test your code.</li>
+<li>NodeJS and Browser - Run your browser tests and Node.js tests with the same framework.</li>
+</ul>
+<p>The <a href="https://www.npmjs.com/package/jasmine-spiratest">Spira Reporter for Jasmine</a> will integrate JasmineJS with Spira. It will create a test run in Spira for each test spec executed in Jasmine.</p>
+<h2 id="setting-up-the-integration">Setting up the integration</h2>
+<p>Install the integration by running <code>npm i jasmine-spiratest</code> in the root directory of your tests. Inside each test spec file, import the SpiraReporter with <code>var SpiraReporter = require('jasmine-spiratest')</code> then put the line <code>jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));</code> where spiraCredentials is an object of the format below. You can see a full sample test spec below.</p>
+<pre><code>{
+    &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
+    &quot;username&quot;: &quot;fredbloggs&quot;,
+    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
+    &quot;projectId&quot;: 1,
+    &quot;releaseId&quot;: 1,
+    &quot;testSetId&quot;: 1,
+    &quot;testCases&quot;: {
+        &quot;default&quot;: 20,
+        &quot;should multiply correctly&quot;: 21,
+        &quot;should solve exponents and logarithms correctly&quot;: 16
+    }
+}
 </code></pre>
 
-<p>In this sample, we have one test suite "Example Test" that has two tests
--- "sample pass" and "sample fail" inside it. When you run this test
-using Mocha using the command line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js</p>
-<p>You get the following:</p>
-<p><img alt="" src="../img/Integrating_UnitJS_&amp;_NodeJS_25.png" /></p>
-<p>What we want is to have this test suite report back against a matching
-test case in SpiraTest.</p>
-<p>To do that we need to download and unzip the
-<strong>UnitJS-MochaJS-Reporter.zip</strong> file from the Inflectra website and
-extract the contents to the same location as your test framework. The
-<strong>reporter</strong> subfolder contains two NodeJS modules:</p>
-<ul>
-<li>
-<p>SpiraReporter.js -- this contains the Mocha custom reporter used for
-sending the results to SpiraTest</p>
-</li>
-<li>
-<p>SpiraClient.js -- this contains the JavaScript module that sends a
-test result back to SpiraTest. It is used by SpiraReporter.js but
-can also be used directly in your code if you want to report back
-results without using Mocha.</p>
-</li>
-</ul>
-<p>To use this custom reporter with your Mocha test framework, you simply
-need to do these two things:</p>
-<ol>
-<li>
-<p>Add the reporter name to the command line used to invoke Mocha</p>
-</li>
-<li>
-<p>Add some configuration code to your UnitJS test suite to tell Mocha
-how to connect to your instance of SpiraTest.</p>
-</li>
-</ol>
-<p>The first part is very straightforward, just add the Reporter to your
-Mocha command line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js --reporter
-.\reporter\SpiraReporter</p>
-<p>For the second part, you need to add the following code to your test
-suite at the top:</p>
-<pre><code class="javascript">var SpiraReporter = require('../reporter/SpiraReporter.js');
+<p>Fields are required unless otherwise noted.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>The root URL of your SpiraTest instance without a '/' at the end</td>
+</tr>
+<tr>
+<td>username</td>
+<td>The username you use to sign into SpiraTest</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Your RSS Token. Found in your profile page as the RSS Token field. You must have RSS Feeds enabled for this to work</td>
+</tr>
+<tr>
+<td>projectId</td>
+<td>The ID of the product you would like the Test Runs to be filed under</td>
+</tr>
+<tr>
+<td>releaseId</td>
+<td>OPTIONAL - Use if you would like to associate created test runs with a release</td>
+</tr>
+<tr>
+<td>testSetId</td>
+<td>OPTIONAL - Use if you would like to associated created test runs with a test set</td>
+</tr>
+<tr>
+<td>testCases</td>
+<td>Must contain the default field within it and, optionally, specific test cases for a given test spec name</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Inside the testCases field, this is the ID of the default test case mapped to a created test run</td>
+</tr>
+<tr>
+<td><spec_name></td>
+<td>OPTIONAL - Use as many times as you would like to map a the created test run for a spec to a particular test case in SpiraTest. Note that capitalization, special characters and spaces are ignored both in testCases and the spec itself</td>
+</tr>
+<tr>
+<td>Once you have added the SpiraReporter to the jasmine environment in each file as described above, you are all set!</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-the-spiratest-reporter">Using the SpiraTest Reporter</h2>
+<p>Run <code>npm test</code> or however you ran jasmine before and you should see test runs created in the product you specified.</p>
+<h2 id="sample-test-spec-with-spiratest-integration">Sample Test Spec with SpiraTest Integration</h2>
+<pre><code>describe(&quot;Test having two specs&quot;, () =&gt; {
+    var SpiraReporter = require('jasmine-spiratest');
 
-//set the SpiraTest options
+    jasmine.getEnv().addReporter(new SpiraReporter({
+        &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
+        &quot;username&quot;: &quot;fredbloggs&quot;,
+        &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
+        &quot;projectId&quot;: 1,
+        &quot;releaseId&quot;: 1,
+        &quot;testSetId&quot;: 1,
+        &quot;testCases&quot;: {
+            &quot;default&quot;: 20,
+            &quot;equality works&quot;: 21,
+            &quot;addition works&quot;: 16
+        }
+    }));
 
-global.spiraOptions = {
-
-projectId: 1,
-
-testCaseId: 4,
-
-releaseId: 1,
-
-testSetId: null,
-
-login: 'fredbloggs',
-
-apiKey: '{7A05FD06-83C3-4436-B37F-51BCF0060483}',
-
-protocol: 'http',
-
-host: '127.0.0.1',
-
-vdir: 'spira'
-
-};
-</code></pre>
-
-<p>The first line simply adds a reference to the SpiraTest Mocha reporter
-module.</p>
-<p>The second line defines the connection and test case information used
-for reporting back to SpiraTest. Here's what you need to put in each of
-the required configuration options:</p>
-<ul>
-<li>
-<p><strong>protocol</strong> -- this needs to be set to either "http" or "https"
-depending on how you connect to SpiraTest</p>
-</li>
-<li>
-<p><strong>host</strong> -- this needs to be the name or IP address of the host
-running SpiraTest. For cloud customers, it will be something like
-<strong>mycompany.spiraservice.net</strong></p>
-</li>
-<li>
-<p><strong>port</strong> -- this is usually 80 for http and 443 for https unless you
-are running SpiraTest on a custom port</p>
-</li>
-<li>
-<p><strong>vdir</strong> -- this is the name of any path used after the hostname.
-For example, if your URL is <a href="https://demo.spiraservice.net/mysite">https://demo.spiraservice.net/mysite</a>
-then the vdir would be "mysite". If your URL is just
-<a href="https://mycompany.spiraservice.net">https://mycompany.spiraservice.net</a> then you can leave the vdir
-blank or just not set a value for it.</p>
-</li>
-<li>
-<p><strong>login</strong> -- this should be a login that has access to the project
-in SpiraTest with permissions to create test runs.</p>
-</li>
-<li>
-<p><strong>apiKey</strong> -- this should be the API Key (also known as the RSS
-Token) for the login specified</p>
-</li>
-<li>
-<p><strong>projectId</strong> -- this should be the numeric ID of the project that
-the test case belongs to (e.g. if the project is PR56 just use 56)</p>
-</li>
-<li>
-<p><strong>testCaseId</strong> -- this should be the numeric ID of the test case
-that you want this Mocha test suite to report against (e.g. if the
-test case in question is TC23 just use 23)</p>
-</li>
-</ul>
-<p>In addition, there are two optional configuration parameters you can
-use:</p>
-<ul>
-<li>
-<p><strong>releaseId</strong> -- If you would like the recorded test run to be
-reported against a specific release, iteration or phase in
-SpiraTest, you need to specify the ID of the release in question
-(e.g. for release RL18 just use 18)</p>
-</li>
-<li>
-<p><strong>testSetId</strong> - If you would like the recorded test run to be
-reported against a specific test set in SpiraTest, you need to
-specify the ID of the test set in question (e.g. for test set TX35
-just use 35)</p>
-</li>
-</ul>
-<p>With those values set, when you run the test suite using the command
-line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js --reporter
-.\reporter\SpiraReporter</p>
-<p>The results of the test suite will be displayed inside the Mocha
-console:</p>
-<p><img alt="" src="../img/Integrating_UnitJS_&amp;_NodeJS_26.png" /></p>
-<p>When you login to SpiraTest and view the test case being executed, you
-will now see the automated test runs reported back from Mocha:</p>
-<p><img alt="" src="../img/Integrating_UnitJS_&amp;_NodeJS_27.png" /></p>
-<p>Clicking on one of the MochaJS Reporter test runs will bring up a screen
-that provides the detailed test run report from Mocha:</p>
-<p><img alt="" src="../img/Integrating_UnitJS_&amp;_NodeJS_28.png" /></p>
-<p>The Console Output section gives more detailed information:</p>
-<p><img alt="" src="../img/Integrating_UnitJS_&amp;_NodeJS_29.png" /></p>
-<p>Congratulations... You are now able to run UnitJS automated tests using
-Mocha and the SpiraTest custom reporter and have the results be recorded
-within SpiraTest. The sample test suites <strong>example.js</strong> and
-<strong>example2.js</strong> are provided with the installation.</p></div>
+    describe(&quot;Test basic JavaScript&quot;, () =&gt; {
+        it(&quot;Equality works...&quot;, () =&gt; {
+            expect(2).toEqual(2);
+        });
+        it(&quot;Addition works&quot;, () =&gt; {
+            expect(3 + 2).toEqual(5);
+        });
+        it(&quot;Multiplication works&quot;, () =&gt; {
+            expect(4 * 5).toEqual(20);
+        });
+    });
+});
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
