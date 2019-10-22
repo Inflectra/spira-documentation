@@ -391,6 +391,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://spiradoc.inflectra.com/IDE-Integration/Visual-Studio-Code/</loc>
      <lastmod>2019-10-22</lastmod>
      <changefreq>daily</changefreq>
