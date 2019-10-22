@@ -11,7 +11,7 @@ Some key features of Jasmine are:
 The [Spira Reporter for Jasmine](https://www.npmjs.com/package/jasmine-spiratest) will integrate JasmineJS with Spira. It will create a test run in Spira for each test spec executed in Jasmine.
 
 ## Setting up the integration
-Install the integration by running `npm i jasmine-spiratest` in the root directory of your tests. Inside each test spec file, import the SpiraReporter with `var SpiraReporter = require('jasmine-spiratest')` then put the line `jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));` where spiraCredentials is an object of the format below. You can see a full sample test spec below.
+Install the integration by running `npm i jasmine-spiratest` in the root directory of your tests. Inside each test spec file, import the SpiraReporter with `var SpiraReporter = require('jasmine-spiratest')` then put the line `jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));` where spiraCredentials is an object of the format below. You can see a full sample test spec at the bottom of this page.
 
 ```
 {
