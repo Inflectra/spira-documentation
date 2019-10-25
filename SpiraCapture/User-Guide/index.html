@@ -765,25 +765,25 @@
 <h2 id="what-event-triggers-data-to-be-captured">What event triggers data to be captured?</h2>
 <p>A number of events trigger SpiraCapture to capture how the user is interacting with the current browser tab:</p>
 <ul>
-<li><strong>Clicks</strong>: each click is captured with a screenshot and a description of where you clicked. <strong>Note</strong> <em>Currently their is no distiction between single and double clicks</em></li>
-<li><strong>KeyStrokes</strong>: collections of keystrokes are captured together (for instance when filling in a form, SpiraCaptures will capture a whole username as one string). The string is cut off if: nothing is typed for 3 seconds; the field being typed in changes; or when the enter key is hit. </li>
-<li><strong>The Enter key is clicked</strong> when the enter/return key is hit a log is captured along with a screenshot</li>
+<li><strong>Clicks</strong>: each click is captured with a screenshot and a description of where you clicked. <strong>Note</strong> <em>Currently there is no distinction between single and double clicks</em></li>
+<li><strong>KeyStrokes</strong>: collections of keystrokes are captured together (for instance when filling in a form, SpiraCapture will capture a whole username as one string). The string is cut off if: nothing is typed for 3 seconds; the field being typed in changes; or when the enter key is hit. </li>
+<li><strong>The Enter key is clicked</strong>: when the enter/return key is hit a log is captured along with a screenshot</li>
 <li><strong>Url-Changes</strong>: each change in URL is captured.  <strong>Note</strong> *any link or user action that opens a url in a new tab will not be captured (because only changes to the current tab are captured)</li>
-<li><strong>Network Errors</strong>: Network Errors are captureed in the background and are taken from any tab being captureed not just the current tab.</li>
+<li><strong>Network Errors</strong>: Network Errors are captured in the background and are taken from any tab being captured not just the current tab.</li>
 </ul>
 <p>Additionally, there are a few ways that data can be captured manually by the tester, by interacting with the SpiraCapture menu. These give users flexibility in organizing the captured data to reflect their test.</p>
 <ul>
-<li><strong>Steps</strong>: Steps break up the captured data into discreet sections, just like you break up a test case into test steps. This makes navigating the captured data much easier. Steps can be created manually by the user, or otherwise are incremented over time (roughly every 10 minutes). For instance if a step is called "Login", after 10 minutes, a new step will be created called "Login 1", and then "Login 2" after another 10 minutes.</li>
-<li><strong>Notes</strong>: Notes are you used to remind yourself after the session when you go back through the data. They can be very useful to "stick a pin" in something that just happened so that you can review it later, but not have to break your testing flow by analysing it in detail now.</li>
-<li><strong>Screenshots</strong>: screenshots can be captured manually, as well as automatically by some of the events listed above.</li>
+<li><strong>Steps</strong>: Steps break up the captured data into discrete sections, just like you break up a test case into test steps. This makes navigating the captured data much easier. Steps can be created manually by the user, or otherwise are incremented over time (roughly every 10 minutes). For instance if a step is called "Login", after 10 minutes, a new step will be created called "Login 1", and then "Login 2" after another 10 minutes.</li>
+<li><strong>Notes</strong>: Notes are used to remind yourself after the session when you go back through the data. They can be very useful to "stick a pin" in something that just happened so that you can review it later, but not have to break your testing flow by analysing it in detail now.</li>
+<li><strong>Screenshots</strong>: Screenshots can be captured manually, as well as automatically by some of the events listed above.</li>
 </ul>
 <h2 id="spiracapture-menu">SpiraCapture Menu</h2>
 <p>Clicking the SpiraCapture icon from the browser toolbar will show the SpiraCapture menu. This gives you access to the main functionality of the extension.</p>
 <ul>
 <li><strong>View data</strong>: This links opens a new tab showing all of the data that SpiraCapture has... captured. <strong>Note:</strong> <em>You will only see this link in the menu if you have any captured data</em>.</li>
-<li><strong>Start capturing</strong>: If you are on a tab that is not yet being capturing, as explained above, clicking this links will start capturing this tab only. * <strong>Stop capturing</strong>: If you are on a tab that IS being capturing, click this link to stop capturing. The remainder of the menu is only visible while capturing the curren* ab.</li>
-<li><strong>Take ScreenShot</strong>: This captures the full page screenshot of the current tab. This is useful when you need to manually capture the screen.<em> <strong>Current Step</strong>: This is a label that shows you the name of the current step. <strong>Note</strong> </em>this label, if the menu is left open for a long time, may not always reflect th<em> ost recent step number - as mentioned above this will increment automatically over time.</em></li>
-<li><strong>Step Description</strong>: This field is how you break up your testing session when you are viewing the data.  <strong>Note</strong> <em>If you choose to not use this feature the application it will automatically break your session up every 10 minutes for your convience when viewing the data</em></li>
+<li><strong>Start capturing</strong>: If you are on a tab that is not yet being capture, as explained above, clicking this links will start capturing this tab only. * <strong>Stop capturing</strong>: If you are on a tab that IS being capturing, click this link to stop capturing. The remainder of the menu is only visible while capturing the current tab.</li>
+<li><strong>Take ScreenShot</strong>: This captures the full page screenshot of the current tab. This is useful when you need to manually capture the screen.<em> <strong>Current Step</strong>: This is a label that shows you the name of the current step. <strong>Note</strong> </em>this label, if the menu is left open for a long time, may not always reflect the most recent step number - as mentioned above this will increment automatically over time.*</li>
+<li><strong>Step Description</strong>: This field is how you break up your testing session when you are viewing the data.  <strong>Note</strong> <em>If you choose to not use this feature the application it will automatically break your session up every 10 minutes for your convenience when viewing the data</em></li>
 <li><strong>Create Step field</strong>: enter text in this field and click the button on the left to create a new step using that name.</li>
 <li><strong>Create Note Field</strong>:  enter text in this field and click the button on the left to create a new note using that name</li>
 </ul>
@@ -802,7 +802,7 @@
 <p>Each step has a heading which shows the name of the step and the time that particular step started. If the step contains any notes, a pin icon is shown in the step heading. This is designed to help you see which steps have notes in as these are likely the steps that you want to examine more closely. Clicking on the step heading will collapse or expand the events inside the step.</p>
 <p>Each event shows certain standard information to make it easy to navigate and browse the data.</p>
 <ul>
-<li>Where relevant, a thumbail of the screenshot taken with the event</li>
+<li>Where relevant, a thumbnail of the screenshot taken with the event</li>
 <li>The time that the event occurred</li>
 <li>An icon showing the type of event</li>
 <li>Where relevant, information recording along with the event (for instance, the url moved to, the keys typed, or the place in the DOM where you clicked)</li>
@@ -815,8 +815,8 @@
 <ul>
 <li><strong>Preview selected events</strong>: this is enabled if one or more events has been selected from the event list (see above). Clicking the button will show a popup with a filtered list of just those selected events. To export this data to a document or another application, highlight the preview and copy it to the clipboard</li>
 <li><strong>Send selected events to Spira</strong>: this is enabled if one or more events has been selected from the event list (see above). Clicking this button will show the Spira popup (discussed in more detail below)</li>
-<li><strong>Refresh</strong>: Clicking this button updates the event list with any new data <strong>Tip</strong> <em>Use this button if you have lots of data and just wanna see the new data, if you are already scrolled to the bottom it will keep you there</em></li>
-<li><strong>Clear all events and stop capturing</strong>: This button closes the current data table page, clears all data in chrome storage, and stops capturing all tabs.</li>
+<li><strong>Refresh</strong>: Clicking this button updates the event list with any new data</li>
+<li><strong>Clear all events and stop capturing</strong>: This button closes the current data table page, clears all data in chrome storage, and stops capturing all tabs</li>
 </ul>
 <h2 id="sending-selected-events-to-spira">Sending selected events to Spira</h2>
 <p>You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. </p>
@@ -835,7 +835,7 @@
 <p>Once you are logged in to your Spira (and have your events selected) the popup will require 3 fields to be selected/filled in.</p>
 <ul>
 <li><strong>Selecting a product</strong>: choose a product from the list of all the ones you have access to in Spira</li>
-<li><strong>Select a Incident type</strong>: pick the most relevant type available for the product you select</li>
+<li><strong>Select an Incident type</strong>: pick the most relevant type available for the product you select</li>
 <li><strong>Incident Name</strong>: Type in the name to be given to the incident</li>
 </ul>
 <p>Once these have been filled in, click the "Send data to Spira" button to connect to your Spira application and upload the incident. Once the incident has been created you will see a link next to the send button that will open the incident in Spira for you.</p>
