@@ -15,6 +15,14 @@ We can fully change the theme used and its features using a basic templating lan
 2. Clone this repo to your local machine
 3. Edit files as needed
 
+# Working with the docs and Markdown
+- ![How to create files and style them](https://www.mkdocs.org/user-guide/writing-your-docs/)
+- Markdown is a straightforward way to write human readable text that renders to display HTML headings, **bold**, *italics*, links, images, numbered lists, bulleted lists, tables, line breaks, and code blocks.
+- To make a paragraph make sure to leave an empty line between paragraphs (ie press return twice)
+- You don't need to leave an empty line between list items
+- You can have a list that has differently indented levels. Make sure each new indent uses 4 spaces
+- Using MkDocs you can also make links to places in other files in the documentation which is really handy
+
 # Key commands
 - **Running a local test server**: from the current branch, run `mkdocs serve`. The web server should be available at localhost:8000
 - **Edit and commit your documentation changes**: files can be edited and committed straight on Github, and created, deleted, or edited from the desktop. Work in the relevant branch (master to make the changes live) and commit code as normal using Git. 
