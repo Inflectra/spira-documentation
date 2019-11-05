@@ -23,6 +23,7 @@ We can fully change the theme used and its features using a basic templating lan
 - You can have a list that has differently indented levels. Make sure each new indent uses 4 spaces
 - Using MkDocs you can also make links to places in other files in the documentation which is really handy
 
+
 # Key commands
 - **Running a local test server**: from the current branch, run `mkdocs serve`. The web server should be available at localhost:8000
 - **Edit and commit your documentation changes**: files can be edited and committed straight on Github, and created, deleted, or edited from the desktop. Work in the relevant branch (master to make the changes live) and commit code as normal using Git. 

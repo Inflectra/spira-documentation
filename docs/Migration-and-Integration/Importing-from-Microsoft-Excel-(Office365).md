@@ -1,160 +1,94 @@
-#  Importing from Microsoft Excel (Office365)
+#  Importing from Microsoft Excel (Office 2016+, iOS, web)
 
-If you are using Office365 in the cloud (via a web browser) or if you
-are using Microsoft Office 2016+, you can use the dedicated Office365
-Microsoft Excel add-in.
+If you are using Microsoft Excel 2016+, or in the cloud (via a web browser) or on iPad OS, you can use the dedicated Microsoft Excel 2016+ add-in. With this add-in you can import or export data to and from any product in your SpiraTest, SpiraTeam, or SpiraPlan application. The add-in works for requirements, releases, incidents, tasks, and test cases with their test steps.
+
+In legacy versions of this add-in you need to download a static excel template to help make sure you enter data into it in the correct way. This add-in dynamically creates the sheet headers and cell validation based off of the specific selections you make. 
+
 
 ## Installation
 
-To install the add-in, go to the **insert** tab in Excel. Click on
-**"Office Add-Ins"** and in the window that opens navigate to the
-**store** tab. Enter **"SpiraTeam Excel 365 Integration"** into the
-search bar and search. When you see the correct add-in developed by
-Inflectra, click on the "Add" button associated with it. You should now
-see the SpiraTeam icon labeled "Show add-in" in your home tab. Click on
-it to begin.
+To install the add-in:
 
-## The Template
-
-Downloading and Applying:
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_20.png)
+* Go to the **insert** tab in Excel
+* Click on **"Office Add-Ins"** and in the window that opens navigate to the **store** tab
+* Search for **"Spira** or **SpiraPlan**. 
+* When you see the correct add-in developed by Inflectra, click on the "Add" button associated with it. 
+* You should now see the SpiraPlan icon labeled "Show add-in" in your home tab. Click on it to begin.
 
 
-When you first open the add-in, you should
-see the following in your welcome screen:
+## 1. Connect to your Spira app
+You can use this add-on with SpiraTest®, SpiraTeam®, or SpiraPlan®. If you are using Excel in the browser, your Spira app needs to be accessible over the internet.
 
-Click on the **"Download Template"** button to begin the download. If
-you are using a desktop version of Excel open the file as you would any
-other workbook.
+![Spira add-in login screen](img/excel365-log-in-screen.png)
 
+* **Your Spira Url:** The web address that you use to access SpiraPlan® in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://(company).spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
+* **Your Username:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
+* **Enter your RSS token:** You can find or generate this from your user profile page inside Spira. Make sure to include the curly braces - {ExampleRSS}
 
-
-If you are using Excel Online, you will
-need to upload the file to your **OneDrive**. You can get to OneDrive
-quickly by clicking on the menu icon in the top left corner of Excel
-Online and selecting OneDrive.
-You should now see the following in your Excel Window:
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_21.png)
-
-**
-At this point please click on "File" and "Save As". Create a new copy of
-the template and name it after the project you plan on working on.
-Remember to do this before making any changes to the template or logging
-in to avoid overwriting your original template.**
-
-For a full description list of the template fields, please refer to the
-table in [Excel](../Importing-from-Microsoft-Excel/#importing-exporting-data). The only differences are the (temporary)
-exclusion of the linked requirements and comments fields, as well as the
-30 "CUS-01" style custom fields. This add-in will load your custom field
-names dynamically. To do this, you must now log in.
-
-## Connecting to SpiraTeam
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_22.png)
+You will be notified if there is an issue with your url or the user information you provided. 
 
 
-Once the template is loaded, click on the
-SpiraExcel add-in ribbon icon to show the exporter and fill in the
-following fields:
+## 2. Choose which mode to use
+This add-in has two separate modes: exporting; and importing.
 
--   **Your Team's Spira Url:** The web address that you use to access
-SpiraTeam® in your browser. This is usually in the form
-***https://<hostname\>/SpiraTeam.com***. Make sure to remove any
-suffixes from the address (e.g. /Default/aspx). The url **must** be
-an https address, if your url does not begin with https:// it will
-not work.
+![Spira mode selection screen](img/excel365-main-screen.png)
 
--   **Your Username:** The username that you use for logging in to
-SpiraTeam
+Once you have successfully logged in to your Spira application, you need to decide what you want to use this add-in for. You can go back and change your mind at any time.
 
--   **Your API key:** The API key associated with your SpiraTeam account
+* **Get data from Spira (exporting)**: This button will prompt you to pick a product and artifact to LOAD FROM Spira loaded into the spreadsheet (on the current active sheet). Exporting data in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over 100% of the artifacts in that product so it may take some time.
+* **Send data to Spira (importing)**: This will button will prompt you to pick a product and artifact to SEND TO Spira from the current active sheet. Before you can enter data to send, the add-in creates a dynamic template for that specific product and artifact to make it easier to enter data correctly.
+* **Logout**: Close your connection with Spira and take you back to the add-in's login page
 
 
+## 3. Prepare for the data transfer
+If you are getting data from or sending data to Spira you first have to select the product and artifact to use from the dropdown menus.
+
+![Spira data transfer screen](img/excel365-template-screen.png)
+
+* **Products**:  lists all products in Spira that you are a member of
+* **Artifacts**: this menu does not dynamically change based on your permissions, so if you cannot add data to an artifact this could be why.
+
+**Getting data from Spira**: once you have your product and artifact selected, click the button to start the export process. The add-in gets every entry of that artifact in the chosen product so it may take some time.
+
+**Sending data to Spira**: before you can enter data into the sheet click "Prepare Sheet" to create a template for that product and artifact. Once the sheet is ready click the Send button to add that data to Spira.
 
 
-You will be notified if there is an issue with your url or the user
-information you provided. If your log in is successful, you will see the
-following screen where you can select a SpiraTeam project to load
-information from:
+### Fields: working with required fields
+* Required fields are marked by their name in the title row shown as bold black text (standard fields are regular light text)                  
+* For test steps, required fields are shown in black, but not bold text.
 
-![](img/Importing_from_Microsoft_Excel_(Office365)_23.png)
+### Fields: how certain 'special' fields work
+* **ID Fields**: This field MUST be left blank to add new items to Spira. Any rows with entries in the ID fields are skipped over.
+* **Test Step Fields**: have their header row shown in a lighter background color. Do not put any information in these fields when creating a test case. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
+* **Name**: For REQUIREMENTS and RELEASES this field supports indentation, add a “ > “ symbol to indicate how the items in the artifact hierarchy are organized.
+        
+```
+Example:
+Item 1
+> Item 2 child of item 1
+> Item 3 child of item 1
+> > Item 4 child of item 3
+```
+### Other actions you can do on this page
+* **Back**: Go back to select which add-in mode to run
+* **Help**: Open the add-ins help menu to this page
+* **Logout**: Close your connection with Spira and take you back to the login page
 
-
-Select a project and an artifact to populate the fields in the template
-that have drop down lists associated with them (e.g. users, releases,
-components, etc.) and populate the list of custom fields associated with
-the project. You are now ready to begin creating requirements.
-
-## Creating Requirements
-
-After you have selected your project and an artifact (currently only
-requirements are available) You may start filling out your worksheet.
-The ID \# field should be left empty for new requirements. If the field
-is not empty the row will be ignored. This is to avoid affecting any
-existing requirements.
-
-**Custom Fields:** If you have selected your project and artifact type,
-you should see the custom fields associated with your project in the
-custom fields section of the template (it will be empty if your project
-has no custom fields for requirements). You **must** know what data the
-custom field will accept. For a list of acceptable data types for
-different fields, refer to the template field chart in [Excel](../Importing-from-Microsoft-Excel/#importing-exporting-data).
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_24.png)
+![Spira example of date and sheet](img/excel365-add-in-store-3.jpg)
 
 
-**Indenting and Hierarchy:** Indents are
-handled with a "\>" symbol. The farther in a requirement needs to be
-indented, the more "\>" symbols are required. The first requirement will
-**always** be at the root level. For an example of this, refer to the
-values in the template:
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_25.png)
-
-
-
-If you were to send these new requirements to your existing project,
-they would show up in SpiraTeam like this:
-
-![](img/Importing_from_Microsoft_Excel_(Office365)_26.png)
+## Entering Data for different artifacts
+* **Requirements**: SpiraPlan allows a hierarchy of requirements (where each requirement can have children, who can, in turn, have child requirements of their own). To designate the hierarchy level of requirements, use the "\>" character at the start of the name field. See above for an example of how to do this
+* ***Releases**: like Requirements, Releases in SpiraPlan are hierarchical. You designate hierarchy in the exact same way as for requirements.
+* **Test Cases and Test Steps**:
+    * A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.
+    * There is no need to number the test steps -- SpiraPlan adds this information automatically
+    * Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps
+    * The lighter orange column names are ONLY for test step creation
+    * Fields with black text are required: darker orange ones are needed for a test case, lighter orange ones for a test step
+    * If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
+* **Incidents** and **Tasks**: neither of these artifacts have any special factors to take into account
 
 
-**Event Log:** When requirements are
-sending, you will see a loading spinner and a log of progress that looks
-like this:
-
-Here is a list of possible messages:
-
-***(Requirement name)* sent successfully:** The requirement in line was
-successfully created in SpiraTeam
-
-***(Requirement name)* failed to send:** The requirement could not be
-created in SpiraTeam. May be missing a required field. Check console for
-response from API.
-
-***(Requirement ID)* was not updated:** The requirement had a value in
-its ID field and was ignored. If it was intended to be a new
-requirement, please clear the ID field and try again.
-
-**Done!:** All requirements in queue have either been created, rejected,
-or ignored.
-
-When requirements are sent successfully their ID field will be filled
-out with the new ID created in SpiraTeam.
-
-To clear the event log, click on **Clear Log.**
-
-## Saving the Worksheet and Logging Out
-
-Make sure you had previously created a new file by selecting **Save As**
-so you don't overwrite your template. Name the worksheet the same as
-your project so it is easy to keep organized. Excel will then either
-auto save any changes you make or you can save the worksheet the same as
-any other worksheet in Excel.
-
-When you have finished sending requirements to SpiraTeam, click on **Log
-Out** to disconnect and return to the log in screen.
-
-
+## Privacy Policy
+Inflectra respects the privacy of its customers. This Excel add-in does not collect or transmit any user information. Nothing about the user is stored in the add-in once you have closed it or logged out. If you are using a cloud hosted Spira application then by using this add-in you will be required to connect to your cloud application, managed by Inflectra to import or export the required data. Inflectra does not collect any of this data. For more information about our policies for cloud hosted customers, please refer to our [hosting terms of service](https://www.inflectra.com/Purchase/HostingTOS.htm)
