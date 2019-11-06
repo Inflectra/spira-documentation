@@ -100,6 +100,7 @@ nav:
     - PHPUnit: Unit-Testing-Integration\Integrating-with-PHPUnit.md
     - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
     - Jasmine: Unit-Testing-Integration\Integrating-with-Jasmine.md
+    - Jest: Unit-Testing-Integration\Integrating-with-Jest.md
   - IDE Integration:
     - Visual Studio Code: IDE-Integration\Visual-Studio-Code.md
     - Visual Studio: IDE-Integration\Visual-Studio.md
