@@ -741,88 +741,48 @@
         
         <li class="second-level"><a href="#jama-contour-spirateam-importing-notes">Jama Contour &amp; SpiraTeam Importing Notes</a></li>
         
+        <li class="second-level"><a href="#keeping-jama-and-spira-in-sync">Keeping Jama and Spira in Sync</a></li>
+        
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="importing-from-jama-contour">Importing From Jama Contour</h1>
-<p>This section outlines how to use the included Importer for importing
-Requirements, Features, and Use Cases from projects residing in Jama
-Contour™ projects into equivalent projects in SpiraTest®, SpiraPlan® or
-SpiraTeam® (hereafter referred to as SpiraTeam).</p>
+<p>This section outlines how to use the included Importer for importing Requirements, Features, and Use Cases from projects residing in Jama Contour™ projects into equivalent projects in SpiraTest®, SpiraPlan® or SpiraTeam® (hereafter referred to as SpiraTeam).</p>
 <h2 id="installing-the-importer">Installing the Importer</h2>
-<p>This section outlines how to install the importer onto a workstation so
-that you can then import requirements and use cases from Contour into
-SpiraTeam. It assumes that you already have a working installation of
-SpiraTeam v3.0 or later and a working installation of Jama Contour.</p>
-<p>You can download the Importer from the Inflectra's website under
-"Downloads and Add-Ons". When downloaded, double-click the MSI file.
-Follow the instructions in the MSI file to install the importer.</p>
+<p>This section outlines how to install the importer onto a workstation so that you can then import requirements and use cases from Contour into SpiraTeam. It assumes that you already have a working installation of SpiraTeam v3.0 or later and a working installation of Jama Contour.</p>
+<p>You can download the Importer from the Inflectra's website under "Downloads and Add-Ons". When downloaded, double-click the MSI file. Follow the instructions in the MSI file to install the importer.</p>
 <h2 id="importing-from-a-contour-project">Importing from a Contour Project</h2>
-<p>Now that you have installed the integration adapter, you can launch it
-at any time by going to Start > Programs > SpiraTest > Tools > Jama
-Contour Adapter. This will launch the import application itself. You
-will be shown an introduction screen. Click 'Next' to get to the second
-screen:</p>
+<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start > Programs > SpiraTest > Tools > Jama Contour Adapter. This will launch the import application itself. You will be shown an introduction screen. Click 'Next' to get to the second screen:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_20.png" /></p>
-<p>You need to enter the Contour Server URL (including the port number if
-appropriate), the username and password you use to log onto the system,
-then click the <em>Get Projects</em> button. The program will connect to the
-server and get a list of all available projects. Select the project you
-want to import into under the <em>Project</em> section. Once the project is
-selected, click <em>Next</em> to continue to the screen where you enter your
-SpiraTeam server and project information:</p>
+<p>You need to enter the Contour Server URL (including the port number if appropriate), the username and password you use to log onto the system, then click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project</em> section. Once the project is selected, click <em>Next</em> to continue to the screen where you enter your SpiraTeam server and project information:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_21.png" /></p>
-<p>On this screen, you need to enter the SpiraTeam Server URL, the username
-and password you use to log onto the system, then click the <em>Get
-Projects</em> button. The program will connect to the server and get a list
-of all available projects. Select the project you want to import into
-under the <em>Project &amp; Requirement</em> section.</p>
-<p>The <em>Root Requirement</em> box is for specifying a base requirement to load
-all the Contour elements into. If left blank, then the root folders in
-the Contour's explorer will be root requirement folders in the SpiraTeam
-Project.</p>
+<p>On this screen, you need to enter the SpiraTeam Server URL, the username and password you use to log onto the system, then click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project &amp; Requirement</em> section.</p>
+<p>The <em>Root Requirement</em> box is for specifying a base requirement to load all the Contour elements into. If left blank, then the root folders in the Contour's explorer will be root requirement folders in the SpiraTeam Project.</p>
 <p>For example, if your Jama Contour project has a tree that looks like:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_22.png" /></p>
 <p>Then the requirements imported into SpiraTeam will appear like:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_23.png" /></p>
 <p>Note: At this time, change request and defect items are
 <strong>not</strong> imported from Contour projects.</p>
-<p>If you have a requirement already in SpiraTeam, and want the Contour
-requirements to appear inside it, then you need to enter the requirement
-number into the <em>Root Requirement</em> text box. For example, if you have a
-requirement named "Contour Requirements" with a number of RQ1920, then
-put 1920 into the <em>Root Requirement</em> field and run the import. When
-import is finished, the SpiraTeam requirement tree will look like:</p>
+<p>If you have a requirement already in SpiraTeam, and want the Contour requirements to appear inside it, then you need to enter the requirement number into the <em>Root Requirement</em> text box. For example, if you have a requirement named "Contour Requirements" with a number of RQ1920, then put 1920 into the <em>Root Requirement</em> field and run the import. When import is finished, the SpiraTeam requirement tree will look like:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_24.png" /></p>
-<p>Once the fields have been populated, click <em>Next</em> to get to the summary
-screen.</p>
+<p>Once the fields have been populated, click <em>Next</em> to get to the summary screen.</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_25.png" /></p>
-<p>The summary screen tells you what will actions will be performed, and
-once you have verified the information, click the <em>Import</em> button to
-start the import:</p>
+<p>The summary screen tells you what will actions will be performed, and once you have verified the information, click the <em>Import</em> button to start the import:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_26.png" /></p>
 <p>Anything flagged with a red
 <img alt="Error" src="../img/Importing_From_Jama_Contour_17.png" /></p>
 <p>failed, green
 <img alt="Success" src="../img/Importing_From_Jama_Contour_18.png" /></p>
-<p>means that they succeeded. Once finished,
-click <em>Finish</em> to get to the last page of the wizard:</p>
+<p>means that they succeeded. Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_27.png" /></p>
-<p>If the <em>Minimize to System Tray</em> option is selected, when you click
-Finish or exit the from the application, it will minimize to the system
-tray. Once in the system tray, you can right-click on the icon and the
-it will give you the option to either re-import from the same project or
-select another project for a fresh import. If the option is not
-selected, the program will exit, and you can re-launch the importer to
-import from the same or another Contour project.</p>
+<p>If the <em>Minimize to System Tray</em> option is selected, when you click Finish or exit the from the application, it will minimize to the system tray. Once in the system tray, you can right-click on the icon and the it will give you the option to either re-import from the same project or select another project for a fresh import. If the option is not selected, the program will exit, and you can re-launch the importer to import from the same or another Contour project.</p>
 <h2 id="using-the-system-tray-shortcut-menu">Using the System Tray Shortcut Menu</h2>
-<p>When the application is minimized to the system tray, there are several
-shortcuts available:</p>
+<p>When the application is minimized to the system tray, there are several shortcuts available:</p>
 <ul>
 <li>
-<p>Double-Clicking the icon will bring the importer back to the first
-screen, allowing you to import another Contour project.</p>
+<p>Double-Clicking the icon will bring the importer back to the first screen, allowing you to import another Contour project.</p>
 </li>
 <li>
 <p>Right-clicking will give a shortcut menu with the following options:</p>
@@ -831,20 +791,14 @@ screen, allowing you to import another Contour project.</p>
 <p>Exit -- Close the program entirely.</p>
 </li>
 <li>
-<p>Rerun Import -- Will provide you the screen to re-launch the
-last import you just ran.</p>
+<p>Rerun Import -- Will provide you the screen to re-launch the last import you just ran.</p>
 </li>
 <li>
-<p>Show Window -- Same as double-clicking on the icon, will bring
-the wizard back to the first screen, allowing new input options
-to be set.</p>
+<p>Show Window -- Same as double-clicking on the icon, will bring the wizard back to the first screen, allowing new input options to be set.</p>
 </li>
 </ul>
 <h2 id="jama-contour-spirateam-importing-notes">Jama Contour &amp; SpiraTeam Importing Notes</h2>
-<p>At this time, only requirements are imported into SpiraTeam from
-Contour. All the various types in Contour are imported as Requirements
-into SpiraTeam. In addition, the following fields are brought over into
-SpiraTeam from Contour according to the following mapping table:</p>
+<p>At this time, only requirements are imported into SpiraTeam from Contour. All the various types in Contour are imported as Requirements into SpiraTeam. In addition, the following fields are brought over into SpiraTeam from Contour according to the following mapping table:</p>
 <table>
 <thead>
 <tr>
@@ -899,25 +853,10 @@ SpiraTeam from Contour according to the following mapping table:</p>
 </tr>
 </tbody>
 </table>
-<p>Using this adapter, you can manage the appropriate artifacts in Contour
-and then periodically re-run the import application to update SpiraTeam.
-The application will remember that the project was already used for an
-initial load and will simply update the requirements as appropriate as
-well as add any additional ones added. If you are using SpiraTeam v3.1
-or later, the update process will also delete any artifacts removed in
-Contour.</p>
-<p>Note that any changes to the requirement hierarchy in Contour are
-<strong>not</strong> reflected. This allows you to change the organization of the
-artifacts in SpiraTeam to make them easier to use without the changes
-being overwritten on the next import cycle.</p>
-<p>Finally, should you want to start again and re-import a project from
-scratch that has already been imported once before, you may do so by
-re-running the Importer, and entering in <strong>-1</strong> as the <em>Root
-Requirement</em>. This will not delete requirements from SpiraTeam, only
-remove mappings, so the next time you run the importer on this file, all
-new requirements will be created.</p>
-<p><strong><em>Note: This option is irreversible and should be performed with
-care.</em></strong></p></div>
+<h2 id="keeping-jama-and-spira-in-sync">Keeping Jama and Spira in Sync</h2>
+<p>Using this adapter, you can manage the appropriate artifacts in Contour and then periodically re-run the import application to update Spira. The application will remember that the project was already used for an initial load and will simply update the requirements as appropriate as well as add any additional ones added. If you are using SpiraTeam v3.1 or later, the update process will also delete any artifacts removed in Contour.</p>
+<p>Note that any changes to the requirement hierarchy in Contour are <strong>not</strong> reflected. This allows you to change the organization of the artifacts in SpiraTeam to make them easier to use without the changes being overwritten on the next import cycle.</p>
+<p>Finally, should you want to start again and re-import a project from scratch that has already been imported once before, you may do so by re-running the Importer, and entering in <strong>-1</strong> as the <em>Root Requirement</em>. This will not delete requirements from SpiraTeam, only remove mappings, so the next time you run the importer on this file, all new requirements will be created. <strong>Note: This option is irreversible and should be performed with care.</strong></p></div>
         </div>
 
         <footer class="col-md-12">
