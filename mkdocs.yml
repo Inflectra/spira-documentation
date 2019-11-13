@@ -29,6 +29,10 @@ nav:
   - Risk Management: Spira-User-Manual\Risks-Management.md
   - 'Appendix 1: Keyboard Shortcuts': Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
 - Quick Start Guides:
+  - Quick How-To Guides:
+    - Moving Around the Application: HowTo-Guides\Users-orientation.md
+    - Managing Your User Profile: HowTo-Guides\Users-profile-management.md
+    - Getting to Know Administration: HowTo-Guides\Admins-orientation.md
   - SpiraPlan: SpiraPlan-Quick-Start-Guide\index.md
   - SpiraTeam: SpiraTeam-Quick-Start-Guide\index.md
   - SpiraTest: SpiraTest-Quick-Start-Guide\index.md
