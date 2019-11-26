@@ -1,8 +1,7 @@
-# Using SpiraTeam with Jira Server (5 or later)
+# Using SpiraTeam with Jira Cloud
 
 This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Jira Server
-issue/bug tracking system version 5.0 and later. The built-in
+(hereafter referred to as SpiraTeam) in conjunction with the cloud version of the Jira issue/bug tracking system. The built-in
 integration service allows the quality assurance team to manage their
 requirements and test cases in SpiraTeam, execute test runs in
 SpiraTest, and then have the new incidents generated during the run be
@@ -25,26 +24,15 @@ This section outlines how to configure the integration service to export
 incidents into JIRA, import new issues from JIRA and pick up subsequent
 status changes in JIRA and have them update SpiraTeam. It assumes that
 you already have a working installation of SpiraTest, SpiraPlan or
-SpiraTeam and a working installation of JIRA.
+SpiraTeam and a cloud subscription to Jira.
 
-The following versions of SpiraTeam and Jira Server are supported:
-
-- The JIRA 5.x plugin supports Jira Server 5.0 or later and SpiraTeam v5.0 or
-later
-
-- The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or
-later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
-
-- The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or
-later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
-
-If you are using the Cloud version of Jira, please refer to the [Jira Cloud Documentation](../Using-SpiraTeam-with-Jira-Cloud) instead.
+The Jira Cloud plugin supports SpiraTeam v5.0 or later and the most recent version of Jira cloud hosted by Atlassian. For Jira Server, we have an alternate [Jira Server plugin](../Using-SpiraTeam-with-JIRA-5+) available.
 
 If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v2.3 before trying to integrate with Jira Server.
+at least v5.0 before trying to integrate with Jira Cloud.
 
 The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the Jira server. To start the configuration,
+system knows how to access the JIRA server. To start the configuration,
 please open up SpiraTeam in a web browser, log in using a valid account
 that has System-Administration level privileges and click on the System
 \> Data Synchronization administration option from the left-hand
@@ -87,12 +75,10 @@ plug-in. This is an optional field that is used for documentation
 purposes and is not actually used by the system.
 
 -   **Connection Info** -- this should the full URL to the JIRA
-installation being connected to (including any custom port numbers).
+instance being connected to.
 Entering this URL into a web browser should bring up the JIRA login
-page.
-
--   It is typically of the form:
-<http://myserver:8080>
+page. It is typically of the form:
+<https://mycompany.atlassian.net>
 
 -   **Login** -- this should be set to a valid login to the JIRA
 installation. The login needs to have permissions to create and view
@@ -105,24 +91,21 @@ specified above.
 find that issues being changed in JIRA are not being updated in
 SpiraTeam, try increasing the value as this will tell the
 data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps. Also if your JIRA installation is
-running on a server set to a different time-zone, then you should
-add in the number of hours difference between the servers'
-time-zones here.
+when comparing date-time stamps.
 
 -   **Auto-Map Users** -- This changes the way that the plugin maps
 users in SpiraTeam to those in JIRA:
 
 -   **Auto-Map = True\
 **With this setting, all users in SpiraTeam need to have the
-same username as those in JIRA. If this is the case then you do
+same username as those in JIRA (typically email addresses). If this is the case then you do
 not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
 -   **Auto-Map = False\
 **With this setting, users in SpiraTeam and JIRA are free to
 have different usernames because you specify the corresponding
-JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
+Jira **email address** or **accountId** for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
 -   **Custom 01** -- This is used to specify a JIRA custom property that
 should be mapped to the built-in SpiraTeam Incident Severity field
@@ -188,16 +171,16 @@ JIRA (for example).
 
 The following mapping information needs to be setup in SpiraTeam:
 
-- The mapping of the project identifiers for the projects that need to be
+The mapping of the project identifiers for the projects that need to be
 synchronized
 
-- The mapping of users in the system
+The mapping of users in the system
 
-- The mapping of releases (equivalent to JIRA versions) in the system
+The mapping of releases (equivalent to JIRA versions) in the system
 
-- The mapping of the various standard fields in the system
+The mapping of the various standard fields in the system
 
-- The mapping of the various custom properties in the system
+The mapping of the various custom properties in the system
 
 Each of these is explained in turn below. However, to make the data
 mapping process easier, we have a helpful utility that will help you
@@ -281,18 +264,34 @@ Administration \> Users \> View Edit Users, which will bring up the list
 of users in the system. Then click on the "Edit" button for a particular
 user that will be editing issues in JIRA:
 
-![](img/Using_SpiraTeam_with_JIRA_5+_24.png)
+![User Profile in Spira](img/JiraCloud-User-Mapping-1.png)
 
 
 
 
 Click on the 'Data Mapping' tab to list all the configured
-data-synchronization plug-ins for this user. In the text box next to the
-JIRA Data-Sync plug-in you need to enter the login for this username in
-JIRA. This will allow the data-synchronization plug-in to know which
-user in SpiraTeam match which equivalent user in JIRA. Click \[Save\]
-once you've entered the appropriate login name. You should now repeat
-for the other users who will be active in both systems.
+data-synchronization plug-ins for this user.
+
+![User Data Mapping Tab in Spira](img/JiraCloud-User-Mapping-2.png)
+
+In the text box next to the
+JIRA Data-Sync plug-in entry, you need to enter one of the following Jira user identifiers to allow the data-synchronization plug-in to know which
+user in SpiraTeam match which equivalent user in Jira:
+
+1. **Email Address** - you can enter in the email address of the user in Jira. This will only work if the user has set their user profile to be **public**.
+
+![User Data Mapping Tab in Spira using Email Address](img/JiraCloud-User-Mapping-2.png)
+
+- This requires that the profile has its email address visibility set to **Anyone** inside Jira:
+
+![Email visibility setting in Jira](img/JiraCloud-User-Mapping-User-Profile-Visibility.png)
+
+2. **Atlassian AccountID** - you can enter in the corresponding Atlassian **AccountID** value into this field. This will work regardless of whether the user's profile is public or private.
+
+![User Data Mapping Tab in Spira using Account ID](img/JiraCloud-User-Mapping-3.png)
+
+Click \[Save\]
+once you've entered the appropriate user identifier name. You should now repeat for the other users who will be active in both systems.
 
 *If you have set the "Auto-Map Users" option in the JIRA plugin, you can
 skip this section completely.*
@@ -831,3 +830,59 @@ SpiraTeam acts as a read-only viewer of these incidents.
 You are now able to perform test coverage and incident reporting inside
 SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam
 and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.
+
+## Using the Jira Cloud Connector
+
+Once you have the data-synchronization established between SpiraTest and
+Jira Cloud, we have an additional Atlassian marketplace connector that you can
+use (see
+<https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-jira>):
+
+![](img/Using_SpiraTeam_with_JIRA_5+_49.png)
+
+
+
+
+You can install the connector by following these instructions:
+
+1.  Log into your Jira instance as an admin.
+
+2.  Click the admin dropdown and choose Add-ons. The Find new apps or
+Find new add-ons screen loads.
+
+3.  Locate SpiraTest app for Jira.
+
+4.  Click Install to download and install your app.
+
+5.  Click Close in the "Installed and ready to go" dialog.
+
+6.  Now you need to configure the add-on to connect to your SpiraTest
+instance.
+
+![](img/Using_SpiraTeam_with_JIRA_5+_50.png)
+
+
+
+
+Please enter the following information:
+
+-   **SpiraTest URL**: this needs to be the base URL for your SpiraTest
+instance, typically of the form:
+
+-   <https://mysite.spiraservice.net>
+
+-   <https://demo.spiraservice.net/mysite>
+
+-   **Username**: This is the login you use to connect to SpiraTest
+
+-   **API Key / RSS Token**: This is the RSS Token / API key for the
+user name you specified.
+
+You can get the SpiraTest API Key from within the User Profile screen of
+SpiraTest:
+
+![](img/Using_SpiraTeam_with_JIRA_5+_51.png)
+
+
+
+

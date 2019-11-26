@@ -114,21 +114,22 @@ nav:
     - Visual Studio 2005-2008: IDE-Integration\Visual-Studio-2005---2008.md
   - Bug Tracking/DataSync:
     - Setup: External-Bug-Tracking-Integration\Setting-up-Data-Synchronization.md
-    - JIRA 5+: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
-    - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
+    - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
+    - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
+    - Azure DevOps: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
+    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
+    - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
+    - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
+    - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
     - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
-    - MS-TFS: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
-    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
     - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
+    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
     - ClearQuest: External-Bug-Tracking-Integration\Using-SpiraTeam-with-ClearQuest.md
     - RTC: External-Bug-Tracking-Integration\Using-SpiraTeam-with-IBM-RTC.md
     - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
     - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
-    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
+    - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
     - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
-    - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
-    - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
-    - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
   - VCS: 
     - Git: Version-Control-Integration\Integrating-with-Git.md
     - Mercurial: Version-Control-Integration\Integrating-with-Mercurial.md
