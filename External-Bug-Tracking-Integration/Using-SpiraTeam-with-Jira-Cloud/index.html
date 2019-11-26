@@ -7,10 +7,10 @@
 
 
 
-<link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">
+<link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">
 
 <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Jira Server - SpiraDocs</title>
+        <title>Jira Cloud - SpiraDocs</title>
 <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
 <link href="../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../css/base.css" rel="stylesheet">
@@ -495,12 +495,12 @@
     <a href="../Setting-up-Data-Synchronization/">Setup</a>
 </li>
             
-<li >
-    <a href="../Using-SpiraTeam-with-Jira-Cloud/">Jira Cloud</a>
+<li class="active">
+    <a href="./">Jira Cloud</a>
 </li>
             
-<li class="active">
-    <a href="./">Jira Server</a>
+<li >
+    <a href="../Using-SpiraTeam-with-JIRA-5+/">Jira Server</a>
 </li>
             
 <li >
@@ -735,11 +735,11 @@
   </a>
 </li>
 <li >
-  <a rel="next" href="../Using-SpiraTeam-with-Jira-Cloud/" >
+  <a rel="next" href="../Setting-up-Data-Synchronization/" >
     <i class="fa fa-arrow-left"></i></a>
 </li>
 <li >
-  <a rel="prev" href="../Using-SpiraTest-with-MS-TFS/" ><i
+  <a rel="prev" href="../Using-SpiraTeam-with-JIRA-5+/" ><i
       class="fa fa-arrow-right"></i></a>
 </li>
                             <li>
@@ -754,7 +754,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a
-                href="#using-spirateam-with-jira-server-5-or-later">Using SpiraTeam with Jira Server (5 or later)</a></li>
+                href="#using-spirateam-with-jira-cloud">Using SpiraTeam with Jira Cloud</a></li>
         <li class="second-level"><a href="#configuring-the-plug-in">Configuring the Plug-In</a></li>
         
         <li class="second-level"><a href="#configuring-the-data-mapping">Configuring the Data Mapping</a></li>
@@ -766,14 +766,15 @@
         <li class="third-level"><a href="#configuring-the-custom-property-mapping">Configuring the Custom Property Mapping</a></li>
         <li class="second-level"><a href="#using-spirateam-with-jira">Using SpiraTeam with JIRA</a></li>
         
+        <li class="second-level"><a href="#using-the-jira-cloud-connector">Using the Jira Cloud Connector</a></li>
+        
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="using-spirateam-with-jira-server-5-or-later">Using SpiraTeam with Jira Server (5 or later)</h1>
+<h1 id="using-spirateam-with-jira-cloud">Using SpiraTeam with Jira Cloud</h1>
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Jira Server
-issue/bug tracking system version 5.0 and later. The built-in
+(hereafter referred to as SpiraTeam) in conjunction with the cloud version of the Jira issue/bug tracking system. The built-in
 integration service allows the quality assurance team to manage their
 requirements and test cases in SpiraTeam, execute test runs in
 SpiraTest, and then have the new incidents generated during the run be
@@ -792,27 +793,12 @@ lifecycle.</p>
 incidents into JIRA, import new issues from JIRA and pick up subsequent
 status changes in JIRA and have them update SpiraTeam. It assumes that
 you already have a working installation of SpiraTest, SpiraPlan or
-SpiraTeam and a working installation of JIRA.</p>
-<p>The following versions of SpiraTeam and Jira Server are supported:</p>
-<ul>
-<li>
-<p>The JIRA 5.x plugin supports Jira Server 5.0 or later and SpiraTeam v5.0 or
-later</p>
-</li>
-<li>
-<p>The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or
-later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
-</li>
-<li>
-<p>The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or
-later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
-</li>
-</ul>
-<p>If you are using the Cloud version of Jira, please refer to the <a href="../Using-SpiraTeam-with-Jira-Cloud">Jira Cloud Documentation</a> instead.</p>
+SpiraTeam and a cloud subscription to Jira.</p>
+<p>The Jira Cloud plugin supports SpiraTeam v5.0 or later and the most recent version of Jira cloud hosted by Atlassian. For Jira Server, we have an alternate <a href="../Using-SpiraTeam-with-JIRA-5+">Jira Server plugin</a> available.</p>
 <p>If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v2.3 before trying to integrate with Jira Server.</p>
+at least v5.0 before trying to integrate with Jira Cloud.</p>
 <p>The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the Jira server. To start the configuration,
+system knows how to access the JIRA server. To start the configuration,
 please open up SpiraTeam in a web browser, log in using a valid account
 that has System-Administration level privileges and click on the System
 > Data Synchronization administration option from the left-hand
@@ -848,13 +834,10 @@ purposes and is not actually used by the system.</p>
 </li>
 <li>
 <p><strong>Connection Info</strong> -- this should the full URL to the JIRA
-installation being connected to (including any custom port numbers).
+instance being connected to.
 Entering this URL into a web browser should bring up the JIRA login
-page.</p>
-</li>
-<li>
-<p>It is typically of the form:
-<a href="http://myserver:8080">http://myserver:8080</a></p>
+page. It is typically of the form:
+<a href="https://mycompany.atlassian.net">https://mycompany.atlassian.net</a></p>
 </li>
 <li>
 <p><strong>Login</strong> -- this should be set to a valid login to the JIRA
@@ -870,10 +853,7 @@ specified above.</p>
 find that issues being changed in JIRA are not being updated in
 SpiraTeam, try increasing the value as this will tell the
 data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps. Also if your JIRA installation is
-running on a server set to a different time-zone, then you should
-add in the number of hours difference between the servers'
-time-zones here.</p>
+when comparing date-time stamps.</p>
 </li>
 <li>
 <p><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps
@@ -882,7 +862,7 @@ users in SpiraTeam to those in JIRA:</p>
 <li>
 <p><strong>Auto-Map = True\
 </strong>With this setting, all users in SpiraTeam need to have the
-same username as those in JIRA. If this is the case then you do
+same username as those in JIRA (typically email addresses). If this is the case then you do
 not need to perform the <a href="#configuring-the-user-mapping">user-mapping task</a>. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.</p>
 </li>
@@ -890,7 +870,7 @@ usernames are the same in both systems.</p>
 <p><strong>Auto-Map = False\
 </strong>With this setting, users in SpiraTeam and JIRA are free to
 have different usernames because you specify the corresponding
-JIRA name for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></p>
+Jira <strong>email address</strong> or <strong>accountId</strong> for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></p>
 </li>
 <li>
 <p><strong>Custom 01</strong> -- This is used to specify a JIRA custom property that
@@ -959,24 +939,12 @@ a correct mapping, there is no way for the integration service to know
 that an "Enhancement" in SpiraTeam is the same as a "New Feature" in
 JIRA (for example).</p>
 <p>The following mapping information needs to be setup in SpiraTeam:</p>
-<ul>
-<li>
 <p>The mapping of the project identifiers for the projects that need to be
 synchronized</p>
-</li>
-<li>
 <p>The mapping of users in the system</p>
-</li>
-<li>
 <p>The mapping of releases (equivalent to JIRA versions) in the system</p>
-</li>
-<li>
 <p>The mapping of the various standard fields in the system</p>
-</li>
-<li>
 <p>The mapping of the various custom properties in the system</p>
-</li>
-</ul>
 <p>Each of these is explained in turn below. However, to make the data
 mapping process easier, we have a helpful utility that will help you
 connect to your JIRA instance (both cloud or server) and determine the
@@ -1026,14 +994,27 @@ the project mappings get copied across to the new project.</em></strong></p>
 Administration > Users > View Edit Users, which will bring up the list
 of users in the system. Then click on the "Edit" button for a particular
 user that will be editing issues in JIRA:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_24.png" /></p>
+<p><img alt="User Profile in Spira" src="../img/JiraCloud-User-Mapping-1.png" /></p>
 <p>Click on the 'Data Mapping' tab to list all the configured
-data-synchronization plug-ins for this user. In the text box next to the
-JIRA Data-Sync plug-in you need to enter the login for this username in
-JIRA. This will allow the data-synchronization plug-in to know which
-user in SpiraTeam match which equivalent user in JIRA. Click [Save]
-once you've entered the appropriate login name. You should now repeat
-for the other users who will be active in both systems.</p>
+data-synchronization plug-ins for this user.</p>
+<p><img alt="User Data Mapping Tab in Spira" src="../img/JiraCloud-User-Mapping-2.png" /></p>
+<p>In the text box next to the
+JIRA Data-Sync plug-in entry, you need to enter one of the following Jira user identifiers to allow the data-synchronization plug-in to know which
+user in SpiraTeam match which equivalent user in Jira:</p>
+<ol>
+<li><strong>Email Address</strong> - you can enter in the email address of the user in Jira. This will only work if the user has set their user profile to be <strong>public</strong>.</li>
+</ol>
+<p><img alt="User Data Mapping Tab in Spira using Email Address" src="../img/JiraCloud-User-Mapping-2.png" /></p>
+<ul>
+<li>This requires that the profile has its email address visibility set to <strong>Anyone</strong> inside Jira:</li>
+</ul>
+<p><img alt="Email visibility setting in Jira" src="../img/JiraCloud-User-Mapping-User-Profile-Visibility.png" /></p>
+<ol>
+<li><strong>Atlassian AccountID</strong> - you can enter in the corresponding Atlassian <strong>AccountID</strong> value into this field. This will work regardless of whether the user's profile is public or private.</li>
+</ol>
+<p><img alt="User Data Mapping Tab in Spira using Account ID" src="../img/JiraCloud-User-Mapping-3.png" /></p>
+<p>Click [Save]
+once you've entered the appropriate user identifier name. You should now repeat for the other users who will be active in both systems.</p>
 <p><em>If you have set the "Auto-Map Users" option in the JIRA plugin, you can
 skip this section completely.</em></p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping</h3>
@@ -1369,7 +1350,60 @@ SpiraTeam acts as a read-only viewer of these incidents.</p>
 </ul>
 <p>You are now able to perform test coverage and incident reporting inside
 SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam
-and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.</p></div>
+and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.</p>
+<h2 id="using-the-jira-cloud-connector">Using the Jira Cloud Connector</h2>
+<p>Once you have the data-synchronization established between SpiraTest and
+Jira Cloud, we have an additional Atlassian marketplace connector that you can
+use (see
+<a href="https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-jira">https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-jira</a>):</p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_49.png" /></p>
+<p>You can install the connector by following these instructions:</p>
+<ol>
+<li>
+<p>Log into your Jira instance as an admin.</p>
+</li>
+<li>
+<p>Click the admin dropdown and choose Add-ons. The Find new apps or
+Find new add-ons screen loads.</p>
+</li>
+<li>
+<p>Locate SpiraTest app for Jira.</p>
+</li>
+<li>
+<p>Click Install to download and install your app.</p>
+</li>
+<li>
+<p>Click Close in the "Installed and ready to go" dialog.</p>
+</li>
+<li>
+<p>Now you need to configure the add-on to connect to your SpiraTest
+instance.</p>
+</li>
+</ol>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_50.png" /></p>
+<p>Please enter the following information:</p>
+<ul>
+<li>
+<p><strong>SpiraTest URL</strong>: this needs to be the base URL for your SpiraTest
+instance, typically of the form:</p>
+</li>
+<li>
+<p><a href="https://mysite.spiraservice.net">https://mysite.spiraservice.net</a></p>
+</li>
+<li>
+<p><a href="https://demo.spiraservice.net/mysite">https://demo.spiraservice.net/mysite</a></p>
+</li>
+<li>
+<p><strong>Username</strong>: This is the login you use to connect to SpiraTest</p>
+</li>
+<li>
+<p><strong>API Key / RSS Token</strong>: This is the RSS Token / API key for the
+user name you specified.</p>
+</li>
+</ul>
+<p>You can get the SpiraTest API Key from within the User Profile screen of
+SpiraTest:</p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_51.png" /></p></div>
         </div>
 
         <footer class="col-md-12">
