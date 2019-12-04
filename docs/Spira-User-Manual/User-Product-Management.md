@@ -596,7 +596,7 @@ tour.
 
 ### Instant Messenger
 
-The Spira instant messenger is available in both SpiraPlan® and
+The Spira instant messenger is available in both SpiraTeam® and
 SpiraPlan® and allows you to send short messages instantaneously to
 other users in the system. You can see the status of other users by
 looking for the small green circle next to the list of users in the 'My
