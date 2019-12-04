@@ -1,5 +1,5 @@
 # Getting Started
-This documentation uses ![MkDocs](https://www.mkdocs.org/) - documentation using Markdown. This is an open source system that takes a folder system of markdown files with associated files (eg images) and renders them into HTML with nice features like site navigation and search, and on page navigation. It is similar to other services like Jekyll or OctoPress, but it is focused on documentation, not blogging.
+This documentation uses [MkDocs](https://www.mkdocs.org/) - documentation using Markdown. This is an open source system that takes a folder system of markdown files with associated files (eg images) and renders them into HTML with nice features like site navigation and search, and on page navigation. It is similar to other services like Jekyll or OctoPress, but it is focused on documentation, not blogging.
 
 We can fully change the theme used and its features using a basic templating language and normal CSS. If needed you can insert HTML into the Markdown files and it will get passed through as HTML.
 
@@ -11,12 +11,12 @@ We can fully change the theme used and its features using a basic templating lan
 - Github hosts these deployed files as a static site
 
 ## Getting the build environment set up
-1. Refer to ![MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
+1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
 2. Clone this repo to your local machine
 3. Edit files as needed
 
 # Working with the docs and Markdown
-- ![How to create files and style them](https://www.mkdocs.org/user-guide/writing-your-docs/)
+- [How to create files and style them](https://www.mkdocs.org/user-guide/writing-your-docs/)
 - Markdown is a straightforward way to write human readable text that renders to display HTML headings, **bold**, *italics*, links, images, numbered lists, bulleted lists, tables, line breaks, and code blocks.
 - To make a paragraph make sure to leave an empty line between paragraphs (ie press return twice)
 - You don't need to leave an empty line between list items
