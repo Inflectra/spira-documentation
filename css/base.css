@@ -358,3 +358,18 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 .table-with-icons + table td {
     margin: 4px 8px;
 }
+
+.alert-box {
+    margin: 2rem 0 4rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.section-break {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 3px solid #eee;
+}

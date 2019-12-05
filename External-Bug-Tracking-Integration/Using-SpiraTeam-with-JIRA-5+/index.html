@@ -403,6 +403,14 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+<li >
+    <a href="../Using-SpiraTeam-with-Jira-Cloud/">Jira Cloud</a>
+</li>
+                                    
+<li >
+    <a href="./">Jira Server</a>
+</li>
+                                    
   <li class="dropdown-submenu">
     <a href="#">Testing</a>
     <ul class="dropdown-menu">
@@ -775,605 +783,238 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="using-spirateam-with-jira-server-5-or-later">Using SpiraTeam with Jira Server (5 or later)</h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Jira Server
-issue/bug tracking system version 5.0 and later. The built-in
-integration service allows the quality assurance team to manage their
-requirements and test cases in SpiraTeam, execute test runs in
-SpiraTest, and then have the new incidents generated during the run be
-automatically loaded into JIRA. Once the incidents are loaded into JIRA
-as issues, the development team can then manage the lifecycle of these
-issues in JIRA, and have the status changes in JIRA be reflected back in
-SpiraTeam.</p>
-<p>In addition, any issues logged directly into JIRA will get imported into
-SpiraTeam as either new incidents or new requirements (depending on
-their type) so that they can be used as part of the planning and testing
-lifecycle.</p>
-<p><strong>STOP! Please make sure you have first read the Instructions in 
-<a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the Jira Server issue/bug tracking system version 5.0 and later. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam.</p>
+<p>In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.</p>
+<p class="alert-box"><strong>STOP! Please make sure you have first read the Instructions in <a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In</h2>
-<p>This section outlines how to configure the integration service to export
-incidents into JIRA, import new issues from JIRA and pick up subsequent
-status changes in JIRA and have them update SpiraTeam. It assumes that
-you already have a working installation of SpiraTest, SpiraPlan or
-SpiraTeam and a working installation of JIRA.</p>
+<p>This section outlines how to configure the integration service to export incidents into JIRA, import new issues from JIRA and pick up subsequent status changes in JIRA and have them update SpiraTeam. It assumes that you already have a working installation of SpiraTest, SpiraPlan or SpiraTeam and a working installation of JIRA.</p>
 <p>The following versions of SpiraTeam and Jira Server are supported:</p>
 <ul>
 <li>
-<p>The JIRA 5.x plugin supports Jira Server 5.0 or later and SpiraTeam v5.0 or
-later</p>
+<p>The JIRA 5.x plugin supports Jira Server 5.0 or later and SpiraTeam v5.0 or later</p>
 </li>
 <li>
-<p>The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or
-later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
+<p>The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
 </li>
 <li>
-<p>The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or
-later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
+<p>The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or later <em>(see <a href="../Using-SpiraTeam-with-JIRA-3--4/">Using SpiraTeam with JIRA 3 / 4</a>)</em></p>
 </li>
 </ul>
 <p>If you are using the Cloud version of Jira, please refer to the <a href="../Using-SpiraTeam-with-Jira-Cloud">Jira Cloud Documentation</a> instead.</p>
-<p>If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v2.3 before trying to integrate with Jira Server.</p>
-<p>The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the Jira server. To start the configuration,
-please open up SpiraTeam in a web browser, log in using a valid account
-that has System-Administration level privileges and click on the System
-> Data Synchronization administration option from the left-hand
-navigation:</p>
+<p>If you have an earlier version of SpiraTeam, you will need to upgrade to at least v2.3 before trying to integrate with Jira Server.</p>
+<p>The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the Jira server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System > Data Synchronization administration option from the left-hand navigation:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_16.png" /></p>
-<p>This screen lists all the plug-ins already configured in the system.
-Depending on whether you chose the option to include sample data in your
-installation or not, you will see either an empty screen or a list of
-sample data-synchronization plug-ins.</p>
-<p>If you already see an entry for <strong>JiraDataSync</strong> you should click on its
-"Edit" link. If you don't see such an entry in the list, please click on
-the [Add] button instead. In either case you will be taken to the
-following screen where you can enter or modify the JIRA
-Data-Synchronization plug-in:</p>
+<p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>JiraDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_17.png" /></p>
-<p>You need to fill out the following fields for the JIRA Plug-in to
-operate correctly:</p>
+<p>You need to fill out the following fields for the JIRA Plug-in to operate correctly:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- this needs to be set to <strong>JiraDataSync</strong>.</p>
+<li><strong>Name</strong> -- this needs to be set to <strong>JiraDataSync</strong>.</li>
+<li><strong>Caption</strong> -- this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraDataSync"</li>
+<li><strong>Description</strong> -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
+<li><strong>Connection Info</strong> -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.</li>
+<li>It is typically of the form: <a href="http://myserver:8080">http://myserver:8080</a></li>
+<li><strong>Login</strong> -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.</li>
+<li><strong>Password</strong> -- this should be set to the password of the login specified above.</li>
+<li><strong>Time Offset</strong> -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
+time-zones here.</li>
+<li><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:</li>
+<li><strong>Auto-Map = True\
+</strong>With this setting, all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the <a href="#configuring-the-user-mapping">user-mapping task</a>. This is a big time-saver if you can guarantee that all usernames are the same in both systems.</li>
+<li><strong>Auto-Map = False\
+</strong>With this setting, users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></li>
+<li><strong>Custom 01</strong> -- This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</li>
+<li><strong>Custom 02</strong> -- This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.</li>
+<li><strong>Custom 03</strong> -- This determines how the synchronization of incidents works:<ul>
+<li><strong>Default (leave blank)</strong> -- By default, SpiraTeam will log new incidents in JIRA that were originally created in SpiraTeam. It will also log new issues from JIRA in SpiraTeam. Updates will only occur from JIRA SpiraTeam. <em>This is the recommended option for most users.</em></li>
+<li><strong>"True"</strong> -- If you enter the word "True" in this setting, the plugin will restrict synchronization to only loading new incidents from SpiraTeam > JIRA and updating existing items. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.</li>
+<li><strong>"Both"</strong> -- If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict.\
+<em>This option is not recommended for novice users.</em></li>
+</ul>
 </li>
-<li>
-<p><strong>Caption</strong> -- this is the display name of the plugin. Normally you
-can use something generic such as "Jira", however if you have
-multiple JIRA instances you might want to name it something specific
-such as "Jira External". If you don't enter a value, the display
-name will be "JiraDataSync"</p>
-</li>
-<li>
-<p><strong>Description</strong> -- this should be set to a description of the
-plug-in. This is an optional field that is used for documentation
-purposes and is not actually used by the system.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong> -- this should the full URL to the JIRA
-installation being connected to (including any custom port numbers).
-Entering this URL into a web browser should bring up the JIRA login
-page.</p>
-</li>
-<li>
-<p>It is typically of the form:
-<a href="http://myserver:8080">http://myserver:8080</a></p>
-</li>
-<li>
-<p><strong>Login</strong> -- this should be set to a valid login to the JIRA
-installation. The login needs to have permissions to create and view
-issues and versions within JIRA.</p>
-</li>
-<li>
-<p><strong>Password</strong> -- this should be set to the password of the login
-specified above.</p>
-</li>
-<li>
-<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
-find that issues being changed in JIRA are not being updated in
-SpiraTeam, try increasing the value as this will tell the
-data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps. Also if your JIRA installation is
-running on a server set to a different time-zone, then you should
-add in the number of hours difference between the servers'
-time-zones here.</p>
-</li>
-<li>
-<p><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps
-users in SpiraTeam to those in JIRA:</p>
-</li>
-<li>
-<p><strong>Auto-Map = True\
-</strong>With this setting, all users in SpiraTeam need to have the
-same username as those in JIRA. If this is the case then you do
-not need to perform the <a href="#configuring-the-user-mapping">user-mapping task</a>. This is a big time-saver if you can guarantee that all
-usernames are the same in both systems.</p>
-</li>
-<li>
-<p><strong>Auto-Map = False\
-</strong>With this setting, users in SpiraTeam and JIRA are free to
-have different usernames because you specify the corresponding
-JIRA name for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></p>
-</li>
-<li>
-<p><strong>Custom 01</strong> -- This is used to specify a JIRA custom property that
-should be mapped to the built-in SpiraTeam Incident Severity field
-(which does not exist in JIRA). This can be left empty for now and
-will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</p>
-</li>
-<li>
-<p><strong>Custom 02</strong> -- This should be set to the word "True" if you want
-to have the new issues submitted to JIRA be submitted using a
-specified SecurityLevel. If you're not using the security level
-feature of JIRA, leave the field blank.</p>
-</li>
-<li>
-<p><strong>Custom 03</strong> -- This determines how the synchronization of
-incidents works:</p>
-</li>
-<li>
-<p><strong>Default (leave blank)</strong> -- By default, SpiraTeam will log new
-incidents in JIRA that were originally created in SpiraTeam. It
-will also log new issues from JIRA in SpiraTeam. Updates will
-only occur from JIRA SpiraTeam.\
-<em>This is the recommended option for most users.</em></p>
-</li>
-<li>
-<p><strong>"True"</strong> -- If you enter the word "True" in this setting, the
-plugin will restrict synchronization to only loading new
-incidents from SpiraTeam > JIRA and updating existing items.
-This is useful if you want to prevent existing issues in JIRA
-from being loaded into SpiraTeam.</p>
-</li>
-<li>
-<p><strong>"Both"</strong> -- If you enter the word "Both" in this setting, the
-plugin will allow full bidirectional synchronization of new
-incidents/issues and also updates to existing incidents/issues
-in both SpiraTeam and JIRA. This option should only be used if
-you have a well-defined set of workflows that make sense in both
-systems, and that do not conflict.\
-<em>This option is not recommended for novice users.</em></p>
-</li>
-<li>
-<p><strong>Custom 04</strong> -- This should be set to a comma-separated list of IDs
-of any JIRA issue types that you want to be synchronized with
-SpiraTeam requirements instead of incidents. If you leave this
-blank, all JIRA issue types will be synchronized with incidents.</p>
-</li>
-<li>
-<p><strong>Custom 05</strong> -- This should be set to the name of the JIRA issue
-link type that you want SpiraTeam incident associations to use. If
-you leave this blank, incident associations in SpiraTeam will not be
-imported into JIRA. You can get the list of issue link types from
-the following screen in JIRA:</p>
-</li>
+<li><strong>Custom 04</strong> -- This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.</li>
+<li><strong>Custom 05</strong> -- This should be set to the name of the JIRA issue link type that you want SpiraTeam incident associations to use. If you leave this blank, incident associations in SpiraTeam will not be imported into JIRA. You can get the list of issue link types from the following screen in JIRA:</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_18.png" /></p>
 <blockquote>
-<p><strong>Note: For most users, we recommend leaving Custom 01 -- Custom 04
-blank.</strong></p>
+<p><strong>Note: For most users, we recommend leaving Custom 01 -- Custom 04 blank.</strong></p>
 </blockquote>
 <h2 id="configuring-the-data-mapping">Configuring the Data Mapping</h2>
-<p>Next, you need to configure the data mapping between SpiraTeam and JIRA.
-This allows the various projects, users, releases, incident types,
-statuses, priorities and custom property values used in the two
-applications to be related to each other. This is important, as without
-a correct mapping, there is no way for the integration service to know
-that an "Enhancement" in SpiraTeam is the same as a "New Feature" in
-JIRA (for example).</p>
+<p>Next, you need to configure the data mapping between SpiraTeam and JIRA. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Enhancement" in SpiraTeam is the same as a "New Feature" in JIRA (for example).</p>
 <p>The following mapping information needs to be setup in SpiraTeam:</p>
 <ul>
-<li>
-<p>The mapping of the project identifiers for the projects that need to be
-synchronized</p>
-</li>
-<li>
-<p>The mapping of users in the system</p>
-</li>
-<li>
-<p>The mapping of releases (equivalent to JIRA versions) in the system</p>
-</li>
-<li>
-<p>The mapping of the various standard fields in the system</p>
-</li>
-<li>
-<p>The mapping of the various custom properties in the system</p>
-</li>
+<li>The mapping of the project identifiers for the projects that need to be synchronized</li>
+<li>The mapping of users in the system</li>
+<li>The mapping of releases (equivalent to JIRA versions) in the system</li>
+<li>The mapping of the various standard fields in the system</li>
+<li>The mapping of the various custom properties in the system</li>
 </ul>
-<p>Each of these is explained in turn below. However, to make the data
-mapping process easier, we have a helpful utility that will help you
-connect to your JIRA instance (both cloud or server) and determine the
-matching IDs for the various fields in JIRA:</p>
+<p>Each of these is explained in turn below. However, to make the data mapping process easier, we have a helpful utility that will help you connect to your JIRA instance (both cloud or server) and determine the matching IDs for the various fields in JIRA:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_19.png" /></p>
 <p>You can download it from this URL:
 <a href="https://www.inflectra.com/Downloads/JiraConfigurationHelper.zip">https://www.inflectra.com/Downloads/JiraConfigurationHelper.zip</a></p>
 <p>Once you have downloaded and unzipped the program, run the
-<strong>JiraConfigurationHelper.exe</strong> and the following screen will be
-displayed:</p>
+<strong>JiraConfigurationHelper.exe</strong> and the following screen will be displayed:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_20.png" /></p>
-<p>Enter in the URL, login and password/API Key for your JIRA instance and
-click <strong>Connect</strong>:</p>
+<p>Enter in the URL, login and password/API Key for your JIRA instance and click <strong>Connect</strong>:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_21.png" /></p>
-<p>Choose the project in JIRA that you will be connecting to SpiraTest and
-then the list of issue types, issue statuses, issue priorities,
-components, versions and custom fields will be displayed. We will be
-using this tool later on when you want to get some of the ID values to
-populate in SpiraTest.</p>
+<p>Choose the project in JIRA that you will be connecting to SpiraTest and then the list of issue types, issue statuses, issue priorities, components, versions and custom fields will be displayed. We will be using this tool later on when you want to get some of the ID values to populate in SpiraTest.</p>
 <h3 id="configuring-the-project-mapping">Configuring the Project Mapping</h3>
-<p>From the data synchronization administration page, you need to click on
-the "View Project Mappings" hyperlink next to the JIRA plug-in name.
-This will take you to the data-mapping home page for the currently
-selected project:</p>
+<p>From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the JIRA plug-in name. This will take you to the data-mapping home page for the currently selected project:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_22.png" /></p>
-<p>If the project name does not match the name of the project you want to
-configure the data-mapping for, click on the "(Change Project)"
-hyperlink to change the current project.</p>
-<p>To enable this project for data-synchronization with JIRA, you need to
-enter:</p>
+<p>If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with JIRA, you need to enter:</p>
 <p><strong>External Key</strong> -- This should be set to the name of the project
 <strong>Key</strong> in JIRA. Typically, this is a short acronym for the project:
 <img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_23.png" /></p>
-<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
-want to synchronize data for this project. Once the project has been
-completed, setting the value to "No" will stop data synchronization,
-reducing network utilization.</p>
-<p>Click [Update] to confirm these settings. Once you have enabled the
-project for data-synchronization, you can now enter the other data
-mapping values outlined below.</p>
-<p><strong><em>Note: Once you have successfully configured the project, when
-creating a new project, you should choose the option to "Create Project
-from Existing Project" rather than "Use Default Template" so that all
-the project mappings get copied across to the new project.</em></strong></p>
+<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.</p>
+<p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping</h3>
-<p>To configure the mapping of users in the two systems, you need to go to
-Administration > Users > View Edit Users, which will bring up the list
-of users in the system. Then click on the "Edit" button for a particular
-user that will be editing issues in JIRA:</p>
+<p>To configure the mapping of users in the two systems, you need to go to Administration > Users > View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing issues in JIRA:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_24.png" /></p>
-<p>Click on the 'Data Mapping' tab to list all the configured
-data-synchronization plug-ins for this user. In the text box next to the
-JIRA Data-Sync plug-in you need to enter the login for this username in
-JIRA. This will allow the data-synchronization plug-in to know which
-user in SpiraTeam match which equivalent user in JIRA. Click [Save]
-once you've entered the appropriate login name. You should now repeat
-for the other users who will be active in both systems.</p>
-<p><em>If you have set the "Auto-Map Users" option in the JIRA plugin, you can
-skip this section completely.</em></p>
+<p>Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box next to the JIRA Data-Sync plug-in you need to enter the login for this username in JIRA. This will allow the data-synchronization plug-in to know which user in SpiraTeam match which equivalent user in JIRA. Click [Save]
+once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
+<p><em>If you have set the "Auto-Map Users" option in the JIRA plugin, you can skip this section completely.</em></p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping</h3>
-<p>When the data-synchronization service runs, when it comes across a
-release/iteration in SpiraTeam that it has not seen before, it will
-create a corresponding "Version" in JIRA. Similarly, if it comes across
-a new Version in JIRA that it has not seen before, it will create a new
-Release in SpiraTeam. Therefore, when using both systems together, it is
-recommended that you only enter new Releases/Versions in one system and
-let the data-synchronization service add them to the other system.</p>
-<p>However, you may start out with the situation where you already have
-pre-existing Releases/Version in both systems that you need to associate
-in the data-mapping. If you don't do this, you may find that duplicates
-get created when you first enable the data-synchronization service.
-Therefore, for any Releases/Iterations that already exist in BOTH
-systems please navigate to Planning > Releases and click on the
-Release/Iteration in question. Make sure you have the 'Overview' tab
-visible and expand the "Details" section of the release/iteration:</p>
+<p>When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Version" in JIRA. Similarly, if it comes across a new Version in JIRA that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Versions in one system and let the data-synchronization service add them to the other system.</p>
+<p>However, you may start out with the situation where you already have pre-existing Releases/Version in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore, for any Releases/Iterations that already exist in BOTH systems please navigate to Planning > Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_25.png" /></p>
-<p>In addition to the standard fields and custom properties, you will see
-an additional text property called "<strong>Jira ID</strong>" that is used to store
-the mapped external identifier for the equivalent Version in JIRA. You
-need to locate the ID of the equivalent version in JIRA, enter it into
-this text-box and click [Save]. You should now repeat for all the
-other pre-existing releases.</p>
+<p>In addition to the standard fields and custom properties, you will see an additional text property called "<strong>Jira ID</strong>" that is used to store the mapped external identifier for the equivalent Version in JIRA. You need to locate the ID of the equivalent version in JIRA, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>
 <p>The JIRA ID can be found using the Jira Configuration Helper using the
 <strong>Versions</strong> tab:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_26.png" /></p>
 <h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping</h3>
-<p>Now that the projects, user and releases have been mapped correctly, we
-need to configure the standard incident and requirement fields. To do
-this, go to Administration > System > Data Synchronization and click
-on the "View Project Mappings" for the JiraDataSync plug-in entry:</p>
+<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident and requirement fields. To do this, go to Administration > System > Data Synchronization and click on the "View Project Mappings" for the JiraDataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_27.png" /></p>
-<p>From this screen, you need to click on Priority, Severity, Component,
-Status and Type in turn to configure the incident field mappings. If
-you're using the option to have JIRA also synchronize some issue types
-as requirements, then you'll need to also configure the Requirement
-Importance, Type, Component and Status fields.</p>
+<p>From this screen, you need to click on Priority, Severity, Component, Status and Type in turn to configure the incident field mappings. If you're using the option to have JIRA also synchronize some issue types as requirements, then you'll need to also configure the Requirement Importance, Type, Component and Status fields.</p>
 <h4 id="a-incident-type">a) Incident Type</h4>
-<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up
-the Incident type mapping configuration screen:</p>
+<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_28.png" /></p>
-<p>The table lists each of the incident types available in SpiraTeam and
-provides you with the ability to enter the matching JIRA issue type ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields (e.g. Bug and Incident in SpiraTeam are both equivalent to Bug in
-JIRA), in which case only one of the two values can be listed as Primary
-= Yes as that's the value that's used on the reverse synchronization
-(from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the incident types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Bug and Incident in SpiraTeam are both equivalent to Bug in JIRA), in which case only one of the two values can be listed as Primary
+= Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
 <h4 id="b-incident-status">b) Incident Status</h4>
-<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
-up the Incident status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_30.png" /></p>
-<p>The table lists each of the incident statuses available in SpiraTeam and
-provides you with the ability to enter the matching JIRA issue status ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields (e.g. New and Open in SpiraTeam are both equivalent to Open in
-JIRA), in which case only one of the two values can be listed as Primary
-= Yes as that's the value that's used on the reverse synchronization
-(from JIRA > SpiraTeam).</p>
-<p>We recommend that you always point the New and Open statuses inside
-SpiraTeam to point to the ID for "Open" inside JIRA and make Open in
-SpiraTeam the Primary status of the two. This is recommended so that as
-new incidents in SpiraTeam get synched over to JIRA, they will get
-switched to the Open status in JIRA which will then be synched back to
-"Open" in SpiraTeam. That way you'll be able to see at a glance which
-incidents have been synched with JIRA and those that haven't.</p>
-<p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the incident statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. New and Open in SpiraTeam are both equivalent to Open in JIRA), in which case only one of the two values can be listed as Primary
+= Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>We recommend that you always point the New and Open statuses inside SpiraTeam to point to the ID for "Open" inside JIRA and make Open in SpiraTeam the Primary status of the two. This is recommended so that as new incidents in SpiraTeam get synched over to JIRA, they will get switched to the Open status in JIRA which will then be synched back to "Open" in SpiraTeam. That way you'll be able to see at a glance which incidents have been synched with JIRA and those that haven't.</p>
+<p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
 <h4 id="c-incident-priority">c) Incident Priority</h4>
-<p>Click on the "Priority" hyperlink under Incident Standard Fields to
-bring up the Incident Priority mapping configuration screen:</p>
+<p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_32.png" /></p>
-<p>The table lists each of the incident priorities available in SpiraTeam
-and provides you with the ability to enter the matching JIRA priority ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the
-Jira configuration helper:</p>
+<p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
 <h4 id="d-incident-component-optional">d) Incident Component (Optional)</h4>
-<p>Click on the "Component" hyperlink under Incident Standard Fields to
-bring up the Incident component mapping configuration screen:</p>
+<p>Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_34.png" /></p>
-<p>The table lists each of the components available in SpiraTeam and
-provides you with the ability to enter the matching JIRA component ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
 <h4 id="e-incident-severity-optional">e) Incident Severity (Optional)</h4>
-<p>Click on the "Severity" hyperlink under Incident Standard Fields to
-bring up the Incident severity mapping configuration screen:</p>
+<p>Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_36.png" /></p>
-<p>Unlike the other incident standard fields, JIRA doesn't actually have a
-built-in field for storing the severity of an issue, so if you want to
-be able to see the SpiraTeam incident severity in JIRA, you'll need to
-create a JIRA custom list field to store the different severity values.
-If you don't want to synchronize severity values with JIRA, you can skip
-the rest of this section.</p>
-<p>Once you have created a custom field in JIRA to contain the list of
-severity values, you need to now populate the above table <strong>with the
-name</strong> (Not the ID) of the severity custom property values inside JIRA
-and click Update. Secondly you need to go to the Plug-in configuration
-screen:</p>
+<p>Unlike the other incident standard fields, JIRA doesn't actually have a built-in field for storing the severity of an issue, so if you want to be able to see the SpiraTeam incident severity in JIRA, you'll need to create a JIRA custom list field to store the different severity values. If you don't want to synchronize severity values with JIRA, you can skip the rest of this section.</p>
+<p>Once you have created a custom field in JIRA to contain the list of severity values, you need to now populate the above table <strong>with the name</strong> (Not the ID) of the severity custom property values inside JIRA and click Update. Secondly you need to go to the Plug-in configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_37.png" /></p>
-<p>On this screen you need to enter the ID of the custom field that you're
-using to store severities in JIRA and populate the <strong>Custom 01 property
-with this value</strong> (see above). The ID can be found by using the Custom
-Fields tab of the Jira Configuration Helper:</p>
+<p>On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the <strong>Custom 01 property with this value</strong> (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
 <h4 id="f-requirement-status-optional">f) Requirement Status (Optional)</h4>
-<p>Click on the "Status" hyperlink under Requirement Standard Fields to
-bring up the Requirement status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_39.png" /></p>
-<p>The table lists each of the requirement statuses available in SpiraTeam
-and provides you with the ability to enter the matching JIRA issue
-status ID for each one. You can map multiple SpiraTeam fields to the
-same JIRA fields, in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the requirement statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
 <h4 id="g-requirement-importance-optional">g) Requirement Importance (Optional)</h4>
-<p>Click on the "Importance" hyperlink under Requirement Standard Fields to
-bring up the Requirement Importance mapping configuration screen:</p>
+<p>Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_40.png" /></p>
-<p>The table lists each of the requirement importances available in
-SpiraTeam and provides you with the ability to enter the matching JIRA
-priority ID for each one. You can map multiple SpiraTeam fields to the
-same JIRA fields, in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the
-Jira configuration helper:</p>
+<p>The table lists each of the requirement importances available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
 <h4 id="h-requirement-type-optional">h) Requirement Type (Optional)</h4>
-<p>Click on the "Type" hyperlink under Requirement Standard Fields to bring
-up the Requirement type mapping configuration screen:</p>
+<p>Click on the "Type" hyperlink under Requirement Standard Fields to bring up the Requirement type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_41.png" /></p>
-<p>The table lists each of the requirement types available in SpiraTeam and
-provides you with the ability to enter the matching JIRA issue type ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields (e.g. Use Case and User Story in SpiraTeam are both equivalent to
-User Story in JIRA), in which case only one of the two values can be
-listed as Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the requirement types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Use Case and User Story in SpiraTeam are both equivalent to User Story in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
 <h4 id="i-requirement-component-optional">i) Requirement Component (Optional)</h4>
-<p>Click on the "Component" hyperlink under Requirement Standard Fields to
-bring up the Requirement component mapping configuration screen:</p>
+<p>Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_42.png" /></p>
-<p>The table lists each of the components available in SpiraTeam and
-provides you with the ability to enter the matching JIRA component ID
-for each one. You can map multiple SpiraTeam fields to the same JIRA
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA > SpiraTeam).</p>
-<p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira
-configuration helper:</p>
+<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
 <h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping</h3>
-<p>Now that the various SpiraTeam standard fields have been mapped
-correctly, we need to configure the custom property mappings. This is
-used for both custom properties in SpiraTeam that map to custom fields
-in JIRA and also for custom properties in SpiraTeam that are used to map
-to standard fields in JIRA (Environment, Resolution and SecurityLevel)
-that don't exist in SpiraTeam.</p>
-<p>From the View/Edit Project Data Mapping screen, you need to click on the
-name of the Incident or Requirement Custom Property that you want to add
-data-mapping information for. We will consider the four different types
-of mapping that you might want to enter:</p>
+<p>Now that the various SpiraTeam standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in SpiraTeam that map to custom fields in JIRA and also for custom properties in SpiraTeam that are used to map to standard fields in JIRA (Environment, Resolution and SecurityLevel) that don't exist in SpiraTeam.</p>
+<p>From the View/Edit Project Data Mapping screen, you need to click on the name of the Incident or Requirement Custom Property that you want to add data-mapping information for. We will consider the four different types of mapping that you might want to enter:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_27.png" /></p>
 <h4 id="a-scalar-custom-properties">a) Scalar Custom Properties</h4>
-<p>This refers to custom properties that have a simple user-entered value
-and don't need to have their specific options mapped between SpiraTeam
-and JIRA. All of the custom property types except <strong>List</strong> and
-<strong>Multi-List</strong> fall into this category (e.g. Text, Date, User, Boolean,
-Decimal, Integer, etc.)</p>
-<p>Click on the hyperlink of the scalar custom property under
-Incident/Requirement Custom Properties to bring up the custom property
-mapping configuration screen. For scalar custom properties, there will
-be no values listed in the lower half of the screen.</p>
+<p>This refers to custom properties that have a simple user-entered value and don't need to have their specific options mapped between SpiraTeam and JIRA. All of the custom property types except <strong>List</strong> and
+<strong>Multi-List</strong> fall into this category (e.g. Text, Date, User, Boolean, Decimal, Integer, etc.)</p>
+<p>Click on the hyperlink of the scalar custom property under Incident/Requirement Custom Properties to bring up the custom property mapping configuration screen. For scalar custom properties, there will be no values listed in the lower half of the screen.</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_43.png" /></p>
-<p>You need to lookup the ID of the custom field in JIRA that matches this
-custom property in SpiraTeam. Once you have entered the id of the custom
-field, click [Update].</p>
-<p>The ID can be found by using the Custom Fields tab of the Jira
-Configuration Helper:</p>
+<p>You need to lookup the ID of the custom field in JIRA that matches this custom property in SpiraTeam. Once you have entered the id of the custom field, click [Update].</p>
+<p>The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
 <h4 id="b-list-custom-properties">b) List Custom Properties</h4>
 <p>This refers to custom properties that are either of type <strong>List</strong> or
-<strong>Multi-List</strong>. Click on the hyperlink of the list custom property under
-Incident/Requirement Custom Properties to bring up the custom property
-mapping configuration screen. For list custom properties there will be a
-textbox for both the custom field itself and a mapping table for each of
-the custom property values that need to be mapped:</p>
+<strong>Multi-List</strong>. Click on the hyperlink of the list custom property under Incident/Requirement Custom Properties to bring up the custom property mapping configuration screen. For list custom properties there will be a textbox for both the custom field itself and a mapping table for each of the custom property values that need to be mapped:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_44.png" /></p>
-<p>First you need to lookup the ID of the custom field in JIRA that matches
-this custom property in SpiraTeam. This should be entered in the
-'External Key' field below the name of the custom property. The ID can
-be found by using the Custom Fields tab of the Jira Configuration
-Helper:</p>
+<p>First you need to lookup the ID of the custom field in JIRA that matches this custom property in SpiraTeam. This should be entered in the
+'External Key' field below the name of the custom property. The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
-<p>Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the full name (not the id this time) of the
-custom field value as specified in JIRA:</p>
+<p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the full name (not the id this time) of the custom field value as specified in JIRA:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_45.png" /></p>
 <h4 id="c-jiras-resolution-field">c) JIRA's Resolution Field</h4>
-<p>If you would like the values of the JIRA '<strong>Resolution'</strong> field to be
-synchronized back to SpiraTeam, then you will need to fill out this
-section. You first need to create an incident custom property in
-SpiraTeam of type 'LIST' that contains the various resolution names that
-exist inside JIRA.</p>
-<p>Then click on the hyperlink of this new list custom property under
-Incident Custom Properties to bring up the custom property mapping
-configuration screen:</p>
+<p>If you would like the values of the JIRA '<strong>Resolution'</strong> field to be synchronized back to SpiraTeam, then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type 'LIST' that contains the various resolution names that exist inside JIRA.</p>
+<p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_46.png" /></p>
-<p>First you need to enter the word "Resolution" as the External Key of the
-custom property. This tells the data-sync plug-in that the custom
-property in SpiraTeam should be mapped to built-in Resolution field in
-JIRA.</p>
-<p>Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the JIRA ID of the various Resolutions that
-are configured in JIRA. The external ID can be found by looking at the
-URL inside JIRA which choosing to View/Edit the resolution
-name/description.</p>
+<p>First you need to enter the word "Resolution" as the External Key of the custom property. This tells the data-sync plug-in that the custom property in SpiraTeam should be mapped to built-in Resolution field in JIRA.</p>
+<p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Resolutions that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the resolution name/description.</p>
 <h4 id="d-jiras-environment-field">d) JIRA's Environment Field</h4>
-<p>If your instance of JIRA requires that all new issues are submitted with
-an 'Environment' description specified, then you will need to fill out
-this section. You first need to create an incident custom property in
-SpiraTeam of type 'TEXT' that will be used to store the environment
-description within SpiraTeam.</p>
-<p>Then click on the hyperlink of this new list custom property under
-Incident Custom Properties to bring up the custom property mapping
-configuration screen:</p>
+<p>If your instance of JIRA requires that all new issues are submitted with an 'Environment' description specified, then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the environment description within SpiraTeam.</p>
+<p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_47.png" /></p>
-<p>All you need to do on this screen is enter the word "<strong>Environment</strong>" in
-the External Key textbox and the data-sync plug-in will know that this
-custom property is mapped to the built-in Environment field in JIRA.</p>
+<p>All you need to do on this screen is enter the word "<strong>Environment</strong>" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Environment field in JIRA.</p>
 <h4 id="e-jiras-security-level-field">e) JIRA's Security Level Field</h4>
-<p>If your instance of JIRA requires that all new issues are submitted with
-a 'Security Level' then you will need to fill out this section. You
-first need to create an incident custom property in SpiraTeam of type
+<p>If your instance of JIRA requires that all new issues are submitted with a 'Security Level' then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type
 'LIST' that contains the various security levels that exist inside JIRA.</p>
-<p>Then click on the hyperlink of this new list custom property under
-Incident Custom Properties to bring up the custom property mapping
-configuration screen.</p>
-<p>First you need to enter the word "<strong>SecurityLevel</strong>" as the External Key
-of the custom property. This tells the data-sync plug-in that the custom
-property in SpiraTeam should be mapped to built-in Security Level field
-in JIRA.</p>
-<p>Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the JIRA ID of the various Security Levels
-that are configured in JIRA. The external ID can be found by looking at
-the URL inside JIRA which choosing to View/Edit the security level
-name/description.</p>
+<p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen.</p>
+<p>First you need to enter the word "<strong>SecurityLevel</strong>" as the External Key of the custom property. This tells the data-sync plug-in that the custom property in SpiraTeam should be mapped to built-in Security Level field in JIRA.</p>
+<p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Security Levels that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the security level name/description.</p>
 <h4 id="f-jiras-issue-key-field">f) JIRA's Issue Key Field</h4>
-<p>It can be convenient to create a SpiraTeam custom property to store the
-JIRA Issue Key (the ID used to identify an issue in JIRA). This allows
-you to display a list of incients in SpiraTest and see the corresponding
-JIRA ID in the same list. You first need to create an incident custom
-property in SpiraTeam of type 'TEXT' that will be used to store the JIRA
-issue key within SpiraTeam.</p>
-<p>Then click on the hyperlink of this new list custom property under
-Incident Custom Properties to bring up the custom property mapping
-configuration screen:</p>
+<p>It can be convenient to create a SpiraTeam custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incients in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the JIRA issue key within SpiraTeam.</p>
+<p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_48.png" /></p>
-<p>All you need to do on this screen is enter the word "<strong>JiraIssueKey</strong>"
-in the External Key textbox and the data-sync plug-in will know that
-this custom property is mapped to the built-in Issue Key field in JIRA.</p>
-<p>Once you have updated the various mapping sections, you are now ready to
-use the integration.</p>
+<p>All you need to do on this screen is enter the word "<strong>JiraIssueKey</strong>" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Issue Key field in JIRA.</p>
+<p>Once you have updated the various mapping sections, you are now ready to use the integration.</p>
 <h2 id="using-spirateam-with-jira">Using SpiraTeam with JIRA</h2>
-<p>Now that the integration service has been configured and the service
-started, initially any incidents created in SpiraTeam for the specified
-projects will be imported into JIRA and any existing issues in JIRA will
-get loaded into SpiraTeam as either incidents or requirements (depending
-on your configuration).</p>
-<p>At this point we recommend opening the Windows Event Viewer and choosing
-the Application Log. In this log any error messages raised by the
-SpiraTeam Data Sync Service will be displayed. If you see any error
-messages at this point, we recommend immediately stopping the SpiraTeam
-service and checking the various mapping entries. If you cannot see any
-issues with the mapping information, we recommend sending a copy of the
-event log message(s) to Inflectra customer services
-(<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
-<p>To use SpiraTeam with JIRA on an ongoing basis, we recommend the
-following general processes be followed:</p>
+<p>Now that the integration service has been configured and the service started, initially any incidents created in SpiraTeam for the specified projects will be imported into JIRA and any existing issues in JIRA will get loaded into SpiraTeam as either incidents or requirements (depending on your configuration).</p>
+<p>At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the SpiraTeam Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the SpiraTeam service and checking the various mapping entries. If you cannot see any issues with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
+<p>To use SpiraTeam with JIRA on an ongoing basis, we recommend the following general processes be followed:</p>
 <ul>
 <li>
-<p>When running tests in SpiraTest or SpiraTeam, defects found should be
-logged through the Test Execution Wizard as normal.</p>
+<p>When running tests in SpiraTest or SpiraTeam, defects found should be logged through the Test Execution Wizard as normal.</p>
 </li>
 <li>
-<p>Developers can log new defects into either SpiraTeam or JIRA. In either
-case they will get loaded into the other system.</p>
+<p>Developers can log new defects into either SpiraTeam or JIRA. In either case they will get loaded into the other system.</p>
 </li>
 <li>
-<p>Once created in one of the systems and successfully replicated to the
-other system, the incident should not be modified again inside SpiraTeam</p>
+<p>Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside SpiraTeam</p>
 </li>
 <li>
-<p>At this point, the incident should not be acted upon inside SpiraTeam
-and all data changes to the issue should be made inside JIRA. To enforce
-this, you should modify the workflows set up in SpiraTeam so that the
-various fields are marked as inactive for all the incident statuses
-other than the "New" status. This will allow someone to submit an
-incident in SpiraTeam, but will prevent them making changes in conflict
-with JIRA after that point.</p>
+<p>At this point, the incident should not be acted upon inside SpiraTeam and all data changes to the issue should be made inside JIRA. To enforce this, you should modify the workflows set up in SpiraTeam so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in SpiraTeam, but will prevent them making changes in conflict with JIRA after that point.</p>
 </li>
 <li>
-<p>As the issue progresses through the customized JIRA workflow, changes to
-the type of issue, changes to its status, priority, description and
-resolution will be updated automatically in SpiraTeam. In essence,
-SpiraTeam acts as a read-only viewer of these incidents.</p>
+<p>As the issue progresses through the customized JIRA workflow, changes to the type of issue, changes to its status, priority, description and resolution will be updated automatically in SpiraTeam. In essence, SpiraTeam acts as a read-only viewer of these incidents.</p>
 </li>
 </ul>
-<p>You are now able to perform test coverage and incident reporting inside
-SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam
-and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.</p></div>
+<p>You are now able to perform test coverage and incident reporting inside SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.</p></div>
         </div>
 
         <footer class="col-md-12">
