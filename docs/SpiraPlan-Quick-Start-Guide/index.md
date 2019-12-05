@@ -960,7 +960,7 @@ product name on the left).
 
 In addition to having dashboards that let you monitor the performance of
 your product, SpiraPlan has several views available at the program
-level. These let your group products together into a common program and
+level. These let you group products together into a common program and
 report on them as a whole.
 
 To see this in action, click on the "Sample Program One" link in the
