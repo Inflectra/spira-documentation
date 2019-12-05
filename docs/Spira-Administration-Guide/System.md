@@ -32,6 +32,8 @@ The available settings include:
 
 -   **Enable Free Text Indexes** -- This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
 
+-   **Use TaraVault for source code** -- This toggle is only available to cloud hosted versions of SpiraTeam and SpiraPlan. Cloud hosted applications will, by default, use [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) for source code management. Administrators can turn off TaraVault and then connect directly to any third party source code provider they choose.
+
 
 ## File Type Icons
 
