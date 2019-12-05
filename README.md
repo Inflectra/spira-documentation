@@ -3,6 +3,7 @@ This documentation uses [MkDocs](https://www.mkdocs.org/) - documentation using 
 
 We can fully change the theme used and its features using a basic templating language and normal CSS. If needed you can insert HTML into the Markdown files and it will get passed through as HTML.
 
+
 ## The broad workflow:
 - write and edit in markdown
 - make sure new pages are accessible using the main navigation (in the mkdocs.yml)
@@ -10,10 +11,12 @@ We can fully change the theme used and its features using a basic templating lan
 - deploy from a local machine using a simple command from the command line to build, commit, push, and deploy the rendered files to Github
 - Github hosts these deployed files as a static site
 
+
 ## Getting the build environment set up
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
 2. Clone this repo to your local machine
 3. Edit files as needed
+
 
 # Working with the docs and Markdown
 - [How to create files and style them](https://www.mkdocs.org/user-guide/writing-your-docs/)
@@ -24,6 +27,7 @@ We can fully change the theme used and its features using a basic templating lan
 - Using MkDocs you can also make links to places in other files in the documentation which is really handy
 
 
+
 # Key commands
 - **Running a local test server**: from the current branch, run `mkdocs serve`. The web server should be available at localhost:8000
 - **Edit and commit your documentation changes**: files can be edited and committed straight on Github, and created, deleted, or edited from the desktop. Work in the relevant branch (master to make the changes live) and commit code as normal using Git. 
@@ -31,9 +35,12 @@ We can fully change the theme used and its features using a basic templating lan
 
 
 
+
 # Maintenance Operations
+
 ## Delete Unused Pictures
 From the tools directory, run the command `python .\unusedimgs.py`. This will generate a list of commands you can paste into the console to delete the file. ***PLEASE READ LIMITATIONS BEFORE YOU PROCEED AND DELETE IMAGES*** 
+
 
 ### Limitations
 - If an image name has a parenthesis in it (like `Importing_from_Microsoft_Excel_(Office365)_24.png`), the script will print it out no matter what. Please review them before you delete in case they are actually used.
@@ -42,12 +49,12 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 ```
 ...
 
-![Git stores data as snapshots of the project over
-time.](img/Using_Git_47.png)
+![Git stores data as snapshots of the project over time.](img/Using_Git_47.png)
 
 ...
 ```
  
+
 
 ## REGEXes to tidy up the markdown files
 * To combine paragraphs split across multiple lines: `([A-Za-z",\. 0-9\(\)])\n([A-Za-z"\(\)])` => `$1 $2`
@@ -55,7 +62,9 @@ time.](img/Using_Git_47.png)
 * To add spacing before headings: `\n#` => `\n\n#`
 
 
+
 # Conversion processes
+
 ## MD to PDF
 1. Install [MiTeX](https://miktex.org/howto/install-miktex)
 2. Install pyyaml with `pip install pyyaml`
@@ -68,6 +77,7 @@ time.](img/Using_Git_47.png)
  
 **Possible Issues**: If a line starts with a file/folder URI (ex. C:\WINDOWS), the script will error out. Just find the ofending line in the markdown and format it in some way (wrapping it with grave marks (\`) to make it format as code works well.)
  
+
 ## docx to MD (used to create these docs)
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
 2. [Install Pandoc](https://pandoc.org/installing.html)
@@ -76,6 +86,7 @@ time.](img/Using_Git_47.png)
 5. The script will run, copying iles into the `./temp` folder in the root directory as it goes. These markdown files and the images should be pasted into the `./docs` directory in the apropriate folders.
 6. Review the files for weirdness (more information below)
 7. Put all the new files in mkdocs.yml where you would like. The `nav` property will generate the top navbar in the structure you define. Run `mkdocs serve` to test it out, which can be viewed at http://127.0.0.1:8000/
+
 
 ### Conversion Problems
 - Table formatting is generally a huge pain and needs to be done manually

@@ -6,9 +6,13 @@ repo_url: https://www.inflectra.com
 site_url: https://spiradoc.inflectra.com/
 google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
 
+markdown_extensions:
+  - attr_list
+
 theme: 
   name: mkdocs
   custom_dir: inflectra_mkdocs
+
 nav:
 - User Manual:
   - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
@@ -92,6 +96,8 @@ nav:
     - ZAPTEST: RemoteLaunch-User-Guide\ZAPTEST.md
   - SpiraCapture: SpiraCapture\User-Guide.md
 - Integrations:
+  - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
+  - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
   - Testing:
     - NUnit: Unit-Testing-Integration\Integrating-with-NUnit.md
     - JUnit: Unit-Testing-Integration\Integrating-with-JUnit.md

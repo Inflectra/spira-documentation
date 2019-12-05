@@ -1,5 +1,5 @@
 # Moving around the application
-## How to use the global navigation bar
+## How to use the global navigation bar {: .section-break}
 1. Spira’s main global navigation is the horizontal bar at the top of the application - visible on every page
 2. It lets you move between all pages of the application
 3. From left to right, it has links and dropdowns for the following: 
@@ -12,13 +12,13 @@
     * the user menu (shown by your user avatar)
     * the dynamic administration menu, where relevant
 
-## What are workspaces and how to pick one
+## What are workspaces and how to pick one {: .section-break}
 1. To start getting things done in the application you need to select a workspace to explore, manage, or work on. Workspaces can be products (e.g. for a specific application) or programs (that groups a number of products together)
 2. Change your workspace by using the workspace selector dropdown on the global navigation bar
 3. Each workspace has a dedicated dashboard which provides a "one-stop shop" for understanding the overall status of the current workspace, with comprehensive, easily digestible (and customizable) information. 
 4. Access the workspace dashboard by clicking the large workspace icon on the navigation bar
 
-## What are artifacts and how to pick one
+## What are artifacts and how to pick one {: .section-break}
 1. Artifacts are the building blocks of a product or program and contain all of their data. 
 2. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They both work differently, and are not interchangable.
 3. Spira has specific artifacts designed to help you do things like test, plan, track bugs and tasks, and more.
@@ -26,13 +26,13 @@
 5. To learn more about each artifact, hover over the artifact name in the artifact selector to see its tooltip
 6. If you do not see the artifacts you expect for a particular product, it may be because of your role on the product. Discuss this with your product administrator
 
-## Using the user menu
+## Using the user menu {: .section-break}
 1. Clicking on your user avatar on the global navigation bar will open the user menu
 2. At the top there is a large user avatar next to your name. Clicking on this will open your user profile
 3. Other links in the user menu let you access various help: documentation for the page you are on; keyboard shortcuts; or in-app onboarding tours. 
 4. From the user menu you can also go to your timecard (SpiraTeam or SpiraPlan only), and change your dark mode settings
 
-## Artifact list and details pages
+## Artifact list and details pages {: .section-break}
 1. Each artifact has its own dedicated pages of the Spira application.
 2. For example, when viewing a product, you can go to the incident artifact from the artifact selector of the global navigation bar. This will take you to the incident list page.
 3. What is an artifact list page?
