@@ -37,7 +37,7 @@ For more information about changing a product's template see [here](../Spira-Adm
 9. If you are sure you want to change template follow the instructions
 
 
-## How to split off a product from its template  {: .section-break}
+## How to move a product to a new version of its original template  {: .section-break}
 If you have 2+ products using the same template, but decide 1 products needs slightly different template settings, you need to branch its template off into a brand new template. This is possible, but requires a few different steps to make it work smoothly.
 
 1. Clone the existing template - following the steps [above](#how-to-clone-a-template)
