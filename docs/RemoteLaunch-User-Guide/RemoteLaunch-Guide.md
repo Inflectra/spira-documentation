@@ -54,6 +54,14 @@ the any changes to take effect. The program will only load up to the
 first number of extensions that the license allows. Additional
 extensions will not be loaded or used during testing.
 
+RemoteLaunch runs in the background, to stop and start it again is not just closing the RemoteLaunch window, but stopping it in the task bar usually in the lower right of your screen Exit will completely exit the program. Doing this will cancel any tests currently running and shut down the program. Any tests that were waiting to be executed will not execute until the program is restarted and the polling is resumed.
+
+![](img/RemoteLaunch_Guide_2.png)
+
+If the restarting of the application does not cause the new engine tab to show up in RemoteLaunch, then Windows may have blocked the engine dll in the extensions folder.
+
+To resolve the block, right click on the engine .dll file you placed in the extensions folder, select the properties for the file, and unblock it.  You should be able to see the engine name in a tab in RemoteLaunch after the dll is unblocked.
+
 ### Registration
 
 Spira RemoteLaunch has its own License key needed for using the program.
