@@ -119,4 +119,4 @@ Once these have been filled in, click the "Send data to Spira" button to connect
 * If a link opens in a new tab or window it will not be recorded. You will need to click the capture button on that new tab to start capturing data
 * On newly installing or reinstalling the extension refresh any pages you would like to capture before starting to capture
 * To create incidents in Spira you must have version 6.1+
-* You may not be able to create an incident in Spira if your product is set up where a custom field cannot be left blank
+* You may not be able to create an incident in Spira if your product is set up where a custom field cannot be left blank (as specified in the custom property definition)
