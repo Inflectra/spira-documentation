@@ -201,7 +201,7 @@ code.code-large, .rst-content tt.code-large {
 code {
     padding: .125rem .25rem;
     background: #f5f5f5;
-    background-color: var(bg-v-close);
+    background-color: var(--bg-v-close);
     border: solid 1px #e3e3e3;
     border: solid 1px var(--bg-close);
     color: #333;
