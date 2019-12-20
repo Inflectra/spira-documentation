@@ -33,8 +33,8 @@ You need to fill out the following fields for the JIRA Plug-in to operate correc
 - **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
 - **Connection Info** -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
 -   It is typically of the form: <https://mycompany.atlassian.net>
-- **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
-- **Password** -- this should be set to the password of the login specified above.
+- **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.
+- **Password** -- this should be set to the **API Key** (*not password*) of the Atlassian login specified above.
 - **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
 - **Auto-Map Users** -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:
