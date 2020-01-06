@@ -8,6 +8,7 @@ google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
 
 markdown_extensions:
   - attr_list
+  - footnotes
 
 theme: 
   name: mkdocs

@@ -91,14 +91,13 @@ Once you have chosen the destination product and clicked the "***Export***" butt
 
 ### Creating Requirement from Incidents
 
-Sometimes you may have enhancements logged that now need to be converted into formal requirements. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create new requirements from selected incidents (1 or more); and it automatically creates an association between each new requirement and the corresponding incident.
+Sometimes you may have enhancements logged that now need to be converted into formal requirements. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create new requirements from selected incidents (1 or more); and it automatically creates an association between each new requirement and the corresponding incident.[^rq-in]
 
 To use this feature:
 
 - select the checkboxes of the incidents you want to convert
 - click Tools \> Convert Into Requirements
-
-Read about what information is copied from the incident to the requiement [below](#how-a-requirement-gets-created-from-an-incident). 
+ 
 
 ### Printing Items
 
@@ -205,15 +204,13 @@ Read about [how the history tab works](Application-Wide.md#history)
 
 ### Creating a Requirement from an Incident
 
-Sometimes you may have an enhancement logged that now needs to be converted into a formal requirement. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create a new requirement from the current incident; and it automatically creates an association between the new requirement and the incident.
+Sometimes you may have an enhancement logged that now needs to be converted into a formal requirement. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create a new requirement from the current incident; and it automatically creates an association between the new requirement and the incident.[^rq-in]
 
 To use this feature:
 
 - go to the Associations tab
 - click the `Add` button
-- at the bottom right of the panel that displays click the `Create Requirement from this Incident` button
-
-Read about what information is copied from the incident to the requiement [below](#how-a-requirement-gets-created-from-an-incident). 
+- at the bottom right of the panel that displays click the `Create Requirement from this Incident` button 
 
 
 ### Emailing the Incident
@@ -335,22 +332,21 @@ Note: The system will allow you to assign more incidents to a sprint than it is 
 Clicking on the sprint hyperlinks in the headers will switch the incident board into the sprint view.
 
 
-## Notes
-### How a Requirement Gets Created from an Incident
-To create a requirement from an incident, the user needs must have the permission to create requirements (which makes sense).
+[^rq-in]: 
+    To create a requirement from an incident, the user needs must have the permission to create requirements (which makes sense).
 
-The creation process does not enforce the relevant requirement workflow.
+    The creation process does not enforce the relevant requirement workflow.
 
-What gets copied over from the incident to the new requirement:
+    What gets copied over from the incident to the new requirement:
 
-- Name
-- Description
-- Owner
-- "Detected By" becomes Author
-- Component (as long as only a single component is selected on the incident)
-- "Resolved Release" becomes Release
-- Priority becomes Importance (if there is an exact name match)
-- "Estimated Effort" becomes Estimate (converting hours into points)
-- Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)
-- Comments (using the name of the original author, but the comment creation date is the current date)
-- Attachments
+    - Name
+    - Description
+    - Owner
+    - "Detected By" becomes Author
+    - Component (as long as only a single component is selected on the incident)
+    - "Resolved Release" becomes Release
+    - Priority becomes Importance (if there is an exact name match)
+    - "Estimated Effort" becomes Estimate (converting hours into points)
+    - Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)
+    - Comments (using the name of the original author, but the comment creation date is the current date)
+    - Attachments
