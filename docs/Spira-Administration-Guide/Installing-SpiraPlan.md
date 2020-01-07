@@ -11,8 +11,8 @@ The minimum hardware and software requirements for running the SpiraPlan® syste
 | **Requirement**         | **Minimum Specification**                         |
 | **Processor:**          | Intel® or AMD® x86 or x64 compatible processor    |
 | **Memory:**             | 4 GB, 8 GB recommended                            |
-| **Operating System:**   | Windows Server 2019 (recommended) <br> Windows Server 2016 (recommended)              <br> Windows Server 2012 R1 & R2 <br> Windows Server 2008 R1 & R2 <br>Windows 10, 8, 7 (for demoing)                    |
-| **Database:**           | Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition <br> Microsoft SQL Server 2014           <br> Microsoft SQL Server 2014 Express Edition <br> Microsoft SQL Server 2012 <br> Microsoft SQL Server 2012 Express Edition <br> Microsoft SQL Server 2008 R2 <br> Microsoft SQL Server 2008 R2 Express Edition      |
+| **Operating System:**   | Windows Server 2019 (recommended) <br>Windows Server 2016 (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10, 8 (for demoing) |
+| **Database:**           | Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition <br> Microsoft SQL Server 2014 <br> Microsoft SQL Server 2014 Express Edition <br> Microsoft SQL Server 2012 <br> Microsoft SQL Server 2012 Express Edition |
 | **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.6 or higher |
 
 ---
@@ -32,7 +32,7 @@ Assuming that you have already installed the appropriate version of Microsoft Wi
 We recommend that you install / configure the prerequisites in the following order:
 
 - Install the .NET Framework v4.6
-- Install SQL Server 2017, 2016, 2014, 2012, 2008R2
+- Install SQL Server 2017, 2016, 2014, 2012
 - Install the latest version of Internet Explorer that your server OS
 - allows
 - Ensure that IIS is installed
@@ -52,7 +52,7 @@ To see which version of the Microsoft .NET framework installed, open up Windows 
 To install the .NET Framework, launch Internet Explorer and enter the URL: <https://www.inflectra.com/CustomerArea>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.6 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.6 has been installed if necessary.
 
 
-### Install SQL Server 2017, 2016, 2014, 2012, or 2008R2
+### Install SQL Server 2017, 2016, 2014, 2012
 
 If you do not have a SQL Server instance ready, you can install the appropriate version of the database software, following the instructions provided with the installation. We recommend SQL Server Express Edition®
 for most users. This free version of SQL Server will offer sufficient performance for most installations and can be easily downloaded from either the customer area of our website (<http://www.inflectra.com/CustomerArea>) or directly from the Microsoft® web-site at <http://www.microsoft.com/express/sql>.
@@ -67,20 +67,14 @@ Administrative Tools. Under the "Administrative Tools folder", you should see an
 
 ![](img/Installing_SpiraPlan_9.png)
 
-**a) Windows 7**
-
-To install IIS on **Windows 7**, you need to click Start \> Control Panel \> Programs and Features, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
-
-![](img/Installing_SpiraPlan_10.png)
-
-**b) Windows 8, Windows 8.1**
+#### Windows 8, Windows 8.1
 
 On **Windows 8 or 8.1**, to install IIS, you need to click Start \>
 Control Panel \> Programs and Features, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
 
 ![](img/Installing_SpiraPlan_11.png)
 
-**c) Windows 10**
+#### Windows 10
 
 On **Windows 10**, to install IIS, you need to click Start \> Control Panel \> Programs and Features, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
 
@@ -127,34 +121,8 @@ To verify that this IIS is now installed, type
 
 ![Image](img/Installing_SpiraPlan_14.png)
 
-**d) Windows Server 2008 / 2008 R2**
 
-On **Windows Server 2008**, you need to click on Server Manager, then under the "Roles" heading, choose the option to "Add Role" followed by selecting the new role "Web Server / IIS". Then click "Next" to bring up the role configuration screen:
-
-![](img/Installing_SpiraPlan_15.png)
-
-Make sure that the following features are enabled:
-
-- Common HTTP Features
-- Static Content
-- Default Document
-- HTTP Errors
-- HTTP Redirection
-- Application Development
-- ASP.NET
-- .NET Extensibility
-- ISAPI Extensions
-- ISAPI Filters
-- Management Tools
-- IIS Management Console
-- IIS Management Service
-
-To verify that this IIS is now installed, type
-[http://localhost](http://localhost/) into the address bar of Internet Explorer on your computer. You should see a screen displaying the initial IIS startup page:
-
-![](img/Installing_SpiraPlan_16.png)
-
-**e) Windows Server 2012, 2016, 2019**
+#### Windows Server 2012, 2016, 2019
 
 On **Windows Server 2012, 2016, 2019**, you need to click on Server Manager, then under the "Roles" heading, choose the option to "Add Role" followed by selecting the new role "Web Server / IIS". Then click "Next" to bring up the role configuration screen:
 
@@ -275,7 +243,7 @@ This is the easiest option when the application and databases will be residing o
 
 In the "Server" box, you need to enter the name of the Microsoft SQL Server instance that is running on your system; the installer will default it to the hostname of the server (which in many cases will be correct). The easiest way to find out the database server name is to open up the SQL Server Administrative console (typically by clicking Start \> Programs \> Microsoft SQL Server \> Enterprise Manager) and look for the name of the server.
 
-For SQL Server 2005/2008 Express edition installations, the Server name is usually the name of your computer followed by "\\SQLEXPRESS", so for example, if your computer is called MyComputer, the server name would be MyComputer\\SQLEXPRESS. Omitting the second part (called the instance name) would lead to a "host not found" error.
+For SQL Server Express edition installations, the Server name is usually the name of your computer followed by "\\SQLEXPRESS", so for example, if your computer is called MyComputer, the server name would be MyComputer\\SQLEXPRESS. Omitting the second part (called the instance name) would lead to a "host not found" error.
 
 You can also choose whether to install the sample products or not --
 typically we recommend installing the sample products for evaluation installations and excluding them for production installs.
