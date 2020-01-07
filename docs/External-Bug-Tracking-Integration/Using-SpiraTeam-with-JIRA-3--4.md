@@ -128,13 +128,13 @@ feature of JIRA, leave the field blank.
 
 -   **Custom 03** -- This should be set to the word "True" if you want
 to have the plugin restrict synchronization to only loading new
-incidents from SpiraTeam \> JIRA and updating existing items. This
+incidents from SpiraTeam to JIRA and updating existing items. This
 is useful if you want to prevent existing issues in JIRA from being
 loaded into SpiraTeam. Leave blank if you want the plugin to
 synchronize normally.
 
 -   **Custom 04** -- This should be set to the word "True" if you want
-to have the plugin copy file attachments from SpiraTeam \> JIRA.
+to have the plugin copy file attachments from SpiraTeam to JIRA.
 This can use additional system resources and may fail if the files
 are too large for JIRA's API to handle. Leave the field blank if you
 want the default behavior -- which is to not synchronize
@@ -297,7 +297,7 @@ for each one. You can map multiple SpiraTeam fields to the same JIRA
 fields (e.g. Bug and Incident in SpiraTeam are both equivalent to Bug in
 JIRA), in which case only one of the two values can be listed as Primary
 = Yes as that's the value that's used on the reverse synchronization
-(from JIRA \> SpiraTeam).
+(from JIRA to SpiraTeam).
 
 *Note: The JIRA ID can be found by looking at the URL inside JIRA when
 choosing to View/Edit the Issue Type. The URL will include the section:
@@ -319,7 +319,7 @@ for each one. You can map multiple SpiraTeam fields to the same JIRA
 fields (e.g. New and Open in SpiraTeam are both equivalent to Open in
 JIRA), in which case only one of the two values can be listed as Primary
 = Yes as that's the value that's used on the reverse synchronization
-(from JIRA \> SpiraTeam).
+(from JIRA to SpiraTeam).
 
 We recommend that you always point the New and Open statuses inside
 SpiraTeam to point to the ID for "Open" inside JIRA and make Open in
@@ -349,7 +349,7 @@ and provides you with the ability to enter the matching JIRA priority ID
 for each one. You can map multiple SpiraTeam fields to the same JIRA
 fields, in which case only one of the two values can be listed as
 Primary = Yes as that's the value that's used on the reverse
-synchronization (from JIRA \> SpiraTeam).
+synchronization (from JIRA to SpiraTeam).
 
 *Note: The JIRA ID can be found by looking at the URL inside JIRA when
 choosing to View/Edit the Priority. The URL will include the section:
