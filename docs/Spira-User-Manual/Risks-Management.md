@@ -109,40 +109,23 @@ The navigation pane shows a list of the peer risks to the one selected. This lis
 -   The list of all risks, irrespective of the current filter
 -   The list of risks assigned to the current user
 
-On the main right-hand side of the page, which of the fields for the currently selected risk are available and which are required will depend on your stage in the risk workflow. For example, an identified risk might not require a "Release" whereas an evaluated risk could well do. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the system for you. Administrators should refer to the
-*SpiraPlan Administration Guide* for details on configuring the risk workflows to better meet their needs.
-
-Depending on the user's role and whether they are listed as the owner or author of the risk, displayed in the info bar beneath the risk name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations:
-
-![](img/Risks_Management_461.png)
-
-These workflow transitions allow the user to move the risk from one status to another. For example, when the risk is in the Open status, you may be given options to:
-
-**Close Risk** -- changes status to "Closed"
-
-**Reject Risk** -- changes the status to "Rejected"
-
-After changing the status of the risk by clicking on the workflow link, you can then fill in any additional fields that are now enabled and/or required. Once you've made the changes to the appropriate fields, you can either click "***Save***", "***Save and Close***", or "******" to commit the changes or "***Refresh***" to discard the changes and reload the risk from the database. In addition, you can print the current risk by clicking "***Print***", which will display a printable version of the page in a separate window.
-
-Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:
-
-![](img/Risks_Management_462.png)
-
-On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with the following popup:
-
-![](img/Risks_Management_463.png)
-
-Using the "***Email***" button on the toolbar, you can send an email containing details of the risk to an email address or another user on the system:
-
-![](img/Risks_Management_97.png)
-
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration --
-Notification Templates.
-
-To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.
-
 The bottom part of the right pane can be switched between four views:
 "Overview", "Tasks", "Attachments", "History", each of which will be described in more detail below.
+
+
+### Emailing
+
+Read about [emailing a document to colleagues using Spira](Application-Wide.md#emailing).
+
+
+### Followers
+
+Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+
+
+### Workflows
+
+Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
 
 
 ### Overview - Details
@@ -153,22 +136,6 @@ The top part of this tab displays the various standard fields and custom propert
 
 ![](img/Risks_Management_464.png)
 
-
-### Followers
-
-Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
-
-![](img/Risks_Management_99.png)
-
-![](img/Risks_Management_100.png)
-
-You can also quickly see who is following an incident under the "People" section in the Overview tab.
-
-![](img/Risks_Management_101.png)
-
-To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.
-
-![](img/Risks_Management_102.png)
 
 
 ### Overview -- Detailed Information

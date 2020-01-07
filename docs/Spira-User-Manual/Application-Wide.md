@@ -49,13 +49,30 @@ The navigation pane can be collapsed by clicking on the "-" button, or expanded 
 
 The navigation pane often shows a list of the peer artifacts to the one selected. This list is useful as a navigation shortcut.
 
+### Breadcrumbs 
+
+For folders and hierarchical / tree view artifacts at the top of the details page right hand side you will see the breadcrumb trail, where relevant. 
+
+If the artifact you are looking at is in a folder, above its name you will see a breadcrumb trail for the full folder path. It will be in the form of `Grandparent Folder / Parent Folder`. You can click on any part of this breadcrumb / path to navigate to that folder. 
+
+Artifacts that have folders are: documents, test cases, test sets, and tasks.
+
+Requirements and releases exist in a hierarchy with other requirements and releases. For these you will also see a breadcrumb, but instead of showing folders it will show the hierarchy to the container requirements or releases. Clicking on the breadcrumb link will take you to the specific requirement or release clicked on.
+
+**Tip**: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
+
+
 ### Workflows
 
-A number of artifacts can be controlled using workflows (these include requirements, releases, test cases, documents, risks, incidents, and tasks). Depending on the user's role and whether they are listed as the owner or author of the artifact, displayed in the info bar beneath the artifact name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations (below we are looking at that for a requirement):
+A number of artifacts can be controlled using workflows (these include requirements, releases, test cases, documents, risks, incidents, and tasks). Depending on the user's role and whether they are listed as the owner or author of the artifact, displayed in the info bar beneath the artifact name is the current workflow status and an `Operations` button. When you click this button you will see a set of allowed workflow operations - called transitions (below we are looking at that for a requirement):
 
 ![](img/Requirements_Management_94.png)
 
-These workflow transitions specify, given a starting status, which statuses you can move the artifact to. After changing the status of the artifact by clicking on the workflow link, you can fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate artifact fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "***Print***", which will display a printable version of the page in a separate window.
+These workflow transitions specify, given a starting status, which statuses you can move the artifact to. After changing the status of the artifact by clicking on a transition, the form on the overview tab may change. Different fields may be visible, enabled, or required. 
+
+For example, a requested requirement has its "Release" field hidden, but once the requirement is planned, that release field is visible and required. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the workflow. Administrators should refer to the *Administration Guide* for details on configuring workflows. 
+
+Once you've made the changes to the appropriate artifact fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "***Print***", which will display a printable version of the page in a separate window.
 
 Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:
 
@@ -65,7 +82,8 @@ On attempting to save changes made after clicking a workflow operation that requ
 
 ![](img/Requirements_Management_96.png)
 
-### Emailing and Following
+
+### Emailing
 
 Using the "***Email***" button on the toolbar, you can send an email containing details of the artifact to an email address or another user on the system:
 
@@ -74,20 +92,19 @@ Using the "***Email***" button on the toolbar, you can send an email containing 
 You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration --
 Notification Templates.
 
-To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.
 
 The bottom part of the right pane can be switched between six views:
 "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.
 
 ### Followers
+To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.
 
-Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
 
 ![](img/Requirements_Management_99.png)
 
 ![](img/Requirements_Management_100.png)
 
-You can also quickly see who is following an incident under the "People" section in the Overview tab.
+You can also quickly see who is following an artifact under the "People" section in the Overview tab.
 
 ![](img/Requirements_Management_101.png)
 

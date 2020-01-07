@@ -266,7 +266,7 @@ This page is made up of *three* areas;
 
 1.  the left pane displays the requirements list navigation;
 
-2.  the right pane's header, which displays: the operations toolbar; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
+2.  the right pane's header, which displays: the operations toolbar; [the hierarchical structure the requirement is in](Application-Wide.md#breadcrumbs); the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
 
 3.  the right pane's tabbed interface with rich information related to the requirement.
 
@@ -282,51 +282,24 @@ The navigation pane shows a list of the peer requirements to the one selected. T
 
 -   The list of requirements assigned to the current user
 
-On the main right hand side of the page, which of the fields for the currently selected requirement are available and which are required will depend on your stage in the requirement workflow. For example, a requested requirement might not require a "Release" whereas a planned requirement could well do. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the system for you. Administrators should refer to the *SpiraPlan Administration Guide* for details on configuring the requirement workflows to better meet their needs.
-
-Depending on the user's role and whether they are listed as the owner or author of the requirement, displayed in the info bar beneath the requirement name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations:
-
-![](img/Requirements_Management_94.png)
-
-
-
-
-These workflow transitions allow the user to move the requirement from one status to another. For example when the requirement is in the Developed status, you will be given the options to:
-
-**Continue Development** -- changes status to "In-Progress"
-
-**Mark as Completed** -- changes the status to "Completed"
-
-**Mark as Tested**- changes the status to "Tested"
-
-After changing the status of the requirement by clicking on the workflow link, you can then fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate requirement fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the requirement from the database. In addition you can print the current requirement by clicking "***Print***", which will display a printable version of the page in a separate window.
-
-Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:
-
-![](img/Requirements_Management_95.png)
-
-
-
-
-On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with the following popup:
-
-![](img/Requirements_Management_96.png)
-
-
-
-
-Using the "***Email***" button on the toolbar, you can send an email containing details of the requirement to an email address or another user on the system:
-
-![](img/Requirements_Management_97.png)
-
-
-
-
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration -- Notification Templates.
-
-To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.
-
 The bottom part of the right pane can be switched between six views: "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.
+
+
+
+### Emailing
+
+Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+
+
+### Followers
+
+Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+
+
+### Workflows
+
+Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+
 
 ### Overview - Details
 
@@ -335,36 +308,6 @@ The Overview tab is divided into a number of different sections. Each of these c
 The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
 
 ![](img/Requirements_Management_98.png)
-
-
-
-
-### Followers
-
-Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
-
-![](img/Requirements_Management_99.png)
-
-
-
-
-![](img/Requirements_Management_100.png)
-
-
-
-
-You can also quickly see who is following an incident under the "People" section in the Overview tab.
-
-![](img/Requirements_Management_101.png)
-
-
-
-
-To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.
-
-![](img/Requirements_Management_102.png)
-
-
 
 
 ### Overview -- Detailed Information

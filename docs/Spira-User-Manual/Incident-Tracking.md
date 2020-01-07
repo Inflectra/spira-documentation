@@ -213,33 +213,14 @@ To use this feature:
 - at the bottom right of the panel that displays click the `Create Requirement from this Incident` button 
 
 
-### Emailing the Incident
+### Emailing
 
-Using the "***Email***" button on the toolbar, you can send an email containing details of the incident to an email address or another user on the system:
-
-![](img/Incident_Tracking_217.png)
-
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user. The content of the email is specified in the System Administration --
-Notification Templates.
-
-To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact.
+Read about [emailing an incident to colleagues](Application-Wide.md#emailing).
 
 
 ### Incident Followers
 
-Using the "***Subscribe***" button on the toolbar, you can quickly follow the incident, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this incident.
-
-![](img/Incident_Tracking_99.png)
-
-![](img/Incident_Tracking_100.png)
-
-You can also quickly see who is following an incident under the "People" section in the Overview tab.
-
-![](img/Incident_Tracking_101.png)
-
-To view information about the follower, or to unfollow them from the incident, hover over their avatar to display a user profile card.
-
-![](img/Incident_Tracking_102.png)
+Read about [how to add and manage followers to an artifact](Application-Wide.md#followers)
 
 
 ## Incident Board
