@@ -801,8 +801,10 @@
         
         <li class="second-level"><a href="#requirement-details">Requirement Details</a></li>
         
-        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
+        <li class="third-level"><a href="#emailing">Emailing</a></li>
         <li class="third-level"><a href="#followers">Followers</a></li>
+        <li class="third-level"><a href="#workflows">Workflows</a></li>
+        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
         <li class="third-level"><a href="#overview-detailed-information">Overview -- Detailed Information</a></li>
         <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
         <li class="third-level"><a href="#overview-scenario">Overview -- Scenario</a></li>
@@ -847,23 +849,7 @@
 <h3 id="show-level">Show Level</h3>
 <p>Choosing an indent level from the 'Show Level' drop down box allows you to quickly and easily view the entire requirements list at a specific indent level. For example you may want to see all requirements drilled-down to the <em>third</em> level of detail. To do this you would simply choose 'Level 3' from the list, and the requirements will be expanded / collapsed accordingly.</p>
 <h3 id="filtering">Filtering</h3>
-<p>You can easily filter the list of requirements as illustrated in the screen-shot below:</p>
-<p><img alt="" src="../img/Requirements_Management_86.png" /></p>
-<p>To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click the &lt;Filter> icon or press the &lt;ENTER> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, requirement numbers). In the screen-shot above, we are filtering on Status = Requested.</p>
-<p>In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter > Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. If you would like to share the filter with other members of the product, choose the "Share with other members of the product" option. The list of saved filters can also be retrieved by clicking Filter > Retrieve Filter:</p>
-<p><img alt="" src="../img/Requirements_Management_87.png" /></p>
-<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong> that can be applied in a single-click:</p>
-<ul>
-<li>
-<p><strong>The topmost section</strong> -- This displays any saved requirement filters created by the current user alongside any 'shared' filters. The latter are marked with an icon showing a group of people.</p>
-</li>
-<li>
-<p><strong>Components</strong> -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the requirements to only show those that belong to the selected component.</p>
-</li>
-<li>
-<p><strong>Releases</strong> -- This section lists the releases and sprints defined for the current product. Clicking on any of the releases or sprints in the list will filter the requirements by that release/sprint.</p>
-</li>
-</ul>
+<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters</a>.</p>
 <h3 id="show-hide-columns">Show / Hide Columns</h3>
 <p>This drop-down list allows you to change the fields that are displayed in the requirement list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
 <h3 id="copying-requirements">Copying Requirements</h3>
@@ -923,7 +909,7 @@
 <li><strong>Delete</strong>: Clicking this button deletes all the requirements selected. If any are summary items, their child requirements are also deleted. If all the children are deleted from a summary item, it changes back into a non-summary item.</li>
 <li><strong>Refresh</strong>: Clicking this button reloads the requirements list (not the entire page).</li>
 <li><strong>Edit</strong>: this works the same way as on the requirements hierarchy list - see <a href="#edit">above</a>.</li>
-<li><strong>Filter</strong>: this works the same way as on the requirements hierarchy list - see <a href="#filtering">above</a>.</li>
+<li><strong>Filter</strong>: Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</li>
 <li><strong>Show / Hide Columns</strong>: this works the same way as on the requirements hierarchy list - see <a href="#show-hide-columns">above</a></li>
 <li><strong>Clone</strong>: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.</li>
 <li><strong>Tools</strong>: this dropdown allows to <a href="#exporting-requirements">export requirements</a>, <a href="create-a-test-cases-from-requirements">create test cases</a> or <a href="create-a-test-set-from-requirements">create test sets</a> from requirements, or to <a href="#printing-items">print items</a>.</li>
@@ -973,7 +959,7 @@
 <p>the left pane displays the requirements list navigation;</p>
 </li>
 <li>
-<p>the right pane's header, which displays: the operations toolbar; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
+<p>the right pane's header, which displays: the operations toolbar; <a href="../Application-Wide/#breadcrumbs">the hierarchical structure the requirement is in</a>; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
 </li>
 <li>
 <p>the right pane's tabbed interface with rich information related to the requirement.</p>
@@ -993,35 +979,17 @@
 <p>The list of requirements assigned to the current user</p>
 </li>
 </ul>
-<p>On the main right hand side of the page, which of the fields for the currently selected requirement are available and which are required will depend on your stage in the requirement workflow. For example, a requested requirement might not require a "Release" whereas a planned requirement could well do. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the system for you. Administrators should refer to the <em>SpiraPlan Administration Guide</em> for details on configuring the requirement workflows to better meet their needs.</p>
-<p>Depending on the user's role and whether they are listed as the owner or author of the requirement, displayed in the info bar beneath the requirement name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations:</p>
-<p><img alt="" src="../img/Requirements_Management_94.png" /></p>
-<p>These workflow transitions allow the user to move the requirement from one status to another. For example when the requirement is in the Developed status, you will be given the options to:</p>
-<p><strong>Continue Development</strong> -- changes status to "In-Progress"</p>
-<p><strong>Mark as Completed</strong> -- changes the status to "Completed"</p>
-<p><strong>Mark as Tested</strong>- changes the status to "Tested"</p>
-<p>After changing the status of the requirement by clicking on the workflow link, you can then fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate requirement fields, you can either click "<strong><em>Save</em></strong>", "<strong><em>Save and Close</em></strong>", or "<strong><em>Save and New</em></strong>" to commit the changes or "<strong><em>Refresh</em></strong>" to discard the changes and reload the requirement from the database. In addition you can print the current requirement by clicking "<strong><em>Print</em></strong>", which will display a printable version of the page in a separate window.</p>
-<p>Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:</p>
-<p><img alt="" src="../img/Requirements_Management_95.png" /></p>
-<p>On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with the following popup:</p>
-<p><img alt="" src="../img/Requirements_Management_96.png" /></p>
-<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can send an email containing details of the requirement to an email address or another user on the system:</p>
-<p><img alt="" src="../img/Requirements_Management_97.png" /></p>
-<p>You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration -- Notification Templates.</p>
-<p>To be notified of any changes made to the current artifact via email, click the "<strong><em>Subscribe</em></strong>" button. If you already subscribed, the button will instead let you "<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.</p>
 <p>The bottom part of the right pane can be switched between six views: "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.</p>
+<h3 id="emailing">Emailing</h3>
+<p>Read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</p>
+<h3 id="followers">Followers</h3>
+<p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
+<h3 id="workflows">Workflows</h3>
+<p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
 <h3 id="overview-details">Overview - Details</h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Requirements_Management_98.png" /></p>
-<h3 id="followers">Followers</h3>
-<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.</p>
-<p><img alt="" src="../img/Requirements_Management_99.png" /></p>
-<p><img alt="" src="../img/Requirements_Management_100.png" /></p>
-<p>You can also quickly see who is following an incident under the "People" section in the Overview tab.</p>
-<p><img alt="" src="../img/Requirements_Management_101.png" /></p>
-<p>To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.</p>
-<p><img alt="" src="../img/Requirements_Management_102.png" /></p>
 <h3 id="overview-detailed-information">Overview -- Detailed Information</h3>
 <p>The Detailed Information section contains the long, formatted description of the requirement, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Requirements_Management_103.png" /></p>

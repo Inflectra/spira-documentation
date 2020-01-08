@@ -769,7 +769,7 @@
                 href="#risks-management">Risks Management</a></li>
         <li class="second-level"><a href="#risks-list">Risks List</a></li>
         
-        <li class="third-level"><a href="#sorting-and-filtering">Sorting and Filtering</a></li>
+        <li class="third-level"><a href="#filtering-sorting">Filtering &amp; Sorting</a></li>
         <li class="third-level"><a href="#new-risk">New Risk</a></li>
         <li class="third-level"><a href="#delete">Delete</a></li>
         <li class="third-level"><a href="#refresh">Refresh</a></li>
@@ -780,8 +780,10 @@
         <li class="third-level"><a href="#printing-items">Printing Items</a></li>
         <li class="second-level"><a href="#risk-details">Risk Details</a></li>
         
-        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
+        <li class="third-level"><a href="#emailing">Emailing</a></li>
         <li class="third-level"><a href="#followers">Followers</a></li>
+        <li class="third-level"><a href="#workflows">Workflows</a></li>
+        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
         <li class="third-level"><a href="#overview-detailed-information">Overview -- Detailed Information</a></li>
         <li class="third-level"><a href="#overview-mitigations">Overview -- Mitigations</a></li>
         <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
@@ -801,18 +803,8 @@
 <p>The risk list screen displays all the risks entered for the current product, in a filterable, sortable grid. The grid displays the risk number together with fields such as risk type (schedule, financial, etc.), status (open, evaluated, etc.), probability, impact, and exposure (calculated from the probability and impact). The choice of columns displayed is configurable per-user, per-product, giving extensive flexibility when it comes to viewing and searching risks.</p>
 <p>The sidebar on the left gives you quick access to saved filters, along with useful charts to get an at-a-glance view of risks for this product.</p>
 <p>In addition, you can view a more detailed description of the risk (along with any mitigations) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the risk name hyperlink, you will be taken to the <a href="#risk-details">risk details</a> page. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of risks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
-<h3 id="sorting-and-filtering">Sorting and Filtering</h3>
-<p>You can easily filter and sort the list of risks as illustrated in the screen-shot below:</p>
-<p><img alt="" src="../img/Risks_Management_457.png" /></p>
-<p>To filter the list by a field like type, probability, impact, or status choose an item from the appropriate drop-down list. For exposure you can search for a specific number range, and for the other fields, you enter a free-text phrase then click "<strong><em>Filter</em></strong>" or press the
-&lt;ENTER> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, risk numbers).</p>
-<p>To change the column that is sorted, or to change the direction of the current sort, click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow. In the screen-shot above, we are filtering on Exposures between 6 and 15 (inclusive), and sorting by ascending name.</p>
-<p>Clicking on Filter > Clear Filter removes any set filters and expands the risk list to display all risks for the current product, and clicking on Filter > Save Filter allows you to save the filter to your 'My Page' for use in the future. The list of saved filters can also be retrieved by clicking Filter > Retrieve Filter.</p>
-<p>As a shortcut, the left hand panel includes a set of <strong>Quick Filters</strong> that can be applied in a single-click:</p>
-<ul>
-<li>The topmost section displays any saved risk filters created by the current user or that are shared with the current user (the former are designated with an icon representing a single person, the latter a group of people)</li>
-<li><strong>Components</strong> -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the risks to only show those that are associated with the selected component.</li>
-</ul>
+<h3 id="filtering-sorting">Filtering &amp; Sorting</h3>
+<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
 <h3 id="new-risk">New Risk</h3>
 <p>Clicking on the "<strong><em>New Risk</em></strong>" button takes you to the new risk screen. This is essentially the same screen as the <a href="#risk-details">risk details</a> screen except, depending on how the workflow has been configured for your product, certain fields may be disabled. For more details on setting and up configuring workflow for your product, please refer to the <em>SpiraTest Administration Guide</em>.</p>
 <h3 id="delete">Delete</h3>
@@ -854,37 +846,18 @@ on any of the cells in the row, you change the item from "View" mode to "Edit" m
 <li>The list of all risks, irrespective of the current filter</li>
 <li>The list of risks assigned to the current user</li>
 </ul>
-<p>On the main right-hand side of the page, which of the fields for the currently selected risk are available and which are required will depend on your stage in the risk workflow. For example, an identified risk might not require a "Release" whereas an evaluated risk could well do. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the system for you. Administrators should refer to the
-<em>SpiraPlan Administration Guide</em> for details on configuring the risk workflows to better meet their needs.</p>
-<p>Depending on the user's role and whether they are listed as the owner or author of the risk, displayed in the info bar beneath the risk name is the current workflow status and an "operations" button which, when clicked, will show a set of allowed workflow operations:</p>
-<p><img alt="" src="../img/Risks_Management_461.png" /></p>
-<p>These workflow transitions allow the user to move the risk from one status to another. For example, when the risk is in the Open status, you may be given options to:</p>
-<p><strong>Close Risk</strong> -- changes status to "Closed"</p>
-<p><strong>Reject Risk</strong> -- changes the status to "Rejected"</p>
-<p>After changing the status of the risk by clicking on the workflow link, you can then fill in any additional fields that are now enabled and/or required. Once you've made the changes to the appropriate fields, you can either click "<strong><em>Save</em></strong>", "<strong><em>Save and Close</em></strong>", or "<strong><em>*</em>*" to commit the changes or "</strong><em>Refresh<strong><em>" to discard the changes and reload the risk from the database. In addition, you can print the current risk by clicking "</em></strong>Print</em>**", which will display a printable version of the page in a separate window.</p>
-<p>Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:</p>
-<p><img alt="" src="../img/Risks_Management_462.png" /></p>
-<p>On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with the following popup:</p>
-<p><img alt="" src="../img/Risks_Management_463.png" /></p>
-<p>Using the "<strong><em>Email</em></strong>" button on the toolbar, you can send an email containing details of the risk to an email address or another user on the system:</p>
-<p><img alt="" src="../img/Risks_Management_97.png" /></p>
-<p>You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration --
-Notification Templates.</p>
-<p>To be notified of any changes made to the current artifact via email, click the "<strong><em>Subscribe</em></strong>" button. If you already subscribed, the button will instead let you "<strong><em>Unsubscribe</em></strong>" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.</p>
 <p>The bottom part of the right pane can be switched between four views:
 "Overview", "Tasks", "Attachments", "History", each of which will be described in more detail below.</p>
+<h3 id="emailing">Emailing</h3>
+<p>Read about <a href="../Application-Wide/#emailing">emailing a document to colleagues using Spira</a>.</p>
+<h3 id="followers">Followers</h3>
+<p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
+<h3 id="workflows">Workflows</h3>
+<p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
 <h3 id="overview-details">Overview - Details</h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the risk.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the risk. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Risks_Management_464.png" /></p>
-<h3 id="followers">Followers</h3>
-<p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.</p>
-<p><img alt="" src="../img/Risks_Management_99.png" /></p>
-<p><img alt="" src="../img/Risks_Management_100.png" /></p>
-<p>You can also quickly see who is following an incident under the "People" section in the Overview tab.</p>
-<p><img alt="" src="../img/Risks_Management_101.png" /></p>
-<p>To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.</p>
-<p><img alt="" src="../img/Risks_Management_102.png" /></p>
 <h3 id="overview-detailed-information">Overview -- Detailed Information</h3>
 <p>The Detailed Information section contains the long, formatted description of the risk, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Risks_Management_465.png" /></p>

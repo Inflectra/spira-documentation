@@ -805,8 +805,8 @@
 <li><strong>Description</strong> -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
 <li><strong>Connection Info</strong> -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.</li>
 <li>It is typically of the form: <a href="https://mycompany.atlassian.net">https://mycompany.atlassian.net</a></li>
-<li><strong>Login</strong> -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.</li>
-<li><strong>Password</strong> -- this should be set to the password of the login specified above.</li>
+<li><strong>Login</strong> -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.</li>
+<li><strong>Password</strong> -- this should be set to the <strong>API Key</strong> (<em>not password</em>) of the Atlassian login specified above.</li>
 <li><strong>Time Offset</strong> -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.</li>
 <li><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:</li>
@@ -817,8 +817,8 @@ time-zones here.</li>
 <li><strong>Custom 01</strong> -- This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</li>
 <li><strong>Custom 02</strong> -- This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.</li>
 <li><strong>Custom 03</strong> -- This determines how the synchronization of incidents works:<ul>
-<li><strong>Default (leave blank)</strong> -- By default, SpiraTeam will log new incidents in JIRA that were originally created in SpiraTeam. It will also log new issues from JIRA in SpiraTeam. Updates will only occur from JIRA SpiraTeam. <em>This is the recommended option for most users.</em></li>
-<li><strong>"True"</strong> -- If you enter the word "True" in this setting, the plugin will restrict synchronization to only loading new incidents from SpiraTeam > JIRA and updating existing items. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.</li>
+<li><strong>Default (leave blank)</strong> -- By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. <em>This is the recommended option for most users.</em></li>
+<li><strong>"True"</strong> -- If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.</li>
 <li><strong>"Both"</strong> -- If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict.\
 <em>This option is not recommended for novice users.</em></li>
 </ul>
@@ -898,27 +898,27 @@ once you've entered the appropriate user identifier name. You should now repeat 
 <p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_28.png" /></p>
 <p>The table lists each of the incident types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Bug and Incident in SpiraTeam are both equivalent to Bug in JIRA), in which case only one of the two values can be listed as Primary
-= Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+= Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
 <h4 id="b-incident-status">b) Incident Status</h4>
 <p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_30.png" /></p>
 <p>The table lists each of the incident statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. New and Open in SpiraTeam are both equivalent to Open in JIRA), in which case only one of the two values can be listed as Primary
-= Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+= Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>We recommend that you always point the New and Open statuses inside SpiraTeam to point to the ID for "Open" inside JIRA and make Open in SpiraTeam the Primary status of the two. This is recommended so that as new incidents in SpiraTeam get synched over to JIRA, they will get switched to the Open status in JIRA which will then be synched back to "Open" in SpiraTeam. That way you'll be able to see at a glance which incidents have been synched with JIRA and those that haven't.</p>
 <p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
 <h4 id="c-incident-priority">c) Incident Priority</h4>
 <p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_32.png" /></p>
-<p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
 <h4 id="d-incident-component-optional">d) Incident Component (Optional)</h4>
 <p>Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_34.png" /></p>
-<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
@@ -933,25 +933,25 @@ once you've entered the appropriate user identifier name. You should now repeat 
 <h4 id="f-requirement-status-optional">f) Requirement Status (Optional)</h4>
 <p>Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_39.png" /></p>
-<p>The table lists each of the requirement statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the requirement statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
 <h4 id="g-requirement-importance-optional">g) Requirement Importance (Optional)</h4>
 <p>Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_40.png" /></p>
-<p>The table lists each of the requirement importances available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the requirement importances available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
 <h4 id="h-requirement-type-optional">h) Requirement Type (Optional)</h4>
 <p>Click on the "Type" hyperlink under Requirement Standard Fields to bring up the Requirement type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_41.png" /></p>
-<p>The table lists each of the requirement types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Use Case and User Story in SpiraTeam are both equivalent to User Story in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the requirement types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Use Case and User Story in SpiraTeam are both equivalent to User Story in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
 <h4 id="i-requirement-component-optional">i) Requirement Component (Optional)</h4>
 <p>Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_42.png" /></p>
-<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA > SpiraTeam).</p>
+<p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
