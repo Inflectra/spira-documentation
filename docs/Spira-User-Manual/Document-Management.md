@@ -22,6 +22,10 @@ The bottom left-hand pane contains the "Tag Cloud". This is a list of all the ta
 
 The main toolbar contains icons for all the operations that can be performed on the document list. You can add documents to the current folder, delete existing documents from the product, refresh the list of documents, export documents to another product, apply a filter, and clear the current filter. In addition there is the option to either display just the documents in the current folder or all documents in all folders. The latter is useful when you want to search for a specific document by keyword or tag name.
 
+### Filtering
+
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
+
 
 ### Add New Document
 

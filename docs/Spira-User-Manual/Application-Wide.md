@@ -10,16 +10,52 @@ When you first visit an artifact section in the app (by clicking on the relevant
 
 ### Filtering
 
-You can easily filter the list of artifacts as illustrated in the screen-shot below:
+You can easily filter artifact lists as you can see in the screen-shot below. Here we are filtering Requirements by the status "Requested"):
 
 ![](img/Requirements_Management_86.png)
 
-To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click the <Filter\> icon or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, requirement numbers). In the screen-shot above, we are filtering on Status = Requested.
+To filter the list:
 
-In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. If you would like to share the filter with other members of the product, choose the "Share with other members of the product" option. The list of saved filters can also be retrieved by clicking Filter \>
-Retrieve Filter:
+- make sure the columns you want to filter on are visible (you can hide them later if you want)
+- use the dropdowns or free-text search fields immediately beneath the column names
+- click the `Filter` icon or press the `ENTER` key to apply the filters
+
+Note that the name field is searched using a "like" comparison, so that searching for "database" would match "Database is ready", "There is a database", "The data in the database is correct", and so on. All other freetext fields need to be exact matches (e.g. dates or numbers).
+
+To **clear the current filter** (whether it is saved or not), either click the `Clear Filters` button above the table (as you can see in the screenshot above), or go to `Filter` > `Clear Filter` from the operations toolbar.
+
+#### Managing Filters
+You can do a number of things with filters. First let's talk about using the `Filters` button on the operations toolbar (at the top of the page just below the main navigation bar).
+
+To **reuse a filter**, save it by going to `Filter` > `Save Filter` from the operations toolbar. Give your new filter a name and click `Save`.
+
+By default, when you save a filter it will also save your **column selection** information. Uncheck the box next to "Save the column selection with the filter" if you do not want to save this information. 
+
+When you apply a saved filter with column selection information, the system will show the specific columns visible (including their relative ordering and width) to match those in the filter. This means that you can Show/Hide different columns, filter on them, and save the entire combination as a saved view. When you switch between saved views, the system will show/hide and reposition the columns associated with the view automatically.
+
+To **share the filter** with other members of the product, in the Save Filter dialog, check the box next to "Share with other members of the product". 
+
+To **update an existing filter**, go to `Filter` > `Save Filter` and click on `Update Existing`. You will see a dropdown of all your saved filters. Pick one, and then click `Save`. This will update the filter itself, any sort applied, whether it is shared or not, or if it should save the column selection with the filter.
+
+To **see your saved filters** for this artifact, go to `Filter` > `Retrieve Filter`. Apply the filter by selecting it.
 
 ![](img/Requirements_Management_87.png)
+
+From your "My Page" you can **see all your save filters** across all artifacts and products. You can also delete any filter from there. This is all through the [My Saved Searches](User-Product-Management.md#my-saved-searches) widget.
+
+#### Quick Filter Side Panel
+As a shortcut, the left hand panel on artifact list pages includes a set of **Quick Filters**. Click the name of the filter in this panel to apply it. This panel is NOT visible for list pages that do not have a side panel at all - i.e. Releases, Automation Hosts, Test Configurations, and Resources.
+
+The quick filter panel shows a list of **all saved filters** created by you (with an icon of a person) or shared by others (with an icon of a group of people)  for the current artifact.
+
+For Requirements, Test Cases, Incidents, Risks, and Tasks the quick filter panel also shows a list of **Components** for the current product. Picking a component will filter the list to only show those associated with that component.
+
+For Requirements and Test Runs the quick filter panel additionally shows a dropdown for **Releases**. Picking a release will filter the list to only show items that are set for that particular release.
+
+#### Sorting
+
+Many artifact lists let you sort by a specific column (either ascending or descending). To change the column being sorted, click on the up or down arrow icon next to the title of that column. Click the other icon will reverse the sort order. The currently sorted column is indicated by the darker arrow. When you save a filter it will always save the selected sort.
+
 
 ### Show / Hide Columns
 

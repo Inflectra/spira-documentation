@@ -66,27 +66,7 @@ Choosing an indent level from the 'Show Level' drop down box allows you to quick
 
 ### Filtering
 
-You can easily filter the list of requirements as illustrated in the screen-shot below:
-
-![](img/Requirements_Management_86.png)
-
-
-
-
-To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click the <Filter\> icon or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, requirement numbers). In the screen-shot above, we are filtering on Status = Requested.
-
-In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. If you would like to share the filter with other members of the product, choose the "Share with other members of the product" option. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter:
-
-![](img/Requirements_Management_87.png)
-
-
-As a shortcut, the left hand panel includes a set of **Quick Filters** that can be applied in a single-click:
-
--   **The topmost section** -- This displays any saved requirement filters created by the current user alongside any 'shared' filters. The latter are marked with an icon showing a group of people.
-
--   **Components** -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the requirements to only show those that belong to the selected component.
-
--   **Releases** -- This section lists the releases and sprints defined for the current product. Clicking on any of the releases or sprints in the list will filter the requirements by that release/sprint.
+Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 ### Show / Hide Columns
 
@@ -188,7 +168,7 @@ One major benefit of this view is that when you filter by a field, you only get 
 - **Delete**: Clicking this button deletes all the requirements selected. If any are summary items, their child requirements are also deleted. If all the children are deleted from a summary item, it changes back into a non-summary item.
 - **Refresh**: Clicking this button reloads the requirements list (not the entire page).
 - **Edit**: this works the same way as on the requirements hierarchy list - see [above](#edit).
-- **Filter**: this works the same way as on the requirements hierarchy list - see [above](#filtering).
+- **Filter**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 - **Show / Hide Columns**: this works the same way as on the requirements hierarchy list - see [above](#show-hide-columns)
 - **Clone**: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.
 - **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](create-a-test-cases-from-requirements) or [create test sets](create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).

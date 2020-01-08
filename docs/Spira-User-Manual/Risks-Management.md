@@ -14,23 +14,9 @@ The sidebar on the left gives you quick access to saved filters, along with usef
 
 In addition, you can view a more detailed description of the risk (along with any mitigations) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the risk name hyperlink, you will be taken to the [risk details](#risk-details) page. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of risks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
-### Sorting and Filtering
+### Filtering & Sorting
 
-You can easily filter and sort the list of risks as illustrated in the screen-shot below:
-
-![](img/Risks_Management_457.png)
-
-To filter the list by a field like type, probability, impact, or status choose an item from the appropriate drop-down list. For exposure you can search for a specific number range, and for the other fields, you enter a free-text phrase then click "***Filter***" or press the
-<ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, risk numbers).
-
-To change the column that is sorted, or to change the direction of the current sort, click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow. In the screen-shot above, we are filtering on Exposures between 6 and 15 (inclusive), and sorting by ascending name.
-
-Clicking on Filter \> Clear Filter removes any set filters and expands the risk list to display all risks for the current product, and clicking on Filter \> Save Filter allows you to save the filter to your 'My Page' for use in the future. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
-
-As a shortcut, the left hand panel includes a set of **Quick Filters** that can be applied in a single-click:
-
--   The topmost section displays any saved risk filters created by the current user or that are shared with the current user (the former are designated with an icon representing a single person, the latter a group of people)
--   **Components** -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the risks to only show those that are associated with the selected component.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### New Risk

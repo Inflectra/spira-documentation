@@ -81,20 +81,9 @@ This drop-down list allows you to change the fields that are displayed in the te
 Note: If you hide the 'execution status' column, the test case folders will no longer show the count of test cases contained within the folder.
 
 
-### Filtering
+### Filtering & Sorting
 
-You can easily filter the list of test cases as illustrated in the screen-shot below:
-
-![](img/Test_Case_Management_128.png)
-
-To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click "***Filter***" or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, test case numbers). In the screen-shot above, we are filtering on Owner =
-(None).
-
-In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter:
-
-![](img/Test_Case_Management_129.png)
-
-Because the same test case can be run against more than one release, sometimes you want to see the execution information for the displayed test cases for different releases. If you select a release or sprint from the dropdown marked "All Releases" on the right above the table, then the execution information for that specific release will be displayed. If the dropdown is set to "all releases", then it shows only the most recent execution information. In both cases, all test cases (as per any filter) are listed.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### Copying Test Cases
@@ -841,21 +830,9 @@ Clicking on the "***Refresh***" button simply reloads the test run list. This is
 This drop-down list allows you to change the fields that are displayed in the test run list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
 
-### Sorting and Filtering
+### Filtering & Sorting
 
-You can easily filter and sort the list of test runs. To filter the list by any of the visible fields, you simply choose an item from the appropriate drop-down list, and for the other fields, you enter a free-text phrase then click <Filter\> or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name.
-
-To change the column that is sorted, or to change the direction of the current sort, simply click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow. In the screen-shot above, we have filtered on test runs that have failed, sorted in order of increasing release version number.
-
-Clicking on Filter \> Clear Filter removes any set filters and expands the test run list to display all test runs for the current product, and clicking on Filter \> Save Filter allows you to save the filter to your
-'My Page' for use in the future. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
-
-As a shortcut, the left hand panel includes a set of **Quick Filters**
-that can be applied in a single-click:
-
--   **The topmost section** -- This displays any saved requirement filters created by the current user alongside any 'shared' filters. The latter are marked with an icon showing a group of people.
-
--   **Releases** -- This section lists the releases and sprints defined for the current product. Clicking on any of the releases or sprints in the list will filter the requirements by that release/sprint.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### Printing Items
@@ -1007,16 +984,9 @@ When you have made your updates, you can either click "***Save***" to commit the
 This drop-down list allows you to change the fields that are displayed in the test set list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
 
-### Filtering
+### Filtering & Sorting
 
-You can easily filter the list of test sets. To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) then click "***Filter***" or press the <ENTER\>
-key to apply the different filters. Note that the Name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other free-text fields need to be exact matches (e.g. dates, test set numbers). In the screen-shot below, we are filtering on test sets that contain at least one failed test case.
-
-![](img/Test_Case_Management_213.png)
-
-In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
-
-Because the same test set can be run against more than one release, sometimes you want to see the execution information for the displayed test sets for different releases. If you select a release or sprint from the dropdown marked "All Releases" on the right above the table, then the execution information for that specific release will be displayed. If the dropdown is set to "all releases", then it shows only the most recent execution information. In both cases, all test sets (as per any filter) are listed.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### Copying Test Sets
@@ -1226,13 +1196,9 @@ In addition, you can view a more detailed description of the automation host by 
 One special column that is unique to automation hosts is the "Token" field. This needs to contain a short textual identifier that uniquely identifies each automation host in the product. This will be used by each host computer to identify itself to SpiraPlan.
 
 
-### Sorting and Filtering
+### Filtering & Sorting
 
-You can easily filter and sort the list of automation hosts. To filter the list by one of the displayed fields, you simply choose an item from the appropriate drop-down list or enter a free-text phrase then click "***Filter***" or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, automation host numbers).
-
-To change the column that is sorted, or to change the direction of the current sort, simply click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow.
-
-Clicking on Filter \> Clear Filter removes any set filters and expands the host list to display all automation hosts in the current product, and clicking on Filter \> Save Filter allows you to save the filter to your 'My Page' for use in the future. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### New Host
@@ -1323,13 +1289,9 @@ The test configuration list screen displays all the test configurations for the 
 In addition, you can view a more detailed description of the test configuration by positioning the mouse pointer over the host name hyperlink and waiting for the popup "tooltip" to appear. If you click on the host name hyperlink, you will be taken to the [test configuration details page](#test-configuration-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of hosts in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
 
-### Sorting and Filtering
+### Filtering & Sorting
 
-You can easily filter and sort the list of automation hosts. To filter the list by one of the displayed fields, you simply choose an item from the appropriate drop-down list or enter a free-text phrase then click "***Filter***" or press the <ENTER\> key to apply the different filters. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, test configuration numbers).
-
-To change the column that is sorted, or to change the direction of the current sort, simply click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow.
-
-Clicking on Filter \> Clear Filter removes any set filters.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### New Test Configuration

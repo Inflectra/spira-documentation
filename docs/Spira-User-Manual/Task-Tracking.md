@@ -50,27 +50,9 @@ You can change the parent folder and/or name of the folder and click "***Update*
 To move a task / tasks between folders, click and drag the relevant task/tasks from the table on the right, and drag them over the desired folder in the tree view on the left. The destination folder will be highlighted to show where the task will be placed.[^folder-url]
 
 
-### Sorting and Filtering
+### Filtering & Sorting
 
-You can easily filter and sort the list of tasks as illustrated in the screen-shot below:
-
-![](img/Task_Tracking_291.png)
-
-To filter the list by progress, status, priority, owner or release, you simply choose an item from the appropriate drop-down list, and for the other fields, you enter a free-text phrase and click "***Filter***" or press the <ENTER\> key to apply. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, task numbers).
-
-To change the column that is sorted, or to change the direction of the current sort, simply click on the up/down arrow icon in the appropriate column. The currently sorted column is indicated by the darker arrow. In the screen-shot above, we have filtered on tasks that are finishing late, sorted in order of decreasing priority.
-
-Clicking on Filter \> Clear Filter removes any set filters and expands the task list to display all tasks for the current product, and clicking on Filter \> Save Filter allows you to save the filter to your 'My Page'
-for use in the future. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
-
-As a shortcut, the left hand panel includes a set of **Quick Filters**
-that can be applied in a single-click:
-
--   The topmost section displays any **saved filters** created by the current user or that are shared with the current user (the former are designated with an icon representing a single person, the latter a group of people)
-
--   **Components** -- This section lists the components defined for the current product. Clicking on any of the components in the list will filter the tasks to only show those that belong to the selected component. Tasks are linked to components indirectly through their associated requirement.
-
--   **Releases** -- This section lists the releases and sprints defined for the current product. Clicking on any of the releases or sprints in the list will filter the requirements by that release/sprint.
+Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### New Task

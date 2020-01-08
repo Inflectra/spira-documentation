@@ -32,14 +32,7 @@ Clicking on a release's hyperlink will take you to the [release details](#releas
 
 ### Filtering
 
-You can easily filter the list of releases as illustrated in the screen-shot below:
-
-![](img/Release_Management_259.png)
-
-To filter the list by any of the displayed columns, you either choose an item from the appropriate drop-down list or enter a free-text phrase (depending on the type of field) and click "***Filter***" or press the <ENTER\> key. Note that the name field is searched using a "LIKE" comparison, so that searching for "database" would include any item with the word database in the name. The other freetext fields need to be exact matches (e.g. dates, release numbers). Clicking on Filter \>
-Clear Filters clears all the set filters and displays all the releases for the product.
-
-In addition, if you have a set of filters that you plan on using on a regular basis, you can choose the option Filter \> Save Filter to add the current filter to the list of saved filters that appear on your 'My Page'. The list of saved filters can also be retrieved by clicking Filter \> Retrieve Filter.
+Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 
 ### Insert
