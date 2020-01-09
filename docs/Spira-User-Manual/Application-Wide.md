@@ -1,6 +1,6 @@
 # Common Elements Across the Application
 
-There are lots of different artifact in the application (described [here](Functionality-Overview.md)). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. While each artifact is different and behaves differently, many parts to how you interact with these artifacts are the same. 
+There are lots of different artifacts in the application (described [here](Functionality-Overview.md)). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. Each artifact is different but they also share many similarities. These are explained below. 
 
 ## Artifact List Pages
 
@@ -10,7 +10,7 @@ When you first visit an artifact section in the app (by clicking on the relevant
 
 ### Filtering
 
-You can easily filter artifact lists as you can see in the screen-shot below. Here we are filtering Requirements by the status "Requested"):
+You can easily filter artifact lists as you can see in the screen-shot below. Here, we are filtering Requirements by the status "Requested":
 
 ![](img/Requirements_Management_86.png)
 
