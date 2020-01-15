@@ -298,7 +298,7 @@ Clicking on the sprint hyperlinks in the headers will switch the incident board 
 [^rq-in]: 
     To create a requirement from an incident, the user needs must have the permission to create requirements (which makes sense).
 
-    The creation process does not enforce the relevant requirement workflow.
+    The creation process does not enforce the relevant requirement workflow to make sure that all required fields are filled in.
 
     What gets copied over from the incident to the new requirement:
 
