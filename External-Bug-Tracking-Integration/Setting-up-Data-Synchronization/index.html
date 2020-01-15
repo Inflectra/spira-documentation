@@ -783,228 +783,128 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="setting-up-data-synchronization">Setting up Data Synchronization</h1>
-<p>This section outlines the general data synchronization configuration to
-use any of the supported bug trackers with SpiraTest, SpiraPlan or
-SpiraTeam (hereafter referred to as Spira).</p>
-<p>► Please read this section first, before performing the configuration
-steps specific to your bug-tracker.</p>
-<p>The built-in data-synchronization service that comes with Spira, allows
-the quality assurance team to manage their requirements and test cases
-in Spira, execute their test runs, and then have the new defects/bugs
-generated during the run be automatically loaded into an external
-bug-tracker. Once the incidents are loaded into the external
-bug-tracker, the development team can then manage the lifecycle of these
-defects/bugs in their chosen tool, and have the status changes be
-reflected back in Spira.</p>
-<p>In addition, any issues logged directly into the external bug-tracker
-will get imported into Spira as either new incidents or new requirements
-(depending on their type) so that they can be used as part of the
-planning and testing lifecycle.</p>
-<p>There are three possible deployment options for the Spira data
-synchronization:</p>
+<p>This section outlines the general data synchronization configuration to use any of the supported bug trackers with SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira).</p>
+<p>► Please read this section first, before performing the configuration steps specific to your bug-tracker.</p>
+<p>The built-in data-synchronization service that comes with Spira, allows the quality assurance team to manage their requirements and test cases in Spira, execute their test runs, and then have the new defects/bugs generated during the run be automatically loaded into an external bug-tracker. Once the incidents are loaded into the external bug-tracker, the development team can then manage the lifecycle of these defects/bugs in their chosen tool, and have the status changes be reflected back in Spira.</p>
+<p>In addition, any issues logged directly into the external bug-tracker will get imported into Spira as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.</p>
+<p>There are three possible deployment options for the Spira data synchronization:</p>
 <ol>
 <li>
 <p>You have both Spira and the External Bug Tracker cloud-hosted</p>
 </li>
 <li>
-<p>You have Spira installed on-premise (External Bug Tracker can be
-either)</p>
+<p>You have Spira installed on-premise (External Bug Tracker can be either)</p>
 </li>
 <li>
-<p>You have Spira cloud-hosted, but the External Bug Tracker installed
-on-premise</p>
+<p>You have Spira cloud-hosted, but the External Bug Tracker installed on-premise</p>
 </li>
 </ol>
 <p>We shall provide the configuration steps for each option:</p>
 <h2 id="spira-external-tool-cloud-hosted">Spira &amp; External Tool Cloud Hosted</h2>
-<p>When you sign up for Spira as a cloud-hosted subscription, you have the
-option of including the Spira DataSync service as an add-on feature to
-the subscription:</p>
+<p>When you sign up for Spira as a cloud-hosted subscription, you have the option of including the Spira DataSync service as an add-on feature to the subscription:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_5.png" /></p>
-<p>Make sure you include the 'Spira DataSync' add-on with your
-subscription. Once your subscription is provisioned, you will be able to
-configure the connection to Spira by going to your secure Customer Area
-on our website:</p>
+<p>Make sure you include the 'Spira DataSync' add-on with your subscription. Once your subscription is provisioned, you will be able to configure the connection to Spira by going to your secure Customer Area on our website:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_6.png" /></p>
 <p>Click on the 'Configure' button associated with the <strong>Spira-DataSync</strong>
 addon row:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_7.png" /></p>
-<p>Enter a login and password that can connect to your Spira instance. This
-user needs to be a member of the project(s) that will be synchronized
-with the external bug-tracker and needs to have at least <strong>Incident
-create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
+<p>Enter a login and password that can connect to your Spira instance. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
 permissions in these projects.</p>
-<p>Click on the 'Test' button to verify the credentials, and once they
-validate, make sure the 'Active' flag is checked and then click 'Save'.
-You have now configured the synchronization.</p>
-<p>You should now see a list of the plugins currently configured in your
-Spira instance:</p>
+<p>Click on the 'Test' button to verify the credentials, and once they validate, make sure the 'Active' flag is checked and then click 'Save'. You have now configured the synchronization.</p>
+<p>You should now see a list of the plugins currently configured in your Spira instance:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_8.png" /></p>
-<p>If you click on any of the 'Manage' buttons you will be taken to your
-Spira instance where you can complete the plugin configuration:</p>
+<p>If you click on any of the 'Manage' buttons you will be taken to your Spira instance where you can complete the plugin configuration:</p>
 <p><img alt="" src="../../Spira-Administration-Guide/img/System_Integration_Data_Synchronization_List.png" /></p>
-<p>The steps for configuring each plugin are specific to each external
-bug-tracking tool. Please refer to the appropriate section in this
-document for the tool you are using.</p>
+<p>The steps for configuring each plugin are specific to each external bug-tracking tool. Please refer to the appropriate section in this document for the tool you are using.</p>
 <h2 id="spira-installed-on-premise">Spira Installed On-Premise</h2>
-<p>With Spira installed on-premise, there is a built-in Windows® service
-that is installed with Spira that is not running by default, but is
-available for data-synchronization.</p>
-<p>The steps that need to be performed to configure integration are as
-follows:</p>
+<p>With Spira installed on-premise, there is a built-in Windows® service that is installed with Spira that is not running by default, but is available for data-synchronization.</p>
+<p>The steps that need to be performed to configure integration are as follows:</p>
 <ul>
 <li>Download appropriate plug-in for Spira from our website</li>
 <li>Configure the DataSync Service</li>
 <li>Start the service and proceed to the plugin specific section of this manual</li>
 </ul>
 <h3 id="download-the-data-sync-plug-in">Download the Data-Sync Plug-In</h3>
-<p>Go to the Inflectra website and open up the page that lists the various
-downloads available for Spira
-(<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this
-page will be the data-synchronization plug-In for your desired
-bug-tracking tool. Right-click on this link and save the Zip compressed
-folder to the hard-drive of the server where Spira is installed.</p>
-<p>Open up the compressed folder and extract the DLL assembly files and
-place them in the C:\Program Files (x86)\SpiraTeam\Bin
-folder (it may be SpiraTest or SpiraPlan depending on which product
-you're running). This folder should already contain the
-DataSyncService.exe and
-DataSyncService.exe.config files that are the primary
-files used for managing the data synchronization between Spira and other
-systems.</p>
+<p>Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this page will be the data-synchronization plug-In for your desired bug-tracking tool. Right-click on this link and save the Zip compressed folder to the hard-drive of the server where Spira is installed.</p>
+<p>Open up the compressed folder and extract the DLL assembly files and place them in the C:\Program Files (x86)\SpiraTeam\Bin folder (it may be SpiraTest or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.</p>
 <h3 id="configuring-the-synchronization-service">Configuring the Synchronization Service</h3>
-<p>To configure the integration service, please open up the
-DataSyncService.exe.config file located in C:\Program
-Files (x86)\SpiraTeam\Bin with a text editor such as
-Notepad. Once open, it should look like:</p>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;configuration&gt;
-    &lt;configSections&gt;
-  &lt;sectionGroup name=&quot;applicationSettings&quot; type=&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; &gt;
-   &lt;section name=&quot;Inflectra.SpiraTest.DataSyncService.Properties.Settings&quot; type=&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; requirePermission=&quot;false&quot; /&gt;
-  &lt;/sectionGroup&gt;
- &lt;/configSections&gt;
- &lt;applicationSettings&gt;
-  &lt;Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;
-   &lt;setting name=&quot;PollingInterval&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;600000&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;WebServiceUrl&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;http://localhost/SpiraTeam&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;Login&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;fredbloggs&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;Password&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;fredbloggs&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;EventLogSource&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;SpiraTeam Data Sync Service&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;TraceLogging&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;False&lt;/value&gt;
-   &lt;/setting&gt;
-  &lt;/Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;
- &lt;/applicationSettings&gt;
-&lt;/configuration&gt;
+<p>To configure the integration service, please open up the DataSyncService.exe.config file located in C:\Program Files (x86)\SpiraTeam\Bin with a text editor such as Notepad. Once open, it should look like:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;configSections&gt;</span>
+  <span class="nt">&lt;sectionGroup</span> <span class="na">name=</span><span class="s">&quot;applicationSettings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="nt">&gt;</span>
+   <span class="nt">&lt;section</span> <span class="na">name=</span><span class="s">&quot;Inflectra.SpiraTest.DataSyncService.Properties.Settings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="na">requirePermission=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/sectionGroup&gt;</span>
+ <span class="nt">&lt;/configSections&gt;</span>
+ <span class="nt">&lt;applicationSettings&gt;</span>
+  <span class="nt">&lt;Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;PollingInterval&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>600000<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;WebServiceUrl&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>http://localhost/SpiraTeam<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Login&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Password&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;EventLogSource&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>SpiraTeam Data Sync Service<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;TraceLogging&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+  <span class="nt">&lt;/Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;</span>
+ <span class="nt">&lt;/applicationSettings&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
 
-</code></pre>
 
-<p>The sections that need to be verified and possibly changed are marked in
-yellow above. You need to check the following information:</p>
-<p>The polling interval allows you to specify how frequently the
-data-synchronization service will ask Spira and the external system for
-new data updates. The value is specified in milliseconds and we
-recommend a value no smaller than 5 minutes (i.e. 300,000ms). The larger
-the number, the longer it will take for data to be synchronized, but the
-lower the network and server overhead.</p>
-<p>The base URL to your instance Spira. It is typically of the form
-http://&lt;server name>/SpiraTeam. Make sure that when you
-enter this URL on a browser on the server itself, the application login
-page appears.</p>
-<p>A valid login name and password to your instance of Spira. This user
-needs to be a member of the project(s) that will be synchronized with
-the external bug-tracker and needs to have at least <strong>Incident
-create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
+<p>The sections that need to be verified and possibly changed are the values for the following 4 setting XML tags above. </p>
+<ul>
+<li>name="PollingInterval"</li>
+<li>name="WebServiceUrl"</li>
+<li>name="Login"</li>
+<li>name="Password" </li>
+</ul>
+<p>For each of these, check the following information:</p>
+<p>The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value no smaller than 5 minutes (i.e. 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead.</p>
+<p>The base URL to your instance Spira. It is typically of the form http://&lt;server name>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.</p>
+<p>A valid login name and password to your instance of Spira. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
 permissions in these projects.</p>
-<p>Once you have made these changes, please refer to the section in this
-document that covers the specific bug-tracking tool you will be
-integrating with.</p>
-<p>Note: If you are using the MS-TFS plugin on premise, you will also need
-to switch over your IIS application pool running Spira to "Enable 32-bit
-Applications. You will also need to download the recompiled 32-bit
-version of the DataSyncService.exe application from our support
-knowledge base - <a href="https://www.inflectra.com/Support/KnowledgeBase/KB14.aspx">KB14 - Using SpiraTeam Data Synchronization with TFS
-on a 64-bit
-system</a>.</p>
+<p>Once you have made these changes, please refer to the section in this document that covers the specific bug-tracking tool you will be integrating with.</p>
+<p>Note: If you are using the MS-TFS plugin on premise, you will also need to switch over your IIS application pool running Spira to "Enable 32-bit Applications. You will also need to download the recompiled 32-bit version of the DataSyncService.exe application from our support knowledge base - <a href="https://www.inflectra.com/Support/KnowledgeBase/KB14.aspx">KB14 - Using SpiraTeam Data Synchronization with TFS on a 64-bit system</a>.</p>
 <h3 id="starting-the-data-synchronization-service">Starting the Data-Synchronization Service</h3>
-<p>When Spira is installed, a Windows Service -- SpiraTeam Data Sync
-Service -- is installed along with the web application. However to avoid
-wasting system resources, this service is initially set to run manually.
-To ensure continued synchronization of SpiraTeam with the external tool,
-we recommend starting the service and setting its startup-type to
-Automatic.</p>
-<p>To make these changes, open up the Windows Control Panel, click on the
-"Administrative Tools" link, and then choose the Services option. This
-will bring up the Windows Service control panel:</p>
+<p>When Spira is installed, a Windows Service -- SpiraTeam Data Sync Service -- is installed along with the web application. However to avoid wasting system resources, this service is initially set to run manually. To ensure continued synchronization of SpiraTeam with the external tool, we recommend starting the service and setting its startup-type to Automatic.</p>
+<p>To make these changes, open up the Windows Control Panel, click on the "Administrative Tools" link, and then choose the Services option. This will bring up the Windows Service control panel:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_10.png" /></p>
-<p>Click on the 'SpiraTeam Data Sync Service' entry and click on the link
-to start the service. Then right-click the service entry and choose the
-option to set the startup type to 'Automatic'. This will ensure that
-synchronization continues after a reboot of the server.</p>
+<p>Click on the 'SpiraTeam Data Sync Service' entry and click on the link to start the service. Then right-click the service entry and choose the option to set the startup type to 'Automatic'. This will ensure that synchronization continues after a reboot of the server.</p>
 <h2 id="spira-cloud-hosted-external-tool-on-premise">Spira Cloud Hosted, External Tool On-Premise</h2>
-<p>The Desktop Data Synchronization utility (hereafter referred to as the
-"Desktop DataSync") is a standalone utility than can be used to run the
-various Data Synchronization PlugIns without a server installation of
-Spira.</p>
-<p>This is useful where you have your SpiraTeam instance cloud hosted, but
-the external tool is locally installed behind your firewall.</p>
+<p>The Desktop Data Synchronization utility (hereafter referred to as the "Desktop DataSync") is a standalone utility than can be used to run the various Data Synchronization PlugIns without a server installation of Spira.</p>
+<p>This is useful where you have your SpiraTeam instance cloud hosted, but the external tool is locally installed behind your firewall.</p>
 <h3 id="installation">Installation</h3>
-<p>To obtain the Desktop DataSync, go to the Inflectra website and under
-the "Downloads and Add-Ons" section you will find a Windows Installation
-(MSI) package that will install the Desktop DataSync onto your computer.
-The installer will install both a 64-bit version of the Desktop Data
-Sync and a 32-bit version. You should use the 64-bit version for all
-plugins except the Microsoft TFS plugin which will require the 32-bit
-version.</p>
+<p>To obtain the Desktop DataSync, go to the Inflectra website and under the "Downloads and Add-Ons" section you will find a Windows Installation (MSI) package that will install the Desktop DataSync onto your computer. The installer will install both a 64-bit version of the Desktop Data Sync and a 32-bit version. You should use the 64-bit version for all plugins except the Microsoft TFS plugin which will require the 32-bit version.</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_11.png" /></p>
-<p>Next you need to download the appropriate plug-in(s) for the various
-bug-trackers (as described in the appropriate section of this document)
-and place the assemblies (DLL files) into the same folder that contains
-the DesktopDataSync.exe application.</p>
+<p>Next you need to download the appropriate plug-in(s) for the various bug-trackers (as described in the appropriate section of this document) and place the assemblies (DLL files) into the same folder that contains the DesktopDataSync.exe application.</p>
 <h3 id="usage">Usage</h3>
-<p>Once you have downloaded and installed the application and appropriate
-plug-ins, go to Start > Programs > Inflectra > Desktop DataSync to
-launch the application.</p>
+<p>Once you have downloaded and installed the application and appropriate plug-ins, go to Start > Programs > Inflectra > Desktop DataSync to launch the application.</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_12.png" /></p>
 <p>This will bring up the main options window of the application:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_13.png" /></p>
-<p>You should then enter the URL, login and password to your Spira
-installation and click [Test]. Assuming that this information is
-correct, you will see a confirmation message:</p>
+<p>You should then enter the URL, login and password to your Spira installation and click [Test]. Assuming that this information is correct, you will see a confirmation message:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_14.png" /></p>
-<p>Now you should complete the configuation by setting the Polling Interval
-(how often the utility will synchronize data between Spira and the
-external system) and whether Trace Logging is enabled (useful when
-verifying your data mapping, but will fill up the application log, so
-leave unchecked for production use). Then click the [Update] button to
-save your settings or [Start] to save your settings and start
-synchronization immediately.</p>
-<p>Once the Options window closes, the application will remain active in
-the system tray of your computer:</p>
+<p>Now you should complete the configuation by setting the Polling Interval (how often the utility will synchronize data between Spira and the external system) and whether Trace Logging is enabled (useful when verifying your data mapping, but will fill up the application log, so leave unchecked for production use). Then click the [Update] button to save your settings or [Start] to save your settings and start synchronization immediately.</p>
+<p>Once the Options window closes, the application will remain active in the system tray of your computer:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_15.png" /></p>
-<p>You can then use the right-click context menu to start synchronization,
-stop synchronization, view the status (if synchronization is running) or
-exit the application altogether.</p>
-<p>During synchronization, any errors will be logged to the Windows
-Application Event Log and you can use those logs to diagnose any issues
-connecting to the external bug-tracker or any data mapping configuration
-changes that need to be made.</p></div>
+<p>You can then use the right-click context menu to start synchronization, stop synchronization, view the status (if synchronization is running) or exit the application altogether.</p>
+<p>During synchronization, any errors will be logged to the Windows Application Event Log and you can use those logs to diagnose any issues connecting to the external bug-tracker or any data mapping configuration changes that need to be made.</p></div>
         </div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

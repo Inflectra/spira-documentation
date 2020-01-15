@@ -814,51 +814,52 @@ PyUnit test fixtures with SpiraTest.</p>
 <h2 id="using-pyunit-with-spiratest">Using PyUnit with SpiraTest</h2>
 <p>The typical code structure for a PyUnit test fixture coded in Python is
 as follows:</p>
-<pre><code class="python">import random
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-import unittest
+<span class="kn">import</span> <span class="nn">unittest</span>
 
-\# sample PyUnit test case
+\<span class="c1"># sample PyUnit test case</span>
 
-class TestSequenceFunctions(unittest.TestCase):
+<span class="k">class</span> <span class="nc">TestSequenceFunctions</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
-def setUp(self):
+<span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.seq = range(10)
+<span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-def testshuffle(self):
+<span class="k">def</span> <span class="nf">testshuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-\# make sure the shuffled sequence does not lose any elements
+\<span class="c1"># make sure the shuffled sequence does not lose any elements</span>
 
-random.shuffle(self.seq)
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-self.seq.sort()
+<span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 
-self.assertEqual(self.seq, range(10))
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-def testchoice(self):
+<span class="k">def</span> <span class="nf">testchoice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-element = random.choice(self.seq)
+<span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-self.assert\_(element in self.seq)
+<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-def testfail(self):
+<span class="k">def</span> <span class="nf">testfail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.assertEqual(1, 2, &quot;1==2 Should fail&quot;)
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
 
-def testsample(self):
+<span class="k">def</span> <span class="nf">testsample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.assertRaises(ValueError, random.sample, self.seq, 20)
+<span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-for element in random.sample(self.seq, 5):
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
 
-self.assert\_(element in self.seq)
+<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-suite =
-unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
+<span class="n">suite</span> <span class="o">=</span>
+<span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
 
-testResult = unittest.TextTestRunner(verbosity=2).run(suite)
-</code></pre>
+<span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+</pre></div>
+
 
 <p>The Python class is marked as a PyUnit test fixture by inheriting from
 the unittest.TestCase base class, and the individual test methods are
@@ -879,76 +880,77 @@ steps or they can be new test cases designed specifically for automated
 testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PyUnit test fixture for SpiraTest to
 record the PyUnit test run are illustrated below:</p>
-<pre><code class="python">import random
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-import unittest
+<span class="kn">import</span> <span class="nn">unittest</span>
 
-import spiratestextension
+<span class="kn">import</span> <span class="nn">spiratestextension</span>
 
-\# sample PyUnit test case
+\<span class="c1"># sample PyUnit test case</span>
 
-class TestSequenceFunctions(unittest.TestCase):
+<span class="k">class</span> <span class="nc">TestSequenceFunctions</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
-def setUp(self):
+<span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.seq = range(10)
+<span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-def testshuffle\_\_2(self):
+<span class="k">def</span> <span class="nf">testshuffle</span>\<span class="n">_</span>\<span class="n">_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-\# make sure the shuffled sequence does not lose any elements
+\<span class="c1"># make sure the shuffled sequence does not lose any elements</span>
 
-random.shuffle(self.seq)
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-self.seq.sort()
+<span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 
-self.assertEqual(self.seq, range(10))
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-def testchoice\_\_3(self):
+<span class="k">def</span> <span class="nf">testchoice</span>\<span class="n">_</span>\<span class="n">_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-element = random.choice(self.seq)
+<span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-self.assert\_(element in self.seq)
+<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-def testfail\_\_4(self):
+<span class="k">def</span> <span class="nf">testfail</span>\<span class="n">_</span>\<span class="n">_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.assertEqual(1, 2, &quot;1==2 Should fail&quot;)
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
 
-def testsample\_\_5(self):
+<span class="k">def</span> <span class="nf">testsample</span>\<span class="n">_</span>\<span class="n">_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-self.assertRaises(ValueError, random.sample, self.seq, 20)
+<span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-for element in random.sample(self.seq, 5):
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
 
-self.assert\_(element in self.seq)
+<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-suite =
-unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
+<span class="n">suite</span> <span class="o">=</span>
+<span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
 
-testResult = unittest.TextTestRunner(verbosity=2).run(suite)
+<span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 
-releaseId = 1
+<span class="n">releaseId</span> <span class="o">=</span> <span class="mi">1</span>
 
-testSetId = 1
+<span class="n">testSetId</span> <span class="o">=</span> <span class="mi">1</span>
 
-spiraTestExtension = spiratestextension.SpiraTestExtension()
+<span class="n">spiraTestExtension</span> <span class="o">=</span> <span class="n">spiratestextension</span><span class="o">.</span><span class="n">SpiraTestExtension</span><span class="p">()</span>
 
-spiraTestExtension.projectId = 1
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span>
 
-spiraTestExtension.server = &quot;localhost&quot;
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
 
-spiraTestExtension.port = 80
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
 
-spiraTestExtension.ssl = False
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">ssl</span> <span class="o">=</span> <span class="kc">False</span>
 
-spiraTestExtension.path = &quot;SpiraTest&quot;
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;SpiraTest&quot;</span>
 
-spiraTestExtension.userName = &quot;fredbloggs&quot;
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
 
-spiraTestExtension.password = &quot;PleaseChange&quot;
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;PleaseChange&quot;</span>
 
-spiraTestExtension.recordResults(TestSequenceFunctions, testResult,
-releaseId, testSetId)
-</code></pre>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span>
+<span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">)</span>
+</pre></div>
+
 
 <p>Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
@@ -1004,7 +1006,7 @@ installation.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

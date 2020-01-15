@@ -788,20 +788,21 @@
 <p>The <a href="https://www.npmjs.com/package/jasmine-spiratest">Spira Reporter for Jasmine</a> will integrate JasmineJS with Spira. It will create a test run in Spira for each test spec executed in Jasmine.</p>
 <h2 id="setting-up-the-integration">Setting up the integration</h2>
 <p>Install the integration by running <code>npm i jasmine-spiratest</code> in the root directory of your tests. Inside each test spec file, import the SpiraReporter with <code>var SpiraReporter = require('jasmine-spiratest')</code> then put the line <code>jasmine.getEnv().addReporter(new SpiraReporter(spiraCredentials));</code> where spiraCredentials is an object of the format below. You can see a full sample test spec at the bottom of this page.</p>
-<pre><code>{
-    &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
-    &quot;username&quot;: &quot;fredbloggs&quot;,
-    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
-    &quot;projectId&quot;: 1,
-    &quot;releaseId&quot;: 1,
-    &quot;testSetId&quot;: 1,
-    &quot;testCases&quot;: {
-        &quot;default&quot;: 20,
-        &quot;should multiply correctly&quot;: 21,
-        &quot;should solve exponents and logarithms correctly&quot;: 16
-    }
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="err">{</span>
+<span class="err">    &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,</span>
+<span class="err">    &quot;username&quot;: &quot;fredbloggs&quot;,</span>
+<span class="err">    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,</span>
+<span class="err">    &quot;projectId&quot;: 1,</span>
+<span class="err">    &quot;releaseId&quot;: 1,</span>
+<span class="err">    &quot;testSetId&quot;: 1,</span>
+<span class="err">    &quot;testCases&quot;: {</span>
+<span class="err">        &quot;default&quot;: 20,</span>
+<span class="err">        &quot;should multiply correctly&quot;: 21,</span>
+<span class="err">        &quot;should solve exponents and logarithms correctly&quot;: 16</span>
+<span class="err">    }</span>
+<span class="err">}</span>
+</pre></div>
+
 
 <p>Fields are required unless otherwise noted.</p>
 <table>
@@ -857,41 +858,41 @@
 <h2 id="using-the-spiratest-reporter">Using the SpiraTest Reporter</h2>
 <p>Run <code>npm test</code> or however you ran jasmine before and you should see test runs created in the product you specified.</p>
 <h2 id="sample-test-spec-with-spiratest-integration">Sample Test Spec with SpiraTest Integration</h2>
-<pre><code>describe(&quot;Test having two specs&quot;, () =&gt; {
-    var SpiraReporter = require('jasmine-spiratest');
+<div class="codehilite"><pre><span></span><span class="k">describe</span><span class="p">(</span><span class="ss">&quot;Test having two specs&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="err">{</span>
+    <span class="n">var</span> <span class="n">SpiraReporter</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;jasmine-spiratest&#39;</span><span class="p">);</span>
 
-    jasmine.getEnv().addReporter(new SpiraReporter({
-        &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
-        &quot;username&quot;: &quot;fredbloggs&quot;,
-        &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
-        &quot;projectId&quot;: 1,
-        &quot;releaseId&quot;: 1,
-        &quot;testSetId&quot;: 1,
-        &quot;testCases&quot;: {
-            &quot;default&quot;: 20,
-            &quot;equality works&quot;: 21,
-            &quot;addition works&quot;: 16
-        }
-    }));
+    <span class="n">jasmine</span><span class="p">.</span><span class="n">getEnv</span><span class="p">().</span><span class="n">addReporter</span><span class="p">(</span><span class="k">new</span> <span class="n">SpiraReporter</span><span class="p">(</span><span class="err">{</span>
+        <span class="ss">&quot;url&quot;</span><span class="p">:</span> <span class="ss">&quot;https://doctor/SpiraPlan&quot;</span><span class="p">,</span>
+        <span class="ss">&quot;username&quot;</span><span class="p">:</span> <span class="ss">&quot;fredbloggs&quot;</span><span class="p">,</span>
+        <span class="ss">&quot;token&quot;</span><span class="p">:</span> <span class="ss">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
+        <span class="ss">&quot;projectId&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="ss">&quot;releaseId&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="ss">&quot;testSetId&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="ss">&quot;testCases&quot;</span><span class="p">:</span> <span class="err">{</span>
+            <span class="ss">&quot;default&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="ss">&quot;equality works&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+            <span class="ss">&quot;addition works&quot;</span><span class="p">:</span> <span class="mi">16</span>
+        <span class="err">}</span>
+    <span class="err">}</span><span class="p">));</span>
 
-    describe(&quot;Test basic JavaScript&quot;, () =&gt; {
-        it(&quot;Equality works...&quot;, () =&gt; {
-            expect(2).toEqual(2);
-        });
-        it(&quot;Addition works&quot;, () =&gt; {
-            expect(3 + 2).toEqual(5);
-        });
-        it(&quot;Multiplication works&quot;, () =&gt; {
-            expect(4 * 5).toEqual(20);
-        });
-    });
-});
-</code></pre></div>
+    <span class="k">describe</span><span class="p">(</span><span class="ss">&quot;Test basic JavaScript&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="err">{</span>
+        <span class="n">it</span><span class="p">(</span><span class="ss">&quot;Equality works...&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="err">{</span>
+            <span class="n">expect</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">toEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="err">}</span><span class="p">);</span>
+        <span class="n">it</span><span class="p">(</span><span class="ss">&quot;Addition works&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="err">{</span>
+            <span class="n">expect</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">).</span><span class="n">toEqual</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+        <span class="err">}</span><span class="p">);</span>
+        <span class="n">it</span><span class="p">(</span><span class="ss">&quot;Multiplication works&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="err">{</span>
+            <span class="n">expect</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span><span class="p">).</span><span class="n">toEqual</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="err">}</span><span class="p">);</span>
+    <span class="err">}</span><span class="p">);</span>
+<span class="err">}</span><span class="p">);</span>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

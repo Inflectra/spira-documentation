@@ -807,109 +807,110 @@ your PHPUnit test fixtures with SpiraTest.</p>
 <p>The typical code structure for a PHPUnit test suite and test case coded
 in PHP is as follows:</p>
 <p>a) Sample Test Suite</p>
-<pre><code class="PHP">&lt;?php
-/**
- * 
- * @author      Inflectra Corporation
- * @version     0
- *
- */
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * </span>
+<span class="sd"> * @author      Inflectra Corporation</span>
+<span class="sd"> * @version     0</span>
+<span class="sd"> *</span>
+<span class="sd"> */</span>
 
- require_once 'PHPUnit/Framework.php';
- require_once 'PHPUnit/TextUI/ResultPrinter.php';
- require_once './SimpleTest.php';
+ <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework.php&#39;</span><span class="p">;</span>
+ <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/TextUI/ResultPrinter.php&#39;</span><span class="p">;</span>
+ <span class="k">require_once</span> <span class="s1">&#39;./SimpleTest.php&#39;</span><span class="p">;</span>
 
- // Create a test suite that contains the tests
- // from the ArrayTest class
-  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+ <span class="c1">// Create a test suite that contains the tests</span>
+ <span class="c1">// from the ArrayTest class</span>
+  <span class="nv">$suite</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestSuite</span><span class="p">(</span><span class="s1">&#39;SimpleTest&#39;</span><span class="p">);</span>
 
- // Create a test result and attach the default console text listener
- $result = new PHPUnit_Framework_TestResult;
- $textPrinter = new PHPUnit_TextUI_ResultPrinter;
- $result-&gt;addListener($textPrinter);
+ <span class="c1">// Create a test result and attach the default console text listener</span>
+ <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestResult</span><span class="p">;</span>
+ <span class="nv">$textPrinter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_TextUI_ResultPrinter</span><span class="p">;</span>
+ <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">addListener</span><span class="p">(</span><span class="nv">$textPrinter</span><span class="p">);</span>
 
- // Run the tests and print the results
- $result = $suite-&gt;run($result);
- $textPrinter-&gt;printResult($result);
+ <span class="c1">// Run the tests and print the results</span>
+ <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$suite</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+ <span class="nv">$textPrinter</span><span class="o">-&gt;</span><span class="na">printResult</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
 
- ?&gt;
+ <span class="cp">?&gt;</span><span class="x"></span>
 
-b) Sample Test Case
-&lt;?php
-require_once 'PHPUnit/Framework/TestCase.php';
+<span class="x">b) Sample Test Case</span>
+<span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework/TestCase.php&#39;</span><span class="p">;</span>
 
-/**
- * Some simple tests
- * 
- * @author      Inflectra Corporation
- * @version     0
- *
- */
+<span class="sd">/**</span>
+<span class="sd"> * Some simple tests</span>
+<span class="sd"> * </span>
+<span class="sd"> * @author      Inflectra Corporation</span>
+<span class="sd"> * @version     0</span>
+<span class="sd"> *</span>
+<span class="sd"> */</span>
 
-class SimpleTest extends PHPUnit_Framework_TestCase
-{
-    protected $fValue1;
-    protected $fValue2;
+<span class="k">class</span> <span class="nc">SimpleTest</span> <span class="k">extends</span> <span class="nx">PHPUnit_Framework_TestCase</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$fValue1</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$fValue2</span><span class="p">;</span>
 
-    /**
-     * Sets up the unit test
-     */
-    protected function setUp()
-    {
-        $this-&gt;fValue1= 2;
-        $this-&gt;fValue2= 3;
-    }
+    <span class="sd">/**</span>
+<span class="sd">     * Sets up the unit test</span>
+<span class="sd">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue1</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue2</span><span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests the addition of the two values
-     */
-    public function testAdd()
-    {
-        $result = $this-&gt;fValue1 + $this-&gt;fValue2;
+    <span class="sd">/**</span>
+<span class="sd">     * Tests the addition of the two values</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testAdd</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue1</span> <span class="o">+</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue2</span><span class="p">;</span>
 
-        // forced failure result == 5
-        $this-&gt;assertTrue ($result == 6);
-    }
+        <span class="c1">// forced failure result == 5</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">==</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests division by zero
-     */
-    /*
-    public function testDivideByZero()
-    {
-        $zero = 0;
-        $result = 8 / $zero;
-        $result++; // avoid warning for not using result
-    }
+    <span class="sd">/**</span>
+<span class="sd">     * Tests division by zero</span>
+<span class="sd">     */</span>
+    <span class="cm">/*</span>
+<span class="cm">    public function testDivideByZero()</span>
+<span class="cm">    {</span>
+<span class="cm">        $zero = 0;</span>
+<span class="cm">        $result = 8 / $zero;</span>
+<span class="cm">        $result++; // avoid warning for not using result</span>
+<span class="cm">    }</span>
 
-    /**
-     * Tests two equal values
-     */
-    /*
-public function testEquals()
-    {
-        $this-&gt;assertEquals(12, 12);
-        $this-&gt;assertEquals(10, 10);
-            $num1 = 12;
-            $num2 = 12;
-        $this-&gt;assertEquals($num1, $num2);
+<span class="cm">    /**</span>
+<span class="cm">     * Tests two equal values</span>
+<span class="cm">     */</span>
+    <span class="cm">/*</span>
+<span class="cm">public function testEquals()</span>
+<span class="cm">    {</span>
+<span class="cm">        $this-&gt;assertEquals(12, 12);</span>
+<span class="cm">        $this-&gt;assertEquals(10, 10);</span>
+<span class="cm">            $num1 = 12;</span>
+<span class="cm">            $num2 = 12;</span>
+<span class="cm">        $this-&gt;assertEquals($num1, $num2);</span>
 
-        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);
-        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);
-    }
+<span class="cm">        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);</span>
+<span class="cm">        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);</span>
+<span class="cm">    }</span>
 
-    /**
-     * Tests success
-     */
-    /*
-    public function testSuccess()
-    {
-        //Successful test
-        $this-&gt;assertEquals(12, 12);
-    }
-}
-?&gt;
-</code></pre>
+<span class="cm">    /**</span>
+<span class="cm">     * Tests success</span>
+<span class="cm">     */</span>
+    <span class="o">/*</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testSuccess</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Successful test</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>The PHP class is marked as a PHPUnit test case by inheriting from the
 <em>PHPUnit_Framework_TestCase</em> base class, and the individual test
@@ -931,126 +932,128 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PHPUnit test case and test suite for
 SpiraTest to record the PHPUnit test run are illustrated below:</p>
 <p>a) Sample Test Suite</p>
-<pre><code class="PHP">&lt;?php
-/**
- * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener
- * 
- * @author      Inflectra Corporation
- * @version     0
- *
- */
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener</span>
+<span class="sd"> * </span>
+<span class="sd"> * @author      Inflectra Corporation</span>
+<span class="sd"> * @version     0</span>
+<span class="sd"> *</span>
+<span class="sd"> */</span>
 
- require_once 'PHPUnit/Framework.php';
- require_once 'PHPUnit/TextUI/ResultPrinter.php';
- require_once './SimpleTest.php';
- require_once '../SpiraListener/Listener.php';
+ <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework.php&#39;</span><span class="p">;</span>
+ <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/TextUI/ResultPrinter.php&#39;</span><span class="p">;</span>
+ <span class="k">require_once</span> <span class="s1">&#39;./SimpleTest.php&#39;</span><span class="p">;</span>
+ <span class="k">require_once</span> <span class="s1">&#39;../SpiraListener/Listener.php&#39;</span><span class="p">;</span>
 
- // Create a test suite that contains the tests
- // from the ArrayTest class
-  $suite = new PHPUnit_Framework_TestSuite('SimpleTest');
+ <span class="c1">// Create a test suite that contains the tests</span>
+ <span class="c1">// from the ArrayTest class</span>
+  <span class="nv">$suite</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestSuite</span><span class="p">(</span><span class="s1">&#39;SimpleTest&#39;</span><span class="p">);</span>
 
- //Set the timezone identifier to match that used by the SpiraTest server
- date_default_timezone_set (&quot;US/Eastern&quot;);
+ <span class="c1">//Set the timezone identifier to match that used by the SpiraTest server</span>
+ <span class="nb">date_default_timezone_set</span> <span class="p">(</span><span class="s2">&quot;US/Eastern&quot;</span><span class="p">);</span>
 
- //Create a new SpiraTest listener instance and specify the connection info
- $spiraListener = new SpiraListener_Listener;
- $spiraListener-&gt;setBaseUrl ('http://localhost/SpiraTeam');
- $spiraListener-&gt;setUserName ('fredbloggs');
- $spiraListener-&gt;setPassword ('fredbloggs');
- $spiraListener-&gt;setProjectId (1);
- $spiraListener-&gt;setReleaseId (1);
- $spiraListener-&gt;setTestSetId (1);
+ <span class="c1">//Create a new SpiraTest listener instance and specify the connection info</span>
+ <span class="nv">$spiraListener</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SpiraListener_Listener</span><span class="p">;</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setBaseUrl</span> <span class="p">(</span><span class="s1">&#39;http://localhost/SpiraTeam&#39;</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setUserName</span> <span class="p">(</span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setPassword</span> <span class="p">(</span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setProjectId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setReleaseId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setTestSetId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
- // Create a test result and attach the SpiraTest listener
- // object as an observer to it (as well as the default console text listener)
- $result = new PHPUnit_Framework_TestResult;
- $textPrinter = new PHPUnit_TextUI_ResultPrinter;
- $result-&gt;addListener($textPrinter);
- $result-&gt;addListener($spiraListener);
+ <span class="c1">// Create a test result and attach the SpiraTest listener</span>
+ <span class="c1">// object as an observer to it (as well as the default console text listener)</span>
+ <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestResult</span><span class="p">;</span>
+ <span class="nv">$textPrinter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_TextUI_ResultPrinter</span><span class="p">;</span>
+ <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">addListener</span><span class="p">(</span><span class="nv">$textPrinter</span><span class="p">);</span>
+ <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">addListener</span><span class="p">(</span><span class="nv">$spiraListener</span><span class="p">);</span>
 
- // Run the tests and print the results
- $result = $suite-&gt;run($result);
- $textPrinter-&gt;printResult($result);
+ <span class="c1">// Run the tests and print the results</span>
+ <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$suite</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+ <span class="nv">$textPrinter</span><span class="o">-&gt;</span><span class="na">printResult</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
 
- ?&gt;
-</code></pre>
+ <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>b) Sample Test Case</p>
-<pre><code class="PHP">&lt;?php
-require_once 'PHPUnit/Framework/TestCase.php';
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework/TestCase.php&#39;</span><span class="p">;</span>
 
-/**
- * Some simple tests using the ability to return results back to SpiraTest
- * 
- * @author      Inflectra Corporation
- * @version     0
- *
- */
+<span class="sd">/**</span>
+<span class="sd"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="sd"> * </span>
+<span class="sd"> * @author      Inflectra Corporation</span>
+<span class="sd"> * @version     0</span>
+<span class="sd"> *</span>
+<span class="sd"> */</span>
 
-class SimpleTest extends PHPUnit_Framework_TestCase
-{
-    protected $fValue1;
-    protected $fValue2;
+<span class="k">class</span> <span class="nc">SimpleTest</span> <span class="k">extends</span> <span class="nx">PHPUnit_Framework_TestCase</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$fValue1</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$fValue2</span><span class="p">;</span>
 
-    /**
-     * Sets up the unit test
-     */
-    protected function setUp()
-    {
-        $this-&gt;fValue1= 2;
-        $this-&gt;fValue2= 3;
-    }
+    <span class="sd">/**</span>
+<span class="sd">     * Sets up the unit test</span>
+<span class="sd">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue1</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue2</span><span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests the addition of the two values
-     */
-    public function testAdd__2()
-    {
-        $result = $this-&gt;fValue1 + $this-&gt;fValue2;
+    <span class="sd">/**</span>
+<span class="sd">     * Tests the addition of the two values</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testAdd__2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue1</span> <span class="o">+</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fValue2</span><span class="p">;</span>
 
-        // forced failure result == 5
-        $this-&gt;assertTrue ($result == 6);
-    }
+        <span class="c1">// forced failure result == 5</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">==</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests division by zero
-     */
-    /*
-    public function testDivideByZero__3()
-    {
-        $zero = 0;
-        $result = 8 / $zero;
-        $result++; // avoid warning for not using result
-    }
+    <span class="sd">/**</span>
+<span class="sd">     * Tests division by zero</span>
+<span class="sd">     */</span>
+    <span class="cm">/*</span>
+<span class="cm">    public function testDivideByZero__3()</span>
+<span class="cm">    {</span>
+<span class="cm">        $zero = 0;</span>
+<span class="cm">        $result = 8 / $zero;</span>
+<span class="cm">        $result++; // avoid warning for not using result</span>
+<span class="cm">    }</span>
 
-    /**
-     * Tests two equal values
-     */
-    /*
-public function testEquals__4()
-    {
-        $this-&gt;assertEquals(12, 12);
-        $this-&gt;assertEquals(10, 10);
-            $num1 = 12;
-            $num2 = 12;
-        $this-&gt;assertEquals($num1, $num2);
+<span class="cm">    /**</span>
+<span class="cm">     * Tests two equal values</span>
+<span class="cm">     */</span>
+    <span class="cm">/*</span>
+<span class="cm">public function testEquals__4()</span>
+<span class="cm">    {</span>
+<span class="cm">        $this-&gt;assertEquals(12, 12);</span>
+<span class="cm">        $this-&gt;assertEquals(10, 10);</span>
+<span class="cm">            $num1 = 12;</span>
+<span class="cm">            $num2 = 12;</span>
+<span class="cm">        $this-&gt;assertEquals($num1, $num2);</span>
 
-        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);
-        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);
-    }
+<span class="cm">        $this-&gt;assertEquals(&quot;Size&quot;, 12, 13);</span>
+<span class="cm">        $this-&gt;assertEquals(&quot;Capacity&quot;, 10, 199, 0);</span>
+<span class="cm">    }</span>
 
-    /**
-     * Tests success
-     */
-    /*
-    public function testSuccess__5()
-    {
-        //Successful test
-        $this-&gt;assertEquals(12, 12);
-    }
-}
-?&gt;
-</code></pre>
+<span class="cm">    /**</span>
+<span class="cm">     * Tests success</span>
+<span class="cm">     */</span>
+    <span class="o">/*</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testSuccess__5</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Successful test</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
@@ -1083,46 +1086,48 @@ Testing > Test Sets tab). If you don't want to associate the test run
 with a specific test set, just use the value -1 to indicate N/A.</p>
 <p>The SpiraListener_Listener class can also be called with the parameters
 as the constructor arguments:</p>
-<pre><code class="php">//Create a new SpiraTest listener instance and specify the connection info
- $spiraListener = new SpiraListener_Listener (
-'http://localhost/SpiraTeam',
-    'fredbloggs',
- 'fredbloggs',
-    1,
-    1,
-    1);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="x">//Create a new SpiraTest listener instance and specify the connection info</span>
+<span class="x"> $spiraListener = new SpiraListener_Listener (</span>
+<span class="x">&#39;http://localhost/SpiraTeam&#39;,</span>
+<span class="x">    &#39;fredbloggs&#39;,</span>
+<span class="x"> &#39;fredbloggs&#39;,</span>
+<span class="x">    1,</span>
+<span class="x">    1,</span>
+<span class="x">    1);</span>
+</pre></div>
+
 
 <p>You can also attach the listener to the class declaratively by adding it
 to the phpunit.xml configuration file instead of adding through PHP
 code:</p>
-<pre><code class="xml">&lt;phpunit&gt;
-  &lt;listeners&gt;
-    &lt;listener class=&quot;SpiraListener_Listener&quot; file=&quot;../SpiraListener/Listener.php&quot;&gt;
-          &lt;arguments&gt;
-              &lt;!-- URL --&gt;
-              &lt;string&gt;http://localhost/SpiraTeam&lt;/string&gt;
-              &lt;!-- User Name --&gt;
-              &lt;string&gt;fredbloggs&lt;/string&gt;
-              &lt;!-- User Password --&gt;
-              &lt;string&gt;fredbloggs&lt;/string&gt;
-              &lt;!-- Project ID --&gt;
-              &lt;integer&gt;1&lt;/integer&gt;
-              &lt;!-- Release ID --&gt;
-              &lt;integer&gt;1&lt;/integer&gt;
-              &lt;!-- Test Set ID --&gt;
-              &lt;integer&gt;1&lt;/integer&gt;
-            &lt;/arguments&gt;
-    &lt;/listener&gt;
-  &lt;/listeners&gt;
-  &lt;testsuites&gt;
-    &lt;testsuite name=&quot;Sample Suite&quot;&gt;
-      &lt;directory&gt;.&lt;/directory&gt;
-      &lt;file&gt;./SampleSuite.php&lt;/file&gt;
-    &lt;/testsuite&gt;
-  &lt;/testsuites&gt;
-&lt;/phpunit&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;phpunit&gt;</span>
+  <span class="nt">&lt;listeners&gt;</span>
+    <span class="nt">&lt;listener</span> <span class="na">class=</span><span class="s">&quot;SpiraListener_Listener&quot;</span> <span class="na">file=</span><span class="s">&quot;../SpiraListener/Listener.php&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;arguments&gt;</span>
+              <span class="c">&lt;!-- URL --&gt;</span>
+              <span class="nt">&lt;string&gt;</span>http://localhost/SpiraTeam<span class="nt">&lt;/string&gt;</span>
+              <span class="c">&lt;!-- User Name --&gt;</span>
+              <span class="nt">&lt;string&gt;</span>fredbloggs<span class="nt">&lt;/string&gt;</span>
+              <span class="c">&lt;!-- User Password --&gt;</span>
+              <span class="nt">&lt;string&gt;</span>fredbloggs<span class="nt">&lt;/string&gt;</span>
+              <span class="c">&lt;!-- Project ID --&gt;</span>
+              <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+              <span class="c">&lt;!-- Release ID --&gt;</span>
+              <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+              <span class="c">&lt;!-- Test Set ID --&gt;</span>
+              <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+            <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/listener&gt;</span>
+  <span class="nt">&lt;/listeners&gt;</span>
+  <span class="nt">&lt;testsuites&gt;</span>
+    <span class="nt">&lt;testsuite</span> <span class="na">name=</span><span class="s">&quot;Sample Suite&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;directory&gt;</span>.<span class="nt">&lt;/directory&gt;</span>
+      <span class="nt">&lt;file&gt;</span>./SampleSuite.php<span class="nt">&lt;/file&gt;</span>
+    <span class="nt">&lt;/testsuite&gt;</span>
+  <span class="nt">&lt;/testsuites&gt;</span>
+<span class="nt">&lt;/phpunit&gt;</span>
+</pre></div>
+
 
 <p>Now all you need to do is save your code, launch PHPUnit, run the test
 suite as you would normally do, and when you view the test cases in
@@ -1141,7 +1146,7 @@ provided with the installation in the Samples subfolder.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

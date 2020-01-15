@@ -849,38 +849,38 @@ be used instead of the server-based DataSyncService.</em></p>
 DataSyncService.exe.config file located in C:\Program
 Files\SpiraTeam\Bin with a text editor such as Notepad.
 Once open, it should look like:</p>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;configuration&gt;
-    &lt;configSections&gt;
-  &lt;sectionGroup name=&quot;applicationSettings&quot; type=&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; &gt;
-   &lt;section name=&quot;Inflectra.SpiraTest.DataSyncService.Properties.Settings&quot; type=&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; requirePermission=&quot;false&quot; /&gt;
-  &lt;/sectionGroup&gt;
- &lt;/configSections&gt;
- &lt;applicationSettings&gt;
-  &lt;Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;
-   &lt;setting name=&quot;PollingInterval&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;600000&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;WebServiceUrl&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;http://localhost/SpiraTeam&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;Login&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;fredbloggs&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;Password&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;fredbloggs&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;EventLogSource&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;SpiraTeam Data Sync Service&lt;/value&gt;
-   &lt;/setting&gt;
-   &lt;setting name=&quot;TraceLogging&quot; serializeAs=&quot;String&quot;&gt;
-    &lt;value&gt;False&lt;/value&gt;
-   &lt;/setting&gt;
-  &lt;/Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;
- &lt;/applicationSettings&gt;
-&lt;/configuration&gt;
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;configSections&gt;</span>
+  <span class="nt">&lt;sectionGroup</span> <span class="na">name=</span><span class="s">&quot;applicationSettings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="nt">&gt;</span>
+   <span class="nt">&lt;section</span> <span class="na">name=</span><span class="s">&quot;Inflectra.SpiraTest.DataSyncService.Properties.Settings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="na">requirePermission=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/sectionGroup&gt;</span>
+ <span class="nt">&lt;/configSections&gt;</span>
+ <span class="nt">&lt;applicationSettings&gt;</span>
+  <span class="nt">&lt;Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;PollingInterval&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>600000<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;WebServiceUrl&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>http://localhost/SpiraTeam<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Login&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Password&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;EventLogSource&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>SpiraTeam Data Sync Service<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+   <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;TraceLogging&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+   <span class="nt">&lt;/setting&gt;</span>
+  <span class="nt">&lt;/Inflectra.SpiraTest.DataSyncService.Properties.Settings&gt;</span>
+ <span class="nt">&lt;/applicationSettings&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
 
-</code></pre>
 
 <p>The sections that need to be verified and possibly changed are marked in
 yellow above. You need to check the following information:</p>
@@ -1198,7 +1198,7 @@ ClearQuest.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

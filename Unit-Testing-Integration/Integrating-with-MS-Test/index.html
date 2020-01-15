@@ -824,85 +824,86 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <h2 id="using-ms-test-with-spiratest">Using MS-Test with SpiraTest</h2>
 <p>The typical code structure for a Visual Studio Team System Test
 (MS-Test) test fixture coded in C# is as follows:</p>
-<pre><code class="C#"> using System;
-using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+<div class="codehilite"><pre><span></span> <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.VisualStudio.TestTools.UnitTesting</span><span class="p">;</span>
 
-namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
-{
-    /// &lt;summary&gt;
-    /// Sample test fixture that tests the SpiraTest integration
-    /// Written by Paul Tissue. Packed by Inflectra Corporation
-    /// &lt;/summary&gt;
-    [
-    TestClass
-    ]
-    public class SpiraTestCaseAttributeTest
-    {
-        /// &lt;summary&gt;
-        /// Test fixture state
-        /// &lt;/summary&gt;
-        protected static int testFixtureState = 1;
+<span class="k">namespace</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Sample test fixture that tests the SpiraTest integration</span>
+    <span class="c1">/// Written by Paul Tissue. Packed by Inflectra Corporation</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">    [</span>
+<span class="na">    TestClass</span>
+<span class="na">    ]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SpiraTestCaseAttributeTest</span>
+    <span class="p">{</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Test fixture state</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">protected</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">testFixtureState</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 
-        /// &lt;summary&gt;
-        /// Constructor method
-        /// &lt;/summary&gt;
-        public SpiraTestCaseAttributeTest()
-        {
-            //Delegates to base
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Constructor method</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="nf">SpiraTestCaseAttributeTest</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Delegates to base</span>
 
-            //Set the state to 2
-            testFixtureState = 2;
-        }
+            <span class="c1">//Set the state to 2</span>
+            <span class="n">testFixtureState</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that asserts a failure and overrides the default configuration
-        /// &lt;/summary&gt;
-        [
-        TestMethod
-        ]
-        public void SampleFail()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that asserts a failure and overrides the default configuration</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SampleFail</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Failure Assertion
-            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
-        }
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that succeeds - uses the default configuration
-        /// &lt;/summary&gt;
-        [
-        TestMethod
-        ]
-        public void SamplePass()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that succeeds - uses the default configuration</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SamplePass</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Successful assertion
-            Assert.AreEqual(1, 1, &quot;Passed as Expected&quot;);
-        }
+            <span class="c1">//Successful assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that does not log to SpiraTest
-        /// &lt;/summary&gt;
-        [
-        TestMethod,
-        ExpectedException(typeof(AssertFailedException))
-        ]
-        public void SampleIgnore()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that does not log to SpiraTest</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod,</span>
+<span class="na">        ExpectedException(typeof(AssertFailedException))</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SampleIgnore</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Failure Assertion
-            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
-        }
-    }
-}
-</code></pre>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The .NET class is marked as a MS-Test unit test fixture by applying the
 [TestClass] attribute to the class as a whole, and the [TestMethod]
@@ -923,124 +924,126 @@ steps or they can be new test cases designed specifically for automated
 testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the MS-Test test fixture for SpiraTest
 to record the MS-Test test run are illustrated below:</p>
-<pre><code class="C#">using System;
-using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.VisualStudio.TestTools.UnitTesting</span><span class="p">;</span>
 
-namespace Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest
-{
-    /// &lt;summary&gt;
-    /// Sample test fixture that tests the SpiraTest integration
-    /// Written by Paul Tissue. Packed by Inflectra Corporation
-    /// &lt;/summary&gt;
-    [
-    TestClass
-    ]
-    public class SpiraTestCaseAttributeTest : MSTestExtensionsTestFixture
-    {
-        /// &lt;summary&gt;
-        /// Test fixture state
-        /// &lt;/summary&gt;
-        protected static int testFixtureState = 1;
+<span class="k">namespace</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.SampleMSTest</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Sample test fixture that tests the SpiraTest integration</span>
+    <span class="c1">/// Written by Paul Tissue. Packed by Inflectra Corporation</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">    [</span>
+<span class="na">    TestClass</span>
+<span class="na">    ]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SpiraTestCaseAttributeTest</span> <span class="p">:</span> <span class="n">MSTestExtensionsTestFixture</span>
+    <span class="p">{</span>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Test fixture state</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">protected</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">testFixtureState</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 
-        /// &lt;summary&gt;
-        /// Constructor method
-        /// &lt;/summary&gt;
-        public SpiraTestCaseAttributeTest()
-        {
-            //Delegates to base
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Constructor method</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="nf">SpiraTestCaseAttributeTest</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Delegates to base</span>
 
-            //Set the state to 2
-            testFixtureState = 2;
-        }
+            <span class="c1">//Set the state to 2</span>
+            <span class="n">testFixtureState</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that asserts a failure and overrides the default configuration
-        /// &lt;/summary&gt;
-        [
-        TestMethod,
-        SpiraTestCase(5),
-        SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2)
-        ]
-        public void SampleFail()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that asserts a failure and overrides the default configuration</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod,</span>
+<span class="na">        SpiraTestCase(5),</span>
+<span class="na">        SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2)</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SampleFail</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Failure Assertion
-            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
-        }
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that succeeds - uses the default configuration
-        /// &lt;/summary&gt;
-        [
-        TestMethod,
-        SpiraTestCase(6)
-        ]
-        public void SamplePass()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that succeeds - uses the default configuration</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod,</span>
+<span class="na">        SpiraTestCase(6)</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SamplePass</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Successful assertion
-            Assert.AreEqual(1, 1, &quot;Passed as Expected&quot;);
-        }
+            <span class="c1">//Successful assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that does not log to SpiraTest
-        /// &lt;/summary&gt;
-        [
-        TestMethod,
-        ExpectedException(typeof(AssertFailedException))
-        ]
-        public void SampleIgnore()
-        {
-            //Verify the state
-            Assert.AreEqual(2, testFixtureState, &quot;*Real Error*: State not persisted&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that does not log to SpiraTest</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        TestMethod,</span>
+<span class="na">        ExpectedException(typeof(AssertFailedException))</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SampleIgnore</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Verify the state</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">testFixtureState</span><span class="p">,</span> <span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
-            //Failure Assertion
-            Assert.AreEqual(1, 0, &quot;Failed as Expected&quot;);
-        }
-    }
-}
-</code></pre>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>And the following settings need to be added to the .config file
 associated with the test fixture assembly:</p>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;configuration&gt;
-  &lt;configSections&gt;
-    &lt;sectionGroup name=&quot;applicationSettings&quot; type=&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; &gt;
-      &lt;section name=&quot;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&quot; type=&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; requirePermission=&quot;false&quot; /&gt;
-    &lt;/sectionGroup&gt;
-  &lt;/configSections&gt;
-  &lt;applicationSettings&gt;
-    &lt;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;
-      &lt;setting name=&quot;Url&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;http://localhost/SpiraTest&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;Login&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;fredbloggs&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;Password&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;fredbloggs&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;ProjectId&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;1&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;ReleaseId&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;1&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;TestSetId&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;1&lt;/value&gt;
-      &lt;/setting&gt;
-      &lt;setting name=&quot;RecordTestRun&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;True&lt;/value&gt;
-      &lt;/setting&gt;
-    &lt;/Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;
-  &lt;/applicationSettings&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+  <span class="nt">&lt;configSections&gt;</span>
+    <span class="nt">&lt;sectionGroup</span> <span class="na">name=</span><span class="s">&quot;applicationSettings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;section</span> <span class="na">name=</span><span class="s">&quot;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&quot;</span> <span class="na">type=</span><span class="s">&quot;System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;</span> <span class="na">requirePermission=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/sectionGroup&gt;</span>
+  <span class="nt">&lt;/configSections&gt;</span>
+  <span class="nt">&lt;applicationSettings&gt;</span>
+    <span class="nt">&lt;Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Url&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>http://localhost/SpiraTest<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Login&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;Password&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>fredbloggs<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;ProjectId&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;ReleaseId&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;TestSetId&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+      <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;RecordTestRun&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+      <span class="nt">&lt;/setting&gt;</span>
+    <span class="nt">&lt;/Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;</span>
+  <span class="nt">&lt;/applicationSettings&gt;</span>
+</pre></div>
+
 
 <p>Firstly the settings in the .config file indicate the following
 information to the test fixture:</p>
@@ -1087,7 +1090,7 @@ SampleMSTest is provided with the installation.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

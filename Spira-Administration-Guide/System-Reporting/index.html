@@ -883,7 +883,7 @@ is to first run the "Raw XML" format report from the main SpiraPlan
 reports center. An example XML report is partially shown below:</p>
 </li>
 </ul>
-<pre><code class="xml">“?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?”
+<div class="codehilite"><pre><span></span>“?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?”
 “Report”
   “Title”
     Requirements Detailed Report
@@ -1019,12 +1019,13 @@ reports center. An example XML report is partially shown below:</p>
     “/Requirement”
   “/RequirementData”
 “/Report”
-</code></pre>
+</pre></div>
+
 
 <p>This XML data is then converted by the XSLT template into HTML format so
 that it can be included into the final generated report. An example
 fragment of the XSLT template looks like:</p>
-<pre><code class="xml">“?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?”
+<div class="codehilite"><pre><span></span>“?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?”
 “xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:msxsl=&quot;urn:schemas-microsoft-com:xslt&quot; exclude-result-prefixes=&quot;msxsl&quot;“
   “xsl:template match=&quot;/RequirementData&quot;“
     “xsl:for-each select=&quot;Requirement&quot;“
@@ -1032,7 +1033,7 @@ fragment of the XSLT template looks like:</p>
         “xsl:attribute name=&quot;style&quot;“
           padding-left: “xsl:value-of select=&quot;string-length(IndentLevel)*2&quot;/”px;
         “/xsl:attribute”
-        “xsl:if test=&quot;SummaryYn='Y'&quot;“
+        “xsl:if test=&quot;SummaryYn=&#39;Y&#39;&quot;“
           “div class=&quot;Title2&quot;“
             RQ:”xsl:value-of select=&quot;RequirementId&quot;/” - “xsl:value-of select=&quot;Name&quot;/”
           “/div”
@@ -1041,7 +1042,7 @@ fragment of the XSLT template looks like:</p>
           “/div”
           “br /”
         “/xsl:if”
-        “xsl:if test=&quot;SummaryYn='N'&quot;“
+        “xsl:if test=&quot;SummaryYn=&#39;N&#39;&quot;“
           “xsl:attribute name=&quot;style&quot;“
             padding-left: “xsl:value-of select=&quot;string-length(IndentLevel)*2&quot;/”px;
           “/xsl:attribute”
@@ -1055,7 +1056,8 @@ fragment of the XSLT template looks like:</p>
       “/div”
     “/xsl:for-each”
   “/xsl:template”
-</code></pre>
+</pre></div>
+
 
 <p>So using a combination of XSLT and the Raw XML report format, you can
 generate a customized view of the standard report section that will be
@@ -1258,7 +1260,7 @@ data to a user that shouldn't have permission to see that data.</em></p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

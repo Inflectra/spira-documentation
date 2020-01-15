@@ -834,13 +834,14 @@ location that it was installed (typically
 C:\inetpub\wwwroot\OnTimeSdk) and open up the
 Web.Config file in Notepad and locate the "<strong>appSettings</strong>" part of the
 file:</p>
-<pre><code class="xml"> &lt;appSettings&gt;
-    &lt;add key=&quot;ConnectionString&quot; value=&quot;server=SERVER;database=OnTime;uid=USER;pwd=PASSWORD;&quot;/&gt;
-    &lt;add key=&quot;SecurityToken&quot; value=&quot;{66ACD352-16C0-4485-8498-8C461BE7CE44}&quot;/&gt;
-    &lt;add key=&quot;WebServicesUser&quot; value=&quot;1&quot;/&gt;
-    &lt;add key=&quot;EnableDataCache&quot; value=&quot;False&quot;/&gt;
-  &lt;/appSettings&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span> <span class="nt">&lt;appSettings&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">&quot;ConnectionString&quot;</span> <span class="na">value=</span><span class="s">&quot;server=SERVER;database=OnTime;uid=USER;pwd=PASSWORD;&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">&quot;SecurityToken&quot;</span> <span class="na">value=</span><span class="s">&quot;{66ACD352-16C0-4485-8498-8C461BE7CE44}&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">&quot;WebServicesUser&quot;</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;add</span> <span class="na">key=</span><span class="s">&quot;EnableDataCache&quot;</span> <span class="na">value=</span><span class="s">&quot;False&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/appSettings&gt;</span>
+</pre></div>
+
 
 <p>You need to make sure that you fill out the ConnectionString that points
 to the Microsoft SQL Server database that OnTime is connecting to. Also
@@ -1251,7 +1252,7 @@ managed on behalf of SpiraTeam inside OnTime.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

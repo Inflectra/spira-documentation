@@ -839,39 +839,40 @@ that the Spira task can access the current build status.</p>
 that it's executed last. This will make sure that the final result of
 the build gets recorded in Spira.</p>
 <p>Here is an example YAML file:</p>
-<pre><code class="yaml">trigger:
-- master
+<div class="codehilite"><pre><span></span><span class="nt">trigger</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
 
-pool:
-  vmImage: 'ubuntu-latest'
+<span class="nt">pool</span><span class="p">:</span>
+  <span class="nt">vmImage</span><span class="p">:</span> <span class="s">&#39;ubuntu-latest&#39;</span>
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-- script: |
-    npm install
-    npm test
-  displayName: 'npm install and test'
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/junitresults-*.xml'
-- task: spira-build-task@0
-  condition: succeededOrFailed()
-  inputs:
-    connectedService: 'SpiraPlan Fred Bloggs'
-    project: '2'
-    releaseId: '20'
-    baseUrl: 'https://dev.azure.com/inflectra'
-    buildNumber: '$(Build.BuildNumber)'
-    buildStatus: '$(Agent.JobStatus)'
-    buildId: '$(Build.BuildId)'
-    sourceVersion: '$(Build.SourceVersion)'
-    projectName: '$(System.TeamProject)'
-</code></pre>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">NodeTool@0</span>
+  <span class="nt">inputs</span><span class="p">:</span>
+    <span class="nt">versionSpec</span><span class="p">:</span> <span class="s">&#39;10.x&#39;</span>
+  <span class="nt">displayName</span><span class="p">:</span> <span class="s">&#39;Install</span><span class="nv"> </span><span class="s">Node.js&#39;</span>
+<span class="p p-Indicator">-</span> <span class="nt">script</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">npm install</span>
+    <span class="no">npm test</span>
+  <span class="nt">displayName</span><span class="p">:</span> <span class="s">&#39;npm</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">test&#39;</span>
+<span class="p p-Indicator">-</span> <span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PublishTestResults@2</span>
+  <span class="nt">condition</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span>
+  <span class="nt">inputs</span><span class="p">:</span>
+    <span class="nt">testRunner</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">JUnit</span>
+    <span class="nt">testResultsFiles</span><span class="p">:</span> <span class="s">&#39;**/junitresults-*.xml&#39;</span>
+<span class="p p-Indicator">-</span> <span class="nt">task</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">spira-build-task@0</span>
+  <span class="nt">condition</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span>
+  <span class="nt">inputs</span><span class="p">:</span>
+    <span class="nt">connectedService</span><span class="p">:</span> <span class="s">&#39;SpiraPlan</span><span class="nv"> </span><span class="s">Fred</span><span class="nv"> </span><span class="s">Bloggs&#39;</span>
+    <span class="nt">project</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
+    <span class="nt">releaseId</span><span class="p">:</span> <span class="s">&#39;20&#39;</span>
+    <span class="nt">baseUrl</span><span class="p">:</span> <span class="s">&#39;https://dev.azure.com/inflectra&#39;</span>
+    <span class="nt">buildNumber</span><span class="p">:</span> <span class="s">&#39;$(Build.BuildNumber)&#39;</span>
+    <span class="nt">buildStatus</span><span class="p">:</span> <span class="s">&#39;$(Agent.JobStatus)&#39;</span>
+    <span class="nt">buildId</span><span class="p">:</span> <span class="s">&#39;$(Build.BuildId)&#39;</span>
+    <span class="nt">sourceVersion</span><span class="p">:</span> <span class="s">&#39;$(Build.SourceVersion)&#39;</span>
+    <span class="nt">projectName</span><span class="p">:</span> <span class="s">&#39;$(System.TeamProject)&#39;</span>
+</pre></div>
+
 
 <p>If everything had been configured correctly a new build in DevOps will
 create a new build in Spira!</p>
@@ -912,7 +913,7 @@ in Azure DevOps and your test automation schedule in SpiraPlan.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

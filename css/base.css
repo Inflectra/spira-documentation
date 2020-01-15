@@ -185,8 +185,8 @@ hr {
 
 pre, .rst-content tt {
     max-width: 100%;
-    background: #fff;
-    background: var(--bg);
+    background: #f5f5f5;
+    background: var(--bg-v-close);
     border: solid 1px #e1e4e5;
     border: solid 1px var(--iron);
     color: #333;

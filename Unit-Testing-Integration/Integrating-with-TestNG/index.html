@@ -832,84 +832,85 @@ TestNG test fixtures with SpiraTest.</p>
 <h2 id="using-testng-with-spiratest">Using TestNG with SpiraTest</h2>
 <p>The typical code structure for a TestNG test fixture coded in Java is as
 follows:</p>
-<pre><code class="Java">package com.inflectra.spiratest.addons.testnglistener.samples;
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
-import org.testng.annotations.*;
-import static org.testng.AssertJUnit.*;
+<span class="kn">import</span> <span class="nn">org.testng.annotations.*</span><span class="p">;</span>
+<span class="kn">import static</span> <span class="nn">org.testng.AssertJUnit.*</span><span class="p">;</span>
 
-import java.util.*;
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
 
-/**
- * Some simple tests using the ability to return results back to SpiraTest
- * 
- * @author      Inflectra Corporation
- * @version     2.3.0
- *
- */
-@Test(groups={&quot;unittest&quot;})
-public class SimpleTest
-{
-    protected int fValue1;
-    protected int fValue2;
+<span class="cm">/**</span>
+<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * </span>
+<span class="cm"> * @author      Inflectra Corporation</span>
+<span class="cm"> * @version     2.3.0</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SimpleTest</span>
+<span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">fValue1</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">fValue2</span><span class="p">;</span>
 
-    /**
-     * Sets up the unit test
-     */
-    @BeforeClass
-    public void setUp()
-    {
-        fValue1= 2;
-        fValue2= 3;
-    }
+    <span class="cm">/**</span>
+<span class="cm">     * Sets up the unit test</span>
+<span class="cm">     */</span>
+    <span class="nd">@BeforeClass</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">fValue1</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">fValue2</span><span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests the addition of the two values
-     */
-    @Test(groups={&quot;unittest&quot;})
-    public void testAdd()
-    {
-        double result = fValue1 + fValue2;
+    <span class="cm">/**</span>
+<span class="cm">     * Tests the addition of the two values</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">fValue1</span> <span class="o">+</span> <span class="n">fValue2</span><span class="p">;</span>
 
-        // forced failure result == 5
-        assertTrue (result == 6);
-    }
+        <span class="c1">// forced failure result == 5</span>
+        <span class="n">assertTrue</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests division by zero
-     */
-    @Test(groups={&quot;unittest&quot;})
-    public void testDivideByZero()
-    {
-        int zero = 0;
-        int result = 8 / zero;
-        result++; // avoid warning for not using result
-    }
+    <span class="cm">/**</span>
+<span class="cm">     * Tests division by zero</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDivideByZero</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">zero</span><span class="p">;</span>
+        <span class="n">result</span><span class="o">++</span><span class="p">;</span> <span class="c1">// avoid warning for not using result</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests two equal values
-     */
-    @Test(groups={&quot;unittest&quot;})
-    public void testEquals()
-    {
-        assertEquals(12, 12);
-        assertEquals(12L, 12L);
-        assertEquals(new Long(12), new Long(12));
+    <span class="cm">/**</span>
+<span class="cm">     * Tests two equal values</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testEquals</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12L</span><span class="p">,</span> <span class="mi">12L</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="k">new</span> <span class="n">Long</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="k">new</span> <span class="n">Long</span><span class="p">(</span><span class="mi">12</span><span class="p">));</span>
 
-        assertEquals(&quot;Size&quot;, 12, 13);
-        assertEquals(&quot;Capacity&quot;, 12.0, 11.99, 0.0);
-    }
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Size&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Capacity&quot;</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">11.99</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests success
-     */
-    @Test(groups={&quot;unittest&quot;})
-    public void testSuccess()
-    {
-        //Successful test
-        assertEquals(12, 12);
-    }
-}
-</code></pre>
+    <span class="cm">/**</span>
+<span class="cm">     * Tests success</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSuccess</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Successful test</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The Java class is marked as a TestNG test fixture by applying the @Test
 attribute to the class definition, and the @Test attribute to each of
@@ -930,98 +931,99 @@ steps or they can be new test cases designed specifically for automated
 testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the TestNG test fixture for SpiraTest to
 record the TestNG test run are illustrated below:</p>
-<pre><code class="Java">package com.inflectra.spiratest.addons.testnglistener.samples;
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
-import org.testng.annotations.*;
-import static org.testng.AssertJUnit.*;
+<span class="kn">import</span> <span class="nn">org.testng.annotations.*</span><span class="p">;</span>
+<span class="kn">import static</span> <span class="nn">org.testng.AssertJUnit.*</span><span class="p">;</span>
 
-import com.inflectra.spiratest.addons.testnglistener.*;
+<span class="kn">import</span> <span class="nn">com.inflectra.spiratest.addons.testnglistener.*</span><span class="p">;</span>
 
-import java.util.*;
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
 
-/**
- * Some simple tests using the ability to return results back to SpiraTest
- * 
- * @author      Inflectra Corporation
- * @version     2.3.0
- *
- */
-@SpiraTestConfiguration(
-    url=&quot;http://localhost/SpiraTest&quot;,
-    login=&quot;fredbloggs&quot;,
-    password=&quot;fredbloggs&quot;,
-    projectId=1,
-    releaseId=1,
-    testSetId
-)
-@Test(groups={&quot;unittest&quot;})
-public class SimpleTest
-{
-    protected int fValue1;
-    protected int fValue2;
+<span class="cm">/**</span>
+<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * </span>
+<span class="cm"> * @author      Inflectra Corporation</span>
+<span class="cm"> * @version     2.3.0</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/SpiraTest&quot;</span><span class="p">,</span>
+    <span class="n">login</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
+    <span class="n">projectId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">releaseId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">testSetId</span>
+<span class="p">)</span>
+<span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SimpleTest</span>
+<span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">fValue1</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">fValue2</span><span class="p">;</span>
 
-    /**
-     * Sets up the unit test
-     */
-    @BeforeClass
-    public void setUp()
-    {
-        fValue1= 2;
-        fValue2= 3;
-    }
+    <span class="cm">/**</span>
+<span class="cm">     * Sets up the unit test</span>
+<span class="cm">     */</span>
+    <span class="nd">@BeforeClass</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">fValue1</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">fValue2</span><span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests the addition of the two values
-     */
-    @Test(groups={&quot;unittest&quot;})
-    @SpiraTestCase(testCaseId=5)
-    public void testAdd()
-    {
-        double result = fValue1 + fValue2;
+    <span class="cm">/**</span>
+<span class="cm">     * Tests the addition of the two values</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">fValue1</span> <span class="o">+</span> <span class="n">fValue2</span><span class="p">;</span>
 
-        // forced failure result == 5
-        assertTrue (result == 6);
-    }
+        <span class="c1">// forced failure result == 5</span>
+        <span class="n">assertTrue</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="mi">6</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests division by zero
-     */
-    @Test(groups={&quot;unittest&quot;})
-    @SpiraTestCase(testCaseId=5)
-    public void testDivideByZero()
-    {
-        int zero = 0;
-        int result = 8 / zero;
-        result++; // avoid warning for not using result
-    }
+    <span class="cm">/**</span>
+<span class="cm">     * Tests division by zero</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDivideByZero</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">zero</span><span class="p">;</span>
+        <span class="n">result</span><span class="o">++</span><span class="p">;</span> <span class="c1">// avoid warning for not using result</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests two equal values
-     */
-    @Test(groups={&quot;unittest&quot;})
-    @SpiraTestCase(testCaseId=6)
-    public void testEquals()
-    {
-        assertEquals(12, 12);
-        assertEquals(12L, 12L);
-        assertEquals(new Long(12), new Long(12));
+    <span class="cm">/**</span>
+<span class="cm">     * Tests two equal values</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testEquals</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12L</span><span class="p">,</span> <span class="mi">12L</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="k">new</span> <span class="n">Long</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="k">new</span> <span class="n">Long</span><span class="p">(</span><span class="mi">12</span><span class="p">));</span>
 
-        assertEquals(&quot;Size&quot;, 12, 13);
-        assertEquals(&quot;Capacity&quot;, 12.0, 11.99, 0.0);
-    }
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Size&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Capacity&quot;</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">11.99</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    /**
-     * Tests success
-     */
-    @Test(groups={&quot;unittest&quot;})
-    @SpiraTestCase(testCaseId=6)
-    public void testSuccess()
-    {
-        //Successful test
-        assertEquals(12, 12);
-    }
-}
-</code></pre>
+    <span class="cm">/**</span>
+<span class="cm">     * Tests success</span>
+<span class="cm">     */</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;unittest&quot;</span><span class="p">})</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSuccess</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Successful test</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
@@ -1081,7 +1083,7 @@ SimpleText.java is provided with the installation.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

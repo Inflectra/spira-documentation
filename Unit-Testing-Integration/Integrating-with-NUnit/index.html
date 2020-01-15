@@ -804,63 +804,65 @@ all the steps correctly, the SpiraPlan NUnit add-in should now be
 properly installed.</p>
 <h2 id="using-nunit-3-with-spiratest">Using NUnit 3 with SpiraTest</h2>
 <p>For this example, we will be using the following sample test fixture:</p>
-<pre><code class="C#">using NUnit.Framework;
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">NUnit.Framework</span><span class="p">;</span>
 
-namespace SampleTestSuite
-{
-    [TestFixture]
-    class SampleTest
-    {
-        int One, Two;
-        [SetUp]
-        protected void SetUp()
-        {
-            One = 1;
-            Two = 2;
-        }
-        [Test]
-        public void TestAdd()
-        {
-            int Result = One + Two;
-            //will succeed
-            Assert.AreEqual(Result, 3);
-        }
-        [Test]
-        public void TestMultiply()
-        {
-            int Result = One * Two;
-            //will fail
-            Assert.AreEqual(Result, 3);
-        }
-        [Test]
-        public void TestConcat()
-        {
-            string Result = string.Concat(One, Two);
-            //will fail
-            Assert.AreEqual(Result, &quot;21&quot;);
-        }   
-    }
-}
-</code></pre>
+<span class="k">namespace</span> <span class="nn">SampleTestSuite</span>
+<span class="p">{</span>
+<span class="na">    [TestFixture]</span>
+    <span class="k">class</span> <span class="nc">SampleTest</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">One</span><span class="p">,</span> <span class="n">Two</span><span class="p">;</span>
+<span class="na">        [SetUp]</span>
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">SetUp</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">One</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+            <span class="n">Two</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">TestAdd</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">Result</span> <span class="p">=</span> <span class="n">One</span> <span class="p">+</span> <span class="n">Two</span><span class="p">;</span>
+            <span class="c1">//will succeed</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">TestMultiply</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">Result</span> <span class="p">=</span> <span class="n">One</span> <span class="p">*</span> <span class="n">Two</span><span class="p">;</span>
+            <span class="c1">//will fail</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">TestConcat</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">Result</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Concat</span><span class="p">(</span><span class="n">One</span><span class="p">,</span> <span class="n">Two</span><span class="p">);</span>
+            <span class="c1">//will fail</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span> <span class="s">&quot;21&quot;</span><span class="p">);</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>In your test root directory (the directory with your <em>.nunit</em> file),
 create a new file called <em>SpiraConfig.json</em>, and populate it like so:</p>
-<pre><code class="JSON">{
-  &quot;credentials&quot;: {
-    &quot;url&quot;: &quot;localhost/SpiraPlan&quot;,
-    &quot;username&quot;: &quot;fredbloggs&quot;,
-    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
-    &quot;project_id&quot;: 1,
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;credentials&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost/SpiraPlan&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;project_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 
-    &quot;release_id&quot;: 5,
-    &quot;test_set_id&quot;: 1
-  },
-  &quot;test_cases&quot;: {
-    &quot;default&quot;: 20,
-    &quot;TestMultiply&quot;:  22
-  }
-}
-</code></pre>
+    <span class="nt">&quot;release_id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;test_set_id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;test_cases&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;TestMultiply&quot;</span><span class="p">:</span>  <span class="mi">22</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>For the plugin to work, you must have both settings groups (credentials
 and test_cases) with the following in the credentials group:</p>
@@ -925,55 +927,56 @@ closing and reopening NUnit.</p>
 <h2 id="using-nunit-2x-with-spiratest">Using NUnit 2.x with SpiraTest</h2>
 <p>The typical code structure for an NUnit test fixture coded in C# is as
 follows:</p>
-<pre><code class="C#">using System;
-using NUnit.Framework;
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">NUnit.Framework</span><span class="p">;</span>
 
-namespace Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite
-{
-    /// &lt;summary&gt;
-    /// Sample test fixture that tests the NUnit SpiraTest integration
-    /// &lt;/summary&gt;
-    [TestFixture]
-    public class SampleTestFixture
-    {
-        [SetUp]
-        public void Init()
-        {
-            //Do Nothing
-        }
+<span class="k">namespace</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">    [TestFixture]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SampleTestFixture</span>
+    <span class="p">{</span>
+<span class="na">        [SetUp]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Init</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Do Nothing</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that asserts a failure
-        /// &lt;/summary&gt;
-        [Test]
-        public void _01_SampleFailure()
-        {
-            //Failure Assertion
-            Assert.AreEqual (1, 0);
-        }   
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that asserts a failure</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_01_SampleFailure</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+        <span class="p">}</span>   
 
-        /// &lt;summary&gt;
-        /// Sample test that succeeds
-        /// &lt;/summary&gt;
-        [Test]
-        public void _02_SamplePass()
-        {
-            //Successful assertion
-            Assert.AreEqual (1, 1);
-        }   
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that succeeds</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_02_SamplePass</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Successful assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+        <span class="p">}</span>   
 
-        /// &lt;summary&gt;
-        /// Sample test that fails
-        /// &lt;/summary&gt;
-        [Test]
-        public void _03_SampleIgnore()
-        {
-            //Failure Assertion
-            Assert.AreEqual (1, 0);
-        }   
-    }
-}
-</code></pre>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that fails</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [Test]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_03_SampleIgnore</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The .NET class is marked as an NUnit test fixture by applying the
 [TestFixture] attribute to the class as a whole, and the [Test]
@@ -994,75 +997,76 @@ they can be new test cases designed specifically for automated testing
 and therefore have no defined test steps. In either case, the changes
 that need to be made to the NUnit test fixture for SpiraTest to record
 the NUnit test run are illustrated below:</p>
-<pre><code class="C#">using System;
-using NUnit.Framework;
-using Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework;
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">NUnit.Framework</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework</span><span class="p">;</span>
 
-namespace Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite
-{
-    /// &lt;summary&gt;
-    /// Sample test fixture that tests the NUnit SpiraTest integration
-    /// &lt;/summary&gt;
-    [
-    TestFixture,
-    SpiraTestConfiguration (
-     &quot;http://&lt;server name&gt;/SpiraTest&quot;,
-     &quot;&lt;username&gt;&quot;,
-     &quot;&lt;password&gt;&quot;,
-     &lt;project id&gt;,
-     &lt;release id&gt;,
-     &lt;test set id&gt;,
-     &lt;runner name&gt;
-)
-    ]
-    public class SampleTestFixture
-    {
-        [SetUp]
-        public void Init()
-        {
-            //Do Nothing
-        }
+<span class="k">namespace</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">    [</span>
+<span class="na">    TestFixture,</span>
+<span class="na">    SpiraTestConfiguration (</span>
+<span class="na">     &quot;http://&lt;server name&gt;/SpiraTest&quot;,</span>
+<span class="na">     &quot;&lt;username&gt;&quot;,</span>
+<span class="na">     &quot;&lt;password&gt;&quot;,</span>
+<span class="na">     &lt;project id&gt;,</span>
+<span class="na">     &lt;release id&gt;,</span>
+<span class="na">     &lt;test set id&gt;,</span>
+<span class="na">     &lt;runner name&gt;</span>
+<span class="na">)</span>
+<span class="na">    ]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">SampleTestFixture</span>
+    <span class="p">{</span>
+<span class="na">        [SetUp]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Init</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Do Nothing</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that asserts a failure
-        /// &lt;/summary&gt;
-        [
-        Test,
-        SpiraTestCase (&lt;test case id&gt;)
-        ]
-        public void _01_SampleFailure()
-        {
-            //Failure Assertion
-            Assert.AreEqual (1, 0);
-        }   
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that asserts a failure</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        Test,</span>
+<span class="na">        SpiraTestCase (&lt;test case id&gt;)</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_01_SampleFailure</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+        <span class="p">}</span>   
 
-        /// &lt;summary&gt;
-        /// Sample test that succeeds
-        /// &lt;/summary&gt;
-        [
-        Test,
-        SpiraTestCase (&lt;test case id&gt;))
-        ]
-        public void _02_SamplePass()
-        {
-            //Successful assertion
-            Assert.AreEqual (1, 1);
-        }   
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that succeeds</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        Test,</span>
+<span class="na">        SpiraTestCase (&lt;test case id&gt;))</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_02_SamplePass</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Successful assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+        <span class="p">}</span>   
 
-        /// &lt;summary&gt;
-        /// Sample test that does not log to SpiraTest
-        /// &lt;/summary&gt;
-        [
-        Test
-        ]
-        public void _03_SampleIgnore()
-        {
-            //Failure Assertion
-            Assert.AreEqual (1, 0);
-        }   
-    }
-}
-</code></pre>
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that does not log to SpiraTest</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        Test</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">_03_SampleIgnore</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Failure Assertion</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span> <span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The overall class is marked with a new [SpiraTestConfiguration]
 attribute that contains the following pieces of information needed to
@@ -1113,7 +1117,7 @@ SampleTestSuite.cs is provided with the installation.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

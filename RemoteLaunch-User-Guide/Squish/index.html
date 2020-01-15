@@ -935,57 +935,58 @@ specify them by using the syntax ${parameterName}.</li>
 </ul>
 <p>A complete sample script (illustrating the use of parameters) is
 illustrated below:</p>
-<pre><code class="javascript">function main()
-{
-    // open URL
-    loadUrl(&quot;:http://address.icefaces.org/address/&quot;);
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// open URL</span>
+    <span class="nx">loadUrl</span><span class="p">(</span><span class="s2">&quot;:http://address.icefaces.org/address/&quot;</span><span class="p">);</span>
 
-    // wait for the first entry object to be available
-    waitForObject(&quot;:_id0:title_select-one&quot;);
+    <span class="c1">// wait for the first entry object to be available</span>
+    <span class="nx">waitForObject</span><span class="p">(</span><span class="s2">&quot;:_id0:title_select-one&quot;</span><span class="p">);</span>
 
-    // check that the submit button is disabled
-    test.compare(findObject(&quot;:_id0:Submit_image&quot;).disabled, true);
+    <span class="c1">// check that the submit button is disabled</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">findObject</span><span class="p">(</span><span class="s2">&quot;:_id0:Submit_image&quot;</span><span class="p">).</span><span class="nx">disabled</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 
-    // enter data
-    selectOption(&quot;:_id0:title_select-one&quot;, &quot;${title}&quot;);
-    setText(&quot;:_id0:firstName_text&quot;, &quot;${firstname}&quot;);
-    setText(&quot;:_id0:lastName_text&quot;, &quot;${lastname}&quot;);
-    setText(&quot;:_id0:city_text&quot;, &quot;${city}&quot;);
+    <span class="c1">// enter data</span>
+    <span class="nx">selectOption</span><span class="p">(</span><span class="s2">&quot;:_id0:title_select-one&quot;</span><span class="p">,</span> <span class="s2">&quot;${title}&quot;</span><span class="p">);</span>
+    <span class="nx">setText</span><span class="p">(</span><span class="s2">&quot;:_id0:firstName_text&quot;</span><span class="p">,</span> <span class="s2">&quot;${firstname}&quot;</span><span class="p">);</span>
+    <span class="nx">setText</span><span class="p">(</span><span class="s2">&quot;:_id0:lastName_text&quot;</span><span class="p">,</span> <span class="s2">&quot;${lastname}&quot;</span><span class="p">);</span>
+    <span class="nx">setText</span><span class="p">(</span><span class="s2">&quot;:_id0:city_text&quot;</span><span class="p">,</span> <span class="s2">&quot;${city}&quot;</span><span class="p">);</span>
 
-    // check that after entering city, the state is automatically chosen correctly
-    var state = &quot;${state}&quot;;
-    setFocus(&quot;:_id0:state_text&quot;);
-    if (!test.verify(waitFor(&quot;findObject(':_id0:state_text').value == state&quot;, 10000)))
-    {
-        clickButton(&quot;:_id0:Reset_image&quot;);
-        continue;
-    }
+    <span class="c1">// check that after entering city, the state is automatically chosen correctly</span>
+    <span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;${state}&quot;</span><span class="p">;</span>
+    <span class="nx">setFocus</span><span class="p">(</span><span class="s2">&quot;:_id0:state_text&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:state_text&#39;).value == state&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)))</span>
+    <span class="p">{</span>
+        <span class="nx">clickButton</span><span class="p">(</span><span class="s2">&quot;:_id0:Reset_image&quot;</span><span class="p">);</span>
+        <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    // input ZIP
-    selectOption(&quot;:_id0:zipSelect_select-one&quot;, &quot;${zip}&quot;);
+    <span class="c1">// input ZIP</span>
+    <span class="nx">selectOption</span><span class="p">(</span><span class="s2">&quot;:_id0:zipSelect_select-one&quot;</span><span class="p">,</span> <span class="s2">&quot;${zip}&quot;</span><span class="p">);</span>
 
-    // check that submit button is enabled now
-    setFocus(&quot;:_id0:lastName_text&quot;);
-    if (!test.verify(waitFor(&quot;findObject(':_id0:Submit_image').disabled == false&quot;, 10000)))
-    {
-        clickButton(&quot;:_id0:Reset_image&quot;);
-    }
+    <span class="c1">// check that submit button is enabled now</span>
+    <span class="nx">setFocus</span><span class="p">(</span><span class="s2">&quot;:_id0:lastName_text&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:Submit_image&#39;).disabled == false&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)))</span>
+    <span class="p">{</span>
+        <span class="nx">clickButton</span><span class="p">(</span><span class="s2">&quot;:_id0:Reset_image&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    // submit
-    clickButton(&quot;:_id0:Submit_image&quot;);
+    <span class="c1">// submit</span>
+    <span class="nx">clickButton</span><span class="p">(</span><span class="s2">&quot;:_id0:Submit_image&quot;</span><span class="p">);</span>
 
-    // wait for results page
-    waitForContextExists(&quot;:response.iface&quot;);
-    waitForObject(&quot;:_id1:_id3_SPAN&quot;);
+    <span class="c1">// wait for results page</span>
+    <span class="nx">waitForContextExists</span><span class="p">(</span><span class="s2">&quot;:response.iface&quot;</span><span class="p">);</span>
+    <span class="nx">waitForObject</span><span class="p">(</span><span class="s2">&quot;:_id1:_id3_SPAN&quot;</span><span class="p">);</span>
 
-    // verify that data is stored and displayed correctly
-    test.compare(findObject(&quot;:_id1:_id3_SPAN&quot;).innerText, firstName);
-    test.compare(findObject(&quot;:_id1:_id6_SPAN&quot;).innerText, state);
+    <span class="c1">// verify that data is stored and displayed correctly</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">findObject</span><span class="p">(</span><span class="s2">&quot;:_id1:_id3_SPAN&quot;</span><span class="p">).</span><span class="nx">innerText</span><span class="p">,</span> <span class="nx">firstName</span><span class="p">);</span>
+    <span class="nx">test</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">findObject</span><span class="p">(</span><span class="s2">&quot;:_id1:_id6_SPAN&quot;</span><span class="p">).</span><span class="nx">innerText</span><span class="p">,</span> <span class="nx">state</span><span class="p">);</span>
 
-    // close browser
-    closeWindow(&quot;:[Window]&quot;);
-}
-</code></pre>
+    <span class="c1">// close browser</span>
+    <span class="nx">closeWindow</span><span class="p">(</span><span class="s2">&quot;:[Window]&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>Once you are happy with the values, click [Save] to update the test
 case. Now you are ready to schedule the automated test case for
@@ -1238,7 +1239,7 @@ and have the results be recorded within SpiraTest / SpiraTeam.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

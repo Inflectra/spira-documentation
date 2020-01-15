@@ -1069,63 +1069,64 @@ command components:</p>
 </li>
 </ul>
 <p>An example Selenium test script is illustrated below:</p>
-<pre><code class="html">&lt;html&gt;
-    &lt;body&gt;
-        &lt;table&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
                     open
-                &lt;/td&gt;
-                &lt;td&gt;                    
-                &lt;/td&gt;
-                &lt;td&gt;
+                <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
                     http://www.google.com/webhp
-                &lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    assertTitle&lt;/td&gt;
-                &lt;td&gt;                    
-                    &amp;nbsp;&lt;/td&gt;
-                &lt;td&gt;
-                    Google&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    type&lt;/td&gt;
-                &lt;td&gt;                    
-                    q&lt;/td&gt;
-                &lt;td&gt;
-                    ${query}&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    click&lt;/td&gt;
-                &lt;td&gt;                    
-                    btnG&lt;/td&gt;
-                &lt;td&gt;
-                    &amp;nbsp;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    waitForPageToLoad&lt;/td&gt;
-                &lt;td&gt;                    
-                    &amp;nbsp;&lt;/td&gt;
-                &lt;td&gt;
-                    5000&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    isTextPresent&lt;/td&gt;
-                &lt;td&gt;                    
-                    &amp;nbsp;&lt;/td&gt;
-                &lt;td&gt;
-                    ${matchtext}&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/table&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+                <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    assertTitle<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                    <span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    Google<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    type<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                    q<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    ${query}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    click<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                    btnG<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    waitForPageToLoad<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                    <span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    isTextPresent<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>                    
+                    <span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                    ${matchtext}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p>When opened in an HTML editing tool it looks like:</p>
 <table>
@@ -1323,7 +1324,7 @@ and have the results be recorded within SpiraTest / SpiraTeam.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

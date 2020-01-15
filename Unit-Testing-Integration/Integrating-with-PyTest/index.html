@@ -800,64 +800,66 @@ need to do is configure the extension, then you can begin testing!</p>
 It assumes that you are familiar with pytest, and already have some
 working tests configured.</p>
 <p>Here is a sample test file:</p>
-<pre><code class="python">import pytest
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
 
-\# Function we are testing
+\<span class="c1"># Function we are testing</span>
 
-def add(num1, num2):
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
 
-return num1 + num2
+<span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
 
-\# Successful test
+\<span class="c1"># Successful test</span>
 
-def test\_add\_1():
+<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_1</span><span class="p">():</span>
 
-assert add(1, 1) == 2
+<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-\# Failed test
+\<span class="c1"># Failed test</span>
 
-def test\_add\_2():
+<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_2</span><span class="p">():</span>
 
-assert add(2, 1) == 2
+<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-\# Failed test
+\<span class="c1"># Failed test</span>
 
-def test\_add\_3():
+<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_3</span><span class="p">():</span>
 
-assert add(4, 1) == 6
-</code></pre>
+<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+</pre></div>
+
 
 <p>Note how test_add_2 is used in the configuration file discussed below.</p>
 <p>In your test root folder (the folder you run the pytest command from),
 create a file named "spira.cfg" with the following:</p>
-<pre><code class="cfg">\[credentials\]
+<div class="codehilite"><pre><span></span><span class="na">\[credentials\]</span>
 
-\# Following are required
+<span class="na">\# Following are required</span>
 
-url = localhost/SpiraTest
+<span class="na">url</span> <span class="o">=</span> <span class="s">localhost/SpiraTest</span>
 
-username = fredbloggs
+<span class="na">username</span> <span class="o">=</span> <span class="s">fredbloggs</span>
 
-token = {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}
+<span class="na">token</span> <span class="o">=</span> <span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
 
-project\_id = 1
+<span class="na">project\_id</span> <span class="o">=</span> <span class="s">1</span>
 
-\# Following are optional:
+<span class="na">\# Following are optional:</span>
 
-release\_id = 5
+<span class="na">release\_id</span> <span class="o">=</span> <span class="s">5</span>
 
-test\_set\_id = 1
+<span class="na">test\_set\_id</span> <span class="o">=</span> <span class="s">1</span>
 
-\[test\_cases\]
+<span class="na">\[test\_cases\]</span>
 
-\# Assigned to the rest
+<span class="na">\# Assigned to the rest</span>
 
-default = 20
+<span class="na">default</span> <span class="o">=</span> <span class="s">20</span>
 
-\# Test case for a specific function
+<span class="na">\# Test case for a specific function</span>
 
-test\_add\_2 = 22
-</code></pre>
+<span class="na">test\_add\_2</span> <span class="o">=</span> <span class="s">22</span>
+</pre></div>
+
 
 <p>For the plugin to work, you must have both settings groups (credentials
 and test_cases) with the following in the credentials group:</p>
@@ -888,7 +890,7 @@ of the test_add_3 function inside SpiraTest:</p>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

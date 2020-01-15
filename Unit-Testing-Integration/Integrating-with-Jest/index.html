@@ -789,26 +789,27 @@
 <p>This guide assumes a basic familiarity with both SpiraTest and the Jest testing framework. </p>
 <h2 id="setting-up-the-integration">Setting up the integration</h2>
 <p>Install the integration by running <code>npm i jest-spiratest</code> in the root directory of your tests. Inside your <code>package.json</code> file, add the <code>jest</code> field with the format as shown below. You can see a full sample <code>package.json</code> at the bottom of this README.</p>
-<pre><code class="javascript">&quot;reporters&quot;: [
-            &quot;default&quot;,
-            [
-                &quot;jest-spiratest&quot;,
-                {
-                    &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
-                    &quot;username&quot;: &quot;fredbloggs&quot;,
-                    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
-                    &quot;projectId&quot;: 1,
-                    &quot;releaseId&quot;: 1,
-                    &quot;testSetId&quot;: 1,
-                    &quot;testCases&quot;: {
-                        &quot;default&quot;: 20,
-                        &quot;storesCorrectly&quot;: 21,
-                        &quot;javascriptWorks&quot;: 16
-                    }
-                }
-            ]
-        ]
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;reporters&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;jest-spiratest&quot;</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://doctor/SpiraPlan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;projectId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;releaseId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;testSetId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;testCases&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;storesCorrectly&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+                        <span class="s2">&quot;javascriptWorks&quot;</span><span class="o">:</span> <span class="mi">16</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+</pre></div>
+
 
 <p>Fields are required unless otherwise noted.</p>
 <p>Field | Description
@@ -826,39 +827,39 @@
 <h2 id="using-the-spiratest-reporter">Using the SpiraTest Reporter</h2>
 <p>Actually, you don't do anything different! Just run <code>npm test</code> or however you ran jest before and you should see test runs created in the project you specified!</p>
 <h2 id="sample-packagejson-with-spiratest-integration">Sample <code>package.json</code> with SpiraTest Integration</h2>
-<pre><code class="javascript">{
-    &quot;name&quot;: &quot;sample&quot;,
-    &quot;scripts&quot;: {
-        &quot;test&quot;: &quot;jest&quot;
-    },
-    &quot;jest&quot;: {
-        &quot;reporters&quot;: [
-            &quot;default&quot;,
-            [
-                &quot;jest-spiratest&quot;,
-                {
-                    &quot;url&quot;: &quot;https://doctor/SpiraPlan&quot;,
-                    &quot;username&quot;: &quot;fredbloggs&quot;,
-                    &quot;token&quot;: &quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;,
-                    &quot;projectId&quot;: 1,
-                    &quot;releaseId&quot;: 1,
-                    &quot;testSetId&quot;: 1,
-                    &quot;testCases&quot;: {
-                        &quot;default&quot;: 20,
-                        &quot;storesCorrectly&quot;: 21,
-                        &quot;javascriptWorks&quot;: 16
-                    }
-                }
-            ]
-        ]
-    }
-}
-</code></pre></div>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;sample&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="s2">&quot;jest&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;jest&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;reporters&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;jest-spiratest&quot;</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://doctor/SpiraPlan&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;projectId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;releaseId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;testSetId&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;testCases&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+                        <span class="s2">&quot;storesCorrectly&quot;</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+                        <span class="s2">&quot;javascriptWorks&quot;</span><span class="o">:</span> <span class="mi">16</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",

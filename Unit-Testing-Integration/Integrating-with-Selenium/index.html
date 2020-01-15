@@ -802,65 +802,66 @@ SpiraTest as 'Selenium' rather than "NUnit' so you can distinguish
 between them.</p>
 <p>Supplied with the SpiraTest NUnit add-in is a sample test for using
 Selenium with SpiraTest:</p>
-<pre><code class="C#">using System;
-using NUnit.Framework;
-using Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework;
-using Selenium;
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">NUnit.Framework</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Selenium</span><span class="p">;</span>
 
-namespace SeleniumSampleTest
-{
-    /// &lt;summary&gt;
-    /// Sample test fixture that tests the NUnit SpiraTest integration with the
-    /// Selenium-RC .NET Driver
-    /// &lt;/summary&gt;
-    [
-    TestFixture,
-    SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2, SpiraTestConfigurationAttribute.RunnerName.Selenium)
-    ]
-    public class GoogleTest
-    {
-        private static ISelenium selenium;
+<span class="k">namespace</span> <span class="nn">SeleniumSampleTest</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration with the</span>
+    <span class="c1">/// Selenium-RC .NET Driver</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">    [</span>
+<span class="na">    TestFixture,</span>
+<span class="na">    SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2, SpiraTestConfigurationAttribute.RunnerName.Selenium)</span>
+<span class="na">    ]</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">GoogleTest</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="n">ISelenium</span> <span class="n">selenium</span><span class="p">;</span>
 
-        [SetUp]
-        public void SetupTest()
-        {
-            //Instantiate the selenium .NET proxy
-            selenium = new DefaultSelenium(&quot;localhost&quot;, 4444, &quot;*iexplore&quot;, &quot;http://www.google.com&quot;);
-            selenium.Start();
-        }
+<span class="na">        [SetUp]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">SetupTest</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Instantiate the selenium .NET proxy</span>
+            <span class="n">selenium</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultSelenium</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="m">4444</span><span class="p">,</span> <span class="s">&quot;*iexplore&quot;</span><span class="p">,</span> <span class="s">&quot;http://www.google.com&quot;</span><span class="p">);</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
+        <span class="p">}</span>
 
-        [TearDown]
-        public void TeardownTest()
-        {
-            selenium.Stop();
-        }
+<span class="na">        [TearDown]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">TeardownTest</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+        <span class="p">}</span>
 
-        /// &lt;summary&gt;
-        /// Sample test that searches on Google, passes correctly
-        /// &lt;/summary&gt;
-        [
-        Test,
-        SpiraTestCase (5)
-        ]
-        public void GoogleSearch()
-        {
-            //Opens up Google
-            selenium.Open(&quot;http://www.google.com/webhp&quot;);
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// Sample test that searches on Google, passes correctly</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">        [</span>
+<span class="na">        Test,</span>
+<span class="na">        SpiraTestCase (5)</span>
+<span class="na">        ]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">GoogleSearch</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">//Opens up Google</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="s">&quot;http://www.google.com/webhp&quot;</span><span class="p">);</span>
 
-            //Verifies that the title matches
-            Assert.AreEqual(&quot;Google&quot;, selenium.GetTitle());
-            selenium.Type(&quot;q&quot;, &quot;Selenium OpenQA&quot;);
+            <span class="c1">//Verifies that the title matches</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="s">&quot;Google&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="n">GetTitle</span><span class="p">());</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">Type</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">,</span> <span class="s">&quot;Selenium OpenQA&quot;</span><span class="p">);</span>
 
-            //Verifies that it can find the Selenium website
-            Assert.AreEqual(&quot;Selenium OpenQA&quot;, selenium.GetValue(&quot;q&quot;));
-            selenium.Click(&quot;btnG&quot;);
-            selenium.WaitForPageToLoad(&quot;5000&quot;);
-            Assert.IsTrue(selenium.IsTextPresent(&quot;www.openqa.org&quot;));
-            Assert.AreEqual(&quot;Selenium OpenQA - Google Search&quot;, selenium.GetTitle());
-        }   
-    }
-}
-</code></pre>
+            <span class="c1">//Verifies that it can find the Selenium website</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="s">&quot;Selenium OpenQA&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="n">GetValue</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">));</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">Click</span><span class="p">(</span><span class="s">&quot;btnG&quot;</span><span class="p">);</span>
+            <span class="n">selenium</span><span class="p">.</span><span class="n">WaitForPageToLoad</span><span class="p">(</span><span class="s">&quot;5000&quot;</span><span class="p">);</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">selenium</span><span class="p">.</span><span class="n">IsTextPresent</span><span class="p">(</span><span class="s">&quot;www.openqa.org&quot;</span><span class="p">));</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="s">&quot;Selenium OpenQA - Google Search&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="n">GetTitle</span><span class="p">());</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>The details of the sample itself are described in more detail on the
 Selenium website, and you can see that we have added the SpiraTest
@@ -885,70 +886,71 @@ Selenium with SpiraTest:</p>
 Selenium website, and you can see that we have added the SpiraTest
 specific attributes onto the test case and test methods to indicate that
 they need to report back to SpiraTest.</p>
-<pre><code class="Java">package com.inflectra.spiratest.addons.testnglistener.samples;
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
-import org.testng.annotations.*;
-import static org.testng.AssertJUnit.*;
-import com.thoughtworks.selenium.*;
+<span class="kn">import</span> <span class="nn">org.testng.annotations.*</span><span class="p">;</span>
+<span class="kn">import static</span> <span class="nn">org.testng.AssertJUnit.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.thoughtworks.selenium.*</span><span class="p">;</span>
 
-import com.inflectra.spiratest.addons.testnglistener.*;
+<span class="kn">import</span> <span class="nn">com.inflectra.spiratest.addons.testnglistener.*</span><span class="p">;</span>
 
-/**
- * A sample Selenium test using the ability to return results back to SpiraTest
- * 
- * @author      Inflectra Corporation
- * @version     2.3.0
- *
- */
-@SpiraTestConfiguration(
-url=&quot;http://localhost/SpiraTest&quot;,
-login=&quot;fredbloggs&quot;,
-password=&quot;fredbloggs&quot;,
-projectId=1,
-releaseId=1,
-testSetId=-1
-runner=RunnerName.Selenium
-)
-@Test(groups={&quot;seleniumtest&quot;})
-public class SeleniumTest
-{
-    private Selenium selenium;
+<span class="cm">/**</span>
+<span class="cm"> * A sample Selenium test using the ability to return results back to SpiraTest</span>
+<span class="cm"> * </span>
+<span class="cm"> * @author      Inflectra Corporation</span>
+<span class="cm"> * @version     2.3.0</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
+<span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/SpiraTest&quot;</span><span class="p">,</span>
+<span class="n">login</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
+<span class="n">password</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
+<span class="n">projectId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="n">releaseId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="n">testSetId</span><span class="o">=-</span><span class="mi">1</span>
+<span class="n">runner</span><span class="o">=</span><span class="n">RunnerName</span><span class="p">.</span><span class="na">Selenium</span>
+<span class="p">)</span>
+<span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;seleniumtest&quot;</span><span class="p">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SeleniumTest</span>
+<span class="p">{</span>
+    <span class="kd">private</span> <span class="n">Selenium</span> <span class="n">selenium</span><span class="p">;</span>
 
-    @BeforeClass
-    public void setUp()
-    {
-        //Instantiate the selenium Java proxy
-        String url = &quot;http://www.google.com&quot;;
-        selenium = new DefaultSelenium(&quot;localhost&quot;, 4444, &quot;*firefox&quot;, url);
-        selenium.start();
-    }
+    <span class="nd">@BeforeClass</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Instantiate the selenium Java proxy</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://www.google.com&quot;</span><span class="p">;</span>
+        <span class="n">selenium</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultSelenium</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">4444</span><span class="p">,</span> <span class="s">&quot;*firefox&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">);</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+    <span class="p">}</span>
 
-    @AfterClass
-    protected void tearDown()
-    {
-        selenium.stop();
-    }
+    <span class="nd">@AfterClass</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">tearDown</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">stop</span><span class="p">();</span>
+    <span class="p">}</span>
 
-    // Sample test that searches on Google, passes correctly
-    @Test(groups={&quot;seleniumtest&quot;})
-    @SpiraTestCase(testCaseId=5)
-    public void testGoogle()
-    {
-        //Opens up Google
-        selenium.open(&quot;http://www.google.com/webhp?hl=en&quot;);
+    <span class="c1">// Sample test that searches on Google, passes correctly</span>
+    <span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;seleniumtest&quot;</span><span class="p">})</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testGoogle</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//Opens up Google</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">open</span><span class="p">(</span><span class="s">&quot;http://www.google.com/webhp?hl=en&quot;</span><span class="p">);</span>
 
-        //Verifies that the title matches
-        assertEquals(&quot;Google&quot;, selenium.getTitle());
-        selenium.type(&quot;q&quot;, &quot;Selenium OpenQA&quot;);
+        <span class="c1">//Verifies that the title matches</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Google&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="na">getTitle</span><span class="p">());</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">type</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">,</span> <span class="s">&quot;Selenium OpenQA&quot;</span><span class="p">);</span>
 
-        //Verifies that it can find the Selenium website
-        assertEquals(&quot;Selenium OpenQA&quot;, selenium.getValue(&quot;q&quot;));
-        selenium.click(&quot;btnG&quot;);
-        selenium.waitForPageToLoad(&quot;5000&quot;);
-        assertEquals(&quot;Selenium OpenQA - Google Search&quot;, selenium.getTitle());
-    }
-}
-</code></pre>
+        <span class="c1">//Verifies that it can find the Selenium website</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Selenium OpenQA&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="na">getValue</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">));</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">click</span><span class="p">(</span><span class="s">&quot;btnG&quot;</span><span class="p">);</span>
+        <span class="n">selenium</span><span class="p">.</span><span class="na">waitForPageToLoad</span><span class="p">(</span><span class="s">&quot;5000&quot;</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Selenium OpenQA - Google Search&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="p">.</span><span class="na">getTitle</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>However there is one change that has been made to the
 <em>SpiraTestConfiguration</em> attribute applied to the test fixture -- an
@@ -965,58 +967,59 @@ back to SpiraTest as 'Selenium' rather than "PyUnit' so you can
 distinguish between them.</p>
 <p>Supplied with the SpiraTest PyUnit extension is a sample test for using
 Selenium with SpiraTest:</p>
-<pre><code class="python">from selenium import selenium
-import unittest
-import sys, time
-import spiratestextension
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">selenium</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">spiratestextension</span>
 
-#   A sample Selenium test using the ability to return results back to SpiraTest
-#
-#   Author      Inflectra Corporation
-#   Version     2.3.0
-#
-class TestSeleniumSample(unittest.TestCase):
+<span class="c1">#   A sample Selenium test using the ability to return results back to SpiraTest</span>
+<span class="c1">#</span>
+<span class="c1">#   Author      Inflectra Corporation</span>
+<span class="c1">#   Version     2.3.0</span>
+<span class="c1">#</span>
+<span class="k">class</span> <span class="nc">TestSeleniumSample</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
-    seleniumHost = 'localhost'
-    seleniumPort = str(4444)
-    browserStartCommand = &quot;*firefox&quot;
-    browserURL = &quot;http://www.google.com&quot;
+    <span class="n">seleniumHost</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+    <span class="n">seleniumPort</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">4444</span><span class="p">)</span>
+    <span class="n">browserStartCommand</span> <span class="o">=</span> <span class="s2">&quot;*firefox&quot;</span>
+    <span class="n">browserURL</span> <span class="o">=</span> <span class="s2">&quot;http://www.google.com&quot;</span>
 
-    def setUp(self):
-        print &quot;Using selenium server at &quot; + self.seleniumHost + &quot;:&quot; + self.seleniumPort
-        self.selenium = selenium(self.seleniumHost, self.seleniumPort, self.browserStartCommand, self.browserURL)
-        self.selenium.start()
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="s2">&quot;Using selenium server at &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumHost</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumPort</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span> <span class="o">=</span> <span class="n">selenium</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seleniumHost</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumPort</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">browserStartCommand</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">browserURL</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-    def testGoogle__4(self):
-        selenium = self.selenium
-        selenium.open(&quot;http://www.google.com/webhp?hl=en&quot;)
+    <span class="k">def</span> <span class="nf">testGoogle__4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">selenium</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span>
+        <span class="n">selenium</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://www.google.com/webhp?hl=en&quot;</span><span class="p">)</span>
 
-        #Verifies that the title matches
-        self.assertEqual (&quot;Google&quot;, selenium.get_title())
-        selenium.type(&quot;q&quot;, &quot;Selenium OpenQA&quot;)
+        <span class="c1">#Verifies that the title matches</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span> <span class="p">(</span><span class="s2">&quot;Google&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="o">.</span><span class="n">get_title</span><span class="p">())</span>
+        <span class="n">selenium</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;Selenium OpenQA&quot;</span><span class="p">)</span>
 
-        #Verifies that it can find the Selenium website
-        self.assertEqual(&quot;Selenium OpenQA&quot;, selenium.get_value(&quot;q&quot;))
-        selenium.click(&quot;btnG&quot;)
-        selenium.wait_for_page_to_load(&quot;5000&quot;)
-        self.assertEqual(&quot;Selenium OpenQA - Google Search&quot;, selenium.get_title())
+        <span class="c1">#Verifies that it can find the Selenium website</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;Selenium OpenQA&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;q&quot;</span><span class="p">))</span>
+        <span class="n">selenium</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s2">&quot;btnG&quot;</span><span class="p">)</span>
+        <span class="n">selenium</span><span class="o">.</span><span class="n">wait_for_page_to_load</span><span class="p">(</span><span class="s2">&quot;5000&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;Selenium OpenQA - Google Search&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="o">.</span><span class="n">get_title</span><span class="p">())</span>
 
-    def tearDown(self):
-        self.selenium.stop()
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
-suite = unittest.TestLoader().loadTestsFromTestCase(TestSeleniumSample)
-testResult = unittest.TextTestRunner(verbosity=2).run(suite)
-releaseId = 1
-testSetId = -1
-spiraTestExtension = spiratestextension.SpiraTestExtension()
-spiraTestExtension.projectId = 1
-spiraTestExtension.server = &quot;localhost&quot;
-spiraTestExtension.port = 80
-spiraTestExtension.path = &quot;SpiraTest&quot;
-spiraTestExtension.userName = &quot;fredbloggs&quot;
-spiraTestExtension.password = &quot;fredbloggs&quot;
-spiraTestExtension.recordResults(TestSeleniumSample, testResult, releaseId, testSetId, &quot;Selenium&quot;)
-</code></pre>
+<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSeleniumSample</span><span class="p">)</span>
+<span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+<span class="n">releaseId</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">testSetId</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">spiraTestExtension</span> <span class="o">=</span> <span class="n">spiratestextension</span><span class="o">.</span><span class="n">SpiraTestExtension</span><span class="p">()</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;SpiraTest&quot;</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSeleniumSample</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span> <span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">,</span> <span class="s2">&quot;Selenium&quot;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>The details of the sample itself are described in more detail on the
 Selenium website, and you can see that we have added the SpiraTest
@@ -1031,7 +1034,7 @@ results back as being generated by Selenium rather than PyUnit.</p></div>
 
         <footer class="col-md-12">
 <hr>
-<p>© Copyright 2006-2019 Inflectra Corporation, All Rights Reserved | en-US |</p>
+<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
         </footer>
         <script>
             var base_url = "../..",
