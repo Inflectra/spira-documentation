@@ -225,19 +225,22 @@ Once you have extracted the files listed above, open up the
 
 ```
 
-This file contains the configuration data used by the RemoteLaunch-X application
+#This file contains the configuration data used by the RemoteLaunch-X application
 
+#Spira connection information
+server-url = http://vm-win2012r2/SpiraTeam
+server-login = fredbloggs
+server-token = {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
 
-Spira connection information server-url = http://vm-win2012r2/SpiraTeam server-login = fredbloggs server-password = PleaseChange
+#The automation host token 
+host-token = MyHost1
 
+#The license key 
+license-organization: TBD 
+license-key: TBD
 
-The automation host token host-token = MyHost1
-
-
-The license key license-organization: TBD license-key: TBD
-
-
-The regular expressions for each of the possible execution statuses pass-regex = .*
+#The regular expressions for each of the possible execution statuses
+pass-regex = .*
 fail-regex = .*(Error|Fail|Fatal).*
 caution-regex = .*(Warning|Caution).*
 blocked-regex = .*(Blocked).*
@@ -249,7 +252,7 @@ The following changes need to be made to this configuration file:
 
 -   **server-login** -- This is the SpiraTest login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.
 
--   **server-password** -- The password of the SpiraTest login listed above.
+-   **server-token** -- The RSS Token of the SpiraTest login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.
 
 -   **host-token** -- This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on SpiraTest will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  ***Important***: This field must match the string that is entered into the Automation Host Details screen in the **Token**: field, or scheduled tests will not be recognized.
 
