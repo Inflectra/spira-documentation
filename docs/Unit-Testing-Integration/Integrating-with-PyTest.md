@@ -36,92 +36,74 @@ Here is a sample test file:
 ```python
 import pytest
 
-\# Function we are testing
-
+# Function we are testing
 def add(num1, num2):
+  return num1 + num2
 
-return num1 + num2
+# Successful test
+def test_add_1():
+  assert add(1, 1) == 2
 
-\# Successful test
+# Failed test
+def test_add_2():
+  assert add(2, 1) == 2
 
-def test\_add\_1():
-
-assert add(1, 1) == 2
-
-\# Failed test
-
-def test\_add\_2():
-
-assert add(2, 1) == 2
-
-\# Failed test
-
-def test\_add\_3():
-
-assert add(4, 1) == 6
+# Failed test
+def test_add_3():
+  assert add(4, 1) == 6
 ```
 
-Note how test\_add\_2 is used in the configuration file discussed below.
+Note how test_add_2 is used in the configuration file discussed below.
 
 In your test root folder (the folder you run the pytest command from),
 create a file named "spira.cfg" with the following:
 
 ```cfg
-\[credentials\]
-
-\# Following are required
+[credentials]
+# Following are required
 
 url = localhost/SpiraTest
-
 username = fredbloggs
-
 token = {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}
+project_id = 1
 
-project\_id = 1
+# Following are optional:
+release_id = 5
+test_set_id = 1
 
-\# Following are optional:
-
-release\_id = 5
-
-test\_set\_id = 1
-
-\[test\_cases\]
-
-\# Assigned to the rest
-
+[test_cases]
+# Assigned to the rest
 default = 20
-
-\# Test case for a specific function
-
-test\_add\_2 = 22
+# Test case for a specific function
+test_add_2 = 22
 ```
 
 For the plugin to work, you must have both settings groups (credentials
-and test\_cases) with the following in the credentials group:
+and test_cases) with the following in the credentials group:
 
-**url** -- The base url to your SpiraTest installation, without a '/' at
+- **url** -- The base url to your SpiraTest installation, without a '/' at
 the end.
 
-**username** -- The username you use to sign into SpiraTest.
+- **username** -- The username you use to sign into SpiraTest.
 
-**token** -- Your RSS Token. Found in your profile page as the "RSS
+- **token** -- Your RSS Token. Found in your profile page as the "RSS
 Token" field, you must have RSS Feeds enabled for this to work.
 
-**project\_id** -- The ID of the project you would like the test runs to
+- **project_id** -- The ID of the project you would like the test runs to
 be sent to
 
-**release\_id** -- OPTIONAL -- Use if you would like to associate the
+- **release_id** -- OPTIONAL -- Use if you would like to associate the
 test run with a release.
 
-**test\_set\_id** -- OPTIONAL -- Use if you would like to associate the
+- **test_set_id** -- OPTIONAL -- Use if you would like to associate the
 test run with a test set.
 
-Under the test\_cases group, put the following:
+Under the test_cases group, put the following:
 
-**default** -- The default test case ID for functions without an
+- **default** -- The default test case ID for functions without an
 assigned test case
 
-**<function name\>** - Used to override the default setting for a
+- **\<function name>** - Used to override the default setting for a
 function's test case ID in SpiraTest. Only include the function name,
 without the parentheses.
 
@@ -130,7 +112,7 @@ go!
 
 Running the pytest (or py.test) command will run your unit tests, send
 the data to SpiraTest, and show the results to you. Here is an example
-of the test\_add\_3 function inside SpiraTest:
+of the test_add_3 function inside SpiraTest:
 
 ![](img/Integrating_with_PyTest_16.png)
 
