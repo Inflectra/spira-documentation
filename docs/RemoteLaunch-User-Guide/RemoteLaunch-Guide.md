@@ -244,6 +244,9 @@ pass-regex = .*
 fail-regex = (?i).*(Error|Fail|Fatal).*
 caution-regex = .*(Warning|Caution).*
 blocked-regex = .*(Blocked).*
+
+#Default status for output not matching any of the regular expressions above
+default-test-status = Not Run
 ```
 
 The following changes need to be made to this configuration file:
@@ -423,6 +426,11 @@ If you have parameterized test cases inside the automated test set you can set t
 -   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 ![](img/RemoteLaunch_Guide_19.png)
 
+### RemoteLaunchX Command Line Options
+
+- **testset** -- If you would like to force execution of a test set regardless of its status, you can use the `-testset` command-line option just as in RemoteLaunch. Simply add `-testset:[ID]` where \[ID\] is the ID of the test set you would like to execute. e.g. `java -jar RemoteLaunchX.jar -testset:24 -testset:37`
+
+- **project** -- If you would like to limit the projects scanned by RemoteLaunchX, you can use the `-project` command-line option. Simply add `-project:[ID]` where \[ID\] is the ID of the project. e.g. `java -jar RemoteLaunchX.jar -project:1 project:6`
 
 ## Running RemoteLaunchX
 
@@ -505,7 +513,7 @@ Unlike the main RemoteLaunch application, RemoteLaunchX does not have a built-in
 
 ## Customizing the Reporting
 
-By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution):
+By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution) Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the `(?i)` flag to the beginning just as in the `fail-regex` below.
 
 **Passed** -- The test completed and the console output didn't contain any of the error phrases listed in the other rules (below).
 
@@ -515,7 +523,7 @@ By default, RemoteLaunchX will use the following rules to determine if a test ha
 
 **Blocked** -- The automated test did not run successfully or the console output contained the phrase "Blocked".
 
-You can customize the reporting by changing the Regular Expressions (Regex) stored in the config.properties files:
+You can customize the reporting by changing the Regular Expressions (Regex) and the default test status stored in the config.properties files:
 
 ```
 \#The regular expressions for each of the possible execution statuses
@@ -524,8 +532,10 @@ pass-regex = .\*
 fail-regex = (?i).\*(Error\|Fail\|Fatal).\*
 caution-regex = .\*(Warning\|Caution).\*
 blocked-regex = .\*(Blocked).\*
+
+\#Default status for output not matching any of the regular expressions above
+default-test-status = Not Run
 ```
 
-Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the `(?i)` flag to the beginning just as in the `fail-regex` above.
 
 
