@@ -241,7 +241,7 @@ license-key: TBD
 
 #The regular expressions for each of the possible execution statuses
 pass-regex = .*
-fail-regex = .*(Error|Fail|Fatal).*
+fail-regex = (?i).*(Error|Fail|Fatal).*
 caution-regex = .*(Warning|Caution).*
 blocked-regex = .*(Blocked).*
 ```
@@ -517,13 +517,15 @@ By default, RemoteLaunchX will use the following rules to determine if a test ha
 
 You can customize the reporting by changing the Regular Expressions (Regex) stored in the config.properties files:
 
+```
 \#The regular expressions for each of the possible execution statuses
 
 pass-regex = .\*
-
-fail-regex = .\*(Error\|Fail\|Fatal).\*
-
+fail-regex = (?i).\*(Error\|Fail\|Fatal).\*
 caution-regex = .\*(Warning\|Caution).\*
-
 blocked-regex = .\*(Blocked).\*
+```
+
+Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the `(?i)` flag to the beginning just as in the `fail-regex` above.
+
 
