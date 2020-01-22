@@ -526,14 +526,14 @@ By default, RemoteLaunchX will use the following rules to determine if a test ha
 You can customize the reporting by changing the Regular Expressions (Regex) and the default test status stored in the config.properties files:
 
 ```
-\#The regular expressions for each of the possible execution statuses
+#The regular expressions for each of the possible execution statuses
 
 pass-regex = .\*
 fail-regex = (?i).\*(Error\|Fail\|Fatal).\*
 caution-regex = .\*(Warning\|Caution).\*
 blocked-regex = .\*(Blocked).\*
 
-\#Default status for output not matching any of the regular expressions above
+#Default status for output not matching any of the regular expressions above
 default-test-status = Not Run
 ```
 
