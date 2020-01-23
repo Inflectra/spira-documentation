@@ -802,84 +802,86 @@ working tests configured.</p>
 <p>Here is a sample test file:</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
 
-\<span class="c1"># Function we are testing</span>
-
+<span class="c1"># Function we are testing</span>
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
 
-<span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+<span class="c1"># Successful test</span>
+<span class="k">def</span> <span class="nf">test_add_1</span><span class="p">():</span>
+  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-\<span class="c1"># Successful test</span>
+<span class="c1"># Failed test</span>
+<span class="k">def</span> <span class="nf">test_add_2</span><span class="p">():</span>
+  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
-<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_1</span><span class="p">():</span>
-
-<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-
-\<span class="c1"># Failed test</span>
-
-<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_2</span><span class="p">():</span>
-
-<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-
-\<span class="c1"># Failed test</span>
-
-<span class="k">def</span> <span class="nf">test</span>\<span class="n">_add</span>\<span class="n">_3</span><span class="p">():</span>
-
-<span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+<span class="c1"># Failed test</span>
+<span class="k">def</span> <span class="nf">test_add_3</span><span class="p">():</span>
+  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
 </pre></div>
 
 
 <p>Note how test_add_2 is used in the configuration file discussed below.</p>
 <p>In your test root folder (the folder you run the pytest command from),
 create a file named "spira.cfg" with the following:</p>
-<div class="codehilite"><pre><span></span><span class="na">\[credentials\]</span>
-
-<span class="na">\# Following are required</span>
+<div class="codehilite"><pre><span></span><span class="k">[credentials]</span>
+<span class="c1"># Following are required</span>
 
 <span class="na">url</span> <span class="o">=</span> <span class="s">localhost/SpiraTest</span>
-
 <span class="na">username</span> <span class="o">=</span> <span class="s">fredbloggs</span>
-
 <span class="na">token</span> <span class="o">=</span> <span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
+<span class="na">project_id</span> <span class="o">=</span> <span class="s">1</span>
 
-<span class="na">project\_id</span> <span class="o">=</span> <span class="s">1</span>
+<span class="c1"># Following are optional:</span>
+<span class="na">release_id</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">test_set_id</span> <span class="o">=</span> <span class="s">1</span>
 
-<span class="na">\# Following are optional:</span>
-
-<span class="na">release\_id</span> <span class="o">=</span> <span class="s">5</span>
-
-<span class="na">test\_set\_id</span> <span class="o">=</span> <span class="s">1</span>
-
-<span class="na">\[test\_cases\]</span>
-
-<span class="na">\# Assigned to the rest</span>
-
+<span class="k">[test_cases]</span>
+<span class="c1"># Assigned to the rest</span>
 <span class="na">default</span> <span class="o">=</span> <span class="s">20</span>
-
-<span class="na">\# Test case for a specific function</span>
-
-<span class="na">test\_add\_2</span> <span class="o">=</span> <span class="s">22</span>
+<span class="c1"># Test case for a specific function</span>
+<span class="na">test_add_2</span> <span class="o">=</span> <span class="s">22</span>
 </pre></div>
 
 
 <p>For the plugin to work, you must have both settings groups (credentials
 and test_cases) with the following in the credentials group:</p>
+<ul>
+<li>
 <p><strong>url</strong> -- The base url to your SpiraTest installation, without a '/' at
 the end.</p>
+</li>
+<li>
 <p><strong>username</strong> -- The username you use to sign into SpiraTest.</p>
+</li>
+<li>
 <p><strong>token</strong> -- Your RSS Token. Found in your profile page as the "RSS
 Token" field, you must have RSS Feeds enabled for this to work.</p>
+</li>
+<li>
 <p><strong>project_id</strong> -- The ID of the project you would like the test runs to
 be sent to</p>
+</li>
+<li>
 <p><strong>release_id</strong> -- OPTIONAL -- Use if you would like to associate the
 test run with a release.</p>
+</li>
+<li>
 <p><strong>test_set_id</strong> -- OPTIONAL -- Use if you would like to associate the
 test run with a test set.</p>
+</li>
+</ul>
 <p>Under the test_cases group, put the following:</p>
+<ul>
+<li>
 <p><strong>default</strong> -- The default test case ID for functions without an
 assigned test case</p>
-<p><strong>&lt;function name></strong> - Used to override the default setting for a
+</li>
+<li>
+<p><strong>\<function name></strong> - Used to override the default setting for a
 function's test case ID in SpiraTest. Only include the function name,
 without the parentheses.</p>
+</li>
+</ul>
 <p>Once you have filled out all of the configurations, you are all set to
 go!</p>
 <p>Running the pytest (or py.test) command will run your unit tests, send

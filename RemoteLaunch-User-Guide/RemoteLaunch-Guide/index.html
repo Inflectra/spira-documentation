@@ -797,6 +797,7 @@
         
         <li class="second-level"><a href="#setting-up-automated-tests-in-spiratest">Setting up Automated Tests in SpiraTest</a></li>
         
+        <li class="third-level"><a href="#remotelaunchx-command-line-options">RemoteLaunchX Command Line Options</a></li>
         <li class="second-level"><a href="#running-remotelaunchx">Running RemoteLaunchX</a></li>
         
         <li class="second-level"><a href="#scheduling-remotelaunchx">Scheduling RemoteLaunchX</a></li>
@@ -1021,22 +1022,28 @@ computers provided that they have the Java 1.7 (or later) runtime installed.</p>
 <h2 id="configuring-remotelaunchx">Configuring RemoteLaunchX</h2>
 <p>Once you have extracted the files listed above, open up the
 <strong>config.properties</strong> file in a text editor:</p>
-<div class="codehilite"><pre><span></span><span class="n">This</span> <span class="n">file</span> <span class="k">contains</span> <span class="n">the</span> <span class="n">configuration</span> <span class="k">data</span> <span class="n">used</span> <span class="k">by</span> <span class="n">the</span> <span class="n">RemoteLaunch</span><span class="o">-</span><span class="n">X</span> <span class="n">application</span>
+<div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">This</span> <span class="n">file</span> <span class="k">contains</span> <span class="n">the</span> <span class="n">configuration</span> <span class="k">data</span> <span class="n">used</span> <span class="k">by</span> <span class="n">the</span> <span class="n">RemoteLaunch</span><span class="o">-</span><span class="n">X</span> <span class="n">application</span>
 
+<span class="o">#</span><span class="n">Spira</span> <span class="k">connection</span> <span class="n">information</span>
+<span class="n">server</span><span class="o">-</span><span class="n">url</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">vm</span><span class="o">-</span><span class="n">win2012r2</span><span class="o">/</span><span class="n">SpiraTeam</span>
+<span class="n">server</span><span class="o">-</span><span class="n">login</span> <span class="o">=</span> <span class="n">fredbloggs</span>
+<span class="n">server</span><span class="o">-</span><span class="n">token</span> <span class="o">=</span> <span class="err">{</span><span class="n">XXXXXXXX</span><span class="o">-</span><span class="n">XXXX</span><span class="o">-</span><span class="n">XXXX</span><span class="o">-</span><span class="n">XXXX</span><span class="o">-</span><span class="n">XXXXXXXXXXXX</span><span class="err">}</span>
 
-<span class="n">Spira</span> <span class="k">connection</span> <span class="n">information</span> <span class="n">server</span><span class="o">-</span><span class="n">url</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">vm</span><span class="o">-</span><span class="n">win2012r2</span><span class="o">/</span><span class="n">SpiraTeam</span> <span class="n">server</span><span class="o">-</span><span class="n">login</span> <span class="o">=</span> <span class="n">fredbloggs</span> <span class="n">server</span><span class="o">-</span><span class="n">password</span> <span class="o">=</span> <span class="n">PleaseChange</span>
+<span class="o">#</span><span class="n">The</span> <span class="n">automation</span> <span class="k">host</span> <span class="n">token</span> 
+<span class="k">host</span><span class="o">-</span><span class="n">token</span> <span class="o">=</span> <span class="n">MyHost1</span>
 
+<span class="o">#</span><span class="n">The</span> <span class="n">license</span> <span class="k">key</span> 
+<span class="n">license</span><span class="o">-</span><span class="n">organization</span><span class="p">:</span> <span class="n">TBD</span> 
+<span class="n">license</span><span class="o">-</span><span class="k">key</span><span class="p">:</span> <span class="n">TBD</span>
 
-<span class="n">The</span> <span class="n">automation</span> <span class="k">host</span> <span class="n">token</span> <span class="k">host</span><span class="o">-</span><span class="n">token</span> <span class="o">=</span> <span class="n">MyHost1</span>
-
-
-<span class="n">The</span> <span class="n">license</span> <span class="k">key</span> <span class="n">license</span><span class="o">-</span><span class="n">organization</span><span class="p">:</span> <span class="n">TBD</span> <span class="n">license</span><span class="o">-</span><span class="k">key</span><span class="p">:</span> <span class="n">TBD</span>
-
-
-<span class="n">The</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="k">for</span> <span class="k">each</span> <span class="k">of</span> <span class="n">the</span> <span class="n">possible</span> <span class="n">execution</span> <span class="n">statuses</span> <span class="n">pass</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="o">*</span>
-<span class="n">fail</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="o">*</span><span class="p">(</span><span class="n">Error</span><span class="o">|</span><span class="n">Fail</span><span class="o">|</span><span class="n">Fatal</span><span class="p">).</span><span class="o">*</span>
+<span class="o">#</span><span class="n">The</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="k">for</span> <span class="k">each</span> <span class="k">of</span> <span class="n">the</span> <span class="n">possible</span> <span class="n">execution</span> <span class="n">statuses</span>
+<span class="n">pass</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="o">*</span>
+<span class="n">fail</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">(</span><span class="o">?</span><span class="n">i</span><span class="p">).</span><span class="o">*</span><span class="p">(</span><span class="n">Error</span><span class="o">|</span><span class="n">Fail</span><span class="o">|</span><span class="n">Fatal</span><span class="p">).</span><span class="o">*</span>
 <span class="n">caution</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="o">*</span><span class="p">(</span><span class="n">Warning</span><span class="o">|</span><span class="n">Caution</span><span class="p">).</span><span class="o">*</span>
 <span class="n">blocked</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="o">*</span><span class="p">(</span><span class="n">Blocked</span><span class="p">).</span><span class="o">*</span>
+
+<span class="o">#</span><span class="k">Default</span> <span class="n">status</span> <span class="k">for</span> <span class="k">output</span> <span class="k">not</span> <span class="n">matching</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="n">above</span>
+<span class="k">default</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">status</span> <span class="o">=</span> <span class="k">Not</span> <span class="n">Run</span>
 </pre></div>
 
 
@@ -1049,7 +1056,7 @@ computers provided that they have the Java 1.7 (or later) runtime installed.</p>
 <p><strong>server-login</strong> -- This is the SpiraTest login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.</p>
 </li>
 <li>
-<p><strong>server-password</strong> -- The password of the SpiraTest login listed above.</p>
+<p><strong>server-token</strong> -- The RSS Token of the SpiraTest login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.</p>
 </li>
 <li>
 <p><strong>host-token</strong> -- This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on SpiraTest will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  <strong><em>Important</em></strong>: This field must match the string that is entered into the Automation Host Details screen in the <strong>Token</strong>: field, or scheduled tests will not be recognized.</p>
@@ -1190,6 +1197,15 @@ Test Sets to create the test sets that will contain the automated test case. Not
 <img alt="" src="../img/RemoteLaunch_Guide_19.png" /></p>
 </li>
 </ul>
+<h3 id="remotelaunchx-command-line-options">RemoteLaunchX Command Line Options</h3>
+<ul>
+<li>
+<p><strong>testset</strong> -- If you would like to force execution of a test set regardless of its status, you can use the <code>-testset</code> command-line option just as in RemoteLaunch. Simply add <code>-testset:[ID]</code> where [ID] is the ID of the test set you would like to execute. e.g. <code>java -jar RemoteLaunchX.jar -testset:24 -testset:37</code></p>
+</li>
+<li>
+<p><strong>project</strong> -- If you would like to limit the projects scanned by RemoteLaunchX, you can use the <code>-project</code> command-line option. Simply add <code>-project:[ID]</code> where [ID] is the ID of the project. e.g. <code>java -jar RemoteLaunchX.jar -project:1 project:6</code></p>
+</li>
+</ul>
 <h2 id="running-remotelaunchx">Running RemoteLaunchX</h2>
 <p>Once you have set the various test set fields (as described above), you are now ready to execute RemoteLaunchX. You can execute the RemoteLaunchX console application by either running the provided batch /
 shell command or just executing the JAR file directly:</p>
@@ -1237,17 +1253,22 @@ exist in projec PR3.</p>
 <h2 id="scheduling-remotelaunchx">Scheduling RemoteLaunchX</h2>
 <p>Unlike the main RemoteLaunch application, RemoteLaunchX does not have a built-in timer and so when executed it will run once, check for pending test sets and then exit. If you want to have it run on a periodic basis, you will need to schedule it externally. If you are using Microsoft Windows® you would use the Windows Task Scheduler and in other operating systems you would setup a CRON job. We recommend scheduling RemoteLaunchX to run every 5 minutes.</p>
 <h2 id="customizing-the-reporting">Customizing the Reporting</h2>
-<p>By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution):</p>
+<p>By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution) Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the <code>(?i)</code> flag to the beginning just as in the <code>fail-regex</code> below.</p>
 <p><strong>Passed</strong> -- The test completed and the console output didn't contain any of the error phrases listed in the other rules (below).</p>
 <p><strong>Failed</strong> -- The test completed and the console output contained the phrases "Error", "Fail" or "Fatal".</p>
 <p><strong>Caution</strong> -- The test completed and the console output contained the phrases "Warning", or "Caution".</p>
 <p><strong>Blocked</strong> -- The automated test did not run successfully or the console output contained the phrase "Blocked".</p>
-<p>You can customize the reporting by changing the Regular Expressions (Regex) stored in the config.properties files:</p>
-<p>#The regular expressions for each of the possible execution statuses</p>
-<p>pass-regex = .*</p>
-<p>fail-regex = .*(Error|Fail|Fatal).*</p>
-<p>caution-regex = .*(Warning|Caution).*</p>
-<p>blocked-regex = .*(Blocked).*</p></div>
+<p>You can customize the reporting by changing the Regular Expressions (Regex) and the default test status stored in the config.properties files:</p>
+<div class="codehilite"><pre><span></span><span class="o">#</span><span class="n">The</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="k">for</span> <span class="k">each</span> <span class="k">of</span> <span class="n">the</span> <span class="n">possible</span> <span class="n">execution</span> <span class="n">statuses</span>
+
+<span class="n">pass</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="err">\</span><span class="o">*</span>
+<span class="n">fail</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">(</span><span class="o">?</span><span class="n">i</span><span class="p">).</span><span class="err">\</span><span class="o">*</span><span class="p">(</span><span class="n">Error</span><span class="err">\</span><span class="o">|</span><span class="n">Fail</span><span class="err">\</span><span class="o">|</span><span class="n">Fatal</span><span class="p">).</span><span class="err">\</span><span class="o">*</span>
+<span class="n">caution</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="err">\</span><span class="o">*</span><span class="p">(</span><span class="n">Warning</span><span class="err">\</span><span class="o">|</span><span class="n">Caution</span><span class="p">).</span><span class="err">\</span><span class="o">*</span>
+<span class="n">blocked</span><span class="o">-</span><span class="n">regex</span> <span class="o">=</span> <span class="p">.</span><span class="err">\</span><span class="o">*</span><span class="p">(</span><span class="n">Blocked</span><span class="p">).</span><span class="err">\</span><span class="o">*</span>
+
+<span class="o">#</span><span class="k">Default</span> <span class="n">status</span> <span class="k">for</span> <span class="k">output</span> <span class="k">not</span> <span class="n">matching</span> <span class="k">any</span> <span class="k">of</span> <span class="n">the</span> <span class="n">regular</span> <span class="n">expressions</span> <span class="n">above</span>
+<span class="k">default</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">status</span> <span class="o">=</span> <span class="k">Not</span> <span class="n">Run</span>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">
