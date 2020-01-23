@@ -564,9 +564,7 @@ Once you have chosen the appropriate release name and/or custom properties, clic
 There is a second test execution view: the [exploratory test execution module](#exploratory-test-execution). This has much in common with standard test execution but differs in a number of important ways. You will automatically see this module if the following three conditions are met;
 
 1.  you are executing a single test case (not a test set or a test case as part of a test set);
-
-2.  that test case is of type "exploratory"; and
-
+2.  that test case type has its "Is Exploratory" flag set to true / yes (in the template administration that the product uses); and
 3.  you have the necessary permissions (you can create test cases)
 
 ![](img/Test_Case_Management_171.png)
