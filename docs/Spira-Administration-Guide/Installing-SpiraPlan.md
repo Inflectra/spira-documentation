@@ -237,7 +237,7 @@ This is the easiest option when the application and database will be residing on
 
 **b) SQL Server Authentication \[advanced only\]**
 
-This is the easiest option when the application and databases will be residing on *different* servers across the network. In this case, choose "SQL Server Authentication" and provide a SQL Server Login that has Database Owner (DB-Owner) permissions -- e.g. the built in System Administrator (SA) account. The installer will use this DB-Owner account to create the database objects, and SpiraPlan® will use a special login (called SpiraPlan by default) for normal application operations.
+This is the easiest option when the application and databases will be residing on *different* servers across the network. In this case, choose "SQL Server Authentication" and provide a SQL Server Login that has full sysadmin permissions -- e.g. the built in System Administrator (SA) account. The installer will use this sysadmin account to create the database objects, and SpiraPlan® will use a special login (called SpiraPlan by default) for normal application operations.
 
 **Setting the Correct Server Instance**
 
