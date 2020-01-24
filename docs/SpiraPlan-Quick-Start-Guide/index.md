@@ -21,7 +21,7 @@ The My Page looks pretty empty right now. This is normal.
 
 ![](img/Logging_In_and_Selecting_a_Product_5.png)
 
-For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Next to see the homepage for the empty product click on the hexagon in the top left:
+For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Now to see the homepage for the product you just selected click on the hexagon in the top left:
 
 ![](img/Logging_In_and_Selecting_a_Product_6.png)
 
