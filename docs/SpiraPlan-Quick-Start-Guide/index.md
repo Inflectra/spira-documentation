@@ -21,7 +21,7 @@ The My Page looks pretty empty right now. This is normal.
 
 ![](img/Logging_In_and_Selecting_a_Product_5.png)
 
-For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will bring up the homepage for the empty product:
+For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Now to see the homepage for the product you just selected click on the hexagon in the top left:
 
 ![](img/Logging_In_and_Selecting_a_Product_6.png)
 
@@ -98,7 +98,7 @@ You now have a prioritized list of user story requirements:
 
 ![](img/Define_the_Requirements_11.png)
 
-The next thing we can do is assign estimates to each requirement. This is something that the developers or business analysts may do based on the complexity and scope of each. The 'Estimates' column is not visible yet, so first we need to show it. To do that, click on the 'Show/Hide Columns' dropdown list and select 'Show Estimate'.:
+The next thing we can do is assign estimates to each requirement. This is something that the developers or business analysts may do based on the complexity and scope of each. The 'Estimates' column is not visible yet, so first we need to show it. To do that, click on the 'Show/Hide Columns' dropdown list and select 'Show Estimate (points)'.:
 
 ![](img/Define_the_Requirements_12.png)
 
@@ -324,16 +324,16 @@ This test case needs 3 test steps.
 
 1.  Click 'Edit' on 'Step 1' and enter the first set of parameters below.
 
-2.  Click 'Save and New' to add the second test step and enter its information from below
+2.  Click 'Save' and then 'Insert Step' to add the second test step and enter its information from below
 
-3.  Click 'Save and New' again to make the third step
+3.  Click 'Save and New' to make the third step
 
 4.  Once you've entered its information click 'Save'
 
 | **Test Step Description**      |                               **Expected Result**      |   **Sample Data** |
 | ----------- | -------------------- | ------------------ |
 Click on the link to add new user      |                       New user screen displayed   | |
-Enter the name, email address and password of the new user. |  Data accepted    |           Fred Bloggs<br><fredblogs@aol.com> |
+Enter the name, email address and password of the new user. |  Data accepted    |           Fred Bloggs<br><fredblogs@example.com> |
 Click the 'Submit' button to create the user.     |            The user is created     |   | 
 
 You should now have the following test steps in the test case:
@@ -580,7 +580,7 @@ Next, let's assign this test set to a specific release and to a particular teste
 
 -   Owner = System Administrator (your user)
 
--   Release = Release 1.0 - Iteration 1
+-   Scheduled = Release 1.0 - Iteration 1
 
 -   Planned Date = (Today's Date).
 
