@@ -1,0 +1,11 @@
+# Legal Notices
+
+This publication is provided as is without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+This publication could include technical inaccuracies or typographical errors. Changes are periodically added to the information contained herein; these changes will be incorporated in new editions of the publication. Inflectra Corporation may make improvements and/or changes in the product(s) and/or program(s) and/or service(s) described in this publication at any time.
+
+The sections in this guide that discuss internet web security are provided as suggestions and guidelines. Internet security is constantly evolving field, and our suggestions are no substitute for an up-to-date understanding of the vulnerabilities inherent in deploying internet or web applications, and Inflectra cannot be held liable for any losses due to breaches of security, compromise of data or other cyber-attacks that may result from following our recommendations.
+
+The section of the manual that describes modifying the Windows System Registry ("Registry") should only be attempted by experienced Windows administrators who are familiar with its organization and contents. Inflectra<sup>®</sup> cannot be held liable for any losses due to damage to the system registry made by inexperienced personnel.
+
+Spira™, TaraVault<sup>®</sup>, SpiraPlan<sup>®</sup>, SpiraTeam<sup>®</sup>, SpiraTest<sup>®</sup> and Inflectra<sup>®</sup> are either trademarks or registered trademarks of Inflectra Corporation in the United States of America and other countries. Microsoft<sup>®</sup>, Windows<sup>®</sup>, Explorer<sup>®</sup>, Microsoft Project<sup>®</sup> and Visual SourceSafe<sup>®</sup> are registered trademarks of Microsoft Corporation. Subversion<sup>®</sup> is a registered trademark of Collabnet, Inc.  iOS, iPod, iPad and iPhone are registered trademarks of Apple Corporation, Android® is a registered trademark of Google Corporation, and Kindle Fire® is a registered trademark of Amazon LLC. All other trademarks and product names are property of their respective holders.

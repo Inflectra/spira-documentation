@@ -9,10 +9,33 @@ google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
 markdown_extensions:
   - attr_list
   - footnotes
-  - codehilite
+  - admonition
+  - codehilite:
+      linenums: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 theme: 
-  name: mkdocs
+  name: 'material'
+  palette:
+    primary: 'black'
+    accent: 'amber'
+  favicon: 'img/favicon.ico'
+  logo: 'img/logo.svg'
   custom_dir: inflectra_mkdocs
 
 nav:
@@ -177,3 +200,7 @@ nav:
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
+- About:
+  - Release Notes for v6: About/release-notes-v6.md
+  - Introduction to Spira: About/introduction-to-spira.md
+  - Legal Notices: About/legal-notices.md
