@@ -1,907 +1,3431 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=9">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
-<link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Test-Case-Management/">
 
-<link rel="shortcut icon" href="../../img/favicon.ico">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Test-Case-Management/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
         <title>Test Case Management - SpiraDocs</title>
-<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-<link href="../../css/font-awesome.min.css" rel="stylesheet">
-<link href="../../css/base.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/base.css">
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-<script src="../../js/jquery-1.10.2.min.js" defer></script>
-<script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-<script src="/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-1302007-6', 'https://spiradoc.inflectra.com/');
-            ga('send', 'pageview');
-        </script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-<a class="navbar-brand" href="../..">SpiraDocs</a>
-
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Manual <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../Functionality-Overview/">Functionality Overview</a>
-</li>
-                                    
-<li >
-    <a href="../Application-Wide/">Common Elements Across the Application</a>
-</li>
-                                    
-<li >
-    <a href="../User-Product-Management/">User/Product Management</a>
-</li>
-                                    
-<li >
-    <a href="../Requirements-Management/">Requirements Management</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Test Case Management</a>
-</li>
-                                    
-<li >
-    <a href="../Incident-Tracking/">Incident Tracking</a>
-</li>
-                                    
-<li >
-    <a href="../Release-Management/">Release Management</a>
-</li>
-                                    
-<li >
-    <a href="../Task-Tracking/">Task Tracking</a>
-</li>
-                                    
-<li >
-    <a href="../Resource-Tracking/">Resource Tracking</a>
-</li>
-                                    
-<li >
-    <a href="../Document-Management/">Document Management</a>
-</li>
-                                    
-<li >
-    <a href="../Reports-Center/">Reports Center</a>
-</li>
-                                    
-<li >
-    <a href="../Source-Code/">Source Code</a>
-</li>
-                                    
-<li >
-    <a href="../Planning-Board/">Planning Board</a>
-</li>
-                                    
-<li >
-    <a href="../Mobile-Access/">Mobile Access</a>
-</li>
-                                    
-<li >
-    <a href="../Program-Management/">Program Management</a>
-</li>
-                                    
-<li >
-    <a href="../Risks-Management/">Risk Management</a>
-</li>
-                                    
-<li >
-    <a href="../Appendix-1-Keyboard-Shortcuts/">Appendix 1: Keyboard Shortcuts</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start Guides <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Mini How-To Guides</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../HowTo-Guides/Users-orientation/">Moving Around the Application</a>
-</li>
-            
-<li >
-    <a href="../../HowTo-Guides/Users-profile-management/">Managing Your User Profile</a>
-</li>
-            
-<li >
-    <a href="../../HowTo-Guides/Admins-orientation/">Getting to Know Administration</a>
-</li>
-            
-<li >
-    <a href="../../HowTo-Guides/Admins-templates/">Template Administration</a>
-</li>
-    </ul>
-  </li>
-                                    
-<li >
-    <a href="../../SpiraPlan-Quick-Start-Guide/">SpiraPlan</a>
-</li>
-                                    
-<li >
-    <a href="../../SpiraTeam-Quick-Start-Guide/">SpiraTeam</a>
-</li>
-                                    
-<li >
-    <a href="../../SpiraTest-Quick-Start-Guide/">SpiraTest</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/">Installing Spira</a>
-</li>
-                                    
-<li >
-    <a href="../../Spira-Administration-Guide/System-Administration/">System Administration</a>
-</li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">System</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System-Workspaces/">Workspaces</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System-Home/">System Home page</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System-Users/">Users</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System/">System</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System-Integration/">Integration</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/System-Reporting/">Reporting</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Product</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Product-Home/">Home page</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Product-General-Settings/">General Settings</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Product-Users/">Users</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Product-Planning/">Planning</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Product-Changing-Template/">Changing Templates</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Template</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Home/">Home page</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Requirements/">Requirements</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Releases/">Releases</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Documents/">Documents</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Test-Cases/">Test Cases</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Incidents/">Incidents</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Tasks/">Tasks</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Risks/">Risks</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/">Custom Properties</a>
-</li>
-            
-<li >
-    <a href="../../Spira-Administration-Guide/Template-Notifications/">Notifications</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optional Features <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">TaraVault</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../TaraVault-User-Manual/Activating-TaraVault/">Activating</a>
-</li>
-            
-<li >
-    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/">Provisioning Projects & Users</a>
-</li>
-            
-<li >
-    <a href="../../TaraVault-User-Manual/Using-Git/">Using Git</a>
-</li>
-            
-<li >
-    <a href="../../TaraVault-User-Manual/Using-Subversion/">Using Subversion</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">RemoteLaunch</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/">Guide</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/">HP UFT/QTP</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/SmarteScript/">SmarteScript</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/TestComplete/">TestComplete</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Selenium/">Selenium</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Squish/">Squish</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Command-Line/">Command-Line</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/LoadRunner/">LoadRunner</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/SoapUI/">SoapUI</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/FitNesse/">FitNesse</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/NeoLoad/">NeoLoad</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/TestPartner/">TestPartner</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/BadBoy/">BadBoy</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/JMeter/">JMeter</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Ranorex/">Ranorex</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/">Rational Functional Tester</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/">TestingAnywhere</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/">Worksoft Certify</a>
-</li>
-            
-<li >
-    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/">ZAPTEST</a>
-</li>
-    </ul>
-  </li>
-                                    
-<li >
-    <a href="../../SpiraCapture/User-Guide/">SpiraCapture</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">Jira Cloud</a>
-</li>
-                                    
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">Jira Server</a>
-</li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Testing</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/">NUnit</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/">JUnit</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/">TestNG</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/">Selenium</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/">PyUnit</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/">PyTest</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/">MS-Test</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/">Ruby Test::Unit</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/">Perl TAP</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/">PHPUnit</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/">UnitJS & NodeJS</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-Jasmine/">Jasmine</a>
-</li>
-            
-<li >
-    <a href="../../Unit-Testing-Integration/Integrating-with-Jest/">Jest</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">IDE Integration</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../IDE-Integration/Visual-Studio-Code/">Visual Studio Code</a>
-</li>
-            
-<li >
-    <a href="../../IDE-Integration/Visual-Studio/">Visual Studio</a>
-</li>
-            
-<li >
-    <a href="../../IDE-Integration/Jetbrains-IDEs/">Jetbrains</a>
-</li>
-            
-<li >
-    <a href="../../IDE-Integration/Eclipse--Mylyn/">Eclipse</a>
-</li>
-            
-<li >
-    <a href="../../IDE-Integration/Visual-Studio-2010/">Visual Studio 2010</a>
-</li>
-            
-<li >
-    <a href="../../IDE-Integration/Visual-Studio-2005---2008/">Visual Studio 2005-2008</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Bug Tracking/DataSync</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Setup</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">Jira Cloud</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/">Jira Server</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/">Azure DevOps</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/">VersionOne</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/">GitHub</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/">GitLab</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/">ServiceNow</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/">Bugzilla</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/">Mantis</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/">FogBugz</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/">ClearQuest</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/">RTC</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/">Axosoft</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/">Redmine</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/">JIRA 3, 4</a>
-</li>
-            
-<li >
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">OnTime</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">VCS</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/">Mercurial</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-Perforce/">Perforce</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-TFS/">TFS</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-VSS/">VSS</a>
-</li>
-            
-<li >
-    <a href="../../Version-Control-Integration/Integrating-with-CVS/">CVS</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Email</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/">Installing</a>
-</li>
-            
-<li >
-    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/">Configuring</a>
-</li>
-            
-<li >
-    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/">Using</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Help Desk</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Help-Desk-Integration/KronoDesk/">KronoDesk</a>
-</li>
-            
-<li >
-    <a href="../../Help-Desk-Integration/Zendesk/">Zendesk</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Migration</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/">Excel</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/">Excel (Office 365)</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/">Google Sheets</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/">Microsoft Word</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/">Microsoft Project</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/">HP QualityCenter</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/">Project Backup and Migration</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/">MS Test Manager</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/">HP ALM</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Migrating-from-TestRail/">TestRail</a>
-</li>
-            
-<li >
-    <a href="../../Migration-and-Integration/Migrating-from-TestLink/">TestLink</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Build Servers</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Build-Server-Integration/Jenkins--Hudson/">Jenkins/Hudson</a>
-</li>
-            
-<li >
-    <a href="../../Build-Server-Integration/JetBrains-TeamCity/">JetBrains TeamCity</a>
-</li>
-            
-<li >
-    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/">Azure DevOps Pipelines</a>
-</li>
-            
-<li >
-    <a href="../../Build-Server-Integration/Atlassian-Bamboo/">Atlassian Bamboo</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Requirements</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/">RequisitePro</a>
-</li>
-            
-<li >
-    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/">EnterpriseArchitect</a>
-</li>
-            
-<li >
-    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/">Jama Contour</a>
-</li>
-            
-<li >
-    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/">VersionOne</a>
-</li>
-            
-<li >
-    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/">DOORS</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-    <i class="fa fa-search"></i>
-  </a>
-</li>
-<li >
-  <a rel="next" href="../Requirements-Management/" >
-    <i class="fa fa-arrow-left"></i></a>
-</li>
-<li >
-  <a rel="prev" href="../Incident-Tracking/" ><i
-      class="fa fa-arrow-right"></i></a>
-</li>
-                            <li>
-                                <a href="https://www.inflectra.com">Inflectra</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-1302007-6", "https://spiradoc.inflectra.com/")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#test-case-management" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SpiraDocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Test Case Management
+              
+            </span>
+          
         </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a
-                href="#test-case-management">Test Case Management</a></li>
-        <li class="second-level"><a href="#test-case-list">Test Case List</a></li>
+
+  
+
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    Inflectra
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
         
-        <li class="third-level"><a href="#add-a-test-case">Add a Test Case</a></li>
-        <li class="third-level"><a href="#delete">Delete</a></li>
-        <li class="third-level"><a href="#execute">Execute</a></li>
-        <li class="third-level"><a href="#refresh">Refresh</a></li>
-        <li class="third-level"><a href="#editing-a-test-case">Editing a Test Case</a></li>
-        <li class="third-level"><a href="#editing-a-test-folder">Editing a Test Folder</a></li>
-        <li class="third-level"><a href="#show-hide-columns">Show / Hide Columns</a></li>
-        <li class="third-level"><a href="#filtering-sorting">Filtering &amp; Sorting</a></li>
-        <li class="third-level"><a href="#copying-test-cases">Copying Test Cases</a></li>
-        <li class="third-level"><a href="#blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases</a></li>
-        <li class="third-level"><a href="#moving-test-cases-or-folders">Moving Test Cases or Folders</a></li>
-        <li class="third-level"><a href="#exporting-test-cases">Exporting Test Cases</a></li>
-        <li class="third-level"><a href="#adding-test-cases-to-a-release-test-set-or-requirement">Adding Test Cases to a Release, Test Set or Requirement</a></li>
-        <li class="third-level"><a href="#viewing-the-test-status-for-a-release">Viewing the Test Status for a Release</a></li>
-        <li class="third-level"><a href="#printing-items">Printing Items</a></li>
-        <li class="third-level"><a href="#right-click-context-menu">Right-Click Context Menu</a></li>
-        <li class="second-level"><a href="#test-case-details">Test Case Details</a></li>
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.svg" width="48" height="48">
+      
+    </a>
+    SpiraDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    Inflectra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      User Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        User Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-        <li class="third-level"><a href="#emailing">Emailing</a></li>
-        <li class="third-level"><a href="#followers">Followers</a></li>
-        <li class="third-level"><a href="#workflows">Workflows</a></li>
-        <li class="third-level"><a href="#overview-details">Overview - Details</a></li>
-        <li class="third-level"><a href="#overview-test-steps">Overview - Test Steps</a></li>
-        <li class="third-level"><a href="#insert-step">Insert Step</a></li>
-        <li class="third-level"><a href="#insert-link">Insert Link</a></li>
-        <li class="third-level"><a href="#delete_1">Delete</a></li>
-        <li class="third-level"><a href="#clone">Clone</a></li>
-        <li class="third-level"><a href="#refresh_1">Refresh</a></li>
-        <li class="third-level"><a href="#show-hide-columns_1">Show / Hide Columns</a></li>
-        <li class="third-level"><a href="#editing-test-steps">Editing Test Steps</a></li>
-        <li class="third-level"><a href="#editing-test-links">Editing Test Links</a></li>
-        <li class="third-level"><a href="#moving-test-steps">Moving Test Steps</a></li>
-        <li class="third-level"><a href="#parameters">Parameters</a></li>
-        <li class="third-level"><a href="#overview-automation">Overview - Automation</a></li>
-        <li class="third-level"><a href="#overview-comments">Overview - Comments</a></li>
-        <li class="third-level"><a href="#requirements-coverage">Requirements Coverage</a></li>
-        <li class="third-level"><a href="#test-runs">Test Runs</a></li>
-        <li class="third-level"><a href="#releases">Releases</a></li>
-        <li class="third-level"><a href="#incidents">Incidents</a></li>
-        <li class="third-level"><a href="#attachments">Attachments</a></li>
-        <li class="third-level"><a href="#history">History</a></li>
-        <li class="third-level"><a href="#test-sets">Test Sets</a></li>
-        <li class="third-level"><a href="#associations">Associations</a></li>
-        <li class="second-level"><a href="#test-step-details">Test Step Details</a></li>
         
-        <li class="third-level"><a href="#incidents_1">Incidents</a></li>
-        <li class="third-level"><a href="#attachments_1">Attachments</a></li>
-        <li class="third-level"><a href="#history_1">History</a></li>
-        <li class="third-level"><a href="#requirements">Requirements</a></li>
-        <li class="second-level"><a href="#execute-test-cases">Execute Test Case(s)</a></li>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Functionality-Overview/" title="Functionality Overview" class="md-nav__link">
+      Functionality Overview
+    </a>
+  </li>
+
         
-        <li class="third-level"><a href="#display-modes">Display Modes</a></li>
-        <li class="third-level"><a href="#navigating-around-a-test-run">Navigating Around a Test Run</a></li>
-        <li class="third-level"><a href="#viewing-and-recording-execution-details">Viewing and Recording Execution Details</a></li>
-        <li class="third-level"><a href="#saving-screenshots-to-a-test-step">Saving Screenshots to a Test Step</a></li>
-        <li class="third-level"><a href="#recording-extra-information">Recording Extra Information</a></li>
-        <li class="third-level"><a href="#leaving-the-test-execution-page">Leaving the Test Execution Page</a></li>
-        <li class="third-level"><a href="#extra-test-execution-options">Extra Test Execution Options</a></li>
-        <li class="third-level"><a href="#exploratory-test-execution">Exploratory Test Execution</a></li>
-        <li class="second-level"><a href="#test-run-list">Test Run List</a></li>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Application-Wide/" title="Common Elements Across the Application" class="md-nav__link">
+      Common Elements Across the Application
+    </a>
+  </li>
+
         
-        <li class="third-level"><a href="#refresh_2">Refresh</a></li>
-        <li class="third-level"><a href="#show-hide-columns_2">Show / Hide Columns</a></li>
-        <li class="third-level"><a href="#filtering-sorting_1">Filtering &amp; Sorting</a></li>
-        <li class="third-level"><a href="#printing-items_1">Printing Items</a></li>
-        <li class="second-level"><a href="#test-run-details">Test Run Details</a></li>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../User-Product-Management/" title="User/Product Management" class="md-nav__link">
+      User/Product Management
+    </a>
+  </li>
+
         
-        <li class="third-level"><a href="#re-running-a-test">Re-running a Test</a></li>
-        <li class="third-level"><a href="#editing-a-test-run">Editing a Test Run</a></li>
-        <li class="third-level"><a href="#deleting-the-test-run">Deleting the Test Run</a></li>
-        <li class="third-level"><a href="#test-run-steps">Test Run Steps</a></li>
-        <li class="third-level"><a href="#console-output">Console Output</a></li>
-        <li class="third-level"><a href="#attachments_2">Attachments</a></li>
-        <li class="third-level"><a href="#history_2">History</a></li>
-        <li class="third-level"><a href="#incidents_2">Incidents</a></li>
-        <li class="third-level"><a href="#tasks">Tasks</a></li>
-        <li class="second-level"><a href="#test-set-list">Test Set List</a></li>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Requirements-Management/" title="Requirements Management" class="md-nav__link">
+      Requirements Management
+    </a>
+  </li>
+
         
-        <li class="third-level"><a href="#delete_2">Delete</a></li>
-        <li class="third-level"><a href="#refresh_3">Refresh</a></li>
-        <li class="third-level"><a href="#focus-on">Focus On</a></li>
-        <li class="third-level"><a href="#edit">Edit</a></li>
-        <li class="third-level"><a href="#show-hide-columns_3">Show / Hide Columns</a></li>
-        <li class="third-level"><a href="#filtering-sorting_2">Filtering &amp; Sorting</a></li>
-        <li class="third-level"><a href="#copying-test-sets">Copying Test Sets</a></li>
-        <li class="third-level"><a href="#moving-test-sets">Moving Test Sets</a></li>
-        <li class="third-level"><a href="#printing-or-exporting-items">Printing or Exporting Items</a></li>
-        <li class="third-level"><a href="#right-click-context-menu_1">Right-Click Context Menu</a></li>
-        <li class="second-level"><a href="#test-set-details">Test Set Details</a></li>
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Test Case Management
+      </label>
+    
+    <a href="./" title="Test Case Management" class="md-nav__link md-nav__link--active">
+      Test Case Management
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-case-list" class="md-nav__link">
+    Test Case List
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-        <li class="third-level"><a href="#emailing_1">Emailing</a></li>
-        <li class="third-level"><a href="#followers_1">Followers</a></li>
-        <li class="third-level"><a href="#workflows_1">Workflows</a></li>
-        <li class="third-level"><a href="#overview-details_1">Overview -- Details</a></li>
-        <li class="third-level"><a href="#overview-comments_1">Overview - Comments</a></li>
-        <li class="third-level"><a href="#overview-parameters">Overview - Parameters</a></li>
-        <li class="third-level"><a href="#overview-test-cases">Overview - Test Cases</a></li>
-        <li class="third-level"><a href="#overview-comments_2">Overview - Comments</a></li>
-        <li class="third-level"><a href="#test-runs_1">Test Runs</a></li>
-        <li class="third-level"><a href="#attachments_3">Attachments</a></li>
-        <li class="third-level"><a href="#history_3">History</a></li>
-        <li class="third-level"><a href="#incidents_3">Incidents</a></li>
-        <li class="second-level"><a href="#automation-host-list">Automation Host List</a></li>
+          <li class="md-nav__item">
+  <a href="#add-a-test-case" class="md-nav__link">
+    Add a Test Case
+  </a>
+  
+</li>
         
-        <li class="third-level"><a href="#filtering-sorting_3">Filtering &amp; Sorting</a></li>
-        <li class="third-level"><a href="#new-host">New Host</a></li>
-        <li class="third-level"><a href="#delete_3">Delete</a></li>
-        <li class="third-level"><a href="#refresh_4">Refresh</a></li>
-        <li class="third-level"><a href="#show-hide-columns_4">Show / Hide Columns</a></li>
-        <li class="third-level"><a href="#edit_1">Edit</a></li>
-        <li class="second-level"><a href="#automation-host-details">Automation Host Details</a></li>
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
         
-        <li class="third-level"><a href="#overview">Overview</a></li>
-        <li class="third-level"><a href="#test-runs_2">Test Runs</a></li>
-        <li class="third-level"><a href="#attachments_4">Attachments</a></li>
-        <li class="third-level"><a href="#history_4">History</a></li>
-        <li class="second-level"><a href="#test-configurations-list">Test Configurations List</a></li>
+          <li class="md-nav__item">
+  <a href="#execute" class="md-nav__link">
+    Execute
+  </a>
+  
+</li>
         
-        <li class="third-level"><a href="#filtering-sorting_4">Filtering &amp; Sorting</a></li>
-        <li class="third-level"><a href="#new-test-configuration">New Test Configuration</a></li>
-        <li class="third-level"><a href="#delete_4">Delete</a></li>
-        <li class="third-level"><a href="#refresh_5">Refresh</a></li>
-        <li class="third-level"><a href="#edit_2">Edit</a></li>
-        <li class="second-level"><a href="#test-configuration-details">Test Configuration Details</a></li>
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    Refresh
+  </a>
+  
+</li>
         
-        <li class="third-level"><a href="#overview_1">Overview</a></li>
-        <li class="third-level"><a href="#overview-test-configuration-entries">Overview -- Test Configuration Entries</a></li>
-        <li class="third-level"><a href="#test-sets_1">Test Sets</a></li>
+          <li class="md-nav__item">
+  <a href="#editing-a-test-case" class="md-nav__link">
+    Editing a Test Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-test-folder" class="md-nav__link">
+    Editing a Test Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-hide-columns" class="md-nav__link">
+    Show / Hide Columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-sorting" class="md-nav__link">
+    Filtering &amp; Sorting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-test-cases" class="md-nav__link">
+    Copying Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocking-and-unblocking-test-cases" class="md-nav__link">
+    Blocking and Unblocking Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-test-cases-or-folders" class="md-nav__link">
+    Moving Test Cases or Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-test-cases" class="md-nav__link">
+    Exporting Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-test-cases-to-a-release-test-set-or-requirement" class="md-nav__link">
+    Adding Test Cases to a Release, Test Set or Requirement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-items" class="md-nav__link">
+    Printing Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-click-context-menu" class="md-nav__link">
+    Right-Click Context Menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-case-details" class="md-nav__link">
+    Test Case Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emailing" class="md-nav__link">
+    Emailing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#followers" class="md-nav__link">
+    Followers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-details" class="md-nav__link">
+    Overview - Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-test-steps" class="md-nav__link">
+    Overview - Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-step" class="md-nav__link">
+    Insert Step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-link" class="md-nav__link">
+    Insert Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    Clone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh_1" class="md-nav__link">
+    Refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-hide-columns_1" class="md-nav__link">
+    Show / Hide Columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-test-steps" class="md-nav__link">
+    Editing Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-test-links" class="md-nav__link">
+    Editing Test Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-test-steps" class="md-nav__link">
+    Moving Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-automation" class="md-nav__link">
+    Overview - Automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-comments" class="md-nav__link">
+    Overview - Comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-coverage" class="md-nav__link">
+    Requirements Coverage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-runs" class="md-nav__link">
+    Test Runs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidents" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sets" class="md-nav__link">
+    Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associations" class="md-nav__link">
+    Associations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-step-details" class="md-nav__link">
+    Test Step Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidents_1" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments_1" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history_1" class="md-nav__link">
+    History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-test-cases" class="md-nav__link">
+    Execute Test Case(s)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-list" class="md-nav__link">
+    Test Run List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-details" class="md-nav__link">
+    Test Run Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set-list" class="md-nav__link">
+    Test Set List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set-details" class="md-nav__link">
+    Test Set Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-host-list" class="md-nav__link">
+    Automation Host List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-host-list_1" class="md-nav__link">
+    Automation Host List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-configuration-list" class="md-nav__link">
+    Test Configuration List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-configuration-details" class="md-nav__link">
+    Test Configuration Details
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="test-case-management">Test Case Management</h1>
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Test-Execution/" title="Test Execution" class="md-nav__link">
+      Test Execution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Test-Run-Management/" title="Test Run Management" class="md-nav__link">
+      Test Run Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Test-Set-Management/" title="Test Set Management" class="md-nav__link">
+      Test Set Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Automation-Host-Management/" title="Automation Host Management" class="md-nav__link">
+      Automation Host Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Test-Configuration-Management/" title="Test Configuration Management" class="md-nav__link">
+      Test Configuration Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Incident-Tracking/" title="Incident Tracking" class="md-nav__link">
+      Incident Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Release-Management/" title="Release Management" class="md-nav__link">
+      Release Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Task-Tracking/" title="Task Tracking" class="md-nav__link">
+      Task Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
+      Resource Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Document-Management/" title="Document Management" class="md-nav__link">
+      Document Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Reports-Center/" title="Reports Center" class="md-nav__link">
+      Reports Center
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Planning-Board/" title="Planning Board" class="md-nav__link">
+      Planning Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mobile-Access/" title="Mobile Access" class="md-nav__link">
+      Mobile Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Program-Management/" title="Program Management" class="md-nav__link">
+      Program Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Risks-Management/" title="Risk Management" class="md-nav__link">
+      Risk Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Appendix-1-Keyboard-Shortcuts/" title="Appendix 1: Keyboard Shortcuts" class="md-nav__link">
+      Appendix 1: Keyboard Shortcuts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Quick Start Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Quick Start Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Mini How-To Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Mini How-To Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../HowTo-Guides/Users-orientation/" title="Moving Around the Application" class="md-nav__link">
+      Moving Around the Application
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../HowTo-Guides/Users-profile-management/" title="Managing Your User Profile" class="md-nav__link">
+      Managing Your User Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../HowTo-Guides/Admins-orientation/" title="Getting to Know Administration" class="md-nav__link">
+      Getting to Know Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../HowTo-Guides/Admins-templates/" title="Template Administration" class="md-nav__link">
+      Template Administration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpiraPlan-Quick-Start-Guide/" title="SpiraPlan" class="md-nav__link">
+      SpiraPlan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpiraTeam-Quick-Start-Guide/" title="SpiraTeam" class="md-nav__link">
+      SpiraTeam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpiraTest-Quick-Start-Guide/" title="SpiraTest" class="md-nav__link">
+      SpiraTest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Admin Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Admin Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/" title="Installing Spira" class="md-nav__link">
+      Installing Spira
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Administration/" title="System Administration" class="md-nav__link">
+      System Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      System
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        System
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Workspaces/" title="Workspaces" class="md-nav__link">
+      Workspaces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Home/" title="System Home page" class="md-nav__link">
+      System Home page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Users/" title="Users" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System/" title="System" class="md-nav__link">
+      System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Integration/" title="Integration" class="md-nav__link">
+      Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/System-Reporting/" title="Reporting" class="md-nav__link">
+      Reporting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Product
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Product
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Product-Home/" title="Home page" class="md-nav__link">
+      Home page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Product-General-Settings/" title="General Settings" class="md-nav__link">
+      General Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Product-Users/" title="Users" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Product-Planning/" title="Planning" class="md-nav__link">
+      Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Product-Changing-Template/" title="Changing Templates" class="md-nav__link">
+      Changing Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Template
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Template
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Home/" title="Home page" class="md-nav__link">
+      Home page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Releases/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Documents/" title="Documents" class="md-nav__link">
+      Documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Test-Cases/" title="Test Cases" class="md-nav__link">
+      Test Cases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Incidents/" title="Incidents" class="md-nav__link">
+      Incidents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Tasks/" title="Tasks" class="md-nav__link">
+      Tasks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Risks/" title="Risks" class="md-nav__link">
+      Risks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Custom-Properties/" title="Custom Properties" class="md-nav__link">
+      Custom Properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-Administration-Guide/Template-Notifications/" title="Notifications" class="md-nav__link">
+      Notifications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Optional Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Optional Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      TaraVault
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        TaraVault
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TaraVault-User-Manual/Activating-TaraVault/" title="Activating" class="md-nav__link">
+      Activating
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/" title="Provisioning Projects & Users" class="md-nav__link">
+      Provisioning Projects & Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TaraVault-User-Manual/Using-Git/" title="Using Git" class="md-nav__link">
+      Using Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TaraVault-User-Manual/Using-Subversion/" title="Using Subversion" class="md-nav__link">
+      Using Subversion
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      RemoteLaunch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        RemoteLaunch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/" title="Guide" class="md-nav__link">
+      Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/" title="HP UFT/QTP" class="md-nav__link">
+      HP UFT/QTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/SmarteScript/" title="SmarteScript" class="md-nav__link">
+      SmarteScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/TestComplete/" title="TestComplete" class="md-nav__link">
+      TestComplete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Selenium/" title="Selenium" class="md-nav__link">
+      Selenium
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Squish/" title="Squish" class="md-nav__link">
+      Squish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Command-Line/" title="Command-Line" class="md-nav__link">
+      Command-Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/LoadRunner/" title="LoadRunner" class="md-nav__link">
+      LoadRunner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/SoapUI/" title="SoapUI" class="md-nav__link">
+      SoapUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/FitNesse/" title="FitNesse" class="md-nav__link">
+      FitNesse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/NeoLoad/" title="NeoLoad" class="md-nav__link">
+      NeoLoad
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/TestPartner/" title="TestPartner" class="md-nav__link">
+      TestPartner
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/BadBoy/" title="BadBoy" class="md-nav__link">
+      BadBoy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/JMeter/" title="JMeter" class="md-nav__link">
+      JMeter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Ranorex/" title="Ranorex" class="md-nav__link">
+      Ranorex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/" title="Rational Functional Tester" class="md-nav__link">
+      Rational Functional Tester
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/" title="TestingAnywhere" class="md-nav__link">
+      TestingAnywhere
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/" title="Worksoft Certify" class="md-nav__link">
+      Worksoft Certify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RemoteLaunch-User-Guide/ZAPTEST/" title="ZAPTEST" class="md-nav__link">
+      ZAPTEST
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpiraCapture/User-Guide/" title="SpiraCapture" class="md-nav__link">
+      SpiraCapture
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/" title="Jira Cloud" class="md-nav__link">
+      Jira Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+      Jira Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Testing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/" title="NUnit" class="md-nav__link">
+      NUnit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/" title="JUnit" class="md-nav__link">
+      JUnit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/" title="TestNG" class="md-nav__link">
+      TestNG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/" title="Selenium" class="md-nav__link">
+      Selenium
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/" title="PyUnit" class="md-nav__link">
+      PyUnit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/" title="PyTest" class="md-nav__link">
+      PyTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/" title="MS-Test" class="md-nav__link">
+      MS-Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/" title="Ruby Test::Unit" class="md-nav__link">
+      Ruby Test::Unit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/" title="Perl TAP" class="md-nav__link">
+      Perl TAP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/" title="PHPUnit" class="md-nav__link">
+      PHPUnit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
+      UnitJS & NodeJS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-Jasmine/" title="Jasmine" class="md-nav__link">
+      Jasmine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Unit-Testing-Integration/Integrating-with-Jest/" title="Jest" class="md-nav__link">
+      Jest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      IDE Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        IDE Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Visual-Studio-Code/" title="Visual Studio Code" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Visual-Studio/" title="Visual Studio" class="md-nav__link">
+      Visual Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Jetbrains-IDEs/" title="Jetbrains" class="md-nav__link">
+      Jetbrains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Eclipse--Mylyn/" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Visual-Studio-2010/" title="Visual Studio 2010" class="md-nav__link">
+      Visual Studio 2010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../IDE-Integration/Visual-Studio-2005---2008/" title="Visual Studio 2005-2008" class="md-nav__link">
+      Visual Studio 2005-2008
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Bug Tracking/DataSync
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        Bug Tracking/DataSync
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/" title="Jira Cloud" class="md-nav__link">
+      Jira Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+      Jira Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/" title="Azure DevOps" class="md-nav__link">
+      Azure DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/" title="VersionOne" class="md-nav__link">
+      VersionOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/" title="GitHub" class="md-nav__link">
+      GitHub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/" title="GitLab" class="md-nav__link">
+      GitLab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/" title="ServiceNow" class="md-nav__link">
+      ServiceNow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/" title="Bugzilla" class="md-nav__link">
+      Bugzilla
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/" title="Mantis" class="md-nav__link">
+      Mantis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/" title="FogBugz" class="md-nav__link">
+      FogBugz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/" title="ClearQuest" class="md-nav__link">
+      ClearQuest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/" title="RTC" class="md-nav__link">
+      RTC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/" title="Axosoft" class="md-nav__link">
+      Axosoft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/" title="Redmine" class="md-nav__link">
+      Redmine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/" title="JIRA 3, 4" class="md-nav__link">
+      JIRA 3, 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/" title="OnTime" class="md-nav__link">
+      OnTime
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
+    
+    <label class="md-nav__link" for="nav-5-6">
+      VCS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-6">
+        VCS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-Mercurial/" title="Mercurial" class="md-nav__link">
+      Mercurial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-Subversion/" title="Subversion" class="md-nav__link">
+      Subversion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-Perforce/" title="Perforce" class="md-nav__link">
+      Perforce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-TFS/" title="TFS" class="md-nav__link">
+      TFS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-VSS/" title="VSS" class="md-nav__link">
+      VSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Version-Control-Integration/Integrating-with-CVS/" title="CVS" class="md-nav__link">
+      CVS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      Email
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-7">
+        Email
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Email-Integration/Installing-the-Email-Integration-Service/" title="Installing" class="md-nav__link">
+      Installing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/" title="Configuring" class="md-nav__link">
+      Configuring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+    
+    <label class="md-nav__link" for="nav-5-8">
+      Help Desk
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-8">
+        Help Desk
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Help-Desk-Integration/KronoDesk/" title="KronoDesk" class="md-nav__link">
+      KronoDesk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Help-Desk-Integration/Zendesk/" title="Zendesk" class="md-nav__link">
+      Zendesk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
+    
+    <label class="md-nav__link" for="nav-5-9">
+      Migration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-9">
+        Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/" title="Excel" class="md-nav__link">
+      Excel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/" title="Excel (Office 365)" class="md-nav__link">
+      Excel (Office 365)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/" title="Google Sheets" class="md-nav__link">
+      Google Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/" title="Microsoft Word" class="md-nav__link">
+      Microsoft Word
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/" title="Microsoft Project" class="md-nav__link">
+      Microsoft Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/" title="HP QualityCenter" class="md-nav__link">
+      HP QualityCenter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Project-Backup-and-Migration/" title="Project Backup and Migration" class="md-nav__link">
+      Project Backup and Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/" title="MS Test Manager" class="md-nav__link">
+      MS Test Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/" title="HP ALM" class="md-nav__link">
+      HP ALM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Migrating-from-TestRail/" title="TestRail" class="md-nav__link">
+      TestRail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Migration-and-Integration/Migrating-from-TestLink/" title="TestLink" class="md-nav__link">
+      TestLink
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-10" type="checkbox" id="nav-5-10">
+    
+    <label class="md-nav__link" for="nav-5-10">
+      Build Servers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-10">
+        Build Servers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Build-Server-Integration/Jenkins--Hudson/" title="Jenkins/Hudson" class="md-nav__link">
+      Jenkins/Hudson
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Build-Server-Integration/JetBrains-TeamCity/" title="JetBrains TeamCity" class="md-nav__link">
+      JetBrains TeamCity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" title="Azure DevOps Pipelines" class="md-nav__link">
+      Azure DevOps Pipelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Build-Server-Integration/Atlassian-Bamboo/" title="Atlassian Bamboo" class="md-nav__link">
+      Atlassian Bamboo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-11" type="checkbox" id="nav-5-11">
+    
+    <label class="md-nav__link" for="nav-5-11">
+      Requirements
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-11">
+        Requirements
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/" title="RequisitePro" class="md-nav__link">
+      RequisitePro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/" title="EnterpriseArchitect" class="md-nav__link">
+      EnterpriseArchitect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/" title="Jama Contour" class="md-nav__link">
+      Jama Contour
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/" title="VersionOne" class="md-nav__link">
+      VersionOne
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Requirements-Management-Integration/Importing-From-DOORS/" title="DOORS" class="md-nav__link">
+      DOORS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/release-notes-v6/" title="Release Notes for v6" class="md-nav__link">
+      Release Notes for v6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/introduction-to-spira/" title="Introduction to Spira" class="md-nav__link">
+      Introduction to Spira
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../About/legal-notices/" title="Legal Notices" class="md-nav__link">
+      Legal Notices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-case-list" class="md-nav__link">
+    Test Case List
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-test-case" class="md-nav__link">
+    Add a Test Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute" class="md-nav__link">
+    Execute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    Refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-test-case" class="md-nav__link">
+    Editing a Test Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-test-folder" class="md-nav__link">
+    Editing a Test Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-hide-columns" class="md-nav__link">
+    Show / Hide Columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-sorting" class="md-nav__link">
+    Filtering &amp; Sorting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-test-cases" class="md-nav__link">
+    Copying Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocking-and-unblocking-test-cases" class="md-nav__link">
+    Blocking and Unblocking Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-test-cases-or-folders" class="md-nav__link">
+    Moving Test Cases or Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-test-cases" class="md-nav__link">
+    Exporting Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-test-cases-to-a-release-test-set-or-requirement" class="md-nav__link">
+    Adding Test Cases to a Release, Test Set or Requirement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-items" class="md-nav__link">
+    Printing Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-click-context-menu" class="md-nav__link">
+    Right-Click Context Menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-case-details" class="md-nav__link">
+    Test Case Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emailing" class="md-nav__link">
+    Emailing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#followers" class="md-nav__link">
+    Followers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-details" class="md-nav__link">
+    Overview - Details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-test-steps" class="md-nav__link">
+    Overview - Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-step" class="md-nav__link">
+    Insert Step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-link" class="md-nav__link">
+    Insert Link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    Clone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh_1" class="md-nav__link">
+    Refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-hide-columns_1" class="md-nav__link">
+    Show / Hide Columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-test-steps" class="md-nav__link">
+    Editing Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-test-links" class="md-nav__link">
+    Editing Test Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-test-steps" class="md-nav__link">
+    Moving Test Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-automation" class="md-nav__link">
+    Overview - Automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-comments" class="md-nav__link">
+    Overview - Comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-coverage" class="md-nav__link">
+    Requirements Coverage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-runs" class="md-nav__link">
+    Test Runs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidents" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sets" class="md-nav__link">
+    Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associations" class="md-nav__link">
+    Associations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-step-details" class="md-nav__link">
+    Test Step Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidents_1" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments_1" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history_1" class="md-nav__link">
+    History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-test-cases" class="md-nav__link">
+    Execute Test Case(s)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-list" class="md-nav__link">
+    Test Run List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-run-details" class="md-nav__link">
+    Test Run Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set-list" class="md-nav__link">
+    Test Set List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set-details" class="md-nav__link">
+    Test Set Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-host-list" class="md-nav__link">
+    Automation Host List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-host-list_1" class="md-nav__link">
+    Automation Host List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-configuration-list" class="md-nav__link">
+    Test Configuration List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-configuration-details" class="md-nav__link">
+    Test Configuration Details
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="test-case-management">Test Case Management</h1>
 <p>This section outlines how the use-case / test-case management features of SpiraPlan® can be used to develop the business use-cases for the system, which specify how the different pieces of functionality are expected to work in practice. In addition, these use/test-cases form the basis of the business specification of the system when associated with the underlying requirements matrix. Typically when starting a new product:</p>
 <ul>
 <li>The requirements matrix is entered first</li>
@@ -1009,10 +3533,10 @@ gray.</p>
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
-<li>create a replica of the current test case by clicking <code>Clone</code></li>
-<li>discard any changes made by clicking <code>Refresh</code></li>
-<li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
-<li>the <code>Execute</code> button will immediately prepare the current test case for execution and then take you to the
+<li>create a replica of the current test case by clicking <code class="codehilite"><span class="err">Clone</span></code></li>
+<li>discard any changes made by clicking <code class="codehilite"><span class="err">Refresh</span></code></li>
+<li>export to a number of files formats or print it via one of the options in the <code class="codehilite"><span class="err">Tools</span></code> dropdown menu</li>
+<li>the <code class="codehilite"><span class="err">Execute</span></code> button will immediately prepare the current test case for execution and then take you to the
 <a href="#execute-test-cases">test execution screen</a></li>
 </ul>
 <p>The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.</p>
@@ -1183,572 +3707,112 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_168.png" /></p>
 <p>One you have found the desired requirement(s), simply select their check boxes and click the 'Save' button to add them to the current test step:</p>
 <p><img alt="" src="../img/Test_Case_Management_169.png" /></p>
-<h2 id="execute-test-cases">Execute Test Case(s)</h2>
-<p>This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the <a href="../Incident-Tracking/">incident tracking module</a>.</p>
-<p>You start test case execution in SpiraPlan by either:</p>
-<ol>
-<li>
-<p>selecting test cases or test sets on their respective page(s) and
-    clicking the "<strong><em>Execute</em></strong>" button;</p>
-</li>
-<li>
-<p>clicking the "<strong><em>Execute</em></strong>" button on the test cases
-/ test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".</p>
-</li>
-</ol>
-<p>If you execute a test set then the values of the selected release and custom list properties for the test run are automatically populated from the test set, whereas if you directly execute a test case itself, those values can be chosen by the tester.</p>
-<p>Regardless of the route taken to launch the test execution module, the first screen that will be displayed will look like the following:</p>
-<p><img alt="" src="../img/Test_Case_Management_170.png" /></p>
-<p>Before actually executing the test scripts, you need to select the release (if not already set) and optionally the specific build of the system that you will be testing against. You can also specify any test run custom properties that have been defined by the product owner. This ensures that the resulting test runs and incidents are associated with the correct release of the system, and that the test runs are mapped to the appropriate custom properties (e.g. operating system, platform, browser, etc.).</p>
-<p>If you have not configured any releases for the product, then the release drop-down list will be disabled and the test runs/incidents will not be associated with any particular release. If the test run was launched from a test set, the release and any list custom properties will be pre-populated from the test set itself and will not be changeable on this screen (unless they weren't set by the test set).</p>
-<p>Once you have chosen the appropriate release name and/or custom properties, click the "<strong><em>Next</em></strong>" button to begin executing test steps. By default you will see the default test execution module, shown below.</p>
-<p>There is a second test execution view: the <a href="#exploratory-test-execution">exploratory test execution module</a>. This has much in common with standard test execution but differs in a number of important ways. You will automatically see this module if the following three conditions are met;</p>
-<ol>
-<li>you are executing a single test case (not a test set or a test case as part of a test set);</li>
-<li>that test case type has its "Is Exploratory" flag set to true / yes (in the template administration that the product uses); and</li>
-<li>you have the necessary permissions (you can create test cases)</li>
-</ol>
-<p><img alt="" src="../img/Test_Case_Management_171.png" /></p>
-<p>The screen is divided up into three main areas (each is explained in more detail in the sections below):</p>
-<p><strong>The header area</strong> at the top of the page, which displays the name (if any) of the test run, along with the selected release. This section also contains buttons to control how the "test execution area" looks and functions for the tester.</p>
-<p><strong>The Progress Bar</strong>, which shows a summary graphical view of the whole test run. The progress bar also has a number of navigation buttons to help you move around the test run, or to leave the test execution page. Between the buttons are indicator blocks. For test runs with relatively few test steps, each indicator block represents a single test step. A tall dotted line is used to indicate the end of one test case and the start of another. When there are many test steps to a test run, each indicator block represents a test case. Hovering over an indicator block will display a tooltip with information about the test step or case represented. The color of the indicator block matches the color of any assigned execution status for the test step or test case (see below).</p>
-<p>The rest of the page contains the "<strong>test execution area</strong>". This has details about all of the steps in the test run. It can be used to both navigate between test cases and test steps, as well as to actions on any test case or test step (for instance assigning an execution status or logging an incident). This area can look markedly different depending on which display mode a user has selected. However, in every mode, a tester will be able to readily view the name and description of the test step (and at times the parent test case), along with the description of the test step, instructions for carrying out it, and any expected results. The test can then compare the results with those listed as expected. As described below, depending on how the actual system responds, you will use the buttons and fields on the page to record what actually happened.</p>
-<p>Note: on first accessing this screen, the user will be given a guided tour of many of the features of this page. This can be accessed at any time via the options menu (discussed below)</p>
-<h3 id="display-modes">Display Modes</h3>
-<p>The display mode toolbar is at the top right of the test execution screen. There are three different display modes. Each display mode has two sub-modes, using simple graphical images to indicate what they do (each pair of buttons to change sub-mode becomes visible on activating a particular display mode).</p>
-<p><img alt="" src="../img/Test_Case_Management_172.png" /></p>
-<p>All of these modes affect how the test cases and test steps are displayed in the "test execution area". The different views have been designed to suit different ways of testing, depending on how your organization works; or the needs of a tester for a particular test.</p>
-<p>There are three parts in the "test execution area", which are visible or hidden depending on the view.</p>
-<p><strong>Table</strong>: this shows a list of every test case and step in the test run. The level of information it displays depends on the display mode.</p>
-<p><strong>Inspector</strong>: this is a detailed form containing full information about a single test step (and its associated test case as needed). It also always shows the full set of actions that can be taken on that step</p>
-<p><strong>Iframe</strong>: if you are testing an internal website (or external site that allows access via iframes) you can access it directly from this iframe browser. This allows you to have the test execution page and what you are testing open in the same web browser tab.</p>
-<p>There are three main display modes:</p>
-<p><strong>Split mode</strong>: shows a simplified list of test steps on the left (in the table) and full details about the currently selected test step on the right (in the inspector). The sub modes in the split view either show a narrow table and wide inspector, or a wide table and narrow inspector.</p>
-<p><img alt="" src="../img/Test_Case_Management_171.png" /></p>
-<p><img alt="" src="../img/Test_Case_Management_173.png" /></p>
-<p><strong>Table mode</strong>: in this mode the table takes up the full width of the "test execution area", with both the inspector and iframe completely hidden. The list of test cases and steps displays all the information about each---the same information as is shown in the inspector. This view makes it easy to quickly scan through a number of test steps and take quick actions on many steps in sequence. The sub-modes in this view either expand or collapse any fields with more than one line or text in them. This is helpful to give either a very detailed or summary view to the table. Note too that every field that takes up more than one line will have a little expand or collapse button to its left, allowing for control of individual fields as needed.</p>
-<p><img alt="" src="../img/Test_Case_Management_174.png" /></p>
-<p><strong>Mini mode</strong>: this mode fills the entire "test execution area" with the inspector, or a combination of the inspector and iframe. The table is completely hidden in this mode. The mini mode is designed to help you maximize space for the inspector or to allow you to test a website in the embedded mini browser (in the iframe) right next to a narrow inspector.</p>
-<p><img alt="" src="../img/Test_Case_Management_175.png" /></p>
-<p><img alt="" src="../img/Test_Case_Management_176.png" /></p>
-<h3 id="navigating-around-a-test-run">Navigating Around a Test Run</h3>
-<p>There are several ways to move through the different cases and steps of a particular test run. In the default "split" mode you are guided through a test run in order, however at any time, in any display mode, you can easily and quickly move steps. Note that if you click on a test case, the first test step in that test case will be selected as well.</p>
-<p><strong>Using the progress bar buttons</strong>: the left-hand side of the progress bar has three buttons: backward, forward, and play/pause (the last of these is discussed in more detail below). Clicking on the backward or forward buttons will move to the previous or next progress bar indicator block (and the associated test step or test case).</p>
-<p><img alt="" src="../img/Test_Case_Management_177.png" /></p>
-<p><strong>Using the progress bar indicator blocks:</strong> clicking on any indicator block will immediately focus the test execution area on that test step or test case.</p>
-<p><strong>Using the table</strong>: when the table view is visible (in either split mode or table mode) clicking on any item will immediately focus the test execution area on that test step or test case.</p>
-<p><strong>Progressing through steps using the inspector</strong>: when the inspector is visible (in split or mini display mode), on properly setting a status for a test step (see <a href="#viewing-and-recording-execution-details">Viewing and Recording Execution Details</a> for further details), the next test step is automatically loaded into the inspector. If you were on step 3 of 5, you would be moved to step 4. If you were on the last step of a test case, you will be moved to the next test case, if one is available.</p>
-<p><strong>Pause/Play button</strong>: the time spent on every test step is recorded, by default, during test execution. This allows an accurate assessment of exactly how long a test run took to complete and these timing details are saved with the test run and its results. If you wish to pause the behind-the-scenes timer (for instance if taking a break) click the pause/play button. To resume the time click it again.</p>
-<p>The currently selected progress bar indicator block will be outlined with a peach border. The currently selected test case and test step on the table view will be indicated with a peach bar along their left edge, and will also be highlighted in a light peach.</p>
-<p><img alt="" src="../img/Test_Case_Management_178.png" /></p>
-<h3 id="viewing-and-recording-execution-details">Viewing and Recording Execution Details</h3>
-<p>There is a small icon to the left of each test step title and test case title. For test steps this is a circle, for test cases a square note. Once a status has been recorded for a test step (or once a test case has been assigned a status based on the statuses of its test steps) these icons will be filled with a visual indicator of its current status. The icons both become colored and are given a small symbol, based on the status. In the inspector view the associated button to that status has a gray bar beneath it.</p>
-<p><img alt="" src="../img/Test_Case_Management_179.png" /></p>
-<p>The same colors and symbols used to show a status are used on the buttons to record a status. The colors and symbols used are: green /
-tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Caution", red / cross = "Failed", gray / dash = "Not Run".</p>
-<p>Depending on the display mode and device, the buttons may show the text name of the status along with the symbol (see examples below---the top button set is that on the inspector, the bottom from the table (when the display mode is set to table).</p>
-<p><img alt="" src="../img/Test_Case_Management_180.png" /></p>
-<p><img alt="" src="../img/Test_Case_Management_181.png" /></p>
-<p>The various statuses when recorded against test steps will appear as below, respectively:</p>
-<p><img alt="" src="../img/Test_Case_Management_182.png" /></p>
-<p>You will notice that softer shades are used above compared to the buttons. Similarly soft shades are also used on the progress bar indicator blocks, as shown below.</p>
-<p><img alt="" src="../img/Test_Case_Management_183.png" /></p>
-<p>The status of a test case is determined by its test steps. If any of the steps are marked as "Caution", "Blocked", or "Fail" then the overall test case is marked with the most severe status of those statuses applied to any of the test steps from "Caution", to "Blocked", to "Fail" (e.g. if one is marked as "Caution, the test case will be marked "Caution"; but if one is marked as "Caution", and another "Blocked", the case will be marked "Blocked). If <em>all</em> the test steps passed, or if steps are marked either passed or "N/A", then the overall test case is marked as "Passed"; any other case results in the test case being marked as "Not Run".</p>
-<p>If the expected results are indeed observed, then you simply need to click the "<strong><em>Pass</em></strong>" button to mark the test step as passed, and advance to the next test step, or if all the steps have passed, you can click "<strong><em>Pass All</em></strong>" to pass all the steps at once.</p>
-<p>On the inspector, the "<strong><em>Pass All</em></strong>" button is visible via a dropdown to the right of the "<strong><em>Pass</em></strong>" button whenever the parent test case information is also displayed with the test step (typically only for the first step in a test case). This is illustrated in the screen shot below:</p>
-<p><img alt="" src="../img/Test_Case_Management_184.png" /></p>
-<p>When in the table display mode, the "<strong><em>Pass All</em></strong>" button is shown on the right-hand side of the test case row, as illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_185.png" /></p>
-<p>Below the main pane there are two optional sections. The first one allows you to log an incident in the system associated with the test step. For failures this will typically be used to log a bug relating to the failure. However even if you pass a step you can still log an incident, which may be useful for logging non-critical cosmetic items that are not serious enough for a failure to be recorded. This tab also displays any pre-existing incidents that were associated with the test step being viewed.</p>
-<p>The second tab displays a list of attachments that are related to the current test case and/or test step. This list initially contains any documents that have been attached to either the test case in general or the test step in particular. However as you perform the testing, you can attach additional documents to this list that are relevant to the test results (e.g. screenshots of an error page); these attached documents will be associated with both the test run itself and any incidents that are created.</p>
-<p>Once all the test steps have passed, you will be automatically be taken to the first step in the next test; if it is the last test case being executed, the &lt;Finish> button will be displayed instead.</p>
-<p>If the actual results differ from those expected, you need to enter a description of the actual result observed and click one of the "<strong><em>Fail</em></strong>", "<strong><em>Caution</em></strong>" buttons. Unlike the "<strong><em>Pass</em></strong>" button, if you don't enter a description for the actual result, the system will display an error message and re-prompt you again for input.</p>
-<p>In the inspector, the actual results text box is shown in the first tab below the information provided to the tester for a test step, as illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_186.png" /></p>
-<p>In the table display mode, previously entered actual results are always visible (below the information provided to the tester for a test step). On attempting to mark a step as anything other than "Pass" the actual results text box will automatically be displayed.</p>
-<p><img alt="" src="../img/Test_Case_Management_187.png" /></p>
-<p>You can also choose to manually show the actual results text box by selecting "Actual Result" option from the "+" dropdown menu.</p>
-<p><img alt="" src="../img/Test_Case_Management_188.png" /></p>
-<h3 id="saving-screenshots-to-a-test-step">Saving Screenshots to a Test Step</h3>
-<p>Often, testers will want to provide visual documentation of what they have found during the testing process. A screenshot of what they are testing is a great way to do this. To add a screenshot to the results of a test step, first copy your screenshot to the clipboard. Next, paste the screenshot into the actual results text box.</p>
-<h3 id="recording-extra-information">Recording Extra Information</h3>
-<p>In addition to logging the result of a test step, you can optionally choose to generate a new incident at the point of logging the execution status of a test step. When the incident form is visible (see below) enter a name, type, priority, severity (and any custom properties) for the new incident <em>before</em> clicking an execution status button. The other information needed for the new incident is automatically populated from the test step details. The newly created incident will also be linked to the test step, allowing traceability from within the incidents module. The functionality for managing incidents is described in more detail in
-<a href="../Incident-Tracking/">Incident Tracking</a>.</p>
-<p>If the inspector is visible, go to the "Incidents" tab. This will show any already linked incidents, show a detailed form for creating a new incident.</p>
-<p><img alt="" src="../img/Test_Case_Management_189.png" /></p>
-<p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button). The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.</p>
-<p><img alt="" src="../img/Test_Case_Management_190.png" /></p>
-<p>When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking "<strong><em>Add</em></strong>" the incident will be immediately linked to the selected test step.</p>
-<p>If you need to attach documents to the test run (in addition to any screenshots), you can either attach a new or link an existing document. From the inspector, go to the "Attachments" tab to see any documents already linked, or to add a document as needed. In the table display mode, select either "Add New Attachment" or "Link Existing Attachment" from the "+" dropdown menu. See <a href="#attachments">Attachments</a> for additional information about how to the different available options (e.g. either upload a document, url link, or screenshot, or to link a document or from source code).</p>
-<h3 id="leaving-the-test-execution-page">Leaving the Test Execution Page</h3>
-<p>If you are not able complete the whole test run in a single session, click the "Leave" button on the right of the progress bar---shown with an eject symbol (see below). This will return you to the page where you began the execution from. You can resume testing at a later date by locating the test run on your 'My Page' under 'My Pending Test Runs' and choosing to resume testing. Note that the system will remember every result you have logged, along with the last test step you were working so you can pick up right where you left off.</p>
-<p><img alt="" src="../img/Test_Case_Management_191.png" /></p>
-<p>Once either all steps in a test have an execution status recorded, or at least one step in each test case has been recorded with any status other than "Pass" the test run can be finished. An orange button at the far right of the progress bar with a stop symbol will appear (see below). Clicking this button will save and archive the entire test run (so it can no longer be amended) and the page will automatically exit the test execution page.</p>
-<p><img alt="" src="../img/Test_Case_Management_192.png" /></p>
-<h3 id="extra-test-execution-options">Extra Test Execution Options</h3>
-<p>There are a number of ways that some users may wish to alter the test execution page, depending on how they work. Options to change this are available from the menu button to the right of the display buttons.</p>
-<p><img alt="" src="../img/Test_Case_Management_193.png" /></p>
-<p>The following actions are available from this dropdown menu:</p>
-<p><strong>Refresh</strong>: this simply reloads the test run data. This is useful if other people are working on different test cases within the same test run and you want to make sure that you have the most current information about the statuses they have recorded.</p>
-<p><strong>Always show test case</strong>: by default, the inspector only shows the test case details when the first test step of a test case is displayed. Checking this item will mean that the test case details will be shown on every test step.</p>
-<p><strong>Show custom properties</strong>: by default, only a handful of system fields are shown for the test case and test step. If your organization places important and relevant information into custom fields as well, you can check this item to make them visible in the inspector for every case and step. Note that these fields will not be visible in the table display mode.</p>
-<p><strong>Show guided tour</strong>: if you missed or want to revisit the visual guided tour of the test execution page, click this button to run the tour again.</p>
-<h3 id="exploratory-test-execution">Exploratory Test Execution</h3>
-<p>As mentioned above, there are a number of conditions that must be satisfied for a test to run in exploratory mode. Exploratory testing is designed for relatively experienced testers and rather than to record the results of a pre-determined set of steps, to instead adjust and create the testing sequence during the act of testing itself. During exploratory testing test steps can be added, removed, edited, moved freely, at any time.</p>
-<p>Care must therefore be taken that this form of testing and of recording the results of a test are used appropriately. The conditions set by the system are one means of limiting its use.</p>
-<p>When starting exploratory testing the main screen will resemble the one below. Note that it looks broadly similar to that for standard test execution and is made up of three different areas:</p>
-<ol>
-<li>
-<p>a list of test steps on the left;</p>
-</li>
-<li>
-<p>details about the currently selected step on the right; and</p>
-</li>
-<li>
-<p>information at the top of the page about the test run itself (it's name and description, release, and how many steps it contains), along with a mini toolbar. In exploratory testing there is no progress bar, or options to layout the page in different views.</p>
-</li>
-</ol>
-<p><img alt="" src="../img/Test_Case_Management_194.png" /></p>
-<p>All fields in the right hand details area, or the top part of the page can often be edited. Their contents and associated label will be grayed out if they are read only fields (for instance if they are information from a custom property). To edit a field, click on it, change the text as required, then click out of the field. The information will be automatically saved. Note that any test steps that come from a link test case will be read only and as such their contents cannot be edited, nor can they be deleted.</p>
-<p>Just like with normal test execution, you can navigate between steps using the list of steps on the left; and steps can be passed, or failed using the execution status toolbar on the right hand section of the page. The unique actions you can take on test steps (besides editing their fields) are below:</p>
-<ol>
-<li>
-<p><strong>add a step</strong>: click on the plus button beneath the list of test steps on the left</p>
-</li>
-<li>
-<p><strong>clone an existing step</strong>: when you hover a test step in the list, you will see a button appear on its right. Click on this to show a mini menu with an option to clone the step. This will create a clone, at the bottom of the list of test steps, with a blank actual result</p>
-</li>
-</ol>
-<blockquote>
-<p><img alt="" src="../img/Test_Case_Management_195.png" /></p>
-<p><img alt="" src="../img/Test_Case_Management_196.png" /></p>
-</blockquote>
-<ol>
-<li>
-<p><strong>delete an existing step</strong>: if you have more than one test step, any editable test step can be deleted. Click on the button for that step (as explained above) and click delete from the mini menu.</p>
-</li>
-<li>
-<p><strong>move an existing step</strong>: to move an editable step click and drag it to the desired location in the test step list.</p>
-</li>
-</ol>
-<p>Below the main detailed section there are two or three tabs. SpiraTest users will only see two tabs -- incidents and attachements. SpiraPlan users will additionally see a tasks tab. The incident and attachment tabs function identically to normal test execution.</p>
-<p>The task tab allows the tester to quickly create tasks based on their exploratory testing, and optionally assign them to a user involved in the product. These tasks are attached to the test run as a whole, so any previously entered tasks will be visible even when changing steps. Creating a task is a light touch way of communicating with others about your findings and alerting them that some work is likely required to fix or clarify a feature. It is quicker to enter and manage than an incident.</p>
-<p><img alt="" src="../img/Test_Case_Management_197.png" /></p>
-<p>Tasks are shown as a list of cards with their left edge showing their priority by color. On creation a task's status will be gray -- showing that no priority has yet been set. The title of the task can be clicked to open the details page for that task.</p>
-<p><img alt="" src="../img/Test_Case_Management_198.png" /></p>
-<p>The toolbar at the top right of the page has a number of buttons:</p>
-<p><img alt="" src="../img/Test_Case_Management_199.png" /></p>
-<ol>
-<li>
-<p><strong>Pause/Play button</strong>: the time spent on every test step is recorded, by default, during test execution. This allows an accurate assessment of exactly how long a test run took to complete and these timing details are saved with the test run and its results. If you wish to pause the behind-the-scenes timer (for instance if taking a break) click the pause/play button. To resume the time click it again.</p>
-</li>
-<li>
-<p><strong>Leave button</strong>: as with normal test execution, if you are not able complete the exploratory test in a single session, click the "Leave" button---shown with an eject symbol. You can resume testing at a later date by locating the test run on your 'My Page' under 'My Pending Test Runs' and choosing to resume testing. Note that the system will remember every result you have logged, along with the last test step you were working so you can pick up right where you left off.</p>
-</li>
-<li>
-<p><strong>Finish button</strong>: once either all steps in a test have an execution status recorded, or at least one step has been recorded with any status other than "Pass" the test run can be finished. An orange with a stop symbol will appear (see below). Clicking this button will give you two options. "Update Test Case" will update the test case execution status, and also change its name, description, and test steps to reflect those on this page (adding, deleting, moving, editing as necessary). "Just Finish" will only change the execution status of the test case only---leaving all details of the test case unchanged. Either option will archive the entire test run (so it can no longer be amended) and the page will automatically exit the test execution page.</p>
-</li>
-</ol>
-<blockquote>
-<p><img alt="" src="../img/Test_Case_Management_200.png" /></p>
-</blockquote>
-<ol>
-<li><strong>Options</strong>: the right most button on the toolbar gives additional options for customizing the page. Specifically a user can decide what fields they wish to show or hide based on how they prefer to work in exploratory testing mode. Additionally this menu let's you revisit the introductory tour shown the first time the page is visited.</li>
-</ol>
-<p><img alt="" src="../img/Test_Case_Management_201.png" /></p>
-<h2 id="test-run-list">Test Run List</h2>
-<p>When you click on the Testing > Test Runs global navigation link, you will be taken to the test run list screen illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_202.png" /></p>
-<p>The test run list screen displays all the individual test executions performed in the current product, in a filterable, sortable grid. The grid displays the test run number together with fields such as execution status, name, assigned tester, execution date, test set, specified release, etc. The choice of columns displayed is configurable per-user, per-product, giving extensive flexibility when it comes to viewing and searching test runs.</p>
-<p>In addition, you can view a more detailed description of the test run by hovering over the test run name hyperlink to display a "tooltip". If you click on this test run hyperlink, you will be taken to the test run details page described in the next section. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of test runs in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
-<h3 id="refresh_2">Refresh</h3>
-<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the test run list. This is useful as other people may be completing test runs, and after stepping away from the computer for a short-time, you can click this button to make sure you are viewing the most current test run list for the product.</p>
-<h3 id="show-hide-columns_2">Show / Hide Columns</h3>
-<p>This drop-down list allows you to change the fields that are displayed in the test run list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
-<h3 id="filtering-sorting_1">Filtering &amp; Sorting</h3>
-<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
-<h3 id="printing-items_1">Printing Items</h3>
-<p>To quickly print a single test run or list of test runs you can select the items' checkboxes and then click the Print icon. This will display a popup window containing a printable version of the selected items.</p>
-<h2 id="test-run-details">Test Run Details</h2>
-<p>When you click on any of the individual test runs in the test run list, you are taken to the Test Run details page (not to be confused with the Test Case details page) shown below:</p>
-<p><img alt="" src="../img/Test_Case_Management_203.png" /></p>
-<p>This page consists of three panes:</p>
-<ol>
-<li>
-<p>The left hand navigation pane displays a list of related test runs with a color indicator for their current execution status. The display dropdown will let you choose whether the list contains test runs that are for the same release, test case or test set, or are just a filtered/unfiltered list based on your last search in the main test run list page.</p>
-</li>
-<li>
-<p>The top right area shows headline information about the test run details of the test run itself</p>
-</li>
-<li>
-<p>The main pane on the right displays tabs for detailed information about the test run, and its associations. The overview tab is initially loaded and shows the name, description, release, test set, estimated and actual duration, tester name, test run type, automation host fields, along with others, including custom fields. Underneath this is shown the list of test run steps, and any console output from a test automation engine such as Rapise, NUnit, JUnit, QTP, or Selenium.</p>
-</li>
-</ol>
-<h3 id="re-running-a-test">Re-running a Test</h3>
-<p>There is a button on the main test run toolbar called
-'<strong><em>Re-Test</em></strong>". If you click this button, SpiraPlan will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers.</p>
-<h3 id="editing-a-test-run">Editing a Test Run</h3>
-<p>When reviewing the test run, you may find that you need to change the results of the test run (e.g. the user selected the wrong release or custom property value). Many of the fields are editable at a later date, and to make changes, just modify the appropriate fields and click any "<strong><em>Save</em></strong>" button.</p>
-<h3 id="deleting-the-test-run">Deleting the Test Run</h3>
-<p>If you need to delete a test run that was erroneously captured, all you need to do is click on the link to access the invalid test run and then click the "<strong><em>Delete</em></strong>" button to remove it from the system. This will then force the system to update the status of the test case itself from the other logged test runs.</p>
-<h3 id="test-run-steps">Test Run Steps</h3>
-<p>In the case of a manual test run, this section displays all the steps of the test case <em>as they appeared during the test run in question.</em> This means that if the test steps were changed after running the test, the list here will reflect the original information.</p>
-<p><img alt="" src="../img/Test_Case_Management_204.png" /></p>
-<p>Each test run step is displayed along with the description, expected result, suggested sample data, a link back to the current version of the test step in question, the actual result and the execution status for this step <em>in this particular test run</em>. Where an actual result was recorded, an additional "<strong><em>View Incidents</em></strong>" button will be displayed. This allows you to view any incidents that are associated with this particular test run step:</p>
-<p><img alt="" src="../img/Test_Case_Management_205.png" /></p>
-<p>Clicking on the link will open up a popup dialog box that displays a list of all the incidents associated with the selected test run step. Each of the incidents listed will reflect the most up-to-date information regarding that incident, including its type, status, priority, name, assigned owner, detection date and who first detected it. Clicking on the incident name will take you to the details page for that incident, which is described in <a href="../Incident-Tracking/#incident-details">Incident Tracking &gt; Incident Details</a>.</p>
-<h3 id="console-output">Console Output</h3>
-<p>In the case of an automated test run, this tab will display the details of the test run as reported from the test runner application. These details will vary depending on the type of automated tool being used, but typically they include the name of the automated test runner, the number of assertions raised, the name of the corresponding test case in the tool, the status of the test run and a detailed error message, and the stack-trace in the case of a failure. An example test run as reported from the NUnit automated test runner is illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_206.png" /></p>
-<p>Details on how to use SpiraPlan® in conjunction with an automated testing tool are provided in the <em>SpiraPlan® Automated Testing Integration Guide,</em> which can be downloaded from the Inflectra<sup>®</sup>
-website.</p>
-<h3 id="attachments_2">Attachments</h3>
-<p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
-<h3 id="history_2">History</h3>
-<p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
-<h3 id="incidents_2">Incidents</h3>
-<p>This tab displays the list of incidents associated with the current test run. The incidents will have been logged during the creation of the test run and will be linked to one of the steps in the test run:</p>
-<p><img alt="" src="../img/Test_Case_Management_208.png" /></p>
-<p>Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:</p>
-<p><strong>Refresh</strong> -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.</p>
-<p>You can also <strong>filter</strong> the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the incident allows you to edit the incident inline directly on this screen.</p>
-<h3 id="tasks">Tasks</h3>
-<p>This tab is only visible to users of SpiraPlan. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.</p>
-<p><img alt="" src="../img/Test_Case_Management_209.png" /></p>
-<h2 id="test-set-list">Test Set List</h2>
-<p>As well as being able to organize test cases into folders, you can also create separate groupings of test cases called test sets which can then be assigned to testers as a package. To view the list of test sets for a product, click on Testing > Test Sets in the global navigation:</p>
-<p><img alt="" src="../img/Test_Case_Management_211.png" /></p>
-<p>The test set list consists of hierarchical list of all the test sets in the current product organized into folders. The structure is very similar to the folder structure in Microsoft Windows® Explorer, and users will find this very familiar and intuitive to use. A folder tree is on the left hand side---with triangle icons to expand / collapse each folder. Contents of the selected folder (the one marked in bold on the folder tree) are shown on the right hand side.<sup id="fnref2:folder-url"><a class="footnote-ref" href="#fn:folder-url">1</a></sup></p>
-<p>When you create a new product, this list will initially be empty, and you will have to use the "<strong><em>New Test Set</em></strong>" button to start adding test sets to the system.</p>
-<p>Each test set is listed along with the number of test cases contained (in parenthesis), the aggregate execution status of the contained test cases (using a graphical bar-chart), the date that the test set has been scheduled to be executed (planned date), the date that it was last executed, the person currently assigned to execute the test set, the status and the test set id. Clicking on a test set's hyperlink will take you to the test set details page for the item in question.</p>
-<p>Note: the test set status is separate from the execution status of the individual test cases and represents where the test set is in its lifecycle:</p>
-<ul>
-<li>
-<p><strong>Not Started</strong> -- The test set has been assigned to a tester or automation host and no testing has been performed.</p>
-</li>
-<li>
-<p><strong>In Progress</strong> -- The test set has been assigned to a tester or automation host and the testing is in progress.</p>
-</li>
-<li>
-<p><strong>Completed</strong> -- The test set was previously assigned, but has now been completed, with all test cases having an execution status recorded and the tester having clicked the Finish button in the test execution wizard.</p>
-</li>
-<li>
-<p><strong>Blocked</strong> -- The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.</p>
-</li>
-<li>
-<p><strong>Deferred</strong> -- The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.</p>
-</li>
-</ul>
-<h3 id="delete_2">Delete</h3>
-<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the currently selected test sets. It will delete the association between the test set and its contained test cases, but it will not delete the test cases themselves.</p>
-<h3 id="refresh_3">Refresh</h3>
-<p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the list of test sets. This is useful if other people are making changes to the test set list and you want to make sure that you have the most current version.</p>
-<h3 id="focus-on">Focus On</h3>
-<p>The "<strong><em>Focus On</em></strong>" button is a useful when you have performed a filter on the list of test sets and then wish to quickly navigate to the folder of a particular test set shown in the list. After selecting a test set, clicking the button will move the left hand folder tree to the folder that contains the selected test set. It will also change the list view on the right to show all of the test sets within that folder (i.e. the selected test set and its siblings).</p>
-<h3 id="edit">Edit</h3>
-<p>Each test set in the list has an "<strong><em>Edit</em></strong>" button in its right-most column. When you click this button, <em>double-click</em> on any of the cells in the row, or select a row and click the "<strong><em>Edit</em></strong>" button in the toolbar at the top of the page. This will change the item from "View" mode to "Edit" mode. The various columns are made editable, and "<strong><em>Save</em></strong>" and "<strong><em>Cancel</em></strong>" buttons are displayed in the last column:</p>
-<p><img alt="" src="../img/Test_Case_Management_212.png" /></p>
-<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Save</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then update the changes by clicking the one "<strong><em>Save</em></strong>" button. Also, if you want to make the same change to multiple rows (e.g. to change the owner of five test sets from "Fred Bloggs" to "Joe Smith"), you can click on the "<strong><em>fill</em></strong>" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.</p>
-<p>If you want to edit lots of items, first select their checkboxes and then click the "<strong><em>Edit</em></strong>" button on the same row as the Filters and it will switch all the selected items into edit mode.</p>
-<p>When you have made your updates, you can either click "<strong><em>Save</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
-<h3 id="show-hide-columns_3">Show / Hide Columns</h3>
-<p>This drop-down list allows you to change the fields that are displayed in the test set list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
-<h3 id="filtering-sorting_2">Filtering &amp; Sorting</h3>
-<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
-<h3 id="copying-test-sets">Copying Test Sets</h3>
-<p>To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit > Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit > Paste Items option.</p>
-<p>The test sets will now be copied into the destination you specified. The name of the copied test sets will be prefixed with "Copy of..." to distinguish them from the originals.</p>
-<h3 id="moving-test-sets">Moving Test Sets</h3>
-<p>There are two options for moving test sets or folders:</p>
-<ol>
-<li>Click on the test set/folder you want to move in the right hand list and drag it to the folder in the left hand folder tree you want it moved to. The background of the new folder will change to show where it will be inserted:</li>
-</ol>
-<p><img alt="" src="../img/Test_Case_Management_214.png" /></p>
-<p>Once you have the test set/folder positioned at the correct place that you want it inserted, just release the mouse button. To move multiple items simply select their checkboxes and then drag-and-drop one of the selected items.</p>
-<ol>
-<li>Alternatively you can simply select the check-boxes of the test sets you want to move and then select the Edit > Cut Items menu option. This will cut the current test set selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit > Paste Items option. The test sets will now be moved into the destination specified.</li>
-</ol>
-<h3 id="printing-or-exporting-items">Printing or Exporting Items</h3>
-<p>To quickly print a single test set, test set folder or list of test sets you can select the items' checkboxes and then click Tools > Print Items. This will display a popup window containing a printable version of the selected items.</p>
-<p>Alternatively you can save the selected items into a number of formats, available via the Tools dropdown.</p>
-<h3 id="right-click-context-menu_1">Right-Click Context Menu</h3>
-<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:</p>
-<p><img alt="" src="../img/Test_Case_Management_215.png" /></p>
-<p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
-<h2 id="test-set-details">Test Set Details</h2>
-<p>When you click on a test set item in the test set list described in the previous section, you are taken to the test set details page illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_216.png" /></p>
-<p>This page is made up of <em>three</em> areas;</p>
-<ol>
-<li>
-<p>the left pane displays the test set folders and list navigation;</p>
-</li>
-<li>
-<p>the right pane's header, which displays: the operations toolbar; the <a href="../Application-Wide/#breadcrumbs">folder the test set is in</a>; the editable name of the selected test set; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
-</li>
-<li>
-<p>the right pane's tabbed interface with rich information related to the test set.</p>
-</li>
-</ol>
-<p>The navigation pane consists of a link that will take you back to the test set list, as well as a list of the peer test sets to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test sets by clicking on the navigation links without having to first return to the test sets list page. The navigation list can be switched between three different modes:</p>
-<ul>
-<li>
-<p>The list of test sets matching the current filter</p>
-</li>
-<li>
-<p>The list of all test sets, irrespective of the current filter</p>
-</li>
-<li>
-<p>The list of test sets assigned to the current user</p>
-</li>
-</ul>
-<p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
-<ul>
-<li>create a duplicate of the current artifact by clicking <code>Clone</code></li>
-<li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
-<li>the <code>Execute</code> button will execute all the test cases in the set against the release specified in the test set and then take you to the
-<a href="#execute-test-cases">test execution screen</a></li>
-</ul>
-<p>Initially the pane will be in "Overview" mode, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" modes if so desired. Each of the views is described separately below.</p>
-<h3 id="emailing_1">Emailing</h3>
-<p>Read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</p>
-<h3 id="followers_1">Followers</h3>
-<p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
-<h3 id="workflows_1">Workflows</h3>
-<p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
-<h3 id="overview-details_1">Overview -- Details</h3>
-<p>The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
-<p>The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
-<p><img alt="" src="../img/Test_Case_Management_218.png" /></p>
-<p>Test Sets can be specified as being either for "Manual" or "Automated" test runs (via the "Type" field. If you choose Manual, then the test set can be executed by a tester from their "My Page." However if you choose "Automated", the test set will be executed by the automation host you specified. In this case, the <em>planned date</em> <em>and time</em> will be used by the automated test engine to know when to execute the automated test scripts. For manual test sets, only the date component is used. In addition, you can specify a <em>recurrence schedule</em> for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc. so that SpiraPlan executes the same test set according to the specified frequency. The "Planned Date" field lets you specify the date and time to execute the test using the popup time picker.</p>
-<p>The <strong>Schedule on Build</strong> field will tell SpiraTest to automatically set the Planned Date to the current date/time plus the <strong>Post Build Wait Time</strong> offset (in seconds) whenever a new build is performed against the release or sprint that the test set is scheduled for. This allows you to automatically run a set of regression tests immediately after a build is completed.</p>
-<p>If you have <strong>test configuration sets</strong> defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the <strong>Configuration</strong> dropdown value. If you have a test configuration associated with the test set, when you execute the test set, SpiraPlan will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.</p>
-<p>The Description section contains the long, formatted description of the test set. You can enter rich text or paste in from a word processing program or web page.</p>
-<h3 id="overview-comments_1">Overview - Comments</h3>
-<p>The Comments section allows users to add and view discussions relating to the test set:</p>
-<p><img alt="" src="../img/Test_Case_Management_149.png" /></p>
-<p>Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "<strong><em>Add Comment</em></strong>" button.</p>
-<h3 id="overview-parameters">Overview - Parameters</h3>
-<p>As discussed in <a href="#parameters">Parameters</a>. test cases can have parameters associated with them. This enables one test case to be called several times and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case. In addition these parameters may be used by certain test automation engines.</p>
-<p>The Parameters section on the test set page lets you set a shared value for all of the parameters contained within the different test cases of the test set. The screenshot below shows that there are three parameters contained in the test cases that have been set at the test set level. In this example, every case that has a Parameter called 'browserName' will have its value set to 'Safari'. This is a quick way of setting values for many test cases at once. Test Set Values will override any default values of a Parameter (defined for each specific test case).</p>
-<p><img alt="" src="../img/Test_Case_Management_219.png" /></p>
-<p>You can add any additional Parameters not already set by clicking on the "<strong><em>Add Parameter Value</em></strong>" button. In this example, you can see that one of the parameters not yet set is called 'url'.</p>
-<p><img alt="" src="../img/Test_Case_Management_220.png" /></p>
-<p>You can also delete an existing Parameter specified for the whole test set by clicking the "<strong><em>Delete</em></strong>" button in the Operations column of the Parameter in question. Clicking the "<strong><em>Edit</em></strong>" button will let you alter the Test Set Value.</p>
-<p><img alt="" src="../img/Test_Case_Management_221.png" /></p>
-<p>Note that the Default Value is derived from the test cases that use a specific Parameter. It is shown in this table for information only---to help testers know what value will be run in the absence of specifying a Test Set Value.</p>
-<h3 id="overview-test-cases">Overview - Test Cases</h3>
-<p>This section displays the list of test cases contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case <em>when run in the context of the current test set</em>.</p>
-<p><img alt="" src="../img/Test_Case_Management_222.png" /></p>
-<p>To move the test cases, click the test case icon and drag it to the appropriate position in the list.</p>
-<p>To modify an existing Test Case click the "<strong><em>Edit</em></strong>" button in the right-most column, or <em>double-click</em> on the cells in the row. That will switch the selected row into Edit mode. The owner field can then be set at the test case level. This is useful in situations where you want the different test cases in the set to be executed by different testers (e.g. in integrated, scenario tests)</p>
-<p><img alt="" src="../img/Test_Case_Management_223.png" /></p>
-<p>To add a new test case to the Test Set, click on the "<strong><em>Add</em></strong>" button to display the panel:</p>
-<p><img alt="" src="../img/Test_Case_Management_224.png" /></p>
-<p>First, select the folder containing the test cases desired. You can then select the checkboxes of the individual test cases that you want to add to the test set (note: clicking the checkbox in the header row of the table will select ever test case in the currently selected folder). Once you have selected the desired items, click the "<strong><em>Save</em></strong>" button to add them to the test set.</p>
-<p>As discussed above in <a href="#overview-parameters">Overview - Parameters</a>, test cases can have parameters defined with specific values. These are created on the Test Case details page (see <a href="#parameters">Parameters</a>). If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":</p>
-<p><img alt="" src="../img/Test_Case_Management_225.png" /></p>
-<p>You can then specify the values of the parameters that the test set will pass to this specific test case. Once you have entered / modified the values, click "<strong><em>Save</em></strong>" to commit the changes.</p>
-<h3 id="overview-comments_2">Overview - Comments</h3>
-<p>The Comments section allows users to add and view discussions related to the Test Set:</p>
-<p><img alt="" src="../img/Test_Case_Management_226.png" /></p>
-<p>Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "<strong><em>Add Comment</em></strong>" button.</p>
-<h3 id="test-runs_1">Test Runs</h3>
-<p>This tab displays the list of all the test runs executed against the test set. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the <a href="#test-run-details">actual test run details</a>. In addition, you can choose to display any of the custom properties associated with the test run.</p>
-<p><img alt="" src="../img/Test_Case_Management_227.png" /></p>
-<p>The "Show/hide columns" drop-down list allows you to change the fields that are displayed in the test run list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
-<p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<h3 id="attachments_3">Attachments</h3>
-<p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
-<h3 id="history_3">History</h3>
-<p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
-<h3 id="incidents_3">Incidents</h3>
-<p>This tab displays the list of incidents associated with the current test set. Each incident will either have been: created during the execution of a test case in the test set (and are thereby linked to one of the test runs); or manually linked to one of the test steps in a test case of the set.</p>
-<p><img alt="" src="../img/Test_Case_Management_229.png" /></p>
-<h2 id="automation-host-list">Automation Host List</h2>
-<p>This section outlines how to use the Automation Host Management features of SpiraPlan® to manage the different host systems that will be running automated tests in your environment. Typically when scheduling automated tests you will want to execute the same tests on multiple computers running different environments.</p>
-<p>SpiraPlan allows you to build a master list of automation hosts in each product, which can be used to schedule test sets containing automated test cases against. Please refer to the Test Set section of this manual for more information on managing and scheduling test sets.</p>
-<p>When you click on the Testing > Automation Hosts global navigation link, you will initially be taken to the automation host list screen illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_230.png" /></p>
-<p>The automation host list screen displays all the automation hosts entered for the current product, in a filterable, sortable grid. The grid displays the automation host ID together with fields such as name, description, last updated date, token, and any custom properties. The choice of columns displayed is configurable per-user, per-product, giving extensive flexibility when it comes to viewing and searching automation hosts.</p>
-<p>In addition, you can view a more detailed description of the automation host by positioning the mouse pointer over the host name hyperlink and waiting for the popup "tooltip" to appear. If you click on the host name hyperlink, you will be taken to the <a href="#automation-host-details">automation host details page</a>. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of hosts in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
-<p>One special column that is unique to automation hosts is the "Token" field. This needs to contain a short textual identifier that uniquely identifies each automation host in the product. This will be used by each host computer to identify itself to SpiraPlan.</p>
-<h3 id="filtering-sorting_3">Filtering &amp; Sorting</h3>
-<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
-<h3 id="new-host">New Host</h3>
-<p>Clicking on the "<strong><em>New Host</em></strong>" button adds a new automation host to the bottom of the automation host list with a default name and token.</p>
-<h3 id="delete_3">Delete</h3>
-<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the automation hosts whose check-boxes have been selected in the host list.</p>
-<h3 id="refresh_4">Refresh</h3>
-<p>Clicking on the "<strong><em>Refresh</em></strong>" button reloads the list of automation hosts; this is useful when new hosts are being added by other users, and you want to make sure you have the most up-to-date list displayed.</p>
-<h3 id="show-hide-columns_4">Show / Hide Columns</h3>
-<p>This drop-down list allows you to change the fields that are displayed in the host list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
-<h3 id="edit_1">Edit</h3>
-<p>Each automation host in the list has an "<strong><em>Edit</em></strong>" button in its right-most column. When you click this button or just
-<em>double-click</em> on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "<strong><em>Save</em></strong>" buttons are displayed in the last column.</p>
-<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Save</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then update the changes by clicking the one "<strong><em>Save</em></strong>" button. Also, if you want to make the same change to multiple rows (e.g. to change five automation hosts from Active = No to Active = Yes), you can click on the "fill" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.</p>
-<p>If you want to edit lots of items, first select their checkboxes and then click the "<strong><em>Edit</em></strong>" button on the same row as the Filters and it will switch all the selected items into edit mode.</p>
-<p>When you have made your updates, you can either click "<strong><em>Save</em></strong>"to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
-<h2 id="automation-host-details">Automation Host Details</h2>
-<p>When you click on an automation host entry in the host list, you are taken to the automation host details page illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_231.png" /></p>
-<p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the automation host name and ID, and the bottom part of the right pane displays different information associated with the automation host.</p>
-<p>The navigation pane consists of a link that will take you back to the host list, as well as a list of the peer automation hosts to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the peer hosts by clicking on the navigation links without having to first return to the host list page. The navigation list can be switched between two different modes:</p>
-<ul>
-<li>
-<p>The list of hosts matching the current filter</p>
-</li>
-<li>
-<p>The list of all hosts, irrespective of the current filter</p>
-</li>
-</ul>
-<p>The top part of the right pane allows you to view and/or edit the details of the particular automation host. You can edit the various fields (name, description, token, etc.) and custom properties. Once you are satisfied with the changes, click either the "<strong><em>Save</em></strong>" button or the alternative options from the "<strong><em>Save</em></strong>" dropdown list. In addition you can delete the current automation host by clicking "<strong><em>Delete</em></strong>", or discard any changes made by clicking "<strong><em>Refresh</em></strong>".</p>
-<h3 id="overview">Overview</h3>
-<p>This tab shows the fields and description associated with the automation host. Standard and custom fields are grouped by type (eg all date and time fields are grouped together).</p>
-<h3 id="test-runs_2">Test Runs</h3>
-<p>This tab displays the list of all the test runs executed against the automation host. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual <a href="#test-run-details">test run details</a>. In addition, you can choose to display any of the custom properties associated with the test run.</p>
-<p><img alt="" src="../img/Test_Case_Management_232.png" /></p>
-<p>The "Show/hide columns" drop-down list allows you to change the fields that are displayed in the test run list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
-<p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<h3 id="attachments_4">Attachments</h3>
-<p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
-<h3 id="history_4">History</h3>
-<p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
-<h2 id="test-configurations-list">Test Configurations List</h2>
-<p>This section outlines how to use the Test Configuration features of SpiraPlan® to create and manage different configurations of parameters that tests (both manual and automated) can be run against. This offers tools to quickly create every combination of different parameters.</p>
-<p>When you click on the Testing > Test Configuration global navigation link, you will initially be taken to the test configuration list screen illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_233.png" /></p>
-<p>The test configuration list screen displays all the test configurations for the current product, in a filterable, sortable grid. The grid displays the name, creation date, last updated date, ID, and whether the test configuration is active.</p>
-<p>In addition, you can view a more detailed description of the test configuration by positioning the mouse pointer over the host name hyperlink and waiting for the popup "tooltip" to appear. If you click on the host name hyperlink, you will be taken to the <a href="#test-configuration-details">test configuration details page</a>. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of hosts in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
-<h3 id="filtering-sorting_4">Filtering &amp; Sorting</h3>
-<p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
-<h3 id="new-test-configuration">New Test Configuration</h3>
-<p>Clicking on the "<strong><em>New Configuration</em></strong>" button adds a new test configuration to the bottom of the list with a default name.</p>
-<h3 id="delete_4">Delete</h3>
-<p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the test configurations whose check-boxes have been selected in the host list.</p>
-<h3 id="refresh_5">Refresh</h3>
-<p>Clicking on the "<strong><em>Refresh</em></strong>" button reloads the list of test configurations; this is useful when new configurations are being added by other users, and you want to make sure you have the most up-to-date list displayed.</p>
-<h3 id="edit_2">Edit</h3>
-<p>Each test configuration in the list has an "<strong><em>Edit</em></strong>" button in its right-most column. When you click this button or just
-<em>double-click</em> on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "<strong><em>Save</em></strong>" buttons are displayed in the last column.</p>
-<p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Save</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then update the changes by clicking the one "<strong><em>Save</em></strong>" button. Also, if you want to make the same change to multiple rows (e.g. to change five test configurations from Active = No to Active = Yes), you can click on the "fill" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.</p>
-<p>If you want to edit lots of items, first select their checkboxes and then click the "<strong><em>Edit</em></strong>" button on the same row as the Filters and it will switch all the selected items into edit mode.</p>
-<p>When you have made your updates, you can either click "<strong><em>Save</em></strong>"to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
-<h2 id="test-configuration-details">Test Configuration Details</h2>
-<p>When you click on a test configuration entry in the list, you are taken to the test configuration details page illustrated below:</p>
-<p><img alt="" src="../img/Test_Case_Management_234.png" /></p>
-<p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the test configuration name and ID, and the bottom part of the right pane displays different information associated with the test configuration.</p>
-<p>The navigation pane consists of a link that will take you back to the test configuration list, as well as a list of the peer test configurations to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the peer configurations by clicking on the navigation links without having to first return to the list page. The navigation list can be switched between two different modes:</p>
-<ul>
-<li>
-<p>The list of configurations matching the current filter</p>
-</li>
-<li>
-<p>The list of all configurations, irrespective of the current filter</p>
-</li>
-</ul>
-<p>The right pane allows you to view and/or edit the details of the particular test configuration. You can edit the various fields (name, description, etc.) and custom properties. Once you are satisfied with the changes, click either the "<strong><em>Save</em></strong>" button or the alternative options from the "<strong><em>Save</em></strong>" dropdown list. In addition you can delete the current automation host by clicking "<strong><em>Delete</em></strong>", or discard any changes made by clicking "<strong><em>Refresh</em></strong>".</p>
-<h3 id="overview_1">Overview</h3>
-<p>This tab shows the fields and description associated with the test configuration. Standard and custom fields are grouped by type (eg all date and time fields are grouped together).</p>
-<h3 id="overview-test-configuration-entries">Overview -- Test Configuration Entries</h3>
-<p>This section shows the list of all entries from this test configuration, and that would be used by a test set to populate parameters. Each row represents a single unique combination of the parameters (shown on the header row of the table).</p>
-<p>Entries can be reordered by dragging and drop one row or more. Individual entries can also be removed by checking the checkbox for that entry and then clicking "<strong><em>Remove</em></strong>" button.</p>
-<p>To create new entries, first click the "<strong><em>Populate</em></strong>" button. This will display the following panel:</p>
-<p><img alt="" src="../img/Test_Case_Management_235.png" /></p>
-<p>You must select a parameter from the left dropdown (which contains a list of all parameters defined in test cases in the current product), and a custom list with which to populate the parameter. Then click the "<strong><em>Add</em></strong>" button. For instance, the screenshot below would create a configuration using every operating system defined by the custom list "Operating System" and assigning these to the parameter called "operatingSystem."</p>
-<p><img alt="" src="../img/Test_Case_Management_236.png" /></p>
-<p>Note: Custom lists are usually used in SpiraPlan for custom fields on various artifacts. However, you can create custom lists that are solely for the purpose of test configurations, should you so wish -- for instance, to contain a list of usernames.</p>
-<p>Once you are happy with the lists and parameters selected, click the "<strong><em>Populate</em></strong>" button. This will overwrite all existing entries in this test configuration. It will create every combination based on the lists specified. So if you select two parameters, each with a list that has ten items, one hundred entries will be created in the test configuration.</p>
-<h3 id="test-sets_1">Test Sets</h3>
-<p>This tab displays the list of all the test sets that are using the test configuration. Each test set is listed together with its name, release, the date of last execution, the owner, the status, the execution status, and a link to the actual test set details. In addition, you can choose to display any of the custom properties associated with the test set.</p>
-<p><img alt="" src="../img/Test_Case_Management_237.png" /></p>
-<p>The "Show/hide columns" drop-down list allows you to change the fields that are displayed in the test set list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
-<p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
+<h2 id="execute-test-cases"><a href="../Test-Execution/">Execute Test Case(s)</a></h2>
+<h2 id="test-run-list"><a href="../Test-Run-Management/#test-run-list">Test Run List</a></h2>
+<h2 id="test-run-details"><a href="../Test-Run-Management/#test-run-details">Test Run Details</a></h2>
+<h2 id="test-set-list"><a href="../Test-Set-Management/#test-set-list">Test Set List</a></h2>
+<h2 id="test-set-details"><a href="../Test-Set-Management/#test-set-details">Test Set Details</a></h2>
+<h2 id="automation-host-list"><a href="../Automation-Host-Management/#automation-host-list">Automation Host List</a></h2>
+<h2 id="automation-host-list_1"><a href="../Automation-Host-Management/#automation-host-details">Automation Host List</a></h2>
+<h2 id="test-configuration-list"><a href="../Test-Configuration-Management/#test-configuration-list">Test Configuration List</a></h2>
+<h2 id="test-configuration-details"><a href="../Test-Configuration-Management/#test-configuration-details">Test Configuration Details</a></h2>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:folder-url">
-<p>when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.&#160;<a class="footnote-backref" href="#fnref:folder-url" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:folder-url" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.&#160;<a class="footnote-backref" href="#fnref:folder-url" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></div>
-        </div>
-
-        <footer class="col-md-12">
-<hr>
-<p>© Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
 </div>
+                
+                  
+                
+                
+              
+              
+                
 
-    </body>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Requirements-Management/" title="Requirements Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Requirements Management
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Test-Execution/" title="Test Execution" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Test Execution
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/inflectra" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/inflectra" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/inflectra-corporation" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
 </html>
