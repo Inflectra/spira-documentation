@@ -14,9 +14,13 @@ We can fully change the theme used and its features using a basic templating lan
 
 ## Getting the build environment set up
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
-2. also run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
-2. Clone this repo to your local machine
-3. Edit files as needed
+2. Run `pip install mkdocs-material` to install everything our base theme needs
+3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
+4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
+5. Clone this repo to your local machine
+6. Edit files as needed
+
+## Setting up our theme and addons
 
 
 # Working with the docs and Markdown

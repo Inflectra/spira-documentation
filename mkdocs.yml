@@ -9,11 +9,45 @@ google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
 markdown_extensions:
   - attr_list
   - footnotes
-  - codehilite
+  - admonition
+  - codehilite:
+      linenums: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 theme: 
-  name: mkdocs
+  name: 'material'
+  palette:
+    primary: 'black'
+    accent: 'amber'
+  font:
+    code: 'IBM Plex Mono'
+  favicon: 'img/favicon.ico'
+  logo: 'img/logo.svg'
   custom_dir: inflectra_mkdocs
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/inflectra'
+    - type: 'twitter'
+      link: 'https://twitter.com/inflectra'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/inflectra-corporation'
 
 nav:
 - User Manual:
@@ -22,6 +56,11 @@ nav:
   - User/Product Management: Spira-User-Manual\User-Product-Management.md
   - Requirements Management: Spira-User-Manual\Requirements-Management.md
   - Test Case Management: Spira-User-Manual\Test-Case-Management.md
+  - Test Execution: Spira-User-Manual\Test-Execution.md
+  - Test Run Management: Spira-User-Manual\Test-Run-Management.md
+  - Test Set Management: Spira-User-Manual\Test-Set-Management.md
+  - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
+  - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
   - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
   - Release Management: Spira-User-Manual\Release-Management.md
   - Task Tracking: Spira-User-Manual\Task-Tracking.md
@@ -177,3 +216,7 @@ nav:
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
+- About:
+  - Release Notes for v6: About/release-notes-v6.md
+  - Introduction to Spira: About/introduction-to-spira.md
+  - Legal Notices: About/legal-notices.md

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+
+{#
+The entry point for the MkDocs Theme.
+ 
+Any theme customisations should override this file to redefine blocks defined in
+the various templates. The custom theme should only need to define a main.html
+which `{% extends "base.html" %}` and defines various blocks which will replace
+the blocks defined in base.html and its included child templates.
+#}
+
+{%- block site_name %}
+{% if config.hide_site_name %}
+{% else %}
+<a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
+{% endif %}
+{%- endblock %}
+
+{%- block site_meta %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% if page and page.is_homepage %}
+<meta name="description" content="{{ config['site_description'] }}">{% endif %}
+{% if config.site_author %}
+<meta name="author" content="{{ config.site_author }}">{% endif %}
+{% if page and page.canonical_url %}
+<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+{% if config.site_favicon %}
+<link rel="shortcut icon" href="{{ config.site_favicon|url }}">
+{% else %}
+<link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">{% endif %}
+{%- endblock %}
+
+{%- block styles %}
+<link href="{{ 'css/bootstrap-custom.min.css'|url }}" rel="stylesheet">
+<link href="{{ 'css/font-awesome.min.css'|url }}" rel="stylesheet">
+<link href="{{ 'css/base.css'|url }}" rel="stylesheet">
+{%- if config.theme.highlightjs %}
+<link rel="stylesheet" href="/css/base.css">
+{%- endif %}
+{%- for path in config['extra_css'] %}
+<link href="{{ path|url }}" rel="stylesheet">
+{%- endfor %}
+{%- endblock %}
+
+{%- block libs %}
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<script src="{{ 'js/jquery-1.10.2.min.js'|url }}" defer></script>
+<script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}" defer></script>
+{%- if config.theme.highlightjs %}
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{%- endif %}
+{%- endblock %}
+
+
+{%- block next_prev %}
+{%- if page and (page.next_page or page.previous_page) %}
+<li {% if not page.previous_page %}class="disabled" {% endif %}>
+  <a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url|url }}" {% endif %}>
+    <i class="fa fa-arrow-left"></i></a>
+</li>
+<li {% if not page.next_page %}class="disabled" {% endif %}>
+  <a rel="prev" {% if page.next_page %}href="{{ page.next_page.url|url }}" {% endif %}><i
+      class="fa fa-arrow-right"></i></a>
+</li>
+{%- endif %}
+{%- endblock %}
+
+{%- block search_button %}
+{%- if 'search' in config['plugins'] %}
+<li>
+  <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+    <i class="fa fa-search"></i>
+  </a>
+</li>
+{%- endif %}
+{%- endblock %}
+
+{%- block footer %}
+<hr>
+{%- if config.copyright %}
+<p>{{ config.copyright }}</p>
+{%- endif %}
+{%- endblock %}
