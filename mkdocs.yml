@@ -34,9 +34,20 @@ theme:
   palette:
     primary: 'black'
     accent: 'amber'
+  font:
+    code: 'IBM Plex Mono'
   favicon: 'img/favicon.ico'
   logo: 'img/logo.svg'
   custom_dir: inflectra_mkdocs
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/inflectra'
+    - type: 'twitter'
+      link: 'https://twitter.com/inflectra'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/inflectra-corporation'
 
 nav:
 - User Manual:
@@ -45,6 +56,11 @@ nav:
   - User/Product Management: Spira-User-Manual\User-Product-Management.md
   - Requirements Management: Spira-User-Manual\Requirements-Management.md
   - Test Case Management: Spira-User-Manual\Test-Case-Management.md
+  - Test Execution: Spira-User-Manual\Test-Execution.md
+  - Test Run Management: Spira-User-Manual\Test-Run-Management.md
+  - Test Set Management: Spira-User-Manual\Test-Set-Management.md
+  - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
+  - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
   - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
   - Release Management: Spira-User-Manual\Release-Management.md
   - Task Tracking: Spira-User-Manual\Task-Tracking.md
