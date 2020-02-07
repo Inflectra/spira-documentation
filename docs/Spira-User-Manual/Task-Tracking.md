@@ -166,7 +166,7 @@ The top part of this tab displays the various standard fields and custom propert
 
 ### Effort Fields
 
-You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and producted final effort.
+You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and projected final effort.
 
 The different effort values mean the following:
 
@@ -177,11 +177,11 @@ The different effort values mean the following:
 **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort:
 % Complete = 100% - (Remaining Effort / Estimated Effort)
 
-**Producted Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort:
+**Projected Effort** -- This is value that the system is projecting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort:
 
-Producted Effort = (Actual Effort + Remaining Effort)
+Projected Effort = (Actual Effort + Remaining Effort)
 
-**Note**: If the actual effort is not specified, the producted effort will be the same as the estimated effort.
+**Note**: If the actual effort is not specified, the projected effort will be the same as the estimated effort.
 
 **Note:** if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.
 
