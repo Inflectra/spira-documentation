@@ -141,8 +141,6 @@ following screen:
 ![](img/System_Users_50.png)
 
 
-
-
 This screen lists all the users available in the LDAP server that have
 not been already imported into SpiraPlan®. The users are
 listed by name along with their login, email address and fully
@@ -154,6 +152,12 @@ directional arrows in the field headings.
 Select the checkbox of any users you want to import and click "Import"
 to complete the operation. These users can now login to SpiraPlan® and
 use their existing LDAP login and password information.
+
+
+## Login Providers
+
+[TODO]
+
 
 ## Active Sessions
 
