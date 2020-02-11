@@ -7,16 +7,24 @@ The following screen is displayed when you choose the "View/Edit Users" link fro
 
 ![](img/System_Users_44.png)
 
-This screen displays the list of users in the system (both inactive and active) together with their first name, middle initial, last name, username (login), administrative permission status and active status.
+This screen displays the list of users in the system (by default it only shows active users, but you can use the dropdown at the top to view inactive or all users). It shows the following fields:
 
-You can filter the list of users by either choosing an administrative /
-active status, or entering a portion of the first name, middle initial, last name or username into the appropriate text box. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.
+- First Name
+- Last  Name
+- Username (login)
+- administrative permission status
+- Department
+- Organization
+- Which, if any, external login provider they are using (LDAP, or a login provider like Google or Okta)
+- active status
+
+You can filter the list of using the filter row at the top of the list. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.
 
 To add a new user to the system, click the "Add" button at the bottom of the user list, and a new screen will be displayed that allows you to enter the new user information:
 
 ![](img/System_Users_45.png)
 
-On this screen, you can enter information about the user, such as their name, email address, and department. You can also create their password, password reset question and answer. If you want the user to be able to subscribe to items in the system as RSS feeds, you should also make sure that the "Enable RSS Feeds" checkbox is selected and a GUID token is displayed in the text-box underneath.
+On this screen, you can enter information about the user, such as their name, email address, and department. You will need to create their password, password reset question and answer. If you want the user to be able to subscribe to items in the system as RSS feeds, you should also make sure that the "Enable RSS Feeds" checkbox is selected and a GUID token is displayed in the text-box underneath.
 
 When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
 
@@ -26,8 +34,13 @@ In a similar way, to edit the details of an existing user, click the "Edit" hype
 
 ![](img/System_Users_46.png)
 
-On this screen you can edit the first name, middle initial, last name, username, email address, system administration status and active status. You can also change the user's password (if the user is managed by SpiraPlan) or LDAP information (if managed by an external LDAP directory server). In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on *"Importing LDAP Users"* and
-*"LDAP Configuration"* for more details.
+On this screen you can edit the first name, middle initial, last name, username, email address, system administration status and active status. You can also change the user's password (if the user is managed by SpiraPlan).
+
+If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](../System/#ldap-configuration) for more details.
+
+If a user's account uses an external provider for authentication (like LDAP or Okta) you can unlink the user from that authentication provider on this page. Click the `Unlink Account` button to display a popup that requires you to add the new security information for that user.
+
+![unlink a user from an external provider](img/System_Users_oauth-admin-unlink.png)
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
@@ -78,7 +91,28 @@ On the Provider List page you can see a list of all available providers, their s
 
 ![user administration login provider list page](img/System_Users_oauth-admin-provider-list-with-connected-account.png)
 
-On the provider details page you can set a provider to active or inactive. Only a provider that does not have any users linked through it can be made inactive. Different providers have different required fields. For your provider, make sure to fill in the required fields with the specific information that the provider generates for you. Every provider needs at least a `client id` and `client secret`.
+On the provider details page you can set a provider to active or inactive. Different providers have different required fields. For your provider, make sure to fill in the required fields with the specific information that the provider generates for you. Every provider needs at least a `client id` and `client secret`. For users to be able to login using the provider make sure to set the provider to active and hit `Save`. This will make sure that the right button shows up on the login screen. 
+
+Note that you can only deactivate a provider that does not have any users linked to it.
+
+![user administration login provider details page for Google](img/System_Users_oauth-admin-provider.png)
+
+### How to set up a provider to integrate with Spira
+Below is a general set of instructions about how to set up the provider and Spira to work together. However, the providers may have changed their process or documentation, so please consult the provider about configuring their system. We have set up and tested all the providers we support, so can offer as footnotes some specific tips for: Github[^github], Gitlab[^gitlab], Google[^google], and Okta[^okta].
+
+1. Go to the provider details page for the provider in question. 
+2. Take note of the "Return URL" at the bottom of the form. You will need to enter this **exactly as it appears here** into your provider (it is case sensitive)
+3. Login with your admin account to the provider
+4. Create a new application / OAuth access with the provider
+5. You will need to provide the homepage / originating URL: this is your main spira domain, e.g. `https://inflectra.spiraservice.net`
+6. Use the "Return URL" from above in the field called something like return URL, callback URL, redirect URL
+7. Go back to Spira and enter the information for the required fields into the provider page and hit save.
+8. Test that you can login to Spira using the provider. This can be done in two ways: linking an existing account, or creating a new account. User will only be able to create a new account if users can register for a new account
+9. Start rolling out to your users - in other words encourage / suggest that they hook up their provider account to Spira (each user has to do this individually, it cannot be managed centrally)
+
+Before rolling out the provider to your users be aware that the provider likely communicates to your Spira application over the internet so your users may not be able to log in to Spira if that provider service goes down. Because of this, the root admin is not able to connect to Spira using a provider in this way. 
+
+
 
 ## Active Sessions
 
@@ -107,17 +141,12 @@ For each pending user request you can choose to either Approve or Deny the reque
 
 There are six (6) default product roles that a user may be assigned to a product with:
 
-**Product Owner** -- the same rights as a Manager, but in addition can access the product administration tools
-
-**Manager** -- can see all screens and add/edit all artifacts, but cannot access product administration tools
-
-**Developer** -- can see all screens, but can only add/edit incidents, tasks and tests and change requirement coverage
-
-**Tester** -- can see all screens, but can only add/edit incidents and execute tests. Note: cannot delete incidents, only a Manager can do that.
-
-**Observer** -- can see all screens, but cannot perform any write operations (insert / update / delete)
-
-**Incident User** -- can only view and edit incidents. This user cannot even see the product's requirements, tasks, test cases or releases.
+- **Product Owner** -- the same rights as a Manager, but in addition can access the product administration tools
+- **Manager** -- can see all screens and add/edit all artifacts, but cannot access product administration tools
+- **Developer** -- can see all screens, but can only add/edit incidents, tasks and tests and change requirement coverage
+- **Tester** -- can see all screens, but can only add/edit incidents and execute tests. Note: cannot delete incidents, only a Manager can do that.
+- **Observer** -- can see all screens, but cannot perform any write operations (insert / update / delete)
+- **Incident User** -- can only view and edit incidents. This user cannot even see the product's requirements, tasks, test cases or releases.
 
 Note: The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
 
@@ -162,3 +191,47 @@ In addition, there are some artifact-wide permissions that can be specified for 
 
 This section lets you specify if the role allows users to add new documents to the product, edit existing documents, delete documents, edit the document folders, and view/edit source code revisions.
 
+
+
+[^github]: 
+    Create an [new application in Github](https://github.com/settings/applications/new), and fill in the required field. To edit an already saved application:
+    
+    - click on your profile in the top right at Github.com
+    - click `Settings`
+    - click `Developer Settings`
+    - clicl `Oauth Apps`
+
+[^gitlab]: 
+    - click on your profile in the right at Gitlab.com
+    - click `settings` from the dropdown
+    - click `Applications` in the lefthand sidebar
+    - enter in the required information
+    - the minimum required scopes to select should be: "read_user", "openid", "profile", and "email"
+
+[^google]:
+    - follow [these instructions from Google](https://developers.google.com/identity/protocols/OAuth2WebServer) to set up Oauth 2.0 for a server-side web app (this is what Spira is)
+    - you should then get to a form to create the OAuth Client Id
+    - you do not need to add any APIs to this application
+    - choose the "web application" radio button 
+    - make sure to set up the OAuth Consent Screen BEFORE creating the "Credentials". This has to use domains where the application lives and for business use these should not be set to public
+    - on the Credentials page make sure to use the same URLs for the Authorized Redirect URLs as you did on the OAuth Consent Screen
+    - you have to use URLs that point to actual domains - you cannot therefore use this for an internal only application or localhost
+    - once the application has been created, you can restrict access to only users within your GSuite internal domain - to do so go back to the Google Oauth Consent Screen and click the "Make Internal" button
+
+[^okta]:
+    - login to Okta.com with your admin account
+    - go to "Applications" from the main navigation
+    - click "Add Application"
+    - choose "Web... .NET, Java, Etc" from the next page and click "Next" 
+    - make sure you use the base domain only in the Base URI field
+    - provide the following permissions: "Client acting on behalf of a user" > "Authorization Code". This should be the only permission selected by default
+    - hit Done
+    - you can specify which users or groups have access to this application through the Okta UI
+
+    To connect Spira to Okta you will need to several urls specific to your Okta domain. The authServerId will need to be configured based on your Okta setup. You can find more information about testing the server here: https://developer.okta.com/docs/guides/customize-authz-server/test-authz-server/
+
+    Broadly, the urls may take the following shape (discuss with Okta if you run into any issues with these)
+
+    - Authorization URL: https://${yourOktaDomain}/oauth2/${authServerId}/v1/authorize
+    - Token URL:        https://${yourOktaDomain}/oauth2/${authServerId}/v1/token
+    - Profile URL:       https://${yourOktaDomain}/oauth2/${authServerId}/v1/userinfo
