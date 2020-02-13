@@ -2678,106 +2678,203 @@
                 
                 
                 <h1 id="importing-from-microsoft-word">Importing from Microsoft Word</h1>
-<p>The web-based interface of SpiraTeam® is ideal for creating and managing requirements, test cases and incidents for a new project. However often an organization will often have existing requirements documentation and test case templates in Microsoft Word format that need to get easily migrated into SpiraTeam.</p>
-<p>To simplify this task, SpiraTeam® comes with a Microsoft Word Add-In that can export requirements and test cases from a populated Word document into SpiraTeam®. Note that this guide refers to SpiraTeam®, but the Word Add-In can be used with SpiraTest® and SpiraPlan® as well. The only difference is that the Test Case import functionality will not be applicable for SpiraPlan® users.</p>
+<p>The web-based interface of SpiraTeam® is ideal for creating and managing
+requirements, test cases and incidents for a new project. However often
+an organization will often have existing requirements documentation and
+test case templates in Microsoft Word format that need to get easily
+migrated into SpiraTeam.</p>
+<p>To simplify this task, SpiraTeam® comes with a Microsoft Word Add-In
+that can export requirements and test cases from a populated Word
+document into SpiraTeam®. Note that this guide refers to SpiraTeam®, but
+the Word Add-In can be used with SpiraTest® and SpiraPlan® as well. The
+only difference is that the Test Case import functionality will not be
+applicable for SpiraPlan® users.</p>
 <h2 id="10installing-the-microsoft-word-add-in">10Installing the Microsoft Word Add-In</h2>
-<p>The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or SpiraTeam sections), and download the <strong>MS-Office Add-Ins</strong>
-installation package. There are separate packages for the following versions of MS Office:</p>
+<p>The first thing you need to do is to go to the "Add-Ons and Downloads"
+page of the Inflectra Website (it can be found in the SpiraTest,
+SpiraPlan or SpiraTeam sections), and download the <strong>MS-Office Add-Ins</strong>
+installation package. There are separate packages for the following
+versions of MS Office:</p>
 <p><strong>MS-Office 2003 Add-Ins</strong> -- these are compatible with Microsoft Office
-2003 and 2007. They can connect to SpiraTeam v2.3 or later. They also require Microsoft .NET 3.5.</p>
+2003 and 2007. They can connect to SpiraTeam v2.3 or later. They also
+require Microsoft .NET 3.5.</p>
 <p><strong>MS-Office 2007 Add-Ins</strong> -- these are compatible with Microsoft Office
-2007 and 2010. They can connect to SpiraTeam v3.0 or later. They also require Microsoft .NET 4.0.</p>
+2007 and 2010. They can connect to SpiraTeam v3.0 or later. They also
+require Microsoft .NET 4.0.</p>
 <p><strong>MS-Office 2010 Add-Ins</strong> -- these are compatible with Microsoft Office
-2010 and later. They can connect to SpiraTeam v5.0 or later. They also require Microsoft .NET 4.0.</p>
-<p>This installation package will install the add-ins for Microsoft Excel, Word and Project at the same time. If you don't have the correct version of Microsoft .NET installed or some of the necessary prerequisites, you will be given the opportunity to install them when you first run the installation package.</p>
-<p>Once you have the Word Add-In installed, the second thing you'll need to download is the <strong>SampleWordDocument</strong> document. This sample document contains some example requirements and test cases that be exported into SpiraTeam. Also the documents make good templates if you're looking for a way to standardize the import of requirements and test cases. There are two versions of the document available -
+2010 and later. They can connect to SpiraTeam v5.0 or later. They also
+require Microsoft .NET 4.0.</p>
+<p>This installation package will install the add-ins for Microsoft Excel,
+Word and Project at the same time. If you don't have the correct version
+of Microsoft .NET installed or some of the necessary prerequisites, you
+will be given the opportunity to install them when you first run the
+installation package.</p>
+<p>Once you have the Word Add-In installed, the second thing you'll need to
+download is the <strong>SampleWordDocument</strong> document. This sample document
+contains some example requirements and test cases that be exported into
+SpiraTeam. Also the documents make good templates if you're looking for
+a way to standardize the import of requirements and test cases. There
+are two versions of the document available -
 <strong>SampleWordDocument.doc</strong> for Word 2003 and
 <strong>SampleWordDocument.docx</strong> for Word 2007 and later.</p>
-<p>Once you have downloaded the template, please double-click on it to open it up in MS-Word. You will notice that there is an additional toolbar displayed in Word which is used for exporting requirements and test cases to SpiraTeam:</p>
+<p>Once you have downloaded the template, please double-click on it to open
+it up in MS-Word. You will notice that there is an additional toolbar
+displayed in Word which is used for exporting requirements and test
+cases to SpiraTeam:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_34.png" /></p>
-<p>If you are using the MS-Word 2007 or 2010 Add-In, you will see a modified version of the toolbar that makes use of the MS-Office Ribbon:</p>
+<p>If you are using the MS-Word 2007 or 2010 Add-In, you will see a
+modified version of the toolbar that makes use of the MS-Office Ribbon:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_35.png" /></p>
-<p>This toolbar allows you to connect to SpiraTeam, and perform the export. The process for using this toolbar is described below:</p>
+<p>This toolbar allows you to connect to SpiraTeam, and perform the export.
+The process for using this toolbar is described below:</p>
 <h2 id="connecting-to-spirateam">Connecting to SpiraTeam®</h2>
-<p>The first thing you need to do is to click on the [Connect] button to specify the information used to connect to your instance of SpiraTeam:</p>
+<p>The first thing you need to do is to click on the [Connect] button to
+specify the information used to connect to your instance of SpiraTeam:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_36.png" /></p>
 <p>Please enter the following information into the dialog box:</p>
 <ul>
 <li>
-<p><strong>Spira URL:</strong> Please enter the web address that you use to access SpiraTeam® in your browser. This is usually of the form http://&lt;hostname>/SpiraTeam. Make sure that you remove any suffixes from the address (e.g. Default.aspx).</p>
+<p><strong>Spira URL:</strong> Please enter the web address that you use to access
+SpiraTeam® in your browser. This is usually of the form
+http://&lt;hostname>/SpiraTeam. Make sure that you
+remove any suffixes from the address (e.g. Default.aspx).</p>
 </li>
 <li>
-<p><strong>User Name:</strong> Please enter the username that you use for logging in to SpiraTeam</p>
+<p><strong>User Name:</strong> Please enter the username that you use for logging in
+to SpiraTeam</p>
 </li>
 <li>
-<p><strong>Password:</strong> Please enter the password that you use for logging in to SpiraTeam</p>
+<p><strong>Password:</strong> Please enter the password that you use for logging in
+to SpiraTeam</p>
 </li>
 <li>
-<p><strong>Remember Password:</strong> If you are using this Add-In on a private computer, you can check this option to have the system remember your credentials locally. Please do not use this option on a public computer and it will compromise the security of your SpiraTeam installation.</p>
+<p><strong>Remember Password:</strong> If you are using this Add-In on a private
+computer, you can check this option to have the system remember your
+credentials locally. Please do not use this option on a public
+computer and it will compromise the security of your SpiraTeam
+installation.</p>
 </li>
 </ul>
 <p>Once you have entered the necessary information, please click
-[Connect] to authenticate with the server. If the login information is invalid, you will see an error message appear, otherwise you will be connected and the list of projects and artifacts will be populated. If you want to end your session, you should just click the [Disconnect]
+[Connect] to authenticate with the server. If the login information is
+invalid, you will see an error message appear, otherwise you will be
+connected and the list of projects and artifacts will be populated. If
+you want to end your session, you should just click the [Disconnect]
 button and the Add-In will close your connection.</p>
 <h2 id="choosing-the-project-and-artifact">Choosing the Project and Artifact</h2>
-<p>Once you have successfully connected to SpiraTeam, you should now choose the appropriate Project and Artifact in the system that you will be importing / exporting:</p>
+<p>Once you have successfully connected to SpiraTeam, you should now choose
+the appropriate Project and Artifact in the system that you will be
+importing / exporting:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_37.png" /></p>
 <p>Or</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_38.png" /></p>
-<p>Once you have selected the project and artifact, there are two buttons that you can now use:</p>
+<p>Once you have selected the project and artifact, there are two buttons
+that you can now use:</p>
 <ul>
 <li>
-<p><strong>Export:</strong> Clicking this button will take the <em>currently selected data</em> in the document and use it to add new items in SpiraTeam.</p>
+<p><strong>Export:</strong> Clicking this button will take the <em>currently selected
+data</em> in the document and use it to add new items in SpiraTeam.</p>
 </li>
 <li>
-<p><strong>Style Mappings:</strong> This button allows you to change the parameters used by the Add-In when scanning the Word document to know where each requirement, test case and test step beings and ends.</p>
+<p><strong>Style Mappings:</strong> This button allows you to change the parameters
+used by the Add-In when scanning the Word document to know where
+each requirement, test case and test step beings and ends.</p>
 </li>
 </ul>
-<p>The parameters selection varies by the type of information being exported, and will be discussed in the relevant artifact section below:</p>
+<p>The parameters selection varies by the type of information being
+exported, and will be discussed in the relevant artifact section below:</p>
 <h2 id="exporting-requirements-into-spirateam">Exporting Requirements into SpiraTeam</h2>
-<p>To export requirements, first you need to open up the MS-Word document that contains the requirements to be exported. Then you need to click on the "Style Mappings" icon to display the style mapping configuration dialog box:</p>
+<p>To export requirements, first you need to open up the MS-Word document
+that contains the requirements to be exported. Then you need to click on
+the "Style Mappings" icon to display the style mapping configuration
+dialog box:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_39.png" /></p>
-<p>This dialog box allows you to tell the Add-In which styles are being used in the document to describe each level of Requirements in the hierarchy. When you run the Export, the Add-In will examine each paragraph in the document, and any item that matches one of these styles will be considered the start of a new requirement, and its indentation level will be based on the appropriate style.</p>
-<p>Once you have verified that the styles match those used in your document, <mark class="critic">highlight the areas of the document that you wish to import</mark> and click the [Import] button. Once you have done this, the Add-In will scan the selected portions of the document and export the requirements into the system. During the export, the Add-In uses the following rules for dealing with the content:</p>
+<p>This dialog box allows you to tell the Add-In which styles are being
+used in the document to describe each level of Requirements in the
+hierarchy. When you run the Export, the Add-In will examine each
+paragraph in the document, and any item that matches one of these styles
+will be considered the start of a new requirement, and its indentation
+level will be based on the appropriate style.</p>
+<p>Once you have verified that the styles match those used in your
+document, highlight the areas of the document that you wish to import
+and click the [Import] button. Once you have done this, the Add-In
+will scan the selected portions of the document and export the
+requirements into the system. During the export, the Add-In uses the
+following rules for dealing with the content:</p>
 <ul>
 <li>
-<p>The text that matches the selected style will be loaded as the Name field of the requirement</p>
+<p>The text that matches the selected style will be loaded as the Name
+field of the requirement</p>
 </li>
 <li>
-<p>Any text located between the selected styles will be loaded into the Description field of the requirement. The Add-In will attempt to match the formatted used in the Word document. However because of some differences between MS-Word and HTML, it may not be exact.</p>
+<p>Any text located between the selected styles will be loaded into the
+Description field of the requirement. The Add-In will attempt to
+match the formatted used in the Word document. However because of
+some differences between MS-Word and HTML, it may not be exact.</p>
 </li>
 <li>
-<p>Any embedded images will be added to the requirement as a file Attachment, with an embedded image tag added to Description field</p>
+<p>Any embedded images will be added to the requirement as a file
+Attachment, with an embedded image tag added to Description field</p>
 </li>
 </ul>
 <h2 id="exporting-test-cases-into-spirateam">Exporting Test Cases into SpiraTeam</h2>
-<p>To export test cases (and their test steps), first you need to open up the MS-Word document that contains the test cases to be exported. Then you need to click on the "Style Mappings" icon to display the style mapping configuration dialog box:</p>
+<p>To export test cases (and their test steps), first you need to open up
+the MS-Word document that contains the test cases to be exported. Then
+you need to click on the "Style Mappings" icon to display the style
+mapping configuration dialog box:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_40.png" /></p>
-<p>This dialog box allows you to tell the Add-In which styles are being used in the document to denote the name of the Test Folder and the name of the Test Case. For the test steps, the Add-In currently requires that they be organized in tables, with each column in the table being used consistently to describe one of the three Test Step fields. For the import to work correct, your tables need to have at least three (3) columns so that it can map them correctly. You can use the same column multiple times (e.g. the contents of column 2 would be imported into both the expected result and sample data).</p>
-<p>Once you have verified that the styles and table columns match those used in your document, <mark class="critic">highlight the areas of the document that you wish to import</mark> and click the [Import] button. Once you have done this, the Add-In will scan the selected portions of the document and export the test cases and test steps into the system. During the export, the Add-In uses the following rules for dealing with the content:</p>
+<p>This dialog box allows you to tell the Add-In which styles are being
+used in the document to denote the name of the Test Folder and the name
+of the Test Case. For the test steps, the Add-In currently requires that
+they be organized in tables, with each column in the table being used
+consistently to describe one of the three Test Step fields. For the
+import to work correct, your tables need to have at least three (3)
+columns so that it can map them correctly. You can use the same column
+multiple times (e.g. the contents of column 2 would be imported into
+both the expected result and sample data).</p>
+<p>Once you have verified that the styles and table columns match those
+used in your document, highlight the areas of the document that you wish
+to import and click the [Import] button. Once you have done this, the
+Add-In will scan the selected portions of the document and export the
+test cases and test steps into the system. During the export, the Add-In
+uses the following rules for dealing with the content:</p>
 <ul>
 <li>
-<p>The text that matches the selected style will be loaded as the Name field of the Test Folder or Test Case</p>
+<p>The text that matches the selected style will be loaded as the Name
+field of the Test Folder or Test Case</p>
 </li>
 <li>
-<p>Any text located between the selected styles will be loaded into the Description field of the Test Case. The Add-In will attempt to match the formatted used in the Word document. However because of some differences between MS-Word and HTML, it may not be exact.</p>
+<p>Any text located between the selected styles will be loaded into the
+Description field of the Test Case. The Add-In will attempt to match
+the formatted used in the Word document. However because of some
+differences between MS-Word and HTML, it may not be exact.</p>
 </li>
 <li>
-<p>Any embedded images will be added to the Test Case as a file Attachment, with an embedded image tag added to Description field</p>
+<p>Any embedded images will be added to the Test Case as a file
+Attachment, with an embedded image tag added to Description field</p>
 </li>
 <li>
-<p>Any tables located between the selected styles will be treated as the Test Steps belonging to the previous test case. The fields for the Test Steps will be populated based on the index of the column.</p>
+<p>Any tables located between the selected styles will be treated as
+the Test Steps belonging to the previous test case. The fields for
+the Test Steps will be populated based on the index of the column.</p>
 </li>
 <li>
-<p>Any text located in the table cells into the appropriate field of the Test Step. The Add-In will attempt to match the formatted used in the Word document. However because of some differences between MS-Word and HTML, it may not be exact.</p>
+<p>Any text located in the table cells into the appropriate field of
+the Test Step. The Add-In will attempt to match the formatted used
+in the Word document. However because of some differences between
+MS-Word and HTML, it may not be exact.</p>
 </li>
 <li>
-<p>The <strong>first row</strong> of the table is assumed to be a <strong>header row</strong>, so if you are seeing the first step of your document being omitted, it means that you need to add a header rows.</p>
+<p>The <strong>first row</strong> of the table is assumed to be a <strong>header row</strong>, so
+if you are seeing the first step of your document being omitted, it
+means that you need to add a header rows.</p>
 </li>
 </ul>
 <h2 id="error-reporting">Error Reporting</h2>
-<p>If there is an error during the import of either requirements or test cases, the error message will be stored in a text file called
-<strong>Spira_WordImport.log</strong> that can be found on the desktop of the user running the import:</p>
+<p>If there is an error during the import of either requirements or test
+cases, the error message will be stored in a text file called
+<strong>Spira_WordImport.log</strong> that can be found on the desktop of the user
+running the import:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Word_41.png" /></p>
                 
                   

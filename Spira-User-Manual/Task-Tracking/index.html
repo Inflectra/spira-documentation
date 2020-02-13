@@ -435,6 +435,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#task-progress" class="md-nav__link">
+    Task Progress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#task-folders" class="md-nav__link">
     Task Folders
   </a>
@@ -2804,6 +2811,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#task-progress" class="md-nav__link">
+    Task Progress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#task-folders" class="md-nav__link">
     Task Folders
   </a>
@@ -3041,6 +3055,7 @@
 <p><img alt="" src="../img/Task_Tracking_282.png" /></p>
 <p>The task list screen displays all the tasks entered for the current product by folder, in a filterable, sortable grid. The grid displays the task number together with fields such as priority, name, assigned owner, start date, end date, scheduled release, etc. The choice of columns displayed is configurable per-user, per-product, giving extensive flexibility when it comes to viewing and searching tasks.</p>
 <p>In addition, you can view a more detailed description of the task by positioning the mouse pointer over the task name hyperlink and waiting for the popup "tooltip" to appear. If you click on the task name hyperlink, you will be taken to the <a href="#task-details">task details page</a> Clicking on any of the pagination links at the bottom of the page will advance you to the next set of tasks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
+<h3 id="task-progress">Task Progress</h3>
 <p>One special column that is unique to tasks is the 'progress indicator'. This illustrates graphically both the percentage completion of the task and also if the task is either starting late or finishing late. The following table illustrates the different type of status that can be conveyed by the indicator:</p>
 <table>
 <thead>
@@ -3104,9 +3119,7 @@ buttons beneath the folder tree, this lets you add, edit and delete task folders
 <h3 id="duplicating-tasks">Duplicating Tasks</h3>
 <p>To create a clone of a task or set of tasks, select the check-boxes of the tasks you want to clone and then click "<strong><em>Clone</em></strong>". This will make a clone of the current task in the current folder with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the task itself.</p>
 <h3 id="exporting-tasks-to-another-product">Exporting Tasks to Another Product</h3>
-<p>To export a task or set of tasks from the current product to another product in the system, select the check-boxes of the task(s) you want to export and then click Tools > Export to Product. This will bring up a list of possible destination products:</p>
-<p><img alt="" src="../img/Task_Tracking_293.png" /></p>
-<p>Once you have chosen the destination product and clicked the "<strong><em>Export</em></strong>" button, the tasks will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the tasks.</p>
+<p>Read about <a href="../Application-Wide/#export-to-another-product">how to export artifacts from one product to another</a>.</p>
 <h3 id="printing-and-saving-items">Printing and Saving Items</h3>
 <p>To quickly print a single task or list of tasks you can select the items' checkboxes and then click Tools > Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.</p>
 <h2 id="task-details">Task Details</h2>
@@ -3156,15 +3169,15 @@ buttons beneath the folder tree, this lets you add, edit and delete task folders
 <p>The top part of this tab displays the various standard fields and custom properties associated with the task. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Task_Tracking_298.png" /></p>
 <h3 id="effort-fields">Effort Fields</h3>
-<p>You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and projected final effort.</p>
+<p>You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and producted final effort.</p>
 <p>The different effort values mean the following:</p>
-<p><strong>Estimated Effort</strong> -- This is the original estimate for how long the task would take to complete.</p>
-<p><strong>Actual Effort</strong> -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress</p>
-<p><strong>Remaining Effort</strong> -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort:
-% Complete = 100% - (Remaining Effort / Estimated Effort)</p>
-<p><strong>Projected Effort</strong> -- This is value that the system is projecting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort:</p>
-<p>Projected Effort = (Actual Effort + Remaining Effort)</p>
-<p><strong>Note</strong>: If the actual effort is not specified, the projected effort will be the same as the estimated effort.</p>
+<ul>
+<li><strong>Estimated Effort</strong> -- This is the original estimate for how long the task would take to complete.</li>
+<li><strong>Actual Effort</strong> -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress</li>
+<li><strong>Remaining Effort</strong> -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about <a href="#task-progress">task progress</a></li>
+<li><strong>Producted Effort</strong> -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Producted Effort = (Actual Effort + Remaining Effort)</li>
+</ul>
+<p><strong>Note</strong>: If the actual effort is not specified, the producted effort will be the same as the estimated effort.</p>
 <p><strong>Note:</strong> if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.</p>
 <h3 id="followers_1">Followers</h3>
 <p>Using the "<strong><em>Subscribe</em></strong>" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.</p>
