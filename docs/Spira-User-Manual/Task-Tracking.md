@@ -15,6 +15,8 @@ The task list screen displays all the tasks entered for the current product by f
 
 In addition, you can view a more detailed description of the task by positioning the mouse pointer over the task name hyperlink and waiting for the popup "tooltip" to appear. If you click on the task name hyperlink, you will be taken to the [task details page](#task-details) Clicking on any of the pagination links at the bottom of the page will advance you to the next set of tasks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
+### Task Progress
+
 One special column that is unique to tasks is the 'progress indicator'. This illustrates graphically both the percentage completion of the task and also if the task is either starting late or finishing late. The following table illustrates the different type of status that can be conveyed by the indicator:
 
 | Indicator Display | Progress Description |
@@ -166,16 +168,10 @@ You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actu
 
 The different effort values mean the following:
 
-**Estimated Effort** -- This is the original estimate for how long the task would take to complete.
-
-**Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
-
-**Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort:
-% Complete = 100% - (Remaining Effort / Estimated Effort)
-
-**Producted Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort:
-
-Producted Effort = (Actual Effort + Remaining Effort)
+- **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
+- **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
+- **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
+- **Producted Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Producted Effort = (Actual Effort + Remaining Effort)
 
 **Note**: If the actual effort is not specified, the producted effort will be the same as the estimated effort.
 
