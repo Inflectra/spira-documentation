@@ -107,11 +107,7 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 
 ### Exporting Releases/Sprints
 
-To export releases/sprints from the current product to another product in the system, select the check-boxes of the releases/sprints you want to export and then click the Tools \> Export to Product item. This will then bring up a list of possible destination products:
-
-![](img/Release_Management_261.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the releases/sprints will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the release/sprint.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Creating Test Sets from Releases

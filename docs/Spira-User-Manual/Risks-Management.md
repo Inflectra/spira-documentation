@@ -61,11 +61,7 @@ To create a clone of an existing risk or set of risks, select the check-boxes of
 
 ### Exporting Risks
 
-To export a risk or set of risks from the current product to another product in the system, select the check-boxes of the risk(s) you want to export and then click the Tools \> "***Export to Product***". This will then bring up a list of possible destination products:
-
-![](img/Risks_Management_459.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the risks will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the risks.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Printing Items

@@ -95,11 +95,7 @@ To create a clone of a task or set of tasks, select the check-boxes of the tasks
 
 ### Exporting Tasks to Another Product
 
-To export a task or set of tasks from the current product to another product in the system, select the check-boxes of the task(s) you want to export and then click Tools \> Export to Product. This will bring up a list of possible destination products:
-
-![](img/Task_Tracking_293.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the tasks will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the tasks.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Printing and Saving Items
