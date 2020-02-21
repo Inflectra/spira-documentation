@@ -13,7 +13,7 @@ To perform these tasks, you need to login to the system with a user that has som
 3.  **Program Administration:** just like with products, some aspects of a program are managed in the program section of administration. Anyone who is assigned the role of "Program Owner" on a program can perform these administrative functions.
 
 4.  **Template Administration:** end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
-*Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product.*
+*Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work [here](../System-Users/#view-edit-roles).*
 
 Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:
 
