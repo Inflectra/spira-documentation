@@ -21,7 +21,7 @@ The My Page looks pretty empty right now. This is normal.
 
 ![](img/Logging_In_and_Selecting_a_Product_5.png)
 
-For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Now to see the homepage for the product you just selected click on the hexagon in the top left:
+For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Now to see the homepage for the product you just selected, click on the hexagon in the top left:
 
 ![](img/Logging_In_and_Selecting_a_Product_6.png)
 
@@ -72,7 +72,7 @@ Next, we are going to indent the requirements. This will give us a hierarchy, wi
 1.  To indent, select the checkboxes of all the requirements below
 'Functional Requirements' and click 'Indent'. This makes 'Functional Requirements' the parent and all the other requirements its children.
 
-2.  Now, select the three requirements immediately below 'Module 1' and click 'Indent' again. This makes these three requirements children of 'Module 1' (and grandchildren of 'Functional Requirements')
+2.  Now, select the three requirements immediately below 'Module 1' and click 'Indent' again. This makes these three requirements children of 'Module 1' (and grandchildren of 'Functional Requirements').
 
 3.  Repeat for the requirement below 'Module 2' by right-clicking on this last requirement and choosing 'Indent' from the popup context menu.
 
@@ -80,7 +80,7 @@ You should now have a list that looks like:
 
 ![](img/Define_the_Requirements_9.png)
 
-We now have a nicely group set of requirements. Let's enter more information about them, starting with setting their types and priorities.
+We now have a nicely grouped set of requirements. Let's enter more information about them, starting with setting their types and priorities.
 
 1.  Click the ''select all' checkbox at the top of the list (the checkbox just above the checkbox for 'Functional Requirements')
 
@@ -92,13 +92,13 @@ We now have a nicely group set of requirements. Let's enter more information abo
 
 4.  Choose whatever values you like for the 'Importance' field.
 
-5.  Click the 'Save' button.
+5.  Click the `Save` button.
 
 You now have a prioritized list of user story requirements:
 
 ![](img/Define_the_Requirements_11.png)
 
-The next thing we can do is assign estimates to each requirement. This is something that the developers or business analysts may do based on the complexity and scope of each. The 'Estimates' column is not visible yet, so first we need to show it. To do that, click on the 'Show/Hide Columns' dropdown list and select 'Show Estimate (points)'.:
+The next thing we can do is assign estimates to each requirement. This is something that the developers or business analysts may do based on the complexity and scope of each. The 'Estimates' column is not visible yet, so first we need to show it. To do that, click on the 'Show/Hide Columns' dropdown list and select 'Show Estimate (points)':
 
 ![](img/Define_the_Requirements_12.png)
 
@@ -112,7 +112,7 @@ To change the estimates:
 
 3.  Enter the following estimates for the requirements
 
-4.  Click 'Save'
+4.  Click `Save`
 
 | **Requirement**                                           |   **Estimate** |
 | ------------ | --------- |
@@ -137,21 +137,17 @@ On the main navigation bar, click out of 'Requirements' and select
 
 ![](img/Create_the_Release_and_Iteration_Plan_14.png)
 
-The release list will be empty. Click the 'Insert' button in the toolbar to create your first release. Hit 'Save and New' (shown as buttons on the right of the new release in the list table) to add each new release after that. Below is the list of release names to add
+The release list will be empty. Click the 'Insert' button in the toolbar to create your first release. Hit 'Save and New' (shown as buttons on the right of the new release in the list table) to add each new release after that. Below is the list of release names to add:
 
--   Release 1.0 -- version number 1.0.0.0
+- Release 1.0
+    - Version Number: 1.0.0.0
+    - Start Date: Today's Date
+    - End Date: Today's Date + 2 months
 
--   Start Date: Today's Date
-
--   End Date: Today's Date + 2 months
-
-<!-- -->
-
--   Release 1.1 -- version number 1.1.0.0
-
--   Start Date: Today's Date + 2 months
-
--   End Date: Today's Date + 4 months
+- Release 1.1
+    - Version Number: 1.1.0.0
+    - Start Date: Today's Date + 2 months
+    - End Date: Today's Date + 4 months
 
 You should have a list of releases like this:
 
@@ -159,35 +155,26 @@ You should have a list of releases like this:
 
 We need to add one additional level of detail to each release -- the list of sprints that will take place in each release.
 
-Let's add some sample sprints for the first release.
+Let's add some sample sprints for the first release:
 
-1.  Select the checkbox for Release 1.0 and, from the toolbar, click Insert \> Child Release.
-
+1.  Select the checkbox for Release 1.0 and, from the toolbar, click `Insert` > `Child Release`
 2.  Choose a name for the new sprint
-
 3.  Make sure its 'Type' is set to 'sprint'
+4.  Specify its date range. We recommend making each sprint last 2 weeks and have each one scheduled in series
+5.  Click `Save And New`
+6.  Repeat steps 2-5 above, then steps 2-4 and then finally click `Save` on the final sprint's row. 
 
-4.  Specify its date-range. We recommend making each sprint last 2-weeks and have each one scheduled in series
-
-5.  click 'Save And New'.
-
-6.  Repeat steps 2-5 above, then steps 2-4 and then finally click 'Save'
-on the final sprint's row. You should have three sprints added to the list, all children of Release 1.0
+You should have three sprints added to the list, all children of Release 1.0.
 
 ![](img/Create_the_Release_and_Iteration_Plan_16.png)
 
 Finally, let's specify the number of resources assigned to each sprint and release.
 
-1.  Click on the 'Show/Hide Columns' dropdown list and select 'Show \#
-Resources' column
-
+1.  Click on the 'Show/Hide Columns' dropdown list and select 'Show # Resources' column
 2.  Select the three checkboxes for the sprints of "Release 1.0"
-
-3.  Click the 'Edit' button on the toolbar.
-
-4.  Adjust the \# resources for the sprints to 2.
-
-5.  Click 'Save':
+3.  Click the `Edit` button on the toolbar
+4.  Adjust the # Resources for the sprints to 2
+5.  Click `Save`
 
 ![](img/Create_the_Release_and_Iteration_Plan_17.png)
 
@@ -196,7 +183,7 @@ Resources' column
 
 ## Adding Requirement Tasks
 
-We have defined the high-level schedule for Release 1.0. The next stage is to have the developers take each of the requirements defined so far and define the various tasks needed to deliver them. Each task will have its own estimate associated with it. In addition, you can optionally specify date-ranges and priorities to each of the individual tasks.
+We have defined the high-level schedule for Release 1.0. The next stage is to have the developers take each of the requirements defined so far and define the various tasks needed to deliver them. Each task will have its own estimate associated with it. In addition, you can optionally specify date ranges and priorities to each of the individual tasks.
 
 To start adding tasks, go to the main navigation bar and click out of Releases and hit Requirements to display the requirements list. Click on the hyperlink for the first requirement ("System must allow entry of users") and the requirement's details page will be displayed:
 
@@ -206,19 +193,15 @@ To start adding tasks, go to the main navigation bar and click out of Releases a
 
 Click on the 'Tasks' tab to display the list of tasks defined for this requirement. The list is empty, so let's change that:
 
-1.  Because we want to enter the estimated effort for each task, before entering the tasks, first click on the 'Show/Hide Columns' dropdown list and hit the 'Show Est. Effort' column.
-
-2.  Click the 'New Task' button (this adds a new task and associated it with this requirement)
+1.  Because we want to enter the estimated effort for each task, before entering the tasks, first click on the 'Show/Hide Columns' dropdown list and hit the 'Show Est. Effort' column
+2.  Click the `New Task` button (this adds a new task and associates it with this requirement)
 
 ![](img/Adding_Requirement_Tasks_19.png)
 
-3.  Set the task's name to "Create user data tables"
-
-4.  Choose a 'Priority' level
-
-5.  Set the 'Est. effort' to 10.0h.
-
-6.  Click 'Save'.
+1.  Set the task's name to "Create user data tables"
+2.  Choose a 'Priority' level
+3.  Set the 'Est. effort' to 10.0h.
+4.  Click `Save`.
 
 The new task has now been added:
 
@@ -249,7 +232,7 @@ On the main Navigation bar, click again on 'Requirements'. You should now have t
 
 ![](img/Adding_Requirement_Tasks_21.png)
 
-The total number of hours for these tasks divided by the total number of story points, gives a number a lot more than the 8 hours that the system assumes. We can update the system to better estimate the number of hours to deliver each story point.
+The total number of hours for these tasks divided by the total number of story points gives a number a lot more than the 8 hours that the system assumes. We can update the system to better estimate the number of hours to deliver each story point.
 
 To update the metric, go to the three cogs dropdown menu on the rightmost corner of the main Navigation Bar, locate Planning and click Planning Options:
 
@@ -260,49 +243,40 @@ As you can see, the system lists 8.0 hours as the current number of hours requir
 
 ![](img/Adding_Requirement_Tasks_23.png)
 
-Click the 'Apply' button to update the planning metric, and then click the main 'Save' button at the very bottom of the page to confirm the change.
+Click the 'Apply' button to update the planning metric, and then click the main `Save` button at the very bottom of the page to confirm the change.
 
 ***
 
 
 ## Adding the Test Cases
 
-Click on the Artifacts \> Test Cases menu option to display the product's test case list page:
+Click on the Artifacts > Test Cases menu option to display the product's test case list page:
 
 ![](img/Adding_the_Test_Cases_24.png)
 
 The test case list is empty and the only folder visible in the 'Folders'
 tree on the left-hand side is 'Root'.
 
-1.  Click on the 'Add' button underneath the folder tree,
-
-2.  Enter the new folder name 'Functional Tests'.
-
-3.  Click 'Add'.
+1.  Click on the `Add` button underneath the folder tree
+2.  Enter the new folder name 'Functional Tests'
+3.  Click `Add`
 
 ![](img/Adding_the_Test_Cases_25.png)
 
-4.  You now have a new folder in the 'Folders' tree view. To show it, click 'Refresh'.
+You now have a new folder in the 'Folders' tree view. To show it, click 'Refresh'.
 
 ![](img/Adding_the_Test_Cases_26.png)
 
-5.  Click on this folder from the 'Folders' tree on the left
-
-6.  Click 'New Test Case' from the toolbar.
-
+1.  Click on this folder from the 'Folders' tree on the left
+2.  Click 'New Test Case' from the toolbar
 7.  Enter "Test ability to add new users" for the name of this new test case
+8.  Click `Save And New`
 
-8.  Click 'Save And New'
+Repeat the above steps to create 3 more test cases:
 
-9.  Repeat the above steps to create 3 more test cases:
-
-<!-- -->
-
-1.  Test ability to edit existing users
-
-2.  Test ability to delete existing users
-
-3.  Test ability to edit notifications
+1.  "Test ability to edit existing users"
+2.  "Test ability to delete existing users"
+3.  "Test ability to edit notifications"
 
 You should now have the following test case list:
 
@@ -310,7 +284,7 @@ You should now have the following test case list:
 
 Next, we need to enter detailed test steps to each test case, and link each test to the appropriate requirements.
 
-1.  Click on the hyperlink for the first test case 'Test ability to add new users'. This will bring up the test case details page
+1.  Click on the hyperlink for the first test case 'Test ability to add new users'. This will bring up the test case details page:
 
 ![](img/Adding_the_Test_Cases_28.png)
 
@@ -324,11 +298,11 @@ This test case needs 3 test steps.
 
 1.  Click 'Edit' on 'Step 1' and enter the first set of parameters below.
 
-2.  Click 'Save' and then 'Insert Step' to add the second test step and enter its information from below
+2.  Click `Save` and then 'Insert Step' to add the second test step and enter its information from below
 
 3.  Click 'Save and New' to make the third step
 
-4.  Once you've entered its information click 'Save'
+4.  Once you've entered its information click `Save`
 
 | **Test Step Description**      |                               **Expected Result**      |   **Sample Data** |
 | ----------- | -------------------- | ------------------ |
@@ -352,7 +326,7 @@ Next, we need to link this test case to the requirement(s) that it validates.
 
 3.  Choose the 'System must allow the entry of users' requirement
 
-4.  Click the 'Save' button beneath the list of requirements to add the test case to this requirement
+4.  Click the `Save` button beneath the list of requirements to add the test case to this requirement
 
 ![](img/Adding_the_Test_Cases_33.png)
 
@@ -382,7 +356,7 @@ folder.
 
 5.  Select 'Release 1.0
 
-6.  Click 'Add'.
+6.  Click `Add`.
 
 You have added all the tests to the overarching Release. Finally, we want to add the tests to the different sprints, based off the data in the table below.
 
@@ -394,7 +368,7 @@ You have added all the tests to the overarching Release. Finally, we want to add
 
 4.  Select the appropriate sprint
 
-5.  Click 'Add'
+5.  Click `Add`
 
 | **Test Case**             |              **Sprint(s)** |
 | -------------- | ------------------ |
@@ -412,17 +386,13 @@ You typically want to include previous functionality in each of the successive i
 
 We have requirements that have tasks, and tests connected to them. What we haven't done yet is scope out which requirements go in which sprint.
 
-1.  On the main Navigation Bar, click on the Planning \> Planning Board option ~~on the main menu~~ to display the product backlog planning board.
-
-2.  Make sure the 'Group By' dropdown on the left is set to "By Priority"
-
-3.  Make sure all requirements are visible by checking the left-most column and ensuring that all priority levels are shown in an expanded view (downward facing triangle signs)
+1.  From the artifact dropdown in the global navigation bar, click "Planning Board" to display the product backlog planning board
+2.  On the planning board page set the 'Group By' dropdown on the left to "By Priority"
+3.  To show all requirements check that in the left-most column all the priority levels are shown in an expanded view (downward facing triangle signs)
 
 ![](img/Planning_the_Sprint_36.png)
 
-4.  To view the iteration plan for a specific release, select 'Release
-1.0' on the 'Planning:' drop down menu on the top left.
-
+4.  To view the iteration plan for a specific release, select 'Release 1.0' on the 'Planning:' drop down menu on the top left.
 5.  Choose 'By Sprint' from the drop-down 'Group By' menu. That will display the sprint plan for the selected release (currently empty)
 
 ![](img/Planning_the_Sprint_37.png)
@@ -433,8 +403,7 @@ We have requirements that have tasks, and tests connected to them. What we haven
 
 Each backlog item (requirement or incident) is represented by a virtual "story card" in the iteration. The left-hand side of each item displays the priority color. The progress bar near the bottom of each item depicts the progress of the item. You can flip through each iteration to see the work planned by clicking the left/right arrow buttons at the sides of the screen.
 
-Now drag the two highest priority requirements (the ones with Importance
-= 1-Critical) to the first iteration:
+Now drag the two highest priority requirements (the ones with Importance = 1 - Critical) to the first iteration:
 
 ![](img/Planning_the_Sprint_39.png)
 
@@ -471,7 +440,7 @@ You can see at a glance which tasks are in each status (in this case, they are a
 
 ![](img/Assigning_the_Requirements_&_Tasks_43.png)
 
-For our sample product, we have two product members listed (included ourselves). As an example, select the first four tasks (which are all priority = 1 -- Critical) and drag them to your user's section:
+For our sample product, we have two product members listed (included ourselves). As an example, select the first four tasks (which are all priority = 1 - Critical) and drag them to your user's section:
 
 ![](img/Assigning_the_Requirements_&_Tasks_44.png)
 
@@ -485,14 +454,13 @@ This page lists all the development tasks that have been assigned to your user. 
 
 This task has been estimated at 10.0 hours and is currently not started. The next step is to start working on the assigned task and report back progress. As an example:
 
-1.  click the workflow 'Operations' and chose 'Start Task'.
+* Click the workflow `Operations` button and choose 'Start Task'
+
 ![](img/Assigning_the_Requirements_&_Tasks_47.png)
 
-2.  Then under 'Dates and Times' enter an 'Actual Effort' of 3.0 hours, and a 'Remaining Effort' of 5.0 hours.
-
-3.  In the 'Comments' section below, add a comment: "Added initial set of data tables",
-
-4.  Click 'Save' at the top of the page.
+* Then under 'Dates and Times' enter an 'Actual Effort' of 3.0 hours, and a 'Remaining Effort' of 5.0 hours
+* In the 'Comments' section below, add a comment: "Added initial set of data tables"
+* Click `Save` at the top of the page
 
 The progress indicator will reflect the changes and the new comment will have been added.
 
@@ -511,7 +479,7 @@ After updating the assigned tasks, the 'My Page' dashboard will show all these c
 
 ![](img/Assigning_the_Requirements_&_Tasks_49.png)
 
-Similarly, for the product manager, On the main Navigation Bar, clicking on Artifacts \> Requirements to display the requirements list will show the task progress as it impacts the various requirements:
+Similarly, for the product manager, click on Requirements from the artifact dropdown in the global Navigation Bar to display the requirements list. This will show the task progress as it impacts the various requirements:
 
 ![](img/Assigning_the_Requirements_&_Tasks_50.png)
 
@@ -528,21 +496,16 @@ On the main Navigation Bar, click on Artifacts \>Test Sets menu option to displa
 
 At first, the test set list will be empty and the 'Folders' tree on the left will only show 'Root'.
 
-1.  Click the 'Add' button beneath the folder tree
-
+1.  Click the `Add` button beneath the folder tree
 2.  Enter the new folder name 'Test Cycle \#1'
-
-3.  Click the 'Add' button.
+3.  Click the `Add` button.
 
 ![](img/Scheduling_the_Testing_Activities_52.png)
 
-4.  Click on the folder you just made
-
-5.  Click 'New Test Set' from the toolbar.
-
-6.  Enter the name of the new test set 'Testing new functionality'
-
-7.  Click 'Save'
+1.  Click on the folder you just made
+2.  Click 'New Test Set' from the toolbar
+3.  Enter the name of the new test set 'Testing new functionality'
+4.  Click `Save`
 
 You should now have the following test set list:
 
@@ -552,37 +515,29 @@ Click on the hyperlink for the test set to bring up the test set details page:
 
 ![](img/Scheduling_the_Testing_Activities_54.png)
 
-Let's add the appropriate test cases to this set.
-
-1.  Click the 'Add' button in the 'Test Cases' section half way down the page to bring up the following panel:
+Let's add the appropriate test cases to this set. Click the `Add` button in the 'Test Cases' section halfway down the page to bring up the following panel:
 
 ![](img/Scheduling_the_Testing_Activities_55.png)
 
-2.  Locate 'Root' drop down menu under 'Test Cases' section.
-
-3.  Choose the 'Functional Tests' folder and the test cases in that folder will be displayed:
+1.  Locate 'Root' drop down menu under 'Test Cases' section
+2.  Choose the 'Functional Tests' folder and the test cases in that folder will be displayed:
 
 ![](img/Scheduling_the_Testing_Activities_56.png)
 
-4.  Select the following test cases and click the 'Save' button:
-
-<!-- -->
+Select the following test cases and click the `Save` button:
 
 1.  Test ability to add new users
-
 2.  Test ability to edit existing users
 
 You should now have the following displayed:
 
 ![](img/Scheduling_the_Testing_Activities_57.png)
 
-Next, let's assign this test set to a specific release and to a particular tester. To do that, choose the following values for the following fields and click 'Save':
+Next, let's assign this test set to a specific release and to a particular tester. To do that, choose the following values for the following fields and click `Save`:
 
 -   Owner = System Administrator (your user)
-
 -   Scheduled = Release 1.0 - Iteration 1
-
--   Planned Date = (Today's Date).
+-   Planned Date = (Today's Date)
 
 You have now scheduled this test set to be executed by your user by the end of today against the first iteration of release 1.0:
 
@@ -617,11 +572,11 @@ Click the 'Pass' button to pass the first test step. As soon as you do, the test
 
 Now for the second test step, enter in the actual result field "Unable to enter the sample data as the fields were disabled". Before clicking the Fail button, we also want to enter in the following fields in the Incident form (accessed by clicking the "Incidents" tab):
 
--   Name = Error displaying user fields
+-   Name: Error displaying user fields
 
--   Type = Bug
+-   Type: Bug
 
--   Priority = 2 -- High
+-   Priority: 2 - High
 
 Now click the 'Fail' button and you will have recorded a test failure and a new incident/defect:
 
@@ -649,7 +604,7 @@ The next step in the process is to triage the logged defect and assign it to a d
 
 ## Triaging Issues and Defects
 
-Now that a new incident has been logged, the next step in the process is to review the incident and assign it to a developer to be fixed. First, click on the Artifacts \> Incidents menu item. This will display the incident list page for the product. You can also view the same list of incidents in a Kanban board view.
+Now that a new incident has been logged, the next step in the process is to review the incident and assign it to a developer to be fixed. First, click on the Artifacts > Incidents menu item. This will display the incident list page for the product. You can also view the same list of incidents in a Kanban board view.
 
 ![](img/Triaging_Issues_and_Defects_68.png)
 
@@ -657,13 +612,10 @@ In either view, click on the hyperlink for the new incident "Error displaying us
 
 ![](img/Triaging_Issues_and_Defects_69.png)
 
-1.  In the 'Operations' dropdown menu underneath the incident name on the top of the page, select 'Assign Incident' option. This will switch the status of the incident from New \> Assigned.
-
-2.  Location the 'People' section and set the 'Owner' field to System Administrator (your user)
-
+1.  In the 'Operations' dropdown menu underneath the incident name on the top of the page, select 'Assign Incident' option. This will switch the status of the incident from New > Assigned
+2.  Locate the 'People' section and set the 'Owner' field to System Administrator (your user)
 3.  Add a new comment in the 'Comments' section at the bottom of the page. Type "Assigning this to you to fix. Issue was found during testing."
-
-4.  Click the 'Save' button in the top toolbar.
+4.  Click the `Save` button in the top toolbar.
 
 The incident will be assigned to your user for fixing.
 
@@ -685,29 +637,21 @@ If you click on the test run hyperlink "Test ability to add new users", you will
 
 This allows the developer to retrace the steps taken by the tester and attempt to reproduce the issue. We are going to assume we can reproduce and fix the issue so we can go right ahead and resolve the incident.
 
-1.  Make your way back to the incident details screen: Artifacts\>
-Incidents \> Error displaying user fields' Hyperlink.
-
-2.  Click on the workflow 'Operations' drop-down menu and select
-'Resolve Incident'.
+1.  Make your way back to the incident details screen: Artifacts > Incidents > Error displaying user fields' link.
+2.  Click on the workflow `Operations` drop-down menu and select 'Resolve Incident'.
 
 ![](img/Triaging_Issues_and_Defects_74.png)
 
-3.  Fill in the following fields
+Fill in the following fields:
 
-<!-- -->
+1.  Resolved Release: "Release 1.0 - Iteration 2"
+2.  In 'Comments' section enter a new comment: "Fixed the incident."
 
-1.  Resolved Release = Release 1.0 - Iteration 2
-
-2.  In 'Comments' section enter a new comment = "Fixed the incident."
-
-<!-- -->
-
-4.  Click 'Save' on the main toolbar
+Click `Save` on the main toolbar.
 
 ![](img/Triaging_Issues_and_Defects_75.png)
 
-The incident will now change from Assigned \> Resolved and an email will be sent to the tester letting them know that they need to retest the test case and close the incident.
+The incident will now change from Assigned > Resolved and an email will be sent to the tester letting them know that they need to retest the test case and close the incident.
 
 ***
 
@@ -727,7 +671,7 @@ Note how you can change between several views (the buttons on the right) to show
 ***
 
 
-## Reviewing A Program
+## Reviewing a Program
 
 In addition to having dashboards that let you monitor the performance of your product, SpiraPlan has several views available at the program level. These let you group products together into a common program and report on them as a whole.
 
@@ -735,13 +679,13 @@ To see this in action, click on the "Sample Program One" link in the main naviga
 
 ![](img/Reviewing_A_Program_79.png)
 
-You can click on the Artifacts \> **Planning** Board tab to display the Program Planning Board (which is similar to the one we used previously for products, except that is works across multiple products):
+You can click on the Artifacts > Planning Board tab to display the Program Planning Board (which is similar to the one we used previously for products, except that it is works across multiple products):
 
 ![](img/Reviewing_A_Program_80.png)
 
-There are additional program views that let you see the **Releases** and
-**Incidents** at a program level. Click Artifacts \> Releases:
+There are additional program views that let you see the **Releases** and **Incidents** at a program level. Click Artifacts > Releases:
 
 ![](img/Reviewing_A_Program_81.png)
 
-*Congratulations! You have now completed the software development and testing lifecycle using SpiraPlan. For more information about any of the features, please refer to the SpiraPlan User Manual.*
+!!! success "Congratulations"
+    Congratulations! You have now completed the software development and testing lifecycle using SpiraPlan. For more information about any of the features, please refer to the SpiraPlan User Manual.
