@@ -3162,7 +3162,10 @@
                 <h1 id="using-spirateam-with-jira-server-5-or-later">Using SpiraTeam with Jira Server (5 or later)</h1>
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the Jira Server issue/bug tracking system version 5.0 and later. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam.</p>
 <p>In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.</p>
-<p class="alert-box"><strong>STOP! Please make sure you have first read the Instructions in <a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Set up data synchronization</p>
+<p><strong>STOP! Please make sure you have first read the Instructions in <a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
+</div>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In</h2>
 <p>This section outlines how to configure the integration service to export incidents into JIRA, import new issues from JIRA and pick up subsequent status changes in JIRA and have them update SpiraTeam. It assumes that you already have a working installation of SpiraTest, SpiraPlan or SpiraTeam and a working installation of JIRA.</p>
 <p>The following versions of SpiraTeam and Jira Server are supported:</p>
