@@ -110,7 +110,8 @@ nav:
     - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
     - Notifications: Spira-Administration-Guide\Template-Notifications.md
 - Reporting:
-  - Custom Reports Tutorial: Reporting\Custom-Reports-Tutorial.md
+  - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
+  - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
 - Optional Features:
   - TaraVault:
     - Activating: TaraVault-User-Manual\Activating-TaraVault.md
