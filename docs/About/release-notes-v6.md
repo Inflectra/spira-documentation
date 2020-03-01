@@ -17,7 +17,7 @@
     
     **Improved navigation between folders and hierarchies**: Each folder now has its own unique url, so you can share links to specific folders with your team. For requirements, releases, and all artifacts with folders new clickable breadcrumbs making it easy to go straight to an artifact’s parent.
 
-??? success "New Features"
+??? success "New features"
 
     - Replace file upload with newer control on artifact detail pages and document list page [RQ:2359]
     - TaraVault licensing has no restrictions [RQ:2530] 
@@ -86,7 +86,7 @@
 !!! info "Summary"
     **Enhanced product template management**: Users can migrate a product from one template to another. This will help you consolidate your templates and streamline your administration more easily.
 
-??? success "New Features"
+??? success "New features"
 
     - Project Template Migration Wizard implemented [RQ:2489]
     - Installer tasks for cloud and download [RQ:2598]
@@ -125,7 +125,7 @@
 
     **Improved Risk Associations (SpiraPlan only)**: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements.
 
-??? success "New Features"
+??? success "New features"
 
     - MindMapping requirements functionality  [RQ:1708]
     - Additional Task Board View (tasks by Requirement) [RQ:2357]
@@ -187,7 +187,7 @@
 
     **Version 6 of our SOAP and REST APIs**: Our existing APIs are as compatible as they can be with version 6 of SpiraPlan. The new API version will allow access to new features, such as those from templates.
 
-??? success "New Features"
+??? success "New features"
 
     - Enable beta dark color mode for modern browsers [RQ:2557]
     - Add new 6.0 API for existing calls [RQ:2308]
@@ -256,7 +256,7 @@
 
     **Improve navigation and new administration user interface**: New login screens and a completely reworked navigation menu in the application make using SpiraPlan easier than ever. Navigation is more mobile friendly and intuitive. Administration menus are now only ever one click away.
 
-??? success "New Features"
+??? success "New features"
 
     - Risk Administration (Project Template)
         - Edit Risk Statuses [RQ:2417]
