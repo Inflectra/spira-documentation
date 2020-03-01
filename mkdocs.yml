@@ -109,6 +109,8 @@ nav:
     - Risks: Spira-Administration-Guide\Template-Risks.md
     - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
     - Notifications: Spira-Administration-Guide\Template-Notifications.md
+- Reporting:
+  - Custom Reports Tutorial: Reporting\Custom-Reports-Tutorial.md
 - Optional Features:
   - TaraVault:
     - Activating: TaraVault-User-Manual\Activating-TaraVault.md

@@ -11,6 +11,11 @@ We can fully change the theme used and its features using a basic templating lan
 - deploy from a local machine using a simple command from the command line to build, commit, push, and deploy the rendered files to Github
 - Github hosts these deployed files as a static site
 
+## Git workflow
+- Quick fixes should be done on master - eg typos
+- New pages or larger changes should be done in a branch off master (eg. reporting-pages)
+- There is a special branch called "gh-pages" that you should NEVER touch. It is the deployment branch and is handled automatically by MkDocs. 
+
 
 ## Getting the build environment set up
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
