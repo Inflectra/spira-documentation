@@ -1,10 +1,8 @@
-# Using SpiraTest with MS-TFS
+# Using SpiraTest with Microsoft Azure DevOps (TFS)
 
 This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
 (hereafter referred to as SpiraTeam) in conjunction with the work item
-tracking functionality of Microsoft Visual Studio Team Services
-(MS-VSTS), Visual Studio Online (VSO), or Microsoft Team Foundation
-Server (TFS) hereafter referred to as TFS.
+tracking functionality of Microsoft Azure DevOps, also known as Microsoft Team Foundation Server (TFS) hereafter referred to as TFS for brevity.
 
 The built-in integration service allows the quality assurance team to
 manage their requirements and test cases in SpiraTeam, execute test runs
@@ -22,9 +20,6 @@ being reflected back in SpiraTeam.
 
 **STOP! Please make sure you have first read the Instructions in 
 [Setup](../Setting-up-Data-Synchronization/) before proceeding!**
-
-► Note: Only the MS-TFS 2012+ Plug-In is Available on the Inflectra
-Cloud-Based DataSync Service.
 
 ## Configuring the Plug-In
 
@@ -74,18 +69,16 @@ purposes and is not actually used by the system.
 -   **Connection Info** -- this should the URL that you use for
 connecting Visual Studio to the Team Foundation Server.
 
--   **For Visual Studio Online**, it is of the format
-<https://mycompany.visualstudio.com>. See our special [KB213
-regarding Visual Studio
-Online](https://www.inflectra.com/Support/KnowledgeBase/KB213.aspx).
+-   **For Microsoft Azure DevOps Online**, it is of the format <https://dev.azure.com/mycompany> or
+<https://mycompany.visualstudio.com>. See our special [KB437
+regarding Microsoft Azure DevOps
+Online](https://www.inflectra.com/Support/KnowledgeBase/KB437.aspx).
 
--   **For TFS 2010+** it is of the format
+-   **For Microsoft Azure DevOps Server**, also known as **Team Foundation Server (TFS)** it is of the format
 <http://servername:8080/tfs/collectionname> where
 "collectionname" is the name of the project collection you're
 integrating with.
 
--   **For TFS 2005/2008** it is of the format
-<http://servername:8080>.
 
 -   **Login** -- this should be set to a valid user that has permissions
 to access the TFS installation. The login needs to have permissions
@@ -105,43 +98,46 @@ running on a server set to a different time-zone, then you should
 add in the number of hours difference between the servers'
 time-zones here.
 
-If you are using Visual Studio Online (VSO) instead of a local TFS
-instance, you will need to login to the instance of Visual Studio Online
-and access your profile:
+If you are using Microsoft Azure DevOps Online instead of a local TFS
+instance, you will need to use a **Personal Access Token (PAT)** to
+connect to the instance of Azure DevOps from SpiraTeam.
+
+To get a PAT, login to Azure DevOps and access your user profile:
 
 ![](img/Using_SpiraTest_with_MS-TFS_79.png)
 
-
-
-
-Click on the Security Option. Then in the user security menu, choose the
-option to enter 'Alternate Credentials'. You need to now enter a login
-and password that SpiraTeam will use to connect to VSO:
+In the popup menu, Click on the **Personal access tokens** option. This will display the list of already issued/active personal access tokens:
 
 ![](img/Using_SpiraTest_with_MS-TFS_80.png)
 
+Click on the + New Token button to create a new personal access token:
 
+![](img/Using_SpiraTest_with_MS-TFS_80a.png)
 
+You can give it a logical name (e.g. "Spira") and give it permissions to:
 
-The remaining fields work differently depending on which version of the
-TFS plugin you are using (2012, 2010 or 2005/2008):
+* Read, write & manage Work Items
+* Read, write & manage Releases
+* (or just grant Full Access)
 
-a) TFS 2012 Plugin
+Azure Devops will then create a personal access token that you should copy to the clipboard and store somewhere secure (e.g. a password manager):
 
-Please fill out the fields as follows:
+![](img/Using_SpiraTest_with_MS-TFS_80b.png)
 
--   **Auto-Map Users** -- This changes the way the plugin maps users in
+You will now use this personal access token as the "password" that SpiraTeam will use to connect to Azure DevOps. For the username, you can just use your standard Azure DevOps login (in fact you can use anything, it will only be checking the PAT).
+
+The remaining fields should be completed as follows:
+
+-   **Auto-Map Users** - This changes the way the plugin maps users in
 SpiraTeam to those in TFS:
 
--   **Auto-Map = True
-**With this setting, all users in SpiraTeam need to have the
+    -   **Auto-Map = True** - With this setting, all users in SpiraTeam need to have the
 same username as those in TFS. If this is the case then you do
 not need to perform the user-mapping task outlined in section
 5.2.2. This is a big time-saver if you can guarantee that all
 usernames are the same in both systems.
 
--   **Auto-Map = False
-**With this setting, users in SpiraTeam and TFS are free to have
+    -   **Auto-Map = False** - With this setting, users in SpiraTeam and TFS are free to have
 different usernames because you specify the corresponding TFS
 name for each user as outlined in 5.2.2.
 
@@ -179,74 +175,6 @@ work item types that you want to synchronize as SpiraTeam
 Requirements as opposed to Incidents. Normally you would want to
 list at least the TFS "User Story" work item type in this field.
 
-b) TFS 2010 Plugin
-
-Please fill out the fields as follows:
-
--   **Auto-Map Users** -- this is not used by this version of the plugin
-and can be ignored.
-
--   **Custom 01** -- This is used to specify the Windows Active
-Directory Domain that the Windows user specified above is a member
-of. If you are running TFS on a Windows workgroup, just use the
-server name and make sure that the Windows user above is a user on
-that server itself.
-
--   **Custom 02** -- This is used to specify if you want to synchronize
-Incidents, Tasks or Both. By default this field is blank, meaning
-synchronize both types of artifact. However if you enter in
-"*Incidents*" into this field it will tell the system to only
-synchronize incidents, and if you enter "*Tasks*" it will tell the
-system to only synchronize tasks.
-
--   **Custom 03** -- If you would like the system to display the
-SpiraTeam artifact ID (e.g. IN5 for incidents or TK36 for tasks) in
-a custom field inside TFS, you should just enter the name of the
-appropriate TFS field from your process template (e.g.
-Spira.IncidentId) and then when the incident or task is added to
-TFS, the corresponding SpiraTeam ID will be added to that field of
-the work item.
-
--   **Custom 04** - Depending on your TFS process template, the
-data-synchronization plugin may not be allowed to set the detector
-of the incident inside TFS. If you would like the system to display
-the detector of the incident (as recorded in SpiraTeam) in a custom
-field inside TFS, you should just enter the name of the appropriate
-TFS field from your process template (e.g. Spira.Detector) and then
-when the incident is added to TFS, the corresponding detector's name
-will be added to that field of the work item.
-
--   **Custom 05** -- this is not used by this version of the plugin and
-can be ignored.
-
-c) TFS 2005/2008 Plugin
-
-Please fill out the fields as follows:
-
--   **Auto-Map Users** -- this is not used by this version of the plugin
-and can be ignored.
-
--   **Custom 01** -- This is used to specify the Windows Active
-Directory Domain that the Windows user specified above is a member
-of. If you are running TFS on a Windows workgroup, just use the
-server name and make sure that the Windows user above is a user on
-that server itself.
-
--   **Custom 02** -- This is used to specify if you want to synchronize
-Incidents, Tasks or Both. By default this field is blank, meaning
-synchronize both types of artifact. However if you enter in
-"*Incidents*" into this field it will tell the system to only
-synchronize incidents, and if you enter "*Tasks*" it will tell the
-system to only synchronize tasks.
-
--   **Custom 03** -- this is not used by this version of the plugin and
-can be ignored.
-
--   **Custom 04** -- this is not used by this version of the plugin and
-can be ignored.
-
--   **Custom 05** -- this is not used by this version of the plugin and
-can be ignored.
 
 ## Configuring the Data Mapping
 
@@ -260,27 +188,19 @@ that a "Not Reproducible" incident in SpiraTeam is the same as a "Closed
 
 The following mapping information needs to be setup in SpiraTeam:
 
-The mapping of the project identifiers for the projects that need to be
+- The mapping of the project identifiers for the projects that need to be
 synchronized
-
-The mapping of *users* in the system
-
-The mapping of *releases* (equivalent to TFS iterations) in the system
-
-The mapping of the various standard *incident* fields in the system
-
-The mapping of the various custom *incident* properties in the system
-
-The mapping of the various standard *requirement* fields in the system
+- The mapping of *users* in the system
+- The mapping of *releases* (equivalent to TFS iterations) in the system
+- The mapping of the various standard *incident* fields in the system
+- The mapping of the various custom *incident* properties in the system
+- The mapping of the various standard *requirement* fields in the system
 (if synching requirements)
-
-The mapping of the various custom *requirement* properties in the system
+- The mapping of the various custom *requirement* properties in the system
 (if synching requirements)
-
-The mapping of the various standard *task* fields in the system (if
+- The mapping of the various standard *task* fields in the system (if
 synching tasks)
-
-The mapping of the various custom *task* properties in the system (if
+- The mapping of the various custom *task* properties in the system (if
 synching tasks)
 
 *Note: If using SpiraTest, you do not need to setup the last two sets of
@@ -306,12 +226,13 @@ To enable this project for data-synchronization with TFS, you need to
 enter:
 
 **External Key** -- This should be set to the name of the project in TFS
-as visible from the Visual Studio Team Explorer:
+as visible from the Visual Studio Team Explorer or web interface:
 
 > ![](img/Using_SpiraTest_with_MS-TFS_82.png)
 
-> 
+OR
 
+> ![](img/Using_SpiraTest_with_MS-TFS_82b.png)
 
 **Active Flag** -- Set this to 'Yes' so that SpiraTeam knows that you
 want to synchronize data for this project. Once the project has been
@@ -376,7 +297,7 @@ duplicates get created when you first enable the data-synchronization
 service. Therefore for any Releases/Iterations that already exist in
 BOTH systems please navigate to Planning \> Releases and click on the
 Release/Iteration in question. Make sure you have the 'Overview' tab
-visible and expand the "Details" section of the release/iteration:
+visible and expand the "Properties" section of the release/iteration:
 
 ![](img/Using_SpiraTest_with_MS-TFS_85.png)
 
@@ -798,7 +719,7 @@ The table lists each of the requirement importance values available in
 SpiraTeam and provides you with the ability to enter the matching TFS
 work item priority value for each one.
 
-### Configuring the Requirement Custom Property Mapping (2012 Plugin Only)
+### Configuring the Requirement Custom Property Mapping
 
 Now that the various SpiraTeam standard requirement fields have been
 mapped correctly, we need to configure the custom property mappings.
@@ -956,118 +877,120 @@ the Event Viewer letting you know which users needs to be mapped.
 The following fields are available in TFS for data-mapping when using
 the TFS agile process template:
 
-**Display Name**                                          **Reference Name**
-Accepted By                                               Microsoft.VSTS.CodeReview.AcceptedBy
-Accepted Date                                             Microsoft.VSTS.CodeReview.AcceptedDate
-Activated By                                              Microsoft.VSTS.Common.ActivatedBy
-Activated Date                                            Microsoft.VSTS.Common.ActivatedDate
-Activity                                                  Microsoft.VSTS.Common.Activity
-Application Launch Instructions                           Microsoft.VSTS.Feedback.ApplicationLaunchInstructions
-Application Start Information                             Microsoft.VSTS.Feedback.ApplicationStartInformation
-Application Type                                          Microsoft.VSTS.Feedback.ApplicationType
-Area ID                                                   System.AreaId
-Area Level 1                                              System.AreaLevel1
-Area Level 2                                              System.AreaLevel2
-Area Level 3                                              System.AreaLevel3
-Area Level 4                                              System.AreaLevel4
-Area Level 5                                              System.AreaLevel5
-Area Level 6                                              System.AreaLevel6
-Area Level 7                                              System.AreaLevel7
-Area Path                                                 System.AreaPath
-Assigned To                                               System.AssignedTo
-Associated Context                                        Microsoft.VSTS.CodeReview.Context
-Associated Context Code                                   Microsoft.VSTS.CodeReview.ContextCode
-Associated Context Owner                                  Microsoft.VSTS.CodeReview.ContextOwner
-Associated Context Type                                   Microsoft.VSTS.CodeReview.ContextType
-Attached File Count                                       System.AttachedFileCount
-Attached Files                                            System.AttachedFiles
-Authorized As                                             System.AuthorizedAs
-Authorized Date                                           System.AuthorizedDate
-Automated Test Id                                         Microsoft.VSTS.TCM.AutomatedTestId
-Automated Test Name                                       Microsoft.VSTS.TCM.AutomatedTestName
-Automated Test Storage                                    Microsoft.VSTS.TCM.AutomatedTestStorage
-Automated Test Type                                       Microsoft.VSTS.TCM.AutomatedTestType
-Automation status                                         Microsoft.VSTS.TCM.AutomationStatus
-BIS Links                                                 System.BISLinks
-Changed By                                                System.ChangedBy
-Changed Date                                              System.ChangedDate
-Changed Set                                               System.ChangedSet
-Closed By                                                 Microsoft.VSTS.Common.ClosedBy
-Closed Date                                               Microsoft.VSTS.Common.ClosedDate
-Closed Status                                             Microsoft.VSTS.CodeReview.ClosedStatus
-Closed Status Code                                        Microsoft.VSTS.CodeReview.ClosedStatusCode
-Closing Comment                                           Microsoft.VSTS.CodeReview.ClosingComment
-Completed Work                                            Microsoft.VSTS.Scheduling.CompletedWork
-Created By                                                System.CreatedBy
-Created Date                                              System.CreatedDate
-Description                                               System.Description
-Due Date                                                  Microsoft.VSTS.Scheduling.DueDate
-External Link Count                                       System.ExternalLinkCount
-Finish Date                                               Microsoft.VSTS.Scheduling.FinishDate
-Found In                                                  Microsoft.VSTS.Build.FoundIn
-History                                                   System.History
-Hyperlink Count                                           System.HyperLinkCount
-ID                                                        System.Id
-InAdminOnlyTreeFlag                                       System.InAdminOnlyTreeFlag
-InDeletedTreeFlag                                         System.InDeletedTreeFlag
-Integration Build                                         Microsoft.VSTS.Build.IntegrationBuild
-Issue                                                     Microsoft.VSTS.Common.Issue
-Iteration ID                                              System.IterationId
-Iteration Level 1                                         System.IterationLevel1
-Iteration Level 2                                         System.IterationLevel2
-Iteration Level 3                                         System.IterationLevel3
-Iteration Level 4                                         System.IterationLevel4
-Iteration Level 5                                         System.IterationLevel5
-Iteration Level 6                                         System.IterationLevel6
-Iteration Level 7                                         System.IterationLevel7
-Iteration Path                                            System.IterationPath
-Link Type                                                 System.Links.LinkType
-Linked Files                                              System.LinkedFiles
-Local Data Source                                         Microsoft.VSTS.TCM.LocalDataSource
-Node Name                                                 System.NodeName
-Node Type                                                 System.NodeType
-Not a field                                               System.NotAField
-Original Estimate                                         Microsoft.VSTS.Scheduling.OriginalEstimate
-Parameters                                                Microsoft.VSTS.TCM.Parameters
-PersonID                                                  System.PersonId
-Priority                                                  Microsoft.VSTS.Common.Priority
-ProjectID                                                 System.ProjectId
-Rating                                                    Microsoft.VSTS.Common.Rating
-Reason                                                    System.Reason
-Related Link Count                                        System.RelatedLinkCount
-Related Links                                             System.RelatedLinks
-Remaining Work                                            Microsoft.VSTS.Scheduling.RemainingWork
-Repro Steps                                               Microsoft.VSTS.TCM.ReproSteps
-Resolved By                                               Microsoft.VSTS.Common.ResolvedBy
-Resolved Date                                             Microsoft.VSTS.Common.ResolvedDate
-Resolved Reason                                           Microsoft.VSTS.Common.ResolvedReason
-Rev                                                       System.Rev
-Reviewed By                                               Microsoft.VSTS.Common.ReviewedBy
-Revised Date                                              System.RevisedDate
-Risk                                                      Microsoft.VSTS.Common.Risk
-Severity                                                  Microsoft.VSTS.Common.Severity
-Stack Rank                                                Microsoft.VSTS.Common.StackRank
-Start Date                                                Microsoft.VSTS.Scheduling.StartDate
-State                                                     System.State
-State Change Date                                         Microsoft.VSTS.Common.StateChangeDate
-State Code                                                Microsoft.VSTS.Common.StateCode
-Steps                                                     Microsoft.VSTS.TCM.Steps
-Story Points                                              Microsoft.VSTS.Scheduling.StoryPoints
-System Info                                               Microsoft.VSTS.TCM.SystemInfo
-Tags                                                      System.Tags
-Team Project                                              System.TeamProject
-TF Server                                                 System.TFServer
-Title                                                     System.Title
-Tree                                                      System.Tree
-Watermark                                                 System.Watermark
-WEF\_BD66C4E18FB54884A18B2299E91ADE1B\_Extension Marker   WEF\_BD66C4E18FB54884A18B2299E91ADE1B\_System.ExtensionMarker
-WEF\_BD66C4E18FB54884A18B2299E91ADE1B\_Kanban Column      WEF\_BD66C4E18FB54884A18B2299E91ADE1B\_Kanban.Column
-Work Item Form                                            System.WorkItemForm
-Work Item FormID                                          System.WorkItemFormId
-Work Item Type                                            System.WorkItemType
-WorkItem                                                  System.WorkItem
-WorkItemLink                                              System.WorkItemLink
-WorkItemTypeExtension                                     System.WorkItemTypeExtension
+|**Display Name**|                                          **Reference Name**|
+|---|---|
+|
+|Accepted By                                               |Microsoft.VSTS.CodeReview.AcceptedBy|
+|Accepted Date                                             |Microsoft.VSTS.CodeReview.AcceptedDate|
+|Activated By                                              |Microsoft.VSTS.Common.ActivatedBy|
+|Activated Date                                            |Microsoft.VSTS.Common.ActivatedDate|
+|Activity                                                  |Microsoft.VSTS.Common.Activity|
+|Application Launch Instructions                           |Microsoft.VSTS.Feedback.ApplicationLaunchInstructions|
+|Application Start Information                             |Microsoft.VSTS.Feedback.ApplicationStartInformation|
+|Application Type                                          |Microsoft.VSTS.Feedback.ApplicationType|
+|Area ID                                                   |System.AreaId|
+|Area Level 1                                              |System.AreaLevel1|
+|Area Level 2                                              |System.AreaLevel2|
+|Area Level 3                                              |System.AreaLevel3|
+|Area Level 4                                              |System.AreaLevel4|
+|Area Level 5                                              |System.AreaLevel5|
+|Area Level 6                                              |System.AreaLevel6|
+|Area Level 7                                              |System.AreaLevel7|
+|Area Path                                                 |System.AreaPath|
+|Assigned To                                               |System.AssignedTo|
+|Associated Context                                        |Microsoft.VSTS.CodeReview.Context|
+|Associated Context Code                                   |Microsoft.VSTS.CodeReview.ContextCode|
+|Associated Context Owner                                  |Microsoft.VSTS.CodeReview.ContextOwner|
+|Associated Context Type                                   |Microsoft.VSTS.CodeReview.ContextType|
+|Attached File Count                                       |System.AttachedFileCount|
+|Attached Files                                            |System.AttachedFiles|
+|Authorized As                                             |System.AuthorizedAs|
+|Authorized Date                                           |System.AuthorizedDate|
+|Automated Test Id                                         |Microsoft.VSTS.TCM.AutomatedTestId|
+|Automated Test Name                                       |Microsoft.VSTS.TCM.AutomatedTestName|
+|Automated Test Storage                                    |Microsoft.VSTS.TCM.AutomatedTestStorage|
+|Automated Test Type                                       |Microsoft.VSTS.TCM.AutomatedTestType|
+|Automation status                                         |Microsoft.VSTS.TCM.AutomationStatus|
+|BIS Links                                                 |System.BISLinks|
+|Changed By                                                |System.ChangedBy|
+|Changed Date                                              |System.ChangedDate|
+|Changed Set                                               |System.ChangedSet|
+|Closed By                                                 |Microsoft.VSTS.Common.ClosedBy|
+|Closed Date                                               |Microsoft.VSTS.Common.ClosedDate|
+|Closed Status                                             |Microsoft.VSTS.CodeReview.ClosedStatus|
+|Closed Status Code                                        |Microsoft.VSTS.CodeReview.ClosedStatusCode|
+|Closing Comment                                           |Microsoft.VSTS.CodeReview.ClosingComment|
+|Completed Work                                            |Microsoft.VSTS.Scheduling.CompletedWork|
+|Created By                                                |System.CreatedBy|
+|Created Date                                              |System.CreatedDate|
+|Description                                               |System.Description|
+|Due Date                                                  |Microsoft.VSTS.Scheduling.DueDate|
+|External Link Count                                       |System.ExternalLinkCount|
+|Finish Date                                               |Microsoft.VSTS.Scheduling.FinishDate|
+|Found In                                                  |Microsoft.VSTS.Build.FoundIn|
+|History                                                   |System.History|
+|Hyperlink Count                                           |System.HyperLinkCount|
+|ID                                                        |System.Id|
+|InAdminOnlyTreeFlag                                       |System.InAdminOnlyTreeFlag|
+|InDeletedTreeFlag                                         |System.InDeletedTreeFlag|
+|Integration Build                                         |Microsoft.VSTS.Build.IntegrationBuild|
+|Issue                                                     |Microsoft.VSTS.Common.Issue|
+|Iteration ID                                              |System.IterationId|
+|Iteration Level 1                                         |System.IterationLevel1|
+|Iteration Level 2                                         |System.IterationLevel2|
+|Iteration Level 3                                         |System.IterationLevel3|
+|Iteration Level 4                                         |System.IterationLevel4|
+|Iteration Level 5                                         |System.IterationLevel5|
+|Iteration Level 6                                         |System.IterationLevel6|
+|Iteration Level 7                                         |System.IterationLevel7|
+|Iteration Path                                            |System.IterationPath|
+|Link Type                                                 |System.Links.LinkType|
+|Linked Files                                              |System.LinkedFiles|
+|Local Data Source                                         |Microsoft.VSTS.TCM.LocalDataSource|
+|Node Name                                                 |System.NodeName|
+|Node Type                                                 |System.NodeType|
+|Not a field                                               |System.NotAField|
+|Original Estimate                                         |Microsoft.VSTS.Scheduling.OriginalEstimate|
+|Parameters                                                |Microsoft.VSTS.TCM.Parameters|
+|PersonID                                                  |System.PersonId|
+|Priority                                                  |Microsoft.VSTS.Common.Priority|
+|ProjectID                                                 |System.ProjectId|
+|Rating                                                    |Microsoft.VSTS.Common.Rating|
+|Reason                                                    |System.Reason|
+|Related Link Count                                        |System.RelatedLinkCount|
+|Related Links                                             |System.RelatedLinks|
+|Remaining Work                                            |Microsoft.VSTS.Scheduling.RemainingWork|
+|Repro Steps                                               |Microsoft.VSTS.TCM.ReproSteps|
+|Resolved By                                               |Microsoft.VSTS.Common.ResolvedBy|
+|Resolved Date                                             |Microsoft.VSTS.Common.ResolvedDate|
+|Resolved Reason                                           |Microsoft.VSTS.Common.ResolvedReason|
+|Rev                                                       |System.Rev|
+|Reviewed By                                               |Microsoft.VSTS.Common.ReviewedBy|
+|Revised Date                                              |System.RevisedDate|
+|Risk                                                      |Microsoft.VSTS.Common.Risk|
+|Severity                                                  |Microsoft.VSTS.Common.Severity|
+|Stack Rank                                                |Microsoft.VSTS.Common.StackRank|
+|Start Date                                                |Microsoft.VSTS.Scheduling.StartDate|
+|State                                                     |System.State|
+|State Change Date                                         |Microsoft.VSTS.Common.StateChangeDate|
+|State Code                                                |Microsoft.VSTS.Common.StateCode|
+|Steps                                                     |Microsoft.VSTS.TCM.Steps|
+|Story Points                                              |Microsoft.VSTS.Scheduling.StoryPoints|
+|System Info                                               |Microsoft.VSTS.TCM.SystemInfo|
+|Tags                                                      |System.Tags|
+|Team Project                                              |System.TeamProject|
+|TF Server                                                 |System.TFServer|
+|Title                                                     |System.Title|
+|Tree                                                      |System.Tree|
+|Watermark                                                 |System.Watermark|
+|_Extension Marker                                         |System.ExtensionMarker|
+|_Kanban Column                                            |_Kanban.Column|
+|Work Item Form                                            |System.WorkItemForm|
+|Work Item FormID                                          |System.WorkItemFormId|
+|Work Item Type                                            |System.WorkItemType|
+|WorkItem                                                  |System.WorkItem|
+|WorkItemLink                                              |System.WorkItemLink|
+|WorkItemTypeExtension                                     |System.WorkItemTypeExtension|
 
 For a full list of the available TFS fields in the different process
 templates, please refer to:
