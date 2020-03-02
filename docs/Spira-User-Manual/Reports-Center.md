@@ -348,7 +348,7 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 ### Incident Aging Graph
 
-The incident aging chart displays the number of days incidents have been left open in the system. The chart is organized as a stacked histogram, with the count of incidents on the y-axis and different age intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the age of open product incidents by priority.
+The incident aging graph displays the number of days incidents have been left open in the system with the count of incidents on the y-axis and different age intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the age of open incidents by priority and detected release. For this chart, "open" is defined as any incident with an empty "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_375.png)
 
@@ -357,7 +357,7 @@ This report can be filtered by the type of incident, so for example you can see 
 
 ### Incident Turnaround Time Graph
 
-The incident turnaround time chart displays the number of days incidents have taken to be closed (from the time they were first raised) in the system. The chart is organized as a stacked histogram, with the count of incidents on the y-axis and different turnaround time intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the turnaround time of product incidents by priority.
+The incident turnaround time graph displays the number of days incidents have taken to be closed (from the time they were first raised) in the system with the count of incidents on the y-axis and different turnaround time intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the turnaround time of incidents by priority and detected release. For this chart, "closed" is defined as any incident with a "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_376.png)
 
@@ -424,7 +424,7 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 ### Test Run Progress Rate Graph
 
-The test run progress rate graph shows how many tests have been executed during a period of time, and what execution status was recorded. The report can be displayed for a specific date-range and for the entire product or for a specific release/sprint:
+The Test Run Progress Rate Graph shows how many tests have been executed for the selected release/sprint for a specific date range, and what execution status was recorded. The graph can be displayed for all test case types or for a specific type.
 
 ![](img/Reports_Center_380.png)
 
@@ -435,14 +435,18 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 ### Test Case Progress Rate Graph
 
-This graph displays the number of test case executions for the specified date range for that specific date interval. That means it will display for each day, the total number of test cases executed ignoring the status from any previous days. Any test cases not executed that day will be considered "not run" and will appear in the "not run" category. For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 0 failed and 7 not run.
+The Test Case Progress Rate Graph displays the number of test case executions for the specified date range, against the specified release/sprint, ignoring the status from any previous days. Any test cases not executed that day will be considered "not run" and will appear in the "not run" category. 
+
+For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 0 failed and 7 not run.
 
 ![](img/Reports_Center_381.png)
 
 
 ### Test Case Cumulative Progress Graph
 
-This graph displays the number of test case executions cumulatively over the specified date range. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category. For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.
+The Test Case Cumulative Progress Graph displays the number of test case executions cumulatively over the specified date range, against the specified release/sprint. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category.
+
+For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.
 
 ![](img/Reports_Center_382.png)
 
