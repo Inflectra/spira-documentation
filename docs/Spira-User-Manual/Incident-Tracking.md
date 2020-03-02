@@ -303,7 +303,7 @@ Clicking on the sprint hyperlinks in the headers will switch the incident board 
     - Owner
     - "Detected By" becomes Author
     - Component (as long as only a single component is selected on the incident)
-    - "Resolved Release" becomes Release
+    - "Planned Release" becomes Release
     - Priority becomes Importance (using an intelligent name match)
     - "Estimated Effort" becomes Estimate (converting hours into points)
     - Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)

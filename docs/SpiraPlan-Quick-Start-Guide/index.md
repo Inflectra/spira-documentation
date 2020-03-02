@@ -697,7 +697,7 @@ Incidents \> Error displaying user fields' Hyperlink.
 
 <!-- -->
 
-1.  Resolved Release = Release 1.0 - Iteration 2
+1.  Planned Release = Release 1.0 - Iteration 2
 
 2.  In 'Comments' section enter a new comment = "Fixed the incident."
 

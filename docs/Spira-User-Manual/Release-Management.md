@@ -171,7 +171,7 @@ Read about [how to add and manage followers to an artifact](Application-Wide.md#
 
 ### Workflows and Statuses
 
-Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's resolved release cannot by a cancelled release.
+Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot by a cancelled release.
 
 Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
 

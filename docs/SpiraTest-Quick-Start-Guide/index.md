@@ -537,9 +537,8 @@ This allows the developer to retrace the steps taken by the tester and attempt t
 
 3.  Fill in the following fields
 
--   Resolved Release = Release 1.0 - Iteration 2
-
--   In 'Comments' section enter a new comment = "Fixed the incident."
+    -   Planned Release = Release 1.0 - Iteration 2
+    -   In 'Comments' section enter a new comment = "Fixed the incident."
 
 4.  Click 'Save' on the main toolbar
 
