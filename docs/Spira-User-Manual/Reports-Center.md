@@ -26,7 +26,13 @@ The configuration page for each report differs slightly, but the general format 
 
 You can configure the reports in the following ways:
 
-**Report Format** -- This allows you to specify the display format of the report. Depending on the specific report, they can be displayed as a web-page (HTML), downloaded as a Microsoft Word document, downloaded as a Microsoft Excel spreadsheet or downloaded as a Microsoft Product file. In addition there is a raw-XML format that allows you to export the underlying report data into any external reporting system that supports XML import.
+**Report Format** -- This allows you to specify the display format of the report. Depending on the specific report, they can be:
+
+- displayed as a web-page (HTML)
+- downloaded as a Microsoft Word document (there are two Word versions: one for newer versions of Word and one for legacy versions of Word)
+- downloaded as a Microsoft Excel spreadsheet (there are two Excel versions: one is better for printing, while the other is more suited to data manipulation)
+- downloaded as a Microsoft Product file
+- there is also a raw-XML format that allows you to export the underlying report data into any external reporting system that supports XML import.
 
 ![](img/Reports_Center_338.png)
 
