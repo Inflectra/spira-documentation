@@ -136,6 +136,7 @@ nav:
     - Ranorex: RemoteLaunch-User-Guide\Ranorex.md
     - Rational Functional Tester: RemoteLaunch-User-Guide\Rational-Functional-Tester.md
     - TestingAnywhere: RemoteLaunch-User-Guide\TestingAnywhere.md
+    - WebLOAD: RemoteLaunch-User-Guide\WebLOAD.md
     - Worksoft Certify: RemoteLaunch-User-Guide\Worksoft-Certify.md
     - ZAPTEST: RemoteLaunch-User-Guide\ZAPTEST.md
   - SpiraCapture: SpiraCapture\User-Guide.md
@@ -221,5 +222,6 @@ nav:
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
 - About:
   - Release Notes for v6: About/release-notes-v6.md
+  - Release Notes for v5: About/release-notes-v5.md
   - Introduction to Spira: About/introduction-to-spira.md
   - Legal Notices: About/legal-notices.md
