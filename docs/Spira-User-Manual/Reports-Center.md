@@ -4,12 +4,21 @@ This section describes the reporting features of SpiraPlan®, including an overv
 
 ![](img/Reports_Center_335.png)
 
+## Overview
 This page consists of four main areas:
 
-1. The top bar shows the product name, controls for changing the graph widgets, and a dropdown release picker. The selected release will affect all of the reporting / graphing widgets simultaneously. You can either choose a specific release (includes any child sprints) or "All Releases". Your selection here is synced with the selection you set on the product dashboard page.
+1. The top bar shows the product name, controls for changing the graph widgets, and a **dropdown release picker**. The selected release will affect all of the reporting / graphing widgets simultaneously. You can either choose a specific release (includes any child sprints) or "All Releases". Your selection here is synced with the selection you set on the product dashboard page.
 2. The top left-hand pane displays a list of any reports that have either been saved by the currently logged in user, or those reports created by other members of the product, that have been marked (by that user) as 'shareable'.
 3. The bottom left-hand main pane displays a list of the printable reports available in the system, categorized by the artifact they primarily relate to (requirements, test cases, incidents and releases). Clicking on any of the report hyperlinks will take you to the [configuration page](#reports-configuration) for the report in question below for details).
-4. The right-hand pane is a dashboard that contains the set of graph widgets configured by the current user. By default the dashboard will display: the Incident Progress Rate, Test Run Progress Rate, Requirement Summary, Test Case Summary, Incident Aging and Task Burndown.
+4. The right-hand pane is a dashboard that contains the set of graph widgets configured by the current user. By default the dashboard will display: the Incident Progress Rate, Test Run Progress Rate, Requirement Summary, Test Case Summary, Incident Aging and Task Burndown. When "All Releases" is seleted from the dropdown release picker, some widgets show information for every single release and sprint, and others only for active releases/sprints[^active-release]:
+
+    - Requirement Graphs widget: only active releases
+    - Task Graphs widgets: only active releases
+    - All Summary Graphs widgets: all releases
+    - All Date-Range Graphs widgets: all releases
+    - Custom Graphs that use the token ${ReleaseId}: no data
+    - Custom Graphs that use the token ${ReleaseAndChildIds}: only active releases
+
 
 In addition to the graphs displayed by default, you can click on the "***Add Items***" buttons to add additional graphs to the reporting dashboard:
 
@@ -550,3 +559,5 @@ This report displays all of the risks tracked for the current project. The risks
 
 ![](img/Reports_Center_393.png)
 
+
+[^active-release]: An active release or sprint is one that has a status of either: "Planned", "In Progress", or "Completed"
