@@ -79,6 +79,7 @@ nav:
     - Managing Your User Profile: HowTo-Guides\Users-profile-management.md
     - Getting to Know Administration: HowTo-Guides\Admins-orientation.md
     - Template Administration: HowTo-Guides\Admins-templates.md
+    - Login Providers (Oauth): HowTo-Guides\Login-providers.md
   - SpiraPlan: SpiraPlan-Quick-Start-Guide\index.md
   - SpiraTeam: SpiraTeam-Quick-Start-Guide\index.md
   - SpiraTest: SpiraTest-Quick-Start-Guide\index.md
