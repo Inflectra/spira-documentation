@@ -160,7 +160,17 @@ Existing comments are displayed by date (either newest-first or oldest-first) ab
 
 ### Overview -- Dates and Times
 
-This section displays the general schedule and completion status of the specific incident. You can enter/edit the start-date, closed-date (i.e. the due-date), estimate, actual and remaining effort. From these values, the system will display the calculated percent completion, progress indicator and producted final effort. Any custom date fields set up by the system administrator or product owner will also appear in this section (as shown below with the Review Date field).
+This section displays the general schedule and completion status of the specific incident. You can enter/edit:
+
+- the start-date (this gets set automatically when you add the incident to a release/sprint from the planning board)
+- closed-date (i.e. the due-date)
+- estimated effort
+- actual effort
+- remaining effort
+
+From the above values, the system will display the calculated percent completion, progress indicator and projected (final) effort. 
+
+Any custom date fields set up by the system administrator or product owner will also appear in this section (as shown below with the Review Date field).
 
 ![](img/Incident_Tracking_246.png)
 
