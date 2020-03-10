@@ -1,5 +1,88 @@
 # Release Notes for Spira v6
 
+## Version 6.4 (March 2020)
+
+!!! info "Summary"
+    **Single Sign On (SSO) Support**: Built in integration with a number of OAuth 2.0 providers to provide more seamless and secure sign-on to the application. Initial providers will include Azure AD, GitHub, GitLab, Google, Microsoft ADFS, and Okta.
+
+    **Improved reporting**: With a single release picker you can now update every graph (including custom graphs) on the main reporting page. Report formatting for Word has also been improved
+
+
+??? success "New features"
+    * Integration with OAuth2 Protocol
+        - User can select an OAuth provider to log in with on the Login Screen [RQ:2465]
+        - Users will be able to log into the application using an OAuth provider [RQ:2457]
+        - Users will be able to log off of the application without signing out of their provider. [RQ:2459]
+        - Automatic Timout Logoff works as normal [RQ:2481]
+        - OAuth managed users can use electronic signatures by signing using their RSS Token [RQ:2604]
+        - OAuth managed users have API Soap access by allowing them to authenticate using their RSS token [RQ:2461]
+        - Users connected using a provider can not use the Forgot Password feature [RQ:2691]
+    
+    * Users will be able to register an account after signing into their OAuth account
+        - Users can link their Oauth account to their existing Spira user [RQ:2466]
+        - Users can register for a new Spira user with their Oauth account [RQ:2467]
+ 
+    * All OAuth providers will have their own library
+        - Standalone Library for each Provider [RQ:2468]
+        - Master Library to Interface with Provider Libraries [RQ:2469]
+        - Autonomous Operation [RQ:2470]
+
+    * System Administrators can managed Oauth providers and users connected using a provider
+        - Admins can see and manage all available providers [RQ:2473]
+        - Unloaded Providers are handled gracefully [RQ:2474]
+        - Admins can see which users are using which provider, and unlink a user from their provider [RQ:2612]
+
+    * Error States are managed
+        - Logging in with incorrect credentials [RQ:2475]
+        - Logging in with deactivated provider. [RQ:2476]
+        - Logging in and not able to Link to existing user [RQ:2477]
+
+    * Business Code
+        - Database Handling [RQ:2479]
+        - Library Handling [RQ:2480]
+        - Users can unlink their account from the OAuth Provider [RQ:2552]
+
+    * OAuth connectors are available for specific providers
+        - Google [RQ:2619]
+        - Github [RQ:2617]
+        - Okta [RQ:2618]
+        - Azure AD / Microsoft Identity Provider [RQ:2849]
+        - Microsoft ADFS [RQ:2637]
+        - Gitlab [RQ:2616]
+
+    * Other features
+        - LDAP - Switch from LDAP to Native for existing user [RQ:2558]
+        - LDAP - Switch from native to LDAP for existing user [RQ:2559]
+        - Centrally control all reports dashboard charts with a single release dropdown [RQ:2681]
+
+??? bug "Bug fixes and enhancements"
+    - Add release filter to incident/test run snapshot and time phased graphs [IN:1696]
+    - Two enhancements to the Test Run and Test Case graphs [IN:1776]
+    - Test Case Summary graph data displays for all releases (inconsistent with Project Home dashboard) [IN:2407]
+    - Enhancement Request: Test Run Summary Graph [IN:2812]
+    - Test Case Summary widget always includes all releases: add ability to specify a release [IN:3036]
+    - Association panel: search for test step by ID, step description not shown. [IN:4132]
+    - Test coverage wrongly gets reset to not run sometimes when an iteration is inserted or moved [IN:4801]
+    - Can not set test set configuration when POSTing test set using REST api [IN:5199]
+    - API: cannot sort test set retrieve by a sort field [IN:5215]
+    - Build Risk Custom Report Reportable Entity [IN:5226]
+    - Add a test case type filter to test case date range graphs [IN:5307]
+    - Add Release Id as option for custom graphs [IN:5313]
+    - Test case details page: make it clearer with more explicit labels what the two "Delete" buttons do - for the test case and for its steps [IN:5367]
+    - Test case detail page, test steps section, right-click menu: change 'Copy Items' to 'Clone' [IN:5369]
+    - Improve performance when retrieving a folder's parents (for test cases, test sets, tasks, and documents) [IN:5373]
+    - Sidebar panel for hierarchical artifacts can have its contents spill outside if artifacts are added to deeply collapsed parents by other users [IN:5374]
+    - Detail pages: dropdowns on tabs partially obscured by the side bar [IN:5385]
+    - API call to REST Release_AddTestMapping in v5 and v6 does not provide information in the documentation [IN:5390]
+    - Going to task board page after clicking on a task folder in list view fails - the url is not properly structured [IN:5411]
+    - Association panel: can select artifacts to add even if you cannot access these artifacts in the application [IN:5418]
+    - Possibility (pre-existing) of iteration threading issue with instant messenger [IN:5434]
+    - Change the incident field label "Resolved Release" to "Planned Release" to better articulate its meaning [IN:5441]
+    - Ensure that Word always display embedded images, and Excel reports strip out images [IN:5445]
+    - Project Documents don't upload until you select a folder [IN:5449]
+    - Need to remove the UFT8 BOM from the v6.0 REST API [IN:5458]
+    - Need to extend the data sync password field to more than 52 characters due to TFS breaking change [IN:5486]
+
 ## Version 6.3.0.1 (February 2020)
 
 !!! bug "Bug fixes and performance improvements"
