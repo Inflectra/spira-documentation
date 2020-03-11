@@ -746,6 +746,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://spiradoc.inflectra.com/About/introduction-to-spira/</loc>
+     <lastmod>2020-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://spiradoc.inflectra.com/About/release-notes-v6/</loc>
      <lastmod>2020-03-10</lastmod>
      <changefreq>daily</changefreq>
@@ -756,7 +761,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://spiradoc.inflectra.com/About/introduction-to-spira/</loc>
+     <loc>https://spiradoc.inflectra.com/About/release-notes-v4/</loc>
+     <lastmod>2020-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/About/release-notes-v3/</loc>
+     <lastmod>2020-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://spiradoc.inflectra.com/About/release-notes-v2/</loc>
      <lastmod>2020-03-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
