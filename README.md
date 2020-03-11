@@ -86,7 +86,7 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 5. In the tools directory, run the command `python .\createpdf.py`
  
 **Possible Issues**: If a line starts with a file/folder URI (ex. C:\WINDOWS), the script will error out. Just find the ofending line in the markdown and format it in some way (wrapping it with grave marks (\`) to make it format as code works well.)
- 
+
 
 ## docx to MD (used to create these docs)
 1. Install mkdocs with `pip install mkdocs`, if you haven't already. Note that you need [pip](https://pip.pypa.io/en/stable/installing/) and Python for this to work. 
