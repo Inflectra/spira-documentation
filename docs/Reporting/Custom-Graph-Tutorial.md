@@ -61,7 +61,7 @@ group by R.EXECUTION_STATUS_NAME
 
 In this modified query, we have replaced the keyword **value** with the specific column names. We have also added an aggregation function called **COUNT** to count the number of test runs and group by the execution status name column. Spira uses a modified SQL language called Entity SQL created by Microsoft that we'll be discussing in more detail in later articles in this series.
 
-You may have noticed that we had a special token in the query **${ProjectId}**, this token will be evaluated during the generation of the graph and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token **${ProjectGroupId}**. If you don't use either token, the graph will include all the items in the entire system, across all products and programs.
+You may have noticed that we had a special token in the query **\${ProjectId}**, this token will be evaluated during the generation of the graph and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token **\${ProjectGroupId}**. If you don't use either token, the graph will include all the items in the entire system, across all products and programs.
 
 There are some restrictions about the **select** clause of the query:
 

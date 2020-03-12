@@ -58,7 +58,7 @@ time-zones here.
     - **"Both"** -- If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict.\
 *This option is not recommended for novice users.*
 - **Custom 04** -- This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
-- **Custom 05** -- This should be set to the name of the JIRA issue link type that you want SpiraTeam incident associations to use. If you leave this blank, incident associations in SpiraTeam will not be imported into JIRA. You can get the list of issue link types from the following screen in JIRA:
+- **Custom 05** -- This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
