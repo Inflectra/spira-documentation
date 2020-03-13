@@ -51,6 +51,7 @@ extra:
 
 nav:
 - User Manual:
+  - How to use this manual: Spira-User-Manual\index.md
   - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
   - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
   - User/Product Management: Spira-User-Manual\User-Product-Management.md
@@ -66,12 +67,12 @@ nav:
   - Task Tracking: Spira-User-Manual\Task-Tracking.md
   - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
   - Document Management: Spira-User-Manual\Document-Management.md
-  - Reports Center: Spira-User-Manual\Reports-Center.md
+  - Risk Management: Spira-User-Manual\Risks-Management.md
   - Source Code: Spira-User-Manual\Source-Code.md
+  - Reports Center: Spira-User-Manual\Reports-Center.md
   - Planning Board: Spira-User-Manual\Planning-Board.md
   - Mobile Access: Spira-User-Manual\Mobile-Access.md
   - Program Management: Spira-User-Manual\Program-Management.md
-  - Risk Management: Spira-User-Manual\Risks-Management.md
   - 'Appendix 1: Keyboard Shortcuts': Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
 - Quick Start Guides:
   - Mini How-To Guides:
@@ -83,6 +84,7 @@ nav:
   - SpiraTeam: SpiraTeam-Quick-Start-Guide\index.md
   - SpiraTest: SpiraTest-Quick-Start-Guide\index.md
 - Admin Guide:
+  - How to use this guide: Spira-Administration-Guide\index.md
   - Installing Spira: Spira-Administration-Guide\Installing-SpiraPlan.md
   - System Administration: Spira-Administration-Guide\System-Administration.md
   - System:
