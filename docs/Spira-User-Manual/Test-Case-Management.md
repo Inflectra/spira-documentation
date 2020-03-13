@@ -113,11 +113,7 @@ Once you have the test case/folder positioned at the correct place that you want
 
 ### Exporting Test Cases
 
-To export a test case or set of test cases from the current product to another product in the system, select the check-boxes of the test case(s) you want to export and then click Tools \> "***Export to Product***". This will bring up a list of possible destination products:
-
-![](img/Test_Case_Management_131.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the test cases will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the test cases.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Adding Test Cases to a Release, Test Set or Requirement

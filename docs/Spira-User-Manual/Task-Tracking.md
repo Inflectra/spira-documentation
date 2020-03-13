@@ -15,6 +15,8 @@ The task list screen displays all the tasks entered for the current product by f
 
 In addition, you can view a more detailed description of the task by positioning the mouse pointer over the task name hyperlink and waiting for the popup "tooltip" to appear. If you click on the task name hyperlink, you will be taken to the [task details page](#task-details) Clicking on any of the pagination links at the bottom of the page will advance you to the next set of tasks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
+### Task Progress
+
 One special column that is unique to tasks is the 'progress indicator'. This illustrates graphically both the percentage completion of the task and also if the task is either starting late or finishing late. The following table illustrates the different type of status that can be conveyed by the indicator:
 
 | Indicator Display | Progress Description |
@@ -95,11 +97,7 @@ To create a clone of a task or set of tasks, select the check-boxes of the tasks
 
 ### Exporting Tasks to Another Product
 
-To export a task or set of tasks from the current product to another product in the system, select the check-boxes of the task(s) you want to export and then click Tools \> Export to Product. This will bring up a list of possible destination products:
-
-![](img/Task_Tracking_293.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the tasks will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the tasks.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Printing and Saving Items
@@ -170,18 +168,12 @@ You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actu
 
 The different effort values mean the following:
 
-**Estimated Effort** -- This is the original estimate for how long the task would take to complete.
+- **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
+- **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
+- **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
+- **Producted Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Producted Effort = (Actual Effort + Remaining Effort)
 
-**Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
-
-**Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort:
-% Complete = 100% - (Remaining Effort / Estimated Effort)
-
-**Projected Effort** -- This is value that the system is projecting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort:
-
-Projected Effort = (Actual Effort + Remaining Effort)
-
-**Note**: If the actual effort is not specified, the projected effort will be the same as the estimated effort.
+**Note**: If the actual effort is not specified, the producted effort will be the same as the estimated effort.
 
 **Note:** if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.
 

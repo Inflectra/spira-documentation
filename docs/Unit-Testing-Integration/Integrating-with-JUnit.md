@@ -187,8 +187,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
         //following are REQUIRED
         url = "http://doctor/SpiraPlan",
         login = "fredbloggs",
-        rssToken = "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}",
-        projectId = 1,
+        password = "PleaseChange",
+        projectId = 1,`
         //following are OPTIONAL
         releaseId = 7,
         testSetId = 1
@@ -265,8 +265,8 @@ needs to start with http:// or https://.
 
 **Login** - A valid username for the instance of SpiraTest.
 
-**RSS Token** -- Found in your profile page, RSS Feeds must be enabled
-to work.
+**Password** -- Use the password you login with. For Spira 6.4+ you can alternatively use your RSS Token, found in your profile page (RSS Feeds must be enabled
+for this to work).
 
 **Project Id** - The ID of the project (this can be found on the project
 homepage in the "Project Overview" section)

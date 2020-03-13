@@ -67,6 +67,31 @@ SpiraPlan® provides a shortcut -- called the *context menu* - for accessing som
 
 ![](img/Requirements_Management_90.png)
 
+
+### Export to Another Product
+
+You can export the following artifacts from the current product to any other product that you have access to:
+
+- incidents
+- releases
+- requirements
+- risks
+- tasks
+- test cases
+
+The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product.
+
+To export one or more of a particular artifact:
+
+1. go to the list page for that artifact in the right product. 
+2. check the check-boxes of the artifact(s) you want to export
+3. click `Tools` > `Export to Product` from the toolbar
+4. this will then bring up a list of possible destination products (below is an example for exporting incidents)
+5. select the destination product and click `Export`
+
+![](img/Incident_Tracking_241.png)
+
+
 ## Artifact Details Pages
 
 To view details about a specific artifact, you need to go to the artifact's detail page. Clicking on an item on the artifact list page will open the corresponding detail page.
@@ -117,6 +142,9 @@ Please note that if digital signatures have been enabled for a particular workfl
 On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with a popup like the one below:
 
 ![](img/Requirements_Management_96.png)
+
+!!! info  "How to digitally sign if using OAuth"
+    If you login to Spira using an OAuth / Single Sign On provider like Google or Okta, instead of entering your password use your RSS Key. This is visible on your [My Profile](../User-Product-Management/#my-profile) page.
 
 
 ### Emailing

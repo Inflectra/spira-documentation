@@ -95,11 +95,7 @@ Once you have the requirement positioned at the correct place that you want it i
 
 ### Exporting Requirements
 
-To export a requirement or set of requirements from the current product to another product in the system, all you need to do is select the check-boxes of the requirement(s) you want to export and then click the Tools \> ***Export To Product*** button. This will then bring up a list of possible destination products:
-
-![](img/Requirements_Management_89.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the requirements will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the requirements.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 ### Creating Test Cases from Requirements
 

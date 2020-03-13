@@ -64,11 +64,7 @@ To create a clone of an existing incident or set of incidents, simply select the
 
 ### Exporting Incidents
 
-To export an incident or set of incidents from the current product to another product in the system, select the check-boxes of the incident(s) you want to export and then click the Tools \> "***Export to Product***". This will then bring up a list of possible destination products:
-
-![](img/Incident_Tracking_241.png)
-
-Once you have chosen the destination product and clicked the "***Export***" button, the incidents will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product along with the incidents.
+Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Creating Requirement from Incidents
@@ -317,7 +313,7 @@ Clicking on the sprint hyperlinks in the headers will switch the incident board 
     - Owner
     - "Detected By" becomes Author
     - Component (as long as only a single component is selected on the incident)
-    - "Resolved Release" becomes Release
+    - "Planned Release" becomes Release
     - Priority becomes Importance (using an intelligent name match)
     - "Estimated Effort" becomes Estimate (converting hours into points)
     - Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)
