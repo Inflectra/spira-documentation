@@ -3622,6 +3622,16 @@ once you've entered the appropriate user identifier name. You should now repeat 
 </ul>
 <p>You can get the SpiraTest API Key from within the User Profile screen of SpiraTest:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_51.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">What to do if you cannot connect</p>
+<p>If you get a message in the connector on a user story saying that it can't connect, please try the following:</p>
+<ol>
+<li>Check your URL is your BASE url - it should not include a "/" at the end. It should not have anything like "login.aspx" at the end</li>
+<li>Make sure your API key includes the "{" and "}" and matches what you see on your Profile page after you go away from and then go back to the Profile page</li>
+<li>Ask your Spira system admin to go to System Administration &gt; System &gt; Security Settings. There is a field called "Allowed Domains". Add "<a href="https://jira.inflectra.com">https://jira.inflectra.com</a>" and hit <code class="codehilite"><span class="err">Save</span></code></li>
+<li>Make sure you are on at least version 6.3.0.1 of Spira</li>
+</ol>
+</div>
                 
                   
                 
