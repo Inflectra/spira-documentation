@@ -423,3 +423,10 @@ You can get the SpiraTest API Key from within the User Profile screen of SpiraTe
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_51.png)
 
+!!! warning "What to do if you cannot connect"
+    If you get a message in the connector on a user story saying that it can't connect, please try the following:
+
+    1. Check your URL is your BASE url - it should not include a "/" at the end. It should not have anything like "login.aspx" at the end
+    2. Make sure your API key includes the "{" and "}" and matches what you see on your Profile page after you go away from and then go back to the Profile page
+    3. Ask your Spira system admin to go to System Administration > System > Security Settings. There is a field called "Allowed Domains". Add "https://jira.inflectra.com" and hit `Save`
+    4. Make sure you are on at least version 6.3.0.1 of Spira
