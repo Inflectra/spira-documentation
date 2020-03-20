@@ -11,14 +11,14 @@ computers provided that they have the Java 1.7 (or later) runtime installed.
 The first part of this section will describe how to use the Windows-only RemoteLaunch® GUI application and the second part will describe how to use the cross-platform RemoteLaunchX**™** console application.
 
 
-# Installing RemoteLaunch
+## Installing RemoteLaunch
 
 It is required that you install the program before copying or installing any test extensions for the program. Testing applications, like Selenium and QuickTest Pro can be installed with no regards to the client application -- if they are not installed by the time a test requiring them needs to be executed, the test extension will simply report an error or block for the specified test set.
 
 There are no options to the installer except for installation path. If you do not use the default installation path (typically `C:\Program Files\Inflectra\Spira RemoteLaunch\`), then make a note of where the installation path is, because it will be needed to install test extensions later.
 
 
-## Installing a Test Extension
+### Installing a Test Extension
 
 A test extension is a single or a set of DLLs that the program will read upon startup and provides a link in which testing applications (like TestComplete and Squish) to report test information and status back to SpiraTeam.
 
@@ -37,7 +37,7 @@ If, when you restart the application, the new engine tab does not show up in Rem
 - you should now see the engine name in the RemoteLaunch tab
 
 
-## Registration
+### Registration
 
 Spira RemoteLaunch has its own License key needed for using the program. You cannot use your existing SpiraTest/Plan/Team key in Spira RemoteLaunch. Upon the first launch of the program, you will be asked to update your license information:
 
@@ -50,17 +50,17 @@ Trial licenses are good until the 28^th^ day of the listed month. The next time 
 The license key can be updated at any time by going to the Tray Menu and select Help -\> About. Once the About screen opens up, click the Update button in the license details section to update or change license information.
 
 
-# Using RemoteLaunch
+## Using RemoteLaunch
 
 
-## Basic Unattended Operation
+### Basic Unattended Operation
 
 When run, the program will start minimized to the system tray and will start its polling of the server. Polling will occur every 'x' minutes (60 by default) for any automated test sets that are scheduled to be run. When time comes for a test to be launched, it will start the test extension. The installed test extension will then perform the test and report results back to SpiraTeam. At the end of the test, the program will go back and resume scanning for tests that need to be executed.
 
 No user input is ever needed from the application itself. However, testing applications may pop up dialogs needing user input. For existing Inflectra testing extensions, effort was put in to avoid as much user-interaction as possible, but in some cases it is unavoidable.
 
 
-## Client Configuration
+### Client Configuration
 
 By right clicking on the system tray icon and selecting "Configuration", the application's window will open to the configuration panel. The panel has the following options:
 
@@ -111,12 +111,12 @@ By right clicking on the system tray icon and selecting "Configuration", the app
       screen.
 
 
-## Extension Configuration
+### Extension Configuration
 
 If an extension has custom configuration options, they will appear as separate tabs located after the **Client Setup** tab. The contents of each tab will vary depending on the extension. View the extension's documentation for options given in those extensions.
 
 
-## Status Screen
+### Status Screen
 
 The status screen is usually hidden, but can be brought up for display by double-clicking on the system tray icon. The top of the screen shows the current status, whether it's running a test or waiting to poll the server for an update. It will also show any errors present on the application, like a registration error or configuration issue. Under the status bar is a list of any pending or executing tests that are scheduled for this testing machine. The list will get cleared at every poll, so tests that have executed since the previous poll will still be on the list, and will show their execution status:
 
@@ -135,7 +135,7 @@ By highlighting a test that has not been executed yet, you can click the Force E
 At any time the Force Poll button can be clicked, causing RemoteLaunch to initiate an immediate poll of the SpiraTeam server to check for pending runs. The timers for the next server poll will be reset when the button is clicked.
 
 
-## Tray Icon Menu
+### Tray Icon Menu
 
 Instead of operating from the application window, all functions exist on the tray icon menu as well, as well as some additional commands:
 
@@ -156,7 +156,7 @@ Instead of operating from the application window, all functions exist on the tra
 You can double-click the try icon to bring up the main window on the Status page.
 
 
-# Test Execution and Reporting
+## Test Execution and Reporting
 
 All test handling is performed by the extension that the automated tests are configured for. Test Sets that have multiple Test Cases, the Test Cases will all be executed in order, sequentially. (No parallel executing.)
 
@@ -175,7 +175,7 @@ Executing
  Test Sets are marked with the icons next to their scheduled date in the Status screen. They will stay in the list until the next scheduled server poll. You cannot manually re-run them.
 
 
-# Running RemoteLaunch from a Build Script
+## Running RemoteLaunch from a Build Script
 
 Normally you schedule tests in SpiraTeam using the Planned Date field of the test sets and let the various instances of RemoteLaunch poll SpiraTeam for upcoming tests. In addition (as described in the
 *SpiraTeam User Manual*) you can execute a test set on the local machine immediately by clicking the "Execute" button within SpiraTeam.
@@ -183,7 +183,7 @@ Normally you schedule tests in SpiraTeam using the Planned Date field of the tes
 However there are situations where you want to be able to launch an automated test script using one of the supported engines from an external batch file or build script (e.g. as part of a continuous integration environment) and have those tests report their results back into SpiraTeam. You can achieve this by using the special command-line argument --testset which is passed to RemoteLaunch. For more details on this parameter see the next section.
 
 
-# Command line arguments
+## Command line arguments
 
 For debugging and additional options when running the program, the following command-line arguments are available:
 
@@ -198,7 +198,7 @@ For debugging and additional options when running the program, the following com
 | <filename\>             |  Must be the last item on the command line. This is a TST file downloaded from SpiraTeam to start immediate execution on.
 
 
-# Using RemoteLaunchX
+## Using RemoteLaunchX
 
 When you need to run automated tests on a variety of different platforms (Windows, MacOS X, Linux, Unix, etc.) the RemoteLaunchX cross-platform automated testing agent is a better choice than the standard RemoteLaunch® GUI application.
 
@@ -218,7 +218,7 @@ The following four files are included:
 -   **RemoteLaunchX.sh** -- this is a sample UNIX/Linux/MacOS X shell script that can be used to run RemoteLaunchX on UNIX, Linux or Mac OS X.
 
 
-## Configuring RemoteLaunchX
+### Configuring RemoteLaunchX
 
 Once you have extracted the files listed above, open up the
 **config.properties** file in a text editor:
@@ -307,7 +307,7 @@ When you run the application, the following should be output to the console:
 The system will report back zero Test Runs at this point because nothing has been scheduled in SpiraTest. In the next section we shall setup an automated test set that contains an automated test case.
 
 
-## Setting up Automated Tests in SpiraTest
+### Setting up Automated Tests in SpiraTest
 
 This section assumes that you already have a working installation of SpiraTest or SpiraTeam and have installed RemoteLaunchX on the various test automation hosts following the instructions above. Once those prerequisites are in place, please follow these steps:
 
@@ -426,13 +426,13 @@ If you have parameterized test cases inside the automated test set you can set t
 -   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 ![](img/RemoteLaunch_Guide_19.png)
 
-### RemoteLaunchX Command Line Options
+#### RemoteLaunchX Command Line Options
 
 - **testset** -- If you would like to force execution of a test set regardless of its status, you can use the `-testset` command-line option just as in RemoteLaunch. Simply add `-testset:[ID]` where \[ID\] is the ID of the test set you would like to execute. e.g. `java -jar RemoteLaunchX.jar -testset:24 -testset:37`
 
 - **project** -- If you would like to limit the projects scanned by RemoteLaunchX, you can use the `-project` command-line option. Simply add `-project:[ID]` where \[ID\] is the ID of the project. e.g. `java -jar RemoteLaunchX.jar -project:1 project:6`
 
-## Running RemoteLaunchX
+### Running RemoteLaunchX
 
 Once you have set the various test set fields (as described above), you are now ready to execute RemoteLaunchX. You can execute the RemoteLaunchX console application by either running the provided batch /
 shell command or just executing the JAR file directly:
@@ -506,12 +506,12 @@ This screen indicates the status of the test run that was reported back from com
 Congratulations... You are now able to run a custom command-line test, and have the results be recorded within SpiraTest / SpiraTeam.
 
 
-## Scheduling RemoteLaunchX
+### Scheduling RemoteLaunchX
 
 Unlike the main RemoteLaunch application, RemoteLaunchX does not have a built-in timer and so when executed it will run once, check for pending test sets and then exit. If you want to have it run on a periodic basis, you will need to schedule it externally. If you are using Microsoft Windows® you would use the Windows Task Scheduler and in other operating systems you would setup a CRON job. We recommend scheduling RemoteLaunchX to run every 5 minutes.
 
 
-## Customizing the Reporting
+### Customizing the Reporting
 
 By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution) Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the `(?i)` flag to the beginning just as in the `fail-regex` below.
 
