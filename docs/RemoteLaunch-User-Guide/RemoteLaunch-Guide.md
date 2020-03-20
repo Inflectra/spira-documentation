@@ -6,10 +6,9 @@ There are actually two separate versions of RemoteLaunch® that are available fr
 application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured SpiraTest/SpiraTeam server.
 
 2.  The cross-platform **Spira RemoteLaunchX™** Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured SpiraTest/SpiraTeam server. This application can be used in **Microsoft Windows®, Linux or Apple MacOS X®**
-computers provided that they have the Java 1.7 (or later) runtime installed.
+computers provided that they have the Java 1.8 (or later) runtime installed.
 
 The first part of this section will describe how to use the Windows-only RemoteLaunch® GUI application and the second part will describe how to use the cross-platform RemoteLaunchX**™** console application.
-
 
 ## Installing RemoteLaunch
 
@@ -209,7 +208,7 @@ To start using RemoteLaunchX, please go to the Customer Area of the Inflectra we
 
 The following four files are included:
 
--   **RemoteLaunchX.jar** -- this is the main application, packaged as a Java JAR file. This version of RemoteLaunch requires Java 1.7 SE or later to be installed.
+-   **RemoteLaunchX.jar** -- this is the main application, packaged as a Java JAR file. This version of RemoteLaunch requires Java 1.8 SE or later to be installed.
 
 -   **config.properties** -- this contains all the settings used by RemoteLaunchX. You will need to edit this file in a text editor to configure RemoteLaunchX for use.
 
@@ -217,6 +216,9 @@ The following four files are included:
 
 -   **RemoteLaunchX.sh** -- this is a sample UNIX/Linux/MacOS X shell script that can be used to run RemoteLaunchX on UNIX, Linux or Mac OS X.
 
+In addition, there is a **lib** folder that also needs to be extracted. It contains various third-party libraries that RemoteLaunchX uses. Currently it only uses the Google json parser library (gson v2.8.6):
+
+ ![](img/RemoteLaunch_Guide_11a.png)
 
 ### Configuring RemoteLaunchX
 
@@ -482,6 +484,10 @@ When you run the application, the following should be output to the console:
 > Exiting RemoteLaunch\...
 > 
 > ========================
+
+This can be seen graphically below:
+
+![](img/RemoteLaunchX_Guide1.png)
 
 The console output will indicate which test sets are being executed and what the final result was. Inside SpiraTest, once execution begins the status of the test set will change from "Not Started" to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed (passed or failed) -- or "Blocked" -- RemoteLaunchX was not able to execute the test.
 
