@@ -1,5 +1,11 @@
 # Release Notes for Spira v6
 
+## Version 6.4.0.1 (March 2020)
+
+!!! bug "Bug fix"
+    - Oauth does not work correctly in certain environments [IN:5512]
+
+
 ## Version 6.4 (March 2020)
 
 !!! info "Summary"
