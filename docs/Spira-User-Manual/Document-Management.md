@@ -85,7 +85,7 @@ This page is made up of *three* areas;
 
 1.  the left pane displays the documents list navigation;
 
-2.  the right pane's header, which displays: the operations toolbar; the editable name of the selected document; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
+2.  the right pane's header, which displays: the operations toolbar; the name of the selected document; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
 
 3.  the right pane's tabbed interface with rich information related to the document, including, where available, the [folder the document is in](Application-Wide.md#breadcrumbs), a preview of the document, the list of document versions, the list of artifacts that the document is associated with, and history of changes made to the document).
 
