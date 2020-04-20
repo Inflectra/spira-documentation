@@ -177,6 +177,7 @@ nav:
     - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
     - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
     - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
+    - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
     - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
     - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
     - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
