@@ -55,7 +55,7 @@ The following screen is displayed when you choose the "View/Edit Programs" link 
 
 This screen displays the list of programs in the system (both inactive and active) together with their portfolio (SpiraPlan only), template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
 
-You can filter the list of programs by either choosing an active status, or entering a portion of the name, web-site or date into the appropriate text box. When you click the "Filter" button, the list of programs will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of programs, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of programs is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the product list.
+You can filter the list of programs by either choosing an active status, or entering a portion of the name, web-site or date into the appropriate text box. When you click the "Filter" button, the list of programs will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of programs, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of programs is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the list.
 
 To permanently delete a program, you should click the "Delete" button to the right of the program details. Any products contained in the program will not be deleted, but instead just moved to the default program. There has to be at least one program in the system at all times, so the program designated as the 'default' one will not be available for deletion.
 
@@ -109,6 +109,42 @@ You now should narrow down the list of users by entering filter criteria and cli
 This tab allows you to see the list of products that are contained within the current program. Clicking on the name of the product will take you to the details page for that product:
 
 ![](img/System_Workspaces_41.png)
+
+
+## View/Edit Portfolios (SpiraPlan only)
+
+The following screen is displayed when you choose the "View/Edit Portfolios" link from the Administration menu:
+
+![](img/System_Workspaces_Portfolios_1.png)
+
+This screen displays the list of portfolios in the system (both inactive and active) together with their description, ID, and active status. Portfolios are used to relate programs together.
+
+You can filter the list of portfolios by either choosing an active status, or entering a portion of the name. When you click the "Filter" button, the list of portfolios will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of portfolios, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of portfolios is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the list.
+
+To permanently delete a portfolio, click the "Delete" button to the right of the portfolio details. No programs (or their products) in the portfolio will be deleted - the programs' portfolios will instead be reset to "none".
+
+### Add a new portfolio
+To add a new portfolio to the system, click the "Add" button at the bottom of the portfolio list, and a new screen will be displayed that allows you to enter the new portfolio information:
+
+![](img/System_Workspaces_Portfolios_2.png)
+
+You need to enter:
+
+- a name for the portfolio
+- optionally enter a detailed description
+- you should initially make sure that the portfolio is marked as "Active": this mean the portfolio and its programs (and their products) will be accessible to users  
+
+Once you are satisfied with the information, click the "Insert" button to actually create the new portfolio.
+
+### Edit a portfolio
+
+In a similar way, to edit the details of an existing portfolio, click the "Edit" button in the right-hand column of the portfolio list box, and you will be taken to the following screen that allows you modify the portfolio details. **Please note that this is the only administrative page in the portfolio administration section.**
+
+![](img/System_Workspaces_Portfolios_3.png)
+
+On the top part of this screen you can edit the name, description, and active flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+
+At the bottom of the screen you can see all the programs that belong to this portfolio.
 
 
 ## View/Edit Templates
