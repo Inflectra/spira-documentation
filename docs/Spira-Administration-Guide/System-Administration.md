@@ -1,7 +1,8 @@
 # System Administration
-
+## Introduction
 Now that you have successfully installed SpiraPlan®, this section of the guide outlines how to perform the typical administrative tasks necessary for setting up products and programs in the system, managing users and verifying the license information.
 
+## Types of administrator
 To perform these tasks, you need to login to the system with a user that has some level of "administration" permissions within the system. There are four different sections to administration, and each has its own permission. These sections and their permissions are:
 
 1.  **System Administration**: tasks like approving new users, creating new products, changing security settings, or viewing the logs all happen at the system-wide level of administration. There is a special "System Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any system administrator task. *Please note that a special "administrator" user is created by the installer. You should initially login to SpiraPlan® with the username `administrator`, and the password `PleaseChange`. Change this password as soon as possible to something that is secure yet memorable by clicking on the "User Profile" link.*
@@ -13,6 +14,7 @@ To perform these tasks, you need to login to the system with a user that has som
 4.  **Template Administration:** end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
 *Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work [here](../System-Users/#view-edit-roles).*
 
+## Administration Menu
 Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:
 
 ![](img/System_Administration_28.png)
@@ -66,3 +68,19 @@ When you first install the system, we suggest **three main tasks** to perform as
 These tasks typically need to be performed before any other users can use the system, since there will be no logins or products available other than the sample ones provided during the installation.
 
 The rest of this guide explores each area of administration in order, grouped by administration section.
+
+
+## How user permissions are set
+As described above there are 4 different types of administrator. There are also different permission models for accessing the application itself (ie not administration). How do you set each of these permissions so that a user can only see / use what they are supposed to see / use?
+
+- **We start with a user**: without a user, your colleague can not even log in to the application
+- **Then add a user to a product**: a brand new user cannot do anything or see anything in the application. The most common way of granting a user access to the system is to add them as a member to specific products
+- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once.
+- **Any role can grant the user product ownership access**. Product roles have two special flags. One of which is product ownership. Any person with a role that has product ownership set to Yes can carry out all administrative tasks on that product
+- **Any role that grants product ownership access can also grant template admin access**. The second special flag on a product role is that of Template Admin. If a role grants product ownership it can optionally also grant template admin access.
+- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have been granted access with a particular role to that specific program. Program roles are either Executive or Owner. The owner can carry out any administration tasks on the program.
+- **Users can be granted portfolio viewer access (SpiraPlan only)**: each user profile has two special flags on it. These are system wide permissions, that are separate from product roles. First, is Portfolio Viewer access, which lets a user see all portfolio pages and enterprise pages in the application. In other words, you do not let a user see this portfolio or that portfolio, but all portfolios en masse. Only a system administrator can set this on a user.
+- **Users can be granted system administrator status**: this is the second special flag on a user profile and makes the user a system administrator. Only a system administrator can set this on a user.
+
+!!! info "System administrators and product roles"
+    Note: if a user is a System Administrator, it will force that user to always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If you disable this option, they will then revert back to their true role.*
