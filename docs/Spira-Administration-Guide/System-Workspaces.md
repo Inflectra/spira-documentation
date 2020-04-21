@@ -1,5 +1,11 @@
 # System: Workspaces
+There are up to 3 levels of workspaces that you can use to organize all of your data within Spira. Products are where all your tests, requirements, and bugs live. These are grouped inside of Programs. In SpiraPlan you can group programs inside of Portfolios. Each of these workspaces is discussed below, as are Templates - a special type of workspace for controlling parts of how products and programs work.
 
+All workspaces share certain ways of working: they all have a name and description, then can all be made active or inactive. An inactive workspace is completely inaccessible to any user.
+
+- if you make a product inactive, no member of that product will see it in the app. Only a system administrator can make that product active again. 
+- if you make a program inactive, no member of that program can access it in the app. Additionally, none of the products inside that program will be accessible.
+- if you make a portfolio inactive, it will not be accessible in the app. And, like with programs, none of its programs, and also none of their products will be accessible.
 
 ## View/Edit Products
 
@@ -47,39 +53,39 @@ The following screen is displayed when you choose the "View/Edit Programs" link 
 
 ![](img/System_Workspaces_36.png)
 
-This screen displays the list of programs in the system (both inactive and active) together with their template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
+This screen displays the list of programs in the system (both inactive and active) together with their portfolio (SpiraPlan only), template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
 
 You can filter the list of programs by either choosing an active status, or entering a portion of the name, web-site or date into the appropriate text box. When you click the "Filter" button, the list of programs will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of programs, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of programs is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the product list.
 
 To permanently delete a program, you should click the "Delete" button to the right of the program details. Any products contained in the program will not be deleted, but instead just moved to the default program. There has to be at least one program in the system at all times, so the program designated as the 'default' one will not be available for deletion.
 
+### Add a new program
 To add a new program to the system, click the "Add" button at the bottom of the program list, and a new screen will be displayed that allows you to enter the new program information:
 
 ![](img/System_Workspaces_37.png)
 
 You need to enter:
 
--   a name for the program;
-
--   optionally enter a detailed description and/or web-site URL;
-
--   you should initially make sure that the program is marked as "Active";
-
--   you can choose to make this program the default one (meaning that it cannot be deleted and products get added to it when their programs are deleted);
-
--   in addition you can optionally choose to associate the program with a product template. The template only controls the products that use it. It does not control the program, but it can affect what data is visible from some of the program pages.
+- a name for the program
+- optionally enter a detailed description and/or web-site URL
+- SpiraPlan only: optionally select a portfolio for the program to belong to, by default "none" is selected 
+- you should initially make sure that the program is marked as "Active": this mean the program and its products will be accessible to users  
+- you can choose to make this program the default one (meaning that it cannot be deleted and products get added to it when their programs are deleted)
+- in addition you can optionally choose to associate the program with a product template. The template only controls the products that use it. It does not control the program, but it can affect what data is visible from some of the program pages
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new program.
+
+### Edit a program
 
 In a similar way, to edit the details of an existing program, click the "Edit" button in the right-hand column of the program list box, and you will be taken to the following screen that allows you modify the program details. **Please note that this is the only administrative page in the program administration section.**
 
 ![](img/System_Workspaces_38.png)
 
-On the top part of this screen you can edit the name, description, website URL, active status and default status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On the top part of this screen you can edit the name, description, website URL, portfolio (SpiraPlan only), active flag and default flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 In addition, the lower part of the screen allows you to view/edit the users that are members of the program and also see which products are in the program:
 
-a) Program User Membership
+#### Program User Membership
 
 This tab allows you to see which users are members of the program and which program role they have:
 
@@ -98,7 +104,7 @@ To change the role of an existing program member, just change the role in the dr
 You now should narrow down the list of users by entering filter criteria and clicking \[Filter\]. Once you have located the appropriate user(s), just select a program role for them from the drop-down list and click
 \[Add\] to add them to the program in the specified role.
 
-b) Program Product List
+#### Program Product List
 
 This tab allows you to see the list of products that are contained within the current program. Clicking on the name of the product will take you to the details page for that product:
 
