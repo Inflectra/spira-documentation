@@ -111,7 +111,10 @@ This tab allows you to see the list of products that are contained within the cu
 ![](img/System_Workspaces_41.png)
 
 
-## View/Edit Portfolios (SpiraPlan only)
+## View/Edit Portfolios
+
+!!! info ""
+    Please note that portfolios are only available in SpiraPlan
 
 The following screen is displayed when you choose the "View/Edit Portfolios" link from the Administration menu:
 
@@ -146,6 +149,8 @@ On the top part of this screen you can edit the name, description, and active fl
 
 At the bottom of the screen you can see all the programs that belong to this portfolio.
 
+!!! info "Who can view portfolios?"
+    Any user who's profile 
 
 ## View/Edit Templates
 
