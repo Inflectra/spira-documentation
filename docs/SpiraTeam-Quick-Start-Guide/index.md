@@ -21,7 +21,7 @@ The My Page looks pretty empty right now. This is normal.
 
 ![](img/Logging_In_and_Selecting_a_Product_5.png)
 
-For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product' / 'Sample Program Two'. That will select the empty product. Now to see the homepage for the product you just selected click on the hexagon in the top left:
+For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product 2' / 'Sample Program'. That will select the empty product. Now to see the homepage for the product you just selected click on the hexagon in the top left:
 
 ![](img/Logging_In_and_Selecting_a_Product_6.png)
 
@@ -47,7 +47,7 @@ The terminology in SpiraTeam is designed to be methodology agnostic. The table b
 | Sprint               | Iteration                | Sprint       |  Iteration |
 
 At first, the requirements list will be empty. Click the 'Insert' button in the toolbar to create your first requirement. Hit 'Save and New'
-(shown as buttons on the right of the new requirement in the list table) to add each new requirement after that. Below is the list of requirement names to add:
+(shown as buttons on the right of the new requirement in the list table) to add each new requirement after that except for the last requirement. After entering the last requirement, hit "Save" button. Below is the list of requirement names to add:
 
 1.  Functional Requirements
 
@@ -90,7 +90,7 @@ We now have a nicely group set of requirements. Let's enter more information abo
 
 3.  Set the 'Type' of the four requirements you can edit this for to User Story'.
 
-4.  Choose whatever values you like for the 'Importance' field.
+4.  Choose whatever values you like for the 'Importance' field for each of the requirements.
 
 5.  Click the 'Save' button.
 
@@ -627,7 +627,7 @@ Now click the 'Fail' button and you will have recorded a test failure and a new 
 
 ![](img/Running_Tests_and_Logging_Incidents_63.png)
 
-Now that we have logged the test failure and the new incident/defect, click on a hexagon on the main navigation bar on the left of "Sample Empty Product" option.
+Now that we have logged the test failure and the new incident/defect, click on a hexagon on the main navigation bar on the left of "Sample Empty Product 2" option.
 ![](img/Running_Tests_and_Logging_Incidents_64.png)
 
 You'll be taken to the product homepage with the requirements and test case metrics now visible in individual widgets (like the Test Execution Status widget shown below):
