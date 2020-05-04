@@ -193,7 +193,7 @@ In SpiraTeam and SpiraPlan, there are two additional release list views. These v
 1. Gantt chart view (beta)
 2. Hierarchical Pert chart / Mind Map (beta)
 
-You can pick between each of these views using the view selection button group at the top right of any requirement list page. 
+You can pick between each of these views using the view selection button group at the top right of any requirement list page.
 
 ![](img/releases-list-selector.png)
 

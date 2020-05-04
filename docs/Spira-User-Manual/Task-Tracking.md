@@ -105,6 +105,142 @@ Read about [how to export artifacts from one product to another](Application-Wid
 To quickly print a single task or list of tasks you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 
+## Task Additional List Views
+There are two additional task list views. These views are:
+
+2. Task Board
+1. Gantt chart view (beta)
+
+You can pick between each of these views using the view selection button group at the top right of any requirement list page.
+
+![](img/tasks-list-selector.png)
+
+
+## Task Board
+
+The task board is an alternative to the [task list page](#task-list) designed to let you view the tasks planned for the current product. You can access this feature by clicking on the **Board** icon in the top-right of the Tasks list page. You can switch back to the Task list page by clicking on the **Table** view.
+
+The task board has the following different display modes:
+
+-   **All Releases**
+
+    -   By Release
+    -   By Priority
+    -   By Status
+    -   By Person
+
+-   **Release**
+
+    -   By Sprint
+    -   By Priority
+    -   By Status
+    -   By Person
+
+-   **Sprint**
+
+    -   By Priority
+    -   By Status
+    -   By Person
+
+Each of these views is described below:
+
+
+### Tasks -- By Priority
+
+This view is designed to let you see the list of planned tasks organized by priority. Each of the possible priority values is displayed on the left-hand side and the tasks displayed in the same row on the right:
+
+![](img/Task_Tracking_305.png)
+
+The top section will contain the list of tasks that are not assigned a priority, with the other sections containing the tasks that have been assigned to the specific priority.
+
+
+### Tasks -- By Status
+
+This view is designed to let you see the tasks in the current product /
+release / sprint organized by their status. Each task status (not started, in progress, completed, blocked, deferred) is displayed as a heading, with the tasks displayed in the same column underneath:
+
+![](img/Task_Tracking_306.png)
+
+You can click on the expand/collapse icons to hide any resources that are not relevant.
+
+Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the tasks between statuses or to/from the release/sprint backlog. Any tasks not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
+
+![](img/Task_Tracking_307.png)
+
+
+### Tasks - By Person
+
+This view is designed to let you see the tasks in the current product /
+release / sprint organized by resource / person. Each of the users that is a member of the current product is displayed as a heading, with the tasks displayed in the same column underneath. This view is often called the **Task Board**:
+
+![](img/Task_Tracking_308.png)
+
+You can click on the expand/collapse icons to hide any resources that are not relevant. The system will display a progress bar for each resource to illustrate the allocation for that resource. Any resource that has a progress bar that is completely green has been fully scheduled and should not have any additional tasks assigned. If the progress bar for that resource turns red, it means that they have been over-scheduled and you need to reassign some of the tasks.
+
+![](img/Task_Tracking_309.png)
+
+Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain tasks that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the tasks between resources or to/from the release/sprint backlog. Any tasks not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
+
+
+### Tasks - By Release
+
+This view is only available when you are displaying the task board for
+'all releases'. Each of the active releases defined for the current product is displayed as a heading, with the tasks displayed in the same column underneath
+
+![](img/Task_Tracking_310.png)
+
+You can drag and drop the tasks between the different releases. Once the task has been added to the release, the utilized effort for the release will increase, and the available effort will decrease by the same amount.
+
+Note: The system will allow you to assign more tasks to a release than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the release length or add product personnel resources to the release.
+
+Clicking on the release hyperlinks in the headers will switch the task board into the release view.
+
+
+### Tasks - By Sprint
+
+This view is only available when you are displaying the task board for a specific release. Each of the sprints defined for the current release is displayed as a heading, with the tasks displayed in the same column underneath. This view is commonly used in **Scrum** products:
+
+![](img/Task_Tracking_311.png)
+
+You can drag and drop the tasks between the different sprints. Once the task has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount.
+
+Note: The system will allow you to assign more tasks to a sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint.
+
+Clicking on the sprint hyperlinks in the headers will switch the task board into the sprint view.
+
+
+### Tasks - By Requirement
+
+This option is only available when you are displaying the task board for a specific release or sprint. 
+
+In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.
+
+![](img/task-board-by-requirement.png)
+
+
+
+[^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
+
+
+## Task Gantt Chart
+
+This displays all active releases and sprints[^active-release] nested in the same hierarchy as on the main release list page (releases or sprints without any tasks are also shown). It also displays any task that are assigned to one of these releases.
+
+Any release that has active children or open tasks has an expand / collapse toggle to the left of its name. This will show the child releases and/or the assigned tasks
+
+To the right of the names is the timeline bar, which graphically shows the length of each release (blue) and task (green) between their start and end dates in individual horizontal bars. The names of the releases and tasks on the left or in the horizontal bars are clickable and will open the specific release or task.
+
+Part of a release or task may be shaded darker than normal, from its left - this is based on how complete the release or task is.
+
+- For releases, this represents the [requirements completion percentage](../Release-Management/#requirements-completion) for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. 
+- For tasks, this represents the percentage complete of the task itself.
+
+
+![Release Gantt Chart](img/tasks-gantt-chart.png)
+
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
+
+
 ## Task Details
 
 When you click on a task item in the lists displayed on either the main task list page or on the requirement / release details pages, you are taken to the task details page illustrated below:
@@ -217,109 +353,3 @@ You can associate other tasks, incidents, and source code to a task from this ta
 ### History
 
 Read about [how the history tab works](Application-Wide.md#history)
-
-
-## Task Board
-
-The task board is an alternative to the [task list page](#task-list) designed to let you view the tasks planned for the current product. You can access this feature by clicking on the **Board** icon in the top-right of the Tasks list page. You can switch back to the Task list page by clicking on the **Table** view.
-
-The task board has the following different display modes:
-
--   **All Releases**
-
-    -   By Release
-    -   By Priority
-    -   By Status
-    -   By Person
-
--   **Release**
-
-    -   By Sprint
-    -   By Priority
-    -   By Status
-    -   By Person
-
--   **Sprint**
-
-    -   By Priority
-    -   By Status
-    -   By Person
-
-Each of these views is described below:
-
-
-### Tasks -- By Priority
-
-This view is designed to let you see the list of planned tasks organized by priority. Each of the possible priority values is displayed on the left-hand side and the tasks displayed in the same row on the right:
-
-![](img/Task_Tracking_305.png)
-
-The top section will contain the list of tasks that are not assigned a priority, with the other sections containing the tasks that have been assigned to the specific priority.
-
-
-### Tasks -- By Status
-
-This view is designed to let you see the tasks in the current product /
-release / sprint organized by their status. Each task status (not started, in progress, completed, blocked, deferred) is displayed as a heading, with the tasks displayed in the same column underneath:
-
-![](img/Task_Tracking_306.png)
-
-You can click on the expand/collapse icons to hide any resources that are not relevant.
-
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the tasks between statuses or to/from the release/sprint backlog. Any tasks not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
-
-![](img/Task_Tracking_307.png)
-
-
-### Tasks - By Person
-
-This view is designed to let you see the tasks in the current product /
-release / sprint organized by resource / person. Each of the users that is a member of the current product is displayed as a heading, with the tasks displayed in the same column underneath. This view is often called the **Task Board**:
-
-![](img/Task_Tracking_308.png)
-
-You can click on the expand/collapse icons to hide any resources that are not relevant. The system will display a progress bar for each resource to illustrate the allocation for that resource. Any resource that has a progress bar that is completely green has been fully scheduled and should not have any additional tasks assigned. If the progress bar for that resource turns red, it means that they have been over-scheduled and you need to reassign some of the tasks.
-
-![](img/Task_Tracking_309.png)
-
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain tasks that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the tasks between resources or to/from the release/sprint backlog. Any tasks not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
-
-
-### Tasks - By Release
-
-This view is only available when you are displaying the task board for
-'all releases'. Each of the active releases defined for the current product is displayed as a heading, with the tasks displayed in the same column underneath
-
-![](img/Task_Tracking_310.png)
-
-You can drag and drop the tasks between the different releases. Once the task has been added to the release, the utilized effort for the release will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more tasks to a release than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the release length or add product personnel resources to the release.
-
-Clicking on the release hyperlinks in the headers will switch the task board into the release view.
-
-
-### Tasks - By Sprint
-
-This view is only available when you are displaying the task board for a specific release. Each of the sprints defined for the current release is displayed as a heading, with the tasks displayed in the same column underneath. This view is commonly used in **Scrum** products:
-
-![](img/Task_Tracking_311.png)
-
-You can drag and drop the tasks between the different sprints. Once the task has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more tasks to a sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint.
-
-Clicking on the sprint hyperlinks in the headers will switch the task board into the sprint view.
-
-
-### Tasks - By Requirement
-
-This option is only available when you are displaying the task board for a specific release or sprint. 
-
-In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.
-
-![](img/task-board-by-requirement.png)
-
-
-
-[^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.

@@ -1,5 +1,20 @@
 # Release Notes for Spira v6
 
+## Version 6.5 (May 2020)
+!!! info "Summary"
+    **Portfolio management (SpiraPlan only)**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view.
+
+    **New dashboard views to assess overall progress**: Key data about percent complete for sprints, releases, products, programs, and portfolios will be displayed in a new widget on relevant dashboards. This will be based on the requirements that are part of each active sprint and release.
+
+    **New release and task views to better manage workloads**: View all your relevant releases and tasks in new Gannt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
+
+??? success "New features"
+
+
+
+??? bug "Bug fixes and enhancements"
+
+
 ## Version 6.4.0.1 (March 2020)
 
 !!! bug "Bug fix"
