@@ -75,16 +75,16 @@ As described above there are 4 different types of administrator. There are also 
 
 - **We start with a user**: without a user, your colleague can not even log in to the application
 - **Then add a user to a product**: a brand new user cannot do anything or see anything in the application. The most common way of granting a user access to the system is to add them as a member to specific products
-- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once.
+- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once. Multiple users can be assigned the same product role.
 
 Product roles have two special flags. Changing these flags immediately affect anyone with that particular role:
 
-- **Any product role can grant the user product administrator access**. One of the special product role flag is product administrator. Any person with a role that has product administrator set to "Yes" can carry out all administrative tasks on that product.
+- **Any product role can grant the user product administrator access**. One of the special product role flags is product administrator. Any person with a role that has product administrator set to "Yes" can carry out all administrative tasks on that product.
 - **Any role that grants product ownership access can also grant template admin access**. The second special flag on a product role is that of Template Admin. If a role grants product administrator access it can optionally also grant template admin access.
 
 Permissions for programs are more simple and managed on a per program basis:
 
-- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have access, with a particular role, to that specific program. Program roles are either Executive or Owner. Program Owners can carry out any administration tasks on the program.
+- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have access, with a particular role, to that specific program. Program roles are either Executive or Owner. Program Owners can carry out any administration tasks on the program. NOTE: a user with a program role is given view-only permissions to all products within that program. This view-only access is superceded by any specific product roles they have on the individual products themselves.
 
 Each user profile has two special flags about permissions, which affect the entire system, but only for one user at a time (they are completely separate to product and program permissions):
 
