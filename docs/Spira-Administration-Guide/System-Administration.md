@@ -71,15 +71,24 @@ The rest of this guide explores each area of administration in order, grouped by
 
 
 ## How user permissions are set
-As described above there are 4 different types of administrator. There are also different permission models for accessing the application itself (ie not administration). How do you set each of these permissions so that a user can only see / use what they are supposed to see / use?
+As described above there are 4 different types of administrator. There are also different permission models for accessing the application itself (ie not the administration pages). How do you set each of these permissions so that a user can only see / use what they are supposed to?
 
 - **We start with a user**: without a user, your colleague can not even log in to the application
 - **Then add a user to a product**: a brand new user cannot do anything or see anything in the application. The most common way of granting a user access to the system is to add them as a member to specific products
-- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once.
-- **Any role can grant the user product ownership access**. Product roles have two special flags. One of which is product ownership. Any person with a role that has product ownership set to Yes can carry out all administrative tasks on that product
-- **Any role that grants product ownership access can also grant template admin access**. The second special flag on a product role is that of Template Admin. If a role grants product ownership it can optionally also grant template admin access.
-- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have been granted access with a particular role to that specific program. Program roles are either Executive or Owner. The owner can carry out any administration tasks on the program.
-- **Users can be granted portfolio viewer access (SpiraPlan only)**: each user profile has two special flags on it. These are system wide permissions, that are separate from product roles. First, is Portfolio Viewer access, which lets a user see all portfolio pages and enterprise pages in the application. In other words, you do not let a user see this portfolio or that portfolio, but all portfolios en masse. Only a system administrator can set this on a user.
+- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once.
+
+Product roles have two special flags. Changing these flags immediately affect anyone with that particular role:
+
+- **Any product role can grant the user product administrator access**. One of the special product role flag is product administrator. Any person with a role that has product administrator set to "Yes" can carry out all administrative tasks on that product.
+- **Any role that grants product ownership access can also grant template admin access**. The second special flag on a product role is that of Template Admin. If a role grants product administrator access it can optionally also grant template admin access.
+
+Permissions for programs are more simple and managed on a per program basis:
+
+- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have access, with a particular role, to that specific program. Program roles are either Executive or Owner. Program Owners can carry out any administration tasks on the program.
+
+Each user profile has two special flags about permissions, which affect the entire system, but only for one user at a time (they are completely separate to product and program permissions):
+
+- **Users can be granted portfolio viewer access (SpiraPlan only)**: The first special flag on the user profile is Portfolio Viewer access. This allows a user access to all portfolio pages and enterprise pages in the application. In other words, you do not control which portfolio a user can see, but only if they can access all portfolios or none of them. Only a system administrator can set this on a user.
 - **Users can be granted system administrator status**: this is the second special flag on a user profile and makes the user a system administrator. Only a system administrator can set this on a user.
 
 !!! info "System administrators and product roles"
