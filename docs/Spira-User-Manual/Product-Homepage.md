@@ -10,7 +10,7 @@ You will see a small "i" in a circle at the top right of every chart. Hovering o
 
 In addition to viewing the product home page, you can choose to filter by a specific release, to get the homepage for just that release (and any child sprints).
 
-Just like the 'My Page', the Product Home dashboard is initially loaded in 'view mode' with pre-configured set of widgets. The Product Home also offers 3 versions you can quickly switch between. While each of these can be customized as you want, by default they are designed to help different types of product member -- be they managers, testers, or developers.
+Just like the 'My Page', the Product Home dashboard is initially loaded in 'view mode' with pre-configured set of widgets. The Product Home has 3 versions you can quickly switch between. While each of these can be customized as you want, by default they are designed to help different types of product member -- be they managers, testers, or developers.
 
 ![](img/UserProduct_Management_60.png)
 
@@ -20,7 +20,7 @@ To switch the page to 'edit mode', you should click on the button with the cog i
 
 Once in 'edit mode', each of the 'widgets' displayed on the product homepage can be minimized by clicking on the arrow icon (![](img/UserProduct_Management_42.png)) in the top-left of the window, or closed by clicking-on the cross icon (![](img/UserProduct_Management_43.png)) in the top-right of the window. In addition, the widgets allow you change their settings by clicking on the settings icon (![](img/UserProduct_Management_40.png)).This allows you to customize your view of the product to reflect the types of information that are relevant to you. If you have closed a widget that you subsequently decide you want to reopen, you can rectify by clicking the "***Add Items***" button at the top of the page, and locating the closed item from the list of 'Closed Widgets'.
 
-When you load your 'Product Home' for the first time it will default to the "General" view. The following table shows which widgets are displayed on the different views of the 'Product Home':
+By default, the product home page shows the "General" view. The following table shows which widgets are displayed on the different views of the 'Product Home':
 
 | Widget Name                        | General   | Development   | Testing |
 | ---------------------------------  | --------- | ------------- | ------- |
@@ -163,7 +163,7 @@ Each release will display the aggregate status of any test cases directly assign
 ## Releases/Sprints Completion
 This chart shows the progress of each active release with requirements attached in this product. The left-hand chart shows progress from the start to end date of the release. The bar's color indicates how on track the schedule is against requirement completion. The right-hand chart shows the proportion of requirements in the release that have been completed.
 
-!!! info "Displaying for a Release"
+!!! question "Displaying for a Release"
     Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget 
 
 Schedule Progress color definitions:
@@ -179,7 +179,7 @@ Schedule Progress color definitions:
     
     The Schedule Progress bar will show as 50% (if you click "Displaying" button to "As Numbers" it will show 7 days). 
     
-    This release has a total of 20 requirements (summed up from all its products and their active releases). Let's say that 15 of these are completed. That's 75% complete. So the Requirements Complete bar will show 75% (if you click "Displaying" button to "As Numbers" it will show 15 completed).
+    This release has a total of 20 requirements (summed up from all its active child releases and sprints, if any). Let's say that 15 of these are completed. That's 75% complete. So the Requirements Complete bar will show 75% (if you click "Displaying" button to "As Numbers" it will show 15 completed).
 
     So the schedule is half way through but we are three quarters done with the work (the requirements). So we are ahead of schedule (awesome!). The schedule bar will therefore have the "Ahead of Schedule" color.
 
