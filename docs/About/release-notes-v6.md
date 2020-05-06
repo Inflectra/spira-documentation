@@ -6,7 +6,7 @@
 
     **New dashboard views to assess overall progress**: Key data about percent complete for sprints, releases, products, programs, and portfolios will be displayed in a new widget on relevant dashboards. This will be based on the requirements that are part of each active sprint and release.
 
-    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: View all your relevant releases and tasks in new Gannt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
+    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
 
 ??? success "New features"
 
