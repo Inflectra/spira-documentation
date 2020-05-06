@@ -28,7 +28,7 @@ This column shows a mini chart that shows the percentage completion of all relev
 The percentaged complete is worked out by dividing the number of "completed requirements" (described below) by the total number of requirements assigned to the release. A "completed requirement" is a requirement with a status of either "Tested", "Completed", or "Released".
 
 ### Test coverage
-This column shows a mini chart that shows the sum of each execution statuses against the release. It is calculated from the lastest test run executed against that release for each test case that is assigned to that release. If you execute a test case against a release, and that test case is not by itself assigned to the release, the information for that test run will *not* be included.
+This column shows a mini chart that shows the sum of each execution statuses against the release. It is calculated from the latest test run executed against that release for each test case that is assigned to that release. If you execute a test case against a release, and that test case is not by itself assigned to the release, the information for that test run will *not* be included.
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
 
@@ -67,7 +67,6 @@ How are the different categories calculated?
 Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../../Spira-Administration-Guide/Product-Planning/#planning-options) page of product administration.
 
 Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
-
 
 
 ## Release List
