@@ -22,10 +22,14 @@ From the release list page you can see a number of columns that show calculated 
 
 This allows you to see at a glance the state of play about a number of key metrics for the release.
 
+
 ### Requirements Completion
 This column shows a mini chart that shows the percentage completion of all relevant requirements assigned to the release (or that are rolling up from the releases children).
 
 The percentaged complete is worked out by dividing the number of "completed requirements" (described below) by the total number of requirements assigned to the release. A "completed requirement" is a requirement with a status of either "Tested", "Completed", or "Released".
+
+### Requirement Count and Points
+These columns (not shown by default) show you the sum of all requirements assigned to the release; and the sum of all the points scored to all those requirements respectively.
 
 ### Test coverage
 This column shows a mini chart that shows the sum of each execution statuses against the release. It is calculated from the latest test run executed against that release for each test case that is assigned to that release. If you execute a test case against a release, and that test case is not by itself assigned to the release, the information for that test run will *not* be included.
