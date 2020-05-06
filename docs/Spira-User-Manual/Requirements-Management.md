@@ -13,9 +13,26 @@ From the requirement list page you can see a number of columns that show calcula
 This allows you to see at a glance the state of play about a number of key metrics for the requirement.
 
 ### Test coverage
-This column shows a mini chart that shows the sum of each execution statuses against the requirement (or that rollup from its children). It is calculated from the latest test run executed for each test case that is assigned to that requirement.
+This column shows a mini chart that shows the sum of each execution statuses against the requirement. It is calculated from the current execution status of each test case assigned to that requirement. If a requirement has 3 test cases assigned to it, then the mini chart will show the results for those 3 test cases.
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
+
+When you have a hierarchy of requirements, the total number of test cases included in the mini chart is the sum of all of the test cases assigned to each of its children, added to the number of test cases directly assigned to the parent requirement.
+
+??? note "Example: How Test Coverage Rolls up to Parent Requirements"
+    - You have 3 requirements (A, B, and C) nested one inside the other
+    - The most nested requirement (C) therefore has a parent (B) and a grandparent (A)
+    - We assign one test case to C: C has 1 test case against it in the mini chart; B will also have 1; and A will have 1 too
+    - We now add that same test case to B: C still has 1 test case; but now B has 2 test cases (1 it gets from its child C and 1 is from its own test coverage); and A has a total of 2 test cases as well (0 from itself, and 2 as the sum of its direct children's test cases - in this case B)
+
+The left-hand sidebar on the requirements list page shows an donut chart of aggregate requirement test coverage in the product. It shows segments for each test execution status. It calculates the number for each execution status segment as follows:
+
+- Each requirement in the product gets a score of 1
+- This score of 1 is split based on the execution status proportions for that requirement (so a requirement that is 50% passed, 30% failed, and 20% not run gets scores for passed, failed, and not run of 0.5, 0.3 and 0.2 respectively). These values exactly match those you will see in the mini chart on the main list page (discussed above)
+- The individual execution status scores from above are summed up across all the requirements in the product
+- These totals for each execution status are then shown as proportions on the donut chart
+- In this way the sum of the numbers on the donut chart will be the number of requirements in the product (and the sum of all the proportions will be 100%)
+
 
 ### Task Progress
 This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the requirement, by progress category for the requirement. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
