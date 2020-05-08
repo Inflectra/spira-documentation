@@ -1,12 +1,19 @@
 # Release Notes for Spira v6
 
 ## Version 6.5 (May 2020)
+
 !!! info "Summary"
-    **Portfolio management (SpiraPlan only)**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view.
+    **Portfolio management (SpiraPlan only)**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view. 
+    
+    *Learn: [editing portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios); [letting users see portfolio and enterprise pages](../../Spira-Administration-Guide/System-Administration/#how-user-permissions-are-set).*
 
     **New dashboard views to assess overall progress**: Key data about percent complete for sprints, releases, products, programs, and portfolios will be displayed in a new widget on relevant dashboards. This will be based on the requirements that are part of each active sprint and release.
 
+    *Learn: [the portfolio dashboard](../../Spira-User-Manual/Portfolio-Homepage/); [the enterprise dashboard](../../Spira-User-Manual/Enterprise-Homepage/).*
+
     **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
+
+    *Learn: [release Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart); [release mind map](../../Spira-User-Manual/Release-Management/#release-mind-map); [task Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart).*
 
 ??? success "New features"
 
@@ -14,52 +21,52 @@
     - Installer can upgrade successfully with required database additions [RQ:2850]
 
 
-    * Enterprise Dashboard (SpiraPlan only)
-        - Overall Completion Gauge Chart [RQ:2743]
-        - Portfolios: Completion [RQ:2744]
-        - Portfolios: Relative Size [RQ:2745]
-        - Top Open Risks [RQ:2746]
-        - Enterprise Schedule Gantt Chart [RQ:2747]
+    * [Enterprise Dashboard]((../../Spira-User-Manual/Enterprise-Homepage/) (SpiraPlan only)
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Enterprise-Homepage/#requirement-completion) [RQ:2743]
+        - [Portfolios: Completion](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-completion) [RQ:2744]
+        - [Portfolios: Relative Size](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-relative-size) [RQ:2745]
+        - [Top Open Risks](../../Spira-User-Manual/Enterprise-Homepage/#top-open-risks) [RQ:2746]
+        - [Enterprise Schedule Gantt Chart](../../Spira-User-Manual/Enterprise-Homepage/#schedule) [RQ:2747]
 
     * Porfolio Dashboard (SpiraPlan only)
-        - Overall Completion Gauge Chart [RQ:2749]
-        - Programs: Completion [RQ:2750]
-        - Programs: Relative Size [RQ:2751]
-        - Top Open Risks [RQ:2752]
-        - Portfolio Schedule Gantt Chart [RQ:2753]
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Portfolio-Homepage/#requirement-completion) [RQ:2749]
+        - [Programs: Completion](../../Spira-User-Manual/Portfolio-Homepage/#programs-completion) [RQ:2750]
+        - [Programs: Relative Size](../../Spira-User-Manual/Portfolio-Homepage/#programs-relative-size) [RQ:2751]
+        - [Top Open Risks](../../Spira-User-Manual/Portfolio-Homepage/#top-open-risks) [RQ:2752]
+        - [Portfolio Schedule Gantt Chart](../../Spira-User-Manual/Portfolio-Homepage/#schedule) [RQ:2753]
 
     * Program Dashboard
         - Add General, Development, and Test Views [RQ:2755]
-        - Overall Completion Gauge Chart [RQ:2756]
-        - Products: Completion [RQ:2757]
-        - Products: Relative Size [RQ:2758]
-        - Program Schedule Gantt Chart [RQ:2759]
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Program-Homepage/#requirement-completion) [RQ:2756]
+        - [Products: Completion](../../Spira-User-Manual/Program-Homepage/#products-completion) [RQ:2757]
+        - [Products: Relative Size](../../Spira-User-Manual/Program-Homepage/#products-relative-size) [RQ:2758]
+        - [Program Schedule Gantt Chart](../../Spira-User-Manual/Program-Homepage/#schedule) [RQ:2759]
         - Program Overview widget shows the portfolio, where relevant [RQ:2854]
 
     * Product Dashboard
-        - Overall Completion Gauge Chart [RQ:2765]
-        - Releases: Completion [RQ:2766]
-        - Releases: Relative Size [RQ:2767]
-        - Product Schedule Gantt Chart [RQ:2768]
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Product-Homepage/#requirement-completion) [RQ:2765]
+        - [Releases: Completion](../../Spira-User-Manual/Product-Homepage/#releasessprints-completion) [RQ:2766]
+        - [Releases: Relative Size](../../Spira-User-Manual/Product-Homepage/#releasessprints-relatize-size) [RQ:2767]
+        - [Product Schedule Gantt Chart](../../Spira-User-Manual/Product-Homepage/#schedule) [RQ:2768]
 
     * My Page
-        - Add My Recent Products widget [RQ:2770]
-        - Add My Recent Artifacts widget [RQ:2771]
+        - Add [Recent Products widget](../../Spira-User-Manual/User-Product-Management/#recent-products) [RQ:2770]
+        - Add [Recent Artifacts widget](../../Spira-User-Manual/User-Product-Management/#recent-artifacts) [RQ:2771]
 
     * Release List Page Changes
         - Add column for total # points [RQ:2774]
         - Add column for total # requirements [RQ:2775]
         - Add progress bar for requirements [RQ:2776]
-        - Release Hierarchical Diagram View - read only (SpiraTeam and SpiraPlan only) [RQ:2777]
-        - Release GANTT Chart View - read only (SpiraTeam and SpiraPlan only) [RQ:2778]
+        - [Release Hierarchical Diagram View](../../Spira-User-Manual/Release-Management/#releases-mind-map) - read only (SpiraTeam and SpiraPlan only) [RQ:2777]
+        - [Release Gantt Chart View](../../Spira-User-Manual/Release-Management/#release-gantt-chart) - read only (SpiraTeam and SpiraPlan only) [RQ:2778]
 
     * Program Release List Page (SpiraPlan only)
         - Add column for total # points for all requirements in the release [RQ:2836]
         - Add column for total # requirements [RQ:2837]
-        - Add progress bar for requirements [RQ:2838]
+        - Add [progress bar for requirements](../../Spira-User-Manual/Release-Management/#requirements-completion) [RQ:2838]
 
     * Product Task List Page Changes
-        - Add a Task GANTT Chart View [RQ:2780]
+        - Add a [Task GANTT Chart View](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) [RQ:2780]
 
     * Sample Data installed with new installations
         - Remove data and rename Sample Barebones Product to Sample Empty Product 1 [RQ:2782]
@@ -74,8 +81,8 @@
         - Program changes trigger updates in all parent workspaces [RQ:2831]
         - Porfolio changes trigger updates to the enterprise level [RQ:2832]
         - Requirements calculations for counts and completion work as expected [RQ:2855]
-        - Task Effort calculations for requirements work as expected (for fields shown on the requirements list page) [RQ:2863]
-        - Task effort calculations for releases work as expected (for fields shown on the release list page) [RQ:2856]
+        - [Task Effort calculations for requirements](../../Spira-User-Manual/Requirements-Management/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
+        - [Task effort calculations for releases](../../Spira-User-Manual/Release-Management/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]
 
     * Permissions to control access to portfolios and enterprise views (SpiraPlan only)
         - New Portfolio Viewer attribute on the user profile to allow access to all portfolios (and enterprise view) [RQ:2834]
@@ -83,10 +90,10 @@
         - Access to portfolios features pages and visibility in UI restricted by permissions and Spira version [RQ:2846]
 
     * Administration changes
-        - Ability to create, edit, delete portfolios [RQ:2840]
-        - Ability to assign programs to a portfolio [RQ:2841]
+        - [Ability to create, edit, delete portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios) [RQ:2840]
+        - [Ability to assign programs to a portfolio](../../Spira-Administration-Guide/System-Workspaces/#edit-a-program) [RQ:2841]
         - Handle the default portfolio for new programs [RQ:2844]
-        - Ability to delete sample data (all sample products, programs, and portfolios) and where possible sample users [RQ:2845]
+        - [Ability to delete sample data](../../Spira-Administration-Guide/System-Home/#delete-sample-data) (all sample products, programs, and portfolios) and where possible sample users [RQ:2845]
 
 
 ??? bug "Bug fixes and enhancements"

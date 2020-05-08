@@ -17,9 +17,9 @@ This screen displays the list of products in the system (both inactive and activ
 
 By default the table shows you only the active products, but you can select a different option from the dropdown above the table. You can filter the list of products by either choosing an active status, program, or entering a portion of the name or date into the appropriate text box. When you click the "Filter" button, the list of products will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of products, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of products is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the product list.
 
-To permanently delete a product, click the "Delete" button to the right of the product details. Doing so will show a popup where the admin will be required to correctly type the name of the selected product. Product deletion is irreversible and will delete all the artifacts associated with the product. If you want to temporarily delete a product, set its Active flag to 'No' instead. To make a copy of a product to reuse its test cases, releases, test sets and requirements, click the "Copy" link to the right of the product.
-*Note that this will not make a copy of any historical information, test runs or incidents.*
+To permanently delete a product, click the "Delete" button to the right of the product details. Doing so will show a popup where the admin will be required to correctly type the name of the selected product. Product deletion is irreversible and will delete all the artifacts associated with the product. If you want to temporarily delete a product, set its Active flag to 'No' instead. To make a copy of a product to reuse its test cases, releases, test sets and requirements, click the "Copy" link to the right of the product. *NOTE: this will not make a copy of any historical information, test runs or incidents.*
 
+### Add a new product
 To add a new product to the system, click the "Add" button at the bottom of the product list, and a new screen will be displayed that allows you to enter the new product information:
 
 ![](img/System_Workspaces_34.png)
@@ -27,17 +27,14 @@ To add a new product to the system, click the "Add" button at the bottom of the 
 You need to:
 
 -   enter a name for the product (which cannot be the same as any already in use);
-
 -   select which program it belongs to and optionally enter a detailed description and/or web-site URL;
-
 -   you should initially make sure that the product is marked as "Active";
-
 -   decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
-
 -   select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new product.
 
+### Edit a product
 In a similar way, to edit the details of an existing product, click the "Edit" button in the right hand column of the product list box, and you will be taken to the following screen that allows you modify the product details:
 
 ![](img/System_Workspaces_35.png)
@@ -45,6 +42,9 @@ In a similar way, to edit the details of an existing product, click the "Edit" b
 On this screen you can edit the name, description, program, website URL and active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 Next to the current template for the product, is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md). 
+
+!!! question "What happens when you make a product inactive"
+    If you set a product's active flag to "No" then it will be hidden from the global navigation for all users. This is a potential alternative to deleting a product.
 
 
 ## View/Edit Programs
@@ -82,6 +82,9 @@ In a similar way, to edit the details of an existing program, click the "Edit" b
 ![](img/System_Workspaces_38.png)
 
 On the top part of this screen you can edit the name, description, website URL, portfolio (SpiraPlan only), active flag and default flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+
+!!! question "What happens when you make a program inactive"
+    If you set a programs's active flag to "No" then it will be hidden from the global navigation for all users. All products in that program will also be hidden from the global navigation for all users.
 
 In addition, the lower part of the screen allows you to view/edit the users that are members of the program and also see which products are in the program:
 
@@ -141,7 +144,7 @@ Once you are satisfied with the information, click the "Insert" button to actual
 
 ### Edit a portfolio
 
-In a similar way, to edit the details of an existing portfolio, click the "Edit" button in the right-hand column of the portfolio list box, and you will be taken to the following screen that allows you modify the portfolio details. **Please note that this is the only administrative page in the portfolio administration section.**
+In a similar way, to edit the details of an existing portfolio, click the "Edit" button in the right-hand column of the portfolio list box, and you will be taken to the following screen that allows you modify the portfolio details.
 
 ![](img/System_Workspaces_Portfolios_3.png)
 
@@ -149,8 +152,9 @@ On the top part of this screen you can edit the name, description, and active fl
 
 At the bottom of the screen you can see all the programs that belong to this portfolio.
 
-!!! info "Who can view portfolios?"
-    Any user who's profile 
+!!! question "What happens when you make a portfolio inactive"
+    If you set a portfolio's active flag to "No" then it will be hidden from the global navigation for all users. Any programs in the portfolio and all products in those programs will also be hidden from the global navigation for all users.
+
 
 ## View/Edit Templates
 

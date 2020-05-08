@@ -13,7 +13,7 @@ As with other dashboards, you can edit these widgets, their position, and what i
 ## System Information
 The system information widget displays an overview of your Spira instance, including license information and the number of currently-active users, as well as links to detailed information.
 
-### Deleting Sample Data
+### Delete Sample Data
 On fresh installations that include the sample data that ships with the application there is a button on this widget to delete this sample data. This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
 
 If you click the "Delete" button, a popup will show a warning. If you decide to proceed the system will attempt to delete all sample data, including users, products, artifact information, programs, and portfolios. This method will not delete:

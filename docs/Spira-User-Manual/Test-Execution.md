@@ -6,13 +6,12 @@ This section describes how a tester can follow the steps defined for a series of
 
 You start test case execution in SpiraPlan by either:
 
-1.  selecting test cases or test sets on their respective page(s) and
-    clicking the "***Execute***" button;
-
-2.  clicking the "***Execute***" button on the test cases
-/ test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".
+1.  selecting test cases or test sets on their respective page(s) and clicking the "***Execute***" button;
+2.  clicking the "***Execute***" button on the test cases / test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".
 
 If you execute a test set then the values of the selected release and custom list properties for the test run are automatically populated from the test set, whereas if you directly execute a test case itself, those values can be chosen by the tester.
+
+If you attempt to execute a single test case that you are in the middle of testing (from either a test case, group of test cases, or a test set) a popup will ask if you want to resume one of those existing, not-yet-completed pending test runs, or start a new test run. The popup will show the five most recent relevant pending test runs with their dates and names. 
 
 Regardless of the route taken to launch the test execution module, the first screen that will be displayed will look like the following:
 

@@ -164,7 +164,7 @@ Each release will display the aggregate status of any test cases directly assign
 This chart shows the progress of each active release with requirements attached in this product. The left-hand chart shows progress from the start to end date of the release. The bar's color indicates how on track the schedule is against requirement completion. The right-hand chart shows the proportion of requirements in the release that have been completed.
 
 !!! question "Displaying for a Release"
-    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget 
+    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget.
 
 Schedule Progress color definitions:
 
@@ -190,8 +190,8 @@ Schedule Progress color definitions:
 ## Releases/Sprints Relatize Size
 This chart shows the number of active requirements in each active release. Hovering over a segment will show its percentage of all requirements (this is visually represented by the size of the donut wedge). Please note, releases with no active requirements are not shown.
 
-!!! info "Displaying for a Release"
-    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget
+!!! question "Displaying for a Release"
+    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget. The widget will also show sprints if you ONLY have ative sprints in this product (i.e. if there are no active major or minor releases at all).
 
 ## Recent Builds
 
