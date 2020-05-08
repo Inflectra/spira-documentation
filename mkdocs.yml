@@ -54,26 +54,37 @@ nav:
   - How to use this manual: Spira-User-Manual\index.md
   - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
   - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
-  - User/Product Management: Spira-User-Manual\User-Product-Management.md
-  - Requirements Management: Spira-User-Manual\Requirements-Management.md
-  - Test Case Management: Spira-User-Manual\Test-Case-Management.md
-  - Test Execution: Spira-User-Manual\Test-Execution.md
-  - Test Run Management: Spira-User-Manual\Test-Run-Management.md
-  - Test Set Management: Spira-User-Manual\Test-Set-Management.md
-  - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
-  - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
-  - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
-  - Release Management: Spira-User-Manual\Release-Management.md
-  - Task Tracking: Spira-User-Manual\Task-Tracking.md
-  - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
-  - Document Management: Spira-User-Manual\Document-Management.md
-  - Risk Management: Spira-User-Manual\Risks-Management.md
-  - Source Code: Spira-User-Manual\Source-Code.md
-  - Reports Center: Spira-User-Manual\Reports-Center.md
-  - Planning Board: Spira-User-Manual\Planning-Board.md
+  - User Management: Spira-User-Manual\User-Product-Management.md
+  - Products:
+    - Homepage: Spira-User-Manual\Product-Homepage.md
+    - Planning:
+      - Requirements Management: Spira-User-Manual\Requirements-Management.md
+      - Release Management: Spira-User-Manual\Release-Management.md
+      - Document Management: Spira-User-Manual\Document-Management.md
+      - Planning Board: Spira-User-Manual\Planning-Board.md
+    - Testing:
+      - Test Case Management: Spira-User-Manual\Test-Case-Management.md
+      - Test Execution: Spira-User-Manual\Test-Execution.md
+      - Test Set Management: Spira-User-Manual\Test-Set-Management.md
+      - Test Run Management: Spira-User-Manual\Test-Run-Management.md
+      - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
+      - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
+    - Tracking:
+      - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
+      - Risk Management: Spira-User-Manual\Risks-Management.md
+      - Task Tracking: Spira-User-Manual\Task-Tracking.md
+      - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
+      - Source Code: Spira-User-Manual\Source-Code.md
+    - Reporting: Spira-User-Manual\Reports-Center.md
+  - Programs: 
+    - Homepage: Spira-User-Manual\Program-Homepage.md
+    - Releases: Spira-User-Manual\Program-Releases.md
+    - Planning Board: Spira-User-Manual\Program-Planning-Board.md
+    - Incidents: Spira-User-Manual\Program-Incidents.md
+  - Portfolio Homepage: Spira-User-Manual\Portfolio-Homepage.md
+  - Enterprise Homepage: Spira-User-Manual\Enterprise-Homepage.md
   - Mobile Access: Spira-User-Manual\Mobile-Access.md
-  - Program Management: Spira-User-Manual\Program-Management.md
-  - 'Appendix 1: Keyboard Shortcuts': Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
+  - Keyboard Shortcuts: Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
 - Quick Start Guides:
   - Mini How-To Guides:
     - Moving Around the Application: HowTo-Guides\Users-orientation.md

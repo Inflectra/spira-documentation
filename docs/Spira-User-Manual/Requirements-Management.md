@@ -2,6 +2,78 @@
 
 This section outlines how the requirements management features of SpiraPlan® can be used to develop a requirements / scope matrix for a product, and how you can map any existing test-cases to the requirements. Typically when starting a product, developing the requirements list is the first activity after the Administrator has set up the product in the system.
 
+
+
+## Requirement Traceability and Coverage
+From the requirement list page you can see a number of columns that show calculated data for each requirement, based off:
+
+- rolling up of information from child to parent
+- associations between the requirement and other artifacts (tasks and test cases)
+
+This allows you to see at a glance the state of play about a number of key metrics for the requirement.
+
+### Test coverage
+This column shows a mini chart that shows the sum of each execution statuses against the requirement. It is calculated from the current execution status of each test case assigned to that requirement. If a requirement has 3 test cases assigned to it, then the mini chart will show the results for those 3 test cases.
+
+If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
+
+When you have a hierarchy of requirements, the total number of test cases included in the mini chart is the sum of all of the test cases assigned to each of its children, added to the number of test cases directly assigned to the parent requirement.
+
+??? note "Example: How Test Coverage Rolls up to Parent Requirements"
+    - You have 3 requirements (A, B, and C) nested one inside the other
+    - The most nested requirement (C) therefore has a parent (B) and a grandparent (A)
+    - We assign one test case to C: C has 1 test case against it in the mini chart; B will also have 1; and A will have 1 too
+    - We now add that same test case to B: C still has 1 test case; but now B has 2 test cases (1 it gets from its child C and 1 is from its own test coverage); and A has a total of 2 test cases as well (0 from itself, and 2 as the sum of its direct children's test cases - in this case B)
+
+The left-hand sidebar on the requirements list page shows an donut chart of aggregate requirement test coverage in the product. It shows segments for each test execution status. It calculates the number for each execution status segment as follows:
+
+- Each requirement in the product gets a score of 1
+- This score of 1 is split based on the execution status proportions for that requirement (so a requirement that is 50% passed, 30% failed, and 20% not run gets scores for passed, failed, and not run of 0.5, 0.3 and 0.2 respectively). These values exactly match those you will see in the mini chart on the main list page (discussed above)
+- The individual execution status scores from above are summed up across all the requirements in the product
+- These totals for each execution status are then shown as proportions on the donut chart
+- In this way the sum of the numbers on the donut chart will be the number of requirements in the product (and the sum of all the proportions will be 100%)
+
+
+### Task Progress
+This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the requirement, by progress category for the requirement. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
+
+If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tasks in each category.
+
+How are the different categories calculated?
+
+- Inactive tasks are completely excluded
+- Each task assigned to the requirement has a count of 1. 
+- Counts in each category are added together and percentages taken based off those final counts
+- Counts for tasks that are either "Running Late" or "On Schedule" are split based off their percentage completion (the done portion adding to the specific category and the remainder adding to the "Not Started" category). So if a task is 40% done it will add 0.4 to, for example, "Running Late" and 0.6 to "Not Started".  
+- **On Schedule** tasks:
+    - have some work completed on them (percentage complete is more than 0 but is not 100%)
+    - are not overdue (their end date is not in the future)
+- **Running Late** tasks:
+    - are overdue (i.e. with an end date in the past)
+    - either have a status of "In Progress" or have been partially completed (have a completion of more than 0%)
+    - have not been fully completed (their completion is not at 100%)
+- **Starting Late** tasks:
+    - have not had any work done on them (percentage complete is 0) 
+    - have already started (their start date is in the past)
+- **Not Started** tasks:
+    - have not had any work done on them (percentage complete is 0) 
+    - have not yet started: this is the case if either their start date is in the future or they have a status of "Deferred"
+
+
+[^active-tasks]: any task with a status that is *not* one of the following: "Rejected", "Obsolete", "Duplicate".
+
+
+### Task Effort
+For each requirement each effort column is calculated from the sum of effort from all tasks assigned to that requirement. These values are aggregated to any parent requirements:
+
+- Task Effort: the sum of all tasks' estimated efforts
+- Actual Effort: the sum of all tasks' actual efforts
+- Remaining Effort: the sum of all tasks' remaining efforts
+- Projected Effort: the sum of all task projected efforts
+
+Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
+
+
 ## Requirements List
 
 When you click on the Planning \> Requirements link on the global navigation bar, you will initially be taken to the requirements list screen illustrated below:

@@ -1,5 +1,6 @@
 # Release Management
 
+## Introduction
 This section outlines how to use the Release Management features of SpiraPlan® to manage different versions of the system being tested in a particular product. This is an optional feature of the system, and you can manage the testing for a product successfully without tracking individual releases. Typically, when you develop a system, it is important to ensure that features introduced in successive versions do not impair existing functionality - this is known as *regression testing*.
 
 In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.
@@ -10,7 +11,66 @@ The main differences between releases and sprints are as follows:
 
 Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
 
-When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child builds/sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release.
+When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child builds/sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
+
+
+## Release Traceability and Coverage
+From the release list page you can see a number of columns that show calculated data for each release, based off:
+
+- rolling up of information from child to parent (as mentioned above)
+- associations between the release and other artifacts (such as requirements, tasks, incidents, and test cases)
+
+This allows you to see at a glance the state of play about a number of key metrics for the release.
+
+
+### Requirements Completion
+This column shows a mini chart that shows the percentage completion of all relevant requirements assigned to the release (or that are rolling up from the releases children).
+
+The percentaged complete is worked out by dividing the number of "completed requirements" (described below) by the total number of requirements assigned to the release. A "completed requirement" is a requirement with a status of either "Tested", "Completed", or "Released".
+
+### Requirement Count and Points
+These columns (not shown by default) show you the sum of all requirements assigned to the release; and the sum of all the points scored to all those requirements respectively.
+
+### Test coverage
+This column shows a mini chart that shows the sum of each execution statuses against the release. It is calculated from the latest test run executed against that release for each test case that is assigned to that release. If you execute a test case against a release, and that test case is not by itself assigned to the release, the information for that test run will *not* be included.
+
+If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
+
+Each release will display the aggregate status of any test cases directly assigned to itself, together with the test execution status of any child sprints that are contained within the release.
+
+### Task Progress
+This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the release, by progress category for the release. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
+
+If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tasks in each category.
+
+How are the different categories calculated?
+
+- Inactive tasks are completely excluded
+- Each task assigned to the release has a count of 1. 
+- Counts in each category are added together and percentages taken based off those final counts
+- Counts for tasks that are either "Running Late" or "On Schedule" are split based off their percentage completion (the done portion adding to the specific category and the remainder adding to the "Not Started" category). So if a task is 40% done it will add 0.4 to, for example, "Running Late" and 0.6 to "Not Started".  
+- **On Schedule** tasks:
+    - have some work completed on them (percentage complete is more than 0 but is not 100%)
+    - are not overdue (their end date is not in the future)
+- **Running Late** tasks:
+    - are overdue (i.e. with an end date in the past)
+    - either have a status of "In Progress" or have been partially completed (have a completion of more than 0%)
+    - have not been fully completed (their completion is not at 100%)
+- **Starting Late** tasks:
+    - have not had any work done on them (percentage complete is 0) 
+    - have already started (their start date is in the past)
+- **Not Started** tasks:
+    - have not had any work done on them (percentage complete is 0) 
+    - have not yet started: this is the case if either their start date is in the future or they have a status of "Deferred"
+
+
+[^active-tasks]: any task with a status that is *not* one of the following: "Rejected", "Obsolete", "Duplicate".
+
+
+### Task Effort
+Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../../Spira-Administration-Guide/Product-Planning/#planning-options) page of product administration.
+
+Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
 
 
 ## Release List
@@ -127,6 +187,51 @@ SpiraPlan® provides a shortcut -- called the *context menu* - for accessing som
 ![](img/Release_Management_262.png)
 
 You can now choose any of these options as an alternative to using the icons in the toolbar
+
+
+
+## Releases Additional List Views
+In SpiraTeam and SpiraPlan, there are two additional release list views. These views are:
+
+1. Gantt chart view (beta)
+2. Hierarchical Pert chart / Mind Map (beta)
+
+You can pick between each of these views using the view selection button group at the top right of any requirement list page.
+
+![](img/releases-list-selector.png)
+
+
+
+## Release Gantt Chart
+
+This displays all active releases and sprints[^active-release] nested in the same hierarchy as on the main release list page. Any release that has active children has an expand / collapse toggle to the left of its name. To the right of the release names is the timeline bar, which graphically shows the length of each release between their start and end dates in individual horizontal bars.
+
+Part of a release may be shaded darker than normal, from its left (see Library System Release 1.1 below). This represents the [requirements completion percentage](#requirements-completion) for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. 
+
+The names of the releases on the left or in the horizontal bar are clickable and will open the specific release.
+
+![Release Gantt Chart](img/releases-gantt-chart.png)
+
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
+
+## Releases Mind Map
+
+The releases Mind Map / Pert chart displays the first 5,000 active releases[^active-release] in a product as a connected tree view / mindmap. The root node shows the name of the product at the tope. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
+
+![](img/releases-mind-map.png)
+
+For each release the map displays the name and ID of the release, with a tooltip that additionally shows the release's version number. Each node is color coded by the release type: product is the darkest; major and minor releases are less dark; sprints and phases are the lightest.
+
+Clicking on the node will take you to the details page for that release.
+
+There are several other display options:
+
+- **refresh**: to redraw the mindmap
+- **levels dropdown**: lets you select how deep into the mindmap you wish to view. To only show the topmost level releases, select level 1; to select the top two levels, select level 2, or view everything by selecting "all levels"
+- **zoom**: you can change the zoom between 25% and 100% using the plus and minus buttons. To reset the zoom, click the magnifying glass
+
+Note: this view is unfortunately not compatible with Internet Explorer 11.
+
 
 
 ## Release Details

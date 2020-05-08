@@ -105,118 +105,15 @@ Read about [how to export artifacts from one product to another](Application-Wid
 To quickly print a single task or list of tasks you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 
-## Task Details
+## Task Additional List Views
+There are two additional task list views. These views are:
 
-When you click on a task item in the lists displayed on either the main task list page or on the requirement / release details pages, you are taken to the task details page illustrated below:
+2. Task Board
+1. Gantt chart view (beta)
 
-![](img/Task_Tracking_294.png)
+You can pick between each of these views using the view selection button group at the top right of any requirement list page.
 
-This page is made up of *three* areas;
-
-1.  the left pane displays the tasks list navigation;
-
-2.  the right pane's header, which displays: the operations toolbar; the [folder the task is in](Application-Wide.md#breadcrumbs); the editable name of the selected task; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-
-3.  the right pane's tabbed interface with rich information related to the task.
-
-Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the tasks list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
-
-The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.
-
-The navigation pane consists of a link that will take you back to the task list, as well as a list of tasks, and another list of the other related tasks, nested under their parent task. This latter list is useful as a navigation shortcut; you can quickly view the peer tasks by clicking on the navigation links without having to first return to the tasks list pages. The navigation list can be switched between five different modes:
-
--   **Current Filter -** The list of tasks matching the current filter organized by task folder
-
--   **All Items** - The list of all tasks, irrespective of the current filter, organized by task folder
-
--   **Assigned** - The list of tasks assigned to the current user grouped by their parent requirement
-
--   **For Release** - The list of tasks assigned to the current release or sprint, grouped under that parent release/sprint.
-
--   **For Requirement** -- The list of tasks associated to the same requirement as the current task as well as other tasks at the same level in the requirement hierarchy.
-
-The lower part of the right pane can be in one of *four* possible tabs that can be selected: "Overview Properties", "Attachments", "History" and "Associations". Each of the different views is described separately below.
-
-
-### Emailing
-
-Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
-
-
-### Followers
-
-Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
-
-
-### Workflows
-
-Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
-
-
-### Overview -- Details
-
-The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the task.
-
-The top part of this tab displays the various standard fields and custom properties associated with the task. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
-
-![](img/Task_Tracking_298.png)
-
-
-### Effort Fields
-
-You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and projected final effort.
-
-The different effort values mean the following:
-
-- **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
-- **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
-- **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
-- **Producted Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Producted Effort = (Actual Effort + Remaining Effort)
-
-**Note**: If the actual effort is not specified, the producted effort will be the same as the estimated effort.
-
-**Note:** if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.
-
-
-### Followers
-
-Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
-
-![](img/Task_Tracking_99.png)
-
-![](img/Task_Tracking_100.png)
-
-You can also quickly see who is following an incident under the "People" section in the Overview tab.
-
-![](img/Task_Tracking_101.png)
-
-To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.
-
-![](img/Task_Tracking_102.png)
-
-
-### Overview -- Comments
-
-The comments tab will display the comments associated with the task:
-
-![](img/Task_Tracking_299.png)
-
-All existing comments are displayed in date entered underneath the textbox. To enter a new comment, enter the text into the textbox, and then click the "***Add Comment***" button.
-
-
-### Attachments
-
-Read about [how the attachments tab works](Application-Wide.md#attachments)
-
-
-### Associations
-
-You can associate other tasks, incidents, and source code to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
-
-
-### History
-
-Read about [how the history tab works](Application-Wide.md#history)
+![](img/tasks-list-selector.png)
 
 
 ## Task Board
@@ -323,3 +220,136 @@ In this case, the left hand side displays the requirements currently assigned to
 
 
 [^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
+
+
+## Task Gantt Chart
+
+This displays all active releases and sprints[^active-release] nested in the same hierarchy as on the main release list page (releases or sprints without any tasks are also shown). It also displays any task that are assigned to one of these releases.
+
+Any release that has active children or open tasks has an expand / collapse toggle to the left of its name. This will show the child releases and/or the assigned tasks
+
+To the right of the names is the timeline bar, which graphically shows the length of each release (blue) and task (green) between their start and end dates in individual horizontal bars. The names of the releases and tasks on the left or in the horizontal bars are clickable and will open the specific release or task.
+
+Part of a release or task may be shaded darker than normal, from its left - this is based on how complete the release or task is.
+
+- For releases, this represents the [requirements completion percentage](../Release-Management/#requirements-completion) for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. 
+- For tasks, this represents the percentage complete of the task itself.
+
+
+![Release Gantt Chart](img/tasks-gantt-chart.png)
+
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
+
+
+## Task Details
+
+When you click on a task item in the lists displayed on either the main task list page or on the requirement / release details pages, you are taken to the task details page illustrated below:
+
+![](img/Task_Tracking_294.png)
+
+This page is made up of *three* areas;
+
+1.  the left pane displays the tasks list navigation;
+
+2.  the right pane's header, which displays: the operations toolbar; the [folder the task is in](Application-Wide.md#breadcrumbs); the editable name of the selected task; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
+
+3.  the right pane's tabbed interface with rich information related to the task.
+
+Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the tasks list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
+
+The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.
+
+The navigation pane consists of a link that will take you back to the task list, as well as a list of tasks, and another list of the other related tasks, nested under their parent task. This latter list is useful as a navigation shortcut; you can quickly view the peer tasks by clicking on the navigation links without having to first return to the tasks list pages. The navigation list can be switched between five different modes:
+
+-   **Current Filter -** The list of tasks matching the current filter organized by task folder
+
+-   **All Items** - The list of all tasks, irrespective of the current filter, organized by task folder
+
+-   **Assigned** - The list of tasks assigned to the current user grouped by their parent requirement
+
+-   **For Release** - The list of tasks assigned to the current release or sprint, grouped under that parent release/sprint.
+
+-   **For Requirement** -- The list of tasks associated to the same requirement as the current task as well as other tasks at the same level in the requirement hierarchy.
+
+The lower part of the right pane can be in one of *four* possible tabs that can be selected: "Overview Properties", "Attachments", "History" and "Associations". Each of the different views is described separately below.
+
+
+### Emailing
+
+Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+
+
+### Followers
+
+Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+
+
+### Workflows
+
+Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+
+
+### Overview -- Details
+
+The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the task.
+
+The top part of this tab displays the various standard fields and custom properties associated with the task. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
+
+![](img/Task_Tracking_298.png)
+
+
+### Effort Fields
+
+You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and projected final effort.
+
+The different effort values mean the following:
+
+- **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
+- **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
+- **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
+- **Projected Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Projected Effort = (Actual Effort + Remaining Effort)
+
+**Note**: If the actual effort is not specified, the projected effort will be the same as the estimated effort.
+
+**Note:** if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.
+
+
+### Followers
+
+Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
+
+![](img/Task_Tracking_99.png)
+
+![](img/Task_Tracking_100.png)
+
+You can also quickly see who is following an incident under the "People" section in the Overview tab.
+
+![](img/Task_Tracking_101.png)
+
+To view information about the follower, or to unfollow them from the item, hover over their avatar to display a user profile card.
+
+![](img/Task_Tracking_102.png)
+
+
+### Overview -- Comments
+
+The comments tab will display the comments associated with the task:
+
+![](img/Task_Tracking_299.png)
+
+All existing comments are displayed in date entered underneath the textbox. To enter a new comment, enter the text into the textbox, and then click the "***Add Comment***" button.
+
+
+### Attachments
+
+Read about [how the attachments tab works](Application-Wide.md#attachments)
+
+
+### Associations
+
+You can associate other tasks, incidents, and source code to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
+
+
+### History
+
+Read about [how the history tab works](Application-Wide.md#history)

@@ -1,5 +1,136 @@
 # Release Notes for Spira v6
 
+## Version 6.5 (May 2020)
+
+!!! info "Summary"
+    **Portfolio management (SpiraPlan only)**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view. 
+    
+    *Learn: [editing portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios); [letting users see portfolio and enterprise pages](../../Spira-Administration-Guide/System-Administration/#how-user-permissions-are-set).*
+
+    **New dashboard views to assess overall progress**: Key data about percent complete for sprints, releases, products, programs, and portfolios will be displayed in a new widget on relevant dashboards. This will be based on the requirements that are part of each active sprint and release.
+
+    *Learn: [the portfolio dashboard](../../Spira-User-Manual/Portfolio-Homepage/); [the enterprise dashboard](../../Spira-User-Manual/Enterprise-Homepage/).*
+
+    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
+
+    *Learn: [release Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart); [release mind map](../../Spira-User-Manual/Release-Management/#release-mind-map); [task Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart).*
+
+??? success "New features"
+
+    - Generic Project Settings Provider [RQ:2852]
+    - Installer can upgrade successfully with required database additions [RQ:2850]
+
+
+    * [Enterprise Dashboard]((../../Spira-User-Manual/Enterprise-Homepage/) (SpiraPlan only)
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Enterprise-Homepage/#requirement-completion) [RQ:2743]
+        - [Portfolios: Completion](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-completion) [RQ:2744]
+        - [Portfolios: Relative Size](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-relative-size) [RQ:2745]
+        - [Top Open Risks](../../Spira-User-Manual/Enterprise-Homepage/#top-open-risks) [RQ:2746]
+        - [Enterprise Schedule Gantt Chart](../../Spira-User-Manual/Enterprise-Homepage/#schedule) [RQ:2747]
+
+    * Porfolio Dashboard (SpiraPlan only)
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Portfolio-Homepage/#requirement-completion) [RQ:2749]
+        - [Programs: Completion](../../Spira-User-Manual/Portfolio-Homepage/#programs-completion) [RQ:2750]
+        - [Programs: Relative Size](../../Spira-User-Manual/Portfolio-Homepage/#programs-relative-size) [RQ:2751]
+        - [Top Open Risks](../../Spira-User-Manual/Portfolio-Homepage/#top-open-risks) [RQ:2752]
+        - [Portfolio Schedule Gantt Chart](../../Spira-User-Manual/Portfolio-Homepage/#schedule) [RQ:2753]
+
+    * Program Dashboard
+        - Add General, Development, and Test Views [RQ:2755]
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Program-Homepage/#requirement-completion) [RQ:2756]
+        - [Products: Completion](../../Spira-User-Manual/Program-Homepage/#products-completion) [RQ:2757]
+        - [Products: Relative Size](../../Spira-User-Manual/Program-Homepage/#products-relative-size) [RQ:2758]
+        - [Program Schedule Gantt Chart](../../Spira-User-Manual/Program-Homepage/#schedule) [RQ:2759]
+        - Program Overview widget shows the portfolio, where relevant [RQ:2854]
+
+    * Product Dashboard
+        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Product-Homepage/#requirement-completion) [RQ:2765]
+        - [Releases: Completion](../../Spira-User-Manual/Product-Homepage/#releasessprints-completion) [RQ:2766]
+        - [Releases: Relative Size](../../Spira-User-Manual/Product-Homepage/#releasessprints-relatize-size) [RQ:2767]
+        - [Product Schedule Gantt Chart](../../Spira-User-Manual/Product-Homepage/#schedule) [RQ:2768]
+
+    * My Page
+        - Add [Recent Products widget](../../Spira-User-Manual/User-Product-Management/#recent-products) [RQ:2770]
+        - Add [Recent Artifacts widget](../../Spira-User-Manual/User-Product-Management/#recent-artifacts) [RQ:2771]
+
+    * Release List Page Changes
+        - Add column for total # points [RQ:2774]
+        - Add column for total # requirements [RQ:2775]
+        - Add progress bar for requirements [RQ:2776]
+        - [Release Hierarchical Diagram View](../../Spira-User-Manual/Release-Management/#releases-mind-map) - read only (SpiraTeam and SpiraPlan only) [RQ:2777]
+        - [Release Gantt Chart View](../../Spira-User-Manual/Release-Management/#release-gantt-chart) - read only (SpiraTeam and SpiraPlan only) [RQ:2778]
+
+    * Program Release List Page (SpiraPlan only)
+        - Add column for total # points for all requirements in the release [RQ:2836]
+        - Add column for total # requirements [RQ:2837]
+        - Add [progress bar for requirements](../../Spira-User-Manual/Release-Management/#requirements-completion) [RQ:2838]
+
+    * Product Task List Page Changes
+        - Add a [Task GANTT Chart View](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) [RQ:2780]
+
+    * Sample Data installed with new installations
+        - Remove data and rename Sample Barebones Product to Sample Empty Product 1 [RQ:2782]
+        - Rename Sample Empty Product to Sample Empty Product 2 [RQ:2783]
+        - Rename Sample Program [RQ:2784]
+
+    * Calculation Changes/Updates
+        - Requirement completion/counts refreshed correctly product-wide following relevant triggers [RQ:2827]
+        - Requirement updates in the system trigger changes in all relevant releases and workspaces [RQ:2828]
+        - Release updates in the system trigger changes in all relevant releases and workspaces [RQ:2829]
+        - Product changes trigger updates in all parent workspaces [RQ:2830]
+        - Program changes trigger updates in all parent workspaces [RQ:2831]
+        - Porfolio changes trigger updates to the enterprise level [RQ:2832]
+        - Requirements calculations for counts and completion work as expected [RQ:2855]
+        - [Task Effort calculations for requirements](../../Spira-User-Manual/Requirements-Management/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
+        - [Task effort calculations for releases](../../Spira-User-Manual/Release-Management/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]
+
+    * Permissions to control access to portfolios and enterprise views (SpiraPlan only)
+        - New Portfolio Viewer attribute on the user profile to allow access to all portfolios (and enterprise view) [RQ:2834]
+        - Access to portfolios admin pages and visibility in UI restricted by permissions and Spira version [RQ:2851]
+        - Access to portfolios features pages and visibility in UI restricted by permissions and Spira version [RQ:2846]
+
+    * Administration changes
+        - [Ability to create, edit, delete portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios) [RQ:2840]
+        - [Ability to assign programs to a portfolio](../../Spira-Administration-Guide/System-Workspaces/#edit-a-program) [RQ:2841]
+        - Handle the default portfolio for new programs [RQ:2844]
+        - [Ability to delete sample data](../../Spira-Administration-Guide/System-Home/#delete-sample-data) (all sample products, programs, and portfolios) and where possible sample users [RQ:2845]
+
+
+??? bug "Bug fixes and enhancements"
+    - Add a try/catch around IIS check, as when IIS isn't installed, the Admin DLL isn't available and will crash. [IN:5219]
+    - Add ability to see product role description as a tooltip when hovering over your product role in the global navigation subheader [IN:5541]
+    - Add an event in the event log after the event log is cleared by a user [IN:4818]
+    - Add color highlighting to start and end-dates that are today or earlier [IN:5448]
+    - Can review and resume recent pending test runs when attempting to execute a single test case [IN:4364]
+    - Change 'New Test Case from' text to "Verify: " when creating tests from requirements [IN:5557]
+    - Disable SSL yes/no toggle in email settings for cloud customers [IN:5302]
+    - Ensure long single words for field labels wrap properly on artifact details pages [IN:5539]
+    - Fix a role with release delete not being able to successfully delete a release on the release detail page [IN:5118]
+    - Fix error when trying to add Risk Summary widget to Development or Testing Product Dashboards [IN:5440]
+    - Fix Foreign Key Error trying to Delete a Template due to importance ID not being migrated for some requirements of type Epic [IN:5399]
+    - Fix Installer (on prem): Upgrading to the current version does not always show warning [IN:5517]
+    - Fix Installer uninstalls always being saved in SQL default location and not being properly named [IN:5176]
+    - Fix My Page widget "Assigned Requirements" sorting by Importance ID instead of Importance Score [IN:5362]
+    - Fix program release list: filtering on some columns causes problems [IN:5336]
+    - Fix release "plan effort" calculation counting Saturdays but not Mondays [IN:3979]
+    - Fix releases, Export to Project & Project Clone will hide releases until you click "show all levels" [IN:4812]
+    - Fix Rest API documentation not explaining URL parameters for GET transitions for requirements, tasks, or test cases [IN:5361]
+    - Fix saved filters not saving filters for integer or decimal fields [IN:5332]
+    - Fix some test cases not opening in exploratory testing mode [IN:5412]
+    - Fix the rows per page control not working for MembershipAdd.aspx page [IN:5415]
+    - Fix the v6 API not returning project Template id in some calls [IN:5076]
+    - Fix widget info popups on dashboards getting the top chopped off when the widget is at the top of the widget list [IN:5511]
+    - Improve performance by removing the last usage of a Dictionary<> used in multi-threading [IN:5450]
+    - Installer: Add key in web.config for anonymous UniqueID. [IN:5546]
+    - Installer: refactor tst_addl_objects.sql generatin to reduce chances of corruption and upgrade problems [IN:5473]
+    - Installer: Refine master Upgrade code for minDB & maxDB Version [IN:5119]
+    - Make sure that requirement export to product function includes any use case steps [IN:5370]
+    - Order links to pages in the administration menu logically not alphabetically [IN:5566]
+    - Remove event log entries for non configured Oauth providers after the app pool restarts [IN:5521]
+    - Remove the context menu options for opening or deleting a requirement or task on the Requirement and Tasks tab of the Releases detail page [IN:5433]
+    - Template Admin: on custom property page artifact dropdown, omit irrelevant artifacts [IN:5103]
+    - Tools -> Print or Export: provide an actionable message when the number of items is too large for the report to generate via url [IN:5403]
+
 ## Version 6.4.0.1 (March 2020)
 
 !!! bug "Bug fix"

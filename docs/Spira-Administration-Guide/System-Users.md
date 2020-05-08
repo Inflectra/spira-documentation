@@ -18,23 +18,33 @@ This screen displays the list of users in the system (by default it only shows a
 - Which, if any, external login provider they are using (LDAP, or a login provider like Google or Okta)
 - active status
 
-You can filter the list of using the filter row at the top of the list. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.
+You can filter the list using the filter row above. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.
 
+!!! info "System administrators and product roles"
+    Note: if a user is a System Administrator, it will force that user to always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If you disable this option, they will then revert back to their true role.*
+
+### Add a new user
 To add a new user to the system, click the "Add" button at the bottom of the user list, and a new screen will be displayed that allows you to enter the new user information:
 
 ![](img/System_Users_45.png)
 
-On this screen, you can enter information about the user, such as their name, email address, and department. You will need to create their password, password reset question and answer. If you want the user to be able to subscribe to items in the system as RSS feeds, you should also make sure that the "Enable RSS Feeds" checkbox is selected and a GUID token is displayed in the text-box underneath.
+On this screen, you can:
+
+- enter information about the user, such as their name, email address, and department
+- make the user a portfolio viewer (SpiraPlan only)
+- make the user a system administrator
+- create their password, password reset question and answer. 
+- if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
+
 
 When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
 
-*Note: If you make a user a System Administrator, it will force that user to always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If you disable this option, they will then revert back to their true role.*
-
+### Edit an existing user
 In a similar way, to edit the details of an existing user, click the "Edit" hyperlink in the user list box, and you will be taken to the following screen that allows you modify the user details:
 
 ![](img/System_Users_46.png)
 
-On this screen you can edit the first name, middle initial, last name, username, email address, system administration status and active status. You can also change the user's password (if the user is managed by SpiraPlan).
+On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only), system administration status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).
 
 If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](../System/#ldap-configuration) for more details.
 
@@ -138,7 +148,8 @@ For each pending user request you can choose to either Approve or Deny the reque
 **Delete** -- clicking this option will delete the pending user request from the system.
 
 
-## View / Edit Roles
+## View / Edit Product Roles
+Read an [overview](../System-Administration/#how-user-permissions-are-set) of how permissions work across the application and all its workspaces.
 
 There are six (6) default product roles that a user may be assigned to a product with:
 
@@ -149,7 +160,8 @@ There are six (6) default product roles that a user may be assigned to a product
 - **Observer** -- can see all screens, but cannot perform any write operations (insert / update / delete)
 - **Incident User** -- can only view and edit incidents. This user cannot even see the product's requirements, tasks, test cases or releases.
 
-Note: The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
+!!! info "The Special case of user administrator"
+    The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
 
 You can make changes to the permissions associated with each of these default roles, and also create as many additional roles as you like. To customize the roles in your installation of SpiraPlan®, click on the "View / Edit Roles" link in the Administration menu:
 
