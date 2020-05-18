@@ -18,6 +18,8 @@ We can fully change the theme used and its features using a basic templating lan
 
 
 ## Getting the build environment set up
+**NOTE** as of May 2020 we recommend using 1.0.4 of mkdocs. Installing material theme may bump mkdocs up. If this poses any problems revert to 1.0.4 of mkdocs.
+
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
 2. Run `pip install mkdocs-material` to install everything our base theme needs
 3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
