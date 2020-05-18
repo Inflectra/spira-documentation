@@ -238,6 +238,7 @@ nav:
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
 - About:
   - Introduction to Spira: About/introduction-to-spira.md
+  - Product Roadmap: About/roadmap.md
   - Release Notes for v6: About/release-notes-v6.md
   - Release Notes for v5: About/release-notes-v5.md
   - Release Notes for v4: About/release-notes-v4.md

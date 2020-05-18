@@ -3,7 +3,7 @@
 ## Version 6.5.0.2 (May 2020)
 
 !!! bug "Bug fix"
-    - On-premise installations to 6.5 remove baked-in custom reporting database views [IN:5512]
+    - On-premise upgrades to 6.5 remove baked-in custom reporting database views [IN:5512]
 
 
 ## Version 6.5.0.1 (May 2020)
