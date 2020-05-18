@@ -806,6 +806,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://spiradoc.inflectra.com/About/roadmap/</loc>
+     <lastmod>2020-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://spiradoc.inflectra.com/About/release-notes-v6/</loc>
      <lastmod>2020-05-18</lastmod>
      <changefreq>daily</changefreq>
