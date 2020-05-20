@@ -4,7 +4,9 @@ copyright: © Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | e
 repo_name: Inflectra
 repo_url: https://www.inflectra.com
 site_url: https://spiradoc.inflectra.com/
-google_analytics: ['UA-1302007-6', 'https://spiradoc.inflectra.com/']
+google_analytics: 
+  - UA-1302007-6
+  - https://spiradoc.inflectra.com/
 
 markdown_extensions:
   - attr_list
@@ -19,7 +21,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -27,27 +30,38 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed
   - pymdownx.tilde
+  - toc:
+      permalink: true
 
-theme: 
-  name: 'material'
+theme:
+  features:
+    - instant
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/git-alt
+  language: en 
+  name: material
   palette:
-    primary: 'black'
-    accent: 'amber'
+    primary: black
+    accent: amber
   font:
-    code: 'IBM Plex Mono'
-  favicon: 'img/favicon.ico'
-  logo: 'img/logo.svg'
-  custom_dir: inflectra_mkdocs
+    code: IBM Plex Mono
+  favicon: images/favicon.ico
+  logo: images/logo.svg
+
+extra_css:
+  - stylesheets/spira.css
 
 extra:
   social:
-    - type: 'github'
-      link: 'https://github.com/inflectra'
-    - type: 'twitter'
-      link: 'https://twitter.com/inflectra'
-    - type: 'linkedin'
-      link: 'https://www.linkedin.com/inflectra-corporation'
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/inflectra
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/inflectra
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/inflectra-corporation
 
 nav:
 - User Manual:
