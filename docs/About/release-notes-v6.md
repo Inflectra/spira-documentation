@@ -43,6 +43,7 @@
     - Fixes bug in the HistoryManager when retrieving history sets by product [IN:5619]
     - My Recent Artifacts widget now displays a clickable "(none)" when the artifact does not have a name [IN:5623]
     - Fixes ability to add new documents/attachments to three sample products [IN:5655]
+    - In Internet Explorer 11 some home page bar charts have an overly dark background color for bars [IN:5673]
 
 
 ## Version 6.5.0.2 (May 2020)
