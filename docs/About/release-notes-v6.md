@@ -1,5 +1,50 @@
 # Release Notes for Spira v6
 
+## Version 6.5.1 (June 2020)
+
+!!! info "Summary"
+    **Improved dashboard widgets**: enhanced and new Recent Build widgets, let you get an easier handle on your CI/CD processes from [program](../../Spira-User-Manual/Program-Homepage/#recent-builds), [portfolio](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds), and [enterprise](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) home pages; a number of widgets on the program home page by default display data for active releases only to make their data more meaningful; a brand new [product test summary table](../../Spira-User-Manual/Program-Homepage/#product-test-summary) on the program home page provides important information at a glance.
+
+??? success "New features"
+    * Baselining (**these features are currently disabled but are in the app now to prepare for a future release**)
+        - On generating a test run the system automatically links it to the most recent history changeset to improve auditing [RQ:2655]
+        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672]
+        - Turning on baselining for a product disables the ability to purge or revert product history [RQ:2938]
+    
+    * Enterprise Dashboard (SpiraPlan only)
+        - Add an Enterprise [Recent Builds](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) widget [RQ:2937]
+    
+    * Porfolio Dashboard (SpiraPlan only)
+        - Add a Portfolio [Recent Builds](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds) widget [RQ:2934]
+    
+    * Program Dashboard
+        - Change the [Requirements Coverage](../../Spira-User-Manual/Program-Homepage/#requirements-coverage) widget to, by default, show data for active releases only [RQ:2761]
+        - Change the [Test Execution Status](../../Spira-User-Manual/Program-Homepage/#test-execution-status) widget to, by default, show data for active releases only [RQ:2762]
+        - Change the [Task Progress](../../Spira-User-Manual/Program-Homepage/#task-progress) widget to, by default, show data for active releases only [RQ:2763]
+        - Improve the [Program Recent Builds](../../Spira-User-Manual/Program-Homepage/#recent-builds) Widget [RQ:2936]
+        - Add new [Product Test Summary](../../Spira-User-Manual/Program-Homepage/#product-test-summary) Widget [RQ:2858]
+    
+    * Sample Data installed with new installations
+        - Improve data consistency in sample product Library Information System [RQ:2948]
+        - Rename the "Agile" template to "Library Information System (sample)" [RQ:2822]
+        - Create a "Default" template that matches the template you create on making a product with a new template [RQ:2947]
+
+
+??? bug "Bug fixes and enhancements"
+    - Global search and Association panel: improved search on different letter/number combinations [IN:4695]
+    - Logging in with an OAuth provider takes you any specified return url, to improve getting you to the right place faster [IN:5413]
+    - Deafault product role text descriptions have been improved for clarity [IN:5560]
+    - User settings collection service does not accept or return unsafe strings [IN:5580]
+    - Program home page (general) info tooltips no longer get cut off for widgets at the top of the page [IN:5593]
+    - Program release list page: start and end dates are colored to improve quickly seeing the state of a release [IN:5594]
+    - The My Profile page highlights to the user that they need to save after generating a new RSS token [IN:5599]
+    - Program, portfolio, and enterprise schedule widgets now show sprints without an active parent inside the correct product [IN:5603]
+    - Reduce the error logging from the Recent Artifacts Service [IN:5607]
+    - Fixes bug in the HistoryManager when retrieving history sets by product [IN:5619]
+    - My Recent Artifacts widget now displays a clickable "(none)" when the artifact does not have a name [IN:5623]
+    - Fixes ability to add new documents/attachments to three sample products [IN:5655]
+
+
 ## Version 6.5.0.2 (May 2020)
 
 !!! bug "Bug fix"
