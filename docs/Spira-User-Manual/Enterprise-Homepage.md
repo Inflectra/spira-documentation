@@ -68,9 +68,11 @@ This chart shows the number of active requirements in each active portfolio. Hov
 This Gantt chart shows all active portfolios, programs, products, releases, and sprints in the enterprise. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
 
 ## Recent Builds
-This widget displays a list of the most recent build and its status for each active release in the system (organized by portfolio, program and product). For each active release it shows: 
+This widget displays a list of the most recent builds for each active release (organized alphabetically by portfolio, program, and product; in each product the builds are listed by date). For each build it shows: 
 
 - the release name (which links to the specific [release](../Release-Management/#release-details))
 - the build name (which links to the specific [build details](../Release-Management/#build-details))
 - the build status (did it succeed or fail)
 - the date of the build
+
+You can change the number of builds the widget should show in the widget's settings (the default is 15).*

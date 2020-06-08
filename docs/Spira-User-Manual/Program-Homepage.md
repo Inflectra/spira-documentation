@@ -89,7 +89,9 @@ This chart shows the proportion of all active requirements that have been comple
 
 This section consists of a bar graph that displays the aggregated count of requirements test coverage for the entire program. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of requirements that have tests covering them, allocated across the execution status of the covering tests
 
-Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific requirements coverage distribution for that product. That way you can see both the aggregate coverage and also the relative coverage for the products. *You can configure in the widget settings whether you want to see the aggregate bar graph, and/or the product-specific requirements coverage.*
+Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific requirements coverage distribution for that product. That way you can see both the aggregate coverage and also the relative coverage for the products. *You can choose to show the aggregate bar graph, and/or the product-specific requirements coverage from the widget settings.*
+
+By default, this widget shows data for **active releases only** in each product in the program. *You can choose to show data for all releases in all products of the program from the widget settings.*
 
 
 ## Task Progress
@@ -97,14 +99,17 @@ Under the main bar graph is displayed a table containing each product in the pro
 This section consists of a bar graph that displays the aggregated count of tasks by progress category for the entire program. The 'On Schedule',
 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category for all the products in the program.
 
-Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific task progress for that product (using the same coloring convention as the main graph). That way you can see both the aggregate task progress and also the relative progress for each product. *You can configure in the widget settings whether you want to see the aggregate bar graph, and/or the product-specific task progress.*
+Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific task progress for that product (using the same coloring convention as the main graph). That way you can see both the aggregate task progress and also the relative progress for each product. *You can choose to show the aggregate bar graph, and/or the product-specific task progress from the widget settings.*
 
+By default, this widget shows data for **active releases only** in each product in the program. *You can choose to show data for all releases in all products of the program from the widget settings.*
 
 ## Test Execution Status
 
 This section consists of a bar graph that displays the aggregated count of test cases by execution status for the entire program. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of test cases that are in that category for all the products in the program.
 
-Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific test case execution status for that product (using the same coloring convention as the main graph). That way you can see both the aggregate test status and also the relative status for each product. *You can configure in the widget settings whether you want to see the aggregate bar graph, and/or the product-specific test status.*
+Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific test case execution status for that product (using the same coloring convention as the main graph). That way you can see both the aggregate test status and also the relative status for each product. *You can choose to show the aggregate bar graph, and/or the product-specific test status from the widget settings.*
+
+By default, this widget shows data for **active releases only** in each product in the program. *You can choose to show data for all releases in all products of the program from the widget settings.*
 
 
 ## Incident Aging
@@ -124,11 +129,11 @@ This widget lists the top risks logged against any of the products in the portfo
 
 
 ## Recent Builds
-This widget displays a list of the most recent build and its status for each active release in each product of the program. For each active release it shows: 
+This widget displays a list of the most recent builds for each active release (organized alphabetically by product; in each product the builds are listed by date). For each build it shows: 
 
 - the release name (which links to the specific [release](../Release-Management/#release-details))
 - the build name (which links to the specific [build details](../Release-Management/#build-details))
 - the build status (did it succeed or fail)
 - the date of the build
 
-
+You can change the number of builds the widget should show in the widget's settings (the default is 15).
