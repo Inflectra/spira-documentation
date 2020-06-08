@@ -137,3 +137,15 @@ This widget displays a list of the most recent builds for each active release (o
 - the date of the build
 
 You can change the number of builds the widget should show in the widget's settings (the default is 15).
+
+## Product Test Summary
+This table shows an information-dense, but easy to understand assessment of each product by a number of key metrics. It shows each product in the program, together with:
+
+- the product ID and name
+- the end date of the product (which is the furthest out end date of the product's active releases)
+- the number of requirements across all active releases
+- requirement coverage (by test execution status and by those not covered by any tests)
+- the number of test cases
+- the number of tests executed (test runs)
+- the proportion of tests that have passed, failed, blocked, caution or not run
+- the number of open incidents and the priority distribution of them
