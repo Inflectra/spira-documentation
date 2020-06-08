@@ -68,5 +68,15 @@ Schedule Progress color definitions:
 ## Programs: Relative Size
 This chart shows the number of active requirements in each active program. Hovering over a segment will show its percentage of all requirements (this is visually represented by the size of the donut wedge). Please note, programs with no active requirements are not shown.
 
+
 ## Schedule
 This Gantt chart shows all active programs, products, releases, and sprints in this portfolio. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
+
+
+## Recent Builds
+This widget displays a list of the most recent build and its status for each active release in each product in each program of the portfolio. For each active release it shows: 
+
+- the release name (which links to the specific [release](../Release-Management/#release-details))
+- the build name (which links to the specific [build details](../Release-Management/#build-details))
+- the build status (did it succeed or fail)
+- the date of the build

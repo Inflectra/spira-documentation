@@ -124,7 +124,11 @@ This widget lists the top risks logged against any of the products in the portfo
 
 
 ## Recent Builds
+This widget displays a list of the most recent build and its status for each active release in each product of the program. For each active release it shows: 
 
-This widget displays a list of the most recent build and its status for each product in the program/program. For each product it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](../Release-Management/#test-runs).
+- the release name (which links to the specific [release](../Release-Management/#release-details))
+- the build name (which links to the specific [build details](../Release-Management/#build-details))
+- the build status (did it succeed or fail)
+- the date of the build
 
 

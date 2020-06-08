@@ -5,7 +5,7 @@ The web-based interface of SpiraTeam® is ideal for creating and managing requir
 To simplify this task, SpiraTeam® comes with a Microsoft Word Add-In that can export requirements and test cases from a populated Word document into SpiraTeam®. Note that this guide refers to SpiraTeam®, but the Word Add-In can be used with SpiraTest® and SpiraPlan® as well. The only difference is that the Test Case import functionality will not be applicable for SpiraPlan® users.
 
 
-## 10Installing the Microsoft Word Add-In
+## Installing the Microsoft Word Add-In
 
 The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or SpiraTeam sections), and download the **MS-Office Add-Ins**
 installation package. There are separate packages for the following versions of MS Office:
