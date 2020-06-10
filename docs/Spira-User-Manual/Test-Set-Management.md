@@ -139,11 +139,6 @@ Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
 
 
-### Workflows
-
-Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
-
-
 ### Overview -- Details
 
 The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
