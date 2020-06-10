@@ -62,7 +62,7 @@ To enter the provider information into Spira you will need 3 URLs.
 8. Once the application has been created, you can restrict access to only users within your GSuite internal domain - to do so go back to the Google Oauth Consent Screen and click the "Make Internal" button
 
 ## Microsoft ADFS
-This guide assumes you already have an accessible ADFS server, configured with users as required.
+This guide assumes you already have an accessible ADFS (2016+) server, configured with users as required.
 
 First, create the application group
 
