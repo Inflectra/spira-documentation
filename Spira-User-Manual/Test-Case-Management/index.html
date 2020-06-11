@@ -1,40 +1,19 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Test-Case-Management/">
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
     
     
       
@@ -42,9 +21,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
       
       
         
@@ -53,114 +32,96 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
-        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono","Courier New",Courier,monospace}</style>
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../stylesheets/spira.css">
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-1302007-6", "https://spiradoc.inflectra.com/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-1302007-6","https://spiradoc.inflectra.com/"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="amber">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="amber">
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#test-case-management" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#test-case-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo">
-          
-            <img src="../../img/logo.svg" width="24" height="24">
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              SpiraDocs
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Test Case Management
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo" aria-label="SpiraDocs">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SpiraDocs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Test Case Management
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -168,59 +129,55 @@
     </div>
   </div>
 </div>
+    
+    
+      <div class="md-header-nav__source">
         
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo" aria-label="SpiraDocs">
       
-        <img src="../../img/logo.svg" width="48" height="48">
-      
+  <img src="../../images/logo.svg" alt="logo">
+
     </a>
     SpiraDocs
   </label>
   
     <div class="md-nav__source">
       
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
@@ -238,13 +195,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       User Manual
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         User Manual
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -307,13 +270,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
     
     <label class="md-nav__link" for="nav-1-5">
       Products
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Products" data-md-level="2">
       <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Products
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -338,13 +307,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
     
     <label class="md-nav__link" for="nav-1-5-2">
       Planning
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Planning" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Planning
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -412,13 +387,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3" checked>
     
     <label class="md-nav__link" for="nav-1-5-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Testing" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -433,13 +414,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Test Case Management
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Test Case Management" class="md-nav__link md-nav__link--active">
@@ -447,13 +431,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -461,7 +450,7 @@
     Test Case List
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Case List">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -586,7 +575,7 @@
     Test Case Details
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Case Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -774,7 +763,7 @@
     Test Step Details
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Step Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -873,10 +862,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -956,13 +941,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
       Tracking
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Tracking" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Tracking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1057,13 +1048,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
     
     <label class="md-nav__link" for="nav-1-6">
       Programs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Programs" data-md-level="2">
       <label class="md-nav__title" for="nav-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Programs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1182,13 +1179,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Quick Start Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Quick Start Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1201,13 +1204,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       Mini How-To Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Mini How-To Guides" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Mini How-To Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1326,13 +1335,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Admin Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Admin Guide" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Admin Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1381,13 +1396,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       System
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="System" data-md-level="2">
       <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         System
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1477,13 +1498,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
       Product
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Product" data-md-level="2">
       <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Product
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1561,13 +1588,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
     
     <label class="md-nav__link" for="nav-3-6">
       Template
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Template" data-md-level="2">
       <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Template
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1710,13 +1743,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Reporting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Reporting" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Reporting
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1770,13 +1809,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Optional Features
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Optional Features" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Optional Features
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1789,13 +1834,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
       TaraVault
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="TaraVault" data-md-level="2">
       <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         TaraVault
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1819,7 +1870,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/" title="Provisioning Projects & Users" class="md-nav__link">
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-%26-Users/" title="Provisioning Projects & Users" class="md-nav__link">
       Provisioning Projects & Users
     </a>
   </li>
@@ -1861,13 +1912,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
     <label class="md-nav__link" for="nav-5-2">
       RemoteLaunch
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="RemoteLaunch" data-md-level="2">
       <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         RemoteLaunch
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2142,13 +2199,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Integrations" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2172,7 +2235,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -2185,13 +2248,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
     <label class="md-nav__link" for="nav-6-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Testing" data-md-level="2">
       <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2323,7 +2392,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
       UnitJS & NodeJS
     </a>
   </li>
@@ -2365,13 +2434,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
     <label class="md-nav__link" for="nav-6-4">
       IDE Integration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="IDE Integration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         IDE Integration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2461,13 +2536,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
     
     <label class="md-nav__link" for="nav-6-5">
       Bug Tracking/DataSync
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Bug Tracking/DataSync" data-md-level="2">
       <label class="md-nav__title" for="nav-6-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Bug Tracking/DataSync
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2503,7 +2584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -2647,7 +2728,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/" title="Axosoft" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14%2B/" title="Axosoft" class="md-nav__link">
       Axosoft
     </a>
   </li>
@@ -2701,13 +2782,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
     
     <label class="md-nav__link" for="nav-6-6">
       VCS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="VCS" data-md-level="2">
       <label class="md-nav__title" for="nav-6-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         VCS
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2809,13 +2896,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
     
     <label class="md-nav__link" for="nav-6-7">
       Email
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Email" data-md-level="2">
       <label class="md-nav__title" for="nav-6-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Email
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2869,13 +2962,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
       Help Desk
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Help Desk" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Help Desk
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2917,13 +3016,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
     
     <label class="md-nav__link" for="nav-6-9">
       Migration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Migration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Migration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2947,7 +3052,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/" title="Excel (Office 365)" class="md-nav__link">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29/" title="Excel (Office 365)" class="md-nav__link">
       Excel (Office 365)
     </a>
   </li>
@@ -3073,13 +3178,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
     
     <label class="md-nav__link" for="nav-6-10">
       Build Servers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Build Servers" data-md-level="2">
       <label class="md-nav__title" for="nav-6-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Build Servers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3145,13 +3256,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
     
     <label class="md-nav__link" for="nav-6-11">
       Requirements
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
       <label class="md-nav__title" for="nav-6-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Requirements
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3234,13 +3351,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="About" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         About
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3358,13 +3481,18 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -3372,7 +3500,7 @@
     Test Case List
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Case List">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3497,7 +3625,7 @@
     Test Case Details
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Case Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3685,7 +3813,7 @@
     Test Step Details
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Test Step Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3784,10 +3912,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -3801,7 +3925,10 @@
               
                 
                 
-                <h1 id="test-case-management">Test Case Management</h1>
+                  
+                
+                
+                <h1 id="test-case-management">Test Case Management<a class="headerlink" href="#test-case-management" title="Permanent link">&para;</a></h1>
 <p>This section outlines how the use-case / test-case management features of SpiraPlan® can be used to develop the business use-cases for the system, which specify how the different pieces of functionality are expected to work in practice. In addition, these use/test-cases form the basis of the business specification of the system when associated with the underlying requirements matrix. Typically when starting a new product:</p>
 <ul>
 <li>The requirements matrix is entered first</li>
@@ -3810,7 +3937,7 @@
 <li>Finally the tests are grouped into test-sets so that they can be assigned to users in batches for execution and tracking.</li>
 </ul>
 <p>However when migrating existing products into SpiraPlan®, you may need to migrate the test-case list first, and then add the supporting requirements matrix afterwards.</p>
-<h2 id="test-case-list">Test Case List</h2>
+<h2 id="test-case-list">Test Case List<a class="headerlink" href="#test-case-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Testing > Test Cases link on the global navigation bar, you will initially be taken to the test case list screen illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_124.png" /></p>
 <p>The test case list consists of a hierarchical arrangement of the various test folders and test cases. The structure is very similar to the folder structure in Microsoft Windows® Explorer, and users will find this very familiar and intuitive to use. A folder tree is on the left hand side---with triangle icons to expand / collapse each folder. Contents of the selected folder (the one marked in bold on the folder tree) are shown on the right hand side.</p>
@@ -3819,37 +3946,37 @@
 <p>It is important to understand that only test cases are assigned a status themselves; the test folders instead display a test execution bar graph that illustrates the aggregate execution status of its child test-cases. Thus, if the test folder contains two test cases, one of which passed, and one of which wasn't run, the graph will display 50% green and 50%
 gray.</p>
 <p>To determine the exact aggregate test folder execution status information, position the mouse pointer over the bar-chart, and the number of tests in each of the execution statuses (passed, failed, not-run, blocked, caution) will be displayed as a "tooltip". Note that if you change the owner of a test folder, then all the child test cases will be assigned the same owner. This allows you to more easily associate entire folders to test cases to be executed by a specific user.</p>
-<h3 id="add-a-test-case">Add a Test Case</h3>
+<h3 id="add-a-test-case">Add a Test Case<a class="headerlink" href="#add-a-test-case" title="Permanent link">&para;</a></h3>
 <p>Click the "<strong><em>New Test Case</em></strong>" button will add a test case in the currently displayed folder (ie the one marked in bolder on the folder tree and also shown in the yellow information box). The new test case will be added at the bottom of the list.</p>
 <p>Once the new test case has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose an owner and/or author. Note that all new test cases are initially set with an execution status of "Not Run".</p>
-<h3 id="delete">Delete</h3>
+<h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the test cases and/or test folders whose check-boxes have been selected. If any of the items are test folders, then the entire contents of that folder will also be deleted (as you would expect in Microsoft Windows® Explorer or OS X Finder).</p>
-<h3 id="execute">Execute</h3>
+<h3 id="execute">Execute<a class="headerlink" href="#execute" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Execute Tests</em></strong>" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in <a href="#test-step-details">Test Step Details</a>.</p>
-<h3 id="refresh">Refresh</h3>
+<h3 id="refresh">Refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the test case list. This is useful as other people may be modifying the list of test cases at the same time as you, or executing specific test cases, and after stepping away from the computer for a short-time, you can click this button to make sure you are viewing the most current test case list for the product.</p>
-<h3 id="editing-a-test-case">Editing a Test Case</h3>
+<h3 id="editing-a-test-case">Editing a Test Case<a class="headerlink" href="#editing-a-test-case" title="Permanent link">&para;</a></h3>
 <p>Each test case in the list has an "<strong><em>Edit</em></strong>" button in its right-most column. When you click this button (or <em>double-click</em> on any of the cells in the row), you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "<strong><em>Update</em></strong>" buttons are displayed in the last column:</p>
 <p><img alt="" src="../img/Test_Case_Management_125.png" /></p>
 <p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Update</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then update the changes by clicking the one "<strong><em>Update</em></strong>" button. Also, if you want to make the same change to multiple rows (e.g. to change the owner of five test cases from "Fred Bloggs" to "Joe Smith"), you can click on the "fill" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.</p>
 <p>If you want to edit lots of items, first select their checkboxes and then click the "<strong><em>Edit</em></strong>" button on the same row as the Filters (ie the topmost edit button) and it will switch all the selected items into edit mode.</p>
 <p>When you have made your updates, you can either click "<strong><em>Update</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
-<h3 id="editing-a-test-folder">Editing a Test Folder</h3>
+<h3 id="editing-a-test-folder">Editing a Test Folder<a class="headerlink" href="#editing-a-test-folder" title="Permanent link">&para;</a></h3>
 <p>Test folders shown on the right hand list pane do not have an "<strong><em>Edit</em></strong>" button. To edit a test folder, first click the "<strong><em>Edit</em></strong>" button at the bottom of the left hand folder tree. This will place the whole folder tree into edit mode---each folder will get a small "Edit" button of its own.</p>
 <p><img alt="" src="../img/Test_Case_Management_126.png" /></p>
 <p>Clicking on the "<strong><em>Edit</em></strong>" button of the folder you want to edit will display a pop up dialog. This allows you to: move the folder into a new or different parent folder; edit the name of the folder; or add a more detailed description. Click "<strong><em>Update</em></strong>" to commit the changes, "<strong><em>Cancel</em></strong>" to revert back to the original information, or "Delete" to delete the folder (and all of its contents). Note that on clicking "<strong><em>Delete</em></strong>" a warning box will appear to make sure you don't accidentally delete something.</p>
 <p><img alt="" src="../img/Test_Case_Management_127.png" /></p>
-<h3 id="show-hide-columns">Show / Hide Columns</h3>
+<h3 id="show-hide-columns">Show / Hide Columns<a class="headerlink" href="#show-hide-columns" title="Permanent link">&para;</a></h3>
 <p>This drop-down list allows you to change the fields that are displayed in the test case list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
 <p>Note: If you hide the 'execution status' column, the test case folders will no longer show the count of test cases contained within the folder.</p>
-<h3 id="filtering-sorting">Filtering &amp; Sorting</h3>
+<h3 id="filtering-sorting">Filtering &amp; Sorting<a class="headerlink" href="#filtering-sorting" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
-<h3 id="copying-test-cases">Copying Test Cases</h3>
+<h3 id="copying-test-cases">Copying Test Cases<a class="headerlink" href="#copying-test-cases" title="Permanent link">&para;</a></h3>
 <p>To copy one or more test cases, simply select the check-boxes of the test cases you want to copy and then select the Edit > Copy Items menu option. This will copy the current test case selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit > Paste Items option.</p>
 <p>The test cases will now be copied to the destination you specified. The name of the copied test cases will be prefixed with "Copy of..." to distinguish them from the originals.</p>
-<h3 id="blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases</h3>
+<h3 id="blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases<a class="headerlink" href="#blocking-and-unblocking-test-cases" title="Permanent link">&para;</a></h3>
 <p>To designate one or more test cases as blocked, select the check-boxes of the test cases and then select the Edit > Block Test Cases menu option.  This temporarily blocks test cases so that testers know they are not available for testing. Unlike actually executing the test cases and recording an execution status, no test run is recorded and summary metrics (such as requirements test coverage and test set status) are not updated. Likewise, to unblock test cases, select their check-boxes and then select the Edit > Unblock Test Cases menu option. This changes their Execution Status from Blocked to Not Run. The Edit menu will be enabled if the current user has Test Case > Bulk Edit permission.   </p>
-<h3 id="moving-test-cases-or-folders">Moving Test Cases or Folders</h3>
+<h3 id="moving-test-cases-or-folders">Moving Test Cases or Folders<a class="headerlink" href="#moving-test-cases-or-folders" title="Permanent link">&para;</a></h3>
 <p>There are two options for moving test cases or folders:</p>
 <ol>
 <li>Click on the test case/folder you want to move in the right hand list and drag it to the folder in the left hand folder tree you want it moved to. The background of the new folder will change to show where it will be inserted:</li>
@@ -3859,26 +3986,26 @@ gray.</p>
 <ol>
 <li>Alternatively you can simply select the check-boxes of the test cases you want to move and then select the Edit > Cut Items menu option. This will cut the current test selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit > Paste Items option. The test cases will now be moved into the destination specified.</li>
 </ol>
-<h3 id="exporting-test-cases">Exporting Test Cases</h3>
+<h3 id="exporting-test-cases">Exporting Test Cases<a class="headerlink" href="#exporting-test-cases" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#export-to-another-product">how to export artifacts from one product to another</a>.</p>
-<h3 id="adding-test-cases-to-a-release-test-set-or-requirement">Adding Test Cases to a Release, Test Set or Requirement</h3>
+<h3 id="adding-test-cases-to-a-release-test-set-or-requirement">Adding Test Cases to a Release, Test Set or Requirement<a class="headerlink" href="#adding-test-cases-to-a-release-test-set-or-requirement" title="Permanent link">&para;</a></h3>
 <p>To quickly add a series of test cases to a Release, Test Set or Requirement, select the check-boxes of the appropriate test cases and then click Tools > Add to Release / Test Set / Requirement. This will bring up a dialog box displaying either a list of available releases, test sets or requirements (depending on which option was chosen):</p>
 <p><img alt="" src="../img/Test_Case_Management_132.png" /></p>
 <p>Once you have chosen the destination release / test set / requirement, clicking "<strong><em>Add</em></strong>" will add the selected test cases to the destination release / test set / requirement.</p>
-<h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release</h3>
+<h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release<a class="headerlink" href="#viewing-the-test-status-for-a-release" title="Permanent link">&para;</a></h3>
 <p>By default, when you view the list of test case cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.</p>
 <p>To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the yellow information panel (on the right-hand side) from "All Releases" to a specific release:</p>
 <p><img alt="" src="../img/Test_Case_Management_133.png" /></p>
 <p><img alt="" src="../img/Test_Case_Management_134.png" /></p>
 <p>As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test releases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.</p>
 <p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
-<h3 id="printing-items">Printing Items</h3>
+<h3 id="printing-items">Printing Items<a class="headerlink" href="#printing-items" title="Permanent link">&para;</a></h3>
 <p>To quickly print a single test case, test folder or list of test cases you can select the items' checkboxes and then click Tools > Print Items. This will create a printable report of the selected items in a new window.</p>
-<h3 id="right-click-context-menu">Right-Click Context Menu</h3>
+<h3 id="right-click-context-menu">Right-Click Context Menu<a class="headerlink" href="#right-click-context-menu" title="Permanent link">&para;</a></h3>
 <p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test case list and the following menu will be displayed:</p>
 <p><img alt="" src="../img/Test_Case_Management_135.png" /></p>
 <p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
-<h2 id="test-case-details">Test Case Details</h2>
+<h2 id="test-case-details">Test Case Details<a class="headerlink" href="#test-case-details" title="Permanent link">&para;</a></h2>
 <p>When you click on a test case item in the <a href="#test-case-list">test case list</a>, you are taken to the test case details page illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_136.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
@@ -3907,67 +4034,67 @@ gray.</p>
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
-<li>create a replica of the current test case by clicking <code class="codehilite"><span class="err">Clone</span></code></li>
-<li>discard any changes made by clicking <code class="codehilite"><span class="err">Refresh</span></code></li>
-<li>export to a number of files formats or print it via one of the options in the <code class="codehilite"><span class="err">Tools</span></code> dropdown menu</li>
-<li>the <code class="codehilite"><span class="err">Execute</span></code> button will immediately prepare the current test case for execution and then take you to the
+<li>create a replica of the current test case by clicking <code>Clone</code></li>
+<li>discard any changes made by clicking <code>Refresh</code></li>
+<li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
+<li>the <code>Execute</code> button will immediately prepare the current test case for execution and then take you to the
 <a href="#execute-test-cases">test execution screen</a></li>
 </ul>
 <p>The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.</p>
-<h3 id="emailing">Emailing</h3>
+<h3 id="emailing">Emailing<a class="headerlink" href="#emailing" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</p>
-<h3 id="followers">Followers</h3>
+<h3 id="followers">Followers<a class="headerlink" href="#followers" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
-<h3 id="workflows">Workflows</h3>
+<h3 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
-<h3 id="overview-details">Overview - Details</h3>
+<h3 id="overview-details">Overview - Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. This tab displays the fields, detailed information, and comments associated with the test case.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the test case. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Test_Case_Management_140.png" /></p>
 <p>The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p>The <strong>Suspect</strong> flag is automatically set on an approved test case, when one of the requirements linking to it changes. This lets you quickly find all the test cases impacted by a specific requirement change. For this to happen the requirement needs to be in an Accepted or later status (i.e. not Rejected, Rejected, Under Review, Obsolete) and the test case needs to be an approved status (i.e. not Draft, Obsolete, Rejected).</p>
-<h3 id="overview-test-steps">Overview - Test Steps</h3>
+<h3 id="overview-test-steps">Overview - Test Steps<a class="headerlink" href="#overview-test-steps" title="Permanent link">&para;</a></h3>
 <p>This view displays the name of the test case together with all the defined test steps that a tester would need to perform to verify that the functionality works as expected. The list of test steps displays the position number, the description, the expected result, some suggested sample data and the most recent execution status of the individual test step:</p>
 <p><img alt="" src="../img/Test_Case_Management_141.png" /></p>
 <p>Note: Test steps that are marked with a hyperlink and test case icon (e.g. "Call Login to Application" in the screen shot above) are in fact
 <em>linked test cases.</em> Linked test cases are a useful way of reusing existing test steps from other test cases. For example if you want to have a set of steps be in more than one test case (e.g. a login step) then you would create a separate test case just containing these steps, then have all the other test cases just link to it. This avoids the need to have duplicate test steps throughout the product.</p>
 <p>If you click on the step number hyperlink (e.g. Step 2) you will be taken to the test step details page which allows you to perform additional editing of a specific test step as well as attach documents, associate pre-existing incidents and view the change history.</p>
-<h3 id="insert-step">Insert Step</h3>
+<h3 id="insert-step">Insert Step<a class="headerlink" href="#insert-step" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Insert Step</em></strong>" button inserts a new test step <em>before</em> the currently selected (by means of the check-box) test step. Clicking the "<strong><em>Insert Step</em></strong>" button without selecting a test step will insert a new step at the end of the list. When a new step is inserted, the fields are displayed in "Edit" mode, so the description, expected result and sample data fields are editable, allowing you to enter the data:</p>
 <p><img alt="" src="../img/Test_Case_Management_142.png" /></p>
 <p>Once you have entered the necessary information, you can click either "<strong><em>Save and New</em></strong>" to commit the changes. If you choose "<strong><em>Save and New</em></strong>" another new row will be inserted which is useful if you intend on entering lots of rows at once, whereas clicking "<strong><em>Save</em></strong>" will commit only the current row.</p>
-<h3 id="insert-link">Insert Link</h3>
+<h3 id="insert-link">Insert Link<a class="headerlink" href="#insert-link" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Insert Link</em></strong>" button brings up the following dialog box that allows you to either choose an existing test case to be inserted or create a new test case and step with parameters:</p>
 <p><img alt="" src="../img/Test_Case_Management_143.png" /></p>
 <p>When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared parameters (see the section on Parameters below for more details) you will be given a list of parameters that needed to be filled out.</p>
 <p>You need to fill out the values of the parameters for the linked test case and then click the "<strong><em>Add</em></strong>" button to complete the operation. The system will then insert the test case as a link just before the currently selected test step. If no existing test step was selected, the link will be added at the end of the test step list.</p>
 <p>If you want to create a test step with specific parameters and parameter values, you can do so by clicking the "<strong><em>Create New Test Case</em></strong>". This will change the dialog to one where you can assign a folder, name, and parameters to a new test case. On clicking the "<strong><em>Add</em></strong>" button: the new test case is created; a test step is created within that new test case; the parameters specified in the dialog are assigned to that test step, with the values set as the defaults for the step; and the new test case is added as a linked test case in the list of test steps.</p>
 <p><img alt="" src="../img/Test_Case_Management_144.png" /></p>
-<h3 id="delete_1">Delete</h3>
+<h3 id="delete_1">Delete<a class="headerlink" href="#delete_1" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the currently selected test steps, and reorders the test step position numbers to close any gaps in numbering.</p>
-<h3 id="clone">Clone</h3>
+<h3 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Clone</em></strong>" button makes a duplicate of the current test step or linked test case and inserts the copied version directly above the original one.</p>
-<h3 id="refresh_1">Refresh</h3>
+<h3 id="refresh_1">Refresh<a class="headerlink" href="#refresh_1" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the list of test steps. This is useful if other people are making changes to the test list and you want to make sure that you have the most current version.</p>
-<h3 id="show-hide-columns_1">Show / Hide Columns</h3>
+<h3 id="show-hide-columns_1">Show / Hide Columns<a class="headerlink" href="#show-hide-columns_1" title="Permanent link">&para;</a></h3>
 <p>By default the test step list screen will display the Description, Expected Result and Sample Data fields. However the Expected Result and Sample Data fields are optional and can be hidden if necessary to make more space. If you have configured custom properties for test steps, you can use the Show/Hide features to display one or more of your custom properties instead. These fields will then be editable in this grid-view.</p>
-<h3 id="editing-test-steps">Editing Test Steps</h3>
+<h3 id="editing-test-steps">Editing Test Steps<a class="headerlink" href="#editing-test-steps" title="Permanent link">&para;</a></h3>
 <p>To modify an existing Test Step you simply need to click on the "<strong><em>Edit</em></strong>" button to the right of the step, or just
 <em>double-click</em> on the cells in the row. That will switch the selected row into Edit mode. The various columns are turned into editable text-boxes, and "<strong><em>Save</em></strong>" and "<strong><em>Cancel</em></strong>" buttons are displayed in the last column:</p>
 <p><img alt="" src="../img/Test_Case_Management_145.png" /></p>
 <p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Save</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then save the changes by clicking the one "<strong><em>Save</em></strong>" button. Also, if you want to make the same change to multiple rows, you can click on the "<strong><em>fill</em></strong>" icon to the right of the editable item, which will propagate the new value to all editable items in the same column. When you have made your changes, you can either click "<strong><em>Save</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information.</p>
-<h3 id="editing-test-links">Editing Test Links</h3>
+<h3 id="editing-test-links">Editing Test Links<a class="headerlink" href="#editing-test-links" title="Permanent link">&para;</a></h3>
 <p>To modify an existing Test Link you simply need to click on the "<strong><em>Edit</em></strong>" button to the right of the step, or double click on the cells in the row. That will open up the special dialog box used for editing the parameter values associated with a specific linked test case:</p>
 <p><img alt="" src="../img/Test_Case_Management_146.png" /></p>
 <p>This allows you to edit the parameters being passed from the current test step to the linked test case without having to recreate the test link from scratch. To commit the change click "<strong><em>Save</em></strong>" to close the dialog box, or click "<strong><em>Cancel</em></strong>" to revert back to the original information.</p>
-<h3 id="moving-test-steps">Moving Test Steps</h3>
+<h3 id="moving-test-steps">Moving Test Steps<a class="headerlink" href="#moving-test-steps" title="Permanent link">&para;</a></h3>
 <p>To move test steps in the list, click on the row you want to move and drag it where you want it moved to within the list of test steps. An empty space will appear to show you where it will be inserted.</p>
-<h3 id="parameters">Parameters</h3>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p>Test cases can have parameters associated with them. This enables one test case to be called several times by another test case (as a link) and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case.</p>
 <p>To view / change the parameters associated with the current test case, click on the "<strong><em>Edit Parameters</em></strong>" button in the toolbar and the list of current parameters will be displayed:</p>
 <p><img alt="" src="../img/Test_Case_Management_147.png" /></p>
 <p>The list of existing parameters is displayed in a list. Beneath this, is a form where you can add a new parameter and default value (used when the test case is run directly rather than being called by another test case). You can delete an existing parameter or copy the parameter token to your computer's clipboard. If you want to paste the parameter token onto the current page (say into a specific test step), position the cursor where you want and click "<strong><em>Insert at Cursor</em></strong>" This is a quick way to include the parameter and then have it converted into the parameter value during test execution.</p>
-<h3 id="overview-automation">Overview - Automation</h3>
+<h3 id="overview-automation">Overview - Automation<a class="headerlink" href="#overview-automation" title="Permanent link">&para;</a></h3>
 <p>The Automation section displays any automated test scripts associated with the current test case. There are three types of automated test:</p>
 <ul>
 <li>
@@ -3991,11 +4118,11 @@ gray.</p>
 <p><strong>Version</strong> -- This should contain the version number of the test script.</p>
 <p><strong>Test Script</strong> -- If you are attaching a test script, this should contain the actual program code for executing the test script. The language and syntax will be dependent on the test automation engine being used. If you are linking the test script, this section will be disabled.</p>
 <p><strong>Parameters</strong> -- You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that SpiraPlan integrates with will support the passing of parameter values from SpiraPlan to the automation tool.</p>
-<h3 id="overview-comments">Overview - Comments</h3>
+<h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
 <p>The Comments section allows users to add and view discussions related to the Test Case:</p>
 <p><img alt="" src="../img/Test_Case_Management_149.png" /></p>
 <p>Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Case, enter your text into the textbox, then click the "<strong><em>Add Comment</em></strong>" button.</p>
-<h3 id="requirements-coverage">Requirements Coverage</h3>
+<h3 id="requirements-coverage">Requirements Coverage<a class="headerlink" href="#requirements-coverage" title="Permanent link">&para;</a></h3>
 <p>This tab displays the requirements coverage information for the test case in question:</p>
 <p><img alt="" src="../img/Test_Case_Management_150.png" /></p>
 <p>The table shows the requirements, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question.</p>
@@ -4003,22 +4130,22 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_151.png" /></p>
 <p>From the same add association panel there is a short to "<strong><em>Create Requirement from This Test Case</em></strong>". This button will create a new requirement in the list of covered requirements that will be automatically linked to this test case. This is useful when you have created a new test case and want to generate an initial placeholder requirement to be fleshed-out later.</p>
 <p>Finally, to remove coverage for this test case, select any of the added requirements (those in the bottom table) and click the "<strong><em>Remove</em></strong>" button.</p>
-<h3 id="test-runs">Test Runs</h3>
+<h3 id="test-runs">Test Runs<a class="headerlink" href="#test-runs" title="Permanent link">&para;</a></h3>
 <p>This view displays the name of the test case together with a list of the previous execution runs that the test case has been put through. Each test run is listed together with the date of execution, the name of the test case, the name of the test set (if applicable), the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the actual <a href="#test-run-details">test run details</a>. In addition, you can choose to display any of the custom properties associated with the test run.</p>
 <p><img alt="" src="../img/Test_Case_Management_152.png" /></p>
 <p>The "show/hide columns" drop-down list allows you to change the fields that are displayed in the test run list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
 <p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<h3 id="releases">Releases</h3>
+<h3 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h3>
 <p>This tab displays the name of the test case together with the release mapping information for the test case in question. It functions in a similar way to the Test Coverage tab described above: the table at the bottom of the panel shows the releases, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question. You can search for and add releases to this list using the "<strong><em>Add</em></strong>" button, or remove them using the "<strong><em>Remove</em></strong>" button.</p>
 <p><img alt="" src="../img/Test_Case_Management_153.png" /></p>
-<h3 id="incidents">Incidents</h3>
+<h3 id="incidents">Incidents<a class="headerlink" href="#incidents" title="Permanent link">&para;</a></h3>
 <p>This tab displays the list of incidents associated with the current test case. The incidents have either been created during an execution of the test case (and are thereby linked to one of the test runs) or manually linked to one of the test steps in the test case.</p>
 <p><img alt="" src="../img/Test_Case_Management_154.png" /></p>
 <p>Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:</p>
 <p><strong>Refresh</strong> -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.</p>
 <p>You can also <strong>filter</strong> the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
 <p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the incident allows you to edit the incident inline.</p>
-<h3 id="attachments">Attachments</h3>
+<h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though SpiraPlan® will only display an icon for certain known types.</p>
 <p><img alt="" src="../img/Test_Case_Management_155.png" /></p>
 <p>The attachment list includes the filename that was originally uploaded together with the file-size (in KB), name of the person who attached it and the date uploaded. In addition, if you position the pointer over the filename and hold it there for a few seconds, a detailed description is displayed as a tooltip.</p>
@@ -4034,26 +4161,26 @@ gray.</p>
 <p>You can also associate an existing document (that's already stored in SpiraTeam) with the test case. To do that, click on the "<strong><em>Add Existing</em></strong>" button to bring up the add file association dialog box:</p>
 <p><img alt="g4197" src="../img/Test_Case_Management_156.png" /></p>
 <p>You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.</p>
-<h3 id="history">History</h3>
+<h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>In this tab, the main pane displays the list of changes that have been performed on the test case artifact since its creation. An example test case change history is depicted below:</p>
 <p><img alt="" src="../img/Test_Case_Management_157.png" /></p>
 <p>The change history displays the date that each change was made, together with the fields that were changed, the old and new values and the person who made the change. This allows a complete audit trail to be maintained of all changes in the system. In addition, if you are logged in as a product administrator you can also click on the "<strong><em>Admin View</em></strong>" button to navigate to where you can revert any unwanted changes.</p>
-<h3 id="test-sets">Test Sets</h3>
+<h3 id="test-sets">Test Sets<a class="headerlink" href="#test-sets" title="Permanent link">&para;</a></h3>
 <p>In this tab, the main pane displays the test sets that contain the current test case. Each test set is listed together with its name, release, the date of last execution, the owner, the status, the execution status, and a link to the actual <a href="#test-set-details">test set details</a>. In addition, you can choose to display any of the custom properties associated with the test set.</p>
 <p><img alt="" src="../img/Test_Case_Management_158.png" /></p>
 <p>The "show/hide columns" drop-down list allows you to change the fields that are displayed in the test set list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
 <p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<h3 id="associations">Associations</h3>
+<h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
 <p>You can associate tasks and risks to a test case from this tab (which is only available to SpiraTeam and SpiraPlan users). Apart from creating links to an existing task from this tab, any tasks created during exploratory test execution will also be shown here.</p>
 <p>Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
-<h2 id="test-step-details">Test Step Details</h2>
+<h2 id="test-step-details">Test Step Details<a class="headerlink" href="#test-step-details" title="Permanent link">&para;</a></h2>
 <p>When you click on one of the hyperlinks next to a test step in the test step list (see above), you will be taken to the test step details screen illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_160.png" /></p>
 <p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the test step detailed information itself, and the bottom part of the right pane contains related information about the test step.</p>
 <p>The navigation pane consists of a link that will take you back to the test step list, as well as a list of the peer test steps to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test steps by clicking on the navigation links without having to first return to the test step list page. You can also switch between seeing the list of test steps with the current filter applier or simply unfiltered.</p>
 <p>The top part of the right pane allows you to view and/or edit the details of the particular test step. You can edit the various fields (description, expected result and sample data) and custom properties. Once you are satisfied with them, click any "<strong><em>Save</em></strong>" button on the page to commit the changes. If you want to add a new test step to the test case, you should click "<strong><em>Save and New</em></strong>" from the dropdown menu of the "Save" button at the top of the page instead.</p>
 <p>The lower part of the right pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be on "Incidents" tab, but it can be switched to "Attachments", "History" or "Requirements" tabs if so desired. Each of the views is described separately below.</p>
-<h3 id="incidents_1">Incidents</h3>
+<h3 id="incidents_1">Incidents<a class="headerlink" href="#incidents_1" title="Permanent link">&para;</a></h3>
 <p>In this mode, the main pane displays a list of any incidents that are associated with this test step. They can either be linked indirectly due to being logged during a test run, or directly linked after the fact:</p>
 <p><img alt="" src="../img/Test_Case_Management_161.png" /></p>
 <p>Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:</p>
@@ -4063,11 +4190,11 @@ gray.</p>
 <p>To create a new association between this test step and an existing incident, click the "<strong><em>Link Incident</em></strong>" button which will display the following panel:</p>
 <p><img alt="" src="../img/Test_Case_Management_162.png" /></p>
 <p>You need to choose the specific incident(s) you want to link to, either by choosing the item from the scrolling selection box, or searching for them by name or ID. Before adding the chosen incidents you can add a comment that explains the rationale for the association.</p>
-<h3 id="attachments_1">Attachments</h3>
+<h3 id="attachments_1">Attachments<a class="headerlink" href="#attachments_1" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
-<h3 id="history_1">History</h3>
+<h3 id="history_1">History<a class="headerlink" href="#history_1" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
-<h3 id="requirements">Requirements</h3>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <p>Normally within SpiraTest, you will link the test cases in a product with your requirements to describe which requirements are covered by each of the test cases. When all of the tests for a requirement pass, the requirement is considered fully tested.</p>
 <p>However, in some industries (for example when developing Defense systems) there is an additional requirement to report on the traceability between the individual <strong>test steps</strong> and the requirements. For customers that have such a requirement, this tab lets you associate the current test step with specific requirements.</p>
 <p><img alt="" src="../img/Test_Case_Management_165.png" /></p>
@@ -4081,15 +4208,15 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_168.png" /></p>
 <p>One you have found the desired requirement(s), simply select their check boxes and click the 'Save' button to add them to the current test step:</p>
 <p><img alt="" src="../img/Test_Case_Management_169.png" /></p>
-<h2 id="execute-test-cases"><a href="../Test-Execution/">Execute Test Case(s)</a></h2>
-<h2 id="test-run-list"><a href="../Test-Run-Management/#test-run-list">Test Run List</a></h2>
-<h2 id="test-run-details"><a href="../Test-Run-Management/#test-run-details">Test Run Details</a></h2>
-<h2 id="test-set-list"><a href="../Test-Set-Management/#test-set-list">Test Set List</a></h2>
-<h2 id="test-set-details"><a href="../Test-Set-Management/#test-set-details">Test Set Details</a></h2>
-<h2 id="automation-host-list"><a href="../Automation-Host-Management/#automation-host-list">Automation Host List</a></h2>
-<h2 id="automation-host-list_1"><a href="../Automation-Host-Management/#automation-host-details">Automation Host List</a></h2>
-<h2 id="test-configuration-list"><a href="../Test-Configuration-Management/#test-configuration-list">Test Configuration List</a></h2>
-<h2 id="test-configuration-details"><a href="../Test-Configuration-Management/#test-configuration-details">Test Configuration Details</a></h2>
+<h2 id="execute-test-cases"><a href="../Test-Execution/">Execute Test Case(s)</a><a class="headerlink" href="#execute-test-cases" title="Permanent link">&para;</a></h2>
+<h2 id="test-run-list"><a href="../Test-Run-Management/#test-run-list">Test Run List</a><a class="headerlink" href="#test-run-list" title="Permanent link">&para;</a></h2>
+<h2 id="test-run-details"><a href="../Test-Run-Management/#test-run-details">Test Run Details</a><a class="headerlink" href="#test-run-details" title="Permanent link">&para;</a></h2>
+<h2 id="test-set-list"><a href="../Test-Set-Management/#test-set-list">Test Set List</a><a class="headerlink" href="#test-set-list" title="Permanent link">&para;</a></h2>
+<h2 id="test-set-details"><a href="../Test-Set-Management/#test-set-details">Test Set Details</a><a class="headerlink" href="#test-set-details" title="Permanent link">&para;</a></h2>
+<h2 id="automation-host-list"><a href="../Automation-Host-Management/#automation-host-list">Automation Host List</a><a class="headerlink" href="#automation-host-list" title="Permanent link">&para;</a></h2>
+<h2 id="automation-host-list_1"><a href="../Automation-Host-Management/#automation-host-details">Automation Host List</a><a class="headerlink" href="#automation-host-list_1" title="Permanent link">&para;</a></h2>
+<h2 id="test-configuration-list"><a href="../Test-Configuration-Management/#test-configuration-list">Test Configuration List</a><a class="headerlink" href="#test-configuration-list" title="Permanent link">&para;</a></h2>
+<h2 id="test-configuration-details"><a href="../Test-Configuration-Management/#test-configuration-details">Test Configuration Details</a><a class="headerlink" href="#test-configuration-details" title="Permanent link">&para;</a></h2>
 <div class="footnote">
 <hr />
 <ol>
@@ -4098,9 +4225,6 @@ gray.</p>
 </li>
 </ol>
 </div>
-                
-                  
-                
                 
               
               
@@ -4117,34 +4241,34 @@ gray.</p>
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Planning-Board/" title="Planning Board" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../Planning-Board/" title="Planning Board" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Planning Board
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../Test-Execution/" title="Test Execution" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../Test-Execution/" title="Test Execution" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Test Execution
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -4159,21 +4283,40 @@ gray.</p>
             © Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/inflectra" class="md-footer-social__link fa fa-github"></a>
+      
+      
+        
+        
+      
+      <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
     
-      <a href="https://twitter.com/inflectra" class="md-footer-social__link fa fa-twitter"></a>
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
     
-      <a href="https://www.linkedin.com/inflectra-corporation" class="md-footer-social__link fa fa-linkedin"></a>
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
     
   </div>
 
@@ -4183,9 +4326,18 @@ gray.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

@@ -1,40 +1,19 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
     
     
       
@@ -42,9 +21,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
       
       
         
@@ -53,114 +32,96 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
-        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono","Courier New",Courier,monospace}</style>
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../stylesheets/spira.css">
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-1302007-6", "https://spiradoc.inflectra.com/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-1302007-6","https://spiradoc.inflectra.com/"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="amber">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="amber">
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#using-spirateam-with-jira-cloud" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-spirateam-with-jira-cloud" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo">
-          
-            <img src="../../img/logo.svg" width="24" height="24">
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              SpiraDocs
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Jira Cloud
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo" aria-label="SpiraDocs">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SpiraDocs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Jira Cloud
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -168,59 +129,55 @@
     </div>
   </div>
 </div>
+    
+    
+      <div class="md-header-nav__source">
         
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo" aria-label="SpiraDocs">
       
-        <img src="../../img/logo.svg" width="48" height="48">
-      
+  <img src="../../images/logo.svg" alt="logo">
+
     </a>
     SpiraDocs
   </label>
   
     <div class="md-nav__source">
       
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
@@ -236,13 +193,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       User Manual
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         User Manual
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -303,13 +266,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
     <label class="md-nav__link" for="nav-1-5">
       Products
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Products" data-md-level="2">
       <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Products
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -334,13 +303,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
     
     <label class="md-nav__link" for="nav-1-5-2">
       Planning
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Planning" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Planning
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -406,13 +381,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3">
     
     <label class="md-nav__link" for="nav-1-5-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Testing" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -502,13 +483,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
       Tracking
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Tracking" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Tracking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -603,13 +590,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
     
     <label class="md-nav__link" for="nav-1-6">
       Programs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Programs" data-md-level="2">
       <label class="md-nav__title" for="nav-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Programs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -728,13 +721,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Quick Start Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Quick Start Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -747,13 +746,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       Mini How-To Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Mini How-To Guides" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Mini How-To Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -872,13 +877,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Admin Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Admin Guide" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Admin Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -927,13 +938,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       System
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="System" data-md-level="2">
       <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         System
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1023,13 +1040,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
       Product
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Product" data-md-level="2">
       <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Product
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1107,13 +1130,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
     
     <label class="md-nav__link" for="nav-3-6">
       Template
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Template" data-md-level="2">
       <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Template
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1256,13 +1285,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Reporting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Reporting" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Reporting
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1316,13 +1351,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Optional Features
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Optional Features" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Optional Features
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1335,13 +1376,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
       TaraVault
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="TaraVault" data-md-level="2">
       <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         TaraVault
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1365,7 +1412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/" title="Provisioning Projects & Users" class="md-nav__link">
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-%26-Users/" title="Provisioning Projects & Users" class="md-nav__link">
       Provisioning Projects & Users
     </a>
   </li>
@@ -1407,13 +1454,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
     <label class="md-nav__link" for="nav-5-2">
       RemoteLaunch
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="RemoteLaunch" data-md-level="2">
       <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         RemoteLaunch
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1690,13 +1743,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Integrations" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1709,13 +1768,16 @@
 
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Jira Cloud
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Jira Cloud" class="md-nav__link md-nav__link--active">
@@ -1723,13 +1785,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1744,7 +1811,7 @@
     Configuring the Data Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Data Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1773,7 +1840,7 @@
     Configuring the Standard Field Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Standard Field Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1849,7 +1916,7 @@
     Configuring the Custom Property Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Custom Property Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1918,10 +1985,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -1935,7 +1998,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -1948,13 +2011,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
     <label class="md-nav__link" for="nav-6-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Testing" data-md-level="2">
       <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2086,7 +2155,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
       UnitJS & NodeJS
     </a>
   </li>
@@ -2128,13 +2197,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
     <label class="md-nav__link" for="nav-6-4">
       IDE Integration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="IDE Integration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         IDE Integration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2226,13 +2301,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5" checked>
     
     <label class="md-nav__link" for="nav-6-5">
       Bug Tracking/DataSync
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Bug Tracking/DataSync" data-md-level="2">
       <label class="md-nav__title" for="nav-6-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Bug Tracking/DataSync
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2259,13 +2340,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Jira Cloud
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Jira Cloud" class="md-nav__link md-nav__link--active">
@@ -2273,13 +2357,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -2294,7 +2383,7 @@
     Configuring the Data Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Data Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2323,7 +2412,7 @@
     Configuring the Standard Field Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Standard Field Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2399,7 +2488,7 @@
     Configuring the Custom Property Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Custom Property Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2468,10 +2557,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -2485,7 +2570,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -2629,7 +2714,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Using-Spira-with-Axosoft-14+/" title="Axosoft" class="md-nav__link">
+    <a href="../Using-Spira-with-Axosoft-14%2B/" title="Axosoft" class="md-nav__link">
       Axosoft
     </a>
   </li>
@@ -2683,13 +2768,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
     
     <label class="md-nav__link" for="nav-6-6">
       VCS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="VCS" data-md-level="2">
       <label class="md-nav__title" for="nav-6-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         VCS
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2791,13 +2882,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
     
     <label class="md-nav__link" for="nav-6-7">
       Email
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Email" data-md-level="2">
       <label class="md-nav__title" for="nav-6-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Email
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2851,13 +2948,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
       Help Desk
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Help Desk" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Help Desk
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2899,13 +3002,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
     
     <label class="md-nav__link" for="nav-6-9">
       Migration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Migration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Migration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2929,7 +3038,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/" title="Excel (Office 365)" class="md-nav__link">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29/" title="Excel (Office 365)" class="md-nav__link">
       Excel (Office 365)
     </a>
   </li>
@@ -3055,13 +3164,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
     
     <label class="md-nav__link" for="nav-6-10">
       Build Servers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Build Servers" data-md-level="2">
       <label class="md-nav__title" for="nav-6-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Build Servers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3127,13 +3242,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
     
     <label class="md-nav__link" for="nav-6-11">
       Requirements
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
       <label class="md-nav__title" for="nav-6-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Requirements
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3216,13 +3337,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="About" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         About
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3340,13 +3467,18 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -3361,7 +3493,7 @@
     Configuring the Data Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Data Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3390,7 +3522,7 @@
     Configuring the Standard Field Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Standard Field Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3466,7 +3598,7 @@
     Configuring the Custom Property Mapping
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Configuring the Custom Property Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3535,10 +3667,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -3552,23 +3680,26 @@
               
                 
                 
-                <h1 id="using-spirateam-with-jira-cloud">Using SpiraTeam with Jira Cloud</h1>
+                  
+                
+                
+                <h1 id="using-spirateam-with-jira-cloud">Using SpiraTeam with Jira Cloud<a class="headerlink" href="#using-spirateam-with-jira-cloud" title="Permanent link">&para;</a></h1>
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the cloud version of the Jira issue/bug tracking system. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam.</p>
 <p>In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the Instructions in <a href="../Setting-up-Data-Synchronization/">Setup</a> before proceeding!</strong></p>
 </div>
-<h2 id="configuring-the-plug-in">Configuring the Plug-In</h2>
+<h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to configure the integration service to export incidents into JIRA, import new issues from JIRA and pick up subsequent status changes in JIRA and have them update SpiraTeam. It assumes that you already have a working installation of SpiraTest, SpiraPlan or SpiraTeam and a cloud subscription to Jira.</p>
 <p>The Jira Cloud plugin supports SpiraTeam v5.0 or later and the most recent version of Jira cloud hosted by Atlassian. For Jira Server, we have an alternate <a href="../Using-SpiraTeam-with-JIRA-5+">Jira Server plugin</a> available.</p>
 <p>If you have an earlier version of SpiraTeam, you will need to upgrade to at least v5.0 before trying to integrate with Jira Cloud.</p>
 <p>The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the JIRA server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System
 > Data Synchronization administration option from the left-hand navigation:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_16.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_16.png" /></p>
 <p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
 <p>If you already see an entry for <strong>JiraDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_17.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_17.png" /></p>
 <p>You need to fill out the following fields for the JIRA Plug-in to operate correctly:</p>
 <ul>
 <li><strong>Name</strong> -- this needs to be set to <strong>JiraDataSync</strong>.</li>
@@ -3597,11 +3728,11 @@ time-zones here.</li>
 <li><strong>Custom 04</strong> -- This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.</li>
 <li><strong>Custom 05</strong> -- This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:</li>
 </ul>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_18.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_18.png" /></p>
 <blockquote>
 <p><strong>Note: For most users, we recommend leaving Custom 01 -- Custom 04 blank.</strong></p>
 </blockquote>
-<h2 id="configuring-the-data-mapping">Configuring the Data Mapping</h2>
+<h2 id="configuring-the-data-mapping">Configuring the Data Mapping<a class="headerlink" href="#configuring-the-data-mapping" title="Permanent link">&para;</a></h2>
 <p>Next, you need to configure the data mapping between SpiraTeam and JIRA. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Enhancement" in SpiraTeam is the same as a "New Feature" in JIRA (for example).</p>
 <p>The following mapping information needs to be setup in SpiraTeam:</p>
 <ul>
@@ -3612,27 +3743,27 @@ time-zones here.</li>
 <li>The mapping of the various custom properties in the system</li>
 </ul>
 <p>Each of these is explained in turn below. However, to make the data mapping process easier, we have a helpful utility that will help you connect to your JIRA instance (both cloud or server) and determine the matching IDs for the various fields in JIRA:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_19.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_19.png" /></p>
 <p>You can download it from this URL:
 <a href="https://www.inflectra.com/Downloads/JiraConfigurationHelper.zip">https://www.inflectra.com/Downloads/JiraConfigurationHelper.zip</a></p>
 <p>Once you have downloaded and unzipped the program, run the
 <strong>JiraConfigurationHelper.exe</strong> and the following screen will be displayed:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_20.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_20.png" /></p>
 <p>Enter in the URL, login and password/API Key for your JIRA instance and click <strong>Connect</strong>:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_21.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_21.png" /></p>
 <p>Choose the project in JIRA that you will be connecting to SpiraTest and then the list of issue types, issue statuses, issue priorities, components, versions and custom fields will be displayed. We will be using this tool later on when you want to get some of the ID values to populate in SpiraTest.</p>
-<h3 id="configuring-the-project-mapping">Configuring the Project Mapping</h3>
+<h3 id="configuring-the-project-mapping">Configuring the Project Mapping<a class="headerlink" href="#configuring-the-project-mapping" title="Permanent link">&para;</a></h3>
 <p>From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the JIRA plug-in name. This will take you to the data-mapping home page for the currently selected project:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_22.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_22.png" /></p>
 <p>If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.</p>
 <p>To enable this project for data-synchronization with JIRA, you need to enter:</p>
 <p><strong>External Key</strong> -- This should be set to the name of the project
 <strong>Key</strong> in JIRA. Typically, this is a short acronym for the project:
-<img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_23.png" /></p>
+<img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_23.png" /></p>
 <p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.</p>
 <p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
 <p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
-<h3 id="configuring-the-user-mapping">Configuring the User Mapping</h3>
+<h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
 <p>To configure the mapping of users in the two systems, you need to go to Administration > Users > View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing issues in JIRA:</p>
 <p><img alt="User Profile in Spira" src="../img/JiraCloud-User-Mapping-1.png" /></p>
 <p>Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user.</p>
@@ -3653,124 +3784,124 @@ time-zones here.</li>
 <p>Click [Save]
 once you've entered the appropriate user identifier name. You should now repeat for the other users who will be active in both systems.</p>
 <p><em>If you have set the "Auto-Map Users" option in the JIRA plugin, you can skip this section completely.</em></p>
-<h3 id="configuring-the-release-mapping">Configuring the Release Mapping</h3>
+<h3 id="configuring-the-release-mapping">Configuring the Release Mapping<a class="headerlink" href="#configuring-the-release-mapping" title="Permanent link">&para;</a></h3>
 <p>When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Version" in JIRA. Similarly, if it comes across a new Version in JIRA that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Versions in one system and let the data-synchronization service add them to the other system.</p>
 <p>However, you may start out with the situation where you already have pre-existing Releases/Version in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore, for any Releases/Iterations that already exist in BOTH systems please navigate to Planning > Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_25.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_25.png" /></p>
 <p>In addition to the standard fields and custom properties, you will see an additional text property called "<strong>Jira ID</strong>" that is used to store the mapped external identifier for the equivalent Version in JIRA. You need to locate the ID of the equivalent version in JIRA, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>
 <p>The JIRA ID can be found using the Jira Configuration Helper using the
 <strong>Versions</strong> tab:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_26.png" /></p>
-<h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping</h3>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_26.png" /></p>
+<h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping<a class="headerlink" href="#configuring-the-standard-field-mapping" title="Permanent link">&para;</a></h3>
 <p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident and requirement fields. To do this, go to Administration > System > Data Synchronization and click on the "View Project Mappings" for the JiraDataSync plug-in entry:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_27.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_27.png" /></p>
 <p>From this screen, you need to click on Priority, Severity, Component, Status and Type in turn to configure the incident field mappings. If you're using the option to have JIRA also synchronize some issue types as requirements, then you'll need to also configure the Requirement Importance, Type, Component and Status fields.</p>
-<h4 id="a-incident-type">a) Incident Type</h4>
+<h4 id="a-incident-type">a) Incident Type<a class="headerlink" href="#a-incident-type" title="Permanent link">&para;</a></h4>
 <p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_28.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_28.png" /></p>
 <p>The table lists each of the incident types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Bug and Incident in SpiraTeam are both equivalent to Bug in JIRA), in which case only one of the two values can be listed as Primary
 = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
-<h4 id="b-incident-status">b) Incident Status</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_29.png" /></p>
+<h4 id="b-incident-status">b) Incident Status<a class="headerlink" href="#b-incident-status" title="Permanent link">&para;</a></h4>
 <p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_30.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_30.png" /></p>
 <p>The table lists each of the incident statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. New and Open in SpiraTeam are both equivalent to Open in JIRA), in which case only one of the two values can be listed as Primary
 = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>We recommend that you always point the New and Open statuses inside SpiraTeam to point to the ID for "Open" inside JIRA and make Open in SpiraTeam the Primary status of the two. This is recommended so that as new incidents in SpiraTeam get synched over to JIRA, they will get switched to the Open status in JIRA which will then be synched back to "Open" in SpiraTeam. That way you'll be able to see at a glance which incidents have been synched with JIRA and those that haven't.</p>
 <p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
-<h4 id="c-incident-priority">c) Incident Priority</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_31.png" /></p>
+<h4 id="c-incident-priority">c) Incident Priority<a class="headerlink" href="#c-incident-priority" title="Permanent link">&para;</a></h4>
 <p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_32.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_32.png" /></p>
 <p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
-<h4 id="d-incident-component-optional">d) Incident Component (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_33.png" /></p>
+<h4 id="d-incident-component-optional">d) Incident Component (Optional)<a class="headerlink" href="#d-incident-component-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_34.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_34.png" /></p>
 <p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
-<h4 id="e-incident-severity-optional">e) Incident Severity (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_35.png" /></p>
+<h4 id="e-incident-severity-optional">e) Incident Severity (Optional)<a class="headerlink" href="#e-incident-severity-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_36.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_36.png" /></p>
 <p>Unlike the other incident standard fields, JIRA doesn't actually have a built-in field for storing the severity of an issue, so if you want to be able to see the SpiraTeam incident severity in JIRA, you'll need to create a JIRA custom list field to store the different severity values. If you don't want to synchronize severity values with JIRA, you can skip the rest of this section.</p>
 <p>Once you have created a custom field in JIRA to contain the list of severity values, you need to now populate the above table <strong>with the name</strong> (Not the ID) of the severity custom property values inside JIRA and click Update. Secondly you need to go to the Plug-in configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_37.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_37.png" /></p>
 <p>On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the <strong>Custom 01 property with this value</strong> (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
-<h4 id="f-requirement-status-optional">f) Requirement Status (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
+<h4 id="f-requirement-status-optional">f) Requirement Status (Optional)<a class="headerlink" href="#f-requirement-status-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_39.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_39.png" /></p>
 <p>The table lists each of the requirement statuses available in SpiraTeam and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_31.png" /></p>
-<h4 id="g-requirement-importance-optional">g) Requirement Importance (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_31.png" /></p>
+<h4 id="g-requirement-importance-optional">g) Requirement Importance (Optional)<a class="headerlink" href="#g-requirement-importance-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_40.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_40.png" /></p>
 <p>The table lists each of the requirement importances available in SpiraTeam and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_33.png" /></p>
-<h4 id="h-requirement-type-optional">h) Requirement Type (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_33.png" /></p>
+<h4 id="h-requirement-type-optional">h) Requirement Type (Optional)<a class="headerlink" href="#h-requirement-type-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Type" hyperlink under Requirement Standard Fields to bring up the Requirement type mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_41.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_41.png" /></p>
 <p>The table lists each of the requirement types available in SpiraTeam and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields (e.g. Use Case and User Story in SpiraTeam are both equivalent to User Story in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_29.png" /></p>
-<h4 id="i-requirement-component-optional">i) Requirement Component (Optional)</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_29.png" /></p>
+<h4 id="i-requirement-component-optional">i) Requirement Component (Optional)<a class="headerlink" href="#i-requirement-component-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_42.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_42.png" /></p>
 <p>The table lists each of the components available in SpiraTeam and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraTeam fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraTeam).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p>:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_35.png" /></p>
-<h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping</h3>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_35.png" /></p>
+<h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping<a class="headerlink" href="#configuring-the-custom-property-mapping" title="Permanent link">&para;</a></h3>
 <p>Now that the various SpiraTeam standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in SpiraTeam that map to custom fields in JIRA and also for custom properties in SpiraTeam that are used to map to standard fields in JIRA (Environment, Resolution and SecurityLevel) that don't exist in SpiraTeam.</p>
 <p>From the View/Edit Project Data Mapping screen, you need to click on the name of the Incident or Requirement Custom Property that you want to add data-mapping information for. We will consider the four different types of mapping that you might want to enter:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_27.png" /></p>
-<h4 id="a-scalar-custom-properties">a) Scalar Custom Properties</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_27.png" /></p>
+<h4 id="a-scalar-custom-properties">a) Scalar Custom Properties<a class="headerlink" href="#a-scalar-custom-properties" title="Permanent link">&para;</a></h4>
 <p>This refers to custom properties that have a simple user-entered value and don't need to have their specific options mapped between SpiraTeam and JIRA. All of the custom property types except <strong>List</strong> and
 <strong>Multi-List</strong> fall into this category (e.g. Text, Date, User, Boolean, Decimal, Integer, etc.)</p>
 <p>Click on the hyperlink of the scalar custom property under Incident/Requirement Custom Properties to bring up the custom property mapping configuration screen. For scalar custom properties, there will be no values listed in the lower half of the screen.</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_43.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_43.png" /></p>
 <p>You need to lookup the ID of the custom field in JIRA that matches this custom property in SpiraTeam. Once you have entered the id of the custom field, click [Update].</p>
 <p>The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
-<h4 id="b-list-custom-properties">b) List Custom Properties</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
+<h4 id="b-list-custom-properties">b) List Custom Properties<a class="headerlink" href="#b-list-custom-properties" title="Permanent link">&para;</a></h4>
 <p>This refers to custom properties that are either of type <strong>List</strong> or
 <strong>Multi-List</strong>. Click on the hyperlink of the list custom property under Incident/Requirement Custom Properties to bring up the custom property mapping configuration screen. For list custom properties there will be a textbox for both the custom field itself and a mapping table for each of the custom property values that need to be mapped:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_44.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_44.png" /></p>
 <p>First you need to lookup the ID of the custom field in JIRA that matches this custom property in SpiraTeam. This should be entered in the
 'External Key' field below the name of the custom property. The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_38.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
 <p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the full name (not the id this time) of the custom field value as specified in JIRA:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_45.png" /></p>
-<h4 id="c-jiras-resolution-field">c) JIRA's Resolution Field</h4>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_45.png" /></p>
+<h4 id="c-jiras-resolution-field">c) JIRA's Resolution Field<a class="headerlink" href="#c-jiras-resolution-field" title="Permanent link">&para;</a></h4>
 <p>If you would like the values of the JIRA '<strong>Resolution'</strong> field to be synchronized back to SpiraTeam, then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type 'LIST' that contains the various resolution names that exist inside JIRA.</p>
 <p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_46.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_46.png" /></p>
 <p>First you need to enter the word "Resolution" as the External Key of the custom property. This tells the data-sync plug-in that the custom property in SpiraTeam should be mapped to built-in Resolution field in JIRA.</p>
 <p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Resolutions that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the resolution name/description.</p>
-<h4 id="d-jiras-environment-field">d) JIRA's Environment Field</h4>
+<h4 id="d-jiras-environment-field">d) JIRA's Environment Field<a class="headerlink" href="#d-jiras-environment-field" title="Permanent link">&para;</a></h4>
 <p>If your instance of JIRA requires that all new issues are submitted with an 'Environment' description specified, then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the environment description within SpiraTeam.</p>
 <p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_47.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_47.png" /></p>
 <p>All you need to do on this screen is enter the word "<strong>Environment</strong>" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Environment field in JIRA.</p>
-<h4 id="e-jiras-security-level-field">e) JIRA's Security Level Field</h4>
+<h4 id="e-jiras-security-level-field">e) JIRA's Security Level Field<a class="headerlink" href="#e-jiras-security-level-field" title="Permanent link">&para;</a></h4>
 <p>If your instance of JIRA requires that all new issues are submitted with a 'Security Level' then you will need to fill out this section. You first need to create an incident custom property in SpiraTeam of type
 'LIST' that contains the various security levels that exist inside JIRA.</p>
 <p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen.</p>
 <p>First you need to enter the word "<strong>SecurityLevel</strong>" as the External Key of the custom property. This tells the data-sync plug-in that the custom property in SpiraTeam should be mapped to built-in Security Level field in JIRA.</p>
 <p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Security Levels that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the security level name/description.</p>
-<h4 id="f-jiras-issue-key-field">f) JIRA's Issue Key Field</h4>
+<h4 id="f-jiras-issue-key-field">f) JIRA's Issue Key Field<a class="headerlink" href="#f-jiras-issue-key-field" title="Permanent link">&para;</a></h4>
 <p>It can be convenient to create a SpiraTeam custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incients in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the JIRA issue key within SpiraTeam.</p>
 <p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_48.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_48.png" /></p>
 <p>All you need to do on this screen is enter the word "<strong>JiraIssueKey</strong>" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Issue Key field in JIRA.</p>
 <p>Once you have updated the various mapping sections, you are now ready to use the integration.</p>
-<h2 id="using-spirateam-with-jira">Using SpiraTeam with JIRA</h2>
+<h2 id="using-spirateam-with-jira">Using SpiraTeam with JIRA<a class="headerlink" href="#using-spirateam-with-jira" title="Permanent link">&para;</a></h2>
 <p>Now that the integration service has been configured and the service started, initially any incidents created in SpiraTeam for the specified projects will be imported into JIRA and any existing issues in JIRA will get loaded into SpiraTeam as either incidents or requirements (depending on your configuration).</p>
 <p>At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the SpiraTeam Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the SpiraTeam service and checking the various mapping entries. If you cannot see any issues with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
 <p>To use SpiraTeam with JIRA on an ongoing basis, we recommend the following general processes be followed:</p>
@@ -3792,10 +3923,10 @@ once you've entered the appropriate user identifier name. You should now repeat 
 </li>
 </ul>
 <p>You are now able to perform test coverage and incident reporting inside SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam and the incidents managed on behalf of SpiraTest/SpiraTeam inside JIRA.</p>
-<h2 id="using-the-jira-cloud-connector">Using the Jira Cloud Connector</h2>
+<h2 id="using-the-jira-cloud-connector">Using the Jira Cloud Connector<a class="headerlink" href="#using-the-jira-cloud-connector" title="Permanent link">&para;</a></h2>
 <p>Once you have the data-synchronization established between SpiraTest and Jira Cloud, we have an additional Atlassian marketplace connector that you can use (see
 <a href="https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-jira">https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-jira</a>):</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_49.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_49.png" /></p>
 <p>You can install the connector by following these instructions:</p>
 <ol>
 <li>
@@ -3817,7 +3948,7 @@ once you've entered the appropriate user identifier name. You should now repeat 
 <p>Now you need to configure the add-on to connect to your SpiraTest instance.</p>
 </li>
 </ol>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_50.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_50.png" /></p>
 <p>Please enter the following information:</p>
 <ul>
 <li>
@@ -3837,20 +3968,17 @@ once you've entered the appropriate user identifier name. You should now repeat 
 </li>
 </ul>
 <p>You can get the SpiraTest API Key from within the User Profile screen of SpiraTest:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5+_51.png" /></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_51.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">What to do if you cannot connect</p>
 <p>If you get a message in the connector on a user story saying that it can't connect, please try the following:</p>
 <ol>
 <li>Check your URL is your BASE url - it should not include a "/" at the end. It should not have anything like "login.aspx" at the end</li>
 <li>Make sure your API key includes the "{" and "}" and matches what you see on your Profile page after you go away from and then go back to the Profile page</li>
-<li>Ask your Spira system admin to go to System Administration &gt; System &gt; Security Settings. There is a field called "Allowed Domains". Add "<a href="https://jira.inflectra.com">https://jira.inflectra.com</a>" and hit <code class="codehilite"><span class="err">Save</span></code></li>
+<li>Ask your Spira system admin to go to System Administration &gt; System &gt; Security Settings. There is a field called "Allowed Domains". Add "<a href="https://jira.inflectra.com">https://jira.inflectra.com</a>" and hit <code>Save</code></li>
 <li>Make sure you are on at least version 6.3.0.1 of Spira</li>
 </ol>
 </div>
-                
-                  
-                
                 
               
               
@@ -3867,34 +3995,34 @@ once you've entered the appropriate user identifier name. You should now repeat 
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Setting-up-Data-Synchronization/" title="Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../Setting-up-Data-Synchronization/" title="Setup" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Setup
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Jira Server
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -3909,21 +4037,40 @@ once you've entered the appropriate user identifier name. You should now repeat 
             © Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/inflectra" class="md-footer-social__link fa fa-github"></a>
+      
+      
+        
+        
+      
+      <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
     
-      <a href="https://twitter.com/inflectra" class="md-footer-social__link fa fa-twitter"></a>
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
     
-      <a href="https://www.linkedin.com/inflectra-corporation" class="md-footer-social__link fa fa-linkedin"></a>
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
     
   </div>
 
@@ -3933,9 +4080,18 @@ once you've entered the appropriate user identifier name. You should now repeat 
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>

@@ -1,40 +1,19 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://spiradoc.inflectra.com/Reporting/Custom-Graph-Tutorial/">
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
     
     
       
@@ -42,9 +21,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.616af814.min.css">
       
       
         
@@ -53,114 +32,96 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
-        <style>body,input{font-family:"","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono","Courier New",Courier,monospace}</style>
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+    
+      <link rel="stylesheet" href="../../stylesheets/spira.css">
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-1302007-6", "https://spiradoc.inflectra.com/")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-1302007-6","https://spiradoc.inflectra.com/"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="amber">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="amber">
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#custom-graphs-tutorial-and-introduction" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#custom-graphs-tutorial-and-introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo">
-          
-            <img src="../../img/logo.svg" width="24" height="24">
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              SpiraDocs
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Custom Graph Tutorial
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo" aria-label="SpiraDocs">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SpiraDocs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Custom Graph Tutorial
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -168,59 +129,55 @@
     </div>
   </div>
 </div>
+    
+    
+      <div class="md-header-nav__source">
         
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo" aria-label="SpiraDocs">
       
-        <img src="../../img/logo.svg" width="48" height="48">
-      
+  <img src="../../images/logo.svg" alt="logo">
+
     </a>
     SpiraDocs
   </label>
   
     <div class="md-nav__source">
       
-
-
-  
-
-<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-source="">
-  
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     Inflectra
   </div>
@@ -236,13 +193,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       User Manual
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="User Manual" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         User Manual
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -303,13 +266,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5">
     
     <label class="md-nav__link" for="nav-1-5">
       Products
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Products" data-md-level="2">
       <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Products
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -334,13 +303,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2">
     
     <label class="md-nav__link" for="nav-1-5-2">
       Planning
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Planning" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Planning
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -406,13 +381,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3">
     
     <label class="md-nav__link" for="nav-1-5-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Testing" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -502,13 +483,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
       Tracking
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Tracking" data-md-level="3">
       <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Tracking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -603,13 +590,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6">
     
     <label class="md-nav__link" for="nav-1-6">
       Programs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Programs" data-md-level="2">
       <label class="md-nav__title" for="nav-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Programs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -728,13 +721,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Quick Start Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Quick Start Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -747,13 +746,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
       Mini How-To Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Mini How-To Guides" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Mini How-To Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -872,13 +877,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Admin Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Admin Guide" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Admin Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -927,13 +938,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       System
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="System" data-md-level="2">
       <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         System
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1023,13 +1040,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
       Product
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Product" data-md-level="2">
       <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Product
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1107,13 +1130,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
     
     <label class="md-nav__link" for="nav-3-6">
       Template
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Template" data-md-level="2">
       <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Template
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1258,13 +1287,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Reporting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Reporting" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Reporting
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1291,13 +1326,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Custom Graph Tutorial
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Custom Graph Tutorial" class="md-nav__link md-nav__link--active">
@@ -1305,13 +1343,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1333,7 +1376,7 @@
     Writing the ESQL Query Used in the Graph
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Writing the ESQL Query Used in the Graph">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1381,7 +1424,7 @@
     Entity SQL Syntax Basics
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Entity SQL Syntax Basics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1436,7 +1479,7 @@
     Differences Between ESQL and Traditional Database SQL
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Differences Between ESQL and Traditional Database SQL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1451,7 +1494,7 @@
     Changes to Group By
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Changes to Group By">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1499,7 +1542,7 @@
     Group By Clause Differences
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Group By Clause Differences">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1566,7 +1609,7 @@
     Advanced Entity SQL Queries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Advanced Entity SQL Queries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1594,10 +1637,6 @@
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -1630,13 +1669,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Optional Features
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Optional Features" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Optional Features
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1649,13 +1694,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
       TaraVault
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="TaraVault" data-md-level="2">
       <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         TaraVault
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1679,7 +1730,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../TaraVault-User-Manual/Provisioning-Projects-&-Users/" title="Provisioning Projects & Users" class="md-nav__link">
+    <a href="../../TaraVault-User-Manual/Provisioning-Projects-%26-Users/" title="Provisioning Projects & Users" class="md-nav__link">
       Provisioning Projects & Users
     </a>
   </li>
@@ -1721,13 +1772,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
     <label class="md-nav__link" for="nav-5-2">
       RemoteLaunch
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="RemoteLaunch" data-md-level="2">
       <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         RemoteLaunch
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2002,13 +2059,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Integrations" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2032,7 +2095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -2045,13 +2108,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
     <label class="md-nav__link" for="nav-6-3">
       Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Testing" data-md-level="2">
       <label class="md-nav__title" for="nav-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Testing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2183,7 +2252,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
+    <a href="../../Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/" title="UnitJS & NodeJS" class="md-nav__link">
       UnitJS & NodeJS
     </a>
   </li>
@@ -2225,13 +2294,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
     <label class="md-nav__link" for="nav-6-4">
       IDE Integration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="IDE Integration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         IDE Integration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2321,13 +2396,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
     
     <label class="md-nav__link" for="nav-6-5">
       Bug Tracking/DataSync
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Bug Tracking/DataSync" data-md-level="2">
       <label class="md-nav__title" for="nav-6-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Bug Tracking/DataSync
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2363,7 +2444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+/" title="Jira Server" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" title="Jira Server" class="md-nav__link">
       Jira Server
     </a>
   </li>
@@ -2507,7 +2588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+/" title="Axosoft" class="md-nav__link">
+    <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14%2B/" title="Axosoft" class="md-nav__link">
       Axosoft
     </a>
   </li>
@@ -2561,13 +2642,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
     
     <label class="md-nav__link" for="nav-6-6">
       VCS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="VCS" data-md-level="2">
       <label class="md-nav__title" for="nav-6-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         VCS
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2669,13 +2756,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
     
     <label class="md-nav__link" for="nav-6-7">
       Email
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Email" data-md-level="2">
       <label class="md-nav__title" for="nav-6-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Email
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2729,13 +2822,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
     <label class="md-nav__link" for="nav-6-8">
       Help Desk
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Help Desk" data-md-level="2">
       <label class="md-nav__title" for="nav-6-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Help Desk
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2777,13 +2876,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
     
     <label class="md-nav__link" for="nav-6-9">
       Migration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Migration" data-md-level="2">
       <label class="md-nav__title" for="nav-6-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Migration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2807,7 +2912,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365)/" title="Excel (Office 365)" class="md-nav__link">
+    <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29/" title="Excel (Office 365)" class="md-nav__link">
       Excel (Office 365)
     </a>
   </li>
@@ -2933,13 +3038,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-10" type="checkbox" id="nav-6-10">
     
     <label class="md-nav__link" for="nav-6-10">
       Build Servers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Build Servers" data-md-level="2">
       <label class="md-nav__title" for="nav-6-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Build Servers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3005,13 +3116,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-11" type="checkbox" id="nav-6-11">
     
     <label class="md-nav__link" for="nav-6-11">
       Requirements
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="Requirements" data-md-level="2">
       <label class="md-nav__title" for="nav-6-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Requirements
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3094,13 +3211,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="About" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         About
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3218,13 +3341,18 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -3246,7 +3374,7 @@
     Writing the ESQL Query Used in the Graph
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Writing the ESQL Query Used in the Graph">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3294,7 +3422,7 @@
     Entity SQL Syntax Basics
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Entity SQL Syntax Basics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3349,7 +3477,7 @@
     Differences Between ESQL and Traditional Database SQL
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Differences Between ESQL and Traditional Database SQL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3364,7 +3492,7 @@
     Changes to Group By
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Changes to Group By">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3412,7 +3540,7 @@
     Group By Clause Differences
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Group By Clause Differences">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3479,7 +3607,7 @@
     Advanced Entity SQL Queries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Advanced Entity SQL Queries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3508,10 +3636,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -3525,16 +3649,19 @@
               
                 
                 
-                <h1 id="custom-graphs-tutorial-and-introduction">Custom Graphs Tutorial and Introduction</h1>
-<h2 id="introduction">Introduction</h2>
+                  
+                
+                
+                <h1 id="custom-graphs-tutorial-and-introduction">Custom Graphs Tutorial and Introduction<a class="headerlink" href="#custom-graphs-tutorial-and-introduction" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>One of the maxims I always tell developers is that regardless of what you build, customers will never be satisfied with the reports you offer or the integration that you provide. In fact, the two most underestimated tasks in software development are data feeds and reporting. So one of the nice features in our Spira platform is the ability to do custom graphing, so that you are not limited to just the graphs that ship with the system.</p>
-<h2 id="creating-custom-graphs">Creating Custom Graphs</h2>
+<h2 id="creating-custom-graphs">Creating Custom Graphs<a class="headerlink" href="#creating-custom-graphs" title="Permanent link">&para;</a></h2>
 <p>To create a custom report,  go to: Administration &gt; System Administration &gt; Reporting &gt; Edit Graphs:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-1.png" /></p>
 <p>When you click on the <strong>Edit Graphs</strong> link, you will be taken to the custom graph configuration page where you can add / modify custom graphs.</p>
 <p>This page lets you create custom graphs and charts in the system that your users can run in the various products they have access to. Note that the graph definitions themselves are global to the system and therefore available in all products.</p>
 <p><img alt="" src="../img/custom-graph-tutorial-2.png" /></p>
-<p>You can click the <code class="codehilite"><span class="err">Edit</span></code> button to modify an existing graph, or click <code class="codehilite"><span class="err">Add New Custom Graph</span></code> to create an new one. In either case, you will see the custom graph editing screen.</p>
+<p>You can click the <code>Edit</code> button to modify an existing graph, or click <code>Add New Custom Graph</code> to create an new one. In either case, you will see the custom graph editing screen.</p>
 <p>The graph list page has the following additional operations:</p>
 <ul>
 <li><strong>Clone</strong>: this will make a copy of the graph with '- Copy' appended to the name</li>
@@ -3549,27 +3676,22 @@
 <li><strong>Position</strong>: use this to specify the relative position of the graph in the list of custom graphs.</li>
 <li><strong>Query</strong>: this is where you enter the actual query used to generate the graph data. We shall discuss this below.</li>
 </ul>
-<h2 id="writing-the-esql-query-used-in-the-graph">Writing the ESQL Query Used in the Graph</h2>
+<h2 id="writing-the-esql-query-used-in-the-graph">Writing the ESQL Query Used in the Graph<a class="headerlink" href="#writing-the-esql-query-used-in-the-graph" title="Permanent link">&para;</a></h2>
 <p>The <strong>Query</strong> box is where you can choose the <strong>Reportable Entity</strong> from the dropdown list and then use that base query to create your own custom query.</p>
 <p>We recommend that you first choose the appropriate <strong>reportable entity</strong> from the dropdown list. In the example  below, we have selected the "Test Runs" reportable entity:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-4.png" /></p>
 <p>This will automatically populate the following query in the <strong>Query</strong> editor:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">value</span> <span class="n">R</span> <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span> <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">R</span> <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span> <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
+</code></pre></div>
 
 <p>This query tells Spira to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking <strong>Display Data Grid</strong> to see all of the columns that you can use in the graph:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-5.png" /></p>
 <p>This will help you decide which columns are important for your graph. You can then adjust the query to only include those columns:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span>
 <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>In this modified query, we have replaced the keyword <strong>value</strong> with the specific column names. We have also added an aggregation function called <strong>COUNT</strong> to count the number of test runs and group by the execution status name column. Spira uses a modified SQL language called Entity SQL created by Microsoft that we'll be discussing in more detail in later articles in this series.</p>
 <p>You may have noticed that we had a special token in the query <strong>${ProjectId}</strong>, this token will be evaluated during the generation of the graph and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token <strong>${ProjectGroupId}</strong>. If you don't use either token, the graph will include all the items in the entire system, across all products and programs.</p>
@@ -3585,18 +3707,18 @@
 <p class="admonition-title">Note</p>
 <p>For donut graphs, only one data range is supported, for line/bar charts, you can have multiple ranges</p>
 </div>
-<h3 id="a-donut-chart">a) Donut Chart</h3>
+<h3 id="a-donut-chart">a) Donut Chart<a class="headerlink" href="#a-donut-chart" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/custom-graph-tutorial-7.png" /></p>
-<h3 id="b-bar-graph">b) Bar Graph</h3>
+<h3 id="b-bar-graph">b) Bar Graph<a class="headerlink" href="#b-bar-graph" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/custom-graph-tutorial-8.png" /></p>
-<h3 id="c-line-chart">c) Line Chart</h3>
+<h3 id="c-line-chart">c) Line Chart<a class="headerlink" href="#c-line-chart" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/custom-graph-tutorial-9.png" /></p>
 <p>Once you are happy with your graph design, make sure the <strong>Active</strong> flag is set to <strong>Yes</strong> and then click <strong>Save</strong> to publish the graph for your end users.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you create a graph that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.</p>
 </div>
-<h2 id="viewing-custom-graphs">Viewing Custom Graphs</h2>
+<h2 id="viewing-custom-graphs">Viewing Custom Graphs<a class="headerlink" href="#viewing-custom-graphs" title="Permanent link">&para;</a></h2>
 <p>Once published, the custom graphs can be displayed in the main <strong>Reports</strong> dashboard by your end users:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-10.png" /></p>
 <p>Once you have added an instance of the <strong>Custom Graphs</strong> to your dashboard, you can choose the specific graph, and the visualization type (donut, bar, and line currently):</p>
@@ -3604,27 +3726,21 @@
 <p>You can display the data being used to generate the graph by clicking on the data-grid button in the bottom-left:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-12.png" /></p>
 <p>As with all of the graphs on the reporting dashboard, you can export the data-grid as a CSV / Excel sheet, and export the actual graph as an image (PNG, JPEG, and BMP formats supported).</p>
-<h2 id="understanding-entity-sql-esql">Understanding Entity SQL (ESQL)</h2>
+<h2 id="understanding-entity-sql-esql">Understanding Entity SQL (ESQL)<a class="headerlink" href="#understanding-entity-sql-esql" title="Permanent link">&para;</a></h2>
 <p>This section explains how you can use Entity SQL to write queries to pull back the data you need for your graphs.</p>
 <p>The language that we use for creating graphs (and reports) in Spira is called "<em>Entity SQL</em>" (abbreviated to <strong>ESQL</strong>) and is based on the standard database Structured Query Language (SQL) but modified by Microsoft to work against a conceptual object oriented data structure rather than a traditional relational database. According to the <a href="http://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/entity-sql-overview">Microsoft Entity SQL website</a>:</p>
 <blockquote>
 <p>Entity SQL is a SQL-like language that enables you to query conceptual models in the Entity Framework. Conceptual models represent data as entities and relationships, and Entity SQL allows you to query those entities and relationships in a format that is familiar to those who have used SQL.</p>
 </blockquote>
-<h2 id="entity-sql-syntax-basics">Entity SQL Syntax Basics</h2>
+<h2 id="entity-sql-syntax-basics">Entity SQL Syntax Basics<a class="headerlink" href="#entity-sql-syntax-basics" title="Permanent link">&para;</a></h2>
 <p>Similar to database SQL, ESQL supports query that consists of the following parts:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">properties</span> <span class="k">or</span> <span class="k">object</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">properties</span> <span class="k">or</span> <span class="k">object</span>
 <span class="k">from</span> <span class="n">entity</span> <span class="n">collection</span> <span class="k">as</span> <span class="k">alias</span>
 <span class="k">join</span> <span class="n">other</span> <span class="n">entity</span> <span class="n">collections</span> <span class="k">on</span> <span class="n">relationship</span>
 <span class="k">where</span> <span class="n">conditions</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">properties</span>
 <span class="k">order</span> <span class="k">by</span> <span class="n">properties</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>When using ESQL with Spira's reporting system, the entity collections you can use are the ones generated from the 'Add New Query' dropdown discussed in the previous article. For example, you have:</p>
 <ul>
@@ -3635,66 +3751,47 @@
 </ul>
 <p>The <strong>R_xxx</strong> prefix is used to distinguish the entities available for reporting from the core entities used by Spira internally for its data access. You will only ever be able query the R_ prefixed entities from within the Spira reporting system.</p>
 <p>A simple query used to retrieve all of the requirements in project 1 sorted by hierarchical order then ID would be:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">value</span> <span class="n">RQ</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">RQ</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_Requirements</span> <span class="k">as</span> <span class="n">RQ</span>
 <span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">order</span> <span class="k">by</span> <span class="n">RQ</span><span class="p">.</span><span class="n">INDENT_LEVEL</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>A more complex query that selects specific requirement properties (vs. the entire object), joins to other table (e.g. to get test case object properties as well) would be:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">TEST_CASE_NAME</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">TEST_CASE_NAME</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_Requirements</span> <span class="k">as</span> <span class="n">RQ</span>
 <span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_RequirementTestCases</span> <span class="k">as</span> <span class="n">RT</span> <span class="k">on</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="o">=</span> <span class="n">RT</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
 <span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestCases</span> <span class="k">as</span> <span class="n">TC</span> <span class="k">on</span> <span class="n">RT</span><span class="p">.</span><span class="n">TEST_CASE_ID</span> <span class="o">=</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span> 
 <span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">order</span> <span class="k">by</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">NAME</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>Finally, you can add on an aggregation function and group by to group by one property and aggregate the other properties against this. For example to get a count of the test cases associated with each requirement, instead of the test case names would be:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">)</span> <span class="k">as</span> <span class="n">TEST_CASE_COUNT</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">)</span> <span class="k">as</span> <span class="n">TEST_CASE_COUNT</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_Requirements</span> <span class="k">as</span> <span class="n">RQ</span>
 <span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_RequirementTestCases</span> <span class="k">as</span> <span class="n">RT</span> <span class="k">on</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="o">=</span> <span class="n">RT</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
 <span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestCases</span> <span class="k">as</span> <span class="n">TC</span> <span class="k">on</span> <span class="n">RT</span><span class="p">.</span><span class="n">TEST_CASE_ID</span> <span class="o">=</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span>
 <span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span>
 <span class="k">order</span> <span class="k">by</span> <span class="n">TEST_CASE_COUNT</span> <span class="k">desc</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>In this last case, we're sorting the list of requirements by the count of associated test cases (in descending order).</p>
 <p>So now that we have seen some example queries, let's examine each of the parts of the query in turn:</p>
-<h3 id="the-select-clause">The SELECT Clause</h3>
+<h3 id="the-select-clause">The SELECT Clause<a class="headerlink" href="#the-select-clause" title="Permanent link">&para;</a></h3>
 <p>The <strong>select</strong> clause of an ESQL query can consist of either:</p>
 <ul>
 <li>a single object reference, prefixed by <strong>value</strong>. This is semantically equivalent to SELECT * in database SQL and means evaluate all of the properties of the object.</li>
 <li>a comma separated list of discrete object properties. They need to have their object alias prefixes (e.g. RQ in the examples above)</li>
 </ul>
 <p>So for example we could have:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">value</span> <span class="n">RQ</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">RQ</span>
+</code></pre></div>
 
 <p>that selects all of the properties in the requirements table (i.e. all the columns).</p>
 <p>Alternatively you could select specific properties (columns) from one or more object:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">TEST_CASE_NAME</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">,</span> <span class="n">TC</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">TEST_CASE_NAME</span>
+</code></pre></div>
 
 <p>In this case, we omit the <strong>value</strong> prefix since it's not evaluating all of the properties of an object. Since two of the properties have the same name ("NAME") we are using the <strong>as</strong> operator to give the property returned a unique name. This is important. If you try and return back two properties with the same name, Spira will give the following error message:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-13.png" /></p>
@@ -3709,23 +3806,20 @@
 </ul>
 <p>A full list of <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/aggregate-canonical-functions">Entity SQL aggregate functions</a> can be found on the Microsoft ESQL reference website.</p>
 <p>For example, we can count how many times one property appears relative to another column:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">)</span> <span class="k">as</span> <span class="n">TEST_CASE_COUNT</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span> <span class="k">as</span> <span class="n">REQUIREMENT_NAME</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">TC</span><span class="p">.</span><span class="n">TEST_CASE_ID</span><span class="p">)</span> <span class="k">as</span> <span class="n">TEST_CASE_COUNT</span>
+</code></pre></div>
 
 <p>Note that in this case we recommend you always specify an alias for the result of the aggregation function using the <strong>as</strong> operator. If you forget, you'll get the same error message as before:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-13.png" /></p>
-<h3 id="the-from-clause">The FROM Clause</h3>
+<h3 id="the-from-clause">The FROM Clause<a class="headerlink" href="#the-from-clause" title="Permanent link">&para;</a></h3>
 <p>The <strong>from</strong> </span>clause in ESQL is relatively simple, it contains the primary object collection being queried and an alias that will be used to reference its properties in the other parts of the query:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_Requirements</span> <span class="k">as</span> <span class="n">RQ</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_Requirements</span> <span class="k">as</span> <span class="n">RQ</span>
+</code></pre></div>
 
-<h3 id="the-join-clauses">The JOIN Clauses</h3>
+<h3 id="the-join-clauses">The JOIN Clauses<a class="headerlink" href="#the-join-clauses" title="Permanent link">&para;</a></h3>
 <p>If you are only going to need to work with the properties from a single object collection then you don't need to have any <strong>join</strong></span> clauses in your query. However if you are going to need data from multiple object collections, then you will need to use the join clause to add in those other collections. A simple join clause looks like:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_RequirementTestCases</span> <span class="k">as</span> <span class="n">RT</span> <span class="k">on</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="o">=</span> <span class="n">RT</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">join</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_RequirementTestCases</span> <span class="k">as</span> <span class="n">RT</span> <span class="k">on</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="o">=</span> <span class="n">RT</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span>
+</code></pre></div>
 
 <p>where you add the name of the entity collection being joined, the alias to refer to it with, and the comparison operator (in this case an equality) used to make the join.</p>
 <p>Entity SQL supports the following types of join:</p>
@@ -3736,7 +3830,7 @@
 <li><strong>full outer join</strong> or <strong>full join</strong> - All rows from both sides of the comparison are returned, with NULL values being used for non-matching rows on the alternate side.</li>
 <li><strong>cross join</strong> - This query expression produces the Cartesian product of the two collections from the left and right hand sides.</li>
 </ul>
-<h3 id="the-where-clauses">The WHERE Clauses</h3>
+<h3 id="the-where-clauses">The WHERE Clauses<a class="headerlink" href="#the-where-clauses" title="Permanent link">&para;</a></h3>
 <p>The <strong>where</strong> clause in ESQL lets you filter the results by one or more condition. In addition to the standard ESQL syntax, you can use the special Spira tokens to filter by dynamic data in the system:</p>
 <ul>
 <li>${ProjectGroupId} - the current program (formerly known as project group)</li>
@@ -3750,14 +3844,12 @@
 </ul>
 <p>Generally <strong>and</strong> operators have higher precedence than <strong>or</strong> operators, so you will need to use parenthesis when you want to have <strong>or</strong> operators that are higher precedence than an <strong>and</strong>.</p>
 <p>For example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">where</span> <span class="p">(</span><span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">or</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">where</span> <span class="p">(</span><span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">or</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
 
 <p>means that you will retrieve any un-deleted requirement that is in project 1 or project 2, whereas this would mean something completely different:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">or</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">or</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
 
 <p>this would retrieve all (including deleted) requirements in project 1, and any un-deleted ones from project 2.</p>
 <p>The type of operator you can use in the various conditions include:</p>
@@ -3802,22 +3894,19 @@
 </li>
 </ul>
 <p>For example you might have a compound conditional clause such as:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">&lt;=</span> <span class="mi">4</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">and</span> <span class="p">(</span><span class="n">RQ</span><span class="p">.</span><span class="n">TASK_ACTUAL_EFFORT</span> <span class="o">+</span> <span class="n">RQ</span><span class="p">.</span><span class="n">TASK_REMAINING_EFFORT</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">where</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">&lt;=</span> <span class="mi">4</span> <span class="k">and</span> <span class="n">RQ</span><span class="p">.</span><span class="n">IS_DELETED</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">and</span> <span class="p">(</span><span class="n">RQ</span><span class="p">.</span><span class="n">TASK_ACTUAL_EFFORT</span> <span class="o">+</span> <span class="n">RQ</span><span class="p">.</span><span class="n">TASK_REMAINING_EFFORT</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div>
 
-<h3 id="aggregations-and-group-by">Aggregations and GROUP BY</h3>
+<h3 id="aggregations-and-group-by">Aggregations and GROUP BY<a class="headerlink" href="#aggregations-and-group-by" title="Permanent link">&para;</a></h3>
 <p>In the discussion of the <strong>select</strong> clause we mentioned that you can use <strong>aggregation</strong> functions such as <strong>count, sum, min, max</strong>, etc. If you use these in the <strong>select</strong> clause, then any object properties that are not being aggregated need to be included in the <strong>group by</strong> clause:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">group</span> <span class="k">by</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">group</span> <span class="k">by</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">NAME</span>
+</code></pre></div>
 
 <p>If you don't have any aggregation functions, you can still use a <strong>group by</strong> clause to simply group similar rows, but generally speaking you omit the <strong>group by</strong> clause if there are no aggregation functions in the <strong>select</strong> list.</p>
-<h3 id="sorting-and-order-by">Sorting and ORDER BY</h3>
+<h3 id="sorting-and-order-by">Sorting and ORDER BY<a class="headerlink" href="#sorting-and-order-by" title="Permanent link">&para;</a></h3>
 <p>Finally, you typically want to sort the data by one or more of the object properties, this is done by having an order by clause at the end of the query:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">order</span> <span class="k">by</span> <span class="n">TEST_CASE_COUNT</span> <span class="k">desc</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="k">asc</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">order</span> <span class="k">by</span> <span class="n">TEST_CASE_COUNT</span> <span class="k">desc</span><span class="p">,</span> <span class="n">RQ</span><span class="p">.</span><span class="n">REQUIREMENT_ID</span> <span class="k">asc</span>
+</code></pre></div>
 
 <p>The syntax of the order by clause is:</p>
 <ul>
@@ -3826,142 +3915,113 @@
 <li><strong>asc</strong> or <strong>desc</strong> for ascending or descending order (if omitted, it will default to ascending)</li>
 </ul>
 <p>If you sort by a property (e.g. requirement name) that could be held by multiple rows, it is recommended to always add a final sort clause by a guaranteed unique ID such as the primary key <strong>REQUIREMENT_ID</strong> since that will ensure the results are consistent each time. This is known as 'stable sorting'</p>
-<h2 id="differences-between-esql-and-traditional-database-sql">Differences Between ESQL and Traditional Database SQL</h2>
+<h2 id="differences-between-esql-and-traditional-database-sql">Differences Between ESQL and Traditional Database SQL<a class="headerlink" href="#differences-between-esql-and-traditional-database-sql" title="Permanent link">&para;</a></h2>
 <p>Now that we have covered the basics of writing an Entity SQL (ESQL) query, we'll discuss some of the differences and limitations between ESQL and traditional database SQL.</p>
-<h3 id="no-support-for">No Support for *</h3>
-<p>Database SQL supports the unqualified * syntax as an alias for the entire row, and the qualified * syntax (t.*) as a shortcut for the fields of that table. In addition, database SQL allows for a special <code class="codehilite"><span class="err">count(*)</span></code> aggregate, which includes nulls.</p>
+<h3 id="no-support-for">No Support for *<a class="headerlink" href="#no-support-for" title="Permanent link">&para;</a></h3>
+<p>Database SQL supports the unqualified * syntax as an alias for the entire row, and the qualified * syntax (t.*) as a shortcut for the fields of that table. In addition, database SQL allows for a special <code>count(*)</code> aggregate, which includes nulls.</p>
 <p>Entity SQL does not support the * construct. Database SQL queries of the form:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">T</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">T</span>
+</code></pre></div>
 
 <p>and</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">T1</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> <span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">...</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">T1</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> <span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">...</span>
+</code></pre></div>
 
 <p>can be expressed in Entity SQL as</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">value</span> <span class="n">t</span> <span class="k">from</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">t</span> <span class="k">from</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span>
+</code></pre></div>
 
 <p>and</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">value</span> <span class="n">t1</span> <span class="k">from</span> <span class="n">T1</span> <span class="k">as</span> <span class="n">t1</span><span class="p">,</span> <span class="n">T2</span> <span class="k">as</span> <span class="n">t2</span><span class="p">...</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">t1</span> <span class="k">from</span> <span class="n">T1</span> <span class="k">as</span> <span class="n">t1</span><span class="p">,</span> <span class="n">T2</span> <span class="k">as</span> <span class="n">t2</span><span class="p">...</span>
+</code></pre></div>
 
 <p>respectively.</p>
-<p>Additionally, these constructs handle inheritance (value substitutability), while the <code class="codehilite"><span class="err">select *</span></code> variants are restricted to top-level properties of the declared type. Entity SQL does not support the <code class="codehilite"><span class="err">count(*)</span></code> aggregate. Use <code class="codehilite"><span class="err">count(0)</span></code> instead.</p>
-<h3 id="changes-to-group-by">Changes to Group By</h3>
-<p>Entity SQL supports aliasing of <code class="codehilite"><span class="err">group by</span></code> keys. Expressions in the <code class="codehilite"><span class="err">select</span></code> clause and <code class="codehilite"><span class="err">having</span></code> clause must refer to the <code class="codehilite"><span class="err">group by</span></code> keys via these aliases. For example, this Entity SQL syntax:</p>
-<h4 id="esql">ESQL</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">k1</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">),</span> <span class="k">sum</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">)</span>
+<p>Additionally, these constructs handle inheritance (value substitutability), while the <code>select *</code> variants are restricted to top-level properties of the declared type. Entity SQL does not support the <code>count(*)</code> aggregate. Use <code>count(0)</code> instead.</p>
+<h3 id="changes-to-group-by">Changes to Group By<a class="headerlink" href="#changes-to-group-by" title="Permanent link">&para;</a></h3>
+<p>Entity SQL supports aliasing of <code>group by</code> keys. Expressions in the <code>select</code> clause and <code>having</code> clause must refer to the <code>group by</code> keys via these aliases. For example, this Entity SQL syntax:</p>
+<h4 id="esql">ESQL<a class="headerlink" href="#esql" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">k1</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">),</span> <span class="k">sum</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">a</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">t</span><span class="p">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="k">c</span> <span class="k">AS</span> <span class="n">k1</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>...is equivalent to the following database SQL:</p>
-<h4 id="sql">SQL</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">b</span> <span class="o">+</span> <span class="k">c</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<h4 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">b</span> <span class="o">+</span> <span class="k">c</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="n">T</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">b</span> <span class="o">+</span> <span class="k">c</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
-<h3 id="collection-based-aggregates">Collection-Based Aggregates</h3>
+<h3 id="collection-based-aggregates">Collection-Based Aggregates<a class="headerlink" href="#collection-based-aggregates" title="Permanent link">&para;</a></h3>
 <p>Entity SQL supports two kinds of aggregates.</p>
-<p>Collection-based aggregates operate on collections and produce the aggregated result. These can appear anywhere in the query, and do not require a <code class="codehilite"><span class="err">group by</span></code> clause. For example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">a</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="err">}</span><span class="p">)</span> <span class="k">AS</span> <span class="n">b</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span>
-</pre></div>
-</td></tr></table>
+<p>Collection-based aggregates operate on collections and produce the aggregated result. These can appear anywhere in the query, and do not require a <code>group by</code> clause. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">a</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="err">}</span><span class="p">)</span> <span class="k">AS</span> <span class="n">b</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span>
+</code></pre></div>
 
 <p>Entity SQL also supports SQL-style aggregates. For example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">a</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">b</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">a</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">a</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">b</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">a</span>
+</code></pre></div>
 
-<h3 id="order-by-clause-usage">ORDER BY Clause Usage</h3>
-<p>Database SQL allows <code class="codehilite"><span class="err">ORDER BY</span></code> clauses to be specified only in the topmost <code class="codehilite"><span class="err">SELECT .. FROM .. WHERE</span></code> block. In Entity SQL you can use a nested <code class="codehilite"><span class="err">ORDER BY</span></code> expression and it can be placed anywhere in the query, but ordering in a nested query is not preserved.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">-- The following query will order the results by the last name  </span>
+<h3 id="order-by-clause-usage">ORDER BY Clause Usage<a class="headerlink" href="#order-by-clause-usage" title="Permanent link">&para;</a></h3>
+<p>Database SQL allows <code>ORDER BY</code> clauses to be specified only in the topmost <code>SELECT .. FROM .. WHERE</code> block. In Entity SQL you can use a nested <code>ORDER BY</code> expression and it can be placed anywhere in the query, but ordering in a nested query is not preserved.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- The following query will order the results by the last name  </span>
 <span class="k">SELECT</span> <span class="n">C1</span><span class="p">.</span><span class="n">FirstName</span><span class="p">,</span> <span class="n">C1</span><span class="p">.</span><span class="n">LastName</span>  
         <span class="k">FROM</span> <span class="n">AdventureWorks</span><span class="p">.</span><span class="n">Contact</span> <span class="k">AS</span> <span class="n">C1</span>
         <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">C1</span><span class="p">.</span><span class="n">LastName</span>  
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">-- In the following query ordering of the nested query is ignored.  </span>
+<div class="highlight"><pre><span></span><code><span class="c1">-- In the following query ordering of the nested query is ignored.  </span>
 <span class="k">SELECT</span> <span class="n">C2</span><span class="p">.</span><span class="n">FirstName</span><span class="p">,</span> <span class="n">C2</span><span class="p">.</span><span class="n">LastName</span>  
     <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">C1</span><span class="p">.</span><span class="n">FirstName</span><span class="p">,</span> <span class="n">C1</span><span class="p">.</span><span class="n">LastName</span>  
         <span class="k">FROM</span> <span class="n">AdventureWorks</span><span class="p">.</span><span class="n">Contact</span> <span class="k">as</span> <span class="n">C1</span>  
         <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">C1</span><span class="p">.</span><span class="n">LastName</span><span class="p">)</span> <span class="k">as</span> <span class="n">C2</span>  
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
-<h3 id="caseaccent-sensitivity">Case/Accent Sensitivity</h3>
+<h3 id="caseaccent-sensitivity">Case/Accent Sensitivity<a class="headerlink" href="#caseaccent-sensitivity" title="Permanent link">&para;</a></h3>
 <p>In database SQL, identifier comparison is based on the settings of the current database and the database platform being used (SQL Server, Oracle, MySQL, etc.). In Entity SQL, identifiers are always case insensitive and accent sensitive (that is, Entity SQL distinguishes between accented and unaccented characters; for example, 'a' is not equal to 'ấ'). Entity SQL treats versions of letters that appear the same but are from different code pages as different characters.</p>
-<h3 id="group-by-clause-differences">Group By Clause Differences</h3>
-<p>Entity SQL also imposes additional restrictions on queries involving <code class="codehilite"><span class="err">group by</span></code> clauses. Expressions in the <code class="codehilite"><span class="err">select</span></code> clause and <code class="codehilite"><span class="err">having</span></code> clause of such queries may only refer to the <code class="codehilite"><span class="err">group by</span></code> keys via their aliases. The following construct is valid in most database SQL variants but are not in Entity SQL:</p>
-<h4 id="sql_1">SQL</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">group</span> <span class="k">BY</span> <span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span>
-</pre></div>
-</td></tr></table>
+<h3 id="group-by-clause-differences">Group By Clause Differences<a class="headerlink" href="#group-by-clause-differences" title="Permanent link">&para;</a></h3>
+<p>Entity SQL also imposes additional restrictions on queries involving <code>group by</code> clauses. Expressions in the <code>select</code> clause and <code>having</code> clause of such queries may only refer to the <code>group by</code> keys via their aliases. The following construct is valid in most database SQL variants but are not in Entity SQL:</p>
+<h4 id="sql_1">SQL<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">group</span> <span class="k">BY</span> <span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span>
+</code></pre></div>
 
-<h4 id="esql_1">ESQL</h4>
+<h4 id="esql_1">ESQL<a class="headerlink" href="#esql_1" title="Permanent link">&para;</a></h4>
 <p>To do this in Entity SQL:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">k</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="k">AS</span> <span class="n">k</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">k</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">t</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="k">AS</span> <span class="n">k</span>
+</code></pre></div>
 
-<h3 id="referencing-columns-properties-of-tables-collections">Referencing Columns (Properties) of Tables (Collections)</h3>
-<p>All column references in Entity SQL must be qualified with the table alias. The following construct (assuming that <code class="codehilite"><span class="err">a</span></code> is a valid column of table <code class="codehilite"><span class="err">T</span></code>) is valid in database SQL but not in Entity SQL.</p>
+<h3 id="referencing-columns-properties-of-tables-collections">Referencing Columns (Properties) of Tables (Collections)<a class="headerlink" href="#referencing-columns-properties-of-tables-collections" title="Permanent link">&para;</a></h3>
+<p>All column references in Entity SQL must be qualified with the table alias. The following construct (assuming that <code>a</code> is a valid column of table <code>T</code>) is valid in database SQL but not in Entity SQL.</p>
 <p>SQL:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">a</span> <span class="k">FROM</span> <span class="n">T</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">a</span> <span class="k">FROM</span> <span class="n">T</span>
+</code></pre></div>
 
 <p>The Entity SQL form is</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">A</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">AS</span> <span class="n">A</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">AS</span> <span class="n">t</span>
+</code></pre></div>
 
-<p>The table aliases are optional in the <code class="codehilite"><span class="err">from</span></code> clause. The name of the table is used as the implicit alias. Entity SQL allows the following form as well:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">Tab</span><span class="p">.</span><span class="n">a</span> <span class="k">FROM</span> <span class="n">Tab</span>
-</pre></div>
-</td></tr></table>
+<p>The table aliases are optional in the <code>from</code> clause. The name of the table is used as the implicit alias. Entity SQL allows the following form as well:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">Tab</span><span class="p">.</span><span class="n">a</span> <span class="k">FROM</span> <span class="n">Tab</span>
+</code></pre></div>
 
-<h3 id="navigation-through-objects">Navigation Through Objects</h3>
+<h3 id="navigation-through-objects">Navigation Through Objects<a class="headerlink" href="#navigation-through-objects" title="Permanent link">&para;</a></h3>
 <p>Database SQL uses the "." notation for referencing columns of (a row of) a table. Entity SQL extends this notation (borrowed from programming languages) to support navigation through properties of an object.</p>
-<p>For example, if <code class="codehilite"><span class="err">p</span></code> is an expression of type Person, the following is the Entity SQL syntax for referencing the city of the address of this person.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">p</span><span class="p">.</span><span class="n">Address</span><span class="p">.</span><span class="n">City</span>   
-</pre></div>
-</td></tr></table>
+<p>For example, if <code>p</code> is an expression of type Person, the following is the Entity SQL syntax for referencing the city of the address of this person.</p>
+<div class="highlight"><pre><span></span><code><span class="n">p</span><span class="p">.</span><span class="n">Address</span><span class="p">.</span><span class="n">City</span>   
+</code></pre></div>
 
-<h3 id="collections-of-literals">Collections of Literals</h3>
+<h3 id="collections-of-literals">Collections of Literals<a class="headerlink" href="#collections-of-literals" title="Permanent link">&para;</a></h3>
 <p>In database SQL, if you want to refer to a collection of possible values, you would use an IN clause together with a set of values contained within parenthesis:</p>
 <p><strong>SQL</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span> <span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">b</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">FROM</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span> <span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">b</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
 
 <p>In Entity SQL, the syntax for a collection of values is based on braces / curly brackets instead:</pre></p>
 <p><strong>ESQL</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">from</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span> <span class="k">where</span> <span class="n">t</span><span class="p">.</span><span class="n">b</span> <span class="k">in</span> <span class="err">{</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="err">}</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">t</span><span class="p">.</span><span class="n">a</span> <span class="k">from</span> <span class="n">T</span> <span class="k">as</span> <span class="n">t</span> <span class="k">where</span> <span class="n">t</span><span class="p">.</span><span class="n">b</span> <span class="k">in</span> <span class="err">{</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="err">}</span>
+</code></pre></div>
 
-<h3 id="differences-in-literals-and-types">Differences in Literals and Types</h3>
+<h3 id="differences-in-literals-and-types">Differences in Literals and Types<a class="headerlink" href="#differences-in-literals-and-types" title="Permanent link">&para;</a></h3>
 <p>There are some differences between how literal values and types are represented in Entity SQL vs. Database SQL:</p>
 <ul>
 <li>In database SQL, you typically represent boolean values as 1 or 0 whereas in Entity SQL you use <strong>true</strong></span>** and <strong>false</strong></li>
@@ -3969,19 +4029,17 @@
 <li>Integer literals can be of type Int32 (123), UInt32 (123U), Int64 (123L), and UInt64 (123UL)</li>
 <li>DateTime literals, both date and time parts are mandatory. There are no default values. For example, a date literal would be:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATETIME</span> <span class="s1">&#39;2006-12-25 01:01:00.000&#39;</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="n">DATETIME</span> <span class="s1">&#39;2006-12-25 01:01:00.000&#39;</span>
+</code></pre></div>
 
 <ul>
-<li>There are Unicode and non-Unicode character string literals. Unicode strings are prepended with N. For example, <code class="codehilite"><span class="err">N&#39;hello&#39;</span></code>.</li>
+<li>There are Unicode and non-Unicode character string literals. Unicode strings are prepended with N. For example, <code>N'hello'</code>.</li>
 <li>Typed nulls can be used anywhere. Type inference is not required for typed nulls because the type is known. For example, you can construct a null of type Int16 with the following Entity SQL construct:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">(</span><span class="k">cast</span><span class="p">(</span><span class="k">null</span> <span class="k">as</span> <span class="n">Int16</span><span class="p">))</span>
-</pre></div>
-</td></tr></table>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">cast</span><span class="p">(</span><span class="k">null</span> <span class="k">as</span> <span class="n">Int16</span><span class="p">))</span>
+</code></pre></div>
 
-<h3 id="database-sql-functionality-not-available-in-entity-sql">Database SQL Functionality Not Available in Entity SQL</h3>
+<h3 id="database-sql-functionality-not-available-in-entity-sql">Database SQL Functionality Not Available in Entity SQL<a class="headerlink" href="#database-sql-functionality-not-available-in-entity-sql" title="Permanent link">&para;</a></h3>
 <p>The following database SQL functionality is not available in Entity SQL.</p>
 <ul>
 <li><strong>DML Commands</strong> - Entity SQL currently provides no support for DML statements (insert, update, delete).</li>
@@ -3991,18 +4049,14 @@
 <li><strong>Analytic Functions</strong> - Entity SQL does not (yet) provide support for analytic functions.</li>
 <li><strong>Built-in Functions, Operators</strong> - Entity SQL supports a subset of most database SQL's built in functions and operators.</li>
 </ul>
-<h2 id="advanced-entity-sql-queries">Advanced Entity SQL Queries</h2>
+<h2 id="advanced-entity-sql-queries">Advanced Entity SQL Queries<a class="headerlink" href="#advanced-entity-sql-queries" title="Permanent link">&para;</a></h2>
 <p>Now that we have discussed the differences between traditional database SQL and Entity SQL, we will cover some more advanced queries and functions that customers typically will want to use when creating custom graphs with Spira.</p>
 <p>At the top of this tutorial, we outlined a sample ESQL query to get the count of test runs by execution status:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span>
 <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>As we discussed, when using ESQL queries to display custom graphs, there are some restrictions about the <strong>select</strong> clause of the query:</p>
 <ul>
@@ -4010,19 +4064,9 @@
 <li>The other columns need to be purely numeric, and will be used to populate the data series that will be mapped to the x-axis categories.</li>
 </ul>
 <p>We will now be looking at some specific examples of graphs that users have asked us for help with, that we have some suggestions for...</p>
-<h3 id="1-requirements-addedremoved-over-time">1) Requirements Added/Removed Over Time</h3>
+<h3 id="1-requirements-addedremoved-over-time">1) Requirements Added/Removed Over Time<a class="headerlink" href="#1-requirements-addedremoved-over-time" title="Permanent link">&para;</a></h3>
 <p>For example, lets consider that you want to display a graph of requirements added and removed over time. To get a count of this we can query the <strong>SpiraTestEntities.R_HistoryChangeSets</strong> view to get a count of the changes, filter by additions and deletions, then use a combination of aggregation and the <strong>CAST</strong> operator to count the items added/removed:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span>
 <span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span> <span class="k">as</span> <span class="k">Timestamp</span><span class="p">,</span>
 <span class="k">count</span><span class="p">(</span><span class="k">CASE</span>
 <span class="k">WHEN</span> <span class="n">R</span><span class="p">.</span><span class="n">CHANGETYPE_NAME</span><span class="o">=</span><span class="ss">&quot;Added&quot;</span> <span class="k">THEN</span> <span class="mi">1</span>
@@ -4033,8 +4077,7 @@
 <span class="k">where</span>
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>This will display the following data:</p>
 <table class="table table-striped">
@@ -4089,17 +4132,7 @@
 <p>Which when displayed as a graph would look like:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-14.png" /></p>
 <p>However suppose you want to display this graph by day, not by unique timestamp (a reasonable request), you would use the <strong>TruncateTime</strong> canonical EntitySQL function and combine that with a different way of writing the <strong>GROUP BY</strong> clause:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span>
 <span class="n">DatePart</span><span class="p">,</span>
 <span class="k">count</span><span class="p">(</span><span class="k">CASE</span>
 <span class="k">WHEN</span> <span class="n">R</span><span class="p">.</span><span class="n">CHANGETYPE_NAME</span><span class="o">=</span><span class="ss">&quot;Added&quot;</span> <span class="k">THEN</span> <span class="mi">1</span>
@@ -4110,30 +4143,10 @@
 <span class="k">where</span>
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">TruncateTime</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">)</span> <span class="k">as</span> <span class="n">DatePart</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>This would now give the following results instead:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;Header&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>DatePart<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -4153,33 +4166,13 @@
         <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>which could be graphed as follows:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-15.png" /></p>
-<h2 id="2-aggregating-data-over-time-periods">2) Aggregating Data Over Time Periods</h2>
+<h2 id="2-aggregating-data-over-time-periods">2) Aggregating Data Over Time Periods<a class="headerlink" href="#2-aggregating-data-over-time-periods" title="Permanent link">&para;</a></h2>
 <p>A common need is the ability to aggregate data over multiple time periods. For example, in the query above, we had the list of requirements aggregated by day:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;Header&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>DatePart<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -4199,21 +4192,10 @@
         <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>Suppose we wanted to group the data over a 20 day time period. We would need to modify the query as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span>
 <span class="n">DatePart</span><span class="p">,</span>
 <span class="k">count</span><span class="p">(</span><span class="k">CASE</span>
 <span class="k">WHEN</span> <span class="n">R</span><span class="p">.</span><span class="n">CHANGETYPE_NAME</span><span class="o">=</span><span class="ss">&quot;Added&quot;</span> <span class="k">THEN</span> <span class="mi">1</span>
@@ -4224,8 +4206,7 @@
 <span class="k">where</span>
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">AddDays</span><span class="p">(</span><span class="n">CreateDateTime</span><span class="p">(</span><span class="k">Year</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">DayOfYear</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">)</span><span class="o">/</span><span class="mi">20</span><span class="p">)</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span> <span class="k">as</span> <span class="n">DatePart</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>Now when you execute the query, the system is using the following functions to combines the dates down into 20 day ranges:</p>
 <ul>
@@ -4234,22 +4215,7 @@
 <li>Using <strong>AddDays</strong> and <strong>CreateDateTime</strong> to compose the full date time again, adding the total number of days back to the year base.</li>
 </ul>
 <p>When executed, this will display:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;Header&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>DatePart<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -4265,19 +4231,15 @@
         <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <p>or in graphical form:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-16.png" /></p>
-<h2 id="further-reading">Further Reading</h2>
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/entity-sql-language">Microsoft Entity SQL Reference Documentation</a></li>
 <li><a href="https://www.inflectra.com/Support/KnowledgeBase/spira-reports/List.aspx">Custom Reports Section of Inflectra Knowledge Base</a></li>
 </ul>
-                
-                  
-                
                 
               
               
@@ -4294,34 +4256,34 @@
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Custom-Report-Tutorial/" title="Custom Reports Tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../Custom-Report-Tutorial/" title="Custom Reports Tutorial" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Custom Reports Tutorial
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Custom Report Tokens
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -4336,21 +4298,40 @@
             © Copyright 2006-2020 Inflectra Corporation, All Rights Reserved | en-US |
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/inflectra" class="md-footer-social__link fa fa-github"></a>
+      
+      
+        
+        
+      
+      <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
     
-      <a href="https://twitter.com/inflectra" class="md-footer-social__link fa fa-twitter"></a>
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
     
-      <a href="https://www.linkedin.com/inflectra-corporation" class="md-footer-social__link fa fa-linkedin"></a>
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
     
   </div>
 
@@ -4360,9 +4341,18 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
