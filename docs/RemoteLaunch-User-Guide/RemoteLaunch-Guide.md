@@ -108,6 +108,10 @@ By right clicking on the system tray icon and selecting "Configuration", the app
       read the schedule for the Automation host. Tests that are scheduled
       farther in advance will not show up as a pending test on the status
       screen.
+      -   **Run in Load Balancing Mode**: This is an advanced mode that lets
+      you schedule test sets in Spira for a pool of machines all running RemoteLaunch.
+      Then the next available RemoteLaunch machine will take take the next test
+      case in the test set and run that.
 
 
 ### Extension Configuration
