@@ -3268,7 +3268,7 @@
 <p>On this screen, you can:</p>
 <ul>
 <li>enter information about the user, such as their name, email address, and department</li>
-<li>make the user a portfolio viewer (SpiraPlan only)</li>
+<li>make the user a portfolio viewer (SpiraPlan only). This controls who can access both the homepages of all portfolios and the enterprise homepage</li>
 <li>make the user a system administrator</li>
 <li>create their password, password reset question and answer. </li>
 <li>if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)</li>
@@ -3277,7 +3277,7 @@
 <h3 id="edit-an-existing-user">Edit an existing user<a class="headerlink" href="#edit-an-existing-user" title="Permanent link">&para;</a></h3>
 <p>In a similar way, to edit the details of an existing user, click the "Edit" hyperlink in the user list box, and you will be taken to the following screen that allows you modify the user details:</p>
 <p><img alt="" src="../img/System_Users_46.png" /></p>
-<p>On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only), system administration status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).</p>
+<p>On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access), system administration status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).</p>
 <p>If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on <a href="#importing-ldap-users">Importing LDAP Users</a> and <a href="../System/#ldap-configuration">LDAP Configuration</a> for more details.</p>
 <p>If a user's account uses an external provider for authentication (like LDAP or Okta) you can unlink the user from that authentication provider on this page. Click the <code>Unlink Account</code> button to display a popup that requires you to add the new security information for that user.</p>
 <p><img alt="unlink a user from an external provider" src="../img/System_Users_oauth-admin-unlink.png" /></p>
