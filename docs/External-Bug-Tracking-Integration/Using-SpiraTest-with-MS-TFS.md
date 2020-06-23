@@ -116,8 +116,12 @@ Click on the + New Token button to create a new personal access token:
 
 You can give it a logical name (e.g. "Spira") and give it permissions to:
 
-* Read, write & manage Work Items
-* Read, write & manage Releases
+* **Work Items**
+  * Read, write & manage
+* **Releases**
+  * Read, write, execute & manage
+* **Identity**
+  * Read & manage
 * (or just grant Full Access)
 
 Azure Devops will then create a personal access token that you should copy to the clipboard and store somewhere secure (e.g. a password manager):
