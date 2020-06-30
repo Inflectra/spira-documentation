@@ -90,5 +90,21 @@ Item 1
 * **Incidents** and **Tasks**: neither of these artifacts have any special factors to take into account
 
 
-## Privacy Policy
-Inflectra respects the privacy of its customers. This Excel add-in does not collect or transmit any user information. Nothing about the user is stored in the add-in once you have closed it or logged out. If you are using a cloud hosted Spira application then by using this add-in you will be required to connect to your cloud application, managed by Inflectra to import or export the required data. Inflectra does not collect any of this data. For more information about our policies for cloud hosted customers, please refer to our [hosting terms of service](https://www.inflectra.com/Purchase/HostingTOS.htm)
+## Functionality Differences from Microsoft Excel Classic plugin
+Excel 365 can (and the classic plugin cannot):
+
+- work with customizable template fields like importance, status, and type
+- provide much easier data entry with dropdowns to show user names, releases, custom lists
+- seamlessly integrates custom fields and standard fields
+- works across Windows, Mac OS, and the web
+- NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
+
+Excel Classic can (and the Excel 365 plugin cannot):
+
+- work with version of Spira older than 6.3.0.1 
+- work with versions of Excel pre Excel 2015
+- update existing data in Spira
+- create Test Sets
+- create Test Runs
+- import/export comments
+- import/export specific artifact association (eg requirements)

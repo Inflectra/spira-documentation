@@ -602,3 +602,22 @@ If you set a date for the 'Test Run Date', the importer will use that
 date to be the date the test runs were executed on, rather than the
 current date/time, which is used by default.
 
+
+## Functionality Differences from Microsoft Excel 365 plugin
+Excel Classic can (and the Excel 365 plugin cannot):
+
+- work with version of Spira older than 6.3.0.1 
+- work with versions of Excel pre Excel 2015
+- update existing data in Spira
+- create Test Sets
+- create Test Runs
+- import/export comments
+- import/export specific artifact association (eg requirements)
+
+Excel 365 can (and the classic plugin cannot):
+
+- work with customizable template fields like importance, status, and type
+- provide much easier data entry with dropdowns to show user names, releases, custom lists
+- seamlessly integrates custom fields and standard fields
+- works across Windows, Mac OS, and the web
+- NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
