@@ -621,3 +621,5 @@ Excel 365 can (and the classic plugin cannot):
 - seamlessly integrates custom fields and standard fields
 - works across Windows, Mac OS, and the web
 - NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
+
+For more information about how the Excel Classic plugin works with version 6+ of SpiraPlan see [this blog post](https://www.inflectra.com/Ideas/Entry/migrating-to-60---changes-to-using-the-excel-addon-819.aspx).
