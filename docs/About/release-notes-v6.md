@@ -5,13 +5,13 @@
 !!! info "Summary"
     **Baselining (SpiraTeam and SpiraPlan only)**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. 
 
-    **Testing Settings**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
+    **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
     **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
 
 
 ??? success "New features"
-    - Testing Settings are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
+    - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
     - Users can [create an Incident directly from a Task](../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task) [RQ:2971]
 
     * Custom Reports

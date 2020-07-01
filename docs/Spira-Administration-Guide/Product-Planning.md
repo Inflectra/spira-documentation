@@ -36,14 +36,28 @@ This page allows you to make changes to the following settings:
 
 Clicking on the "Testing Settings" link brings up a list of options that the administrator can configure regarding testing. Select from the options displayed (as illustrated below) and click "Save" to commit the changes.
 
-![](img/System_72.png)
+![](img/Product_Planning_testing_settings.png)
 
 You can enable or disable the following settings:
 
--   **Display Build During Test Execution** -- During test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".
--   **Auto Unassign Tests** -- When a tester passes an assigned test case or all the test cases in an assigned test set the system by default will automatically un-assign the test case / test set from the user. To prevent this from happening, change either setting to "No".
--   **Auto create a test step** - Automatically creating a default test step on the creation of any test case
--   **Worx Integration** -- Integrating with the Worx desktop application
+* **Test Case Execution**: the following settings affect the test execution rules / experience of all testers in the products
+    - **Display Build During Test Execution**: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".
+    - **Disable users from PASSING ALL test steps at once**: (default = no) normally in testing on the first step testers have the options of selecting "Pass All" to mark every step at once as passed. This can be a useful shortcut. If you don't want testers to use this shortcut turn this setting on.
+    - **Disable users from marking a test step as BLOCKED**: (default = no) testing in Spira has five different execution statuses: Pass, Fail, Blocked, Caution, and N/A. Pass or Fail cannot be disabled. To disable "Blocked" turn this setting on. Testers will no longer see a "Blocked" button during testing.
+    - **Disable users from marking a test step as CAUTION**: (default = no) to disable "Caution" turn this setting on. Testers will no longer see a "Caution" button during testing.
+    - **Disable users from marking a test step as N/A**: (default = no) to disable "N/A" turn this setting on. Testers will no longer see an "N/A" button during testing.
+    - **User must ALWAYS enter an actual result for Test Steps**: (default = no) an actual result is normally required when a step is marked as Fail, Blocked, Caution, or N/A. To also make testers enter an actual result when marked a step as Passed, turn this feature on.   
+    - **Every test step that does not pass must have an Incident**: (default = no) turn this setting on to make sure that failed steps have an attached incident. This setting applies to marking a test step as Failed, Blocked, Caution, or N/A. When this setting is on, a tester will not be made to add a new incident every time they fail a step. If a step does not already have an incident linked to it the tester must either link an existing incident or make a new one.
+    - **Users can create Tasks during execution (including exploratory testing)**: (default = no) some testing workflows using tasks to log issues from testers to developers. This is more streamlined than using incidents, and can be particularly useful for issues that originated during a development cycle (ie are not existing bugs). Turning this setting on adds a task tab to both exploratory and normal test execution ot let testers quickly log tasks against the release and test step. 
+
+
+* **Auto Unassign Tests**:
+    - **Passing a test case unassigns it from its owner**: (default = yes) when a tester passes an assigned test case automatically un-assign the test case from the user.
+    - **Completing a test set unassigns it from its owner**: (default = yes) when a tester passes all the test cases in an assigned test set automatically un-assign the test set from the user.
+
+* **Execute Only From Test Sets**: (default = no) when turned on testers will not be able to execute Test Cases. They will only be able to execute Test Sets.
+* **Auto create a test step**: (default = yes) automatically create a default test step on the creation of any test case.
+* **Worx Integration**: (default = no) integrating with the Worx desktop application.
 
 
 ## Edit Components
