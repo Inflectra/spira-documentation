@@ -1,15 +1,90 @@
 # Release Notes for Spira v6
 
+## Version 6.5.2 (July 2020)
+
+!!! info "Summary"
+    **Baselining (SpiraTeam and SpiraPlan only)**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. 
+
+    **Testing Settings**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
+
+    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
+
+??? success "New features"
+    - Testing Settings are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
+    - Users can create an Incident directly from a Task [RQ:2971]
+
+    * Custom Reports
+        - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} tokens in their ESQL as is already possible for custom graphs [RQ:2976]
+
+    * Baselining (SpiraTeam and SpiraPlan only)
+        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672] (released but disabled in 6.5.1)
+        - Turning on baselining for a product disables the ability to purge or revert product history [RQ:2938] (released but disabled in 6.5.1)
+        - Turning on baselining for a product shows the baseline tab on the release details page [RQ:2940]
+        - Baseline tab on the release details page lets you view existing baselines [RQ:2664]
+        - Users with equivalent release permissions can add/edite/delete a new baseline from the baseline tab on a release details page [RQ:2662]
+        - A new custom reportable entity lets users create custom reports for baselines [RQ:2873]
+    
+    * Security Enhancements
+        - Implement CSRF Anti-Forgery Tokens on Postback Pages [RQ:2959]
+        - Implement CSRF Anti-Forgery Tokens on WCF Ajax Services [RQ:2960]
+    
+    * Improve included sample templates
+        - Update and refresh notification event subject lines and notification templates [RQ:2843]
+        - A new "Regulated Industries" Template provides out-the-box best practice for workflows across all artifacts [RQ:2825]
+        - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
+
+    * Source Code Management (SpiraTeam and SpiraPlan only)
+        - Artifact associations show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
+        - There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]
+
+??? bug "Bug fixes and enhancements"
+    * Testing
+        - Product admins can require a test step has at least one incident if it is executed and marked as anything other than passed [IN:1185]
+        - Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]
+        - Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]
+        - Product admins can limit users to only execute tests from test sets, not from test cases [IN:5686]
+        - Product admins can allow tasks to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]
+        - Include an Add button on the incident tab of the test execution page to make it clearer to users how to create an incident during testing [IN:5474]
+        - In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]
+        - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
+
+    * Home pages
+        - Improve the styling of the My Page News Reader widget [IN:5718]
+        - The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]
+        - The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]
+        - Program, portfolio, enterprise schedule widgets should not show releases with an inactive parent detached from a workspace [IN:5687]
+        - Program, portfolio, enterprise schedule widgets should not show releases from inactive products detached from a workspace [IN:5689]
+        - All schedule widgets should work better on smaller screen sizes [IN:5605]
+        - Product home page widgets should all only show active releases when displaying for a particular release [IN:5691]
+        - The Relative Size widget should hide the legend when there are over 10 items to show to make it more useable [IN:5692]
+
+    * Other
+        - Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - it is so nice to close out an old enhancement :tada:)
+        - Do not show an error if you add a folder of test cases to the same release twice (error occurs when the folder contains deleted test cases) [IN:4880]
+        - Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]
+        - Remove references to 'Project' when exporting an artifact from one product to another [IN:5540]
+        - On the incident list page, the column labelled "Progress" is incorrectly called "Task Progress" in the column selector dropdown and filter message box [IN:5575]
+        - Revisions tab on build detail page should show revisions more consistently and not a message about the cache [IN:5548]
+        - Improve the CI/CD functionality of the association panel on artifact details pages to show revisions more consistently and also to link builds to artifacts [IN:5666]
+        - Task list: issues if the user's current folder has been deleted [IN:5027]
+        - Test Case list: issues if the user's current folder has been deleted [IN:5658]
+        - Test Set list: issues if the user's current folder has been deleted [IN:5659]
+        - Document list: issues if the user's current folder has been deleted - Copy [IN:5662]
+        - Performance fixes for projects with large numbers of releases by introducing a product setting to optionally use active releases only for detected release dropdown [IN:5671]
+        - Relax the incident closed/start date validation as it can break data-syncs [IN:5693]
+        - Make filtering by release more consistent between the hierarchical and sorted requirement list pages to always include any child releases/sprints [IN:5709]
+
+
+
+
 ## Version 6.5.1 (June 2020)
 
 !!! info "Summary"
     **Improved dashboard widgets**: enhanced and new Recent Build widgets, let you get an easier handle on your CI/CD processes from [program](../../Spira-User-Manual/Program-Homepage/#recent-builds), [portfolio](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds), and [enterprise](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) home pages; a number of widgets on the program home page by default display data for active releases only to make their data more meaningful; a brand new [product test summary table](../../Spira-User-Manual/Program-Homepage/#product-test-summary) on the program home page provides important information at a glance.
 
 ??? success "New features"
-    * Baselining (**these features are currently disabled but are in the app now to prepare for a future release**)
+    * Baselining
         - On generating a test run the system automatically links it to the most recent history changeset to improve auditing [RQ:2655]
-        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672]
-        - Turning on baselining for a product disables the ability to purge or revert product history [RQ:2938]
     
     * Enterprise Dashboard (SpiraPlan only)
         - Add an Enterprise [Recent Builds](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) widget [RQ:2937]
