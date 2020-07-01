@@ -9,9 +9,10 @@
 
     **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
 
+
 ??? success "New features"
     - Testing Settings are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
-    - Users can create an Incident directly from a Task [RQ:2971]
+    - Users can [create an Incident directly from a Task](../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task) [RQ:2971]
 
     * Custom Reports
         - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} tokens in their ESQL as is already possible for custom graphs [RQ:2976]
@@ -36,6 +37,7 @@
     * Source Code Management (SpiraTeam and SpiraPlan only)
         - Artifact associations show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
         - There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]
+
 
 ??? bug "Bug fixes and enhancements"
     * Testing

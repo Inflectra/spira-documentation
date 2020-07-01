@@ -353,3 +353,33 @@ You can associate other tasks, incidents, and source code to a task from this ta
 ### History
 
 Read about [how the history tab works](Application-Wide.md#history)
+
+### Creating an Incident from a Task
+
+Sometimes you may have a task logged to, say, fix something before release, that now needs to be converted into an Incident (because it won't be able to get fixed before release). This workflow is useful because Incidents usually are more public facing, and have more process around them than tasks. There is a shortcut to create a new incident from the current task; and it automatically creates an association between the new incident and the task (and if the task is linked to a requirement an association is added between that requirement and the new incident too).[^in-tk]
+
+To use this feature:
+
+- go to the Associations tab
+- click the `Add` button
+- at the bottom right of the panel that displays click the `Create Incident from this Task` button 
+
+
+
+[^in-tk]: 
+    To create an incident from a task, the user needs must have the permission to create incidents (which makes sense).
+
+    The creation process does **not** enforce the relevant incident workflow to make sure that all required fields are filled in.
+
+    What gets copied over from the task to the new incident:
+
+    - Name
+    - Description
+    - Owner
+    - Creator becomes "Detected By"
+    - Component (if this is set on the task from a linked requirement)
+    - Release becomes "Detected Release" and "Planned Release"
+    - Priority (using an intelligent match on score and name)
+    - Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)
+    - Comments (using the name of the original author, but the comment creation date is the current date)
+    - Auto-link any attachments linked to the task are linked to the incident too
