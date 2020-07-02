@@ -74,7 +74,14 @@ Task effort calculations are described in more detail [here](../User-Product-Man
 
 
 ## Baselining
-PLACEHOLDER QQQ
+!!! info "How to Access Baselining"
+    Baselining is only available in SpiraTeam and SpiraPlan. It has to be enabled on a per product basis via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page.
+
+Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines.
+
+In SpiraPlan, we attach baselines to a release, as well as to the state of the product changes. This is to help you more easily use baselines as part of your release planning and review: baselines are, in effect, tied to the progress of your releases and sprints. You may wish to create a baseline when your release starts, and then create another when it is released. You may create a baseline at the end of every sprint and then use your baselines to see what happened between those two sprints.
+
+There is more information below about how to create, edit, and view your baselines.
 
 ## Release List
 
