@@ -7,7 +7,7 @@
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
-    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
+    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
 
 
 ??? success "New features"
@@ -15,7 +15,7 @@
     - Users can [create an Incident directly from a Task](../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task) [RQ:2971]
 
     * Custom Reports
-        - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} tokens in their ESQL as is already possible for custom graphs [RQ:2976]
+        - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} [tokens](../../Reporting/Custom-Reporting-Tokens) in their ESQL as is already possible for custom graphs [RQ:2976]
 
     * Baselining (SpiraTeam and SpiraPlan only)
         - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672] (released but disabled in 6.5.1)
