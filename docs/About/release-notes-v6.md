@@ -23,7 +23,7 @@
         - Turning on baselining for a product shows the baseline tab on the release details page [RQ:2940]
         - Baseline tab on the release details page lets you view existing baselines [RQ:2664]
         - Users with equivalent release permissions can add/edite/delete a new baseline from the baseline tab on a release details page [RQ:2662]
-        - A new custom reportable entity lets users create custom reports for baselines [RQ:2873]
+        - A new [custom reportable entity](../../Reporting/Custom-Report-Tables/#baselines) lets users create custom reports for baselines [RQ:2873]
     
     * Security Enhancements
         - Implement CSRF Anti-Forgery Tokens on Postback Pages [RQ:2959]

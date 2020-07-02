@@ -26,11 +26,13 @@ To add a new product to the system, click the "Add" button at the bottom of the 
 
 You need to:
 
--   enter a name for the product (which cannot be the same as any already in use);
--   select which program it belongs to and optionally enter a detailed description and/or web-site URL;
--   you should initially make sure that the product is marked as "Active";
--   decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
--   select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
+- enter a name for the product (which cannot be the same as any already in use);
+- select which program it belongs to and optionally enter a detailed description and/or web-site URL;
+- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
+- select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
+- (SpiraTeam and SpiraPlan only) decided whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining).
+- you should initially make sure that the product is marked as "Active";
+
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new product.
 
@@ -39,7 +41,7 @@ In a similar way, to edit the details of an existing product, click the "Edit" b
 
 ![](img/System_Workspaces_35.png)
 
-On this screen you can edit the name, description, program, website URL and active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On this screen you can edit the name, description, program, website URL, enable/disable baselining (SpiraTeam and SpiraPlan only), or toggle the active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 Next to the current template for the product, is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md). 
 

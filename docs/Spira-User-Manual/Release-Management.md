@@ -73,6 +73,9 @@ Rollup of effort from requirements associated to the release are summed together
 Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
 
 
+## Baselining
+PLACEHOLDER QQQ
+
 ## Release List
 
 When you click on the Planning \> Releases global navigation link, you will initially be taken to the release list screen illustrated below:
