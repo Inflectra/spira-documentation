@@ -3,8 +3,31 @@
     SpiraPlan has a number of database views available for creating custom reports using ESQL queries. Below, each available table is listed with all of their exact field names. 
 
 ## Artifact Associations
+- ARTIFACT_LINK_TYPE_ID
+- SOURCE_ARTIFACT_ID
+- SOURCE_ARTIFACT_TYPE_ID
+- DEST_ARTIFACT_ID
+- DEST_ARTIFACT_TYPE_ID
+- CREATOR_ID
+- CREATION_DATE
+- COMMENT
+- SOURCE_ARTIFACT_TYPE_NAME
+- DEST_ARTIFACT_TYPE_NAME
+- CREATOR_NAME
+- ARTIFACT_LINK_TYPE_NAME
 
 ## Artifact Attachments
+- ARTIFACT_TYPE_ID
+- ARTIFACT_ID
+- ARTIFACT_TYPE_NAME
+- ARTIFACT_NAME
+- COMMENT
+- CREATOR_ID
+- CREATION_DATE
+- CREATOR_NAME
+- ATTACHMENT_ID
+- PROJECT_ID
+- ARTIFACT_STATUS_NAME
 
 ## Attachments
 - ATTACHMENT_ID

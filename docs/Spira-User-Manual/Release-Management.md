@@ -362,7 +362,7 @@ Each of the requirements and associated tasks is displayed together with its:
 - current owner
 - estimated effort
 - actual effort
-- producted effort
+- projected effort
 - story points (requirements only)
 - and numeric task identifier
 
