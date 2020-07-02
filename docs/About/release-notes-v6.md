@@ -29,8 +29,8 @@
         - Implement CSRF Anti-Forgery Tokens on Postback Pages [RQ:2959]
         - Implement CSRF Anti-Forgery Tokens on WCF Ajax Services [RQ:2960]
     
-    * Improve included sample templates
-        - Update and refresh notification event subject lines and notification templates [RQ:2843]
+    * Improve included [sample templates](../../Spira-Administration-Guide/System-Workspaces/#included-templates)
+        - Update and refresh notification event subject lines and [notification templates](../../Spira-Administration-Guide/Template-Notifications/#notification-templates) [RQ:2843]
         - A new "Regulated Industries" Template provides out-the-box best practice for workflows across all artifacts [RQ:2825]
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
