@@ -60,3 +60,8 @@
     --md-code-fg-color:                  hsla(200, 18%, 75%, 1);
   }
 }
+
+.section-break {
+  border-bottom: 2px solid var(--md-default-fg-color);
+  padding: 2rem 0 .5rem 0;
+}
