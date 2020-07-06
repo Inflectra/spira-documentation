@@ -36,7 +36,10 @@ The History Details screen will show basic information as well as fields that we
 
 If a set of fields were affected (Standard or Custom), then the list of fields will be listed below. In the example above, the change was a Modification, and 5 fields were changed. In other change types, no fields will be displayed.
 
-If the artifact is still available in the system, you can click the Artifact or click the 'View Item' button in the toolbar to view the item as it is currently. However, if the item has been deleted, a warning label will be displayed (as above in the example screenshot), the View Item links will be disabled, and a new option, "Purge" will appear on the toolbar (providing baselining is not currently enabled for this product).
+If the artifact is still available in the system, you can click the Artifact or click the 'View Item' button in the toolbar to view the item as it is currently. However, if the item has been deleted, a warning label will be displayed (as above in the example screenshot), the View Item links will be disabled, and a new option, "Purge" will appear on the toolbar.
+
+!!! info "If baselining is turned on"
+    If baselining is enabled for this product, you will not be able to revert or purge any history item and the relevant buttons will not even be visible to you.
 
 
 ### Purging Items

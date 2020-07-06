@@ -4,6 +4,8 @@
 
 !!! info "Summary"
     **Baselining (SpiraTeam and SpiraPlan only)**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. 
+    
+    *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../../Spira-User-Manual/Release-Management/#baselining)
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
@@ -17,10 +19,10 @@
     * Custom Reports
         - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} [tokens](../../Reporting/Custom-Reporting-Tokens) in their ESQL as is already possible for custom graphs [RQ:2976]
 
-    * Baselining (SpiraTeam and SpiraPlan only)
-        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672] (released but disabled in 6.5.1)
-        - Turning on baselining for a product disables the ability to purge or revert product history [RQ:2938] (released but disabled in 6.5.1)
-        - Turning on baselining for a product shows the baseline tab on the release details page [RQ:2940]
+    * [Baselining](../../Spira-User-Manual/Release-Management/#baselining) (SpiraTeam and SpiraPlan only)
+        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the [Admin Product page](../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product) [RQ:2672] (released but disabled in 6.5.1)
+        - Turning on baselining for a product disables the ability to purge or revert [product history](../../Spira-Administration-Guide/Product-General-Settings/#history-details-screen) [RQ:2938] (released but disabled in 6.5.1)
+        - Turning on baselining for a product shows the [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) on the release details page [RQ:2940]
         - Baseline tab on the release details page lets you view existing baselines [RQ:2664]
         - Users with equivalent release permissions can add/edite/delete a new baseline from the baseline tab on a release details page [RQ:2662]
         - A new [custom reportable entity](../../Reporting/Custom-Report-Tables/#baselines) lets users create custom reports for baselines [RQ:2873]
@@ -51,7 +53,7 @@
         - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
 
     * Home pages
-        - Improve the styling of the My Page News Reader widget [IN:5718]
+        - Improve the styling of the My Page [News Reader widget](../../Spira-User-Manual/User-Product-Management/#my-news-feeds) [IN:5718]
         - The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]
         - The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]
         - Program, portfolio, enterprise schedule widgets should not show releases with an inactive parent detached from a workspace [IN:5687]

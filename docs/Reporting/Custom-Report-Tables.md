@@ -134,6 +134,8 @@
 - LAST_CONTACT_DATE
 
 ## Baselines
+See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for some examples of using this custom report table.
+
 - BASELINE_ID
 - PROJECT_ID
 - CREATOR_USER_ID
