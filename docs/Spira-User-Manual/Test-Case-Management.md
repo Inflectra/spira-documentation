@@ -42,7 +42,7 @@ Clicking on the "***Delete***" button deletes all the test cases and/or test fol
 
 ### Execute
 
-Clicking on the "***Execute Tests***" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in [Test Step Details](#test-step-details).
+Clicking on the "***Execute Tests***" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in [Test Step Details](#test-step-details). NOTE: if the product does not allow you to execute test cases this button will not be available.
 
 
 ### Refresh
@@ -163,17 +163,13 @@ When you click on a test case item in the [test case list](#test-case-list), you
 This page is made up of *three* areas;
 
 1.  the left pane displays the test case folders and list navigation;
-
 2.  the right pane's header, which displays: the operations toolbar; the [folder the test case is in](Application-Wide.md#breadcrumbs); the editable name of the selected test case; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-
 3.  the right pane's tabbed interface with rich information related to the test case.
 
 The navigation pane consists of a link that will take you back to the test case list, as well as a list of the peer test cases to the one selected. This latter list is useful as a navigation shortcut: you can quickly view the detailed information of all the peer test cases by clicking on the navigation links without having to first return to the test cases list page. The navigation list can be switched between three different modes:
 
 -   The list of test cases matching the current filter
-
 -   The list of all test cases, irrespective of the current filter
-
 -   The list of test cases assigned to the current user
 
 
@@ -182,24 +178,20 @@ The operations toolbar lets you, amongst standard operations like save and delet
 - create a replica of the current test case by clicking `Clone`
 - discard any changes made by clicking `Refresh`
 - export to a number of files formats or print it via one of the options in the `Tools` dropdown menu
-- the `Execute` button will immediately prepare the current test case for execution and then take you to the
-[test execution screen](#execute-test-cases)
+- the `Execute` button will immediately prepare the current test case for execution and then take you to the [test execution screen](#execute-test-cases). NOTE: if the product does not allow you to execute test cases this button will not be available.
 
 The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.
 
 
 ### Emailing
-
 Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
 
 
 ### Followers
-
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
 
 
 ### Workflows
-
 Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
 
 

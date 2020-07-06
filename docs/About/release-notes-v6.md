@@ -47,7 +47,7 @@
         - Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]
         - Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]
         - Product admins can limit users to only execute tests from test sets, not from test cases [IN:5686]
-        - Product admins can allow tasks to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]
+        - Product admins can allow [tasks](../../Spira-User-Manual/Test-Execution/#tasks) to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]
         - Include an Add button on the incident tab of the test execution page to make it clearer to users how to create an incident during testing [IN:5474]
         - In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]
         - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
