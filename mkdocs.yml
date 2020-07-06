@@ -145,6 +145,7 @@ nav:
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
   - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
   - Custom Report Tokens: Reporting\Custom-Reporting-Tokens.md
+  - Available Database Tables: Reporting\Custom-Report-Tables.md
 - Optional Features:
   - TaraVault:
     - Activating: TaraVault-User-Manual\Activating-TaraVault.md

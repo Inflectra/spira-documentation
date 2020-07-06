@@ -143,9 +143,9 @@ This section lists all the requirements you have been made owner of, across *all
 
 This section lists all the test cases you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the assigned test scripts. To aid in this process, the script name is displayed, along with its last execution status (failed, passed or not-run) and date of last execution. This enables you to see how recently the tests have been run, and whether they need to be re-run.
 
-If you click on the test-name hyperlink, you will be taken to the
-[details page for this test-case](../Test-Case-Management/#test-case-details) and the product that the test-case belongs to will be made your current product. If you click on the play button to its right you will launch the test-case in the
-[test-case execution module](../Test-Case-Management/#execute-test-cases) so that you can easily retest failed cases.
+If you click on the test-name hyperlink, you will be taken to the [details page for this test-case](../Test-Case-Management/#test-case-details) and the product that the test-case belongs to will be made your current product. 
+
+If you click on the play button to its right you will launch the test-case in the [test-case execution module](../Test-Case-Management/#execute-test-cases) so that you can easily retest failed cases. NOTE: the execute button will not display if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
 
 
 ## My Assigned Test Sets

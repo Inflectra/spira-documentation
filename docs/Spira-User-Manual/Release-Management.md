@@ -73,6 +73,27 @@ Rollup of effort from requirements associated to the release are summed together
 Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
 
 
+## Baselining
+NOTE: **Baselining is only available in SpiraTeam and SpiraPlan**.
+
+!!! question "What is baselining in SpiraPlan"
+    Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines.
+
+    In SpiraPlan, we attach baselines to a release, as well as to the state of the product changes. This is to help you more easily use baselines as part of your release planning and review: baselines are, in effect, tied to the progress of your releases and sprints. You may wish to create a baseline when your release starts, and then create another when it is released. You may create a baseline at the end of every sprint and then use your baselines to see what happened between those two sprints.
+
+Here is a step by step overview on getting started with baselines:
+
+- First, enable baselining for your specific product via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. You have to a system or product admin to do this
+- To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items.
+- With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can baselines. If you can edit a release you can eidt its baselines. And if you can delete releases you can delete baselines.
+- Go to the list of releases and click on the release you want to manage baselines for
+- Click on the baselines tab to see your list of baselines
+- You can sort or filter the list of baselines by any of the fields in the table
+- To add a baseline, click the add button and fill in the details on the popup form
+- To do more with baselines you can create a custom report for them (examples [here](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx)). NOTE: in-app reports and other features for viewing baseline data will be added in future releases.
+
+[Below](#baselines) is more information below about how to create, edit, delete, and view your baselines against a specific release.
+
 ## Release List
 
 When you click on the Planning \> Releases global navigation link, you will initially be taken to the release list screen illustrated below:
@@ -243,9 +264,7 @@ When you click on release item in the [release list](#release-list), you are tak
 This page is made up of *three* areas;
 
 1.  the left pane displays the releases list navigation;
-
 2.  the right pane's header, which displays: the operations toolbar; [the hierarchical structure the release is in](Application-Wide.md#breadcrumbs); the editable name of the selected release; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-
 3.  the right pane's tabbed interface with rich information related to the release.
 
 Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the releases list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
@@ -255,7 +274,6 @@ The navigation pane can be collapsed by clicking on the "-" button, or expanded 
 The navigation pane consists of a link that will take you back to the release list, as well as a list of the other releases in the current product. This latter list is useful as a navigation shortcut; you can quickly view the test run information of all the other releases by clicking on the navigation links without having to first return to the release list page. The navigation list can be switched between two different modes:
 
 -   The list of releases matching the current filter
-
 -   The list of all releases, irrespective of the current filter
 
 
@@ -265,17 +283,14 @@ The lower part of the right pane can be in one of seven possible modes that can 
 
 
 ### Emailing
-
 Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
 
 
 ### Followers
-
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
 
 
 ### Workflows and Statuses
-
 Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot by a cancelled release.
 
 Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
@@ -294,7 +309,6 @@ days, the system will automatically calculate how many hours of effort (planned 
 
 
 ### Overview -- Detailed Information
-
 The Detailed Information section contains the long, formatted description of the requirement, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.
 
 
@@ -359,7 +373,7 @@ Each of the requirements and associated tasks is displayed together with its:
 - current owner
 - estimated effort
 - actual effort
-- producted effort
+- projected effort
 - story points (requirements only)
 - and numeric task identifier
 
@@ -367,17 +381,12 @@ Clicking on a requirement will bring up the [requirement details page](../Requir
 
 You can perform the following actions on a task from this screen:
 
-**Insert Task** -- inserts a new task in the task list under the specified requirement, with a default set of values. The task will be associated with the specified requirement and current release/sprint. If no requirement is selected, the task will only be associated with the current release/sprint
-
-**Delete** -- deletes the task from the product.
-
-**Refresh** -- updates the list of requirements and tasks from the server, useful if other people are adding requirements and/or tasks to this release/sprint at the same time.
-
-You can **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
-
-**Edit** -- Clicking the "***Edit***" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable.
-
-**Show Level** -- Allows you to quickly expand/collapse all the requirements in the list.
+- **Insert Task**: inserts a new task in the task list under the specified requirement, with a default set of values. The task will be associated with the specified requirement and current release/sprint. If no requirement is selected, the task will only be associated with the current release/sprint
+- **Delete**: deletes the task from the product.
+- **Refresh**: updates the list of requirements and tasks from the server, useful if other people are adding requirements and/or tasks to this release/sprint at the same time.
+- You can **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
+- **Edit**: Clicking the "***Edit***" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable.
+- **Show Level**: Allows you to quickly expand/collapse all the requirements in the list.
 
 
 ### Test Cases
@@ -420,12 +429,38 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
-### History
+### Baselines
+NOTE: **Baselining is only available in SpiraTeam and SpiraPlan** and this tab will be only then be visible if baselining has been turned on for a product.
 
+This view displays the list of all baselines created for this release. If you have permissions for releases to create/modify/delete then you can perform the same actions for baselines.
+
+![baselines tab](img/Release_Management_baselines_tab.png)
+
+You can view the following information about a baseline here:
+
+- Name (for product admins this links to the specific producy history change)
+- Description
+- Creator
+- Date (hover to see a tooltip of the date and time)
+- Active (yes or no)
+- Change ID (product admins only - this is the system wide history change id that the baseline is linked to)
+- ID
+
+To **add a new baseline**, click the `New Baseline` button. This will be disabled if you are not able to create releases. This will open up a small form. The name field is required, but the description field is optional. Enter the information and hit `Add`. NOTE: a baseline's description is plain text only.
+
+![adding a new baseline](img/Release_Management_baselines_tab_add.png)
+
+You can **edit** an existing baseline as long as you can edit the specific release the baseline belongs to. If you see `Edit` buttons on the table of baselines that means you can edit. You can edit a baselines name, its description, and whether it is active or not.
+
+If you can **delete** releases you can delete any baseline on any release. To do so click select the baselines to delete (put a checkmark next to it) and click the `Delete` button. 
+
+To filter and sort the list of baselines, use the filter and sort controls at the top of the table.
+
+
+### History
 Read about [how the history tab works](Application-Wide.md#history)
 
 

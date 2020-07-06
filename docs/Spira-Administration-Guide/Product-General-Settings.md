@@ -11,25 +11,18 @@ At this time, only changes made to Requirements, Tasks, Incidents, Test Cases, T
 There are a handful of change types recorded and displayed here:
 
 -   **Modified**: The most common, this means that one or more fields in this artifact were changed. Note that if a standard field and a custom field were changed at the same time, it will generate two separate entries, one for the standard fields, one for the custom fields.
-
 -   **Added**: This means that this artifact was added, created in the system, either by using the New menu option or by copying. Pasting an item that was cut will not result in an Added entry being created.
-
 -   **Rollback**: This items means that the artifact was rolled back to a specific event in the history.
-
 -   **Deleted**: This entry is created when an artifact is deleted from the system.
-
 -   **Undelete**: This entry is created when an artifact was deleted and then undeleted, making it live in the system again.
-
 -   **Purged**: This entry is created (and all other history items are removed) when a deleted artifact is purged from the system. Purged items are removed from the database, and cannot be recovered.
 
 ***Note***: When upgrading from a version before v3.1, each individual field changed will be considered a unique change, due to how previous versions recorded history. However, as soon as the application is upgraded, simultaneous changes will be grouped together based on their last-update date.
 
-This screen allows the administrator several options:
+This screen allows the administrator several options (below). NOTE: if baselining is enabled for this product you will not be able to revert or purge all.
 
 -   *Viewing Details*: The detail screen for each change set can be viewed by clicking on the change ID \#. This will take you to the history details screen, described below.
-
 -   *Revert*: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.
-
 -   *Purge All*: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored.
 
 
@@ -44,6 +37,9 @@ The History Details screen will show basic information as well as fields that we
 If a set of fields were affected (Standard or Custom), then the list of fields will be listed below. In the example above, the change was a Modification, and 5 fields were changed. In other change types, no fields will be displayed.
 
 If the artifact is still available in the system, you can click the Artifact or click the 'View Item' button in the toolbar to view the item as it is currently. However, if the item has been deleted, a warning label will be displayed (as above in the example screenshot), the View Item links will be disabled, and a new option, "Purge" will appear on the toolbar.
+
+!!! info "If baselining is turned on"
+    If baselining is enabled for this product, you will not be able to revert or purge any history item and the relevant buttons will not even be visible to you.
 
 
 ### Purging Items

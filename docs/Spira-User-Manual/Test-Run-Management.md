@@ -49,7 +49,7 @@ This page consists of three panes:
 ### Re-running a Test
 
 There is a button on the main test run toolbar called
-'***Re-Test***". If you click this button, SpiraPlan will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers.
+'***Re-Test***". If you click this button, SpiraPlan will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers. NOTE: this button will not display if the product does not allow you to execute test cases (instead only letting you execute test sets).
 
 
 ### Editing a Test Run

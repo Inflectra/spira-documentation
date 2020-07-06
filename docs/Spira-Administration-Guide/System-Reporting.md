@@ -176,7 +176,7 @@ reports center. An example XML report is partially shown below:
       “PlannedEffort”8700”/PlannedEffort”
       “TaskEstimatedEffort”11400”/TaskEstimatedEffort”
       “TaskActualEffort”7570”/TaskActualEffort”
-      “TaskProductedEffort”3855”/TaskProductedEffort”
+      “TaskProjectedEffort”3855”/TaskProjectedEffort”
       “TaskRemainingEffort”11485”/TaskRemainingEffort”
       “TaskCount”42”/TaskCount”
       “TaskPercentOnTime”59”/TaskPercentOnTime”

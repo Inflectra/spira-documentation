@@ -26,11 +26,13 @@ To add a new product to the system, click the "Add" button at the bottom of the 
 
 You need to:
 
--   enter a name for the product (which cannot be the same as any already in use);
--   select which program it belongs to and optionally enter a detailed description and/or web-site URL;
--   you should initially make sure that the product is marked as "Active";
--   decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
--   select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
+- enter a name for the product (which cannot be the same as any already in use);
+- select which program it belongs to and optionally enter a detailed description and/or web-site URL;
+- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
+- select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
+- (SpiraTeam and SpiraPlan only) decided whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining).
+- you should initially make sure that the product is marked as "Active";
+
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new product.
 
@@ -39,7 +41,7 @@ In a similar way, to edit the details of an existing product, click the "Edit" b
 
 ![](img/System_Workspaces_35.png)
 
-On this screen you can edit the name, description, program, website URL and active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On this screen you can edit the name, description, program, website URL, enable/disable baselining (SpiraTeam and SpiraPlan only), or toggle the active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 Next to the current template for the product, is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md). 
 
@@ -173,4 +175,12 @@ To add a new template to the system, you need to create a new template when crea
 ![](img/System_Workspaces_43.png)
 
 On this screen you can edit the name, description, program, and active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+
+### Included Templates
+SpiraPlan ships with four different templates. Together these will cover most of your needs. You can easily clone and customize one of these templates to meet your exact needs. Or you can start from scratch. Below is a brief description of each of the includes templates:
+
+- **Default**: This basic default template matches the one the system automatically generates when you create a completely new template. It is a good basis for customizing your template if no other template fit your needs
+- **Library Information System (Sample)**: This template is designed to work with the sample product Library Information System. The template showcases a number of different parts of the system, through that product. It is not designed to be used for real life products.
+- **Regulated Industries**: This template is designed specifically for products that are developed in a regulated environment. For example life sciences. The workflows have been configured to help you meet requirements in your work, such as those arising from FDA 21 CFR Part 11. Workflows include the use of electronic signatures for key stages of sign-off; limit who can transition an artifact between statuses, and manages which fields are disabled or required at each workflow step.
+- **Flexible**: This template is designed to alllow users to be as unconstrained from workflow requirements as possible. All relevant fields are available and editable (and not required) at all times. Active statuses are streamlined. This template should be used only for times when process controls are not required or are very lightweight.
 

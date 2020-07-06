@@ -304,7 +304,7 @@ Clicking on the sprint hyperlinks in the headers will switch the incident board 
 [^rq-in]: 
     To create a requirement from an incident, the user needs must have the permission to create requirements (which makes sense).
 
-    The creation process does not enforce the relevant requirement workflow to make sure that all required fields are filled in.
+    The creation process does **not** enforce the relevant requirement workflow to make sure that all required fields are filled in.
 
     What gets copied over from the incident to the new requirement:
 
@@ -318,4 +318,4 @@ Clicking on the sprint hyperlinks in the headers will switch the incident board 
     - "Estimated Effort" becomes Estimate (converting hours into points)
     - Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)
     - Comments (using the name of the original author, but the comment creation date is the current date)
-    - Auto-link any attachments linked to the incident to the requirement too
+    - Auto-link any attachments linked to the incident are linked to the requirement too

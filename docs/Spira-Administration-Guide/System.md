@@ -198,23 +198,6 @@ Each event entry is displayed along with the date-time it occurred, the type of 
 The popup dialog box will display the full error message log and stack trace in a moveable dialog box. This information should be provided to Inflectra customer support if you log a help desk ticket.
 
 
-## Testing Settings
-
-Clicking on the "Testing Settings" link brings up a list of options that the administrator can configure regarding testing. Select from the options displayed (as illustrated below) and click "Save" to commit the changes.
-
-![](img/System_72.png)
-
-You can enable or disable the following settings:
-
--   **Display Build During Test Execution** -- During test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".
-
--   **Auto Unassign Tests** -- When a tester passes an assigned test case or all the test cases in an assigned test set the system by default will automatically un-assign the test case / test set from the user. To prevent this from happening, change either setting to "No".
-
--   **Auto create a test step** - Automatically creating a default test step on the creation of any test case
-
--   **Worx Integration** -- Integrating with the Worx desktop application
-
-
 ## Email Configuration
 
 The Email Configuration page is split into two sections. The first section covers email notification details, and the second section configures how email from the application is sent.
