@@ -104,7 +104,11 @@ nav:
   - Managing Your User Profile: HowTo-Guides\Users-profile-management.md
   - Getting to Know Administration: HowTo-Guides\Admins-orientation.md
   - Template Administration: HowTo-Guides\Admins-templates.md
+  - Permissions & Workflows: HowTo-Guides\Permissions-Workflows.md
+  - Requirements: HowTo-Guides\Requirements.md
+  - Testing: HowTo-Guides\Testing.md
   - Login Providers (Oauth): HowTo-Guides\Login-providers.md
+  - Troubleshooting Integrations: HowTo-Guides\Integrations-Troubleshoot.md
 - Quick Start Guides:
   - SpiraPlan: SpiraPlan-Quick-Start-Guide\index.md
   - SpiraTeam: SpiraTeam-Quick-Start-Guide\index.md
