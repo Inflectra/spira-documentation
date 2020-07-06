@@ -37,7 +37,7 @@
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
     * Source Code Management (SpiraTeam and SpiraPlan only)
-        - Artifact associations show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
+        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
         - There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]
 
 
@@ -63,7 +63,7 @@
         - The Relative Size widget should hide the legend when there are over 10 items to show to make it more useable [IN:5692]
 
     * Other
-        - Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - it is so nice to close out an old enhancement :tada:)
+        - Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - so nice to close out an old enhancement :tada:)
         - Do not show an error if you add a folder of test cases to the same release twice (error occurs when the folder contains deleted test cases) [IN:4880]
         - Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]
         - Remove references to 'Project' when exporting an artifact from one product to another [IN:5540]
@@ -73,8 +73,8 @@
         - Task list: issues if the user's current folder has been deleted [IN:5027]
         - Test Case list: issues if the user's current folder has been deleted [IN:5658]
         - Test Set list: issues if the user's current folder has been deleted [IN:5659]
-        - Document list: issues if the user's current folder has been deleted - Copy [IN:5662]
-        - Performance fixes for projects with large numbers of releases by introducing a product setting to optionally use active releases only for detected release dropdown [IN:5671]
+        - Document list: issues if the user's current folder has been deleted [IN:5662]
+        - Performance fixes for projects with large numbers of releases by introducing a [product setting](../../Spira-Administration-Guide/Product-Planning/#general) to optionally use active releases only for detected release dropdown [IN:5671]
         - Relax the incident closed/start date validation as it can break data-syncs [IN:5693]
         - Make filtering by release more consistent between the hierarchical and sorted requirement list pages to always include any child releases/sprints [IN:5709]
 
