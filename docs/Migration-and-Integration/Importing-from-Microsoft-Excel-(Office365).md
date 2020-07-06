@@ -10,10 +10,10 @@ In legacy versions of this add-in you need to download a static excel template t
 To install the add-in:
 
 * Go to the **insert** tab in Excel
-* Click on **"Office Add-Ins"** and in the window that opens navigate to the **store** tab
+* Click on **"Get Add-Ins"** and in the window that opens navigate to the **store** tab
 * Search for **"Spira** or **SpiraPlan**. 
 * When you see the correct add-in developed by Inflectra, click on the "Add" button associated with it. 
-* You should now see the SpiraPlan icon labeled "Show add-in" in your home tab. Click on it to begin.
+* You should now see the SpiraPlan icon labeled "Show Taskpane, SpiraPlan" in your home tab. Click on it to begin.
 
 
 ## 1. Connect to your Spira app
