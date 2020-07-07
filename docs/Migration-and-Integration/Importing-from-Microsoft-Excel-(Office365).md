@@ -69,6 +69,12 @@ Item 1
 > Item 3 child of item 1
 > > Item 4 child of item 3
 ```
+
+### Fields: multi-select lists
+* Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
+* When data is sent from SpiraPlan to the spreadsheet, only the first value in the list (if multiple are selected) will be displayed
+* When sending data to SpiraPlan you will only be able to select one value
+
 ### Other actions you can do on this page
 * **Back**: Go back to select which add-in mode to run
 * **Help**: Open the add-ins help menu to this page
