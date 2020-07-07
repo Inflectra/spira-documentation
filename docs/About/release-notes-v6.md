@@ -5,7 +5,7 @@
 !!! info "Summary"
     **Baselining (SpiraTeam and SpiraPlan only)**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. 
     
-    *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../../Spira-User-Manual/Release-Management/#baselining)
+    *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../../Spira-User-Manual/Release-Management/#baselining)*
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
