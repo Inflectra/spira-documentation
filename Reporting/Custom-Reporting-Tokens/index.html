@@ -1425,36 +1425,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tokens-for-reports-and-graphs" class="md-nav__link">
-    Tokens for Reports and Graphs
+  <a href="#available-tokens" class="md-nav__link">
+    Available Tokens
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tokens-for-graphs-only" class="md-nav__link">
-    Tokens for Graphs Only
-  </a>
-  
-    <nav class="md-nav" aria-label="Tokens for Graphs Only">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#releaseid" class="md-nav__link">
-    ${ReleaseId}
+  <a href="#more-details-about-releaseid" class="md-nav__link">
+    More details about ${ReleaseId}
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#releaseandchildids" class="md-nav__link">
-    ${ReleaseAndChildIds}
+      
+        <li class="md-nav__item">
+  <a href="#more-details-about-releaseandchildids" class="md-nav__link">
+    More details about ${ReleaseAndChildIds}
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1462,6 +1449,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
+    </a>
   </li>
 
         
@@ -3171,36 +3170,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tokens-for-reports-and-graphs" class="md-nav__link">
-    Tokens for Reports and Graphs
+  <a href="#available-tokens" class="md-nav__link">
+    Available Tokens
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tokens-for-graphs-only" class="md-nav__link">
-    Tokens for Graphs Only
-  </a>
-  
-    <nav class="md-nav" aria-label="Tokens for Graphs Only">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#releaseid" class="md-nav__link">
-    ${ReleaseId}
+  <a href="#more-details-about-releaseid" class="md-nav__link">
+    More details about ${ReleaseId}
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#releaseandchildids" class="md-nav__link">
-    ${ReleaseAndChildIds}
+      
+        <li class="md-nav__item">
+  <a href="#more-details-about-releaseandchildids" class="md-nav__link">
+    More details about ${ReleaseAndChildIds}
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3224,15 +3210,16 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>When creating custom reports or custom graphs, you can use special tokens in your query. These are evaluated during the generation of the report or graph to make sure that your report is dynamically limited to the specific context the user is in when they run the report. These are listed below.</p>
 <p>You do not have to use these tokens. You can hard code a report to query only against a specific value that the token would return dynamically (eg set the ProjectId to 1 rather than to the current ProjectId of the product the user is in). You can also exclude that part of the query entirely, so that the report will include all the items in the entire system, with no restriction by a token / that field.</p>
-<h2 id="tokens-for-reports-and-graphs">Tokens for Reports and Graphs<a class="headerlink" href="#tokens-for-reports-and-graphs" title="Permanent link">&para;</a></h2>
+<h2 id="available-tokens">Available Tokens<a class="headerlink" href="#available-tokens" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>${ProjectId}</strong>: limits the data to items in the current product only (a "product" in the tool is referred to as a "Project" in the database)</li>
 <li><strong>${ProjectGroupId}</strong>: limits the data to items in the current program only (a "program" in the tool is referred to as a "ProjectGroup" in the database)</li>
+<li><strong>${ReleaseId}</strong>: limits the data to a specific single release (selected via a dropdown)</li>
+<li><strong>${ReleaseAndChildIds}</strong>: limits the data to a specific release and all of its 'active' children (selected via a dropdown)</li>
 </ul>
-<h2 id="tokens-for-graphs-only">Tokens for Graphs Only<a class="headerlink" href="#tokens-for-graphs-only" title="Permanent link">&para;</a></h2>
-<h3 id="releaseid">${ReleaseId}<a class="headerlink" href="#releaseid" title="Permanent link">&para;</a></h3>
-<p>This token limits the data to the release selected in the Release dropdown on the main reporting page. </p>
-<p>If "All Releases" is displayed, the graph will display no data (along with an info message to users)</p>
+<h2 id="more-details-about-releaseid">More details about ${ReleaseId}<a class="headerlink" href="#more-details-about-releaseid" title="Permanent link">&para;</a></h2>
+<p>This token limits the data to the release selected in the release dropdown. For custom graphs this is the dropdown on the main reporting page. For custom reports, this dropdown is shown at the bottom of the report configuration page in a section called "Custom Section Filters". </p>
+<p>If "All Releases" is selected, custom graphs/reports using this token display no data. If a specific release is selected, then the graph will display data for that release only.</p>
 <p>Example query:</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span>
@@ -3240,9 +3227,12 @@
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
 </code></pre></div>
 
-<h3 id="releaseandchildids">${ReleaseAndChildIds}<a class="headerlink" href="#releaseandchildids" title="Permanent link">&para;</a></h3>
-<p>This token limits the data to the release selected in the Release dropdown on the main reporting page <strong>and to data from that release's child sprints</strong> (direct child sprints only). </p>
-<p>If "All Releases" is displayed, the graph, using this token, will correctly display information about all releases in the current product.</p>
+<h2 id="more-details-about-releaseandchildids">More details about ${ReleaseAndChildIds}<a class="headerlink" href="#more-details-about-releaseandchildids" title="Permanent link">&para;</a></h2>
+<p>This token limits the data to the selected release <strong>and to data from that release's children</strong>. </p>
+<p>If "All Releases" is selected data against all active releases in the current product will be returned. For example, if your custom graph shows requirements by release, with "All Releases" selected, the graph will show any requirement with an active release set on the release field (which matches the list of releases in the release dropdown). In other words, requirements with no release set will not be included.</p>
+<p>If a specific release is selected that does not have any active children data for that release only will be returned. </p>
+<p>If a release with active children is selected data for that release and all of its active children (ie any children shown in the release dropdown at the top of the page) will be returned.</p>
+<p><strong>Please note</strong>: an "active" release is one with a status of Planned, In Progress, or Completed.</p>
 <p>Example query (note the use of "in" before the token): </p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">TEST_RUN_ID</span><span class="p">)</span> <span class="k">as</span> <span class="k">COUNT</span>
 <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span>
@@ -3282,13 +3272,13 @@
           </a>
         
         
-          <a href="../../TaraVault-User-Manual/Activating-TaraVault/" title="Activating" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Custom-Report-Tables/" title="Available Database Tables" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Activating
+                Available Database Tables
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

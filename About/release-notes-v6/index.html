@@ -1387,6 +1387,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3026,6 +3038,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-652-july-2020" class="md-nav__link">
+    Version 6.5.2 (July 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-651-june-2020" class="md-nav__link">
     Version 6.5.1 (June 2020)
   </a>
@@ -3235,6 +3254,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-652-july-2020" class="md-nav__link">
+    Version 6.5.2 (July 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-651-june-2020" class="md-nav__link">
     Version 6.5.1 (June 2020)
   </a>
@@ -3363,6 +3389,108 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-652-july-2020">Version 6.5.2 (July 2020)<a class="headerlink" href="#version-652-july-2020" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong>Baselining (SpiraTeam and SpiraPlan only)</strong>: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. </p>
+<p>*Learn: read our blog about this feature <a href="http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx">here</a>, or read our <a href="../../Spira-User-Manual/Release-Management/#baselining">documentation overview</a></p>
+<p><strong><a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">Testing Settings</a></strong>: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.</p>
+<p><strong>DevOps (SpiraTeam and SpiraPlan only)</strong>: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.</p>
+</div>
+<details class="success"><summary>New features</summary><ul>
+<li><a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">Testing Settings</a> are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)</li>
+<li>
+<p>Users can <a href="../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task">create an Incident directly from a Task</a> [RQ:2971]</p>
+</li>
+<li>
+<p>Custom Reports</p>
+<ul>
+<li>Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} <a href="../../Reporting/Custom-Reporting-Tokens">tokens</a> in their ESQL as is already possible for custom graphs [RQ:2976]</li>
+</ul>
+</li>
+<li>
+<p><a href="../../Spira-User-Manual/Release-Management/#baselining">Baselining</a> (SpiraTeam and SpiraPlan only)</p>
+<ul>
+<li>Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the <a href="../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product">Admin Product page</a> [RQ:2672] (released but disabled in 6.5.1)</li>
+<li>Turning on baselining for a product disables the ability to purge or revert <a href="../../Spira-Administration-Guide/Product-General-Settings/#history-details-screen">product history</a> [RQ:2938] (released but disabled in 6.5.1)</li>
+<li>Turning on baselining for a product shows the <a href="../../Spira-User-Manual/Release-Management/#baselines">baseline tab</a> on the release details page [RQ:2940]</li>
+<li>Baseline tab on the release details page lets you view existing baselines [RQ:2664]</li>
+<li>Users with equivalent release permissions can add/edite/delete a new baseline from the baseline tab on a release details page [RQ:2662]</li>
+<li>A new <a href="../../Reporting/Custom-Report-Tables/#baselines">custom reportable entity</a> lets users create custom reports for baselines [RQ:2873]</li>
+</ul>
+</li>
+<li>
+<p>Security Enhancements</p>
+<ul>
+<li>Implement CSRF Anti-Forgery Tokens on Postback Pages [RQ:2959]</li>
+<li>Implement CSRF Anti-Forgery Tokens on WCF Ajax Services [RQ:2960]</li>
+</ul>
+</li>
+<li>
+<p>Improve included <a href="../../Spira-Administration-Guide/System-Workspaces/#included-templates">sample templates</a></p>
+<ul>
+<li>Update and refresh notification event subject lines and <a href="../../Spira-Administration-Guide/Template-Notifications/#notification-templates">notification templates</a> [RQ:2843]</li>
+<li>A new "Regulated Industries" Template provides out-the-box best practice for workflows across all artifacts [RQ:2825]</li>
+<li>A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]</li>
+</ul>
+</li>
+<li>
+<p>Source Code Management (SpiraTeam and SpiraPlan only)</p>
+<ul>
+<li><a href="../../Spira-User-Manual/Application-Wide/#associations">Artifact associations</a> show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]</li>
+<li>There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p>Testing</p>
+<ul>
+<li>Product admins can require a test step has at least one incident if it is executed and marked as anything other than passed [IN:1185]</li>
+<li>Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]</li>
+<li>Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]</li>
+<li>Product admins can limit users to only execute tests from test sets, not from test cases [IN:5686]</li>
+<li>Product admins can allow <a href="../../Spira-User-Manual/Test-Execution/#tasks">tasks</a> to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]</li>
+<li>Include an Add button on the incident tab of the test execution page to make it clearer to users how to create an incident during testing [IN:5474]</li>
+<li>In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]</li>
+<li>Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]</li>
+</ul>
+</li>
+<li>
+<p>Home pages</p>
+<ul>
+<li>Improve the styling of the My Page <a href="../../Spira-User-Manual/User-Product-Management/#my-news-feeds">News Reader widget</a> [IN:5718]</li>
+<li>The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]</li>
+<li>The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]</li>
+<li>Program, portfolio, enterprise schedule widgets should not show releases with an inactive parent detached from a workspace [IN:5687]</li>
+<li>Program, portfolio, enterprise schedule widgets should not show releases from inactive products detached from a workspace [IN:5689]</li>
+<li>All schedule widgets should work better on smaller screen sizes [IN:5605]</li>
+<li>Product home page widgets should all only show active releases when displaying for a particular release [IN:5691]</li>
+<li>The Relative Size widget should hide the legend when there are over 10 items to show to make it more useable [IN:5692]</li>
+</ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li>Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - so nice to close out an old enhancement <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" />)</li>
+<li>Do not show an error if you add a folder of test cases to the same release twice (error occurs when the folder contains deleted test cases) [IN:4880]</li>
+<li>Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]</li>
+<li>Remove references to 'Project' when exporting an artifact from one product to another [IN:5540]</li>
+<li>On the incident list page, the column labelled "Progress" is incorrectly called "Task Progress" in the column selector dropdown and filter message box [IN:5575]</li>
+<li>Revisions tab on build detail page should show revisions more consistently and not a message about the cache [IN:5548]</li>
+<li>Improve the CI/CD functionality of the association panel on artifact details pages to show revisions more consistently and also to link builds to artifacts [IN:5666]</li>
+<li>Task list: issues if the user's current folder has been deleted [IN:5027]</li>
+<li>Test Case list: issues if the user's current folder has been deleted [IN:5658]</li>
+<li>Test Set list: issues if the user's current folder has been deleted [IN:5659]</li>
+<li>Document list: issues if the user's current folder has been deleted [IN:5662]</li>
+<li>Performance fixes for projects with large numbers of releases by introducing a <a href="../../Spira-Administration-Guide/Product-Planning/#general">product setting</a> to optionally use active releases only for detected release dropdown [IN:5671]</li>
+<li>Relax the incident closed/start date validation as it can break data-syncs [IN:5693]</li>
+<li>Make filtering by release more consistent between the hierarchical and sorted requirement list pages to always include any child releases/sprints [IN:5709]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-651-june-2020">Version 6.5.1 (June 2020)<a class="headerlink" href="#version-651-june-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
@@ -3370,11 +3498,9 @@
 </div>
 <details class="success"><summary>New features</summary><ul>
 <li>
-<p>Baselining (<strong>these features are currently disabled but are in the app now to prepare for a future release</strong>)</p>
+<p>Baselining</p>
 <ul>
 <li>On generating a test run the system automatically links it to the most recent history changeset to improve auditing [RQ:2655]</li>
-<li>Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the Admin Product page [RQ:2672]</li>
-<li>Turning on baselining for a product disables the ability to purge or revert product history [RQ:2938]</li>
 </ul>
 </li>
 <li>

@@ -808,6 +808,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#creating-an-incident-from-a-task" class="md-nav__link">
+    Creating an Incident from a Task
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1666,6 +1673,18 @@
   <li class="md-nav__item">
     <a href="../../Reporting/Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-nav__link">
       Custom Report Tokens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
     </a>
   </li>
 
@@ -3605,6 +3624,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#creating-an-incident-from-a-task" class="md-nav__link">
+    Creating an Incident from a Task
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3861,6 +3887,14 @@ release / sprint organized by resource / person. Each of the users that is a mem
 <p>You can associate other tasks, incidents, and source code to a task from this tab. Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
+<h3 id="creating-an-incident-from-a-task">Creating an Incident from a Task<a class="headerlink" href="#creating-an-incident-from-a-task" title="Permanent link">&para;</a></h3>
+<p>Sometimes you may have a task logged to, say, fix something before release, that now needs to be converted into an Incident (because it won't be able to get fixed before release). This workflow is useful because Incidents usually are more public facing, and have more process around them than tasks. There is a shortcut to create a new incident from the current task; and it automatically creates an association between the new incident and the task (and if the task is linked to a requirement an association is added between that requirement and the new incident too).<sup id="fnref:in-tk"><a class="footnote-ref" href="#fn:in-tk">3</a></sup></p>
+<p>To use this feature:</p>
+<ul>
+<li>go to the Associations tab</li>
+<li>click the <code>Add</code> button</li>
+<li>at the bottom right of the panel that displays click the <code>Create Incident from this Task</code> button </li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
@@ -3869,6 +3903,24 @@ release / sprint organized by resource / person. Each of the users that is a mem
 </li>
 <li id="fn:active-release">
 <p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:in-tk">
+<p>To create an incident from a task, the user needs must have the permission to create incidents (which makes sense).</p>
+<p>The creation process does <strong>not</strong> enforce the relevant incident workflow to make sure that all required fields are filled in.</p>
+<p>What gets copied over from the task to the new incident:</p>
+<ul>
+<li>Name</li>
+<li>Description</li>
+<li>Owner</li>
+<li>Creator becomes "Detected By"</li>
+<li>Component (if this is set on the task from a linked requirement)</li>
+<li>Release becomes "Detected Release" and "Planned Release"</li>
+<li>Priority (using an intelligent match on score and name)</li>
+<li>Custom Fields of type list or multilist that use the same list and have the same name (case insensitive)</li>
+<li>Comments (using the name of the original author, but the comment creation date is the current date)</li>
+<li>Auto-link any attachments linked to the task are linked to the incident too</li>
+</ul>
+<p><a class="footnote-backref" href="#fnref:in-tk" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

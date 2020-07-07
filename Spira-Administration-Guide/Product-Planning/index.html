@@ -1187,15 +1187,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-components" class="md-nav__link">
-    Edit Components
+  <a href="#planning-options" class="md-nav__link">
+    Planning Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-incidents" class="md-nav__link">
+    Task &amp; Incidents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-settings" class="md-nav__link">
+    Testing Settings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#planning-options" class="md-nav__link">
-    Planning Options
+  <a href="#edit-components" class="md-nav__link">
+    Edit Components
   </a>
   
 </li>
@@ -1436,6 +1470,18 @@
   <li class="md-nav__item">
     <a href="../../Reporting/Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-nav__link">
       Custom Report Tokens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
     </a>
   </li>
 
@@ -3139,15 +3185,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-components" class="md-nav__link">
-    Edit Components
+  <a href="#planning-options" class="md-nav__link">
+    Planning Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-incidents" class="md-nav__link">
+    Task &amp; Incidents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-settings" class="md-nav__link">
+    Testing Settings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#planning-options" class="md-nav__link">
-    Planning Options
+  <a href="#edit-components" class="md-nav__link">
+    Edit Components
   </a>
   
 </li>
@@ -3169,118 +3249,78 @@
                 
                 
                 <h1 id="product-planning">Product: Planning<a class="headerlink" href="#product-planning" title="Permanent link">&para;</a></h1>
-<h2 id="edit-components">Edit Components<a class="headerlink" href="#edit-components" title="Permanent link">&para;</a></h2>
-<p>SpiraPlan lets you define a list of Components for each product. These
-components represent the main functional areas of the system and
-artifacts can be associated with each of the defined components.</p>
-<p><img alt="" src="../img/Product_Planning_109.png" /></p>
-<p>This page lets you display the list of components based on three
-predefined filters:</p>
-<ul>
-<li>
-<p><strong>All Active</strong> -- This displays only the components that are listed
-as Active = Yes. Only active components will be displayed inside the
-main application.</p>
-</li>
-<li>
-<p><strong>All But Deleted</strong> -- This displays all the components (active and
-inactive) except those that have been deleted.</p>
-</li>
-<li>
-<p><strong>All</strong> -- This displays all the components (active, inactive, and
-deleted).</p>
-</li>
-</ul>
-<p>From this page you can click on the 'Add Component' option to add a new
-component in the list:</p>
-<p><img alt="" src="../img/Product_Planning_110.png" /></p>
-<p>After entering the name of the new component and choosing its Active
-status, click on 'Save' to commit the new item. To edit an existing
-component, edit its name and Active status and click 'Save'. To delete a
-component, click the 'Delete' option next to its name. Once deleted, an
-item can be undeleted by changing the display to 'All' and then clicking
-'Undelete'.</p>
 <h2 id="planning-options">Planning Options<a class="headerlink" href="#planning-options" title="Permanent link">&para;</a></h2>
-<p>The Planning Options page lets you configure the schedule and calendar
-options for the various product estimation and planning modules. The
-settings are specific to each product:</p>
+<p>The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product:</p>
 <p><img alt="" src="../img/Product_Planning_111.png" /></p>
 <p>This page allows you to make changes to the following settings:</p>
-<p><strong>General</strong></p>
-<p><strong>Work Hours Per Day</strong> -- this setting allow you to specify how many
-work hours should be used when converting an effort calculation from
-hours to calendar days. For example a 12 hour task will occupy two days
-if you set the working hours per day to 6 hours, whereas the same task
-will occupy 1 ½ days only if you set the working hours per day to 8
-hours.</p>
-<p><strong>Work Days Per Week</strong> -- this setting allows you to specify how many
-days in the week are <em>typically</em> worked on the product. By default the
-system assumes a 5-day (Mon-Fri) working week, but if your organization
-works Saturdays (for example), you may want to switch to a 6-day working
-week. If you want to use partial days, then just round up to the nearest
-day and add non-working hours (see below) to compensate.</p>
-<p><strong>Non-Working Hours Per Month</strong> -- this setting allows to specify how
-many non-working hours <em>typically</em> need to be accounted for. This is
-useful if you want to have a working week that contains a fractional
-number of days or if you have recurring activities that need to be
-removed from each month. <em>Note that if you have specific holidays,
-vacation days that need to be accounted for, it is better to use the
-Release/Iteration non-working time feature instead.</em></p>
-<p><strong>Effort Calculations</strong> -- When calculating how much effort has been
-scheduled in a release or iteration, the system will aggregate the
-individual effort values (both estimated and actual) for all the task,
-incident and test cases artifacts associated with the release/iteration.
-This setting allows you to specify if you want only task, incident, or
-test case effort values to be included in the release/iteration total.
-This is useful if your product management methodology requires that
-incident or test case effort values be excluded from the total.</p>
-<p><strong>Requirements</strong></p>
-<p><strong>Default Estimate</strong> -- Normally when you create a new Requirement in
-the system it will be given an empty initial estimate (in points).
-However if many requirements are typically a standard size, then as a
-time-saver, the system will let you specify a default estimate value
-that will be used when a new requirement is created.</p>
-<p><strong>Point Effort</strong> -- When requirements are added to the Planning Board or
-Iteration planning screen, they will have an initial effort (in hours)
-that is used until tasks are added (see Auto-Create Tasks option). This
-field contains the standard conversion factor used to convert points
-into hours based on the current team velocity (how much time it takes on
-average to accomplish one story point). As the product progresses, the
-team velocity will change, so you can click on the [Suggest] button to
-have the system calculate how many hours each existing story point has
-taken to implement in the product and provide that as a recommendation:</p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Work Hours Per Day</strong>: this setting allow you to specify how many work hours should be used when converting an effort calculation from hours to calendar days. For example a 12 hour task will occupy two days if you set the working hours per day to 6 hours, whereas the same task will occupy 1 ½ days only if you set the working hours per day to 8 hours.</li>
+<li><strong>Work Days Per Week</strong>: this setting allows you to specify how many days in the week are <em>typically</em> worked on the product. By default the system assumes a 5-day (Mon-Fri) working week, but if your organization works Saturdays (for example), you may want to switch to a 6-day working week. If you want to use partial days, then just round up to the nearest day and add non-working hours (see below) to compensate.</li>
+<li><strong>Non-Working Hours Per Month</strong>: this setting allows to specify how many non-working hours <em>typically</em> need to be accounted for. This is useful if you want to have a working week that contains a fractional number of days or if you have recurring activities that need to be removed from each month. <em>Note that if you have specific holidays, vacation days that need to be accounted for, it is better to use the Release/Iteration non-working time feature instead.</em></li>
+<li><strong>Effort Calculations</strong>: When calculating how much effort has been scheduled in a release or iteration, the system will aggregate the individual effort values (both estimated and actual) for all the task, incident and test cases artifacts associated with the release/iteration. This setting allows you to specify if you want only task, incident, or test case effort values to be included in the release/iteration total. This is useful if your product management methodology requires that incident or test case effort values be excluded from the total.</li>
+<li><strong>Detected Release</strong>: By default the Incident detected release field shows ALL releases in the product. This dropdown can become very hard to use if you have a very large number of releases (many hundreds or thousands). If you check the box for this setting the Incident detected release field will only show <em>active</em> releases, not all releases.</li>
+</ul>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Default Estimate</strong>: Normally when you create a new Requirement in the system it will be given an empty initial estimate (in points). However if many requirements are typically a standard size, then as a time-saver, the system will let you specify a default estimate value that will be used when a new requirement is created.</li>
+<li><strong>Point Effort</strong>: When requirements are added to the Planning Board or Iteration planning screen, they will have an initial effort (in hours) that is used until tasks are added (see Auto-Create Tasks option). This field contains the standard conversion factor used to convert points into hours based on the current team velocity (how much time it takes on average to accomplish one story point). As the product progresses, the team velocity will change, so you can click on the [Suggest] button to have the system calculate how many hours each existing story point has taken to implement in the product and provide that as a recommendation:</li>
+</ul>
 <p><img alt="" src="../img/Product_Planning_112.png" /></p>
-<p><strong>Auto-Create Tasks</strong> -- When you change the status of a Requirement in
-the system to "In-Progress" the system will automatically add a default
-Task to that requirement if no tasks already exist. This is a useful
-shortcut that makes planning with requirements easier in the case when
-the requirements are of a size where they don't need to be formally
-decomposed into multiple developer tasks. However if you don't want the
-system to automatically create tasks in, you can deselect the option for
-the current product and it will turn off the feature.</p>
-<p><strong>Auto-Planned</strong> -- When this option is enabled, if you assign a
-release/iteration to a requirement, and the requirement is not already
-in the 'Planned' status, the system will automatically switch the status
-of the requirement to 'Planned'.</p>
-<p><strong>Use Task Status</strong> -- When this option is enabled, if you add any tasks
-to a requirement, the status of the requirement will be automatically
-governed by the aggregate status of the associated tasks.</p>
-<p><strong>Use Test Status</strong> - When this option is enabled, if you associate any
-test cases to a requirement, the status of the requirement will be
-automatically switched from 'Developed' to 'Tested' when all the
-associated test cases are passed.</p>
-<p><strong>Task &amp; Incidents</strong></p>
-<p><strong>Default Effort</strong> -- Normally when you create a new Task in the system
-it will be given an empty initial estimated effort. However if many
-tasks are typically a standard size, then as a time-saver, the system
-will let you specify a default estimated effort that will be used when a
-new task is created.</p>
-<p><strong>Time Tracking</strong> -- SpiraPlan® has an integrated time tracking system
-that allows the easy entry of the hours spent on all assigned incidents
-and tasks in one place (see the <em>SpiraPlan User Manual</em> for more details
-on this feature). This setting allows administrators to specify if they
-want the integrated time tracking features enabled for both incidents or
-tasks (or neither).</p>
+<ul>
+<li><strong>Auto-Create Tasks</strong>: When you change the status of a Requirement in the system to "In-Progress" the system will automatically add a default Task to that requirement if no tasks already exist. This is a useful shortcut that makes planning with requirements easier in the case when the requirements are of a size where they don't need to be formally decomposed into multiple developer tasks. However if you don't want the system to automatically create tasks in, you can deselect the option for the current product and it will turn off the feature.</li>
+<li><strong>Auto-Planned</strong>: When this option is enabled, if you assign a release/iteration to a requirement, and the requirement is not already in the 'Planned' status, the system will automatically switch the status of the requirement to 'Planned'.</li>
+<li><strong>Use Task Status</strong>: When this option is enabled, if you add any tasks to a requirement, the status of the requirement will be automatically governed by the aggregate status of the associated tasks.</li>
+<li><strong>Use Test Status</strong> - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from 'Developed' to 'Tested' when all the associated test cases are passed.</li>
+</ul>
+<h3 id="task-incidents">Task &amp; Incidents<a class="headerlink" href="#task-incidents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Default Effort</strong>: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.</li>
+<li><strong>Time Tracking</strong>: SpiraPlan® has an integrated time tracking system that allows the easy entry of the hours spent on all assigned incidents and tasks in one place (see the <em>SpiraPlan User Manual</em> for more details on this feature). This setting allows administrators to specify if they want the integrated time tracking features enabled for both incidents or tasks (or neither).</li>
+</ul>
+<h2 id="testing-settings">Testing Settings<a class="headerlink" href="#testing-settings" title="Permanent link">&para;</a></h2>
+<p>Clicking on the "Testing Settings" link brings up a list of options that the administrator can configure regarding testing. Select from the options displayed (as illustrated below) and click "Save" to commit the changes.</p>
+<p><img alt="" src="../img/Product_Planning_testing_settings.png" /></p>
+<p>You can enable or disable the following settings:</p>
+<ul>
+<li>
+<p><strong>Test Case Execution</strong>: the following settings affect the test execution rules / experience of all testers in the products</p>
+<ul>
+<li><strong>Display Build During Test Execution</strong>: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".</li>
+<li><strong>Disable users from PASSING ALL test steps at once</strong>: (default = no) normally in testing on the first step testers have the options of selecting "Pass All" to mark every step at once as passed. This can be a useful shortcut. If you don't want testers to use this shortcut turn this setting on.</li>
+<li><strong>Disable users from marking a test step as BLOCKED</strong>: (default = no) testing in Spira has five different execution statuses: Pass, Fail, Blocked, Caution, and N/A. Pass or Fail cannot be disabled. To disable "Blocked" turn this setting on. Testers will no longer see a "Blocked" button during testing.</li>
+<li><strong>Disable users from marking a test step as CAUTION</strong>: (default = no) to disable "Caution" turn this setting on. Testers will no longer see a "Caution" button during testing.</li>
+<li><strong>Disable users from marking a test step as N/A</strong>: (default = no) to disable "N/A" turn this setting on. Testers will no longer see an "N/A" button during testing.</li>
+<li><strong>User must ALWAYS enter an actual result for Test Steps</strong>: (default = no) an actual result is normally required when a step is marked as Fail, Blocked, Caution, or N/A. To also make testers enter an actual result when marked a step as Passed, turn this feature on.   </li>
+<li><strong>Every test step that does not pass must have an Incident</strong>: (default = no) turn this setting on to make sure that failed steps have an attached incident. This setting applies to marking a test step as Failed, Blocked, Caution, or N/A. When this setting is on, a tester will not be made to add a new incident every time they fail a step. If a step does not already have an incident linked to it the tester must either link an existing incident or make a new one.</li>
+<li><strong>Users can create Tasks during execution (including exploratory testing)</strong>: (default = no) some testing workflows using tasks to log issues from testers to developers. This is more streamlined than using incidents, and can be particularly useful for issues that originated during a development cycle (ie are not existing bugs). Turning this setting on adds a task tab to both exploratory and normal test execution ot let testers quickly log tasks against the release and test step. </li>
+</ul>
+</li>
+<li>
+<p><strong>Auto Unassign Tests</strong>:</p>
+<ul>
+<li><strong>Passing a test case unassigns it from its owner</strong>: (default = yes) when a tester passes an assigned test case automatically un-assign the test case from the user.</li>
+<li><strong>Completing a test set unassigns it from its owner</strong>: (default = yes) when a tester passes all the test cases in an assigned test set automatically un-assign the test set from the user.</li>
+</ul>
+</li>
+<li>
+<p><strong>Execute Only From Test Sets</strong>: (default = no) when turned on testers will not be able to execute Test Cases. They will only be able to execute Test Sets.</p>
+</li>
+<li><strong>Auto create a test step</strong>: (default = yes) automatically create a default test step on the creation of any test case.</li>
+<li><strong>Worx Integration</strong>: (default = no) integrating with the Worx desktop application.</li>
+</ul>
+<h2 id="edit-components">Edit Components<a class="headerlink" href="#edit-components" title="Permanent link">&para;</a></h2>
+<p>SpiraPlan lets you define a list of Components for each product. These components represent the main functional areas of the system and artifacts can be associated with each of the defined components.</p>
+<p><img alt="" src="../img/Product_Planning_109.png" /></p>
+<p>This page lets you display the list of components based on three predefined filters:</p>
+<ul>
+<li><strong>All Active</strong> -- This displays only the components that are listed as Active = Yes. Only active components will be displayed inside the main application.</li>
+<li><strong>All But Deleted</strong> -- This displays all the components (active and inactive) except those that have been deleted.</li>
+<li><strong>All</strong> -- This displays all the components (active, inactive, and deleted).</li>
+</ul>
+<p>From this page you can click on the 'Add Component' option to add a new component in the list:</p>
+<p><img alt="" src="../img/Product_Planning_110.png" /></p>
+<p>After entering the name of the new component and choosing its Active status, click on 'Save' to commit the new item. To edit an existing component, edit its name and Active status and click 'Save'. To delete a component, click the 'Delete' option next to its name. Once deleted, an item can be undeleted by changing the display to 'All' and then clicking 'Undelete'.</p>
                 
               
               

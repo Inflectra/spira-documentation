@@ -1845,6 +1845,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -4000,7 +4012,7 @@ gray.</p>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the test cases and/or test folders whose check-boxes have been selected. If any of the items are test folders, then the entire contents of that folder will also be deleted (as you would expect in Microsoft Windows® Explorer or OS X Finder).</p>
 <h3 id="execute">Execute<a class="headerlink" href="#execute" title="Permanent link">&para;</a></h3>
-<p>Clicking on the "<strong><em>Execute Tests</em></strong>" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in <a href="#test-step-details">Test Step Details</a>.</p>
+<p>Clicking on the "<strong><em>Execute Tests</em></strong>" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in <a href="#test-step-details">Test Step Details</a>. NOTE: if the product does not allow you to execute test cases this button will not be available.</p>
 <h3 id="refresh">Refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the test case list. This is useful as other people may be modifying the list of test cases at the same time as you, or executing specific test cases, and after stepping away from the computer for a short-time, you can click this button to make sure you are viewing the most current test case list for the product.</p>
 <h3 id="editing-a-test-case">Editing a Test Case<a class="headerlink" href="#editing-a-test-case" title="Permanent link">&para;</a></h3>
@@ -4058,35 +4070,22 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_136.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
 <ol>
-<li>
-<p>the left pane displays the test case folders and list navigation;</p>
-</li>
-<li>
-<p>the right pane's header, which displays: the operations toolbar; the <a href="../Application-Wide/#breadcrumbs">folder the test case is in</a>; the editable name of the selected test case; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
-</li>
-<li>
-<p>the right pane's tabbed interface with rich information related to the test case.</p>
-</li>
+<li>the left pane displays the test case folders and list navigation;</li>
+<li>the right pane's header, which displays: the operations toolbar; the <a href="../Application-Wide/#breadcrumbs">folder the test case is in</a>; the editable name of the selected test case; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</li>
+<li>the right pane's tabbed interface with rich information related to the test case.</li>
 </ol>
 <p>The navigation pane consists of a link that will take you back to the test case list, as well as a list of the peer test cases to the one selected. This latter list is useful as a navigation shortcut: you can quickly view the detailed information of all the peer test cases by clicking on the navigation links without having to first return to the test cases list page. The navigation list can be switched between three different modes:</p>
 <ul>
-<li>
-<p>The list of test cases matching the current filter</p>
-</li>
-<li>
-<p>The list of all test cases, irrespective of the current filter</p>
-</li>
-<li>
-<p>The list of test cases assigned to the current user</p>
-</li>
+<li>The list of test cases matching the current filter</li>
+<li>The list of all test cases, irrespective of the current filter</li>
+<li>The list of test cases assigned to the current user</li>
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
 <li>create a replica of the current test case by clicking <code>Clone</code></li>
 <li>discard any changes made by clicking <code>Refresh</code></li>
 <li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
-<li>the <code>Execute</code> button will immediately prepare the current test case for execution and then take you to the
-<a href="#execute-test-cases">test execution screen</a></li>
+<li>the <code>Execute</code> button will immediately prepare the current test case for execution and then take you to the <a href="#execute-test-cases">test execution screen</a>. NOTE: if the product does not allow you to execute test cases this button will not be available.</li>
 </ul>
 <p>The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.</p>
 <h3 id="emailing">Emailing<a class="headerlink" href="#emailing" title="Permanent link">&para;</a></h3>

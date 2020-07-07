@@ -458,13 +458,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#display-modes" class="md-nav__link">
     Display Modes
   </a>
@@ -496,6 +489,33 @@
   <a href="#recording-extra-information" class="md-nav__link">
     Recording Extra Information
   </a>
+  
+    <nav class="md-nav" aria-label="Recording Extra Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidents" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    Tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1487,6 +1507,18 @@
   <li class="md-nav__item">
     <a href="../../Reporting/Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-nav__link">
       Custom Report Tokens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
     </a>
   </li>
 
@@ -3190,13 +3222,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#display-modes" class="md-nav__link">
     Display Modes
   </a>
@@ -3228,6 +3253,33 @@
   <a href="#recording-extra-information" class="md-nav__link">
     Recording Extra Information
   </a>
+  
+    <nav class="md-nav" aria-label="Recording Extra Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidents" class="md-nav__link">
+    Incidents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    Tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3269,8 +3321,11 @@
                 
                 
                 <h1 id="execution-of-test-cases">Execution of Test Case(s)<a class="headerlink" href="#execution-of-test-cases" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the <a href="../Incident-Tracking/">incident tracking module</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Customizing Test Execution</p>
+<p>There are a number of ways that a product admin can tailor or customize test execution. Certain features can be disabled / enabled via the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page. The below describes using test execution with default settings and flags the key places where customizing these settings can change testers' experiences. </p>
+</div>
+<p>This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the <a href="../Incident-Tracking/">incident tracking module</a> and, optionally, to <a href="../Task-Tracking/">tasks</a>.</p>
 <p>You start test case execution in SpiraPlan by either:</p>
 <ol>
 <li>selecting test cases or test sets on their respective page(s) and clicking the "<strong><em>Execute</em></strong>" button;</li>
@@ -3300,9 +3355,11 @@
 <p><img alt="" src="../img/Test_Case_Management_172.png" /></p>
 <p>All of these modes affect how the test cases and test steps are displayed in the "test execution area". The different views have been designed to suit different ways of testing, depending on how your organization works; or the needs of a tester for a particular test.</p>
 <p>There are three parts in the "test execution area", which are visible or hidden depending on the view.</p>
-<p><strong>Table</strong>: this shows a list of every test case and step in the test run. The level of information it displays depends on the display mode.</p>
-<p><strong>Inspector</strong>: this is a detailed form containing full information about a single test step (and its associated test case as needed). It also always shows the full set of actions that can be taken on that step</p>
-<p><strong>Iframe</strong>: if you are testing an internal website (or external site that allows access via iframes) you can access it directly from this iframe browser. This allows you to have the test execution page and what you are testing open in the same web browser tab.</p>
+<ul>
+<li><strong>Table</strong>: this shows a list of every test case and step in the test run. The level of information it displays depends on the display mode.</li>
+<li><strong>Inspector</strong>: this is a detailed form containing full information about a single test step (and its associated test case as needed). It also always shows the full set of actions that can be taken on that step</li>
+<li><strong>Iframe</strong>: if you are testing an internal website (or external site that allows access via iframes) you can access it directly from this iframe browser. This allows you to have the test execution page and what you are testing open in the same web browser tab.</li>
+</ul>
 <p>There are three main display modes:</p>
 <p><strong>Split mode</strong>: shows a simplified list of test steps on the left (in the table) and full details about the currently selected test step on the right (in the inspector). The sub modes in the split view either show a narrow table and wide inspector, or a wide table and narrow inspector.</p>
 <p><img alt="" src="../img/Test_Case_Management_171.png" /></p>
@@ -3325,9 +3382,9 @@
 <h2 id="viewing-and-recording-execution-details">Viewing and Recording Execution Details<a class="headerlink" href="#viewing-and-recording-execution-details" title="Permanent link">&para;</a></h2>
 <p>There is a small icon to the left of each test step title and test case title. For test steps this is a circle, for test cases a square note. Once a status has been recorded for a test step (or once a test case has been assigned a status based on the statuses of its test steps) these icons will be filled with a visual indicator of its current status. The icons both become colored and are given a small symbol, based on the status. In the inspector view the associated button to that status has a gray bar beneath it.</p>
 <p><img alt="" src="../img/Test_Case_Management_179.png" /></p>
-<p>The same colors and symbols used to show a status are used on the buttons to record a status. The colors and symbols used are: green /
-tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Caution", red / cross = "Failed", gray / dash = "Not Run".</p>
+<p>The same colors and symbols used to show a status are used on the buttons to record a status. The colors and symbols used are: green / tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Caution", red / cross = "Failed", gray / dash = "Not Run".</p>
 <p>Depending on the display mode and device, the buttons may show the text name of the status along with the symbol (see examples below---the top button set is that on the inspector, the bottom from the table (when the display mode is set to table).</p>
+<p><strong>NOTE</strong>: by default all of the above buttons are visible during testing. However, a product admin can remove any or all of the "Caution", "Blocked", or "N/A" buttons on the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page.</p>
 <p><img alt="" src="../img/Test_Case_Management_180.png" /></p>
 <p><img alt="" src="../img/Test_Case_Management_181.png" /></p>
 <p>The various statuses when recorded against test steps will appear as below, respectively:</p>
@@ -3335,7 +3392,7 @@ tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Ca
 <p>You will notice that softer shades are used above compared to the buttons. Similarly soft shades are also used on the progress bar indicator blocks, as shown below.</p>
 <p><img alt="" src="../img/Test_Case_Management_183.png" /></p>
 <p>The status of a test case is determined by its test steps. If any of the steps are marked as "Caution", "Blocked", or "Fail" then the overall test case is marked with the most severe status of those statuses applied to any of the test steps from "Caution", to "Blocked", to "Fail" (e.g. if one is marked as "Caution, the test case will be marked "Caution"; but if one is marked as "Caution", and another "Blocked", the case will be marked "Blocked). If <em>all</em> the test steps passed, or if steps are marked either passed or "N/A", then the overall test case is marked as "Passed"; any other case results in the test case being marked as "Not Run".</p>
-<p>If the expected results are indeed observed, then you simply need to click the "<strong><em>Pass</em></strong>" button to mark the test step as passed, and advance to the next test step, or if all the steps have passed, you can click "<strong><em>Pass All</em></strong>" to pass all the steps at once.</p>
+<p>If the expected results are indeed observed, then you simply need to click the "<strong><em>Pass</em></strong>" button to mark the test step as passed, and advance to the next test step, or if all the steps have passed, you can click "<strong><em>Pass All</em></strong>" to pass all the steps at once (this ability can be disabled by product admins in <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a>).</p>
 <p>On the inspector, the "<strong><em>Pass All</em></strong>" button is visible via a dropdown to the right of the "<strong><em>Pass</em></strong>" button whenever the parent test case information is also displayed with the test step (typically only for the first step in a test case). This is illustrated in the screen shot below:</p>
 <p><img alt="" src="../img/Test_Case_Management_184.png" /></p>
 <p>When in the table display mode, the "<strong><em>Pass All</em></strong>" button is shown on the right-hand side of the test case row, as illustrated below:</p>
@@ -3343,7 +3400,7 @@ tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Ca
 <p>Below the main pane there are two optional sections. The first one allows you to log an incident in the system associated with the test step. For failures this will typically be used to log a bug relating to the failure. However even if you pass a step you can still log an incident, which may be useful for logging non-critical cosmetic items that are not serious enough for a failure to be recorded. This tab also displays any pre-existing incidents that were associated with the test step being viewed.</p>
 <p>The second tab displays a list of attachments that are related to the current test case and/or test step. This list initially contains any documents that have been attached to either the test case in general or the test step in particular. However as you perform the testing, you can attach additional documents to this list that are relevant to the test results (e.g. screenshots of an error page); these attached documents will be associated with both the test run itself and any incidents that are created.</p>
 <p>Once all the test steps have passed, you will be automatically be taken to the first step in the next test; if it is the last test case being executed, the &lt;Finish> button will be displayed instead.</p>
-<p>If the actual results differ from those expected, you need to enter a description of the actual result observed and click one of the "<strong><em>Fail</em></strong>", "<strong><em>Caution</em></strong>" buttons. Unlike the "<strong><em>Pass</em></strong>" button, if you don't enter a description for the actual result, the system will display an error message and re-prompt you again for input.</p>
+<p>If the actual results differ from those expected, you need to enter a description of the actual result observed and click one of <code>Fail</code>, <code>Caution</code>, or <code>Blocked</code> buttons (if enabled). If you don't enter anything into the actual result description box, the system will display an error message and re-prompt you again for input. By default, you will not see this prompt for passing a step, however product admins can force testers to enter an actual result when passing a step on the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page.</p>
 <p>In the inspector, the actual results text box is shown in the first tab below the information provided to the tester for a test step, as illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_186.png" /></p>
 <p>In the table display mode, previously entered actual results are always visible (below the information provided to the tester for a test step). On attempting to mark a step as anything other than "Pass" the actual results text box will automatically be displayed.</p>
@@ -3353,14 +3410,35 @@ tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Ca
 <h2 id="saving-screenshots-to-a-test-step">Saving Screenshots to a Test Step<a class="headerlink" href="#saving-screenshots-to-a-test-step" title="Permanent link">&para;</a></h2>
 <p>Often, testers will want to provide visual documentation of what they have found during the testing process. A screenshot of what they are testing is a great way to do this. To add a screenshot to the results of a test step, first copy your screenshot to the clipboard. Next, paste the screenshot into the actual results text box.</p>
 <h2 id="recording-extra-information">Recording Extra Information<a class="headerlink" href="#recording-extra-information" title="Permanent link">&para;</a></h2>
-<p>In addition to logging the result of a test step, you can optionally choose to generate a new incident at the point of logging the execution status of a test step. When the incident form is visible (see below) enter a name, type, priority, severity (and any custom properties) for the new incident <em>before</em> clicking an execution status button. The other information needed for the new incident is automatically populated from the test step details. The newly created incident will also be linked to the test step, allowing traceability from within the incidents module. The functionality for managing incidents is described in more detail in
+<h3 id="incidents">Incidents<a class="headerlink" href="#incidents" title="Permanent link">&para;</a></h3>
+<p>In addition to logging the result of a test step, you can optionally choose to generate a new incident at the point of logging the execution status of a test step. When the incident form is visible (see below) enter a name, select a type and fill in any other required fields. The description for the new incident is automatically populated from the test step details. To add the new incident either click the <code>Add</code> button at the bottom of the incident form, or clicking an execution status button for that test step.</p>
+<p>The newly created incident will also be linked to the test step, allowing traceability from within the incidents module. The functionality for managing incidents is described in more detail in
 <a href="../Incident-Tracking/">Incident Tracking</a>.</p>
 <p>If the inspector is visible, go to the "Incidents" tab. This will show any already linked incidents, show a detailed form for creating a new incident.</p>
 <p><img alt="" src="../img/Test_Case_Management_189.png" /></p>
 <p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button). The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.</p>
 <p><img alt="" src="../img/Test_Case_Management_190.png" /></p>
-<p>When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking "<strong><em>Add</em></strong>" the incident will be immediately linked to the selected test step.</p>
+<p>When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking <code>Add</code> the incident will be immediately linked to the selected test step.</p>
+<p><strong>NOTE</strong>: via <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.</p>
+<h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>If you need to attach documents to the test run (in addition to any screenshots), you can either attach a new or link an existing document. From the inspector, go to the "Attachments" tab to see any documents already linked, or to add a document as needed. In the table display mode, select either "Add New Attachment" or "Link Existing Attachment" from the "+" dropdown menu. See <a href="#attachments">Attachments</a> for additional information about how to the different available options (e.g. either upload a document, url link, or screenshot, or to link a document or from source code).</p>
+<h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<p>By default you will not see a Task tab during test execution. But a "Tasks" tab will be visible if:</p>
+<ul>
+<li>this feature has been enabled for a product on the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page</li>
+<li>you are using SpiraTeam or SpiraPlan</li>
+<li>you have permissions to view and create tasks</li>
+</ul>
+<p>The task tab allows the tester to quickly create tasks based on the current test step. These tasks are attached to the test run as a whole, so any previously entered tasks will be visible even when changing steps. Creating a task is a light touch way of communicating with others about your findings and alerting them that some work is likely required to fix or clarify a feature. It is quicker to enter and manage than an incident.</p>
+<p><img alt="" src="../img/Test_Case_Management_197.png" /></p>
+<p>When creating a task the following fields are available:</p>
+<ul>
+<li>Task name</li>
+<li>Description (if you click the link above the description box you can quickly paste in your test step information and actual result into the description field)</li>
+<li>Owner (optional)</li>
+</ul>
+<p>Tasks are shown as a list of cards with their left edge showing their priority by color. On creation a task's status will be gray -- showing that no priority has yet been set. The title of the task can be clicked to open the details page for that task.</p>
+<p><img alt="" src="../img/Test_Case_Management_198.png" /></p>
 <h2 id="leaving-the-test-execution-page">Leaving the Test Execution Page<a class="headerlink" href="#leaving-the-test-execution-page" title="Permanent link">&para;</a></h2>
 <p>If you are not able complete the whole test run in a single session, click the "Leave" button on the right of the progress bar---shown with an eject symbol (see below). This will return you to the page where you began the execution from. You can resume testing at a later date by locating the test run on your 'My Page' under 'My Pending Test Runs' and choosing to resume testing. Note that the system will remember every result you have logged, along with the last test step you were working so you can pick up right where you left off.</p>
 <p><img alt="" src="../img/Test_Case_Management_191.png" /></p>
@@ -3379,63 +3457,43 @@ tick = "Passed"; yellow / stop sign = "Blocked"; orange / warning triangle = "Ca
 <p>Care must therefore be taken that this form of testing and of recording the results of a test are used appropriately. The conditions set by the system are one means of limiting its use.</p>
 <p>When starting exploratory testing the main screen will resemble the one below. Note that it looks broadly similar to that for standard test execution and is made up of three different areas:</p>
 <ol>
-<li>
-<p>a list of test steps on the left;</p>
-</li>
-<li>
-<p>details about the currently selected step on the right; and</p>
-</li>
-<li>
-<p>information at the top of the page about the test run itself (it's name and description, release, and how many steps it contains), along with a mini toolbar. In exploratory testing there is no progress bar, or options to layout the page in different views.</p>
-</li>
+<li>a list of test steps on the left;</li>
+<li>details about the currently selected step on the right; and</li>
+<li>information at the top of the page about the test run itself (it's name and description, release, and how many steps it contains), along with a mini toolbar. In exploratory testing there is no progress bar, or options to layout the page in different views.</li>
 </ol>
 <p><img alt="" src="../img/Test_Case_Management_194.png" /></p>
 <p>All fields in the right hand details area, or the top part of the page can often be edited. Their contents and associated label will be grayed out if they are read only fields (for instance if they are information from a custom property). To edit a field, click on it, change the text as required, then click out of the field. The information will be automatically saved. Note that any test steps that come from a link test case will be read only and as such their contents cannot be edited, nor can they be deleted.</p>
 <p>Just like with normal test execution, you can navigate between steps using the list of steps on the left; and steps can be passed, or failed using the execution status toolbar on the right hand section of the page. The unique actions you can take on test steps (besides editing their fields) are below:</p>
-<ol>
+<ul>
 <li>
 <p><strong>add a step</strong>: click on the plus button beneath the list of test steps on the left</p>
 </li>
 <li>
 <p><strong>clone an existing step</strong>: when you hover a test step in the list, you will see a button appear on its right. Click on this to show a mini menu with an option to clone the step. This will create a clone, at the bottom of the list of test steps, with a blank actual result</p>
 </li>
-</ol>
-<blockquote>
+</ul>
 <p><img alt="" src="../img/Test_Case_Management_195.png" /></p>
 <p><img alt="" src="../img/Test_Case_Management_196.png" /></p>
-</blockquote>
-<ol>
+<ul>
 <li>
 <p><strong>delete an existing step</strong>: if you have more than one test step, any editable test step can be deleted. Click on the button for that step (as explained above) and click delete from the mini menu.</p>
 </li>
 <li>
 <p><strong>move an existing step</strong>: to move an editable step click and drag it to the desired location in the test step list.</p>
 </li>
-</ol>
-<p>Below the main detailed section there are two or three tabs. SpiraTest users will only see two tabs -- incidents and attachements. SpiraPlan users will additionally see a tasks tab. The incident and attachment tabs function identically to normal test execution.</p>
-<p>The task tab allows the tester to quickly create tasks based on their exploratory testing, and optionally assign them to a user involved in the product. These tasks are attached to the test run as a whole, so any previously entered tasks will be visible even when changing steps. Creating a task is a light touch way of communicating with others about your findings and alerting them that some work is likely required to fix or clarify a feature. It is quicker to enter and manage than an incident.</p>
-<p><img alt="" src="../img/Test_Case_Management_197.png" /></p>
-<p>Tasks are shown as a list of cards with their left edge showing their priority by color. On creation a task's status will be gray -- showing that no priority has yet been set. The title of the task can be clicked to open the details page for that task.</p>
-<p><img alt="" src="../img/Test_Case_Management_198.png" /></p>
+</ul>
+<p>Below the main detailed section there are two or three tabs. SpiraTest users will only see two tabs -- incidents and attachements. SpiraPlan users may see the additional  tasks tab (if enabled by the product admin). </p>
 <p>The toolbar at the top right of the page has a number of buttons:</p>
 <p><img alt="" src="../img/Test_Case_Management_199.png" /></p>
-<ol>
-<li>
-<p><strong>Pause/Play button</strong>: the time spent on every test step is recorded, by default, during test execution. This allows an accurate assessment of exactly how long a test run took to complete and these timing details are saved with the test run and its results. If you wish to pause the behind-the-scenes timer (for instance if taking a break) click the pause/play button. To resume the time click it again.</p>
-</li>
-<li>
-<p><strong>Leave button</strong>: as with normal test execution, if you are not able complete the exploratory test in a single session, click the "Leave" button---shown with an eject symbol. You can resume testing at a later date by locating the test run on your 'My Page' under 'My Pending Test Runs' and choosing to resume testing. Note that the system will remember every result you have logged, along with the last test step you were working so you can pick up right where you left off.</p>
-</li>
-<li>
-<p><strong>Finish button</strong>: once either all steps in a test have an execution status recorded, or at least one step has been recorded with any status other than "Pass" the test run can be finished. An orange with a stop symbol will appear (see below). Clicking this button will give you two options. "Update Test Case" will update the test case execution status, and also change its name, description, and test steps to reflect those on this page (adding, deleting, moving, editing as necessary). "Just Finish" will only change the execution status of the test case only---leaving all details of the test case unchanged. Either option will archive the entire test run (so it can no longer be amended) and the page will automatically exit the test execution page.</p>
-</li>
-</ol>
-<blockquote>
+<ul>
+<li><strong>Pause/Play button</strong>: the time spent on every test step is recorded, by default, during test execution. This allows an accurate assessment of exactly how long a test run took to complete and these timing details are saved with the test run and its results. If you wish to pause the behind-the-scenes timer (for instance if taking a break) click the pause/play button. To resume the time click it again.</li>
+<li><strong>Leave button</strong>: as with normal test execution, if you are not able complete the exploratory test in a single session, click the "Leave" button---shown with an eject symbol. You can resume testing at a later date by locating the test run on your 'My Page' under 'My Pending Test Runs' and choosing to resume testing. Note that the system will remember every result you have logged, along with the last test step you were working so you can pick up right where you left off.</li>
+<li><strong>Finish button</strong>: once either all steps in a test have an execution status recorded, or at least one step has been recorded with any status other than "Pass" the test run can be finished. An orange with a stop symbol will appear (see below). Clicking this button will give you two options. "Update Test Case" will update the test case execution status, and also change its name, description, and test steps to reflect those on this page (adding, deleting, moving, editing as necessary). "Just Finish" will only change the execution status of the test case only---leaving all details of the test case unchanged. Either option will archive the entire test run (so it can no longer be amended) and the page will automatically exit the test execution page.</li>
+</ul>
 <p><img alt="" src="../img/Test_Case_Management_200.png" /></p>
-</blockquote>
-<ol>
+<ul>
 <li><strong>Options</strong>: the right most button on the toolbar gives additional options for customizing the page. Specifically a user can decide what fields they wish to show or hide based on how they prefer to work in exploratory testing mode. Additionally this menu let's you revisit the introductory tour shown the first time the page is visited.</li>
-</ol>
+</ul>
 <p><img alt="" src="../img/Test_Case_Management_201.png" /></p>
                 
               

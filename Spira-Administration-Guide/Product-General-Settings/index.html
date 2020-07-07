@@ -1488,6 +1488,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3271,37 +3283,19 @@
 <p><img alt="" src="../img/Product_General_Settings_99.png" /></p>
 <p>There are a handful of change types recorded and displayed here:</p>
 <ul>
-<li>
-<p><strong>Modified</strong>: The most common, this means that one or more fields in this artifact were changed. Note that if a standard field and a custom field were changed at the same time, it will generate two separate entries, one for the standard fields, one for the custom fields.</p>
-</li>
-<li>
-<p><strong>Added</strong>: This means that this artifact was added, created in the system, either by using the New menu option or by copying. Pasting an item that was cut will not result in an Added entry being created.</p>
-</li>
-<li>
-<p><strong>Rollback</strong>: This items means that the artifact was rolled back to a specific event in the history.</p>
-</li>
-<li>
-<p><strong>Deleted</strong>: This entry is created when an artifact is deleted from the system.</p>
-</li>
-<li>
-<p><strong>Undelete</strong>: This entry is created when an artifact was deleted and then undeleted, making it live in the system again.</p>
-</li>
-<li>
-<p><strong>Purged</strong>: This entry is created (and all other history items are removed) when a deleted artifact is purged from the system. Purged items are removed from the database, and cannot be recovered.</p>
-</li>
+<li><strong>Modified</strong>: The most common, this means that one or more fields in this artifact were changed. Note that if a standard field and a custom field were changed at the same time, it will generate two separate entries, one for the standard fields, one for the custom fields.</li>
+<li><strong>Added</strong>: This means that this artifact was added, created in the system, either by using the New menu option or by copying. Pasting an item that was cut will not result in an Added entry being created.</li>
+<li><strong>Rollback</strong>: This items means that the artifact was rolled back to a specific event in the history.</li>
+<li><strong>Deleted</strong>: This entry is created when an artifact is deleted from the system.</li>
+<li><strong>Undelete</strong>: This entry is created when an artifact was deleted and then undeleted, making it live in the system again.</li>
+<li><strong>Purged</strong>: This entry is created (and all other history items are removed) when a deleted artifact is purged from the system. Purged items are removed from the database, and cannot be recovered.</li>
 </ul>
 <p><strong><em>Note</em></strong>: When upgrading from a version before v3.1, each individual field changed will be considered a unique change, due to how previous versions recorded history. However, as soon as the application is upgraded, simultaneous changes will be grouped together based on their last-update date.</p>
-<p>This screen allows the administrator several options:</p>
+<p>This screen allows the administrator several options (below). NOTE: if baselining is enabled for this product you will not be able to revert or purge all.</p>
 <ul>
-<li>
-<p><em>Viewing Details</em>: The detail screen for each change set can be viewed by clicking on the change ID #. This will take you to the history details screen, described below.</p>
-</li>
-<li>
-<p><em>Revert</em>: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.</p>
-</li>
-<li>
-<p><em>Purge All</em>: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored.</p>
-</li>
+<li><em>Viewing Details</em>: The detail screen for each change set can be viewed by clicking on the change ID #. This will take you to the history details screen, described below.</li>
+<li><em>Revert</em>: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.</li>
+<li><em>Purge All</em>: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored.</li>
 </ul>
 <h3 id="history-details-screen">History Details Screen<a class="headerlink" href="#history-details-screen" title="Permanent link">&para;</a></h3>
 <p>The history details screen displays information on the selected change set:</p>
@@ -3309,6 +3303,10 @@
 <p>The History Details screen will show basic information as well as fields that were changed in this change set. Shown here is the Change ID, the date and time that the change was made, the user that made the change, the change type, the artifact affected, and the set of fields affected.</p>
 <p>If a set of fields were affected (Standard or Custom), then the list of fields will be listed below. In the example above, the change was a Modification, and 5 fields were changed. In other change types, no fields will be displayed.</p>
 <p>If the artifact is still available in the system, you can click the Artifact or click the 'View Item' button in the toolbar to view the item as it is currently. However, if the item has been deleted, a warning label will be displayed (as above in the example screenshot), the View Item links will be disabled, and a new option, "Purge" will appear on the toolbar.</p>
+<div class="admonition info">
+<p class="admonition-title">If baselining is turned on</p>
+<p>If baselining is enabled for this product, you will not be able to revert or purge any history item and the relevant buttons will not even be visible to you.</p>
+</div>
 <h3 id="purging-items">Purging Items<a class="headerlink" href="#purging-items" title="Permanent link">&para;</a></h3>
 <p>Items that have been deleted by any user still remain in the database, but do not affect statistics or reports, and do not show up in reports and cannot be viewed. The artifacts are still in the database, however, and can be restored by clicking on the Restore button in the toolbar.</p>
 <p>Purging an individual item can only be done while viewing one of its history detail screens. Once an item is purged, you will be taken back to the history list screen. All the previous history items for the artifact will be removed, and replaced with a single "Purged" history item.</p>

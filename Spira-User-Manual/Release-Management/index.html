@@ -435,6 +435,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#baselining" class="md-nav__link">
+    Baselining
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release-list" class="md-nav__link">
     Release List
   </a>
@@ -661,6 +668,13 @@
           <li class="md-nav__item">
   <a href="#attachments" class="md-nav__link">
     Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselines" class="md-nav__link">
+    Baselines
   </a>
   
 </li>
@@ -1763,6 +1777,18 @@
   <li class="md-nav__item">
     <a href="../../Reporting/Custom-Reporting-Tokens/" title="Custom Report Tokens" class="md-nav__link">
       Custom Report Tokens
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reporting/Custom-Report-Tables/" title="Available Database Tables" class="md-nav__link">
+      Available Database Tables
     </a>
   </li>
 
@@ -3521,6 +3547,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#baselining" class="md-nav__link">
+    Baselining
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release-list" class="md-nav__link">
     Release List
   </a>
@@ -3752,6 +3785,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#baselines" class="md-nav__link">
+    Baselines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#history" class="md-nav__link">
     History
   </a>
@@ -3878,6 +3918,25 @@
 <h3 id="task-effort">Task Effort<a class="headerlink" href="#task-effort" title="Permanent link">&para;</a></h3>
 <p>Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the <a href="../../Spira-Administration-Guide/Product-Planning/#planning-options">Planning Options</a> page of product administration.</p>
 <p>Task effort calculations are described in more detail <a href="../User-Product-Management.md/#release-task-progress">here</a>. </p>
+<h2 id="baselining">Baselining<a class="headerlink" href="#baselining" title="Permanent link">&para;</a></h2>
+<p>NOTE: <strong>Baselining is only available in SpiraTeam and SpiraPlan</strong>.</p>
+<div class="admonition question">
+<p class="admonition-title">What is baselining in SpiraPlan</p>
+<p>Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines.</p>
+<p>In SpiraPlan, we attach baselines to a release, as well as to the state of the product changes. This is to help you more easily use baselines as part of your release planning and review: baselines are, in effect, tied to the progress of your releases and sprints. You may wish to create a baseline when your release starts, and then create another when it is released. You may create a baseline at the end of every sprint and then use your baselines to see what happened between those two sprints.</p>
+</div>
+<p>Here is a step by step overview on getting started with baselines:</p>
+<ul>
+<li>First, enable baselining for your specific product via the <a href="../../Spira-Administration-Guide/System-Workspaces/#edit-a-product">edit product</a> page. You have to a system or product admin to do this</li>
+<li>To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items.</li>
+<li>With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can baselines. If you can edit a release you can eidt its baselines. And if you can delete releases you can delete baselines.</li>
+<li>Go to the list of releases and click on the release you want to manage baselines for</li>
+<li>Click on the baselines tab to see your list of baselines</li>
+<li>You can sort or filter the list of baselines by any of the fields in the table</li>
+<li>To add a baseline, click the add button and fill in the details on the popup form</li>
+<li>To do more with baselines you can create a custom report for them (examples <a href="https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx">here</a>). NOTE: in-app reports and other features for viewing baseline data will be added in future releases.</li>
+</ul>
+<p><a href="#baselines">Below</a> is more information below about how to create, edit, delete, and view your baselines against a specific release.</p>
 <h2 id="release-list">Release List<a class="headerlink" href="#release-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Planning > Releases global navigation link, you will initially be taken to the release list screen illustrated below:</p>
 <p><img alt="" src="../img/Release_Management_258.png" /></p>
@@ -3966,26 +4025,16 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p><img alt="" src="../img/Release_Management_263.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
 <ol>
-<li>
-<p>the left pane displays the releases list navigation;</p>
-</li>
-<li>
-<p>the right pane's header, which displays: the operations toolbar; <a href="../Application-Wide/#breadcrumbs">the hierarchical structure the release is in</a>; the editable name of the selected release; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
-</li>
-<li>
-<p>the right pane's tabbed interface with rich information related to the release.</p>
-</li>
+<li>the left pane displays the releases list navigation;</li>
+<li>the right pane's header, which displays: the operations toolbar; <a href="../Application-Wide/#breadcrumbs">the hierarchical structure the release is in</a>; the editable name of the selected release; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</li>
+<li>the right pane's tabbed interface with rich information related to the release.</li>
 </ol>
 <p>Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the releases list, on mobile devices a 'back' button is shown on the left of the operations toolbar.</p>
 <p>The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.</p>
 <p>The navigation pane consists of a link that will take you back to the release list, as well as a list of the other releases in the current product. This latter list is useful as a navigation shortcut; you can quickly view the test run information of all the other releases by clicking on the navigation links without having to first return to the release list page. The navigation list can be switched between two different modes:</p>
 <ul>
-<li>
-<p>The list of releases matching the current filter</p>
-</li>
-<li>
-<p>The list of all releases, irrespective of the current filter</p>
-</li>
+<li>The list of releases matching the current filter</li>
+<li>The list of all releases, irrespective of the current filter</li>
 </ul>
 <p>The top part of the right pane allows you to view and/or edit the details of the particular release. In addition you can delete the current artifact by choosing "<strong><em>Delete</em></strong>", discard any changes made by clicking "<strong><em>Refresh</em></strong>", or print or export it by clicking one of the options from the Tools dropdown menu. </p>
 <p>The lower part of the right pane can be in one of seven possible modes that can be selected: "Overview", "Incidents", "Reqs &amp; Tasks", "Test Cases", "Test Runs", "Attachments", and "History". Each of the different views is described separately below.</p>
@@ -4038,18 +4087,20 @@ days, the system will automatically calculate how many hours of effort (planned 
 <li>current owner</li>
 <li>estimated effort</li>
 <li>actual effort</li>
-<li>producted effort</li>
+<li>projected effort</li>
 <li>story points (requirements only)</li>
 <li>and numeric task identifier</li>
 </ul>
 <p>Clicking on a requirement will bring up the <a href="../Requirements-Management/#requirement-details">requirement details page</a>. Clicking the triangle by a requirement will expand/collapse its list of tasks. Clicking on a task name will bring up the Task Details page which is described in more detail in <a href="../Task-Tracking/#task-details">Task Tracking &gt; Task Details</a>. This allows you to edit the details of an existing task.</p>
 <p>You can perform the following actions on a task from this screen:</p>
-<p><strong>Insert Task</strong> -- inserts a new task in the task list under the specified requirement, with a default set of values. The task will be associated with the specified requirement and current release/sprint. If no requirement is selected, the task will only be associated with the current release/sprint</p>
-<p><strong>Delete</strong> -- deletes the task from the product.</p>
-<p><strong>Refresh</strong> -- updates the list of requirements and tasks from the server, useful if other people are adding requirements and/or tasks to this release/sprint at the same time.</p>
-<p>You can <strong>filter</strong> the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable.</p>
-<p><strong>Show Level</strong> -- Allows you to quickly expand/collapse all the requirements in the list.</p>
+<ul>
+<li><strong>Insert Task</strong>: inserts a new task in the task list under the specified requirement, with a default set of values. The task will be associated with the specified requirement and current release/sprint. If no requirement is selected, the task will only be associated with the current release/sprint</li>
+<li><strong>Delete</strong>: deletes the task from the product.</li>
+<li><strong>Refresh</strong>: updates the list of requirements and tasks from the server, useful if other people are adding requirements and/or tasks to this release/sprint at the same time.</li>
+<li>You can <strong>filter</strong> the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
+<li><strong>Edit</strong>: Clicking the "<strong><em>Edit</em></strong>" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable.</li>
+<li><strong>Show Level</strong>: Allows you to quickly expand/collapse all the requirements in the list.</li>
+</ul>
 <h3 id="test-cases">Test Cases<a class="headerlink" href="#test-cases" title="Permanent link">&para;</a></h3>
 <p>This tab shows the test coverage information for the release in question:</p>
 <p><img alt="" src="../img/Release_Management_270.png" /></p>
@@ -4071,6 +4122,25 @@ days, the system will automatically calculate how many hours of effort (planned 
 <p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" link. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
+<h3 id="baselines">Baselines<a class="headerlink" href="#baselines" title="Permanent link">&para;</a></h3>
+<p>NOTE: <strong>Baselining is only available in SpiraTeam and SpiraPlan</strong> and this tab will be only then be visible if baselining has been turned on for a product.</p>
+<p>This view displays the list of all baselines created for this release. If you have permissions for releases to create/modify/delete then you can perform the same actions for baselines.</p>
+<p><img alt="baselines tab" src="../img/Release_Management_baselines_tab.png" /></p>
+<p>You can view the following information about a baseline here:</p>
+<ul>
+<li>Name (for product admins this links to the specific producy history change)</li>
+<li>Description</li>
+<li>Creator</li>
+<li>Date (hover to see a tooltip of the date and time)</li>
+<li>Active (yes or no)</li>
+<li>Change ID (product admins only - this is the system wide history change id that the baseline is linked to)</li>
+<li>ID</li>
+</ul>
+<p>To <strong>add a new baseline</strong>, click the <code>New Baseline</code> button. This will be disabled if you are not able to create releases. This will open up a small form. The name field is required, but the description field is optional. Enter the information and hit <code>Add</code>. NOTE: a baseline's description is plain text only.</p>
+<p><img alt="adding a new baseline" src="../img/Release_Management_baselines_tab_add.png" /></p>
+<p>You can <strong>edit</strong> an existing baseline as long as you can edit the specific release the baseline belongs to. If you see <code>Edit</code> buttons on the table of baselines that means you can edit. You can edit a baselines name, its description, and whether it is active or not.</p>
+<p>If you can <strong>delete</strong> releases you can delete any baseline on any release. To do so click select the baselines to delete (put a checkmark next to it) and click the <code>Delete</code> button. </p>
+<p>To filter and sort the list of baselines, use the filter and sort controls at the top of the table.</p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
 <h2 id="build-details">Build Details<a class="headerlink" href="#build-details" title="Permanent link">&para;</a></h2>
