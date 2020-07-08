@@ -2736,6 +2736,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fields-dates" class="md-nav__link">
+    Fields: dates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-multi-select-lists" class="md-nav__link">
+    Fields: multi-select lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-actions-you-can-do-on-this-page" class="md-nav__link">
     Other actions you can do on this page
   </a>
@@ -3249,6 +3263,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fields-dates" class="md-nav__link">
+    Fields: dates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields-multi-select-lists" class="md-nav__link">
+    Fields: multi-select lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-actions-you-can-do-on-this-page" class="md-nav__link">
     Other actions you can do on this page
   </a>
@@ -3337,8 +3365,17 @@
 <h3 id="fields-how-certain-special-fields-work">Fields: how certain 'special' fields work<a class="headerlink" href="#fields-how-certain-special-fields-work" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>ID Fields</strong>: This field MUST be left blank to add new items to Spira. Any rows with entries in the ID fields are skipped over.</li>
-<li><strong>Test Step Fields</strong>: have their header row shown in a lighter background color. Do not put any information in these fields when creating a test case. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.</li>
-<li><strong>Name</strong>: For REQUIREMENTS and RELEASES this field supports indentation, add a “ &gt; “ symbol to indicate how the items in the artifact hierarchy are organized.</li>
+<li>
+<p><strong>Test Cases and Test Steps</strong>: </p>
+<ul>
+<li>Test case fields are columns with a darker background color. Test steps fields are columns with a lighter background color. </li>
+<li>To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. </li>
+<li>Make sure: each row only fills in either test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.</li>
+</ul>
+</li>
+<li>
+<p><strong>Name</strong>: For REQUIREMENTS and RELEASES this field supports indentation, add a “ &gt; “ symbol to indicate how the items in the artifact hierarchy are organized.</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>Example:
 Item 1
@@ -3347,6 +3384,16 @@ Item 1
 &gt; &gt; Item 4 child of item 3
 </code></pre></div>
 
+<h3 id="fields-dates">Fields: dates<a class="headerlink" href="#fields-dates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dates are entered into SpiraPlan as UTC and at midday.</li>
+</ul>
+<h3 id="fields-multi-select-lists">Fields: multi-select lists<a class="headerlink" href="#fields-multi-select-lists" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality</li>
+<li>When data is sent from SpiraPlan to the spreadsheet, only the first value in the list (if multiple are selected) will be displayed</li>
+<li>When sending data to SpiraPlan you will only be able to select one value</li>
+</ul>
 <h3 id="other-actions-you-can-do-on-this-page">Other actions you can do on this page<a class="headerlink" href="#other-actions-you-can-do-on-this-page" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Back</strong>: Go back to select which add-in mode to run</li>
