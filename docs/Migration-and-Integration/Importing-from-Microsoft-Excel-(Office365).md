@@ -59,7 +59,11 @@ If you are getting data from or sending data to Spira you first have to select t
 
 ### Fields: how certain 'special' fields work
 * **ID Fields**: This field MUST be left blank to add new items to Spira. Any rows with entries in the ID fields are skipped over.
-* **Test Step Fields**: have their header row shown in a lighter background color. Do not put any information in these fields when creating a test case. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
+* **Test Cases and Test Steps**: 
+    - Test case fields are columns with a darker background color. Test steps fields are columns with a lighter background color. 
+    - To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. 
+    - Make sure: each row only fills in either test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
+
 * **Name**: For REQUIREMENTS and RELEASES this field supports indentation, add a “ > “ symbol to indicate how the items in the artifact hierarchy are organized.
         
 ```
@@ -69,6 +73,9 @@ Item 1
 > Item 3 child of item 1
 > > Item 4 child of item 3
 ```
+
+### Fields: dates
+* Dates are entered into SpiraPlan as UTC and at midday.
 
 ### Fields: multi-select lists
 * Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
