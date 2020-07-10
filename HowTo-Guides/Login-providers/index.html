@@ -3246,7 +3246,7 @@
 When creating an app registration you should:</p>
 <ol>
 <li>Go to Azure AD</li>
-<li>Click "Add Registration"</li>
+<li>Click "App Registrations" from the sidebar on the left, then "New Registration" from the top of the page</li>
 <li>Enter a meaningful name</li>
 <li>Select which type of accounts to support. There are 3 options (as of March 2020). Pick the one that makes sense for your organization. </li>
 <li><strong>Enter a Redirect URI of type Web</strong>:<ul>
@@ -3263,13 +3263,12 @@ When creating an app registration you should:</p>
 <li>Make sure to copy and safely store the generated secret as once it is created you will not be able to retrieve it again</li>
 </ul>
 </li>
-</ol>
-<p>To enter the provider information into Spira you will need 3 URLs. </p>
-<ol>
-<li>Go to the app registration overview page and click "Endpoints" to see all the possible URLs. </li>
+<li>To enter the provider information into Spira you will need 3 URLs. Go to the app registration overview page and click "Endpoints" to see all the possible URLs. <ol>
 <li>Authorization URL = "OAuth 2.0 authorization endpoint (v2)" url</li>
-<li>Token URL = "OAuth 2.0 token endpoint (v2)" ulr</li>
+<li>Token URL = "OAuth 2.0 token endpoint (v2)" url</li>
 <li>Profile URL = <a href="https://graph.microsoft.com/oidc/userinfo">https://graph.microsoft.com/oidc/userinfo</a></li>
+</ol>
+</li>
 </ol>
 <h2 id="github">Github<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
 <ol>
