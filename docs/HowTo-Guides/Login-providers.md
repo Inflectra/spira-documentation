@@ -11,7 +11,7 @@ To set up an Azure AD provider app with Spira you will need an Azure account wit
 When creating an app registration you should:
 
 1. Go to Azure AD
-2. Click "Add Registration"
+2. Click "App Registrations" from the sidebar on the left, then "New Registration" from the top of the page
 3. Enter a meaningful name
 4. Select which type of accounts to support. There are 3 options (as of March 2020). Pick the one that makes sense for your organization. 
 5. **Enter a Redirect URI of type Web**:
@@ -24,13 +24,10 @@ When creating an app registration you should:
     - Give it a name
     - Set an expiry
     - Make sure to copy and safely store the generated secret as once it is created you will not be able to retrieve it again
-
-To enter the provider information into Spira you will need 3 URLs. 
-
-1. Go to the app registration overview page and click "Endpoints" to see all the possible URLs. 
-2. Authorization URL = "OAuth 2.0 authorization endpoint (v2)" url
-3. Token URL = "OAuth 2.0 token endpoint (v2)" ulr
-4. Profile URL = https://graph.microsoft.com/oidc/userinfo
+10. To enter the provider information into Spira you will need 3 URLs. Go to the app registration overview page and click "Endpoints" to see all the possible URLs. 
+    1. Authorization URL = "OAuth 2.0 authorization endpoint (v2)" url
+    2. Token URL = "OAuth 2.0 token endpoint (v2)" url
+    3. Profile URL = https://graph.microsoft.com/oidc/userinfo
 
 ## Github
 1. Create a [new application in Github](https://github.com/settings/applications/new)
