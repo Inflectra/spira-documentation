@@ -856,6 +856,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-does-a-user-not-see-the-right-transitions" class="md-nav__link">
+    Why does a user not see the right transitions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3188,6 +3195,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-does-a-user-not-see-the-right-transitions" class="md-nav__link">
+    Why does a user not see the right transitions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3230,6 +3244,32 @@
 6. Go to the <code>Options</code> tab in the popup
 7. Set the "Allow Empty" dropdown to Yes or No as desired
 8. Hit <code>Save</code></p>
+<h2 class="section-break" id="why-does-a-user-not-see-the-right-transitions">Why does a user not see the right transitions<a class="headerlink" href="#why-does-a-user-not-see-the-right-transitions" title="Permanent link">&para;</a></h2>
+<p>When a user goes to look at the detail of an artifact they may be able to change the status by transitioning from one status to another. This is called a transition. What transitions show up when for what users is controlled by a number of things.</p>
+<p>To troubleshoot the issue you need to be a template administrator. The summary steps to review are below. Please refer to the <a href="../../Spira-Administration-Guide">admin guide</a> for more information.</p>
+<ol>
+<li>Is the right workflow in use? <ul>
+<li>You can have lots of workflows for an artifact</li>
+<li>One workflow will be the default</li>
+<li>Other workflows can be made inactive</li>
+<li>Different workflows can be assigned to different types of that artifact</li>
+<li><strong>So...</strong> if you have an incident of type bug, check what workflow is assigned to bugs - that is the one to explore</li>
+</ul>
+</li>
+<li>Is there a transition in the right place?<ul>
+<li>Now that you know you are looking at the right workflow you can see if the transition exists</li>
+<li>Look at the starting step/status and see if there is a transition going from it to the correct new step/status</li>
+</ul>
+</li>
+<li>Are the right people able to see and execute that transition?<ul>
+<li>You should now have the right workflow and the right transition</li>
+<li>The next place to look is at the transition itself</li>
+<li>Click on the transition button on the workflow page</li>
+<li>Can the right users see/execute the transition? </li>
+<li>Make sure to enable the necessary product roles and hit <code>Save</code> to commit any changes</li>
+</ul>
+</li>
+</ol>
                 
               
               

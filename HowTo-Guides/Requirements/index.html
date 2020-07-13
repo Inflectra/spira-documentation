@@ -855,6 +855,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-does-my-requirement-status-change-by-itself" class="md-nav__link">
+    Why does my requirement status change by itself
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3162,6 +3169,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-does-my-requirement-status-change-by-itself" class="md-nav__link">
+    Why does my requirement status change by itself
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3195,6 +3209,15 @@
 <li>If an "Epic" later loses all children, its type reverts back to what it was before it became an "Epic" </li>
 <li>A requirement type helps control which workflow is applied to a requirement. However, for an "Epic" this is a mute point: you cannot manually change an "Epic" status, this is automatically set by the system based off of the combined statuses of the "Epic"'s children</li>
 </ul>
+<h2 class="section-break" id="why-does-my-requirement-status-change-by-itself">Why does my requirement status change by itself<a class="headerlink" href="#why-does-my-requirement-status-change-by-itself" title="Permanent link">&para;</a></h2>
+<p>Sometimes you may change the status of a requirement, then when you look at it again the status was the <em>old</em> status, not the new one you tried to change it to. What causes this?</p>
+<ol>
+<li>As a product admin go to Product Admin &gt; Planning &gt; <a href="../../Spira-Administration-Guide/Product-Planning/#requirements">Planning Options</a></li>
+<li>Look at the <a href="../../Spira-Administration-Guide/Product-Planning/#requirements">Requirements</a> section</li>
+<li>There are two options that can keep a requirement status stuck: "Use Task Status" and "Use Test Status".</li>
+<li>If "Use Task Status" is enabled, a requirement will move to "developed" when all its tasks are complete (and cannot be moved to developed before that)</li>
+<li>If "Use Test Status" is enabled, a developed requirement will move to "tested" when all its test cases have passed (and cannot be moved to tested before that)</li>
+</ol>
                 
               
               
