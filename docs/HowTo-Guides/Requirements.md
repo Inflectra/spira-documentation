@@ -15,3 +15,13 @@ You may wonder why a requirement has its type marked as "Epic" even though noone
 - The type "Epic" is a calculated type by the system. Any requirement that has any children automatically becomes an "Epic"
 - If an "Epic" later loses all children, its type reverts back to what it was before it became an "Epic" 
 - A requirement type helps control which workflow is applied to a requirement. However, for an "Epic" this is a mute point: you cannot manually change an "Epic" status, this is automatically set by the system based off of the combined statuses of the "Epic"'s children
+
+
+## Why does my requirement status change by itself {: .section-break}
+Sometimes you may change the status of a requirement, then when you look at it again the status was the *old* status, not the new one you tried to change it to. What causes this?
+
+1. As a product admin go to Product Admin > Planning > [Planning Options](../../Spira-Administration-Guide/Product-Planning/#requirements)
+2. Look at the [Requirements](../../Spira-Administration-Guide/Product-Planning/#requirements) section
+3. There are two options that can keep a requirement status stuck: "Use Task Status" and "Use Test Status".
+4. If "Use Task Status" is enabled, a requirement will move to "developed" when all its tasks are complete (and cannot be moved to developed before that)
+5. If "Use Test Status" is enabled, a developed requirement will move to "tested" when all its test cases have passed (and cannot be moved to tested before that)

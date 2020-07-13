@@ -29,3 +29,23 @@ To change if a blank value is allowed or not for a custom property:
 8. Hit `Save`
 
 
+## Why does a user not see the right transitions {: .section-break}
+When a user goes to look at the detail of an artifact they may be able to change the status by transitioning from one status to another. This is called a transition. What transitions show up when for what users is controlled by a number of things.
+
+To troubleshoot the issue you need to be a template administrator. The summary steps to review are below. Please refer to the [admin guide](../../Spira-Administration-Guide) for more information.
+
+1. Is the right workflow in use? 
+    - You can have lots of workflows for an artifact
+    - One workflow will be the default
+    - Other workflows can be made inactive
+    - Different workflows can be assigned to different types of that artifact
+    - **So...** if you have an incident of type bug, check what workflow is assigned to bugs - that is the one to explore
+2. Is there a transition in the right place?
+    - Now that you know you are looking at the right workflow you can see if the transition exists
+    - Look at the starting step/status and see if there is a transition going from it to the correct new step/status
+3. Are the right people able to see and execute that transition?
+    - You should now have the right workflow and the right transition
+    - The next place to look is at the transition itself
+    - Click on the transition button on the workflow page
+    - Can the right users see/execute the transition? 
+    - Make sure to enable the necessary product roles and hit `Save` to commit any changes
