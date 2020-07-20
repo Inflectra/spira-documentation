@@ -375,12 +375,18 @@ up the Incident status mapping configuration screen:
 
 The table lists each of the incident statuses available in SpiraTeam and
 provides you with the ability to enter the matching TFS work item
-**State + Reason** for each one. Since TFS uses separate
-State (Active, Resolved, Closed) and Reason (Fixed, Duplicate, Not
-Fixed, etc.) codes and SpiraTeam uses a single status code, you need to
-concatenate the TFS State and Reason together with a 'plus' (+) sign so
+**State + Reason** or **State** for each one.
+
+TFS uses separate State (Active, Resolved, Closed) and Reason (Fixed, Duplicate, Not Fixed, etc.) code unlike SpiraTeam which uses a single status code. For  maximum flexibility, the integration can work with either a mapped **State** or a mapped **State+Reason**.
+
+If you want to have SpiraTeam statuses point to a specific TFS
+work item State and a specific Reason associated with that State, you need to concatenate the TFS State and Reason together with a 'plus' (+) sign so
 that the system knows that the incident status in SpiraTeam corresponds
 to that specific combination.
+
+If you want to have SpiraTeam statuses simply point to a specific TFS work item State and let TFS assign the default Reason for that State, you simply map the SpiraTeam statuses to the State:
+
+![](img/tfs-incident-status-mapping-state-only.png)
 
 You can map multiple SpiraTeam fields to the same TFS fields (e.g. New
 and Open in SpiraTeam are both equivalent to 'Active+New' in TFS), in
@@ -412,7 +418,7 @@ value for each one. To make this easier, we recommend that inside the
 Administration \> Edit Incident Priorities screen you first make any
 statuses not used in TFS inactive in SpiraTeam.
 
-d) Incident Severity (TFS 2012 plugin only)
+d) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident Severity mapping configuration screen:
@@ -470,7 +476,7 @@ custom property. This tells the data-sync plug-in that the custom
 property in SpiraTeam should be mapped to built-in Area field in TFS.
 
 Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the ID of the various Areas that are
+the page) you need to enter either the **Area ID** or the **Area Path** of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
 it's installed on, opening the 'TfsWorkItemTracking'
@@ -485,6 +491,10 @@ collection instead) and locating the 'TreeNodes' table:
 Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
+
+For Azure DevOps in the cloud, it is usually easier to just map the areas to the appropriate paths instead (since the IDs are not easily found):
+
+![](img/tfs-incident-area-mapping-by-path.png)
 
 b) TFS Custom Fields
 
@@ -618,7 +628,7 @@ custom property. This tells the data-sync plug-in that the custom
 property in SpiraTeam should be mapped to built-in Area field in TFS.
 
 Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the ID of the various Areas that are
+the page) you need to enter the ID or Path of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
 it's installed on, opening the 'TfsWorkItemTracking'
@@ -633,6 +643,10 @@ collection instead) and locating the 'TreeNodes' table:
 Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
+
+For Azure DevOps in the cloud, it is usually easier to just map the areas to the appropriate paths instead (since the IDs are not easily found):
+
+![](img/tfs-incident-area-mapping-by-path.png)
 
 b) TFS Custom Fields
 
@@ -766,7 +780,7 @@ custom property. This tells the data-sync plug-in that the custom
 property in SpiraTeam should be mapped to built-in Area field in TFS.
 
 Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the ID of the various Areas that are
+the page) you need to enter the ID or Path of the various Areas that are
 configured in TFS. The TFS Area ID is not visible in the TFS user
 interface, but can instead be located by opening up the SQL Server that
 it's installed on, opening the 'TfsWorkItemTracking'
@@ -781,6 +795,10 @@ collection instead) and locating the 'TreeNodes' table:
 Once you have found the matching Area (by name), the numeric value
 stored in the ID column (the one on the left) is the value that needs to
 get added as the External Key inside SpiraTeam.
+
+For Azure DevOps in the cloud, it is usually easier to just map the areas to the appropriate paths instead (since the IDs are not easily found):
+
+![](img/tfs-incident-area-mapping-by-path.png)
 
 b) TFS Custom Fields
 
