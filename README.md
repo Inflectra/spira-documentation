@@ -25,8 +25,6 @@ We can fully change the theme used and its features using a basic templating lan
 6. Clone this repo to your local machine
 7. Edit files as needed
 
-## Setting up our theme and addons
-
 
 # Working with the docs and Markdown
 - [How to create files and style them](https://www.mkdocs.org/user-guide/writing-your-docs/)
