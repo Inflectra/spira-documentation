@@ -244,7 +244,7 @@ This section lists all the test runs that are currently being executed by tester
 
 ![](img/UserProduct_Management_74.png)
 
-Any pending test run can be either deleted or reassigned to another user that is a member of the product by the product manager or test manager.
+Any pending test run can be either deleted or reassigned to another member of the product. **NOTE**: only product administrators can delete or reassign test runs from this widget.
 
 
 ## Test Run Progress
