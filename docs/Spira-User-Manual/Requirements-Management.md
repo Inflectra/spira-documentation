@@ -71,7 +71,7 @@ For each requirement each effort column is calculated from the sum of effort fro
 - Remaining Effort: the sum of all tasks' remaining efforts
 - Projected Effort: the sum of all task projected efforts
 
-Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
+Task effort calculations are described in more detail [here](../User-Product-Management/#release-task-progress). 
 
 
 ## Requirements List
@@ -239,7 +239,7 @@ One major benefit of this view is that when you filter by a field, you only get 
 - **Filter**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 - **Show / Hide Columns**: this works the same way as on the requirements hierarchy list - see [above](#show-hide-columns)
 - **Clone**: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.
-- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](create-a-test-cases-from-requirements) or [create test sets](create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
+- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#create-a-test-cases-from-requirements) or [create test sets](#create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
 
 
 ### Right-Click Context Menu

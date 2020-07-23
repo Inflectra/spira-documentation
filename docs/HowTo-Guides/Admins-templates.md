@@ -42,7 +42,7 @@ If you have 2+ products using the same template, but decide 1 products needs sli
 
 1. Clone the existing template - following the steps [above](#how-to-clone-a-template)
 2. Remember what product you cloned in this step (you will be deleting it later)
-3. Move the product you wish to have different template settings to this new template - following the steps [here](how-to-move-a-product-to-a-new-template)
+3. Move the product you wish to have different template settings to this new template - following the steps [here](#how-to-move-a-product-to-a-new-template)
 4. Go back and delete the product from step 2 above (you don't need it anymore and it will just create clutter)
 5. You now have your product using a new template that is exactly the same as its original template
 6. Start making the changes to this new template as needed

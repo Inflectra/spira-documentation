@@ -208,7 +208,7 @@ This widget lets you see the list of document tags being used in the product:
 
 ![](img/UserProduct_Management_69.png)
 
-The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List]((../Document-Management/#document-list)) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.
+The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List]((../Document-Management/#document-list) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.
 
 
 ## Test Case Cumulative Progress
