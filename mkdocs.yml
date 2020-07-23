@@ -230,6 +230,7 @@ nav:
     - TFS: Version-Control-Integration\Integrating-with-TFS.md
     - VSS: Version-Control-Integration\Integrating-with-VSS.md
     - CVS: Version-Control-Integration\Integrating-with-CVS.md
+    - Tortoise: Version-Control-Integration\Integrating-with-Tortoise.md
   - Email:
     - Installing: Email-Integration\Installing-the-Email-Integration-Service.md
     - Configuring: Email-Integration\Configuring-the-Email-Integration-Service.md
