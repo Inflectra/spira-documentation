@@ -147,13 +147,30 @@ The Detailed Information section contains the long, formatted description of the
 
 ![](img/Test_Case_Management_218.png)
 
-Test Sets can be specified as being either for "Manual" or "Automated" test runs (via the "Type" field. If you choose Manual, then the test set can be executed by a tester from their "My Page." However if you choose "Automated", the test set will be executed by the automation host you specified. In this case, the *planned date* *and time* will be used by the automated test engine to know when to execute the automated test scripts. For manual test sets, only the date component is used. In addition, you can specify a *recurrence schedule* for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc. so that SpiraPlan executes the same test set according to the specified frequency. The "Planned Date" field lets you specify the date and time to execute the test using the popup time picker.
-
-The **Schedule on Build** field will tell SpiraTest to automatically set the Planned Date to the current date/time plus the **Post Build Wait Time** offset (in seconds) whenever a new build is performed against the release or sprint that the test set is scheduled for. This allows you to automatically run a set of regression tests immediately after a build is completed.
-
 If you have **test configuration sets** defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the **Configuration** dropdown value. If you have a test configuration associated with the test set, when you execute the test set, SpiraPlan will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.
 
 The Description section contains the long, formatted description of the test set. You can enter rich text or paste in from a word processing program or web page.
+
+Test Sets can be specified as being either for "Manual" or "Automated" test runs (via the "Type" field). 
+
+- Manual: the test set can be executed (manually) by a tester from their "My Page". 
+- Automated: the test set will be executed by the automation host you specified.
+
+#### Scheduling Test Sets
+How do you say *when* the test set should execute? You have two options.
+
+Use the *Planned Date* field:
+
+- For manual test sets, only the date component is used. 
+- For automated tests you also set the time. This time is based on the time zone of the application (for reference, this is shown in the footer of the application on all pages).
+- You can additionally specify a **recurrence schedule** for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc so that SpiraPlan executes the same test set according to the specified frequency.
+
+Use the **Schedule on Build** field:
+
+- This will tell SpiraPlan to automatically set the *Planned Date* to the exact date and time that a relevant build completes
+- Using the **Post Build Wait Time** field you can add an offset (in seconds) for how long after the build to kick off the test sets
+- Only builds that finish against the release or sprint that the test set is set to will trigger the test set to execute
+- With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.
 
 
 ### Overview - Comments
