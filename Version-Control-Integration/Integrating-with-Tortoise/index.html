@@ -17,7 +17,7 @@
     
     
       
-        <title>Integrating with Tortoise - SpiraDocs</title>
+        <title>Tortoise - SpiraDocs</title>
       
     
     
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Integrating with Tortoise
+              Tortoise
             
           </span>
         </div>
@@ -1798,10 +1798,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Integrations
@@ -2381,23 +2383,25 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6" checked>
     
     <label class="md-nav__link" for="nav-7-6">
-      VCS
+      Version Control
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="VCS" data-md-level="2">
+    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        VCS
+        Version Control
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -2490,11 +2494,94 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Integrating-with-Subversion/" title="Tortoise" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tortoise
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Tortoise" class="md-nav__link md-nav__link--active">
       Tortoise
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tortoisesvn" class="md-nav__link">
+    TortoiseSVN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tortoisegit" class="md-nav__link">
+    TortoiseGit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tortoisecvs" class="md-nav__link">
+    TortoiseCVS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-spira-plugin-for-tortoise" class="md-nav__link">
+    Using the Spira Plugin for Tortoise
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Spira Plugin for Tortoise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-turtlespira-plugin" class="md-nav__link">
+    Installing the TurtleSpira Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#committing-a-code-change-linked-to-spira-artifacts" class="md-nav__link">
+    Committing a Code Change Linked to Spira Artifacts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -3177,13 +3264,13 @@
 <p>Tortoise is a family of Windows Explorer shell extensions that helps programmers manage different versions of the source code for their programs directly inside the standard Windows Explorer user interface.</p>
 <p>There are different versions of Tortoise that are compatible with different version control systems.</p>
 <h2 id="tortoisesvn">TortoiseSVN<a class="headerlink" href="#tortoisesvn" title="Permanent link">&para;</a></h2>
-<p>TortoiseSVN is a <a href="Integrating-with-Subversion">Subversion</a> client, implemented as a Microsoft Windows shell extension, that helps programmers manage different versions of the source code for their programs. </p>
+<p>TortoiseSVN is a <a href="../Integrating-with-Subversion">Subversion</a> client, implemented as a Microsoft Windows shell extension, that helps programmers manage different versions of the source code for their programs. </p>
 <p>In Windows Explorer, besides showing context menu items for Subversion commands, TortoiseSVN provides icon overlay that indicates the status of Subversion working copies. </p>
 <h2 id="tortoisegit">TortoiseGit<a class="headerlink" href="#tortoisegit" title="Permanent link">&para;</a></h2>
-<p>TortoiseGit is a <a href="Integrating-with-Git">Git</a> revision control client, implemented as a Windows shell extension and based on TortoiseSVN.</p>
+<p>TortoiseGit is a <a href="../Integrating-with-Git">Git</a> revision control client, implemented as a Windows shell extension and based on TortoiseSVN.</p>
 <p>In Windows Explorer, besides showing context menu items for Git commands, TortoiseGit provides icon overlays that indicate the status of Git working trees and files. It also comes with the TortoiseGitMerge utility to visually compare two files and resolve conflicts. </p>
 <h2 id="tortoisecvs">TortoiseCVS<a class="headerlink" href="#tortoisecvs" title="Permanent link">&para;</a></h2>
-<p>TortoiseCVS is a <a href="Integrating-with-CVS">CVS</a> client for Microsoft Windows. Unlike most CVS tools, it includes itself in Windows' shell by adding entries in the contextual menu of the file explorer, therefore it does not run in its own window. Moreover, it adds icons onto files and directories controlled by CVS, giving additional information to the user without having to run a full-scale stand-alone application.</p>
+<p>TortoiseCVS is a <a href="../Integrating-with-CVS">CVS</a> client for Microsoft Windows. Unlike most CVS tools, it includes itself in Windows' shell by adding entries in the contextual menu of the file explorer, therefore it does not run in its own window. Moreover, it adds icons onto files and directories controlled by CVS, giving additional information to the user without having to run a full-scale stand-alone application.</p>
 <h2 id="using-the-spira-plugin-for-tortoise">Using the Spira Plugin for Tortoise<a class="headerlink" href="#using-the-spira-plugin-for-tortoise" title="Permanent link">&para;</a></h2>
 <p>The Spira <a href="https://tortoisesvn.net/issuetrackerplugins.html">issue-tracker plugin</a> for Tortoise (called <strong>TurtleSpira</strong>) works with all variants of Tortoise, including TortoiseGit,TortoiseSVN, and TortoiseCVS, and lets you streamline your workflow for linking source code commits / revisions to assigned artifacts in SpiraTeam, SpiraPlan, or SpiraTest.</p>
 <p>The Tortoise plugin system lets you integrate different issue trackers. With such plugins it is possible to fetch information directly from the issue tracker, interact with the user and provide information back to Tortoise about open issues, verify log messages entered by the user and even run actions after a successful commit to e.g, close an issue.</p>
@@ -3234,6 +3321,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Integrating-with-VSS/" title="VSS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VSS
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../Email-Integration/Installing-the-Email-Integration-Service/" title="Installing" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Installing
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
