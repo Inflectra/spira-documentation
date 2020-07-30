@@ -70,7 +70,7 @@ How are the different categories calculated?
 ### Task Effort
 Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../../Spira-Administration-Guide/Product-Planning/#planning-options) page of product administration.
 
-Task effort calculations are described in more detail [here](../User-Product-Management.md/#release-task-progress). 
+Task effort calculations are described in more detail [here](../Product-Homepage/#release-task-progress). 
 
 
 ## Baselining

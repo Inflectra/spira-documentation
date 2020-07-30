@@ -492,11 +492,11 @@ The next step in the process is to triage the logged defect and assign it to a d
 
 ## Triaging Issues and Defects
 
-Now that a new incident has been logged, the next step in the process is to review the incident and assign it to a developer to be fixed. First, click on the Artifacts \> Incidents menu item. This will display the incident list page for the product. You can also view the same list of incidents in a Kanban board view.
+Now that a new incident has been logged, the next step in the process is to review the incident and assign it to a developer to be fixed. First, click on the Artifacts \> Incidents menu item. This will display the incident list page for the product.
 
 ![](img/Triaging_Issues_and_Defects_48.png)
 
-In either view, click on the hyperlink for the new incident "Error displaying user fields". This will display the incident details page:
+Click on the hyperlink for the new incident "Error displaying user fields". This will display the incident details page:
 
 ![](img/Triaging_Issues_and_Defects_49.png)
 
