@@ -12,15 +12,15 @@
 
 ??? success "New features"
     * Administering baselining within a product
-        - With baselining turned on, product admins can access the product admin baseline list page [RQ:2939]
+        - With baselining turned on, product admins can access the product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) [RQ:2939]
         - Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]
-        - Product admin baseline list page shows all baselines in a products across all releases [RQ:2977]
-        - Product admin baseline detail page shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
-        - The baseline tab of the release details page lets a product admin access the details page for that baseline [RQ:2665]
+        - Product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) shows all baselines in a products across all releases [RQ:2977]
+        - Product admin [baseline detail page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
+        - The [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) of the release details page lets a product admin access the details page for that baseline [RQ:2665]
     
     * Product Planning
-        - Product planning option allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
-        - Product planning options page lets you set dynamic WIP Limits for each status on the Planning Board [RQ:2970]
+        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#requirements) allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
+        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits) page lets you set dynamic WIP Limits for each status on the [Planning Board](../../Spira-User-Manual/Planning-Board/#work-in-progress-limits) [RQ:2970]
         - Improve Expand/Collapse behavior on planning boards [RQ:2969]
         - Planning board and requirements board lets you group by component or epic for releases [RQ:2945]
         - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]

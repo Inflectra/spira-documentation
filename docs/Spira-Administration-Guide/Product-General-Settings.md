@@ -132,3 +132,55 @@ button.
 
 You are now ready to use SpiraPlan® in conjunction with the version control tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please refer to the *SpiraPlan® User Manual*.
 
+
+## Baselines
+This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on.
+
+![product baseline list page](img/product_baseline_list.png)
+
+The table of baselines has the following columns:
+
+- Name: baseline name
+
+- Name (this links to the [baseline details page](#baseline-details))
+- Description
+- Release (this links to the release details page)
+- Creator
+- Date (hover to see a tooltip of the date and time)
+- Active (yes or no)
+- Change ID that the baseline is linked to
+- ID
+
+To filter and sort the list of baselines, use the filter and sort controls at the top of the table.
+
+
+## Baseline Details
+This page displays detailed information about a single baseline. You cannot edit information about the baseline on this page. That can only be done from the [release details page](../../Spira-User-Manual/Release-Management/#baselines).
+
+Information about the baseline is divided into 4 sections:
+
+1. The top of the page shows the baseline name
+2. The full baseline description
+3. Properties about the baseline (release, creator, creation date, previous baseline, active, change ID, baseline ID)
+4. A table of all artifacts that have been added, modified, or deleted in this baseline.
+
+!!! question "Why do we show the previous baseline?"
+    A baseline is created against a point in time (more precisely, against a specific change event in this product). This is the end of the baseline. To know what happened during a baseline you need to know when a baseline starts. The start of a baseline is immediately after the end of the last baseline. If this is the first baseline in a product, then the baseline starts at the start of the product.  
+
+    For example, let's say we start a new product. A few days later we create baseline 1. A week later we add baseline 2. Baseline 1 runs from the moment we created the product until the moment we created the baseline. More precisely, baseline 1 runs from the first change ID of the product, to the change ID that the baseline is linked to. Baseline 2 meanwhile runs from the moment baseline 1 was created through to the moment baseline 2 was created.
+
+### Artifacts changed in a baseline
+![product baseline details page](img/product_baseline_details.png)
+
+To filter and sort the list of artifacts shown in the table, use the filter and sort controls at the top of the table.
+
+This table of artifacts only shows artifacts that changed in the baseline (between when this baseline was created and the previous baseline). Each artifact is only shown once, even if it changed multiple times. The changes that happened to the artifact are combined into a single description so you can easily see a summary of what happened to the artifact during the baseline (for example, was it only modified, or added then modified, or modified then deleted). 
+
+This table shows the following information:
+
+- Name (this links to the history details page for the last change to happen to this artifact in this baseline)
+- Artifact Type (e.g. Requirement or Incident)
+- Artifact ID (this links to the artifact details page for that artifact)
+- User name (only one user is shown, even if multiple people have changed the specific artifact)
+- Last modified date (hover to see a tooltip of the date and time)
+- Change Type (this lists all of the types of change that the artifact went through during this baseline. Each type is only listed once, so if an artifact was added, then modified 10 times, it will show "Modified, Added")
