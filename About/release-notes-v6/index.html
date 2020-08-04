@@ -3050,6 +3050,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-66-august-2020" class="md-nav__link">
+    Version 6.6 (August 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-652-july-2020" class="md-nav__link">
     Version 6.5.2 (July 2020)
   </a>
@@ -3266,6 +3273,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-66-august-2020" class="md-nav__link">
+    Version 6.6 (August 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-652-july-2020" class="md-nav__link">
     Version 6.5.2 (July 2020)
   </a>
@@ -3401,6 +3415,88 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-66-august-2020">Version 6.6 (August 2020)<a class="headerlink" href="#version-66-august-2020" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong>Planning Improvements</strong>: Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements.</p>
+<p><strong>Baselines</strong>: View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.</p>
+<p><strong>Performance Improvements</strong>: The most frequent power-hungry operations by users have been reworked from the ground up to maximize performance. Operations like updating test coverage is up to 300% faster.</p>
+</div>
+<details class="success"><summary>New features</summary><ul>
+<li>
+<p>Administering baselining within a product</p>
+<ul>
+<li>With baselining turned on, product admins can access the product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#baselines">baseline list page</a> [RQ:2939]</li>
+<li>Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]</li>
+<li>Product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#baselines">baseline list page</a> shows all baselines in a products across all releases [RQ:2977]</li>
+<li>Product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#baseline-details">baseline detail page</a> shows all baseline details, including all artifacts changed in that baseline [RQ:2670]</li>
+<li>The <a href="../../Spira-User-Manual/Release-Management/#baselines">baseline tab</a> of the release details page lets a product admin access the details page for that baseline [RQ:2665]</li>
+</ul>
+</li>
+<li>
+<p>Product Planning</p>
+<ul>
+<li><a href="../../Spira-Administration-Guide/Product-Planning/#requirements">Product planning options</a> allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]</li>
+<li><a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Product planning options</a> page lets you set dynamic WIP Limits for each status on the <a href="../../Spira-User-Manual/Planning-Board/#work-in-progress-limits">Planning Board</a> [RQ:2970]</li>
+<li>Improve Expand/Collapse behavior on planning boards [RQ:2969]</li>
+<li>Planning board and requirements board lets you group by component or epic for releases [RQ:2945]</li>
+<li>Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p>Agile and Planning</p>
+<ul>
+<li>If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]</li>
+<li>If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]</li>
+<li>Task Board JavaScript can error out and cause the page to not load properly [IN:5627]</li>
+<li>Refine what statuses show on the Requirement and Task boards - include the default status and any statuses with both a transition to and from [IN:5766]</li>
+</ul>
+</li>
+<li>
+<p>Performance</p>
+<ul>
+<li>Improve the performance of retrieving parameters for test cases [IN:5600]</li>
+<li>Improve the performance of updating requirement test and task coverage [IN:5601]</li>
+<li>Improve the performance of retrieving the list of folders for test cases [IN:5751]</li>
+<li>Improve the performance of retrieving the list of folders for test sets [IN:5752]</li>
+<li>Improve the performance of retrieving the list of folders for tasks [IN:5753]</li>
+<li>Improve the performance of retrieving the list of folders for documents [IN:5754]</li>
+</ul>
+</li>
+<li>
+<p>Testing</p>
+<ul>
+<li>Show an asterisk during test execution if there is an existing incident and incidents are required in the product's testing settings [IN:3665]</li>
+<li>Inserting a new test step should save any existing data being edited for step(s) on the test case details page [IN:3773]</li>
+<li>Test execution pages should show custom styling for test steps [IN:4716]</li>
+<li>Test run details page should show custom styling for test steps [IN:4770]</li>
+<li>A test step parameter in a linked test step, once set in a linked test step, cannot be reset to its default in a subsequent linked test step [IN:4922]</li>
+<li>Exploratory test execution should ensure the menu to clone/delete a step is always visible, even with long test step descriptions [IN:5702]</li>
+<li>Test Execution using Internet Explorer 11 was not not possible if the test had more than one step (since 6.5.2 only) [IN:5747]</li>
+<li>Test execution task description (if tasks are enabled) can sometimes be populated with the current steps actual result [IN:5759]</li>
+<li>Test step rows on test case details page should show inline editors at full width (within the cell) when editing [IN:5773]</li>
+<li>Test execution with tasks enabled should let you add a task while working in table mode [IN:5774]</li>
+</ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li>The Filter dialogs and 'Export to Product' dialogs are hidden if the page is scrolled down because the dialogs are fixed to the page not the window [IN:4605]</li>
+<li>Cross-site scripting vulnerability [IN:4613]</li>
+<li>Documents which have at least one recorded electronic signature should be able to deleted [IN:5615]</li>
+<li>OAuth Login Providers 'Return URL' has been updated to use the Web Server URL to improve ease of setup for on-premise customers [IN:5719]</li>
+<li>Correct the on-boarding tour for 6.5.2 link to testing settings [IN:5742]</li>
+<li>Releases and requirements with long names can be aligned too far to the left (since 6.5.2) [IN:5746]</li>
+<li>Incident and task notifications don't send if the token comment:first or comment:last is used, but the artifact has no comments [IN:5749]</li>
+<li>The table of baselines on the release details page should align the icons in a single row when in edit mode [IN:5772]</li>
+<li>Update styling of product admin pages to more closely match the look and feel of artifact details pages [IN:5787]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-652-july-2020">Version 6.5.2 (July 2020)<a class="headerlink" href="#version-652-july-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

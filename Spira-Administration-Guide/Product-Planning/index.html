@@ -1215,6 +1215,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#kanban-work-in-progress-limits" class="md-nav__link">
+    Kanban Work In Progress Limits
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3225,6 +3232,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#kanban-work-in-progress-limits" class="md-nav__link">
+    Kanban Work In Progress Limits
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3262,10 +3276,9 @@
                 
                 <h1 id="product-planning">Product: Planning<a class="headerlink" href="#product-planning" title="Permanent link">&para;</a></h1>
 <h2 id="planning-options">Planning Options<a class="headerlink" href="#planning-options" title="Permanent link">&para;</a></h2>
-<p>The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product:</p>
-<p><img alt="" src="../img/Product_Planning_111.png" /></p>
-<p>This page allows you to make changes to the following settings:</p>
+<p>The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product. The page is divided into a number of collapsible sections. </p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/Product_Planning_General.png" /></p>
 <ul>
 <li><strong>Work Hours Per Day</strong>: this setting allow you to specify how many work hours should be used when converting an effort calculation from hours to calendar days. For example a 12 hour task will occupy two days if you set the working hours per day to 6 hours, whereas the same task will occupy 1 ½ days only if you set the working hours per day to 8 hours.</li>
 <li><strong>Work Days Per Week</strong>: this setting allows you to specify how many days in the week are <em>typically</em> worked on the product. By default the system assumes a 5-day (Mon-Fri) working week, but if your organization works Saturdays (for example), you may want to switch to a 6-day working week. If you want to use partial days, then just round up to the nearest day and add non-working hours (see below) to compensate.</li>
@@ -3274,7 +3287,9 @@
 <li><strong>Detected Release</strong>: By default the Incident detected release field shows ALL releases in the product. This dropdown can become very hard to use if you have a very large number of releases (many hundreds or thousands). If you check the box for this setting the Incident detected release field will only show <em>active</em> releases, not all releases.</li>
 </ul>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/Product_Planning_Requirements.png" /></p>
 <ul>
+<li><strong>Plan by Points</strong>: With this setting enabled, you only estimate a requirement using points. The hours are not displayed on the detail page for requirements. You also use points for planning releases/sprints. The planning board shows the number of points planned, utilized and remaining. With this setting disabled (default), you estimate a requirement using points but it is also shown in hours using a velocity conversion factor (discussed below). You specify the time available in a release/sprint in hours. The planning board shows the number of hours planned, utilized and remaining.</li>
 <li><strong>Default Estimate</strong>: Normally when you create a new Requirement in the system it will be given an empty initial estimate (in points). However if many requirements are typically a standard size, then as a time-saver, the system will let you specify a default estimate value that will be used when a new requirement is created.</li>
 <li><strong>Point Effort</strong>: When requirements are added to the Planning Board or Iteration planning screen, they will have an initial effort (in hours) that is used until tasks are added (see Auto-Create Tasks option). This field contains the standard conversion factor used to convert points into hours based on the current team velocity (how much time it takes on average to accomplish one story point). As the product progresses, the team velocity will change, so you can click on the [Suggest] button to have the system calculate how many hours each existing story point has taken to implement in the product and provide that as a recommendation:</li>
 </ul>
@@ -3286,10 +3301,34 @@
 <li><strong>Use Test Status</strong> - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from 'Developed' to 'Tested' when all the associated test cases are passed.</li>
 </ul>
 <h3 id="task-incidents">Task &amp; Incidents<a class="headerlink" href="#task-incidents" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/Product_Planning_TasksIncidents.png" /></p>
 <ul>
 <li><strong>Default Effort</strong>: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.</li>
 <li><strong>Time Tracking</strong>: SpiraPlan® has an integrated time tracking system that allows the easy entry of the hours spent on all assigned incidents and tasks in one place (see the <em>SpiraPlan User Manual</em> for more details on this feature). This setting allows administrators to specify if they want the integrated time tracking features enabled for both incidents or tasks (or neither).</li>
 </ul>
+<h3 id="kanban-work-in-progress-limits">Kanban Work In Progress Limits<a class="headerlink" href="#kanban-work-in-progress-limits" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/Product_Planning_WIP.png" /></p>
+<p>Work In Progress (WIP) limits set the maximum number of requirements that the product team can efficiently manage at each stage of their Kanban process. Using WIP limits can be a useful way for teams to manage their work, allowing them to get through their work faster. This is done by focusing only tasks that can be done now (in other words, the work that can in-progress at any one time).</p>
+<p>This feature, not available in SpiraTest, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.</p>
+<p>To make use of WIP limits you need to:</p>
+<ul>
+<li>set the <strong>number of resources</strong> for each release and sprint. This represents the number of people working on the release. This defaults to 1 when you create a new release, but can be edited at any time.</li>
+<li>Set a multiplier for releases and/or sprints. This defaults to 1.0. These values apply to all releases/sprints in the product. <em>Think of the multiplier as the number of requirements each team member on the release or sprint can work on at the same time.</em></li>
+<li>fill in the values for releases and/or sprints for each status that you want to set limits on. The statuses shown in the table are all of those that you will see on the planning board. <em>Think of the status percentages as the proportion of all the work that the team can manage once it is in that particular status.</em> </li>
+</ul>
+<p>You can have completely separate multipliers and percentages for releases and sprints. Think of multiplies</p>
+<div class="admonition info">
+<p class="admonition-title">Example WIP Limit</p>
+<ul>
+<li>Your sprint has 5 people working on it. So, set the Resources of the sprint to 5.</li>
+<li>The team can handle developing 5 requirements at once. At the same time they can also test 5 requirements at once.</li>
+<li>So on the WIP limits table, you can get to this result in different ways. Here are two:<ul>
+<li>set "In Progress" and "Developed" statuses to 50%, and the sprint multiplier to 2.0. This means that the QA team, who takes things that are developed and tests, will have a WIP limit of 5 requirements: 5 (sprint resources) x 100% (of that sprint resource) x 1.0 (multiplier). The same applies to requirements in the status of "In Progress".</li>
+<li>set "In Progress" and "Developed" statuses to 100%, and the sprint multiplier to 1.0. Looking at just the QA team again, they will again have a WIP limit of 5 requirements: 5 (sprint resources) x 100% (of that sprint resource) x 1.0 (multiplier).</li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="testing-settings">Testing Settings<a class="headerlink" href="#testing-settings" title="Permanent link">&para;</a></h2>
 <p>Clicking on the "Testing Settings" link brings up a list of options that the administrator can configure regarding testing. Select from the options displayed (as illustrated below) and click "Save" to commit the changes.</p>
 <p><img alt="" src="../img/Product_Planning_testing_settings.png" /></p>
