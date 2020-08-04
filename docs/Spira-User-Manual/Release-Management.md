@@ -77,22 +77,27 @@ Task effort calculations are described in more detail [here](../Product-Homepage
 NOTE: **Baselining is only available in SpiraTeam and SpiraPlan**.
 
 !!! question "What is baselining in SpiraPlan"
-    Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines.
+    Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines (or between the baseline and when the product was first created if you are looking at the earliest baseline).
 
     In SpiraPlan, we attach baselines to a release, as well as to the state of the product changes. This is to help you more easily use baselines as part of your release planning and review: baselines are, in effect, tied to the progress of your releases and sprints. You may wish to create a baseline when your release starts, and then create another when it is released. You may create a baseline at the end of every sprint and then use your baselines to see what happened between those two sprints.
+
+    Once a product has baselines, product owners can explore each baseline to see what artifacts were added, changed, or deleted in a baseline.
 
 Here is a step by step overview on getting started with baselines:
 
 - First, enable baselining for your specific product via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. You have to a system or product admin to do this
-- To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items.
+- To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items
 - With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can baselines. If you can edit a release you can eidt its baselines. And if you can delete releases you can delete baselines.
 - Go to the list of releases and click on the release you want to manage baselines for
 - Click on the baselines tab to see your list of baselines
 - You can sort or filter the list of baselines by any of the fields in the table
 - To add a baseline, click the add button and fill in the details on the popup form
-- To do more with baselines you can create a custom report for them (examples [here](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx)). NOTE: in-app reports and other features for viewing baseline data will be added in future releases.
+- To do more with baselines you can create a custom report for them (examples [here](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx)).
 
 [Below](#baselines) is more information below about how to create, edit, delete, and view your baselines against a specific release.
+
+**Product admins / product owners** can use the dedicated admin [list](../../Spira-Administration-Guide/Product-General-Settings/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details), to see all the artifacts changed, added, or deleed in a baseline.
+
 
 ## Release List
 
@@ -441,12 +446,12 @@ This view displays the list of all baselines created for this release. If you ha
 
 You can view the following information about a baseline here:
 
-- Name (for product admins this links to the specific producy history change)
+- Name (for product admins this links to the [baseline details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details))
 - Description
 - Creator
 - Date (hover to see a tooltip of the date and time)
 - Active (yes or no)
-- Change ID (product admins only - this is the system wide history change id that the baseline is linked to)
+- Change ID that the baseline is linked to
 - ID
 
 To **add a new baseline**, click the `New Baseline` button. This will be disabled if you are not able to create releases. This will open up a small form. The name field is required, but the description field is optional. Enter the information and hit `Add`. NOTE: a baseline's description is plain text only.

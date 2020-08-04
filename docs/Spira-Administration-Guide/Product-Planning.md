@@ -2,13 +2,12 @@
 
 ## Planning Options
 
-The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product:
+The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product. The page is divided into a number of collapsible sections. 
 
-![](img/Product_Planning_111.png)
-
-This page allows you to make changes to the following settings:
 
 ### General
+![](img/Product_Planning_General.png)
+
 - **Work Hours Per Day**: this setting allow you to specify how many work hours should be used when converting an effort calculation from hours to calendar days. For example a 12 hour task will occupy two days if you set the working hours per day to 6 hours, whereas the same task will occupy 1 ½ days only if you set the working hours per day to 8 hours.
 - **Work Days Per Week**: this setting allows you to specify how many days in the week are *typically* worked on the product. By default the system assumes a 5-day (Mon-Fri) working week, but if your organization works Saturdays (for example), you may want to switch to a 6-day working week. If you want to use partial days, then just round up to the nearest day and add non-working hours (see below) to compensate.
 - **Non-Working Hours Per Month**: this setting allows to specify how many non-working hours *typically* need to be accounted for. This is useful if you want to have a working week that contains a fractional number of days or if you have recurring activities that need to be removed from each month. *Note that if you have specific holidays, vacation days that need to be accounted for, it is better to use the Release/Iteration non-working time feature instead.*
@@ -16,7 +15,9 @@ This page allows you to make changes to the following settings:
 - **Detected Release**: By default the Incident detected release field shows ALL releases in the product. This dropdown can become very hard to use if you have a very large number of releases (many hundreds or thousands). If you check the box for this setting the Incident detected release field will only show *active* releases, not all releases.
 
 ### Requirements
+![](img/Product_Planning_Requirements.png)
 
+- **Plan by Points**: With this setting enabled, you only estimate a requirement using points. The hours are not displayed on the detail page for requirements. You also use points for planning releases/sprints. The planning board shows the number of points planned, utilized and remaining. With this setting disabled (default), you estimate a requirement using points but it is also shown in hours using a velocity conversion factor (discussed below). You specify the time available in a release/sprint in hours. The planning board shows the number of hours planned, utilized and remaining.
 - **Default Estimate**: Normally when you create a new Requirement in the system it will be given an empty initial estimate (in points). However if many requirements are typically a standard size, then as a time-saver, the system will let you specify a default estimate value that will be used when a new requirement is created.
 - **Point Effort**: When requirements are added to the Planning Board or Iteration planning screen, they will have an initial effort (in hours) that is used until tasks are added (see Auto-Create Tasks option). This field contains the standard conversion factor used to convert points into hours based on the current team velocity (how much time it takes on average to accomplish one story point). As the product progresses, the team velocity will change, so you can click on the \[Suggest\] button to have the system calculate how many hours each existing story point has taken to implement in the product and provide that as a recommendation:
 
@@ -28,9 +29,33 @@ This page allows you to make changes to the following settings:
 - **Use Test Status** - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from 'Developed' to 'Tested' when all the associated test cases are passed.
 
 ### Task & Incidents
+![](img/Product_Planning_TasksIncidents.png)
 
 - **Default Effort**: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.
 - **Time Tracking**: SpiraPlan® has an integrated time tracking system that allows the easy entry of the hours spent on all assigned incidents and tasks in one place (see the *SpiraPlan User Manual* for more details on this feature). This setting allows administrators to specify if they want the integrated time tracking features enabled for both incidents or tasks (or neither).
+
+### Kanban Work In Progress Limits
+![](img/Product_Planning_WIP.png)
+
+Work In Progress (WIP) limits set the maximum number of requirements that the product team can efficiently manage at each stage of their Kanban process. Using WIP limits can be a useful way for teams to manage their work, allowing them to get through their work faster. This is done by focusing only tasks that can be done now (in other words, the work that can in-progress at any one time).
+
+This feature, not available in SpiraTest, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.
+
+To make use of WIP limits you need to:
+
+- set the **number of resources** for each release and sprint. This represents the number of people working on the release. This defaults to 1 when you create a new release, but can be edited at any time.
+- Set a multiplier for releases and/or sprints. This defaults to 1.0. These values apply to all releases/sprints in the product. *Think of the multiplier as the number of requirements each team member on the release or sprint can work on at the same time.*
+- fill in the values for releases and/or sprints for each status that you want to set limits on. The statuses shown in the table are all of those that you will see on the planning board. *Think of the status percentages as the proportion of all the work that the team can manage once it is in that particular status.* 
+
+You can have completely separate multipliers and percentages for releases and sprints. Think of multiplies
+
+!!! info "Example WIP Limit"
+    - Your sprint has 5 people working on it. So, set the Resources of the sprint to 5.
+    - The team can handle developing 5 requirements at once. At the same time they can also test 5 requirements at once.
+    - So on the WIP limits table, you can get to this result in different ways. Here are two:
+        - set "In Progress" and "Developed" statuses to 50%, and the sprint multiplier to 2.0. This means that the QA team, who takes things that are developed and tests, will have a WIP limit of 5 requirements: 5 (sprint resources) x 100% (of that sprint resource) x 1.0 (multiplier). The same applies to requirements in the status of "In Progress".
+        - set "In Progress" and "Developed" statuses to 100%, and the sprint multiplier to 1.0. Looking at just the QA team again, they will again have a WIP limit of 5 requirements: 5 (sprint resources) x 100% (of that sprint resource) x 1.0 (multiplier).
+
 
 
 ## Testing Settings

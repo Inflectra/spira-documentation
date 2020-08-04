@@ -1,5 +1,69 @@
 # Release Notes for Spira v6
 
+## Version 6.6 (August 2020)
+
+!!! info "Summary"
+
+    **Planning Improvements**: Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements.
+
+    **Baselines**: View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.
+
+    **Performance Improvements**: The most frequent power-hungry operations by users have been reworked from the ground up to maximize performance. Operations like updating test coverage is up to 300% faster.
+
+??? success "New features"
+    * Administering baselining within a product
+        - With baselining turned on, product admins can access the product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) [RQ:2939]
+        - Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]
+        - Product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) shows all baselines in a products across all releases [RQ:2977]
+        - Product admin [baseline detail page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
+        - The [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) of the release details page lets a product admin access the details page for that baseline [RQ:2665]
+    
+    * Product Planning
+        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#requirements) allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
+        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits) page lets you set dynamic WIP Limits for each status on the [Planning Board](../../Spira-User-Manual/Planning-Board/#work-in-progress-limits) [RQ:2970]
+        - Improve Expand/Collapse behavior on planning boards [RQ:2969]
+        - Planning board and requirements board lets you group by component or epic for releases [RQ:2945]
+        - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]
+
+??? bug "Bug fixes and enhancements"
+    * Agile and Planning
+        - If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]
+        - If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]
+        - Task Board JavaScript can error out and cause the page to not load properly [IN:5627]
+        - Refine what statuses show on the Requirement and Task boards - include the default status and any statuses with both a transition to and from [IN:5766]
+
+    * Performance
+        - Improve the performance of retrieving parameters for test cases [IN:5600]
+        - Improve the performance of updating requirement test and task coverage [IN:5601]
+        - Improve the performance of retrieving the list of folders for test cases [IN:5751]
+        - Improve the performance of retrieving the list of folders for test sets [IN:5752]
+        - Improve the performance of retrieving the list of folders for tasks [IN:5753]
+        - Improve the performance of retrieving the list of folders for documents [IN:5754]
+
+    * Testing
+        - Show an asterisk during test execution if there is an existing incident and incidents are required in the product's testing settings [IN:3665]
+        - Inserting a new test step should save any existing data being edited for step(s) on the test case details page [IN:3773]
+        - Test execution pages should show custom styling for test steps [IN:4716]
+        - Test run details page should show custom styling for test steps [IN:4770]
+        - A test step parameter in a linked test step, once set in a linked test step, cannot be reset to its default in a subsequent linked test step [IN:4922]
+        - Exploratory test execution should ensure the menu to clone/delete a step is always visible, even with long test step descriptions [IN:5702]
+        - Test Execution using Internet Explorer 11 was not not possible if the test had more than one step (since 6.5.2 only) [IN:5747]
+        - Test execution task description (if tasks are enabled) can sometimes be populated with the current steps actual result [IN:5759]
+        - Test step rows on test case details page should show inline editors at full width (within the cell) when editing [IN:5773]
+        - Test execution with tasks enabled should let you add a task while working in table mode [IN:5774]
+
+    * Other
+        - The Filter dialogs and 'Export to Product' dialogs are hidden if the page is scrolled down because the dialogs are fixed to the page not the window [IN:4605]
+        - Cross-site scripting vulnerability [IN:4613]
+        - Documents which have at least one recorded electronic signature should be able to deleted [IN:5615]
+        - OAuth Login Providers 'Return URL' has been updated to use the Web Server URL to improve ease of setup for on-premise customers [IN:5719]
+        - Correct the on-boarding tour for 6.5.2 link to testing settings [IN:5742]
+        - Releases and requirements with long names can be aligned too far to the left (since 6.5.2) [IN:5746]
+        - Incident and task notifications don't send if the token comment:first or comment:last is used, but the artifact has no comments [IN:5749]
+        - The table of baselines on the release details page should align the icons in a single row when in edit mode [IN:5772]
+        - Update styling of product admin pages to more closely match the look and feel of artifact details pages [IN:5787]
+
+
 ## Version 6.5.2 (July 2020)
 
 !!! info "Summary"
@@ -10,7 +74,6 @@
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
     **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
-
 
 ??? success "New features"
     - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)

@@ -212,8 +212,8 @@ In SpiraTeam and SpiraPlan, there are four additional requirement list views. Th
 
 1. Sorted List
 2. Agile Board
-3. Documents View (beta)
-4. Mindmap (beta)
+3. Documents View
+4. Mindmap
 
 You can pick between each of these views using the view selection button group at the top right of any requirement list page. 
 
