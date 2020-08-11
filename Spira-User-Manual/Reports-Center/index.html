@@ -4247,14 +4247,16 @@ priority, and the individual bars are grouped by the status of task. If a specif
 <p><strong>Specific Sprint</strong> -- This shows the increase in work for each working day in the date-range covered by the selected sprint.</p>
 <p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h3 id="task-burndown-chart">Task Burndown Chart<a class="headerlink" href="#task-burndown-chart" title="Permanent link">&para;</a></h3>
-<p>The Task Burndown graph shows the remaining work (in hours) that needs to be done for each release/sprint in the product with separate lines for the estimated and ideal burndown. In addition, the graph includes bars for the remaining and completed effort in each time period on the x-axis.</p>
+<p>The Task Burndown graph shows the effort (in hours) on the y-axis. The x-axis shows releases/sprints - the releases/sprints shown changes as you change the release selector at the top of the page. To be useful tasks in the product have to have their effort fields populated (specifically Estimated Effort and Remaining Effort).</p>
+<p>The blue line on the graphs indicates the ideal burndown. The other line shows the estimated actual burndown. The graph also shows bars for the remaining and completed effort for each relevant release/sprint.</p>
 <p><img alt="" src="../img/Reports_Center_379.png" /></p>
-<p>The y-axis of the graph displays the total remaining work that needs to be done (the actual burndown), with a blue line indicating the ideal burndown. In addition, there are bars displayed at each interval of the x-axis that shows the remaining effort and completed effort for that interval.</p>
-<p>The x-axis can be configured to display three different levels of granularity:</p>
-<p><strong>All Releases</strong> -- This shows the total remaining work that needs to be done for each of the releases in the product</p>
-<p><strong>Specific Release</strong> -- This shows the total remaining work that needs to be done for each of the sprints in the selected release</p>
-<p><strong>Specific Sprint</strong> -- This shows the total remaining work that needs to be done for each working day in the date-range covered by the selected sprint.</p>
-<p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
+<p><strong>How changing the displayed release for the page changes the x-axis:</strong></p>
+<ul>
+<li><strong>All Releases</strong>: all active releases in the product</li>
+<li><strong>Specific Release</strong>: all sprints within the chosen release. If the release has no sprints, the chart will be empty -- child releases are not shown</li>
+<li><strong>Specific Sprint</strong>: each day of the sprint, from its start to end date. In order for the chart to be meaningful, tasks must have start and end dates that are within the sprint's dates. </li>
+</ul>
+<p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button shows the underlying data used to generate the graph. Clicking the <code>Download Data as CSV</code> exports the data into Comma Separated Values (CSV) file. Some browsers support saving the graph as an image (JPEG, PNG and GIF formats).</p>
 <h2 id="date-range-graphs">Date-Range Graphs<a class="headerlink" href="#date-range-graphs" title="Permanent link">&para;</a></h2>
 <h3 id="test-run-progress-rate-graph">Test Run Progress Rate Graph<a class="headerlink" href="#test-run-progress-rate-graph" title="Permanent link">&para;</a></h3>
 <p>The Test Run Progress Rate Graph shows how many tests have been executed for the selected release/sprint for a specific date range, and what execution status was recorded. The graph can be displayed for all test case types or for a specific type.</p>
