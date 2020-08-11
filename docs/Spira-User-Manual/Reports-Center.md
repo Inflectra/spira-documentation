@@ -419,26 +419,22 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Task Burndown Chart
+The Task Burndown graph shows the effort (in hours) on the y-axis. The x-axis shows releases/sprints - the releases/sprints shown changes as you change the release selector at the top of the page. To be useful tasks in the product have to have their effort fields populated (specifically Estimated Effort and Remaining Effort).
 
-The Task Burndown graph shows the remaining work (in hours) that needs to be done for each release/sprint in the product with separate lines for the estimated and ideal burndown. In addition, the graph includes bars for the remaining and completed effort in each time period on the x-axis.
+The blue line on the graphs indicates the ideal burndown. The other line shows the estimated actual burndown. The graph also shows bars for the remaining and completed effort for each relevant release/sprint.
 
 ![](img/Reports_Center_379.png)
 
-The y-axis of the graph displays the total remaining work that needs to be done (the actual burndown), with a blue line indicating the ideal burndown. In addition, there are bars displayed at each interval of the x-axis that shows the remaining effort and completed effort for that interval.
+**How changing the displayed release for the page changes the x-axis:**
 
-The x-axis can be configured to display three different levels of granularity:
+- **All Releases**: all active releases in the product
+- **Specific Release**: all sprints within the chosen release. If the release has no sprints, the chart will be empty -- child releases are not shown
+- **Specific Sprint**: each day of the sprint, from its start to end date. In order for the chart to be meaningful, tasks must have start and end dates that are within the sprint's dates. 
 
-**All Releases** -- This shows the total remaining work that needs to be done for each of the releases in the product
-
-**Specific Release** -- This shows the total remaining work that needs to be done for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the total remaining work that needs to be done for each working day in the date-range covered by the selected sprint.
-
-Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
+Clicking on the "***Display Data Grid***" button shows the underlying data used to generate the graph. Clicking the `Download Data as CSV` exports the data into Comma Separated Values (CSV) file. Some browsers support saving the graph as an image (JPEG, PNG and GIF formats).
 
 
 ## Date-Range Graphs
-
 
 ### Test Run Progress Rate Graph
 

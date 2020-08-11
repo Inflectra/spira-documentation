@@ -313,13 +313,9 @@ Each task is listed along with its owner, priority and due-date so that you quic
 
 This widget lets you quickly view the three main graphs used when measuring the progress of tasks in an agile methodology:
 
-1.  **Task Velocity** -- this graph shows the total estimated and actual effort delivered in each product release and/or sprint
-
-2.  **Task Burnup** -- this graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
-
-3.  **Task Burndown** -- this graph shows the remaining work that needs to be done for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
-
-For each of the three graphs you can click on the "Display Data Grid" link to display a grid of the underlying data that is represented in the graph and also there are options to save the graph in a variety of different image formats.
+1.  **Task Velocity**: this graph shows the total estimated and actual effort delivered in each product release and/or sprint
+2.  **Task Burnup**: this graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
+3.  **Task Burndown**: Read more about how this graph works here [here](../Reports-Center/#task-burndown-chart).
 
 
 ## Source Code Commits
