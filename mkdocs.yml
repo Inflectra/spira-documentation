@@ -248,6 +248,7 @@ nav:
     - HP QualityCenter: Migration-and-Integration\Migrating-from-HP-QualityCenter.md
     - MS Test Manager: Migration-and-Integration\Migrating-from-MS-Test-Manager.md
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
+    - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
   - Build Servers:
