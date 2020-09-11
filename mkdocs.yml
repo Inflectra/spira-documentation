@@ -259,6 +259,7 @@ nav:
   - Requirements:
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
     - EnterpriseArchitect: Requirements-Management-Integration\Importing-From-EnterpriseArchitect.md
+    - ReqIF Files: Requirements-Management-Integration\Importing-From-ReqIF-Files.md
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
