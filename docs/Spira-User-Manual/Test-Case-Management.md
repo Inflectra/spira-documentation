@@ -86,6 +86,21 @@ Note: If you hide the 'execution status' column, the test case folders will no l
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
+### Viewing the Test Status for a Release
+
+By default, when you view the list of test cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
+
+To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the top-right from "All Releases" to a specific release:
+
+![](img/Test_Case_Management_133.png)
+
+![](img/Test_Case_Management_134.png)
+
+As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.
+
+As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools \> Execute Tests menu option will default the test run to the selected release.
+
+
 ### Copying Test Cases
 
 To copy one or more test cases, simply select the check-boxes of the test cases you want to copy and then select the Edit \> Copy Items menu option. This will copy the current test case selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit \> Paste Items option.
@@ -123,21 +138,6 @@ To quickly add a series of test cases to a Release, Test Set or Requirement, sel
 ![](img/Test_Case_Management_132.png)
 
 Once you have chosen the destination release / test set / requirement, clicking "***Add***" will add the selected test cases to the destination release / test set / requirement.
-
-
-### Viewing the Test Status for a Release
-
-By default, when you view the list of test case cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
-
-To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the yellow information panel (on the right-hand side) from "All Releases" to a specific release:
-
-![](img/Test_Case_Management_133.png)
-
-![](img/Test_Case_Management_134.png)
-
-As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test releases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.
-
-As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools \> Execute Tests menu option will default the test run to the selected release.
 
 
 ### Printing Items

@@ -5,7 +5,7 @@ This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter re
 In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.
 
 !!! danger "Set up data synchronization"
-    **STOP! Please make sure you have first read the Instructions in [Setup](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 
 ## Configuring the Plug-In

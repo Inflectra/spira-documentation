@@ -347,7 +347,7 @@ Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 ### Associations
 
-You can associate other tasks, incidents, and source code to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
+You can associate other tasks and to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 
 ### History

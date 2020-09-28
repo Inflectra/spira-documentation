@@ -19,6 +19,9 @@ By default the table shows you only the active products, but you can select a di
 
 To permanently delete a product, click the "Delete" button to the right of the product details. Doing so will show a popup where the admin will be required to correctly type the name of the selected product. Product deletion is irreversible and will delete all the artifacts associated with the product. If you want to temporarily delete a product, set its Active flag to 'No' instead. To make a copy of a product to reuse its test cases, releases, test sets and requirements, click the "Copy" link to the right of the product. *NOTE: this will not make a copy of any historical information, test runs or incidents.*
 
+To **clone a product**, select a product and click the "Clone" button. You will have the option of either cloning just the product itself (meaning it will use the same template as the original product); or cloning the product and the template (this will create a clone of the original product's template and make sure that the new cloned product uses this cloned template). This latter option can be really useful if you want to create a new independent product and template compared to the original. **Please note**: a cloned product does not clone everything from the original product. Incidents and test runs are *not* cloned. This is to allow the new clone to have a fresh start in terms of bugs and test results.
+
+
 ### Add a new product
 To add a new product to the system, click the "Add" button at the bottom of the product list, and a new screen will be displayed that allows you to enter the new product information:
 

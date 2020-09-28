@@ -13,8 +13,8 @@ the status changes in FogBugz be reflected back in SpiraTeam. In
 addition, any cases logged into FogBugz will get imported into SpiraTeam
 so that they can be linked to test cases and requirements.
 
-**STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 

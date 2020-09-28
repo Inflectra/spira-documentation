@@ -15,8 +15,8 @@ Once the incidents are loaded into V1 as defects, the development team
 can then manage the lifecycle of these defects in V1, and have the
 status changes in V1 be reflected back in SpiraTeam.
 
-**STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 

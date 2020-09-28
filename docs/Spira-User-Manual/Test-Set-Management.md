@@ -61,6 +61,19 @@ This drop-down list allows you to change the fields that are displayed in the te
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
+### Viewing the Test Status for a Release
+
+By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test sets in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
+
+To change the test set list to just display test sets and execution status for a particular release, change the release selected in the drop-down list located in the top right from "All Releases" to a specific release:
+
+![](img/Test_Set_Management_Specific_Release.png)
+
+When the drop-down is changed to select a specific release, the list of test sets is filtered to only show those tests sets mapped to that release. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). Test sets that have been run for other releases may show as "Not Run" since they've not been run for this specific release (but are scheduled to be).
+
+As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test sets via the Tools \> Execute Tests menu option will default the test run to the selected release.
+
+
 ### Copying Test Sets
 
 To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit \> Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit \> Paste Items option.
@@ -219,7 +232,7 @@ To add a new test case to the Test Set, click on the "***Add***" button to displ
 
 First, select the folder containing the test cases desired. You can then select the checkboxes of the individual test cases that you want to add to the test set (note: clicking the checkbox in the header row of the table will select ever test case in the currently selected folder). Once you have selected the desired items, click the "***Save***" button to add them to the test set.
 
-As discussed above in [Overview - Parameters](#overview-parameters), test cases can have parameters defined with specific values. These are created on the [Test Case details page(#modal-inWaiting-footer). If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":
+As discussed above in [Overview - Parameters](#overview-parameters), test cases can have parameters defined with specific values. These are created on the [Test Case details page](Test-Case-Management.md#test-case-details). If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":
 
 ![](img/Test_Case_Management_225.png)
 

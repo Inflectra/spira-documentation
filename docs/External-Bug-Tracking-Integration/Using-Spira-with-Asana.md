@@ -4,8 +4,8 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan
 (hereafter referred to as Spira) in conjunction with the Asana
 task tracking system.
 
-**STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 Asana is a simple yet powerful cloud-based task management system used to track tasks. The built-in integration between Spira and Asana lets you create incidents and tasks in Spira and have them synchronize over to Asana as tasks.
 

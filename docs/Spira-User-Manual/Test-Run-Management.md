@@ -10,6 +10,8 @@ The test run list screen displays all the individual test executions performed i
 
 In addition, you can view a more detailed description of the test run by hovering over the test run name hyperlink to display a "tooltip". If you click on this test run hyperlink, you will be taken to the test run details page described in the next section. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of test runs in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
+The sidebar shows a chart of the last 30 days of test run activity, broken down, for each day, by the test run status. This is a useful chart to quickly track the testing activity of the product -- this is not the same as overall product status. (For info, this chart matches that on the Product Homepage's  Test Run Progress widget)
+
 
 ### Refresh
 
@@ -103,7 +105,7 @@ This tab displays the list of incidents associated with the current test run. Th
 
 Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
+**Refresh** -- updates the list of incidents, useful if other people are still adding incidents to this test run.
 
 You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 

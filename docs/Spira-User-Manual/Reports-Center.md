@@ -94,7 +94,7 @@ This report displays a complete work breakdown structure of the product from a r
 
 ### Requirements Traceability Matrix
 
-This report displays a matrix of the requirements in the system with their list of covering test cases and a**ssociated, mapped requirements:**
+This report displays a matrix of the requirements in the system with their list of covering test cases and **associated, mapped requirements:**
 
 ![](img/Reports_Center_347.png)
 

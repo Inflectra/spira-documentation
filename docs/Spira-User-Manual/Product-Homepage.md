@@ -249,8 +249,7 @@ Any pending test run can be either deleted or reassigned to another member of th
 
 ## Test Run Progress
 
-This section consists of a chart that displays the last 30 days of test run activity, broken down, for each day, by the test run status. This is a useful chart to quickly track the testing activity of the product --
-this is not the same as overall product status.
+This section consists of a chart that displays the last 30 days of test run activity, broken down, for each day, by the test run status. This is a useful chart to quickly track the testing activity of the product -- this is not the same as overall product status.
 
 ![](img/UserProduct_Management_71.png)
 

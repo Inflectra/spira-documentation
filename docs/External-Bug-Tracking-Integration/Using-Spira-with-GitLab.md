@@ -4,8 +4,8 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan
 (hereafter referred to as SpiraPlan) in conjunction with the GitLab
 integrated issue tracker.
 
-**STOP! Please make sure you have first read the Instructions in 
-[Setup](../Setting-up-Data-Synchronization/) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 The GitLab issue tracker is a simple and lightweight tool used to track
 problems with an associated git repository. The built-in integration
