@@ -510,6 +510,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#copying-test-cases" class="md-nav__link">
     Copying Test Cases
   </a>
@@ -540,13 +547,6 @@
           <li class="md-nav__item">
   <a href="#adding-test-cases-to-a-release-test-set-or-requirement" class="md-nav__link">
     Adding Test Cases to a Release, Test Set or Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
-    Viewing the Test Status for a Release
   </a>
   
 </li>
@@ -3656,6 +3656,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#copying-test-cases" class="md-nav__link">
     Copying Test Cases
   </a>
@@ -3686,13 +3693,6 @@
           <li class="md-nav__item">
   <a href="#adding-test-cases-to-a-release-test-set-or-requirement" class="md-nav__link">
     Adding Test Cases to a Release, Test Set or Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
-    Viewing the Test Status for a Release
   </a>
   
 </li>
@@ -4067,6 +4067,13 @@ gray.</p>
 <p>Note: If you hide the 'execution status' column, the test case folders will no longer show the count of test cases contained within the folder.</p>
 <h3 id="filtering-sorting">Filtering &amp; Sorting<a class="headerlink" href="#filtering-sorting" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
+<h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release<a class="headerlink" href="#viewing-the-test-status-for-a-release" title="Permanent link">&para;</a></h3>
+<p>By default, when you view the list of test cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.</p>
+<p>To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the top-right from "All Releases" to a specific release:</p>
+<p><img alt="" src="../img/Test_Case_Management_133.png" /></p>
+<p><img alt="" src="../img/Test_Case_Management_134.png" /></p>
+<p>As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.</p>
+<p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="copying-test-cases">Copying Test Cases<a class="headerlink" href="#copying-test-cases" title="Permanent link">&para;</a></h3>
 <p>To copy one or more test cases, simply select the check-boxes of the test cases you want to copy and then select the Edit > Copy Items menu option. This will copy the current test case selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit > Paste Items option.</p>
 <p>The test cases will now be copied to the destination you specified. The name of the copied test cases will be prefixed with "Copy of..." to distinguish them from the originals.</p>
@@ -4088,13 +4095,6 @@ gray.</p>
 <p>To quickly add a series of test cases to a Release, Test Set or Requirement, select the check-boxes of the appropriate test cases and then click Tools > Add to Release / Test Set / Requirement. This will bring up a dialog box displaying either a list of available releases, test sets or requirements (depending on which option was chosen):</p>
 <p><img alt="" src="../img/Test_Case_Management_132.png" /></p>
 <p>Once you have chosen the destination release / test set / requirement, clicking "<strong><em>Add</em></strong>" will add the selected test cases to the destination release / test set / requirement.</p>
-<h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release<a class="headerlink" href="#viewing-the-test-status-for-a-release" title="Permanent link">&para;</a></h3>
-<p>By default, when you view the list of test case cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.</p>
-<p>To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the yellow information panel (on the right-hand side) from "All Releases" to a specific release:</p>
-<p><img alt="" src="../img/Test_Case_Management_133.png" /></p>
-<p><img alt="" src="../img/Test_Case_Management_134.png" /></p>
-<p>As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test releases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.</p>
-<p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="printing-items">Printing Items<a class="headerlink" href="#printing-items" title="Permanent link">&para;</a></h3>
 <p>To quickly print a single test case, test folder or list of test cases you can select the items' checkboxes and then click Tools > Print Items. This will create a printable report of the selected items in a new window.</p>
 <h3 id="right-click-context-menu">Right-Click Context Menu<a class="headerlink" href="#right-click-context-menu" title="Permanent link">&para;</a></h3>

@@ -516,6 +516,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#copying-test-sets" class="md-nav__link">
     Copying Test Sets
   </a>
@@ -3405,6 +3412,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#viewing-the-test-status-for-a-release" class="md-nav__link">
+    Viewing the Test Status for a Release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#copying-test-sets" class="md-nav__link">
     Copying Test Sets
   </a>
@@ -3598,6 +3612,12 @@
 <p>This drop-down list allows you to change the fields that are displayed in the test set list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.</p>
 <h3 id="filtering-sorting">Filtering &amp; Sorting<a class="headerlink" href="#filtering-sorting" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
+<h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release<a class="headerlink" href="#viewing-the-test-status-for-a-release" title="Permanent link">&para;</a></h3>
+<p>By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test sets in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.</p>
+<p>To change the test set list to just display test sets and execution status for a particular release, change the release selected in the drop-down list located in the top right from "All Releases" to a specific release:</p>
+<p><img alt="" src="../img/Test_Set_Management_Specific_Release.png" /></p>
+<p>When the drop-down is changed to select a specific release, the list of test sets is filtered to only show those tests sets mapped to that release. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). Test sets that have been run for other releases may show as "Not Run" since they've not been run for this specific release (but are scheduled to be).</p>
+<p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test sets via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="copying-test-sets">Copying Test Sets<a class="headerlink" href="#copying-test-sets" title="Permanent link">&para;</a></h3>
 <p>To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit > Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit > Paste Items option.</p>
 <p>The test sets will now be copied into the destination you specified. The name of the copied test sets will be prefixed with "Copy of..." to distinguish them from the originals.</p>
@@ -3705,7 +3725,7 @@
 <p>To add a new test case to the Test Set, click on the "<strong><em>Add</em></strong>" button to display the panel:</p>
 <p><img alt="" src="../img/Test_Case_Management_224.png" /></p>
 <p>First, select the folder containing the test cases desired. You can then select the checkboxes of the individual test cases that you want to add to the test set (note: clicking the checkbox in the header row of the table will select ever test case in the currently selected folder). Once you have selected the desired items, click the "<strong><em>Save</em></strong>" button to add them to the test set.</p>
-<p>As discussed above in <a href="#overview-parameters">Overview - Parameters</a>, test cases can have parameters defined with specific values. These are created on the [Test Case details page(#modal-inWaiting-footer). If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":</p>
+<p>As discussed above in <a href="#overview-parameters">Overview - Parameters</a>, test cases can have parameters defined with specific values. These are created on the <a href="../Test-Case-Management/#test-case-details">Test Case details page</a>. If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":</p>
 <p><img alt="" src="../img/Test_Case_Management_225.png" /></p>
 <p>You can then specify the values of the parameters that the test set will pass to this specific test case. Once you have entered / modified the values, click "<strong><em>Save</em></strong>" to commit the changes.</p>
 <h3 id="overview-comments_1">Overview - Comments<a class="headerlink" href="#overview-comments_1" title="Permanent link">&para;</a></h3>
