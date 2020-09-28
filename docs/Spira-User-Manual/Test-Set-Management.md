@@ -164,10 +164,11 @@ If you have **test configuration sets** defined in your product, you can assign 
 
 The Description section contains the long, formatted description of the test set. You can enter rich text or paste in from a word processing program or web page.
 
-Test Sets can be specified as being either for "Manual" or "Automated" test runs (via the "Type" field). 
+!!! info "Manual or Automated Test Sets"
+    Test Sets can be marked as either for "Manual" or "Automated" test runs (via the "Type" field). 
 
-- Manual: the test set can be executed (manually) by a tester from their "My Page". 
-- Automated: the test set will be executed by the automation host you specified.
+    - Manual: the test set can be executed (manually) by a tester from their "My Page". 
+    - Automated: the test set will be executed by the automation host you specified.
 
 #### Scheduling Test Sets
 How do you say *when* the test set should execute? You have two options.
