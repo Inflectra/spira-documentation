@@ -5,7 +5,7 @@ This section outlines how to use the Release Management features of SpiraPlan® 
 
 In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.
 
-There are two types of release artifact in SpiraPlan® - major product releases that are displayed with the blue release icon and represent major versions of the system, and release Sprints (aka builds) that are displayed with a yellow icon and represent intermediate builds/sprints of the system. *Note: Sprints can be contained within a Release, but not the other way round.*
+There are two types of release artifact in SpiraPlan® - major product releases that are displayed with the release icon and represent major versions of the system, and release Sprints (aka builds) that are displayed with the sprint icon and represent intermediate builds/sprints of the system. *Note: Sprints can be contained within a Release, but not the other way round.*
 
 The main differences between releases and sprints are as follows:
 
@@ -36,7 +36,7 @@ This column shows a mini chart that shows the sum of each execution statuses aga
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
 
-Each release will display the aggregate status of any test cases directly assigned to itself, together with the test execution status of any child sprints that are contained within the release.
+Each release shows the overall execution status of test cases assigned to that release for that release. For each test case the execution status shown is the most recent result from when that test case was run against that particular release (if at all). **Note:** a major release will also show the results from test cases assigned to it directly that are also assigned to and run against its child sprints. 
 
 ### Task Progress
 This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the release, by progress category for the release. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
