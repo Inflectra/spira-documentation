@@ -1,5 +1,34 @@
 # Release Notes for Spira v6
 
+## Version 6.6.1 (October 2020)
+
+!!! info "Summary"
+
+    **Baselining Enhancements**: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
+
+??? success "New features"
+    - Store source code branche and revision information directly in the database to improve reliability and performance [RQ:2975]
+    - Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]
+    
+    * Baselining
+        - Product admins can purge or revert recent history changes (those not covered by any baselines) [RQ:2988]
+        - Enhanced history to track release test coverage (if baselining is enabled for a product) [RQ:3015]
+        - Enhanced history to track requirement test coverage (if baselining is enabled for a product) [RQ:2991]
+
+??? bug "Bug fixes and enhancements"
+    - On Administration -> Projects -> Data Tools page, update the text to explain the new index refresh button [IN:3655]
+    - On Administration -> Projects -> Data Tools add a new option to fix Folder hierarchies [IN:5839]
+    - On Administration -> Projects -> Data Tools add a new option to fix Test Case Parameters cache [IN:5840]
+    - On Administration -> Projects -> Data Tools combine the two Refresh Cache buttons into a single button [IN:5807]
+    - On the Test Case details page, "Linked" script type option in the "Automation" section should not be greyed out when it's actually available [IN:4668]
+    - On the Test Case details page, inserting a link to child that has no direct parameters should refresh the test case parameters cache [IN:5851]
+    - On the Test Case details page, the releases tab should show the correct artifact prefix (RL), and not TC [IN:5877]
+    - On the Test Run details page, the console output should better force the wrapping of long lines [IN:5780]
+    - On the Requirements List page, a new requirement inserted at the end of the requirements list should have the correct indent level [IN:5864]
+    - Improve performance of the RELEASE_REFRESH_PROGRESS_AND_EFFORT stored procedure [IN:5801]
+    - Fix the documentation links on the Enterprise and Portfolio home pages [IN:5814]
+
+
 ## Version 6.6 (August 2020)
 
 !!! info "Summary"
