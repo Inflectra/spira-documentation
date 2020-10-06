@@ -19,8 +19,8 @@ The minimum hardware and software requirements for running the SpiraPlan® syste
 
 | **Client Requirements** |                                                   |
 |-------------------------|---------------------------------------------------| 
-| **Web Browser:**        | Microsoft Edge <br> Internet Explorer 11.0+ <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera                                             |
-| **Other Components:**   | Microsoft Excel 2003+ (optional) <br> Microsoft Word 2003+ (optional) <br> Microsoft Project 2003+ (optional)                |
+| **Web Browser:**        | Microsoft Edge <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera                                             |
+| **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional) <br> Microsoft Project 2010+ (optional)                |
 
 \*Note that SpiraPlan® can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
 
