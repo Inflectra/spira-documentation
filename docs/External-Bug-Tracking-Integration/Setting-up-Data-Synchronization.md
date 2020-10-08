@@ -21,21 +21,23 @@ We shall provide the configuration steps for each option:
 
 ## Spira & External Tool Cloud Hosted
 
-When you sign up for Spira as a cloud-hosted subscription, you have the option of including the Spira DataSync service as an add-on feature to the subscription:
+When you sign up for Spira for a cloud-hosted trial, you can add on the Spira DataSync service to the trial for free. **NOTE**: the DataSync service is only free during the free trial period - there is a nominal charge for the service once you start your subscription.
+
+Make sure to include the 'Spira DataSync' add-on with your trial. 
 
 ![](img/Setting_up_Data_Synchronization_5.png)
 
-Make sure you include the 'Spira DataSync' add-on with your subscription. Once your subscription is provisioned, you will be able to configure the connection to Spira by going to your secure Customer Area on our website:
+If you did *not* include the Spira DataSync with your trial, you can add one at any time once your subscription starts. Go to the customer area; find the "My Cloud Subscriptions" section and click "Customize" next to the subscription you want to add the Spira DataSync to:
+
+![](img/Setting_up_Data_Synchronization_5b.png)
+
+Once your trial (or subscription) is provisioned, you will be able to configure the connection to Spira by going to your secure Customer Area on our website. Click on the 'Configure' button associated with the **Spira-DataSync** addon row:
 
 ![](img/Setting_up_Data_Synchronization_6.png)
 
-Click on the 'Configure' button associated with the **Spira-DataSync**
-addon row:
+Enter a login and password that can connect to your Spira instance. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least **Incident create/modify/view** permissions and **Release create/modify/view** permissions in these projects.
 
 ![](img/Setting_up_Data_Synchronization_7.png)
-
-Enter a login and password that can connect to your Spira instance. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least **Incident create/modify/view** permissions and **Release create/modify/view**
-permissions in these projects.
 
 Click on the 'Test' button to verify the credentials, and once they validate, make sure the 'Active' flag is checked and then click 'Save'. You have now configured the synchronization.
 
