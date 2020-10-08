@@ -368,6 +368,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#electronic-signatures" class="md-nav__link">
+    Electronic Signatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#emailing" class="md-nav__link">
     Emailing
   </a>
@@ -3398,6 +3405,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#electronic-signatures" class="md-nav__link">
+    Electronic Signatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#emailing" class="md-nav__link">
     Emailing
   </a>
@@ -3547,7 +3561,9 @@
 <p>These workflow transitions specify, given a starting status, which statuses you can move the artifact to. After changing the status of the artifact by clicking on a transition, the form on the overview tab may change. Different fields may be visible, enabled, or required. </p>
 <p>For example, a requested requirement has its "Release" field hidden, but once the requirement is planned, that release field is visible and required. The types of change allowed and the fields that are enabled/visible/required will depend on how your product administrator has set up the workflow. Administrators should refer to the <em>Administration Guide</em> for details on configuring workflows. </p>
 <p>Once you've made the changes to the appropriate artifact fields, you can either click "<strong><em>Save</em></strong>", "<strong><em>Save and Close</em></strong>", or "<strong><em>Save and New</em></strong>" to commit the changes or "<strong><em>Refresh</em></strong>" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "<strong><em>Print</em></strong>", which will display a printable version of the page in a separate window.</p>
-<p>Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:</p>
+<h3 id="electronic-signatures">Electronic Signatures<a class="headerlink" href="#electronic-signatures" title="Permanent link">&para;</a></h3>
+<p>Any workflow transition (moving from one status to another) can be set to require an electronic signature. If enabled for a particular workflow operation an electronic signature is required to confirm the status change. Confirmation requires entering the users password, and a message explaining the meaning of this operation.</p>
+<p>Workflow operations requiring a digital signature are marked with a padlock icon:</p>
 <p><img alt="" src="../img/Requirements_Management_95.png" /></p>
 <p>On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with a popup like the one below:</p>
 <p><img alt="" src="../img/Requirements_Management_96.png" /></p>
