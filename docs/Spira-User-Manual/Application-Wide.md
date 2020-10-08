@@ -135,7 +135,11 @@ For example, a requested requirement has its "Release" field hidden, but once th
 
 Once you've made the changes to the appropriate artifact fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "***Print***", which will display a printable version of the page in a separate window.
 
-Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon:
+
+### Electronic Signatures
+Any workflow transition (moving from one status to another) can be set to require an electronic signature. If enabled for a particular workflow operation an electronic signature is required to confirm the status change. Confirmation requires entering the users password, and a message explaining the meaning of this operation.
+
+Workflow operations requiring a digital signature are marked with a padlock icon:
 
 ![](img/Requirements_Management_95.png)
 
