@@ -5,12 +5,9 @@
     If you have any feedback or suggestions regarding this roadmap, please email us at support@inflectra.com.
 
 
-## Version 6.6 (Summer 2020)
-NOTE: The following features may be split across various point releases to 6.5 and/or 6.6
-
-- **Baselining a product to a specific point in time (SpiraTeam and SpiraPlan)**: Enhancements to history tracking will mean users can create read-only baselines of a product at a specific time. With baselining, you can see exactly what your data looked like when a specific sprint or release was completed.
-- **Improved methodologies for effort and progress rollups**: How task progress and efforts are calculated at the requirement and release level and how they rollup to parent requirements and releases will be rationalized and streamlined to make them more intuitive.
-- **Industry and methodology specific template and samples**: Specific templates for different ways of working will allow users to spend even less time setting up their products. Pick the methodology that best fits your needs and use it out the box. This will include reworked agile and waterfall templates, and templates for life sciences and more.
+## Version 6.7 (Fall/Winter 2020)
+- **Baselining enhancements (SpiraTeam and SpiraPlan)**
+- **Enhanced source code management (SpiraTeam and SpiraPlan)**
 
 ## Planning
 - **Enhanced program level management (SpiraPlan only)**: Manage risks at the program level. Program level planning and roadmapping.

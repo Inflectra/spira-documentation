@@ -19,7 +19,7 @@ There are a handful of change types recorded and displayed here:
 
 ***Note***: When upgrading from a version before v3.1, each individual field changed will be considered a unique change, due to how previous versions recorded history. However, as soon as the application is upgraded, simultaneous changes will be grouped together based on their last-update date.
 
-This screen allows the administrator several options (below). NOTE: if baselining is enabled for this product you will not be able to revert or purge all.
+This screen allows the administrator several options (below). NOTE: if baselining is enabled for this product you will not be able to purge all, and you will only be able to revert recent changes (those made since the last baseline for this product was created).
 
 -   *Viewing Details*: The detail screen for each change set can be viewed by clicking on the change ID \#. This will take you to the history details screen, described below.
 -   *Revert*: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.
@@ -39,7 +39,7 @@ If a set of fields were affected (Standard or Custom), then the list of fields w
 If the artifact is still available in the system, you can click the Artifact or click the 'View Item' button in the toolbar to view the item as it is currently. However, if the item has been deleted, a warning label will be displayed (as above in the example screenshot), the View Item links will be disabled, and a new option, "Purge" will appear on the toolbar.
 
 !!! info "If baselining is turned on"
-    If baselining is enabled for this product, you will not be able to revert or purge any history item and the relevant buttons will not even be visible to you.
+    If baselining is enabled for this product, you will only be able to revert or purge recent history items (those made since the last baseline for this product was created).
 
 
 ### Purging Items
