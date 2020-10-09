@@ -4,6 +4,11 @@
 
 One of the maxims I always tell developers is that regardless of what you build, customers will never be satisfied with the reports you offer or the integration that you provide. In fact the two most underestimated tasks in software development are data feeds and reporting. A great feature of SpiraPlan (and SpiraTest and SpiraTeam) is the ability to do custom reporting, so that you are not limited to only the reports that ship with the system. This guide explains how to use these powerful custom reporting features.
 
+!!! info "How to get more info and gotchas"
+
+	- You can find information about all the available tables and fields for fully custom reports [here](../Custom-Reporting-Tokens).
+	- For performance reasons, custom reports are limited to a maximum of 10,000 rows.
+
 
 ## Basics and Terminology
 
@@ -20,7 +25,6 @@ From here you can either make a copy of one of the existing Spira built-in repor
 Once you have created your custom report, click on the `Edit` button for the report to go to the report details page. This displays a list of formats, sections, and the header and footer of the report.
 
 ![](img/custom-report-tutorial-2.png)
-
 
 ### Terminology
 
