@@ -3074,6 +3074,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-661-october-2020" class="md-nav__link">
+    Version 6.6.1 (October 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-66-august-2020" class="md-nav__link">
     Version 6.6 (August 2020)
   </a>
@@ -3297,6 +3304,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-661-october-2020" class="md-nav__link">
+    Version 6.6.1 (October 2020)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-66-august-2020" class="md-nav__link">
     Version 6.6 (August 2020)
   </a>
@@ -3439,6 +3453,40 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-661-october-2020">Version 6.6.1 (October 2020)<a class="headerlink" href="#version-661-october-2020" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong>Baselining Enhancements</strong>: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.</p>
+</div>
+<details class="success"><summary>New features</summary><ul>
+<li>Store source code branche and revision information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]</li>
+<li>
+<p>Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]</p>
+</li>
+<li>
+<p>Baselining (SpiraTeam and SpiraPlan only)</p>
+<ul>
+<li>Product admins can purge or revert recent history changes (those not covered by any baselines) [RQ:2988]</li>
+<li>Enhanced history to track release test coverage (if baselining is enabled for a product) [RQ:3015]</li>
+<li>Enhanced history to track requirement test coverage (if baselining is enabled for a product) [RQ:2991]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>On Administration -&gt; Projects -&gt; Data Tools page, update the text to explain the new index refresh button [IN:3655]</li>
+<li>On Administration -&gt; Projects -&gt; Data Tools add a new option to fix Folder hierarchies [IN:5839]</li>
+<li>On Administration -&gt; Projects -&gt; Data Tools add a new option to fix Test Case Parameters cache [IN:5840]</li>
+<li>On Administration -&gt; Projects -&gt; Data Tools combine the two Refresh Cache buttons into a single button [IN:5807]</li>
+<li>On the Test Case details page, "Linked" script type option in the "Automation" section should not be greyed out when it's actually available [IN:4668]</li>
+<li>On the Test Case details page, inserting a link to child that has no direct parameters should refresh the test case parameters cache [IN:5851]</li>
+<li>On the Test Case details page, the releases tab should show the correct artifact prefix (RL), and not TC [IN:5877]</li>
+<li>On the Test Run details page, the console output should better force the wrapping of long lines [IN:5780]</li>
+<li>On the Requirements List page, a new requirement inserted at the end of the requirements list should have the correct indent level [IN:5864]</li>
+<li>Improve performance of the RELEASE_REFRESH_PROGRESS_AND_EFFORT stored procedure [IN:5801]</li>
+<li>Fix the documentation links on the Enterprise and Portfolio home pages (SpiraPlan only) [IN:5814]</li>
+</ul>
+</details>
 <h2 id="version-66-august-2020">Version 6.6 (August 2020)<a class="headerlink" href="#version-66-august-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
