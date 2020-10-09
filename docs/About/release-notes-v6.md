@@ -7,10 +7,10 @@
     **Baselining Enhancements**: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
 
 ??? success "New features"
-    - Store source code branche and revision information directly in the database to improve reliability and performance [RQ:2975]
+    - Store source code branche and revision information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
     - Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]
     
-    * Baselining
+    * Baselining (SpiraTeam and SpiraPlan only)
         - Product admins can purge or revert recent history changes (those not covered by any baselines) [RQ:2988]
         - Enhanced history to track release test coverage (if baselining is enabled for a product) [RQ:3015]
         - Enhanced history to track requirement test coverage (if baselining is enabled for a product) [RQ:2991]
@@ -26,7 +26,7 @@
     - On the Test Run details page, the console output should better force the wrapping of long lines [IN:5780]
     - On the Requirements List page, a new requirement inserted at the end of the requirements list should have the correct indent level [IN:5864]
     - Improve performance of the RELEASE_REFRESH_PROGRESS_AND_EFFORT stored procedure [IN:5801]
-    - Fix the documentation links on the Enterprise and Portfolio home pages [IN:5814]
+    - Fix the documentation links on the Enterprise and Portfolio home pages (SpiraPlan only) [IN:5814]
 
 
 ## Version 6.6 (August 2020)

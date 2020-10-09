@@ -4,7 +4,7 @@
 There are two ways that a field can be required. The best way to control this is through the workflow. This controls what fields are required, not required, disabled/read only, or hidden.
 
 ### Workflow
-The below works for any artifact that has a workflow. Below we changing the Incident workflow
+The below works for any artifact that has a workflow. Below we are changing the Incident workflow
 
 1. Find the template that your product is using
 2. As a template administrator go to Template Administration > Incidents > Workflows
