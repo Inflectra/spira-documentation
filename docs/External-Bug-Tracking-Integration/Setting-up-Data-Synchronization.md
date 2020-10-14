@@ -153,8 +153,9 @@ To obtain the Desktop DataSync, go to the Inflectra website and under the "Downl
 
 ![](img/Setting_up_Data_Synchronization_11.png)
 
-Next you need to download the appropriate plug-in(s) for the various bug-trackers (as described in the appropriate section of this document) and place the assemblies (DLL files) into the same folder that contains the DesktopDataSync.exe application.
+Next you need to download the appropriate plug-in(s) for the various bug-trackers (as described in the appropriate section of this document) and place the assemblies (DLL files) into the same folder that contains the DesktopDataSync.exe application:
 
+![](img/DesktopDataSync.png)
 
 ### Usage
 
