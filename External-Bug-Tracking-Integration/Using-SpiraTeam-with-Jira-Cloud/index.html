@@ -3795,7 +3795,7 @@
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_16.png" /></p>
 <p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
 <p>If you already see an entry for <strong>JiraDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:</p>
-<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_17.png" /></p>
+<p><img alt="" src="../img/JiraCloud-Plugin-Config1.png" /></p>
 <p>You need to fill out the following fields for the JIRA Plug-in to operate correctly:</p>
 <ul>
 <li><strong>Name</strong> -- this needs to be set to <strong>JiraDataSync</strong>.</li>
@@ -3805,6 +3805,9 @@
 <li>It is typically of the form: <a href="https://mycompany.atlassian.net">https://mycompany.atlassian.net</a></li>
 <li><strong>Login</strong> -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.</li>
 <li><strong>Password</strong> -- this should be set to the <strong>API Key</strong> (<em>not password</em>) of the Atlassian login specified above.</li>
+</ul>
+<p><img alt="" src="../img/JiraCloud-Plugin-Config2.png" /></p>
+<ul>
 <li><strong>Time Offset</strong> -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.</li>
 <li><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:</li>
