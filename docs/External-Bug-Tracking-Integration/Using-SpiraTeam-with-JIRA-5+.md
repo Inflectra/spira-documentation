@@ -26,23 +26,26 @@ If you have an earlier version of SpiraTeam, you will need to upgrade to at leas
 
 The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the Jira server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System \> Data Synchronization administration option from the left-hand navigation:
 
-![](img/Using_SpiraTeam_with_JIRA_5+_16.png)
+![](img/JiraServer-Plugin-Status.png)
 
 This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.
 
-If you already see an entry for **JiraDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, please click on the \[Add\] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:
+If you already see an entry for **JiraServerDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, please click on the \[Add\] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:
 
-![](img/Using_SpiraTeam_with_JIRA_5+_17.png)
+![](img/JiraServer-Plugin-Config1.png)
 
 You need to fill out the following fields for the JIRA Plug-in to operate correctly:
 
-- **Name** -- this needs to be set to **JiraDataSync**.
-- **Caption** -- this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraDataSync"
+- **Name** -- this needs to be set to **JiraServerDataSync**.
+- **Caption** -- this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraServerDataSync"
 - **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
 - **Connection Info** -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
--   It is typically of the form: <http://myserver:8080>
+-   It is typically of the form: <http://myserver:8080> or <http://myserver:8080/jira>
 - **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
 - **Password** -- this should be set to either the password or the **API Key** of the login specified above. The ability to use your password vs. a special API Key will depend on your version of Jira.
+
+![](img/JiraServer-Plugin-Config2.png)
+
 - **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
 - **Auto-Map Users** -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:

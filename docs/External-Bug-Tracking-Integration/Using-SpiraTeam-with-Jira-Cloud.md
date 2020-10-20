@@ -25,7 +25,7 @@ This screen lists all the plug-ins already configured in the system. Depending o
 
 If you already see an entry for **JiraDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, please click on the \[Add\] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:
 
-![](img/Using_SpiraTeam_with_JIRA_5+_17.png)
+![](img/JiraCloud-Plugin-Config1.png)
 
 You need to fill out the following fields for the JIRA Plug-in to operate correctly:
 
@@ -36,6 +36,9 @@ You need to fill out the following fields for the JIRA Plug-in to operate correc
 -   It is typically of the form: <https://mycompany.atlassian.net>
 - **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.
 - **Password** -- this should be set to the **API Key** (*not password*) of the Atlassian login specified above.
+
+![](img/JiraCloud-Plugin-Config2.png)
+
 - **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
 - **Auto-Map Users** -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:
