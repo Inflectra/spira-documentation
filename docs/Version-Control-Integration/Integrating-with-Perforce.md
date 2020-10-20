@@ -51,7 +51,10 @@ the default, "PerforceProvider".
 -   **Custom02**: The base depot or root directory must be entered
 here.
 
--   **Other Fields**: The other custom fields (Custom03 -- Custom05)
+-   **Custom03**: The encoding to use for the Perforce server (Optional). Depending on your instance you may need to use: *utf-8, utf-16, utf, utf8-bom*
+
+
+-   **Other Fields**: The other custom fields (Custom04 -- Custom05)
 are not used by the plug-in and will be ignored.
 
 -   When finished, click the "Insert" button and you will be taken back
