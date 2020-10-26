@@ -247,9 +247,10 @@ nav:
     - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
     - HP QualityCenter: Migration-and-Integration\Migrating-from-HP-QualityCenter.md
     - MS Test Manager: Migration-and-Integration\Migrating-from-MS-Test-Manager.md
-    - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
+    - qTest: Migration-and-Integration\Migrating-from-qTest.md
     - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
+    - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
   - Build Servers:
     - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
