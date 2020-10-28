@@ -51,11 +51,11 @@ the default, "PerforceProvider".
 -   **Custom02**: The base depot or root directory must be entered
 here.
 
+- **Custom04**: *(This is not used and can be left empty)*
+
 -   **Custom03**: The encoding to use for the Perforce server (Optional). Depending on your instance you may need to use: *utf-8, utf-16, utf, utf8-bom*
 
-
--   **Other Fields**: The other custom fields (Custom04 -- Custom05)
-are not used by the plug-in and will be ignored.
+-   **Custom05**: Normally this should be left empty. However if you need to enable more detailed logging, just enter the word *'true'* in the box to enable trace logging.
 
 -   When finished, click the "Insert" button and you will be taken back
 to the Version Control integration list page, with PerforceProvider
