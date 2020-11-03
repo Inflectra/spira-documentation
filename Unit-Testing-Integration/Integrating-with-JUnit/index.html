@@ -3259,7 +3259,7 @@
                 <h1 id="integrating-with-junit">Integrating with JUnit<a class="headerlink" href="#integrating-with-junit" title="Permanent link">&para;</a></h1>
 <p>The directions for using JUnit 5 and JUnit 4 are in different sections below:</p>
 <h2 id="installing-the-junit-5-extension">Installing the JUnit 5 Extension<a class="headerlink" href="#installing-the-junit-5-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Extension for JUnit
+<p>This section outlines how to install the SpiraTest Extension for JUnit 5
 onto a workstation so that you can then run automated JUnit tests
 against a Java application and have the results be recorded as test runs
 inside SpiraTest. It assumes that you already have a working
@@ -3413,13 +3413,13 @@ the JUnit test run are illustrated below:</p>
 <span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Inflectra Corporation</span>
-<span class="cm"> * @version 4.0.0</span>
+<span class="cm"> * @version 5.0.0</span>
 <span class="cm"> */</span>
 <span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
         <span class="c1">//following are REQUIRED</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://doctor/SpiraPlan&quot;</span><span class="p">,</span>
         <span class="n">login</span> <span class="o">=</span> <span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s">&quot;PleaseChange&quot;</span><span class="p">,</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="s">&quot;{XXXXXXXXXXXXXXXX}&quot;</span><span class="p">,</span> <span class="c1">// make sure to use your API/RSS key and not your login password</span>
         <span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="err">`</span>
         <span class="c1">//following are OPTIONAL</span>
         <span class="n">releaseId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
@@ -3490,24 +3490,18 @@ the JUnit test run are illustrated below:</p>
 <p>The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:</p>
-<p><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This
-needs to start with http:// or https://.</p>
+<ul>
+<li>
+<p><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This needs to start with http:// or https://.</p>
+</li>
+<li>
 <p><strong>Login</strong> - A valid username for the instance of SpiraTest.</p>
-<p><strong>Password</strong> -- Use the password you login with. For Spira 6.4+ you can alternatively use your RSS Token, found in your profile page (RSS Feeds must be enabled
-for this to work).</p>
-<p><strong>Project Id</strong> - The ID of the project (this can be found on the project
-homepage in the "Project Overview" section)</p>
-<p><strong>Release Id</strong> (Optional) - The ID of the release to associate the test
-run with. This can be found on the releases list page (click on the
-Planning > Releases tab). If you don't want to specify a release, just
-use the value -1.</p>
-<p><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the
-test run with. This can be found on the test set list page (click on the
-Testing > Test Sets tab). If you don't want to specify a test set, just
-use the value -1. If you choose a test set that is associated with a
-release, then you don't need to explicitly set a release id (i.e. just
-use -1). However if you do set a release value, it will override the
-value associated with the test set.</p>
+</li>
+<li><strong>Password</strong> -- Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
+<li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
+<li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning > Releases tab). If you don't want to specify a release, just use the value -1.</li>
+<li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing > Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
+</ul>
 <p>In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
 @SpiraTestCase attribute to the test method together with the ID of the
@@ -3531,7 +3525,7 @@ test runs:</p>
 provides information regarding what JUnit test method failed, what the
 error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_11.png" /></p>
-<p>Congratulations... You are now able to run JUnit automated tests and
+<p>Congratulations... You are now able to run JUnit 5 automated tests and
 have the results be recorded within SpiraTest. The sample test fixture
 SimpleText.java is provided with the installation.</p>
 <h2 id="installing-the-junit-4-extension">Installing the JUnit 4 Extension<a class="headerlink" href="#installing-the-junit-4-extension" title="Permanent link">&para;</a></h2>
