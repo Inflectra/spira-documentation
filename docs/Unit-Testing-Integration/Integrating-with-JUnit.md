@@ -4,7 +4,7 @@ The directions for using JUnit 5 and JUnit 4 are in different sections below:
 
 ## Installing the JUnit 5 Extension
 
-This section outlines how to install the SpiraTest Extension for JUnit
+This section outlines how to install the SpiraTest Extension for JUnit 5
 onto a workstation so that you can then run automated JUnit tests
 against a Java application and have the results be recorded as test runs
 inside SpiraTest. It assumes that you already have a working
@@ -181,13 +181,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Some simple tests using the ability to return results back to SpiraTest
  *
  * @author Inflectra Corporation
- * @version 4.0.0
+ * @version 5.0.0
  */
 @SpiraTestConfiguration(
         //following are REQUIRED
         url = "http://doctor/SpiraPlan",
         login = "fredbloggs",
-        password = "PleaseChange",
+        password = "{XXXXXXXXXXXXXXXX}", // make sure to use your API/RSS key and not your login password
         projectId = 1,`
         //following are OPTIONAL
         releaseId = 7,
@@ -260,29 +260,13 @@ The overall class is marked with a new @SpiraTestConfiguration
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:
 
-**URL** - The URL to the instance of SpiraTest being accessed. This
-needs to start with http:// or https://.
+- **URL** - The URL to the instance of SpiraTest being accessed. This needs to start with http:// or https://.
 
-**Login** - A valid username for the instance of SpiraTest.
-
-**Password** -- Use the password you login with. For Spira 6.4+ you can alternatively use your RSS Token, found in your profile page (RSS Feeds must be enabled
-for this to work).
-
-**Project Id** - The ID of the project (this can be found on the project
-homepage in the "Project Overview" section)
-
-**Release Id** (Optional) - The ID of the release to associate the test
-run with. This can be found on the releases list page (click on the
-Planning \> Releases tab). If you don't want to specify a release, just
-use the value -1.
-
-**Test Set Id** (Optional) -- The ID of the test set to associate the
-test run with. This can be found on the test set list page (click on the
-Testing \> Test Sets tab). If you don't want to specify a test set, just
-use the value -1. If you choose a test set that is associated with a
-release, then you don't need to explicitly set a release id (i.e. just
-use -1). However if you do set a release value, it will override the
-value associated with the test set.
+- **Login** - A valid username for the instance of SpiraTest.
+- **Password** -- Use the API key / RSS key for your user profile **NOT your login password**. This can be found in your profile page (RSS Feeds must be enabled for this to work).
+- **Project Id** - The ID of the project (this can be found on the project homepage in the "Project Overview" section)
+- **Release Id** (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning \> Releases tab). If you don't want to specify a release, just use the value -1.
+- **Test Set Id** (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing \> Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.
 
 In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
@@ -321,9 +305,10 @@ error was, together with the associated code stack-trace:
 
 
 
-Congratulations... You are now able to run JUnit automated tests and
+Congratulations... You are now able to run JUnit 5 automated tests and
 have the results be recorded within SpiraTest. The sample test fixture
 SimpleText.java is provided with the installation.
+
 
 ## Installing the JUnit 4 Extension
 
