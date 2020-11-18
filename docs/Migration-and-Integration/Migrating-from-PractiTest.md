@@ -30,8 +30,6 @@ Once you have entered this information, click `Authenticate` and the list of pro
 
 This page allows you to enter the URL, user name and password to access SpiraPlan that you want to **import to**. Enter the information and click `Login`. Typically, the URL is of the form (*https://xxxx.spiraservice.net*). The version of the importer being used must be compatible with the version of SpiraPlan you're importing into; if not you will receive an error message.
 
-If you are importing users, make sure to enter the default password for all users that the importer will create in SpiraPlan. You need to make sure that this password meets the requirements of your SpiraPlan installation or the import will fail with an error message indicating the password is not allowed.
-
 Assuming that the login was successful, click the `Start Import` button to actually begin the process of importing the various artifacts from PractiTest into SpiraPlan. Note that the importer will automatically create a new product in SpiraPlan to hold all the artifacts with the same name as that used in PractiTest. Note: if you run the importer on the same PractiTest project multiple times, it will create a new product in SpiraPlan each time.
 
 ![](img/Migrating_from_PractiTest_5.png)

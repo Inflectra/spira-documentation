@@ -38,8 +38,6 @@ On the Connect to SpiraTest page you have to enter your SpiraTest login informat
 - SpiraTest username
 - SpiraTest password
 
-If you are importing users, make sure to enter the default password for all users that the importer will create in SpiraPlan. You need to make sure that this password meets the requirements of your SpiraPlan installation or the import will fail with an error message indicating the password is not allowed.
-
 Once the wizard has verified its connection with SpiraTest and you are logged in, click the now enabled `Start Import` button. This begins the import process from qTest into SpiraPlan. The importer will automatically create a new product in SpiraPlan with the same name as that used in qTest. **Note**: if you run the importer on the same qTest project multiple times, it will create a new product in SpiraTest each time.
 
 ![](img/qTest_05.png)

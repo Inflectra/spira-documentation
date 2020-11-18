@@ -65,7 +65,7 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 
 
 ## REGEXes to tidy up the markdown files
-* To combine paragraphs split across multiple lines: `([A-Za-z",\. 0-9\(\)])\n([A-Za-z"\(\)])` => `$1 $2`
+* To combine paragraphs split across multiple lines: `([A-Za-z",\*<>\. 0-9&\(\)])\n([A-Za-z",\*<>\. 0-9&\(\)])` => `$1 $2`
 * To get rid of extra line breaks: `\n\n\n` => `\n\n` and run until it can't be run anymore
 * To add spacing before headings: `\n#` => `\n\n#`
 
