@@ -83,15 +83,12 @@ You should now have a list that looks like:
 We now have a nicely grouped set of requirements. Let's enter more information about them, starting with setting their types and priorities.
 
 1.  Click the ''select all' checkbox at the top of the list (the checkbox just above the checkbox for 'Functional Requirements')
-
 2.  Click on the top 'Edit' button in the right-hand column of that same row. That will make all the requirement rows editable:
 
 ![](img/Define_the_Requirements_10.png)
 
-3.  Set the 'Type' of the four requirements you can edit this for to User Story'.
-
+3.  Change the 'Type' to 'User Story' for the requirements that let you edit this field.
 4.  Choose whatever values you like for the 'Importance' field for each of the requirements.
-
 5.  Click the `Save` button.
 
 You now have a prioritized list of user story requirements:

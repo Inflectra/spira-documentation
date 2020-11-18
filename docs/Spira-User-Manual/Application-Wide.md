@@ -79,7 +79,9 @@ You can export the following artifacts from the current product to any other pro
 - tasks
 - test cases
 
-The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product.
+The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product (the system will try and match up fields as best it can).
+
+*Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.*
 
 To export one or more of a particular artifact:
 

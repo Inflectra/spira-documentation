@@ -107,8 +107,7 @@ called "ServiceNowDataSync Test."
 Click on the "View Project Mappings" button for the ServiceNow Data
 Sync. You need to fill out the following fields to sync correctly:
 
--   **External Key** -- The value of the property in Custom 02/04 you
-would like to map with this project
+- **External Key** – A specific value that the table column name listed in *Custom 02/04* should have to map with this project. For example, if the table column in Salesforce that stores your project names is called "Project", and that column contains values like "alpha", "beta", "gamma", type "alpha" to map every alpha item to this product. In other words, do not type "Project".
 
 -   **Active** -- Set this to yes so that the Data Sync plug-in knows to
 synchronize with this project.
