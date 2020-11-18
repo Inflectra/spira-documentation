@@ -68,7 +68,30 @@ By default, all products in SpiraPlan are completely self-contained. Artifacts i
 
 ![](img/Product_General_Settings_101.png)
 
-Note: When you share artifacts from the current product to another product, the permissions in the other product will determine which users can see the items, so you need to make sure that is acceptable before enabling the sharing.
+!!! info "Permissions when sharing artifacts across products"
+    When you share artifacts from the current product to another product, the permissions and membership in the other product determine who can see what items. You therefore need to think about the impact of this before enabling cross product associations.
+
+    For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product shares its requirements with Product A, anyone who can see Product A's requirements (like Marie can) will now be able to see (not edit - only see) all of Product B's requirements too.
+
+### What artifacts can be shared across products
+You can share the following artifacts from one product to another:
+
+- Incidents
+- Requirements
+- Risks
+- Tasks
+- Test Cases
+
+When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts in a number of places in the other product (the one being shared with). For example:
+
+- Incidents: from the association panels of incidents, requirements, and risks
+- Requirements: from the association panels of incidents, risks, and test cases; from the requirement coverage panel of test cases; by selecting "All Products" in the upper right on the requirement list page
+- Risks: from the association panels of incidents, requirements, test cases, and risks
+- Tasks: from the association panels of incidents and tasks
+- Test Cases: from the test coverage panel of requirements; from the association panel of risks
+
+
+### How to share artifacts with another product
 
 To share artifacts with another product, click on the 'Add' button in the toolbar:
 
