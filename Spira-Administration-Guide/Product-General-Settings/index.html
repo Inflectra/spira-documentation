@@ -1201,6 +1201,26 @@
     Product Associations
   </a>
   
+    <nav class="md-nav" aria-label="Product Associations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-artifacts-can-be-shared-across-products" class="md-nav__link">
+    What artifacts can be shared across products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-share-artifacts-with-another-product" class="md-nav__link">
+    How to share artifacts with another product
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3312,6 +3332,26 @@
     Product Associations
   </a>
   
+    <nav class="md-nav" aria-label="Product Associations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-artifacts-can-be-shared-across-products" class="md-nav__link">
+    What artifacts can be shared across products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-share-artifacts-with-another-product" class="md-nav__link">
+    How to share artifacts with another product
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3421,7 +3461,29 @@
 <h2 id="product-associations">Product Associations<a class="headerlink" href="#product-associations" title="Permanent link">&para;</a></h2>
 <p>By default, all products in SpiraPlan are completely self-contained. Artifacts in one product can only be linked or associated with artifacts in the same product. However, for some customers, they need a way to share artifacts between products. This administration screen lets the product admin specify which other products can access artifacts in the current product:</p>
 <p><img alt="" src="../img/Product_General_Settings_101.png" /></p>
-<p>Note: When you share artifacts from the current product to another product, the permissions in the other product will determine which users can see the items, so you need to make sure that is acceptable before enabling the sharing.</p>
+<div class="admonition info">
+<p class="admonition-title">Permissions when sharing artifacts across products</p>
+<p>When you share artifacts from the current product to another product, the permissions and membership in the other product determine who can see what items. You therefore need to think about the impact of this before enabling cross product associations.</p>
+<p>For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product shares its requirements with Product A, anyone who can see Product A's requirements (like Marie can) will now be able to see (not edit - only see) all of Product B's requirements too.</p>
+</div>
+<h3 id="what-artifacts-can-be-shared-across-products">What artifacts can be shared across products<a class="headerlink" href="#what-artifacts-can-be-shared-across-products" title="Permanent link">&para;</a></h3>
+<p>You can share the following artifacts from one product to another:</p>
+<ul>
+<li>Incidents</li>
+<li>Requirements</li>
+<li>Risks</li>
+<li>Tasks</li>
+<li>Test Cases</li>
+</ul>
+<p>When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts in a number of places in the other product (the one being shared with). For example:</p>
+<ul>
+<li>Incidents: from the association panels of incidents, requirements, and risks</li>
+<li>Requirements: from the association panels of incidents, risks, and test cases; from the requirement coverage panel of test cases; by selecting "All Products" in the upper right on the requirement list page</li>
+<li>Risks: from the association panels of incidents, requirements, test cases, and risks</li>
+<li>Tasks: from the association panels of incidents and tasks</li>
+<li>Test Cases: from the test coverage panel of requirements; from the association panel of risks</li>
+</ul>
+<h3 id="how-to-share-artifacts-with-another-product">How to share artifacts with another product<a class="headerlink" href="#how-to-share-artifacts-with-another-product" title="Permanent link">&para;</a></h3>
 <p>To share artifacts with another product, click on the 'Add' button in the toolbar:</p>
 <p><img alt="" src="../img/Product_General_Settings_102.png" /></p>
 <p>Select the name of the product you want to share with and choose which artifact(s) you want to share with this product:</p>
