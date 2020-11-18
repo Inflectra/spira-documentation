@@ -3534,7 +3534,8 @@
 <li>tasks</li>
 <li>test cases</li>
 </ul>
-<p>The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product.</p>
+<p>The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product (the system will try and match up fields as best it can).</p>
+<p><em>Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.</em></p>
 <p>To export one or more of a particular artifact:</p>
 <ol>
 <li>go to the list page for that artifact in the right product. </li>
