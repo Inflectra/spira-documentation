@@ -46,22 +46,23 @@ You need to fill out the following fields for the JIRA Plug-in to operate correc
 
 ![](img/JiraServer-Plugin-Config2.png)
 
-- **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
+- **Time Offset**: normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
-- **Auto-Map Users** -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:
-- **Auto-Map = True\
-**With this setting, all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
-- **Auto-Map = False\
-**With this setting, users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
-- **Custom 01** -- This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
-- **Custom 02** -- This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.
-- **Custom 03** -- This determines how the synchronization of incidents works:
-    - **Default (leave blank)** -- By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. *This is the recommended option for most users.*
-    - **"True"** -- If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.
-    - **"Both"** -- If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict.\
-*This option is not recommended for novice users.*
-- **Custom 04** -- This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
-- **Custom 05** -- This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
+- **Auto-Map Users**: This changes the way that the plugin maps users in SpiraTeam to those in JIRA:
+
+    - **Set to Yes**: all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
+    - **Set to No**: users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
+
+- **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Custom 02**: This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.
+- **Custom 03**: This determines how the synchronization of incidents works:
+
+    - **Default (leave blank)**: By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. *NOTE: This is the recommended option for most users.*
+    - **"True"**: If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.
+    - **"Both"**: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
+    
+- **Custom 04**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
+- **Custom 05**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
