@@ -3810,34 +3810,41 @@
 <p><img alt="" src="../img/JiraCloud-Plugin-Config1.png" /></p>
 <p>You need to fill out the following fields for the JIRA Plug-in to operate correctly:</p>
 <ul>
-<li><strong>Name</strong> -- this needs to be set to <strong>JiraDataSync</strong>.</li>
-<li><strong>Caption</strong> -- this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraDataSync"</li>
-<li><strong>Description</strong> -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
-<li><strong>Connection Info</strong> -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.</li>
+<li><strong>Name</strong>: this needs to be set to <strong>JiraDataSync</strong>.</li>
+<li><strong>Caption</strong>: this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraDataSync"</li>
+<li><strong>Description</strong>: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
+<li><strong>Connection Info</strong>: this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.</li>
 <li>It is typically of the form: <a href="https://mycompany.atlassian.net">https://mycompany.atlassian.net</a></li>
-<li><strong>Login</strong> -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.</li>
-<li><strong>Password</strong> -- this should be set to the <strong>API Key</strong> (<em>not password</em>) of the Atlassian login specified above.</li>
+<li><strong>Login</strong>: this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.</li>
+<li><strong>Password</strong>: this should be set to the <strong>API Key</strong> (<em>not password</em>) of the Atlassian login specified above.</li>
 </ul>
 <p><img alt="" src="../img/JiraCloud-Plugin-Config2.png" /></p>
 <ul>
-<li><strong>Time Offset</strong> -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
+<li><strong>Time Offset</strong>: normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.</li>
-<li><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps users in SpiraTeam to those in JIRA:</li>
-<li>**Auto-Map = True\
-**With this setting, all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the <a href="#configuring-the-user-mapping">user-mapping task</a>. This is a big time-saver if you can guarantee that all usernames are the same in both systems.</li>
-<li>**Auto-Map = False\
-**With this setting, users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></li>
-<li><strong>Custom 01</strong> -- This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</li>
-<li><strong>Custom 02</strong> -- This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.</li>
-<li><strong>Custom 03</strong> -- This determines how the synchronization of incidents works:<ul>
-<li><strong>Default (leave blank)</strong> -- By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. <em>This is the recommended option for most users.</em></li>
-<li><strong>"True"</strong> -- If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.</li>
-<li><strong>"Both"</strong> -- If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict.\
-<em>This option is not recommended for novice users.</em></li>
+<li>
+<p><strong>Auto-Map Users</strong>: This changes the way that the plugin maps users in SpiraTeam to those in JIRA:</p>
+<ul>
+<li><strong>Set to Yes</strong>: all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the <a href="#configuring-the-user-mapping">user-mapping task</a>. This is a big time-saver if you can guarantee that all usernames are the same in both systems.</li>
+<li><strong>Set to No</strong>: users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a></li>
 </ul>
 </li>
-<li><strong>Custom 04</strong> -- This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.</li>
-<li><strong>Custom 05</strong> -- This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:</li>
+<li>
+<p><strong>Custom 01</strong>: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</p>
+</li>
+<li><strong>Custom 02</strong>: This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.</li>
+<li>
+<p><strong>Custom 03</strong>: This determines how the synchronization of incidents works:</p>
+<ul>
+<li><strong>Default (leave blank)</strong>: By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. <em>NOTE: This is the recommended option for most users.</em></li>
+<li><strong>"True"</strong>: If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.</li>
+<li><strong>"Both"</strong>: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. <em>NOTE: This option is not recommended for novice users.</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Custom 04</strong>: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.</p>
+</li>
+<li><strong>Custom 05</strong>: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_18.png" /></p>
 <blockquote>
