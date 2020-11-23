@@ -211,6 +211,7 @@ nav:
     - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
     - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
     - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
+    - Salesforce.com: External-Bug-Tracking-Integration\Using-Spira-with-Salesforce.com.md
     - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
     - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
     - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
