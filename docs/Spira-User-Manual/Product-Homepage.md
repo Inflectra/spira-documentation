@@ -199,7 +199,7 @@ This widget displays a list of the most recent builds that have been performed a
 
 ![](img/UserProduct_Management_70.png)
 
-For each build it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](../Release-Management/#test-runs). Note: If no release or sprint is selected then the widget will not display any data.
+For each build it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](../Release-Management/#build-details). Note: If no release or sprint is selected then the widget will not display any data.
 
 
 ## Tag Cloud
