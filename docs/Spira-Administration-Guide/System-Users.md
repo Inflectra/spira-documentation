@@ -36,8 +36,10 @@ On this screen, you can:
 - create their password, password reset question and answer. 
 - if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
 
-
 When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
+
+!!! tip "Notifying Newly Created Users"
+    The new user created as above will get an email with the subject "New Spira Account". The email contains the new user's assigned username and password, along with the login URL.
 
 ### Edit an existing user
 In a similar way, to edit the details of an existing user, click the "Edit" hyperlink in the user list box, and you will be taken to the following screen that allows you modify the user details:
