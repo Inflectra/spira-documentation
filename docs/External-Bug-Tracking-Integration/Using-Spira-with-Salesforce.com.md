@@ -80,13 +80,18 @@ Click on the "View Project Mappings" dropdown for the Salesforce Data Sync. Sele
 
 ![](img/SalesforceDotCom_07.png)
 
-A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific column names are mapped to their counterparts in SpiraPlan based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to SpiraPlan. Other fields (unless linked to a custom field in SpiraPlan) will not be synced.
+A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in SpiraPlan based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to SpiraPlan. Other fields (unless linked to a custom field in SpiraPlan) will not be synced.
 
-- **Description**
-- **Priority**
-- **Type**
-- **Status**
-- **Comment**
+- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be splitted in these 2 different fileds in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
+- **Description**: Users can sync the artifact description from/to Spira if their object has a field named like that.
+- **Priority**: Users can sync Incidents'Priority from/to Spira if their object has a field named like that.
+- **Importance**: Users can sync Requirements'Importance from/to Spira if their object has a field named like that.
+- **Severity**: Users can sync Incidents'Severity from/to Spira if their object has a field named like that.
+- **Type**: Users can sync Artifacts'Type from/to Spira if their object has a field named like that.
+- **Status**: Users can sync Artifacts'Status from/to Spira if their object has a field named like that.
+- **Comments**: Users can sync Artifacts'Comments from/to Spira if their object has a field named like that.
+
+Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
 
 ![](img/SalesforceDotCom_07-2.png)
 
