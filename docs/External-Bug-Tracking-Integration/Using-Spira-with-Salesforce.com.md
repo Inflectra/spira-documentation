@@ -4,6 +4,8 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter re
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
+    If you are running the data sync on your servers, download the required file [here](https://www.inflectra.com/Downloads/SalesforceDataSync.zip). For cloud syncing login to your customer account at inflectra.com.
+
 Salesforce objects are a highly customizable system that can now be used in conjunction with SpiraPlan. This integration service enables:
 
 1. two-way syncing of incidents between a specific Salesforce object and SpiraPlan 
