@@ -1,5 +1,71 @@
 # Release Notes for Spira v6
 
+## Version 6.7 (December 2020)
+
+!!! info "Summary"
+    This release focused on **improving the experience and functionality for developers and development teams** using Spira. On top of integrating with the top IDEs, your CI/CD processes, and unit test, this release brings massive improvements to our source code features.
+    
+    **We have revamped the source code management module**, and for the first time, there is now a native code difference viewing capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost.
+    
+    **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
+
+??? success "New Features"
+    - Improve functionality and performance of Git source code control (for GitProvider and TaraVault-Git) [RQ:3033]
+    - Improve functionality and performance of Subversion source code control (for SubversionProvider and TaraVault-Subversion) [RQ:3034]
+    - Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]
+    - Global navigation bar's artifact dropdown has a new "Developing" section for Source Code and Commits [RQ:3003]
+    - Enhance and improve the Source Code File List page [RQ:3016]
+    - Enhance and improve the Source Code Commit List page [RQ:3010]
+    - Enhance and improve the Source Code Commit Details page [RQ:3014]
+    - Enhance and improve the Source Code File details page [RQ:3018]
+    - Add a new Source Code Commit File Details page to show diffs between current and previous commits [RQ:3013]
+    - Change the source code branch selector from showing a fake 'master' to "(None)" when there are no branches to avoid confusion [RQ:3004]
+    - Change the source code branch selector to a hierarchical dropdown using slash separator to represent folders [RQ:3007]
+    - Enhance and improve the sample source code repository to showcase difference branches and file types [RQ:3023]
+    - Ensure users can review a build and easily explore what code was committed in that build [RQ:3029]
+    - Ensure users can readily find what a specific file looks like at each commit and across different branches [RQ:3028]
+    - Ensure users can easily see how a file changed in a particular commit [RQ:3027]
+    - Improve usability with a more accessible source code cache retention settings that is now measured and set in minutes not hours [RQ:3032]
+
+??? bug "Bug fixes and enhancements"
+    * Source Code
+    
+        - Fix source code files missing their author and date information [IN:4526]
+        - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
+        - Build Details: fix the revisions tab to always show complete information [IN:5701]
+        - Build details page > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
+        - Improve the performance of source code on artifact details pages (specifically on the association and attachment panels) [IN:5710]
+        - Add preview support in documents and source code for additional filetypes (bat, feature, markdown, json, yaml, typescript, svg files) [IN:5859]
+        - Source Code File Details > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
+        - Fix the GitProvider to not require event log entries that can block usage of third party git providers on cloud installs [IN:5867]
+        - Add preview support for Markdown in Source Code Files [IN:5912]
+        - Update the use of the word "Revision" to "Commit" throughout the application [IN:5920]
+        - Product Home page > Source Code Commits widget: improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
+        - Source code file preview for binary files (like png or jpeg) should work correctly for TaraVault Git [IN:6005]
+
+    * Other
+
+        - Product Admin > Planning Options: improve the description of "Use Task Status" [IN:2612]
+        - Fix the API that creates a user can so that it will not create a user without a user profile if the API body is incomplete [IN:5432]
+        - Ensure all requirement statuses roll up correctly to parent requirements [IN:5664]
+        - Allow full artifact tag search (eg [IN:123]) in association panels, global search, and filtering on grids (outside of admin) [IN:5706]
+        - Clicking Insert or Add while editing rows on a list page should save all current edits before adding the new row [IN:5786]
+        - System Admin > Product Create page: make the template dropdown list existing templates alphabetically and show their IDs [IN:5811]
+        - Document details page: add new overview tab to match the design of other detail pages [IN:5869]
+        - Release detail page > test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]
+        - Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]
+        - Password Expired page explainer note about password requirements includes information about special characters [IN:5892]
+        - Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]
+        - Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]
+        - Add preview support for Markdown in Documents [IN:5913]
+        - Product Admin > Data Tools: upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
+        - Task list page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
+        - Document Details page > Associations tab: add the ability to create an association to a risk [IN:5952]
+        - System Admin > Template Edit page: make the active selector disabled if the template has any products associated with it [IN:5956]
+        - API to update custom lists should update list items that are currently inactive (as well as those that are active) [IN:5958]
+        - Test Run details page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
+        - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
+
 ## Version 6.6.1 (October 2020)
 
 !!! info "Summary"
