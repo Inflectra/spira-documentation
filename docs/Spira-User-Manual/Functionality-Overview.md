@@ -84,8 +84,7 @@ SpiraPlan® (not available in SpiraTest or SpiraTeam) enables a complete risk ma
 
 ## Source Code Tracking
 
-SpiraPlan® and SpiraPlan® provide the ability to browse your source code repository from within the main web application. This is an excellent way for managers and casual users of the product to browse the files and revisions of the software code without needing to install the version control software on their own workstations. In addition all users have the ability to link source code revisions with SpiraPlan®
-artifacts--providing traceability from requirements, incidents, and tasks to the code changes that were made to implement the required feature, or fix the identified defect. Should a defect resurface later, you can view the associated source code revisions to determine which changes were made and did they truly correct the defect.
+SpiraTeam® and SpiraPlan® let you browse your source code from within the main web application. This is an excellent way to browse all a product's code files, commits, and how a file changed in a commit (the 'diff'). There is no need to install version control software on your own computer or to clone the source code to your machine. All users can link source code commits with any SpiraPlan® artifact. This gives you traceability from requirements, incidents, tasks, and more to right code changes. This let you easily see what code was edited to implement a feature, or fix a bug. If the bug is reopened later, you can quickly see the associated source code commits to check if the changes made actually did fix things properly.
 
 
 ## Build Management
@@ -167,7 +166,7 @@ In addition, certain artifacts in the system are displayed with an icon that hel
 | ![](img/Functionality_Overview_26.png) |    Incident |
 | ![](img/Functionality_Overview_27.png) |    Risk |
 | ![](img/Functionality_Overview_28.png) |    Risk Mitigation |
-| ![](img/Functionality_Overview_29.png) |    Source Code Revision |
+| ![](img/Functionality_Overview_29.png) |    Source Code Commit |
 | ![](img/Functionality_Overview_30.png) |    Product User |
 | ![](img/Functionality_Overview_31.png) |    Build |
 | ![](img/Functionality_Overview_32.png) |    Artifact has an Attachment |

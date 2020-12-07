@@ -133,13 +133,13 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ### Document Versions
 
-This view displays the list of different versions that exist for the current document. When you initially create a new document there will be only a single version (e.g. v1.0), however as revisions are made to the document, rather than having to create a whole new document, you can just upload the new revision as a new version (e.g. v1.1) and it will be added to the list of versions.
+This view displays the list of different versions that exist for the current document. When you initially create a new document there will be only a single version (e.g. v1.0), however as commits are made to the document, rather than having to create a whole new document, you can just upload the new commit as a new version (e.g. v1.1) and it will be added to the list of versions.
 
-Each version in the list is displayed with its name, a description of what changed in the version, the version number assigned to the revision, the file-size, who uploaded the new version and a link to actually open the new version:
+Each version in the list is displayed with its name, a description of what changed in the version, the version number assigned to the commit, the file-size, who uploaded the new version and a link to actually open the new version:
 
 ![](img/Document_Management_329.png)
 
-On this page, you have the option to delete an existing version, make a different version the active one (the one that users see when they view the document list and click on the link) and upload a new revision. To upload a new version, click on the 'Upload New Version' hyperlink:
+On this page, you have the option to delete an existing version, make a different version the active one (the one that users see when they view the document list and click on the link) and upload a new commit. To upload a new version, click on the 'Upload New Version' hyperlink:
 
 ![](img/Document_Management_330.png)
 

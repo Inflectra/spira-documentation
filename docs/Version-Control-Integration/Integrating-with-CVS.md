@@ -5,16 +5,16 @@ Management (SCM) system that enables users to work on code
 simultaneously while preserving previous versions by avoiding collisions
 in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam
 (hereafter referred to as SpiraTeam) to be able to browse a CVS
-repository and view revisions linked to SpiraTeam artifacts.
+repository and view commits linked to SpiraTeam artifacts.
 
 The plug-in will download a working-copy of the CVS repository onto the
 SpiraTeam server and use that for displaying the list of files/folders.
-The list of revisions will be queries dynamically from the CVS
+The list of commits will be queries dynamically from the CVS
 repository on an as-needed basis. The rest of this section outlines how
 to install and use the plug-in with SpiraTeam.
 
 *Note: The plug-in will allow users to download and view different
-revisions of files and view revision logs, but no changes to the
+commits of files and view commit logs, but no changes to the
 repository are allowed through the plug-in.*
 
 ## Installing the CVS Plug-In To install the CVS Version Control plug-in, follow these steps:
@@ -112,7 +112,7 @@ Tracking tab to navigate and browse the source code repository.
 
 While being able to browse the source code repository can be useful in
 itself, the real strength comes from linking artifacts in SpiraTeam -
-including Incidents, Requirements, and Tasks - to revisions checked into
+including Incidents, Requirements, and Tasks - to commits checked into
 the software repository.
 
 ### Viewing the Repository Tree
@@ -127,18 +127,18 @@ Tracking tab. You will get a screen similar to:
 
 The folder tree of the repository is on the left, and files in the
 current selected directory will be listed in the right table. Note that
-this view will always show the current (HEAD) revision of the
+this view will always show the current (HEAD) commit of the
 repository. The file view will display the filename, the current
-revision number of the file and the date of the last commit. You can
+commit number of the file and the date of the last commit. You can
 filter and sort on any of the columns, as well.
 
 ### Viewing File Details
 
 To view the file details, click on a file in the right-hand side of the
 repository. The file details page displays the details on the selected
-revision. By default, it will be the HEAD revision, unless you clicked
-to view the file details from a revision. By clicking on the file name,
-you can download the specified revision of the file to your local
+commit. By default, it will be the HEAD commit, unless you clicked
+to view the file details from a commit. By clicking on the file name,
+you can download the specified commit of the file to your local
 machine. This does not do an CVS checkout; you are merely downloading
 the file to your local machine.
 
@@ -147,33 +147,33 @@ the file to your local machine.
 
 
 
-Underneath the file details is a list of all the revisions that this
+Underneath the file details is a list of all the commits that this
 file belongs in, or was committed to, who performed the commit, and the
-log message for the commit. Throughout SpiraTeam, revisions are
+log message for the commit. Throughout SpiraTeam, commits are
 indicated by the
-![Revision](img/Integrating_with_CVS_12.png)
+![Commit](img/Integrating_with_CVS_12.png)
 
 
  icon.
 
-### Revision Details
+### Commit Details
 
-By clicking on a revision in SpiraTeam, you will be taken to the
-revision details page.
+By clicking on a commit in SpiraTeam, you will be taken to the
+commit details page.
 
 ![](img/Integrating_with_CVS_47.png)
 
 
 
 
-The revision details screen shows the log for the Commit, the commit
+The commit details screen shows the log for the Commit, the commit
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
-commit, with their full path, size, latest revision and date of edit.
+commit, with their full path, size, latest commit and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
 Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
-information on how to link a revision with a CVS Commit:
+information on how to link a commit with a CVS Commit:
 
 ![](img/Integrating_with_CVS_42.png)
 
@@ -195,7 +195,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.
+them under the Associations tab for a commit detail.
 
 ## Troubleshooting
 
@@ -225,7 +225,7 @@ working:
 -   If you are taken back to the repository screen and given a message
 > saying that the requested file was deleted from the system, this
 > means that an attempt was made to view details on a file that is
-> no longer part of the HEAD revision. This can happen when a file
+> no longer part of the HEAD commit. This can happen when a file
 > is deleted or renamed, and this is a normal condition in the code
 > repository, not necessarily an error with CVS or SpiraTeam.
 

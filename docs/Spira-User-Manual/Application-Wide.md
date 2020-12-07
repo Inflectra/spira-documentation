@@ -267,7 +267,7 @@ Each association is displayed with the:
 - name of the person who created the association
 - a comment that describes why the association was made. In the case of an indirect association (eg when a link to an incident is added to a requirement during a test run), the comment will contain the name of the specific artifact that created that indirect association.
 
-In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any revisions, across all branches, that are linked to this artifact.
+In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any commits, across all branches, that are linked to this artifact.
 
 You can perform the following actions on the list of associations:
 

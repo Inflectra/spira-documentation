@@ -10,7 +10,7 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter re
 
 Jenkins provides continuous integration services for software development, primarily in the Java programming language. It is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including CVS, Subversion, Git, Mercurial, Perforce and Clearcase, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands.
 
-When you use the SpiraPlan plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in SpiraPlan. Then, each time Jenkins creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraPlan will be automatically linked to the incidents fixed, source code revisions committed, and any SpiraPlan tokens in the Jenkins changelog will be parsed and turned into SpiraPlan artifact hyperlinks.
+When you use the SpiraPlan plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in SpiraPlan. Then, each time Jenkins creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraPlan will be automatically linked to the incidents fixed, source code commits committed, and any SpiraPlan tokens in the Jenkins changelog will be parsed and turned into SpiraPlan artifact hyperlinks.
 
 
 ## Installing the SpiraPlan Plug-in for Jenkins
@@ -82,12 +82,12 @@ Clicking on either of the hyperlinks will allow you to navigate to the Build det
 
 ![](img/Jenkins__Hudson_14.png)
 
-This page will display the status (success / failure) and details of the build (from the Jenkins Console Output) together with a list of the associated incidents, test runs and source code revisions. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira Importer plugin and automatically link incidents and source code revisions to the build information.
+This page will display the status (success / failure) and details of the build (from the Jenkins Console Output) together with a list of the associated incidents, test runs and source code commits. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira Importer plugin and automatically link incidents and source code commits to the build information.
 
 
 ## Working with Source Code Changesets
 
-When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in SpiraPlan. For example they may want to record that the revision fixes a specific incident or implements a specific feature (requirement).
+When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in SpiraPlan. For example they may want to record that the commit fixes a specific incident or implements a specific feature (requirement).
 
 Linking an artifact is very simple. All the developer needs to do is enter the artifact token in the following format:
 
@@ -95,13 +95,13 @@ Linking an artifact is very simple. All the developer needs to do is enter the a
 
 The first half, the Artifact Identifier, is a two-letter code that is used throughout SpiraPlan, and is visible on almost every page in the application. For example, a requirement's identifier is "**RQ**". Incidents are "**IN**", and tasks are "**TK**". The artifact ID is the number of the artifact. So by creating a commit message that reads:
 
-SpiraPlan will automatically detect the tokens and will include links to them under the Associations tab for each revision detail in SpiraPlan.
+SpiraPlan will automatically detect the tokens and will include links to them under the Associations tab for each commit detail in SpiraPlan.
 
-In addition, when Jenkins creates the next build (that includes this revision), the plugin will automatically parse the revision message and convert the tokens into hyperlinks to the corresponding SpiraPlan artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the SpiraPlan items:
+In addition, when Jenkins creates the next build (that includes this commit), the plugin will automatically parse the commit message and convert the tokens into hyperlinks to the corresponding SpiraPlan artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the SpiraPlan items:
 
 ![](img/Jenkins__Hudson_15.png)
 
-Meanwhile, inside SpiraPlan, the system will use the same information to automatically link the list of associated revisions to the build record:
+Meanwhile, inside SpiraPlan, the system will use the same information to automatically link the list of associated commits to the build record:
 
 ![](img/Jenkins__Hudson_16.png)
 

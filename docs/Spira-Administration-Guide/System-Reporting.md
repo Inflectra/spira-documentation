@@ -71,7 +71,7 @@ elements that will return back data. For example, the "Requirements
 Details" section consists of a list of all the requirements in a
 product, together with the associated test cases, tasks, custom
 properties, attachments, discussions, change history, source code
-revisions and other related items.
+commits, and other related items.
 
 With a standard section, you cannot change the underlying data query,
 but you can change the header, footer and XSLT template used to format

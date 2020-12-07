@@ -19,7 +19,7 @@ code files
 
 Before we get started with using Subversion, we need to discuss the
 standard folder layout. For TaraVault to display its branches, folders,
-files and revisions correctly in Spira you need to follow this layout
+files and commits correctly in Spira you need to follow this layout
 for all your Subversion projects:
 
  ![](img/Using_Subversion_19.png)
@@ -182,7 +182,7 @@ commit the change. Make sure you add a comment:
 
 
 
-Click OK and the change (known as a revision) will now be committed into
+Click OK and the change (known as a /commit) will now be committed into
 TaraVault.
 
 ## Branching and Tagging
@@ -202,8 +202,8 @@ Branch/Tag:
 
 
 Change the 'To path' from /Trunk to /Branches/v2.0.0.0. You can either
-branch the latest revision (called the HEAD revision) or a specific
-revision:
+branch the latest commit (called the HEAD revision) or a specific
+commit:
 
 ![](img/Using_Subversion_32.png)
 
@@ -256,8 +256,8 @@ Click 'OK' and we are now ready to view the repository within Spira.
 In addition to being able to browse the source code repository in Spira,
 which is itself very useful, the real strength comes from linking
 artifacts in Spira - including Incidents, Requirements, and Tasks - to
-revisions checked into the software repository, indicating what was
-fixed or implemented in a specific revision.
+commits checked into the software repository, indicating what was
+fixed or implemented in a specific commit.
 
 Firstly, you can view the source code tree by selecting the Tracking \>
 Source Code link under the main Spira menu. This will display the
@@ -280,7 +280,7 @@ ready for use and you can refresh the page to display:
 
 The folder tree of the repository is on the left, and files in the
 current selected directory will be listed in the right table. Note that
-this view will always show the current (HEAD) revision of the
+this view will always show the current (HEAD) commit of the
 repository.
 
 Also note that the page will display the folders and files for the
@@ -292,7 +292,7 @@ the current branch at any time by selecting it from the dropdown menu:
 
 
 
-The file grid will display the filename, the current revision number of
+The file grid will display the filename, the current commit number of
 the file, the author of the last commit, and the date of the last
 commit. You can filter and sort on any of the columns, as well:
 
@@ -303,9 +303,9 @@ commit. You can filter and sort on any of the columns, as well:
 
 To view the file details, click on a file hyperlink in the grid. The
 file details page displays the details on the selected file. By default,
-it will be the HEAD revision, unless you clicked to view the file
-details from a specific revision. By clicking on the file name, you can
-download the specified revision of the file to your local machine. This
+it will be the HEAD commit, unless you clicked to view the file
+details from a specific commit. By clicking on the file name, you can
+download the specified commit of the file to your local machine. This
 does not do an Subversion checkout; you are merely downloading the file
 to your local machine.
 
@@ -315,10 +315,10 @@ to your local machine.
 
 
 Underneath the file details are tabs that show a preview of the file
-(with syntax highlighting), a list of all the revisions that this file
+(with syntax highlighting), a list of all the commits that this file
 belongs in, or was committed to, who performed the commit, and the log
 message for the commit, and a tab that shows any artifact associations.
-Throughout SpiraTeam, revisions are indicated by the
+Throughout SpiraTeam, commits are indicated by the
 ![Revision](img/Using_Subversion_42.png)
 
 
@@ -329,15 +329,15 @@ Throughout SpiraTeam, revisions are indicated by the
 
 
 
-By clicking on a revision in SpiraTeam, you will be taken to the
-revision details page.
+By clicking on a commit in SpiraTeam, you will be taken to the
+commit details page.
 
 ![](img/Using_Subversion_44.png)
 
 
 
 
-The revision details screen shows the log for the Commit, the commit
+The commit details screen shows the log for the Commit, the commit
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
 commit, with their full path and the action that was performed on them
@@ -345,7 +345,7 @@ for this commit. Possible values are Added, Modified, or Deleted.
 
 The Associations tab shows any artifact (Incident, Task, Requirement,
 Test Case, Test Set, etc.) that the log message references. See the next
-section for information on how to link a revision with a Subversion
+section for information on how to link a commit with a Subversion
 Commit:
 
 ![](img/Using_Subversion_45.png)
@@ -368,7 +368,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.
+them under the Associations tab for a commit detail.
 If you forget to add the association during the commit, you can use the
 'Add Association' option within SpiraTeam to add the association after
 the fact. This is described in more detail in the *SpiraTeam User

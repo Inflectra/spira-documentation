@@ -6,7 +6,7 @@ Configuration Management (SCM) system that enables users to work on code
 simultaneously while preserving previous versions by avoiding collisions
 in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam
 (hereafter referred to as SpiraTeam) to be able to browse a TFS
-repository and view revisions linked to SpiraTeam artifacts. There are
+repository and view commits linked to SpiraTeam artifacts. There are
 separate plug-ins for TFS 2005/2008, 2010 and 2012+. When connecting to
 a TFS 2010/2012+ repository, the connection URL will also need to be in
 a different format (see below).
@@ -17,7 +17,7 @@ repository remotely. The rest of this section outlines how to install
 and use the plug-in with SpiraTeam.
 
 *Note: The plug-in will allow users to download and view different
-revisions of files and view revision logs, but no changes to the
+commits of files and view commit logs, but no changes to the
 repository are allowed through the plug-in.*
 
 ## Installing the TFS Plug-In To install the TFS Version Control plug-in, follow these steps:
@@ -133,7 +133,7 @@ Tracking tab to navigate and browse the source code repository.
 
 Whilst being able to browse the source code repository can be useful in
 itself, the real strength comes from linking artifacts in SpiraTeam -
-including Incidents, Requirements, and Tasks - to revisions checked into
+including Incidents, Requirements, and Tasks - to commits checked into
 the TFS repository.
 
 ### Viewing the Repository Tree
@@ -148,8 +148,8 @@ Tracking tab. You will get a screen similar to:
 
 The folder tree of the repository is on the left, and files in the
 current selected directory will be listed in the right table. Note that
-this view will always show the most recent revision of the database. The
-file view will display the filename, the current revision number of the
+this view will always show the most recent commit of the database. The
+file view will display the filename, the current commit number of the
 file and the date of the last check-in. You can filter and sort on any
 of the columns, as well.
 
@@ -166,9 +166,9 @@ at any time by selecting it from the dropdown menu:
 
 To view the file details, click on a file in the right-hand side of the
 repository. The file details page displays the details on the selected
-revision. By default, it will be the most recent revision, unless you
-clicked to view the file details from a revision. By clicking on the
-file name, you can download the specified revision of the file to your
+commit. By default, it will be the most recent commit, unless you
+clicked to view the file details from a commit. By clicking on the
+file name, you can download the specified commit of the file to your
 local machine. This does *not* do a TFS checkout; you are
 merely downloading the file to your local machine.
 
@@ -181,7 +181,7 @@ Underneath the file details is a preview of the contents of the source
 code file (with syntax coloring to make it easier to read).
 
 In addition, there are two other tabs that display the list of all the
-revisions made to this file and any associations with other SpiraTeam
+commits made to this file and any associations with other SpiraTeam
 artifacts:
 
 ![](img/Integrating_with_TFS_29.png)
@@ -189,10 +189,10 @@ artifacts:
 
 
 
-The revision list will display the name of the revision, who performed
-the revision, and the log message for the action performed. Throughout
-SpiraTeam, revisions are indicated by the
-![Revision](img/Integrating_with_TFS_12.png)
+The commit list will display the name of the commit, who performed
+the commit, and the log message for the action performed. Throughout
+SpiraTeam, commits are indicated by the
+![Commit](img/Integrating_with_TFS_12.png)
 
 
  icon.
@@ -206,24 +206,24 @@ The association list will display the list of SpiraTeam artifacts that
 are linked to this specific source code file. You can add a new
 association by clicking on the 'Add Association' hyperlink.
 
-### Revision Details
+### Commit Details
 
-By clicking on a revision in SpiraTeam, you will be taken to the
-revision details page.
+By clicking on a commit in SpiraTeam, you will be taken to the
+commit details page.
 
 ![](img/Integrating_with_TFS_31.png)
 
 
 
 
-The revision details screen shows the log for the action performed, the
+The commit details screen shows the log for the action performed, the
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
-revision, with their full path, latest revision and date of edit.
+commit, with their full path, latest commit and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
 Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
-information on how to link a revision with a TFS check-in or other
+information on how to link a commit with a TFS check-in or other
 action:
 
 ![](img/Integrating_with_TFS_32.png)
@@ -246,7 +246,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.
+them under the Associations tab for a commit detail.
 
 If you forget to add the association during the commit, you can use the
 'Add Association' option within SpiraTeam to add the association after

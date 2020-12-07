@@ -32,7 +32,7 @@
     
         - Fix source code files missing their author and date information [IN:4526]
         - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
-        - Build Details: fix the revisions tab to always show complete information [IN:5701]
+        - Build Details: fix the commits tab to always show complete information [IN:5701]
         - Build details page > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
         - Improve the performance of source code on artifact details pages (specifically on the association and attachment panels) [IN:5710]
         - Add preview support in documents and source code for additional filetypes (bat, feature, markdown, json, yaml, typescript, svg files) [IN:5859]
@@ -73,7 +73,7 @@
     **Baselining Enhancements**: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
 
 ??? success "New features"
-    - Store source code branche and revision information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
+    - Store source code branches and commit information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
     - Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]
     
     * Baselining (SpiraTeam and SpiraPlan only)
@@ -168,7 +168,7 @@
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
-    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
+    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts.
 
 ??? success "New features"
     - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
@@ -195,8 +195,8 @@
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
     * Source Code Management (SpiraTeam and SpiraPlan only)
-        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
-        - There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]
+        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show commits from all branches, not just the branch being filtered on in the source code view [RQ:2973]
+        - There is a background feature flag to disable Source Code Commits in Documents/Associations (available to IT on-premise only) [RQ:2974]
 
 
 ??? bug "Bug fixes and enhancements"
@@ -226,8 +226,8 @@
         - Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]
         - Remove references to 'Project' when exporting an artifact from one product to another [IN:5540]
         - On the incident list page, the column labelled "Progress" is incorrectly called "Task Progress" in the column selector dropdown and filter message box [IN:5575]
-        - Revisions tab on build detail page should show revisions more consistently and not a message about the cache [IN:5548]
-        - Improve the CI/CD functionality of the association panel on artifact details pages to show revisions more consistently and also to link builds to artifacts [IN:5666]
+        - Commits tab on build detail page should show commits more consistently and not a message about the cache [IN:5548]
+        - Improve the CI/CD functionality of the association panel on artifact details pages to show commits more consistently and also to link builds to artifacts [IN:5666]
         - Task list: issues if the user's current folder has been deleted [IN:5027]
         - Test Case list: issues if the user's current folder has been deleted [IN:5658]
         - Test Set list: issues if the user's current folder has been deleted [IN:5659]
@@ -733,7 +733,7 @@
     - Support change/remove user membership for a project using 6.0 API [IN:4107]
     - Add ability to specify/change project group with API [IN:4108]
     - User defined start page not properly remembered on refresh/login [IN:4966]
-    - On revision detail page, the link "Back to Revision List" is incorrect [IN:4974]
+    - On commit detail page, the link "Back to Commit List" is incorrect [IN:4974]
     - SpiraPlan: risk default values and sample data contain a misspelling [IN:4976]
     - Test configuration detail page: entries do not appear unless you refresh the page [IN:4978]
     - For TaraVault users, admin menu for product settings has incorrect label [IN:4995]

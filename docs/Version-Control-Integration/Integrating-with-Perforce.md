@@ -84,7 +84,7 @@ Tracking tab to navigate and browse the source code repository.
 
 While being able to browse the source code repository can be useful in
 itself, the real strength comes from linking artifacts in SpiraTeam -
-including Incidents, Requirements, and Tasks - to revisions checked into
+including Incidents, Requirements, and Tasks - to commits checked into
 the software repository.
 
 ### Viewing the Repository Tree
@@ -122,7 +122,7 @@ file to your local machine.
 Underneath the file's details is a list of all the changes that this
 file was changed in, who performed the change, and the log message for
 the change. Throughout SpiraTeam, changes are indicated by the
-![Revision](img/Integrating_with_Perforce_12.png)
+![Commit](img/Integrating_with_Perforce_12.png)
 
 
  icon.
@@ -137,7 +137,7 @@ changelist details page:
 
 
 
-The revision details screen shows the log for the change, the change
+The commit details screen shows the log for the change, the change
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
 change, with their full path and the action that was performed on them
@@ -145,7 +145,7 @@ for this change. Possible values are Added, Modified, Deleted, or Other.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
 Case, Test Set) that the log message references. See [Linking Artifacts](#linking-artifacts) for
-information on how to link a revision with a Perforce change:
+information on how to link a commit with a Perforce change:
 
 ![](img/Integrating_with_Perforce_58.png)
 
@@ -167,7 +167,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a change message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.
+them under the Associations tab for a commit detail.
 
 ## Troubleshooting
 
@@ -194,7 +194,7 @@ working:
 -   If you are taken back to the repository screen and given a message
 > saying that the requested file was deleted from the system, this
 > means that an attempt was made to view details on a file that is
-> no longer part of the HEAD revision. This can happen when a file
+> no longer part of the HEAD commit. This can happen when a file
 > is deleted or renamed, and this is a normal condition in the code
 > repository, not necessarily an error with Subversion or SpiraTeam.
 

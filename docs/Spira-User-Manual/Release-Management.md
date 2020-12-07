@@ -480,19 +480,19 @@ This page is made up of three areas; the left pane is the navigation window, the
 The navigation pane consists of a link that will take you back to the build list, as well as a list of the other builds that belong to the same release/sprint as the current one. The top part of the right pane allows you to view the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.
 
 The lower part of the right pane contains tabs that can display different information associated with the build. Each of the tabs --
-"Associations", "Incidents", "Revisions", and "Test Runs" - is described separately below.
+"Associations", "Incidents", "Commits", and "Test Runs" - is described separately below.
 
 
 ### Associations
 
-This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code revisions that were included in the current build:
+This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code commits that were included in the current build:
 
 ![](img/Release_Management_278.png)
 
 
-### Revisions
+### Commits
 
-This tab displays a list of the source code revisions that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:
+This tab displays a list of the source code commits that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:
 
 ![](img/Release_Management_279.png)
 
