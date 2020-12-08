@@ -224,7 +224,7 @@ nav:
     - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
     - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
     - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
-  - Version Control: 
+  - Source Code: 
     - Git: Version-Control-Integration\Integrating-with-Git.md
     - Subversion: Version-Control-Integration\Integrating-with-Subversion.md
     - Mercurial: Version-Control-Integration\Integrating-with-Mercurial.md

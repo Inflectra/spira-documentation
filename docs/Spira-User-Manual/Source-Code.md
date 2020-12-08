@@ -1,83 +1,104 @@
 # Source Code
+SpiraTeam®'s and SpiraPlan®'s source code integration features let you browse the source code associated with a particular product and link source code commits and specific source code files to SpiraPlan artifacts. Product members can quickly view files in the repository right from within SpiraPlan to see the end-to-end traceability from requirements, tasks, incidents, and more.
 
-This section outlines the source code integration features of SpiraPlan®
-and SpiraTeam® that can be used to browse the source code repository associated with a particular product and link artifacts in SpiraPlan to commits made in the source code repository. This functionality allows product members to quickly view files in the repository through a convenient web interface and also to see the end-to-end traceability from requirements, tasks and incidents to the code changes that addressed the requirement, fulfilled the task or resolved the incident
+SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or plugins for the different SCM's (including [Git](../../Version-Control-Integration/Integrating-with-Git/) and [Subversion](../../Version-Control-Integration/Integrating-with-Subversion/)). 
 
-The software can be integrated with a variety of different version control / Software Configuration Management (SCM) systems by means of different plug-ins. This section will outline the general features irrespective of the type of version control provider being used. For details on using a specific provider (e.g. Subversion) please refer to the separate *SpiraPlan/Team Version Control Integration Guide*. This section also assumes that an administrator has already configured the product to be integrated with the version control provider. The steps for using the administrative interface are described in the separate *SpiraPlan Administration Guide*.
+This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. 
+
+## Getting Started With Source Code 
+To use the source code features in SpiraPlan you need to do 3 things:
+
+1. a system administrator has setup the source code provider (for example, [Git](../../Version-Control-Integration/Integrating-with-Git/#configuring-git-in-spiraplan))
+2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [Git](../../Version-Control-Integration/Integrating-with-Git/#use-git-for-your-product))
+3. SpiraPlan users have a [role](../../Spira-Administration-Guide/System-Users/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
+
+Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.
+
+## Troubleshooting Source Code Integration
+Integration with a source code provider can sometimes not work as you expect:
+
+- When you first view the source code or commits, this starts the process of generating the data to display. It may take several minutes for this data to properly load. You will see a message on the page explaining that the 'cache' is building. Please refresh the page after a few minutes and try again.
+- If SpiraPlan does not display the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the GitProvider.dll or some of its dependent assemblies are not in the correct folder of the SpiraPlan installation.
+- If SpiraPlan reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access to all branches of the source code.
 
 
 ## Source Code File List
-
-When you click on Tracking \> Source Code on the global navigation bar, you will be taken to the source code repository file list screen illustrated below:
+When you click on Developing \> Source Code on the global navigation bar, you will be taken to the source code repository file list screen. This shows you all file in the current folder and the current branch. You can sort and filter this list, or browse the different pages of files (up to 500 commits can be displayed on the page at any one time).
 
 ![](img/Source_Code_394.png)
 
-This screen consists of three main sections:
+This screen consists of two sections:
 
-The top left-hand pane displays a hierarchical list of the various folders that exist in the source code repository. Clicking on the expand icon will expand the child folders and clicking on the name of the folder will display the list of files in the folder in the main pane to the right.
+1. The left-hand pane shows the various folders that exist in the source code repository for the currently selected branch. Clicking on the expand icon will expand the child folders and clicking on the name of the folder will display its files in the main pane to the right.
+2. The main right-hand pane shows a list of all the files in the currently selected folder. This list can be filtered and sorted, and you can choose how many rows to display on the page at once.
 
-The main right-hand pane displays a list of all the files contained within the currently selected folder. This list can be filtered and sorted, and you can choose how many rows of documents to display on the page at one time.
+Above the list of files is the action toolbar. This lets you perform the following functions:
 
-The bottom left-hand pane contains a list of the most recent commits, together with the option to view the overall commit log for the product, clicking on that will display the [commit log page](../Commits/#commit-list).
-
-Above the main right-hand pane, there is the **branch selector**. This lets you choose which branch in the source code repository is being viewed:
+- Refresh the list of files to see any recent updates
+- The **branch selector** lets you choose which branch[^old-scm] in the source code repository to view. This is stored for your user across the whole product, which means that you will see information for this same branch in other relevant places - eg when viewing files, when viewing commits, or on Product Home Page widgets. An example of the branch selector is shown below.
+- Filter buttons to apply or clear the current filter
+- Clone or Checkout information so you can see, if permitted, the url of the source code remote along with potentially other connection information
+- The type of source code provider active for this product
 
 ![](img/Source_Code_395.png)
 
-Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
+[^old-scm]: Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
 
 
 ## Source Code File Details
-
-When you click on a file in the source code file list described above, you are taken to the file details page illustrated below:
+When you click on a file in the source code file list, you open the file details page for that file. This page shows you information about the file, its commit history, and where relevant a file preview. It also shows you links to other relevant files, commits, or artifacts. 
 
 ![](img/Source_Code_396.png)
 
-This page is made up of three areas; the left pane is for navigation, the upper part of the main pane contains information regarding the file, and the bottom part of the right pane contains **three tabs** that display a preview of the file (if textual), the list of file commits stored in the version control system, and a list of associated artifacts.
+The page is made up of three areas:
 
-The navigation pane consists of a link that will take you back to the source code file list, as well as a list of other files in the current folder. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer files by clicking on the navigation links without having to first return to the main file list page.
+1. the top of the left-hand pane shows the various folders that exist in the source code repository for the currently selected branch
+2. the bottom of he left-hand pane has a link back to the list page and shows files in the folder selected in the pane above it (you can choose to see all files in the folder or only those that match the filter set on the file list page). Together with the pane above, you can quickly navigate across the source code folders and files and see detailed information about any file
+3. the right-hand pane shows detailed information about the file. This pane is discussed more below.
 
-The top part of the main pane allows you to view the details of the particular file in the version control system. Clicking on the "Source Code File" hyperlink will open the file in a separate window, and depending on the type of file, it may display in the page or prompt you to download it to your local computer. The "Latest Commit" hyperlink allows you to view [details of the latest commit](../Commits/#commit-details).
+The detailed information available at the top of the page is the:
 
-The lower part of the main pane can be switched between the three different views by clicking the appropriate tab. Initially the pane will be in "Preview" mode, but it can be switched to "commits", or "Associations" as well. The functionality in each of these views is described below:
+- folder path of the file
+- currently selected branch (useful to know what version of the file you are looking at)
+- name of the file, along with its file extension
+- A link to open or download the raw version of the file as it is/was at the most recent commit of the current branch
+- icon for the file type
+- file size
+- identifier of the latest commit for this file (in the current branch) and a link to the [detailed page](../Commits/#commit-details) for that commit
+- date and time of the above commit
 
+There are 3 tabs on this page that each show additional information about the file. These are discussed below.
 
 ### Preview
-
-This view is only available for files that are textual and it will display the contents of the file inside the tab, with the text color-coded to match the syntax of the programming language it is written in:
+This shows, where possible, a preview of the file. Image files are previewed, as are text files (for example, code), and markdown files (as HTML rendered previews). For code, syntax highlighting is applied based on the code file type (using the file extension) and line numbers are also shown.
 
 ![](img/Source_Code_397.png)
 
-The syntax highlighting is based on the file type and file extension, so if you save a file with an incorrect extension (e.g. using .txt for a JavaScript file) it may not display the correct color-coding. For text files that are not for a specific programming language, it will simply display as plain text
+Note that if you save a file with an incorrect extension (e.g. using .txt for a JavaScript file) it may not display the correct color-coding.
 
 
-### Commits
-
-This view displays the list of commits that have been committed for the current file:
+### History
+This shows the full commit history for that file in the current branch. The list of commits is paginated and up to 500 rows of commits can be shown at one time. You can also filter this list of commits. 
 
 ![](img/Source_Code_398.png)
 
-Each commit in the list is displayed with its name, the name of the person who made the commit, a description of what was changed, the date the change was made and two flags that denote whether the content was changed and/or if any of the properties of the file were changed. Clicking on the commit name will take you to the [appropriate commit details page](../Commits/#commit-details).
+Each commit is displayed with:
 
+- its name/identifier - clicking on the commit identifier will open the [Commit File Details](../Commits/#commit-file-details) page for that file at that specific commit
+- the date of the commit (hovering over this date will show a tooltip with the date and time)
+- its commit message (or summary) - any artifact tokens (eg "[IN:7]") in the message are clickable and will open the details page for that artifact
+- the type of action that was done to the file (eg added, or modified),
+- the name of the person who made the commit
 
 ### Associations
-
-This view displays a list of the SpiraPlan artifacts in the current product that are associated with the current file. This allows you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the hyperlink for the artifact will take you to the appropriate artifact page inside the product (assuming your user has permissions to access that information).
+This shows all current associations between this file and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information)
 
 ![](img/Source_Code_399.png)
 
-In addition, you can use the "***Add New Association***" button to add a new association from the current source code file to an existing artifact in SpiraTeam:
-
-![](img/Source_Code_400.png)
-
-To add the association, you just need to select the type of artifact being associated (requirement, test case, incident, etc.) and the numeric ID of the artifact and then click the "***Add Association***" button.
-
-For example, to add an association to Requirement RQ00005 you would choose Artifact Type = Requirement and Artifact ID = 5.
-
+You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 ## Source Code Revision List 
 Updated documentation is [here](../Commits/#commit-list).
-
 
 ## Source Code Revision Details 
 Updated documentation is [here](../Commits/#commit-details).

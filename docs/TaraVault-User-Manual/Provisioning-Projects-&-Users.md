@@ -144,7 +144,7 @@ Git or Subversion.
 ## Connecting to the Project
 
 Individual users can see the connection information they can use for
-connecting via. Git or Subversion by going to Tracking \> Source Code:
+connecting via. Git or Subversion by going to Developing > Source Code:
 
 ![](img/Provisioning_Projects_&_Users_18.png)
 

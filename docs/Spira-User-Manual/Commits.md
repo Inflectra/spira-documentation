@@ -1,9 +1,17 @@
 # Commits
 
+## Linking To Artifacts In Commit Messages
+When developers are working on source code, it is often to fix a bug, create a feature described in a user story, or deal with a task. To let you trace what commits (and therefore file changes) SpiraPlan reads commit messages for links to artifacts. If SpiraPlan finds any links in the commit message it automatically creates the association between the commit and the artifact(s). You can view these associations from the [commit details](#commit-details) page, or from the associations tab of any artifact.
+
+How does this work? The commit message has to contain one or more artifact token. For example [TK:123], or [IN:456], or [RQ:789]. These tokens are short and do not get in the way of the rest of the commit message.Artifact tokens are in the following format: `[{artifact identifier}:{artifact id}]`
+
+The first half of the token, is a two-letter code, used throughout SpiraPlan and visible on almost every page in the application. For example, a requirement's identifier is "**RQ**". Incidents are "**IN**", and test cases are "**TC**". The artifact ID is the number of the artifact. If you go to the details page for an artifact, you will always see this artifact token near the top of the page. Clicking on it copies it to your clipboard. Then you can paste it into your commit message.
+
+**Note:** If you forget to add the association during the commit, go to the details page for that commit in SpiraPlan, and click 'Add Association' to add the association at any time.
+
 
 ## Commit List
-
-If you click on the "***View Commit Log***" button on the main Source Code page, it will take you to the Commit List page that displays all the commits made to the product in a sortable, filterable list:
+When you click on Developing \> Commits on the global navigation bar, you will be taken to the commits list screen. This shows you all commits in the current branch. You can sort and filter this list, or browse the different pages (up to 500 commits can be displayed on the page at any one time).
 
 ![](img/Source_Code_401.png)
 
