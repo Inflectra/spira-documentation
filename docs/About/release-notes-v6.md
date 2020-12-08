@@ -55,6 +55,7 @@
         - Release detail page > test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]
         - Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]
         - Password Expired page explainer note about password requirements includes information about special characters [IN:5892]
+        - Fix e-signatures for some artifacts not correctly checking passwords or RSS Tokens [IN:5962]
         - Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]
         - Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]
         - Add preview support for Markdown in Documents [IN:5913]
@@ -64,6 +65,8 @@
         - System Admin > Template Edit page: make the active selector disabled if the template has any products associated with it [IN:5956]
         - API to update custom lists should update list items that are currently inactive (as well as those that are active) [IN:5958]
         - Test Run details page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
+        - Add test runs (as an option) to the requirements detailed report [IN:5947]
+        - Reports default to not automatically generating history or attachment sections [IN:5947]
         - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
 
 ## Version 6.6.1 (October 2020)
