@@ -11,7 +11,7 @@ The plug-in will clone a read-only "bare" (i.e. no working folder) copy of the G
 The current version of the Git plugin is compatiblbe with SpiraPlan v4.2.0.2 or later.
 
 ## Installing the Git Plug-In 
-On-premise users on SpiraPlan 6+ can skip this section: all required files are included as part of the normal installation process. 
+Cloud hosted users and on-premise users on SpiraPlan 6+ can skip this section: all required files are included as part of the normal installation process. 
 
 To install the Git plug-in on your SpiraPlan service:
 
@@ -36,7 +36,7 @@ Complete the form on this page as below:
 - **Description**: The description is for your use only, and does not affect operation of the plug-in
 - **Active**: If checked, the plug-in is active and able to be used for any product
 - **Connection Info**: This field holds the clone URL of the defaults repository for any product accessing the plug-in, unless overridden in the product admin
-- **Login / Password**: The default user id and password to use while accessing and retrieving information from the remote Git repositories. If you are accessing a public repository anonymously enter "*anonymous*" for both the username and password
+- **Login / Password**: The default user id and password to use while accessing and retrieving information from the remote repositories. If you are accessing a public repository anonymously enter "*anonymous*" for both the username and password
 - **Custom 01** -- By default, SpiraPlan will store a copy of the Git working directory in the C:\ProgramData\Inflectra\Spira\GitProvider\URL folder (where URL is the Git connection URL). If you would like to use an override location for the Git repository, specify the full filepath here (e.g. C:\Git\Repositories)
 - **Custom 02 -- Custom 05** -- Not used by this plugin.
 
