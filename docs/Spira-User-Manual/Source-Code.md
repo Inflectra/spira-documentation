@@ -18,12 +18,12 @@ Once these steps are complete, the source code will be viewable within SpiraPlan
 Integration with a source code provider can sometimes not work as you expect:
 
 - When you first view the source code or commits, this starts the process of generating the data to display. It may take several minutes for this data to properly load. You will see a message on the page explaining that the 'cache' is building. Please refresh the page after a few minutes and try again.
-- If SpiraPlan does not display the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the GitProvider.dll or some of its dependent assemblies are not in the correct folder of the SpiraPlan installation.
+- If SpiraPlan does not display the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the source code provider dll or some of its dependent assemblies are not in the correct folder of the SpiraPlan installation. If you installed these yourself, make sure you are using the correct 32 bit or 64 bit version of the files. Download the correct version > from the Inflectra website, and overwrite the files in the > VersionControl folder.
 - If SpiraPlan reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access to all branches of the source code.
 
 
 ## Source Code File List
-When you click on Developing \> Source Code on the global navigation bar, you will be taken to the source code repository file list screen. This shows you all file in the current folder and the current branch. You can sort and filter this list, or browse the different pages of files (up to 500 commits can be displayed on the page at any one time).
+When you click on Developing \> Source Code on the global navigation bar, you will be taken to the source code repository file list screen. This shows you all file in the current folder and the current branch. You can change the branch, sort and filter this list, or browse the different pages of files (up to 500 files can be displayed on the page at any one time).
 
 ![](img/Source_Code_394.png)
 
@@ -41,6 +41,14 @@ Above the list of files is the action toolbar. This lets you perform the followi
 - The type of source code provider active for this product
 
 ![](img/Source_Code_395.png)
+
+For each file you can see the following information (you can sort or filter on all of these):
+
+- Name - click on this to view the details for this file, and hover over the name to see a tooltip of the full filename and filepath
+- Size
+- Author (this is the most recent author - the person who made the most recent commit that changed this file in the current branch)
+- Latest Commit - click to view details about the specific commit (this is the most recent commit that changed this file in the current branch)
+- Last edited date - this is the date of the latest commit and if you hover over the date you will see a tooltip showing the date and time
 
 [^old-scm]: Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
 
