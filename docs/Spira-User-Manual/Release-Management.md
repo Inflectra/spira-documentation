@@ -5,13 +5,12 @@ This section outlines how to use the Release Management features of SpiraPlan® 
 
 In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.
 
-There are two types of release artifact in SpiraPlan® - major product releases that are displayed with the release icon and represent major versions of the system, and release Sprints (aka builds) that are displayed with the sprint icon and represent intermediate builds/sprints of the system. *Note: Sprints can be contained within a Release, but not the other way round.*
+There are two types of release artifact in SpiraPlan® - product releases that are displayed with the release icon and represent major or minor versions of the system, and release Sprints that are displayed with the sprint icon. *Note: Sprints can be contained within a Release, but not the other way round.*
 
 The main differences between releases and sprints are as follows:
 
-Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
-
-When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child builds/sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
+- Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
+- When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
 
 
 ## Release Traceability and Coverage

@@ -87,7 +87,9 @@ This section lists any filters/searches have been saved from the various artifac
 The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "***Delete***" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.
 
 ## Schedule
-This Gantt chart shows all active releases and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
+This Gantt chart shows all active releases[^active-release] and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
+
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
 ## Requirement Completion
 This chart shows the proportion of all active requirements that have been completed across all active releases in this product. When 100% of the requirements are completed, the color changes so that it is easy to tell what is in progress vs completed.
@@ -135,7 +137,7 @@ However, unlike the 'Requirements Coverage' widget, when you filter the product 
 
 ## Requirements Summary
 
-This section consists of a summary table that displays the aggregate count of requirements in the system broken-down by importance (on the x-axis) and status (on the y-axis). This allows the product manager to determine how many critical vs. low priority enhancements are waiting to be implemented, vs. actually being implemented. In addition, it makes a distinction between those requirements simply requested and those actually planned for implementation, so the product manager can see what the backlog is between the customer's demands, and the plan in place. Clicking on the "***View Details***" button at the top of the table simply brings up a detail graph that you can customize by selecting the axes. Clicking on the individual values in the cells will display the requirements list with the filter set to match the importance and status of the value.
+This section consists of a summary table that displays the aggregate count of requirements in the system broken-down by importance (on the x-axis) and status (on the y-axis). This allows the product manager to determine how many critical vs. low priority enhancements are waiting to be implemented, vs. actually being implemented. In addition, it makes a distinction between those requirements simply requested and those actually planned for implementation, so the product manager can see what the backlog is between the customer's demands, and the plan in place. Clicking on the "***View Details***" button at the top of the table takes you to the Requirement list page. Clicking on the individual values in the cells will display the requirements list with the filter set to match the importance and status of the value.
 
 
 ## Release Task Progress
@@ -208,7 +210,7 @@ This widget lets you see the list of document tags being used in the product:
 
 ![](img/UserProduct_Management_69.png)
 
-The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List]((../Document-Management/#document-list) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.
+The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List](../Document-Management/#document-list) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.
 
 
 ## Test Case Cumulative Progress
@@ -261,12 +263,12 @@ This section displays the number of days incidents have been left open in the sy
 
 ## Incident Open Count
 
-This section show a bar chart to visualize the breakdown of all open incidents in the product by priority. The chart's bar match the color assigned to that priority. Clicking on the "View Details" link at the top of the widget loads a chart builder where you can further refine and filter the chart to meet your needs.
+This section show a bar chart to visualize the breakdown of all open incidents in the product by priority. The chart's bar match the color assigned to that priority. Clicking on the "View Details" link at the top of the widget opens the Incident list page.
 
 
 ## Incident Summary
 
-This section consists of a summary table that displays the aggregate count of incidents in the system broken-down by priority (on the x-axis) and status (on the y-axis). This allow the product manager to determine how many critical vs. low priority incidents are waiting to be addressed, and how many new items need to be categorized and assigned. Clicking on the "View Details" link at the top of the table simply brings up a detail graph that you can customize by selecting the axes. Clicking on the individual values in the cells will display the incident list with the filter set to match the priority and status of the value.
+This section consists of a summary table that displays the aggregate count of incidents in the system broken-down by priority (on the x-axis) and status (on the y-axis). This allow the product manager to determine how many critical vs. low priority incidents are waiting to be addressed, and how many new items need to be categorized and assigned. Clicking on the "View Details" link at the top of the table opens the Incident list page. Clicking on the individual values in the cells will display the incident list with the filter set to match the priority and status of the value.
 
 By default this summary table displays the total count of all incidents
 -- regardless of type, however my changing the drop-down list to a specific incident type (e.g. bug, enhancement, issue, etc.), the product manager can filter the summary table to just items of that type. *You can also configure in the settings whether to use Priority or Severity for the x-axis*
@@ -285,7 +287,7 @@ This section displays a breakdown of the top issues logged against the product, 
 
 ## Risk Summary
 
-This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure*.*
+This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.
 
 
 ## Top Open Risks
