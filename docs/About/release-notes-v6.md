@@ -68,6 +68,7 @@
         - Add test runs (as an option) to the requirements detailed report [IN:5947]
         - Reports default to not automatically generating history or attachment sections [IN:5947]
         - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
+        - POST call to search for automated test runs has incorrect URL formulation with ?? instead of ? at start of query [IN:6032]
 
 ## Version 6.6.1 (October 2020)
 
