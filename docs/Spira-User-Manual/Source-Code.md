@@ -44,24 +44,24 @@ Above the list of files is the action toolbar. This lets you perform the followi
 
 For each file you can see the following information (you can sort or filter on all of these):
 
-- Name - click on this to view the details for this file, and hover over the name to see a tooltip of the full filename and filepath
+- Name - click to view the details for this file, and hover over the name to see a tooltip of the full filename and filepath
 - Size
 - Author (this is the most recent author - the person who made the most recent commit that changed this file in the current branch)
-- Latest Commit - click to view details about the specific commit (this is the most recent commit that changed this file in the current branch)
+- Latest Commit - click to view details about that commit (this is the most recent commit that changed this file in the current branch)
 - Last edited date - this is the date of the latest commit and if you hover over the date you will see a tooltip showing the date and time
 
 [^old-scm]: Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
 
 
 ## Source Code File Details
-When you click on a file in the source code file list, you open the file details page for that file. This page shows you information about the file, its commit history, and where relevant a file preview. It also shows you links to other relevant files, commits, or artifacts. 
+When you click on a file link (for example, from the source code file list), you open the file details page for that file. This page shows you information about the file, its commit history, and where relevant a file preview. It also shows you links to other relevant files, commits, or artifacts. 
 
 ![](img/Source_Code_396.png)
 
 The page is made up of three areas:
 
 1. the top of the left-hand pane shows the various folders that exist in the source code repository for the currently selected branch
-2. the bottom of he left-hand pane has a link back to the list page and shows files in the folder selected in the pane above it (you can choose to see all files in the folder or only those that match the filter set on the file list page). Together with the pane above, you can quickly navigate across the source code folders and files and see detailed information about any file
+2. the bottom of the left-hand pane has a link back to the list page and shows files in the folder selected in the pane above it (you can choose to see all files in the folder or only those that match the filter set on the file list page). Together with the pane above, you can quickly navigate across the source code folders and files and see detailed information about any file
 3. the right-hand pane shows detailed information about the file. This pane is discussed more below.
 
 The detailed information available at the top of the page is the:
@@ -78,17 +78,17 @@ The detailed information available at the top of the page is the:
 There are 3 tabs on this page that each show additional information about the file. These are discussed below.
 
 ### Preview
-This shows, where possible, a preview of the file. Image files are previewed, as are text files (for example, code), and markdown files (as HTML rendered previews). For code, syntax highlighting is applied based on the code file type (using the file extension) and line numbers are also shown.
-
 ![](img/Source_Code_397.png)
+
+This shows, where possible, a preview of the file. Image files are previewed, as are text files (for example, code), and markdown files (as HTML rendered previews). For code, syntax highlighting is applied based on the code file type (using the file extension) and line numbers are also shown.
 
 Note that if you save a file with an incorrect extension (e.g. using .txt for a JavaScript file) it may not display the correct color-coding.
 
 
 ### History
-This shows the full commit history for that file in the current branch. The list of commits is paginated and up to 500 rows of commits can be shown at one time. You can also filter this list of commits. 
-
 ![](img/Source_Code_398.png)
+
+This shows the full commit history for that file in the current branch. The list of commits is paginated and up to 500 rows of commits can be shown at one time. You can also filter this list of commits. 
 
 Each commit is displayed with:
 
@@ -99,11 +99,11 @@ Each commit is displayed with:
 - the name of the person who made the commit
 
 ### Associations
-This shows all current associations between this file and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information)
-
 ![](img/Source_Code_399.png)
 
-You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
+This shows all current associations between this file and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
+
+You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations).
 
 ## Source Code Revision List 
 Updated documentation is [here](../Commits/#commit-list).

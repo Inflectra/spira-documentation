@@ -36,44 +36,77 @@ For each commit you can see the following information (you can sort or filter on
 [^old-scm]: Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
 
 ## Commit Details
-
-When you click on a commit hyperlink in either the product commit log or the file commits tab described above, you are taken to the commit details page illustrated below:
+When you click on a commit link (for example, from the commit list), you open the commit details page for that commit. This page shows you information about the commit, the files it includes, the branches it appears in, and other artifacts it is associated with.
 
 ![](img/Source_Code_402.png)
 
-This page is made up of three areas; the left pane is for navigation, the upper part of the main pane contains the details of the commit, and the bottom part of the right pane contains the list of files that were changed in this commit and the list of artifacts that the commit is associated with.
+The page is made up of two areas:
 
-The navigation pane consists of a link that will take you back to the source code commit list, as well as a list of other commits associated with the current file. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer commits by clicking on the navigation links without having to first return to the main commit list page.
+1. the left-hand pane has a link back to the list page and shows a list of commits in the current branch - either only those that match the filter set on the list page, or all commits
+2. the right-hand pane shows detailed information about the commit. This pane is discussed more below
 
-The top part of the main pane allows you to view the details of this commit in the version control system, including the description of what was changed, the date that the change was made, and the name of the person who made the change.
+The detailed information available at the top of the page is the:
 
-The lower part of the main pane can be switched between two different views by clicking the appropriate tab. Initially the pane will be in "Files" mode, but it can be switched to "Associations" as well. The functionality in each of these two views is described below:
+- currently selected branch
+- commit name
+- commit summary message (artifacts tokens are links that will open that artifact)
+- author of the commit
+- date and time the commit was made
+- associated build, if there is one (clicking on the build will open the [build details](../Release-Management/#build-details) page for that build)
+
+There are 3 tabs on this page that each show additional information about the commit. These are discussed below.
 
 
 ### Files
-
-This view displays the list of files that were changed in the current commit:
-
 ![](img/Source_Code_403.png)
 
-Each file in the list is displayed with its name, the file-size, who made changes to the file, what action was performed on the file (added, deleted, replaced, updated, etc.) and the most recent commit that exists for that file. Clicking on the filename will take you to the appropriate [file details page](../Source-Code#source-code-file-details), and clicking on the commit hyperlink will take you the appropriate commit.
+This shows the list of files changed in this commit. You can sort or filter the list by any of its columns:
 
+- Name: click to view the details for this [file at this commit](#commit-file-details), and hover over the name to see a tooltip of the full filename and filepath
+- Size
+- Author (this is the *most recent* author - the person who made the most recent commit that changed this file in the current branch)
+- Latest Commit: click to view that commit (this is the most recent commit that changed this file in the current branch)
+- Last edited date: this is the date of the latest commit and if you hover over the date you will see a tooltip showing the date and time
+- Action: what happened to the file in this commit - for example, was it added or modified
+
+### Branches
+![](img/Source_Code_406.png)
+
+This shows the list of all branches that the commit appears in, listed in alphabetical order. Clicking on a branch changes your selected branch to that branch.
+
+A commit exists in any branch that was made from the branch the commit was originally committed in, and that was made after this commit. There is no single "original" or "main" branch for a commit, because all the different git branches are considered equal. Deleted branches are not shown.
 
 ### Associations
-
-This view displays a list of the SpiraPlan artifacts in the current product that are associated with the current commit. This allows you to see which requirements, incidents or tasks were affected by this specific change to the source code:
-
 ![](img/Source_Code_404.png)
 
-Clicking on the hyperlink for the artifact will take you to the appropriate artifact page inside the product (assuming your user has permissions to access that information).
+This shows all current associations between this commit and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the commit. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
 
-In addition to the associations that are created from within the source code management system, you can add associations between source code commits and SpiraPlan artifacts from within SpiraPlan interface itself. To do this, you simply need to click on the '***Add Association***' button:
-
-![](img/Source_Code_405.png)
-
-To add the association, you just need to select the type of artifact being associated (requirement, test case, incident, etc.) and the numeric ID of the artifact and then click the "***Add Association***" button.
-
-For example to add an association to Requirement RQ00005 you would choose Artifact Type = Requirement and Artifact ID = 5.
+You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations).
 
 
 ## Commit File Details
+Files are change as source code develops. Each commit adds or changes or removes files. This pages allows you to see exactly how a file was changed between one commit and the next. For example, you could see that one function was added, and that another line of code was deleted. Or you can see how an image file looked before and after the commit.
+
+SpiraPlan supports showing before and after previews of all file types that it can show previews for elsewhere in the application (for example, text files and images). For text files (things like code, markdown, and plain text), SpiraPlan will also show a line by line comparison of both file versions. 
+
+![commit file details page](img/Source_Code_407.png)
+
+This page is made up of three areas: 
+
+1. 
+2. 
+3. 
+
+
+The detailed information available at the top of the page is the:
+
+
+### Changes
+![changes tab in unified view](img/Source_Code_408.png)
+![changes tab in split view](img/Source_Code_409.png)
+
+### Previous Commit
+![previous commit tab](img/Source_Code_410.png)
+
+### Current Commit
+![current commit tab](img/Source_Code_411.png)
