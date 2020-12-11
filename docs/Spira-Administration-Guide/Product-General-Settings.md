@@ -71,7 +71,7 @@ By default, all products in SpiraPlan are completely self-contained. Artifacts i
 !!! info "Permissions when sharing artifacts across products"
     When you share artifacts from the current product to another product, the permissions and membership in the other product determine who can see what items. You therefore need to think about the impact of this before enabling cross product associations.
 
-    For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product shares its requirements with Product A, anyone who can see Product A's requirements (like Marie can) will now be able to see (not edit - only see) all of Product B's requirements too.
+    For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product B shares its requirements with Product A, anyone who can see Product A's requirements (like Marie can) will now be able to see (not edit - only see) all of Product B's requirements too.
 
 ### What artifacts can be shared across products
 You can share the following artifacts from one product to another:
