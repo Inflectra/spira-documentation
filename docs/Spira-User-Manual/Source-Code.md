@@ -1,9 +1,17 @@
 # Source Code
-SpiraTeam®'s and SpiraPlan®'s source code integration features let you browse the source code associated with a particular product and link source code commits and specific source code files to SpiraPlan artifacts. Product members can quickly view files in the repository right from within SpiraPlan to see the end-to-end traceability from requirements, tasks, incidents, and more.
+## Introduction
+SpiraTeam®'s and SpiraPlan®'s source code integration features let you:
+
+- browse the source code associated with a particular product 
+- view all the active branches available in the source code (branches with "/" in them are shown as nested within a folder structure to help view your branch structure more easily)
+- browse all commits made over time
+- see how the source code evolved over time by seeing how individual files changed between two commits
+- link source code commits and files to SpiraPlan artifacts. 
+- view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.
 
 SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or plugins for the different SCM's (including [Git](../../Version-Control-Integration/Integrating-with-Git/) and [Subversion](../../Version-Control-Integration/Integrating-with-Subversion/)). 
 
-This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. 
+This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](../Commits) outlines viewing and working with commits and the changes made in them.
 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
@@ -24,6 +32,9 @@ Integration with a source code provider can sometimes not work as you expect:
 
 ## Source Code File List
 When you click on Developing \> Source Code on the global navigation bar, you will be taken to the source code repository file list screen. This shows you all file in the current folder and the current branch. You can change the branch, sort and filter this list, or browse the different pages of files (up to 500 files can be displayed on the page at any one time).
+
+!!! info "Deleted Files"
+    Once a file has been deleted you will no longer be able to view that file from the list of files, or view information about that file. There is a current limitation that means the commit where a file was deleted is not able to show this file deletion.
 
 ![](img/Source_Code_394.png)
 
@@ -64,15 +75,15 @@ The page is made up of three areas:
 2. the bottom of the left-hand pane has a link back to the list page and shows files in the folder selected in the pane above it (you can choose to see all files in the folder or only those that match the filter set on the file list page). Together with the pane above, you can quickly navigate across the source code folders and files and see detailed information about any file
 3. the right-hand pane shows detailed information about the file. This pane is discussed more below.
 
-The detailed information available at the top of the page is the:
+The detailed information available at the top of the page is:
 
-- folder path of the file
-- currently selected branch (useful to know what version of the file you are looking at)
-- name of the file, along with its file extension
-- A link to open or download the raw version of the file as it is/was at the most recent commit of the current branch
-- icon for the file type
-- file size
-- identifier of the latest commit for this file (in the current branch) and a link to the [detailed page](../Commits/#commit-details) for that commit
+- the folder path of the file
+- the currently selected branch (useful to know what version of the file you are looking at)
+- the name of the file, along with its file extension
+- a link to open or download the raw version of the file as it is/was at the most recent commit of the current branch
+- the icon for the file type
+- the file size
+- the identifier of the latest commit for this file (in the current branch) and a link to the [detailed page](../Commits/#commit-details) for that commit
 - date and time of the above commit
 
 There are 3 tabs on this page that each show additional information about the file. These are discussed below.

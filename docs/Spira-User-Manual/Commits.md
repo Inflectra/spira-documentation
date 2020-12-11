@@ -1,5 +1,5 @@
 # Commits
-Go [here](../Source-Code/#getting-started-with-source-code) to read about how to connec your source code to your SpiraPlan product.
+Go [here](../Source-Code/#getting-started-with-source-code) to read about how to connect your source code to your SpiraPlan product.
 
 ## Linking To Artifacts In Commit Messages
 When developers are working on source code, it is often to fix a bug, create a feature described in a user story, or deal with a task. SpiraPlan let you trace what commits (and therefore file changes) contributed to a bug fix. To do this SpiraPlan reads commit messages for special tokens that it turns into links between the commit and those artifacts. If SpiraPlan finds any links in the commit message it automatically creates the association between the commit and the artifact(s). You can view these associations from the [commit details](#commit-details) page, or from the associations tab of any artifact.
@@ -93,20 +93,53 @@ SpiraPlan supports showing before and after previews of all file types that it c
 
 This page is made up of three areas: 
 
-1. 
-2. 
-3. 
+1. the top of the left-hand pane shows other files that were changed in the commit currently being viewed. You can click on the file name to update the page for that file at this commit. You can also click on the commit name to open its [commit details](#commit-details) page (hovering over the name will show you the commit message in a tooltip)
+2. the bottom of the left-hand pane shows the currently selected branch, and the other commits in this branch that changed the file currently being viewed (the icon represents the commit action for this file). Newer commits are at the top. 
+
+  - Clicking on a commit will update the page for the current file at that commit (hovering over the name will show you the commit message in a tooltip). 
+  - Above the list of commits is the file name - clicking on this will open the [file details](../Source-Code/#source-code-file-details) page for this file (hovering over the name will show you the full file path and file name in a tooltip).
+
+3. the right-hand pane shows detailed information about the file for the particular commit. This pane is discussed more below.
 
 
-The detailed information available at the top of the page is the:
+The detailed information available at the top of the page is:
 
+- the commit name: click to open its [commit details](#commit-details) page (hovering over the name will show you the commit message in a tooltip)
+- the name of the file, along with its file extension
+- a link to open or download the raw version of the file as it was at this particular commit
+- a link to open the [file details](../Source-Code/#source-code-file-details) page for this file
+- the icon for the file type
+- the file size
+- the name of the person who made the commit
+- the date and time of the commit
+- the name of the previous commit (if there is one): clicking on this will update the page for the current file at that previous commit (hovering over the name will show you the commit message in a tooltip)
+
+There are 3 tabs on this page that each show additional information about the file at the specific commit. These are discussed below.
 
 ### Changes
 ![changes tab in unified view](img/Source_Code_408.png)
+
+This shows you, for support file types (text files), the line by line changes that were made to the file in this commit. Above the diff view you can see:
+
+- the total number of lines changed
+- a mini chart showing the mix of changes (hover to see a tooltip with a breakdown)
+- the names of the previous and the current commit
+- a toggle button between the two diff views: one shows a unified view, the other a split view - click to change the view (by default the unified view is shown, but the app remembers what you last picked)
+
+Each line that changed is highlighted based off the sort of edit that was made, and a symbol in the left hand gutter shows this too. Line numbers are also displayed. In the unified view (shown above) lines are either added or removed (shown in green or red; and with a "+" or "-" gutter symbol respectively).
+
 ![changes tab in split view](img/Source_Code_409.png)
+
+In the split view (shown above) lines can be marked as added, deleted, or edited (shown in green, red, or blue; and with a "+", "-", or "~" gutter symbol respectively). In split, where a line was edited, we highlight the specific parts of the line that were changed.
 
 ### Previous Commit
 ![previous commit tab](img/Source_Code_410.png)
 
+This shows you the preview of the complete file as it was at the previous commit (the commit name is shown in the tab label). Image files as well as text files are previewed. Markdown files are shown as rendered HTML
+
 ### Current Commit
 ![current commit tab](img/Source_Code_411.png)
+
+This shows you the preview of the complete file as it was at the commit currently being viewed (the commit name is shown in the tab label). Image files as well as text files are previewed. Markdown files are shown as rendered HTML.
+
+**Note:** The first commit for a file adds the entire file. So when viewing the file at that first commit, you will only see this "Current Commit" tab, with a full preview of the file that was added in that commit.  
