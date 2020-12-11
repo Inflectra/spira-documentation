@@ -486,13 +486,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -545,18 +599,6 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2401,17 +2443,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3339,7 +3381,7 @@ server-based system running that supports a variety of different version
 control systems. It supports SCM tools including CVS, Subversion, and
 Git, and can execute Apache Ant and Apache Maven based projects as well
 as arbitrary shell scripts and Tomcat.</p>
-<p>When you use the SpiraTeam Add-on for Bamboo, it will allow you to associate each Bamboo project and plan with a corresponding project/release in SpiraTeam. Then, each time Bamboo creates a new build, a new build artifact will be created in SpiraTeam. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code revisions committed.</p>
+<p>When you use the SpiraTeam Add-on for Bamboo, it will allow you to associate each Bamboo project and plan with a corresponding project/release in SpiraTeam. Then, each time Bamboo creates a new build, a new build artifact will be created in SpiraTeam. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.</p>
 <h2 id="installing-the-spirateam-add-on-for-bamboo">Installing the SpiraTeam Add-on for Bamboo<a class="headerlink" href="#installing-the-spirateam-add-on-for-bamboo" title="Permanent link">&para;</a></h2>
 <p>Go to the Inflectra website and open up the page that lists the various
 downloads available for SpiraTeam
@@ -3420,15 +3462,15 @@ Build details page inside SpiraTeam:</p>
 <p><img alt="Figure 09" src="../img/Atlassian_Bamboo_42.jpeg" /></p>
 <p>This page will display the status (success / failure) and details of the
 build (imported from the Bamboo Console Output) together with a list of
-the associated incidents, test runs and source code revisions. The
+the associated incidents, test runs and source code commits. The
 following section will explain how to use your Source Code Management
 (SCM) system to take advantage of the SpiraTeam add-on and automatically
-link incidents and source code revisions to the build information.</p>
+link incidents and source code commits to the build information.</p>
 <h2 id="working-with-source-code-changesets">Working with Source Code Changesets<a class="headerlink" href="#working-with-source-code-changesets" title="Permanent link">&para;</a></h2>
 <p>When your developers commit changes to your application's source into
 the SCM repository, they should make sure to link the commit to the
 appropriate artifacts in SpiraTeam. For example they may want to record
-that the revision fixes a specific incident or implements a specific
+that the commit fixes a specific incident or implements a specific
 feature (requirement).</p>
 <p>Linking an artifact is very simple. All the developer needs to do is
 enter the artifact token in the following format:</p>
@@ -3439,9 +3481,9 @@ application. For example, a requirement's identifier is "<strong>RQ</strong>".
 Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the
 number of the artifact. So by creating a commit message that reads:</p>
 <p>SpiraTeam will automatically detect the tokens and will include links to
-them under the Associations tab for each revision detail in SpiraTeam.</p>
+them under the Associations tab for each commit detail in SpiraTeam.</p>
 <p>Inside SpiraTeam, the system will use the same information to
-automatically link the list of associated revisions to the build record:</p>
+automatically link the list of associated commits to the build record:</p>
 <p><img alt="" src="../img/Atlassian_Bamboo_30.png" /></p>
 <p>If the commit message contains Incident tokens, the add-on will also
 automatically link those incidents to the appropriate build:</p>

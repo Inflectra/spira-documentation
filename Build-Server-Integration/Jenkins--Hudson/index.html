@@ -486,13 +486,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -545,18 +599,6 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2401,17 +2443,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3315,7 +3357,7 @@
 <p class="alert-box"><strong>Note:</strong> this integration is only available for Jenkins Freestyle Project items</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Jenkins provides continuous integration services for software development, primarily in the Java programming language. It is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including CVS, Subversion, Git, Mercurial, Perforce and Clearcase, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands.</p>
-<p>When you use the SpiraPlan plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in SpiraPlan. Then, each time Jenkins creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraPlan will be automatically linked to the incidents fixed, source code revisions committed, and any SpiraPlan tokens in the Jenkins changelog will be parsed and turned into SpiraPlan artifact hyperlinks.</p>
+<p>When you use the SpiraPlan plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in SpiraPlan. Then, each time Jenkins creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraPlan will be automatically linked to the incidents fixed, source code commits committed, and any SpiraPlan tokens in the Jenkins changelog will be parsed and turned into SpiraPlan artifact hyperlinks.</p>
 <h2 id="installing-the-spiraplan-plug-in-for-jenkins">Installing the SpiraPlan Plug-in for Jenkins<a class="headerlink" href="#installing-the-spiraplan-plug-in-for-jenkins" title="Permanent link">&para;</a></h2>
 <p>The plug-in for SpiraPlan is available through the Jenkins Plugin Manager under the Available tab. Use the filter on the right of the screen to narrow down the plugins listed by typing spira. Check off Spira Importer and use the install that is best for your environment.</p>
 <p><img alt="" src="../img/Jenkins__Hudson_4.png" /></p>
@@ -3355,16 +3397,16 @@
 <p><img alt="" src="../img/Jenkins__Hudson_13.png" /></p>
 <p>Clicking on either of the hyperlinks will allow you to navigate to the Build details page inside SpiraPlan:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_14.png" /></p>
-<p>This page will display the status (success / failure) and details of the build (from the Jenkins Console Output) together with a list of the associated incidents, test runs and source code revisions. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira Importer plugin and automatically link incidents and source code revisions to the build information.</p>
+<p>This page will display the status (success / failure) and details of the build (from the Jenkins Console Output) together with a list of the associated incidents, test runs and source code commits. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira Importer plugin and automatically link incidents and source code commits to the build information.</p>
 <h2 id="working-with-source-code-changesets">Working with Source Code Changesets<a class="headerlink" href="#working-with-source-code-changesets" title="Permanent link">&para;</a></h2>
-<p>When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in SpiraPlan. For example they may want to record that the revision fixes a specific incident or implements a specific feature (requirement).</p>
+<p>When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in SpiraPlan. For example they may want to record that the commit fixes a specific incident or implements a specific feature (requirement).</p>
 <p>Linking an artifact is very simple. All the developer needs to do is enter the artifact token in the following format:</p>
 <p><strong>[PREFIX:ID]</strong></p>
 <p>The first half, the Artifact Identifier, is a two-letter code that is used throughout SpiraPlan, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the number of the artifact. So by creating a commit message that reads:</p>
-<p>SpiraPlan will automatically detect the tokens and will include links to them under the Associations tab for each revision detail in SpiraPlan.</p>
-<p>In addition, when Jenkins creates the next build (that includes this revision), the plugin will automatically parse the revision message and convert the tokens into hyperlinks to the corresponding SpiraPlan artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the SpiraPlan items:</p>
+<p>SpiraPlan will automatically detect the tokens and will include links to them under the Associations tab for each commit detail in SpiraPlan.</p>
+<p>In addition, when Jenkins creates the next build (that includes this commit), the plugin will automatically parse the commit message and convert the tokens into hyperlinks to the corresponding SpiraPlan artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the SpiraPlan items:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_15.png" /></p>
-<p>Meanwhile, inside SpiraPlan, the system will use the same information to automatically link the list of associated revisions to the build record:</p>
+<p>Meanwhile, inside SpiraPlan, the system will use the same information to automatically link the list of associated commits to the build record:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_16.png" /></p>
 <p>If the commit message contains Incident tokens, the plugin will also automatically link those incidents to the appropriate build:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_17.png" /></p>

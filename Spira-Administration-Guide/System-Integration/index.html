@@ -486,13 +486,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -545,18 +599,6 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2459,17 +2501,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3265,7 +3307,7 @@ button will achieve this. The recommended procedure for forcing a re-sync is to 
 <p>In the "Data Mapping" column each plugin has a dropdown that shows all the active products on the system, ordered alphabetically. The TFS plugin has this drodown open. You can see two different icons to the left of the product names: a full hexagon and an empty hexagon. A full hexagon means that the product is actively using this particular plugin. Selecting a product from the dropdown and then clicking the arrow to its right will take you to the detailed <a href="../Product-General-Settings/#data-synchronization">product data synchronization page</a> for that plugin and product.</p>
 <h2 id="version-control-integration-on-premise-customers-only">Version Control Integration (On-Premise Customers Only)<a class="headerlink" href="#version-control-integration-on-premise-customers-only" title="Permanent link">&para;</a></h2>
 <p><em>This section refers to the functionality available to on-premise customers of SpiraPlan. If you are using the cloud / hosted version of SpiraPlan, please refer to <a href="../System/#taravault">TaraVault Configuration</a> instead.</em></p>
-<p>SpiraPlan® is capable of integrating with a variety of Version Control (VC) / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link revisions in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.</p>
+<p>SpiraPlan® is capable of integrating with a variety of Version Control (VC) / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.</p>
 <p>The information on using the various version control providers for SpiraPlan® and the steps for configuring the provider-specific settings are described in the <em>SpiraPlan/Team Version Control Integration Guide</em>.</p>
 <p>To configure a version control provider, you need to click on the Administration > Integration > Version Control link in the Administration navigation to bring up the list of configured version control providers:</p>
 <p><img alt="" src="../img/System_Integration_76.png" /></p>

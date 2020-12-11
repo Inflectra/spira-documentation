@@ -749,13 +749,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -808,18 +862,6 @@
   <li class="md-nav__item">
     <a href="../Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2662,17 +2704,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3896,7 +3938,7 @@
 <p>This section lists any filters/searches have been saved from the various artifact list screens throughout the application and marked as <strong>shared filters</strong>. This allows users to store specific combinations of searches that the product team needs to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).</p>
 <p>The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "<strong><em>Delete</em></strong>" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.</p>
 <h2 id="schedule">Schedule<a class="headerlink" href="#schedule" title="Permanent link">&para;</a></h2>
-<p>This Gantt chart shows all active releases and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.</p>
+<p>This Gantt chart shows all active releases<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">1</a></sup> and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.</p>
 <h2 id="requirement-completion">Requirement Completion<a class="headerlink" href="#requirement-completion" title="Permanent link">&para;</a></h2>
 <p>This chart shows the proportion of all active requirements that have been completed across all active releases in this product. When 100% of the requirements are completed, the color changes so that it is easy to tell what is in progress vs completed.</p>
 <h2 id="requirement-incident-count">Requirement Incident Count<a class="headerlink" href="#requirement-incident-count" title="Permanent link">&para;</a></h2>
@@ -3930,7 +3972,7 @@
 <p><img alt="" src="../img/UserProduct_Management_67.png" /></p>
 <p>However, unlike the 'Requirements Coverage' widget, when you filter the product home by release/sprint, this widget will filter the requirements coverage graph to include all requirements (regardless of release/sprint), but only considering covering test cases that are associated with the selected release/sprint. This is useful when you want to determine the regression requirements test coverage of a specific release (i.e. does running all the tests relevant to this release cover all the necessary requirements, not just new requirements).</p>
 <h2 id="requirements-summary">Requirements Summary<a class="headerlink" href="#requirements-summary" title="Permanent link">&para;</a></h2>
-<p>This section consists of a summary table that displays the aggregate count of requirements in the system broken-down by importance (on the x-axis) and status (on the y-axis). This allows the product manager to determine how many critical vs. low priority enhancements are waiting to be implemented, vs. actually being implemented. In addition, it makes a distinction between those requirements simply requested and those actually planned for implementation, so the product manager can see what the backlog is between the customer's demands, and the plan in place. Clicking on the "<strong><em>View Details</em></strong>" button at the top of the table simply brings up a detail graph that you can customize by selecting the axes. Clicking on the individual values in the cells will display the requirements list with the filter set to match the importance and status of the value.</p>
+<p>This section consists of a summary table that displays the aggregate count of requirements in the system broken-down by importance (on the x-axis) and status (on the y-axis). This allows the product manager to determine how many critical vs. low priority enhancements are waiting to be implemented, vs. actually being implemented. In addition, it makes a distinction between those requirements simply requested and those actually planned for implementation, so the product manager can see what the backlog is between the customer's demands, and the plan in place. Clicking on the "<strong><em>View Details</em></strong>" button at the top of the table takes you to the Requirement list page. Clicking on the individual values in the cells will display the requirements list with the filter set to match the importance and status of the value.</p>
 <h2 id="release-task-progress">Release Task Progress<a class="headerlink" href="#release-task-progress" title="Permanent link">&para;</a></h2>
 <p>This widget allows you to quickly ascertain the task progress of each of the active releases that make up the current product in one snapshot. Each release is displayed together with a graphical display that illustrates the completion percentage and status with different colored bars. In addition, if you hover the mouse over the graphical display it will display a tooltip that provides a more detailed description of the number of tasks in each status.</p>
 <p><img alt="" src="../img/UserProduct_Management_64.png" /></p>
@@ -3977,7 +4019,7 @@
 <h2 id="tag-cloud">Tag Cloud<a class="headerlink" href="#tag-cloud" title="Permanent link">&para;</a></h2>
 <p>This widget lets you see the list of document tags being used in the product:</p>
 <p><img alt="" src="../img/UserProduct_Management_69.png" /></p>
-<p>The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List]((../Document-Management/#document-list) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.</p>
+<p>The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the <a href="../Document-Management/#document-list">Document List</a> page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.</p>
 <h2 id="test-case-cumulative-progress">Test Case Cumulative Progress<a class="headerlink" href="#test-case-cumulative-progress" title="Permanent link">&para;</a></h2>
 <p>This section consists of a chart that displays the last 30 days of test case executions cumulatively. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category. For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.</p>
 <p><img alt="" src="../img/UserProduct_Management_72.png" /></p>
@@ -4000,9 +4042,9 @@
 <h2 id="incident-aging">Incident Aging<a class="headerlink" href="#incident-aging" title="Permanent link">&para;</a></h2>
 <p>This section displays the number of days incidents have been left open in the system. The chart is organized as a histogram, with the count of incidents on the y-axis and different age intervals on the x-axis.</p>
 <h2 id="incident-open-count">Incident Open Count<a class="headerlink" href="#incident-open-count" title="Permanent link">&para;</a></h2>
-<p>This section show a bar chart to visualize the breakdown of all open incidents in the product by priority. The chart's bar match the color assigned to that priority. Clicking on the "View Details" link at the top of the widget loads a chart builder where you can further refine and filter the chart to meet your needs.</p>
+<p>This section show a bar chart to visualize the breakdown of all open incidents in the product by priority. The chart's bar match the color assigned to that priority. Clicking on the "View Details" link at the top of the widget opens the Incident list page.</p>
 <h2 id="incident-summary">Incident Summary<a class="headerlink" href="#incident-summary" title="Permanent link">&para;</a></h2>
-<p>This section consists of a summary table that displays the aggregate count of incidents in the system broken-down by priority (on the x-axis) and status (on the y-axis). This allow the product manager to determine how many critical vs. low priority incidents are waiting to be addressed, and how many new items need to be categorized and assigned. Clicking on the "View Details" link at the top of the table simply brings up a detail graph that you can customize by selecting the axes. Clicking on the individual values in the cells will display the incident list with the filter set to match the priority and status of the value.</p>
+<p>This section consists of a summary table that displays the aggregate count of incidents in the system broken-down by priority (on the x-axis) and status (on the y-axis). This allow the product manager to determine how many critical vs. low priority incidents are waiting to be addressed, and how many new items need to be categorized and assigned. Clicking on the "View Details" link at the top of the table opens the Incident list page. Clicking on the individual values in the cells will display the incident list with the filter set to match the priority and status of the value.</p>
 <p>By default this summary table displays the total count of all incidents
 -- regardless of type, however my changing the drop-down list to a specific incident type (e.g. bug, enhancement, issue, etc.), the product manager can filter the summary table to just items of that type. <em>You can also configure in the settings whether to use Priority or Severity for the x-axis</em></p>
 <h2 id="incident-test-coverage">Incident Test Coverage<a class="headerlink" href="#incident-test-coverage" title="Permanent link">&para;</a></h2>
@@ -4011,7 +4053,7 @@
 <p>This section displays a breakdown of the top issues logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see
 <a href="../Incident-Tracking/#incident-details">Incident Tracking &gt; Incident Details</a>). <em>You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.</em></p>
 <h2 id="risk-summary">Risk Summary<a class="headerlink" href="#risk-summary" title="Permanent link">&para;</a></h2>
-<p>This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure*.*</p>
+<p>This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.</p>
 <h2 id="top-open-risks">Top Open Risks<a class="headerlink" href="#top-open-risks" title="Permanent link">&para;</a></h2>
 <p>This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the <a href="../Incident-Tracking/#incident-details">incident details page</a> for the risk in question.
 <em>You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.</em></p>
@@ -4029,8 +4071,18 @@
 <li><strong>Task Burndown</strong>: Read more about how this graph works here <a href="../Reports-Center/#task-burndown-chart">here</a>.</li>
 </ol>
 <h2 id="source-code-commits">Source Code Commits<a class="headerlink" href="#source-code-commits" title="Permanent link">&para;</a></h2>
-<p>This section consists of a chart that displays the last 3 months of code commits to the product (if you are using the source code functionality of the application). Commits are aggregated by week. The chart is color coded by bottom quartile, the middle 50%, and the top quartile of activity.</p>
 <p><img alt="" src="../img/UserProduct_Management_73.png" /></p>
+<p>This section consists of a chart that displays the last 3 months of code commits to the product (if you are using the source code functionality of the application). Commits are aggregated by week. The chart is color coded by bottom quartile, the middle 50%, and the top quartile of activity.</p>
+<p>Above the chart is a branch selector. This shows you the current branch and lets you choose which branch in the source code repository to view. This is stored for your user across the whole product, which means that you will see information for this same branch in other relevant places - eg when viewing files, or when viewing commits.</p>
+<p>Below the chart is a list of the five most recent commits, along with the date they were made (hovering over the commit name will show a tooltip with the commit message and exact time of the commit). Click the "View All" button to open the <a href="../Commits/#commit-list">commit list</a> page.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:active-release">
+<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               

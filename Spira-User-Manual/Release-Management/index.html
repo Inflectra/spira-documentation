@@ -707,8 +707,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#revisions" class="md-nav__link">
-    Revisions
+  <a href="#commits" class="md-nav__link">
+    Commits
   </a>
   
 </li>
@@ -880,13 +880,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -939,18 +993,6 @@
   <li class="md-nav__item">
     <a href="../Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2793,17 +2835,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3879,8 +3921,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#revisions" class="md-nav__link">
-    Revisions
+  <a href="#commits" class="md-nav__link">
+    Commits
   </a>
   
 </li>
@@ -3924,10 +3966,12 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to use the Release Management features of SpiraPlan® to manage different versions of the system being tested in a particular product. This is an optional feature of the system, and you can manage the testing for a product successfully without tracking individual releases. Typically, when you develop a system, it is important to ensure that features introduced in successive versions do not impair existing functionality - this is known as <em>regression testing</em>.</p>
 <p>In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.</p>
-<p>There are two types of release artifact in SpiraPlan® - major product releases that are displayed with the release icon and represent major versions of the system, and release Sprints (aka builds) that are displayed with the sprint icon and represent intermediate builds/sprints of the system. <em>Note: Sprints can be contained within a Release, but not the other way round.</em></p>
+<p>There are two types of release artifact in SpiraPlan® - product releases that are displayed with the release icon and represent major or minor versions of the system, and release Sprints that are displayed with the sprint icon. <em>Note: Sprints can be contained within a Release, but not the other way round.</em></p>
 <p>The main differences between releases and sprints are as follows:</p>
-<p>Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.</p>
-<p>When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child builds/sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).</p>
+<ul>
+<li>Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.</li>
+<li>When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).</li>
+</ul>
 <h2 id="release-traceability-and-coverage">Release Traceability and Coverage<a class="headerlink" href="#release-traceability-and-coverage" title="Permanent link">&para;</a></h2>
 <p>From the release list page you can see a number of columns that show calculated data for each release, based off:</p>
 <ul>
@@ -4211,12 +4255,12 @@ days, the system will automatically calculate how many hours of effort (planned 
 <p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the build detailed information itself, and the bottom part of the right pane displays different information associated with the build.</p>
 <p>The navigation pane consists of a link that will take you back to the build list, as well as a list of the other builds that belong to the same release/sprint as the current one. The top part of the right pane allows you to view the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.</p>
 <p>The lower part of the right pane contains tabs that can display different information associated with the build. Each of the tabs --
-"Associations", "Incidents", "Revisions", and "Test Runs" - is described separately below.</p>
+"Associations", "Incidents", "Commits", and "Test Runs" - is described separately below.</p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
-<p>This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code revisions that were included in the current build:</p>
+<p>This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code commits that were included in the current build:</p>
 <p><img alt="" src="../img/Release_Management_278.png" /></p>
-<h3 id="revisions">Revisions<a class="headerlink" href="#revisions" title="Permanent link">&para;</a></h3>
-<p>This tab displays a list of the source code revisions that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:</p>
+<h3 id="commits">Commits<a class="headerlink" href="#commits" title="Permanent link">&para;</a></h3>
+<p>This tab displays a list of the source code commits that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:</p>
 <p><img alt="" src="../img/Release_Management_279.png" /></p>
 <h3 id="incidents_1">Incidents<a class="headerlink" href="#incidents_1" title="Permanent link">&para;</a></h3>
 <p>This tab displays the list of incidents that have been fixed in the current build. The grid can be sorted and filtered by using the appropriate controls:</p>

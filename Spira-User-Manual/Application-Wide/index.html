@@ -667,13 +667,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -726,18 +780,6 @@
   <li class="md-nav__item">
     <a href="../Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2580,17 +2622,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3646,6 +3688,8 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <li>Incidents</li>
 <li>Requirements</li>
 <li>Risks</li>
+<li>Source code commits</li>
+<li>Source code files</li>
 <li>Tasks</li>
 <li>Test cases (in SpiraTeam and SpiraPlan only)</li>
 </ul>
@@ -3660,14 +3704,14 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <li>name of the person who created the association</li>
 <li>a comment that describes why the association was made. In the case of an indirect association (eg when a link to an incident is added to a requirement during a test run), the comment will contain the name of the specific artifact that created that indirect association.</li>
 </ul>
-<p>In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any revisions, across all branches, that are linked to this artifact.</p>
+<p>In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any commits, across all branches, that are linked to this artifact.</p>
 <p>You can perform the following actions on the list of associations:</p>
 <ol>
-<li><strong>Delete</strong> -- removes the selected association to the other artifact. This will only delete the association, not the linked artifact itself.</li>
-<li><strong>Refresh</strong> -- updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.</li>
-<li><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to the list of associations</li>
-<li><strong>Clear Filters</strong> -- Clears the current filter, so that all associations for the current requirement are shown.</li>
-<li><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.</li>
+<li><strong>Delete</strong>: removes the selected association to the other artifact. This will only delete the association, not the linked artifact itself. Not all associations can be removed in this way because they are managed by the application (for example, the association between a commit with artifact tokens in it and those artifacts)</li>
+<li><strong>Refresh</strong>: updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.</li>
+<li><strong>Filter / Apply Filter</strong>: Applies the entries in the filter boxes to the list of associations</li>
+<li><strong>Clear Filters</strong>: Clears the current filter, so that all associations for the current requirement are shown.</li>
+<li><strong>Edit</strong>: Clicking the "<strong><em>Edit</em></strong>" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.</li>
 </ol>
 <p>To create a new association, click the "<strong><em>Add</em></strong>" button to display the add association panel (below is an example from requirements):</p>
 <p><img alt="" src="../img/Requirements_Management_119.png" /></p>

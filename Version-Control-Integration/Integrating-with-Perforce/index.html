@@ -486,13 +486,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -545,18 +599,6 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2403,17 +2445,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6" checked>
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3328,203 +3370,81 @@
 <ul>
 <li>
 <p>Copy the following files to the folder named "VersionControl" in the SpiraTeam installation folder:</p>
+<ul>
+<li>Inflectra.Global.dll</li>
+<li>P4API.dll</li>
+<li>P4DN.dll</li>
+<li>PerforceProvider.dll</li>
+</ul>
 </li>
 <li>
-<p>Inflectra.Global.dll</p>
-</li>
-<li>
-<p>P4API.dll</p>
-</li>
-<li>
-<p>P4DN.dll</p>
-</li>
-<li>
-<p>PerforceProvider.dll</p>
-</li>
-<li>
-<p>Log in as the Administrator and go into SpiraTeam main
-Administration page and click on the "Version Control" link under
-<strong>System</strong>.</p>
+<p>Log in as the Administrator and go into SpiraTeam main Administration page and click on the "Version Control" link under <strong>System</strong>.</p>
 </li>
 <li>
 <p><img alt="" src="../img/Integrating_with_Perforce_53.png" /></p>
 </li>
 </ul>
-<p>Click the "Add" button to enter the
-Plug-in details page. The fields required are as follows:</p>
+<p>Click the "Add" button to enter the Plug-in details page. The fields required are as follows:</p>
 <ul>
-<li>
-<p><strong>Name</strong>: The name must be "PerforceProvider".</p>
-</li>
-<li>
-<p><strong>Description</strong>: The description is for your use only, and does
-not affect operation of the plug-in.</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the plug-in is active and able to be
-used for any project.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong>: This field is the server's DNS or IP with
-the port to connect to. No depot information or root directory
-is to be specified here. Do not enter in any protocol, like
-http:// or ftp://.</p>
-</li>
-<li>
-<p><strong>Login / Password</strong>: The user id and the password of the user
-to use while accessing and retrieving information from the
-Subversion server. If either field needs to be blank, enter in
-'anonymous'.</p>
-</li>
-<li>
-<p><strong>Domain</strong>: Not used.</p>
-</li>
-<li>
-<p><strong>Custom01</strong>: The client name is to be entered here. The plugin
-will attempt to create the client if it does not exist. Unless
-you have a client pre-defined for the plugin, we recommend using
-the default, "PerforceProvider".</p>
-</li>
-<li>
-<p><strong>Custom02</strong>: The base depot or root directory must be entered
-here.</p>
-</li>
-<li>
-<p><strong>Custom04</strong>: <em>(This is not used and can be left empty)</em></p>
-</li>
-<li>
-<p><strong>Custom03</strong>: The encoding to use for the Perforce server (Optional). Depending on your instance you may need to use: <em>utf-8, utf-16, utf, utf8-bom</em></p>
-</li>
-<li>
-<p><strong>Custom05</strong>: Normally this should be left empty. However if you need to enable more detailed logging, just enter the word <em>'true'</em> in the box to enable trace logging.</p>
-</li>
-<li>
-<p>When finished, click the "Insert" button and you will be taken back
-to the Version Control integration list page, with PerforceProvider
-listed as an available plug-in.</p>
-</li>
-<li>
-<p><img alt="" src="../img/Integrating_with_Perforce_54.png" /></p>
-</li>
+<li><strong>Name</strong>: The name must be "PerforceProvider".</li>
+<li><strong>Description</strong>: The description is for your use only, and does not affect operation of the plug-in.</li>
+<li><strong>Active</strong>: If checked, the plug-in is active and able to be used for any project.</li>
+<li><strong>Connection Info</strong>: This field is the server's DNS or IP with the port to connect to. No depot information or root directory is to be specified here. Do not enter in any protocol, like http:// or ftp://.</li>
+<li><strong>Login / Password</strong>: The user id and the password of the user to use while accessing and retrieving information from the Subversion server. If either field needs to be blank, enter in
+'anonymous'.</li>
+<li><strong>Domain</strong>: Not used.</li>
+<li><strong>Custom01</strong>: The client name is to be entered here. The plugin will attempt to create the client if it does not exist. Unless you have a client pre-defined for the plugin, we recommend using the default, "PerforceProvider".</li>
+<li><strong>Custom02</strong>: The base depot or root directory must be entered here.</li>
+<li><strong>Custom04</strong>: <em>(This is not used and can be left empty)</em></li>
+<li><strong>Custom03</strong>: The encoding to use for the Perforce server (Optional). Depending on your instance you may need to use: <em>utf-8, utf-16, utf, utf8-bom</em></li>
+<li><strong>Custom05</strong>: Normally this should be left empty. However if you need to enable more detailed logging, just enter the word <em>'true'</em> in the box to enable trace logging.</li>
 </ul>
-<p>Verify that you are in the correct
-project using the drop-down at top, and click on the "Project
-Settings" link for the PerforceProvider. You will get a screen
-listing all the same configuration settings:</p>
+<p>When finished, click the "Insert" button and you will be taken back to the Version Control integration list page, with PerforceProvider listed as an available plug-in.
+<img alt="" src="../img/Integrating_with_Perforce_54.png" /></p>
+<p>Verify that you are in the correct project using the drop-down at top, and click on the "Project Settings" link for the PerforceProvider. You will get a screen listing all the same configuration settings:</p>
 <ul>
-<li>
-<p>Be sure to change the Active field to Yes, or the repository
-will not be available for the current project.</p>
-</li>
-<li>
-<p>Any other settings entered on this page will override - and have
-the same use as - the general settings that you created above.
-You would use these settings if you will have more than one
-project access different code repositories.</p>
-</li>
-<li>
-<p>Initial setup is complete, click on the "Source Code" menu under the
-Tracking tab to navigate and browse the source code repository.</p>
-</li>
+<li>Be sure to change the Active field to Yes, or the repository will not be available for the current project.</li>
+<li>Any other settings entered on this page will override - and have the same use as - the general settings that you created above. You would use these settings if you will have more than one project access different code repositories.</li>
+<li>Initial setup is complete, click on the "Source Code" menu under the Tracking tab to navigate and browse the source code repository.</li>
 </ul>
 <h2 id="using-perforce-with-spirateam">Using Perforce with SpiraTeam<a class="headerlink" href="#using-perforce-with-spirateam" title="Permanent link">&para;</a></h2>
-<p>While being able to browse the source code repository can be useful in
-itself, the real strength comes from linking artifacts in SpiraTeam -
-including Incidents, Requirements, and Tasks - to revisions checked into
-the software repository.</p>
+<p>While being able to browse the source code repository can be useful in itself, the real strength comes from linking artifacts in SpiraTeam -
+including Incidents, Requirements, and Tasks - to commits checked into the software repository.</p>
 <h3 id="viewing-the-repository-tree">Viewing the Repository Tree<a class="headerlink" href="#viewing-the-repository-tree" title="Permanent link">&para;</a></h3>
-<p>View the source code tree by selecting the "Source Code" link under the
-Tracking tab. You will get a screen similar to:</p>
+<p>View the source code tree by selecting the "Source Code" link under the Tracking tab. You will get a screen similar to:</p>
 <p><img alt="" src="../img/Integrating_with_Perforce_55.png" /></p>
-<p>The folder tree of the repository is on the left, and files in the
-current selected directory will be listed in the right table. Note that
-this view will always show the current (HEAD) changelist of the depot.
-The file view will display the filename, the current change number of
-the file, the author of the last change, and the date of the last
-change. You can filter and sort on any of the columns, as well.</p>
+<p>The folder tree of the repository is on the left, and files in the current selected directory will be listed in the right table. Note that this view will always show the current (HEAD) changelist of the depot. The file view will display the filename, the current change number of the file, the author of the last change, and the date of the last change. You can filter and sort on any of the columns, as well.</p>
 <h3 id="viewing-file-details">Viewing File Details<a class="headerlink" href="#viewing-file-details" title="Permanent link">&para;</a></h3>
-<p>To view the file details, click on a file in the right-hand side of the
-screen. The file details page displays the details on the selected file.
-By default, it will be the HEAD change, unless you clicked to view the
-file details from a change. By clicking on the file name, you can
-download the specified change version of the file to your local machine.
-This does not open the file on the depot; you are merely downloading the
-file to your local machine.</p>
+<p>To view the file details, click on a file in the right-hand side of the screen. The file details page displays the details on the selected file. By default, it will be the HEAD change, unless you clicked to view the file details from a change. By clicking on the file name, you can download the specified change version of the file to your local machine. This does not open the file on the depot; you are merely downloading the file to your local machine.</p>
 <p><img alt="" src="../img/Integrating_with_Perforce_56.png" /></p>
-<p>Underneath the file's details is a list of all the changes that this
-file was changed in, who performed the change, and the log message for
-the change. Throughout SpiraTeam, changes are indicated by the
-<img alt="Revision" src="../img/Integrating_with_Perforce_12.png" /></p>
+<p>Underneath the file's details is a list of all the changes that this file was changed in, who performed the change, and the log message for the change. Throughout SpiraTeam, changes are indicated by the
+<img alt="Commit" src="../img/Integrating_with_Perforce_12.png" /></p>
 <p>icon.</p>
 <h3 id="change-details">Change Details<a class="headerlink" href="#change-details" title="Permanent link">&para;</a></h3>
-<p>By clicking on a change in SpiraTeam, you will be taken to the
-changelist details page:</p>
+<p>By clicking on a change in SpiraTeam, you will be taken to the changelist details page:</p>
 <p><img alt="" src="../img/Integrating_with_Perforce_57.png" /></p>
-<p>The revision details screen shows the log for the change, the change
-date and author. At the bottom of the page are two tabs, Files and
-Associations. The Files tab lists all files that were a part of this
-change, with their full path and the action that was performed on them
-for this change. Possible values are Added, Modified, Deleted, or Other.</p>
-<p>The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See <a href="#linking-artifacts">Linking Artifacts</a> for
-information on how to link a revision with a Perforce change:</p>
+<p>The commit details screen shows the log for the change, the change date and author. At the bottom of the page are two tabs, Files and Associations. The Files tab lists all files that were a part of this change, with their full path and the action that was performed on them for this change. Possible values are Added, Modified, Deleted, or Other.</p>
+<p>The Associations tab shows any artifact (Incident, Requirement, Test Case, Test Set) that the log message references. See <a href="#linking-artifacts">Linking Artifacts</a> for information on how to link a commit with a Perforce change:</p>
 <p><img alt="" src="../img/Integrating_with_Perforce_58.png" /></p>
 <h3 id="linking-artifacts">Linking Artifacts<a class="headerlink" href="#linking-artifacts" title="Permanent link">&para;</a></h3>
-<p>Linking an artifact is quite simple. To maintain the readability of
-Subversion's change messages, we adopted a bracket token. The token is
-in the format of:</p>
+<p>Linking an artifact is quite simple. To maintain the readability of Subversion's change messages, we adopted a bracket token. The token is in the format of:</p>
 <p><strong>[&lt;artifact identifier>:&lt;artifact id>]</strong></p>
-<p>The first half, the Artifact Identifier, is a two-letter code that is
-used throughout SpiraTeam, and is visible on almost every page in the
-application. For example, a requirement's identifier is "<strong>RQ</strong>".
-Incidents are "<strong>IN</strong>", and test cases are "<strong>TC</strong>". The artifact ID is
-the number of the artifact. So by creating a change message that reads:</p>
-<p>SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.</p>
+<p>The first half, the Artifact Identifier, is a two-letter code that is used throughout SpiraTeam, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and test cases are "<strong>TC</strong>". The artifact ID is the number of the artifact. So by creating a change message that reads:</p>
+<p>SpiraTeam will automatically detect tokens and will include links to them under the Associations tab for a commit detail.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p>While integration with Perforce is rather complex, as a user you will
-only receive a couple of errors that will prevent the integration from
-working:</p>
+<p>While integration with Perforce is rather complex, as a user you will only receive a couple of errors that will prevent the integration from working:</p>
 <ul>
 <li>
-<p>SpiraTeam will not display the login page, and there is an error</p>
-<blockquote>
-<p>(either on the page or in the Application Event Log) that says
-"Could not load file or assembly." This simply means that not all
-of the <a href="#installing-the-perforce-plug-in">required DLL libraries</a> are present in
-the \VersionControl directory inside of the installation. It
-could also mean that the IIS Application Pool is not set to allow
-32-bit applications. (At this time, there are no 64-bit DLLs
-available for the Perforce Provider.)</p>
-</blockquote>
+<p>SpiraTeam will not display the login page, and there is an error &gt; (either on the page or in the Application Event Log) that says &gt; "Could not load file or assembly." This simply means that not all &gt; of the <a href="#installing-the-perforce-plug-in">required DLL libraries</a> are present in &gt; the \VersionControl directory inside of the installation. It &gt; could also mean that the IIS Application Pool is not set to allow &gt; 32-bit applications. (At this time, there are no 64-bit DLLs &gt; available for the Perforce Provider.)</p>
 </li>
 <li>
-<p>SpiraTeam reports that the login information is incorrect. In this</p>
-<blockquote>
-<p>case, double check the Version Control settings, both for the
-Project (which overrides the general settings) and the general
-settings. Project settings will over-ride the general settings. Be
-sure to use a user that has access to all nodes in the tree
-starting from the root repository location.</p>
-</blockquote>
+<p>SpiraTeam reports that the login information is incorrect. In this &gt; case, double check the Version Control settings, both for the &gt; Project (which overrides the general settings) and the general &gt; settings. Project settings will over-ride the general settings. Be &gt; sure to use a user that has access to all nodes in the tree &gt; starting from the root repository location.</p>
 </li>
 <li>
-<p>If you are taken back to the repository screen and given a message</p>
-<blockquote>
-<p>saying that the requested file was deleted from the system, this
-means that an attempt was made to view details on a file that is
-no longer part of the HEAD revision. This can happen when a file
-is deleted or renamed, and this is a normal condition in the code
-repository, not necessarily an error with Subversion or SpiraTeam.</p>
-</blockquote>
+<p>If you are taken back to the repository screen and given a message &gt; saying that the requested file was deleted from the system, this &gt; means that an attempt was made to view details on a file that is &gt; no longer part of the HEAD commit. This can happen when a file &gt; is deleted or renamed, and this is a normal condition in the code &gt; repository, not necessarily an error with Subversion or SpiraTeam.</p>
 </li>
 <li>
-<p>Any other errors about not being able to load the version control</p>
-<blockquote>
-<p>provider will have the error messages logged in the web server's
-(that hosts SpiraTeam) Application Event Log. When contacting
-support, be sure to have the event logs ready.</p>
-</blockquote>
+<p>Any other errors about not being able to load the version control &gt; provider will have the error messages logged in the web server's &gt; (that hosts SpiraTeam) Application Event Log. When contacting &gt; support, be sure to have the event logs ready.</p>
 </li>
 </ul>
                 

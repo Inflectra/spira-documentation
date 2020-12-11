@@ -486,13 +486,67 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4">
     
     <label class="md-nav__link" for="nav-1-5-4">
+      Developing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
+      Source Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
+      Commits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5">
+    
+    <label class="md-nav__link" for="nav-1-5-5">
       Tracking
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tracking" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-5-4">
+      <label class="md-nav__title" for="nav-1-5-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -545,18 +599,6 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Resource-Tracking/" title="Resource Tracking" class="md-nav__link">
       Resource Tracking
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Spira-User-Manual/Source-Code/" title="Source Code" class="md-nav__link">
-      Source Code
     </a>
   </li>
 
@@ -2487,17 +2529,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
     <label class="md-nav__link" for="nav-7-6">
-      Version Control
+      Source Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="2">
+    <nav class="md-nav" aria-label="Source Code" data-md-level="2">
       <label class="md-nav__title" for="nav-7-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Version Control
+        Source Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3312,7 +3354,7 @@
                 
                 <h1 id="using-git">Using Git<a class="headerlink" href="#using-git" title="Permanent link">&para;</a></h1>
 <p>Git is a Distributed Version Control System (DVCS) system that keeps
-track of software revisions and allows many developers to work on a
+track of software commits and allows many developers to work on a
 given project without necessarily being connected to a common network
 since it doesn't rely on a central repository, but instead distributes
 copies of the entire source code repository to each user's workstation.</p>
@@ -3434,7 +3476,7 @@ to it. Then right-click on the top-level 'sampleapplicationone' folder
 and choose Git Commit -> "master" to commit the change. Make sure you
 add a comment:</p>
 <p><img alt="" src="../img/Using_Git_59.png" /></p>
-<p>Click OK and the change (known as a revision) will now be committed into
+<p>Click OK and the change (known as a commit) will now be committed into
 the 'master' branch of the local repository.</p>
 <h2 id="working-with-branches">Working with Branches<a class="headerlink" href="#working-with-branches" title="Permanent link">&para;</a></h2>
 <p>Now that we have the primary development line in our master branch, we
@@ -3483,8 +3525,8 @@ within Spira.</p>
 <p>In addition to being able to browse the source code repository in Spira,
 which is itself very useful, the real strength comes from linking
 artifacts in Spira - including Incidents, Requirements, and Tasks - to
-revisions checked into the software repository, indicating what was
-fixed or implemented in a specific revision.</p>
+commits checked into the software repository, indicating what was
+fixed or implemented in a specific commit.</p>
 <p>Firstly, you can view the source code tree by selecting the Tracking >
 Source Code link under the main Spira menu. This will display the
 following:</p>
@@ -3496,7 +3538,7 @@ ready for use and you can refresh the page to display:</p>
 <p><img alt="" src="../img/Using_Git_67.png" /></p>
 <p>The folder tree of the repository is on the left, and files in the
 current selected directory will be listed in the right table. The file
-view will display the filename, the current revision number of the file
+view will display the filename, the current commit number of the file
 and the date of the last commit. You can filter and sort on any of the
 columns, as well.</p>
 <p>The page will display the folders and files for the currently selected
@@ -3505,27 +3547,27 @@ branch at any time by selecting it from the dropdown menu:</p>
 <p><img alt="" src="../img/Using_Git_68.png" /></p>
 <p>To view the file details, click on a file hyperlink the main source code
 file grid. The file details page displays the details on the selected
-revision. By default, it will be the latest revision in the current
-branch, unless you clicked to view the file details from a revision. By
-clicking on the file name, you can download the specified revision of
+commit. By default, it will be the latest commit in the current
+branch, unless you clicked to view the file details from a commit. By
+clicking on the file name, you can download the specified commit of
 the file to your local machine. This does not do a Git clone or pull;
 you are merely downloading the file to your local machine.</p>
 <p><img alt="" src="../img/Using_Git_69.png" /></p>
 <p>Underneath the file details are tabs that show a preview of the file
-(with syntax highlighting), a list of all the revisions that this file
+(with syntax highlighting), a list of all the commits that this file
 belongs in, or was committed to, who performed the commit, and the log
 message for the commit, and a tab that shows any artifact associations.
-Throughout SpiraTeam, revisions are indicated by the
-<img alt="Revision" src="../img/Using_Git_42.png" /></p>
+Throughout SpiraTeam, commits are indicated by the
+<img alt="Commit" src="../img/Using_Git_42.png" /></p>
 <p>icon:</p>
 <p><img alt="" src="../img/Using_Git_70.png" /></p>
-<p>By clicking on a revision in SpiraTeam, you will be taken to the
-revision details page.</p>
+<p>By clicking on a commit in SpiraTeam, you will be taken to the
+commit details page.</p>
 <p><img alt="" src="../img/Using_Git_71.png" /></p>
-<p>The revision details screen shows the log for the commit, the commit
+<p>The commit details screen shows the log for the commit, the commit
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
-commit, with their full path, size, latest revision and date of edit.</p>
+commit, with their full path, size, latest commit and date of edit.</p>
 <p>The Associations tab shows any artifact (Incident, Requirement, Test
 Case, Test Set) that the log message references. See <a href="../../Spira-User-Manual/Source-Code/#associations_1">Source Code Associations</a></p>
 <p><img alt="" src="../img/Using_Git_72.png" /></p>
@@ -3540,7 +3582,7 @@ application. For example, a requirement's identifier is "<strong>RQ</strong>".
 Incidents are "<strong>IN</strong>", and test cases are "<strong>TC</strong>". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:</p>
 <p>SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.</p>
+them under the Associations tab for a commit detail.</p>
 <p>If you forget to add the association during the commit, you can use the
 'Add Association' option within SpiraTeam to add the association after
 the fact.</p>
