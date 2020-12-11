@@ -246,7 +246,7 @@ One major benefit of this view is that when you filter by a field, you only get 
 
 To access the context menu, right-click on any of the rows in the requirements sorted list and the following menu will be displayed:
 
-![](img/requirements-sorted-list-context-menu.png)
+![](img/Requirements_Management_90.png)
 
 You can now choose any of these options as an alternative to using the icons in the toolbar.
 

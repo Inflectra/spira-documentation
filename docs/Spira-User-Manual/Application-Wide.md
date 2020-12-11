@@ -250,6 +250,8 @@ You can associate artifacts to one another. For instance, you can associate (or 
 - Incidents
 - Requirements
 - Risks
+- Source code commits
+- Source code files
 - Tasks
 - Test cases (in SpiraTeam and SpiraPlan only)
 
@@ -267,15 +269,15 @@ Each association is displayed with the:
 - name of the person who created the association
 - a comment that describes why the association was made. In the case of an indirect association (eg when a link to an incident is added to a requirement during a test run), the comment will contain the name of the specific artifact that created that indirect association.
 
-In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any revisions, across all branches, that are linked to this artifact.
+In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any commits, across all branches, that are linked to this artifact.
 
 You can perform the following actions on the list of associations:
 
-1. **Delete** -- removes the selected association to the other artifact. This will only delete the association, not the linked artifact itself.
-2. **Refresh** -- updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.
-3. **Filter / Apply Filter** -- Applies the entries in the filter boxes to the list of associations
-4. **Clear Filters** -- Clears the current filter, so that all associations for the current requirement are shown.
-5. **Edit** -- Clicking the "***Edit***" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.
+1. **Delete**: removes the selected association to the other artifact. This will only delete the association, not the linked artifact itself. Not all associations can be removed in this way because they are managed by the application (for example, the association between a commit with artifact tokens in it and those artifacts)
+2. **Refresh**: updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.
+3. **Filter / Apply Filter**: Applies the entries in the filter boxes to the list of associations
+4. **Clear Filters**: Clears the current filter, so that all associations for the current requirement are shown.
+5. **Edit**: Clicking the "***Edit***" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.
 
 To create a new association, click the "***Add***" button to display the add association panel (below is an example from requirements):
 

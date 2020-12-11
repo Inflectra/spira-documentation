@@ -17,7 +17,7 @@ control systems. It supports SCM tools including CVS, Subversion, and
 Git, and can execute Apache Ant and Apache Maven based projects as well
 as arbitrary shell scripts and Tomcat.
 
-When you use the SpiraTeam Add-on for Bamboo, it will allow you to associate each Bamboo project and plan with a corresponding project/release in SpiraTeam. Then, each time Bamboo creates a new build, a new build artifact will be created in SpiraTeam. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code revisions committed.
+When you use the SpiraTeam Add-on for Bamboo, it will allow you to associate each Bamboo project and plan with a corresponding project/release in SpiraTeam. Then, each time Bamboo creates a new build, a new build artifact will be created in SpiraTeam. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.
 
 ## Installing the SpiraTeam Add-on for Bamboo 
 
@@ -145,17 +145,17 @@ Build details page inside SpiraTeam:
 
 This page will display the status (success / failure) and details of the
 build (imported from the Bamboo Console Output) together with a list of
-the associated incidents, test runs and source code revisions. The
+the associated incidents, test runs and source code commits. The
 following section will explain how to use your Source Code Management
 (SCM) system to take advantage of the SpiraTeam add-on and automatically
-link incidents and source code revisions to the build information.
+link incidents and source code commits to the build information.
 
 ## Working with Source Code Changesets
 
 When your developers commit changes to your application's source into
 the SCM repository, they should make sure to link the commit to the
 appropriate artifacts in SpiraTeam. For example they may want to record
-that the revision fixes a specific incident or implements a specific
+that the commit fixes a specific incident or implements a specific
 feature (requirement).
 
 Linking an artifact is very simple. All the developer needs to do is
@@ -170,10 +170,10 @@ Incidents are "**IN**", and tasks are "**TK**". The artifact ID is the
 number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect the tokens and will include links to
-them under the Associations tab for each revision detail in SpiraTeam.
+them under the Associations tab for each commit detail in SpiraTeam.
 
 Inside SpiraTeam, the system will use the same information to
-automatically link the list of associated revisions to the build record:
+automatically link the list of associated commits to the build record:
 
 ![](img/Atlassian_Bamboo_30.png)
 

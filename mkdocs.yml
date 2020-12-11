@@ -88,12 +88,14 @@ nav:
       - Test Run Management: Spira-User-Manual\Test-Run-Management.md
       - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
       - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
+    - Developing:
+      - Source Code: Spira-User-Manual\Source-Code.md
+      - Commits: Spira-User-Manual\Commits.md
     - Tracking:
       - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
       - Risk Management: Spira-User-Manual\Risks-Management.md
       - Task Tracking: Spira-User-Manual\Task-Tracking.md
       - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
-      - Source Code: Spira-User-Manual\Source-Code.md
     - Reporting: Spira-User-Manual\Reports-Center.md
   - Programs: 
     - Homepage: Spira-User-Manual\Program-Homepage.md
@@ -223,7 +225,7 @@ nav:
     - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
     - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
     - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
-  - Version Control: 
+  - Source Code: 
     - Git: Version-Control-Integration\Integrating-with-Git.md
     - Subversion: Version-Control-Integration\Integrating-with-Subversion.md
     - Mercurial: Version-Control-Integration\Integrating-with-Mercurial.md

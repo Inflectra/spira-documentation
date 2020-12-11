@@ -21,7 +21,7 @@ In the "Data Mapping" column each plugin has a dropdown that shows all the activ
 
 *This section refers to the functionality available to on-premise customers of SpiraPlan. If you are using the cloud / hosted version of SpiraPlan, please refer to [TaraVault Configuration](../System/#taravault) instead.*
 
-SpiraPlan® is capable of integrating with a variety of Version Control (VC) / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link revisions in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
+SpiraPlan® is capable of integrating with a variety of Version Control (VC) / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
 
 The information on using the various version control providers for SpiraPlan® and the steps for configuring the provider-specific settings are described in the *SpiraPlan/Team Version Control Integration Guide*.
 

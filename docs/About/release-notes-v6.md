@@ -1,5 +1,75 @@
 # Release Notes for Spira v6
 
+## Version 6.7 (December 2020)
+
+!!! info "Summary"
+    This release focused on **improving the experience and functionality for developers and development teams** using Spira. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
+    
+    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost.
+    
+    **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
+
+??? success "New Features"
+    - Improve functionality and performance of Git source code control (for [GitProvider](../../Version-Control-Integration/Integrating-with-Git) and [TaraVault-Git](../../TaraVault-User-Manual/Using-Git)) [RQ:3033]
+    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../../Version-Control-Integration/Integrating-with-Subversion) and [TaraVault-Subversion](../../TaraVault-User-Manual/Using-Subversion)) [RQ:3034]
+    - Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]
+    - Enhance and improve the Source Code [File list](../../Spira-User-Manual/Source-Code/#source-code-file-list) page [RQ:3016]
+    - Enhance and improve the Source Code [File details](../../Spira-User-Manual/Source-Code/#source-code-file-details) page [RQ:3018]
+    - Enhance and improve the Source Code [Commit list](../../Spira-User-Manual/Commits/#commit-list) page [RQ:3010]
+    - Enhance and improve the Source Code [Commit details](../../Spira-User-Manual/Commits/#commit-details) page [RQ:3014]
+    - Add a new Source Code [Commit File details](../../Spira-User-Manual/Commits/#commit-file-details) page to show diffs between current and previous commits [RQ:3013]
+    - Global navigation bar's artifact dropdown has a new "Developing" section for Source Code and Commits [RQ:3003]
+    - Change the source code branch selector from showing a fake 'master' to "(None)" when there are no branches to avoid confusion [RQ:3004]
+    - Change the source code branch selector to a hierarchical dropdown using slash separator to represent folders [RQ:3007]
+    - Improve usability with a more accessible source code cache retention settings that is now measured and set in minutes not hours [RQ:3032]
+    - Enhance and improve the sample source code repository to showcase difference branches and file types [RQ:3023]
+    - Ensure users can review a build and easily explore what code was committed in that build [RQ:3029]
+    - Ensure users can readily find what a specific file looks like at each commit and across different branches [RQ:3028]
+    - Ensure users can easily see how a file changed in a particular commit [RQ:3027]
+
+??? bug "Bug fixes and enhancements"
+    * **Source Code**
+    
+        - Fix source code files missing their author and date information [IN:4526]
+        - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
+        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details): fix the commits tab to always show complete information [IN:5701]
+        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details) > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
+        - Improve the performance of source code on artifact details pages (specifically on the association and attachment panels) [IN:5710]
+        - Add preview support in documents and source code for additional filetypes (bat, feature, markdown, json, yaml, typescript, svg files) [IN:5859]
+        - [Source Code File Details](../../Spira-User-Manual/Source-Code/#source-code-file-details) > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
+        - Fix the GitProvider to not require event log entries that can block usage of third party git providers on cloud installs [IN:5867]
+        - Add preview support for Markdown in Source Code Files [IN:5912]
+        - Update the use of the word "Revision" to "Commit" throughout the application [IN:5920]
+        - Product Home page > [Source Code Commits widget](../../Spira-User-Manual/Product-Homepage/#source-code-commits): improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
+        - Source code file preview for binary files (like png or jpeg) should work correctly for TaraVault Git [IN:6005]
+
+    * **Other**
+
+        - Product Admin > Planning Options: improve the description of "Use Task Status" [IN:2612]
+        - Fix the API that creates a user can so that it will not create a user without a user profile if the API body is incomplete [IN:5432]
+        - Ensure all requirement statuses roll up correctly to parent requirements [IN:5664]
+        - Allow full artifact tag search (eg [IN:123]) in association panels, global search, and filtering on grids (outside of admin) [IN:5706]
+        - Clicking Insert or Add while editing rows on a list page should save all current edits before adding the new row [IN:5786]
+        - System Admin > Product Create page: make the template dropdown list existing templates alphabetically and show their IDs [IN:5811]
+        - Document details page: add new overview tab to match the design of other detail pages [IN:5869]
+        - Release detail page > test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]
+        - Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]
+        - Password Expired page explainer note about password requirements includes information about special characters [IN:5892]
+        - Fix e-signatures for some artifacts not correctly checking passwords or RSS Tokens [IN:5962]
+        - Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]
+        - Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]
+        - Add preview support for Markdown in Documents [IN:5913]
+        - Product Admin > Data Tools: upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
+        - Task list page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
+        - Document Details page > Associations tab: add the ability to create an association to a risk [IN:5952]
+        - System Admin > Template Edit page: make the active selector disabled if the template has any products associated with it [IN:5956]
+        - API to update custom lists should update list items that are currently inactive (as well as those that are active) [IN:5958]
+        - Test Run details page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
+        - Add test runs (as an option) to the requirements detailed report [IN:5947]
+        - Reports default to not automatically generating history or attachment sections [IN:5947]
+        - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
+        - POST call to search for automated test runs has incorrect URL formulation with ?? instead of ? at start of query [IN:6032]
+
 ## Version 6.6.1 (October 2020)
 
 !!! info "Summary"
@@ -7,7 +77,7 @@
     **Baselining Enhancements**: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
 
 ??? success "New features"
-    - Store source code branche and revision information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
+    - Store source code branches and commit information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
     - Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]
     
     * Baselining (SpiraTeam and SpiraPlan only)
@@ -55,13 +125,13 @@
         - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]
 
 ??? bug "Bug fixes and enhancements"
-    * Agile and Planning
+    * **Agile and Planning**
         - If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]
         - If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]
         - Task Board JavaScript can error out and cause the page to not load properly [IN:5627]
         - Refine what statuses show on the Requirement and Task boards - include the default status and any statuses with both a transition to and from [IN:5766]
 
-    * Performance
+    * **Performance**
         - Improve the performance of retrieving parameters for test cases [IN:5600]
         - Improve the performance of updating requirement test and task coverage [IN:5601]
         - Improve the performance of retrieving the list of folders for test cases [IN:5751]
@@ -69,7 +139,7 @@
         - Improve the performance of retrieving the list of folders for tasks [IN:5753]
         - Improve the performance of retrieving the list of folders for documents [IN:5754]
 
-    * Testing
+    * **Testing**
         - Show an asterisk during test execution if there is an existing incident and incidents are required in the product's testing settings [IN:3665]
         - Inserting a new test step should save any existing data being edited for step(s) on the test case details page [IN:3773]
         - Test execution pages should show custom styling for test steps [IN:4716]
@@ -81,7 +151,7 @@
         - Test step rows on test case details page should show inline editors at full width (within the cell) when editing [IN:5773]
         - Test execution with tasks enabled should let you add a task while working in table mode [IN:5774]
 
-    * Other
+    * **Other**
         - The Filter dialogs and 'Export to Product' dialogs are hidden if the page is scrolled down because the dialogs are fixed to the page not the window [IN:4605]
         - Cross-site scripting vulnerability [IN:4613]
         - Documents which have at least one recorded electronic signature should be able to deleted [IN:5615]
@@ -102,7 +172,7 @@
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
-    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code revisions, CI builds, DevOps pipelines, and SpiraPlan artifacts.
+    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts.
 
 ??? success "New features"
     - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
@@ -129,12 +199,12 @@
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
     * Source Code Management (SpiraTeam and SpiraPlan only)
-        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show revisions from all branches, not just the branch being filtered on in the source code view [RQ:2973]
-        - There is a background feature flag to disable Source Code Revisions in Documents/Associations (available to IT on-premise only) [RQ:2974]
+        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show commits from all branches, not just the branch being filtered on in the source code view [RQ:2973]
+        - There is a background feature flag to disable Source Code Commits in Documents/Associations (available to IT on-premise only) [RQ:2974]
 
 
 ??? bug "Bug fixes and enhancements"
-    * Testing
+    * **Testing**
         - Product admins can require a test step has at least one incident if it is executed and marked as anything other than passed [IN:1185]
         - Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]
         - Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]
@@ -144,7 +214,7 @@
         - In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]
         - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
 
-    * Home pages
+    * **Home pages**
         - Improve the styling of the My Page [News Reader widget](../../Spira-User-Manual/User-Product-Management/#my-news-feeds) [IN:5718]
         - The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]
         - The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]
@@ -154,14 +224,14 @@
         - Product home page widgets should all only show active releases when displaying for a particular release [IN:5691]
         - The Relative Size widget should hide the legend when there are over 10 items to show to make it more useable [IN:5692]
 
-    * Other
+    * **Other**
         - Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - so nice to close out an old enhancement :tada:)
         - Do not show an error if you add a folder of test cases to the same release twice (error occurs when the folder contains deleted test cases) [IN:4880]
         - Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]
         - Remove references to 'Project' when exporting an artifact from one product to another [IN:5540]
         - On the incident list page, the column labelled "Progress" is incorrectly called "Task Progress" in the column selector dropdown and filter message box [IN:5575]
-        - Revisions tab on build detail page should show revisions more consistently and not a message about the cache [IN:5548]
-        - Improve the CI/CD functionality of the association panel on artifact details pages to show revisions more consistently and also to link builds to artifacts [IN:5666]
+        - Commits tab on build detail page should show commits more consistently and not a message about the cache [IN:5548]
+        - Improve the CI/CD functionality of the association panel on artifact details pages to show commits more consistently and also to link builds to artifacts [IN:5666]
         - Task list: issues if the user's current folder has been deleted [IN:5027]
         - Test Case list: issues if the user's current folder has been deleted [IN:5658]
         - Test Set list: issues if the user's current folder has been deleted [IN:5659]
@@ -667,7 +737,7 @@
     - Support change/remove user membership for a project using 6.0 API [IN:4107]
     - Add ability to specify/change project group with API [IN:4108]
     - User defined start page not properly remembered on refresh/login [IN:4966]
-    - On revision detail page, the link "Back to Revision List" is incorrect [IN:4974]
+    - On commit detail page, the link "Back to Commit List" is incorrect [IN:4974]
     - SpiraPlan: risk default values and sample data contain a misspelling [IN:4976]
     - Test configuration detail page: entries do not appear unless you refresh the page [IN:4978]
     - For TaraVault users, admin menu for product settings has incorrect label [IN:4995]

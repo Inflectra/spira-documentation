@@ -80,7 +80,7 @@ Schedule Progress color definitions:
 This chart shows the number of active requirements in each active product. Hovering over a segment will show its percentage of all requirements (this is visually represented by the size of the donut wedge). Please note, products with no active requirements are not shown.
 
 ## Schedule 
-This Gantt chart shows all active releases and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
+This Gantt chart shows all active releases and sprints in this program. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
 
 ## Requirement Completion 
 This chart shows the proportion of all active requirements that have been completed across all active products in this program. When 100% of the requirements are completed, the color changes so that it is easy to tell what is in progress vs completed.

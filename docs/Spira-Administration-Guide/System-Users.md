@@ -204,7 +204,7 @@ In addition, there are some artifact-wide permissions that can be specified for 
 
 ![](img/System_Users_56.png)
 
-This section lets you specify if the role allows users to add new documents to the product, edit existing documents, delete documents, edit the document folders, and view/edit source code revisions.
+This section lets you specify if the role allows users to add new documents to the product, edit existing documents, delete documents, edit the document folders, and view/edit source code commits.
 
 
 

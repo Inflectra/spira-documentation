@@ -1,7 +1,7 @@
 # Using Git
 
 Git is a Distributed Version Control System (DVCS) system that keeps
-track of software revisions and allows many developers to work on a
+track of software commits and allows many developers to work on a
 given project without necessarily being connected to a common network
 since it doesn't rely on a central repository, but instead distributes
 copies of the entire source code repository to each user's workstation.
@@ -206,7 +206,7 @@ add a comment:
 
 
 
-Click OK and the change (known as a revision) will now be committed into
+Click OK and the change (known as a commit) will now be committed into
 the 'master' branch of the local repository.
 
 ## Working with Branches
@@ -298,8 +298,8 @@ within Spira.
 In addition to being able to browse the source code repository in Spira,
 which is itself very useful, the real strength comes from linking
 artifacts in Spira - including Incidents, Requirements, and Tasks - to
-revisions checked into the software repository, indicating what was
-fixed or implemented in a specific revision.
+commits checked into the software repository, indicating what was
+fixed or implemented in a specific commit.
 
 Firstly, you can view the source code tree by selecting the Tracking \>
 Source Code link under the main Spira menu. This will display the
@@ -322,7 +322,7 @@ ready for use and you can refresh the page to display:
 
 The folder tree of the repository is on the left, and files in the
 current selected directory will be listed in the right table. The file
-view will display the filename, the current revision number of the file
+view will display the filename, the current commit number of the file
 and the date of the last commit. You can filter and sort on any of the
 columns, as well.
 
@@ -337,9 +337,9 @@ branch at any time by selecting it from the dropdown menu:
 
 To view the file details, click on a file hyperlink the main source code
 file grid. The file details page displays the details on the selected
-revision. By default, it will be the latest revision in the current
-branch, unless you clicked to view the file details from a revision. By
-clicking on the file name, you can download the specified revision of
+commit. By default, it will be the latest commit in the current
+branch, unless you clicked to view the file details from a commit. By
+clicking on the file name, you can download the specified commit of
 the file to your local machine. This does not do a Git clone or pull;
 you are merely downloading the file to your local machine.
 
@@ -349,11 +349,11 @@ you are merely downloading the file to your local machine.
 
 
 Underneath the file details are tabs that show a preview of the file
-(with syntax highlighting), a list of all the revisions that this file
+(with syntax highlighting), a list of all the commits that this file
 belongs in, or was committed to, who performed the commit, and the log
 message for the commit, and a tab that shows any artifact associations.
-Throughout SpiraTeam, revisions are indicated by the
-![Revision](img/Using_Git_42.png)
+Throughout SpiraTeam, commits are indicated by the
+![Commit](img/Using_Git_42.png)
 
 
  icon:
@@ -363,18 +363,18 @@ Throughout SpiraTeam, revisions are indicated by the
 
 
 
-By clicking on a revision in SpiraTeam, you will be taken to the
-revision details page.
+By clicking on a commit in SpiraTeam, you will be taken to the
+commit details page.
 
 ![](img/Using_Git_71.png)
 
 
 
 
-The revision details screen shows the log for the commit, the commit
+The commit details screen shows the log for the commit, the commit
 date and author. At the bottom of the page are two tabs, Files and
 Associations. The Files tab lists all files that were a part of this
-commit, with their full path, size, latest revision and date of edit.
+commit, with their full path, size, latest commit and date of edit.
 
 The Associations tab shows any artifact (Incident, Requirement, Test
 Case, Test Set) that the log message references. See [Source Code Associations](../../Spira-User-Manual/Source-Code/#associations_1)
@@ -399,7 +399,7 @@ Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
 the number of the artifact. So by creating a commit message that reads:
 
 SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a revision detail.
+them under the Associations tab for a commit detail.
 
 If you forget to add the association during the commit, you can use the
 'Add Association' option within SpiraTeam to add the association after

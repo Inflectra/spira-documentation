@@ -5,13 +5,12 @@ This section outlines how to use the Release Management features of SpiraPlan® 
 
 In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.
 
-There are two types of release artifact in SpiraPlan® - major product releases that are displayed with the release icon and represent major versions of the system, and release Sprints (aka builds) that are displayed with the sprint icon and represent intermediate builds/sprints of the system. *Note: Sprints can be contained within a Release, but not the other way round.*
+There are two types of release artifact in SpiraPlan® - product releases that are displayed with the release icon and represent major or minor versions of the system, and release Sprints that are displayed with the sprint icon. *Note: Sprints can be contained within a Release, but not the other way round.*
 
 The main differences between releases and sprints are as follows:
 
-Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
-
-When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child builds/sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
+- Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
+- When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
 
 
 ## Release Traceability and Coverage
@@ -480,19 +479,19 @@ This page is made up of three areas; the left pane is the navigation window, the
 The navigation pane consists of a link that will take you back to the build list, as well as a list of the other builds that belong to the same release/sprint as the current one. The top part of the right pane allows you to view the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.
 
 The lower part of the right pane contains tabs that can display different information associated with the build. Each of the tabs --
-"Associations", "Incidents", "Revisions", and "Test Runs" - is described separately below.
+"Associations", "Incidents", "Commits", and "Test Runs" - is described separately below.
 
 
 ### Associations
 
-This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code revisions that were included in the current build:
+This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code commits that were included in the current build:
 
 ![](img/Release_Management_278.png)
 
 
-### Revisions
+### Commits
 
-This tab displays a list of the source code revisions that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:
+This tab displays a list of the source code commits that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:
 
 ![](img/Release_Management_279.png)
 
