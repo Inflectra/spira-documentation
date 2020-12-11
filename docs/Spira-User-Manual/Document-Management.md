@@ -115,7 +115,7 @@ For documents, you can, depending on how the product administrator has set this 
 
 ### Overview - details
 
-The top part of the main pane allows you to view and/or edit the details of the particular document. You can edit the various fields (name, description, etc.) and once you are satisfied with them, click one of the "***Save***" buttons to commit the changes. In addition, you can delete the current document by choosing "***Delete***", or discard any changes made by clicking "***Refresh***".
+This tab allows you to view and/or edit the details of the particular document. You can edit the various fields (name, description, etc.) and once you are satisfied with them, click one of the "***Save***" buttons to commit the changes. In addition, you can delete the current document by choosing "***Delete***", or discard any changes made by clicking "***Refresh***".
 
 The lower part of the main pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be in "Versions" mode. The functionality in each of these views is described below.
 
@@ -133,7 +133,7 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ### Document Versions
 
-This view displays the list of different versions that exist for the current document. When you initially create a new document there will be only a single version (e.g. v1.0), however as commits are made to the document, rather than having to create a whole new document, you can just upload the new commit as a new version (e.g. v1.1) and it will be added to the list of versions.
+This tab displays the list of different versions that exist for the current document. When you initially create a new document there will be only a single version (e.g. v1.0), however as commits are made to the document, rather than having to create a whole new document, you can just upload the new commit as a new version (e.g. v1.1) and it will be added to the list of versions.
 
 Each version in the list is displayed with its name, a description of what changed in the version, the version number assigned to the commit, the file-size, who uploaded the new version and a link to actually open the new version:
 

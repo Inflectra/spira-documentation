@@ -80,7 +80,7 @@ This report displays all of the requirements defined for the current product in 
 
 ### Requirements Detailed Report
 
-This printable report displays all of the requirements defined for the current product in the order they appear in the requirements list. For each individual requirement, the name, priority, author, status and coverage status are displayed, along with tables containing the list of covering test cases, linked incidents/requirements, associated tasks, attached documents, and the change history:
+This printable report displays all of the requirements defined for the current product in the order they appear in the requirements list. For each individual requirement, the name, priority, author, status and coverage status are displayed, along with tables containing the list of covering test cases, these test cases' test runs, linked incidents/requirements, associated tasks, attached documents, and the change history:
 
 ![](img/Reports_Center_345.png)
 

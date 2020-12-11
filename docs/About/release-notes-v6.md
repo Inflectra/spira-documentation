@@ -3,9 +3,9 @@
 ## Version 6.7 (December 2020)
 
 !!! info "Summary"
-    This release focused on **improving the experience and functionality for developers and development teams** using Spira. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
+    This release focused on **improving the experience and functionality for developers and development teams** using SpiraTeam and SpiraPlan. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
     
-    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost.
+    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. *Note, source code is not included in SpiraTest*.
     
     **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
 
@@ -45,30 +45,33 @@
 
     * **Other**
 
-        - Product Admin > Planning Options: improve the description of "Use Task Status" [IN:2612]
-        - Fix the API that creates a user can so that it will not create a user without a user profile if the API body is incomplete [IN:5432]
+        - Product Admin > [Planning Options](../../Spira-Administration-Guide/Product-Planning/#requirements): improve the description of "Use Task Status" [IN:2612]
         - Ensure all requirement statuses roll up correctly to parent requirements [IN:5664]
         - Allow full artifact tag search (eg [IN:123]) in association panels, global search, and filtering on grids (outside of admin) [IN:5706]
-        - Clicking Insert or Add while editing rows on a list page should save all current edits before adding the new row [IN:5786]
+        - Clicking Insert or Add while editing rows on a list page should save all current edits before adding the new row/artifact [IN:5786]
         - System Admin > Product Create page: make the template dropdown list existing templates alphabetically and show their IDs [IN:5811]
-        - Document details page: add new overview tab to match the design of other detail pages [IN:5869]
+        - [Document details](../../Spira-User-Manual/Document-Management/#document-details) page: add new overview tab to match the design of other detail pages [IN:5869]
+        - [Document details](../../Spira-User-Manual/Document-Management/#document-details) page > Associations tab: add the ability to create an association to a risk [IN:5952]
+        - Add preview support for Markdown in Documents [IN:5913]
         - Release detail page > test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]
         - Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]
         - Password Expired page explainer note about password requirements includes information about special characters [IN:5892]
         - Fix e-signatures for some artifacts not correctly checking passwords or RSS Tokens [IN:5962]
         - Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]
         - Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]
-        - Add preview support for Markdown in Documents [IN:5913]
-        - Product Admin > Data Tools: upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
-        - Task list page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
-        - Document Details page > Associations tab: add the ability to create an association to a risk [IN:5952]
+        - Product Admin > [Data Tools](../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools): upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
+        - [Task list](../../Spira-User-Manual/Task-Tracking/#task-list) page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
         - System Admin > Template Edit page: make the active selector disabled if the template has any products associated with it [IN:5956]
-        - API to update custom lists should update list items that are currently inactive (as well as those that are active) [IN:5958]
-        - Test Run details page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
-        - Add test runs (as an option) to the requirements detailed report [IN:5947]
+        - [Test Run details](../../Spira-User-Manual/Test-Run-Management/#test-run-details) page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
+        - Add test runs (as an option) to the [requirements detailed report](../../Spira-User-Manual/Reports-Center/#requirements-detailed-report) [IN:5947]
         - Reports default to not automatically generating history or attachment sections [IN:5947]
         - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
-        - POST call to search for automated test runs has incorrect URL formulation with ?? instead of ? at start of query [IN:6032]
+    
+    * **API**
+
+        - Fix the API that [creates a user](http://api.inflectra.com/Spira/Services/v6_0/RestServiceOperation.aspx?uri=users%3fpassword%3d%7bpassword%7d%26password_question%3d%7bpassword_question%7d%26password_answer%3d%7bpassword_answer%7d%26project_id%3d%7bproject_id%7d%26project_role_id%3d%7bproject_role_id%7d&method=POST) can so that it will not create a user without a user profile if the API body is incomplete [IN:5432]
+        - API to [update custom lists](http://api.inflectra.com/Spira/Services/v6_0/RestServiceOperation.aspx?uri=project-templates%2f%7bproject_template_id%7d%2fcustom-lists%2f%7bcustom_list_id%7d&method=PUT) should update list items that are currently inactive (as well as those that are active) [IN:5958]
+        - POST call to [search for automated test runs](http://api.inflectra.com/Spira/Services/v6_0/RestServiceOperation.aspx?uri=projects%2f%7bproject_id%7d%2ftest-runs%2fsearch%2fautomated%3fstarting_row%3d%7bstarting_row%7d%26number_of_rows%3d%7bnumber_of_rows%7d%26sort_field%3d%7bsort_field%7d%26sort_direction%3d%7bsort_direction%7d&method=POST) has incorrect URL formulation with ?? instead of ? at start of query [IN:6032]
 
 ## Version 6.6.1 (October 2020)
 
