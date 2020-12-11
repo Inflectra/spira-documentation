@@ -3,47 +3,47 @@
 ## Version 6.7 (December 2020)
 
 !!! info "Summary"
-    This release focused on **improving the experience and functionality for developers and development teams** using Spira. On top of integrating with the top IDEs, your CI/CD processes, and unit test, this release brings massive improvements to our source code features.
+    This release focused on **improving the experience and functionality for developers and development teams** using Spira. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
     
-    **We have revamped the source code management module**, and for the first time, there is now a native code difference viewing capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost.
+    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost.
     
     **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
 
 ??? success "New Features"
-    - Improve functionality and performance of Git source code control (for GitProvider and TaraVault-Git) [RQ:3033]
-    - Improve functionality and performance of Subversion source code control (for SubversionProvider and TaraVault-Subversion) [RQ:3034]
+    - Improve functionality and performance of Git source code control (for [GitProvider](../../Version-Control-Integration/Integrating-with-Git) and [TaraVault-Git](../../TaraVault-User-Manual/Using-Git)) [RQ:3033]
+    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../../Version-Control-Integration/Integrating-with-Subversion) and [TaraVault-Subversion](../../TaraVault-User-Manual/Using-Subversion)) [RQ:3034]
     - Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]
+    - Enhance and improve the Source Code [File list](../../Spira-User-Manual/Source-Code/#source-code-file-list) page [RQ:3016]
+    - Enhance and improve the Source Code [File details](../../Spira-User-Manual/Source-Code/#source-code-file-details) page [RQ:3018]
+    - Enhance and improve the Source Code [Commit list](../../Spira-User-Manual/Commits/#commit-list) page [RQ:3010]
+    - Enhance and improve the Source Code [Commit details](../../Spira-User-Manual/Commits/#commit-details) page [RQ:3014]
+    - Add a new Source Code [Commit File details](../../Spira-User-Manual/Commits/#commit-file-details) page to show diffs between current and previous commits [RQ:3013]
     - Global navigation bar's artifact dropdown has a new "Developing" section for Source Code and Commits [RQ:3003]
-    - Enhance and improve the Source Code File List page [RQ:3016]
-    - Enhance and improve the Source Code Commit List page [RQ:3010]
-    - Enhance and improve the Source Code Commit Details page [RQ:3014]
-    - Enhance and improve the Source Code File details page [RQ:3018]
-    - Add a new Source Code Commit File Details page to show diffs between current and previous commits [RQ:3013]
     - Change the source code branch selector from showing a fake 'master' to "(None)" when there are no branches to avoid confusion [RQ:3004]
     - Change the source code branch selector to a hierarchical dropdown using slash separator to represent folders [RQ:3007]
+    - Improve usability with a more accessible source code cache retention settings that is now measured and set in minutes not hours [RQ:3032]
     - Enhance and improve the sample source code repository to showcase difference branches and file types [RQ:3023]
     - Ensure users can review a build and easily explore what code was committed in that build [RQ:3029]
     - Ensure users can readily find what a specific file looks like at each commit and across different branches [RQ:3028]
     - Ensure users can easily see how a file changed in a particular commit [RQ:3027]
-    - Improve usability with a more accessible source code cache retention settings that is now measured and set in minutes not hours [RQ:3032]
 
 ??? bug "Bug fixes and enhancements"
-    * Source Code
+    * **Source Code**
     
         - Fix source code files missing their author and date information [IN:4526]
         - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
-        - Build Details: fix the commits tab to always show complete information [IN:5701]
-        - Build details page > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
+        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details): fix the commits tab to always show complete information [IN:5701]
+        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details) > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
         - Improve the performance of source code on artifact details pages (specifically on the association and attachment panels) [IN:5710]
         - Add preview support in documents and source code for additional filetypes (bat, feature, markdown, json, yaml, typescript, svg files) [IN:5859]
-        - Source Code File Details > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
+        - [Source Code File Details](../../Spira-User-Manual/Source-Code/#source-code-file-details) > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
         - Fix the GitProvider to not require event log entries that can block usage of third party git providers on cloud installs [IN:5867]
         - Add preview support for Markdown in Source Code Files [IN:5912]
         - Update the use of the word "Revision" to "Commit" throughout the application [IN:5920]
-        - Product Home page > Source Code Commits widget: improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
+        - Product Home page > [Source Code Commits widget](../../Spira-User-Manual/Product-Homepage/#source-code-commits): improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
         - Source code file preview for binary files (like png or jpeg) should work correctly for TaraVault Git [IN:6005]
 
-    * Other
+    * **Other**
 
         - Product Admin > Planning Options: improve the description of "Use Task Status" [IN:2612]
         - Fix the API that creates a user can so that it will not create a user without a user profile if the API body is incomplete [IN:5432]
@@ -125,13 +125,13 @@
         - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]
 
 ??? bug "Bug fixes and enhancements"
-    * Agile and Planning
+    * **Agile and Planning**
         - If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]
         - If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]
         - Task Board JavaScript can error out and cause the page to not load properly [IN:5627]
         - Refine what statuses show on the Requirement and Task boards - include the default status and any statuses with both a transition to and from [IN:5766]
 
-    * Performance
+    * **Performance**
         - Improve the performance of retrieving parameters for test cases [IN:5600]
         - Improve the performance of updating requirement test and task coverage [IN:5601]
         - Improve the performance of retrieving the list of folders for test cases [IN:5751]
@@ -139,7 +139,7 @@
         - Improve the performance of retrieving the list of folders for tasks [IN:5753]
         - Improve the performance of retrieving the list of folders for documents [IN:5754]
 
-    * Testing
+    * **Testing**
         - Show an asterisk during test execution if there is an existing incident and incidents are required in the product's testing settings [IN:3665]
         - Inserting a new test step should save any existing data being edited for step(s) on the test case details page [IN:3773]
         - Test execution pages should show custom styling for test steps [IN:4716]
@@ -151,7 +151,7 @@
         - Test step rows on test case details page should show inline editors at full width (within the cell) when editing [IN:5773]
         - Test execution with tasks enabled should let you add a task while working in table mode [IN:5774]
 
-    * Other
+    * **Other**
         - The Filter dialogs and 'Export to Product' dialogs are hidden if the page is scrolled down because the dialogs are fixed to the page not the window [IN:4605]
         - Cross-site scripting vulnerability [IN:4613]
         - Documents which have at least one recorded electronic signature should be able to deleted [IN:5615]
@@ -204,7 +204,7 @@
 
 
 ??? bug "Bug fixes and enhancements"
-    * Testing
+    * **Testing**
         - Product admins can require a test step has at least one incident if it is executed and marked as anything other than passed [IN:1185]
         - Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]
         - Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]
@@ -214,7 +214,7 @@
         - In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]
         - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
 
-    * Home pages
+    * **Home pages**
         - Improve the styling of the My Page [News Reader widget](../../Spira-User-Manual/User-Product-Management/#my-news-feeds) [IN:5718]
         - The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]
         - The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]
@@ -224,7 +224,7 @@
         - Product home page widgets should all only show active releases when displaying for a particular release [IN:5691]
         - The Relative Size widget should hide the legend when there are over 10 items to show to make it more useable [IN:5692]
 
-    * Other
+    * **Other**
         - Enable custom reports to use ${ReleaseIds} token in their ESQL like custom graphs [IN:460] (see [RQ:2976] above - so nice to close out an old enhancement :tada:)
         - Do not show an error if you add a folder of test cases to the same release twice (error occurs when the folder contains deleted test cases) [IN:4880]
         - Correct references to old term "Resolved Release" to "Planned Release" in incident notifications, incident detailed report, and incident workflows [IN:5485]

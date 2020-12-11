@@ -321,6 +321,10 @@ This widget lets you quickly view the three main graphs used when measuring the 
 
 ## Source Code Commits
 
+![](img/UserProduct_Management_73.png)
+
 This section consists of a chart that displays the last 3 months of code commits to the product (if you are using the source code functionality of the application). Commits are aggregated by week. The chart is color coded by bottom quartile, the middle 50%, and the top quartile of activity.
 
-![](img/UserProduct_Management_73.png)
+Above the chart is a branch selector. This shows you the current branch and lets you choose which branch in the source code repository to view. This is stored for your user across the whole product, which means that you will see information for this same branch in other relevant places - eg when viewing files, or when viewing commits.
+
+Below the chart is a list of the five most recent commits, along with the date they were made (hovering over the commit name will show a tooltip with the commit message and exact time of the commit). Click the "View All" button to open the [commit list](../Commits/#commit-list) page.
