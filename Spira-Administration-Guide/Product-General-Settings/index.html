@@ -3553,12 +3553,17 @@
 <h2 id="product-data-tools">Product Data Tools<a class="headerlink" href="#product-data-tools" title="Permanent link">&para;</a></h2>
 <p>This page contains several different data management tools that can be used to identify certain data issues in the system and correct them. There are two main sections to this page -- Data Caching and Indentation Hierarchy:</p>
 <p><img alt="" src="../img/Product_General_Settings_104.png" /></p>
-<p>a) Database Indexes</p>
-<p>In order to improve the performance of SpiraPlan®, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all SpiraPlan products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.</p>
-<p>b) Data Caching</p>
-<p>In order to improve the performance of SpiraPlan®, certain types of product data are cached. If for any reason you make changes to test cases, test runs or tasks in the system through the database, you may need to update the cached values for test execution status and task progress that are displayed on the requirements and releases pages. To refresh the execution status or task progress data, click on the appropriate "Refresh" button illustrated above.</p>
-<p>c) Indentation Hierarchy</p>
-<p>The Requirement and Releases pages use an "Indent" system for managing the hierarchy of information. This allows requirements and test cases to be nested under parent items and be rapidly searched and filtered on. Sometimes if a move/copy operation is interrupted (due to a network outage, etc.) the hierarchy may get corrupted. If so, you'll see a red Error message instead of the Green OK. If that happens, just click on the appropriate "Correct" button and the system will correct the indent levels for you.</p>
+<ol>
+<li>
+<p><strong>Database Indexes</strong>: In order to improve the performance of SpiraPlan®, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all SpiraPlan products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.</p>
+</li>
+<li>
+<p><strong>Data Caching</strong>: In order to improve the performance of SpiraPlan®, certain types of product data are cached. If for any reason you make changes to test cases, test runs or tasks in the system through the database, you may need to update the cached values for test execution status and task progress that are displayed on the requirements and releases pages. To refresh the execution status or task progress data, click on the appropriate "Refresh" button illustrated above.</p>
+</li>
+<li>
+<p><strong>Indentation Hierarchy</strong>: The Requirement and Releases pages use an "Indent" system for managing the hierarchy of information. This allows requirements and test cases to be nested under parent items and be rapidly searched and filtered on. Sometimes if a move/copy operation is interrupted (due to a network outage, etc.) the hierarchy may get corrupted. If you suspect a problem with either of these artifacts, click the "Check" button. Once the check has run, if you see a red Error message instead of the Green OK that means problems were found. If that happens, click the "Correct" button and the system will correct the indent levels.</p>
+</li>
+</ol>
 <h2 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
 <p>Clicking on the Source Code link in the administration menu will, if a source code provider has been set up by a system administrator, show a screen like the one below.</p>
 <p><img alt="" src="../img/Product_General_Settings_105.png" /></p>

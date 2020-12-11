@@ -2580,43 +2580,23 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuring-vss-in-spiraplan" class="md-nav__link">
+    Configuring VSS in SpiraPlan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-vss-for-your-product" class="md-nav__link">
+    Use VSS for Your Product
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-vss-with-spirateam" class="md-nav__link">
     Using VSS with SpiraTeam
   </a>
-  
-    <nav class="md-nav" aria-label="Using VSS with SpiraTeam">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-repository-tree" class="md-nav__link">
-    Viewing the Repository Tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-file-details" class="md-nav__link">
-    Viewing File Details
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commit-details" class="md-nav__link">
-    Commit Details
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linking-artifacts" class="md-nav__link">
-    Linking Artifacts
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3301,43 +3281,23 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuring-vss-in-spiraplan" class="md-nav__link">
+    Configuring VSS in SpiraPlan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-vss-for-your-product" class="md-nav__link">
+    Use VSS for Your Product
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-vss-with-spirateam" class="md-nav__link">
     Using VSS with SpiraTeam
   </a>
-  
-    <nav class="md-nav" aria-label="Using VSS with SpiraTeam">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-repository-tree" class="md-nav__link">
-    Viewing the Repository Tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#viewing-file-details" class="md-nav__link">
-    Viewing File Details
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commit-details" class="md-nav__link">
-    Commit Details
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linking-artifacts" class="md-nav__link">
-    Linking Artifacts
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3379,60 +3339,49 @@
 <li>SourceSafe.Interop.dll</li>
 </ul>
 </li>
-<li>
-<p>Log in as the Administrator and go into SpiraTeam main Administration page and click on the "Version Control" link under <strong>System</strong>.</p>
-</li>
-<li>
-<p>Click the "Add" button to enter the Plug-in details page. The fields required are as follows:
-<img alt="" src="../img/Integrating_with_VSS_37.png" /></p>
-</li>
-<li>
-<p><strong>Name</strong>: The name must be "VssProvider".</p>
-</li>
+</ul>
+<h2 id="configuring-vss-in-spiraplan">Configuring VSS in SpiraPlan<a class="headerlink" href="#configuring-vss-in-spiraplan" title="Permanent link">&para;</a></h2>
+<p>Before you can start using VSS in SpiraPlan you need to setup, at a system level, how VSS and SpiraPlan should work together: </p>
+<ul>
+<li>Log in as a system admin, and go to System Admininstration &gt; Integration &gt; Source Code</li>
+<li>If there is not already an antry for "VssProvider" click "Add" to go to the Plug-in details page</li>
+</ul>
+<p>Complete the form on this page as below:</p>
+<ul>
+<li><strong>Name</strong>: The name must be "VssProvider".</li>
 <li><strong>Description</strong>: The description is for your use only, and does not affect operation of the plug-in.</li>
 <li><strong>Active</strong>: If checked, the plug-in is active and able to be used for any project.</li>
-<li><strong>Connection Info</strong>: This field points to the filepath where the srcsafe.ini file is located (which contains the VSS database information). For example: C:\VssDatabases\Project1\srcsafe.ini</li>
+<li><strong>Connection Info</strong>: This field points to the filepath where the srcsafe.ini file is located (which contains the VSS database information). For example: <code>C:\VssDatabases\Project1\srcsafe.ini</code></li>
 <li><strong>Login / Password</strong>: The user id and the password of the user to use while accessing and retrieving information from the VSS database. If the repository doesn't require a password, just use "<em>anonymous"</em> as the password.</li>
 <li><strong>Domain:</strong> is not used by the VSS plug-in and can be ignored</li>
 <li><strong>Custom01 -- 05:</strong> are not used by the VSS plug-in and can be ignored</li>
 </ul>
-<p>When finished, click the "Insert" button and you will be taken back to the Version Control integration list page, with VssProvider listed as an available plug-in.</p>
-<p>Verify that you are in the correct project using the drop-down at top, and click on the "Project Settings" link for the VssProvider. You will get a screen listing all the same configuration settings:
-<img alt="" src="../img/Integrating_with_VSS_38.png" /></p>
+<p><img alt="" src="../img/Integrating_with_VSS_37.png" /></p>
+<p>When finished, click "Insert". You will be taken back to the Source Code list page, with VssProvider listed as an available plug-in.</p>
+<h2 id="use-vss-for-your-product">Use VSS for Your Product<a class="headerlink" href="#use-vss-for-your-product" title="Permanent link">&para;</a></h2>
+<p>Once VSS has been configured at the system level, you are ready to use it for any products you need to. </p>
 <ul>
-<li>Be sure to change the Active field to Yes, or the repository will not be available for the current project.</li>
-<li>Any other settings entered on this page will override - and have the same use as - the general settings that you created above. You would use these settings if you will have more than one project access different code repositories.</li>
-<li>Initial setup is complete, click on the "Source Code" menu under the Tracking tab to navigate and browse the source code database.</li>
+<li>First go to the product you want to use for VSS as a product admin</li>
+<li>Go to Product Admin &gt; General Settings &gt; Source Code</li>
+<li>You will be taken to a list of all the providers on your system. Find the VssProvider row; make sure the product dropdown has your current product selected; and click the arrow to the right of the product name to manage VSS for that Product</li>
+<li>You will now be on the "VssProvider Product Settings" page for your chosen product</li>
+<li>If not already active, set "Active" to use and click "Save"</li>
+<li>The product VSS settings screen will now let you fully manage all its settings</li>
+<li>Make sure to override any of the system wide defaults (as outlined above). In particular, the <strong>Connection Info</strong> (the URL to the repo) should be set to the right repo for this product.</li>
+<li>Click "Save" after making any changes.</li>
 </ul>
+<p><img alt="" src="../img/Integrating_with_VSS_38.png" /></p>
 <h2 id="using-vss-with-spirateam">Using VSS with SpiraTeam<a class="headerlink" href="#using-vss-with-spirateam" title="Permanent link">&para;</a></h2>
-<p>While being able to browse the source code repository can be useful in itself, the real strength comes from linking artifacts in SpiraTeam -
-including Incidents, Requirements, and Tasks - to commits checked into the VSS database.</p>
-<h3 id="viewing-the-repository-tree">Viewing the Repository Tree<a class="headerlink" href="#viewing-the-repository-tree" title="Permanent link">&para;</a></h3>
-<p>View the source code tree by selecting the "Source Code" link under the Tracking tab. You will get a screen similar to:</p>
-<p><img alt="" src="../img/Integrating_with_VSS_39.png" /></p>
-<p>The folder tree of the repository is on the left, and files in the current selected directory will be listed in the right table. Note that this view will always show the most recent commit of the database. The file view will display the filename, the current commit number of the file and the date of the last check-in. You can filter and sort on any of the columns, as well.</p>
-<h3 id="viewing-file-details">Viewing File Details<a class="headerlink" href="#viewing-file-details" title="Permanent link">&para;</a></h3>
-<p>To view the file details, click on a file in the right-hand side of the repository. The file details page displays the details on the selected commit. By default, it will be the most recent commit, unless you clicked to view the file details from a commit. By clicking on the file name, you can download the specified commit of the file to your local machine. This does <em>not</em> do a VSS checkout; you are merely downloading the file to your local machine.</p>
-<p><img alt="" src="../img/Integrating_with_VSS_40.png" /></p>
-<p>Underneath the file details is a list of all the commits made to this file, who performed the commit, and the log message for the action performed. Throughout SpiraTeam, commits are indicated by the icon.
-<img alt="Commit" src="../img/Integrating_with_VSS_12.png" /></p>
-<h3 id="commit-details">Commit Details<a class="headerlink" href="#commit-details" title="Permanent link">&para;</a></h3>
-<p>By clicking on a commit in SpiraTeam, you will be taken to the commit details page.</p>
-<p><img alt="" src="../img/Integrating_with_VSS_41.png" /></p>
-<p>The commit details screen shows the log for the action performed, the date and author. At the bottom of the page are two tabs, Files and Associations. The Files tab lists all files that were a part of this commit, with their full path, latest commit and date of edit.</p>
-<p>The Associations tab shows any artifact (Incident, Requirement, Test Case, Test Set) that the log message references. See <a href="../../Spira-User-Manual/Requirements-Management/#overview-scenario">Requirements Management &gt; Overview - Scenario</a> for information on how to link a commit with a VSS check-in or other action:</p>
-<p><img alt="" src="../img/Integrating_with_VSS_42.png" /></p>
-<h3 id="linking-artifacts">Linking Artifacts<a class="headerlink" href="#linking-artifacts" title="Permanent link">&para;</a></h3>
-<p>Linking an artifact is quite simple. To maintain the readability of VSS check-in messages, we adopted a square bracket token. The token is in the format of:</p>
-<p><strong>[&lt;artifact identifier>:&lt;artifact id>]</strong></p>
-<p>The first half, the Artifact Identifier, is a two-letter code that is used throughout SpiraTeam, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and test cases are "<strong>TC</strong>". The artifact ID is the number of the artifact. So by creating a commit message that reads:</p>
-<p>SpiraTeam will automatically detect tokens and will include links to them under the Associations tab for a commit detail.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p>While integration with VSS is rather complex behind the scenes, as a user you will only receive a couple of errors that will prevent the integration from working:</p>
+<p>Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.</p>
+<p>You can read more about working with source code in SpiraPlan at the links below:</p>
 <ul>
-<li>SpiraTeam will not display the login page, and there is an error &gt; (either on the page or in the Application Event Log) that says &gt; "Could not load file or assembly.". If this error occurs, it is &gt; most likely that the VssProvider.dll or some of its dependent &gt; assemblies were not correctly placed in the VersionControl folder &gt; of the SpiraTeam installation.</li>
-<li>SpiraTeam reports that the login information is incorrect. In this &gt; case, double check the Version Control settings, both for the &gt; Project (which overrides the general settings) and the general &gt; settings. Project settings will over-ride the general settings. Be &gt; sure to use a user that has access to all nodes in the tree &gt; starting from the root repository location.</li>
-<li>If you are taken back to the repository screen and given a message &gt; saying that the requested file was deleted from the system, this &gt; means that an attempt was made to view details on a file that was &gt; deleted or destroyed in VSS. This is a normal condition in the &gt; code repository, not necessarily an error with VSS or SpiraTeam.</li>
+<li><a href="../../Spira-User-Manual/Source-Code/#source-code-file-list">Source code files</a></li>
+<li><a href="../../Spira-User-Manual/Commits/#commit-list">Commits</a></li>
+<li><a href="../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages">Linking to artifacts in commit messages</a></li>
+<li><a href="../../Spira-User-Manual/Source-Code/#troubleshooting-source-code-integration">Troubleshooting source code integration</a></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
 <li>If you have the VSS database located on a remote file-share on a &gt; separate server to SpiraTeam, you will need to modify the identify &gt; used by the IIS Application Pool running SpiraTeam. By default the &gt; IIS Application Pool will run as the special Windows user "NETWORK &gt; SERVICE". Whilst this is a secure account with low privileges for &gt; normal use of the system, it may not have sufficient permissions &gt; to access the VSS repository over your Local Area Network (LAN). &gt; We recommend changing the IIS Application Pool to instead run as a &gt; Windows Domain user that has permissions to access the remote &gt; file-share containing the VSS database.</li>
 </ul>
                 
