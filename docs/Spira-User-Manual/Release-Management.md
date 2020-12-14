@@ -122,10 +122,18 @@ Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 ### Insert
 
-The "***Insert***" button has an attached dropdown menu that allows you to choose whether to insert a release or sprint (if you just click "***Insert***" it defaults to inserting a release). In either case, it will insert the new release / sprint
-*above* the currently selected item -- i.e. the one whose check-box has been selected, at the same level in the hierarchy. If you want to insert a release/sprint below a summary item, you need to insert it first, then indent it with the "***Indent***" button. If you insert a release without first selecting an existing release from the list, the new release will simply be inserted at the end of the list.
+The "***Insert***" button has an attached dropdown menu that lets you:
 
-Once the new release has been inserted, the item is switched to "Edit" mode so that you can change the default name, active flag, version number and creator.
+- insert a release (this is the default if you click the main "*Insert*" button)
+- insert a child release
+- insert a sprint
+- insert a child sprint
+
+If you insert a release or sprint (not as a child) the new item is inserted *above* the currently selected item -- i.e. at the same level in the hierarchy but visually above the release with the checked checkbox. If you insert an item with no release selected, the item is inserted at the bottom of the list (at the same level in the hierarchy as the item release or sprint that was previously at the bottom).
+
+If you insert a child release or sprint, the new item is inserted *below* the currently selected item - i.e. nested insde the selected release as a child (a sprint cannot have  child sprints or releases).
+
+Once the new release has been inserted, the item is switched to "Edit" mode so you can change its name, version number or other information.
 
 
 ### Delete
@@ -295,7 +303,7 @@ Read about [how to add and manage followers to an artifact](Application-Wide.md#
 
 
 ### Workflows and Statuses
-Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot by a cancelled release.
+Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot be a cancelled release.
 
 Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
 

@@ -71,7 +71,7 @@ For each requirement each effort column is calculated from the sum of effort fro
 - Remaining Effort: the sum of all tasks' remaining efforts
 - Projected Effort: the sum of all task projected efforts
 
-Task effort calculations are described in more detail [here](../User-Product-Management/#release-task-progress). 
+Task effort calculations are described in more detail [here](../Product-Homepage/#release-task-progress). 
 
 
 ## Requirements List
@@ -444,37 +444,25 @@ This tab shows the list of product tasks that need to be completed for the requi
 ![](img/Requirements_Management_112.png)
 
 
-
-
 Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, projected effort and numeric task identifier. Clicking on the task name will bring up the [Task Details page](../Task-Tracking/#task-details). This allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:
 
-**New Task** -- inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.
+- **New Task**: inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.
+- **Remove**: removes the task from this requirement without actually deleting the task
+- **Refresh**: updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.
+- **Filter / Apply Filter**: Applies the entries in the filter boxes to the list of tasks
+- **Clear Filters**: Clears the current filter, so that all tasks associated with the current requirement are shown.
+- **Edit**: Clicking the "***Edit***" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.
+- **Show/Hide Columns**: Allows you to choose which Task columns are visible
 
-**Remove** -- removes the task from this requirement without actually deleting the task
+The system has a series of shortcuts that simplify the editing of requirements and tasks (these can be changed as required in [product administration](../../Spira-Administration-Guide/Product-Planning/#requirements)):
 
-**Refresh** -- updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.
-
-**Filter / Apply Filter** -- Applies the entries in the filter boxes to the list of tasks
-
-**Clear Filters** -- Clears the current filter, so that all tasks associated with the current requirement are shown.
-
-**Edit** -- Clicking the "***Edit***" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.
-
-**Show/Hide Columns** -- Allows you to choose which Task columns are visible
-
-The system has a series of shortcuts that simplify the editing of requirements and tasks:
-
-If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "***Save***"
-
-When you assign a release/sprint to a requirement, its status automatically changes to "Planned"
-
-When at least one task assigned to the requirement changes from "Not Started" to "In Progress", the parent requirement automatically switches from "Planned" to "In Progress"
-
-When all the tasks under the requirement are completed, the parent requirement will switch to the "Completed" status.
-
-If you manually move a requirement that has *no associated tasks* from "Planned" to "In Progress", the system will automatically generate one task under the requirement and use the requirement's planned effort field to generate the task's estimated effort.
+- If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "***Save***"
+- When you assign a release/sprint to a requirement, its status automatically changes to "Planned"
+- When at least one task assigned to the requirement changes from "Not Started" to "In Progress", the parent requirement automatically switches from "Planned" to "In Progress"
+- When all the tasks under the requirement are completed, the parent requirement will switch to the "Completed" status.
+- If you manually move a requirement that has *no associated tasks* from "Planned" to "In Progress", the system will automatically generate one task under the requirement and use the requirement's planned effort field to generate the task's estimated effort.
 
 ### Attachments
 
