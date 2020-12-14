@@ -91,8 +91,10 @@ A brief note about field syncing in Salesforce: The sheer customizability of Sal
 - **Status**: Users can sync Artifacts'Status from/to Spira if their object has a field named like that.
 - **Comments**: Users can sync Artifacts'Comments from/to Spira if their object has a field named like that.
 
-Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
-Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
+!!! warning
+    Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
+    
+    Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
 
 ![](img/SalesforceDotCom_07-2.png)
 
