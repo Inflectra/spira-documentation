@@ -4054,9 +4054,16 @@
 <h3 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters</a>.</p>
 <h3 id="insert">Insert<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h3>
-<p>The "<strong><em>Insert</em></strong>" button has an attached dropdown menu that allows you to choose whether to insert a release or sprint (if you just click "<strong><em>Insert</em></strong>" it defaults to inserting a release). In either case, it will insert the new release / sprint
-<em>above</em> the currently selected item -- i.e. the one whose check-box has been selected, at the same level in the hierarchy. If you want to insert a release/sprint below a summary item, you need to insert it first, then indent it with the "<strong><em>Indent</em></strong>" button. If you insert a release without first selecting an existing release from the list, the new release will simply be inserted at the end of the list.</p>
-<p>Once the new release has been inserted, the item is switched to "Edit" mode so that you can change the default name, active flag, version number and creator.</p>
+<p>The "<strong><em>Insert</em></strong>" button has an attached dropdown menu that lets you:</p>
+<ul>
+<li>insert a release (this is the default if you click the main "<em>Insert</em>" button)</li>
+<li>insert a child release</li>
+<li>insert a sprint</li>
+<li>insert a child sprint</li>
+</ul>
+<p>If you insert a release or sprint (not as a child) the new item is inserted <em>above</em> the currently selected item -- i.e. at the same level in the hierarchy but visually above the release with the checked checkbox. If you insert an item with no release selected, the item is inserted at the bottom of the list (at the same level in the hierarchy as the item release or sprint that was previously at the bottom).</p>
+<p>If you insert a child release or sprint, the new item is inserted <em>below</em> the currently selected item - i.e. nested insde the selected release as a child (a sprint cannot have  child sprints or releases).</p>
+<p>Once the new release has been inserted, the item is switched to "Edit" mode so you can change its name, version number or other information.</p>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the releases whose check-boxes have been selected. If any of the releases have child releases/sprint, then the child releases and sprints are also deleted.</p>
 <h3 id="indent">Indent<a class="headerlink" href="#indent" title="Permanent link">&para;</a></h3>
@@ -4149,7 +4156,7 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <h3 id="followers">Followers<a class="headerlink" href="#followers" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
 <h3 id="workflows-and-statuses">Workflows and Statuses<a class="headerlink" href="#workflows-and-statuses" title="Permanent link">&para;</a></h3>
-<p>Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot by a cancelled release.</p>
+<p>Releases can have the following statuses: planned, in progress, completed, closed, deferred, and cancelled. Note that releases marked as closed, deferred, or cancelled cannot be associated with other artifacts -- for example an incident's planned release cannot be a cancelled release.</p>
 <p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
 <h3 id="overview-details">Overview -- Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>

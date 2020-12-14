@@ -3987,7 +3987,7 @@
 <li>Remaining Effort: the sum of all tasks' remaining efforts</li>
 <li>Projected Effort: the sum of all task projected efforts</li>
 </ul>
-<p>Task effort calculations are described in more detail <a href="../User-Product-Management/#release-task-progress">here</a>. </p>
+<p>Task effort calculations are described in more detail <a href="../Product-Homepage/#release-task-progress">here</a>. </p>
 <h2 id="requirements-list">Requirements List<a class="headerlink" href="#requirements-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Planning > Requirements link on the global navigation bar, you will initially be taken to the requirements list screen illustrated below:</p>
 <p><img alt="" src="../img/Requirements_Management_83.png" /></p>
@@ -4189,19 +4189,23 @@
 <p><img alt="" src="../img/Requirements_Management_112.png" /></p>
 <p>Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, projected effort and numeric task identifier. Clicking on the task name will bring up the <a href="../Task-Tracking/#task-details">Task Details page</a>. This allows you to edit the details of an existing task.</p>
 <p>You can perform the following actions on a task from this screen:</p>
-<p><strong>New Task</strong> -- inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.</p>
-<p><strong>Remove</strong> -- removes the task from this requirement without actually deleting the task</p>
-<p><strong>Refresh</strong> -- updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.</p>
-<p><strong>Filter / Apply Filter</strong> -- Applies the entries in the filter boxes to the list of tasks</p>
-<p><strong>Clear Filters</strong> -- Clears the current filter, so that all tasks associated with the current requirement are shown.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.</p>
-<p><strong>Show/Hide Columns</strong> -- Allows you to choose which Task columns are visible</p>
-<p>The system has a series of shortcuts that simplify the editing of requirements and tasks:</p>
-<p>If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "<strong><em>Save</em></strong>"</p>
-<p>When you assign a release/sprint to a requirement, its status automatically changes to "Planned"</p>
-<p>When at least one task assigned to the requirement changes from "Not Started" to "In Progress", the parent requirement automatically switches from "Planned" to "In Progress"</p>
-<p>When all the tasks under the requirement are completed, the parent requirement will switch to the "Completed" status.</p>
-<p>If you manually move a requirement that has <em>no associated tasks</em> from "Planned" to "In Progress", the system will automatically generate one task under the requirement and use the requirement's planned effort field to generate the task's estimated effort.</p>
+<ul>
+<li><strong>New Task</strong>: inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.</li>
+<li><strong>Remove</strong>: removes the task from this requirement without actually deleting the task</li>
+<li><strong>Refresh</strong>: updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.</li>
+<li><strong>Filter / Apply Filter</strong>: Applies the entries in the filter boxes to the list of tasks</li>
+<li><strong>Clear Filters</strong>: Clears the current filter, so that all tasks associated with the current requirement are shown.</li>
+<li><strong>Edit</strong>: Clicking the "<strong><em>Edit</em></strong>" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.</li>
+<li><strong>Show/Hide Columns</strong>: Allows you to choose which Task columns are visible</li>
+</ul>
+<p>The system has a series of shortcuts that simplify the editing of requirements and tasks (these can be changed as required in <a href="../../Spira-Administration-Guide/Product-Planning/#requirements">product administration</a>):</p>
+<ul>
+<li>If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "<strong><em>Save</em></strong>"</li>
+<li>When you assign a release/sprint to a requirement, its status automatically changes to "Planned"</li>
+<li>When at least one task assigned to the requirement changes from "Not Started" to "In Progress", the parent requirement automatically switches from "Planned" to "In Progress"</li>
+<li>When all the tasks under the requirement are completed, the parent requirement will switch to the "Completed" status.</li>
+<li>If you manually move a requirement that has <em>no associated tasks</em> from "Planned" to "In Progress", the system will automatically generate one task under the requirement and use the requirement's planned effort field to generate the task's estimated effort.</li>
+</ul>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
