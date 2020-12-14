@@ -83,7 +83,7 @@ The detailed information available at the top of the page is:
 - a link to open or download the raw version of the file as it is/was at the most recent commit of the current branch
 - the icon for the file type
 - the file size
-- the identifier of the latest commit for this file (in the current branch) and a link to the [detailed page](../Commits/#commit-details) for that commit
+- the identifier of the latest commit for this file (in the current branch) and a link to the [detailed page for the file at that commit](../Commits/#commit-file-details)
 - date and time of the above commit
 
 There are 3 tabs on this page that each show additional information about the file. These are discussed below.
