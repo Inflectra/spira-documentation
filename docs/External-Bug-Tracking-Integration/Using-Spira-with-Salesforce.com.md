@@ -4,8 +4,6 @@ This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter re
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
-    If you are running the data sync on your servers, download the required file [here](https://www.inflectra.com/Downloads/SalesforceDataSync.zip). For cloud syncing login to your customer account at inflectra.com.
-
 Salesforce objects are a highly customizable system that can now be used in conjunction with SpiraPlan. This integration service enables:
 
 1. two-way syncing of incidents between a specific Salesforce object and SpiraPlan 
@@ -82,20 +80,19 @@ Click on the "View Project Mappings" dropdown for the Salesforce Data Sync. Sele
 
 ![](img/SalesforceDotCom_07.png)
 
-A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in SpiraPlan based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to SpiraPlan. Other fields (unless linked to a custom field in SpiraPlan - see below) will not be synced.
+A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in SpiraPlan based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to SpiraPlan. Other fields (unless linked to a custom field in SpiraPlan) will not be synced.
 
-- **Name**: This is a mandatory field for every object in Salesforce. Optionally, you can use an extra Salesforce field of "**Title**" to add extra information. The name of the artifact in Spira will be synced from Salesforce as "{Name}: {Title}". When syncing incidents from Spira to Salesforce, if Salesforce has a "Title" field and the Incident name has a colon in it, the Incident name will be split across Salesforce's Name and Title fields. For example: "Incident01: Console Bug" in Spira will become a record in Salesfoce named "Incident01" with a title of "Console Bug".
+- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be splitted in these 2 different fileds in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
+- **Description**: Users can sync the artifact description from/to Spira if their object has a field named like that.
+- **Priority**: Users can sync Incidents'Priority from/to Spira if their object has a field named like that.
+- **Importance**: Users can sync Requirements'Importance from/to Spira if their object has a field named like that.
+- **Severity**: Users can sync Incidents'Severity from/to Spira if their object has a field named like that.
+- **Type**: Users can sync Artifacts'Type from/to Spira if their object has a field named like that.
+- **Status**: Users can sync Artifacts'Status from/to Spira if their object has a field named like that.
+- **Comments**: Users can sync Artifacts'Comments from/to Spira if their object has a field named like that.
 
-- **Description**: if the relevant Salesforce object has a field called "Description" it will automatically sync to Spira Requirements' description field / from/to Spira Incidents' description field.
-- **Priority**: if there is a Salesforce field matching this name it will sync from/to Spira's Incident Priority
-- **Importance**: if a matching field name exists it will sync to Spira's Requirement Importance
-- **Severity**: if a matching field name exists it will sync to Spira's Incident Severity
-- **Type**: if a matching field name exists it will sync to Spira's Requirement Type, or from/to Spira's Incident Type
-- **Status**: if a matching field name exists it will sync to Spira's Requirement Status, or from/to Spira's Incident Status
-- **Comments**: if a matching field name exists it will sync to Spira's Requirement Comments, or from/to Spira's Incident Comments.
-
-!!! info "Make sure to make required standard field"
-    Do not forget to map the specific values for the standard fields Priority, Importance, Severity, Type, and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
+Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
+Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
 
 ![](img/SalesforceDotCom_07-2.png)
 
