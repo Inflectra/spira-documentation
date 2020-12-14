@@ -129,13 +129,15 @@ This section assumes the custom properties in SpiraPlan and Salesforce are of th
 
 Click on a custom property mapping for a property you would like to sync. For the "External Key" put the exact Salesforce field name.
 
-If your custom property is a single-select list , for each custom value, put in the "Label" of the option in Salesforce (the text you see in the Salesforce main application). An example of mapping a single-select list is below:
+If your custom property is a **single-select list**, for each custom value, put in the "Label" of the option in Salesforce (the text you see in the Salesforce main application). An example of mapping a single-select list is below:
 
 ![](img/SalesforceDotCom_10.png)
 
-If you have a multi-select list in SpiraPlan repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:
+If you have a **multi-select list** in SpiraPlan repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:
 
 ![](img/SalesforceDotCom_11.png)
+
+If, in Salesforce, you have list **dropdown that links to another Salesforce object** then the value you enter in SpiraPlan *must* be the string for the ID of the object, not the name. For example, if your dropdown says "Release 1" in Salesforce, and it has an ID of "6fghincx8dx", in SpiraPlan enter "6fghincx8dx" into the appropriate field.
 
 ## Configuring the User Mapping
 *If you have set the "Auto-Map Users" option set to yes in the Salesforce plugin, please skip this section.*
