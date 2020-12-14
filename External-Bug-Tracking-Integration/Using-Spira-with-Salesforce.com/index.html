@@ -3473,10 +3473,11 @@
 <h2 id="configuring-custom-properties">Configuring Custom Properties<a class="headerlink" href="#configuring-custom-properties" title="Permanent link">&para;</a></h2>
 <p>This section assumes the custom properties in SpiraPlan and Salesforce are of the same type (integer -&gt; integer, text -&gt; text, etc.). Custom property syncing <strong>will not</strong> work otherwise. This applies to both requirement and incident custom properties.</p>
 <p>Click on a custom property mapping for a property you would like to sync. For the "External Key" put the exact Salesforce field name.</p>
-<p>If your custom property is a single-select list , for each custom value, put in the "Label" of the option in Salesforce (the text you see in the Salesforce main application). An example of mapping a single-select list is below:</p>
+<p>If your custom property is a <strong>single-select list</strong>, for each custom value, put in the "Label" of the option in Salesforce (the text you see in the Salesforce main application). An example of mapping a single-select list is below:</p>
 <p><img alt="" src="../img/SalesforceDotCom_10.png" /></p>
-<p>If you have a multi-select list in SpiraPlan repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:</p>
+<p>If you have a <strong>multi-select list</strong> in SpiraPlan repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:</p>
 <p><img alt="" src="../img/SalesforceDotCom_11.png" /></p>
+<p>If, in Salesforce, you have list <strong>dropdown that links to another Salesforce object</strong> then the value you enter in SpiraPlan <em>must</em> be the string for the ID of the object, not the name. For example, if your dropdown says "Release 1" in Salesforce, and it has an ID of "6fghincx8dx", in SpiraPlan enter "6fghincx8dx" into the appropriate field.</p>
 <h2 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h2>
 <p><em>If you have set the "Auto-Map Users" option set to yes in the Salesforce plugin, please skip this section.</em></p>
 <p>To configure the mapping of users in the two systems, you need to go to <em>Administration &gt; Users &gt; View Edit Users</em>, which will bring up the list of users in the system. Click on the [Edit] button for a particular user that will be editing records in Salesforce:</p>
