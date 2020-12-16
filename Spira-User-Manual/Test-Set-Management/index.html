@@ -3646,21 +3646,11 @@
 <p>Each test set is listed along with the number of test cases contained (in parenthesis), the aggregate execution status of the contained test cases (using a graphical bar-chart), the date that the test set has been scheduled to be executed (planned date), the date that it was last executed, the person currently assigned to execute the test set, the status and the test set id. Clicking on a test set's hyperlink will take you to the test set details page for the item in question.</p>
 <p>Note: the test set status is separate from the execution status of the individual test cases and represents where the test set is in its lifecycle:</p>
 <ul>
-<li>
-<p><strong>Not Started</strong> -- The test set has been assigned to a tester or automation host and no testing has been performed.</p>
-</li>
-<li>
-<p><strong>In Progress</strong> -- The test set has been assigned to a tester or automation host and the testing is in progress.</p>
-</li>
-<li>
-<p><strong>Completed</strong> -- The test set was previously assigned, but has now been completed, with all test cases having an execution status recorded and the tester having clicked the Finish button in the test execution wizard.</p>
-</li>
-<li>
-<p><strong>Blocked</strong> -- The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.</p>
-</li>
-<li>
-<p><strong>Deferred</strong> -- The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.</p>
-</li>
+<li><strong>Not Started</strong>: The test set has been assigned to a tester or automation host and no testing has been performed.</li>
+<li><strong>In Progress</strong>: The test set has been assigned to a tester or automation host and the testing is in progress.</li>
+<li><strong>Completed</strong>: The test set was previously assigned and has since been executed (either the full test set was executed, or only some of its test cases were selected for execution) with the tester concluding testing by clicking the Finish button in the test execution wizard.</li>
+<li><strong>Blocked</strong>: The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.</li>
+<li><strong>Deferred</strong>: The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.</li>
 </ul>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the currently selected test sets. It will delete the association between the test set and its contained test cases, but it will not delete the test cases themselves.</p>
