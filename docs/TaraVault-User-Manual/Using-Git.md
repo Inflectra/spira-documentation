@@ -287,121 +287,15 @@ to push the changes:
 
 ![](img/Using_Git_66.png)
 
-
-
-
 Once they have been pushed, we are now ready to view the repository
 within Spira.
 
-## Viewing within Spira
 
-In addition to being able to browse the source code repository in Spira,
-which is itself very useful, the real strength comes from linking
-artifacts in Spira - including Incidents, Requirements, and Tasks - to
-commits checked into the software repository, indicating what was
-fixed or implemented in a specific commit.
+## Using Git with SpiraPlan
+Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
-Firstly, you can view the source code tree by selecting the Tracking \>
-Source Code link under the main Spira menu. This will display the
-following:
+You can read more about working with source code in SpiraPlan at the links below:
 
-![](img/Using_Git_37.png)
-
-
-
-
-This is normal, it means simply that the source code viewer is
-initializing for initial use. Whenever you access a TaraVault project
-for the first time you will see this. After a few minutes it will be
-ready for use and you can refresh the page to display:
-
-![](img/Using_Git_67.png)
-
-
-
-
-The folder tree of the repository is on the left, and files in the
-current selected directory will be listed in the right table. The file
-view will display the filename, the current commit number of the file
-and the date of the last commit. You can filter and sort on any of the
-columns, as well.
-
-The page will display the folders and files for the currently selected
-branch (in the example above "master"), you can change the current
-branch at any time by selecting it from the dropdown menu:
-
-![](img/Using_Git_68.png)
-
-
-
-
-To view the file details, click on a file hyperlink the main source code
-file grid. The file details page displays the details on the selected
-commit. By default, it will be the latest commit in the current
-branch, unless you clicked to view the file details from a commit. By
-clicking on the file name, you can download the specified commit of
-the file to your local machine. This does not do a Git clone or pull;
-you are merely downloading the file to your local machine.
-
-![](img/Using_Git_69.png)
-
-
-
-
-Underneath the file details are tabs that show a preview of the file
-(with syntax highlighting), a list of all the commits that this file
-belongs in, or was committed to, who performed the commit, and the log
-message for the commit, and a tab that shows any artifact associations.
-Throughout SpiraTeam, commits are indicated by the
-![Commit](img/Using_Git_42.png)
-
-
- icon:
-
-![](img/Using_Git_70.png)
-
-
-
-
-By clicking on a commit in SpiraTeam, you will be taken to the
-commit details page.
-
-![](img/Using_Git_71.png)
-
-
-
-
-The commit details screen shows the log for the commit, the commit
-date and author. At the bottom of the page are two tabs, Files and
-Associations. The Files tab lists all files that were a part of this
-commit, with their full path, size, latest commit and date of edit.
-
-The Associations tab shows any artifact (Incident, Requirement, Test
-Case, Test Set) that the log message references. See [Source Code Associations](../../Spira-User-Manual/Source-Code/#associations_1)
-
-![](img/Using_Git_72.png)
-
-
-
-
-## Linking Artifacts
-
-Linking an artifact is quite simple. To maintain the readability of Git
-commit messages, we adopted a square bracket token. The token is in the
-format of:
-
-**\[<artifact identifier\>:<artifact id\>\]**
-
-The first half, the Artifact Identifier, is a two-letter code that is
-used throughout SpiraTeam, and is visible on almost every page in the
-application. For example, a requirement's identifier is "**RQ**".
-Incidents are "**IN**", and test cases are "**TC**". The artifact ID is
-the number of the artifact. So by creating a commit message that reads:
-
-SpiraTeam will automatically detect tokens and will include links to
-them under the Associations tab for a commit detail.
-
-If you forget to add the association during the commit, you can use the
-'Add Association' option within SpiraTeam to add the association after
-the fact.
-
+- [Source code files](../../Spira-User-Manual/Source-Code/#source-code-file-list)
+- [Commits](../../Spira-User-Manual/Commits/#commit-list)
+- [Linking to artifacts in commit messages](../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages)
