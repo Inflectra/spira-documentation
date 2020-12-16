@@ -17,45 +17,37 @@ button will achieve this. The recommended procedure for forcing a re-sync is to 
 In the "Data Mapping" column each plugin has a dropdown that shows all the active products on the system, ordered alphabetically. The TFS plugin has this drodown open. You can see two different icons to the left of the product names: a full hexagon and an empty hexagon. A full hexagon means that the product is actively using this particular plugin. Selecting a product from the dropdown and then clicking the arrow to its right will take you to the detailed [product data synchronization page](Product-General-Settings.md#data-synchronization) for that plugin and product.
 
 
-## Version Control Integration (On-Premise Customers Only)
+## Source Code Integration (On-Premise Customers Only)
 
 *This section refers to the functionality available to on-premise customers of SpiraPlan. If you are using the cloud / hosted version of SpiraPlan, please refer to [TaraVault Configuration](../System/#taravault) instead.*
 
-SpiraPlan® is capable of integrating with a variety of Version Control (VC) / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
+SpiraPlan® is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
 
-The information on using the various version control providers for SpiraPlan® and the steps for configuring the provider-specific settings are described in the *SpiraPlan/Team Version Control Integration Guide*.
+The information on using the various source code providers for SpiraPlan® and the steps for configuring the provider-specific settings are described elsewhere - for example for [Git](../../Version-Control-Integration/Integrating-with-Git/).
 
-To configure a version control provider, you need to click on the Administration \> Integration \> Version Control link in the Administration navigation to bring up the list of configured version control providers:
+To configure a source code provider, you need to click on the System Administration \> Integration \> Source Code link in the Administration navigation to bring up the list of configured source code providers:
 
 ![](img/System_Integration_76.png)
 
 By default the only provider listed will be the TestVersionControlProvider which is used for demonstration purposes only, and can be deleted from a production system by clicking on the "Delete" button to the right of it.
 
-To add a new version control provider, click the "Add" button to enter the Plug-in details page. The fields required are as follows:
+To add a new source code provider, click the "Add" button to enter the Plug-in details page. The fields required are as follows:
 ![](img/System_Integration_77.png)
 
--   **Name**: The name of the version control provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the *SpiraPlan/Team Version Control Integration Guide* for more details on your specific tool)
-
+-   **Name**: The name of the source code provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the specific page for that provider in this documentation - eg [Git](../../Version-Control-Integration/Integrating-with-Git/)).
 -   **Description**: The description is for your use only, and does not affect operation of the plug-in.
-
 -   **Active**: If checked, the plug-in is active and able to be used for any product.
+-   **Connection Info**: This field holds the root of the repository for any product accessing the plug-in, unless overridden in the Product Settings. Use the syntax that is described for your tool on the relevant docs page for that provider. 
+-   **Login / Password**: The user id and the password of the user to use while accessing and retrieving information from the source code system.
+-   **Other Fields**: The other fields (Domain, Custom1 -- Custom5) are provider-specific and will be described on the relevant docs page for that provider.
 
--   **Connection Info**: This field holds the root of the repository for any product accessing the plug-in, unless overridden in the Product Settings. Use the syntax that is described for your tool in the
-*SpiraPlan/Team Version Control Integration Guide)*
-
--   **Login / Password**: The user id and the password of the user to use while accessing and retrieving information from the version control system.
-
--   **Other Fields**: The other fields (Domain, Custom1 -- Custom5) are provider-specific and will be described in the appropriate section of the *SpiraPlan/Team Version Control Integration Guide.*
-
-When finished, click the "Insert" button and you will be taken back to the Version Control integration list page, with new provider listed as an available plug-in:
+When finished, click the "Insert" button and you will be taken back to the Source Code integration list page, with new provider listed as an available plug-in:
 
 ![](img/System_Integration_78.png)
 
-To edit the settings for an existing version control provider, click on the "Edit" button next to the name of the provider and you will be able to edit the same settings that were shown above when you first created it.
+To edit the settings for an existing source code provider, click on the "Edit" button on the far right of the row for that provider. You can edit the same settings that were shown above when you first created that provider.
 
-Now, you may want to change some of the settings on a per-product basis. For example you may have different repositories that you want to link to each product. You still enter the base settings for the provider as illustrated above, but then you can override specific settings for each product.
-
-To do this, click on the "Product Settings" button next to the provider in question, which will take you to the screen discussed in 3.6.4. below.
+If you want to change the settings for a particular product, make sure the product dropdown in that row has the correct product selected; and click the arrow to the right of the product name to manage [that provider for that Product](../Product-General-Settings/#source-code).
 
 
 ## Test Automation

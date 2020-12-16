@@ -136,18 +136,15 @@ Clicking on the Source Code link in the administration menu will, if a source co
 
 ![](img/Product_General_Settings_105.png)
 
-The first thing you need to do (regardless of whether you'll be overriding any of the settings) is to make the provider active for the current product. To do this, change the toggle to "Yes" and click
-\[Save\]:
+The first thing you need to do (regardless of whether you'll be overriding any of the settings) is to make the provider active for the current product. To do this, change the toggle to "Yes" and click \[Save\]:
 
 ![](img/Product_General_Settings_106.png)
 
-Now you can decide whether you want to override any of the default settings for this product. Any field left blank will automatically get its settings from the default values entered earlier. In the example above, we have specified a product-specific repository path, login and password. Once you have correctly configured the product, click \[Save\]
-to commit the changes.
+Now you can decide whether you want to override any of the default settings for this product. Any field left blank will automatically get its settings from the default values entered at the [system level](../System-Integration/#source-code-integration-on-premise-customers-only). In the example above, we have specified a product-specific repository path, login and password. Once you have correctly configured the product, click \[Save\] to commit the changes.
 
-To improve performance, SpiraPlan will cache some of the data it receives from the version control provider. Normally SpiraPlan will know when to update the cached data based on changes made in the version control system automatically. However sometimes you may wish to flush the cached data completed, to do this, click on the \[Clear Cache\]
-button.
+To improve performance, SpiraPlan will cache some of the data it receives from the source code provider. Normally SpiraPlan will know when to update the cached data based on changes made in the source code system automatically. However, sometimes you may wish to force the cache to refresh right now. To do so, click the "Refresh Cache" button. If you ever want to wipe the cache completely and have it rebuild from scratch, click  "Clear Cache".
 
-You are now ready to use SpiraPlan® in conjunction with the version control tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please refer to the *SpiraPlan® User Manual*.
+You are now ready to use SpiraPlan® in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see [here](../../Spira-User-Manual/Source-Code/).
 
 
 ## Baselines

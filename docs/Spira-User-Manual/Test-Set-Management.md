@@ -12,15 +12,11 @@ Each test set is listed along with the number of test cases contained (in parent
 
 Note: the test set status is separate from the execution status of the individual test cases and represents where the test set is in its lifecycle:
 
--   **Not Started** -- The test set has been assigned to a tester or automation host and no testing has been performed.
-
--   **In Progress** -- The test set has been assigned to a tester or automation host and the testing is in progress.
-
--   **Completed** -- The test set was previously assigned, but has now been completed, with all test cases having an execution status recorded and the tester having clicked the Finish button in the test execution wizard.
-
--   **Blocked** -- The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.
-
--   **Deferred** -- The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.
+- **Not Started**: The test set has been assigned to a tester or automation host and no testing has been performed.
+- **In Progress**: The test set has been assigned to a tester or automation host and the testing is in progress.
+- **Completed**: The test set was previously assigned and has since been executed (either the full test set was executed, or only some of its test cases were selected for execution) with the tester concluding testing by clicking the Finish button in the test execution wizard.
+- **Blocked**: The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.
+- **Deferred**: The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.
 
 
 ### Delete

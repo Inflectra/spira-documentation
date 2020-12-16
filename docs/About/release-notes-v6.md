@@ -42,6 +42,7 @@
         - Update the use of the word "Revision" to "Commit" throughout the application [IN:5920]
         - Product Home page > [Source Code Commits widget](../../Spira-User-Manual/Product-Homepage/#source-code-commits): improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
         - Source code file preview for binary files (like png or jpeg) should work correctly for TaraVault Git [IN:6005]
+        - Rename sample source code "master" branch to "main" [IN:5945]
 
     * **Other**
 
