@@ -96,8 +96,8 @@ This page is made up of three areas:
 1. the top of the left-hand pane shows other files that were changed in the commit currently being viewed. You can click on the file name to update the page for that file at this commit. You can also click on the commit name to open its [commit details](#commit-details) page (hovering over the name will show you the commit message in a tooltip)
 2. the bottom of the left-hand pane shows the currently selected branch, and the other commits in this branch that changed the file currently being viewed (the icon represents the commit action for this file). Newer commits are at the top. 
 
-  - Clicking on a commit will update the page for the current file at that commit (hovering over the name will show you the commit message in a tooltip). 
-  - Above the list of commits is the file name - clicking on this will open the [file details](../Source-Code/#source-code-file-details) page for this file (hovering over the name will show you the full file path and file name in a tooltip).
+    - Clicking on a commit will update the page for the current file at that commit (hovering over the name will show you the commit message in a tooltip). 
+    - Above the list of commits is the file name - clicking on this will open the [file details](../Source-Code/#source-code-file-details) page for this file (hovering over the name will show you the full file path and file name in a tooltip).
 
 3. the right-hand pane shows detailed information about the file for the particular commit. This pane is discussed more below.
 
