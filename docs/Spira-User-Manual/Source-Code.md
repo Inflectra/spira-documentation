@@ -16,8 +16,8 @@ This section outlines SpiraPlan's source code features, whatever type of source 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
 
-1. a system administrator has setup the source code provider (for example, [Git](../../Version-Control-Integration/Integrating-with-Git/#configuring-git-in-spiraplan))
-2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [Git](../../Version-Control-Integration/Integrating-with-Git/#use-git-for-your-product))
+1. a system administrator has setup the source code provider (for example, Inflectra's cloud-hosted [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/ or [Git](../../Version-Control-Integration/Integrating-with-Git/#configuring-git-in-spiraplan))
+2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/ or [Git](../../Version-Control-Integration/Integrating-with-Git/#use-git-for-your-product))
 3. SpiraPlan users have a [role](../../Spira-Administration-Guide/System-Users/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
 
 Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.

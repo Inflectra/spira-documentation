@@ -26,6 +26,6 @@ However, this stove-piped approach has many limitations and drawbacks, most impo
 
 ## Product Management
 
-As described in the Agile Manifesto, traditional waterfall software methodologies and lifecycles have failed to delivery products on-time and on-budget. In addition, many systems built this way will fail to provide the expected business value as there is no ability to quickly refine the requirements as the product progresses.
+As described in the Agile Manifesto, traditional waterfall software methodologies and lifecycles have failed to deliver products on-time and on-budget. In addition, many systems built this way will fail to provide the expected business value as there is no ability to quickly refine the requirements as the product progresses.
 
 Consequently, software development has been transformed with these new ideas and concepts, with new agile methodologies such as Scrum, and Kanban becoming common. However, the traditional tools of product management - requirements specifications, high level product plans, GANTT charts, white-board schedules and top-down task management - are too cumbersome and not well suited.
