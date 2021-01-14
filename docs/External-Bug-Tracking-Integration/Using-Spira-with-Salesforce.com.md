@@ -96,7 +96,7 @@ A brief note about field syncing in Salesforce: The sheer customizability of Sal
     
     Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
     
-    Note 3: If you would like to see the Spira Incident ID in your Salesforce instance, just add the "ID__c" field in your corresponding object in Salesforce.
+    Note 3: If you would like to see the Spira Incident ID in your Salesforce instance, just add the "SpiraPlanID__c" field in your corresponding object in Salesforce.
 
 ![](img/SalesforceDotCom_07-2.png)
 
