@@ -95,6 +95,8 @@ A brief note about field syncing in Salesforce: The sheer customizability of Sal
     Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
     
     Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
+    
+    Note 3: If you would like to see the Spira Incident ID in your Salesforce instance, just add the "ID__c" field in your corresponding object in Salesforce.
 
 ![](img/SalesforceDotCom_07-2.png)
 
@@ -149,6 +151,9 @@ To configure the mapping of users in the two systems, you need to go to *Adminis
 Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "Salesforce Data Sync ID," **enter the first and last name of the user as set in Salesforce**. This will allow the data-synchronization plug-in to know which user in SpiraPlan matches  an equivalent user in Salesforce. Click [Save] once you've entered the appropriate login name. 
 
 Repeat for other users who will be active in both systems.
+
+## Attachments synchronization
+If an object in Salesforce has the "Notes & Attachments" section, the data sync will sync all files to SpiraPlan and any attachments on SpiraPlan Incidents will sync to Salesforce. If a new version of a pre-existing file is uploaded in Salesforce, this will be uploaded as a new version to the matching SpiraPlan attachment (new versions of attachments to SpiraPlan Incidents will be uploaded as new versions in Salesforce). Finally, if an attachment is deleted from a record in Salesforce, the file will be  removed from the equivalent artifact in SpiraPlan.
 
 ## Using the Data Synchronization
 Once the above steps have been correctly carried out, the plug-in should start working. Start your Data Sync service and verify that records in Salesforce appear inside SpiraPlan as either incidents or requirements in the relevant product(s). Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
