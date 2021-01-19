@@ -44,10 +44,10 @@ This feature, not available in SpiraTest, is an optional way of using the Planni
 To make use of WIP limits you need to:
 
 - set the **number of resources** for each release and sprint. This represents the number of people working on the release. This defaults to 1 when you create a new release, but can be edited at any time.
-- Set a multiplier for releases and/or sprints. This defaults to 1.0. These values apply to all releases/sprints in the product. *Think of the multiplier as the number of requirements each team member on the release or sprint can work on at the same time.*
-- fill in the values for releases and/or sprints for each status that you want to set limits on. The statuses shown in the table are all of those that you will see on the planning board. *Think of the status percentages as the proportion of all the work that the team can manage once it is in that particular status.* 
+- set a **multiplier for releases and/or sprints**. This defaults to 1.0. These values apply to all releases/sprints in the product. *Think of the multiplier as the number of requirements each team member on the release or sprint can work on at the same time.*
+- fill in the **percentage values** for releases and/or sprints for each status that you want to set limits on. The statuses shown in the table are all of those that you will see on the planning board. *Think of the status percentages as the proportion of all the work that the team can manage once it is in that particular status.* 
 
-You can have completely separate multipliers and percentages for releases and sprints. Think of multiplies
+The multipliers and percentages for releases and sprints are independent of one another.
 
 !!! info "Example WIP Limit"
     - Your sprint has 5 people working on it. So, set the Resources of the sprint to 5.

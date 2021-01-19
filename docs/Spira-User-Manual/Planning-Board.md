@@ -290,6 +290,6 @@ Above the resource headings there are sections with the release and sprint name;
 If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.
 
 - A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green
-- Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only
+- Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only.
 
-![](img/Planning_Board_WIP.png)
+Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
