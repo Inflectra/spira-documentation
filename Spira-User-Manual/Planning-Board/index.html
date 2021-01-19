@@ -3800,8 +3800,8 @@ automatically update based on changes to the associated tasks and test cases, th
 <h3 id="release-backlog-by-sprint">Release Backlog -- By Sprint<a class="headerlink" href="#release-backlog-by-sprint" title="Permanent link">&para;</a></h3>
 <p>This view is designed to let you see the release backlog organized by iteration / sprint. Each of the sprints defined for the current release is displayed as a heading, with the backlog items displayed in the same column underneath. The backlog items in this view can be either requirements (with associated tasks and test cases) or incidents. This view is commonly called a <strong>Scrum</strong> board:</p>
 <p><img alt="" src="../img/Planning_Board_424.png" /></p>
-<p>You can drag and drop the requirements between the different sprints. If you schedule a requirement for a specific sprint, all the child tasks that have not yet been started, will follow the parent requirement in being associated with the sprint. Once the backlog item has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount.</p>
-<p>Note: The system will allow you to assign more backlog items to an sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint.</p>
+<p>You can drag and drop the requirements between the different sprints. If you schedule a requirement for a specific sprint, all the child tasks that have not yet been started, will follow the parent requirement in being associated with the sprint. Once the backlog item has been added to the sprint, the utilized effort for the sprint will increase, and the remaining effort will decrease by the same amount.</p>
+<p>Note: The system will allow you to assign more backlog items to an sprint than it is possible to complete, however this will result in a negative value for 'remaining effort'. If this happens, the "Remaining" value will be displayed in red - as will the sprint header area and the cards column. This alerts you that you need to rebalance the items, extend the sprint length, or add product personnel resources to the sprint.</p>
 <p>Clicking on the Sprint hyperlinks in the headers will switch the planning board into the <a href="#sprint-backlog-planning">Sprint Backlog</a> view described below.</p>
 <h3 id="release-backlog-by-status">Release Backlog -- By Status<a class="headerlink" href="#release-backlog-by-status" title="Permanent link">&para;</a></h3>
 <p>This view is designed to let you see the release backlog organized by requirement status. Each of the possible status values (for a planned item) is displayed as a heading, with the backlog items displayed in the same column underneath. The backlog items in this view will only be requirements (with associated tasks and test cases). This view is commonly called a <strong>Kanban</strong> board:</p>
@@ -3842,9 +3842,9 @@ that contains backlog items that are scheduled for the current release but have 
 <p>If the product is using <a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Work in Progress (WIP) limits set</a>, they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.</p>
 <ul>
 <li>A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green</li>
-<li>Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only</li>
+<li>Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only.</li>
 </ul>
-<p><img alt="" src="../img/Planning_Board_WIP.png" /></p>
+<p>Read more about <a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">how to set up and use WIP limits</a>.</p>
                 
               
               
