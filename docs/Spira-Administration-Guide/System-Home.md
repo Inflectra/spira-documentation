@@ -24,7 +24,7 @@ If you click the "Delete" button, a popup will show a warning. If you decide to 
 - any sample user who has been used to create, comment or has been assigned any artifacts in non-sample data products
 
 !!! tip 
-    If you do not users to see the sample data but also do not want to delete it all you, there is a way. You can make all sample portfolios (SpiraPlan only), programs, products, and users inactive. These inactive items will still be visible on the relevant administration pages, but not in the main application. 
+    If you do not want users to see the sample data but do not want to permanently delete that data, there is a way. Make all sample portfolios (SpiraPlan only), programs, products, and users inactive. These inactive items will still be visible on the relevant administration pages, but noone will see them in the main application. 
 
 ## Event Log
 This widget shows the latest events from the system event log. By default, 5 events are shown, but this number can be changed. To view the complete event log, click View All.
