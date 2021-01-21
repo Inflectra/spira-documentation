@@ -2383,6 +2383,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments-synchronization" class="md-nav__link">
+    Comments synchronization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-data-synchronization" class="md-nav__link">
     Using the Data Synchronization
   </a>
@@ -3358,6 +3365,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments-synchronization" class="md-nav__link">
+    Comments synchronization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-data-synchronization" class="md-nav__link">
     Using the Data Synchronization
   </a>
@@ -3457,7 +3471,6 @@
 <li><strong>Severity</strong>: Users can sync Incidents'Severity from/to Spira if their object has a field named like that.</li>
 <li><strong>Type</strong>: Users can sync Artifacts'Type from/to Spira if their object has a field named like that.</li>
 <li><strong>Status</strong>: Users can sync Artifacts'Status from/to Spira if their object has a field named like that.</li>
-<li><strong>Comments</strong>: Users can sync Artifacts'Comments from/to Spira if their object has a field named like that.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -3501,6 +3514,9 @@
 <p>Repeat for other users who will be active in both systems.</p>
 <h2 id="attachments-synchronization">Attachments synchronization<a class="headerlink" href="#attachments-synchronization" title="Permanent link">&para;</a></h2>
 <p>If an object in Salesforce has the "Notes &amp; Attachments" section, the data sync will sync all files to SpiraPlan and any attachments on SpiraPlan Incidents will sync to Salesforce. If a new version of a pre-existing file is uploaded in Salesforce, this will be uploaded as a new version to the matching SpiraPlan attachment (new versions of attachments to SpiraPlan Incidents will be uploaded as new versions in Salesforce). Finally, if an attachment is deleted from a record in Salesforce, the file will be  removed from the equivalent artifact in SpiraPlan.</p>
+<h2 id="comments-synchronization">Comments synchronization<a class="headerlink" href="#comments-synchronization" title="Permanent link">&para;</a></h2>
+<p>If an object in Salesforce has the "Feed Post &amp; Comments component" configured, the comments posted on it will be synced to SpiraPlan and vice-versa.</p>
+<p><img alt="" src="../img/SalesforceDotCom_13.png" /></p>
 <h2 id="using-the-data-synchronization">Using the Data Synchronization<a class="headerlink" href="#using-the-data-synchronization" title="Permanent link">&para;</a></h2>
 <p>Once the above steps have been correctly carried out, the plug-in should start working. Start your Data Sync service and verify that records in Salesforce appear inside SpiraPlan as either incidents or requirements in the relevant product(s). Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>
 <p>Congratulations, you have just integrated your SpiraPlan instance with Salesforce!</p>
