@@ -89,7 +89,6 @@ A brief note about field syncing in Salesforce: The sheer customizability of Sal
 - **Severity**: Users can sync Incidents'Severity from/to Spira if their object has a field named like that.
 - **Type**: Users can sync Artifacts'Type from/to Spira if their object has a field named like that.
 - **Status**: Users can sync Artifacts'Status from/to Spira if their object has a field named like that.
-- **Comments**: Users can sync Artifacts'Comments from/to Spira if their object has a field named like that.
 
 !!! warning
     Note: Do not forget to map the standard fields Priority, Importance, Severity, Type and Status in the "Standard Field Data Mapping" menu of the Data Sync configuration. Otherwise, they won't be synced.
@@ -154,6 +153,11 @@ Repeat for other users who will be active in both systems.
 
 ## Attachments synchronization
 If an object in Salesforce has the "Notes & Attachments" section, the data sync will sync all files to SpiraPlan and any attachments on SpiraPlan Incidents will sync to Salesforce. If a new version of a pre-existing file is uploaded in Salesforce, this will be uploaded as a new version to the matching SpiraPlan attachment (new versions of attachments to SpiraPlan Incidents will be uploaded as new versions in Salesforce). Finally, if an attachment is deleted from a record in Salesforce, the file will be  removed from the equivalent artifact in SpiraPlan.
+
+## Comments synchronization
+If an object in Salesforce has the "Feed Post & Comments component" configured, the comments posted on it will be synced to SpiraPlan and vice-versa.
+
+![](img/SalesforceDotCom_13.png)
 
 ## Using the Data Synchronization
 Once the above steps have been correctly carried out, the plug-in should start working. Start your Data Sync service and verify that records in Salesforce appear inside SpiraPlan as either incidents or requirements in the relevant product(s). Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
