@@ -274,19 +274,35 @@ The navigation pane consists of a link that will take you back to the task list,
 The lower part of the right pane can be in one of *four* possible tabs that can be selected: "Overview Properties", "Attachments", "History" and "Associations". Each of the different views is described separately below.
 
 
-### Emailing
+### Toolbar Operations
 
-Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+- **Emailing**: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+{: #emailing}
+- **Followers**: read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+{: #followers}
+- **Workflows**: read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+{: #workflows}
 
+#### Task Splitting
+Sometimes you may want to split a task into two: the original task, and a new task (based off the original one). The two tasks are associated together after this process. To do this click `Tools` > `Split`. This will bring up the task split dialog shown below.
 
-### Followers
+![task split dialog](img/Task_Tracking_SplitDialog.png)
 
-Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+In this dialog you are focusing on the new task you are creating from performing the split. Here you can:
 
+- change the name of the new task (by default, this will be the same as the original task)
+- set the owner for the new task (by default, this will be the same as the original task)
+- set the percentage of the remaining effort to move from the original task to the new task
+- enter a comment to list against the association between the two tasks (visible after the split on the [associations tab](#associations))
 
-### Workflows
+To complete the split click the `Split` button.
 
-Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+**Notes about how the split works**:
+
+- **New remaining effort**: this defaults to blank in the split dialog. If this is left blank and the original task has the status of "In Progress" all the remaining effort will be moved to the new task. If the original task has any other status than "In Progress" the remaining effort will be split equally between the original and new task (if the remaining effort percentage is left blank).
+- **Status**: the new task's status will match that of the original task
+- **Attachments** are copied over to the new task (and left unchanged on the original task)
+- All standard and custom field information is copied over to the new task
 
 
 ### Overview -- Details

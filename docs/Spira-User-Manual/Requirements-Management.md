@@ -344,8 +344,8 @@ In this dialog you are focusing on the new requirement you are creating from per
 
 - change the name of the new requirement (by default, this will be the same as the original requirement)
 - set the owner for the new requirement (by default, this will be the same as the original requirement)
-- set the point estimate to move from the original requirement to the new requirement.
-- enter a comment to list against the association between the two requirements (visible after the split on the [associations tab](#associations)).
+- set the point estimate to move from the original requirement to the new requirement
+- enter a comment to list against the association between the two requirements (visible after the split on the [associations tab](#associations))
 
 To complete the split click the `Split` button.
 
@@ -359,7 +359,7 @@ To complete the split click the `Split` button.
 - **Status**: 
 
     - the new requirement's status will match that of the original requirement
-    - if the original requirement's status is "In Progress" AND the new requirement takes all the effort of the original requirement, the original requirement now has zero effort left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs
+    - if the original requirement's status is "In Progress" AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs
 
 - **Tasks** are not moved or cloned from the original requirement to the new requirement
 - **Test Coverage** is copied over to the new requirement (and left unchanged on the original requirement)
