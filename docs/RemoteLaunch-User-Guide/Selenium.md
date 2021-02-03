@@ -155,11 +155,9 @@ created in the previous section from the drop-down list.
 into SpiraTeam you can enter any name you like for the filename as long
 as it's logical and memorable.
 
-- **Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
-which document type the automated test script will be categorized under.
+- **Document Type** -- you can choose which document type the automated test script will be categorized under.
 
-- **Document Folder** -- If using SpiraTeam (not SpiraTest) you can choose
-which document folder the automated test script will be stored in.
+- **Document Folder** -- you can choose which document folder the automated test script will be stored in.
 
 - **Version** -- The version of the test script (1.0 is used if no value
 specified)
