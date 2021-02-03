@@ -91,6 +91,7 @@ nav:
     - Developing:
       - Source Code: Spira-User-Manual\Source-Code.md
       - Commits: Spira-User-Manual\Commits.md
+      - Pull Requests: Spira-User-Manual\Pull-Requests.md
     - Tracking:
       - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
       - Risk Management: Spira-User-Manual\Risks-Management.md

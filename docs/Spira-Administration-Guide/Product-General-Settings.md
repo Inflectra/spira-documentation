@@ -4,7 +4,9 @@
 
 This page displays a list, by default in chronological order, of changes made to items within the selected product.
 
-At this time, only changes made to Requirements, Tasks, Incidents, Test Cases, Test Steps, Test Sets, Releases, and Automation Hosts are recorded. Certain changes are to these artifacts are not recorded, such as location changes (indenting, outdenting), and comment additions.
+At this time, only artifact changes made to Requirements, Tasks, Incidents, Test Cases, Test Steps, Test Sets, Releases, and Automation Hosts are recorded. If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to these artifacts are not recorded, such as location changes (indenting, outdenting), and comment additions.
+
+Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).
 
 ![](img/Product_General_Settings_99.png)
 
