@@ -308,14 +308,10 @@ When you click on a requirement item in the requirements list described in [Requ
 ![](img/Requirements_Management_93.png)
 
 
-
-
 This page is made up of *three* areas;
 
 1.  the left pane displays the requirements list navigation;
-
 2.  the right pane's header, which displays: the operations toolbar; [the hierarchical structure the requirement is in](Application-Wide.md#breadcrumbs); the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-
 3.  the right pane's tabbed interface with rich information related to the requirement.
 
 Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the requirements list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
@@ -325,28 +321,50 @@ The navigation pane can be collapsed by clicking on the "-" button, or expanded 
 The navigation pane shows a list of the peer requirements to the one selected. This list is useful as a navigation shortcut; you can quickly view the coverage information of all the peer requirements by clicking on the navigation links without having to first return to the requirements list page. The navigation list can be switched between three different modes:
 
 -   The list of requirements matching the current filter
-
 -   The list of all requirements, irrespective of the current filter
-
 -   The list of requirements assigned to the current user
 
 The bottom part of the right pane can be switched between six views: "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.
 
+### Toolbar Operations
 
+- **Emailing**: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+{: #emailing}
+- **Followers**: read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+{: #followers}
+- **Workflows**: read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+{: #workflows}
 
-### Emailing
+#### Requirement Splitting
+Sometimes you may want to split a requirement into two: the original requirement, and a new requirement (based off the original one). The two requirements are associated together after this process. To do this click `Tools` > `Split`. This will bring up the requirement split dialog shown below.
 
-Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
+![requirement split dialog](img/Requirements_Management_SplitDialog.png)
 
+In this dialog you are focusing on the new requirement you are creating from performing the split. Here you can:
 
-### Followers
+- change the name of the new requirement (by default, this will be the same as the original requirement)
+- set the owner for the new requirement (by default, this will be the same as the original requirement)
+- set the point estimate to move from the original requirement to the new requirement.
+- enter a comment to list against the association between the two requirements (visible after the split on the [associations tab](#associations)).
 
-Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+To complete the split click the `Split` button.
 
+**Notes about how the split works**:
 
-### Workflows
+- **New estimate**: 
 
-Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
+    - this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. 
+    - The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).
+
+- **Status**: 
+
+    - the new requirement's status will match that of the original requirement
+    - if the original requirement's status is "In Progress" AND the new requirement takes all the effort of the original requirement, the original requirement now has zero effort left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs
+
+- **Tasks** are not moved or cloned from the original requirement to the new requirement
+- **Test Coverage** is copied over to the new requirement (and left unchanged on the original requirement)
+- **Attachments** are copied over to the new requirement (and left unchanged on the original requirement)
+- All standard and custom field information is copied over to the new requirement
 
 
 ### Overview - Details
