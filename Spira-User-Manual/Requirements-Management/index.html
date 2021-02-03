@@ -604,23 +604,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#emailing" class="md-nav__link">
-    Emailing
+  <a href="#toolbar-operations" class="md-nav__link">
+    Toolbar Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolbar Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirement-splitting" class="md-nav__link">
+    Requirement Splitting
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#followers" class="md-nav__link">
-    Followers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workflows" class="md-nav__link">
-    Workflows
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -3809,23 +3808,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#emailing" class="md-nav__link">
-    Emailing
+  <a href="#toolbar-operations" class="md-nav__link">
+    Toolbar Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolbar Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirement-splitting" class="md-nav__link">
+    Requirement Splitting
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#followers" class="md-nav__link">
-    Followers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workflows" class="md-nav__link">
-    Workflows
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -4121,37 +4119,59 @@
 <p><img alt="" src="../img/Requirements_Management_93.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
 <ol>
-<li>
-<p>the left pane displays the requirements list navigation;</p>
-</li>
-<li>
-<p>the right pane's header, which displays: the operations toolbar; <a href="../Application-Wide/#breadcrumbs">the hierarchical structure the requirement is in</a>; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
-</li>
-<li>
-<p>the right pane's tabbed interface with rich information related to the requirement.</p>
-</li>
+<li>the left pane displays the requirements list navigation;</li>
+<li>the right pane's header, which displays: the operations toolbar; <a href="../Application-Wide/#breadcrumbs">the hierarchical structure the requirement is in</a>; the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</li>
+<li>the right pane's tabbed interface with rich information related to the requirement.</li>
 </ol>
 <p>Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the requirements list, on mobile devices a 'back' button is shown on the left of the operations toolbar.</p>
 <p>The navigation pane can be collapsed by clicking on the "-" button, or expanded by clicking anywhere on the gray title area. On desktops the user can also control the exact width of the navigation pane by dragging and dropping a red handle that appears on hovering at the rightmost edge of the navigation pane.</p>
 <p>The navigation pane shows a list of the peer requirements to the one selected. This list is useful as a navigation shortcut; you can quickly view the coverage information of all the peer requirements by clicking on the navigation links without having to first return to the requirements list page. The navigation list can be switched between three different modes:</p>
 <ul>
-<li>
-<p>The list of requirements matching the current filter</p>
-</li>
-<li>
-<p>The list of all requirements, irrespective of the current filter</p>
-</li>
-<li>
-<p>The list of requirements assigned to the current user</p>
-</li>
+<li>The list of requirements matching the current filter</li>
+<li>The list of all requirements, irrespective of the current filter</li>
+<li>The list of requirements assigned to the current user</li>
 </ul>
 <p>The bottom part of the right pane can be switched between six views: "Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.</p>
-<h3 id="emailing">Emailing<a class="headerlink" href="#emailing" title="Permanent link">&para;</a></h3>
-<p>Read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</p>
-<h3 id="followers">Followers<a class="headerlink" href="#followers" title="Permanent link">&para;</a></h3>
-<p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
-<h3 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h3>
-<p>Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</p>
+<h3 id="toolbar-operations">Toolbar Operations<a class="headerlink" href="#toolbar-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li id="emailing"><strong>Emailing</strong>: read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</li>
+<li id="followers"><strong>Followers</strong>: read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</li>
+<li id="workflows"><strong>Workflows</strong>: read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>.</li>
+</ul>
+<h4 id="requirement-splitting">Requirement Splitting<a class="headerlink" href="#requirement-splitting" title="Permanent link">&para;</a></h4>
+<p>Sometimes you may want to split a requirement into two: the original requirement, and a new requirement (based off the original one). The two requirements are associated together after this process. To do this click <code>Tools</code> &gt; <code>Split</code>. This will bring up the requirement split dialog shown below.</p>
+<p><img alt="requirement split dialog" src="../img/Requirements_Management_SplitDialog.png" /></p>
+<p>In this dialog you are focusing on the new requirement you are creating from performing the split. Here you can:</p>
+<ul>
+<li>change the name of the new requirement (by default, this will be the same as the original requirement)</li>
+<li>set the owner for the new requirement (by default, this will be the same as the original requirement)</li>
+<li>set the point estimate to move from the original requirement to the new requirement.</li>
+<li>enter a comment to list against the association between the two requirements (visible after the split on the <a href="#associations">associations tab</a>).</li>
+</ul>
+<p>To complete the split click the <code>Split</code> button.</p>
+<p><strong>Notes about how the split works</strong>:</p>
+<ul>
+<li>
+<p><strong>New estimate</strong>: </p>
+<ul>
+<li>this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. </li>
+<li>The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).</li>
+</ul>
+</li>
+<li>
+<p><strong>Status</strong>: </p>
+<ul>
+<li>the new requirement's status will match that of the original requirement</li>
+<li>if the original requirement's status is "In Progress" AND the new requirement takes all the effort of the original requirement, the original requirement now has zero effort left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs</li>
+</ul>
+</li>
+<li>
+<p><strong>Tasks</strong> are not moved or cloned from the original requirement to the new requirement</p>
+</li>
+<li><strong>Test Coverage</strong> is copied over to the new requirement (and left unchanged on the original requirement)</li>
+<li><strong>Attachments</strong> are copied over to the new requirement (and left unchanged on the original requirement)</li>
+<li>All standard and custom field information is copied over to the new requirement</li>
+</ul>
 <h3 id="overview-details">Overview - Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
