@@ -2,7 +2,7 @@
 
 ## Version 6.7.1 (February 2020)
 !!! info "Summary"
-    **[Pull Requests](../../Spira-User-Manual/Pull-Requests/pull-request-list)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
+    **[Pull Requests](../../Spira-User-Manual/Pull-Requests)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
 
     **The [build details](../../Spira-User-Manual/Release-Management/build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
 
@@ -14,10 +14,10 @@
 ??? success "New Features"
     * **Source Code**
 
-        - Add list page to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
-        - Can create a new pull request on the Pull Request list page, specifying the source branch and the destination branch [RQ:3006]
+        - Add [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list) to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
+        - Can create a new pull request on the [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list), specifying the source branch and the destination branch [RQ:3006]
         - Task pages shows pull request with different icon [RQ:3045]
-        - Pull Request Task detail page shows source code revisions [RQ:3046]
+        - [Pull Request task details page](../../Spira-User-Manual/Pull-Requests#pull-request-details) shows source code commits [RQ:3046]
 
     * **Enhanced history tracking**
 

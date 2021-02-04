@@ -28,9 +28,9 @@ Above the list of commits is the action toolbar. This lets you perform the follo
 
 For each commit you can see the following information (you can sort or filter on all of these):
 
-- Name - click on this to view the details for this commit, and hover to see a tooltip with extra information
+- Commit - the commit name: click on this to view the details for this commit, and hover to see a tooltip with extra information
 - Commit Date - hover over the date to see a tooltip showing the date and time
-- Summary - the commit message (any artifact tokens in the summary are links: clicking them will open the relevant artifact details page)
+- Message - the commit message (any artifact tokens in the message are links: clicking them will open the relevant artifact details page)
 - Author - this is the person who made the commit
 
 [^old-scm]: Some older source code management systems (e.g. CVS, Visual SourceSafe) do not have the formal concept of branches, so the dropdown list will simply list the one main branch (usually called "Trunk").
@@ -49,7 +49,7 @@ The detailed information available at the top of the page is the:
 
 - currently selected branch
 - commit name
-- commit summary message (artifacts tokens are links that will open that artifact)
+- commit message (artifacts tokens are links that will open that artifact)
 - author of the commit
 - date and time the commit was made
 - associated build, if there is one (clicking on the build will open the [build details](../Release-Management/#build-details) page for that build)
