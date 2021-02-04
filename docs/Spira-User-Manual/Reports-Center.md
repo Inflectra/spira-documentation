@@ -35,7 +35,8 @@ The configuration page for each report differs slightly, but the general format 
 
 You can configure the reports in the following ways:
 
-**Report Format** -- This allows you to specify the display format of the report. Depending on the specific report, they can be:
+### Report Format
+This allows you to specify the display format of the report. Depending on the specific report, they can be:
 
 - displayed as a web-page (HTML)
 - downloaded as a Microsoft Word document (there are two Word versions: one for newer versions of Word and one for legacy versions of Word)
@@ -45,10 +46,12 @@ You can configure the reports in the following ways:
 
 ![](img/Reports_Center_338.png)
 
-**Report Elements** -- This allows you to determine which types of information to include in the report. This varies by report type, but includes the dependent items related to the artifact being reported on (attachments, test steps, coverage, history, etc.)
+### Report Elements
+This allows you to determine which types of information to include in the report. This varies by report type, but includes the dependent items related to the artifact being reported on (attachments, test steps, coverage, history, etc.)
 
 ![](img/Reports_Center_339.png)
 
+### Filters
 **Standard Field Filters** -- This allows you to constrain the range of data being reported on, based on the various fields associated with the artifact in question. These filters are typically selections from multi-valued-dropdown lists and date-ranges.
 
 ![](img/Reports_Center_340.png)
@@ -61,15 +64,25 @@ You can configure the reports in the following ways:
 
 ![](img/Reports_Center_342.png)
 
+
+### Saving and Sharing
 **Report Name** -- If you would like to save the report configuration so that you can quickly re-run it at a later date, you just need to enter a name for the report and indicate (by selecting the checkbox or not) whether you want this report to be private or shared by all members of the product.
 
 ![](img/Reports_Center_343.png)
 
-Once you have selected the format, elements and filters, clicking the "***Create Report***" button launches the report in a new window. Each of the reports is described in [Requirement Reports](#requirement-reports) to [Release Reports](#release-reports) below:
+To save the generated report into the documents repository for the product, check the checkbox. This will load two extra inputs: 
+
+- a dropdown to select the folder to save the report to
+- the filename that the saved report will have (note that this cannot contain spaces)
+
+![](img/Reports_Center_343b.png)
+
+Once you have selected the format, elements and filters, clicking the "***Create Report***" button launches the report in a new window. If you saved the generated report to documents, you can view that report in the folder you selected at any time, as with any other document.
+
+Each of the reports is described below:
 
 
 ## Requirement Reports
-
 
 ### Requirements Summary Report
 

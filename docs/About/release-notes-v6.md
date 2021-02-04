@@ -23,7 +23,7 @@
 
         - Enhance history to track position changes of test steps, use case steps, and risk mitigations [RQ:2659]
         - Enhance History to record Product Setting Changes (this includes toggling baseling, testing settings, and some planning options) [RQ:3044]
-        - Ability to save a report directly into documents on generating the report, and specify a document name and folder for the report [RQ:2295]
+        - Ability to [save a report directly into documents](../../Spira-User-Manual/Reports-Center/#saving-and-sharing) on generating the report, and specify a document name and folder for the report [RQ:2295]
 
 ??? bug "Bug fixes and enhancements"
     * **Source Code / Development**
