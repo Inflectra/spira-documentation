@@ -29,6 +29,8 @@ In the screenshot below we have chosen 'libraryinformationsystem' as the product
 
 ![](img/Provisioning_Projects_&_Users_7.png)
 
+**NOTE**: Once TaraVault has been activated on a product, you can deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.
+
 
 ## Managing Users
 
