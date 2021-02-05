@@ -141,7 +141,8 @@ to push the changes:
 Once they have been pushed, we are now ready to view the repository within Spira.
 
 
-## Using Git with SpiraPlan Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
+## Using Git with SpiraPlan
+Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
 You can read more about working with source code in SpiraPlan at the links below:
 

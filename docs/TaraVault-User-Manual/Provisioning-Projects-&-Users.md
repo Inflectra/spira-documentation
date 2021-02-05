@@ -1,5 +1,5 @@
 # Provisioning Products & Users
-Once you have [activated TaraVault](../Activating-TaraVault), you can begin to provision specific products to use source code with TaraVault and assign users to commit code or files into the TaraVault repositories. Note: *All SpiraPlan users with roles that let them view source code, can view the code in the application, even if they are not a TaraVault user.*.
+Once you have [activated TaraVault](../Activating-TaraVault), you can begin to provision specific products to use source code with TaraVault and assign users to commit code or files into the TaraVault repositories. **Note**: All SpiraPlan users with roles that let them view source code, can view the code in the application, even if they are not a TaraVault user.
 
 
 ## Provisioning Products

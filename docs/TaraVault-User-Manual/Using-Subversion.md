@@ -128,7 +128,8 @@ The main difference between a Branch and a Tag is that you can continue to make 
 Click 'OK' and we are now ready to view the repository within Spira.
 
 
-## Using Subversion with SpiraPlan Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
+## Using Subversion with SpiraPlan
+Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
 You can read more about working with source code in SpiraPlan at the links below:
 
