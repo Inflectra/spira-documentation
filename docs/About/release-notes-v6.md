@@ -1,6 +1,7 @@
 # Release Notes for Spira v6
 
 ## Version 6.7.1 (February 2020)
+
 !!! info "Summary"
     **[Pull Requests](../../Spira-User-Manual/Pull-Requests)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
 
