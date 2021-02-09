@@ -9,7 +9,7 @@ SpiraTeam®'s and SpiraPlan®'s source code integration features let you:
 - link source code commits and files to SpiraPlan artifacts. 
 - view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.
 
-SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or plugins for the different SCM's (including [Git](../../Version-Control-Integration/Integrating-with-Git/) and [Subversion](../../Version-Control-Integration/Integrating-with-Subversion/)). 
+SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or plugins for the different SCM's (including [Git](../../Version-Control-Integration/Integrating-with-Git/) and [Subversion](../../Version-Control-Integration/Integrating-with-Subversion/)). If you want to learn more about using a source code provider, read our intro guides to  [using Git](../../TaraVault-User-Manual/Using-Git/) and [using Subversion](../../TaraVault-User-Manual/Using-Subversion/).
 
 This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](../Commits) outlines viewing and working with commits and the changes made in them.
 

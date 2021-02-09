@@ -162,6 +162,7 @@ You can perform the following actions on a task from this screen:
 
 - **New Task** -- inserts a new task in the task list with a default set of values. The task will be associated with the current risk.
 - **Remove** -- removes the task from this risk without actually deleting the task
+- **Delete**: click the arrow next to the Remove button to show the option of completetly deleting the task 
 - **Refresh** -- updates the list of tasks from the server, useful if other people are adding tasks to this risk at the same time.
 - **Filter / Apply Filter** -- Applies the entries in the filter boxes to the list of tasks
 - **Clear Filters** -- Clears the current filter, so that all tasks associated with the current risk are shown.

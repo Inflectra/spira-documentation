@@ -1,5 +1,75 @@
 # Release Notes for Spira v6
 
+## Version 6.7.1 (February 2020)
+!!! info "Summary"
+    **[Pull Requests](../../Spira-User-Manual/Pull-Requests)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
+
+    **The [build details](../../Spira-User-Manual/Release-Management/build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
+
+
+    **[Source code diff](../../Spira-User-Manual/Commits/#commit-file-details) view**: by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.
+
+    **Recording Product setting changes**: The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the [product history page](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes).
+
+??? success "New Features"
+    * **Source Code**
+
+        - Add [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list) to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
+        - Can create a new pull request on the [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list), specifying the source branch and the destination branch [RQ:3006]
+        - Task pages shows pull request with different icon [RQ:3045]
+        - [Pull Request task details page](../../Spira-User-Manual/Pull-Requests#pull-request-details) shows source code commits [RQ:3046]
+
+    * **Enhanced history tracking**
+
+        - Enhance history to track position changes of test steps, use case steps, and risk mitigations [RQ:2659]
+        - Enhance History to record Product Setting Changes (this includes toggling baseling, testing settings, and some planning options) [RQ:3044]
+        - Ability to [save a report directly into documents](../../Spira-User-Manual/Reports-Center/#saving-and-sharing) on generating the report, and specify a document name and folder for the report [RQ:2295]
+
+??? bug "Bug fixes and enhancements"
+    * **Source Code / Development**
+
+        - Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]
+        - Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]
+        - [Source code clone popup](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#connecting-to-the-source-code-repository) for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
+        - Improve the design of the [build details](../../Spira-User-Manual/Release-Management/build-details) page to make it easier to use [IN:5665]
+        - [Build details](../../Spira-User-Manual/Release-Management/build-details) page truncates very large console logs to improve performance page load time [IN:6056]
+        - Add ability to copy to clipboard the full canonical commit ids for git and subversion (not the shorthand version) on the commit details page [IN:6026]
+        - [File diff view for source code](../../Spira-User-Manual/Commits/#commit-file-details) auto collapses to only show changed lines (with option to expand) [IN:6006]
+        - Association Panel (source code): build associations are added by the system (like commits) so users should not be able to remove or edit [IN:6010]
+        - Add preview and syntax highlighting for .ignore and .gitignore files for documents and source code [IN:5999]
+        - Add preview and syntax highlighting for a range of common development file formats (including csv, sql, scss, log, swift) and image formats (ico and webp) [IN:6037]
+        - Add preview and syntax highlighting for all powershell file types [IN:6067]
+        - Fix not being able to activate TaraVault if host site name is too long or contains the word "demo" [IN:6063]
+        - Fix [activating TaraVault](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#provisioning-products) for a product causing errors in other products that use the TestProvider for source code [IN:6066]
+        - With new cloud instance, [activating and deactivating TaraVault](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#provisioning-products) on a product should not cause any errors [IN:6069]
+        - Display list of products using source code on TaraVault's main administration page [IN:6013]
+        - [Source code product admin](../../Spira-Administration-Guide/Product-General-Settings/#source-code) page: do not display "source code up to date" if it has never been initialized successfully [IN:6034]
+        - [Source code product admin](../../Spira-Administration-Guide/Product-General-Settings/#source-code) page: the test button should correctly check and verify the connection to git repositories [IN:6035]
+        - [Source code file list](../../Spira-User-Manual/Source-Code/#source-code-file-list) page: when a fatal error has occurred during cache refresh, give a message to that effect [IN:6036]
+        - Different commit grids should each have a separately saved filter and sort [IN:6016]
+        - Fix some source code commits sometimes not being shown if the commits are from a deleted branch [IN:6054]
+        - Fix SubversionProvider problem where it may not work on hosted systems due to event log permission issues
+    
+    * **Other**
+
+        - Cloning releases or test cases should record in the history the user who performed the clone, not the artifact's author [IN:5208]
+        - [Test set details page](../../Spira-User-Manual/Test-Set-Management/#test-set-details): the dropdowns for setting parameters should never contain duplicates, even if multiple test cases in the set have same parameter names [IN:5855]
+        - Remove the loophole where under very particular circumstances a user could log back in to the application after their password had expired [IN:5893]
+        - When adding test cases to a requirement, automatically map them to the same release as the requirement [IN:5899]
+        - Improve the contrast of widget config icons whe in dark mode on home pages or the reporting page [IN:5965]
+        - Improve performance of loading any application URL by reformatting the regular expressions used to parse and rewrite all application URLs (including API calls) [IN:5997]
+        - Administration: sort all template dropdowns alphabetically, not by ID, and include the ID after the name [IN:5998]
+        - Allow users to delete tasks from the [requirements](../../Spira-User-Manual/Requirements-Management/#tasks) and [risks detail](../../Spira-User-Manual/Risk-Management/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
+        - Association history records should not be visible on the Product Admin Product History Widget [IN:6027]
+        - [Product Home Page]((../../Spira-User-Manual/Product-Homepage) (Development) should not show error if no source code providers are active [IN:6050]
+        - Admin [product history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) changes: allow users to revert more than one change at a time (as in earlier versions) [IN:6081]
+        - Installer: display an error message on upgrading to v6+ if the database had not been DB properly upgraded to v5.4.0.4 first [IN:6086]
+
+    * **API**
+
+        - Create an API call that retrieves source code connection information [IN:5866]
+        - Create a generic API call that can be called by an external service to trigger internal functions [IN:6045]
+
 ## Version 6.7 (December 2020)
 
 !!! info "Summary"

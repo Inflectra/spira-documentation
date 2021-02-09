@@ -482,38 +482,54 @@ When you click on a build entry in the build list, you are taken to the build de
 
 ![](img/Release_Management_277.png)
 
-This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the build detailed information itself, and the bottom part of the right pane displays different information associated with the build.
+This page is made up of three areas:
 
-The navigation pane consists of a link that will take you back to the build list, as well as a list of the other builds that belong to the same release/sprint as the current one. The top part of the right pane allows you to view the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.
+- the navigation panel on the left
+- summary / headline information about the build on the top right
+- detailed information about the build on the bottom right
 
-The lower part of the right pane contains tabs that can display different information associated with the build. Each of the tabs --
-"Associations", "Incidents", "Commits", and "Test Runs" - is described separately below.
+### Navigation Panel
+The navigation panel has:
 
+- a link back to the build list for that release
+- a list of the other builds that belong to the same release/sprint as this build
+
+### Header 
+The top part of the right panel shows:
+
+- the build's ID (read only)
+- its status (e.g. success or failure)
+- the creation date
+- the last updated date
+
+
+Beneath the header bar are a number of collapsible sections, each of which show specific information about the build or links between the build and other parts of the system. This sections are: "Commits", "Associations", "Test Runs", "Incidents", and "Full Log". These are described below.
+
+ the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.
+
+### Commits
+This section shows all source code commits included in the current build. The grid can be sorted and filtered by using the appropriate controls.
+
+![](img/Release_Management_279.png)
 
 ### Associations
-
-This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code commits that were included in the current build:
+This section shows a list of SpiraPlan artifacts associated with the build. This is automatically populated by all artifacts listed as tokens in the commit messages of the commits included in the build.
 
 ![](img/Release_Management_278.png)
 
 
-### Commits
-
-This tab displays a list of the source code commits that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:
-
-![](img/Release_Management_279.png)
-
-
 ### Incidents
-
-This tab displays the list of incidents that have been fixed in the current build. The grid can be sorted and filtered by using the appropriate controls:
+This section shows the list of incidents that have been fixed in the current build. The grid can be sorted and filtered by using the appropriate controls. **Note**: if the build has no incidents the section will be hidden.
 
 ![](img/Release_Management_280.png)
 
 
 ### Test Runs
-
-This tab displays a list of all the tests that have been executed against the current build. The grid can be sorted and filtered by using the appropriate controls:
+This section displays a list of all the tests that have been executed against the current build. The grid can be sorted and filtered by using the appropriate controls. **Note**: if the build has no test runs the section will be hidden.
 
 ![](img/Release_Management_281.png)
 
+### Full Log
+This section displays the full console log readout that was returned from SpiraPlan by the build tool. This lets you view any detailed messages or errors. **Note**: this only displays the first two million characters of the console log (which should be more than enough under normal circumstances).
+
+![](img/Release_Management_282.png)

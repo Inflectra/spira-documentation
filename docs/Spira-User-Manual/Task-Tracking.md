@@ -1,8 +1,14 @@
 # Task Tracking
+Task Tracking in SpiraPlan® and SpiraPlan® lets you view and manage tasks assigned to each person in the product. Each task can be assigned to an individual user and linked to a particular release or sprint. Product managers can track the the progress of tasks to see if the product is on schedule.
 
-This section outlines how you can use the Task Tracking features of SpiraPlan® and SpiraPlan® to view and manage the discrete activities that each member of the development team would need to carry out for the requirement to be fulfilled. Each task can be assigned to an individual user as well as associated with a particular release or sprint. The system can then be used by the product manager to track the completion of the different tasks to determine if the product is on schedule.
+Tasks can be organized into different folders and categorized by different types (development, testing, infrastructure, etc.), each of which can have its own *workflow* which defines the way the task can change status during the product lifecycle.
 
-The tasks can be organized into different folders as well as categorized by different types (development, testing, infrastructure, etc.), each of which can have its own *workflow* which defines the process by which the task changes status during the product lifecycle.
+Tasks can be used in a number of different parts of the system to manage and track work:
+
+- standalone tasks: tasks not specifically linked to any other work.
+- [tasks on a requirement](../Requirements-Management/#tasks): you can create tasks against any requirement to break down the work into smaller chunks and potentially divide up amongst the team. You may have some tasks on a requirement for developers, others for business analysts, others for QA, and others for marketing, and so on.
+- [tasks resulting from testing](../Test-Execution/#tasks): if enabled for a product, testers can create tasks for developers during testing. This is a lighter touch way than incidents to communicate with others about your findings, or to ask questions.
+- [pull request tasks](../Pull-Requests): pull requests are special types of tasks that let a developer flag that their feature branch is ready for merging into the main development branch.
 
 
 ## Task List
@@ -357,17 +363,16 @@ All existing comments are displayed in date entered underneath the textbox. To e
 
 
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
 ### Associations
-
 You can associate other tasks and to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
+### Commits
+Tasks that are pull requests will show the commits tab. Read more about the [commits tab](../Pull-Requests/#commits).
 
 ### History
-
 Read about [how the history tab works](Application-Wide.md#history)
 
 ### Creating an Incident from a Task

@@ -7,11 +7,12 @@
     
     If you have any feedback or suggestions regarding this roadmap, please email us at support@inflectra.com.
 
+## What has been released
+Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.7.1 (February 2021)
-- **Improved history tracking (SpiraTeam and SpiraPlan)**: if baselining is enabled, track when the order of test steps, use case steps, and risk mitigations changes.
-- **Save a report directly into the document repository**
-- **Source code refinements**: build on improvements in 6.7 and continue to provide further refinements to the user experience
+## Version 6.8 (March 2021)
+- **Performance improvements**: including improvements to the My Page, and a setting to auto purge old and unfinished test executions (pending test runs).
+- **Inline content editing**: adds the ability to create and edit documents directly in Spira. Create markdown, rich text, and feature files from within Spira. Edit these file types and any plain text file (like txt, code, json, yaml) online and with version and workflow controls.
 
 ## Planning
 - **Baselining enhancements**: Improved views for seeing changes between baselines, for instance so you can see how a specific test case changed from baseline 1 to baseline 2.
