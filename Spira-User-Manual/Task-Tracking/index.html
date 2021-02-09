@@ -529,6 +529,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pull-Requests/" title="Pull Requests" class="md-nav__link">
+      Pull Requests
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -850,6 +862,13 @@
           <li class="md-nav__item">
   <a href="#associations" class="md-nav__link">
     Associations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    Commits
   </a>
   
 </li>
@@ -3718,6 +3737,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#history" class="md-nav__link">
     History
   </a>
@@ -3753,8 +3779,15 @@
                 
                 
                 <h1 id="task-tracking">Task Tracking<a class="headerlink" href="#task-tracking" title="Permanent link">&para;</a></h1>
-<p>This section outlines how you can use the Task Tracking features of SpiraPlan® and SpiraPlan® to view and manage the discrete activities that each member of the development team would need to carry out for the requirement to be fulfilled. Each task can be assigned to an individual user as well as associated with a particular release or sprint. The system can then be used by the product manager to track the completion of the different tasks to determine if the product is on schedule.</p>
-<p>The tasks can be organized into different folders as well as categorized by different types (development, testing, infrastructure, etc.), each of which can have its own <em>workflow</em> which defines the process by which the task changes status during the product lifecycle.</p>
+<p>Task Tracking in SpiraPlan® and SpiraPlan® lets you view and manage tasks assigned to each person in the product. Each task can be assigned to an individual user and linked to a particular release or sprint. Product managers can track the the progress of tasks to see if the product is on schedule.</p>
+<p>Tasks can be organized into different folders and categorized by different types (development, testing, infrastructure, etc.), each of which can have its own <em>workflow</em> which defines the way the task can change status during the product lifecycle.</p>
+<p>Tasks can be used in a number of different parts of the system to manage and track work:</p>
+<ul>
+<li>standalone tasks: tasks not specifically linked to any other work.</li>
+<li><a href="../Requirements-Management/#tasks">tasks on a requirement</a>: you can create tasks against any requirement to break down the work into smaller chunks and potentially divide up amongst the team. You may have some tasks on a requirement for developers, others for business analysts, others for QA, and others for marketing, and so on.</li>
+<li><a href="../Test-Execution/#tasks">tasks resulting from testing</a>: if enabled for a product, testers can create tasks for developers during testing. This is a lighter touch way than incidents to communicate with others about your findings, or to ask questions.</li>
+<li><a href="../Pull-Requests">pull request tasks</a>: pull requests are special types of tasks that let a developer flag that their feature branch is ready for merging into the main development branch.</li>
+</ul>
 <h2 id="task-list">Task List<a class="headerlink" href="#task-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Tracking > Tasks global navigation link, you will initially be taken to the tasks list screen illustrated below:</p>
 <p><img alt="" src="../img/Task_Tracking_282.png" /></p>
@@ -4003,6 +4036,8 @@ release / sprint organized by resource / person. Each of the users that is a mem
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
 <p>You can associate other tasks and to a task from this tab. Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
+<h3 id="commits">Commits<a class="headerlink" href="#commits" title="Permanent link">&para;</a></h3>
+<p>Tasks that are pull requests will show the commits tab. Read more about the <a href="../Pull-Requests/#commits">commits tab</a>.</p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
 <h3 id="creating-an-incident-from-a-task">Creating an Incident from a Task<a class="headerlink" href="#creating-an-incident-from-a-task" title="Permanent link">&para;</a></h3>

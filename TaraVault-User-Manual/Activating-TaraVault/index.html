@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#activating-taravault" class="md-skip">
           Skip to content
         </a>
       
@@ -521,6 +521,18 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
       Commits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Pull-Requests/" title="Pull Requests" class="md-nav__link">
+      Pull Requests
     </a>
   </li>
 
@@ -1514,9 +1526,49 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Activating
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Activating" class="md-nav__link md-nav__link--active">
       Activating
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    Activation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -3204,6 +3256,30 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    Activation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3218,47 +3294,35 @@
                   
                 
                 
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<p>TaraVault® is the secure source code and file hosting service from
-Inflectra that allows you to host your source code and other assets in
-our secure cloud, integrated with our SpiraTeam® application lifecycle
-management system.</p>
-<p>This guide outlines how to activate and use TaraVault® with a
-cloud-based instance of SpiraPlan<sup>®</sup> or SpiraTeam<sup>®</sup>. The guide covers
-the general activation process in additional to specific sections
-dedicated to the two supported SCM technologies -- <em>Git or</em>
-<em>Subversion</em>.</p>
-<p>This guide assumes that the reader is familiar with both
-SpiraPlan/SpiraTeam and the appropriate SCM platform (Git and/or
-Subversion). For information regarding how to use SpiraPlan/Team, please
-refer to the <em>SpiraPlan User Manual</em> or the <em>SpiraTeam User Manual</em>.</p>
-<h1 id="activating-taravault">Activating TaraVault<a class="headerlink" href="#activating-taravault" title="Permanent link">&para;</a></h1>
-<p>To get started, log into your existing SpiraPlan or SpiraTeam instance
-(hereafter referred to as Spira) with a system administrator account and
-go to the main Administration menu:</p>
-<p><img alt="" src="../img/Activating_TaraVault_3.png" /></p>
-<p>You should see the '<strong>TaraVault'</strong> menu entry under the "<strong>System</strong>"
-heading. If you don't see this option then you might either be
-self-hosted or running SpiraTest. If you are running SpiraTest, please
-contact Inflectra customer services to get your account upgraded to
-SpiraTeam.</p>
-<p>Click on this TaraVault link to bring up the TaraVault administration
-home page:</p>
+                <h1 id="activating-taravault">Activating TaraVault<a class="headerlink" href="#activating-taravault" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>TaraVault® is the secure source code and file hosting service from Inflectra that allows you to host source code and other assets in our secure cloud, integrated with our SpiraPlan® application lifecycle management system.</p>
+<p>This guide assumes that the reader is familiar with both SpiraPlan/SpiraTeam and the appropriate SCM platform (Git and/or Subversion). For information regarding how to use SpiraPlan/Team, please refer to the <em><a href="../../Spira-User-Manual">User Manual</a></em>.</p>
+<p>You can use either Git or Subversion with TaraVault. If you want to learn more about each of these and which is right for you, read our intro guides to  <a href="../Using-Git/">using Git</a> and <a href="../Using-Subversion/">using Subversion</a>.</p>
+<h2 id="activation">Activation<a class="headerlink" href="#activation" title="Permanent link">&para;</a></h2>
+<p>To activate TaraVault:</p>
+<ul>
+<li>log into your existing SpiraPlan or SpiraTeam instance (hereafter referred to as Spira) with a system administrator account </li>
+<li>open the Administration menu</li>
+<li>open the TaraVault page by clicking the <strong>'TaraVault (Source Code)'</strong> link under the "Integrations" section of the system administration menu. </li>
+</ul>
+<p>NOTE: If you don't see the above link it will because you are: self-hosted, are using SpiraTest, or are not a system administrator. Please contact Inflectra customer services to upgrade to SpiraTeam or SpiraPlan, if needed.</p>
 <p><img alt="" src="../img/Activating_TaraVault_4.png" /></p>
-<p>This screen lets you know that your instance of Spira does not yet have
-an active instance of TaraVault. This is normal and you should now click
-on the 'Activate TaraVault' button to activate TaraVault. Once this is
-done, the screen will display:</p>
+<p>If TaraVault is not yet activated, the TaraVault page displays a message explaining just that. This is normal. Click 'Activate TaraVault' to activate TaraVault. Once this succeeds, the page will change to look like the image below.</p>
 <p><img alt="" src="../img/Activating_TaraVault_5.png" /></p>
-<p>This provides you information on the name and ID of your TaraVault
-account as well as an indication as to how many source code users your
-subscription allows. If you need to purchase additional users, just
-contact Inflectra customer services who will be happy to help you out.</p>
-<p>Now that your instance is active, you will need to provision individual
-projects and also activate the Spira users that will be allowed to
-commit code or files into the TaraVault repositories. Note: <em>All users
-in Spira will be able to view the files in TaraVault without needing a
-separate TaraVault license.</em></p>
+<p>This shows you you the following information:</p>
+<ul>
+<li>the number of available TaraVault users (typically this is unlimited)</li>
+<li>the number of active TaraVault users. When you first activate TaraVault this will be 1 - the system administrator. Click "view list" to see all TaraVault users.</li>
+<li>the name of your TaraVault account (this shoud match the name of your SpiraPlan application as shown in its url)</li>
+<li>the TaraVault ID, which is shown in parentheses after the acount name information</li>
+<li>the number of active TaraVault products. Click "view list" to see all TaraVault products.</li>
+</ul>
+<p>Now that TaraVault is active, you can:</p>
+<ul>
+<li>setup TaraVault on <a href="../Provisioning-Projects-&amp;-Users/#provisioning-projects">individual products</a></li>
+<li><a href="../Provisioning-Projects-&amp;-Users/#managing-users">activate the Spira users</a> who will be allowed to commit code or files into the TaraVault repositories. Note: <em>All SpiraPlan users with roles that let them view source code, can view the code in the application, even if they are not a TaraVault user.</em></li>
+</ul>
                 
               
               

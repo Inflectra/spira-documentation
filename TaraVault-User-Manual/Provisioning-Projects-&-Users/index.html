@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provisioning-projects-users" class="md-skip">
+        <a href="#provisioning-products-users" class="md-skip">
           Skip to content
         </a>
       
@@ -521,6 +521,18 @@
   <li class="md-nav__item">
     <a href="../../Spira-User-Manual/Commits/" title="Commits" class="md-nav__link">
       Commits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spira-User-Manual/Pull-Requests/" title="Pull Requests" class="md-nav__link">
+      Pull Requests
     </a>
   </li>
 
@@ -1553,8 +1565,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#provisioning-projects" class="md-nav__link">
-    Provisioning Projects
+  <a href="#provisioning-products" class="md-nav__link">
+    Provisioning Products
   </a>
   
 </li>
@@ -1567,8 +1579,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-the-project" class="md-nav__link">
-    Connecting to the Project
+  <a href="#connecting-to-the-source-code-repository" class="md-nav__link">
+    Connecting to the Source Code Repository
   </a>
   
 </li>
@@ -3260,8 +3272,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#provisioning-projects" class="md-nav__link">
-    Provisioning Projects
+  <a href="#provisioning-products" class="md-nav__link">
+    Provisioning Products
   </a>
   
 </li>
@@ -3274,8 +3286,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-the-project" class="md-nav__link">
-    Connecting to the Project
+  <a href="#connecting-to-the-source-code-repository" class="md-nav__link">
+    Connecting to the Source Code Repository
   </a>
   
 </li>
@@ -3296,95 +3308,64 @@
                   
                 
                 
-                <h1 id="provisioning-projects-users">Provisioning Projects &amp; Users<a class="headerlink" href="#provisioning-projects-users" title="Permanent link">&para;</a></h1>
-<p>Once you have activated TaraVault for your instance of Spira, you can
-now begin to provision specific projects and assign users.</p>
-<h2 id="provisioning-projects">Provisioning Projects<a class="headerlink" href="#provisioning-projects" title="Permanent link">&para;</a></h2>
-<p>To provision a new project with TaraVault, go to the main Spira
-Administration page and select the appropriate project and then go to
-the TaraVault administration page. For example, in the screenshot below
-we have selected the 'Library Information System' sample project:</p>
-<p><img alt="" src="../img/Provisioning_Projects_%26_Users_6.png" /></p>
-<p>To provision this project with TaraVault, you need to choose the
-following:</p>
+                <h1 id="provisioning-products-users">Provisioning Products &amp; Users<a class="headerlink" href="#provisioning-products-users" title="Permanent link">&para;</a></h1>
+<p>Once you have <a href="../Activating-TaraVault">activated TaraVault</a>, you can begin to provision specific products to use source code with TaraVault and assign users to commit code or files into the TaraVault repositories. <strong>Note</strong>: All SpiraPlan users with roles that let them view source code, can view the code in the application, even if they are not a TaraVault user.</p>
+<h2 id="provisioning-products">Provisioning Products<a class="headerlink" href="#provisioning-products" title="Permanent link">&para;</a></h2>
+<p>When you provision a product with TaraVault you are setting up TaraVault's source code to be fully integrated into the SpiraPlan product. To do this: </p>
 <ul>
-<li>
-<p><strong>Project Name</strong> -- this is the name of the project in TaraVault.
-This name is incorporated into the connection URL so it should be
-alphanumeric only.</p>
-</li>
-<li>
-<p><strong>Project Type</strong> -- this is the type of SCM repository you wish to
-use. Currently the choices are between Subversion and Git. We
-discuss the differences between <a href="../Using-Subversion/">Subversion</a> (also known as SVN) and
-<a href="../Using-Git/">Git</a> in the next two pages.
-Note: once you choose the repository type for a project it cannot be
-changed without deleting the entire repository, so make sure you
-understand the differences between the two technologies beforehand.</p>
-</li>
+<li>select the product as a product admin</li>
+<li>open the administration menu</li>
+<li>click the "Source Code" link from "General Settings" section of the product admin menu</li>
 </ul>
-<p>For example we will choose 'libraryinformationsystem' as the project
-name and 'SVN' (Subversion) as the project type. Once you are happy with
-your choice, click 'Activate' to enable this project for TaraVault:</p>
+<p>This opens the TaraVault product administration page. In the screenshot below we have selected the 'Library Information System' sample product:</p>
+<p><img alt="" src="../img/Provisioning_Projects_%26_Users_6.png" /></p>
+<p>To provision this product with TaraVault:</p>
+<ul>
+<li>enter a <strong>Product Name</strong>: this should normally be the name of the SpiraPlan product. This name forms part of the connection URL so it should be alphanumeric only.</li>
+<li>select the <strong>Product Type</strong>: this is the type of source code management to use for this product. You can choose between <a href="../Using-Git/">Git</a> (default) or <a href="../Using-Subversion/">Subversion</a>. <em>Note</em>: once you choose the repository type for a product it cannot be changed without deleting the entire repository, so make sure you understand the differences between the two technologies beforehand.</li>
+</ul>
+<p>Click 'Activate' to complete the TaraVault setu for this product.</p>
+<p>In the screenshot below we have chosen 'libraryinformationsystem' as the product name and 'Git' as the type. The application will now:</p>
+<ul>
+<li>show that TaraVault is active</li>
+<li>fills in the 'Client Connection' with the URL you need to connect to this TaraVault product</li>
+<li>shows the list of TaraVault users that are active for this product.</li>
+</ul>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_7.png" /></p>
-<p>The system will then populate the 'Client Connection' section with the
-URL that you need to use to connect to this TaraVault project from your
-Subversion or Git client (this is described in more detail in the following pages). In addition, it will display a list of users that
-are enabled for this project.</p>
+<p><strong>NOTE</strong>: Once TaraVault has been activated on a product, you can deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.</p>
 <h2 id="managing-users">Managing Users<a class="headerlink" href="#managing-users" title="Permanent link">&para;</a></h2>
-<p>By default, the built-in system administrator account will be
-automatically enabled for TaraVault use and will be added as a member of
-all TaraVault projects. To enable other users to commit code/files to a
-TaraVault repository, you need to go to the Administration > Users >
-View/Edit Users menu item:</p>
+<p>By default, the built-in system administrator account will be automatically enabled for TaraVault and will be added as a member of all TaraVault products. To enable other users to commit code/files to a TaraVault repository, go to Administration &gt; Users &gt; View/Edit Users menu item.</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_8.png" /></p>
-<p>This will display the user details page. On this page, if you have
-activated TaraVault there will be a special TaraVault tab that is used
-to enable a specific Spira user for TaraVault:</p>
+<p>Click on the user you want to add to TaraVault. This will show their user details page. On this page, if TaraVault is active, you will see a TaraVault tab. From here you can enable a specific Spira user for TaraVault:</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_9.png" /></p>
 <p>Now change the setting to "YES" and the following screen appears:</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_10.png" /></p>
-<p>Enter in the desired password for TaraVault and click the main 'Save'
-button and this user will now be added to TaraVault. <em>Note that you need
-to have sufficient TaraVault licenses for all of the users you wish to
-activate.</em></p>
-<p>Finally, you can now add this user to specific TaraVault projects by
-clicking on the user's administration page again:</p>
+<p>Enter a TaraVault password and click 'Save'. The user is now added to TaraVault and you can add them to specific TaraVault products.</p>
+<p>To add a user to TaraVault products, make sure you are on their admin user details page. On the TaraVault tab click "Add Products".</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_11.png" /></p>
-<p>Now click on the 'Add Projects' link and you can now choose which
-TaraVault projects to add the user to:</p>
+<p>You can now choose which TaraVault products to add the user to - select Yes for each active TaraVault product they should be added to. Then click Save.</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_12.png" /></p>
-<p>You should now click the 'Add User to Project' YES/NO slider and then
-click the 'Save button:</p>
-<p><img alt="" src="../img/Provisioning_Projects_%26_Users_13.png" /></p>
-<p>The user will now be listed for that specific TaraVault project.</p>
-<p>If you now go back to the main Administration > TaraVault page:</p>
-<p><img alt="" src="../img/Provisioning_Projects_%26_Users_14.png" /></p>
-<p>You will see the two users listed under the current project. If you
-click on the 'Edit Users' hyperlink it will let you make changes to the
-TaraVault user settings page.</p>
+<p>The user will now be listed for those specific TaraVault products.</p>
+<p>On the admin user details page, on the TaraVault tab:
+<img alt="" src="../img/Provisioning_Projects_%26_Users_13.png" /></p>
+<p>And on the Product Admin &gt; Source Code page:
+<img alt="" src="../img/Provisioning_Projects_%26_Users_14.png" /></p>
+<p>You can see in the example above we have two users listed under the current product Library Information System. If you click on any of the 'Edit Users' you can make changes to the TaraVault user settings page.</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_15.png" /></p>
-<p>On this page you can use the <strong>Add Project</strong> option to add multiple
-TaraVault users to the current Spira project:</p>
-<p><img alt="" src="../img/Provisioning_Projects_%26_Users_16.png" /></p>
-<p>Individual users can see their own TaraVault profile from the main Spira
-profile page. They need to click on the 'My Profile' link under their
-user's avatar on the main Spira navigation page:</p>
+<p>From here you can:</p>
+<ul>
+<li>CLick "Add To Product" for a user in the "TaraVault Users" section to add that user to the TaraVault Product</li>
+<li>Click "Remove" for a user in the "TaraVault Product Members" section to remove that user from the TaraVault Product</li>
+<li>Click "Edit" for a user to go to the User Details page for that user </li>
+</ul>
+<p>Individual users can see their own TaraVault profile from the main Spira profile page. They need to click on the 'My Profile' link under their user's avatar on the main Spira navigation page:</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_17.png" /></p>
-<p>This page displays the current user's TaraVault login and password
-(masked). They can update the password for connecting to TaraVault via.
-Git or Subversion.</p>
-<h2 id="connecting-to-the-project">Connecting to the Project<a class="headerlink" href="#connecting-to-the-project" title="Permanent link">&para;</a></h2>
-<p>Individual users can see the connection information they can use for
-connecting via. Git or Subversion by going to Developing &gt; Source Code:</p>
+<p>This page displays the current user's TaraVault login and password (masked). They can update the password for connecting to TaraVault.</p>
+<h2 id="connecting-to-the-source-code-repository">Connecting to the Source Code Repository<a class="headerlink" href="#connecting-to-the-source-code-repository" title="Permanent link">&para;</a></h2>
+<p>Individual users can see the connection information they can use for connecting via. Git or Subversion by going to Developing &gt; Source Code:</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_18.png" /></p>
-<p>This dialog displays the connection string they should use to connect to
-the current project (the format will depend on whether the user is using
-Git or Subversion) along with the login and password.</p>
-<p>They can click on the blurred password option to reveal their actual
-password. This is necessary since they will need to know the password to
-use when connecting to Subversion / Git using their desired SCM client
-(e.g. TortoiseSVN, TortoiseGit, etc.).</p>
+<p>This dialog displays the connection string they should use to connect to the current product (the format will depend on whether the user is using Git or Subversion) along with the login and password.</p>
+<p>They can click on the blurred password option to reveal their actual password. This is necessary since they will need to know the password to use when connecting to Subversion / Git using their desired SCM client (e.g. TortoiseSVN, TortoiseGit, etc.).</p>
                 
               
               

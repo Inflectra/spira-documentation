@@ -529,6 +529,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pull-Requests/" title="Pull Requests" class="md-nav__link">
+      Pull Requests
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -663,6 +675,40 @@
   <a href="#reports-configuration" class="md-nav__link">
     Reports Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Reports Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-format" class="md-nav__link">
+    Report Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-elements" class="md-nav__link">
+    Report Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-and-sharing" class="md-nav__link">
+    Saving and Sharing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3689,6 +3735,40 @@
     Reports Configuration
   </a>
   
+    <nav class="md-nav" aria-label="Reports Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-format" class="md-nav__link">
+    Report Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-elements" class="md-nav__link">
+    Report Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-and-sharing" class="md-nav__link">
+    Saving and Sharing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4160,7 +4240,8 @@
 <p>The configuration page for each report differs slightly, but the general format is illustrated below (please note all sections are shown in orange text with a line beneath and are shown here in the collapsed state -- click the orange text to expand the section):</p>
 <p><img alt="" src="../img/Reports_Center_337.png" /></p>
 <p>You can configure the reports in the following ways:</p>
-<p><strong>Report Format</strong> -- This allows you to specify the display format of the report. Depending on the specific report, they can be:</p>
+<h3 id="report-format">Report Format<a class="headerlink" href="#report-format" title="Permanent link">&para;</a></h3>
+<p>This allows you to specify the display format of the report. Depending on the specific report, they can be:</p>
 <ul>
 <li>displayed as a web-page (HTML)</li>
 <li>downloaded as a Microsoft Word document (there are two Word versions: one for newer versions of Word and one for legacy versions of Word)</li>
@@ -4169,17 +4250,27 @@
 <li>there is also a raw-XML format that allows you to export the underlying report data into any external reporting system that supports XML import.</li>
 </ul>
 <p><img alt="" src="../img/Reports_Center_338.png" /></p>
-<p><strong>Report Elements</strong> -- This allows you to determine which types of information to include in the report. This varies by report type, but includes the dependent items related to the artifact being reported on (attachments, test steps, coverage, history, etc.)</p>
+<h3 id="report-elements">Report Elements<a class="headerlink" href="#report-elements" title="Permanent link">&para;</a></h3>
+<p>This allows you to determine which types of information to include in the report. This varies by report type, but includes the dependent items related to the artifact being reported on (attachments, test steps, coverage, history, etc.)</p>
 <p><img alt="" src="../img/Reports_Center_339.png" /></p>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p><strong>Standard Field Filters</strong> -- This allows you to constrain the range of data being reported on, based on the various fields associated with the artifact in question. These filters are typically selections from multi-valued-dropdown lists and date-ranges.</p>
 <p><img alt="" src="../img/Reports_Center_340.png" /></p>
 <p><strong>Custom Property Filters</strong> -- This allows you to constrain the range of data being reported on, based on the custom fields associated with the artifact by your product administrator. These filters can be either freetext or drop-down lists.</p>
 <p><img alt="" src="../img/Reports_Center_341.png" /></p>
 <p><strong>Sort Options</strong> - This option is only available for the non-hierarchical data reports (i.e. for test cases, test sets, test runs, incidents and tasks) and allows you to specify the sort order of the results returned in the report. For the hierarchical-data based reports the sort order is always the order of the hierarchy.</p>
 <p><img alt="" src="../img/Reports_Center_342.png" /></p>
+<h3 id="saving-and-sharing">Saving and Sharing<a class="headerlink" href="#saving-and-sharing" title="Permanent link">&para;</a></h3>
 <p><strong>Report Name</strong> -- If you would like to save the report configuration so that you can quickly re-run it at a later date, you just need to enter a name for the report and indicate (by selecting the checkbox or not) whether you want this report to be private or shared by all members of the product.</p>
 <p><img alt="" src="../img/Reports_Center_343.png" /></p>
-<p>Once you have selected the format, elements and filters, clicking the "<strong><em>Create Report</em></strong>" button launches the report in a new window. Each of the reports is described in <a href="#requirement-reports">Requirement Reports</a> to <a href="#release-reports">Release Reports</a> below:</p>
+<p>To save the generated report into the documents repository for the product, check the checkbox. This will load two extra inputs: </p>
+<ul>
+<li>a dropdown to select the folder to save the report to</li>
+<li>the filename that the saved report will have (note that this cannot contain spaces)</li>
+</ul>
+<p><img alt="" src="../img/Reports_Center_343b.png" /></p>
+<p>Once you have selected the format, elements and filters, clicking the "<strong><em>Create Report</em></strong>" button launches the report in a new window. If you saved the generated report to documents, you can view that report in the folder you selected at any time, as with any other document.</p>
+<p>Each of the reports is described below:</p>
 <h2 id="requirement-reports">Requirement Reports<a class="headerlink" href="#requirement-reports" title="Permanent link">&para;</a></h2>
 <h3 id="requirements-summary-report">Requirements Summary Report<a class="headerlink" href="#requirements-summary-report" title="Permanent link">&para;</a></h3>
 <p>This report displays all of the requirements defined for the current product in the order they appear in the requirements list. The requirement's details and coverage status are displayed in a summary list form:</p>

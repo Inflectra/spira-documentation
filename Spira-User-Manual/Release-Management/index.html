@@ -700,8 +700,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#associations" class="md-nav__link">
-    Associations
+  <a href="#navigation-panel" class="md-nav__link">
+    Navigation Panel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
   </a>
   
 </li>
@@ -709,6 +716,13 @@
           <li class="md-nav__item">
   <a href="#commits" class="md-nav__link">
     Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associations" class="md-nav__link">
+    Associations
   </a>
   
 </li>
@@ -723,6 +737,13 @@
           <li class="md-nav__item">
   <a href="#test-runs_1" class="md-nav__link">
     Test Runs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-log" class="md-nav__link">
+    Full Log
   </a>
   
 </li>
@@ -915,6 +936,18 @@
   <li class="md-nav__item">
     <a href="../Commits/" title="Commits" class="md-nav__link">
       Commits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pull-Requests/" title="Pull Requests" class="md-nav__link">
+      Pull Requests
     </a>
   </li>
 
@@ -3914,8 +3947,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#associations" class="md-nav__link">
-    Associations
+  <a href="#navigation-panel" class="md-nav__link">
+    Navigation Panel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
   </a>
   
 </li>
@@ -3923,6 +3963,13 @@
           <li class="md-nav__item">
   <a href="#commits" class="md-nav__link">
     Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associations" class="md-nav__link">
+    Associations
   </a>
   
 </li>
@@ -3937,6 +3984,13 @@
           <li class="md-nav__item">
   <a href="#test-runs_1" class="md-nav__link">
     Test Runs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-log" class="md-nav__link">
+    Full Log
   </a>
   
 </li>
@@ -4259,22 +4313,43 @@ days, the system will automatically calculate how many hours of effort (planned 
 <h2 id="build-details">Build Details<a class="headerlink" href="#build-details" title="Permanent link">&para;</a></h2>
 <p>When you click on a build entry in the build list, you are taken to the build details page illustrated below:</p>
 <p><img alt="" src="../img/Release_Management_277.png" /></p>
-<p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the build detailed information itself, and the bottom part of the right pane displays different information associated with the build.</p>
-<p>The navigation pane consists of a link that will take you back to the build list, as well as a list of the other builds that belong to the same release/sprint as the current one. The top part of the right pane allows you to view the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.</p>
-<p>The lower part of the right pane contains tabs that can display different information associated with the build. Each of the tabs --
-"Associations", "Incidents", "Commits", and "Test Runs" - is described separately below.</p>
-<h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
-<p>This tab displays a list of SpiraPlan artifacts that have been associated with any of the source code commits that were included in the current build:</p>
-<p><img alt="" src="../img/Release_Management_278.png" /></p>
+<p>This page is made up of three areas:</p>
+<ul>
+<li>the navigation panel on the left</li>
+<li>summary / headline information about the build on the top right</li>
+<li>detailed information about the build on the bottom right</li>
+</ul>
+<h3 id="navigation-panel">Navigation Panel<a class="headerlink" href="#navigation-panel" title="Permanent link">&para;</a></h3>
+<p>The navigation panel has:</p>
+<ul>
+<li>a link back to the build list for that release</li>
+<li>a list of the other builds that belong to the same release/sprint as this build</li>
+</ul>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>The top part of the right panel shows:</p>
+<ul>
+<li>the build's ID (read only)</li>
+<li>its status (e.g. success or failure)</li>
+<li>the creation date</li>
+<li>the last updated date</li>
+</ul>
+<p>Beneath the header bar are a number of collapsible sections, each of which show specific information about the build or links between the build and other parts of the system. This sections are: "Commits", "Associations", "Test Runs", "Incidents", and "Full Log". These are described below.</p>
+<p>the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.</p>
 <h3 id="commits">Commits<a class="headerlink" href="#commits" title="Permanent link">&para;</a></h3>
-<p>This tab displays a list of the source code commits that were included in the current build. The grid can be sorted and filtered by using the appropriate controls:</p>
+<p>This section shows all source code commits included in the current build. The grid can be sorted and filtered by using the appropriate controls.</p>
 <p><img alt="" src="../img/Release_Management_279.png" /></p>
+<h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
+<p>This section shows a list of SpiraPlan artifacts associated with the build. This is automatically populated by all artifacts listed as tokens in the commit messages of the commits included in the build.</p>
+<p><img alt="" src="../img/Release_Management_278.png" /></p>
 <h3 id="incidents_1">Incidents<a class="headerlink" href="#incidents_1" title="Permanent link">&para;</a></h3>
-<p>This tab displays the list of incidents that have been fixed in the current build. The grid can be sorted and filtered by using the appropriate controls:</p>
+<p>This section shows the list of incidents that have been fixed in the current build. The grid can be sorted and filtered by using the appropriate controls. <strong>Note</strong>: if the build has no incidents the section will be hidden.</p>
 <p><img alt="" src="../img/Release_Management_280.png" /></p>
 <h3 id="test-runs_1">Test Runs<a class="headerlink" href="#test-runs_1" title="Permanent link">&para;</a></h3>
-<p>This tab displays a list of all the tests that have been executed against the current build. The grid can be sorted and filtered by using the appropriate controls:</p>
+<p>This section displays a list of all the tests that have been executed against the current build. The grid can be sorted and filtered by using the appropriate controls. <strong>Note</strong>: if the build has no test runs the section will be hidden.</p>
 <p><img alt="" src="../img/Release_Management_281.png" /></p>
+<h3 id="full-log">Full Log<a class="headerlink" href="#full-log" title="Permanent link">&para;</a></h3>
+<p>This section displays the full console log readout that was returned from SpiraPlan by the build tool. This lets you view any detailed messages or errors. <strong>Note</strong>: this only displays the first two million characters of the console log (which should be more than enough under normal circumstances).</p>
+<p><img alt="" src="../img/Release_Management_282.png" /></p>
 <div class="footnote">
 <hr />
 <ol>
