@@ -346,7 +346,7 @@ Project Mappings" for the MsTfsDataSync plug-in entry:
 From this screen, you need to click on Priority, Severity, Status and
 Type in turn to configure their values:
 
-a) Incident Type
+#### a) Incident Type
 
 Click on the "Type" hyperlink under Incident Standard Fields to bring up
 the Incident type mapping configuration screen:
@@ -363,7 +363,7 @@ Administration \> Edit Incident Statuses screen you first make all
 incident types inactive except *Risk, Issue* and *Bug* since only those
 types make sense to synchronize with TFS.
 
-b) Incident Status
+#### b) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring
 up the Incident status mapping configuration screen:
@@ -402,7 +402,7 @@ switched to the "Active+New" status in TFS which will then be synched
 back to "Open" in SpiraTeam. That way you'll be able to see at a glance
 which incidents have been synched with TFS and those that haven't.
 
-c) Incident Priority
+#### c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to
 bring up the Incident Priority mapping configuration screen:
@@ -418,7 +418,7 @@ value for each one. To make this easier, we recommend that inside the
 Administration \> Edit Incident Priorities screen you first make any
 statuses not used in TFS inactive in SpiraTeam.
 
-d) Incident Severity
+#### d) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to
 bring up the Incident Severity mapping configuration screen:
@@ -451,7 +451,7 @@ information for:
 
 
 
-a) TFS's Area Field
+#### a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -496,7 +496,7 @@ For Azure DevOps in the cloud, it is usually easier to just map the areas to the
 
 ![](img/tfs-incident-area-mapping-by-path.png)
 
-b) TFS Custom Fields
+#### b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom
@@ -549,7 +549,7 @@ on the "View Project Mappings" for the MsTfsDataSync plug-in entry:
 From this screen, you need to click on Priority and Status in turn to
 configure their values:
 
-a) Task Status
+#### a) Task Status
 
 Click on the "Status" hyperlink under Task Standard Fields to bring up
 the Task status mapping configuration screen:
@@ -572,7 +572,7 @@ Blocked, Completed and Deferred in SpiraTeam are all equivalent to State
 Primary = Yes as that's the value that's used on the reverse
 synchronization (from TFS \> SpiraTeam).
 
-b) Task Priority (TFS 2012 Plugin Only)
+#### b) Task Priority
 
 Click on the "Priority" hyperlink under Task Standard Fields to bring up
 the Task Priority mapping configuration screen:
@@ -580,7 +580,16 @@ the Task Priority mapping configuration screen:
 ![](img/Using_SpiraTest_with_MS-TFS_96.png)
 
 
+#### c) Task Type
 
+Click on the "Type" hyperlink under Task Standard Fields to
+bring up the Task Type mapping configuration screen:
+
+![](img/Using_Spira_With_ADO_2.png)
+
+The table lists each of the task type values available in
+SpiraTeam and provides you with the ability to enter the matching TFS
+work item type value for each one.
 
 The table lists each of the task priorities available in SpiraTeam and
 provides you with the ability to enter the matching TFS priority value
@@ -603,7 +612,7 @@ information for:
 
 
 
-a) TFS's Area Field
+#### a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -648,7 +657,7 @@ For Azure DevOps in the cloud, it is usually easier to just map the areas to the
 
 ![](img/tfs-incident-area-mapping-by-path.png)
 
-b) TFS Custom Fields
+#### b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom
@@ -701,7 +710,7 @@ MsTfsDataSync plug-in entry:
 From this screen, you need to click on Importance and Status in turn to
 configure their values:
 
-a) Requirement Status
+#### a) Requirement Status
 
 Click on the "Status" hyperlink under Requirement Standard Fields to
 bring up the Requirement status mapping configuration screen:
@@ -723,7 +732,7 @@ case only one of the values can be listed as Primary = Yes as that's the
 value that's used on the reverse synchronization (from TFS \>
 SpiraTeam).
 
-b) Requirement Importance
+#### b) Requirement Importance
 
 Click on the "Importance" hyperlink under Requirement Standard Fields to
 bring up the Requirement Importance mapping configuration screen:
@@ -736,6 +745,20 @@ bring up the Requirement Importance mapping configuration screen:
 The table lists each of the requirement importance values available in
 SpiraTeam and provides you with the ability to enter the matching TFS
 work item priority value for each one.
+
+#### c) Requirement Type
+
+Click on the "Type" hyperlink under Requirement Standard Fields to
+bring up the Requirement Type mapping configuration screen:
+
+![](img/Using_Spira_With_ADO_1.png)
+
+
+
+
+The table lists each of the requirement type values available in
+SpiraTeam and provides you with the ability to enter the matching TFS
+work item type value for each one.
 
 ### Configuring the Requirement Custom Property Mapping
 
@@ -755,7 +778,7 @@ data-mapping information for:
 
 
 
-a) TFS's Area Field
+#### a) TFS's Area Field
 
 First you need to go to Administration \> Edit Custom Lists and create a
 new custom list that contains all the different Areas that are being
@@ -800,7 +823,7 @@ For Azure DevOps in the cloud, it is usually easier to just map the areas to the
 
 ![](img/tfs-incident-area-mapping-by-path.png)
 
-b) TFS Custom Fields
+#### b) TFS Custom Fields
 
 If the custom field in TFS is a list field, first you need to go to
 Administration \> Edit Custom Lists in SpiraTeam and create a new custom

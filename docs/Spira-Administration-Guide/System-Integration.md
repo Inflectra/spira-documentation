@@ -17,9 +17,9 @@ button will achieve this. The recommended procedure for forcing a re-sync is to 
 In the "Data Mapping" column each plugin has a dropdown that shows all the active products on the system, ordered alphabetically. The TFS plugin has this drodown open. You can see two different icons to the left of the product names: a full hexagon and an empty hexagon. A full hexagon means that the product is actively using this particular plugin. Selecting a product from the dropdown and then clicking the arrow to its right will take you to the detailed [product data synchronization page](Product-General-Settings.md#data-synchronization) for that plugin and product.
 
 
-## Source Code Integration (On-Premise Customers Only)
+## Source Code Integration
 
-*This section refers to the functionality available to on-premise customers of SpiraPlan. If you are using the cloud / hosted version of SpiraPlan, please refer to [TaraVault Configuration](../System/#taravault) instead.*
+*This section refers to the functionality available to on-premise customers of SpiraPlan or those customers that have disabled TaraVault. If you are using the cloud / hosted version of SpiraPlan and have not disabled TaraVault, please refer to [TaraVault Configuration](../System/#taravault) instead.*
 
 SpiraPlan® is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
 
