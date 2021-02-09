@@ -256,7 +256,7 @@ This view is designed to let you see the incidents in the current product / rele
 
 ![](img/Incident_Tracking_253.png)
 
-You can click on the expand/collapse icons to hide any resources that are not relevant.
+You can click on the expand/collapse icons to hide any statuses that are not relevant.
 
 Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the incidents between statuses or to/from the release/sprint backlog. Any incidents not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
 
