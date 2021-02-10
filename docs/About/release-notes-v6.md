@@ -3,9 +3,9 @@
 ## Version 6.7.1 (February 2020)
 
 !!! info "Summary"
-    **[Pull Requests](../../Spira-User-Manual/Pull-Requests)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
+    **[Pull Requests](../../Spira-User-Manual/Pull-Requests)**: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/#pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
 
-    **The [build details](../../Spira-User-Manual/Release-Management/build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
+    **The [build details](../../Spira-User-Manual/Release-Management/#build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
 
 
     **[Source code diff](../../Spira-User-Manual/Commits/#commit-file-details) view**: by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.
@@ -32,8 +32,8 @@
         - Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]
         - Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]
         - [Source code clone popup](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#connecting-to-the-source-code-repository) for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
-        - Improve the design of the [build details](../../Spira-User-Manual/Release-Management/build-details) page to make it easier to use [IN:5665]
-        - [Build details](../../Spira-User-Manual/Release-Management/build-details) page truncates very large console logs to improve performance page load time [IN:6056]
+        - Improve the design of the [build details](../../Spira-User-Manual/Release-Management/#build-details) page to make it easier to use [IN:5665]
+        - [Build details](../../Spira-User-Manual/Release-Management/#build-details) page truncates very large console logs to improve performance page load time [IN:6056]
         - Add ability to copy to clipboard the full canonical commit ids for git and subversion (not the shorthand version) on the commit details page [IN:6026]
         - [File diff view for source code](../../Spira-User-Manual/Commits/#commit-file-details) auto collapses to only show changed lines (with option to expand) [IN:6006]
         - Association Panel (source code): build associations are added by the system (like commits) so users should not be able to remove or edit [IN:6010]
@@ -60,7 +60,7 @@
         - Improve the contrast of widget config icons whe in dark mode on home pages or the reporting page [IN:5965]
         - Improve performance of loading any application URL by reformatting the regular expressions used to parse and rewrite all application URLs (including API calls) [IN:5997]
         - Administration: sort all template dropdowns alphabetically, not by ID, and include the ID after the name [IN:5998]
-        - Allow users to delete tasks from the [requirements](../../Spira-User-Manual/Requirements-Management/#tasks) and [risks detail](../../Spira-User-Manual/Risk-Management/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
+        - Allow users to delete tasks from the [requirements](../../Spira-User-Manual/Requirements-Management/#tasks) and [risks detail](../../Spira-User-Manual/Risks-Management/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
         - Association history records should not be visible on the Product Admin Product History Widget [IN:6027]
         - [Product Home Page]((../../Spira-User-Manual/Product-Homepage) (Development) should not show error if no source code providers are active [IN:6050]
         - Admin [product history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) changes: allow users to revert more than one change at a time (as in earlier versions) [IN:6081]
