@@ -585,7 +585,7 @@ the Task Priority mapping configuration screen:
 Click on the "Type" hyperlink under Task Standard Fields to
 bring up the Task Type mapping configuration screen:
 
-![](img/Using_Spira_With_ADO_2.png)
+![](img/Using_Spira_with_ADO_2.png)
 
 The table lists each of the task type values available in
 SpiraTeam and provides you with the ability to enter the matching TFS
@@ -751,7 +751,7 @@ work item priority value for each one.
 Click on the "Type" hyperlink under Requirement Standard Fields to
 bring up the Requirement Type mapping configuration screen:
 
-![](img/Using_Spira_With_ADO_1.png)
+![](img/Using_Spira_with_ADO_1.png)
 
 
 
