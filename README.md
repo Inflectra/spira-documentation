@@ -7,6 +7,7 @@ We can fully change the theme used and its features using a basic templating lan
 ## The broad workflow:
 - write and edit in markdown
 - make sure new pages are accessible using the main navigation (in the mkdocs.yml)
+- check that there are no broken images or links
 - save, commit, and push your changes to Github - this gets the source code of our documentation in place
 - deploy from a local machine using a simple command from the command line to build, commit, push, and deploy the rendered files to Github
 - Github hosts these deployed files as a static site
@@ -24,6 +25,7 @@ We can fully change the theme used and its features using a basic templating lan
 4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
 6. Clone this repo to your local machine
 7. Edit files as needed
+8. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
 
 
 # Working with the docs and Markdown
@@ -39,12 +41,19 @@ We can fully change the theme used and its features using a basic templating lan
 # Key commands
 - **Running a local test server**: from the current branch, run `mkdocs serve`. The web server should be available at localhost:8000
 - **Edit and commit your documentation changes**: files can be edited and committed straight on Github, and created, deleted, or edited from the desktop. Work in the relevant branch (master to make the changes live) and commit code as normal using Git. 
+- **CHECK FOR ERRORS**:
+
+    - run `mkdocs build` - this will show pages not linked in the navigation (likely fine) and images broken links that you can then repair
+    - run `mkdocs serve` then in a new terminal window run `blc http://localhost:8000/About/release-notes-v6 -ro -e`. This checks for internal links only
+    - once this has finished (will take a few minutes) search in the output for "─BROKEN─". This will give you the bad link and you can see above the page the link is on (the line above starting "Getting links from: http://localhost:8000...").
+    - you can separately run `blc http://localhost:8000/About/release-notes-v6 -ro -i` to check for external broken links but this will throw lots of errors on things like twitter on every page
+
 - **Deploy to to GitHub Pages**: from the local machine when on the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
 
 
-
-
 # Maintenance Operations
+
+Can run `mkdocs build --clean`. After some time, files may be removed from the documentation but they will still reside in the site directory. Run this command to remove those stale files.
 
 ## Delete Unused Pictures
 From the tools directory, run the command `python .\unusedimgs.py`. This will generate a list of commands you can paste into the console to delete the file. ***PLEASE READ LIMITATIONS BEFORE YOU PROCEED AND DELETE IMAGES*** 
