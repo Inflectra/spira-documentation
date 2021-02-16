@@ -62,7 +62,7 @@
         - Administration: sort all template dropdowns alphabetically, not by ID, and include the ID after the name [IN:5998]
         - Allow users to delete tasks from the [requirements](../../Spira-User-Manual/Requirements-Management/#tasks) and [risks detail](../../Spira-User-Manual/Risks-Management/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
         - Association history records should not be visible on the Product Admin Product History Widget [IN:6027]
-        - [Product Home Page]((../../Spira-User-Manual/Product-Homepage) (Development) should not show error if no source code providers are active [IN:6050]
+        - [Product Home Page](../../Spira-User-Manual/Product-Homepage) (Development) should not show error if no source code providers are active [IN:6050]
         - Admin [product history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) changes: allow users to revert more than one change at a time (as in earlier versions) [IN:6081]
         - Installer: display an error message on upgrading to v6+ if the database had not been DB properly upgraded to v5.4.0.4 first [IN:6086]
 
@@ -395,7 +395,7 @@
     - Installer can upgrade successfully with required database additions [RQ:2850]
 
 
-    * [Enterprise Dashboard]((../../Spira-User-Manual/Enterprise-Homepage/) (SpiraPlan only)
+    * [Enterprise Dashboard](../../Spira-User-Manual/Enterprise-Homepage/) (SpiraPlan only)
         - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Enterprise-Homepage/#requirement-completion) [RQ:2743]
         - [Portfolios: Completion](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-completion) [RQ:2744]
         - [Portfolios: Relative Size](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-relative-size) [RQ:2745]
