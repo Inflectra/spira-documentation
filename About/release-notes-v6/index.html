@@ -3562,14 +3562,14 @@
 <h2 id="version-671-february-2020">Version 6.7.1 (February 2020)<a class="headerlink" href="#version-671-february-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
-<p><strong><a href="../../Spira-User-Manual/Pull-Requests">Pull Requests</a></strong>: The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each <a href="../../Spira-User-Manual/Pull-Requests/#pull-request-details">pull request</a> you can see all of the relevant commits, their code changes, and discuss any code changes.</p>
+<p><strong><a href="../../Spira-User-Manual/Pull-Requests">Pull Requests</a></strong> (SpiraTeam and SpiraPlan): The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each <a href="../../Spira-User-Manual/Pull-Requests/#pull-request-details">pull request</a> you can see all of the relevant commits, their code changes, and discuss any code changes.</p>
 <p><strong>The <a href="../../Spira-User-Manual/Release-Management/#build-details">build details</a> page</strong> has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.</p>
-<p><strong><a href="../../Spira-User-Manual/Commits/#commit-file-details">Source code diff</a> view</strong>: by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.</p>
-<p><strong>Recording Product setting changes</strong>: The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product history page</a>.</p>
+<p><strong><a href="../../Spira-User-Manual/Commits/#commit-file-details">Source code diff</a> view</strong> (SpiraTeam and SpiraPlan): by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.</p>
+<p><strong>Recording Product setting changes</strong> (SpiraTeam and SpiraPlan only): The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product history page</a>.</p>
 </div>
 <details class="success"><summary>New Features</summary><ul>
 <li>
-<p><strong>Source Code</strong></p>
+<p><strong>Source Code</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>Add <a href="../../Spira-User-Manual/Pull-Requests#pull-request-list">Pull Request list page</a> to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]</li>
 <li>Can create a new pull request on the <a href="../../Spira-User-Manual/Pull-Requests#pull-request-list">Pull Request list page</a>, specifying the source branch and the destination branch [RQ:3006]</li>
@@ -3578,7 +3578,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Enhanced history tracking</strong></p>
+<p><strong>Enhanced history tracking</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>Enhance history to track position changes of test steps, use case steps, and risk mitigations [RQ:2659]</li>
 <li>Enhance History to record Product Setting Changes (this includes toggling baseling, testing settings, and some planning options) [RQ:3044]</li>
@@ -3589,7 +3589,7 @@
 </details>
 <details class="bug"><summary>Bug fixes and enhancements</summary><ul>
 <li>
-<p><strong>Source Code / Development</strong></p>
+<p><strong>Source Code / Development</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]</li>
 <li>Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]</li>
@@ -3644,7 +3644,7 @@
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
 <p>This release focused on <strong>improving the experience and functionality for developers and development teams</strong> using SpiraTeam and SpiraPlan. On top of integrating with the top <a href="../../IDE-Integration/Visual-Studio">IDEs</a>, your <a href="../../Build-Server-Integration/Jenkins--Hudson">CI/CD</a> processes, and unit test, this release brings massive improvements to our <a href="../../Spira-User-Manual/Source-Code">source code</a> features.</p>
-<p><strong>We have revamped the <a href="../../Spira-User-Manual/Source-Code">source code management module</a></strong>, and for the first time, there is now a native <a href="../../Spira-User-Manual/Commits/#commit-file-details">code difference viewing</a> capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <em>Note, source code is not included in SpiraTest</em>.</p>
+<p><strong>We have revamped the <a href="../../Spira-User-Manual/Source-Code">source code management module</a></strong> (SpiraTeam and SpiraPlan only), and for the first time, there is now a native <a href="../../Spira-User-Manual/Commits/#commit-file-details">code difference viewing</a> capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <em>Note, source code is not included in SpiraTest</em>.</p>
 <p><strong>View rendered markdown files</strong> directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.</p>
 </div>
 <details class="success"><summary>New Features</summary><ul>
@@ -3668,7 +3668,7 @@
 </details>
 <details class="bug"><summary>Bug fixes and enhancements</summary><ul>
 <li>
-<p><strong>Source Code</strong></p>
+<p><strong>Source Code</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>Fix source code files missing their author and date information [IN:4526]</li>
 <li>Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]</li>
@@ -3724,7 +3724,7 @@
 <h2 id="version-661-october-2020">Version 6.6.1 (October 2020)<a class="headerlink" href="#version-661-october-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
-<p><strong>Baselining Enhancements</strong>: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.</p>
+<p><strong>Baselining Enhancements</strong> (SpiraTeam and SpiraPlan only): with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.</p>
 </div>
 <details class="success"><summary>New features</summary><ul>
 <li>Store source code branches and commit information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]</li>
@@ -3758,13 +3758,13 @@
 <h2 id="version-66-august-2020">Version 6.6 (August 2020)<a class="headerlink" href="#version-66-august-2020" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
-<p><strong>Planning Improvements</strong>: Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements.</p>
-<p><strong>Baselines</strong>: View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.</p>
+<p><strong>Planning Improvements</strong> (SpiraTeam and SpiraPlan only): Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements.</p>
+<p><strong>Baselines</strong> (SpiraTeam and SpiraPlan only): View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.</p>
 <p><strong>Performance Improvements</strong>: The most frequent power-hungry operations by users have been reworked from the ground up to maximize performance. Operations like updating test coverage is up to 300% faster.</p>
 </div>
 <details class="success"><summary>New features</summary><ul>
 <li>
-<p>Administering baselining within a product</p>
+<p>Administering baselining within a product (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>With baselining turned on, product admins can access the product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#baselines">baseline list page</a> [RQ:2939]</li>
 <li>Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]</li>
@@ -3774,7 +3774,7 @@
 </ul>
 </li>
 <li>
-<p>Product Planning</p>
+<p>Product Planning (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li><a href="../../Spira-Administration-Guide/Product-Planning/#requirements">Product planning options</a> allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]</li>
 <li><a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Product planning options</a> page lets you set dynamic WIP Limits for each status on the <a href="../../Spira-User-Manual/Planning-Board/#work-in-progress-limits">Planning Board</a> [RQ:2970]</li>
@@ -3787,7 +3787,7 @@
 </details>
 <details class="bug"><summary>Bug fixes and enhancements</summary><ul>
 <li>
-<p><strong>Agile and Planning</strong></p>
+<p><strong>Agile and Planning</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
 <li>If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]</li>
 <li>If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]</li>
