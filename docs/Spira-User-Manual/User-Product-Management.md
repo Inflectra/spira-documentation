@@ -136,12 +136,12 @@ The name of the saved search is displayed along with an icon that depicts which 
 
 ## My Assigned Requirements
 
-This section lists all the requirements you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for either developing the supporting test cases or decomposing the requirement into its detailed work breakdown structure of product tasks. The requirement name is displayed, along with its status (requested, accepted, in-progress, etc.) and its importance.
+This section lists all the requirements you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for either developing the supporting test cases or decomposing the requirement into its detailed work breakdown structure of product tasks. The requirement name is displayed, along with its status (requested, accepted, in-progress, etc.) and its importance. Requirements are included based on their importance: the list is ordered by importance (highest at top) and requirements with the same importance are ordered by their IDs.
 
 
 ## My Assigned Test Cases
 
-This section lists all the test cases you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the assigned test scripts. To aid in this process, the script name is displayed, along with its last execution status (failed, passed or not-run) and date of last execution. This enables you to see how recently the tests have been run, and whether they need to be re-run.
+This section lists all the test cases you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the assigned test scripts. To aid in this process, the script name is displayed, along with its last execution status (failed, passed or not-run) and date of last execution. This enables you to see how recently the tests have been run, and whether they need to be re-run. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs.
 
 If you click on the test-name hyperlink, you will be taken to the [details page for this test-case](../Test-Case-Management/#test-case-details) and the product that the test-case belongs to will be made your current product. 
 
@@ -150,7 +150,7 @@ If you click on the play button to its right you will launch the test-case in th
 
 ## My Assigned Test Sets
 
-This section lists all the test sets (groups of test cases) you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. To aid in this process, the test set name is displayed, along with its status, the product it belongs to, the number of remaining test cases to be executed, and the date by which all the tests need to have been run.
+This section lists all the test sets (groups of test cases) you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. To aid in this process, the test set name is displayed, along with its status, the product it belongs to, the number of remaining test cases to be executed, and the date by which all the tests need to have been run. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs.
 
 If you click on the test-set name hyperlink, you will be taken to the
 [details page for this test-set](../Test-Case-Management/#test-run-details) and the product that the test-set belongs to will be made your current product. If you click on the play button to its right you will 
@@ -166,27 +166,24 @@ Any pending test run can be either deleted or resumed by clicking on the appropr
 
 ## My Assigned Tasks
 
-This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed in ascending date order so that the items with the oldest due-dates are displayed first. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](../Task-Tracking/) -- task management for details of the different progress indicators.
+This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed by priority: tasks with no priority at the top, and after that the highest priority tasks. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](../Task-Tracking/) -- task management for details of the different progress indicators.
 
 Clicking on the task name hyperlink will take you to the task details page. This page will describe the task in more detail, illustrate which requirement and release it is associated with, and also allow you to view the change log of actions that have been performed on it.
 
 
 ## My Assigned Incidents
 
-This section lists all the open incidents you are the owner of, across
-*all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for resolving the incident. In the case of a bug, this can mean actually fixing the problem, whereas for other incident types (e.g. training item) it may mean simply documenting a workaround. In either event, this section highlights the open incidents you need to manage, ranked by importance/priority and categorized by type, with the open date displayed to give you a sense of the age of the incident.
+This section lists all the open incidents you are the owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for resolving the incident. In the case of a bug, this can mean actually fixing the problem, whereas for other incident types (e.g. training item) it may mean simply documenting a workaround. In either event, this section highlights the open incidents you need to manage, ranked by priority (incidents with no priority are at the top) and categorized by type, with the open date displayed to give you a sense of the age of the incident.
 
-Clicking on the incident name hyperlink takes you to the 
-[incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
+Clicking on the incident name hyperlink takes you to the [incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
 ## My Detected Incidents
 
 This section lists all the open incidents that you have detected, across
-*all the different products* you are a member of. These incidents are not necessarily ones that you need to take an active role in resolving, but since you were the originator -- either by executing a test case or just logging a standalone incident -- you can watch them to make sure that they are resolved in a timely manner.
+*all the different products* you are a member of. These incidents are not necessarily ones that you need to take an active role in resolving, but since you were the originator -- either by executing a test case or just logging a standalone incident -- you can watch them to make sure that they are resolved in a timely manner. The incidents shown are ranked by last updated date (most recent at the top).
 
-Clicking on the incident name hyperlink takes you to the 
-[incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
+Clicking on the incident name hyperlink takes you to the [incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
 ## Quick Launch
@@ -219,12 +216,12 @@ This widget allows you to subscribe to an external newsfeed and have the results
 
 ## My Assigned Risks (SpiraPlan only)
 
-This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail.
+This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 
 
 ## My Assigned Documents
 
-This section lists all the documents you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the documents details page. This page will describe the documents in more detail.
+This section lists all the documents you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the documents details page. This page will describe the documents in more detail. The list is ranked by last updated date.
 
 
 ## Global Navigation
