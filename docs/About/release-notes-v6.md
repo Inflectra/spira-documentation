@@ -1,6 +1,71 @@
 # Release Notes for Spira v6
 
-## Version 6.7.1 (February 2020)
+## Version 6.8 (March 2021)
+
+!!! info "Summary"
+    **BDD and Gherkin Support**: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the documents repository, which includes workflow, checkout, and versioning support.
+
+    **Inline content editing**: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.
+
+??? success "New Features"
+    - **Document Management**: Live editing of Text/Markdown/HTML in the Documents Management module [RQ:1697]
+    - **Administration**: Add support for future implementation of program, template and portfolio settings [RQ:3051]
+    - Add APIs for Risk management (including risk mitigations and reading risk template fields) [RQ:2544]
+
+??? bug "Bug fixes and enhancements"
+    * **Testing and test coverage**
+
+        - [My Assigned Test Cases](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-cases) widget adds options to show or hide the last executed date and the workflow status [IN:3935]
+        - Fix package not changing status to "Tested" once all its child features are marked "Tested" [IN:4008]
+        - Requirement test coverage for test cases in a different product should always reflect those tests' execution results [IN:4856]
+        - Limited View role: do not show error message when the user creates an incident during test execution by clicking the Add button [IN:5984]
+        - Generic test case/set list URL should always open the test case list to the last folder (this was not the case if the folder has an ID of 1) [IN:5989]
+        - Improve performance of [test case parameter](../../Spira-User-Manual/Test-Case-Management/#parameters) hierarchy refresh [IN:6094]
+        - Fix not being able to reassign pending test runs from product home page or My Page (introduced in 6.7.1) [IN:6161]
+        - Fix system error that occurred when baselining was on for a product and you attempted an operation that added or edit test steps [IN:6179]
+        - Test Case > [Automation Section](../../Spira-User-Manual/Test-Case-Management/#overview-automation): add file icon and link to document details page for filename [IN:6196]
+        - Do not associate a test case with a release if the test case is a different product to the release [IN:4863]
+    
+    * **Home pages and reporting**
+
+        - The image saved from a graph should look the same as the original (without oddly shaped black shaded areas) [IN:4960]
+        - Program Home page [Test Execution Status](../../Spira-User-Manual/Program-Homepage/#test-execution-status) widget: when specified in the options, the number of test runs should be limited to active releases only [IN:5844]
+        - [Incident Summary Report](../../Spira-User-Manual/Reports-Center/#incident-summary-report) has a field called "Resolved Release" but it should read "Planned Release" [IN:5943]
+        - Improve Performance by switching My Page widget pagination to be fully handled by the database [IN:6102]
+        - Fix My Page, [Recent Artifacts](../../Spira-User-Manual/User-Product-Management/#recent-artifacts): Test Run and Document links had 0 for the product ID, so the links did not work [IN:6092]
+        - Tooltips on the My Page [My Assigned Test Cases](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-cases) and [My Assigned Test Sets](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-sets) widgets should always display [IN:6167]
+
+    * **API**
+
+        - Add API methods to open and delete document versions [IN:2237]
+        - Add API methods to delete an existing association [IN:3623]
+        - Add API methods to manage Document Types for a template [IN:6217]
+        - Add API method to retrieve release builds without description information [IN:5031]
+        - Add API function to v6.0 API to retrieve event logs [IN:5128]
+
+    * **Other**
+    
+        - Add a [product setting](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) to filter list page name field by name only (not name and description as now) - this can speed up search for very large lists of artifacts [IN:5969]
+        - [Build details](../../Spira-User-Manual/Release-Management/#build-details) page: improve the display of logs and, for long logs, cut out the middle of the log not the end [IN:6145]
+        - Ignore extra spaces around a product or between words when attempting to [change templates](../../Spira-Administration-Guide/Product-Changing-Template) or [delete a product](../../Spira-Administration-Guide/System-Workspaces/#view-edit-products) [IN:5949]
+        - Fix [Data Tools](../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools) operation to fix releases missing the required field of Percent Complete [IN:6109]
+        - Pull Request tasks should show the correct icon on the [task tab](../../Spira-User-Manual/Requirements-Management/#tasks) of the requirement details page (currently shows no icon) [IN:6156]
+        - Document detail page, [versions tab](../../Spira-User-Manual/Document-Management/#document-versions): buttons should be hidden if the user does not have permission to edit the current document [IN:6214]
+        - When another users has changed the same artifact as you, you see the wrong message if that other user changed status, and there is no transition from the new status back to the old status [IN:4822]
+        - Clicking "Save And New" on a requirement/release should always add the subsequent artifact as a sibling, not add it at the bottom of the list [IN:4878]
+        - Fix opening a details page directly to a specific tab via a dedicated url like requirements/1/Tasks.aspx [IN:5730]
+        - Fix when creating one artifact from another (via associations tabs), new artifact notifications were not firing as they would for a normally new item [IN:5990]
+        - Code in comments and plain text boxes should render as a monospace font [IN:6149]
+        - Improve performance of saving recent products and artifacts a user visits by adding dedicated database tables for this functionality [IN:6070]
+        - Improve performance of common operations by adding datbase asc and desc indexes to key tables [IN:6100]
+        - Add security improvement to always prevent the application being loaded inside frames/iframes [IN:6051]
+        - Add security improvement to fix "Format String Error" found during ZAP analysis [IN:6072]
+        - Add security improvement to fix "X-Content-Type-Options Header Missing" found during ZAP analysis [IN:6076]
+        - Updating risks should correctly check for concurrency (if another user has updated the risk since you opened it) [IN:6165]
+        - Fix not being able to save a risk after transitioning to a status that requires a comment [IN:6203]
+
+
+## Version 6.7.1 (February 2021)
 
 !!! info "Summary"
     **[Pull Requests](../../Spira-User-Manual/Pull-Requests)** (SpiraTeam and SpiraPlan): The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/#pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
