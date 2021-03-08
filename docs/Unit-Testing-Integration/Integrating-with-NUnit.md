@@ -119,6 +119,14 @@ assigned test case
 method's test case ID in SpiraPlan. Only include the method name,
 without the parentheses.
 
+### Running the Tests with NUnit
+
+To execute the tests, you can use any of the standard ways that NUnit can be executed (Gui, Console, etc.), however the simplest way to get started is to use the NUnit console runner:
+
+	nunit3-console "NUnit 3.0\bin\Release\SampleTestSuite.dll"
+
+*(where you will need to adjust the path to match where the test suite assembly can be found)*
+
 Once you run your tests with the NUnit Console Runner, you should see
 the results in SpiraPlan:
 
