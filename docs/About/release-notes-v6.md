@@ -3,12 +3,12 @@
 ## Version 6.8 (March 2021)
 
 !!! info "Summary"
-    **BDD and Gherkin Support**: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the documents repository, which includes workflow, checkout, and versioning support.
+    **BDD and Gherkin Support**: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the [documents repository](../../Spira-User-Manual/Document-Management), which includes workflow, checkout, and versioning support.
 
-    **Inline content editing**: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.
+    **[Inline content editing](../../Spira-User-Manual/Document-Management/#edit)**: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.
 
 ??? success "New Features"
-    - **Document Management**: Live editing of Text/Markdown/HTML in the Documents Management module [RQ:1697]
+    - **Document Management**: [Inline editing](../../Spira-User-Manual/Document-Management/#edit) of Text/Markdown/HTML in the Documents Management module [RQ:1697]
     - **Administration**: Add support for future implementation of program, template and portfolio settings [RQ:3051]
     - Add APIs for Risk management (including risk mitigations and reading risk template fields) [RQ:2544]
 

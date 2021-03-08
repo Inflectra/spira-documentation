@@ -1,9 +1,17 @@
 # Document Management
 
-This section outlines the document management features of SpiraPlan®
-that can be used to upload, manage and share documents between the different members of the product. This module includes support for uploading files and URLs, versioning of documents, the ability to organize into folders and categorize and search using meta-tags.
+This section outlines the document management features of SpiraPlan® that can be used to upload, manage, edit, and share documents between product members. This module includes support for:
 
-In addition the document management features are fully integrated into the rest of the system, so that documents attached to other artifacts (e.g. requirements, test cases, etc.) are automatically connected to the product documentation repository.
+- uploading files and URLs
+- creating certain document types (eg text files) from within the app
+- versioning of documents
+- editing (with versioning) certain document types (eg text files) from the app itself
+- managing metadata on each document (description, author, custom fields, and more)
+- managing documents using workflows
+- organizing documents into folders
+- categorizing and searching using tags
+
+Document management is fully integrated into the rest of the system: you can attach documents to other artifacts (e.g. requirements, test cases, etc.) and any ones you add on an artifact (including screenshots) are automatically connected to the product documentation repository.
 
 
 ## Document List
@@ -113,13 +121,6 @@ Read about [using workflows to change the status of your document](Application-W
 For documents, you can, depending on how the product administrator has set this up, use workflows to control who can add a new version to a document when. This can be useful for "checking-out" a document, during which time it is locked. When the document is checked back in the workflow can require that the person checking in the document upload a new version (make sure you upload the version before changing the status).
 
 
-### Overview - details
-
-This tab allows you to view and/or edit the details of the particular document. You can edit the various fields (name, description, etc.) and once you are satisfied with them, click one of the "***Save***" buttons to commit the changes. In addition, you can delete the current document by choosing "***Delete***", or discard any changes made by clicking "***Refresh***".
-
-The lower part of the main pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be in "Versions" mode. The functionality in each of these views is described below.
-
-
 ### Preview
 
 This tab displays a preview of the currently active version of the document. Previews are shown for a number of file types, notably plain text or code files, and images.
@@ -130,6 +131,15 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ![](img/Document_Management_328.png)
 
+### Edit
+
+TODO
+
+### Overview - details
+
+This tab allows you to view and/or edit the details of the particular document. You can edit the various fields (name, description, etc.) and once you are satisfied with them, click one of the "***Save***" buttons to commit the changes. In addition, you can delete the current document by choosing "***Delete***", or discard any changes made by clicking "***Refresh***".
+
+The lower part of the main pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be in "Versions" mode. The functionality in each of these views is described below.
 
 ### Document Versions
 
