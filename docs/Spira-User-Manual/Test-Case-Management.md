@@ -235,9 +235,9 @@ Clicking on the "***Insert Link***" button brings up the following dialog box th
 
 ![](img/Test_Case_Management_143.png)
 
-When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared parameters (see the section on Parameters below for more details) you will be given a list of parameters that needed to be filled out.
+When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared [parameters](#parameters) you will see a list of parameters to fill out.
 
-You need to fill out the values of the parameters for the linked test case and then click the "***Add***" button to complete the operation. The system will then insert the test case as a link just before the currently selected test step. If no existing test step was selected, the link will be added at the end of the test step list.
+If it makes sense for your tests you can fill out the parameter values and then click "***Add***". The system will insert the test case as a link. These paramter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.
 
 If you want to create a test step with specific parameters and parameter values, you can do so by clicking the "***Create New Test Case***". This will change the dialog to one where you can assign a folder, name, and parameters to a new test case. On clicking the "***Add***" button: the new test case is created; a test step is created within that new test case; the parameters specified in the dialog are assigned to that test step, with the values set as the defaults for the step; and the new test case is added as a linked test case in the list of test steps.
 
@@ -276,7 +276,7 @@ If you click "***Edit***" on more than one row, the "***Save***" buttons are onl
 
 ### Editing Test Links
 
-To modify an existing Test Link you simply need to click on the "***Edit***" button to the right of the step, or double click on the cells in the row. That will open up the special dialog box used for editing the parameter values associated with a specific linked test case:
+To modify an existing Test Link you simply need to click on the "***Edit***" button to the right of the step, or double click on the cells in the row. This will open up the special dialog box used for editing the parameter values to pass into the specific linked test case:
 
 ![](img/Test_Case_Management_146.png)
 
@@ -290,14 +290,37 @@ To move test steps in the list, click on the row you want to move and drag it wh
 
 ### Parameters
 
-Test cases can have parameters associated with them. This enables one test case to be called several times by another test case (as a link) and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case.
+Test cases can have parameters associated with them. This lets a single test case get called multiple times by another test case (as a link) and have different parameters passed in each case, making the operation different. 
 
-To view / change the parameters associated with the current test case, click on the "***Edit Parameters***" button in the toolbar and the list of current parameters will be displayed:
+!!! info "Parameter Example"
+    You have a test case "login to application". This test case has 2 parameters: username; and password. It has default values for these parameters of "user" and "correct-password". We set the Sample Data field to read: "Username = ${username}, and password = ${password}". You can reuse this test case in other test cases by [linking links](#insert-link).
+    
+    - If you execute the "login to application" by itself you will see that sample data reads: "Username = user, and password = correct-password"
+    - Now add this test case as a [linked step](#insert-link) to another test case "Can login successfully". Let's not change the default values yet. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password"
+    - Next, [edit the linked test step](#editing-test-links) "login to application". We see the two parameters with boxes to type in parameter values. We add a value for "username" of "admin". Now when we execute "Can login successfully" sample data will be different - we are **overriding the default parameter values**: "Username = **admin**, and password = correct-password"
+    - We have not changed the default values - we are passing down values that override the default values. 
+
+    Hopefully, the above example begins to show you the flexibility of parameters. You can link test cases together in complex ways - with test cases nested inside each other. With complex test case / link structures, you can still pass down parameter values. Building on the above example, let's add the test case "Can login successfully" to a new, third, test case called "Can login and logout successfully". We now have 3 test cases in a chain. When we add "Can login successfully" as a link we can only edit one of the original parameters: only "password". We are not able to edit "username". This is because when you override a parameter value in a link once, you cannot override from higher up in the chain. 
+    
+    In other words, during execution, parameter values are set by the linked step's defaults if no parent test case overrides them; and by the test case parent closest to the originating linked step that sets an overriding value for a parameter.
+    
+To **view / change the parameters** associated with the current test case, click on the "***Edit Parameters***" button in the toolbar to see and edit the list of current parameters for this test case:
 
 ![](img/Test_Case_Management_147.png)
 
-The list of existing parameters is displayed in a list. Beneath this, is a form where you can add a new parameter and default value (used when the test case is run directly rather than being called by another test case). You can delete an existing parameter or copy the parameter token to your computer's clipboard. If you want to paste the parameter token onto the current page (say into a specific test step), position the cursor where you want and click "***Insert at Cursor***" This is a quick way to include the parameter and then have it converted into the parameter value during test execution.
+Existing parameters are shown in a list. For each paramenter you can: 
 
+- edit a parameter - you can change the token name, and update/add/remove the default value
+- delete an existing parameter
+- copy the parameter token to the clipboard. 
+- insert the parameter token at the current cursor position. To do this:
+
+    - edit the relevant test step
+    - open the Edit Parameters popup
+    - position the cursor where you want it in on one of the test step fields
+    - click "***Insert at Cursor***".
+
+To **add a new parameter** to the test case, use the form at the bottom of the popup dialog. Set the token name and (optionally) a default value then click "Add", and then "Save". 
 
 ### Overview - Automation
 
