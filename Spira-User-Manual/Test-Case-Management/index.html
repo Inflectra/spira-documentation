@@ -4227,8 +4227,8 @@ gray.</p>
 <h3 id="insert-link">Insert Link<a class="headerlink" href="#insert-link" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Insert Link</em></strong>" button brings up the following dialog box that allows you to either choose an existing test case to be inserted or create a new test case and step with parameters:</p>
 <p><img alt="" src="../img/Test_Case_Management_143.png" /></p>
-<p>When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared parameters (see the section on Parameters below for more details) you will be given a list of parameters that needed to be filled out.</p>
-<p>You need to fill out the values of the parameters for the linked test case and then click the "<strong><em>Add</em></strong>" button to complete the operation. The system will then insert the test case as a link just before the currently selected test step. If no existing test step was selected, the link will be added at the end of the test step list.</p>
+<p>When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared <a href="#parameters">parameters</a> you will see a list of parameters to fill out.</p>
+<p>If it makes sense for your tests you can fill out the parameter values and then click "<strong><em>Add</em></strong>". The system will insert the test case as a link. These paramter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.</p>
 <p>If you want to create a test step with specific parameters and parameter values, you can do so by clicking the "<strong><em>Create New Test Case</em></strong>". This will change the dialog to one where you can assign a folder, name, and parameters to a new test case. On clicking the "<strong><em>Add</em></strong>" button: the new test case is created; a test step is created within that new test case; the parameters specified in the dialog are assigned to that test step, with the values set as the defaults for the step; and the new test case is added as a linked test case in the list of test steps.</p>
 <p><img alt="" src="../img/Test_Case_Management_144.png" /></p>
 <h3 id="delete_1">Delete<a class="headerlink" href="#delete_1" title="Permanent link">&para;</a></h3>
@@ -4245,16 +4245,43 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_145.png" /></p>
 <p>If you click "<strong><em>Edit</em></strong>" on more than one row, the "<strong><em>Save</em></strong>" buttons are only displayed on the first row, and you can make changes to all the editable rows and then save the changes by clicking the one "<strong><em>Save</em></strong>" button. Also, if you want to make the same change to multiple rows, you can click on the "<strong><em>fill</em></strong>" icon to the right of the editable item, which will propagate the new value to all editable items in the same column. When you have made your changes, you can either click "<strong><em>Save</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information.</p>
 <h3 id="editing-test-links">Editing Test Links<a class="headerlink" href="#editing-test-links" title="Permanent link">&para;</a></h3>
-<p>To modify an existing Test Link you simply need to click on the "<strong><em>Edit</em></strong>" button to the right of the step, or double click on the cells in the row. That will open up the special dialog box used for editing the parameter values associated with a specific linked test case:</p>
+<p>To modify an existing Test Link you simply need to click on the "<strong><em>Edit</em></strong>" button to the right of the step, or double click on the cells in the row. This will open up the special dialog box used for editing the parameter values to pass into the specific linked test case:</p>
 <p><img alt="" src="../img/Test_Case_Management_146.png" /></p>
 <p>This allows you to edit the parameters being passed from the current test step to the linked test case without having to recreate the test link from scratch. To commit the change click "<strong><em>Save</em></strong>" to close the dialog box, or click "<strong><em>Cancel</em></strong>" to revert back to the original information.</p>
 <h3 id="moving-test-steps">Moving Test Steps<a class="headerlink" href="#moving-test-steps" title="Permanent link">&para;</a></h3>
 <p>To move test steps in the list, click on the row you want to move and drag it where you want it moved to within the list of test steps. An empty space will appear to show you where it will be inserted.</p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
-<p>Test cases can have parameters associated with them. This enables one test case to be called several times by another test case (as a link) and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case.</p>
-<p>To view / change the parameters associated with the current test case, click on the "<strong><em>Edit Parameters</em></strong>" button in the toolbar and the list of current parameters will be displayed:</p>
+<p>Test cases can have parameters associated with them. This lets a single test case get called multiple times by another test case (as a link) and have different parameters passed in each case, making the operation different. </p>
+<div class="admonition info">
+<p class="admonition-title">Parameter Example</p>
+<p>You have a test case "login to application". This test case has 2 parameters: username; and password. It has default values for these parameters of "user" and "correct-password". We set the Sample Data field to read: "Username = ${username}, and password = ${password}". You can reuse this test case in other test cases by <a href="#insert-link">linking links</a>.</p>
+<ul>
+<li>If you execute the "login to application" by itself you will see that sample data reads: "Username = user, and password = correct-password"</li>
+<li>Now add this test case as a <a href="#insert-link">linked step</a> to another test case "Can login successfully". Let's not change the default values yet. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password"</li>
+<li>Next, <a href="#editing-test-links">edit the linked test step</a> "login to application". We see the two parameters with boxes to type in parameter values. We add a value for "username" of "admin". Now when we execute "Can login successfully" sample data will be different - we are <strong>overriding the default parameter values</strong>: "Username = <strong>admin</strong>, and password = correct-password"</li>
+<li>We have not changed the default values - we are passing down values that override the default values. </li>
+</ul>
+<p>Hopefully, the above example begins to show you the flexibility of parameters. You can link test cases together in complex ways - with test cases nested inside each other. With complex test case / link structures, you can still pass down parameter values. Building on the above example, let's add the test case "Can login successfully" to a new, third, test case called "Can login and logout successfully". We now have 3 test cases in a chain. When we add "Can login successfully" as a link we can only edit one of the original parameters: only "password". We are not able to edit "username". This is because when you override a parameter value in a link once, you cannot override from higher up in the chain. </p>
+<p>In other words, during execution, parameter values are set by the linked step's defaults if no parent test case overrides them; and by the test case parent closest to the originating linked step that sets an overriding value for a parameter.</p>
+</div>
+<p>To <strong>view / change the parameters</strong> associated with the current test case, click on the "<strong><em>Edit Parameters</em></strong>" button in the toolbar to see and edit the list of current parameters for this test case:</p>
 <p><img alt="" src="../img/Test_Case_Management_147.png" /></p>
-<p>The list of existing parameters is displayed in a list. Beneath this, is a form where you can add a new parameter and default value (used when the test case is run directly rather than being called by another test case). You can delete an existing parameter or copy the parameter token to your computer's clipboard. If you want to paste the parameter token onto the current page (say into a specific test step), position the cursor where you want and click "<strong><em>Insert at Cursor</em></strong>" This is a quick way to include the parameter and then have it converted into the parameter value during test execution.</p>
+<p>Existing parameters are shown in a list. For each paramenter you can: </p>
+<ul>
+<li>edit a parameter - you can change the token name, and update/add/remove the default value</li>
+<li>delete an existing parameter</li>
+<li>copy the parameter token to the clipboard. </li>
+<li>
+<p>insert the parameter token at the current cursor position. To do this:</p>
+<ul>
+<li>edit the relevant test step</li>
+<li>open the Edit Parameters popup</li>
+<li>position the cursor where you want it in on one of the test step fields</li>
+<li>click "<strong><em>Insert at Cursor</em></strong>".</li>
+</ul>
+</li>
+</ul>
+<p>To <strong>add a new parameter</strong> to the test case, use the form at the bottom of the popup dialog. Set the token name and (optionally) a default value then click "Add", and then "Save". </p>
 <h3 id="overview-automation">Overview - Automation<a class="headerlink" href="#overview-automation" title="Permanent link">&para;</a></h3>
 <p>The Automation section displays any automated test scripts associated with the current test case. There are three types of automated test:</p>
 <ul>

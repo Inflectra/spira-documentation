@@ -1978,6 +1978,19 @@
     Using NUnit 3 with SpiraTest
   </a>
   
+    <nav class="md-nav" aria-label="Using NUnit 3 with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-tests-with-nunit" class="md-nav__link">
+    Running the Tests with NUnit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3290,6 +3303,19 @@
     Using NUnit 3 with SpiraTest
   </a>
   
+    <nav class="md-nav" aria-label="Using NUnit 3 with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-tests-with-nunit" class="md-nav__link">
+    Running the Tests with NUnit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3423,6 +3449,13 @@ assigned test case</p>
 <p><strong>&lt;method name></strong> - Used to override the default setting for a
 method's test case ID in SpiraPlan. Only include the method name,
 without the parentheses.</p>
+<h3 id="running-the-tests-with-nunit">Running the Tests with NUnit<a class="headerlink" href="#running-the-tests-with-nunit" title="Permanent link">&para;</a></h3>
+<p>To execute the tests, you can use any of the standard ways that NUnit can be executed (Gui, Console, etc.), however the simplest way to get started is to use the NUnit console runner:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">nunit3-console &quot;NUnit 3.0\bin\Release\SampleTestSuite.dll&quot;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><em>(where you will need to adjust the path to match where the test suite assembly can be found)</em></p>
 <p>Once you run your tests with the NUnit Console Runner, you should see
 the results in SpiraPlan:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_5.png" /></p>

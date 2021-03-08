@@ -3152,8 +3152,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-671-february-2020" class="md-nav__link">
-    Version 6.7.1 (February 2020)
+  <a href="#version-671-february-2021" class="md-nav__link">
+    Version 6.7.1 (February 2021)
   </a>
   
 </li>
@@ -3396,8 +3396,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-671-february-2020" class="md-nav__link">
-    Version 6.7.1 (February 2020)
+  <a href="#version-671-february-2021" class="md-nav__link">
+    Version 6.7.1 (February 2021)
   </a>
   
 </li>
@@ -3559,7 +3559,80 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
-<h2 id="version-671-february-2020">Version 6.7.1 (February 2020)<a class="headerlink" href="#version-671-february-2020" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong>BDD and Gherkin Support</strong>: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the documents repository, which includes workflow, checkout, and versioning support.</p>
+<p><strong>Inline content editing</strong>: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.</p>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li><strong>Document Management</strong>: Live editing of Text/Markdown/HTML in the Documents Management module [RQ:1697]</li>
+<li><strong>Administration</strong>: Add support for future implementation of program, template and portfolio settings [RQ:3051]</li>
+<li>Add APIs for Risk management (including risk mitigations and reading risk template fields) [RQ:2544]</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p><strong>Testing and test coverage</strong></p>
+<ul>
+<li>My Assigned Test Cases widget adds options to show or hide the last executed date and the workflow status [IN:3935]</li>
+<li>Fix package not changing status to "Tested" once all its child features are marked "Tested" [IN:4008]</li>
+<li>Requirement test coverage for test cases in a different product should always reflect those tests' execution results [IN:4856]</li>
+<li>Fix opening a details page directly to a specific tab via a dedicated url like requirements/1/Tasks.aspx [IN:5730]</li>
+<li>Limited View role: do not show error message when the user creates an incident during test execution by clicking the Add button [IN:5984]</li>
+<li>Generic test case/set list URL should always open the test case list to the last folder (this was not the case if the folder has an ID of 1) [IN:5989]</li>
+<li>Improve performance of test case parameter hierarchy refresh [IN:6094]</li>
+<li>Fix not being able to reassign pending test runs from product home page or My Page (introduced in 6.7.1) [IN:6161]</li>
+<li>Fix system error that occurred when baselining was on for a product and you attempted an operation that added or edit test steps [IN:6179]</li>
+<li>Test Case &gt; Automation Section: add file icon and link to document details page for filename [IN:6196]</li>
+<li>Do not associate a test case with a release if the test case is a different product to the release [IN:4863]</li>
+</ul>
+</li>
+<li>
+<p><strong>Home pages and reporting</strong></p>
+<ul>
+<li>The image saved from a graph should look the same as the original (without oddly shaped black shaded areas) [IN:4960]</li>
+<li>Program Home page Test Execution Status widget: when specified in the options, the number of test runs should be limited to active releases only [IN:5844]</li>
+<li>Incident Summary Report has a field called "Resolved Release" but it should read "Planned Release" [IN:5943]</li>
+<li>Improve Performance by switching My Page widget pagination to be fully handled by the database [IN:6102]</li>
+<li>Fix My Page, Recent Artifacts: Test Run and Document links had 0 for the product ID, so the links did not work [IN:6092]</li>
+<li>Tooltips on the My Page My Assigned Test Cases and Test Sets widgets should always display [IN:6167]</li>
+</ul>
+</li>
+<li>
+<p><strong>API</strong></p>
+<ul>
+<li>Add API methods to open and delete document versions [IN:2237]</li>
+<li>Add API methods to delete an existing association [IN:3623]</li>
+<li>Add API methods to manage Document Types for a template [IN:6217]</li>
+<li>Add API method to retrieve release builds without description information [IN:5031]</li>
+<li>Add API function to v6.0 API to retrieve event logs [IN:5128]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other</strong></p>
+<ul>
+<li>When another users has changed the same artifact as you, you see the wrong message if that other user changed status, and there is no transition from the new status back to the old status [IN:4822]</li>
+<li>Clicking "Save And New" on a requirement/release should always add the subsequent artifact as a sibling, not add it at the bottom of the list [IN:4878]</li>
+<li>Ignore extra spaces around a product or between words when attempting to change templates or delete a product [IN:5949]</li>
+<li>Add a product setting to filter list page name field by name only (not name and description as now) - this can speed up search for very large lists of artifacts [IN:5969]</li>
+<li>Improve performance of saving recent products and artifacts a user visits by adding dedicated database tables for this functionality [IN:6070]</li>
+<li>Improve performance of common operations by adding datbase asc and desc indexes to key tables [IN:6100]</li>
+<li>Add security improvement to always prevent the application being loaded inside frames/iframes [IN:6051]</li>
+<li>Add security improvement to fix "Format String Error" found during ZAP analysis [IN:6072]</li>
+<li>Add security improvement to fix "X-Content-Type-Options Header Missing" found during ZAP analysis [IN:6076]</li>
+<li>Fix Data Tools operation to fix releases missing the required field of Percent Complete [IN:6109]</li>
+<li>Fix when creating one artifact from another (via associations tabs), new artifact notifications were not firing as they would for a normally new item [IN:5990]</li>
+<li>Build details page: improve the display of logs and, for long logs, cut out the middle of the log not the end [IN:6145]</li>
+<li>Code in comments and plain text boxes should render as a monospace font [IN:6149]</li>
+<li>Pull Request tasks should show the correct icon on the task tab of the requirement details page (currently shows no icon) [IN:6156]</li>
+<li>Updating risks should correctly check for concurrency (if another user has updated the risk since you opened it) [IN:6165]</li>
+<li>Fix not being able to save a risk after transitioning to a status that requires a comment [IN:6203]</li>
+<li>Document detail page, versions tab: buttons should be hidden if the user does not have permission to edit the current document [IN:6214]</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="version-671-february-2021">Version 6.7.1 (February 2021)<a class="headerlink" href="#version-671-february-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
 <p><strong><a href="../../Spira-User-Manual/Pull-Requests">Pull Requests</a></strong> (SpiraTeam and SpiraPlan): The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each <a href="../../Spira-User-Manual/Pull-Requests/#pull-request-details">pull request</a> you can see all of the relevant commits, their code changes, and discuss any code changes.</p>
