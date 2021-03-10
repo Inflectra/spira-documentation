@@ -137,6 +137,16 @@ For example, a requested requirement has its "Release" field hidden, but once th
 
 Once you've made the changes to the appropriate artifact fields, you can either click "***Save***", "***Save and Close***", or "***Save and New***" to commit the changes or "***Refresh***" to discard the changes and reload the artifact from the database. In addition you can print the current artifact by clicking "***Print***", which will display a printable version of the page in a separate window.
 
+Workflows are managed by the product's template. Read more about workflow administration for:
+
+- [Requirements](../../Spira-Administration-Guide/Template-Requirements/#workflows)
+- [Releases](../../Spira-Administration-Guide/Template-Releases/#release-workflows)
+- [Documents](../../Spira-Administration-Guide/Template-Documents/#document-workflows)
+- [Test Cases](../../Spira-Administration-Guide/Template-Test-Cases/#test-case-workflows)
+- [Incidents](../../Spira-Administration-Guide/Template-Incidents/#incident-workflows)
+- [Tasks](../../Spira-Administration-Guide/Template-Tasks/#task-workflows)
+- [Risks](../../Spira-Administration-Guide/Template-Risks/#risk-workflows)
+
 
 ### Electronic Signatures
 Any workflow transition (moving from one status to another) can be set to require an electronic signature. If enabled for a particular workflow operation an electronic signature is required to confirm the status change. Confirmation requires entering the users password, and a message explaining the meaning of this operation.
@@ -159,12 +169,8 @@ Using the "***Email***" button on the toolbar, you can send an email containing 
 
 ![](img/Requirements_Management_97.png)
 
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user .The content of the email is specified in the System Administration --
-Notification Templates.
+You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../../Spira-Administration-Guide/Template-Notifications/#notification-templates). [Notification events](../../Spira-Administration-Guide/Template-Notifications/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes).
 
-
-The bottom part of the right pane can be switched between six views:
-"Overview", "Test Coverage", "Tasks", "Attachments", "History" and "Associations", each of which will be described in more detail below.
 
 ### Followers
 To be notified of any changes made to the current artifact via email, click the "***Subscribe***" button. If you already subscribed, the button will instead let you "***Unsubscribe***" to stop receiving emails about that particular artifact. Depending on your role, you may also see a dropdown arrow to the right of this button. This will let you subscribe others in the product to this artifact.

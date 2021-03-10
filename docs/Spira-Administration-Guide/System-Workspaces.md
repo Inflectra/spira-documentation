@@ -44,12 +44,21 @@ In a similar way, to edit the details of an existing product, click the "Edit" b
 
 ![](img/System_Workspaces_35.png)
 
-On this screen you can edit the name, description, program, website URL, enable/disable baselining (SpiraTeam and SpiraPlan only), or toggle the active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On this screen you can:
 
-Next to the current template for the product, is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md). 
+- edit the name
+- edit the description
+- edit the website URL
+- change the program
+- view the current template for the product. Next to the template name is a "Change" button. Clicking this will let you [change the product to use a different template](../Product-Changing-Template)
+- enable/disable baselining (SpiraTeam and SpiraPlan only)
+- toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
+- toggle the active status
+
+Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 !!! question "What happens when you make a product inactive"
-    If you set a product's active flag to "No" then it will be hidden from the global navigation for all users. This is a potential alternative to deleting a product.
+    If you set a product's active flag to "No" then it will be hidden from the global navigation for all users. This is the recommended alternative to deleting a product (because deletion is permanent).
 
 
 ## View/Edit Programs

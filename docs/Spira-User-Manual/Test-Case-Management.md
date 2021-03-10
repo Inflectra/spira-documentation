@@ -296,11 +296,13 @@ Test cases can have parameters associated with them. This lets a single test cas
     You have a test case "login to application". This test case has 2 parameters: username; and password. It has default values for these parameters of "user" and "correct-password". We set the Sample Data field to read: "Username = ${username}, and password = ${password}". You can reuse this test case in other test cases by [linking links](#insert-link).
     
     - If you execute the "login to application" by itself you will see that sample data reads: "Username = user, and password = correct-password"
-    - Now add this test case as a [linked step](#insert-link) to another test case "Can login successfully". Let's not change the default values yet. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password"
-    - Next, [edit the linked test step](#editing-test-links) "login to application". We see the two parameters with boxes to type in parameter values. We add a value for "username" of "admin". Now when we execute "Can login successfully" sample data will be different - we are **overriding the default parameter values**: "Username = **admin**, and password = correct-password"
-    - We have not changed the default values - we are passing down values that override the default values. 
+    - Now add this test case as a [linked step](#insert-link) to another test case "Can login successfully". When you do this you get the option to override the defaults. We don't want to do this yet, so we blank out the parameter values in the link test step doalig. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password". Even though our test case is not setting values for these at all, the linked test step uses its default parameter values.
+    - Next, [edit the linked test step](#editing-test-links) "login to application". We see the two parameters with boxes to type in parameter values. We add a value for "username" of "admin" (but keep password blank still). Now when we execute "Can login successfully" sample data will be different - we are **overriding the default parameter values**: "Username = **admin**, and password = correct-password"
+    - We have not changed the default values - we are passing down values that override the default values for this specific test case and to this specific linked test step. 
 
-    Hopefully, the above example begins to show you the flexibility of parameters. You can link test cases together in complex ways - with test cases nested inside each other. With complex test case / link structures, you can still pass down parameter values. Building on the above example, let's add the test case "Can login successfully" to a new, third, test case called "Can login and logout successfully". We now have 3 test cases in a chain. When we add "Can login successfully" as a link we can only edit one of the original parameters: only "password". We are not able to edit "username". This is because when you override a parameter value in a link once, you cannot override from higher up in the chain. 
+    Hopefully, the above example begins to show you the flexibility of parameters. You can add the same test case as a linked step multiple times and pass down / override different values each time - useful for testing different logins. You can link test cases together in more complex ways - with test cases nested inside each other. 
+    
+    With complex test case / link structures, you can still pass down parameter values. Building on the above example, let's add the test case "Can login successfully" to a new, third, test case called "Can login and logout successfully". We now have 3 test cases in a chain. When we add "Can login successfully" as a link we can only edit one of the original parameters: only "password". We are not able to edit "username". This is because when you override a parameter value in a link once, you cannot override from higher up in the chain. 
     
     In other words, during execution, parameter values are set by the linked step's defaults if no parent test case overrides them; and by the test case parent closest to the originating linked step that sets an overriding value for a parameter.
     
@@ -324,13 +326,13 @@ To **add a new parameter** to the test case, use the form at the bottom of the p
 
 ### Overview - Automation
 
-The Automation section displays any automated test scripts associated with the current test case. There are three types of automated test:
+The Automation section displays the automated test script associated with the test case. To activate this section, choose an Automation Engine from the dropdown in the section. Automation can only run if it has an engine that it will run on - the application / framework that will actually run the script (e.g. Rapise). You can set up automation engines in [system administration](../../Spira-Administration-Guide/System-Integration/#test-automation). 
 
--   **Attached** -- this is when SpiraPlan physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.
+There are three types of automated test:
 
--   **Linked** -- this is when SpiraPlan stores the location of the test script stored on the automation host itself or on an external network drive.
-
--   **Repository** -- This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in SpiraPlan and have them linked to the test case.
+- **Attached**: this is when SpiraPlan physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.
+- **Linked**: this is when SpiraPlan stores the location of the test script stored on the automation host itself or on an external network drive.
+- **Repository**: This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in SpiraPlan and have them linked to the test case.
 
 The screenshot below illustrates a sample Rapise automated test script attached to a test case:
 
@@ -338,21 +340,15 @@ The screenshot below illustrates a sample Rapise automated test script attached 
 
 The automation screen includes the following fields that you should populate when using SpiraPlan® to store an automated test script:
 
-**Automation Engine** -- this should be the name of the test automation engine that the test script should be executed with. This list is populated by a system administrator using the administration section of the application (as described in the *SpiraPlan Administration Guide*)
+- **Automation Engine (required)**: this should be the name of the test automation engine that the test script should be executed with, as set up in [system administration](../../Spira-Administration-Guide/System-Integration/#test-automation).
+- **Script Type**: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in SpiraPlan. If you choose linked, the test script is stored externally and SpiraPlan just stores a reference to it. The "repository" option is never selectable within SpiraPlan and will be automatically set by Rapise when it attaches a test script to the test case.
+- **Filename**: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneathe filename is a link to open the test script attachment's dedicated document page
+- **Document Type**: This should be set to the document type that you want the test script associated with.
+- **Document Folder**: This should be set to the document folder that you want the test script to be stored in. Note that if the script type is repository then the folder is set automatically and cannot be edited by the user.
+- **Version**: This should contain the version number of the test script.
+- **Test Script**: If you are attaching a test script, this should contain the actual program code for executing the test script. The language and syntax will be dependent on the test automation engine being used. If you are linking the test script, this section will be disabled.
+- **Parameters**: You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that SpiraPlan integrates with will support the passing of parameter values from SpiraPlan to the automation tool.
 
-**Script Type** -- This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in SpiraPlan. If you choose linked, the test script is stored externally and SpiraPlan just stores a reference to it. The "repository" option is never selectable within SpiraPlan and will be automatically set by Rapise when it attaches a test script to the test case.
-
-**Filename** -- If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please refer to the specific test automation engine in the *SpiraTest/Team Automated Test Integration Guide*.
-
-**Document Type** - This should be set to the document type that you want the test script associated with.
-
-**Document Folder** - This should be set to the document folder that you want the test script to be stored in. Note that if the script type is repository then the folder is set automatically and cannot be edited by the user.
-
-**Version** -- This should contain the version number of the test script.
-
-**Test Script** -- If you are attaching a test script, this should contain the actual program code for executing the test script. The language and syntax will be dependent on the test automation engine being used. If you are linking the test script, this section will be disabled.
-
-**Parameters** -- You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that SpiraPlan integrates with will support the passing of parameter values from SpiraPlan to the automation tool.
 
 
 ### Overview - Comments

@@ -107,9 +107,22 @@ By default, this widget shows data for **active releases only** in each product 
 
 This section consists of a bar graph that displays the aggregated count of test cases by execution status for the entire program. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of test cases that are in that category for all the products in the program.
 
-Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific test case execution status for that product (using the same coloring convention as the main graph). That way you can see both the aggregate test status and also the relative status for each product. *You can choose to show the aggregate bar graph, and/or the product-specific test status from the widget settings.*
+Under the main bar graph is displayed a table showing each product in the program with the following information:
 
-By default, this widget shows data for **active releases only** in each product in the program. *You can choose to show data for all releases in all products of the program from the widget settings.*
+- product name
+- number of test cases in the product 
+- number of test runs
+- execution status mini chart: a colored bar illustrating the specific test case execution status for that product (using the same coloring convention as the main graph). This lets you see the aggregate test status and the relative status for each product
+
+
+By default, this widget shows data for **active releases only** in each product in the program. 
+
+In the widget settings you can choose to:
+
+- show data for active releases in all products of the program (default) or otherwise across all releases
+- show/hide the product table
+- show/hide the bar graph (tip: don't hide both this AND the product table - if you do your widget will be totally empty)
+
 
 
 ## Incident Aging
