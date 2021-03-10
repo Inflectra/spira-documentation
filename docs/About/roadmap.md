@@ -10,14 +10,14 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.8 (March 2021)
-- **Performance improvements**: including improvements to the My Page, and a setting to auto purge old and unfinished test executions (pending test runs).
-- **Inline content editing**: adds the ability to create and edit documents directly in Spira. Create markdown, rich text, and feature files from within Spira. Edit these file types and any plain text file (like txt, code, json, yaml) online and with version and workflow controls.
+## Version 6.9 (May/June 2021)
+- **Baselining enhancements** (SpiraTeam and SpiraPlan): improved views for seeing changes between baselines, for instance so you can see all the changes made to a specific artifact between baseline 1 and baseline 2.
+- **Customize custom fields**: accessed to more custom fields per artifact, and the ability to, within each existing grouping of fields, set the field order 
+- **Improved requirement document view** (SpiraTeam and SpiraPlan): lets users customize which fields to display; edit requirement names, descriptions, and other rich text fields; display the requirement hierarchy position as an outline code (e.g. 1.2.11); improved pagination
+- **Access custom report data from external tools**: use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard 
 
 ## Planning
-- **Baselining enhancements**: Improved views for seeing changes between baselines, for instance so you can see how a specific test case changed from baseline 1 to baseline 2.
 - **New planning tools and visualizations**: Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes.
-- **Improved Requirement document view**
 - **In-app shared notes and documentation**: Users can capture and edit information or notes within a product as either rich text or markdown. Potentially, these notes could be transposed into, for example, a list of requirements, to make bulk data entry within the application simpler. 
 - **Enhanced program level management (SpiraPlan only)**: Manage risks at the program level. Increased variety of portfolio and enterprise widgets. Program level planning, releases, and roadmapping.
 
