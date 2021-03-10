@@ -55,7 +55,7 @@ To create a new document, click the `Add New` button. This opens the "Add New Do
 
 
 #### Add New Files
-The `Add New` button has a dropdown with more options - each option shows you a slighlty different dialog box (the bottom part is the same but the top part differs).
+The `Add New` button has a dropdown with more options - each option shows you a slightly different dialog box (the bottom part is the same but the top part differs).
 
 - **Upload** (default - the same as clicking the `Add New` button itself): for uploading a file
 - **URL**: for saving a url / web link as a new document (make sure you enter the full url - including http:// or https:// at the start)
