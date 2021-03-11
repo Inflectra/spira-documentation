@@ -13,33 +13,27 @@ When you click on the Tracking \> Incidents global navigation link, you will ini
 
 The incident list screen displays all the incidents entered for the current product, in a filterable, sortable grid. The grid displays the incident number together with fields such as incident type (bug, issue, risk, etc.), status (new, open, etc.), priority, name, assigned owner, detection date, detector, closed date, etc. The choice of columns displayed is configurable per-user, per-product, giving extensive flexibility when it comes to viewing and searching incidents.
 
-The sidebar on the left gives you quick access to saved filters, along with some useful charts to get an at-a-glance view of incidents for this product.
+The sidebar on the left gives you quick access to saved filters, along with some useful charts to get an at-a-glance view of incidents for this product. These charts are: 
+
+- a donut chart of the ratio of all incidents in the product that have an open status vs closed status
+- a donut chart showing the mix of priorities assigned to all incidents with an open status
 
 In addition, you can view a more detailed description of the incident (along with a resolution if any) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the incident name hyperlink, you will be taken to the incident details page described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of incidents in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
 
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### New Incident
-
-Clicking on the "***New Incident***" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in [Incident Details](../Incident-Tracking/#incident-details) except, depending on how the workflow has been configured for your product, certain fields may be disabled. For more details on setting and up configuring workflow for your product, please refer to the *SpiraTest Administration Guide*.
-
+Clicking on the "***New Incident***" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in [Incident Details](../Incident-Tracking/#incident-details) except, depending on how the [workflow has been configured](../../Spira-Administration-Guide/Template-Incidents/#incident-workflows) for this product, certain fields may be disabled.
 
 ### Delete
-
 Clicking on the "***Delete***" button deletes the incidents whose check-boxes have been selected in the incident list.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the list of incidents; this is useful when new incidents are being added by other users, and you want to make sure you have the most up-to-date list displayed.
 
-
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the incident list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
 
@@ -98,42 +92,17 @@ This page is made up of three areas:
 
 The navigation pane consists of a link that will take you back to the incidents list, as well as a list of the peer incidents to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the peer incidents by clicking on the navigation links without having to first return to the incidents list page. The navigation list can be switched between four different modes:
 
--   The list of incidents matching the current filter
-
--   The list of all incidents, irrespective of the current filter
-
--   The list of incidents assigned to the current user
-
--   The list of incidents detected/found by the current user
+- The list of incidents matching the current filter
+- The list of all incidents, irrespective of the current filter
+- The list of incidents assigned to the current user
+- The list of incidents detected/found by the current user
 
 In addition to the left hand navigation, you can enter a specific incident number in the text-box in the toolbar and click the "***Find***" button. In the same toolbar, there is also a shortcut for creating a copy of the current by clicking the "***Clone***" button.
 
 
 ### Editing an Existing Incident
 
-If you are editing an existing incident, the fields that are available and the fields that are required will depend on your stage in the incident workflow. For example an open incident might not require a "Resolved Version" whereas a resolved incident may well. The types of change allowed and the email notifications that are sent will depend on how your product administrator has setup the system for you. Administrators should refer to the *SpiraPlan Administration Guide* for details on configuring the incident workflows to meet their needs.
-
-Depending on the user's role and whether they are listed as the owner or detector of the incident or not, the dropdown next to the incident's current status shows the allowed workflow operations:
-
-![](img/Incident_Tracking_243.png)
-
-These workflow transitions allow the user to move the incident from one status to another. For example when the incident is in the Assigned status, you will be given the options to:
-
-**Resolve the Incident** -- changes status to "Resolved"
-
-**Unable to Reproduce** -- changes the status to "Not Reproducible"
-
-**Duplicate Incident** - changes the status to "Duplicate"
-
-After changing the status of the incident by clicking on the link, you can then fill in the additional fields that are now enabled and/or required. Once you've made the changes to the appropriate incident fields, you can click "***Save***" or one of the options from the "***Save***" dropdown list to commit the changes or "***Refresh***" to discard the changes and reload the incident from the database.
-
-Please note that if digital signatures have been enabled for a particular workflow operation (and therefore a digital signature is required to confirm the status change. Workflow operations requiring a digital signature are marked with a padlock icon as in the example below:
-
-![](img/Incident_Tracking_244.png)
-
-On attempting to save changes made after clicking a workflow operation that requires a digital signature you will be presented with a popup similar to the one below (which is for a requirement):
-
-![](img/Incident_Tracking_138.png)
+When editing an existing incident, the fields that are available and the fields that are required will depend on your stage in the incident workflow. Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows), and how [electronic signatures](Application-Wide.md#electronic-signatures) can further control how you progress an incident through the workflow.
 
 You can print the current incident by clicking Tools \> Print, which will display a printable version of the page in a separate window. Alternatively, you can export the incident to a number of formats by selecting the appropriate option from the Tools menu.
 
@@ -143,7 +112,6 @@ You can print the current incident by clicking Tools \> Print, which will displa
 If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the *SpiraPlan Administration Guide* for details on configuring the incident workflows to meet their needs.
 
 Once you've filled out the appropriate incident fields, you can either click "***Save***" or one of the options from the "***Save***" dropdown list to commit the changes or click on "***Back to Incident List***" to discard the insertion and return back to the incident list.
-
 
 ### Overview - Comments
 
@@ -225,14 +193,14 @@ The incident board has the following different display modes:
     -   By Status
     -   By Person
 
--   **Release**
+-   **Release** (select a specific release from the release dropdown - only incidents with a Planned Release matching this selection will be displayed)
 
     -   By Sprint
     -   By Priority
     -   By Status
     -   By Person
 
--   **Sprint**
+-   **Sprint** (select a specific sprint from the release dropdown - only incidents with a Planned Release matching this selection will be displayed)
 
     -   By Priority
     -   By Status
@@ -276,7 +244,7 @@ Depending on the view (all releases, release, or sprint), there may be sections 
 
 ### Incidents - By Release
 
-This view is only available when you are displaying the incident board for 'all releases'. Each of the active releases defined for the current product is displayed as a heading, with the incidents displayed in the same column underneath
+This view is only available when you are displaying the incident board for 'all releases'. Each of the active releases defined for the current product is displayed as a heading. Incidents are displayed in the release column that matches their Planned Release. 
 
 ![](img/Incident_Tracking_256.png)
 
@@ -289,8 +257,7 @@ Clicking on the release hyperlinks in the headers will switch the incident board
 
 ### Incidents - By Sprint
 
-This view is only available when you are displaying the incident board for a specific release. Each of the sprints defined for the current release is displayed as a heading, with the incidents displayed in the same column underneath. This view is commonly used in **Scrum**
-products:
+This view is only available when you are displaying the incident board for a specific release. Each of the sprints defined for the current release is displayed as a heading. Incidents are displayed in the sprint column that matches their Planned Release. This view is commonly used in **Scrum** products:
 
 ![](img/Incident_Tracking_257.png)
 

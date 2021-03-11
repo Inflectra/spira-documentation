@@ -178,7 +178,7 @@ This report displays a matrix of the test cases in the system with the list of m
 
 ### Incident Summary Report
 
-This report displays all of the incidents tracked for the current product. The incident's details are displayed in a summary list form:
+This report displays all of the incidents tracked for the current product. Incident information is displayed in a summary list/table form:
 
 ![](img/Reports_Center_356.png)
 

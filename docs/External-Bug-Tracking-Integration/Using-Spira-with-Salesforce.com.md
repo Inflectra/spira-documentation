@@ -140,6 +140,13 @@ If you have a **multi-select list** in SpiraPlan repeat the same steps as for a 
 
 If, in Salesforce, you have list **dropdown that links to another Salesforce object** then the value you enter in SpiraPlan *must* be the string for the ID of the object, not the name. For example, if your dropdown says "Release 1" in Salesforce, and it has an ID of "6fghincx8dx", in SpiraPlan enter "6fghincx8dx" into the appropriate field.
 
+!!! warning
+    Make sure the values provided for "External Key" meet the conditions required by Salesforce. For instance, "false/true" for boolean values, matching values for lists, etc. If the artifact synchronization fails because of that, you will see an error in the System log like this:
+
+    ```
+    Error when creating/updating artifact: [{\"message\":\"GXP: bad value for BOOL field...
+    ```
+
 ## Configuring the User Mapping
 *If you have set the "Auto-Map Users" option set to yes in the Salesforce plugin, please skip this section.*
 

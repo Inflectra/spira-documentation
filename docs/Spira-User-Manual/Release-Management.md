@@ -530,6 +530,6 @@ This section displays a list of all the tests that have been executed against th
 ![](img/Release_Management_281.png)
 
 ### Full Log
-This section displays the full console log readout that was returned from SpiraPlan by the build tool. This lets you view any detailed messages or errors. **Note**: this only displays the first two million characters of the console log (which should be more than enough under normal circumstances).
+This section displays the full console log readout that was returned from SpiraPlan by the build tool. This lets you view any detailed messages or errors. **Note**: this displays a maximum of two million characters (more than enough under normal circumstances) - longer logs are collapsed to show the first and last one million characters.
 
 ![](img/Release_Management_282.png)

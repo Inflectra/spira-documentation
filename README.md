@@ -42,9 +42,9 @@ We can fully change the theme used and its features using a basic templating lan
 - **CHECK FOR ERRORS**:
 
     - run `mkdocs build` - this will show pages not linked in the navigation (likely fine) and images broken links that you can then repair
-    - run `mkdocs serve` then in a new terminal window run `blc http://localhost:8000/About/release-notes-v6 -ro -e`. This checks for internal links only
+    - run `mkdocs serve` then in a new terminal window run `blc http://localhost:8000 -ro -e`. This checks for internal links only - run in dedicated command prompt / terminal (do not run from VS Code as it truncates the console output)
     - once this has finished (will take a few minutes) search in the output for "─BROKEN─". This will give you the bad link and you can see above the page the link is on (the line above starting "Getting links from: http://localhost:8000...").
-    - you can separately run `blc http://localhost:8000/About/release-notes-v6 -ro -i` to check for external broken links but this will throw lots of errors on things like twitter on every page
+    - you can separately run `blc http://localhost:8000 -ro -i` to check for external broken links but this will throw lots of errors on things like twitter on every page
 
 - **Deploy to to GitHub Pages**: from the local machine when on the master branch, run `mkdocs gh-deploy` and that's it! Your changes should be live after the command finishes!
 

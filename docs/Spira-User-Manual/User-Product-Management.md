@@ -141,20 +141,27 @@ This section lists all the requirements you have been made owner of, across *all
 
 ## My Assigned Test Cases
 
-This section lists all the test cases you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the assigned test scripts. To aid in this process, the script name is displayed, along with its last execution status (failed, passed or not-run) and date of last execution. This enables you to see how recently the tests have been run, and whether they need to be re-run. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs.
+This section lists all the test cases you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing these test scripts. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs. For each test case in the list you can see:
 
-If you click on the test-name hyperlink, you will be taken to the [details page for this test-case](../Test-Case-Management/#test-case-details) and the product that the test-case belongs to will be made your current product. 
+- its name (this is a link to the to the [details page for this test-case](../Test-Case-Management/#test-case-details))
+- the product it belongs to
+- its last execution status (for example failed or passed) - hover to see a tooltip showing the last execution date
+- its last execution date (not shown by default)
+- its workflow status
+- a reassign button that let's users with the right permissions assign the test case to another test in that product
+- a play (execute) button. This will execute the test case in the [test-case execution module](../Test-Case-Management/#execute-test-cases). This button will not be there if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
 
-If you click on the play button to its right you will launch the test-case in the [test-case execution module](../Test-Case-Management/#execute-test-cases) so that you can easily retest failed cases. NOTE: the execute button will not display if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
-
+If you edit the widget you can: change the number of rows to show; show or hide the last executed date; and show or hide and the workflow status.
 
 ## My Assigned Test Sets
 
-This section lists all the test sets (groups of test cases) you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. To aid in this process, the test set name is displayed, along with its status, the product it belongs to, the number of remaining test cases to be executed, and the date by which all the tests need to have been run. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs.
+This section lists all the test sets (groups of test cases) you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs. For each test set in the list you can see:
 
-If you click on the test-set name hyperlink, you will be taken to the
-[details page for this test-set](../Test-Case-Management/#test-run-details) and the product that the test-set belongs to will be made your current product. If you click on the play button to its right you will 
-[launch the test-cases](../Test-Case-Management/#execute-test-cases) contained within the test-set in the test-case execution module so that you can easily carry out your assigned testing task.
+- its name (this is a link to the to the [details page for this test-set](../Test-Set-Management/#test-set-details)) - in a badge at the end of the name is a mini badge showing the number of remaining test cases to be executed
+- the product it belongs to
+- its due date
+- its status 
+- a play (execute) button. This will [execute the test set](../Test-Case-Management/#execute-test-cases)
 
 
 ## My Pending Test Runs
