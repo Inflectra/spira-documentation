@@ -9,6 +9,10 @@ google_analytics:
   - UA-1302007-6
   - https://spiradoc.inflectra.com/
 
+plugins:
+  - search:
+      separator: '[\s\(\)\,\-\:]+'
+
 # EXTENSIONS USED
 markdown_extensions:
   - attr_list
@@ -53,7 +57,8 @@ theme:
     code: IBM Plex Mono
   favicon: images/favicon.ico
   logo: images/logo.svg
-
+  custom_dir: material
+  
 extra_css:
   - stylesheets/spira.css
 
