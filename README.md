@@ -20,10 +20,22 @@ We can fully change the theme used and its features using a basic templating lan
 
 ## Getting the build environment set up
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
+
+### If NOT using custom material theme
+2. Run `pip install mkdocs-material` to install everything our base theme needs - it should also install MKdocs
+3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
+4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
+5. Go to mkdocs.yml and remove `theme: custom_dir` and `plugins: - search: separator`
+
+### If using custom material theme (for improved search)
 2. Run `pip install -r requirements.txt` to install everything our base theme needs - it should also install MKdocs
-3. Clone this repo to your local machine
-4. Edit files as needed
-5. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
+3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
+4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
+
+### ALWAYS
+5. Clone this repo to your local machine
+6. Edit files as needed
+7. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
 
 
 # Working with the docs and Markdown
