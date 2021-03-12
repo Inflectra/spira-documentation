@@ -59,13 +59,20 @@ Read about [how to create and manage filters, and how to sort the artifact list]
 
 ### Viewing the Test Status for a Release
 
-By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test sets in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
+By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. This means that the list shows:
 
-To change the test set list to just display test sets and execution status for a particular release, change the release selected in the drop-down list located in the top right from "All Releases" to a specific release:
+- all the test sets in the system (regardless of which release they apply to) 
+- for each test set, the execution status will reflect the most recent test run - regardless of which release it was for
+- next to the name of each test set there is a little badge with a number in it - this is the number of test cases currently in the test set 
+
+If you change what release to display data for, by selecting a release from the dropdown in the top right, the list will show:
+
+- only the test sets that were executed against that release 
+- for each test set, the execution status will reflect the most recent test run against that release (and any child sprints if applicable)
+- next to the name of each test set the little badge with a number in it shows the number of test cases that were in the test set when it was last run against that release
+- test sets that have not been run for this release but have run against other releases may show as "Not Run" since they've not been run (yet) for this specific release 
 
 ![](img/Test_Set_Management_Specific_Release.png)
-
-When the drop-down is changed to select a specific release, the list of test sets is filtered to only show those tests sets mapped to that release. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). Test sets that have been run for other releases may show as "Not Run" since they've not been run for this specific release (but are scheduled to be).
 
 As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test sets via the Tools \> Execute Tests menu option will default the test run to the selected release.
 
@@ -115,17 +122,13 @@ When you click on a test set item in the test set list described in the previous
 This page is made up of *three* areas;
 
 1.  the left pane displays the test set folders and list navigation;
-
 2.  the right pane's header, which displays: the operations toolbar; the [folder the test set is in](Application-Wide.md#breadcrumbs); the editable name of the selected test set; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-
 3.  the right pane's tabbed interface with rich information related to the test set.
 
 The navigation pane consists of a link that will take you back to the test set list, as well as a list of the peer test sets to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test sets by clicking on the navigation links without having to first return to the test sets list page. The navigation list can be switched between three different modes:
 
 -   The list of test sets matching the current filter
-
 -   The list of all test sets, irrespective of the current filter
-
 -   The list of test sets assigned to the current user
 
 The operations toolbar lets you, amongst standard operations like save and delete:
@@ -134,18 +137,18 @@ The operations toolbar lets you, amongst standard operations like save and delet
 - export to a number of files formats or print it via one of the options in the `Tools` dropdown menu
 - the `Execute` button will execute all the test cases in the set against the release specified in the test set and then take you to the
 [test execution screen](#execute-test-cases)
+- Emailing: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing)
+{: #emailing}
+- Followers: read about [how to add and manage followers to an artifact](Application-Wide.md#followers)
+{: #followers}
 
-Initially the pane will be in "Overview" mode, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" modes if so desired. Each of the views is described separately below.
+At the top of the pane, you will see the test set's:
 
+- name
+- status
+- current execution status in a mini bar chart - this matches the execution status on the list page and is determined based on if you are [viewing the Test Status for a release or not](#viewing-the-test-status-for-a-release). You can see the release currently being displayed in the Overview tab.
 
-### Emailing
-
-Read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing).
-
-
-### Followers
-
-Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
+Initially the pane will be set to the "Overview" tab, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" tabs. Each of these is described separately below.
 
 
 ### Overview -- Details
@@ -213,7 +216,7 @@ Note that the Default Value is derived from the test cases that use a specific P
 
 ### Overview - Test Cases
 
-This section displays the list of test cases contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case *when run in the context of the current test set*.
+This section displays the list of test cases currently contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case *when run in the context of the current test set and, if specified, the release we are displaying data for*.
 
 ![](img/Test_Case_Management_222.png)
 
@@ -234,6 +237,13 @@ As discussed above in [Overview - Parameters](#overview-parameters), test cases 
 ![](img/Test_Case_Management_225.png)
 
 You can then specify the values of the parameters that the test set will pass to this specific test case. Once you have entered / modified the values, click "***Save***" to commit the changes.
+
+!!! question "Matching execution status of test cases to the test set"
+    The execution status shown for the test set at the top of the page is calculated from the most recent test run of the whole set for the release being displayed for (or most recent across all releases, if displaying for all releases). The execution status for the test cases in the test set is calculated in the same way.
+
+    As you change your test set over time, you may add and remove test cases. The list of test cases is always the currently included test cases. This means that if you are showing results for an old release, and since then you have REMOVED test cases from the test set, you will not see those test cases and their execution statuses in this list. The same happens if you have since ADDED test cases: they will show as Not Run, even if the test set's execution status has no Not Runs. When it was executed these new test cases weren't there to be run.
+    
+    In this way, the overall test set execution status may not always match what you see in the test case list. 
 
 
 ### Overview - Comments
