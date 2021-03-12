@@ -563,20 +563,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#emailing" class="md-nav__link">
-    Emailing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#followers" class="md-nav__link">
-    Followers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#overview-details" class="md-nav__link">
     Overview -- Details
   </a>
@@ -3513,20 +3499,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#emailing" class="md-nav__link">
-    Emailing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#followers" class="md-nav__link">
-    Followers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#overview-details" class="md-nav__link">
     Overview -- Details
   </a>
@@ -3653,10 +3625,20 @@
 <h3 id="filtering-sorting">Filtering &amp; Sorting<a class="headerlink" href="#filtering-sorting" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
 <h3 id="viewing-the-test-status-for-a-release">Viewing the Test Status for a Release<a class="headerlink" href="#viewing-the-test-status-for-a-release" title="Permanent link">&para;</a></h3>
-<p>By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test sets in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.</p>
-<p>To change the test set list to just display test sets and execution status for a particular release, change the release selected in the drop-down list located in the top right from "All Releases" to a specific release:</p>
+<p>By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. This means that the list shows:</p>
+<ul>
+<li>all the test sets in the system (regardless of which release they apply to) </li>
+<li>for each test set, the execution status will reflect the most recent test run - regardless of which release it was for</li>
+<li>next to the name of each test set there is a little badge with a number in it - this is the number of test cases currently in the test set </li>
+</ul>
+<p>If you change what release to display data for, by selecting a release from the dropdown in the top right, the list will show:</p>
+<ul>
+<li>only the test sets that were executed against that release </li>
+<li>for each test set, the execution status will reflect the most recent test run against that release (and any child sprints if applicable)</li>
+<li>next to the name of each test set the little badge with a number in it shows the number of test cases that were in the test set when it was last run against that release</li>
+<li>test sets that have not been run for this release but have run against other releases may show as "Not Run" since they've not been run (yet) for this specific release </li>
+</ul>
 <p><img alt="" src="../img/Test_Set_Management_Specific_Release.png" /></p>
-<p>When the drop-down is changed to select a specific release, the list of test sets is filtered to only show those tests sets mapped to that release. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). Test sets that have been run for other releases may show as "Not Run" since they've not been run for this specific release (but are scheduled to be).</p>
 <p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test sets via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="copying-test-sets">Copying Test Sets<a class="headerlink" href="#copying-test-sets" title="Permanent link">&para;</a></h3>
 <p>To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit > Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit > Paste Items option.</p>
@@ -3683,27 +3665,15 @@
 <p><img alt="" src="../img/Test_Case_Management_216.png" /></p>
 <p>This page is made up of <em>three</em> areas;</p>
 <ol>
-<li>
-<p>the left pane displays the test set folders and list navigation;</p>
-</li>
-<li>
-<p>the right pane's header, which displays: the operations toolbar; the <a href="../Application-Wide/#breadcrumbs">folder the test set is in</a>; the editable name of the selected test set; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</p>
-</li>
-<li>
-<p>the right pane's tabbed interface with rich information related to the test set.</p>
-</li>
+<li>the left pane displays the test set folders and list navigation;</li>
+<li>the right pane's header, which displays: the operations toolbar; the <a href="../Application-Wide/#breadcrumbs">folder the test set is in</a>; the editable name of the selected test set; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and</li>
+<li>the right pane's tabbed interface with rich information related to the test set.</li>
 </ol>
 <p>The navigation pane consists of a link that will take you back to the test set list, as well as a list of the peer test sets to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test sets by clicking on the navigation links without having to first return to the test sets list page. The navigation list can be switched between three different modes:</p>
 <ul>
-<li>
-<p>The list of test sets matching the current filter</p>
-</li>
-<li>
-<p>The list of all test sets, irrespective of the current filter</p>
-</li>
-<li>
-<p>The list of test sets assigned to the current user</p>
-</li>
+<li>The list of test sets matching the current filter</li>
+<li>The list of all test sets, irrespective of the current filter</li>
+<li>The list of test sets assigned to the current user</li>
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
@@ -3711,12 +3681,16 @@
 <li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
 <li>the <code>Execute</code> button will execute all the test cases in the set against the release specified in the test set and then take you to the
 <a href="#execute-test-cases">test execution screen</a></li>
+<li id="emailing">Emailing: read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a></li>
+<li id="followers">Followers: read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a></li>
 </ul>
-<p>Initially the pane will be in "Overview" mode, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" modes if so desired. Each of the views is described separately below.</p>
-<h3 id="emailing">Emailing<a class="headerlink" href="#emailing" title="Permanent link">&para;</a></h3>
-<p>Read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a>.</p>
-<h3 id="followers">Followers<a class="headerlink" href="#followers" title="Permanent link">&para;</a></h3>
-<p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a>.</p>
+<p>At the top of the pane, you will see the test set's:</p>
+<ul>
+<li>name</li>
+<li>status</li>
+<li>current execution status in a mini bar chart - this matches the execution status on the list page and is determined based on if you are <a href="#viewing-the-test-status-for-a-release">viewing the Test Status for a release or not</a>. You can see the release currently being displayed in the Overview tab.</li>
+</ul>
+<p>Initially the pane will be set to the "Overview" tab, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" tabs. Each of these is described separately below.</p>
 <h3 id="overview-details">Overview -- Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p>The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
@@ -3760,7 +3734,7 @@
 <p><img alt="" src="../img/Test_Case_Management_221.png" /></p>
 <p>Note that the Default Value is derived from the test cases that use a specific Parameter. It is shown in this table for information only---to help testers know what value will be run in the absence of specifying a Test Set Value.</p>
 <h3 id="overview-test-cases">Overview - Test Cases<a class="headerlink" href="#overview-test-cases" title="Permanent link">&para;</a></h3>
-<p>This section displays the list of test cases contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case <em>when run in the context of the current test set</em>.</p>
+<p>This section displays the list of test cases currently contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case <em>when run in the context of the current test set and, if specified, the release we are displaying data for</em>.</p>
 <p><img alt="" src="../img/Test_Case_Management_222.png" /></p>
 <p>To move the test cases, click the test case icon and drag it to the appropriate position in the list.</p>
 <p>To modify an existing Test Case click the "<strong><em>Edit</em></strong>" button in the right-most column, or <em>double-click</em> on the cells in the row. That will switch the selected row into Edit mode. The owner field can then be set at the test case level. This is useful in situations where you want the different test cases in the set to be executed by different testers (e.g. in integrated, scenario tests)</p>
@@ -3771,6 +3745,12 @@
 <p>As discussed above in <a href="#overview-parameters">Overview - Parameters</a>, test cases can have parameters defined with specific values. These are created on the <a href="../Test-Case-Management/#test-case-details">Test Case details page</a>. If you need to specify different values for a parameter for different test cases in the test set, you can override both any default parameter values and any test set parameter values. To do so, click "Edit Parameters" for the required test case in this view. You can do this by either select the checkbox of a test set and click "Edit Parameters" at the top of the section, or right-click on the test case and choose "Edit Parameters":</p>
 <p><img alt="" src="../img/Test_Case_Management_225.png" /></p>
 <p>You can then specify the values of the parameters that the test set will pass to this specific test case. Once you have entered / modified the values, click "<strong><em>Save</em></strong>" to commit the changes.</p>
+<div class="admonition question">
+<p class="admonition-title">Matching execution status of test cases to the test set</p>
+<p>The execution status shown for the test set at the top of the page is calculated from the most recent test run of the whole set for the release being displayed for (or most recent across all releases, if displaying for all releases). The execution status for the test cases in the test set is calculated in the same way.</p>
+<p>As you change your test set over time, you may add and remove test cases. The list of test cases is always the currently included test cases. This means that if you are showing results for an old release, and since then you have REMOVED test cases from the test set, you will not see those test cases and their execution statuses in this list. The same happens if you have since ADDED test cases: they will show as Not Run, even if the test set's execution status has no Not Runs. When it was executed these new test cases weren't there to be run.</p>
+<p>In this way, the overall test set execution status may not always match what you see in the test case list. </p>
+</div>
 <h3 id="overview-comments_1">Overview - Comments<a class="headerlink" href="#overview-comments_1" title="Permanent link">&para;</a></h3>
 <p>The Comments section allows users to add and view discussions related to the Test Set:</p>
 <p><img alt="" src="../img/Test_Case_Management_226.png" /></p>
