@@ -216,21 +216,23 @@ nav:
     - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
     - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
     - Azure DevOps: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
-    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
+    - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
+    - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
     - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
     - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
     - Salesforce.com: External-Bug-Tracking-Integration\Using-Spira-with-Salesforce.com.md
     - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
-    - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
+    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
+    - YouTrack: External-Bug-Tracking-Integration\Using-Spira-with-YouTrack.md
     - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
-    - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
-    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
     - ClearQuest: External-Bug-Tracking-Integration\Using-SpiraTeam-with-ClearQuest.md
-    - RTC: External-Bug-Tracking-Integration\Using-SpiraTeam-with-IBM-RTC.md
-    - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
-    - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
+    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
     - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
+    - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
     - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
+    - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
+    - RTC: External-Bug-Tracking-Integration\Using-SpiraTeam-with-IBM-RTC.md
+    
   - Source Code: 
     - Git: Version-Control-Integration\Integrating-with-Git.md
     - Subversion: Version-Control-Integration\Integrating-with-Subversion.md

@@ -250,7 +250,7 @@
     - SpiraTest: followers are not displayed on incident detail page [IN:4069]
 
 
-## Version 5.1 (December 2017)
+## Version 5.1 (December 2016)
 
 !!! info "Summary"
     Powerful new search
