@@ -84,4 +84,4 @@ Once the above steps have been correctly carried out, the plug-in should start w
 
 ![](img/YouTrack_07.png)
 
-Congratulations, you have just integrated your SpiraPlan instance with Salesforce!
+Congratulations, you have just integrated your SpiraPlan instance with YouTrack!
