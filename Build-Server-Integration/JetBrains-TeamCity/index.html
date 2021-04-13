@@ -3353,9 +3353,9 @@
 (hereafter referred to as SpiraTeam) in conjunction with the JetBrains'
 TeamCity continuous integration build servers. It assumes that you
 already have a working installation of SpiraTest, SpiraPlan or SpiraTeam
-v4.0 or later and a working installation of TeamCity v9.0.4 or later. If
+v6.0 or later and a working installation of TeamCity v9.0.4 or later. If
 you have an earlier version of SpiraTeam, you will need to upgrade to at
-least v4.0.</p>
+least v6.0.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>TeamCity provides continuous integration services for software
 development, primarily in the Java programming language. It is a
@@ -3389,7 +3389,7 @@ Administration > Spira Global Settings:</p>
 <p>You will need TeamCity administrator privileges to access this
 configuration page. Once in the <em>Spira Global Settings</em> page, enter in
 the <strong>URL</strong> you use to access your instance of SpiraTeam, together with
-a valid <strong>username</strong> and <strong>password</strong>. Once you have entered the values,
+a valid <strong>username</strong> and <strong>API Key</strong>. Once you have entered the values,
 click on the [Save] button. TeamCity will then verify if it can
 connect to SpiraTeam successfully.</p>
 <p>Once it has connected successfully, your connection settings will be
@@ -3398,9 +3398,8 @@ again.</p>
 <p>After setting the global configurations appropriately, you will need to
 enable the notifications in TeamCity. To do this, go to <em>My Settings &amp;
 Tools,</em> that can be accessed through clicking your TeamCity username
-(top right). Once there, in the <em>General</em> tab, inside the <em>Watched
-Builds and Notifications</em> box, find the <em>Spira Notifier for TeamCity</em>
-section, and click in <em>Edit</em>:</p>
+(top right). Once there, click on the <em>Notification Rules</em> section, find the <em>Spira Notifier for TeamCity</em>
+section, and click its hyperlink:</p>
 <p><img alt="Figure09" src="../img/JetBrains_TeamCity_23.jpeg" /></p>
 <p>Once in the page, click in <em>Add new Rule</em>. Then, inside the <em>Send
 notification when</em> section, select the events you want TeamCity notify

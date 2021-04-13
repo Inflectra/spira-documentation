@@ -1784,8 +1784,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    Advanced Settings
+  <a href="#configuring-the-remotelaunch-plugin" class="md-nav__link">
+    Configuring the RemoteLaunch Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensuring-jmeter-is-logging-in-xml" class="md-nav__link">
+    Ensuring JMeter is logging in XML
   </a>
   
 </li>
@@ -3313,8 +3320,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    Advanced Settings
+  <a href="#configuring-the-remotelaunch-plugin" class="md-nav__link">
+    Configuring the RemoteLaunch Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensuring-jmeter-is-logging-in-xml" class="md-nav__link">
+    Ensuring JMeter is logging in XML
   </a>
   
 </li>
@@ -3395,7 +3409,7 @@ instances of JMeter on different computers and have the testing results
 be transmitted back to SpiraTeam. This allows you to extend your
 SpiraTeam's test management capabilities to include automated JMeter
 performance tests.</p>
-<p><em>Note: This integration requires at least version 3.0 of SpiraTest/Team
+<p><em>Note: This integration requires at least version 3.0 of Spira (SpiraTest, SpiraTeam or SpiraPlan)
 and version 2.5 of JMeter.</em></p>
 <h2 id="installing-the-jmeter-engine">Installing the JMeter Engine<a class="headerlink" href="#installing-the-jmeter-engine" title="Permanent link">&para;</a></h2>
 <p>This section assumes that you already have a working installation of
@@ -3405,16 +3419,11 @@ Once those prerequisites are in place, please follow these steps:</p>
 <ul>
 <li>
 <p>Download and extract the JMeterEngine.zip file from
-the Inflectra website and locate the appropriate JMeterX.dll for the
-version of JMeter that you are using.</p>
+the Inflectra website and locate the <strong>JMeter2.dll</strong>.</p>
 </li>
 <li>
-<p>If you don't see the version listed, just use the nearest
-version that is <em>lower</em> than your current version.</p>
-</li>
-<li>
-<p>Copy the file "*JMeter*X.dll" (where X is the appropriate version)
-into the "extensions" sub-folder of the RemoteLaunch installation.</p>
+<p>Copy the file <strong>JMeter2.dll</strong>
+into the <strong>extensions</strong> sub-folder of your RemoteLaunch installation.</p>
 </li>
 <li>
 <p>Log in to SpiraTeam as a system administrator and go into SpiraTeam
@@ -3443,17 +3452,16 @@ for any project.</p>
 <p><strong>Token</strong>: This needs to be the assigned unique token for the
 automation engine and is used to tell RemoteLaunch which engine
 to actually use for a given test case. For JMeter this should be
-<strong>JMeterX</strong> where 'X' is the version number of the DLL file that
-you are using.</p>
+<strong>JMeter2</strong> as illustrated in the image.</p>
 </li>
 <li>
-<p>Once you have finished, click the "Insert &amp; Close" button and you
+<p>Once you have finished, click the <strong>Save</strong> button and you
 will be taken back to the Test Automation list page, with JMeter
 listed as an available automation engine.</p>
 </li>
 </ul>
-<h3 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h3>
-<p>You can modify the JMeter configuration for each of the specific
+<h3 id="configuring-the-remotelaunch-plugin">Configuring the RemoteLaunch Plugin<a class="headerlink" href="#configuring-the-remotelaunch-plugin" title="Permanent link">&para;</a></h3>
+<p>Next, you will need to modify the JMeter configuration for each of the specific
 automation hosts, by right-clicking on the RemoteLaunch icon in the
 system tray and choosing "Configuration". That will bring up the
 RemoteLaunch configuration page.</p>
@@ -3467,6 +3475,25 @@ and navigate to the location of the JMeter.bat file.</p>
 <p><strong>Trace Logging</strong> -- When selected, this will log additional trace and
 debugging information to the Windows Event Log. This should not be
 selected in a production environment.</p>
+<h3 id="ensuring-jmeter-is-logging-in-xml">Ensuring JMeter is logging in XML<a class="headerlink" href="#ensuring-jmeter-is-logging-in-xml" title="Permanent link">&para;</a></h3>
+<p>By default, JMeter will log its output in CSV format. This format is not readable by RemoteLaunch, so you will need to update JMeter to log in XML format.</p>
+<p>To make this change, locate the following file - <strong>jmeter.properties</strong>:</p>
+<p><img alt="" src="../img/JMeter_111.png" /></p>
+<p>Open up this file and locate the following line:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.</span>
+<span class="err">    # jmeter.save.saveservice.output_format=csv</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Change this to be:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.</span>
+<span class="err">    jmeter.save.saveservice.output_format=xml</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Then save the <strong>jmeter.properties</strong> file.</p>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
 <p>This section describes the process for setting up a test case in
 SpiraTeam for automation and linking it to an automated JMeter test
@@ -3692,7 +3719,7 @@ Response Assertion (<a href="https://www.inflectra.com/Purchase/Default.aspx">ht
 error=false, message=''</p>
 </blockquote>
 <p>Congratulations... You are now able to run JMeter automated functional
-tests and have the results be recorded within SpiraTest / SpiraTeam.</p>
+tests and have the results be recorded within SpiraTest, SpiraTeam, and SpiraPlan.</p>
                 
               
               
