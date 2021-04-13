@@ -4,9 +4,9 @@ This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
 (hereafter referred to as SpiraTeam) in conjunction with the JetBrains'
 TeamCity continuous integration build servers. It assumes that you
 already have a working installation of SpiraTest, SpiraPlan or SpiraTeam
-v4.0 or later and a working installation of TeamCity v9.0.4 or later. If
+v6.0 or later and a working installation of TeamCity v9.0.4 or later. If
 you have an earlier version of SpiraTeam, you will need to upgrade to at
-least v4.0.
+least v6.0.
 
 ## Overview
 
@@ -62,7 +62,7 @@ Administration \> Spira Global Settings:
 You will need TeamCity administrator privileges to access this
 configuration page. Once in the *Spira Global Settings* page, enter in
 the **URL** you use to access your instance of SpiraTeam, together with
-a valid **username** and **password**. Once you have entered the values,
+a valid **username** and **API Key**. Once you have entered the values,
 click on the \[Save\] button. TeamCity will then verify if it can
 connect to SpiraTeam successfully.
 
@@ -73,9 +73,8 @@ again.
 After setting the global configurations appropriately, you will need to
 enable the notifications in TeamCity. To do this, go to *My Settings &
 Tools,* that can be accessed through clicking your TeamCity username
-(top right). Once there, in the *General* tab, inside the *Watched
-Builds and Notifications* box, find the *Spira Notifier for TeamCity*
-section, and click in *Edit*:
+(top right). Once there, click on the *Notification Rules* section, find the *Spira Notifier for TeamCity*
+section, and click its hyperlink:
 
 ![Figure09](img/JetBrains_TeamCity_23.jpeg)
 
