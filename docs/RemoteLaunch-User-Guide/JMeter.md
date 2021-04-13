@@ -12,7 +12,7 @@ be transmitted back to SpiraTeam. This allows you to extend your
 SpiraTeam's test management capabilities to include automated JMeter
 performance tests.
 
-*Note: This integration requires at least version 3.0 of SpiraTest/Team
+*Note: This integration requires at least version 3.0 of Spira (SpiraTest, SpiraTeam or SpiraPlan)
 and version 2.5 of JMeter.*
 
 ## Installing the JMeter Engine
@@ -23,14 +23,10 @@ test automation hosts following the instructions in [RemoteLaunch Guide](../Remo
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the JMeterEngine.zip file from
-the Inflectra website and locate the appropriate JMeterX.dll for the
-version of JMeter that you are using.
+the Inflectra website and locate the **JMeter2.dll**.
 
--   If you don't see the version listed, just use the nearest
-version that is *lower* than your current version.
-
--   Copy the file "*JMeter*X.dll" (where X is the appropriate version)
-into the "extensions" sub-folder of the RemoteLaunch installation.
+-   Copy the file **JMeter2.dll**
+into the **extensions** sub-folder of your RemoteLaunch installation.
 
 -   Log in to SpiraTeam as a system administrator and go into SpiraTeam
 main Administration page and click on the "Test Automation" link
@@ -56,16 +52,15 @@ for any project.
 -   **Token**: This needs to be the assigned unique token for the
 automation engine and is used to tell RemoteLaunch which engine
 to actually use for a given test case. For JMeter this should be
-**JMeterX** where 'X' is the version number of the DLL file that
-you are using.
+**JMeter2** as illustrated in the image.
 
--   Once you have finished, click the "Insert & Close" button and you
+-   Once you have finished, click the **Save** button and you
 will be taken back to the Test Automation list page, with JMeter
 listed as an available automation engine.
 
-### Advanced Settings
+### Configuring the RemoteLaunch Plugin
 
-You can modify the JMeter configuration for each of the specific
+Next, you will need to modify the JMeter configuration for each of the specific
 automation hosts, by right-clicking on the RemoteLaunch icon in the
 system tray and choosing "Configuration". That will bring up the
 RemoteLaunch configuration page.
@@ -87,6 +82,26 @@ and navigate to the location of the JMeter.bat file.
 **Trace Logging** -- When selected, this will log additional trace and
 debugging information to the Windows Event Log. This should not be
 selected in a production environment.
+
+### Ensuring JMeter is logging in XML
+
+By default, JMeter will log its output in CSV format. This format is not readable by RemoteLaunch, so you will need to update JMeter to log in XML format.
+
+To make this change, locate the following file - **jmeter.properties**:
+
+![](img/JMeter_111.png)
+
+Open up this file and locate the following line:
+
+        # legitimate values: xml, csv, db.  Only xml and csv are currently supported.
+        # jmeter.save.saveservice.output_format=csv
+
+Change this to be:
+
+        # legitimate values: xml, csv, db.  Only xml and csv are currently supported.
+        jmeter.save.saveservice.output_format=xml
+
+Then save the **jmeter.properties** file.
 
 ## Setting up the Automated Test Cases
 
@@ -340,5 +355,5 @@ In addition, the detailed test report from JMeter is below. It will contain mess
 
 
 Congratulations... You are now able to run JMeter automated functional
-tests and have the results be recorded within SpiraTest / SpiraTeam.
+tests and have the results be recorded within SpiraTest, SpiraTeam, and SpiraPlan.
 
