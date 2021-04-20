@@ -79,7 +79,62 @@ We will finish this first tutorial by clicking "Load". Your new sheet with Incid
 You can now: connect Excel and Spira together using OData and view data from Spira live in Excel. In the next tutorial we will build a simple query to filter the data to just those parts we are interested in
 
 ## Writing your first query
-incidents for one product, sorted by priority, remove columns
+In this tutorial you will learn how to use Excel's Power Query to filter down all the Incidents in your SpiraPlan application. You will end up with a list of incidents in a single product, sorted by priority. You do not need any coding or SQL skills - everything you do will feel very similar to how you normal use Excel itself.
+
+To get started:
+
+- connect SpiraPlan and Excel using the OData feed (explained in the previous tutorial)
+- click on the Incidents view in the Excel Navigator (just as we did in the last tutorial)
+- click Transform Data at the bottom of the Excel Navigator popup to load the Power Query interface
+- NOTE: if you followed along with the last tutorial and "loaded" your data into an Excel sheet, look to the "Queries and Connections" sidebar on the right. Double click where it says **Incidents**, *xx rows loaded*.
+
+The Power Query interface looks very similar to Excel
+
+![Power Query Editor window](img/odata-7.png)
+
+The Power Query Editor window is made up of:
+
+- ribbons and buttons at the top
+- a query (data) navigator on the left (this is collapsed in the above screenshot)
+- the data for your current query. This is always a flat 2 dimensional list - each column is a certain field, and each row a record (in this example each row is an incident)
+- query settings sidebar on the right. This is very useful and lets you see all the steps you took to change your query. You can also go back to see what the query looked like at an earlier stage
+
+### Choose columns
+To make the data easier to look at and filter, the first thing to do is get rid of columns we don't need. Ther are well over 100 columns (because of all the custom fields we include) and that is way too many.
+
+Click on the "Choose Columns" button from the Home ribbon. Only select the following columns (make sure the rest are unchecked), and then click OK
+
+- INCIDENT_ID
+- PROJECT_NAME
+- PRIORITY_NAME
+- NAME
+
+You should now see a table of data like the one below. We are showing all the records still, but only 4 columns. The query settings sidebar has an extra line at the end that says "Removed Other Columns." This is what we just did. You can undo the action by deleting it from the sidebar, or change which columns to show by double clicking on it.
+
+![Choosing columns](img/odata-8.png)
+
+### Filtering data
+Just like when filtering data on a sheet, the column names have dropdown arrows to open the filtering popup. 
+
+- Click on the arrow in the PROJECT_NAME column header. Select just one product. In the screenshot below we are going to only show incidents for "Library Information System"
+- Click OK
+
+You have filtered your data! That's all there is to it. It is really easy. What is cool, is that we are not hiding rows of our table like we do in Excel normally. We are actually changing the query we are sending to SpiraPlan so that SpiraPlan is only sending us the information we have asked for.
+
+![Filtering the PROJECT_NAME column](img/odata-9.png)
+
+Let's filter again. This time filter on the PRIORITY_NAME column. Below we are filtering to only get data for "1 - Critical". We have gone from getting 60 rows to only now getting 14 rows. You can see below we have a new entry in the list of Applied Steps in the right hand sidebar - for our Filtering Rows work.
+
+![Filtering the PRIORITY_NAME column](img/odata-10.png)
+
+### Sorting data
+Sorting data is just as easy as filtering data. Click on the dropdown arrow for the column you want to sort by and click "Sort Ascending" or "Sort Descending". That's all there is to it. You can, if you want, sort by multiple columns at once. In the example below, we are sorting ascending by the NAME column. Again, there is a new entry in the list of Applied Steps in the right hand sidebar - for our Sorting Rows.
+
+![Sorting the NAME column](img/odata-11.png)
+
+Hopefully, this feels very straightforward, because it is. In the background Excel is creating the right OData query to send to SpiraPlan, which is then writing a secure query to the database to get just the data you need. But you don't need to think about any of that.
+
+In the next tutorial we are going to try another query with incidents and make things more complicated by combining data across two tables at once.
 
 ## Combining two lots of data
 take the above and combine it with statuses to pick just those that are open (can use the open flag for this but this is another way)
