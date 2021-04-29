@@ -1,5 +1,98 @@
 # Release Notes for Spira v6
 
+## Version 6.9 (May 2021)
+
+!!! info "Summary"
+    - **Improved requirement document view** (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.
+    
+    - **Baselining enhancements** (SpiraTeam and SpiraPlan): There are now new views and existing views improved to make it easier to see what changed in a baseline.
+
+    - **Customize custom fields**: Custom properties have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
+
+    - **Access custom report data from external tools** (SpiraPlan): First, we've added lots more reporting views to help build out even more queries. Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard. This takes custom reports to a whole new level of integration and ease of use.
+
+    **NOTE**: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.
+
+??? success "New Features"
+
+    * **Requirements document view**
+
+        - Users with bulk edit permission can edit the name and rich text fields inline on the requirements documents list view [RQ:2953]
+        - Users can show or hide key standard fields on the requirements documents view [RQ:2954]
+        - The requirements document view can optionally show the requirement's position in the hierarchy as an outline number code (in a form like 1.1.2.4) [RQ:2958]
+        - The requirements document view has improved navigation where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]
+        - Users can quickly print the current requirement documents list with the addition of a dedicated on-page print button [RQ:3066]
+        - Users can show or hide rich text custom properties on the requirements documents view [RQ:3047]
+
+    * **Custom Properties**
+
+        - You can optionally set a position for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
+        - You can optionally add a description to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
+        - Each artifact that has custom properties already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
+
+    * **History and Baselining**
+
+        - Clicking on Artifact Name on the baseline details page opens the baseline artifact details page to view all changes made in that baseline to that artifact [RQ:2989]
+        - Show enhanced history tracking on the product admin history pages and baseline details page (including test coverage and step position changes) [RQ:3040]
+        - Enhance history to track document versioning (history records are created for adding, deleting, and setting a version active) [RQ:3064]
+
+    * ** Report Customization**
+
+        - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) [RQ:3037]
+        - Users can have a dedicated Report Admin role, which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
+
+    * **Other**
+
+        - Release artifacts have event and subscription notifications [RQ:2979]
+        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new product template setting [RQ:3049]
+        - Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]
+        - Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]
+        - Improve product cloning by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
+
+??? bug "Bug fixes and enhancements"
+
+    * **Administration**
+
+        - Stop product cloning exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]
+        - Improve the performance of cloning a product by improving how attachments are copied into the new product [IN:6172]
+        - Add product and system admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]
+        - Add direct links to 'Custom Properties' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]
+    
+    * **Bug fixes**
+
+        - Add jira.inflectra.com as an automatically trusted CORS domain to allow easier connection to Inflectra's Jira marketplace addon [IN:5520]
+        - Ensure full database schema parity between a clean install and an upgraded cloud installation [IN:6181]
+        - Ensure full database schema parity between a clean install and an upgraded on-premise installation [IN:6182]
+        - Enable spell checking on the actual results field during test execution [IN:6192]
+        - Fix opening a details page to a specified tab not working for some pages and tabs [IN:6202]
+        - Fix creating tasks during test execution not triggering notifications [IN:6204]
+        - Fix inline document editing version number not increasing automatically for all cultures (eg if a comma is used for denoting decimals) [IN:6253]
+        - Do not allow users to create multiple custom properties for an artifact with the same property number as this can cause detail pages not to load [IN:6264]
+        - Limit requirement tooltip to only show the start of, not the whole, description and comment fields, if the field is long (hierarchical views only) [IN:6302]
+
+    * **Enhancements**
+
+        - Make it clear when using the application with Internet Explorer that the browser is no longer supported [IN:6246]
+        - Add an attachments tab for documents, to enable, for example, pasting of images into inline rich text documents [IN:6243]
+        - Allow document names to be edited on list and details pages (note that the filename will be overwritten when you upload a new version) [IN:6292]
+        - Add an option on the requirement detail page to insert a child requirement to the current requirement [IN:4913]
+        - Convert the Saved Reports Widget's hyperlinks to make them shareable [IN:6106]
+        - Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]
+        - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
+        - Add additional views for custom reporting to give more flexibility in what data can be queried [IN:6307]
+
+    * **Findings from security review**
+
+        - Version control tables should fully encrypt sensitive information in the database [IN:6242]
+        - Fix "Vulnerable JS Library" issues by upgrading relevant external JS libraries [IN:6073]
+        - Fix XSS vulnerabilities in the components Sidebar [IN:6289]
+        - Fix HTML injection vulnerability on saved reports [IN:6303]
+        - Fix HTML and IFrame injection vulnerabilities [IN:6300]
+        - Fix XSS vulnerabilities in saved filters and reports [IN:6297]
+        - Fix reflected XSS vulnerability [IN:6294]
+        - Fix XSS vulnerabilities caused by using pre ASP .NET 4.6 databinding encoding syntax [IN:6295]
+
+
 ## Version 6.8 (March 2021)
 
 !!! info "Summary"
