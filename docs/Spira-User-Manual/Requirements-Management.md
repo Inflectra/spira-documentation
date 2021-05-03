@@ -257,25 +257,69 @@ This view is similar to the existing [Planning Board](Planning-Board.md) but onl
 
 
 ## Requirements Document View
+This view shows the hierarchical organization of the requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. You can edit the name and description fields inline to update your document as you read through it, as well as change what fields are visible, to tailor the document to your needs.
 
-This view also offers a hierarchical organization of the first 5000 requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. The new view has a sidebar that lets you quickly jump to a section in the requirements document as well as simply scroll through all of the items.
+![main requirement documents view](img/requirements-documents-view.png)
 
-The document is paginated, showing up to 250 requirements on each page.
+### Requirements Document Navigation
+The sidebar shows all the epics in the product[^max-epics], in their hierarchy. Clicking on an epic will load that epic with all its children[^max-epics] into the document view (and save this view for the next time you are on this page for this product). There is a special link at the top of the list of epics called "Level 1 (root)" and clicking on this will load all requirements at the root level (level 1)[^max-epics]. This is the default view you will see when you first visit the documents view. Looking at "Level 1 (root)" is particularly useful if you need to view or edit standalone requirements (requirements that do not have a parent or any children). 
 
-For each requirement, the following information is displayed:
+When you click an epic (or "Level 1 (root)") from the sidebar, the documents view will show a page of the first 50 requirements. If there are more than 50 requirements you can quickly change pages by using the pagination options at the top right.
 
-- icon
-- name
+### Requirements Document Options
+For each requirement, the following fields are always displayed at the top of the requirement:
+
+- Icon
+- Name
 - ID
-- status
-- type
-- importance
-- owner
-- description
-- [use case diagram](#use-case-diagram) (if the requirement has steps)
 
-![](img/requirements-documents-view.png)
+The following fields are displayed by default (but can be hidden) in a header bar, below the requirement name:
 
+- Status
+- Type
+- Importance
+- Owner
+
+The following fields are always displayed, and below the header bar:
+
+- Description
+- [Use case diagram](#use-case-diagram) (if the requirement has steps)
+
+Additionally you can choose to show the following fields in the header bar:
+
+- Author
+- Component
+- Creation date
+- Estimate (points)
+- Last updated date
+- Outline numbers (this is a special field that shows each requirement's position in the hierarchy as an outline. The first requirement has the number 1, the second 2, the first child of the second 2.1, its child 2.1.1 and so on)
+- Release
+- Task progress
+- Test coverage
+- Any requirement rich text custom property (shown below the requirement description - not in the header bar)
+
+To show or hide any of the optional fields, click the "Show/Hide fields" dropdown at the top of the screen and choose your action. When you change which fields are shown, the data will reload to reflect that choice (if you have unsaved changes you will be prompted to discard them or save your changes).
+
+Next to the "Show/Hide fields" dropdown is a print button. Clicking this will allow you to print all the requirements in the current page. If you are on page 2 of 3 in the documents view, you will print all of page 2's requirements only.
+
+### Editing the requirements documents
+To edit the requirements on the documents view your user must have Bulk Edit permissions for requirements in that product. If you have this permission, you will see an edit icon to the far right of each requirement name. Click this to edit that requirement. You can edit the following fields:
+
+- Requirement name
+- Requirement description
+- Any visible rich text custom properties
+
+In the screenshot below we are editing RQ:1. You can see this because of the requirement name is highlighted, and there are two icons on the far right (save and cancel), instead of the edit icon. RQ:2 is **not** being edited: we can see the edit icon on the far left. Look at the very top of the documents view and you see in the screenshot a helpful message showing "Editing 1 item(s), with 0 unsaved change(s)."
+
+![editing a single requirement document](img/requirements-documents-editing1.png)
+
+In this next screenshot, we are editing RQ:1 still, but also now RQ:2. We are currently making changes to RQ:1 (its save icon is now bigger and orange telling us it can be saved). The header message clearly tells us that we have unsaved changes on this page. This is a helpful way of tracking requirements you need to save, because if you are editing several at a time, not all will be on screen at once.
+
+![editing multiple requirement document requirements](img/requirements-documents-editing2.png)
+
+To save your changes, click the save icon. To discard your changes, click the X icon / cancel. If there was a problem saving the requirement you will see an error message explaining the issue.
+
+[^max-epics]: limited to the first 5000 requirements
 
 ## Requirements Mindmap
 

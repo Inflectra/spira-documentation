@@ -31,8 +31,9 @@ To add a new user to the system, click the "Add" button at the bottom of the use
 On this screen, you can:
 
 - enter information about the user, such as their name, email address, and department
-- make the user a portfolio viewer (SpiraPlan only). This controls who can access both the homepages of all portfolios and the enterprise homepage
 - make the user a system administrator
+- make the user a report administrator (this allows the user to administer custom reports and graphs. The can create, edit, and delete reports and graphs, and can also access custom report data in 3rd party tools via OData)
+- make the user a portfolio viewer (SpiraPlan only). This controls who can access both the homepages of all portfolios and the enterprise homepage
 - create their password, password reset question and answer. 
 - if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
 
@@ -46,7 +47,7 @@ In a similar way, to edit the details of an existing user, click the "Edit" hype
 
 ![](img/System_Users_46.png)
 
-On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access), system administration status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).
+On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access), system administration status, report administrator status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).
 
 If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](../System/#ldap-configuration) for more details.
 

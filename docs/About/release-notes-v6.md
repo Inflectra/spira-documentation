@@ -3,26 +3,26 @@
 ## Version 6.9 (May 2021)
 
 !!! info "Summary"
-    - **Improved requirement document view** (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.
+    - **Improved [requirement document view](../../Spira-User-Manual/Requirements-Management/#requirements-document-view)** (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.
     
-    - **Baselining enhancements** (SpiraTeam and SpiraPlan): There are now new views and existing views improved to make it easier to see what changed in a baseline.
+    - **Baselining enhancements** (SpiraTeam and SpiraPlan): There are now [new views](../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details) and existing views improved to make it easier to see what changed in a baseline.
+
+    - **Access custom report data from external tools** (SpiraPlan): First, we've added [lots more reporting views](../../Reporting/Custom-Report-Tables) to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our [in-depth tutorial](../../Reporting/OData-Tutorial)). This takes custom reports to a whole new level of integration and ease of use.
 
     - **Customize custom fields**: Custom properties have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
-
-    - **Access custom report data from external tools** (SpiraPlan): First, we've added lots more reporting views to help build out even more queries. Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard. This takes custom reports to a whole new level of integration and ease of use.
 
     **NOTE**: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.
 
 ??? success "New Features"
 
-    * **Requirements document view**
+    * **[Requirements document view](../../Spira-User-Manual/Requirements-Management/#requirements-document-view)**
 
-        - Users with bulk edit permission can edit the name and rich text fields inline on the requirements documents list view [RQ:2953]
-        - Users can show or hide key standard fields on the requirements documents view [RQ:2954]
-        - The requirements document view can optionally show the requirement's position in the hierarchy as an outline number code (in a form like 1.1.2.4) [RQ:2958]
-        - The requirements document view has improved navigation where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]
+        - Users with bulk edit permission can [edit the name and rich text fields inline](../../Spira-User-Manual/Requirements-Management/#editing-the-requirements-documents) on the requirements documents list view [RQ:2953]
+        - Users can [show or hide key standard fields](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) on the requirements documents view [RQ:2954]
+        - Users can [show or hide rich text custom properties](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) on the requirements documents view [RQ:3047]
+        - The requirements document view can optionally show the requirement's position in the hierarchy as an [outline number code](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) (in a form like 1.1.2.4) [RQ:2958]
+        - The requirements document view has improved [navigation](../../Spira-User-Manual/Requirements-Management/#requirements-document-navigation) where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]
         - Users can quickly print the current requirement documents list with the addition of a dedicated on-page print button [RQ:3066]
-        - Users can show or hide rich text custom properties on the requirements documents view [RQ:3047]
 
     * **Custom Properties**
 
@@ -32,14 +32,14 @@
 
     * **History and Baselining**
 
-        - Clicking on Artifact Name on the baseline details page opens the baseline artifact details page to view all changes made in that baseline to that artifact [RQ:2989]
-        - Show enhanced history tracking on the product admin history pages and baseline details page (including test coverage and step position changes) [RQ:3040]
+        - Clicking on Artifact Name on the [baseline details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) opens the [baseline artifact details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details) to view all changes made in that baseline to that artifact [RQ:2989]
+        - Show enhanced history tracking on the [product admin history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) pages and [baseline details](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) page (including test coverage and step position changes) [RQ:3040]
         - Enhance history to track document versioning (history records are created for adding, deleting, and setting a version active) [RQ:3064]
 
     * ** Report Customization**
 
-        - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) [RQ:3037]
-        - Users can have a dedicated Report Admin role, which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
+        - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) - read our [in-depth tutorial](../../Reporting/OData-Tutorial) [RQ:3037]
+        - Users can have a dedicated [Report Admin role]()../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
 
     * **Other**
 
@@ -61,8 +61,8 @@
     * **Bug fixes**
 
         - Add jira.inflectra.com as an automatically trusted CORS domain to allow easier connection to Inflectra's Jira marketplace addon [IN:5520]
-        - Ensure full database schema parity between a clean install and an upgraded cloud installation [IN:6181]
-        - Ensure full database schema parity between a clean install and an upgraded on-premise installation [IN:6182]
+        - Ensure full database metadata parity between a clean install and an upgraded cloud installation [IN:6181]
+        - Ensure full database metadata parity between a clean install and an upgraded on-premise installation [IN:6182]
         - Enable spell checking on the actual results field during test execution [IN:6192]
         - Fix opening a details page to a specified tab not working for some pages and tabs [IN:6202]
         - Fix creating tasks during test execution not triggering notifications [IN:6204]
@@ -79,7 +79,7 @@
         - Convert the Saved Reports Widget's hyperlinks to make them shareable [IN:6106]
         - Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]
         - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
-        - Add additional views for custom reporting to give more flexibility in what data can be queried [IN:6307]
+        - Add [additional views for custom reporting](../../Reporting/Custom-Report-Tables) to give more flexibility in what data can be queried [IN:6307]
 
     * **Findings from security review**
 
