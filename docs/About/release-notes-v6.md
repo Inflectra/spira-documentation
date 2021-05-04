@@ -9,7 +9,7 @@
 
     - **Access custom report data from external tools** (SpiraPlan): First, we've added [lots more reporting views](../../Reporting/Custom-Report-Tables) to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our [in-depth tutorial](../../Reporting/OData-Tutorial)). This takes custom reports to a whole new level of integration and ease of use.
 
-    - **Customize custom fields**: [Custom properties](../../Spira-Administration-Guide/Templates-Custom-Properties) have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
+    - **Customize custom fields**: [Custom properties](../../Spira-Administration-Guide/Template-Custom-Properties) have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
 
     **NOTE**: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.
 
@@ -26,9 +26,9 @@
 
     * **Custom Properties**
 
-        - You can [optionally set a position](../../Spira-Administration-Guide/Templates-Custom-Properties) for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
-        - You can optionally add [help tooltip text](../../Spira-Administration-Guide/Templates-Custom-Properties/#edit-custom-properties) to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
-        - Each artifact that has [custom properties](../../Spira-Administration-Guide/Templates-Custom-Properties) already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
+        - You can [optionally set a position](../../Spira-Administration-Guide/Template-Custom-Properties) for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
+        - You can optionally add [help tooltip text](../../Spira-Administration-Guide/Template-Custom-Properties/#edit-custom-properties) to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
+        - Each artifact that has [custom properties](../../Spira-Administration-Guide/Template-Custom-Properties) already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
 
     * **History and Baselining**
 
@@ -47,16 +47,27 @@
         - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../../Spira-Administration-Guide/System-Workspaces/#view-edit-templates) [RQ:3049]
         - Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]
         - Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]
-        - Improve [product cloning]../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
+        - Improve [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
 
 ??? bug "Bug fixes and enhancements"
 
     * **Administration**
 
-        - Stop product cloning exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]
-        - Improve the performance of cloning a product by improving how attachments are copied into the new product [IN:6172]
-        - Add product and system admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]
-        - Add direct links to 'Custom Properties' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]
+        - Stop [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]
+        - Improve the performance of [cloning a product](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by improving how attachments are copied into the new product [IN:6172]
+        - Add [product](../../Spira-Administration-Guide/Product-Planning/#testing-settings) and [system](../../Spira-Administration-Guide/System/#general-settings) admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]
+        - Add direct links to '[Custom Properties](../../Spira-Administration-Guide/Template-Custom-Properties)' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]
+
+    * **Enhancements**
+
+        - Convert the [Saved](../../Spira-User-Manual/User-Product-Management/#my-saved-reports) [Reports](../../Spira-User-Manual/Reports-Center) Widget's hyperlinks to make them shareable [IN:6106]
+        - Add [additional views for custom reporting](../../Reporting/Custom-Report-Tables) to give more flexibility in what data can be queried [IN:6307]
+        - Add an [attachments tab for documents](../../Spira-User-Manual/Document-Management/#attachments), to enable, for example, pasting of images into inline rich text documents [IN:6243]
+        - Allow document names to be edited on [list](../../Spira-User-Manual/Document-Management/#document-list) and [details](../../Spira-User-Manual/Document-Management/#document-details) pages (note that the filename will be overwritten when you upload a new version) [IN:6292]
+        - Add an option on the [requirement detail page](../../Spira-User-Manual/Requirements-Management/#requirement-details) to insert a child requirement to the current requirement [IN:4913]
+        - Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]
+        - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
+        - Make it clear when using the application with Internet Explorer that the browser is no longer supported [IN:6246]
     
     * **Bug fixes**
 
@@ -69,17 +80,6 @@
         - Fix inline document editing version number not increasing automatically for all cultures (eg if a comma is used for denoting decimals) [IN:6253]
         - Do not allow users to create multiple custom properties for an artifact with the same property number as this can cause detail pages not to load [IN:6264]
         - Limit requirement tooltip to only show the start of, not the whole, description and comment fields, if the field is long (hierarchical views only) [IN:6302]
-
-    * **Enhancements**
-
-        - Make it clear when using the application with Internet Explorer that the browser is no longer supported [IN:6246]
-        - Add an attachments tab for documents, to enable, for example, pasting of images into inline rich text documents [IN:6243]
-        - Allow document names to be edited on list and details pages (note that the filename will be overwritten when you upload a new version) [IN:6292]
-        - Add an option on the requirement detail page to insert a child requirement to the current requirement [IN:4913]
-        - Convert the Saved Reports Widget's hyperlinks to make them shareable [IN:6106]
-        - Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]
-        - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
-        - Add [additional views for custom reporting](../../Reporting/Custom-Report-Tables) to give more flexibility in what data can be queried [IN:6307]
 
     * Security fixes
 

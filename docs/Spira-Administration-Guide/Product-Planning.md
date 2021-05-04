@@ -84,6 +84,7 @@ You can enable or disable the following settings:
 * **Execute Only From Test Sets**: (default = no) when turned on testers will not be able to execute Test Cases. They will only be able to execute Test Sets.
 * **Auto create a test step**: (default = yes) automatically create a default test step on the creation of any test case.
 * **Worx Integration**: (default = no) integrating with the Worx desktop application.
+* **Disable Rollup Calculations**: (default = no) setting this to Yes will prevent the system from calculating 'rollup' metrics for this product when data is entered in the system (but only if the [equivalent system setting](../System/#general-settings) is also set to yes). This should not be done unless you have been told by the Inflectra Support team to do so. If you have turned this on and then want to return your product to normal, set this back to no, and then refresh the test coverage and task progress on the product admin [Data Tools](../Product-General-Settings/#product-data-tools) page.
 
 
 ## Edit Components

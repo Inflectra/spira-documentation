@@ -196,12 +196,14 @@ Note: This option is only available for files. You cannot add a new URL version 
 
 
 ### Associations
-
 You can associate a document to many other artifacts in the system from this tab. If you originally uploaded the document as an attachment to an artifact, then the initial association will be already listed. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 
-### History
+### Attachments
+Read about [how the attachment tab works](Application-Wide.md#attachments)
 
+
+### History
 Read about [how the history tab works](Application-Wide.md#history)
 
 

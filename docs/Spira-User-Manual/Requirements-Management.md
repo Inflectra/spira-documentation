@@ -393,22 +393,22 @@ In this dialog you are focusing on the new requirement you are creating from per
 
 To complete the split click the `Split` button.
 
-**Notes about how the split works**:
+!!! info "Notes about how requirement splitting works
 
-- **New estimate**: 
+    - **New estimate**: 
 
-    - this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. 
-    - The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).
+        - this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. 
+        - The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).
 
-- **Status**: 
+    - **Status**: 
 
-    - the new requirement's status will match that of the original requirement
-    - if the original requirement's status is "In Progress" AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs
+        - the new requirement's status will match that of the original requirement
+        - if the original requirement's status is "In Progress" AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs
 
-- **Tasks** are not moved or cloned from the original requirement to the new requirement
-- **Test Coverage** is copied over to the new requirement (and left unchanged on the original requirement)
-- **Attachments** are copied over to the new requirement (and left unchanged on the original requirement)
-- All standard and custom field information is copied over to the new requirement
+    - **Tasks** are not moved or cloned from the original requirement to the new requirement
+    - **Test Coverage** is copied over to the new requirement (and left unchanged on the original requirement)
+    - **Attachments** are copied over to the new requirement (and left unchanged on the original requirement)
+    - All standard and custom field information is copied over to the new requirement
 
 
 ### Overview - Details
