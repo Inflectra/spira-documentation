@@ -81,16 +81,7 @@
         - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
         - Add [additional views for custom reporting](../../Reporting/Custom-Report-Tables) to give more flexibility in what data can be queried [IN:6307]
 
-    * **Findings from security review**
-
-        - Version control tables should fully encrypt sensitive information in the database [IN:6242]
-        - Fix "Vulnerable JS Library" issues by upgrading relevant external JS libraries [IN:6073]
-        - Fix XSS vulnerabilities in the components Sidebar [IN:6289]
-        - Fix HTML injection vulnerability on saved reports [IN:6303]
-        - Fix HTML and IFrame injection vulnerabilities [IN:6300]
-        - Fix XSS vulnerabilities in saved filters and reports [IN:6297]
-        - Fix reflected XSS vulnerability [IN:6294]
-        - Fix XSS vulnerabilities caused by using pre ASP .NET 4.6 databinding encoding syntax [IN:6295]
+    * Security fixes
 
 
 ## Version 6.8 (March 2021)
