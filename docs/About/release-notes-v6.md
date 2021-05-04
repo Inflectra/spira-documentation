@@ -9,7 +9,7 @@
 
     - **Access custom report data from external tools** (SpiraPlan): First, we've added [lots more reporting views](../../Reporting/Custom-Report-Tables) to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our [in-depth tutorial](../../Reporting/OData-Tutorial)). This takes custom reports to a whole new level of integration and ease of use.
 
-    - **Customize custom fields**: Custom properties have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
+    - **Customize custom fields**: [Custom properties](../../Spira-Administration-Guide/Templates-Custom-Properties) have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
 
     **NOTE**: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.
 
@@ -26,9 +26,9 @@
 
     * **Custom Properties**
 
-        - You can optionally set a position for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
-        - You can optionally add a description to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
-        - Each artifact that has custom properties already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
+        - You can [optionally set a position](../../Spira-Administration-Guide/Templates-Custom-Properties) for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
+        - You can optionally add [help tooltip text](../../Spira-Administration-Guide/Templates-Custom-Properties/#edit-custom-properties) to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
+        - Each artifact that has [custom properties](../../Spira-Administration-Guide/Templates-Custom-Properties) already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
 
     * **History and Baselining**
 
@@ -39,15 +39,15 @@
     * ** Report Customization**
 
         - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) - read our [in-depth tutorial](../../Reporting/OData-Tutorial) [RQ:3037]
-        - Users can have a dedicated [Report Admin role]()../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
+        - Users can have a dedicated [Report Admin role](../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
 
     * **Other**
 
-        - Release artifacts have event and subscription notifications [RQ:2979]
-        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new product template setting [RQ:3049]
+        - Release artifacts support [notification events and templates](../../Spira-Administration-Guide/Template-Notifications) [RQ:2979]
+        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../../Spira-Administration-Guide/System-Workspaces/#view-edit-templates) [RQ:3049]
         - Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]
         - Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]
-        - Improve product cloning by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
+        - Improve [product cloning]../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
 
 ??? bug "Bug fixes and enhancements"
 
