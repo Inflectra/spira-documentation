@@ -11,7 +11,7 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Version 6.10 (early summer 2021)
-- Allow users to edit requirements directly from the planning board pages
+- Planning board quality of life improvements, including allowing users to edit artifacts on the boards in popups
 - Improve the v6 APIs with additional functions to allow increased automated management of more parts of the applicaton
 - Improve the sample data available to users on first trying out SpiraPlan with more industry specific example products available
 
