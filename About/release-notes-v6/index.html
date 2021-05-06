@@ -1432,6 +1432,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -3138,6 +3150,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-69-may-2021" class="md-nav__link">
+    Version 6.9 (May 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-68-march-2021" class="md-nav__link">
     Version 6.8 (March 2021)
   </a>
@@ -3390,6 +3409,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-69-may-2021" class="md-nav__link">
+    Version 6.9 (May 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-68-march-2021" class="md-nav__link">
     Version 6.8 (March 2021)
   </a>
@@ -3557,6 +3583,114 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-69-may-2021">Version 6.9 (May 2021)<a class="headerlink" href="#version-69-may-2021" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>
+<p><strong>Improved <a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-view">requirement document view</a></strong> (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.</p>
+</li>
+<li>
+<p><strong>Baselining enhancements</strong> (SpiraTeam and SpiraPlan): There are now <a href="../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details">new views</a> and existing views improved to make it easier to see what changed in a baseline.</p>
+</li>
+<li>
+<p><strong>Access custom report data from external tools</strong> (SpiraPlan): First, we've added <a href="../../Reporting/Custom-Report-Tables">lots more reporting views</a> to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3<sup>rd</sup> party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our <a href="../../Reporting/OData-Tutorial">in-depth tutorial</a>). This takes custom reports to a whole new level of integration and ease of use.</p>
+</li>
+<li>
+<p><strong>Customize custom fields</strong>: <a href="../../Spira-Administration-Guide/Template-Custom-Properties">Custom properties</a> have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. </p>
+</li>
+</ul>
+<p><strong>NOTE</strong>: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.</p>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-view">Requirements document view</a></strong></p>
+<ul>
+<li>Users with bulk edit permission can <a href="../../Spira-User-Manual/Requirements-Management/#editing-the-requirements-documents">edit the name and rich text fields inline</a> on the requirements documents list view [RQ:2953]</li>
+<li>Users can <a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-options">show or hide key standard fields</a> on the requirements documents view [RQ:2954]</li>
+<li>Users can <a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-options">show or hide rich text custom properties</a> on the requirements documents view [RQ:3047]</li>
+<li>The requirements document view can optionally show the requirement's position in the hierarchy as an <a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-options">outline number code</a> (in a form like 1.1.2.4) [RQ:2958]</li>
+<li>The requirements document view has improved <a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-navigation">navigation</a> where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]</li>
+<li>Users can quickly print the current requirement documents list with the addition of a dedicated on-page print button [RQ:3066]</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Properties</strong></p>
+<ul>
+<li>You can <a href="../../Spira-Administration-Guide/Template-Custom-Properties">optionally set a position</a> for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]</li>
+<li>You can optionally add <a href="../../Spira-Administration-Guide/Template-Custom-Properties/#edit-custom-properties">help tooltip text</a> to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]</li>
+<li>Each artifact that has <a href="../../Spira-Administration-Guide/Template-Custom-Properties">custom properties</a> already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]</li>
+</ul>
+</li>
+<li>
+<p><strong>History and Baselining</strong></p>
+<ul>
+<li>Clicking on Artifact Name on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#baseline-details">baseline details page</a> opens the <a href="../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details">baseline artifact details page</a> to view all changes made in that baseline to that artifact [RQ:2989]</li>
+<li>Show enhanced history tracking on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product admin history</a> pages and <a href="../../Spira-Administration-Guide/Product-General-Settings/#baseline-details">baseline details</a> page (including test coverage and step position changes) [RQ:3040]</li>
+<li>Enhance history to track document versioning (history records are created for adding, deleting, and setting a version active) [RQ:3064]</li>
+</ul>
+</li>
+<li>
+<p>** Report Customization**</p>
+<ul>
+<li>Allow access to custom report views via API using the ODATA standard (SpiraPlan only) - read our <a href="../../Reporting/OData-Tutorial">in-depth tutorial</a> [RQ:3037]</li>
+<li>Users can have a dedicated <a href="../../Spira-Administration-Guide/System-Users/#add-a-new-user">Report Admin role</a>, which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other</strong></p>
+<ul>
+<li>Release artifacts support <a href="../../Spira-Administration-Guide/Template-Notifications">notification events and templates</a> [RQ:2979]</li>
+<li>Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new <a href="../../Spira-Administration-Guide/System-Workspaces/#view-edit-templates">product template setting</a> [RQ:3049]</li>
+<li>Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]</li>
+<li>Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]</li>
+<li>Improve <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">product cloning</a> by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p><strong>Administration</strong></p>
+<ul>
+<li>Stop <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">product cloning</a> exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]</li>
+<li>Improve the performance of <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">cloning a product</a> by improving how attachments are copied into the new product [IN:6172]</li>
+<li>Add <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">product</a> and <a href="../../Spira-Administration-Guide/System/#general-settings">system</a> admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]</li>
+<li>Add direct links to '<a href="../../Spira-Administration-Guide/Template-Custom-Properties">Custom Properties</a>' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhancements</strong></p>
+<ul>
+<li>Convert the <a href="../../Spira-User-Manual/User-Product-Management/#my-saved-reports">Saved</a> <a href="../../Spira-User-Manual/Reports-Center">Reports</a> Widget's hyperlinks to make them shareable [IN:6106]</li>
+<li>Add <a href="../../Reporting/Custom-Report-Tables">additional views for custom reporting</a> to give more flexibility in what data can be queried [IN:6307]</li>
+<li>Add an <a href="../../Spira-User-Manual/Document-Management/#attachments">attachments tab for documents</a>, to enable, for example, pasting of images into inline rich text documents [IN:6243]</li>
+<li>Allow document names to be edited on <a href="../../Spira-User-Manual/Document-Management/#document-list">list</a> and <a href="../../Spira-User-Manual/Document-Management/#document-details">details</a> pages (note that the filename will be overwritten when you upload a new version) [IN:6292]</li>
+<li>Add an option on the <a href="../../Spira-User-Manual/Requirements-Management/#requirement-details">requirement detail page</a> to insert a child requirement to the current requirement [IN:4913]</li>
+<li>Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]</li>
+<li>Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]</li>
+<li>Make it clear when using the application with Internet Explorer that the browser is no longer supported [IN:6246]</li>
+</ul>
+</li>
+<li>
+<p><strong>Bug fixes</strong></p>
+<ul>
+<li>Add jira.inflectra.com as an automatically trusted CORS domain to allow easier connection to Inflectra's Jira marketplace addon [IN:5520]</li>
+<li>Ensure full database metadata parity between a clean install and an upgraded cloud installation [IN:6181]</li>
+<li>Ensure full database metadata parity between a clean install and an upgraded on-premise installation [IN:6182]</li>
+<li>Enable spell checking on the actual results field during test execution [IN:6192]</li>
+<li>Fix opening a details page to a specified tab not working for some pages and tabs [IN:6202]</li>
+<li>Fix creating tasks during test execution not triggering notifications [IN:6204]</li>
+<li>Fix inline document editing version number not increasing automatically for all cultures (eg if a comma is used for denoting decimals) [IN:6253]</li>
+<li>Do not allow users to create multiple custom properties for an artifact with the same property number as this can cause detail pages not to load [IN:6264]</li>
+<li>Limit requirement tooltip to only show the start of, not the whole, description and comment fields, if the field is long (hierarchical views only) [IN:6302]</li>
+</ul>
+</li>
+<li>
+<p>Security fixes</p>
+</li>
+</ul>
+</details>
 <h2 id="version-68-march-2021">Version 6.8 (March 2021)<a class="headerlink" href="#version-68-march-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

@@ -1493,6 +1493,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -3323,6 +3335,9 @@
 <p><strong>Template Administration:</strong> end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
 <em>Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work <a href="../System-Users/#view-edit-roles">here</a>.</em></p>
 </li>
+<li>
+<p><strong>Report Administration:</strong> a report admin can administer custom reports and graphs (create, edit, delete). They can also access custom report data in 3<sup>rd</sup> party tools via OData and the API. These functions are also available to system admins under System Administration. However report admins can <strong>only</strong> access the reporting functions and pages - they have no access to any other admin functions. There is a special "Report Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any report administrator task.</p>
+</li>
 </ol>
 <h2 id="administration-menu">Administration Menu<a class="headerlink" href="#administration-menu" title="Permanent link">&para;</a></h2>
 <p>Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:</p>
@@ -3342,7 +3357,7 @@
 </ol>
 <p>This menu only shows the links to one product, one template, or one program at a time (and System Admin all the time to system administrators). Because this user is currently viewing a page in the product 'Library Information System', admin items for that product and its template are visible.</p>
 <p>You can see that the "Requirements" sub section is highlighted. This is because the user is currently on a requirements page of the 'Library Information System' product (either in the main application or in template administration). The highlighting serves no function other than to guide the user to where they may wish to focus.</p>
-<p><img alt="" src="../img/System_Administration_29.png" /></p>
+<p><img alt="template admin menu" src="../img/System_Administration_29.png" /></p>
 <p>Below is an example of an administration menu where a user is a Program Owner but with no other access to administration. This menu is much barer than the one above, because the administrative options this user has are that much more limited. This user only has admin access to Sample Program One. If they navigate to a different program page or to a product page in the application, they would not see the admin menu at all.</p>
 <p><img alt="" src="../img/System_Administration_30.png" /></p>
 <p>If a user wants to see what, if any, parts of the system they have administrative access to, they can do so at any time. Clicking on the workspace dropdown on the global navigation will show them the list of workspaces they have access to. Below, you can see that products are grouped into programs, and there is a dedicated Templates section at the bottom. Any workspace the user has administrative access to has a superscript gray cog to the right of that workspace's name.</p>
@@ -3368,6 +3383,8 @@
 <li><a href="../Product-Users/">Add users as members to a product</a></li>
 </ol>
 <p>These tasks typically need to be performed before any other users can use the system, since there will be no logins or products available other than the sample ones provided during the installation.</p>
+<p>Below is the admin menu for a user who is a report administrator but has no other active admin roles. The only menu options available are for custom reports and graphs.</p>
+<p><img alt="report admin menu" src="../img/System_Administration_report_admin_menu.png" /></p>
 <p>The rest of this guide explores each area of administration in order, grouped by administration section.</p>
 <h2 id="how-user-permissions-are-set">How user permissions are set<a class="headerlink" href="#how-user-permissions-are-set" title="Permanent link">&para;</a></h2>
 <p>As described above there are 4 different types of administrator. There are also different permission models for accessing the application itself (ie not the administration pages). How do you set each of these permissions so that a user can only see / use what they are supposed to?</p>

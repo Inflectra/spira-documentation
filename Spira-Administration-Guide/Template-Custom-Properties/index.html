@@ -1382,15 +1382,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-custom-lists" class="md-nav__link">
-    Edit Custom Lists
+  <a href="#edit-custom-properties" class="md-nav__link">
+    Edit Custom Properties
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-custom-properties" class="md-nav__link">
-    Edit Custom Properties
+  <a href="#edit-custom-lists" class="md-nav__link">
+    Edit Custom Lists
   </a>
   
 </li>
@@ -1471,6 +1471,18 @@
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Graph-Tutorial/" class="md-nav__link">
         Custom Graph Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
       </a>
     </li>
   
@@ -3252,15 +3264,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edit-custom-lists" class="md-nav__link">
-    Edit Custom Lists
+  <a href="#edit-custom-properties" class="md-nav__link">
+    Edit Custom Properties
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-custom-properties" class="md-nav__link">
-    Edit Custom Properties
+  <a href="#edit-custom-lists" class="md-nav__link">
+    Edit Custom Lists
   </a>
   
 </li>
@@ -3279,169 +3291,91 @@
                 
                 
                 <h1 id="template-custom-properties">Template: Custom Properties<a class="headerlink" href="#template-custom-properties" title="Permanent link">&para;</a></h1>
-<p>SpiraPlan allows you to customize all of the artifacts in the system
-(requirements, test cases, incidents, etc.) by adding user-defined
-custom properties in addition to the built-in fields. You can create a
-variety of different types of custom properties. This section describes
-how to setup different custom lists and custom properties in your
-templates.</p>
-<p>Artifacts in SpiraPlan can have up to 30 different custom properties per
-artifact-type, per template. There are different types of custom
-properties allowed:</p>
+<p>SpiraPlan allows you to customize many of its artifacts<sup id="fnref:custom-artifacts"><a class="footnote-ref" href="#fn:custom-artifacts">1</a></sup> by adding user-defined custom properties in addition to the built-in fields. Custom properties show in the application in the following places.</p>
 <ul>
-<li>
-<p><strong>Text</strong>: Normal or Rich-Text field.</p>
-</li>
-<li>
-<p><strong>Integer</strong>: Whole-Number entry.</p>
-</li>
-<li>
-<p><strong>Decimal</strong>: Fractional number entry (currency, etc.)</p>
-</li>
-<li>
-<p><strong>Boolean</strong>: Simple yes/no (on/off) checkbox.</p>
-</li>
-<li>
-<p><strong>Date</strong>: Date selector.</p>
-</li>
-<li>
-<p><strong>List</strong>: Custom List selector.</p>
-</li>
-<li>
-<p><strong>Multi-List</strong>: Custom List selector that allows multiple values.</p>
-</li>
-<li>
-<p><strong>User</strong>: List of assignable users.</p>
-</li>
+<li><strong>Artifact list pages</strong>: you can choose to show or hide them the same as standard fields</li>
+<li><strong>Artifact details pages</strong>: the visibility is controlled with the workflow as with standard fields. Each custom property is shown in the section on the page with other fields of that type - all rich text fields are shown together, all date fields together etc. In each section, custom properties are shown after standard fields. By default, custom properties are ordered based off of their number (the row number they are at on the custom property admin page), but you can change this by setting the properties' display positions (see below). Custom properties with position numbers are shown after those that do not. All custom properties with position numbers are shown in the order of their position numbers.</li>
+<li><strong>Planning board</strong> pages when viewing / adding an artifact (visible as per workflow)</li>
+<li><strong>Test execution pages</strong></li>
+<li><strong>Reports</strong> (standard and custom)</li>
+<li><strong>API</strong></li>
 </ul>
-<p>Each custom property can have optional settings applied to it. Optional
-settings are as follows. (Note that not all settings are allowed for all
-property types.)</p>
-<ul>
-<li>
-<p><strong>Default</strong>: The default value when a new artifact is created.</p>
-</li>
-<li>
-<p><strong>Allow Empty</strong>: Whether or not an empty value is allowed.</p>
-</li>
-<li>
-<p><strong>Precision</strong>: (Decimal Only) How many decimal places is allowed (or
-the value is rounded to).</p>
-</li>
-<li>
-<p><strong>Minimum Value</strong>: The minimum value allowed.</p>
-</li>
-<li>
-<p><strong>Maximum Value</strong>: The maximum value allowed.</p>
-</li>
-<li>
-<p><strong>Minimum Length</strong>: The minimum length of the data required in the
-field.</p>
-</li>
-<li>
-<p><strong>Maximum Length</strong>: The maximum length of the data allowed in the
-field.</p>
-</li>
-<li>
-<p><strong>Rich Text</strong>: Whether or not the text field allows HTML or not.</p>
-</li>
-<li>
-<p><strong>Custom List</strong>: The defined Custom List for the field that users
-can select from.</p>
-</li>
-</ul>
-<p><strong><em>Important</em></strong>: Note that setting 'Allow Empty' to No will override any
-<em>workflow step</em> definitions, and will always require a value to be
-entered in, even if the workflow is configured to have the field
-disabled!</p>
-<h2 id="edit-custom-lists">Edit Custom Lists<a class="headerlink" href="#edit-custom-lists" title="Permanent link">&para;</a></h2>
-<p>If you are planning on having any list based custom properties in your
-template, then you first need to create and populate the custom template
-lists that the user will be able to select from. These lists are stored
-separately from the individual artifact types so that you can have one
-set of values (e.g. list of operating systems under test) be reused by
-multiple artifact types.</p>
-<p>The following screen is displayed when you choose the "Custom Lists"
-link from the Administration menu:</p>
-<p><img alt="" src="../img/Template_Custom_Properties_177.png" /></p>
-<p>The screen displays all the custom lists currently defined within the
-template, together the number of values associated with each list. By
-default the screen will initially be empty so the first thing you need
-to do is click "Add List" to create a new custom list:</p>
-<p><img alt="" src="../img/Template_Custom_Properties_178.png" /></p>
-<p>After changing the name of the list, and specifying whether the values
-will be ordered by their name or the order in which they were entered
-(called by ID), you can either click "Save" to commit the change, or
-click the "Add Value" option to add some list values:</p>
-<p><img alt="" src="../img/Template_Custom_Properties_179.png" /></p>
-<p>This is the set of values that the user will select from the drop-down
-list when the custom property is displayed. You can change the display
-to include:</p>
-<ul>
-<li>
-<p><strong>All Active</strong> -- displays only custom list values that are active</p>
-</li>
-<li>
-<p><strong>All But Deleted</strong> -- displays all custom list values that are
-active or inactive but have not been deleted</p>
-</li>
-<li>
-<p><strong>All</strong> -- displays all custom list values, including those that
-have been deleted</p>
-</li>
-</ul>
-<p>To add a new custom list value, click the "Add Value" button and a new
-row will be added to the list which you can now edit. To edit an
-existing custom list value, change the name in the textbox and click
-"Save". To delete a custom list value, click on the "Delete" hyperlink.
-If you want to remove an item from the list temporarily, you can set its
-Active dropdown list to 'No', if you want to remove an item permanently,
-just click the 'Delete' button.</p>
-<p><em>Note: Even if you delete a custom list value, there is an option to
-undelete by simply changing the display selection to "All" and clicking
-the 'Undelete' hyperlink next to a deleted value.</em></p>
-<p>To edit an existing custom list, you just need to click on the "Edit
-Values" button to display the custom list name and list of associated
-values (which is the same screen as the one displayed for a new list).
-To remove a custom list from the template, just click on the "Remove"
-button next to the custom list and the list and all its associated
-values will be deleted from the template.</p>
+<p>You can create a variety of different types of custom properties. You can create as many custom lists as you need with each having as many values as you need. Custom lists are not artifact specific, but can be used by any artifact. This section describes how to setup different custom lists and custom properties in your templates.</p>
 <h2 id="edit-custom-properties">Edit Custom Properties<a class="headerlink" href="#edit-custom-properties" title="Permanent link">&para;</a></h2>
-<p>This option is used to actually define the custom properties associated
-with each artifact type in the template. The following screen is
-displayed when you choose the "Custom Properties" link from the
-Administration menu:</p>
-<p><img alt="" src="../img/Template_Custom_Properties_180.png" /></p>
-<p>The screen displays a list of all the possible custom properties for a
-particular artifact type for the current template. Each artifact type
-(requirement, test case, etc.) can have up to thirty (30) custom
-properties of various types.</p>
-<p>Initially the screen will default to showing the existing custom
-properties for a template's Requirements; to change the list to a
-different artifact type (e.g. Incidents), all you need to do is change
-the artifact type in the drop-down-list. This will refresh the list to
-show the custom properties for that artifact type.</p>
-<p>To edit an existing custom property definition or add a new definition,
-click the "Edit Definition" button for a specific property, and the
-following dialog will be displayed:</p>
+<p>To access an artifact's custom properties, open the template admin menu and click the relevant link (artifacts with their own sub-sections in the menu list "Custom Properties" in that sub-section, all other artifacts are listed under the "Custom Properties" sub-section). This opens the custom property page for that artifact where you can quickly see the name, field number, type, legacy name, and actions (edit and delete) for each custom property.</p>
+<p>In the example below we are looking at the requirements custom property page, which currently has 7 custom properties defined. The custom properties page has rows for available custom properties for that artifact type in the current template.</p>
+<p><img alt="requirements custom property page" src="../img/Template_Custom_Properties_180.png" /></p>
+<p>Artifacts in SpiraPlan can have up to 99 different custom properties per artifact-type, per template. </p>
+<p>To edit an existing custom property definition click the "Edit Definition" button for that specific property. To add new definition cluck the "Add Definition" button. In either case the following dialog will be displayed:</p>
 <p><img alt="" src="../img/Template_Custom_Properties_181.png" /></p>
-<p>The fields visible will vary depending on the type of custom property
-you have selected, but every custom property will need to have a Name
-and a Type. The Name is the caption that will be shown to the user when
-viewing or editing the artifact. The type is the type of data the field
-allows. If the custom property is either a List or Multi-List type, you
-will need to choose the associated Custom List that you previously
-defined.</p>
-<p>Under the Options tab will be available options that can be set for the
-custom property:</p>
+<p>For each custom property you set the following fields on the main definition tab:</p>
+<ul>
+<li><strong>Name:</strong> the name of the custom property as it will be displayed to users</li>
+<li><strong>Type:</strong> select one of the available types (defaults to text)</li>
+<li><strong>Display Position:</strong> a unique number between 1 and 99 to help in sorting custom properties on artifact details pages (optional)</li>
+<li><strong>Help Tooltip Text:</strong> this extra information is shown on artifact details pages to help users understand what the custom property should be used for (optional - up to 512 characters)</li>
+<li><strong>Custom List</strong>: the defined Custom List that the property uses (visible for lists and multi-lists only, where it is required)</li>
+</ul>
+<p>Different types of custom properties supported:</p>
+<ul>
+<li><strong>Text</strong>: normal or rich-text</li>
+<li><strong>Integer</strong>: whole numbers</li>
+<li><strong>Decimal</strong>: decimal numbers</li>
+<li><strong>Boolean</strong>: simple yes/no (on/off) checkbox</li>
+<li><strong>Date</strong>: date selector</li>
+<li><strong>List</strong>: custom list selector</li>
+<li><strong>Multi-List</strong>: custom list selector that allows multiple values to be selected at the same time</li>
+<li><strong>User</strong>: list of users in the current product</li>
+</ul>
+<p>Each custom property can have optional settings applied to it to further control the custom property. Note: not all settings are available for all property types. These settings are on the Options tab of the dialog:</p>
 <p><img alt="" src="../img/Template_Custom_Properties_182.png" /></p>
-<p>When finished, click the 'Save' button and you will be returned to the
-Custom Property list.</p>
-<p><strong><em>Important</em></strong>: When changing a custom property's type or removing a
-custom property, the data is not actually removed from the artifact.
-Therefore, if you change a custom property from a date type to a text
-custom property, the field will display the old date value until it is
-changed by the user.</p>
+<ul>
+<li><strong>Default</strong>: the default value when a new artifact is created</li>
+<li><strong>Allow Empty</strong>: whether or not an empty value is allowed</li>
+<li><strong>Precision</strong>: how many decimal places to allow (decimals only)</li>
+<li><strong>Minimum Value</strong>: the minimum value allowed (numbers only)</li>
+<li><strong>Maximum Value</strong>: the maximum value allowed (numbers only)</li>
+<li><strong>Minimum Length</strong>: the minimum length of the data required in the field (text only)</li>
+<li><strong>Maximum Length</strong>: the maximum length of the data allowed in the field (text only)</li>
+<li><strong>Rich Text</strong>: whether or not the text field is an HTML / rich text field or not (text only)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Setting 'Allow Empty' to <strong>No</strong> will override any <em>workflow step</em> definitions, and will always require a value to be entered in, even if the workflow is configured to have the field disabled!</p>
+</div>
+<p>When finished, click the <code>Save</code> button.</p>
+<div class="admonition danger">
+<p class="admonition-title">Renaming or Removing Custom Properties</p>
+<p>When changing a custom property's type or removing a custom property, the data is not actually removed from the artifact. Therefore, if you change a custom property from a date type to a text custom property, the field may display the old date value until it is changed by the user.</p>
+</div>
+<h2 id="edit-custom-lists">Edit Custom Lists<a class="headerlink" href="#edit-custom-lists" title="Permanent link">&para;</a></h2>
+<p>If you are planning on having any list based custom properties in your template, then you first need to create and populate the custom template lists that the user will be able to select from. These lists are stored separately from the individual artifact types so that you can have one set of values (e.g. list of operating systems under test) be reused by multiple artifact types.</p>
+<p>The following screen is displayed when you choose the "Custom Lists" link from the Administration menu:</p>
+<p><img alt="" src="../img/Template_Custom_Properties_177.png" /></p>
+<p>The screen displays all the custom lists currently defined within the template, together the number of values associated with each list. By default the screen will initially be empty so the first thing you need to do is click "Add List" to create a new custom list:</p>
+<p><img alt="" src="../img/Template_Custom_Properties_178.png" /></p>
+<p>After changing the name of the list, and specifying whether the values will be ordered by their name or the order in which they were entered (called by ID), you can either click "Save" to commit the change, or click the "Add Value" option to add some list values:</p>
+<p><img alt="" src="../img/Template_Custom_Properties_179.png" /></p>
+<p>This is the set of values that the user will select from the drop-down list when the custom property is displayed. You can change the display to include:</p>
+<ul>
+<li><strong>All Active</strong> -- displays only custom list values that are active</li>
+<li><strong>All But Deleted</strong> -- displays all custom list values that are active or inactive but have not been deleted</li>
+<li><strong>All</strong> -- displays all custom list values, including those that have been deleted</li>
+</ul>
+<p>To add a new custom list value, click the "Add Value" button and a new row will be added to the list which you can now edit. To edit an existing custom list value, change the name in the textbox and click "Save". To delete a custom list value, click on the "Delete" hyperlink. If you want to remove an item from the list temporarily, you can set its Active dropdown list to 'No', if you want to remove an item permanently, just click the 'Delete' button.</p>
+<p>To edit an existing custom list, you just need to click on the "Edit Values" button to display the custom list name and list of associated values (which is the same screen as the one displayed for a new list). To remove a custom list from the template, just click on the "Remove" button next to the custom list and the list and all its associated values will be deleted from the template.</p>
+<div class="admonition info">
+<p class="admonition-title">Recovering deleted list values</p>
+<p>Even if you delete a custom list value, there is an option to undelete by simply changing the display selection to "All" and clicking the 'Undelete' hyperlink next to a deleted value.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:custom-artifacts">
+<p>the following artifacts support custom properties: requirements, releases, documents, test cases, test steps, test sets, test runs, automation hosts, incidents, tasks, risks.&#160;<a class="footnote-backref" href="#fnref:custom-artifacts" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               

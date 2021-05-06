@@ -587,6 +587,33 @@
     Requirements Document View
   </a>
   
+    <nav class="md-nav" aria-label="Requirements Document View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-document-navigation" class="md-nav__link">
+    Requirements Document Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-document-options" class="md-nav__link">
+    Requirements Document Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-requirements-documents" class="md-nav__link">
+    Editing the requirements documents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1790,6 +1817,18 @@
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Graph-Tutorial/" class="md-nav__link">
         Custom Graph Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
       </a>
     </li>
   
@@ -3789,6 +3828,33 @@
     Requirements Document View
   </a>
   
+    <nav class="md-nav" aria-label="Requirements Document View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements-document-navigation" class="md-nav__link">
+    Requirements Document Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-document-options" class="md-nav__link">
+    Requirements Document Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-requirements-documents" class="md-nav__link">
+    Editing the requirements documents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4081,21 +4147,57 @@
 <h2 id="requirements-agile-board">Requirements Agile Board<a class="headerlink" href="#requirements-agile-board" title="Permanent link">&para;</a></h2>
 <p>This view is similar to the existing <a href="../Planning-Board/">Planning Board</a> but only displays requirements, whereas the primary planning board will also include incidents / defects. This gives the requirements page consistency with the tasks and incidents pages that already have a Grid / Board view selector option.</p>
 <h2 id="requirements-document-view">Requirements Document View<a class="headerlink" href="#requirements-document-view" title="Permanent link">&para;</a></h2>
-<p>This view also offers a hierarchical organization of the first 5000 requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. The new view has a sidebar that lets you quickly jump to a section in the requirements document as well as simply scroll through all of the items.</p>
-<p>The document is paginated, showing up to 250 requirements on each page.</p>
-<p>For each requirement, the following information is displayed:</p>
+<p>This view shows the hierarchical organization of the requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. You can edit the name and description fields inline to update your document as you read through it, as well as change what fields are visible, to tailor the document to your needs.</p>
+<p><img alt="main requirement documents view" src="../img/requirements-documents-view.png" /></p>
+<h3 id="requirements-document-navigation">Requirements Document Navigation<a class="headerlink" href="#requirements-document-navigation" title="Permanent link">&para;</a></h3>
+<p>The sidebar shows all the epics in the product<sup id="fnref:max-epics"><a class="footnote-ref" href="#fn:max-epics">2</a></sup>, in their hierarchy. Clicking on an epic will load that epic with all its children<sup id="fnref2:max-epics"><a class="footnote-ref" href="#fn:max-epics">2</a></sup> into the document view (and save this view for the next time you are on this page for this product). There is a special link at the top of the list of epics called "Level 1 (root)" and clicking on this will load all requirements at the root level (level 1)<sup id="fnref3:max-epics"><a class="footnote-ref" href="#fn:max-epics">2</a></sup>. This is the default view you will see when you first visit the documents view. Looking at "Level 1 (root)" is particularly useful if you need to view or edit standalone requirements (requirements that do not have a parent or any children). </p>
+<p>When you click an epic (or "Level 1 (root)") from the sidebar, the documents view will show a page of the first 50 requirements. If there are more than 50 requirements you can quickly change pages by using the pagination options at the top right.</p>
+<h3 id="requirements-document-options">Requirements Document Options<a class="headerlink" href="#requirements-document-options" title="Permanent link">&para;</a></h3>
+<p>For each requirement, the following fields are always displayed at the top of the requirement:</p>
 <ul>
-<li>icon</li>
-<li>name</li>
+<li>Icon</li>
+<li>Name</li>
 <li>ID</li>
-<li>status</li>
-<li>type</li>
-<li>importance</li>
-<li>owner</li>
-<li>description</li>
-<li><a href="#use-case-diagram">use case diagram</a> (if the requirement has steps)</li>
 </ul>
-<p><img alt="" src="../img/requirements-documents-view.png" /></p>
+<p>The following fields are displayed by default (but can be hidden) in a header bar, below the requirement name:</p>
+<ul>
+<li>Status</li>
+<li>Type</li>
+<li>Importance</li>
+<li>Owner</li>
+</ul>
+<p>The following fields are always displayed, and below the header bar:</p>
+<ul>
+<li>Description</li>
+<li><a href="#use-case-diagram">Use case diagram</a> (if the requirement has steps)</li>
+</ul>
+<p>Additionally you can choose to show the following fields in the header bar:</p>
+<ul>
+<li>Author</li>
+<li>Component</li>
+<li>Creation date</li>
+<li>Estimate (points)</li>
+<li>Last updated date</li>
+<li>Outline numbers (this is a special field that shows each requirement's position in the hierarchy as an outline. The first requirement has the number 1, the second 2, the first child of the second 2.1, its child 2.1.1 and so on)</li>
+<li>Release</li>
+<li>Task progress</li>
+<li>Test coverage</li>
+<li>Any requirement rich text custom property (shown below the requirement description - not in the header bar)</li>
+</ul>
+<p>To show or hide any of the optional fields, click the "Show/Hide fields" dropdown at the top of the screen and choose your action. When you change which fields are shown, the data will reload to reflect that choice (if you have unsaved changes you will be prompted to discard them or save your changes).</p>
+<p>Next to the "Show/Hide fields" dropdown is a print button. Clicking this will allow you to print all the requirements in the current page. If you are on page 2 of 3 in the documents view, you will print all of page 2's requirements only.</p>
+<h3 id="editing-the-requirements-documents">Editing the requirements documents<a class="headerlink" href="#editing-the-requirements-documents" title="Permanent link">&para;</a></h3>
+<p>To edit the requirements on the documents view your user must have Bulk Edit permissions for requirements in that product. If you have this permission, you will see an edit icon to the far right of each requirement name. Click this to edit that requirement. You can edit the following fields:</p>
+<ul>
+<li>Requirement name</li>
+<li>Requirement description</li>
+<li>Any visible rich text custom properties</li>
+</ul>
+<p>In the screenshot below we are editing RQ:1. You can see this because of the requirement name is highlighted, and there are two icons on the far right (save and cancel), instead of the edit icon. RQ:2 is <strong>not</strong> being edited: we can see the edit icon on the far left. Look at the very top of the documents view and you see in the screenshot a helpful message showing "Editing 1 item(s), with 0 unsaved change(s)."</p>
+<p><img alt="editing a single requirement document" src="../img/requirements-documents-editing1.png" /></p>
+<p>In this next screenshot, we are editing RQ:1 still, but also now RQ:2. We are currently making changes to RQ:1 (its save icon is now bigger and orange telling us it can be saved). The header message clearly tells us that we have unsaved changes on this page. This is a helpful way of tracking requirements you need to save, because if you are editing several at a time, not all will be on screen at once.</p>
+<p><img alt="editing multiple requirement document requirements" src="../img/requirements-documents-editing2.png" /></p>
+<p>To save your changes, click the save icon. To discard your changes, click the X icon / cancel. If there was a problem saving the requirement you will see an error message explaining the issue.</p>
 <h2 id="requirements-mindmap">Requirements Mindmap<a class="headerlink" href="#requirements-mindmap" title="Permanent link">&para;</a></h2>
 <p>This mindmap displays the first 5,000 requirements in a product as a connected tree view / mindmap. The root node shows the name of the product on the left hand side. The top most level nodes are connected to the left of this, with their successive children shown from left to right. </p>
 <p><img alt="" src="../img/requirements-mind-map.png" /></p>
@@ -4145,29 +4247,37 @@
 <li>enter a comment to list against the association between the two requirements (visible after the split on the <a href="#associations">associations tab</a>)</li>
 </ul>
 <p>To complete the split click the <code>Split</code> button.</p>
-<p><strong>Notes about how the split works</strong>:</p>
-<ul>
-<li>
-<p><strong>New estimate</strong>: </p>
-<ul>
-<li>this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. </li>
-<li>The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).</li>
-</ul>
-</li>
-<li>
-<p><strong>Status</strong>: </p>
-<ul>
-<li>the new requirement's status will match that of the original requirement</li>
-<li>if the original requirement's status is "In Progress" AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs</li>
-</ul>
-</li>
-<li>
-<p><strong>Tasks</strong> are not moved or cloned from the original requirement to the new requirement</p>
-</li>
-<li><strong>Test Coverage</strong> is copied over to the new requirement (and left unchanged on the original requirement)</li>
-<li><strong>Attachments</strong> are copied over to the new requirement (and left unchanged on the original requirement)</li>
-<li>All standard and custom field information is copied over to the new requirement</li>
-</ul>
+<p>!!! info "Notes about how requirement splitting works</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">-</span> <span class="o">**</span><span class="k">New</span> <span class="n">estimate</span><span class="o">**</span><span class="p">:</span>
+
+    <span class="o">-</span> <span class="n">this</span> <span class="k">defaults</span> <span class="k">to</span> <span class="n">blank</span> <span class="k">in</span> <span class="n">the</span> <span class="n">split</span> <span class="n">dialog</span><span class="p">.</span> <span class="n">This</span> <span class="n">will</span> <span class="k">move</span> <span class="k">all</span> <span class="n">the</span> <span class="n">remaining</span> <span class="n">effort</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="p">.</span> 
+    <span class="o">-</span> <span class="n">The</span> <span class="k">new</span> <span class="n">requirement</span><span class="s1">&#39;s estimate cannot be greater than the original requirement&#39;</span><span class="n">s</span> <span class="n">estimate</span> <span class="p">(</span><span class="n">because</span> <span class="n">this</span> <span class="k">is</span> <span class="n">moving</span> <span class="k">some</span> <span class="k">or</span> <span class="k">all</span> <span class="k">of</span> <span class="n">its</span> <span class="n">estimate</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="p">).</span>
+
+<span class="o">-</span> <span class="o">**</span><span class="n">Status</span><span class="o">**</span><span class="p">:</span>
+
+    <span class="o">-</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="s1">&#39;s status will match that of the original requirement</span>
+<span class="s1">    - if the original requirement&#39;</span><span class="n">s</span> <span class="n">status</span> <span class="k">is</span> <span class="ss">&quot;In Progress&quot;</span> <span class="k">AND</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="n">takes</span> <span class="k">all</span> <span class="n">the</span> <span class="n">estimate</span> <span class="k">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">,</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="n">now</span> <span class="n">has</span> <span class="n">zero</span> <span class="n">estimate</span> <span class="k">left</span><span class="p">.</span> <span class="k">In</span> <span class="n">this</span> <span class="k">case</span><span class="p">,</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">status</span> <span class="k">is</span> <span class="n">automatically</span> <span class="n">moved</span> <span class="k">to</span> <span class="ss">&quot;Developed&quot;</span><span class="p">.</span> <span class="k">If</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="n">has</span> <span class="k">any</span> <span class="n">other</span> <span class="n">status</span><span class="p">,</span> <span class="k">no</span> <span class="n">change</span> <span class="n">occurs</span>
+
+<span class="o">-</span> <span class="o">**</span><span class="n">Tasks</span><span class="o">**</span> <span class="k">are</span> <span class="k">not</span> <span class="n">moved</span> <span class="k">or</span> <span class="n">cloned</span> <span class="k">from</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span>
+<span class="o">-</span> <span class="o">**</span><span class="n">Test</span> <span class="n">Coverage</span><span class="o">**</span> <span class="k">is</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="p">(</span><span class="k">and</span> <span class="k">left</span> <span class="n">unchanged</span> <span class="k">on</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">)</span>
+<span class="o">-</span> <span class="o">**</span><span class="n">Attachments</span><span class="o">**</span> <span class="k">are</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="p">(</span><span class="k">and</span> <span class="k">left</span> <span class="n">unchanged</span> <span class="k">on</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">)</span>
+<span class="o">-</span> <span class="k">All</span> <span class="n">standard</span> <span class="k">and</span> <span class="n">custom</span> <span class="n">field</span> <span class="n">information</span> <span class="k">is</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span>
+</code></pre></div>
+</td></tr></table>
+
 <h3 id="overview-details">Overview - Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
@@ -4240,6 +4350,9 @@
 <ol>
 <li id="fn:active-tasks">
 <p>any task with a status that is <em>not</em> one of the following: "Rejected", "Obsolete", "Duplicate".&#160;<a class="footnote-backref" href="#fnref:active-tasks" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:max-epics">
+<p>limited to the first 5000 requirements&#160;<a class="footnote-backref" href="#fnref:max-epics" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:max-epics" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:max-epics" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

@@ -1318,6 +1318,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#baseline-artifact-details" class="md-nav__link">
+    Baseline Artifact Details
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1566,6 +1573,18 @@
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Graph-Tutorial/" class="md-nav__link">
         Custom Graph Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
       </a>
     </li>
   
@@ -3455,6 +3474,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#baseline-artifact-details" class="md-nav__link">
+    Baseline Artifact Details
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3470,8 +3496,20 @@
                 
                 <h1 id="product-general-settings">Product: General Settings<a class="headerlink" href="#product-general-settings" title="Permanent link">&para;</a></h1>
 <h2 id="product-history-changes">Product History Changes<a class="headerlink" href="#product-history-changes" title="Permanent link">&para;</a></h2>
-<p>This page displays a list, by default in chronological order, of changes made to items within the selected product.</p>
-<p>At this time, only artifact changes made to Requirements, Tasks, Incidents, Test Cases, Test Steps, Test Sets, Releases, and Automation Hosts are recorded. If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to these artifacts are not recorded, such as location changes (indenting, outdenting), and comment additions.</p>
+<p>This page displays a list of changes made to items within the selected product. By default, items are shown in chronological order - with the most recent at the top.</p>
+<p>The following artifact changes are recorded:</p>
+<ul>
+<li>Requirements</li>
+<li>Releases</li>
+<li>Documents (including tracking when versions are added, removed, or the default version changed) </li>
+<li>Tasks</li>
+<li>Incidents</li>
+<li>Test Cases</li>
+<li>Test Steps</li>
+<li>Test Sets</li>
+<li>Automation Hosts</li>
+</ul>
+<p>If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.</p>
 <p>Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).</p>
 <p><img alt="" src="../img/Product_General_Settings_99.png" /></p>
 <p>There are a handful of change types recorded and displayed here:</p>
@@ -3609,12 +3647,32 @@
 <p>This table of artifacts only shows artifacts that changed in the baseline (between when this baseline was created and the previous baseline). Each artifact is only shown once, even if it changed multiple times. The changes that happened to the artifact are combined into a single description so you can easily see a summary of what happened to the artifact during the baseline (for example, was it only modified, or added then modified, or modified then deleted). </p>
 <p>This table shows the following information:</p>
 <ul>
-<li>Name (this links to the history details page for the last change to happen to this artifact in this baseline)</li>
+<li>Name (this links to the baseline artifact details page for this artifact in this baseline)</li>
 <li>Artifact Type (e.g. Requirement or Incident)</li>
 <li>Artifact ID (this links to the artifact details page for that artifact)</li>
 <li>User name (only one user is shown, even if multiple people have changed the specific artifact)</li>
 <li>Last modified date (hover to see a tooltip of the date and time)</li>
 <li>Change Type (this lists all of the types of change that the artifact went through during this baseline. Each type is only listed once, so if an artifact was added, then modified 10 times, it will show "Modified, Added")</li>
+</ul>
+<h2 id="baseline-artifact-details">Baseline Artifact Details<a class="headerlink" href="#baseline-artifact-details" title="Permanent link">&para;</a></h2>
+<p>This page displays detailed information about the changes made to a specific artifact for a specific baseline. This is a great way to see what happened to an artifact in the baseline.</p>
+<p><img alt="product baseline artifact details page" src="../img/product_baseline_artifact_details.png" /></p>
+<p>Information about the artifact at this baseline is divided into 3 sections:</p>
+<ol>
+<li>The top of the page shows the artifact name (which links to the artifact details page for that artifact) and the baseline name</li>
+<li>Properties about the baseline (release and change ID)</li>
+<li>A table of all changes made to the artifacts in this baseline</li>
+</ol>
+<p>The table of changes is very similar to what you see on the history tab when looking at an artifact. The key difference is that here only a subset of the history is displayed: only those changes that fall within the baseline. All other changes to the artifact are not shown.</p>
+<p>This table shows the following columns. You can apply a filter using any of the fields except for Change ID (because this is already filtered to show the key range for the baseline).</p>
+<ul>
+<li>Change ID</li>
+<li>Change Date</li>
+<li>Field Name</li>
+<li>Old Value</li>
+<li>New Value</li>
+<li>Changed By</li>
+<li>Change Type</li>
 </ul>
                 
               
