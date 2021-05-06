@@ -36,7 +36,7 @@
         - Show enhanced history tracking on the [product admin history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) pages and [baseline details](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) page (including test coverage and step position changes) [RQ:3040]
         - Enhance history to track document versioning (history records are created for adding, deleting, and setting a version active) [RQ:3064]
 
-    * ** Report Customization**
+    * **Report Customization**
 
         - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) - read our [in-depth tutorial](../../Reporting/OData-Tutorial) [RQ:3037]
         - Users can have a dedicated [Report Admin role](../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
