@@ -10,7 +10,7 @@ This page consists of four main areas:
 1. The top bar shows the product name, controls for changing the graph widgets, and a **dropdown release picker**. The selected release will affect all of the reporting / graphing widgets simultaneously. You can either choose a specific release (includes any child sprints) or "All Releases". Your selection here is synced with the selection you set on the product dashboard page.
 2. The top left-hand pane displays a list of any reports that have either been saved by the currently logged in user, or those reports created by other members of the product, that have been marked (by that user) as 'shareable'.
 3. The bottom left-hand main pane displays a list of the printable reports available in the system, categorized by the artifact they primarily relate to (requirements, test cases, incidents and releases). Clicking on any of the report hyperlinks will take you to the [configuration page](#reports-configuration) for the report in question below for details).
-4. The right-hand pane is a dashboard that contains the set of graph widgets configured by the current user. By default the dashboard will display: the Incident Progress Rate, Test Run Progress Rate, Requirement Summary, Test Case Summary, Incident Aging and Task Burndown. When "All Releases" is seleted from the dropdown release picker, some widgets show information for every single release and sprint, and others only for active releases/sprints[^active-release]:
+4. The right-hand pane is a dashboard that contains the set of graph widgets configured by the current user. By default the dashboard will display: the Incident Progress Rate, Test Run Progress Rate, Requirement Summary, Test Case Summary, Incident Aging and Task Burndown. When "All Releases" is selected from the dropdown release picker, some widgets show information for every single release and sprint, and others only for active releases/sprints[^active-release]:
 
     - Requirement Graphs widget: only active releases
     - Task Graphs widgets: only active releases
@@ -18,7 +18,6 @@ This page consists of four main areas:
     - All Date-Range Graphs widgets: all releases
     - Custom Graphs that use the token ${ReleaseId}: no data
     - Custom Graphs that use the token ${ReleaseAndChildIds}: only active releases
-
 
 In addition to the graphs displayed by default, you can click on the "***Add Items***" buttons to add additional graphs to the reporting dashboard:
 
@@ -319,7 +318,7 @@ The requirements coverage graph shows how many requirements are currently in a p
 
 The x-axis of the report represents the various test execution statuses that a requirement can have as its coverage status (plus the Not-Covered status), and the individual bars are grouped by the requirements importance. Each data-value can be viewed by positioning the mouse pointer over the bar, and a "tooltip" will pop-up listing the actual data value.
 
-Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. You can also filter the graph to just display data for a specific release/sprint as well as for the product as a whole. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
+Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
 
 ### Requirements Burndown Graph
@@ -330,13 +329,11 @@ The Requirements Burndown graph shows the remaining number of story points that 
 
 The y-axis of the graph displays the total remaining number of story points that needs to be done (the actual burndown), with a blue line indicating the ideal burndown. In addition, there are bars displayed at each interval of the x-axis that shows the completed number of story points for that interval.
 
-The x-axis can be configured to display three different levels of granularity:
+The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
-**All Releases** -- This shows the total remaining number of story points that needs to be done for each of the releases in the product
-
-**Specific Release** -- This shows the total remaining number of story points that needs to be done for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the total remaining number of story points that needs to be done for each working day in the date-range covered by the selected sprint.
+- **All Releases**: total remaining story points for each releases in the product
+- **Specific Release**: total remaining story points for each of the sprints in the selected release
+- **Specific Sprint**: total remaining story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
@@ -349,13 +346,11 @@ The Requirements Burnup graph shows the cumulative number of story points outsta
 
 The y-axis of the graph displays the cumulative increase in number of story points for the product (the actual burnup), with a blue line indicating the ideal burnup. In addition, there are bars displayed at each interval of the x-axis that shows the number of completed story points for that interval.
 
-The x-axis can be configured to display three different levels of granularity:
+The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
-**All Releases** -- This shows the increase in number of story points for each of the releases in the product
-
-**Specific Release** -- This shows the increase in number of story points for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the increase in number of story points for each working day in the date-range covered by the selected sprint.
+- **All Releases**: increase in the story points for each releases in the product
+- **Specific Release**: increase in the story points for each of the sprints in the selected release
+- **Specific Sprint**: increase in the story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
@@ -366,13 +361,11 @@ The Requirements Velocity graph shows the total number of story points that have
 
 ![](img/Reports_Center_374.png)
 
-The y-axis of the graph displays the total number of story points, and the x-axis can be configured to display three different levels of granularity:
+The y-axis display will change based on the selection of the [dropdown release picker](#overview):
 
-**All Releases** -- This shows the total number of story points for each of the releases in the product
-
-**Specific Release** -- This shows the total number of story points for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the total number of story points for each working day in the date-range covered by the selected sprint.
+- **All Releases**: total remaining story points for each releases in the product
+- **Specific Release**: total remaining story points for each of the sprints in the selected release
+- **Specific Sprint**: total remaining story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
@@ -401,13 +394,11 @@ The Task Velocity graph shows the total estimated and actual effort (in number o
 
 ![](img/Reports_Center_377.png)
 
-The y-axis of the graph displays the total estimated and actual effort delivered (in hours), and the x-axis can be configured to display three different levels of granularity:
+The y-axis of the graph displays the total estimated and actual effort delivered (in hours). The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
-**All Releases** -- This shows the total estimated and actual effort for each of the releases in the product
-
-**Specific Release** -- This shows the total estimated and actual effort for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the total estimated actual effort for each working day in the date-range covered by the selected sprint.
+- **All Releases**: total estimated and actual effort for each releases in the product
+- **Specific Release**: total estimated and actual effort for each of the sprints in the selected release
+- **Specific Sprint**: total estimated and actual effort for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
@@ -420,13 +411,11 @@ The Task Burnup graph shows the cumulative amount of work outstanding for each r
 
 The y-axis of the graph displays the cumulative increase in work (in hours) for the product (the actual burnup), with a blue line indicating the ideal burnup. In addition, there are bars displayed at each interval of the x-axis that shows the remaining effort and completed effort for that interval.
 
-The x-axis can be configured to display three different levels of granularity:
+The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
-**All Releases** -- This shows the increase in work for each of the releases in the product
-
-**Specific Release** -- This shows the increase in work for each of the sprints in the selected release
-
-**Specific Sprint** -- This shows the increase in work for each working day in the date-range covered by the selected sprint.
+- **All Releases**: increase in work for each releases in the product
+- **Specific Release**: increase in work for each of the sprints in the selected release
+- **Specific Sprint**: increase in work for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
@@ -438,7 +427,7 @@ The blue line on the graphs indicates the ideal burndown. The other line shows t
 
 ![](img/Reports_Center_379.png)
 
-**How changing the displayed release for the page changes the x-axis:**
+The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: all active releases in the product
 - **Specific Release**: all sprints within the chosen release. If the release has no sprints, the chart will be empty -- child releases are not shown

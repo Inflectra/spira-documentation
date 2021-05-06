@@ -14,6 +14,8 @@ To perform these tasks, you need to login to the system with a user that has som
 4.  **Template Administration:** end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
 *Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work [here](../System-Users/#view-edit-roles).*
 
+5.  **Report Administration:** a report admin can administer custom reports and graphs (create, edit, delete). They can also access custom report data in 3rd party tools via OData and the API. These functions are also available to system admins under System Administration. However report admins can **only** access the reporting functions and pages - they have no access to any other admin functions. There is a special "Report Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any report administrator task.
+
 ## Administration Menu
 Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:
 
@@ -33,7 +35,7 @@ This menu only shows the links to one product, one template, or one program at a
 
 You can see that the "Requirements" sub section is highlighted. This is because the user is currently on a requirements page of the 'Library Information System' product (either in the main application or in template administration). The highlighting serves no function other than to guide the user to where they may wish to focus.
 
-![](img/System_Administration_29.png)
+![template admin menu](img/System_Administration_29.png)
 
 Below is an example of an administration menu where a user is a Program Owner but with no other access to administration. This menu is much barer than the one above, because the administrative options this user has are that much more limited. This user only has admin access to Sample Program One. If they navigate to a different program page or to a product page in the application, they would not see the admin menu at all.
 
@@ -66,6 +68,10 @@ When you first install the system, we suggest **three main tasks** to perform as
 3.  [Add users as members to a product](Product-Users.md)
 
 These tasks typically need to be performed before any other users can use the system, since there will be no logins or products available other than the sample ones provided during the installation.
+
+Below is the admin menu for a user who is a report administrator but has no other active admin roles. The only menu options available are for custom reports and graphs.
+
+![report admin menu](img/System_Administration_report_admin_menu.png)
 
 The rest of this guide explores each area of administration in order, grouped by administration section.
 

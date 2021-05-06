@@ -105,7 +105,9 @@ assigned test case
 
 - **\<function name>** - Used to override the default setting for a
 function's test case ID in SpiraTest. Only include the function name,
-without the parentheses.
+without the parentheses. 
+
+**NOTE**: If your functions are in a class then add the class before the function name - for example `MyClass.myFunction`. The plugin is case insensitive.
 
 Once you have filled out all of the configurations, you are all set to
 go!

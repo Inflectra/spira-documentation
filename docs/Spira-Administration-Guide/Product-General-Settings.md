@@ -2,12 +2,24 @@
 
 ## Product History Changes
 
-This page displays a list, by default in chronological order, of changes made to items within the selected product.
+This page displays a list of changes made to items within the selected product. By default, items are shown in chronological order - with the most recent at the top.
 
-At this time, only artifact changes made to Requirements, Tasks, Incidents, Test Cases, Test Steps, Test Sets, Releases, and Automation Hosts are recorded. If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to these artifacts are not recorded, such as location changes (indenting, outdenting), and comment additions.
+The following artifact changes are recorded:
+
+- Requirements
+- Releases
+- Documents (including tracking when versions are added, removed, or the default version changed) 
+- Tasks
+- Incidents
+- Test Cases
+- Test Steps
+- Test Sets
+- Automation Hosts
+
+If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.
 
 Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).
-
+ 
 ![](img/Product_General_Settings_99.png)
 
 There are a handful of change types recorded and displayed here:
@@ -194,9 +206,32 @@ This table of artifacts only shows artifacts that changed in the baseline (betwe
 
 This table shows the following information:
 
-- Name (this links to the history details page for the last change to happen to this artifact in this baseline)
+- Name (this links to the baseline artifact details page for this artifact in this baseline)
 - Artifact Type (e.g. Requirement or Incident)
 - Artifact ID (this links to the artifact details page for that artifact)
 - User name (only one user is shown, even if multiple people have changed the specific artifact)
 - Last modified date (hover to see a tooltip of the date and time)
 - Change Type (this lists all of the types of change that the artifact went through during this baseline. Each type is only listed once, so if an artifact was added, then modified 10 times, it will show "Modified, Added")
+
+## Baseline Artifact Details
+This page displays detailed information about the changes made to a specific artifact for a specific baseline. This is a great way to see what happened to an artifact in the baseline.
+
+![product baseline artifact details page](img/product_baseline_artifact_details.png)
+
+Information about the artifact at this baseline is divided into 3 sections:
+
+1. The top of the page shows the artifact name (which links to the artifact details page for that artifact) and the baseline name
+3. Properties about the baseline (release and change ID)
+4. A table of all changes made to the artifacts in this baseline
+
+The table of changes is very similar to what you see on the history tab when looking at an artifact. The key difference is that here only a subset of the history is displayed: only those changes that fall within the baseline. All other changes to the artifact are not shown.
+
+This table shows the following columns. You can apply a filter using any of the fields except for Change ID (because this is already filtered to show the key range for the baseline).
+
+- Change ID
+- Change Date
+- Field Name
+- Old Value
+- New Value
+- Changed By
+- Change Type

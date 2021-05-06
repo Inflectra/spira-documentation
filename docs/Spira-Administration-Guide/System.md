@@ -7,8 +7,6 @@ The general settings page allows you to configure SpiraPlan® to better match yo
 
 ![](img/System_57.png)
 
-![](img/System_58.png)
-
 The available settings include:
 
 - **Default Culture**: SpiraPlan can display information in a variety of different languages (assuming that the appropriate language packs have been installed) and number formats. By default, SpiraPlan will use the regional settings (language and number formats) of the operating system it has been installed on. However, you can override this default by choosing the appropriate culture from the list of options displayed in the drop-down list. *Note: The list of culture options does not reflect the available language packs, so in some cases, the setting will only change the number formats.*
@@ -23,7 +21,8 @@ The available settings include:
 - **Instant Messenger**: SpiraPlan and SpiraTeam come with a built-in instant messenger that allows users to communicate with each other in real-time. This can result in higher levels of network traffic and some system administrators may wish to disable this feature. This option lets you disable the integrated instant messenger. In addition, you can specify how long (in days) instant messages are retained in the system.
 - **Event Log Retention**: As described in  [Event Log](#event-log), SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
 - **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
-- **Use TaraVault for source code**: This toggle is only available to cloud hosted versions of SpiraTeam and SpiraPlan. Cloud hosted applications will, by default, use [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) for source code management. Administrators can turn off TaraVault and then connect directly to any third party source code provider they choose.
+- **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for a product that has its [equivalent setting](../Product-Planning/#testing-settings) set to Yes. This should not be done unless you have been told by the Inflectra Support team to do so.
+- **Use TaraVault for source code**: This toggle is only available to cloud hosted versions of SpiraTeam and SpiraPlan. Cloud hosted applications will, by default, use [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault) for source code management. Administrators can turn off TaraVault and then connect directly to any third party source code provider they choose.
 
 
 ## File Type Icons

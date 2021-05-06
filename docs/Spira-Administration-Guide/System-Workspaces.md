@@ -19,7 +19,52 @@ By default the table shows you only the active products, but you can select a di
 
 To permanently delete a product, click the "Delete" button to the right of the product details. Doing so will show a popup where the admin will be required to correctly type the name of the selected product. Product deletion is irreversible and will delete all the artifacts associated with the product. If you want to temporarily delete a product, set its Active flag to 'No' instead. To make a copy of a product to reuse its test cases, releases, test sets and requirements, click the "Copy" link to the right of the product. *NOTE: this will not make a copy of any historical information, test runs or incidents.*
 
-To **clone a product**, select a product and click the "Clone" button. You will have the option of either cloning just the product itself (meaning it will use the same template as the original product); or cloning the product and the template (this will create a clone of the original product's template and make sure that the new cloned product uses this cloned template). This latter option can be really useful if you want to create a new independent product and template compared to the original. **Please note**: a cloned product does not clone everything from the original product. Incidents and test runs are *not* cloned. This is to allow the new clone to have a fresh start in terms of bugs and test results.
+### Product cloning
+To **clone a product**, select a product and click the "Clone" button. 
+
+![product clone dialog](img/System_Workspaces_product_clone.png)
+
+The popup dialog gives you the following options:
+
+- either create a full clone of the product
+- or create a reset copy of the product
+- and optionally clone the template for whichever of the above options you choose 
+
+Whichver copy / clone option you choose, product settings (planning options and testing settigns), components and product membership will all be copied over to the new product.
+
+**Full clone of the product**: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin [Data Tools page](../Product-General-Settings/#product-data-tools), and after this coverage and traceability should look identical between the original and new product.
+
+While we attempt to create as perfect a clone as possible using this method, there are some limitations to this process:
+
+- only the currently active version of each document is cloned to the new product to save on disk space
+- history is, in general, not copied over to the new product
+- certain date fields like creation dates may reflect the date of the clone itself, not the original creation date
+- cross product associations are not cloned
+
+**Reset copy of the product**: this option creates a partial clone of the original product and then resets certain key fields. This provides a new product that can be used as a base for new work taking the original as a starting point. 
+
+All artifacts are cloned in the same way as the full clone option (e.g. comments and associations are copied) except for the following artifacts which are not copied over at all:
+
+- incidents
+- risk mitigations
+- test runs
+
+For those artifacts that are copied, the following fields are reset to be either blank or to their default value:
+
+- task dates
+- requirement statuses
+- release statuses
+- document statuses
+- test case statuses
+- test set statuses
+- incident statuses
+- task statuses
+- risk statuses
+- execution statuses for test cases, test steps, and test sets (all set to Not Run)
+
+The same limitations listed above for a full clone also apply to this reset copy option.
+
+**Cloning the template**: this will create a clone of the original product's template and make sure that the new cloned/copied product uses this cloned template. This can be really useful if you want to create a new independent product and template compared to the original. 
 
 
 ### Add a new product
@@ -174,19 +219,27 @@ At the bottom of the screen you can see all the programs that belong to this por
 
 The following screen is displayed when you choose the "View/Edit Templates" link from the administration menu:
 
-![](img/System_Workspaces_42.png)
+![template list page](img/System_Workspaces_42.png)
 
 This screen displays the list of templates in the system (both inactive and active) with their active status.
 
 You can filter the list of products by either choosing an active status, ID, or entering a portion of the name into the appropriate text box. When you click the "Filter" button, the list of templates will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filter" button. To sort the list of templates, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending).
 
-To permanently delete a template, click the "Delete" button to the right of the template details. This is irreversible. If you want to temporarily delete a product, set its Active flag to 'No' instead. Neither of these actions will be possible if any product (active or inactive) is controlled by the template*.*
+To permanently delete a template, click the "Delete" button to the right of the template details. This is irreversible. If you want to temporarily delete a product, set its Active flag to 'No' instead. Neither of these actions will be possible if any product (active or inactive) is controlled by the template.
 
 To add a new template to the system, you need to create a new template when creating a new product (as described in [View/Edit Products](#viewedit-products)). To edit the details of an existing template, click the "Edit" button in the right hand column of the template list box, and you will be taken to the following screen that allows you modify the template details:
 
-![](img/System_Workspaces_43.png)
+![edit template page](img/System_Workspaces_43.png)
 
-On this screen you can edit the name, description, program, and active status. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On this screen you can edit the template's:
+
+- Name (click on the name to open the template's [home page](../Template-Home))
+- Description
+- Program
+- Active status
+- Status Bulk Edit status: this defaults to enabled / yes. When this option is enabled, users with "Bulk Edit" permissions can make bulk changes (on list pages and planning boards) to the status of artifacts they have bulk edit permissions for, outside of workflow controls. If you do not want any user of any product in the template to be able to change the status except on the details page of that artifact (where workflows are enforced) set this to disabled / no.
+
+Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 ### Included Templates
 SpiraPlan ships with four different templates. Together these will cover most of your needs. You can easily clone and customize one of these templates to meet your exact needs. Or you can start from scratch. Below is a brief description of each of the includes templates:

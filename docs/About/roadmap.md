@@ -10,11 +10,10 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.9 (May/June 2021)
-- **Baselining enhancements** (SpiraTeam and SpiraPlan): improved views for seeing changes between baselines, for instance so you can see all the changes made to a specific artifact between baseline 1 and baseline 2.
-- **Customize custom fields**: accessed to more custom fields per artifact, and the ability to, within each existing grouping of fields, set the field order 
-- **Improved requirement document view** (SpiraTeam and SpiraPlan): lets users customize which fields to display; edit requirement names, descriptions, and other rich text fields; display the requirement hierarchy position as an outline code (e.g. 1.2.11); improved pagination
-- **Access custom report data from external tools**: use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard 
+## Version 6.10 (early summer 2021)
+- Planning board quality of life improvements, including allowing users to edit artifacts on the boards in popups
+- Improve the v6 APIs with additional functions to allow increased automated management of more parts of the applicaton
+- Improve the sample data available to users on first trying out SpiraPlan with more industry specific example products available
 
 ## Planning
 - **New planning tools and visualizations**: Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes.
