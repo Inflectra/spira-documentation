@@ -158,7 +158,7 @@ To properly match data across different tables of data we should match on this I
 - you can now see all the fields available again. On top of the columns we are already showing, select to also show "INCIDENT_STATUS_ID".
 - Click OK
 
-Excel has asked SpiraPlan for this extra data and is now showing it to us. But notice that you are now seeing all incidents again, and "Removed Other Columns" is highlighted in the list of Applied Steps. Click on the bottom step "Sorted Rows". This will apply all the steps that follow our now updated "Removed Other Columns." This is a great feature - we can, within limits, edit previous steps we have made to our query, then go back to our most current step in the process. We now have the same list of incidents we ended the last tutorial with, but showing these two extra ID columns.
+Excel has asked SpiraPlan for this extra data and is now showing it to us. But notice that you are now seeing all incidents again, and "Removed Other Columns" is highlighted in the list of Applied Steps. Click on the bottom step "Sorted Rows". This will apply all the steps that follow our now updated "Removed Other Columns." This is a great feature - we can, within limits, edit previous steps we have made to our query, then go back to our most current step in the process. We now have the same list of incidents we ended the last tutorial with, but showing this extra column.
 
 ![Adding ID columns to our query](img/odata-12.png)
 
@@ -174,7 +174,7 @@ Right now we are only showing Incident data. To join it up with Incident Status 
 ![Adding a new query](img/odata-13.png)
 
 - Expand the Queries sidebar on the left hand side of the editor window
-- Right click and select New Query > Recent Sources > and click on the name of your OData link (below this shows using localhost)
+- Right click and select New Query > Recent Sources > and click on the name of your OData link (below this shows using localhost). Note: If you do not see the menu as in the screenshot you can get to this same place from the Home ribbon, new query section.
 - This brings up the Navigator window showing all the different tables of data we can access in SpiraPlan
 - Scroll down and click on "IncidentStatuses" then click OK
 - This now loads up data from our second query on IncidentStatuses and selects this view
