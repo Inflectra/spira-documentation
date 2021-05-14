@@ -42,7 +42,7 @@ Once you click this button you will see a popup. Stick with "Basic" and enter th
 
 ![Entering your special OData Feed's url](img/odata-2.png)
 
-Once Excel connects to SpiraPln you see a popup "Navigator" where you can see all the different data views you can access ("query"). There is a lot here and a lot to explore. You can access pretty much all the information in your application, across all its products and templates, from these views. But if you click on now to take a look you will not be able to see anything. That's because you have not authenticated yet with Spira. You have to authenticate to view this data for obvious security reasons.
+Once Excel connects to SpiraPlan you see a popup "Navigator" where you can see all the different data views you can access ("query"). There is a lot here and a lot to explore. You can access pretty much all the information in your application, across all its products and templates, from these views. But if you click on now to take a look you will not be able to see anything. That's because you have not authenticated yet with Spira. You have to authenticate to view this data for obvious security reasons.
 
 To authenticate you need to pieces of information:
 
