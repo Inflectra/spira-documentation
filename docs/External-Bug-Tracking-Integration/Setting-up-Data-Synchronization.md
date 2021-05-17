@@ -67,12 +67,12 @@ The steps that need to be performed to configure integration are as follows:
 
 Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<http://www.inflectra.com/SpiraTeam/Downloads.aspx>). Listed on this page will be the data-synchronization plug-In for your desired bug-tracking tool. Right-click on this link and save the Zip compressed folder to the hard-drive of the server where Spira is installed.
 
-Open up the compressed folder and extract the DLL assembly files and place them in the C:\\Program Files (x86)\\SpiraTeam\\Bin folder (it may be SpiraTest or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.
+Open up the compressed folder and extract the DLL assembly files and place them in the ``C:\\Program Files (x86)\\SpiraTeam\\DataSync`` folder (it may be SpiraTest or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.
 
 
 ### Configuring the Synchronization Service
 
-To configure the integration service, please open up the DataSyncService.exe.config file located in C:\\Program Files (x86)\\SpiraTeam\\Bin with a text editor such as Notepad. Once open, it should look like:
+To configure the integration service, please open up the DataSyncService.exe.config file located in ``C:\\Program Files (x86)\\SpiraTeam\\DataSync`` with a text editor such as Notepad. Once open, it should look like:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
