@@ -32,7 +32,7 @@ Since SpiraPlan® is licensed to organizations for a specific number of concurre
 This means that one of the other users who is already logged-in, needs to click the "Log Out" button so that one of the concurrent licenses is freed for your use. If the user has logged out by closing the browser, the system may not have detected the logout. In this case, the other user needs to log back in, and then click the "Log Out" link.
 
 ## Logging in Using An External Provider
-If you organisation uses a Single Sign On / OAuth provider like Okta or Google, underneath the standard username and password field you will see a button for each enabled provider. 
+If your organisation uses a Single Sign On / OAuth provider like Okta or Google, underneath the standard username and password field you will see a button for each enabled provider. 
 
 ![sign in to Spira using an external provider](img/UserProduct_Management_oauth-login-page.png)
 
