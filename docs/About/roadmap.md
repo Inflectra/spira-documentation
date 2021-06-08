@@ -10,14 +10,13 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.10 (early summer 2021)
-- Planning board quality of life improvements, including allowing users to edit artifacts on the boards in popups
-- Improve the v6 APIs with additional functions to allow increased automated management of more parts of the applicaton
+## Version 6.11 (summer 2021)
 - Improve the sample data available to users on first trying out SpiraPlan with more industry specific example products available
+- Adds the ability to create and edit a wider array of rich and dynamic documents live from within the application
+- **Excel365 and Google Sheets**: addins will support more fields, risks and test sets, updating existing records, and (for advanced users) creating new comments and test coverage and traceability links
 
 ## Planning
 - **New planning tools and visualizations**: Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes.
-- **In-app shared notes and documentation**: Users can capture and edit information or notes within a product as either rich text or markdown. Potentially, these notes could be transposed into, for example, a list of requirements, to make bulk data entry within the application simpler. 
 - **Enhanced program level management (SpiraPlan only)**: Manage risks at the program level. Increased variety of portfolio and enterprise widgets. Program level planning, releases, and roadmapping.
 
 ## Testing
@@ -42,6 +41,8 @@ Please take a look at our [release notes](../release-notes-v6) to see a complete
 - **Cross application tagging**: Tag support to provide a flexible way to connect different artifacts together, including resources. Add the ability to use mentions (eg @amycribbins) to reference a user or artifact in descriptions and comments.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Improved ‘first-time’ experience**: When the main administrator first logs in, a new welcome screen will guide them in setting up the application or to get help doing so.
-- **Simplified integration with third party tools**: clearer integration guidance in-app to make syncing with tools like JIRA and ADO quicker and easier.
 - **Review Center**: A single, central place to view all the areas across the application where your review is needed. This will streamline and simplify how know what they need to review and sign off and how that review is carried out.
+
+## Wider ecosystem
+- **Simplified integration with third party tools**: clearer integration guidance in-app to make syncing with tools like JIRA and ADO quicker and easier.
 - **Improved extensibility**: Support for webhooks, increased API scope, potentially the ability for users to provide in-app UI changes to meet specific types of use case.

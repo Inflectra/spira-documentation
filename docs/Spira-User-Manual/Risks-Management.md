@@ -160,14 +160,15 @@ Each of the tasks is displayed together with, by default, its name, description 
 
 You can perform the following actions on a task from this screen:
 
-- **New Task** -- inserts a new task in the task list with a default set of values. The task will be associated with the current risk.
-- **Remove** -- removes the task from this risk without actually deleting the task
+- **New Task**: inserts a new task in the task list with a default set of values. The task will be associated with the current risk.
+- **Remove**: removes the task from this risk without actually deleting the task
 - **Delete**: click the arrow next to the Remove button to show the option of completetly deleting the task 
-- **Refresh** -- updates the list of tasks from the server, useful if other people are adding tasks to this risk at the same time.
-- **Filter / Apply Filter** -- Applies the entries in the filter boxes to the list of tasks
-- **Clear Filters** -- Clears the current filter, so that all tasks associated with the current risk are shown.
-- **Edit** -- Clicking the "***Edit***" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.
-- **Show/Hide Columns** -- Allows you to choose which Task columns are visible
+- **Refresh**: updates the list of tasks from the server, useful if other people are adding tasks to this risk at the same time.
+- **Filter / Apply Filter**: Applies the entries in the filter boxes to the list of tasks
+- **Clear Filters**: clears the current filter, so that all tasks associated with the current risk are shown.
+- **Clone**: clones the selected tasks. The new tasks will have the same release, requirement, and task assigned to them as the originals
+- **Edit**: clicking the "***Edit***" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.
+- **Show/Hide Columns**: allows you to choose which Task columns are visible
 
 Note that if you create a new task on the risks page, the component, release/sprint, and owner are automatically copied from the parent risk. You can change these suggested values before clicking "***Save***"
 

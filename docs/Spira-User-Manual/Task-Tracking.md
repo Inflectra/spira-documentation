@@ -58,33 +58,26 @@ You can change the parent folder and/or name of the folder and click "***Update*
 To move a task / tasks between folders, click and drag the relevant task/tasks from the table on the right, and drag them over the desired folder in the tree view on the left. The destination folder will be highlighted to show where the task will be placed.[^folder-url]
 
 
-### Filtering & Sorting
-
-Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
-
-
-### New Task
-
-Clicking on the "***New Task***" button creates a new task in the grid with an initial set of information. You can click on the name of the task to edit its information.
-
-
-### Delete
-
-Clicking on the "***Delete***" button deletes the tasks whose check-boxes have been selected in the task list.
-
-
-### Refresh
-
-Clicking on the "***Refresh***" button simply reloads the list of tasks; this is useful when new tasks are being added by other users, and you want to make sure you have the most up-to-date list displayed.
-
-
-### Show / Hide Columns
-
-This drop-down list allows you to change the fields that are displayed in the task list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
+### Actions
+- **Filtering & Sorting**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
+{: #filtering-sorting}
+- **New Task**: Clicking on the "***New Task***" button creates a new task in the grid with an initial set of information. You can click on the name of the task to edit its information.
+{: #new-task}
+- **Delete**: Clicking on the "***Delete***" button deletes the tasks whose check-boxes have been selected in the task list.
+{: #delete}
+- **Refresh**: Clicking on the "***Refresh***" button simply reloads the list of tasks; this is useful when new tasks are being added by other users, and you want to make sure you have the most up-to-date list displayed.
+{: #refresh}
+- **show-hide-columns**: This drop-down list allows you to change the fields that are displayed in the task list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
+{: #Show / Hide Columns}
+- **Duplicating Tasks**: To create a clone of a task, a set of tasks, or a folder of tasks, select the check-boxes of the tasks you want to clone and then click "***Clone***". This will make a clone of the current task in the current folder with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the task itself.
+{: #duplicating-tasks}
+- **Exporting Tasks to Another Product**: Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
+{: #exporting-tasks-to-another-product}
+- **Printing and Saving Items**: To quickly print a single task, a list of tasks, or a folder of tasks you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
+{: #printing-and-saving-items}
 
 
 ### Edit
-
 Each task in the list has an "***Edit***" button display in its right-most column. When you click this button or just click on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column:
 
 ![](img/Task_Tracking_292.png)
@@ -94,21 +87,6 @@ If you click "***Edit***" on more than one row, the "***Save***" buttons are onl
 If you want to edit lots of items, first select their checkboxes and then click the "***Edit***" button on the same row as the Filters and it will switch all the selected items into edit mode.
 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
-
-
-### Duplicating Tasks
-
-To create a clone of a task or set of tasks, select the check-boxes of the tasks you want to clone and then click "***Clone***". This will make a clone of the current task in the current folder with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the task itself.
-
-
-### Exporting Tasks to Another Product
-
-Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
-
-
-### Printing and Saving Items
-
-To quickly print a single task or list of tasks you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 
 ## Task Additional List Views
@@ -148,7 +126,16 @@ The task board has the following different display modes:
     -   By Status
     -   By Person
 
-Each of these views is described below:
+Each of these views is described below.
+
+!!! info "Planning Boards and Editing"
+    **Moving cards**: Please note that the purpose of a planning board or Kanban board, is to make it straightforward for users to move cards around the interface to plan out their work. Therefore we do **not** enforce workflow restrictions on the planning board when moving cards. Therefore only users with permissions to bulk edit the relevant artifact can move cards. If the template admin has prevented status changes while bulk editing, then noone can change a card's status by moving its card on the planning.
+
+    **Viewing cards**: to view more information about the card you can: turn on Detailed View; hover on the card name to see a rich tooltip; click on the card's id to open a popup with much more detail; or ctrl/cmd+click on the card's id to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. 
+
+    **Editing cards**: users with bulk edit permissions can edit a planning board card at any time by click on the card's id (including adding a new comment). This opens a popup with full information about that card. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific card. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you cand do this from the popup by clicking the button next to the artifact's id at the top).
+    
+    **Add new cards**: if you are able to create the requirements then you will see plus (add) symbols in different locations on the board. Clicking any of these will open an popup screen with all relevant fields available. Some of these fields may be prepopulated based on what add button you clicked and how you are using the board. For instance, if you are viewing for a release, that release will be preselected. And if you are grouping by person and click on a particular person, that person will be set as the owner of the artifact. The fields visible and required is driven based on what workflow step will apply to that new card.  
 
 
 ### Tasks -- By Priority
@@ -242,7 +229,7 @@ Part of a release or task may be shaded darker than normal, from its left - this
 - For tasks, this represents the percentage complete of the task itself.
 
 
-![Release Gantt Chart](img/tasks-gantt-chart.png)
+![Task Gantt Chart](img/tasks-gantt-chart.png)
 
 [^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
