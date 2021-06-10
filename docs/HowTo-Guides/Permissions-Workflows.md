@@ -20,8 +20,7 @@ Custom properties have a special option that says whether a blank value is allow
 
 To change if a blank value is allowed or not for a custom property:
 1. Find the template that your product is using
-2. As a template administrator go to Template Administration > Custom Properties > Edit Custom Properties
-3. There is a dropdown at the top of the page - make sure you open this and pick the artifact you want to edit
+2. As a template administrator go to Template Administration, find the artifact section you need, and click its "Custom Properties" link
 4. Find the custom property you want to change
 5. Click `Edit Defintion`
 6. Go to the `Options` tab in the popup
