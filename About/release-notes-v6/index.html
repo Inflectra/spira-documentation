@@ -3150,6 +3150,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-610-june-2011" class="md-nav__link">
+    Version 6.10 (June 2011)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-69-may-2021" class="md-nav__link">
     Version 6.9 (May 2021)
   </a>
@@ -3409,6 +3416,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-610-june-2011" class="md-nav__link">
+    Version 6.10 (June 2011)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-69-may-2021" class="md-nav__link">
     Version 6.9 (May 2021)
   </a>
@@ -3583,6 +3597,63 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-610-june-2011">Version 6.10 (June 2011)<a class="headerlink" href="#version-610-june-2011" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong><a href="../../Spira-User-Manual/Planning-Board">Planning Board</a> enhancements</strong> (SpiraTeam and SpiraPlan): quality of life improvements, including: users can edit cards directly on the board in on-page popups (or view relevant information if you can't edit); improve tooltips, drag and drop; and more sensible defaults when creating items based on your view</p>
+<p><strong>Work faster and smarter with tasks</strong> (SpiraTeam and SpiraPlan): on the <a href="../../Spira-User-Manual/Task-Tracking/#task-list">task list page</a> you can now perform actions on a whole folders at once, not just specific tasks. This lets you quickly clone, export, or print tasks in folders.</p>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li><strong>Planning Board</strong> (SpiraTeam and SpiraPlan): Product level planning boards (<a href="../../Spira-User-Manual/Planning-Board">planning board</a>, <a href="../../Spira-User-Manual/Requirements-Management/#requirements-agile-board">requirement board</a>, <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">incident board</a>, <a href="../../Spira-User-Manual/task-Tracking/#task-board">task board</a>) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p><strong>Planning Board</strong></p>
+<ul>
+<li>Add type and status information to card tooltips (not sub cards) on planning boards [IN:5340]</li>
+<li>Clicking the add buttons on planning boards should always create an artifact with the field where the add button was pre-selected [IN:6469]</li>
+<li>Fix not being able to click on artifact name of a card in detailed view on the planning board if the position legend is 100+ [IN:6477]</li>
+<li>Fix planning board 'Expand All' and 'Collapse All' buttons not working consistently as expected [IN:5988]</li>
+<li>Improve the accuracy of dragging and dropping cards on planning boards [IN:3087]</li>
+<li>Planning Board cards show user initials, not the default icon, when user has not set an avatar image [IN:6083]</li>
+<li>When the planning board is in dark mode, make it clearer which cards are selected [IN:5944]</li>
+</ul>
+</li>
+<li>
+<p><strong>API</strong></p>
+<ul>
+<li>Add API calls to create, update, and delete Test Set Parameters [IN:5513]</li>
+<li>Add settings to allow throttling of API usage in Spira [IN:5819]</li>
+<li>Fix API call for creating test cases to allow setting TestCaseStatusId to 0 to use the default status, as per documentation [IN:5708]</li>
+<li>Fix API call for creating/updating document folders so that if no parent folder id is specified the folder becomes a child of the current root folder [IN:5459]</li>
+<li>Fix API call for getting a filtered list of test sets so that it works correctly with the sort_field parameter [IN:5995]</li>
+<li>Add API calls to update and delete Test Case Parameters [IN:6273]</li>
+<li>Fix v6 API test set search not returning proper results if the release_id query string parameter is set to null [IN:5779]</li>
+<li>Fix the documentation for the API call to get users/all to make it clear it returns all users, not only active ones [IN:5225]</li>
+<li>Fix the Rest API for documents not returning custom properties when retrieving documents [IN:6278]</li>
+<li>Soap and REST API add and update calls for artifacts with workflows abide by the template's Status Bulk Edit setting [IN:6457]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other</strong></p>
+<ul>
+<li>Add tool and edit functions to task folders on the main <a href="../../Spira-User-Manual/Task-Tracking/#task-list">task list</a> page grid, as you can with test cases and test sets [IN:6229]</li>
+<li>Darken the workspace Releases/Sprint Completion widget's overdue color and label [IN:6114]</li>
+<li>Fix document detail page styling potentially being changed by inline styling in HTML documents [IN:6444]</li>
+<li>Fix Firefox sporadically not loading some controls (due to timing issues) [IN:6487]</li>
+<li>Fix Risk Detail Page &gt; <a href="../../Spira-User-Manual/Risks-Management/#tasks">Tasks Tab</a> Clone and Task Split buttons not associating the new task with the original task's Risk [IN:6216]</li>
+<li>Fix some movable dialog boxes being shown too far to the bottom of the screen [IN:6321]</li>
+<li>Fix the follower card showing behind the artifact title, which is particularly problematic on the test case details page [IN:6481]</li>
+<li>Improve the performance of retrieving <a href="../../Spira-User-Manual/Application-Wide/#history">history data</a> for products that use baselining [IN:6466]</li>
+<li>Remove the duplicate "Delete" entry from the <a href="../../Spira-User-Manual/Task-Tracking/#task-list">task list page</a> context menu [IN:6252]</li>
+<li>Schedule widgets for programs, portfolio and enterprise should calculate the product start and end date using the min max of active releases (using same definition as for releases / sprints of active) [IN:6228]</li>
+<li>Show the "is user Locked out" toggle on the system admin <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">user details page</a> only when the user is locked out, and show it for all authentication methods (normal, LDAP, Oauth) [IN:6482]</li>
+<li>Show which release data is being shown for on the <a href="../../Spira-User-Manual/Release-Management/#release-gantt-chart">Release</a> and <a href="../../Spira-User-Manual/Task-Tracking/#task-gantt-chart">Task Gantt</a> views (syncs with release dropdowns used on product home page and elsewhere) [IN:6201]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-69-may-2021">Version 6.9 (May 2021)<a class="headerlink" href="#version-69-may-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
