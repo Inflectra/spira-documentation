@@ -268,7 +268,11 @@ Technical Support using one of the methods described at our website
 
 ### Upgrading
 
-To upgrade an existing installation, execute the same installer, and on the Installation Type screen, select the "Upgrade" button:
+You can upgrade any SpiraPlan version that is 5.4.0.4 or newer using our v6 installer (for instance you can upgrade from 5.4.0.4 to 6.10, or from 6.9.0.1 to 6.10 using the exact same installer exe). To upgrade an existing installation:
+
+1. download the latest version of the installer exe application from your customer area
+2. run the installer on the machine the application is on
+3. on the Installation Type screen, select the "Upgrade" button and follow the steps below
 
 ![](img/Installing_SpiraPlan_20.png)
 
