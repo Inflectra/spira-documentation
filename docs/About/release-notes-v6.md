@@ -1,6 +1,6 @@
 # Release Notes for Spira v6
 
-## Version 6.10 (June 2011)
+## Version 6.10 (June 2021)
 
 !!! info "Summary"
     **[Planning Board](../../Spira-User-Manual/Planning-Board) enhancements** (SpiraTeam and SpiraPlan): quality of life improvements, including: users can edit cards directly on the board in on-page popups (or view relevant information if you can't edit); improve tooltips, drag and drop; and more sensible defaults when creating items based on your view
