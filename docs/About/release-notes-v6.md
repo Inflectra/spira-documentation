@@ -1,5 +1,11 @@
 # Release Notes for Spira v6
 
+## Version 6.10.0.1 (June 2021)
+
+!!! info "Hotfix"
+    * Fix exploratory testing not launching after upgrade to 6.10.0.0 [IN:6550]
+    * Fix incident tab on test execution not setting fields based on the workflow until a step has been recorded after upgrade to 6.10.0.0 [IN:6549]
+
 ## Version 6.10 (June 2021)
 
 !!! info "Summary"
