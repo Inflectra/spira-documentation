@@ -1,0 +1,3670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://spiradoc.inflectra.com/RemoteLaunch-User-Guide/Tosca/">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Tosca - SpiraDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/spira.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-1302007-6","https://spiradoc.inflectra.com/"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="amber">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tricentis-tosca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-header-nav__button md-logo" aria-label="SpiraDocs">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            SpiraDocs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Tosca
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inflectra
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://spiradoc.inflectra.com/" title="SpiraDocs" class="md-nav__button md-logo" aria-label="SpiraDocs">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    SpiraDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inflectra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+      
+      <label class="md-nav__link" for="nav-1">
+        User Manual
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Manual" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          User Manual
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/" class="md-nav__link">
+        How to use this manual
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Functionality-Overview/" class="md-nav__link">
+        Functionality Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Application-Wide/" class="md-nav__link">
+        Common Elements Across the Application
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/User-Product-Management/" class="md-nav__link">
+        User Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+      
+      <label class="md-nav__link" for="nav-1-5">
+        Products
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Products" data-md-level="2">
+        <label class="md-nav__title" for="nav-1-5">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Product-Homepage/" class="md-nav__link">
+        Homepage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+      
+      <label class="md-nav__link" for="nav-1-5-2">
+        Planning
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Planning" data-md-level="3">
+        <label class="md-nav__title" for="nav-1-5-2">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Requirements-Management/" class="md-nav__link">
+        Requirements Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Release-Management/" class="md-nav__link">
+        Release Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Document-Management/" class="md-nav__link">
+        Document Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Planning-Board/" class="md-nav__link">
+        Planning Board
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-3" type="checkbox" id="nav-1-5-3" >
+      
+      <label class="md-nav__link" for="nav-1-5-3">
+        Testing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Testing" data-md-level="3">
+        <label class="md-nav__title" for="nav-1-5-3">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Test-Case-Management/" class="md-nav__link">
+        Test Case Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Test-Execution/" class="md-nav__link">
+        Test Execution
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Test-Set-Management/" class="md-nav__link">
+        Test Set Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Test-Run-Management/" class="md-nav__link">
+        Test Run Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Automation-Host-Management/" class="md-nav__link">
+        Automation Host Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Test-Configuration-Management/" class="md-nav__link">
+        Test Configuration Management
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-4" type="checkbox" id="nav-1-5-4" >
+      
+      <label class="md-nav__link" for="nav-1-5-4">
+        Developing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developing" data-md-level="3">
+        <label class="md-nav__title" for="nav-1-5-4">
+          <span class="md-nav__icon md-icon"></span>
+          Developing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Source-Code/" class="md-nav__link">
+        Source Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Commits/" class="md-nav__link">
+        Commits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Pull-Requests/" class="md-nav__link">
+        Pull Requests
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+      
+      <label class="md-nav__link" for="nav-1-5-5">
+        Tracking
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tracking" data-md-level="3">
+        <label class="md-nav__title" for="nav-1-5-5">
+          <span class="md-nav__icon md-icon"></span>
+          Tracking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Incident-Tracking/" class="md-nav__link">
+        Incident Tracking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Risks-Management/" class="md-nav__link">
+        Risk Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Task-Tracking/" class="md-nav__link">
+        Task Tracking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Resource-Tracking/" class="md-nav__link">
+        Resource Tracking
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Reports-Center/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-6" type="checkbox" id="nav-1-6" >
+      
+      <label class="md-nav__link" for="nav-1-6">
+        Programs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programs" data-md-level="2">
+        <label class="md-nav__title" for="nav-1-6">
+          <span class="md-nav__icon md-icon"></span>
+          Programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Homepage/" class="md-nav__link">
+        Homepage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Releases/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Planning-Board/" class="md-nav__link">
+        Planning Board
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Incidents/" class="md-nav__link">
+        Incidents
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Portfolio-Homepage/" class="md-nav__link">
+        Portfolio Homepage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Enterprise-Homepage/" class="md-nav__link">
+        Enterprise Homepage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Mobile-Access/" class="md-nav__link">
+        Mobile Access
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/" class="md-nav__link">
+        Keyboard Shortcuts
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Tips and Tricks
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tips and Tricks" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Tips and Tricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Users-orientation/" class="md-nav__link">
+        Moving Around the Application
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Users-profile-management/" class="md-nav__link">
+        Managing Your User Profile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Admins-orientation/" class="md-nav__link">
+        Getting to Know Administration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Admins-templates/" class="md-nav__link">
+        Template Administration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Permissions-Workflows/" class="md-nav__link">
+        Permissions & Workflows
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Testing/" class="md-nav__link">
+        Testing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Login-providers/" class="md-nav__link">
+        Login Providers (Oauth)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowTo-Guides/Integrations-Troubleshoot/" class="md-nav__link">
+        Troubleshooting Integrations
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Quick Start Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/" class="md-nav__link">
+        SpiraPlan
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+        SpiraTeam
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+        SpiraTest
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        Admin Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Admin Guide" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Admin Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/" class="md-nav__link">
+        How to use this guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/" class="md-nav__link">
+        Installing Spira
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Administration/" class="md-nav__link">
+        System Administration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
+      
+      <label class="md-nav__link" for="nav-4-4">
+        System
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-4">
+          <span class="md-nav__icon md-icon"></span>
+          System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Workspaces/" class="md-nav__link">
+        Workspaces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Home/" class="md-nav__link">
+        System Home page
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System/" class="md-nav__link">
+        System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Integration/" class="md-nav__link">
+        Integration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Reporting/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" >
+      
+      <label class="md-nav__link" for="nav-4-5">
+        Product
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Product" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-5">
+          <span class="md-nav__icon md-icon"></span>
+          Product
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Product-Home/" class="md-nav__link">
+        Home page
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Product-General-Settings/" class="md-nav__link">
+        General Settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Product-Users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Product-Planning/" class="md-nav__link">
+        Planning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Product-Changing-Template/" class="md-nav__link">
+        Changing Templates
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" >
+      
+      <label class="md-nav__link" for="nav-4-6">
+        Template
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Template" data-md-level="2">
+        <label class="md-nav__title" for="nav-4-6">
+          <span class="md-nav__icon md-icon"></span>
+          Template
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Home/" class="md-nav__link">
+        Home page
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Releases/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Documents/" class="md-nav__link">
+        Documents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Test-Cases/" class="md-nav__link">
+        Test Cases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Incidents/" class="md-nav__link">
+        Incidents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Tasks/" class="md-nav__link">
+        Tasks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Risks/" class="md-nav__link">
+        Risks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Custom-Properties/" class="md-nav__link">
+        Custom Properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Template-Notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Reporting
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reporting" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Reporting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/Custom-Report-Tutorial/" class="md-nav__link">
+        Custom Reports Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/Custom-Graph-Tutorial/" class="md-nav__link">
+        Custom Graph Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
+        OData Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
+        Custom Report Tokens
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/Custom-Report-Tables/" class="md-nav__link">
+        Available Database Tables
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      
+      <label class="md-nav__link" for="nav-6">
+        Optional Features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Optional Features" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" >
+      
+      <label class="md-nav__link" for="nav-6-1">
+        TaraVault
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="TaraVault" data-md-level="2">
+        <label class="md-nav__title" for="nav-6-1">
+          <span class="md-nav__icon md-icon"></span>
+          TaraVault
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TaraVault-User-Manual/Activating-TaraVault/" class="md-nav__link">
+        Activating
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TaraVault-User-Manual/Provisioning-Projects-%26-Users/" class="md-nav__link">
+        Provisioning Projects & Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TaraVault-User-Manual/Using-Git/" class="md-nav__link">
+        Using Git
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TaraVault-User-Manual/Using-Subversion/" class="md-nav__link">
+        Using Subversion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2" checked>
+      
+      <label class="md-nav__link" for="nav-6-2">
+        RemoteLaunch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="RemoteLaunch" data-md-level="2">
+        <label class="md-nav__title" for="nav-6-2">
+          <span class="md-nav__icon md-icon"></span>
+          RemoteLaunch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RemoteLaunch-Guide/" class="md-nav__link">
+        Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HP-UFT--QTP/" class="md-nav__link">
+        UFT/QTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TestComplete/" class="md-nav__link">
+        TestComplete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Selenium/" class="md-nav__link">
+        Selenium
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Squish/" class="md-nav__link">
+        Squish
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command-Line/" class="md-nav__link">
+        Command-Line
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LoadRunner/" class="md-nav__link">
+        LoadRunner
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SoapUI/" class="md-nav__link">
+        SoapUI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FitNesse/" class="md-nav__link">
+        FitNesse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NeoLoad/" class="md-nav__link">
+        NeoLoad
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tosca
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tosca
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-tosca-engine" class="md-nav__link">
+    Installing the Tosca Engine
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the Tosca Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-tosca-remotelaunch-plugin" class="md-nav__link">
+    Configuring the Tosca RemoteLaunch Plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-automated-test-cases" class="md-nav__link">
+    Setting up the Automated Test Cases
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the Automated Test Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-test-case-for-launching-a-tosca-suite" class="md-nav__link">
+    Creating a Test Case for Launching a Tosca Suite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-additional-test-case-for-parsing-the-tosca-results" class="md-nav__link">
+    Creating additional Test Case for Parsing the Tosca Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-the-tosca-test-sets-from-spiratest" class="md-nav__link">
+    Executing the Tosca Test Sets from SpiraTest
+  </a>
+  
+    <nav class="md-nav" aria-label="Executing the Tosca Test Sets from SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-automation-hosts-and-test-sets" class="md-nav__link">
+    Configuring the Automation Hosts and Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-test-sets" class="md-nav__link">
+    Executing the Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-tosca-test-results" class="md-nav__link">
+    Viewing the Tosca Test Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JMeter/" class="md-nav__link">
+        JMeter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ranorex/" class="md-nav__link">
+        Ranorex
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rational-Functional-Tester/" class="md-nav__link">
+        Rational Functional Tester
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebLOAD/" class="md-nav__link">
+        WebLOAD
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Worksoft-Certify/" class="md-nav__link">
+        Worksoft Certify
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZAPTEST/" class="md-nav__link">
+        ZAPTEST
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TestPartner/" class="md-nav__link">
+        TestPartner
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BadBoy/" class="md-nav__link">
+        BadBoy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TestingAnywhere/" class="md-nav__link">
+        TestingAnywhere
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SmarteScript/" class="md-nav__link">
+        SmarteScript
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraCapture/User-Guide/" class="md-nav__link">
+        SpiraCapture
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+      
+      <label class="md-nav__link" for="nav-7">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
+        <label class="md-nav__title" for="nav-7">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/" class="md-nav__link">
+        Jira Cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" class="md-nav__link">
+        Jira Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3" >
+      
+      <label class="md-nav__link" for="nav-7-3">
+        Testing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Testing" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-3">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/" class="md-nav__link">
+        NUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/" class="md-nav__link">
+        JUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/" class="md-nav__link">
+        TestNG
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/" class="md-nav__link">
+        Selenium
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/" class="md-nav__link">
+        PyUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/" class="md-nav__link">
+        PyTest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/" class="md-nav__link">
+        MS-Test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/" class="md-nav__link">
+        Ruby Test::Unit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/" class="md-nav__link">
+        Perl TAP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/" class="md-nav__link">
+        PHPUnit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/" class="md-nav__link">
+        UnitJS & NodeJS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-Jasmine/" class="md-nav__link">
+        Jasmine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unit-Testing-Integration/Integrating-with-Jest/" class="md-nav__link">
+        Jest
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4" >
+      
+      <label class="md-nav__link" for="nav-7-4">
+        IDE Integration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IDE Integration" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-4">
+          <span class="md-nav__icon md-icon"></span>
+          IDE Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Visual-Studio-Code/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Visual-Studio/" class="md-nav__link">
+        Visual Studio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Jetbrains-IDEs/" class="md-nav__link">
+        Jetbrains
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Eclipse--Mylyn/" class="md-nav__link">
+        Eclipse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Visual-Studio-2010/" class="md-nav__link">
+        Visual Studio 2010
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IDE-Integration/Visual-Studio-2005---2008/" class="md-nav__link">
+        Visual Studio 2005-2008
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5" >
+      
+      <label class="md-nav__link" for="nav-7-5">
+        Bug Tracking/DataSync
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Bug Tracking/DataSync" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-5">
+          <span class="md-nav__icon md-icon"></span>
+          Bug Tracking/DataSync
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/" class="md-nav__link">
+        Jira Cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5%2B/" class="md-nav__link">
+        Jira Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS/" class="md-nav__link">
+        Azure DevOps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Asana/" class="md-nav__link">
+        Asana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14%2B/" class="md-nav__link">
+        Axosoft
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitHub/" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-GitLab/" class="md-nav__link">
+        GitLab
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-Salesforce.com/" class="md-nav__link">
+        Salesforce.com
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow/" class="md-nav__link">
+        ServiceNow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-VersionOne/" class="md-nav__link">
+        VersionOne
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-YouTrack/" class="md-nav__link">
+        YouTrack
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla/" class="md-nav__link">
+        Bugzilla
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest/" class="md-nav__link">
+        ClearQuest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz/" class="md-nav__link">
+        FogBugz
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4/" class="md-nav__link">
+        JIRA 3, 4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis/" class="md-nav__link">
+        Mantis
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/" class="md-nav__link">
+        OnTime
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine/" class="md-nav__link">
+        Redmine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC/" class="md-nav__link">
+        RTC
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6" >
+      
+      <label class="md-nav__link" for="nav-7-6">
+        Source Code
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Source Code" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-6">
+          <span class="md-nav__icon md-icon"></span>
+          Source Code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-Git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-Subversion/" class="md-nav__link">
+        Subversion
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-Mercurial/" class="md-nav__link">
+        Mercurial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-Perforce/" class="md-nav__link">
+        Perforce
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-TFS/" class="md-nav__link">
+        TFS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-CVS/" class="md-nav__link">
+        CVS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-VSS/" class="md-nav__link">
+        VSS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Version-Control-Integration/Integrating-with-Tortoise/" class="md-nav__link">
+        Tortoise
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7" >
+      
+      <label class="md-nav__link" for="nav-7-7">
+        Email
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Email" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-7">
+          <span class="md-nav__icon md-icon"></span>
+          Email
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Email-Integration/Installing-the-Email-Integration-Service/" class="md-nav__link">
+        Installing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/" class="md-nav__link">
+        Configuring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/" class="md-nav__link">
+        Using
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-8" type="checkbox" id="nav-7-8" >
+      
+      <label class="md-nav__link" for="nav-7-8">
+        Help Desk
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Help Desk" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-8">
+          <span class="md-nav__icon md-icon"></span>
+          Help Desk
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Help-Desk-Integration/KronoDesk/" class="md-nav__link">
+        KronoDesk
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Help-Desk-Integration/Zendesk/" class="md-nav__link">
+        Zendesk
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-9" type="checkbox" id="nav-7-9" >
+      
+      <label class="md-nav__link" for="nav-7-9">
+        Migration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migration" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-9">
+          <span class="md-nav__icon md-icon"></span>
+          Migration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29/" class="md-nav__link">
+        Excel (Office 365)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/" class="md-nav__link">
+        Excel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/" class="md-nav__link">
+        Google Sheets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/" class="md-nav__link">
+        Microsoft Word
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/" class="md-nav__link">
+        Microsoft Project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/" class="md-nav__link">
+        HP ALM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/" class="md-nav__link">
+        HP QualityCenter
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/" class="md-nav__link">
+        MS Test Manager
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-qTest/" class="md-nav__link">
+        qTest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-PractiTest/" class="md-nav__link">
+        PractiTest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-TestLink/" class="md-nav__link">
+        TestLink
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Migrating-from-TestRail/" class="md-nav__link">
+        TestRail
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Project-Backup-and-Migration/" class="md-nav__link">
+        Project Backup and Migration
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-10" type="checkbox" id="nav-7-10" >
+      
+      <label class="md-nav__link" for="nav-7-10">
+        Build Servers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Build Servers" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-10">
+          <span class="md-nav__icon md-icon"></span>
+          Build Servers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/Jenkins--Hudson/" class="md-nav__link">
+        Jenkins/Hudson
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
+        JetBrains TeamCity
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
+        Azure DevOps Pipelines
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/Atlassian-Bamboo/" class="md-nav__link">
+        Atlassian Bamboo
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-11" type="checkbox" id="nav-7-11" >
+      
+      <label class="md-nav__link" for="nav-7-11">
+        Requirements
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Requirements" data-md-level="2">
+        <label class="md-nav__title" for="nav-7-11">
+          <span class="md-nav__icon md-icon"></span>
+          Requirements
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-DOORS/" class="md-nav__link">
+        DOORS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/" class="md-nav__link">
+        EnterpriseArchitect
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-ReqIF-Files/" class="md-nav__link">
+        ReqIF Files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/" class="md-nav__link">
+        Jama Contour
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/" class="md-nav__link">
+        RequisitePro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/" class="md-nav__link">
+        VersionOne
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+      
+      <label class="md-nav__link" for="nav-8">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="nav-8">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/introduction-to-spira/" class="md-nav__link">
+        Introduction to Spira
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/roadmap/" class="md-nav__link">
+        Product Roadmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/release-notes-v6/" class="md-nav__link">
+        Release Notes for v6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/release-notes-v5/" class="md-nav__link">
+        Release Notes for v5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/release-notes-v4/" class="md-nav__link">
+        Release Notes for v4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/release-notes-v3/" class="md-nav__link">
+        Release Notes for v3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/release-notes-v2/" class="md-nav__link">
+        Release Notes for v2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/legal-notices/" class="md-nav__link">
+        Legal Notices
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-tosca-engine" class="md-nav__link">
+    Installing the Tosca Engine
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the Tosca Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-tosca-remotelaunch-plugin" class="md-nav__link">
+    Configuring the Tosca RemoteLaunch Plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-automated-test-cases" class="md-nav__link">
+    Setting up the Automated Test Cases
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the Automated Test Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-test-case-for-launching-a-tosca-suite" class="md-nav__link">
+    Creating a Test Case for Launching a Tosca Suite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-additional-test-case-for-parsing-the-tosca-results" class="md-nav__link">
+    Creating additional Test Case for Parsing the Tosca Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-the-tosca-test-sets-from-spiratest" class="md-nav__link">
+    Executing the Tosca Test Sets from SpiraTest
+  </a>
+  
+    <nav class="md-nav" aria-label="Executing the Tosca Test Sets from SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-automation-hosts-and-test-sets" class="md-nav__link">
+    Configuring the Automation Hosts and Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-test-sets" class="md-nav__link">
+    Executing the Test Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-tosca-test-results" class="md-nav__link">
+    Viewing the Tosca Test Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tricentis-tosca">Tricentis Tosca<a class="headerlink" href="#tricentis-tosca" title="Permanent link">&para;</a></h1>
+<p>Tricentis Tosca is a software testing tool that is used to automate end-to-end testing for software applications. It is developed by Tricentis. Tricentis Tosca combines multiple aspects of software testing to test GUIs and APIs from a business perspective.</p>
+<p>You can use SpiraTest together with RemoteLaunch to schedule and remotely launch instances of Tricentis Tosca on different computers and have the testing results be transmitted back to SpiraTest. This allows you to extend your SpiraTest’s test management capabilities to include automated Tosca tests.</p>
+<p>This page describes the steps for using SpiraTest with Tosca. The plugin works with all three editions of the Inflectra Spira platform, including SpiraTest, SpiraTeam and SpiraPlan. We will be referring to the product as 'SpiraTest' for brevity.</p>
+<h2 id="installing-the-tosca-engine">Installing the Tosca Engine<a class="headerlink" href="#installing-the-tosca-engine" title="Permanent link">&para;</a></h2>
+<p>This section assumes that you already have a working installation of SpiraTest and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
+<ul>
+<li>Download and extract the <a href="https://www.inflectra.com/Downloads/TricentisToscaEngine.zip">TricentisToscaEngine.zip</a> file from the Inflectra website and extract the file
+<code>ToscaEngine.dll</code> from inside the zipfile. You may need to right-click on the DLL and choose <strong>Unblock</strong> in Windows to confirm that you want to use the downloaded file.</li>
+<li>Copy the file <code>ToscaEngine.dll</code> into the "extensions" sub-folder of the RemoteLaunch installation.</li>
+</ul>
+<p><img alt="" src="../img/Tosca_1.png" /></p>
+<ul>
+<li>Log in to SpiraTest as a system administrator and go into SpiraTest main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</li>
+</ul>
+<p><img alt="" src="../img/Tosca_2.png" /></p>
+<ul>
+<li><strong>Name</strong>: This is the short display name of the automation engine. It can be anything that is meaningful to your users.</li>
+<li><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</li>
+<li><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</li>
+<li><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine to actually use for a given test case. For Tosca this should always be <code>Tosca</code>.</li>
+<li>Once you have finished, click the "Insert &amp; Close" button and you will be taken back to the Test Automation list page, with Tosca listed as an available automation engine.</li>
+</ul>
+<h3 id="configuring-the-tosca-remotelaunch-plugin">Configuring the Tosca RemoteLaunch Plugin<a class="headerlink" href="#configuring-the-tosca-remotelaunch-plugin" title="Permanent link">&para;</a></h3>
+<p>Next you need to configure the Tosca configuration for each of the specific automation hosts, by right-clicking on the RemoteLaunch icon in the system tray and choosing "Configuration". That will bring up the RemoteLaunch configuration page.</p>
+<p>The Tosca engine adds its own tab to this page which allows you to configure how Tosca operates:</p>
+<p><img alt="" src="../img/Tosca_3.png" /></p>
+<p>The following fields can be specified on this screen:</p>
+<ul>
+<li><strong>ToscaCIClient Location</strong>: This is the folder where the Tosca Command Line (CI) Client is located. Normally this will be <code>C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\ToscaCommander\ToscaCI\Client\</code></li>
+<li><strong>Trace Logging</strong>: When selected, this will log additional trace and debugging information to the Windows Event Log. This should not be selected in a production environment.</li>
+<li><strong>Distributed Execution</strong>: If you check this box then the Tosca command line interface will launch tests on a remote Tosca server. Otherwise it will assume that RemoteLaunch is running on the Tosca server itself.</li>
+<li><strong>Tosca Distribution Server</strong>: If you are using the option to use Distributed Execution, you need to enter in the URL of the Tosca server that the Tosca CI will connect with. For example, <code>http://server:8080/DistributionServerService/ManagerService.svc</code></li>
+</ul>
+<p>Once you have configured the plugin, click <strong>Save</strong> to save your changes.</p>
+<h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
+<p>This section describes the process for setting up a test case in SpiraTest for automation and linking it to an automated Tosca test script.</p>
+<p>Due to the way that Tosca executes tests and reports results, we need to actually create two kinds of test case in SpiraTest:</p>
+<ol>
+<li>SpiraTest Test Cases that <strong>launch</strong> the Tosca Test Suites.</li>
+<li>SpiraTest Test Cases that <strong>parse</strong> the Tosca test results and map the results back to specific SpiraTest test cases.</li>
+</ol>
+<p><em>Note: If you only have the first kind of test cases, you will be able to run automated Tosca test suites, but the reporting will be limited to a simple pass/fail for the entire test suite rather than more granular test case level reporting.</em></p>
+<h3 id="creating-a-test-case-for-launching-a-tosca-suite">Creating a Test Case for Launching a Tosca Suite<a class="headerlink" href="#creating-a-test-case-for-launching-a-tosca-suite" title="Permanent link">&para;</a></h3>
+<p>Next, display the list of test cases in SpiraTest (by clicking Testing > Test Cases) and then click on the button to add a new test case. In this example, we have called it <code>Tricentis Insurance Website (Test Event)</code> and stored it in the Tosca Suites folder:</p>
+<p><img alt="" src="../img/Tosca_4.png" /></p>
+<p>Once you have added the new test case, click on it and scroll down to view the "Automation" tab:</p>
+<p><img alt="" src="../img/Tosca_5.png" /></p>
+<p>You need to enter the following fields:</p>
+<ul>
+<li><strong>Automation Engine</strong>: Choose the Tosca Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: This should be set to Linked as the integration with Tosca only supports referencing Tosca test suites and not physically uploading the test suites into SpiraTest.</li>
+<li><strong>Filename</strong>: This needs to be the name of the Tosca <strong>test event</strong> that we will be executing. This needs to be prefixed with the identifier <code>TestEvents=</code>, so that in our example we have the sample test event: <code>TestEvents=Tricentis Insurance Website</code></li>
+</ul>
+<p>Once you are happy with the values, click <strong>[Save]</strong> to update the test case.</p>
+<h3 id="creating-additional-test-case-for-parsing-the-tosca-results">Creating additional Test Case for Parsing the Tosca Results<a class="headerlink" href="#creating-additional-test-case-for-parsing-the-tosca-results" title="Permanent link">&para;</a></h3>
+<p>We recommend that you create additional test cases to map to specific test cases in the Tosca test suite. This is an optional feature, but if you don't map these test cases, you will not be able to get detailed reporting and test coverage metrics.</p>
+<p>To get this additional level of reporting, create one SpiraTest test case for each of the different Tosca test cases in the Tosca suite, for example we created the following:</p>
+<p><img alt="" src="../img/Tosca_6.png" /></p>
+<p>Each of these SpiraTest test cases will have a different format for the <strong>Automation</strong> section:</p>
+<p><img alt="" src="../img/Tosca_7.png" /></p>
+<ul>
+<li><strong>Automation Engine</strong>: Choose the Tosca Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: This should be set to Linked as the integration with Tosca only supports referencing Tosca test suites and not physically uploading the test suites into SpiraTest.</li>
+<li><strong>Filename</strong>: This needs to be the name of the Tosca <strong>test suite</strong> and the Tosca <strong>test case</strong> separated by a <strong>pipe (|)</strong> character, i.e. you will have <code>&lt;Test Suite&gt;|&lt;Test Case&gt;</code>, so that in our example we have the following combination: <code>Auto Insurance Website|Create a quote for Audi Automobile</code>. The other test cases will have the same test suite name, but different test case names.</li>
+</ul>
+<p>Now you are ready to schedule the automated test case for execution in SpiraTest</p>
+<h2 id="executing-the-tosca-test-sets-from-spiratest">Executing the Tosca Test Sets from SpiraTest<a class="headerlink" href="#executing-the-tosca-test-sets-from-spiratest" title="Permanent link">&para;</a></h2>
+<p>There are two ways to execute automated test cases in SpiraTest:</p>
+<ol>
+<li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
+<li>Execute the test cases right now on the local computer.</li>
+</ol>
+<p>We shall outline both of these two scenarios in this section. However first we need to setup the appropriate automation hosts and test sets in SpiraTest:</p>
+<h3 id="configuring-the-automation-hosts-and-test-sets">Configuring the Automation Hosts and Test Sets<a class="headerlink" href="#configuring-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
+<p>Go to Testing > Automation Hosts in SpiraTest to display the list of automation hosts:</p>
+<p><img alt="" src="../img/Tosca_8.png" /></p>
+<p>Make sure that you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified in the RemoteLaunch application</strong> on that specific machine.</p>
+<p>Once you have at least one Automation Host configured, go to Testing > Test Sets to create the test set that will contain the automated test cases:</p>
+<p><img alt="" src="../img/Tosca_9.png" /></p>
+<p>Note: Unlike manual test cases, automated test cases <em>must be executed within a test set</em> -- they cannot be executed directly from the test case. Create a new Test Set (for example <code>Tricentis Insurance Website Suite</code>), and click on its hyperlink to display the test set details page:</p>
+<p><img alt="" src="../img/Tosca_10.png" /></p>
+<p>Lower down, the list of test cases in the test set are displayed:</p>
+<p><img alt="" src="../img/Tosca_11.png" /></p>
+<p>You need to add at least one automated test case to the test set, but to get the best reporting, we recommend having the first test case in the test set be the Tosca <em>Test Event</em> that launches the test suite, and the subsequent test cases be the individual test cases that parse the test suite and extract the results specific to the individual test case.</p>
+<p><em>For example, our first test case in the screenshot will launch the entire insurance website test suite that tries to use the sample website with three different car brands (BMW, Audi and Honda). Each individual car brand will create a unique test case result that we'd want to map to different requirements in SpiraTest.</em></p>
+<p>Once you have added the appropriate test cases to the test set, the final step is to configure the main test set fields:</p>
+<ul>
+<li><strong>Automation Host</strong>: This needs to be set to the name of the automation host that will be running the automated test set.</li>
+<li><strong>Planned Date</strong>: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</li>
+<li><strong>Status</strong>: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</li>
+<li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
+</ul>
+<h3 id="executing-the-test-sets">Executing the Test Sets<a class="headerlink" href="#executing-the-test-sets" title="Permanent link">&para;</a></h3>
+<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll SpiraTest for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to execute. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" --
+the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
+<p>If you want to immediately execute the test case on your local computer, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
+<p>In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the Tosca test:</p>
+<ul>
+<li><strong>Passed</strong>: The Tosca automated test ran successfully and all the test steps in the test script passed and no assertions were thrown.</li>
+<li><strong>Failed</strong>: The Tosca automated test ran successfully, but at least one test step failed or at least one assertion failed.</li>
+<li><strong>Blocked</strong>: The Tosca automated test did not run successfully or at least one timeout error was recorded.</li>
+</ul>
+<p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.</p>
+<p><em>Note: While the tests are executing you may see browser windows launch as Tosca executes the appropriate tests.</em></p>
+<h3 id="viewing-the-tosca-test-results">Viewing the Tosca Test Results<a class="headerlink" href="#viewing-the-tosca-test-results" title="Permanent link">&para;</a></h3>
+<p>Once the tests have completed, you can log back into SpiraTest and see the execution status of your test cases. If you click on a Test Run that was generated by Tosca, you will see the following information:</p>
+<p><img alt="" src="../img/Tosca_12.png" /></p>
+<p>This screen indicates the status of the test run that was reported back from Tosca together with any messages or other information. The Test Name indicates the name of the test inside Tosca and the execution status corresponds the matching status inside Tosca as described above.</p>
+<p>Underneath this high-level test result, you will see the detailed Tosca test results that show each entry in the test script step by step:</p>
+<p><img alt="" src="../img/Tosca_13.png" /></p>
+<p>Finally, there is the <strong>Console Output</strong> section which reports back the raw output from the Tosca test result XML file:</p>
+<p><img alt="" src="../img/Tosca_14.png" /></p>
+<p>Congratulations... You are now able to run Tosca automated functional tests and have the results be recorded within SpiraTest, with the ability to have those test cases update the requirements test coverage and other enterprise quality metrics in the system.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../NeoLoad/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NeoLoad
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../JMeter/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                JMeter
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2006-2021 Inflectra Corporation, All Rights Reserved | en-US
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/company/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.cf7cb942.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['instant'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.e4881a3f.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
