@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integrating-with-junit" class="md-skip">
+        <a href="#installing-the-junit-5-extension" class="md-skip">
           Skip to content
         </a>
       
@@ -1965,8 +1965,6 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           JUnit
@@ -1980,8 +1978,6 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2001,6 +1997,40 @@
   <a href="#using-junit-5-with-spiratest" class="md-nav__link">
     Using JUnit 5 with SpiraTest
   </a>
+  
+    <nav class="md-nav" aria-label="Using JUnit 5 with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-executing-junit-5-tests-using-command-line" class="md-nav__link">
+    a) Executing JUnit 5 Tests using Command Line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-executing-junit-5-tests-using-eclipse" class="md-nav__link">
+    b) Executing JUnit 5 Tests using Eclipse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-executing-junit-5-tests-using-intellij-idea" class="md-nav__link">
+    c) Executing JUnit 5 Tests using IntelliJ IDEA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
+    Viewing the Test Results in SpiraTest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3280,8 +3310,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3300,6 +3328,40 @@
   <a href="#using-junit-5-with-spiratest" class="md-nav__link">
     Using JUnit 5 with SpiraTest
   </a>
+  
+    <nav class="md-nav" aria-label="Using JUnit 5 with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-executing-junit-5-tests-using-command-line" class="md-nav__link">
+    a) Executing JUnit 5 Tests using Command Line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-executing-junit-5-tests-using-eclipse" class="md-nav__link">
+    b) Executing JUnit 5 Tests using Eclipse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-executing-junit-5-tests-using-intellij-idea" class="md-nav__link">
+    c) Executing JUnit 5 Tests using IntelliJ IDEA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
+    Viewing the Test Results in SpiraTest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3330,15 +3392,16 @@
               
                 
                 
-                <h1 id="integrating-with-junit">Integrating with JUnit<a class="headerlink" href="#integrating-with-junit" title="Permanent link">&para;</a></h1>
-<p>The directions for using JUnit 5 and JUnit 4 are in different sections below:</p>
+                  <h1>JUnit</h1>
+                
+                <p>The directions for using JUnit 5 and JUnit 4 are in different sections below:</p>
 <h2 id="installing-the-junit-5-extension">Installing the JUnit 5 Extension<a class="headerlink" href="#installing-the-junit-5-extension" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the SpiraTest Extension for JUnit 5
 onto a workstation so that you can then run automated JUnit tests
 against a Java application and have the results be recorded as test runs
 inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v3.0 or later. If you have an earlier version
-of SpiraTest you will need to upgrade to at least v3.0 before trying to
+installation of SpiraTest v5.0 or later. If you have an earlier version
+of SpiraTest you will need to upgrade to at least v5.0 before trying to
 use this extension. You will also need to have at least version 5.0 of
 Junit. If you are using an earlier version, please visit
 <a href="http://www.junit.org">www.junit.org</a> to obtain the latest version.</p>
@@ -3377,8 +3440,8 @@ FAQ on <a href="http://www.junit.org">www.junit.org</a> for details on the
 appropriate method for your platform. As an example, on a Windows
 platform, the JAR-file would be added to the classpath by typing the
 following:</p>
-<p>set CLASSPATH=%CLASSPATH%; C:\Program Files\JUnit
-Extension\JUnitExtension.jar</p>
+<p><code>set CLASSPATH=%CLASSPATH%; C:\\Program Files\\JUnit
+Extension\\JUnitExtension.jar</code></p>
 <p>Once you have completed this step, you are now ready to begin using your
 JUnit test fixtures with SpiraTest.</p>
 <h2 id="using-junit-5-with-spiratest">Using JUnit 5 with SpiraTest<a class="headerlink" href="#using-junit-5-with-spiratest" title="Permanent link">&para;</a></h2>
@@ -3456,11 +3519,11 @@ follows:</p>
 </code></pre></div>
 
 <p>The Java class is marked as a JUnit test fixture by applying the
-@BeforeEach attribute to the setup method, and the @Test attribute to
+<code>@BeforeEach</code> attribute to the setup method, and the <code>@Test</code> attribute to
 each of the test assertion methods individually -- highlighted in yellow
 above. When you open up the class in a JUnit runner or execute from the
 command line it loads all the test classes and executes all the methods
-marked with @Test in turn.</p>
+marked with <code>@Test</code> in turn.</p>
 <p>Each of the Assert statements is used to test the state of the
 application after executing some sample code that calls the
 functionality being tested. If the condition in the assertion is true,
@@ -3491,10 +3554,10 @@ the JUnit test run are illustrated below:</p>
 <span class="cm"> */</span>
 <span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
         <span class="c1">//following are REQUIRED</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://doctor/SpiraPlan&quot;</span><span class="p">,</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://demo-us.spiraservice.net/mysite&quot;</span><span class="p">,</span>
         <span class="n">login</span> <span class="o">=</span> <span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s">&quot;{XXXXXXXXXXXXXXXX}&quot;</span><span class="p">,</span> <span class="c1">// make sure to use your API/RSS key and not your login password</span>
-        <span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="err">`</span>
+        <span class="n">rssToken</span> <span class="o">=</span> <span class="s">&quot;{XXXXXXXXXXXXXXXX}&quot;</span><span class="p">,</span> <span class="c1">// make sure to use your API/RSS key and not your login password</span>
+        <span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
         <span class="c1">//following are OPTIONAL</span>
         <span class="n">releaseId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
         <span class="n">testSetId</span> <span class="o">=</span> <span class="mi">1</span>
@@ -3517,7 +3580,7 @@ the JUnit test run are illustrated below:</p>
 <span class="cm">     * Tests the addition of the two values</span>
 <span class="cm">     */</span>
     <span class="nd">@Test</span>
-    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="p">()</span> <span class="p">{</span>
         <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">fValue1</span> <span class="o">+</span> <span class="n">fValue2</span><span class="p">;</span>
 
@@ -3529,7 +3592,7 @@ the JUnit test run are illustrated below:</p>
 <span class="cm">     * Tests division by zero</span>
 <span class="cm">     */</span>
     <span class="nd">@Test</span>
-    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDivideByZero</span><span class="p">()</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">zero</span><span class="p">;</span>
@@ -3539,7 +3602,7 @@ the JUnit test run are illustrated below:</p>
 <span class="cm">     * Tests two equal values</span>
 <span class="cm">     */</span>
     <span class="nd">@Test</span>
-    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testEquals</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12L</span><span class="p">,</span> <span class="mi">12L</span><span class="p">);</span>
@@ -3553,7 +3616,7 @@ the JUnit test run are illustrated below:</p>
 <span class="cm">     * Tests success</span>
 <span class="cm">     */</span>
     <span class="nd">@Test</span>
-    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSuccess</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">//Successful test</span>
         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
@@ -3561,7 +3624,7 @@ the JUnit test run are illustrated below:</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>The overall class is marked with a new @SpiraTestConfiguration
+<p>The overall class is marked with a new <code>@SpiraTestConfiguration</code>
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:</p>
 <ul>
@@ -3571,27 +3634,44 @@ access the SpiraTest test repository:</p>
 <li>
 <p><strong>Login</strong> - A valid username for the instance of SpiraTest.</p>
 </li>
-<li><strong>Password</strong> -- Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
+<li><strong>RSS Token</strong> -- Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
 <li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
 <li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning > Releases tab). If you don't want to specify a release, just use the value -1.</li>
 <li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing > Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
 </ul>
 <p>In addition, each of the individual test methods needs to be mapped to a
 specific test case within SpiraTest. This is done by adding a
-@SpiraTestCase attribute to the test method together with the ID of the
+<code>@SpiraTestCase</code> attribute to the test method together with the ID of the
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).</p>
 <p>For these attributes to be available in your test fixture, you also need
 to add a reference to the
-<em>com.inflectra.spiratest.addons.junitextension</em> package. This package is
+<code>com.inflectra.spiratest.addons.junitextension</code> package. This package is
 bundled within the supplied JAR-file library for Windows, and can be
 compiled from the provided source .java files on other platforms.</p>
 <p>Now all you need to do is compile your code and then launch JUnit by
-executing the test fixture through the command line (or through your
-choice of IDE, e.g. Eclipse). E.g. for our sample test, you would use
-the following command:</p>
-<p>java com.inflectra.spiratest.addons.junitextension.samples.SimpleTest</p>
-<p>Once the test has run, you can view the test cases in SpiraTest, you
+executing the test fixture through the command line, or through your
+choice of IDE, e.g. Eclipse, IntelliJ). We shall show an example of each:</p>
+<h3 id="a-executing-junit-5-tests-using-command-line">a) Executing JUnit 5 Tests using Command Line<a class="headerlink" href="#a-executing-junit-5-tests-using-command-line" title="Permanent link">&para;</a></h3>
+<p>To execute JUnit 5 tests using the command line, you need to download the <code>junit-platform-console-standalone.jar</code> JUnit 5 package from Maven and use that to run the tests.</p>
+<p>For our sample test, you would use the following command to launch the JUnit tests:</p>
+<p><code>java -jar "C:\AutomatedTesting\JUnitExtension\junit-platform-console-standalone-1.8.0-M1.jar"--classpath="C:\AutomatedTesting\JUnitExtension\JUnit 5\bin" -classpath="C:\AutomatedTesting\JUnitExtension\Jars\JUnit_5_Extension_jar\JUnit 5 Extension.jar" --select-class=com.inflectra.spiratest.addons.junitextension.samples.SimpleTest</code></p>
+<p><img alt="" src="../img/JUnit5-Command-Line-1.png" /></p>
+<p>This includes <strong>both</strong> the SpiraTest extension JAR and the sample tests being executed on the classpath and the class name of the sample tests in the select argument.</p>
+<p>When executed it will report back to the command line:</p>
+<p><img alt="" src="../img/JUnit5-Command-Line-2.png" /></p>
+<p>and the results will also appear in SpiraTest.</p>
+<h3 id="b-executing-junit-5-tests-using-eclipse">b) Executing JUnit 5 Tests using Eclipse<a class="headerlink" href="#b-executing-junit-5-tests-using-eclipse" title="Permanent link">&para;</a></h3>
+<p>To execute the tests in Eclipse, simply open your automated test script in an Eclipse project, ensure you have the JUnit Eclipse plugin installed, and finally make sure you add a reference to the SpiraTest <code>JUnit 5 Extension.jar</code> JAR file:</p>
+<p><img alt="" src="../img/JUnit5-Eclipse-1.png" /></p>
+<p>Then when you choose the option to Run As a JUnit 5 it will execute the tests:</p>
+<p><img alt="" src="../img/JUnit5-Eclipse-2.png" /></p>
+<p>If for any reason you don't see the test results appear in SpiraTest, make sure you have the correct test IDs mapped. If you still don't see the results, check the <strong>Console</strong> tab inside Eclipse for any errors connecting to SpiraTest:</p>
+<p><img alt="" src="../img/JUnit5-Eclipse-3.png" /></p>
+<h3 id="c-executing-junit-5-tests-using-intellij-idea">c) Executing JUnit 5 Tests using IntelliJ IDEA<a class="headerlink" href="#c-executing-junit-5-tests-using-intellij-idea" title="Permanent link">&para;</a></h3>
+<p><em>[Coming Soon]</em></p>
+<h3 id="viewing-the-test-results-in-spiratest">Viewing the Test Results in SpiraTest<a class="headerlink" href="#viewing-the-test-results-in-spiratest" title="Permanent link">&para;</a></h3>
+<p>Once the test has run using one of the previous methods, you can view the test cases in SpiraTest, you
 should see a JUnit automated test run displayed in the list of executed
 test runs:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_10.png" /></p>
@@ -3947,6 +4027,8 @@ error was, together with the associated code stack-trace:</p>
 <p>Congratulations... You are now able to run JUnit automated tests and
 have the results be recorded within SpiraTest. The sample test fixture
 SimpleText.java is provided with the installation.</p>
+                
+                  
                 
               
               
