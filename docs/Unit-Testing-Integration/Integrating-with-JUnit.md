@@ -274,6 +274,8 @@ specific test case within SpiraTest. This is done by adding a
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).
 
+**<span style="color:red"> -- The test methods must be marked as `public` or the test results will not appear in Spira -- </span>**
+
 For these attributes to be available in your test fixture, you also need
 to add a reference to the
 `com.inflectra.spiratest.addons.junitextension` package. This package is
@@ -282,7 +284,7 @@ compiled from the provided source .java files on other platforms.
 
 Now all you need to do is compile your code and then launch JUnit by
 executing the test fixture through the command line, or through your
-choice of IDE, e.g. Eclipse, IntelliJ). We shall show an example of each:
+choice of IDE, e.g. Eclipse, IntelliJ). We shall show one example of each:
 
 ### a) Executing JUnit 5 Tests using Command Line
 
@@ -315,10 +317,6 @@ Then when you choose the option to Run As a JUnit 5 it will execute the tests:
 If for any reason you don't see the test results appear in SpiraTest, make sure you have the correct test IDs mapped. If you still don't see the results, check the **Console** tab inside Eclipse for any errors connecting to SpiraTest:
 
 ![](img/JUnit5-Eclipse-3.png)
-
-### c) Executing JUnit 5 Tests using IntelliJ IDEA
-
-*[Coming Soon]*
 
 ### Viewing the Test Results in SpiraTest
 
