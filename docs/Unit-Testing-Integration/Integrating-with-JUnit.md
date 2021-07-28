@@ -274,7 +274,7 @@ specific test case within SpiraTest. This is done by adding a
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).
 
-**<span style="color:red"> -- The test methods must be marked as `public` or the test results will not appear in Spira -- </span>**
+**-- The test methods must be marked as `public` or the test results will not appear in Spira --**
 
 For these attributes to be available in your test fixture, you also need
 to add a reference to the
