@@ -95,11 +95,11 @@ Item 1
 ```
 
 ### Fields: dates
-* Dates are entered into SpiraPlan as UTC and at midday.
+* Dates are entered into SpiraPlan as UTC and at midday. Please make sure that your Spira instance and the device you are running Excel are set to the same timezone, to avoid having date mismatches. In Spira, go to your profile page, then 'Regional Settings' to change your displaying timezone. You can also change this configuration at the system level, under System > General Settings > Default Timezone (admin user is required).
 
 ### Fields: multi-select lists
 * Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
-* When data is sent from SpiraPlan to the spreadsheet, only the first list value selected in Spira (if multiple are selected) will be displayed in the spreadsheet
+* When data is sent from SpiraPlan to the spreadsheet, the value you first selected from the list for that field (if multiple are selected) will be displayed in the spreadsheet 
 * When sending data to SpiraPlan you will only be able to select one value
 
 ### Other actions you can do on this page
