@@ -1,11 +1,23 @@
 #  Importing from Microsoft Excel (Office 2016+, iOS, web)
 
-If you are using Microsoft Excel 2016+, or in the cloud (via a web browser) or on iPad OS, you can use the dedicated Microsoft Excel 2016+ add-in. With this add-in you can import or export data to and from any product in your SpiraTest, SpiraTeam, or SpiraPlan application. The add-in works for requirements, releases, incidents, tasks, test cases with their test steps, risks and test sets.
+This addin works with Microsoft Excel 2016+, Excel in the cloud (via a web browser), Excel on iPad OS. The add-in lets you import or export data to and from any product in your SpiraTest, SpiraTeam, or SpiraPlan application. 
 
-In legacy versions of this add-in you need to download a static excel template to help make sure you enter data into it in the correct way. This add-in dynamically creates the sheet headers and cell validation based off of the specific selections you make. 
+**The add-in works for:** 
+
+1. Requirements
+2. Releases
+3. incidents
+4. Tasks
+5. Test cases with their Test steps
+6. Test sets
+7. Risks
+
+In legacy versions of this add-in you need to download a static excel template to help make sure you enter data into it in the correct way. 
+
+This add-in dynamically creates the sheet headers and cell validation based off of the artifact and product you select.
 
 
-## Installation
+## Installation 
 
 To install the add-in:
 
@@ -17,29 +29,35 @@ To install the add-in:
 
 
 ## 1. Connect to your Spira app
-You can use this add-on with SpiraTest®, SpiraTeam®, or SpiraPlan®. If you are using Excel in the browser, your Spira app needs to be accessible over the internet.
+You can use this add-in with SpiraTest®, SpiraTeam®, or SpiraPlan®. 
+
+If you are using Excel in the browser, make sure your SpiraPlan is accessible over the internet.
 
 ![Spira add-in login screen](img/excel365-log-in-screen.png)
 
-* **Your Spira Url:** The web address that you use to access SpiraPlan® in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://(company).spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
+* **Your Spira URL:** The web address that you use to access SpiraPlan® in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://**company**.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
 * **Your Username:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
-* **Enter your RSS token:** You can find or generate this from your user profile page inside Spira. Make sure to include the curly braces - {ExampleRSS}
+* **Enter your RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces *make sure to hit Save after generating a new RSS token.*
 
-You will be notified if there is an issue with your url or the user information you provided. 
+**If there is a problem connecting to Spira you will be notified with an error message.**
 
 
 ## 2. Choose which mode to use
-This add-in has two separate modes: exporting; and importing.
+The addin has two main modes: *getting data ***from*** Spira* and *Sending data ***to*** Spira*.
 
 ![Spira mode selection screen](img/excel365-main-screen.png)
 
-Once you have successfully logged in to your Spira application, you need to decide what you want to use this add-in for. You can go back and change your mind at any time.
+Once you have successfully connected the Excel addin to your Spira app, you need to decide what you want to use this add-in for. You can go back and change your mind at any time.
 
 * **Get data from Spira (exporting)**: This button will prompt you to pick a product and artifact to LOAD FROM Spira loaded into the spreadsheet (on the current active sheet). Exporting data in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over 100% of the artifacts in that product so it may take some time. 
   * Optionally, after getting data, you can make changes, then update the data back in Spira, hitting the button 'Update Spira'. Please note that this option only allows you to update the received data, not create new artifacts.
   
 * **Send data to Spira (importing)**: This will button will prompt you to pick a product and artifact to SEND TO Spira from the current active sheet. Before you can enter data to send, the add-in creates a dynamic template for that specific product and artifact to make it easier to enter data correctly.
 
+* **Get data from Spira (exporting)**: This button will prompt you to pick a product and artifact to LOAD FROM Spira loaded into the spreadsheet (on the current active sheet). Exporting data in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over 100% of the artifacts in that product so it may take some time. 
+  * Optionally, after getting data, you can make changes, then update the data back in Spira, hitting the button 'Update Spira'. Please note that this option only allows you to update the received data, not create new artifacts.
+  
+* **Send data to Spira (importing)**: This button will prompt you to pick a product and artifact to SEND TO Spira from the current active sheet. Before you can enter data to send, the add-in creates a dynamic template for that specific product and artifact __*so to avoid any improper data input*__ to make it easier to enter data correctly. 
 
 * **Logout**: Close your connection with Spira and take you back to the add-in's login page.
 * **Advanced Mode (optional)** This mode allows you to create new comments and associate artifacts. Check the box 'Advanced Mode' to activate it.
@@ -66,11 +84,9 @@ If you are getting data from or sending data to Spira you first have to select t
 
 **Getting data from Spira**: once you have your product and artifact selected, click the button to start the export process. The add-in gets every entry of that artifact in the chosen product so it may take some time.
 
-**Sending data to Spira**: before you can enter data into the sheet click "Prepare Sheet" to create a template for that product and artifact. Once the sheet is ready click the Send button to add that data to Spira.
+**Sending data to Spira**: before you can enter data into the sheet click "Prepare Sheet" to create a template for that product and artifact. Once the sheet is ready click the Send button to add that data to Spira. *__Note, that cells highlighted with grey are not editable and must remain unchanged. Merged cells also not allowed to exist in template prepared for upload.__*
 
 **Updating data in Spira (advanced mode)**: once you have the data from Spira in the spreadsheet, you can update the available fields and then click on 'Update Spira' to make the changes reflect in Spira. Each row will be sent in full to Spira - if you blank out a cell, that value will be blanked out in Spira. NOTE: you cannot moving artifacts by updating (for example, you cannot move requirements in the hierarchy, or test steps within or between test cases).
-
-
 
 
 ### Fields: working with required fields
@@ -78,7 +94,8 @@ If you are getting data from or sending data to Spira you first have to select t
 * For test steps, required fields are shown in black, but not bold text.
 
 ### Fields: how certain 'special' fields work
-* **ID Fields**: This field MUST be left blank to add new items to Spira. Any rows with entries in the ID fields are skipped over.
+* **ID Fields**: This field MUST be left blank *__unchanged__* to add new items to Spira. Any rows with entries in the ID fields *__will be skipped over with error__* are skipped over.
+
 * **Test Cases and Test Steps**: 
     - Test case fields are columns with a darker background color. Test steps fields are columns with a lighter background color. 
     - To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. 
@@ -92,14 +109,14 @@ Item 1
 > Item 2 child of item 1
 > Item 3 child of item 1
 > > Item 4 child of item 3
-```
+``` 
 
 ### Fields: dates
 * Dates are entered into SpiraPlan as UTC and at midday. Please make sure that your Spira instance and the device you are running Excel are set to the same timezone, to avoid having date mismatches. In Spira, go to your profile page, then 'Regional Settings' to change your displaying timezone. You can also change this configuration at the system level, under System > General Settings > Default Timezone (admin user is required).
 
 ### Fields: multi-select lists
 * Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
-* When data is sent from SpiraPlan to the spreadsheet, the value you first selected from the list for that field (if multiple are selected) will be displayed in the spreadsheet 
+* When data is sent from SpiraPlan to the spreadsheet, only the first list value selected in Spira (if multiple are selected) will be displayed in the spreadsheet
 * When sending data to SpiraPlan you will only be able to select one value
 
 ### Other actions you can do on this page
@@ -109,6 +126,7 @@ Item 1
 
 ![Spira example of date and sheet](img/excel365-add-in-store-3.jpg)
 
+-------
 
 ## Entering Data for different artifacts
 * **Requirements**: 
@@ -117,6 +135,7 @@ Item 1
     * Please note that Estimate Point values for Epics will get replaced by the child requirement in Spira, even if you selected a different value in Excel.
 * **Releases**: like Requirements, Releases in SpiraPlan are hierarchical. You designate hierarchy in the exact same way as for requirements.
 * **Test Cases and Test Steps**:
+
     * A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.
     * There is no need to number the test steps -- SpiraPlan adds this information automatically
     * Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps
@@ -126,9 +145,13 @@ Item 1
 * **Incidents**: Please note that the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
 * **Tasks**: this artifact does not have any special factors to take into account
 
+* **Incidents**: Please note that the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
+* **Tasks**: this artifact does not have any special factors to take into account
+
+- - - 
 
 ## Functionality Differences from Microsoft Excel Classic plugin
-Excel 365 can (and the classic plugin cannot):
+__Excel 365 *_plugin_* can (and the classic c cannot):__
 
 - work with customizable template fields like importance, status, and type
 - provide much easier data entry with dropdowns to show user names, releases, custom lists
@@ -136,7 +159,7 @@ Excel 365 can (and the classic plugin cannot):
 - works across Windows, Mac OS, and the web
 - NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
 
-Excel Classic can (and the Excel 365 plugin cannot):
+__Excel Classic *_plugin_* can (and the Excel 365 plugin cannot):__
 
 - work with version of Spira older than 6.3.0.1 
 - work with versions of Excel pre Excel 2015
