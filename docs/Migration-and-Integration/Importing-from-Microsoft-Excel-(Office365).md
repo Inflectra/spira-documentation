@@ -6,7 +6,7 @@ This add-in works with Microsoft Excel 2016+, Excel in the cloud (via a web brow
 
 1. Requirements
 2. Releases
-3. incidents
+3. Incidents
 4. Tasks
 5. Test cases with their Test steps
 6. Test sets
@@ -52,7 +52,7 @@ The add-in has two main modes: *getting data ***from*** Spira* and *Sending data
 Once you have successfully connected the Excel add-in to your Spira app, you need to decide what you want to use this add-in for. You can go back and change your mind at any time.
 
 ### Get data from Spira (exporting)
-This button will prompt you to pick a product and artifact to get from Spira and load into the spreadsheet (on the current active sheet). Exporting data from Spira in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over every one of the artifacts selected in th chosen product so it may take some time. 
+This button will prompt you to pick a product and artifact to get from Spira and load into the spreadsheet (on the current active sheet). Exporting data from Spira in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over every one of the artifacts selected in the chosen product so it may take some time. 
 
 !!! info "Updating Data in Spira"
     Once you have the data from Spira loaded into Excel you can freely edit it. You can then, optionally, update the data in Spira by clicking the "Update" button. This will send every artifact on the sheet back to Spira, updating each and every one. Each row will be sent in full to Spira - if you blank out a cell, that value will be blanked out in Spira.
@@ -112,7 +112,7 @@ Please note that you can only create new comments. You cannot get existing comme
 When advanced mode is enabled you will may see columns that let you create associations between artifacts. This is an advanced feature because you need to know the exact IDs and type them in manually. For a more user friendly experience associating artifacts please use the main application. 
 
 To create an association between artifacts:
-- find the column of the artifact type you want to associate to (e.g.: "Linked Requirement") 
+- find the column of the artifact type you want to associate to (e.g.: "New Linked Requirement(s)") 
 - enter the ID(s) of the artifact(s) to associate with. 
 - associate multiple artifacts at a time using a comma-separated list of IDs, e.g.: 335,336,337. 
 
@@ -163,7 +163,7 @@ Item 1
 
     - **Test case fields** are columns with a darker background color
     - **Test steps fields** are columns with a lighter background color
-    - **Required fields*8 are those with black text: darker orange ones are needed for a test case, lighter orange ones for a test step
+    - **Required fields** are those with black text: darker orange ones are needed for a test case, lighter orange ones for a test step
     
     To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. 
     
