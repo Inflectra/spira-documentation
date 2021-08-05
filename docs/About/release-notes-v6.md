@@ -1,5 +1,38 @@
 # Release Notes for Spira v6
 
+## Version 6.11 (August 2021)
+
+!!! info "Summary"
+    **Multi-Factor Authentication** (MFA) support for all users to improve security. Users can add a one-time password to Spira from within the application. Admins can monitor and manage one-time passwords.
+
+    **Create and edit a wider array of diagrams** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
+
+    **Excel365 and Google Sheets** addins support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
+
+    Edit requirements inline on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
+
+??? success "New Features"
+    - Users can add Multi-Factor Authentication (MFA) with a one-time password to improve login security [RQ:3522]
+    - Can create and edit diagrams as inline documents directly in the app (supports diagrams, mindmaps, and organization charts) [RQ:3507]
+
+??? bug "Bug fixes and enhancements"
+
+    - Fix TaraVault breaking on activation if Pull Requests have been added using the sample source code provider [IN:6535]
+    - Fix planning boards not letting you add a new item if you have create permissions but not bulk edit (introduced in 6.10.0.0) [IN:6536]
+    - Fix planning board and incident board detected release field on the incident popup not showing all releases (only active ones) [IN:6577]
+    - Fix planning boards and incident details page detected release field when the product is set to show active releases only in that field, so it correctly shows current release and only options for active releases [IN:6616]
+    - Improve performance when cloning test cases with massive linked test step hierarchies [IN:6576]
+    - Ensure that LDAP is disabled system wide if the LDAP server name is blank [IN:6583]
+    - Fix the owner field not being set when owner data is sent on first creating a release (e.g. when cloning a release, or creating a release via the API) [IN:6619]
+    
+    - **API**
+
+        - Add API calls to create, update, and delete Test Set Test Case parameters [IN:6471]
+        - Add API calls to create, update, and delete Test Step Parameters [IN:6495]
+        - Fix the v6 SOAP API not always falling back to accept a user's API Token as proper authentication [IN:6560]
+        - Fix the API so the test set folder ID is not ignored during test set updates (PUTs) [IN:6578]
+
+
 ## Version 6.10.0.1 (June 2021)
 
 !!! info "Hotfix"
