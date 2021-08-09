@@ -7,9 +7,9 @@
 
     **Create and edit a wider array of diagrams** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
 
-    **Excel365 and Google Sheets** addins support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
+    [Edit requirements inline](../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing) on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
 
-    Edit requirements inline on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
+    **[Excel365](../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29)** addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
 
 ??? success "New Features"
     - Users can add Multi-Factor Authentication (MFA) with a one-time password to improve login security [RQ:3522]
