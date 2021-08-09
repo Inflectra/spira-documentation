@@ -329,8 +329,6 @@ This mindmap displays the first 5,000 requirements in a product as a connected t
 
 For each requirement the map displays the  name and ID of the requirement, with a tooltip that shows the description and any comments. Each node is color coded by its priority / importance value.
 
-Clicking on the node will take you to the details page for that requirement.
-
 As well as showing the primary hierarchy, there is an option to turn on the display of requirement associations. This will let you see all of the associations as dotted lines. For associations that denote dependencies there is an arrow and dotted line that shows the direction of the dependency. For simple relationship  (relates to) associations, there is a dotted line without an arrow. The system will display either the comment or type of association, depending what was entered when the association was created.
 
 ![](img/requirements-mind-map-associations.png)
@@ -341,9 +339,12 @@ There are several other display options:
 - **levels dropdown**: lets you select how deep into the mindmap you wish to view. To only show the topmost level requirements, select level 1; to select the top two levels, select level 2, or view everything by selecting "all levels"
 - **zoom**: you can change the zoom between 25% and 100% using the plus and minus buttons. To reset the zoom, click the magnifying glass
 
-Note: this view is unfortunately not compatible with Internet Explorer 11.
+### Mindmap Inline Editing
+To **view more information** about a requirement, click its name. This will open popup with much more detail. If you ctrl/cmd+click on the requirement name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific requirement. 
 
+You can **edit requirements** straight from the mindmap. Users with bulk edit permissions can edit a requirement (including adding a new comment) at any time by clicking on the requirement name. This opens a popup with full information about that requirement. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific requirement. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
 
+![](img/requirements-mind-map-editing.png)
 
 ## Requirement Details
 
