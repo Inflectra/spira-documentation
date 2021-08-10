@@ -82,7 +82,7 @@ On **Windows 10**, to install IIS, you need to click Start \> Control Panel \> P
 
 ![](img/Installing_SpiraPlan_12b.png)
 
-![](img/Installing__12c.png)
+![](img/Installing_SpiraPlan_12c.png)
 
 Make sure that the following features are enabled within the 'Internet Information Services' folder:
 
@@ -338,13 +338,13 @@ Including the options listed above with "(advanced mode only)" next to them, Adv
 - Adding a new application server in a cluster of load-balanced servers (explained below)
 * Upgrading a database to the current release (explained below)
 
-![](img/Installing_SpiraPlan_1.png)
+![](img/Installing_SpiraPlan_advanced-options.png)
 
 
 ### Adding An Application Server
 Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#Installing-the-Software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
 
-![](img/Installing_SpiraPlan_2.png)
+![](img/Installing_SpiraPlan_db-options.png)
 
 All other actions during this install matches those in a [standard installation](#Installing-the-Software).
 
@@ -356,7 +356,7 @@ Use this option in two rare cases:
 
 These steps in this option are the same as if you were [upgrading the application normally](#Upgrading). You will be asked for the SQL Server and Database information for your database.
 
-![](img/Installing_SpiraPlan_2.png)
+![](img/Installing_SpiraPlan_db-options.png)
 
 Once the installer connects and verifies the version of the database to be installed, you will be prompted with an additional Options screen with two options:
 
