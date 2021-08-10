@@ -3,9 +3,9 @@
 ## Version 6.11 (August 2021)
 
 !!! info "Summary"
-    **Multi-Factor Authentication** (MFA) support for all users to improve security. Users can add a one-time password to Spira from within the application. Admins can monitor and manage one-time passwords.
+    **Multi-Factor Authentication** (MFA) support for all users to improve security. Users can [add a one-time password](../../Spira-User-Manual/User-Product-Management/#2-step-authentication) to Spira from within the application. Admins can [enable/disable](../../Spira-Administration-Guide/System/#enable-2-step-authentication), [monitor](../../Spira-Administration-Guide/System-Users/#view-edit-users), and [manage](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) one-time passwords.
 
-    **Create and edit a wider array of diagrams** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
+    **Create and edit a [wide array of diagrams](../../Spira-User-Manual/Document-Management/#add-new-inline-documents)** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
 
     [Edit requirements inline](../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing) on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
 

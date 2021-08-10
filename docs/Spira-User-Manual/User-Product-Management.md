@@ -11,6 +11,10 @@ Upon entering the SpiraPlan® URL provided by your system administrator into you
 
 You need to enter your given user-name and password into the system in the appropriate boxes then click the ***Log In*** button to gain access to the application. Normally you only remain logged in to the application whilst in active use, and you will be asked to log-in again after either closing the browser or 20 minutes of inactivity. To prevent this, and to stay logged-in to SpiraPlan® regardless of browser window closing or inactivity, select the "Keep me logged in" check-box before clicking the ***Log In*** button. Note that this setting is specific to each individual computer you are logging-in from, and that it will be reset when you explicitly log-out with the [log-out link](#global-navigation).
 
+If you have enabled [2-step authentication](#2-step-authentication) once you have entered your username and password correctly you will need to enter a valid one-time password.
+
+![](img/UserProduct_Management_enter-mfa.png)
+
 If for any reason you are unable to login with the provided username/password combination, and error message will be displayed. If you cannot remember the correct log-in information, click on the "Forgot your password" link and your password will be emailed to the email address currently on file. The reset password screen is illustrated below:
 
 ![](img/UserProduct_Management_34.png)
@@ -387,19 +391,33 @@ You can change your start page to be any of the following:
 
 
 ## Account Security
-
-In addition to being able to update your user information, you can optionally change your password at the same time. To change your password, on the Change Password tab fill in the three boxes with your current password, and your new password repeated for verification. Then when the "***Save***" button is clicked, the system will update your password, otherwise you will simply get a warning message indicating what needs to be corrected.
-
 ![](img/UserProduct_Management_78.png)
+
+In addition to being able to update your user information, you can also change your password. To change your password, on the Account Security tab, fill in the three fields in the Change Password box with your current password, and new password repeated for verification. Click "Save". If the password fields were not correctly filled in, you will see a warning message at the top of the page.
 
 You can also change the current password retrieval question and answer by entering in your current password (for security reasons) as well as the new password question and answer.
 
-Note: If your SpiraTest user profile is linked to an account stored in an external LDAP server, you may find the change password option is disabled. This is because the system uses the password held in the external server. To change the password in this case, please contact your system administrator who will be able to help you change the password in your LDAP environment.
+Note: If your SpiraPlan user profile is linked to an account stored in an external LDAP server, the change password option is disabled. This is because the system uses the password held in the external server. To change the password in this case, please contact your system administrator who will be able to help you change the password in your LDAP environment.
 
-#### LDAP Information
+### 2-Step Authentication
+2-Step Authentication lets you make sure on logging you have to enter your password and also a one-time password for added security. The 2-Step Authentication box on the Account Security tab:
+
+- tells you if 2-step authentication is currently enabled for your account
+- contains a link for setting up and managing 2-step authentication on your profile
+- is not visible if the system administrator has disabled this feature for your organization 
+
+Click on the link in the box to 2-Step Authentication Settings Page. If not yet enabled , the page will walk you through adding 2-step authentication. If already enabled, the page will let you remove the authentication or update it. 
+
+![](img/UserProduct_Management_mfa-add-page.png)
+
+To add or update your one-time password you need to scan the QR code into a suitable 2-step authentication app. These are available across device types (desktops, smartphones, tablets). For example, apps like Google Authenticator and 1Password can readily scan the QR code. 
+
+Once scanned, enter in the six digit code in your authenticator app within its thirty second window onto the page and click "Submit." 
+
+### LDAP Information
 If your account authenticates using LDAP, this tab will show you information about the configured LDAP options for your account. This is for reference only.
 
-#### Login Provider
+### Login Provider
 If your account authenticates using an external provider (like Google or Okta), this tab will show you information about which provider you are using.
 
 ![Account Security tab when using a login provider](img/UserProduct_Management_oauth-myprofile-page.png)
@@ -407,6 +425,7 @@ If your account authenticates using an external provider (like Google or Okta), 
 Click the `Unlink Account` button to stop using the external provider. The popup will make you enter new security information. You will use this, along with your username, to login to SpiraPlan, once the unlinking process is complete
 
 ![Unlink from a login provider](img/UserProduct_Management_oauth-myprofile-unlink.png)
+
 
 ## Email Preferences
 
