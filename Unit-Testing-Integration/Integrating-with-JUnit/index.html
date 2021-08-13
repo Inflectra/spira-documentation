@@ -2016,13 +2016,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-executing-junit-5-tests-using-intellij-idea" class="md-nav__link">
-    c) Executing JUnit 5 Tests using IntelliJ IDEA
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
     Viewing the Test Results in SpiraTest
   </a>
@@ -3347,13 +3340,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-executing-junit-5-tests-using-intellij-idea" class="md-nav__link">
-    c) Executing JUnit 5 Tests using IntelliJ IDEA
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
     Viewing the Test Results in SpiraTest
   </a>
@@ -3644,6 +3630,7 @@ specific test case within SpiraTest. This is done by adding a
 <code>@SpiraTestCase</code> attribute to the test method together with the ID of the
 corresponding test case in SpiraTest. The Test Case ID can be found on
 the test cases list page (click the "Test Cases" tab).</p>
+<p><strong>-- The test methods must be marked as <code>public</code> or the test results will not appear in Spira --</strong></p>
 <p>For these attributes to be available in your test fixture, you also need
 to add a reference to the
 <code>com.inflectra.spiratest.addons.junitextension</code> package. This package is
@@ -3651,7 +3638,7 @@ bundled within the supplied JAR-file library for Windows, and can be
 compiled from the provided source .java files on other platforms.</p>
 <p>Now all you need to do is compile your code and then launch JUnit by
 executing the test fixture through the command line, or through your
-choice of IDE, e.g. Eclipse, IntelliJ). We shall show an example of each:</p>
+choice of IDE, e.g. Eclipse, IntelliJ). We shall show one example of each:</p>
 <h3 id="a-executing-junit-5-tests-using-command-line">a) Executing JUnit 5 Tests using Command Line<a class="headerlink" href="#a-executing-junit-5-tests-using-command-line" title="Permanent link">&para;</a></h3>
 <p>To execute JUnit 5 tests using the command line, you need to download the <code>junit-platform-console-standalone.jar</code> JUnit 5 package from Maven and use that to run the tests.</p>
 <p>For our sample test, you would use the following command to launch the JUnit tests:</p>
@@ -3668,8 +3655,6 @@ choice of IDE, e.g. Eclipse, IntelliJ). We shall show an example of each:</p>
 <p><img alt="" src="../img/JUnit5-Eclipse-2.png" /></p>
 <p>If for any reason you don't see the test results appear in SpiraTest, make sure you have the correct test IDs mapped. If you still don't see the results, check the <strong>Console</strong> tab inside Eclipse for any errors connecting to SpiraTest:</p>
 <p><img alt="" src="../img/JUnit5-Eclipse-3.png" /></p>
-<h3 id="c-executing-junit-5-tests-using-intellij-idea">c) Executing JUnit 5 Tests using IntelliJ IDEA<a class="headerlink" href="#c-executing-junit-5-tests-using-intellij-idea" title="Permanent link">&para;</a></h3>
-<p><em>[Coming Soon]</em></p>
 <h3 id="viewing-the-test-results-in-spiratest">Viewing the Test Results in SpiraTest<a class="headerlink" href="#viewing-the-test-results-in-spiratest" title="Permanent link">&para;</a></h3>
 <p>Once the test has run using one of the previous methods, you can view the test cases in SpiraTest, you
 should see a JUnit automated test run displayed in the list of executed

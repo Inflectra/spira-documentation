@@ -3436,6 +3436,7 @@
 <li>administrative permission status</li>
 <li>Department</li>
 <li>Organization</li>
+<li>2-step authentication status</li>
 <li>Which, if any, external login provider they are using (LDAP, or a login provider like Google or Okta)</li>
 <li>active status</li>
 </ul>
@@ -3464,18 +3465,34 @@
 <h3 id="edit-an-existing-user">Edit an existing user<a class="headerlink" href="#edit-an-existing-user" title="Permanent link">&para;</a></h3>
 <p>In a similar way, to edit the details of an existing user, click the "Edit" hyperlink in the user list box, and you will be taken to the following screen that allows you modify the user details:</p>
 <p><img alt="" src="../img/System_Users_46.png" /></p>
-<p>On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access), system administration status, report administrator status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).</p>
+<p>On this screen you can edit key information and security about the user:</p>
+<ul>
+<li>first name</li>
+<li>middle initial</li>
+<li>last name</li>
+<li>username</li>
+<li>email address</li>
+<li>portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access)</li>
+<li>system administration status</li>
+<li>report administrator status</li>
+<li>active status</li>
+<li>password (if the user is managed by SpiraPlan)</li>
+<li>secret question and answer (if the user is managed by SpiraPlan)</li>
+<li>LDAP connection (if managed by LDAP - see below)</li>
+<li>2-step authentication (if active for a user, admins can click the "Deactivate" button to deactivate this feature for the specific user)</li>
+</ul>
 <p>If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on <a href="#importing-ldap-users">Importing LDAP Users</a> and <a href="../System/#ldap-configuration">LDAP Configuration</a> for more details.</p>
 <p>If a user's account uses an external provider for authentication (like LDAP or Okta) you can unlink the user from that authentication provider on this page. Click the <code>Unlink Account</code> button to display a popup that requires you to add the new security information for that user.</p>
 <p><img alt="unlink a user from an external provider" src="../img/System_Users_oauth-admin-unlink.png" /></p>
 <p>Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.</p>
 <p>At the top of the page you can also see information relating to the activity of the user on the system, such as when they last logged in.</p>
-<p>In addition, there are three tabs that allow you to add/remove the user from products, update the data-mapping used when synchronizing artifacts that are assigned or created by the current user, and, where relevant, specify whether the user can access the linked TaraVault™ source code management service.</p>
+<p>In addition, there are three tabs that allow you to:
+- add/remove the user from products
+- update the data-mapping used when synchronizing artifacts that are assigned or created by the current user
+- where relevant, specify whether the user can access the linked TaraVault™ source code management service</p>
 <p>If you click on the "Product Membership" tab you will be shown a list of products that the user is currently a member of:</p>
 <p><img alt="" src="../img/System_Users_47.png" /></p>
-<p>You can change the role that the user has on the various products, by choosing the appropriate role from the drop-down list and then clicking
-[Save]. To remove the user from a product, select its checkbox and then click [Delete]. To add a user to a new product, click on the
-[Add] button and then choose the product and associated role from the list of products on the screen that is displayed:</p>
+<p>You can change the role that the user has on the various products, by choosing the appropriate role from the drop-down list and then clicking [Save]. To remove the user from a product, select its checkbox and then click [Delete]. To add a user to a new product, click on the [Add] button and then choose the product and associated role from the list of products on the screen that is displayed:</p>
 <p><img alt="" src="../img/System_Users_48.png" /></p>
 <p>Then click [Add] to add the selected product(s) to the user's product membership.</p>
 <p>To view/change the list of usernames that a user has in an external bug-tracking system, click on the "Data Mapping" tab. This section is used by the SpiraPlan data-synchronization service to map incidents from SpiraPlan to other bug-tracking systems</p>

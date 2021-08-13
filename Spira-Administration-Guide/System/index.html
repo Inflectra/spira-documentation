@@ -3425,45 +3425,45 @@ need to reinstall SpiraPlan®. All you need to do is change the
 <p>As described previously, you can configure SpiraPlan® to use an external LDAP server for importing new user profiles into the system, and for authenticating users -- instead of having to store separate passwords inside SpiraPlan®. However, you need to first configure the LDAP server settings. To do this, click on the "LDAP Configuration" link the Administration navigation:</p>
 <p><img alt="" src="../img/System_62.png" /></p>
 <p>You need to fill out the various configuration settings for your LDAP server, each of which is explained in more detail below:</p>
-<p>**LDAP Host
-**This should contain the name of the LDAP server that you want SpiraPlan to connect to together with the port number if it's not the default of 389.</p>
-<p>**Use Secure Sockets Layer (SSL)
-**You should select this check-box if your LDAP server requires use of the LDAPS secure protocol. Leave unchecked for unencrypted LDAP communication.</p>
-<p>**Base DN
-**This should be the distinguished name of the object inside your LDAP server that contains the list of user accounts. This varies by the type of LDAP server, please consult your LDAP server documentation for more details.</p>
-<p>**Bind DN
-**This should be the distinguished name of the user inside your LDAP server that will be used to authenticate against when importing users. If not provided, SpiraPlan® will try and authenticate with the LDAP server anonymously.</p>
-<p>**Bind Password
-**The is the password of the user specified in the Bind DN field above.</p>
-<p>**Login Attribute
-**When SpiraPlan® imports users from the LDAP server it needs to know the user attribute inside the LDAP server that it should use to generate the SpiraPlan® user-name. For most LDAP servers the appropriate attribute would be "uid". However for Windows ActiveDirectory, the attribute "sAMAccountName" should be used instead.</p>
-<p>**First Name Attribute
-**Providing this optional attribute will allow SpiraPlan® to automatically populate the first name field of the imported user instead of simply using the username as a placeholder.</p>
-<p>**Last Name Attribute
-**Providing this optional attribute will allow SpiraPlan® to automatically populate the last name field of the imported user instead of simply using the username as a placeholder.</p>
-<p>**Middle Initial Attribute
-**Providing this optional attribute will allow SpiraPlan® to automatically populate the middle initial field of the imported user instead of simply leaving it blank.</p>
-<p>**Email Address Attribute
-**Providing this optional attribute will allow SpiraPlan® to automatically populate the email address field of the imported user instead of simply using the <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#115;&#112;&#105;&#114;&#97;&#116;&#101;&#115;&#116;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#115;&#112;&#105;&#114;&#97;&#116;&#101;&#115;&#116;&#46;&#99;&#111;&#109;</a> as a placeholder.</p>
-<p>**Sample User
-**You can optionally enter a sample user and password to test that the user is correctly authenticated against the server. You can update the LDAP configuration without setting this, but if you do provide a sample user/password, it will not save the configuration unless the authentication succeeds. If you choose to enter it, the user's name should be the fully-distinguished name of the user (e.g. CN=Sample User, CN=Users, OU=Headquarters, DC=MyCompany, DC=Com).</p>
+<ul>
+<li><strong>LDAP Host</strong>: This should contain the name of the LDAP server that you want SpiraPlan to connect to together with the port number if it's not the default of 389.</li>
+<li><strong>Use Secure Sockets Layer (SSL)</strong>: You should select this check-box if your LDAP server requires use of the LDAPS secure protocol. Leave unchecked for unencrypted LDAP communication.</li>
+<li><strong>Base DN</strong>: This should be the distinguished name of the object inside your LDAP server that contains the list of user accounts. This varies by the type of LDAP server, please consult your LDAP server documentation for more details.</li>
+<li><strong>Bind DN</strong>: This should be the distinguished name of the user inside your LDAP server that will be used to authenticate against when importing users. If not provided, SpiraPlan® will try and authenticate with the LDAP server anonymously.</li>
+<li><strong>Bind Password</strong>: The is the password of the user specified in the Bind DN field above.</li>
+<li><strong>Login Attribute</strong>: When SpiraPlan® imports users from the LDAP server it needs to know the user attribute inside the LDAP server that it should use to generate the SpiraPlan® user-name. For most LDAP servers the appropriate attribute would be "uid". However for Windows ActiveDirectory, the attribute "sAMAccountName" should be used instead.</li>
+<li><strong>First Name Attribute</strong>: Providing this optional attribute will allow SpiraPlan® to automatically populate the first name field of the imported user instead of simply using the username as a placeholder.</li>
+<li><strong>Last Name Attribute</strong>: Providing this optional attribute will allow SpiraPlan® to automatically populate the last name field of the imported user instead of simply using the username as a placeholder.</li>
+<li><strong>Middle Initial Attribute</strong>: Providing this optional attribute will allow SpiraPlan® to automatically populate the middle initial field of the imported user instead of simply leaving it blank.</li>
+<li><strong>Email Address Attribute</strong>: Providing this optional attribute will allow SpiraPlan® to automatically populate the email address field of the imported user instead of simply using the <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#115;&#112;&#105;&#114;&#97;&#116;&#101;&#115;&#116;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#64;&#115;&#112;&#105;&#114;&#97;&#116;&#101;&#115;&#116;&#46;&#99;&#111;&#109;</a> as a placeholder.</li>
+<li><strong>Sample User</strong>: You can optionally enter a sample user and password to test that the user is correctly authenticated against the server. You can update the LDAP configuration without setting this, but if you do provide a sample user/password, it will not save the configuration unless the authentication succeeds. If you choose to enter it, the user's name should be the fully-distinguished name of the user (e.g. CN=Sample User, CN=Users, OU=Headquarters, DC=MyCompany, DC=Com).</li>
+</ul>
 <h2 id="security-settings">Security Settings<a class="headerlink" href="#security-settings" title="Permanent link">&para;</a></h2>
 <p>The "Security Settings" administration page lets you specify the various security settings within SpiraPlan to match your organization's policies and processes:</p>
 <p><img alt="" src="../img/System_63.png" /></p>
 <p><img alt="" src="../img/System_64.png" /></p>
 <p>The following settings can be changed within the system, once you are satisfied, click the "Save" button to commit the changes:</p>
-<p><strong>Allow User Registration</strong> -- Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.</p>
-<p><strong>Maximum # Invalid Password Attempts</strong> -- Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
+<p><strong>Allow User Registration</strong>: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.</p>
+<p><strong>Maximum # Invalid Password Attempts</strong>: Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
 password hacking attempts.</p>
-<p><strong>Minimum Required Password Length</strong> -- Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.</p>
+<p><strong>Minimum Required Password Length</strong>: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.</p>
 <p><strong>Minimum Required Special Characters</strong> - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.</p>
-<p><strong>Password Attempt Time Window</strong> -- Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).</p>
-<p><strong>Password Change Interval --</strong> If set to a value, it will require all password to be changed after the specified number of days.</p>
-<p><strong>Require Password Change on First Login --</strong> Enabling this requires all new users to change their password on first login.</p>
-<p><strong>Disallow Names in Passwords --</strong> If enabled, passwords cannot contain the user's real name and/or username.</p>
-<p><strong>Authentication Expiration</strong> -- This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.</p>
-<p><strong>Keep Me Logged-In Expiration</strong> - This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.</p>
-<p><strong>Allowed Domains -</strong> This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. <a href="https://www.domain1.com">https://www.domain1.com</a>, <a href="http://www.domain2.com">http://www.domain2.com</a>) or an asterisk (*) to denote all domains are allowed (not recommended).</p>
+<p><strong>Password Attempt Time Window</strong>: Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).</p>
+<p><strong>Password Change Interval</strong>: If set to a value, it will require all password to be changed after the specified number of days.</p>
+<p><strong>Require Password Change on First Login</strong>: Enabling this requires all new users to change their password on first login.</p>
+<p><strong>Disallow Names in Passwords</strong>: If enabled, passwords cannot contain the user's real name and/or username.</p>
+<p id="enable-2-step-authentication"><strong>Enable 2-Step Authentication</strong>: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their <a href="../../Spira-User-Manual/User-Product-Management/#2-step-authentication">User Profile</a>. Administrators can remove a one-time password for a user from <a href="../System-Users/#edit-an-existing-user">Edit User</a> page. </p>
+<div class="admonition hint">
+<p class="admonition-title">2-Step Authentication tips</p>
+<ul>
+<li>Once enabled, users with a one-time password must enter it on each login to access the system.</li>
+<li>If the global security setting is ever disabled, user with a one-time password will immediately not need to provide that password to login.</li>
+<li>If installing on-premise, the web server must have the correct time. Any minor deviation from the correct time will mean users' one-time passwords will not be in sync with the server and they will not be able to login. </li>
+</ul>
+</div>
+<p><strong>Authentication Expiration</strong>: This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.</p>
+<p><strong>Keep Me Logged-In Expiration</strong>: This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.</p>
+<p><strong>Allowed Domains</strong>: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. <a href="https://www.domain1.com">https://www.domain1.com</a>, <a href="http://www.domain2.com">http://www.domain2.com</a>) or an asterisk (*) to denote all domains are allowed (not recommended).</p>
 <h2 id="taravault">TaraVault®<a class="headerlink" href="#taravault" title="Permanent link">&para;</a></h2>
 <p><em>This section refers to the functionality available to hosted/cloud customers of SpiraPlan. If you are using the on-premise version of SpiraPlan, please refer to <a href="../System-Integration/#version-control-integration-on-premise-customers-only">Version Control Integration</a> instead.</em></p>
 <p>TaraVault® is the hosted source code repository and software configuration management (SCM) system provided by Inflectra. When you signed-up or purchased a subscription to either SpiraPlan or SpiraTeam, it will have come with an entry-level subscription to TaraVault.</p>

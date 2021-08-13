@@ -3162,6 +3162,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-611-august-2021" class="md-nav__link">
+    Version 6.11 (August 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-61001-june-2021" class="md-nav__link">
     Version 6.10.0.1 (June 2021)
   </a>
@@ -3435,6 +3442,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-611-august-2021" class="md-nav__link">
+    Version 6.11 (August 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-61001-june-2021" class="md-nav__link">
     Version 6.10.0.1 (June 2021)
   </a>
@@ -3623,6 +3637,40 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-611-august-2021">Version 6.11 (August 2021)<a class="headerlink" href="#version-611-august-2021" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p><strong>Multi-Factor Authentication</strong> (MFA) support for all users to improve security. Users can <a href="../../Spira-User-Manual/User-Product-Management/#2-step-authentication">add a one-time password</a> to Spira from within the application. Admins can <a href="../../Spira-Administration-Guide/System/#enable-2-step-authentication">enable/disable</a>, <a href="../../Spira-Administration-Guide/System-Users/#view-edit-users">monitor</a>, and <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">manage</a> one-time passwords.</p>
+<p><strong>Create and edit a <a href="../../Spira-User-Manual/Document-Management/#add-new-inline-documents">wide array of diagrams</a></strong> live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.</p>
+<p><a href="../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing">Edit requirements inline</a> on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]</p>
+<p><strong><a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29">Excel365</a></strong> addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.</p>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li>Users can add Multi-Factor Authentication (MFA) with a one-time password to improve login security [RQ:3522]</li>
+<li>Can create and edit diagrams as inline documents directly in the app (supports diagrams, mindmaps, and organization charts) [RQ:3507]</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>Fix TaraVault breaking on activation if Pull Requests have been added using the sample source code provider [IN:6535]</li>
+<li>Fix planning boards not letting you add a new item if you have create permissions but not bulk edit (introduced in 6.10.0.0) [IN:6536]</li>
+<li>Fix planning board and incident board detected release field on the incident popup not showing all releases (only active ones) [IN:6577]</li>
+<li>Fix planning boards and incident details page detected release field when the product is set to show active releases only in that field, so it correctly shows current release and only options for active releases [IN:6616]</li>
+<li>Improve performance when cloning test cases with massive linked test step hierarchies [IN:6576]</li>
+<li>Ensure that LDAP is disabled system wide if the LDAP server name is blank [IN:6583]</li>
+<li>
+<p>Fix the owner field not being set when owner data is sent on first creating a release (e.g. when cloning a release, or creating a release via the API) [IN:6619]</p>
+</li>
+<li>
+<p><strong>API</strong></p>
+<ul>
+<li>Add API calls to create, update, and delete Test Set Test Case parameters [IN:6471]</li>
+<li>Add API calls to create, update, and delete Test Step Parameters [IN:6495]</li>
+<li>Fix the v6 SOAP API not always falling back to accept a user's API Token as proper authentication [IN:6560]</li>
+<li>Fix the API so the test set folder ID is not ignored during test set updates (PUTs) [IN:6578]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-61001-june-2021">Version 6.10.0.1 (June 2021)<a class="headerlink" href="#version-61001-june-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Hotfix</p>

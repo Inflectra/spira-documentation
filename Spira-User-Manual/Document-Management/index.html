@@ -494,6 +494,19 @@
     Edit
   </a>
   
+    <nav class="md-nav" aria-label="Edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-diagrams" class="md-nav__link">
+    Editing Diagrams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3509,6 +3522,19 @@
     Edit
   </a>
   
+    <nav class="md-nav" aria-label="Edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-diagrams" class="md-nav__link">
+    Editing Diagrams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3623,6 +3649,9 @@
 <li><strong>Markdown</strong>: for creating a new markdown file</li>
 <li><strong>Rich Text</strong>: for creating a new rich text document file</li>
 <li><strong>Feature</strong>: for creating a new feature / BDD file</li>
+<li><strong>Diagram</strong>: for creating a new drag and drop diagram file</li>
+<li><strong>Mindmap</strong>: for creating a new drag and drop mindmap file</li>
+<li><strong>Orgchart</strong>: for creating a new drag and drop organization chart</li>
 </ul>
 <p><img alt="" src="../img/Document_Management_114c.png" /></p>
 <h3 id="view-document-information">View Document Information<a class="headerlink" href="#view-document-information" title="Permanent link">&para;</a></h3>
@@ -3661,16 +3690,67 @@
 <h3 id="preview">View<a class="headerlink" href="#preview" title="Permanent link">&para;</a></h3>
 <!-- id above set manually to preserve original link -->
 
-<p>This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, and images).</p>
+<p>This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, diagram files (including mindmaps and org charts), and images).</p>
 <p><img alt="" src="../img/Document_Management_327.png" /></p>
 <p>If a format cannot be previewed (for example a PDF or Microsoft Word document), the following message is displayed:</p>
 <p><img alt="" src="../img/Document_Management_328.png" /></p>
+<p>When viewing diagrams, mindmaps, or orgcharts there are two buttons above the diagram that you let you directly download a PNG or PDF formatted version of the diagram (you can download the diagram from the <a href="#document-versions">Versions</a> tab but this downloads the raw data, not a formatted diagram).</p>
 <h3 id="edit">Edit<a class="headerlink" href="#edit" title="Permanent link">&para;</a></h3>
-<p>When you <a href="#add-new-inline-documents">create a new inline document</a> the document opens on this tab, showing you the blank document. Enter the text (and format it as needed if working on a rich text document). Click <code>Save</code> to save the document and automatically create a new version (this version becomes the new active version). You can change the document from the Edit tab at any time (if allowed by the workflow and permissions).</p>
+<p>When you <a href="#add-new-inline-documents">create a new inline document</a> the document opens to this tab, showing you the blank document. Make your changes by either:</p>
+<ul>
+<li>editing the text (for text documents)</li>
+<li>formatting the text (for rich text documents)</li>
+<li>creating and manipulating the diagram (for diagrams, mindmaps, or org charts) as described <a href="#editing-diagrams">below</a></li>
+</ul>
+<p>Click <code>Save</code> to save the document and automatically create a new version (this version becomes the new active version). You can change the document from the Edit tab at any time (if allowed by the workflow and permissions).</p>
 <p><img alt="" src="../img/Document_Management_editing.png" /></p>
 <p>You can only create inline documents from the list page for a few file formats, but there are many other file types that, once uploaded, can be edited inline. These include plain text file, including code files.</p>
 <p>The Edit tab will show the text, but it is not fully formatted. Go to the <a href="#preview">view</a> tab to see the formatted view with syntax highlighting applied.</p>
 <p><img alt="" src="../img/Document_Management_edit-view.png" /></p>
+<h4 id="editing-diagrams">Editing Diagrams<a class="headerlink" href="#editing-diagrams" title="Permanent link">&para;</a></h4>
+<p>SpiraPlan supports three types of diagrams:</p>
+<ul>
+<li><strong>Diagrams</strong>: the most versatile diagram type that let's you fully customize the diagram. You can add many different shapes, control whether or how each shape is linked to others with connectors, and fully control the layout</li>
+<li><strong>Mindmaps</strong>: mindmaps let you add pill-shaped nodes to a core idea, and easily branch off any node to add new ideas. Groups of nodes can be collapsed  (click the plus icon on a node with children) to help you concentrate on only some nodes at a time</li>
+<li><strong>Org Charts</strong>: this special type of chart is perfect for showing hierarchical relationships, adding boxes as children of parents. Org charts provide options of how to show sibling boxes (eg the direct reports to a manager) and the ability to collapse part of the hierarchy to make using the org chart easier (click the plus on a box with children). </li>
+</ul>
+<p><img alt="" src="../img/Document_Management_edit-diagram.png" /></p>
+<p>When editing any diagram, you will see a simple toolbar above the editing area. This toolbar lets:</p>
+<ul>
+<li>reset all changes performed since the last save</li>
+<li>undo changes</li>
+<li>redo changes</li>
+<li>change zoom level</li>
+<li>toggle the formatting palette on the right of the editor area and, for the "diagram" type, also hide the left hand shape picker</li>
+</ul>
+<p>The <strong>shape picker</strong> shows all available shapes available. To add a new shape, click on its shape in the shape picker, or drag it from the shape picker into the editor area.</p>
+<p>The <strong>editor area</strong> shows the diagram with all its nodes or shapes and connections. The diagram will be effectively identical to how it looks on the View tab. The main different being the dot grid background pattern in the editor area. The editor area lets you:</p>
+<ul>
+<li>expand or collapse children of a shape (mindmaps and org charts only)</li>
+<li>delete a shape by clicking on it to bring up a mini menu and then clicking the trash icon</li>
+<li>add a child shape (mindmaps and org charts only) by clicking on it to bring up a mini menu and then clicking the plus icon</li>
+<li>duplicate a shape (diagrams only) by clicking on it to bring up a mini menu and then clicking the duplicate icon</li>
+<li>adding connectors from a shape (diagrams only) by clicking on it to bring up a mini menu and then clicking the connector icon</li>
+<li>move a shape by dragging and dropping it anywhere in the editor area</li>
+<li>select a shape for more detailed customization using the formatting palette</li>
+</ul>
+<p>The <strong>formatting palette</strong> shows you all ways you can format a selected shape. The options available will vary based on which diagram type is being edited. In general you can edit a shape's:</p>
+<ul>
+<li>Position (x and y)</li>
+<li>Size (width and height)</li>
+<li>Rotation [not for org charts]</li>
+<li>Fill color</li>
+<li>Stroke color, thickness, and style [not for org charts]</li>
+<li>Text (i.e. what is written inside the shape)</li>
+<li>Text formatting (size, color, bold, italic, and alignment) [not for org charts]</li>
+</ul>
+<p>When editing a diagram type you can also select a specific connector and edit its:</p>
+<ul>
+<li>Stroke color, thickness, and style</li>
+<li>Termination style (arrow or straight)</li>
+<li>Path (straight or angled)</li>
+<li>Rounded corners (for angled path connectors)</li>
+</ul>
 <h3 id="overview-details">Properties<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <!-- id above set manually to preserve original link -->
 
@@ -3679,7 +3759,7 @@
 <p>This tab displays the list all the different versions that exist for the current document. When you first create a new document there will be only a single version (e.g. v1.0). As you change and update the document you do not need to create a whole new document. Instead, upload new versions or <a href="#edit">edit the document inline</a> (if possible). This will create new versions of the file - you can have as many versions as you need and should give each a unique version number to help track them.</p>
 <p>Each version in the list is displayed with its:</p>
 <ul>
-<li>filename (which is a link to open or download that specific version)</li>
+<li>filename (which is a link to open or download that specific version - note for diagrams this is the raw data and not the formatted diagram)</li>
 <li>any description added when uploading the file (useful for capturing what changed)</li>
 <li>version number</li>
 <li>file-size</li>

@@ -2719,8 +2719,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-spirateam" class="md-nav__link">
-    Configuring SpiraTeam
+  <a href="#configuring-spiraplan" class="md-nav__link">
+    Configuring SpiraPlan
   </a>
   
 </li>
@@ -2733,8 +2733,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-kronodesk-with-spirateam" class="md-nav__link">
-    Using KronoDesk with SpiraTeam
+  <a href="#using-kronodesk-with-spiraplan" class="md-nav__link">
+    Using KronoDesk with SpiraPlan
   </a>
   
 </li>
@@ -3283,8 +3283,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-spirateam" class="md-nav__link">
-    Configuring SpiraTeam
+  <a href="#configuring-spiraplan" class="md-nav__link">
+    Configuring SpiraPlan
   </a>
   
 </li>
@@ -3297,8 +3297,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-kronodesk-with-spirateam" class="md-nav__link">
-    Using KronoDesk with SpiraTeam
+  <a href="#using-kronodesk-with-spiraplan" class="md-nav__link">
+    Using KronoDesk with SpiraPlan
   </a>
   
 </li>
@@ -3317,94 +3317,51 @@
                 
                 
                 <h1 id="kronodesk">KronoDesk<a class="headerlink" href="#kronodesk" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to integrate KronoDesk<sup>®</sup> into SpiraTeam<sup>®</sup>.
-This will enable KronoDesk agents to log incidents emerging from a
-ticket directly from the KronoDesk interface into SpiraTeam. They will
-also be able to see and review any SpiraTeam incidents already linked to
-existing KronoDesk tickets.</p>
-<p>The integration is built-in to KronoDesk out of the box, with no add-ons
-necessary.</p>
-<h2 id="configuring-spirateam">Configuring SpiraTeam<a class="headerlink" href="#configuring-spirateam" title="Permanent link">&para;</a></h2>
-<p>In order for KronoDesk to successfully connect to SpiraTeam to create
-incidents, you need to first enable the security permissions for REST
-API access. To do this, please open up SpiraTeam and go to the
-Administration > System > Security Settings page:</p>
+<p>This section outlines how to integrate KronoDesk<sup>®</sup> into SpiraPlan<sup>®</sup>. This will enable KronoDesk agents to log incidents emerging from a ticket directly from the KronoDesk interface into SpiraPlan. They will also be able to see and review any SpiraPlan incidents already linked to existing KronoDesk tickets.</p>
+<p>The integration is built-in to KronoDesk out of the box, with no add-ons necessary.</p>
+<h2 id="configuring-spiraplan">Configuring SpiraPlan<a class="headerlink" href="#configuring-spiraplan" title="Permanent link">&para;</a></h2>
+<p>In order for KronoDesk to successfully connect to SpiraPlan to create incidents, you need to first enable the security permissions for REST API access. To do this, open up SpiraPlan and go to the Administration &gt; System &gt; Security Settings. Enter the URL domain of your KronoDesk into the "Allowed Domains" box. This tells SpiraPlan that REST API requests from this domain is authorized.</p>
 <p><img alt="" src="../img/KronoDesk_3.png" /></p>
-<p>You need to enter in the URL domain of your KronoDesk. This tells
-SpiraTeam that CORS REST API requests from this domain is authorized.
-For non-production environments, you can also just set the value to (*)
-to allow all requests:</p>
+<p>For non-production environments, you can set the value to "*" to allow all requests. We do not recommend this setting for production.</p>
 <p><img alt="" src="../img/KronoDesk_4.png" /></p>
-<p>We do not recommend this setting for production.</p>
-<p>Once you have done this, you also need to get the API Key for the user
-that will be connecting to SpiraTeam from KronoDesk. Go to the User
-Profile page (if it's your user) or the Administration > Edit Users
-page, if you want to connect as a different user:</p>
+<p>Each agent who wants to integrate KronoDesk with SpiraPlan needs to enter a SpiraPlan username and RSS Token into their user profile. In SpiraPlan, go to your User Profile page (if it's your user) or the Administration &gt; Edit Users page, if you want to connect as a different user:</p>
 <p><img alt="" src="../img/KronoDesk_5.png" /></p>
-<p>You need to make sure that <strong>Enable RSS Feeds</strong> is set to Active = Yes,
-and that there is an RSS Token. This is your REST API Key. Make sure you
-have the following:</p>
+<p>Make sure that <strong>Enable RSS Feeds</strong> is set to Active = Yes, and that there is an RSS Token. This is used as the REST API Key too. Make sure you have the following:</p>
 <ul>
-<li>
-<p>User Name</p>
-</li>
-<li>
-<p>RSS Token</p>
-</li>
+<li>User Name</li>
+<li>RSS Token</li>
 </ul>
 <p>This is what you will use to connect from KronoDesk.</p>
 <h2 id="configuring-kronodesk">Configuring KronoDesk<a class="headerlink" href="#configuring-kronodesk" title="Permanent link">&para;</a></h2>
-<p>Now, inside KronoDesk, please go to: Administration > Help Desk
-Settings > Spira Integration:</p>
+<p>Inside KronoDesk as an administrator, go to: Administration &gt; Help Desk Settings &gt; Spira Integration:</p>
 <p><img alt="" src="../img/KronoDesk_6.png" /></p>
-<p>Enter the following information for your SpiraTeam instance:</p>
+<p>Enter the following information for your SpiraPlan instance:</p>
 <ul>
-<li>
-<p>Spira URL</p>
-</li>
-<li>
-<p>Login</p>
-</li>
-<li>
-<p>API Key (RSS Token)</p>
-</li>
+<li>Spira URL</li>
+<li>Login [only required for testing the connection]</li>
+<li>API Key (RSS Token) [only required for testing the connection]</li>
 </ul>
-<p>Then when you click [Test], you should see the following:</p>
+<p>When you click "Test", you should see the following:</p>
 <p><img alt="" src="../img/KronoDesk_7.png" /></p>
-<p>If you see an authentication error, please check the login and RSS Token
-/ API Key and try again.</p>
-<p>Now you need to associate the support agent in KronoDesk with the
-specific SpiraTeam user. To do this, each user needs to go to their User
-Profile in KronoDesk:</p>
+<p>If you see an authentication error, please check the login and RSS Token / API Key and try again.</p>
+<p>Next, each user support agent in KronoDesk needs to connect their SpiraPlan user to their KronoDesk profile (using the information collected above). Each user needs to go to their User Profile in KronoDesk:</p>
 <p><img alt="" src="../img/KronoDesk_8.png" /></p>
 <p>They should enter the Spira login and RSS Token and click Test:</p>
 <p><img alt="" src="../img/KronoDesk_9.png" /></p>
-<p>Then click <strong>Save Changes</strong> to update your profile with this
-information.</p>
-<h2 id="using-kronodesk-with-spirateam">Using KronoDesk with SpiraTeam<a class="headerlink" href="#using-kronodesk-with-spirateam" title="Permanent link">&para;</a></h2>
-<p>Now when you view a ticket in KronoDesk, you should see the Incidents
-tab for that ticket:</p>
+<p>Then click <strong>Save Changes</strong> to update the profile with this information.</p>
+<h2 id="using-kronodesk-with-spiraplan">Using KronoDesk with SpiraPlan<a class="headerlink" href="#using-kronodesk-with-spiraplan" title="Permanent link">&para;</a></h2>
+<p>When you view a ticket in KronoDesk (and you have configured the connection to SpiraPlan), you will see a little toggle icon to show or hide incidents (the highlighted bug icon in the image below).</p>
 <p><img alt="" src="../img/KronoDesk_10.png" /></p>
-<p>This means that you are connected to SpiraTeam but that there are no
-incidents logged against this help desk ticket.</p>
-<p>If you click the <strong>+ Add New Incident</strong> button, you will see the
-following dialog appear:</p>
+<p>This means you are connected to SpiraPlan and can view any incidents logged against this help desk ticket. </p>
+<p>To log a new incident in SpiraPlan based on the current help desk ticket, click on downward facing arrow on the right hand side of the ticket header (the "more actions" button). To "Add New Incident" make sure a SpiraPlan project is selected from the dropdown list (if the name of the product for the ticket matches the name of any SpiraPlan project, that project will be automatically selected for you):</p>
 <p><img alt="" src="../img/KronoDesk_11.png" /></p>
-<p>You can now select the Project, then populate the Incident Name and the
-various required fields:</p>
+<p>This will display a dialog that lets you add a new incident to the linked instance of SpiraPlan. The system will prepopulate the description of the incident with the ticket description. You can edit this text or clear it completely and enter in custom content:</p>
 <p><img alt="" src="../img/KronoDesk_12.png" /></p>
-<p>Note that the Description field is prepopulated by the Ticket
-Description and associated Notes, this is normally sufficient for
-SpiraTeam, but you can edit it and tailor the incident description if
-you need.</p>
-<p>Once you click <strong>+Add</strong>, the new incident is logged in SpiraTeam and
-linked to the current ticket:</p>
+<p>Once you click <strong>Add</strong>, the new incident is logged in SpiraPlan and linked to the current ticket:</p>
 <p><img alt="" src="../img/KronoDesk_13.png" /></p>
-<p>If you click on the incident hyperlink, you will see that the incident
-is available in SpiraTeam:</p>
+<p>If you click on the incident hyperlink, you will see that the incident is available in SpiraPlan:</p>
 <p><img alt="" src="../img/KronoDesk_14.png" /></p>
-<p>In addition, in the Attachments tab is a hyperlink for the developers to
-see the original help desk ticket:</p>
+<p>In addition, in the Attachments tab of the Incident in Spiraplan, there is a hyperlink for the developers to see the original help desk ticket:</p>
 <p><img alt="" src="../img/KronoDesk_15.png" /></p>
                 
               
