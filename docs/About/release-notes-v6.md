@@ -7,7 +7,7 @@
 
     **Create and edit a [wide array of diagrams](../../Spira-User-Manual/Document-Management/#add-new-inline-documents)** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
 
-    [Edit requirements inline](../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing) on the requirements mind-map page in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
+    **[Edit requirements inline](../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing) on the requirements mind-map page** in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
 
     **[Excel365](../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29)** addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
 
