@@ -10,10 +10,9 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.11 (August 2021)
+## Version 6.12 (September 2021)
 - Improve the sample data available to users on first trying out SpiraPlan with more industry specific example products available
-- Adds the ability to create and edit diagrams, org charts, and mindmaps live from within the application
-- **Excel365 and Google Sheets**: addins will support more fields, risks and test sets, updating existing records, and (for advanced users) creating new comments and test coverage and traceability links
+- **Google Sheets**: addins will support more fields, risks and test sets, updating existing records, and (for advanced users) creating new comments and test coverage and traceability links
 
 ## Future Releases
 ### Planning
