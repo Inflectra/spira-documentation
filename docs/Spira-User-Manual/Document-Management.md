@@ -72,6 +72,10 @@ The `Add New` dropdown has options for creating several files that are not uploa
 - **Markdown**: for creating a new markdown file
 - **Rich Text**: for creating a new rich text document file
 - **Feature**: for creating a new feature / BDD file
+- **Diagram**: for creating a new drag and drop diagram file
+- **Mindmap**: for creating a new drag and drop mindmap file
+- **Orgchart**: for creating a new drag and drop organization chart
+
 
 ![](img/Document_Management_114c.png)
 
@@ -145,7 +149,7 @@ For documents, you can, depending on how the product administrator has set this 
 ### View {: #preview }
 <!-- id above set manually to preserve original link -->
 
-This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, and images).
+This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, diagram files (including mindmaps and org charts), and images).
 
 ![](img/Document_Management_327.png)
 
@@ -153,9 +157,18 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ![](img/Document_Management_328.png)
 
+When viewing diagrams, mindmaps, or orgcharts there are two buttons above the diagram that you let you directly download a PNG or PDF formatted version of the diagram (you can download the diagram from the [Versions](#document-versions) tab but this downloads the raw data, not a formatted diagram).
+
+
 ### Edit
 
-When you [create a new inline document](#add-new-inline-documents) the document opens on this tab, showing you the blank document. Enter the text (and format it as needed if working on a rich text document). Click `Save` to save the document and automatically create a new version (this version becomes the new active version). You can change the document from the Edit tab at any time (if allowed by the workflow and permissions).
+When you [create a new inline document](#add-new-inline-documents) the document opens to this tab, showing you the blank document. Make your changes by either:
+
+- editing the text (for text documents)
+- formatting the text (for rich text documents)
+- creating and manipulating the diagram (for diagrams, mindmaps, or org charts) as described [below](#editing-diagrams)
+
+Click `Save` to save the document and automatically create a new version (this version becomes the new active version). You can change the document from the Edit tab at any time (if allowed by the workflow and permissions).
 
 ![](img/Document_Management_editing.png)
 
@@ -164,6 +177,52 @@ You can only create inline documents from the list page for a few file formats, 
 The Edit tab will show the text, but it is not fully formatted. Go to the [view](#preview) tab to see the formatted view with syntax highlighting applied.
 
 ![](img/Document_Management_edit-view.png)
+
+#### Editing Diagrams
+SpiraPlan supports three types of diagrams:
+
+- **Diagrams**: the most versatile diagram type that let's you fully customize the diagram. You can add many different shapes, control whether or how each shape is linked to others with connectors, and fully control the layout
+- **Mindmaps**: mindmaps let you add pill-shaped nodes to a core idea, and easily branch off any node to add new ideas. Groups of nodes can be collapsed  (click the plus icon on a node with children) to help you concentrate on only some nodes at a time
+- **Org Charts**: this special type of chart is perfect for showing hierarchical relationships, adding boxes as children of parents. Org charts provide options of how to show sibling boxes (eg the direct reports to a manager) and the ability to collapse part of the hierarchy to make using the org chart easier (click the plus on a box with children). 
+
+![](img/Document_Management_edit-diagram.png)
+
+When editing any diagram, you will see a simple toolbar above the editing area. This toolbar lets:
+
+- reset all changes performed since the last save
+- undo changes
+- redo changes
+- change zoom level
+- toggle the formatting palette on the right of the editor area and, for the "diagram" type, also hide the left hand shape picker
+
+The **shape picker** shows all available shapes available. To add a new shape, click on its shape in the shape picker, or drag it from the shape picker into the editor area.
+
+The **editor area** shows the diagram with all its nodes or shapes and connections. The diagram will be effectively identical to how it looks on the View tab. The main different being the dot grid background pattern in the editor area. The editor area lets you:
+
+- expand or collapse children of a shape (mindmaps and org charts only)
+- delete a shape by clicking on it to bring up a mini menu and then clicking the trash icon
+- add a child shape (mindmaps and org charts only) by clicking on it to bring up a mini menu and then clicking the plus icon
+- duplicate a shape (diagrams only) by clicking on it to bring up a mini menu and then clicking the duplicate icon
+- adding connectors from a shape (diagrams only) by clicking on it to bring up a mini menu and then clicking the connector icon
+- move a shape by dragging and dropping it anywhere in the editor area
+- select a shape for more detailed customization using the formatting palette
+
+The **formatting palette** shows you all ways you can format a selected shape. The options available will vary based on which diagram type is being edited. In general you can edit a shape's:
+
+- Position (x and y)
+- Size (width and height)
+- Rotation [not for org charts]
+- Fill color
+- Stroke color, thickness, and style [not for org charts]
+- Text (i.e. what is written inside the shape)
+- Text formatting (size, color, bold, italic, and alignment) [not for org charts]
+
+When editing a diagram type you can also select a specific connector and edit its:
+
+- Stroke color, thickness, and style
+- Termination style (arrow or straight)
+- Path (straight or angled)
+- Rounded corners (for angled path connectors)
 
 
 ### Properties {: #overview-details }
@@ -177,7 +236,7 @@ This tab displays the list all the different versions that exist for the current
 
 Each version in the list is displayed with its:
 
-- filename (which is a link to open or download that specific version)
+- filename (which is a link to open or download that specific version - note for diagrams this is the raw data and not the formatted diagram)
 - any description added when uploading the file (useful for capturing what changed)
 - version number
 - file-size

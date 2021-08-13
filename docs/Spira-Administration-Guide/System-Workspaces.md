@@ -76,7 +76,7 @@ You need to:
 
 - enter a name for the product (which cannot be the same as any already in use);
 - select which program it belongs to and optionally enter a detailed description and/or web-site URL;
-- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings and customizations;
+- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, and customizations;
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
 - (SpiraTeam and SpiraPlan only) decided whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining).
 - you should initially make sure that the product is marked as "Active";

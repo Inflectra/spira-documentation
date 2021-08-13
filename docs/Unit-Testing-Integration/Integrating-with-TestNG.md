@@ -11,7 +11,7 @@ of SpiraTest you will need to upgrade to at least v3.0 before trying to
 use this listener. You will also need to have at least version 1.0 of
 TestNG running under JDK 1.5 or later, since earlier versions do not
 have support for annotations and custom listeners. If you are using an
-earlier version, please visit [www.testng.org](http://www.testng.org) to
+earlier version, please visit [testng.org](https://testng.org) to
 obtain the latest version.
 
 To obtain the latest version of the TestNG listener, you simply need to

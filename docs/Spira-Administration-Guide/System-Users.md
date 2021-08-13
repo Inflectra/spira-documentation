@@ -15,6 +15,7 @@ This screen displays the list of users in the system (by default it only shows a
 - administrative permission status
 - Department
 - Organization
+- 2-step authentication status
 - Which, if any, external login provider they are using (LDAP, or a login provider like Google or Okta)
 - active status
 
@@ -47,7 +48,21 @@ In a similar way, to edit the details of an existing user, click the "Edit" hype
 
 ![](img/System_Users_46.png)
 
-On this screen you can edit the first name, middle initial, last name, username, email address, portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access), system administration status, report administrator status, and active status. You can also change the user's password (if the user is managed by SpiraPlan).
+On this screen you can edit key information and security about the user:
+
+- first name
+- middle initial
+- last name
+- username
+- email address
+- portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access)
+- system administration status
+- report administrator status
+- active status
+- password (if the user is managed by SpiraPlan)
+- secret question and answer (if the user is managed by SpiraPlan)
+- LDAP connection (if managed by LDAP - see below)
+- 2-step authentication (if active for a user, admins can click the "Deactivate" button to deactivate this feature for the specific user)
 
 If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](../System/#ldap-configuration) for more details.
 
@@ -59,15 +74,16 @@ Once you have made the necessary changes, click the "Save" button to commit them
 
 At the top of the page you can also see information relating to the activity of the user on the system, such as when they last logged in.
 
-In addition, there are three tabs that allow you to add/remove the user from products, update the data-mapping used when synchronizing artifacts that are assigned or created by the current user, and, where relevant, specify whether the user can access the linked TaraVault™ source code management service.
+In addition, there are three tabs that allow you to:
+- add/remove the user from products
+- update the data-mapping used when synchronizing artifacts that are assigned or created by the current user
+- where relevant, specify whether the user can access the linked TaraVault™ source code management service
 
 If you click on the "Product Membership" tab you will be shown a list of products that the user is currently a member of:
 
 ![](img/System_Users_47.png)
 
-You can change the role that the user has on the various products, by choosing the appropriate role from the drop-down list and then clicking
-\[Save\]. To remove the user from a product, select its checkbox and then click \[Delete\]. To add a user to a new product, click on the
-\[Add\] button and then choose the product and associated role from the list of products on the screen that is displayed:
+You can change the role that the user has on the various products, by choosing the appropriate role from the drop-down list and then clicking \[Save\]. To remove the user from a product, select its checkbox and then click \[Delete\]. To add a user to a new product, click on the \[Add\] button and then choose the product and associated role from the list of products on the screen that is displayed:
 
 ![](img/System_Users_48.png)
 

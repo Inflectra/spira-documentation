@@ -1,7 +1,12 @@
 # Program Incidents
 The program incident list is only available in SpiraPlan. If you are using SpiraPlan, to access the program incident list, you must be a member of the program (i.e. a program owner or executive).
 
-The program incident list lets you see all of the incidents (bugs, enhancements, issues, risks, etc.) in the current program, displayed in an integrated table view. This view products program managers with the ability to see their incidents' progress, dates, priorities, and other important fields.
+The program incident list lets you see all of the incidents (bugs, enhancements, issues, risks, etc.) in the current program, displayed in an integrated table view showing incidents':
+
+- progress
+- dates
+- priorities
+- other important fields
 
 ![](img/Program_Management_455.png)
 

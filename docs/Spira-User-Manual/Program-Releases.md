@@ -7,7 +7,15 @@ The program release plan lets you see all of the products in the current program
 
 You can access this feature by clicking on the **Releases** menu entry in the program navigation.
 
-This view lets you see all the releases, sprints, and phases with their dates, test coverage, progress and estimated/projected estimates. You can expand and collapse the products and releases to display the appropriate level of detail as well as filter by the various fields in the grid.
+This view lets you see all the releases, sprints, and phases with the following information (each column can be shown or hidden as needed):
+
+- requirement completion 
+- test coverage
+- task progress 
+- dates
+- effort fields
+
+You can expand and collapse the products and releases to display the appropriate level of detail as well as filter by the various fields in the grid.
 
 ## Release Traceability and Coverage
 From the release list page you can see a number of columns that show calculated data for each release, based off:
