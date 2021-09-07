@@ -13,18 +13,8 @@ As with other dashboards, you can edit these widgets, their position, and what i
 ## System Information
 The system information widget displays an overview of your Spira instance, including license information and the number of currently-active users, as well as links to detailed information.
 
-### Delete Sample Data
-On fresh installations that include the sample data that ships with the application there is a button on this widget to delete this sample data. This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
-
-If you click the "Delete" button, a popup will show a warning. If you decide to proceed the system will attempt to delete all sample data, including users, products, artifact information, programs, and portfolios. This method will not delete:
-
-- the default program
-- the root administrator (with username "adminstrator" and an ID of "1")
-- any sample user, product, program, or portfolio whose name has been changed 
-- any sample user who has been used to create, comment or has been assigned any artifacts in non-sample data products
-
-!!! tip 
-    If you do not want users to see the sample data but do not want to permanently delete that data, there is a way. Make all sample portfolios (SpiraPlan only), programs, products, and users inactive. These inactive items will still be visible on the relevant administration pages, but noone will see them in the main application. 
+### Manage Sample Data {: #delete-sample-data }
+On fresh installations that include the sample data that ships with the application there is a button on this widget to direct you to the admin page to set and [manage sample data](../System-Workspaces/#manage-sample-data). This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
 
 ## Event Log
 This widget shows the latest events from the system event log. By default, 5 events are shown, but this number can be changed. To view the complete event log, click View All.
