@@ -121,8 +121,7 @@ organization specific information into the report.
 
 -   **Customize the Data/Layout** -- if you want to customize how the
 data is displayed and formatted, you will need to edit the XSLT
-Template. You can learn more about XSLT at the W3Schools website
-(<http://www.w3schools.com/xsl>). However, the recommended approach
+Template. You can learn more about XSLT at [W3Schools](https://www.w3schools.com/xml/xsl_intro.asp). However, the recommended approach
 is to first run the "Raw XML" format report from the main SpiraPlan
 reports center. An example XML report is partially shown below:
 
