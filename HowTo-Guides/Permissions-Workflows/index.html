@@ -880,6 +880,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-does-a-workflow-do-and-control" class="md-nav__link">
+    What does a workflow do and control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-make-a-field-required-or-hidden-or-disabled" class="md-nav__link">
     How to make a field required or hidden or disabled
   </a>
@@ -909,6 +916,20 @@
         <li class="md-nav__item">
   <a href="#why-does-a-user-not-see-the-right-transitions" class="md-nav__link">
     Why does a user not see the right transitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-workflow-controls-a-specific-artifact" class="md-nav__link">
+    What workflow controls a specific artifact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-change-which-workflow-step-is-the-default" class="md-nav__link">
+    Can I change which workflow step is the default
   </a>
   
 </li>
@@ -3294,6 +3315,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-does-a-workflow-do-and-control" class="md-nav__link">
+    What does a workflow do and control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-make-a-field-required-or-hidden-or-disabled" class="md-nav__link">
     How to make a field required or hidden or disabled
   </a>
@@ -3327,6 +3355,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-workflow-controls-a-specific-artifact" class="md-nav__link">
+    What workflow controls a specific artifact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-change-which-workflow-step-is-the-default" class="md-nav__link">
+    Can I change which workflow step is the default
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3341,6 +3383,23 @@
                 
                 
                 <h1 id="permissions-and-workflows">Permissions and Workflows<a class="headerlink" href="#permissions-and-workflows" title="Permanent link">&para;</a></h1>
+<h2 class="section-break" id="what-does-a-workflow-do-and-control">What does a workflow do and control<a class="headerlink" href="#what-does-a-workflow-do-and-control" title="Permanent link">&para;</a></h2>
+<p>Workflows are a way to control a number of things about your artifacts. A workflow is based on a series of steps (statuses) that you move the artifact through. </p>
+<p>At each step you can control:</p>
+<ul>
+<li>what fields are hidden</li>
+<li>what fields are visible</li>
+<li>what fields are disable (cannot be edited)</li>
+<li>what fields cannot be empty (you will not be able to save the artifact until these fields are filled in)</li>
+<li>which steps you can move to next - this is called a transtion</li>
+</ul>
+<p>Transition are how you move from one step (status) to another. At each workflow step you can make as many transitions as you want. Each transition will move the workflow to a new step. For each transition you can control:</p>
+<ul>
+<li>which product roles can carry out the transition</li>
+<li>if the author of the artifact can carry out the transition</li>
+<li>if the current owner of the artifact can carry out the transition</li>
+<li>if a digital signature is required to carry out the transition</li>
+</ul>
 <h2 class="section-break" id="how-to-make-a-field-required-or-hidden-or-disabled">How to make a field required or hidden or disabled<a class="headerlink" href="#how-to-make-a-field-required-or-hidden-or-disabled" title="Permanent link">&para;</a></h2>
 <p>There are two ways that a field can be required. The best way to control this is through the workflow. This controls what fields are required, not required, disabled/read only, or hidden.</p>
 <h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
@@ -3391,6 +3450,28 @@
 </ul>
 </li>
 </ol>
+<h2 class="section-break" id="what-workflow-controls-a-specific-artifact">What workflow controls a specific artifact<a class="headerlink" href="#what-workflow-controls-a-specific-artifact" title="Permanent link">&para;</a></h2>
+<p><strong>Note</strong>: the following does NOT apply to releases.</p>
+<p>When you are looking at a specific artifact on its full details page, the fields you see or not and which transitions are available are determined by the workflow. However, you can have more than one actie workflow for each artifact. How can this be? </p>
+<p>Because you can match a workflow to a specific type. This means that one type (say incidents of type bug) will use one workflow, but a different type (say incidents of type enhancement) will use a second workflow.</p>
+<p>If you do not know why you are seeing what you are seeing for a workflow, it could be because a different workflow is actually controlling the artifact. You can check this by:</p>
+<ol>
+<li>Go to the specific details page and make a note of the type and status assigned to that specific item</li>
+<li>Go to the artifact's Type page from the Product Template administration menu (you must be a template admin to do this)</li>
+<li>Check to see which workflow is linked to the type assigned to the specific item (in #1 above)</li>
+<li>Go to the artifact's Workflows page from the Product Template administration menu</li>
+<li>Click on the workflow noted in #3 above</li>
+<li>Click on the step (status) that matches the status assigned to the specific item (in #1 above)</li>
+</ol>
+<h2 class="section-break" id="can-i-change-which-workflow-step-is-the-default">Can I change which workflow step is the default<a class="headerlink" href="#can-i-change-which-workflow-step-is-the-default" title="Permanent link">&para;</a></h2>
+<p>You can change the default workflow step for artifacts that let you edit their statuses.</p>
+<p>On the relevant product template administration status page for an artifact (if present) one of the options is to pick a single default status. Changing the status will change the default status for every workflow of that artifact for that product template.</p>
+<p>Artifacts that support editing of statuses, and picking a default workflow step are:</p>
+<ul>
+<li>Documents</li>
+<li>Incidents</li>
+<li>Risks</li>
+</ul>
                 
               
               
