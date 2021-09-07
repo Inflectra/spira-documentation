@@ -158,6 +158,7 @@ Item 1
 **Changing the hierarchy by updating**: you cannot change where a release is in the hierarchy when updating. Do not attempt to change any release's relative row or indentation - it will be ignored by the add-in.
 
 ### Test Cases and Test Steps
+
 !!! danger "Don't get confused between test cases and test steps"
     Test steps are an integral part of test cases so we let you view and add test cases and their steps together in the same table. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps.
 
