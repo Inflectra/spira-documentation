@@ -1,5 +1,24 @@
 # Permissions and Workflows
 
+## What does a workflow do and control {: .section-break}
+Workflows are a way to control a number of things about your artifacts. A workflow is based on a series of steps (statuses) that you move the artifact through. 
+
+At each step you can control:
+
+- what fields are hidden
+- what fields are visible
+- what fields are disable (cannot be edited)
+- what fields cannot be empty (you will not be able to save the artifact until these fields are filled in)
+- which steps you can move to next - this is called a transtion
+
+Transition are how you move from one step (status) to another. At each workflow step you can make as many transitions as you want. Each transition will move the workflow to a new step. For each transition you can control:
+
+- which product roles can carry out the transition
+- if the author of the artifact can carry out the transition
+- if the current owner of the artifact can carry out the transition
+- if a digital signature is required to carry out the transition
+
+
 ## How to make a field required or hidden or disabled {: .section-break}
 There are two ways that a field can be required. The best way to control this is through the workflow. This controls what fields are required, not required, disabled/read only, or hidden.
 
@@ -48,3 +67,33 @@ To troubleshoot the issue you need to be a template administrator. The summary s
     - Click on the transition button on the workflow page
     - Can the right users see/execute the transition? 
     - Make sure to enable the necessary product roles and hit `Save` to commit any changes
+
+
+## What workflow controls a specific artifact {: .section-break}
+
+**Note**: the following does NOT apply to releases.
+
+When you are looking at a specific artifact on its full details page, the fields you see or not and which transitions are available are determined by the workflow. However, you can have more than one actie workflow for each artifact. How can this be? 
+
+Because you can match a workflow to a specific type. This means that one type (say incidents of type bug) will use one workflow, but a different type (say incidents of type enhancement) will use a second workflow.
+
+If you do not know why you are seeing what you are seeing for a workflow, it could be because a different workflow is actually controlling the artifact. You can check this by:
+
+1. Go to the specific details page and make a note of the type and status assigned to that specific item
+2. Go to the artifact's Type page from the Product Template administration menu (you must be a template admin to do this)
+3. Check to see which workflow is linked to the type assigned to the specific item (in #1 above)
+4. Go to the artifact's Workflows page from the Product Template administration menu
+5. Click on the workflow noted in #3 above
+6. Click on the step (status) that matches the status assigned to the specific item (in #1 above)
+
+
+## Can I change which workflow step is the default {: .section-break}
+You can change the default workflow step for artifacts that let you edit their statuses.
+
+On the relevant product template administration status page for an artifact (if present) one of the options is to pick a single default status. Changing the status will change the default status for every workflow of that artifact for that product template.
+
+Artifacts that support editing of statuses, and picking a default workflow step are:
+
+- Documents
+- Incidents
+- Risks

@@ -157,6 +157,7 @@ Item 1
 
 **Changing the hierarchy by updating**: you cannot change where a release is in the hierarchy when updating. Do not attempt to change any release's relative row or indentation - it will be ignored by the add-in.
 
+
 ### Test Cases and Test Steps
 
 !!! danger "Don't get confused between test cases and test steps"
