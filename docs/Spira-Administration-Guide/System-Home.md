@@ -13,7 +13,9 @@ As with other dashboards, you can edit these widgets, their position, and what i
 ## System Information
 The system information widget displays an overview of your Spira instance, including license information and the number of currently-active users, as well as links to detailed information.
 
-### Manage Sample Data {: #delete-sample-data }
+### Manage Sample Data
+<span id="delete-sample-data"></span>
+
 On fresh installations that include the sample data that ships with the application there is a button on this widget to direct you to the admin page to set and [manage sample data](../System-Workspaces/#manage-sample-data). This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
 
 ## Event Log

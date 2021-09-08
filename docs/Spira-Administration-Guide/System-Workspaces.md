@@ -251,9 +251,11 @@ SpiraPlan ships with four different templates. Together these will cover most of
 
 
 ## Manage Sample Data
+![manage sample data admin page](img/System_ManageSampleData.png)
+
 The application includes different types of sample data, some about specific industries, to help you understand how the application works. For example, how products fit inside a program, or how different artifacts work together. There are six sample data sets available in the application. A system administrator can change which of these are available at any one time. The admin can make all available, none available, or anywhere in between.
 
-When you load this page the sample data sets currently active will have the checkbox next to them checked. To change which sample data sets are active, check the relevant checkboxes and click save.
+When you load this page the sample data sets currently active will have the checkbox next to them checked. By default the "Basic Samples" are the only ones enabled. To change which sample data sets are active, check the relevant checkboxes and click save.
 
 Please note that for users to be able to see these samples they can either login with a user who is already a member of the data or they can be added as a member by a system admin. The users with username "adminstrator" and "fredbloggs" have access to all of the sample data by default.
 
