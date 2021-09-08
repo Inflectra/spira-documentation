@@ -81,7 +81,7 @@ As described above there are 4 different types of administrator. There are also 
 
 - **We start with a user**: without a user, your colleague can not even log in to the application
 - **Then add a user to a product**: a brand new user cannot do anything or see anything in the application. The most common way of granting a user access to the system is to add them as a member to specific products
-- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. Each user has to be actively given a particular role for each product. In other words you cannot make a user a "Tester" for all products at once. Multiple users can be assigned the same product role.
+- **Give the user the correct role for a product**: when you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. Each user has to be actively given a particular role for each product. In other words, you cannot make a user a member of a product without giving them a specific role. Likewise, you cannot make a user a "Tester" for any products they are or will be a member of. Multiple users can be assigned the same product role.
 
 Product roles have two special flags. Changing these flags immediately affect anyone with that particular role:
 
