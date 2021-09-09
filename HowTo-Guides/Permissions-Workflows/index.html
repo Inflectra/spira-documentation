@@ -880,8 +880,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-do-spiras-permissions-and-workflows-work" class="md-nav__link">
+    How do Spira's permissions and workflows work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-does-a-workflow-do-and-control" class="md-nav__link">
     What does a workflow do and control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-a-product-role-do-and-control" class="md-nav__link">
+    What does a product role do and control
+  </a>
+  
+    <nav class="md-nav" aria-label="What does a product role do and control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-uses-for-product-roles" class="md-nav__link">
+    Other uses for product roles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-a-field-disabled-or-hidden-or-required" class="md-nav__link">
+    Why is a field disabled or hidden or required
   </a>
   
 </li>
@@ -910,6 +951,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-cant-i-change-the-status-of-an-artifact" class="md-nav__link">
+    Why can't I change the status of an artifact
+  </a>
   
 </li>
       
@@ -3315,8 +3363,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-do-spiras-permissions-and-workflows-work" class="md-nav__link">
+    How do Spira's permissions and workflows work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-does-a-workflow-do-and-control" class="md-nav__link">
     What does a workflow do and control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-a-product-role-do-and-control" class="md-nav__link">
+    What does a product role do and control
+  </a>
+  
+    <nav class="md-nav" aria-label="What does a product role do and control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-uses-for-product-roles" class="md-nav__link">
+    Other uses for product roles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-a-field-disabled-or-hidden-or-required" class="md-nav__link">
+    Why is a field disabled or hidden or required
   </a>
   
 </li>
@@ -3345,6 +3434,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-cant-i-change-the-status-of-an-artifact" class="md-nav__link">
+    Why can't I change the status of an artifact
+  </a>
   
 </li>
       
@@ -3383,6 +3479,13 @@
                 
                 
                 <h1 id="permissions-and-workflows">Permissions and Workflows<a class="headerlink" href="#permissions-and-workflows" title="Permanent link">&para;</a></h1>
+<h2 class="section-break" id="how-do-spiras-permissions-and-workflows-work">How do Spira's permissions and workflows work<a class="headerlink" href="#how-do-spiras-permissions-and-workflows-work" title="Permanent link">&para;</a></h2>
+<p>You give users specific roles to give them specific permissions. These permissions are mostly about what that role can do with each artifact in general. Users with a role that lets them view incidents can view every single incident in the product.</p>
+<p>A workflow controls what a specific artifact will look like and how it can be edited. For example Bug1 may have lots of fields hidden, while Bug2 has every field visible. Bug1 and Bug2 look different because their display is controlled by different parts of a workflow system. One workflow step applies to Bug1 and a different workflow step applies to Bug2.</p>
+<p>So roles let admins control who can see what in general. Workflow let admins control, if you can see something (say a bug), exactly how that bug (for example) should behave based the bug's state at the time. When you change an item's state (by changing this bug's status, for instance) you can change how it will look or behave.</p>
+<p>How do you change an item's state? The most common way is changing the item's status. This is called a <em>transition</em>. Transitions are special because they let users make this big changes to something - for instance hiding or showing information. Because transitions can be so powerful, they can also be protected. An admin can control who can carry out each and every transition (including based on product roles).</p>
+<p>Taken together, this system of roles and workflows, with their combination of permissions, statuses, and transitions, give admins a lot of power to customize how things should work. They are powerful, but also they can be fiddly. It can be confusing to a user or an admin why things work one way for one user, but differently for another. </p>
+<p>The tips and tricks below should help work through the most common problems and stumbling blocks.</p>
 <h2 class="section-break" id="what-does-a-workflow-do-and-control">What does a workflow do and control<a class="headerlink" href="#what-does-a-workflow-do-and-control" title="Permanent link">&para;</a></h2>
 <p>Workflows are a way to control a number of things about your artifacts. A workflow is based on a series of steps (statuses) that you move the artifact through. </p>
 <p>At each step you can control:</p>
@@ -3400,6 +3503,31 @@
 <li>if the current owner of the artifact can carry out the transition</li>
 <li>if a digital signature is required to carry out the transition</li>
 </ul>
+<h2 class="section-break" id="what-does-a-product-role-do-and-control">What does a product role do and control<a class="headerlink" href="#what-does-a-product-role-do-and-control" title="Permanent link">&para;</a></h2>
+<p>When you add a user to a product, you have to set the specific product role they should have. This grants them specific permissions to view certain data, edit other data, maybe the ability to delete some data too. </p>
+<p>Each user has to be actively given a particular role for each product. In other words, you cannot make a user a member of a product without giving them a specific role. Likewise, you cannot make a user a "Tester" for any products they are or will be a member of.</p>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<p>The application ships with some built-in product roles but you can edit these roles or add new ones too. Each role defines if users with that role:</p>
+<ul>
+<li>are admins of that product</li>
+<li>can only see artifacts assigned directly to them (ano nothing else)</li>
+<li>can (set on an artifact by artifact basis) view, create, delete, edit, or bulk edit an artifact</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>If one user cannot see test cases but another user can see test cases in a product, that is because they each have different roles on that product</li>
+<li>If a user can see incidents in one product but only requirements in another, that is because they have different roles in each of those products</li>
+<li>If a user can see risks but the button to add a new risk is disabled or hidden, that means their role does not give them the permission to create risks only to view them</li>
+</ul>
+<h3 id="other-uses-for-product-roles">Other uses for product roles<a class="headerlink" href="#other-uses-for-product-roles" title="Permanent link">&para;</a></h3>
+<p>Your product role is used to control if you:</p>
+<ul>
+<li>can carry out a specific workflow transition</li>
+<li>will receive a notification after a specific event (for example, when a new bug is logged)</li>
+</ul>
+<h2 class="section-break" id="why-is-a-field-disabled-or-hidden-or-required">Why is a field disabled or hidden or required<a class="headerlink" href="#why-is-a-field-disabled-or-hidden-or-required" title="Permanent link">&para;</a></h2>
+<p>Each field can be controlled by the relevant workflow to show, hide, disable, or be required. If you thought a field should be visible, but in reality it is hidden, this is the workflow at work.</p>
+<p>The workflow controlling that specific artifact has a step that matches the current status of the specific artifact. That step sets whether each field is visible, disabled, hidden, or required. You need to work through <a href="#how-to-make-a-field-required-or-hidden-or-disabled">how this is happening</a>.</p>
 <h2 class="section-break" id="how-to-make-a-field-required-or-hidden-or-disabled">How to make a field required or hidden or disabled<a class="headerlink" href="#how-to-make-a-field-required-or-hidden-or-disabled" title="Permanent link">&para;</a></h2>
 <p>There are two ways that a field can be required. The best way to control this is through the workflow. This controls what fields are required, not required, disabled/read only, or hidden.</p>
 <h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
@@ -3424,6 +3552,14 @@
 6. Go to the <code>Options</code> tab in the popup
 7. Set the "Allow Empty" dropdown to Yes or No as desired
 8. Hit <code>Save</code></p>
+<h2 class="section-break" id="why-cant-i-change-the-status-of-an-artifact">Why can't I change the status of an artifact<a class="headerlink" href="#why-cant-i-change-the-status-of-an-artifact" title="Permanent link">&para;</a></h2>
+<p>If you are looking at an artifact and the status has no button next to it, then you cannot change its status. The button (if there) shows which transitions you can do to move the artifact to a new status.</p>
+<p>Why is this button missing? Either because:</p>
+<ol>
+<li>you do not have the correct permissions to see any of the available transitions</li>
+<li>There are no transitions at all from the current status</li>
+</ol>
+<p>Read more about these issues <a href="#why-does-a-user-not-see-the-right-transitions">below</a></p>
 <h2 class="section-break" id="why-does-a-user-not-see-the-right-transitions">Why does a user not see the right transitions<a class="headerlink" href="#why-does-a-user-not-see-the-right-transitions" title="Permanent link">&para;</a></h2>
 <p>When a user goes to look at the detail of an artifact they may be able to change the status by transitioning from one status to another. This is called a transition. What transitions show up when for what users is controlled by a number of things.</p>
 <p>To troubleshoot the issue you need to be a template administrator. The summary steps to review are below. Please refer to the <a href="../../Spira-Administration-Guide">admin guide</a> for more information.</p>
@@ -3472,6 +3608,7 @@
 <li>Incidents</li>
 <li>Risks</li>
 </ul>
+<p>Other artifacts do <strong>not</strong> support editing of their statuses (Test Cases, Test Sets, Requirements, Releases, and Tasks)</p>
                 
               
               

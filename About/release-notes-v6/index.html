@@ -3162,6 +3162,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-612-september-2021" class="md-nav__link">
+    Version 6.12 (September 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-611-august-2021" class="md-nav__link">
     Version 6.11 (August 2021)
   </a>
@@ -3442,6 +3449,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-612-september-2021" class="md-nav__link">
+    Version 6.12 (September 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-611-august-2021" class="md-nav__link">
     Version 6.11 (August 2021)
   </a>
@@ -3637,6 +3651,49 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-612-september-2021">Version 6.12 (September 2021)<a class="headerlink" href="#version-612-september-2021" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>
+<p>New installs come with improved <a href="../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data">sample data</a>. On first trying out SpiraPlan, users can select from a number of industry specific example products, programs, and portfolios to see how the tool can work for them. </p>
+</li>
+<li>
+<p>Bug fixes and performance improvements</p>
+</li>
+</ul>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li>** Test Automation**: Can manage Rapise floating licenses inside Spira (will be available in the application at a later date) [RQ:3533]</li>
+<li>
+<p><strong>Industry specific sample data installed with new installations</strong></p>
+<ul>
+<li>Allow system admins to <a href="../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data">manage sample data</a> by selecting which industry data to make active and display, showing a popup selector to the admin after a new install [RQ:2946]</li>
+<li><strong>Manufacturing</strong> portfolio: Inventory Systems and Automotive programs (2) and products (4)</li>
+<li><strong>Aerospace</strong> portfolio: Aviation and Space Platforms programs (2) and products (4)</li>
+<li><strong>Financial Services</strong> portfolio: Back Office and Customer Experience programs (2) and products (4)</li>
+<li><strong>Life Sciences</strong> portfolio: Clinical Trials and Medical Systems programs (2) and products (4)</li>
+<li><strong>Core Services</strong> portfolio: Corporate Systems and Sales &amp; Marketing programs (2) and products (4)</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>Add product-level <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing setting</a> to allow product-based parameter refresh for large projects [IN:6671]</li>
+<li>Allow an incident's creation date to be after its start date and its closed on date (to avoid not being able to save an incident due to this validation criteria not being met) [IN:5505]</li>
+<li>Ensure full database schema parity between a clean installation and an upgraded on-premise installation [IN:6182]</li>
+<li>Ensure grid for <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">adding product memberships to a specific user</a> (UserDetailsAddProjectMembership page) does not disappear on small screen sizes [IN:6618]</li>
+<li>Fix navigating to a deleted Test Step showing the wrong error message about which artifact was deleted [IN:5394]</li>
+<li>Fix not being able to filter by custom properties on the document list page and on the attachment tab [IN:6269]</li>
+<li>Fix Pull Request popup dialog Name field excessively limiting the character limit of the field [IN:6622]</li>
+<li>Fix rare column order inconsistencies during upgrade process using on-premise installer [IN:5568]</li>
+<li>Fix report admins who are not system admin getting authorization errors on editing standard or custom sections of custom reports or editing custom graphs [IN:6644]</li>
+<li>For incidents, error message where start date cannot be before creation date should use the term "creation date" [IN:6206]</li>
+<li>Improve performance when adding or removing test cases from a test set [IN:6600]</li>
+<li>Improve performance working with test cases with linked test steps so it does not timeout during use [IN:6595]</li>
+<li>Remove the Reporting button from the global navbar when viewing a Portfolio Homepage [IN:6213]</li>
+</ul>
+</details>
 <h2 id="version-611-august-2021">Version 6.11 (August 2021)<a class="headerlink" href="#version-611-august-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
