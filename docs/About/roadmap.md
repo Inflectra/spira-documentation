@@ -10,9 +10,8 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.12 (September 2021)
-- Improve the sample data available to users on first trying out SpiraPlan with more industry specific example products available
-- **Google Sheets**: addins will support more fields, risks and test sets, updating existing records, and (for advanced users) creating new comments and test coverage and traceability links
+## Version 6.13 (Autumn 2021)
+This information will be updated shortly
 
 ## Future Releases
 ### Planning

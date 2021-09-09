@@ -1,5 +1,40 @@
 # Release Notes for Spira v6
 
+## Version 6.12 (September 2021)
+
+!!! info "Summary"
+    - New installs come with improved [sample data](../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data). On first trying out SpiraPlan, users can select from a number of industry specific example products, programs, and portfolios to see how the tool can work for them. 
+
+    - Bug fixes and performance improvements
+
+??? success "New Features"
+
+    * ** Test Automation**: Can manage Rapise floating licenses inside Spira (will be available in the application at a later date) [RQ:3533]
+    * **Industry specific sample data installed with new installations**
+
+        - Allow system admins to [manage sample data](../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data) by selecting which industry data to make active and display, showing a popup selector to the admin after a new install [RQ:2946]
+        - **Manufacturing** portfolio: Inventory Systems and Automotive programs (2) and products (4)
+        - **Aerospace** portfolio: Aviation and Space Platforms programs (2) and products (4)
+        - **Financial Services** portfolio: Back Office and Customer Experience programs (2) and products (4)
+        - **Life Sciences** portfolio: Clinical Trials and Medical Systems programs (2) and products (4)
+        - **Core Services** portfolio: Corporate Systems and Sales & Marketing programs (2) and products (4)
+
+??? bug "Bug fixes and enhancements"
+
+    - Add product-level [testing setting](../../Spira-Administration-Guide/Product-Planning/#testing-settings) to allow product-based parameter refresh for large projects [IN:6671]
+    - Allow an incident's creation date to be after its start date and its closed on date (to avoid not being able to save an incident due to this validation criteria not being met) [IN:5505]
+    - Ensure full database schema parity between a clean installation and an upgraded on-premise installation [IN:6182]
+    - Ensure grid for [adding product memberships to a specific user](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) (UserDetailsAddProjectMembership page) does not disappear on small screen sizes [IN:6618]
+    - Fix navigating to a deleted Test Step showing the wrong error message about which artifact was deleted [IN:5394]
+    - Fix not being able to filter by custom properties on the document list page and on the attachment tab [IN:6269]
+    - Fix Pull Request popup dialog Name field excessively limiting the character limit of the field [IN:6622]
+    - Fix rare column order inconsistencies during upgrade process using on-premise installer [IN:5568]
+    - Fix report admins who are not system admin getting authorization errors on editing standard or custom sections of custom reports or editing custom graphs [IN:6644]
+    - For incidents, error message where start date cannot be before creation date should use the term "creation date" [IN:6206]
+    - Improve performance when adding or removing test cases from a test set [IN:6600]
+    - Improve performance working with test cases with linked test steps so it does not timeout during use [IN:6595]
+    - Remove the Reporting button from the global navbar when viewing a Portfolio Homepage [IN:6213]
+
 ## Version 6.11 (August 2021)
 
 !!! info "Summary"

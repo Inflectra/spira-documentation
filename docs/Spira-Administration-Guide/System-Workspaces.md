@@ -249,3 +249,29 @@ SpiraPlan ships with four different templates. Together these will cover most of
 - **Regulated Industries**: This template is designed specifically for products that are developed in a regulated environment. For example life sciences. The workflows have been configured to help you meet requirements in your work, such as those arising from FDA 21 CFR Part 11. Workflows include the use of electronic signatures for key stages of sign-off; limit who can transition an artifact between statuses, and manages which fields are disabled or required at each workflow step.
 - **Flexible**: This template is designed to alllow users to be as unconstrained from workflow requirements as possible. All relevant fields are available and editable (and not required) at all times. Active statuses are streamlined. This template should be used only for times when process controls are not required or are very lightweight.
 
+
+## Manage Sample Data
+![manage sample data admin page](img/System_ManageSampleData.png)
+
+The application includes different types of sample data, some about specific industries, to help you understand how the application works. For example, how products fit inside a program, or how different artifacts work together. There are six sample data sets available in the application. A system administrator can change which of these are available at any one time. The admin can make all available, none available, or anywhere in between.
+
+When you load this page the sample data sets currently active will have the checkbox next to them checked. By default the "Basic Samples" are the only ones enabled. To change which sample data sets are active, check the relevant checkboxes and click save.
+
+Please note that for users to be able to see these samples they can either login with a user who is already a member of the data or they can be added as a member by a system admin. The users with username "adminstrator" and "fredbloggs" have access to all of the sample data by default.
+
+### Delete Sample Data
+If you click the "Delete" button, a popup will show a warning. If you decide to proceed the system will attempt to delete all sample data, including users, products, artifact information, programs, and portfolios. This method will not delete:
+
+- the default program
+- the root administrator (with username "adminstrator" and an ID of "1")
+- any sample user, product, program, or portfolio whose name has been changed 
+- any sample user who has been used to create, comment or has been assigned any artifacts in non-sample data products
+
+!!! tip 
+    If you do not want users to see the sample data but do not want to permanently delete that data: 
+    
+    - uncheck all the sample data sets and save the page
+    - mark each user as inactive
+    
+    These inactive items will still be visible on the relevant administration pages, but noone will see them in the main application. 
+
