@@ -211,3 +211,5 @@ This artifact does not have any special factors to take into account.
 - work with version of Spira older than 6.3.0.1 
 - work with versions of Excel pre Excel 2015
 - create Test Runs
+- add new custom lists values
+- import and export test step custom properties
