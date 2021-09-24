@@ -3421,9 +3421,9 @@
 <li><strong>Time Offset</strong>: Set this to how many hours <em>ahead</em> UTC is, so for EDT (UTC-4), you would put in <em>positive</em> 4.</li>
 <li><strong>Auto-Map Users -- Set to yes</strong> if you would like the plugin to map users one-to-one by checking first &amp; last names. Set to no if you would like to map users manually.</li>
 <li><strong>Custom 01</strong>: The name of the table you would like to sync with incidents in SpiraPlan. This can be found in the <em>name</em> field in the table definition within ServiceNow Studio.</li>
-<li><strong>Custom 02</strong>: The name of the table column in ServiceNow (make sure it is a Choice field)which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.</li>
+<li><strong>Custom 02</strong>: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.</li>
 <li><strong>Custom 03</strong>: The name of the table you would like to sync with requirements in SpiraPlan. This can be found in the <em>name</em> field in the table definition within ServiceNow Studio. This <em>cannot</em> be the same as the table in Custom 01.</li>
-<li><strong>Custom 04</strong>: The name of the table column in ServiceNow (make sure it is a Choice field)which will decide which project a requirement is created in. This can be found in ServiceNow Studio under the column name.</li>
+<li><strong>Custom 04</strong>: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project a requirement is created in. This can be found in ServiceNow Studio under the column name.</li>
 </ul>
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_225.png" /></p>
 <p>Custom 05 should be left blank. Once all those fields have been filled out, click the "Add" or "Save" button to save your changes.</p>
@@ -3459,8 +3459,7 @@ Description           description Priority/Importance   priority Author/Detected
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_230.png" /></p>
 <p>You must map every priority/importance in SpiraPlan to ServiceNow. Descriptions of the field are below:</p>
 <ul>
-<li><strong>External Key</strong>: If state is a dropdown in ServiceNow, it's the
-'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to <strong>match it exactly</strong> (case, spaces, etc.)</li>
+<li><strong>External Key</strong>: If state is a dropdown in ServiceNow, it's the 'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to <strong>match it exactly</strong> (case, spaces, etc.)</li>
 <li><strong>Primary</strong>: You must have exactly one primary key for each ServiceNow priority. This is what priority the plug-in should set the incident in SpiraPlan to when the priority in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.</li>
 </ul>
 <p>Here are the corresponding priorities in ServiceNow:</p>
