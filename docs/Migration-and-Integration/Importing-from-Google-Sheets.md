@@ -115,6 +115,9 @@ This button will prompt you to pick a product and artifact to get from Spira and
     If you only wish to update a single artifact, we recommend deleting all the other rows of data to keep things clean. 
   
     **Note**: when using the update functionality after getting data, you can only update artifacts that already exist in Spira. You cannot create new artifacts at the same time. See below for more information about how the update works for specific artifacts and fields.
+    
+    
+    
 
 ### Send data to Spira (importing)
 This will button will prompt you to pick a product and artifact to send new data to Spira (from the current active sheet). Before you can enter data to send, the add-in creates a dynamic template for that specific product and artifact to make it easier for you to enter data correctly. Therefore if you have data already in your sheet, make sure to create a new worksheet for GSheets to wipe and then prepare for you. 
@@ -209,6 +212,7 @@ Item 1
 
 **Changing the hierarchy by updating**: you cannot change where a release is in the hierarchy when updating. Do not attempt to change any release's relative row or indentation - it will be ignored by the add-in.
 
+![](img/Importing_from_Google_Sheets_32.png)
 
 ### Test Cases and Test Steps
 
@@ -226,6 +230,8 @@ Item 1
 * A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.
 * There is no need to number the test steps -- SpiraPlan adds this information automatically
 * If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
+
+![](img/Importing_from_Google_Sheets_33.png)
 
 ### Incidents
 **Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
