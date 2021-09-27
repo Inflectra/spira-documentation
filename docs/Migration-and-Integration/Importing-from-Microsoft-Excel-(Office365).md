@@ -100,6 +100,7 @@ After you have chosen which mode to use, select the product and artifact from th
 * Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
 * When data is sent from SpiraPlan to the spreadsheet, only the first list value selected in Spira (if multiple are selected) will be displayed in the spreadsheet
 * When sending data to SpiraPlan you will only be able to select one value
+* When updating data, please note that since the value displayed in the spreadsheet will replace the multiple selections in Spira, you may lose data.
 
 ### Advanced Fields: New Comments
 When advanced mode is enabled you will see a column called "New Comments". This lets you create new comments in Spira when sending the relevant items to Spira
@@ -157,7 +158,9 @@ Item 1
 
 **Changing the hierarchy by updating**: you cannot change where a release is in the hierarchy when updating. Do not attempt to change any release's relative row or indentation - it will be ignored by the add-in.
 
+
 ### Test Cases and Test Steps
+
 !!! danger "Don't get confused between test cases and test steps"
     Test steps are an integral part of test cases so we let you view and add test cases and their steps together in the same table. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps.
 
@@ -209,3 +212,5 @@ This artifact does not have any special factors to take into account.
 - work with version of Spira older than 6.3.0.1 
 - work with versions of Excel pre Excel 2015
 - create Test Runs
+- add new custom lists values
+- import and export test step custom properties

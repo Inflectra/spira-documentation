@@ -2,13 +2,13 @@
 
 The web-based interface of SpiraTeam® is ideal for creating and managing
 all aspects of your projects. However when migrating requirements,
-release, tasks, incidents, and test cases with test steps for an
+release, tasks, incidents, risks, test sets and test cases with test steps for an
 existing project from another system, it is useful to be able to
 retrieve and load in a batch of artifacts, rather than having to
 manually enter them one at a time.
 
-To simplify this task we've created a Google sheets add-on for
-SpiraTeam® that can import requirements, releases, tasks, and test cases
+To simplify this task we've created a Google Sheets (GSheets) add-on for
+SpiraTeam® that can import requirements, releases, tasks, risks, test sets, and test cases
 with test steps from a generated spreadsheet into SpiraTeam®.
 
 *\*This guide assumes you have a Google account with access to Google
@@ -93,137 +93,156 @@ RSS Token text box is your token.
 3.  Once you have entered the necessary information, please click \[ Log
 In \] to authenticate with the server. If the login information is
 invalid, you will see an error message appear, otherwise you will be
-connected and the list of projects and artifacts will be populated.
+connected and will see the modes selection screen.
 
-## Choosing the project and artifact
+## Choosing the operation mode
+
+The add-on has two main modes: **getting data** from Spira and **Sending data** to Spira.
 
 ![](img/Importing_from_Google_Sheets_30.png)
 
+Once you have successfully connected to SpiraTeam, you need to decide what you want to use this add-on for. You can go back and change your mind at any time.
+
+### Get data from Spira (exporting)
+
+This button will prompt you to pick a product and artifact to get from Spira and load into the spreadsheet (on the current active sheet - GSheets assumes it is always the first one). Exporting data from Spira in this way can be helpful to share with colleagues who are not using Spira. Please note that this will bring over every one of the artifacts selected in the chosen product so it may take some time. 
+
+!!! info "Updating Data in Spira"
+    Once you have the data from Spira loaded into GSheets you can freely edit it. You can then, optionally, update the data in Spira by clicking the "Update" button. This will send every artifact on the sheet back to Spira, updating each and every one. Each row will be sent in full to Spira - if you blank out a cell, that value will be blanked out in Spira.
+    
+    If there are any errors during the update process you will see relevant explanations, with the specific cells (as relevant) that are causing the problem highlighted in red.
+  
+    If you only wish to update a single artifact, we recommend deleting all the other rows of data to keep things clean. 
+  
+    **Note**: when using the update functionality after getting data, you can only update artifacts that already exist in Spira. You cannot create new artifacts at the same time. See below for more information about how the update works for specific artifacts and fields.
+
+### Send data to Spira (importing)
+This will button will prompt you to pick a product and artifact to send new data to Spira (from the current active sheet). Before you can enter data to send, the add-in creates a dynamic template for that specific product and artifact to make it easier for you to enter data correctly. Therefore if you have data already in your sheet, make sure to create a new worksheet for GSheets to wipe and then prepare for you. 
+
+Click "Prepare Sheet" to create this template for your chosen product and artifact. Do not alter the worksheet structure in any way after the template has been created (for example do not merge cells, change formatting or delete columns).
+
+Once the template is ready you can start entering your new data. Once you have entered in all required data, click the "Send" button to add the data to Spira. **Note**: cells highlighted grey are not editable.
+
+If there are any errors during the sending process you will see relevant explanations, with the specific cells (as relevant) that are causing the problem highlighted in red.
+
+### Advanced Mode (optional)
+When you enable advanced mode, you have more options when sending data to or updating data in Spira that are normally not available. Advanced mode lets you create new comments and add associations between specific artifacts. Check the box 'Advanced Mode' to activate it for all modes of operation.
+
+## 3. Prepare for the data transfer
+After you have chosen which mode to use, select the product and artifact from the dropdown menus.
+
+![Spira data transfer screen](img/excel365-template-screen.png)
+
+* **Products**:  lists all products in Spira that you are a member of
+* **Artifacts**: this menu does not dynamically change based on your permissions, so if you cannot add data to an artifact this could be why.
+
+### Fields: working with required fields
+* Required fields are marked by their name in the title row shown as bold black text (standard fields are regular light text)                  
+* For test steps, required fields are shown in black, but not bold text.
+
+### Fields: how certain 'special' fields work
+* **ID Fields**: This field MUST be left blank *__unchanged__* to add new items to Spira. Any rows with entries in the ID fields *__will be skipped over with error__* are skipped over.
+
+### Fields: dates
+* Dates are entered into SpiraPlan as UTC and at midday. Please make sure that your Spira instance and the device you are running GSheets are set to the same timezone, to avoid having date mismatches. In Spira, go to your profile page, then 'Regional Settings' to change your displaying timezone. You can also change this configuration at the system level, under System > General Settings > Default Timezone (admin user is required).
+
+### Fields: multi-select lists
+* Some fields in SpiraPlan let you select multiple items from a list. Spreadsheets do not allow this functionality
+* When data is sent from SpiraPlan to the spreadsheet, only the first list value selected in Spira (if multiple are selected) will be displayed in the spreadsheet
+* When sending data to SpiraPlan you will only be able to select one value
+* When updating data, please note that since the value displayed in the spreadsheet will replace the multiple selections in Spira, you may lose data.
+
+### Advanced Fields: New Comments
+When advanced mode is enabled you will see a column called "New Comments". This lets you create new comments in Spira when sending the relevant items to Spira
+
+To add a new comment, enter the comment in the column "New Comment". When you send data to or update Spira, this will be saved as a new comment in the artifact.
+
+Please note that you can only create new comments. You cannot get existing comments from Spira.
+
+### Advanced Fields: associations
+When advanced mode is enabled you will may see columns that let you create associations between artifacts. This is an advanced feature because you need to know the exact IDs and type them in manually. For a more user friendly experience associating artifacts please use the main application. 
+
+To create an association between artifacts:
+- find the column of the artifact type you want to associate to (e.g.: "New Linked Requirement(s)") 
+- enter the ID(s) of the artifact(s) to associate with. 
+- associate multiple artifacts at a time using a comma-separated list of IDs, e.g.: 335,336,337. 
+
+Using the add-in, it's possible to associate:
+
+* Requirements to Requirements
+* TestCases to Requirements
+* TestCases to Releases
+* TestCases to TestSets
+
+Please note that you can only create new associations. You cannot get existing associations from Spira.
 
 
+## Entering or Updating Data for different artifacts
 
-Once you have successfully connected to SpiraTeam, you should now choose
-the appropriate Project and Artifact in the system to which you will be
-importing into SpiraTeam. As you make your selections more buttons will
-be enabled.
+### Requirements
+**Indenting items**: SpiraPlan lets you create a hierarchy of requirements (where each requirement can have children, who can, in turn, have child of their own). Use a "> " at the start of the "Name" field to mark a requirement a child of the row above it. This is illustrated in the example below
 
-After the project and artifact have been selected both buttons below
-these dropdowns should now be clickable. One let's you start entering
-data to send to SpiraPlan, the other gets data from SpiraPlan.
+```
+Indenting Example:
+Item 1
+> Item 2 child of item 1
+> Item 3 child of item 1
+> > Item 4 child of item 3
+``` 
 
-## Preparing your Template
+**Status**: when adding new Requirements, the status you see in Spira may not match the one you selected in the add-in. This is because the status is often calculated by the system itself. E.g.: the 'Requested' status is automatically updated to 'Planned' in Spira if the requirement is assigned to a Release. You can always get the data from Spira to see the most updated fields in the spreadsheet.
 
-The SpiraTeam Google Sheets Integration add-on dynamically generates a
-template for each artifact with the click of a button. After a valid
-project and artifact have been selected the \[ Prepare Template \]
-button will be enabled. Click this button to generate the required
-template on the currently selected sheet.
+**Estimate Points for Epics**: will get replaced by the child requirement in Spira, even if you selected a different value in the add-in.
 
-*Warning: make sure no data on this sheet is needed as the entire sheet
-will be wiped*
+**Changing the hierarchy by updating**: you cannot change where a requirement is in the hierarchy when updating. Do not attempt to change any requirement's relative row or indentation - it will be ignored by the add-in. 
 
-![](img/Importing_from_Google_Sheets_31.png)
+### Releases
+**Indenting items**: SpiraPlan lets you create a hierarchy of releases (where each release can have children, who can, in turn, have child of their own). Use a "> " at the start of the "Name" field to mark a release a child of the row above it. This is illustrated in the example below
 
+```
+Indenting Example:
+Item 1
+> Item 2 child of item 1
+> Item 3 child of item 1
+> > Item 4 child of item 3
+``` 
 
-
-
-## Filling in The Template
-
-The above template is for requirements. Fields which have list of values
-to select from have dropdowns to make choosing the right values easy.
-
-For an artifact to be created successfully in SpiraPlan it has to have
-certain fields filled in. These required fields are highlighted in bold
-black text. For example, the above screenshot is for requirements, where
-both the Name and Type field are required.
-
-Different artifacts have different factors to take account of when
-entering the data:
-
--   **Requirements**: SpiraPlan allows a hierarchy of requirements
-(where each requirement can have children, who can, in turn, have
-child requirements of their own). To designate the hierarchy level
-of requirements, use the "\>" character. For example:
-
--   "Parent Requirement"
-
--   "\> Child of Parent"
-
--   "\> Another child of parent"
-
--   "\>\> Child of "Another Child""
-
--   "A second parent requirement"
-
--   **Releases**: are also hierarchical, and this is set on the sheet in
-the same way as requirements
-
--   **Incidents** **and Tasks**: neither of these artifacts have any
-special factors to take into account
-
--   **Test Cases with Test Steps**: The screenshot below shows the basic
-template for Test Cases. Please note the following points:
-
--   A test step must have a test case parent to be linked to and all
-test steps below a test case will become the steps for that test
-case.
-
--   There is no need to number the test steps -- SpiraPlan adds this
-information automatically
-
--   Because each row can either be a case or a step, there are
-columns for both -- some are only for test cases, others are
-only for tests steps
-
--   The lighter orange column names are ONLY for test step creation
-
--   Fields with black text are required: darker orange ones are
-needed for a test case, lighter orange ones for a test step
-
--   If a row has a mix of required fields in for both test cases and
-test steps, the addon won't know if it is a test case or a test
-step, so it will flag this an error
-
-![](img/Importing_from_Google_Sheets_32.png)
+**Changing the hierarchy by updating**: you cannot change where a release is in the hierarchy when updating. Do not attempt to change any release's relative row or indentation - it will be ignored by the add-in.
 
 
+### Test Cases and Test Steps
 
+!!! danger "Don't get confused between test cases and test steps"
+    Test steps are an integral part of test cases so we let you view and add test cases and their steps together in the same table. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps.
 
-Below is a partially filled in test case with test steps template -- it
-is visually easy to see which rows are steps to which case.
+    - **Test case fields** are columns with a darker background color
+    - **Test steps fields** are columns with a lighter background color
+    - **Required fields** are those with black text: darker orange ones are needed for a test case, lighter orange ones for a test step
+    
+    To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. 
+    
+    **Make sure**: each row only fills in either the required test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
 
-![](img/Importing_from_Google_Sheets_33.png)
+* A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.
+* There is no need to number the test steps -- SpiraPlan adds this information automatically
+* If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
 
+### Incidents
+**Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
 
+### Tasks
+This artifact does not have any special factors to take into account.
 
+### Test Sets
+This artifact does not have any special factors to take into account.
 
-## Import Into SpiraPlan
+### Risks
+This artifact does not have any special factors to take into account.
 
-*Before importing new artifacts, make sure that you're on the correct
-tab and the dropdowns in the sidebar show the correct project and
-artifact type.*
+## Other actions you can do on after you have logged in to the add-in
+* **Back**: Go back to select which add-in mode to run
+* **Help**: Open the add-ins help menu to this page
+* **Logout**: Close your connection with Spira and take you back to the login page
 
-After the correct/required fields have been entered, click the \[ Send
-to SpiraPlan\] button to send your data to SpiraPlan®. You will see a
-popup showing overall progress.
-
-When the artifact has been successfully created an ID number will be
-placed in the ID column. This is the ID straight from SpiraPlan.
-
-If there are any errors for a particular row (eg if required fields have
-not all been filled in, or if there was some other problem with the data
-or on the SpiraPlan server) that row will be highlighted with a comment
-in column A explain the problem.
-
-For hierarchical artifacts (ones with parents and children), the import
-process will stop as soon as any error is found, to ensure SpiraPlan
-does not create an incorrect hierarchy
-
-## Get data From SpiraPlan
-
-To get all the data for the specified project and artifact from
-SpiraPlan, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into SpiraPlan](#import-into-spiraplan)
-above, click the \[ Get From SpiraPlan \] button. This will first load
-up the template on the current sheet then automatically retrieve all
-data from SpiraPlan and add it to the sheet.
+![Spira example of data and sheet](img/Importing_from_Google_Sheets_31.png)
 
