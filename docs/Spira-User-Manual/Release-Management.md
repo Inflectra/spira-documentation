@@ -86,7 +86,7 @@ Here is a step by step overview on getting started with baselines:
 
 - First, enable baselining for your specific product via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. You have to a system or product admin to do this
 - To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items
-- With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can baselines. If you can edit a release you can eidt its baselines. And if you can delete releases you can delete baselines.
+- With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can create baselines. If you can edit a release you can edit its baselines. And if you can delete releases you can delete baselines.
 - Go to the list of releases and click on the release you want to manage baselines for
 - Click on the baselines tab to see your list of baselines
 - You can sort or filter the list of baselines by any of the fields in the table

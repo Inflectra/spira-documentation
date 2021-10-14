@@ -82,7 +82,7 @@
     **Work faster and smarter with tasks** (SpiraTeam and SpiraPlan): on the [task list page](../../Spira-User-Manual/Task-Tracking/#task-list) you can now perform actions on a whole folders at once, not just specific tasks. This lets you quickly clone, export, or print tasks in folders.
 
 ??? success "New Features"
-    * **Planning Board** (SpiraTeam and SpiraPlan): Product level planning boards ([planning board](../../Spira-User-Manual/Planning-Board), [requirement board](../../Spira-User-Manual/Requirements-Management/#requirements-agile-board), [incident board](../../Spira-User-Manual/Incident-Tracking/#incident-board), [task board](../../Spira-User-Manual/task-Tracking/#task-board)) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]
+    * **Planning Board** (SpiraTeam and SpiraPlan): Product level planning boards ([planning board](../../Spira-User-Manual/Planning-Board), [requirement board](../../Spira-User-Manual/Requirements-Management/#requirements-agile-board), [incident board](../../Spira-User-Manual/Incident-Tracking/#incident-board), [task board](../../Spira-User-Manual/Task-Tracking/#task-board)) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]
  
 
 ??? bug "Bug fixes and enhancements"
