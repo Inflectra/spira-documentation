@@ -3428,7 +3428,7 @@
 <h2 id="view-edit-users">View / Edit Users<a class="headerlink" href="#view-edit-users" title="Permanent link">&para;</a></h2>
 <p>The following screen is displayed when you choose the "View/Edit Users" link from the Administration menu:</p>
 <p><img alt="" src="../img/System_Users_44.png" /></p>
-<p>This screen displays the list of users in the system (by default it only shows active users, but you can use the dropdown at the top to view inactive or all users). It shows the following fields:</p>
+<p>This screen displays the list of all approved users in the system (by default it only shows active users, but you can use the dropdown at the top to view inactive or all users). It shows the following fields:</p>
 <ul>
 <li>First Name</li>
 <li>Last  Name</li>
@@ -3441,9 +3441,9 @@
 <li>active status</li>
 </ul>
 <p>You can filter the list using the filter row above. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.</p>
-<div class="admonition info">
-<p class="admonition-title">System administrators and product roles</p>
-<p>Note: if a user is a System Administrator, it will force that user to always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If you disable this option, they will then revert back to their true role.*</p>
+<div class="admonition tip">
+<p class="admonition-title">Why can't I find a user?</p>
+<p>The user list shows all approved users. So if you are looking for a user that you think should exist but they are not in this list, then they are not approved. Check the list of <a href="#pending-requests">pending user requests</a> to see if the user is there waiting to be approved.</p>
 </div>
 <h3 id="add-a-new-user">Add a new user<a class="headerlink" href="#add-a-new-user" title="Permanent link">&para;</a></h3>
 <p>To add a new user to the system, click the "Add" button at the bottom of the user list, and a new screen will be displayed that allows you to enter the new user information:</p>
@@ -3457,6 +3457,10 @@
 <li>create their password, password reset question and answer. </li>
 <li>if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">System administrators and product roles</p>
+<p>Note: if a user is a System Administrator, that user will always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If they stop being a system admin, they will then revert back to their true role.</p>
+</div>
 <p>When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.</p>
 <div class="admonition tip">
 <p class="admonition-title">Notifying Newly Created Users</p>
