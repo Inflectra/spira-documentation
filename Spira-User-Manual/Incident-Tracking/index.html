@@ -1695,6 +1695,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/Understanding-Entity-SQL/" class="md-nav__link">
+        Understanding Entity SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -3719,6 +3731,11 @@
 <p>In addition, you can view a more detailed description of the incident (along with a resolution if any) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the incident name hyperlink, you will be taken to the incident details page described in <a href="../Incident-Tracking/#incident-details">Incident Tracking &gt; Incident Details</a>. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of incidents in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.</p>
 <h3 id="filtering-sorting">Filtering &amp; Sorting<a class="headerlink" href="#filtering-sorting" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</p>
+<p>Incidents can be filtered in special ways when filtering by incident status or incident type:</p>
+<ul>
+<li><strong>Incident Type</strong>: Issues are a special subset of Incidents. <a href="../../Spira-Administration-Guide/Template-Incidents/#edit-types">Admins define</a> which types of incident should be considered issues. When filtering by incident type you can choose to filter by Issues. Doing this will show you all incidents that have any type that is marked as also being an "issue."</li>
+<li><strong>Incident Status</strong>: Incidents have customizable statuses, each of which can be marked as <a href="../../Spira-Administration-Guide/Template-Incidents/#edit-statuses">"open" or "closed" by the admin</a>. When filtering by incident status you can choose to filter by specific statuses, or "all open" or "all closed" - these last two options automatically filter by all statuses that are considered open or closed respectively. </li>
+</ul>
 <h3 id="new-incident">New Incident<a class="headerlink" href="#new-incident" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>New Incident</em></strong>" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in <a href="../Incident-Tracking/#incident-details">Incident Details</a> except, depending on how the <a href="../../Spira-Administration-Guide/Template-Incidents/#incident-workflows">workflow has been configured</a> for this product, certain fields may be disabled.</p>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>

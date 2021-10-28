@@ -1898,6 +1898,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/Understanding-Entity-SQL/" class="md-nav__link">
+        Understanding Entity SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -4161,8 +4173,8 @@ gray.</p>
 <p>As illustrated in the example above, when the drop-down list is changed to select a specific release, the list of test cases is filtered to just those mapped to the release in question. In addition, the execution status for the test cases will only reflect test runs for that specific release (and any child sprints if applicable). As can be seen in our example, many test cases that have been run for other releases now show the "Not Run" status since they've not been run for this specific release.</p>
 <p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test cases via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="copying-test-cases">Copying Test Cases<a class="headerlink" href="#copying-test-cases" title="Permanent link">&para;</a></h3>
-<p>To copy one or more test cases, simply select the check-boxes of the test cases you want to copy and then select the Edit > Copy Items menu option. This will copy the current test case selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit > Paste Items option.</p>
-<p>The test cases will now be copied to the destination you specified. The name of the copied test cases will be prefixed with "Copy of..." to distinguish them from the originals.</p>
+<p>To copy one or more test cases, select the check-boxes of the test cases (or test case folder) you want to copy and then select Edit &gt; Copy Items from the menu. This will copy the current test case / test case folder selection to the clipboard. Then select the place you want the test cases to be inserted and choose the Edit &gt; Paste Items option.</p>
+<p>The test cases will now be copied to the destination you specified. The name of the copied test cases will have " - Copy" added to the end to distinguish them from the originals. If you are copying test case folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.</p>
 <h3 id="blocking-and-unblocking-test-cases">Blocking and Unblocking Test Cases<a class="headerlink" href="#blocking-and-unblocking-test-cases" title="Permanent link">&para;</a></h3>
 <p>To designate one or more test cases as blocked, select the check-boxes of the test cases and then select the Edit > Block Test Cases menu option.  This temporarily blocks test cases so that testers know they are not available for testing. Unlike actually executing the test cases and recording an execution status, no test run is recorded and summary metrics (such as requirements test coverage and test set status) are not updated. Likewise, to unblock test cases, select their check-boxes and then select the Edit > Unblock Test Cases menu option. This changes their Execution Status from Blocked to Not Run. The Edit menu will be enabled if the current user has Test Case > Bulk Edit permission.   </p>
 <h3 id="moving-test-cases-or-folders">Moving Test Cases or Folders<a class="headerlink" href="#moving-test-cases-or-folders" title="Permanent link">&para;</a></h3>

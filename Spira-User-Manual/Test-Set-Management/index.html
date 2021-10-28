@@ -1656,6 +1656,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/Understanding-Entity-SQL/" class="md-nav__link">
+        Understanding Entity SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -3677,8 +3689,8 @@
 <p><img alt="" src="../img/Test_Set_Management_Specific_Release.png" /></p>
 <p>As a shortcut, when you select a specific release for viewing, subsequent execution of any of the test sets via the Tools > Execute Tests menu option will default the test run to the selected release.</p>
 <h3 id="copying-test-sets">Copying Test Sets<a class="headerlink" href="#copying-test-sets" title="Permanent link">&para;</a></h3>
-<p>To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit > Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit > Paste Items option.</p>
-<p>The test sets will now be copied into the destination you specified. The name of the copied test sets will be prefixed with "Copy of..." to distinguish them from the originals.</p>
+<p>To copy one or more test sets, select the check-boxes of the test sets (or test set folder) you want to copy and then select Edit &gt; Copy Items from the menu. This will copy the current test set / test set folder selection to the clipboard. Then select the place you want the test sets to be inserted and choose the Edit &gt; Paste Items option.</p>
+<p>The test sets will now be copied to the destination you specified. The name of the copied test sets will have " - Copy" added to the end to distinguish them from the originals. If you are copying test set folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.</p>
 <h3 id="moving-test-sets">Moving Test Sets<a class="headerlink" href="#moving-test-sets" title="Permanent link">&para;</a></h3>
 <p>There are two options for moving test sets or folders:</p>
 <ol>
@@ -3728,7 +3740,8 @@
 </ul>
 <p>Initially the pane will be set to the "Overview" tab, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" tabs. Each of these is described separately below.</p>
 <h3 id="overview-details">Overview -- Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
-<p>The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
+<p>The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding releases are in the "Releases" group and dates are grouped together in the "Dates and Times" area.</p>
+<p>The <strong>Display For</strong> field in the "Releases" section tells you what release execution status results are displaying for the test set. This field controls the results for the test set overall and also for its individual test cases. This field is read only. To change it, you must use the "Display For" dropdown on the list page.</p>
 <p>The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Test_Case_Management_218.png" /></p>
 <p>If you have <strong>test configuration sets</strong> defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the <strong>Configuration</strong> dropdown value. If you have a test configuration associated with the test set, when you execute the test set, SpiraPlan will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.</p>

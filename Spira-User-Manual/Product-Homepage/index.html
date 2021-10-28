@@ -1703,6 +1703,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Reporting/Understanding-Entity-SQL/" class="md-nav__link">
+        Understanding Entity SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
         Custom Report Tokens
       </a>
@@ -4070,8 +4082,9 @@
 <h2 id="incident-test-coverage">Incident Test Coverage<a class="headerlink" href="#incident-test-coverage" title="Permanent link">&para;</a></h2>
 <p>This section displays a bar-graph that illustrates the execution status of any test cases that previously failed and resulted in the generation of an incident that has subsequently been resolved. This is very useful when a test case was executed in Release 1.0 and an incident was logged. That incident has now been resolved in Release 1.1 (and is in a closed status) but we need to know that the test case that caused the failure has been successfully re-run. Any test cases listed as Blocked, Caution, Not-Run, Not Applicable, or Failed in this graph need to be executed to verify that all resolved bugs in the release have truly been fixed.</p>
 <h2 id="top-open-issues">Top Open Issues<a class="headerlink" href="#top-open-issues" title="Permanent link">&para;</a></h2>
-<p>This section displays a breakdown of the top issues logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see
-<a href="../Incident-Tracking/#incident-details">Incident Tracking &gt; Incident Details</a>). <em>You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.</em></p>
+<p>Issues are a subset of Incidents. <a href="../../Spira-Administration-Guide/Template-Incidents/#edit-types">Admins can control</a> which types of incident should be considered issues. All incidents that have a type marked in this way are considered "issues." </p>
+<p>This widget shows a breakdown of the top issues logged in the product, in order of decreasing priority. Issues that do not have a priority are listed at the top, since critical issues could be lurking in that list. Only open issues are shown. Clicking on the issue's hyperlink opens <a href="../Incident-Tracking/#incident-details">incident details page</a> for that issue. </p>
+<p><em>You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.</em></p>
 <h2 id="risk-summary">Risk Summary<a class="headerlink" href="#risk-summary" title="Permanent link">&para;</a></h2>
 <p>This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.</p>
 <h2 id="top-open-risks">Top Open Risks<a class="headerlink" href="#top-open-risks" title="Permanent link">&para;</a></h2>
