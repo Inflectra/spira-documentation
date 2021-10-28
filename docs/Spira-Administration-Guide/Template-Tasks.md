@@ -112,3 +112,8 @@ Note that you cannot set a field/property as being required and either disabled 
 
 To actually make these changes, all you need to do is select the appropriate checkboxes in the list of fields and custom properties and click the corresponding "Save" button.
 
+
+## Example Workflow
+Below is a diagram that shows an example workflow (the one used by the sample product "Library Information System") for tasks.
+
+![example workflow diagram](img/Template_Tasks_WorkflowDiagram.png)
