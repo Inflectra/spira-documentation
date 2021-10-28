@@ -1,13 +1,12 @@
 # System: Users
 
-
 ## View / Edit Users
 
 The following screen is displayed when you choose the "View/Edit Users" link from the Administration menu:
 
 ![](img/System_Users_44.png)
 
-This screen displays the list of users in the system (by default it only shows active users, but you can use the dropdown at the top to view inactive or all users). It shows the following fields:
+This screen displays the list of all approved users in the system (by default it only shows active users, but you can use the dropdown at the top to view inactive or all users). It shows the following fields:
 
 - First Name
 - Last  Name
@@ -21,8 +20,8 @@ This screen displays the list of users in the system (by default it only shows a
 
 You can filter the list using the filter row above. When you click the "Filter" button, the list of users will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of users, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending). In addition, the list of users is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the user list.
 
-!!! info "System administrators and product roles"
-    Note: if a user is a System Administrator, it will force that user to always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If you disable this option, they will then revert back to their true role.*
+!!! tip "Why can't I find a user?"
+    The user list shows all approved users. So if you are looking for a user that you think should exist but they are not in this list, then they are not approved. Check the list of [pending user requests](#pending-requests) to see if the user is there waiting to be approved.
 
 ### Add a new user
 To add a new user to the system, click the "Add" button at the bottom of the user list, and a new screen will be displayed that allows you to enter the new user information:
@@ -38,6 +37,8 @@ On this screen, you can:
 - create their password, password reset question and answer. 
 - if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
 
+!!! info "System administrators and product roles"
+    Note: if a user is a System Administrator, that user will always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If they stop being a system admin, they will then revert back to their true role.
 When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
 
 !!! tip "Notifying Newly Created Users"
