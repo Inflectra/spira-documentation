@@ -969,3 +969,5 @@ You can now run the report through the main reports center and get something lik
 ### Conclusion
 
 Now we have learned how to create a custom report and a use a combination of standard sections and custom sections to product a report that includes data specific to your business. You can use your knowledge of SQL and XSLT to make more sophisticated changes. For example, you could join multiple tables and use SQL aggregation functions to generate summary reports from other parts of the system.
+
+The language that we use for creating custom graphs and reports in Spira is called "_Entity SQL_" (abbreviated to **ESQL**). Please read our [dedicated tutorial](../Understanding-Entity-SQL) to learn how ESQL works and how it is similar and different to standard SQL.

@@ -158,6 +158,7 @@ nav:
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
   - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
   - OData Tutorial: Reporting\OData-Tutorial.md
+  - Understanding Entity SQL: Reporting\Understanding-Entity-SQL.md
   - Custom Report Tokens: Reporting\Custom-Reporting-Tokens.md
   - Available Database Tables: Reporting\Custom-Report-Tables.md
 - Optional Features:
