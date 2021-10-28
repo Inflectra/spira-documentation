@@ -79,9 +79,9 @@ As a shortcut, when you select a specific release for viewing, subsequent execut
 
 ### Copying Test Sets
 
-To copy one or more test sets, simply select the check-boxes of the test sets you want to copy and then select the Edit \> Copy Items menu option. This will copy the current test set selection to the clipboard. Then select the place where you want the test sets to be inserted and choose the Edit \> Paste Items option.
+To copy one or more test sets, select the check-boxes of the test sets (or test set folder) you want to copy and then select Edit > Copy Items from the menu. This will copy the current test set / test set folder selection to the clipboard. Then select the place you want the test sets to be inserted and choose the Edit > Paste Items option.
 
-The test sets will now be copied into the destination you specified. The name of the copied test sets will be prefixed with "Copy of..." to distinguish them from the originals.
+The test sets will now be copied to the destination you specified. The name of the copied test sets will have " - Copy" added to the end to distinguish them from the originals. If you are copying test set folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.
 
 
 ### Moving Test Sets

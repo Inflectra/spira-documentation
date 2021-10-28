@@ -103,9 +103,9 @@ As a shortcut, when you select a specific release for viewing, subsequent execut
 
 ### Copying Test Cases
 
-To copy one or more test cases, simply select the check-boxes of the test cases you want to copy and then select the Edit \> Copy Items menu option. This will copy the current test case selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit \> Paste Items option.
+To copy one or more test cases, select the check-boxes of the test cases (or test case folder) you want to copy and then select Edit > Copy Items from the menu. This will copy the current test case / test case folder selection to the clipboard. Then select the place you want the test cases to be inserted and choose the Edit > Paste Items option.
 
-The test cases will now be copied to the destination you specified. The name of the copied test cases will be prefixed with "Copy of..." to distinguish them from the originals.
+The test cases will now be copied to the destination you specified. The name of the copied test cases will have " - Copy" added to the end to distinguish them from the originals. If you are copying test case folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.
 
 
 ### Blocking and Unblocking Test Cases
