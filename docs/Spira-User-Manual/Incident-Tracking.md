@@ -24,6 +24,11 @@ In addition, you can view a more detailed description of the incident (along wit
 ### Filtering & Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
+Incidents can be filtered in special ways when filtering by incident status or incident type:
+
+- **Incident Type**: Issues are a special subset of Incidents. [Admins define](../../Spira-Administration-Guide/Template-Incidents/#edit-types) which types of incident should be considered issues. When filtering by incident type you can choose to filter by Issues. Doing this will show you all incidents that have any type that is marked as also being an "issue."
+- **Incident Status**: Incidents have customizable statuses, each of which can be marked as ["open" or "closed" by the admin](../../Spira-Administration-Guide/Template-Incidents/#edit-statuses). When filtering by incident status you can choose to filter by specific statuses, or "all open" or "all closed" - these last two options automatically filter by all statuses that are considered open or closed respectively. 
+
 ### New Incident
 Clicking on the "***New Incident***" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in [Incident Details](../Incident-Tracking/#incident-details) except, depending on how the [workflow has been configured](../../Spira-Administration-Guide/Template-Incidents/#incident-workflows) for this product, certain fields may be disabled.
 

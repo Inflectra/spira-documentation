@@ -280,9 +280,11 @@ This section displays a bar-graph that illustrates the execution status of any t
 
 
 ## Top Open Issues
+Issues are a subset of Incidents. [Admins can control](../../Spira-Administration-Guide/Template-Incidents/#edit-types) which types of incident should be considered issues. All incidents that have a type marked in this way are considered "issues." 
 
-This section displays a breakdown of the top issues logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see
-[Incident Tracking > Incident Details](../Incident-Tracking/#incident-details)). *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
+This widget shows a breakdown of the top issues logged in the product, in order of decreasing priority. Issues that do not have a priority are listed at the top, since critical issues could be lurking in that list. Only open issues are shown. Clicking on the issue's hyperlink opens [incident details page](../Incident-Tracking/#incident-details) for that issue. 
+
+*You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
 
 ## Risk Summary
