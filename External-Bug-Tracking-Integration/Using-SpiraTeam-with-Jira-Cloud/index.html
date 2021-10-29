@@ -2109,6 +2109,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#f-jiras-issue-key-field" class="md-nav__link">
+    f) JIRA's Issue Key Field
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2686,6 +2693,13 @@
           <li class="md-nav__item">
   <a href="#e-jiras-security-level-field" class="md-nav__link">
     e) JIRA's Security Level Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-jiras-issue-key-field" class="md-nav__link">
+    f) JIRA's Issue Key Field
   </a>
   
 </li>
@@ -3883,6 +3897,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#f-jiras-issue-key-field" class="md-nav__link">
+    f) JIRA's Issue Key Field
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4182,6 +4203,16 @@ time-zones here.</li>
 <p>Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen.</p>
 <p>First you need to enter the word "<strong>SecurityLevel</strong>" as the External Key of the custom property. This tells the data-sync plug-in that the custom property in SpiraPlan should be mapped to built-in Security Level field in JIRA.</p>
 <p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Security Levels that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the security level name/description.</p>
+<h4 id="f-jiras-issue-key-field">f) JIRA's Issue Key Field<a class="headerlink" href="#f-jiras-issue-key-field" title="Permanent link">&para;</a></h4>
+<p>To see the Jira ID on the Incident list page you need to create a SpiraPlan custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). The Jira DataSync id field will always show up on the details page, but not the list page. So if you wish to see the Jira ID on the list page follow these steps:</p>
+<ul>
+<li>First, create an incident custom property in SpiraPlan of type 'TEXT'. This will be used to store the JIRA issue key within SpiraTeam.</li>
+<li>Next, from the product data synchronization page for Jira, click on the hyperlink of this new list custom property under Incident Custom Properties. This will load the custom property mapping configuration screen:</li>
+</ul>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_48.png" /></p>
+<ul>
+<li>Enter the word "<strong>JiraIssueKey</strong>" in the External Key textbox. Hit Save. The data-sync plug-in will know that this custom property needs to be mapped to the built-in Issue Key field in JIRA.</li>
+</ul>
 <h2 id="using-spiraplan-with-jira">Using SpiraPlan with JIRA<a class="headerlink" href="#using-spiraplan-with-jira" title="Permanent link">&para;</a></h2>
 <p>Now that all the mappings are done, you are now ready to use the integration.</p>
 <p>Once the data sync service starts, at first any incidents created in SpiraPlan for the specified products will be imported into JIRA and any existing issues in JIRA get loaded into SpiraPlan as either incidents or requirements (depending on your configuration).</p>
