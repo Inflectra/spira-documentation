@@ -393,6 +393,16 @@ First you need to enter the word "**SecurityLevel**" as the External Key of the 
 
 Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Security Levels that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the security level name/description.
 
+#### f) JIRA's Issue Key Field
+
+It can be convenient to create a SpiraTeam custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incients in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the JIRA issue key within SpiraTeam.
+
+Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:
+
+![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
+
+All you need to do on this screen is enter the word "**JiraIssueKey**" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Issue Key field in JIRA.
+
 ## Using SpiraPlan with JIRA
 Now that all the mappings are done, you are now ready to use the integration.
 
