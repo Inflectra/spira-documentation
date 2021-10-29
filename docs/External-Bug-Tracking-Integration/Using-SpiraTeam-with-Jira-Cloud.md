@@ -395,13 +395,14 @@ Next for each of the Property Values in the table (in the lower half of the page
 
 #### f) JIRA's Issue Key Field
 
-It can be convenient to create a SpiraTeam custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incients in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in SpiraTeam of type 'TEXT' that will be used to store the JIRA issue key within SpiraTeam.
+To see the Jira ID on the Incident list page you need to create a SpiraPlan custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). The Jira DataSync id field will always show up on the details page, but not the list page. So if you wish to see the Jira ID on the list page follow these steps:
 
-Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:
+- First, create an incident custom property in SpiraPlan of type 'TEXT'. This will be used to store the JIRA issue key within SpiraTeam.
+- Next, from the product data synchronization page for Jira, click on the hyperlink of this new list custom property under Incident Custom Properties. This will load the custom property mapping configuration screen:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
-All you need to do on this screen is enter the word "**JiraIssueKey**" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Issue Key field in JIRA.
+- Enter the word "**JiraIssueKey**" in the External Key textbox. Hit Save. The data-sync plug-in will know that this custom property needs to be mapped to the built-in Issue Key field in JIRA.
 
 ## Using SpiraPlan with JIRA
 Now that all the mappings are done, you are now ready to use the integration.
