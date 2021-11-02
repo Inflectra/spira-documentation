@@ -3,9 +3,9 @@
 ## Version 6.13 (November 2021)
 
 !!! info "Summary"
-    Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously parent requirements (those with children) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
+    Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously [parent requirements (those with children)](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
 
-    Improve the user experience and features of the built-in rich text editor. This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
+    Improve the user experience and features of the [built-in rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor). This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
 
     Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for passwords (encrypted text), release, and automation host custom properties.
 
@@ -17,10 +17,10 @@
 
 ??? success "New Features"
 
-    - Implement new rich text editor to enable more modern experience [RQ:3697]
-    - Requirements that have children (summary requirements) retain their type and are not forced to be "Epics" [RQ:3703]
+    - Implement new [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) to enable more modern experience [RQ:3697]
+    - Requirements that have children (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
 
-    * ** APIs**
+    * **APIs**
 
         - Add API functions for newly configurable fields [RQ:2543]
         - Add API calls to add and update risk statuses, types, impacts, and probabilities [RQ:3844]
@@ -30,7 +30,7 @@
         - Add API calls to update incident types, statuses, priorities, and severities [RQ:3705]
         - Add API calls to manage document statuses [RQ:3761]
 
-    * ** Custom Property Types**
+    * **Custom Property Types**
 
         - Add a new custom property type to support passwords (fully encrypted text) [RQ:3056]
         - Add a new custom property type for picking an Automation Host [RQ:3058]

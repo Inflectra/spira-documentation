@@ -368,7 +368,7 @@ This tab displays the requirements coverage information for the test case in que
 
 The table shows the requirements, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question.
 
-To map the test case to a new requirement, click the "***Add***" button to display the add association panel. You can search by the ID (if known) prefixed with the appropriate token (e.g. "RQ:4" to search for requirement 4). You can also browse by package, or search by name. Select the requirements you want and then click the "***Save***" button".
+To map the test case to a new requirement, click the "***Add***" button to display the add association panel. You can search by the ID (if known) prefixed with the appropriate token (e.g. "RQ:4" to search for requirement 4). You can also browse by parent requirement, or search by name. Select the requirements you want and then click the "***Save***" button".
 
 ![](img/Test_Case_Management_151.png)
 
@@ -535,7 +535,7 @@ You can search for a requirement by its ID if you know it (make sure to include 
 
 ![](img/Test_Case_Management_167.png)
 
-Otherwise, you can search for the requirements by choosing a parent package from the dropdown and/or entering a partial name match:
+Otherwise, you can search for the requirements by choosing a parent requirement from the dropdown and/or entering a partial name match:
 
 ![](img/Test_Case_Management_168.png)
 

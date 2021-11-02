@@ -372,7 +372,7 @@ You can **filter** the results by choosing items from the filter options display
 
 ### Reqs & Tasks
 
-This tab displays the list of requirements (excluding packages - in other words it displays 'user stories') and their associated child tasks that need to be completed for the release/sprint to be completed:
+This tab displays the list of requirements (excluding parent requirements - in other words it displays 'user stories') and their associated child tasks that need to be completed for the release/sprint to be completed:
 
 ![](img/Release_Management_269.png)
 

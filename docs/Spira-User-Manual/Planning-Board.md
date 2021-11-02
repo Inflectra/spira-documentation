@@ -20,7 +20,7 @@ To access the SpiraPlan **product** planning board, select a product and go to A
 
 By default, the system will display the product planning board in the product backlog view, with the backlog organized by component. You can change the view by click on the '**Planning'** drop down list:
 
--   **Product Backlog** -- This displays a list of all the backlog items that are not currently scheduled for a specific release or sprint. The items can be organized by component, package, priority or person.
+-   **Product Backlog** -- This displays a list of all the backlog items that are not currently scheduled for a specific release or sprint. The items can be organized by component, parent requirement, priority, or person.
 -   **All Releases** -- This displays a list of all the releases as well as the product backlog and is designed to let you easily move items from the product backlog to a specific release.
 -   **Release View** -- This displays a list of all the backlog items that are scheduled for the selected release and lets you organize them by sprint, status, or person.
 -   **Sprint View** - This displays a list of all the backlog items that are scheduled for the selected sprint (also known as a Sprint in some methodologies) and lets you organize them by status, or person.
@@ -97,13 +97,14 @@ This view is designed to let you see the product backlog organized by Component.
 The top section will contain the list of items that are not assigned to a component, with the other sections containing the items that belong to the specific component.
 
 
-### Product Backlog -- By Epic
+### Product Backlog -- By Parent
+<span id="product-backlog-by-epic"></span>
 
-This view is designed to let you see the product backlog organized by requirement package (a summary requirement). Each of the packages is displayed on the left-hand side in a hierarchical structure, and the backlog items displayed in the same row on the right. The backlog items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the package through an association.
+This view is designed to let you see the product backlog organized by parent requirements (those with at least one child requirement). Each of the parents is displayed on the left-hand side in a hierarchical structure, and the backlog items displayed in the same row on the right. The backlog items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the parent requirement through an association.
 
 ![](img/Planning_Board_416.png)
 
-The top section will contain the list of items that are not assigned to a package, with the other sections containing the items that are children of the specific package.
+The top section will contain the list of items that are not assigned to a parent requirement, with the other sections containing the items that are children of the specific parent.
 
 
 ### Product Backlog -- By Priority
@@ -138,12 +139,13 @@ This view is designed to let you see items across all releases organized by Comp
 
 The top section will contain the list of items that are not assigned to a component, with the other sections containing the items that belong to the specific component.
 
-### Release Planning -- By Epic
-This view is designed to let you see items across all releases organized by requirement epic. Each of the packages is displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the package through an association.
+### Release Planning -- By Parent
+<span id="release-planning-by-epic">
+This view is designed to let you see items across all releases organized by parent requirement. Each of the parents is displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the parent requirement through an association.
 
 ![](img/Planning_Board_AllReleases_Epic.png)
 
-The top section will contain the list of items that are not assigned to an epic, with the other sections containing the items that are children of the specific epic.
+The top section will contain the list of items that are not assigned to a parent requirement, with the other sections containing the items that are children of the specific parent.
 
 
 ### Release Planning -- By Priority
@@ -196,12 +198,13 @@ This view is designed to let you see the release backlog organized by Component.
 
 The top section will contain the list of items that are not assigned to a component, with the other sections containing the items that belong to the specific component.
 
-### Release Backlog -- By Epic
-This view is designed to let you see the release backlog organized by requirement epic. Each of the packages is displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the package through an association.
+### Release Backlog -- By Parent
+<span id="release-backlog-by-epic"></span>
+This view is designed to let you see the release backlog organized by parent requirement. Each of the parents is displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the parent requirement through an association.
 
 ![](img/Planning_Board_Release_Epic.png)
 
-The top section will contain the list of items that are not assigned to an epic, with the other sections containing the items that are children of the specific epic.
+The top section will contain the list of items that are not assigned to a parent requirement, with the other sections containing the items that are children of the specific parent.
 
 
 ### Release Backlog -- By Priority
@@ -262,12 +265,13 @@ This view is designed to let you see the sprint backlog organized by Component. 
 
 The top section will contain the list of items that are not assigned to a component, with the other sections containing the items that belong to the specific component.
 
-### Sprint Backlog -- By Epic
-This view is designed to let you see the sprint backlog organized by requirement epic. Each of the packages is displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the package through an association.
+### Sprint Backlog -- By Parent
+<span id="sprint-backlog-by-epic"></span>
+This view is designed to let you see the sprint backlog organized by parent requirement. Each of the parents are displayed on the left-hand side in a hierarchical structure, and the items are displayed in the same row on the right. The items can be child requirements (with associated tasks and test cases) or incidents. In this view the incidents are the ones linked to the parent requirement through an association.
 
 ![](img/Planning_Board_Sprint_Epic.png)
 
-The top section will contain the list of items that are not assigned to an epic, with the other sections containing the items that are children of the specific epic.
+The top section will contain the list of items that are not assigned to a parent requirement, with the other sections containing the items that are children of the specific parent.
 
 ### Sprint Backlog -- By Priority
 This view is designed to let you see the list of planned backlog items in the current sprint, organized by requirement importance. Each of the possible importance values is displayed on the left-hand side and the backlog items displayed in the same row on the right. The backlog items in this view will only be requirements (with associated tasks and test cases).
