@@ -477,12 +477,9 @@ Clicking on the "***Insert Step***" button inserts a new step *before* the curre
 To move the steps in the list, click on the step you want to move and drag it to the location you want it moved.
 
 ### Test Coverage
-
 This tab shows the test coverage information for the requirement in question:
 
 ![](img/Requirements_Management_107.png)
-
-
 
 
 The tab displays a grid containing the test cases already mapped to this requirement. You can filter that list by the test case type, name, status, execution status, execution date, priority, product name and ID. You can remove an existing test case by selecting its check box and clicking the 'Delete' button. This doesn't delete the test case, just removes it from the requirement.
@@ -493,27 +490,17 @@ To add a new test case to the requirement, simply click on the 'Add' button:
 
 ![](img/Requirements_Management_108.png)
 
-
-
-
 You can search for a test case by its ID if you know it (make sure to include the "TC" prefix):
 
 ![](img/Requirements_Management_109.png)
-
 
 Otherwise, you can search for the test cases by choosing a folder from the dropdown and/or entering a partial name match:
 
 ![](img/Requirements_Management_110.png)
 
-
-
-
-One you have found the desired test case(s), simply select their check boxes and click the 'Save' button to add them to the current requirement:
+One you have found the desired test case(s), select their check boxes and click the 'Save' button to add them to the current requirement:
 
 ![](img/Requirements_Management_111.png)
-
-
-
 
 Finally, as a shortcut you can click the "***Create Test Case from This Requirement***" button to create a new test case in the list of covered test cases that will be automatically linked to this requirement. This is useful when you have created a new requirement and want to generate an initial covering test to be fleshed-out later.
 

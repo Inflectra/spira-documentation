@@ -44,12 +44,16 @@ Different types of custom properties supported:
 - **List**: custom list selector
 - **Multi-List**: custom list selector that allows multiple values to be selected at the same time
 - **User**: list of users in the current product
+- **Password**: for storing sensitive information. This data is securely encrypted at rest and the actual value can only be viewed or changed on the relevant artifact details page (or via the API). Passwords cannot be seen on list pages, in history records, or in reports. 
+- **Release**: selector for all releases in the current product
+- **Date & Time**: date and time selector
+- **Automation Host**: selector for all active automation hosts in the current product
 
 Each custom property can have optional settings applied to it to further control the custom property. Note: not all settings are available for all property types. These settings are on the Options tab of the dialog:
 
 ![](img/Template_Custom_Properties_182.png)
 
-- **Default**: the default value when a new artifact is created
+- **Default**: the default value when a new artifact is created (not for passwords, releases, or automation hosts)
 - **Allow Empty**: whether or not an empty value is allowed
 - **Precision**: how many decimal places to allow (decimals only)
 - **Minimum Value**: the minimum value allowed (numbers only)

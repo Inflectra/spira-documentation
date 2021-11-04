@@ -9,20 +9,19 @@
 
     Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for passwords (encrypted text), release, and automation host custom properties.
 
-    The built-in diagram tools get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
+    The built-in [diagram tools](../../Spira-User-Manual/Document-Management/#editing-diagrams) get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
 
-    We continue to round out our extensive API to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage many aspects of product templates.
+    We continue to round out our [extensive API](https://api.inflectra.com/Spira/Services/v6_0/RestService.aspx) to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage all template managed fields for specific artifacts.
 
     Improved localization in the web application of fields that users are not able to customize (like requirement or test case statuses).
 
 ??? success "New Features"
 
     - Implement new [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) to enable more modern experience [RQ:3697]
-    - Requirements that have children (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
+    - [Requirements that have children](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
 
     * **APIs**
 
-        - Add API functions for newly configurable fields [RQ:2543]
         - Add API calls to add and update risk statuses, types, impacts, and probabilities [RQ:3844]
         - Add API calls to add and update task types and priorities [RQ:3843]
         - Add API calls to add and update test case types and priorities [RQ:3838]
@@ -42,6 +41,7 @@
     * **Rich Text Editor**
 
         - Allow accented and other 'special characters to always be viewed as characters and not HTML encoded (e.g. in Excel exports) [IN:4898]
+        - Fix not being able to add screenshots into rich text fields when inline editing on planning boards [IN:6739]
         - Fix not being able to add screenshots to test run rich text custom properties on the test execution wizard pages [IN:6801]
         - Fix rich text boxes on artifact details page not correctly going from disabled to enabled when changing artifacts using the sidebar to live load the new artifact [IN:6736]
         - Fix rich text custom properties for test cases and test steps appearing editable during test execution (normal and exploratory) when they are actually read only [IN:6792]
@@ -53,10 +53,9 @@
 
         - Localize workflow status and other hard coded fields throughout the web application and UI [IN:6262]
         - Complete the integration with Rapise to enable floating licenses in Rapise [IN:6735]
-        - Enhance document diagrams with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]
+        - Enhance [document diagrams](../../Spira-User-Manual/Document-Management/#editing-diagrams) with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]
         - Fix cloud and on premise upgrading to stop system admins seeing links to manage sample data [IN:6745]
         - Fix making a new incident or risk so that the list of followers from any previous incident or risk does not show [IN:6308]
-        - Fix not being able to add screenshots into rich text fields when inline editing on planning boards [IN:6739]
         - Fix the requirement (if set on a task) being removed from the task when editing on the task board pop-up dialog [IN:6732]
         - Make adding a test case to a requirement or release on the test case details page only add the main release and not its children, to match the equivalent behavior on the list page [IN:6749]
 
