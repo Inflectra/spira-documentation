@@ -310,7 +310,7 @@ This section displays a two dimensional matrix of the open risks logged against 
 
 ## Top Open Risks
 
-This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the [risk details page](../Risk-Management/#risk-details) for the risk in question.
+This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the [risk details page](../Risks-Management/#risk-details) for the risk in question.
 *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
 
