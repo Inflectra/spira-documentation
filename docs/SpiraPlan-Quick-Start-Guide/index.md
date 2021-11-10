@@ -87,7 +87,7 @@ We now have a nicely grouped set of requirements. Let's enter more information a
 
 ![](img/Define_the_Requirements_10.png)
 
-3.  Change the 'Type' to 'User Story' for the requirements that let you edit this field.
+3.  Change the 'Type' to 'User Story' for some of the requirements - in the example screenshot all requirements that are children (have a single diamond icon and a non bold name) are now user stories.
 4.  Choose whatever values you like for the 'Importance' field for each of the requirements.
 5.  Click the `Save` button.
 
