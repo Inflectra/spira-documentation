@@ -423,6 +423,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rich-text-editor" class="md-nav__link">
+    Rich Text Editor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3554,6 +3561,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rich-text-editor" class="md-nav__link">
+    Rich Text Editor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3760,7 +3774,7 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <p><img alt="" src="../img/Requirements_Management_121.png" /></p>
 <p>You can narrow down your search by entering a keyword:</p>
 <p><img alt="" src="../img/Requirements_Management_122.png" /></p>
-<p>Artifacts that have folders let you choose a folder to narrow your search. When attempting to add an association to a requirement, you can choose a package from the list to narrow down the results:</p>
+<p>Artifacts that have folders let you choose a folder to narrow your search. When attempting to add an association to a requirement, you can choose a parent requirement from the list to narrow down the results:</p>
 <p><img alt="" src="../img/Requirements_Management_123.png" /></p>
 <p>Once you have a list of artifacts, select the checkboxes of the items you want to associate with the current artifact and click the 'Save' button.</p>
 <p>You can add a comment that explains the rationale for the association and choose the type of association being created:</p>
@@ -3768,6 +3782,85 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <li><strong>Related-to:</strong> this is used to specify that the two artifacts are simply related</li>
 <li><strong>Depends-on:</strong> this is used to specify that the current artifact has a dependency on the one being linked to.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">What can you associate to what?</p>
+<table>
+<thead>
+<tr>
+<th>Assocation Tab Of</th>
+<th>Available artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documents</strong></td>
+<td>Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks</td>
+</tr>
+<tr>
+<td><strong>Incidents</strong></td>
+<td>Requirements, Test Steps, Tasks, Incidents, Risks</td>
+</tr>
+<tr>
+<td><strong>Requirements</strong></td>
+<td>Requirements, Incidents, Risks</td>
+</tr>
+<tr>
+<td><strong>Risks</strong></td>
+<td>Requirements, Incidents, Risks, Test Cases</td>
+</tr>
+<tr>
+<td><strong>Source code commits</strong></td>
+<td>Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks</td>
+</tr>
+<tr>
+<td><strong>Source code files</strong></td>
+<td>Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks</td>
+</tr>
+<tr>
+<td><strong>Tasks</strong></td>
+<td>Tasks, Incidents</td>
+</tr>
+<tr>
+<td><strong>Test cases</strong> (in SpiraTeam and SpiraPlan only)</td>
+<td>Tasks, Risks</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="rich-text-editor">Rich Text Editor<a class="headerlink" href="#rich-text-editor" title="Permanent link">&para;</a></h3>
+<p>There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated <a href="../Document-Management/#add-new-inline-documents">rich text documents in the Documents Repository</a>. Rich text fields can be as long as you need, and can replace traditional documents entirely.</p>
+<p><img alt="" src="../img/Application-Wide_editor.png" /></p>
+<p>SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use. As such, it does not require special instruction. For information, below is a list of supported features in the rich text editor.</p>
+<p><strong>Formatting options</strong>:</p>
+<ul>
+<li>heading type</li>
+<li>font</li>
+<li>text size</li>
+<li>bold</li>
+<li>italic</li>
+<li>underline</li>
+<li>strikethrough</li>
+<li>numbered lists</li>
+<li>bulleted lists</li>
+<li>task lists</li>
+<li>text color</li>
+<li>background color</li>
+<li>text highlighting</li>
+<li>indent</li>
+<li>outdent</li>
+<li>quotes</li>
+<li>code blocks</li>
+</ul>
+<p><strong>Inserting content</strong>:</p>
+<ul>
+<li>links to other sites or urls</li>
+<li>Tables using the powerful table editor</li>
+<li>seperator lines</li>
+<li>Images and screenshots (paste them in)</li>
+<li>media from third parties (including YouTube and Vimeo)</li>
+<li>Text from MS Word (paste it directly in - note that not all formatting is retained)</li>
+</ul>
+<p>In many places the editor can also be made full screen to help editing of larger documents. To enter full screen mode, click on the computer monitor icon at the far right of the toolbar. Are you using dark mode? No problem - the editor works great in dark mode.</p>
                 
               
               

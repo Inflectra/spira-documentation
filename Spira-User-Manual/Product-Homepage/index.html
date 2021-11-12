@@ -347,6 +347,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activity-stream" class="md-nav__link">
+    Activity Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shared-searches" class="md-nav__link">
     Shared Searches
   </a>
@@ -3512,6 +3519,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activity-stream" class="md-nav__link">
+    Activity Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shared-searches" class="md-nav__link">
     Shared Searches
   </a>
@@ -3767,7 +3781,7 @@
 <td>Activity Stream</td>
 <td>Y</td>
 <td>Y</td>
-<td>Y</td>
+<td></td>
 </tr>
 <tr>
 <td>Shared Searches</td>
@@ -3966,6 +3980,21 @@
 <li>the product's program</li>
 <li>the product's template</li>
 </ul>
+<h2 id="activity-stream">Activity Stream<a class="headerlink" href="#activity-stream" title="Permanent link">&para;</a></h2>
+<p>This section shows a list of the most recent changes made by any product member anywhere in the product. It only displays changes to artifacts that the current user is allowed to view (based on their product role). Here is an example activity item - you can see that it displays information about the user who made the change, what was changed, how it was changed, and when:</p>
+<blockquote>
+<p>System Administrator modified Incident [IN:1] - Cannot log into the application | Tuesday, November 2, 2021 2:01:34 PM</p>
+</blockquote>
+<p>You can configure how many recent changes to display.</p>
+<p>Clicking the "View All" button at the top of this section will open the "Activity List" page. This page shows every change ever made in the product in a single, paginated list for artifacts that the current user is allowed to view (based on their product role).The list can be sorted on or filtered by any field. The list shows the following columns:</p>
+<ul>
+<li>Change Date</li>
+<li>Artifact Type</li>
+<li>Artifact Name</li>
+<li>Artifact ID</li>
+<li>Change Type</li>
+<li>User</li>
+</ul>
 <h2 id="shared-searches">Shared Searches<a class="headerlink" href="#shared-searches" title="Permanent link">&para;</a></h2>
 <p>This section lists any filters/searches have been saved from the various artifact list screens throughout the application and marked as <strong>shared filters</strong>. This allows users to store specific combinations of searches that the product team needs to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).</p>
 <p>The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "<strong><em>Delete</em></strong>" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.</p>
@@ -4088,7 +4117,7 @@
 <h2 id="risk-summary">Risk Summary<a class="headerlink" href="#risk-summary" title="Permanent link">&para;</a></h2>
 <p>This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.</p>
 <h2 id="top-open-risks">Top Open Risks<a class="headerlink" href="#top-open-risks" title="Permanent link">&para;</a></h2>
-<p>This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the <a href="../Risk-Management/#risk-details">risk details page</a> for the risk in question.
+<p>This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the <a href="../Risks-Management/#risk-details">risk details page</a> for the risk in question.
 <em>You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.</em></p>
 <h2 id="late-finishing-tasks">Late Finishing Tasks<a class="headerlink" href="#late-finishing-tasks" title="Permanent link">&para;</a></h2>
 <p>This section displays the list of any product tasks that have not yet been completed, but whose scheduled end date has already elapsed. A graphical progress bar is included with each task in the grid, so that you can easily see which tasks are nearest completion.</p>

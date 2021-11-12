@@ -3174,6 +3174,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-613-november-2021" class="md-nav__link">
+    Version 6.13 (November 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-612-september-2021" class="md-nav__link">
     Version 6.12 (September 2021)
   </a>
@@ -3461,6 +3468,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-613-november-2021" class="md-nav__link">
+    Version 6.13 (November 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-612-september-2021" class="md-nav__link">
     Version 6.12 (September 2021)
   </a>
@@ -3663,6 +3677,71 @@
                 
                 
                 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-613-november-2021">Version 6.13 (November 2021)<a class="headerlink" href="#version-613-november-2021" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously <a href="../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements">parent requirements (those with children)</a> had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.</p>
+<p>Improve the user experience and features of the <a href="../../Spira-User-Manual/Application-Wide/#rich-text-editor">built-in rich text editor</a>. This lets users more easily add and view links, create checklists, highlight text, and strikethrough text</p>
+<p>Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for passwords (encrypted text), release, and automation host custom properties.</p>
+<p>The built-in <a href="../../Spira-User-Manual/Document-Management/#editing-diagrams">diagram tools</a> get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.</p>
+<p>We continue to round out our <a href="https://api.inflectra.com/Spira/Services/v6_0/RestService.aspx">extensive API</a> to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage all template managed fields for specific artifacts.</p>
+<p>Improved localization in the web application of fields that users are not able to customize (like requirement or test case statuses).</p>
+</div>
+<details class="success"><summary>New Features</summary><ul>
+<li>Implement new <a href="../../Spira-User-Manual/Application-Wide/#rich-text-editor">rich text editor</a> to enable more modern experience [RQ:3697]</li>
+<li>
+<p><a href="../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements">Requirements that have children</a> (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]</p>
+</li>
+<li>
+<p><strong>APIs</strong></p>
+<ul>
+<li>Add API calls to add and update risk statuses, types, impacts, and probabilities [RQ:3844]</li>
+<li>Add API calls to add and update task types and priorities [RQ:3843]</li>
+<li>Add API calls to add and update test case types and priorities [RQ:3838]</li>
+<li>Add API calls to add and update requirement types and importances [RQ:3712]</li>
+<li>Add API calls to update incident types, statuses, priorities, and severities [RQ:3705]</li>
+<li>Add API calls to manage document statuses [RQ:3761]</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Property Types</strong></p>
+<ul>
+<li>Add a new custom property type to support passwords (fully encrypted text) [RQ:3056]</li>
+<li>Add a new custom property type for picking an Automation Host [RQ:3058]</li>
+<li>Add a new custom property type to support date and time (in addition to existing date type) [RQ:3057]</li>
+<li>Add a new custom property type for picking a Release [RQ:3054]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<li>
+<p><strong>Rich Text Editor</strong></p>
+<ul>
+<li>Allow accented and other 'special characters to always be viewed as characters and not HTML encoded (e.g. in Excel exports) [IN:4898]</li>
+<li>Fix not being able to add screenshots into rich text fields when inline editing on planning boards [IN:6739]</li>
+<li>Fix not being able to add screenshots to test run rich text custom properties on the test execution wizard pages [IN:6801]</li>
+<li>Fix rich text boxes on artifact details page not correctly going from disabled to enabled when changing artifacts using the sidebar to live load the new artifact [IN:6736]</li>
+<li>Fix rich text custom properties for test cases and test steps appearing editable during test execution (normal and exploratory) when they are actually read only [IN:6792]</li>
+<li>Fix rich text rendering on the test execution pages to show all formatting on test step fields (including foreground and background colors) [IN:5707]</li>
+<li>Fix the rich text description for a folder displaying with HTML tags (instead of formatted HTML) when viewing as a tooltip when you hover over a folder name [IN:6758]</li>
+<li>Make it easier to see full rich text field information inline on details pages by always making the height of the field extend to show all content [IN:5604]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other</strong></p>
+<ul>
+<li>Localize workflow status and other hard coded fields throughout the web application and UI [IN:6262]</li>
+<li>Complete the integration with Rapise to enable floating licenses in Rapise [IN:6735]</li>
+<li>Enhance <a href="../../Spira-User-Manual/Document-Management/#editing-diagrams">document diagrams</a> with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]</li>
+<li>Fix cloud and on premise upgrading to stop system admins seeing links to manage sample data [IN:6745]</li>
+<li>Fix making a new incident or risk so that the list of followers from any previous incident or risk does not show [IN:6308]</li>
+<li>Fix the requirement (if set on a task) being removed from the task when editing on the task board pop-up dialog [IN:6732]</li>
+<li>Make adding a test case to a requirement or release on the test case details page only add the main release and not its children, to match the equivalent behavior on the list page [IN:6749]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-612-september-2021">Version 6.12 (September 2021)<a class="headerlink" href="#version-612-september-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

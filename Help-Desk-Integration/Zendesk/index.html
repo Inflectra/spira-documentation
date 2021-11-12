@@ -2805,13 +2805,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen" class="md-nav__link">
-    When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reviewing-the-incident-in-spirateam" class="md-nav__link">
     Reviewing the Incident in SpiraTeam
   </a>
@@ -3419,13 +3412,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen" class="md-nav__link">
-    When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reviewing-the-incident-in-spirateam" class="md-nav__link">
     Reviewing the Incident in SpiraTeam
   </a>
@@ -3453,260 +3439,114 @@
                 
                 
                 <h1 id="zendesk">Zendesk<a class="headerlink" href="#zendesk" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to integrate Zendesk into SpiraTeam<sup>®</sup>. This
-will enable Zendesk agents to log incidents emerging from a ticket
-directly from the Zendesk interface into SpiraTeam<sup>®</sup>. They will also be
-able to see and review any SpiraTeam<sup>®</sup> incidents already linked to
-existing Zendesk tickets. The integration is in the form of a Zendesk
-app, available for free, from the Zendesk marketplace.</p>
+<p>This section outlines how to integrate Zendesk into SpiraTeam<sup>®</sup>. This will enable Zendesk agents to log incidents emerging from a ticket directly from the Zendesk interface into SpiraTeam<sup>®</sup>. They will also be able to see and review any SpiraTeam<sup>®</sup> incidents already linked to existing Zendesk tickets. The integration is in the form of a Zendesk app, available for free, from the Zendesk marketplace.</p>
 <h3 id="overview-to-get-up-and-running">Overview to Get Up and Running<a class="headerlink" href="#overview-to-get-up-and-running" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>Use SpiraTeam version 5+ and Zendesk, using modern browsers</p>
-</li>
-<li>
-<p>Create a new administrator in SpiraTeam (called something like
-"Zendesk")</p>
-</li>
-<li>
-<p>Make sure the Zendesk user has an api-key</p>
-</li>
-<li>
-<p>Install the SpiraTeam app from the Zendesk marketplace</p>
-</li>
-<li>
-<p>Configure the app with url, username, and api-key information</p>
-</li>
-<li>
-<p>Make sure SpiraTeam allows Zendesk to connect to it</p>
-</li>
-<li>
-<p>Get Zendesk to connect to Spirateam (perform an initial handshake)</p>
-</li>
-<li>
-<p>Make sure each relevant SpiraTeam project is set up to work with
-Zendesk</p>
-</li>
+<li>Use SpiraTeam version 5+ and Zendesk, using modern browsers</li>
+<li>Create a new administrator in SpiraTeam (called something like "Zendesk")</li>
+<li>Make sure the Zendesk user has an api-key</li>
+<li>Install the SpiraTeam app from the Zendesk marketplace</li>
+<li>Configure the app with url, username, and api-key information</li>
+<li>Make sure SpiraTeam allows Zendesk to connect to it</li>
+<li>Get Zendesk to connect to Spirateam (perform an initial handshake)</li>
+<li>Make sure each relevant SpiraTeam project is set up to work with Zendesk</li>
 </ul>
 <h2 id="installing-the-spirateam-app">Installing the SpiraTeam app<a class="headerlink" href="#installing-the-spirateam-app" title="Permanent link">&para;</a></h2>
-<p>This section outlines the steps required to ensure that the links
-between Zendesk and Spirateam will work correctly.</p>
+<p>This section outlines the steps required to ensure that the links between Zendesk and Spirateam will work correctly.</p>
 <h3 id="summary-of-requirements">Summary of requirements<a class="headerlink" href="#summary-of-requirements" title="Permanent link">&para;</a></h3>
-<p>There are a number of elements needed for both applications to
-successfully communicate:</p>
+<p>There are a number of elements needed for both applications to successfully communicate:</p>
 <ul>
-<li>
-<p>A working installation of SpiraTeam v5.0 or later</p>
-</li>
-<li>
-<p>The SpiraTeam server must have an authenticated certificate and be
-accessible over HTTPS</p>
-</li>
-<li>
-<p>A working account with Zendesk</p>
-</li>
-<li>
-<p>Zendesk agents must be using a modern browser (IE10 or later)</p>
-</li>
-<li>
-<p>A SpiraTeam admin account whose username and API-key
-(<strong>not</strong> password) can be saved inside the Zendesk app
-settings</p>
-</li>
+<li>A working installation of SpiraTeam v5.0 or later</li>
+<li>The SpiraTeam server must have an authenticated certificate and be accessible over HTTPS</li>
+<li>A working account with Zendesk</li>
+<li>Zendesk agents must be using a modern browser (IE10 or later)</li>
+<li>A SpiraTeam admin account whose username and API-key (<strong>not</strong> password) can be saved inside the Zendesk app settings</li>
 </ul>
 <h3 id="initial-configuration-of-spirateam">Initial Configuration of SpiraTeam<a class="headerlink" href="#initial-configuration-of-spirateam" title="Permanent link">&para;</a></h3>
-<p>Zendesk and SpiraTeam need to communicate and post data to one another
-cross domain. To ensure effective security SpiraTeam therefore needs to
-be accessible via HTTPS (i.e. using a certificate). If this is not
-already in place, contact your network administration for support.</p>
-<p><strong>Note</strong>: all SpiraTeam hosted accounts are already accessible via HTTPS
-(only).</p>
-<p>Zendesk and SpiraTeam communicate through a security protocol called
-CORs to ensure that each application only receives data from trusted
-domains. The subdomain of your Zendesk account is required by SpiraTeam
-to validate any calls it receives.</p>
-<p>Log in as a project-level administrator to SpiraTeam, go to the
-Administration home page and scroll to System > Security Settings.</p>
-<p><img alt="" src="../img/Zendesk_16.png" /></p>
-<p>At the bottom of the Security Settings page, enter the Zendesk subdomain
-in the "Allowed Domains" text box, making sure to include the full url
-(i.e including https:// before the domain address). Click &lt;Update> for
-the changes to take effect. The url should be in the format of:
+<p>Zendesk and SpiraTeam need to communicate and post data to one another cross domain. To ensure effective security SpiraTeam therefore needs to be accessible via HTTPS (i.e. using a certificate). If this is not already in place, contact your network administration for support.</p>
+<p><strong>Note</strong>: all SpiraTeam hosted accounts are already accessible via HTTPS (only).</p>
+<p>Zendesk and SpiraTeam communicate through a security protocol called CORs to ensure that each application only receives data from trusted domains. The subdomain of your Zendesk account is required by SpiraTeam to validate any calls it receives.</p>
+<p>Log in as a project-level administrator to SpiraTeam, go to the Administration home page and scroll to System > Security Settings.</p>
+<p><img alt="" src="../img/Zendesk_16.png" />  </p>
+<p>At the bottom of the Security Settings page, enter the Zendesk subdomain in the "Allowed Domains" text box, making sure to include the full url (i.e including https:// before the domain address). Click &lt;Update> for the changes to take effect. The url should be in the format of:
 "<strong><a href="https://yoursubdomain.zendesk.com">https://yoursubdomain.zendesk.com</a></strong>"</p>
 <p><img alt="" src="../img/Zendesk_17.png" /></p>
-<p><strong>Important:</strong> if this field is left blank, NO domains
-will be allowed to interact with SpiraTeam via CORs. If an asterisk (*)
-is entered, ALL domains will be able to do so (not recommended).</p>
-<p>The Zendesk app uses the details of a SpiraTeam user to authenticate
-with SpiraTeam. This needs to be, for the initial setup, a user with
-administrator privileges. We recommend creating a specific user account
-(such as "Zendesk"), so that the only incidents created by that account
-can be traced back to Zendesk.</p>
-<p><strong>Note</strong>: all tickets logged with Zendesk will be marked as originating
-from this user. This means that the Zendesk team do not need to have
-individual SpiraTeam logins.</p>
-<p>Go to the Administration home page and scroll to Users > View / Edit
-Users.</p>
-<p><img alt="" src="../img/Zendesk_18.png" /></p>
+<p><strong>Important:</strong> if this field is left blank, NO domains will be allowed to interact with SpiraTeam via CORs. If an asterisk (*) is entered, ALL domains will be able to do so (not recommended).</p>
+<p>The Zendesk app uses the details of a SpiraTeam user to authenticate with SpiraTeam. This needs to be, for the initial setup, a user with administrator privileges. We recommend creating a specific user account (such as "Zendesk"), so that the only incidents created by that account can be traced back to Zendesk.</p>
+<p><strong>Note</strong>: all tickets logged with Zendesk will be marked as originating from this user. This means that the Zendesk team do not need to have individual SpiraTeam logins.</p>
+<p>Go to the Administration home page and scroll to Users > View / Edit Users.</p>
+<p><img alt="" src="../img/Zendesk_18.png" />  </p>
 <p>Click the &lt;Add User> button on the bottom right of the page.</p>
 <p>Fill in the required fields (see below), and make sure that:</p>
 <ul>
-<li>
-<p>System Administrator is set to "Yes"</p>
-</li>
-<li>
-<p>Active is set to "Yes"</p>
-</li>
-<li>
-<p>Locked Out is set to "No"</p>
-</li>
-<li>
-<p>RSS Token is enabled</p>
-</li>
-<li>
-<p>That an RSS Token is displayed</p>
-</li>
+<li>System Administrator is set to "Yes"</li>
+<li>Active is set to "Yes"</li>
+<li>Locked Out is set to "No"</li>
+<li>RSS Token is enabled</li>
+<li>That an RSS Token is displayed</li>
 </ul>
 <p>Click &lt;Insert> to add the new user.</p>
-<p><img alt="" src="../img/Zendesk_19.png" /></p>
+<p><img alt="" src="../img/Zendesk_19.png" />  </p>
 <h3 id="install-and-configure-the-spirateam-app-in-zendesk">Install and Configure the SpiraTeam App in Zendesk<a class="headerlink" href="#install-and-configure-the-spirateam-app-in-zendesk" title="Permanent link">&para;</a></h3>
-<p>First, find an install the free SpiraTeam App from within Zendesk. Only
-administrators on Zendesk can install apps. Navigate to the Admin panel,
-and select Marketplace from the Apps menu. Search for "SpiraTeam" in the
-search field on the right, or browse by "Issues Tracking".</p>
-<p>You can also browse the <a href="https://www.zendesk.com/apps">Zendesk app
-website</a>.</p>
+<p>First, find an install the free SpiraTeam App from within Zendesk. Only administrators on Zendesk can install apps. Navigate to the Admin panel, and select Marketplace from the Apps menu. Search for "SpiraTeam" in the search field on the right, or browse by "Issues Tracking".</p>
+<p>You can also browse the <a href="https://www.zendesk.com/apps">Zendesk app website</a>.</p>
 <p><img alt="" src="../img/Zendesk_20.png" /></p>
-<p>Once the application is installed, enter required information in the
-settings page of the app. Go to Admin > Apps > Manage in Zendesk to
-see the list of installed applications.</p>
-<p><img alt="" src="../img/Zendesk_21.png" /></p>
-<p>Make sure the application is enabled. Right click on the app's gear icon
-to change settings</p>
+<p>Once the application is installed, enter required information in the settings page of the app. Go to Admin > Apps > Manage in Zendesk to see the list of installed applications.</p>
+<p><img alt="" src="../img/Zendesk_21.png" />  </p>
+<p>Make sure the application is enabled. Right click on the app's gear icon to change settings</p>
 <p><img alt="" src="../img/Zendesk_22.png" /></p>
-<p>In the settings screen, make sure all input boxes are correctly filled
-in. Enter the username and API key that you created inside SpiraTeam
-above, as well as the address of SpiraTeam. Make sure that the API key
-is an alphanumeric string contained within curly braces -- { }. Click
-&lt;Update>.</p>
-<p><img alt="" src="../img/Zendesk_24.png" /></p>
+<p>In the settings screen, make sure all input boxes are correctly filled in. Enter the username and API key that you created inside SpiraTeam above, as well as the address of SpiraTeam. Make sure that the API key is an alphanumeric string contained within curly braces -- { }. Click &lt;Update>.</p>
+<p><img alt="" src="../img/Zendesk_24.png" />  </p>
 <h3 id="connecting-zendesk-to-spirateam">Connecting Zendesk to SpiraTeam<a class="headerlink" href="#connecting-zendesk-to-spirateam" title="Permanent link">&para;</a></h3>
-<p>Zendesk should now be able to communicate fully with SpiraTeam. In order
-for SpiraTeam to be informed that you are using the Zendesk app, simply
-navigate to any ticket, click on the app sidebar (on the right of the
-Zendesk window) and locate the SpiraTeam app. You should see a screen
-like that below, giving you a welcome message on the successful
-connection of Zendesk to SpiraTeam.</p>
+<p>Zendesk should now be able to communicate fully with SpiraTeam. In order for SpiraTeam to be informed that you are using the Zendesk app, simply navigate to any ticket, click on the app sidebar (on the right of the Zendesk window) and locate the SpiraTeam app. You should see a screen like that below, giving you a welcome message on the successful connection of Zendesk to SpiraTeam.</p>
 <p><img alt="" src="../img/Zendesk_25.png" /></p>
-<p>If you instead see a message like that below (note that you will also
-see a Zendesk service notification), please check your network settings,
-and double check through the steps outline above.</p>
-<p><img alt="" src="../img/Zendesk_26.png" /></p>
-<p><img alt="" src="../img/Zendesk_27.png" /> </p>
+<p>If you instead see a message like that below (note that you will also see a Zendesk service notification), please check your network settings, and double check through the steps outline above.</p>
+<p><img alt="" src="../img/Zendesk_26.png" /><br />
+<img alt="" src="../img/Zendesk_27.png" /> </p>
 <h3 id="connecting-spirateam-to-zendesk">Connecting SpiraTeam to Zendesk<a class="headerlink" href="#connecting-spirateam-to-zendesk" title="Permanent link">&para;</a></h3>
-<p>Zendesk can now retrieve information form SpiraTeam. For Zendesk to be
-able to write all the information it needs to SpiraTeam, you need to
-grant Zendesk access in each relevant project (i.e. any project that a
-Zendesk agent may need to submit an incident about).</p>
-<p>If you wish, at this time you can change the account of the dedicated
-"Zendesk" user to no longer be an administrator. Make sure proper
-permissions are set so that the user has full access to incidents in all
-relevant projects.</p>
-<p>In SpiraTeam, navigate to a project Zendesk will need access to. Go to
-the SpiraTeam administration panel and then Integration > Data
-Synchronization.</p>
+<p>Zendesk can now retrieve information form SpiraTeam. For Zendesk to be able to write all the information it needs to SpiraTeam, you need to grant Zendesk access in each relevant project (i.e. any project that a Zendesk agent may need to submit an incident about).</p>
+<p>If you wish, at this time you can change the account of the dedicated "Zendesk" user to no longer be an administrator. Make sure proper permissions are set so that the user has full access to incidents in all relevant projects.</p>
+<p>In SpiraTeam, navigate to a project Zendesk will need access to. Go to the SpiraTeam administration panel and then Integration > Data Synchronization.</p>
 <p><img alt="" src="../img/Zendesk_28.png" /></p>
-<p>This will show you the list of current external tools that can
-synchronize custom data directly with SpiraTeam. Zendesk should appear
-as the last "Plug-In" in the table.</p>
+<p>This will show you the list of current external tools that can synchronize custom data directly with SpiraTeam. Zendesk should appear as the last "Plug-In" in the table.</p>
 <p><img alt="" src="../img/Zendesk_29.png" /></p>
-<p>Click on &lt;View Project Mappings>. Set Active to "Yes". Type in any
-value for External Key (this is a required field but because SpiraTeam
-does not write to Zendesk it is never used by the app). Click
-&lt;Update>.</p>
-<p><img alt="" src="../img/Zendesk_30.png" /></p>
+<p>Click on &lt;View Project Mappings>. Set Active to "Yes". Type in any value for External Key (this is a required field but because SpiraTeam does not write to Zendesk it is never used by the app). Click &lt;Update>.</p>
+<p><img alt="" src="../img/Zendesk_30.png" />  </p>
 <p><strong>NOTES</strong>:</p>
 <ul>
-<li>
-<p>The screen will return with a selection of configurable fields below
-the Update button. No changes here are required.</p>
-</li>
-<li>
-<p>There is no need to enter the &lt;Edit> screen for the mapping.
-Indeed, settings here are automatically generated by the Zendesk app
-and should not be altered.</p>
-</li>
+<li>The screen will return with a selection of configurable fields below the Update button. No changes here are required.</li>
+<li>There is no need to enter the &lt;Edit> screen for the mapping. Indeed, settings here are automatically generated by the Zendesk app and should not be altered.</li>
 </ul>
-<p><strong>Repeat the above steps for every project Zendesk will need access
-to.</strong></p>
+<p><strong>Repeat the above steps for every project Zendesk will need access to.</strong></p>
 <h2 id="creating-an-incident-in-spirateam">Creating an Incident in SpiraTeam<a class="headerlink" href="#creating-an-incident-in-spirateam" title="Permanent link">&para;</a></h2>
-<p>Zendesk agents are able to create an incident from within Zendesk that
-is logged directly into SpiraTeam. The app should not be visible to the
-public.</p>
-<h2 id="when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen">When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.<a class="headerlink" href="#when-an-agent-has-a-ticket-which-raises-an-issue-to-pass-to-a-development-team-they-open-the-app-sidebar-on-the-right-hand-side-of-zendesk-they-will-see-the-following-screen" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../img/Zendesk_26.png" /></p>
-<p>In order to log an incident, the agent must decide which project the
-issue relates to. SpiraTeam will list all active projects in the drop
-down list. If an agent is unsure which project to select, we recommend
-that they discuss the issue with the development team first. Select a
-project and click &lt;Go>.</p>
-<p><img alt="" src="../img/Zendesk_31.png" /></p>
-<p>Zendesk will load fields specific to that project, including any custom
-properties or components. By default, as a minimum, the app collects
-Incident Type, Priority, Release, and Owner lists, all of which are
-required to be filled in, along with a subject field and a note.</p>
-<p>By default, the subject field will be the same as the ticket's current
-subject, but the agent can change this to make as clear as possible to
-the developer -- changing the subject in the SpiraTeam app will NOT
-change the subject of the ticket itself.</p>
-<p>The Notes to Developers is initially left blank, so that the agent can
-provide meaningful information. If the agent wants to include the
-comment history of the ticket after their own notes, click &lt;Add comment
-history to description>. NOTE: clicking this repeatedly will paste in
-the comment history multiple times.</p>
-<p>When a project has additional fields (such as components or custom
-properties), these are also displayed. The app provides a split view of
-the fields -- those that are required and those that are optional. The
-tab at the top of the app lets agents switch between both.</p>
-<p>If the agent wishes to cancel logging the incident, or has chosen the
-wrong project, click the &lt;Back> button.</p>
-<p>Once the form has been filled in, click &lt;Log Incident>. If any of the
-fields have been left blank a notification will display and the form
-will not be processed. Once everything has been entered correctly,
-Zendesk attempts to send the form to SpiraTeam, along with links to any
-attachments stored with the ticket.</p>
-<p>If Zendesk is not successful, a warning notification will be displayed
-(see below), and the agent is asked to attempt again.</p>
-<p><img alt="" src="../img/Zendesk_36.png" /></p>
+<p>Zendesk agents are able to create an incident from within Zendesk that is logged directly into SpiraTeam. The app should not be visible to the public.</p>
+<p>When an agent has a ticket, which raises an issue to pass to a development team, they open the app sidebar on the right hand side of Zendesk. They will see the following screen.</p>
+<p><img alt="" src="../img/Zendesk_26.png" />  </p>
+<p>In order to log an incident, the agent must decide which project the issue relates to. SpiraTeam will list all active projects in the drop down list. If an agent is unsure which project to select, we recommend that they discuss the issue with the development team first. Select a project and click &lt;Go>.</p>
+<p><img alt="" src="../img/Zendesk_31.png" />  </p>
+<p>Zendesk will load fields specific to that project, including any custom properties or components. By default, as a minimum, the app collects Incident Type, Priority, Release, and Owner lists, all of which are required to be filled in, along with a subject field and a note.</p>
+<p>By default, the subject field will be the same as the ticket's current subject, but the agent can change this to make as clear as possible to the developer -- changing the subject in the SpiraTeam app will NOT change the subject of the ticket itself.</p>
+<p>The Notes to Developers is initially left blank, so that the agent can provide meaningful information. If the agent wants to include the comment history of the ticket after their own notes, click &lt;Add comment history to description>. NOTE: clicking this repeatedly will paste in the comment history multiple times.</p>
+<p>When a project has additional fields (such as components or custom properties), these are also displayed. The app provides a split view of the fields -- those that are required and those that are optional. The tab at the top of the app lets agents switch between both.</p>
+<p>If the agent wishes to cancel logging the incident, or has chosen the wrong project, click the &lt;Back> button.</p>
+<p>Once the form has been filled in, click &lt;Log Incident>. If any of the fields have been left blank a notification will display and the form will not be processed. Once everything has been entered correctly, Zendesk attempts to send the form to SpiraTeam, along with links to any attachments stored with the ticket.</p>
+<p>If Zendesk is not successful, a warning notification will be displayed (see below), and the agent is asked to attempt again.</p>
+<p><img alt="" src="../img/Zendesk_36.png" />  </p>
 <h2 id="reviewing-the-incident-in-spirateam">Reviewing the Incident in SpiraTeam<a class="headerlink" href="#reviewing-the-incident-in-spirateam" title="Permanent link">&para;</a></h2>
-<p>Back in SpiraTeam the new incident should be visible within the main
-incident log. Details about the incident can be altered as needed,
-without risk of breaking the connection with Zendesk.</p>
-<p>NOTE: On the incidents screen, you should notice a new field on the
-Overview page, called "Zendesk ID". This is the ID of the specific
-Zendesk ticket. Editing this field will break the connection and is not
-advised.</p>
+<p>Back in SpiraTeam the new incident should be visible within the main incident log. Details about the incident can be altered as needed, without risk of breaking the connection with Zendesk.</p>
+<p>NOTE: On the incidents screen, you should notice a new field on the Overview page, called "Zendesk ID". This is the ID of the specific Zendesk ticket. Editing this field will break the connection and is not advised.</p>
 <p><img alt="" src="../img/Zendesk_37.png" /></p>
 <h2 id="reviewing-spirateam-incidents-linked-to-a-zendesk-ticket">Reviewing SpiraTeam Incidents Linked to a Zendesk Ticket<a class="headerlink" href="#reviewing-spirateam-incidents-linked-to-a-zendesk-ticket" title="Permanent link">&para;</a></h2>
-<p>As soon as the incident has been successfully logged to SpiraTeam, the
-app in Zendesk will return to the screen showing lists of projects, in
-case another incident needs to be logged.</p>
-<p>In addition, information about any incidents linked to the ticket are
-clearly shown, including the most up to date status from SpiraTeam so
-that the agent can clearly see whether an issue is resolved or not.</p>
+<p>As soon as the incident has been successfully logged to SpiraTeam, the app in Zendesk will return to the screen showing lists of projects, in case another incident needs to be logged.</p>
+<p>In addition, information about any incidents linked to the ticket are clearly shown, including the most up to date status from SpiraTeam so that the agent can clearly see whether an issue is resolved or not.</p>
 <p><img alt="" src="../img/Zendesk_38.png" /></p>
 <p><img alt="" src="../img/Zendesk_39.png" /></p>
-<p>Hovering over a particular incident pops up the description to give the
-agent quick access to additional information.</p>
+<p>Hovering over a particular incident pops up the description to give the agent quick access to additional information.</p>
 <p><img alt="" src="../img/Zendesk_40.png" /></p>
-<p>Finally, clicking on any incident will display a modal pop up table with
-fuller details about all linked incidents, including the incident ID to
-help the agent follow up as needed with the developers.</p>
+<p>Finally, clicking on any incident will display a modal pop up table with fuller details about all linked incidents, including the incident ID to help the agent follow up as needed with the developers.</p>
 <p><img alt="" src="../img/Zendesk_41.png" /></p>
-<p>Also shown on this table is the Last Updated date of the incident.
-Hovering over the data will display a tooltip with the time of the
-update.</p>
-<p><img alt="" src="../img/Zendesk_42.png" /></p>
+<p>Also shown on this table is the Last Updated date of the incident. Hovering over the data will display a tooltip with the time of the update.</p>
+<p><img alt="" src="../img/Zendesk_42.png" />  </p>
                 
               
               

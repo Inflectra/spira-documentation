@@ -3350,11 +3350,15 @@
 <li><strong>List</strong>: custom list selector</li>
 <li><strong>Multi-List</strong>: custom list selector that allows multiple values to be selected at the same time</li>
 <li><strong>User</strong>: list of users in the current product</li>
+<li><strong>Password</strong>: for storing sensitive information. This data is securely encrypted at rest and the actual value can only be viewed or changed on the relevant artifact details page (or via the API). Passwords cannot be seen on list pages, in history records, or in reports. </li>
+<li><strong>Release</strong>: selector for all releases in the current product</li>
+<li><strong>Date &amp; Time</strong>: date and time selector</li>
+<li><strong>Automation Host</strong>: selector for all active automation hosts in the current product</li>
 </ul>
 <p>Each custom property can have optional settings applied to it to further control the custom property. Note: not all settings are available for all property types. These settings are on the Options tab of the dialog:</p>
 <p><img alt="" src="../img/Template_Custom_Properties_182.png" /></p>
 <ul>
-<li><strong>Default</strong>: the default value when a new artifact is created</li>
+<li><strong>Default</strong>: the default value when a new artifact is created (not for passwords, releases, or automation hosts)</li>
 <li><strong>Allow Empty</strong>: whether or not an empty value is allowed</li>
 <li><strong>Precision</strong>: how many decimal places to allow (decimals only)</li>
 <li><strong>Minimum Value</strong>: the minimum value allowed (numbers only)</li>
