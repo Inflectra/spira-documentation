@@ -91,10 +91,10 @@ typically something like:
 https://www1.v1host.com/CompanyName.
 
 -   **Login** -- this should be set to the login that you use to access
-V1 through its web interface
+V1 through its web interface. If you are using a V1 Access Token instead of a login and password, please use `"accesstoken"` as the login instead.
 
 -   **Password** -- this should be set to the password that you use to
-access V1 through its web interface
+access V1 through its web interface or the API access token. If the latter, please make sure to use the login name `"accesstoken"`.
 
 -   **Time Offset** -- normally this should be set to zero, but if you
 find that defects being changed in V1 are not being updated in
