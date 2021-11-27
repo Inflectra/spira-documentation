@@ -1,5 +1,65 @@
 # Release Notes for Spira v6
 
+## Version 6.13 (November 2021)
+
+!!! info "Summary"
+    Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously [parent requirements (those with children)](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
+
+    Improve the user experience and features of the [built-in rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor). This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
+
+    Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for passwords (encrypted text), release, and automation host custom properties.
+
+    The built-in [diagram tools](../../Spira-User-Manual/Document-Management/#editing-diagrams) get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
+
+    We continue to round out our [extensive API](https://api.inflectra.com/Spira/Services/v6_0/RestService.aspx) to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage all template managed fields for specific artifacts.
+
+    Improved localization in the web application of fields that users are not able to customize (like requirement or test case statuses).
+
+??? success "New Features"
+
+    - Implement new [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) to enable more modern experience [RQ:3697]
+    - [Requirements that have children](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
+
+    * **APIs**
+
+        - Add API calls to add and update risk statuses, types, impacts, and probabilities [RQ:3844]
+        - Add API calls to add and update task types and priorities [RQ:3843]
+        - Add API calls to add and update test case types and priorities [RQ:3838]
+        - Add API calls to add and update requirement types and importances [RQ:3712]
+        - Add API calls to update incident types, statuses, priorities, and severities [RQ:3705]
+        - Add API calls to manage document statuses [RQ:3761]
+
+    * **Custom Property Types**
+
+        - Add a new custom property type to support passwords (fully encrypted text) [RQ:3056]
+        - Add a new custom property type for picking an Automation Host [RQ:3058]
+        - Add a new custom property type to support date and time (in addition to existing date type) [RQ:3057]
+        - Add a new custom property type for picking a Release [RQ:3054]
+
+??? bug "Bug fixes and enhancements"
+
+    * **Rich Text Editor**
+
+        - Allow accented and other 'special characters to always be viewed as characters and not HTML encoded (e.g. in Excel exports) [IN:4898]
+        - Fix not being able to add screenshots into rich text fields when inline editing on planning boards [IN:6739]
+        - Fix not being able to add screenshots to test run rich text custom properties on the test execution wizard pages [IN:6801]
+        - Fix rich text boxes on artifact details page not correctly going from disabled to enabled when changing artifacts using the sidebar to live load the new artifact [IN:6736]
+        - Fix rich text custom properties for test cases and test steps appearing editable during test execution (normal and exploratory) when they are actually read only [IN:6792]
+        - Fix rich text rendering on the test execution pages to show all formatting on test step fields (including foreground and background colors) [IN:5707]
+        - Fix the rich text description for a folder displaying with HTML tags (instead of formatted HTML) when viewing as a tooltip when you hover over a folder name [IN:6758]
+        - Make it easier to see full rich text field information inline on details pages by always making the height of the field extend to show all content [IN:5604]
+        
+    * **Other**
+
+        - Localize workflow status and other hard coded fields throughout the web application and UI [IN:6262]
+        - Complete the integration with Rapise to enable floating licenses in Rapise [IN:6735]
+        - Enhance [document diagrams](../../Spira-User-Manual/Document-Management/#editing-diagrams) with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]
+        - Fix cloud and on premise upgrading to stop system admins seeing links to manage sample data [IN:6745]
+        - Fix making a new incident or risk so that the list of followers from any previous incident or risk does not show [IN:6308]
+        - Fix the requirement (if set on a task) being removed from the task when editing on the task board pop-up dialog [IN:6732]
+        - Make adding a test case to a requirement or release on the test case details page only add the main release and not its children, to match the equivalent behavior on the list page [IN:6749]
+
+
 ## Version 6.12 (September 2021)
 
 !!! info "Summary"

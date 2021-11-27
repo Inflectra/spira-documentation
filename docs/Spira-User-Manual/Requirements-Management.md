@@ -2,8 +2,6 @@
 
 This section outlines how the requirements management features of SpiraPlan® can be used to develop a requirements / scope matrix for a product, and how you can map any existing test-cases to the requirements. Typically when starting a product, developing the requirements list is the first activity after the Administrator has set up the product in the system.
 
-
-
 ## Requirement Traceability and Coverage
 From the requirement list page you can see a number of columns that show calculated data for each requirement, based off:
 
@@ -13,7 +11,7 @@ From the requirement list page you can see a number of columns that show calcula
 This allows you to see at a glance the state of play about a number of key metrics for the requirement.
 
 ### Test coverage
-This column shows a mini chart that shows the sum of each execution statuses against the requirement. It is calculated from the current execution status of each test case assigned to that requirement. If a requirement has 3 test cases assigned to it, then the mini chart will show the results for those 3 test cases.
+This column shows a mini chart for the sum of each execution status against the requirement. It is calculated from the current execution status of each test case assigned to that requirement. If a requirement has no test case coverage then the mini chart will be empty. All requirements with at least one test case mapped against them will show a mini chart. For example, if a requirement has 3 test cases assigned to it, then the mini chart will show the results for those 3 test cases. If 2 of those test cases have passed and one has still not been run, the mini chart will show a green bar (for pass) that is 2/3 the length of the chart, and a gray bar (for not run) that is 1/3 the length of the bar.
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.
 
@@ -35,7 +33,7 @@ The left-hand sidebar on the requirements list page shows an donut chart of aggr
 
 
 ### Task Progress
-This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the requirement, by progress category for the requirement. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
+Requirements with at least one task associated with them will display a task progress mini chart in the Task Progress column. This is a mini chart of the count of all active tasks[^active-tasks] assigned to the requirement. Each part of the chart represents the relative size of that progress category for the requirement. The progress categories are 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started'.
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tasks in each category.
 
@@ -45,17 +43,24 @@ How are the different categories calculated?
 - Each task assigned to the requirement has a count of 1. 
 - Counts in each category are added together and percentages taken based off those final counts
 - Counts for tasks that are either "Running Late" or "On Schedule" are split based off their percentage completion (the done portion adding to the specific category and the remainder adding to the "Not Started" category). So if a task is 40% done it will add 0.4 to, for example, "Running Late" and 0.6 to "Not Started".  
-- **On Schedule** tasks:
+- **On Schedule** (green) tasks:
+
     - have some work completed on them (percentage complete is more than 0 but is not 100%)
     - are not overdue (their end date is not in the future)
-- **Running Late** tasks:
+
+- **Running Late** (red) tasks:
+
     - are overdue (i.e. with an end date in the past)
     - either have a status of "In Progress" or have been partially completed (have a completion of more than 0%)
     - have not been fully completed (their completion is not at 100%)
-- **Starting Late** tasks:
+
+- **Starting Late** (yellow) tasks:
+
     - have not had any work done on them (percentage complete is 0) 
     - have already started (their start date is in the past)
-- **Not Started** tasks:
+
+- **Not Started** (gray) tasks:
+
     - have not had any work done on them (percentage complete is 0) 
     - have not yet started: this is the case if either their start date is in the future or they have a status of "Deferred"
 
@@ -73,26 +78,38 @@ For each requirement each effort column is calculated from the sum of effort fro
 
 Task effort calculations are described in more detail [here](../Product-Homepage/#release-task-progress). 
 
+## Standard Requirements and Parent Requirements
+Requirements come in two main flavors (Both can be mapped against test cases for test coverage): 
+
+- **Standard requirements** are any requirements that are not parents (do not have children). These are shown in normal-type and with a normal icon (for either a requirement or a use case). Standard requirements, unlike parent requirements, can:
+
+    - change their status directly (you cannot edit it on the list pages, or on the details pages using the workflows)
+    - assign a point estimate to themselves 
+
+- **Parent requirements** are any requirement that has at least one child inside it. Parents are shown in **bold-type** and have a special parent requirement icon. They are marked as "Yes" when viewing the "Is Parent?" column on the requirement list pages. Parent requirements get some information based on their children (and are therefore always read only):
+
+    - status, which is based on the status of their children and is a worst-case assessment of their statuses
+    - estimate points, which is the sum of the estimates of its children
+
+When you indent a requirement under an existing requirement, the normal requirement becomes a parent requirement. When you outdent a child item, its parent will return to a standard requirement immediately, if it has no other children. 
+
+In all other ways these two requirement flavors are the same. For example, both can have any requirement type, both can be assigned to a release, or to a specific owner, and both follow the relevant workflow for their current type. 
 
 ## Requirements List
-
-When you click on the Planning \> Requirements link on the global navigation bar, you will initially be taken to the requirements list screen illustrated below:
+When you click on the Planning > Requirements link on the global navigation bar, you will initially be taken to the requirements list screen illustrated below:
 
 ![](img/Requirements_Management_83.png)
 
-The requirements list consists of a hierarchical arrangement of the various requirements and functionalities that need to be provided by the system in question. The structure is very similar to the Work Breakdown Structure (WBS) developed in Microsoft Product®, and users of that software package will find this very familiar to use. When you create a new product, this list will initially be empty, and you will have to start using the "***Insert***" button to start adding requirements.
+Each requirement is, by default, displayed along with its importance/priority (ranked from "Critical" to "Low"), its completion status (from "Requested" to "Completed"), the version of the software that the requirement is planned for, and graphical indicators that represents its test coverage status and its task progress.
 
-Requirements come in two main flavors: summary items (Epics) shown in **bold-type**, and detail items shown in normal-type with a hyperlink. When you indent a requirement under an existing requirement, the parent is changed from a detail-item to an Epic / summary item, and when you outdent a child item, its parent will return to a detail-item (assuming it has no other children). This behavior is important to understand, as only detail items are assigned a status themselves; the Epics / summary items simply display an aggregate of the worst-case assessment of their children's status. Both summary and detail items can be mapped against test-cases for test-coverage, in addition the Epics / summary items display an aggregate coverage status.
-
-Each requirement is displayed along with its importance/priority (ranked from "Critical" to "Low"), its completion status (from "Requested" to "Completed"), the version of the software that the requirement is planned for, and graphical indicators that represents its test coverage status and its task progress.
-
-For those requirements that have no test-cases covering them (i.e. validating that the requirement works as expected) the indicator consists of a white solid bar, bearing the legend "Not Covered". For those requirements that have *at least one* test-case mapped against them, they will display a block graph that illustrates the last execution status of each of the mapped test-cases. Thus if the requirement is covered by two test cases, one of which passed, and one of which wasn't run, the graph will display a green bar (50% passed) and an equal length gray bar (50% not run). To determine the exact requirements coverage information, position the mouse pointer over the bar-chart, and the number of covering tests, along with the pass / fail / blocked / caution / not-run breakdown will be displayed as a "tooltip".
-
-For those requirements that have at least one task associated with them, they will display a block graph that illustrates the relative numbers of task that are on-schedule (green), late-starting (yellow), late-finishing (red) or just not-started (grey). These values are weighted by the effort of the task, so that larger, more complex tasks will be change the graph more than the smaller tasks. To determine the exact task progress information, position the mouse pointer over the bar-chart and the number of associated tasks, along with the details of how many are in each status will be displayed as a "tooltip".
+The requirements list consists of a hierarchical arrangement of the various requirements and functionalities that need to be provided by the system in question. The structure is very similar to the Work Breakdown Structure (WBS) developed in Microsoft Product®, and users of that software package will find this very familiar to use. When you create a new product, this list will be empty.
 
 ### Insert
+Click the `Insert` button to add requirements. This button let's you add requirements in different ways:
 
-Clicking on the <Insert\> icon inserts a requirement *above* the currently selected requirement -- i.e. the one whose check-box has been selected, at the same level in the hierarchy. If you want to insert a requirement below an existing item, you can use the Insert \> Child Requirement option instead. If you insert a requirement without first selecting an existing requirement from the list, the new requirement will simply be added at the end of the list. Note that if the full list of requirements are paginated, the new requirement will be at the bottom of the last page.
+- to insert a requirement *above* a requirement, select that requirement (click its checkbox) then click Insert
+- to insert a requirement below an existing item, use the Insert > Child Requirement option. 
+- to insdert a requirement at the end of the list, click Insert with no reqirement selected. Note that if the full list of requirements are paginated, the new requirement will be at the bottom of the last page.
 
 Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.
 
@@ -227,9 +244,9 @@ Note: you can only view requirements from the current product in these four addi
 
 This view lets you view the requirements in a flat, sortable list that does not show the requirements hierarchy. You can still see the hierarchy of an item by hovering the mouse over its name to display the tooltip.
 
-This view lets you sort on any of the fields and also filter by the type of requirement, including whether it is an Epic (package) or not.
+This view lets you sort or filter on any of the visible fields.
 
-One major benefit of this view is that when you filter by a field, you only get the items that are a direct match, unlike in the hierarchical grid view, where you also get its parents displayed. It can be useful when displaying a list of just the Epics and nothing else.
+One major benefit of this view is that when you filter by a field, you only get the items that are a direct match, unlike in the hierarchical grid view, where you also get its parents displayed. It can be useful to displaying a list of only parent requirements.
 
 ### Toolbar
 - **Add**: Click this to add a new requirement. It will appear in this view based on the sorting used. In the main requirement hierarchy, it will be be added at the bottom of the requirement list, at the root level (ie fully outdented). Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.
@@ -262,9 +279,9 @@ This view shows the hierarchical organization of the requirements in a product. 
 ![main requirement documents view](img/requirements-documents-view.png)
 
 ### Requirements Document Navigation
-The sidebar shows all the epics in the product[^max-epics], in their hierarchy. Clicking on an epic will load that epic with all its children[^max-epics] into the document view (and save this view for the next time you are on this page for this product). There is a special link at the top of the list of epics called "Level 1 (root)" and clicking on this will load all requirements at the root level (level 1)[^max-epics]. This is the default view you will see when you first visit the documents view. Looking at "Level 1 (root)" is particularly useful if you need to view or edit standalone requirements (requirements that do not have a parent or any children). 
+The sidebar shows all the parent requirements in the product[^max-epics], in their hierarchy. Clicking on a parent requirement will load that parent with all its children[^max-epics] into the document view (and save this view for the next time you are on this page for this product). There is a special link at the top of the list of parent requirements called "Level 1 (root)" and clicking on this will load all requirements at the root level (level 1)[^max-epics]. This is the default view you will see when you first visit the documents view. Looking at "Level 1 (root)" is particularly useful if you need to view or edit standalone requirements (requirements that do not have a parent or any children). 
 
-When you click an epic (or "Level 1 (root)") from the sidebar, the documents view will show a page of the first 50 requirements. If there are more than 50 requirements you can quickly change pages by using the pagination options at the top right.
+When you click a parent requirement (or "Level 1 (root)") from the sidebar, the documents view will show a page of the first 50 requirements. If there are more than 50 requirements you can quickly change pages by using the pagination options at the top right.
 
 ### Requirements Document Options
 For each requirement, the following fields are always displayed at the top of the requirement:
@@ -460,12 +477,9 @@ Clicking on the "***Insert Step***" button inserts a new step *before* the curre
 To move the steps in the list, click on the step you want to move and drag it to the location you want it moved.
 
 ### Test Coverage
-
 This tab shows the test coverage information for the requirement in question:
 
 ![](img/Requirements_Management_107.png)
-
-
 
 
 The tab displays a grid containing the test cases already mapped to this requirement. You can filter that list by the test case type, name, status, execution status, execution date, priority, product name and ID. You can remove an existing test case by selecting its check box and clicking the 'Delete' button. This doesn't delete the test case, just removes it from the requirement.
@@ -476,27 +490,17 @@ To add a new test case to the requirement, simply click on the 'Add' button:
 
 ![](img/Requirements_Management_108.png)
 
-
-
-
 You can search for a test case by its ID if you know it (make sure to include the "TC" prefix):
 
 ![](img/Requirements_Management_109.png)
-
 
 Otherwise, you can search for the test cases by choosing a folder from the dropdown and/or entering a partial name match:
 
 ![](img/Requirements_Management_110.png)
 
-
-
-
-One you have found the desired test case(s), simply select their check boxes and click the 'Save' button to add them to the current requirement:
+One you have found the desired test case(s), select their check boxes and click the 'Save' button to add them to the current requirement:
 
 ![](img/Requirements_Management_111.png)
-
-
-
 
 Finally, as a shortcut you can click the "***Create Test Case from This Requirement***" button to create a new test case in the list of covered test cases that will be automatically linked to this requirement. This is useful when you have created a new requirement and want to generate an initial covering test to be fleshed-out later.
 

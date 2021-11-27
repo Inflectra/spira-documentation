@@ -137,7 +137,7 @@ To quickly add a series of test cases to a Release, Test Set or Requirement, sel
 
 ![](img/Test_Case_Management_132.png)
 
-Once you have chosen the destination release / test set / requirement, clicking "***Add***" will add the selected test cases to the destination release / test set / requirement.
+Once you have chosen the destination release / test set / requirement, clicking "***Add***" will add the selected test cases to that specific destination release / test set / requirement.
 
 
 ### Printing Items
@@ -296,7 +296,7 @@ Test cases can have parameters associated with them. This lets a single test cas
     You have a test case "login to application". This test case has 2 parameters: username; and password. It has default values for these parameters of "user" and "correct-password". We set the Sample Data field to read: "Username = ${username}, and password = ${password}". You can reuse this test case in other test cases by [linking links](#insert-link).
     
     - If you execute the "login to application" by itself you will see that sample data reads: "Username = user, and password = correct-password"
-    - Now add this test case as a [linked step](#insert-link) to another test case "Can login successfully". When you do this you get the option to override the defaults. We don't want to do this yet, so we blank out the parameter values in the link test step doalig. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password". Even though our test case is not setting values for these at all, the linked test step uses its default parameter values.
+    - Now add this test case as a [linked step](#insert-link) to another test case "Can login successfully". When you do this you get the option to override the defaults. We don't want to do this yet, so we blank out the parameter values in the link test step dialog. When we execute "Can login successfully" sample data still reads: "Username = user, and password = correct-password". Even though our test case is not setting values for these at all, the linked test step uses its default parameter values.
     - Next, [edit the linked test step](#editing-test-links) "login to application". We see the two parameters with boxes to type in parameter values. We add a value for "username" of "admin" (but keep password blank still). Now when we execute "Can login successfully" sample data will be different - we are **overriding the default parameter values**: "Username = **admin**, and password = correct-password"
     - We have not changed the default values - we are passing down values that override the default values for this specific test case and to this specific linked test step. 
 
@@ -368,13 +368,13 @@ This tab displays the requirements coverage information for the test case in que
 
 The table shows the requirements, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question.
 
-To map the test case to a new requirement, click the "***Add***" button to display the add association panel. You can search by the ID (if known) prefixed with the appropriate token (e.g. "RQ:4" to search for requirement 4). You can also browse by package, or search by name. Select the requirements you want and then click the "***Save***" button".
+To map the test case to an additional requirement, click the "***Add***" button to display the add association panel. You can search by the ID (if known) prefixed with the appropriate token (e.g. "RQ:4" to search for requirement 4). You can also browse by parent requirement, or search by name. Select the requirements you want and then click the "***Save***" button". This will add the selected requirement(s) only (and not their children if they are parent requirements). This will also add any releases assigned to the requirement(s) not already linked to the test case.
 
 ![](img/Test_Case_Management_151.png)
 
-From the same add association panel there is a short to "***Create Requirement from This Test Case***". This button will create a new requirement in the list of covered requirements that will be automatically linked to this test case. This is useful when you have created a new test case and want to generate an initial placeholder requirement to be fleshed-out later.
+From the same add association panel there is a shortcut to "***Create Requirement from This Test Case***". This button will create a new requirement in the list of covered requirements that will be automatically linked to this test case. This is useful when you have created a new test case and want to generate an initial placeholder requirement to be fleshed-out later.
 
-Finally, to remove coverage for this test case, select any of the added requirements (those in the bottom table) and click the "***Remove***" button.
+Finally, to remove coverage for this test case, select any of the added requirements (those in the bottom table) and click the "***Remove***" button. Note that this will remove the requirements and does not change the release coverage of the test case.
 
 
 ### Test Runs
@@ -390,7 +390,7 @@ You can also filter the results by choosing items from the filter options displa
 
 ### Releases
 
-This tab displays the name of the test case together with the release mapping information for the test case in question. It functions in a similar way to the Test Coverage tab described above: the table at the bottom of the panel shows the releases, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question. You can search for and add releases to this list using the "***Add***" button, or remove them using the "***Remove***" button.
+This tab displays the name of the test case together with the release mapping information for the test case in question. It functions in a similar way to the Requirements Coverage tab described above: the table at the bottom of the panel shows the releases, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question. You can search for and add releases to this list using the "***Add***" button, or remove them using the "***Remove***" button. Adding the release(s) will only add the release(s) selected (and not their children, if any). However, when adding a sprint, the sprint's immediate parent release (if it has one) is also added.
 
 ![](img/Test_Case_Management_153.png)
 
@@ -535,7 +535,7 @@ You can search for a requirement by its ID if you know it (make sure to include 
 
 ![](img/Test_Case_Management_167.png)
 
-Otherwise, you can search for the requirements by choosing a parent package from the dropdown and/or entering a partial name match:
+Otherwise, you can search for the requirements by choosing a parent requirement from the dropdown and/or entering a partial name match:
 
 ![](img/Test_Case_Management_168.png)
 

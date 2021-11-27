@@ -88,7 +88,7 @@ We now have a nicely group set of requirements. Let's enter more information abo
 
 ![](img/Define_the_Requirements_10.png)
 
-3.  Set the 'Type' of the four requirements you can edit this for to User Story'.
+3.  Change the 'Type' to 'User Story' for some of the requirements - in the example screenshot all requirements that are children (have a single diamond icon and a non bold name) are now user stories.
 
 4.  Choose whatever values you like for the 'Importance' field for each of the requirements.
 

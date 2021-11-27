@@ -301,7 +301,7 @@ You can narrow down your search by entering a keyword:
 
 ![](img/Requirements_Management_122.png)
 
-Artifacts that have folders let you choose a folder to narrow your search. When attempting to add an association to a requirement, you can choose a package from the list to narrow down the results:
+Artifacts that have folders let you choose a folder to narrow your search. When attempting to add an association to a requirement, you can choose a parent requirement from the list to narrow down the results:
 
 ![](img/Requirements_Management_123.png)
 
@@ -311,3 +311,55 @@ You can add a comment that explains the rationale for the association and choose
 
 -   **Related-to:** this is used to specify that the two artifacts are simply related
 -   **Depends-on:** this is used to specify that the current artifact has a dependency on the one being linked to.
+
+!!! info "What can you associate to what?"
+
+    | Assocation Tab Of          | Available artifacts | 
+    |----------------------------|---------------------|
+    | **Documents**              | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Incidents**              | Requirements, Test Steps, Tasks, Incidents, Risks |
+    | **Requirements**           | Requirements, Incidents, Risks |
+    | **Risks**                  | Requirements, Incidents, Risks, Test Cases |
+    | **Source code commits**    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Source code files**      | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Tasks**                  | Tasks, Incidents |
+    | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks |
+
+
+### Rich Text Editor
+There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](../Document-Management/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
+
+![](img/Application-Wide_editor.png)
+
+SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use. As such, it does not require special instruction. For information, below is a list of supported features in the rich text editor.
+
+**Formatting options**:
+
+- heading type
+- font
+- text size
+- bold
+- italic
+- underline
+- strikethrough
+- numbered lists
+- bulleted lists
+- task lists
+- text color
+- background color
+- text highlighting
+- indent
+- outdent
+- quotes
+- code blocks
+
+**Inserting content**:
+
+- links to other sites or urls
+- Tables using the powerful table editor
+- seperator lines
+- Images and screenshots (paste them in)
+- media from third parties (including YouTube and Vimeo)
+- Text from MS Word (paste it directly in - note that not all formatting is retained)
+
+In many places the editor can also be made full screen to help editing of larger documents. To enter full screen mode, click on the computer monitor icon at the far right of the toolbar. Are you using dark mode? No problem - the editor works great in dark mode.

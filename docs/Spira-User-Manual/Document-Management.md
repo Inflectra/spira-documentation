@@ -195,7 +195,11 @@ When editing any diagram, you will see a simple toolbar above the editing area. 
 - change zoom level
 - toggle the formatting palette on the right of the editor area and, for the "diagram" type, also hide the left hand shape picker
 
-The **shape picker** shows all available shapes available. To add a new shape, click on its shape in the shape picker, or drag it from the shape picker into the editor area.
+The **picker** (diagrams only) shows all available objects available that you can add to your diagram. To add a new object, click on it from the picker, or drag it from the picker into the editor area. There are three types of object:
+
+- **shapes**
+- **groups**, that you let you group shapes inside of them. Groups without a header are a simple box outline to help organize diagrams. Groups with a header can be collapsed. All objects fully inside that collapsed group will be hidden.
+- **swimlanes** come in a few varieties to let you create rich kanban and swimlane like diagrams with ease. You can collapse a swimlane. All objects fully inside that collapsed swimlane will be hidden.
 
 The **editor area** shows the diagram with all its nodes or shapes and connections. The diagram will be effectively identical to how it looks on the View tab. The main different being the dot grid background pattern in the editor area. The editor area lets you:
 

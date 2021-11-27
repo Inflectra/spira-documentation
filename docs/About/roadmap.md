@@ -10,13 +10,9 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.13 (Autumn 2021)
-- Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously parent requirements (those with children) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
-- Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for password, release, and automation host custom properties.
-- Improve the user experience and features of the built-in rich text editor. This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
-- The built-in diagram tools get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
+## Version 6.14 (December 2021)
 - View and edit details about artifacts "inline" while using product level Gantt charts
-- We continue to round out our extensive API to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage many aspects of product templates.
+- Bug fixes and improvements
 
 ## Future Releases
 ### Planning
@@ -41,7 +37,7 @@ Please take a look at our [release notes](../release-notes-v6) to see a complete
 
 ### Cross-cutting
 - **New field types and handling**: Ability to set date-time values on list pages. Even more custom property types (for example, dependent dropdowns and hierarchical dropdowns).
-- **New custom fields in different workspace types**: Add optional custom properties that can be set on a workspace itself - for example, on a product or progrgam.
+- **New custom fields in different workspace types**: Add optional custom properties that can be set on a workspace itself - for example, on a product or program.
 - **Cross application tagging**: Tag support to provide a flexible way to connect different artifacts together, including resources. Add the ability to use mentions (eg @amycribbins) to reference a user or artifact in descriptions and comments.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Improved ‘first-time’ experience**: When the main administrator first logs in, a new welcome screen will guide them in setting up the application or to get help doing so.

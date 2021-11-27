@@ -25,7 +25,7 @@ By default, the product home page shows the "General" view. The following table 
 | Widget Name                        | General   | Development   | Testing |
 | ---------------------------------  | --------- | ------------- | ------- |
 | Product Overview                   | Y         | Y             | Y
-| Activity Stream                    | Y         | Y             | Y
+| Activity Stream                    | Y         | Y             | 
 | Shared Searches                    | Y         |               | 
 | Schedule                           | Y         |               | 
 | Requirement Completion             | Y         |               |  
@@ -79,6 +79,22 @@ This section displays:
 - the product's program
 - the product's template
 
+## Activity Stream
+
+This section shows a list of the most recent changes made by any product member anywhere in the product. It only displays changes to artifacts that the current user is allowed to view (based on their product role). Here is an example activity item - you can see that it displays information about the user who made the change, what was changed, how it was changed, and when:
+
+> System Administrator modified Incident [IN:1] - Cannot log into the application | Tuesday, November 2, 2021 2:01:34 PM
+
+You can configure how many recent changes to display.
+
+Clicking the "View All" button at the top of this section will open the "Activity List" page. This page shows every change ever made in the product in a single, paginated list for artifacts that the current user is allowed to view (based on their product role).The list can be sorted on or filtered by any field. The list shows the following columns:
+
+- Change Date
+- Artifact Type
+- Artifact Name
+- Artifact ID
+- Change Type
+- User
 
 ## Shared Searches
 
@@ -294,7 +310,7 @@ This section displays a two dimensional matrix of the open risks logged against 
 
 ## Top Open Risks
 
-This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the [risk details page](../Risk-Management/#risk-details) for the risk in question.
+This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the [risk details page](../Risks-Management/#risk-details) for the risk in question.
 *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
 
