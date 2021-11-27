@@ -1,6 +1,6 @@
-# Using SpiraTeam with Jira Server (5 or later)
+# Using SpiraTeam with Jira Server (or DataCenter)
 
-This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the Jira Server issue/bug tracking system version 5.0 and later. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam.
+This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the Jira Server or Jira DataCenter issue/bug tracking system version 5.0 and later. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam. In addition, new tasks added in SpiraTeam get added to Jira as sub-tasks/tasks.
 
 In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.
 
@@ -54,7 +54,7 @@ time-zones here.
     - **Set to No**: users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
 - **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
-- **Custom 02**: This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.
+- **Custom 02**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
 - **Custom 03**: This determines how the synchronization of incidents works:
 
     - **Default (leave blank)**: By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. *NOTE: This is the recommended option for most users.*
@@ -286,6 +286,43 @@ The JIRA ID can be found by using the **Components** tab of the Jira configurati
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
+#### j) Task Status (Optional)
+
+Click on the "Status" hyperlink under Task Standard Fields to bring up the Task status mapping configuration screen:
+
+![](img/jira-task-mapping-status.png)
+
+The table lists each of the task statuses available in SpiraPlan and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).
+
+The JIRA ID can be found by using the **Issue Statuses** tab of the Jira configuration helper. *Please note, in Jira there are 5 default levels of Issue Priority, and only 4 (by default - this can be changed) in SpiraPlan.*
+
+![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
+
+
+#### k) Task Priority (Optional)
+
+Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen:
+
+![](img/jira-task-mapping-priority.png)
+
+The table lists each of the task priorities available in SpiraPlan and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).
+
+The JIRA ID can be found by using the **Issue Priorities** tab of the Jira configuration helper:
+
+![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
+
+
+#### l) Task Type (Optional)
+
+Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen:
+
+![](img/jira-task-mapping-type.png)
+
+The table lists each of the task types available in SpiraPlan and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields (e.g. Management and Other in SpiraPlan are both equivalent to Task in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).
+
+The JIRA ID can be found by using the **Issue Types** tab of the Jira configuration helper:
+
+![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 ### Configuring the Custom Property Mapping
 
