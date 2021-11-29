@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-with-PHPUnit/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3512,7 +3512,6 @@ SpiraTest to record the PHPUnit test run are illustrated below:</p>
 
  <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-
 <p>b) Sample Test Case</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework/TestCase.php&#39;</span><span class="p">;</span>
@@ -3589,7 +3588,6 @@ SpiraTest to record the PHPUnit test run are illustrated below:</p>
 <span class="p">}</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-
 <p>Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
 SpiraTest. So for example testSuccess() is now testSuccess__5() as it
@@ -3660,7 +3658,6 @@ code:</p>
   <span class="nt">&lt;/testsuites&gt;</span>
 <span class="nt">&lt;/phpunit&gt;</span>
 </code></pre></div>
-
 <p>Now all you need to do is save your code, launch PHPUnit, run the test
 suite as you would normally do, and when you view the test cases in
 SpiraTest, you should see a PHPUnit automated test run displayed in the

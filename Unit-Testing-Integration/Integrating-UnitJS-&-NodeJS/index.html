@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3350,7 +3350,7 @@ mapping uncaught exceptions to the correct test cases.</p>
 
 <span class="nx">job</span><span class="o">:</span> <span class="s1">&#39;developper&#39;</span><span class="p">,</span>
 
-<span class="nx">from</span><span class="o">:</span> <span class="s1">&#39;France&#39;</span>
+<span class="kr">from</span><span class="o">:</span> <span class="s1">&#39;France&#39;</span>
 
 <span class="p">};</span>
 
@@ -3418,7 +3418,7 @@ mapping uncaught exceptions to the correct test cases.</p>
 
 <span class="nx">job</span><span class="o">:</span> <span class="s1">&#39;developper&#39;</span><span class="p">,</span>
 
-<span class="nx">from</span><span class="o">:</span> <span class="s1">&#39;France&#39;</span>
+<span class="kr">from</span><span class="o">:</span> <span class="s1">&#39;France&#39;</span>
 
 <span class="p">};</span>
 
@@ -3456,7 +3456,6 @@ mapping uncaught exceptions to the correct test cases.</p>
 
 <span class="p">});</span>
 </code></pre></div>
-
 <p>In this sample, we have one test suite "Example Test" that has two tests
 -- "sample pass" and "sample fail" inside it. When you run this test
 using Mocha using the command line:</p>
@@ -3502,13 +3501,13 @@ suite at the top:</p>
 
 <span class="c1">//set the SpiraTest options</span>
 
-<span class="nx">global</span><span class="p">.</span><span class="nx">spiraOptions</span> <span class="o">=</span> <span class="p">{</span>
+<span class="nb">global</span><span class="p">.</span><span class="nx">spiraOptions</span> <span class="o">=</span> <span class="p">{</span>
 
-<span class="nx">projectId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nx">projectId</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
 
-<span class="nx">testCaseId</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+<span class="nx">testCaseId</span><span class="o">:</span> <span class="mf">4</span><span class="p">,</span>
 
-<span class="nx">releaseId</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nx">releaseId</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
 
 <span class="nx">testSetId</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
 

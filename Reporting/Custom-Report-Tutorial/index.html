@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Reporting/Custom-Report-Tutorial/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3920,15 +3920,12 @@ Reporting &gt; Edit Reports:</p>
     <span class="nt">&lt;/xsl:template&gt;</span>
 <span class="nt">&lt;/xsl:stlyesheet&gt;</span>
 </code></pre></div>
-
 <p>This is the underlying template that reads the data in Spira and turns it into a simple HTML table containing all of the columns and rows to be reported on. As you can see, it includes the HTML elements for the table:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;DataGrid&quot;</span> <span class="na">style=</span><span class="s">&quot;width:100%&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
-
 <p>The template also includes XSLT selectors for looping through all of the test cases in the Spira product:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;xsl:for-each</span> <span class="na">select=</span><span class="s">&quot;TestCase&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
-
 <p>Before we can successfully modify the report, we need to understand what data is being returned by Spira.</p>
 <h3 id="viewing-the-data-available-for-reporting">Viewing the Data Available for Reporting<a class="headerlink" href="#viewing-the-data-available-for-reporting" title="Permanent link">&para;</a></h3>
 <p>To see the data that is available for reporting, you need to open up another browser tab and then go to the <strong>Reports</strong> section of Spira:</p>
@@ -4023,7 +4020,6 @@ Reporting &gt; Edit Reports:</p>
     <span class="nt">&lt;/TestCaseData&gt;</span>
 <span class="nt">&lt;/Report&gt;</span>
 </code></pre></div>
-
 <p>This fragment of the report lets you see all of the data that is available for displaying in your report. You can navigate this hierarchy of information using the special XSLT selection language called XPATH. This lets you query the data returned from Spira to retrieve specific data elements that can be displayed in the report. Before we start modifying the report XSLT to use this data, we first need to get a basic understanding of XPATH itself.</p>
 <h3 id="understanding-xpath">Understanding XPATH<a class="headerlink" href="#understanding-xpath" title="Permanent link">&para;</a></h3>
 <p>(this section includes material from the website:
@@ -4051,7 +4047,6 @@ Reporting &gt; Edit Reports:</p>
     <span class="nt">&lt;/book&gt;</span>
 <span class="nt">&lt;/bookstore&gt;</span>
 </code></pre></div>
-
 <p>This document contains the following node types:</p>
 <ul>
 <li><strong>root element</strong>: \&lt;bookstore></li>
@@ -4271,13 +4266,11 @@ and</p>
     <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
 <span class="nt">&lt;/xsl:if&gt;</span>
 </code></pre></div>
-
 <p>This removes the four columns related to test steps.</p>
 <h4 id="removing-the-creation-date">Removing the Creation Date<a class="headerlink" href="#removing-the-creation-date" title="Permanent link">&para;</a></h4>
 <p>To remove the creation date, delete the header cell and body cell:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;th&gt;</span>Created On<span class="nt">&lt;/th&gt;</span>
 </code></pre></div>
-
 <p>and</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">&quot;Date&quot;</span><span class="nt">&gt;</span>\
     <span class="nt">&lt;xsl:call-template</span> <span class="na">name=</span><span class="s">&quot;format-date&quot;</span><span class="nt">&gt;</span>
@@ -4285,13 +4278,11 @@ and</p>
     <span class="nt">&lt;/xsl:call-template&gt;</span>\
 <span class="nt">&lt;/td&gt;</span>
 </code></pre></div>
-
 <h4 id="adding-a-calculated-column">Adding a Calculated Column<a class="headerlink" href="#adding-a-calculated-column" title="Permanent link">&para;</a></h4>
 <p>Now to add the cell headers, we just need to add two \<th> tags to the header of the table. This is done by adding:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;th&gt;</span>% Passed<span class="nt">&lt;/th&gt;</span>
 <span class="nt">&lt;th&gt;</span>% Failed<span class="nt">&lt;/th&gt;</span>
 </code></pre></div>
-
 <p>Now to actually get the data, we need to use the following XPATH queries:</p>
 <ul>
 <li><strong>% Passed</strong>: FolderCountPassed div (FolderCountPassed + FolderCountFailed + FolderCountCaution + FolderCountNotRun + FolderCountBlocked)* 100</li>
@@ -4308,7 +4299,6 @@ and</p>
     %
 <span class="nt">&lt;/td&gt;</span>
 </code></pre></div>
-
 <p>Now that have make the changes, the complete XSLT template will be:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span> <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span> <span class="na">xmlns:msxsl=</span><span class="s">&quot;urn:schemas-microsoft-com:xslt&quot;</span> <span class="na">exclude-result-prefixes=</span><span class="s">&quot;msxsl&quot;</span><span class="nt">&gt;</span>
@@ -4484,7 +4474,6 @@ and</p>
     <span class="nt">&lt;/xsl:template&gt;</span>
 <span class="nt">&lt;/xsl:stylesheet&gt;</span>
 </code></pre></div>
-
 <p>Click on the <code>Save</code> button to save your section and then the main <code>Save</code> button to save the report. You can now run the report through the main reports center and get something like:</p>
 <table>
 <thead>
@@ -4571,12 +4560,10 @@ and</p>
 <p>Now change the query to only include the data that we want:</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">VERSION</span><span class="err">\</span><span class="n">_NUMBER</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_PASSED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_FAILED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_NOT</span><span class="err">\</span><span class="n">_RUN</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_BLOCKED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_CAUTION</span> <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R</span><span class="err">\</span><span class="n">_Releases</span> <span class="k">as</span> <span class="n">R</span> <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT</span><span class="err">\</span><span class="n">_ID</span> <span class="o">=</span> <span class="err">\${</span><span class="n">ProjectId</span><span class="err">}</span>
 </code></pre></div>
-
 <p>This will display the release name, and the test case counts for the current project. It will also include the deleted releases, so we need to add on a clause to the WHERE part of the query to make sure they are excluded:</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">R</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">VERSION</span><span class="err">\</span><span class="n">_NUMBER</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_PASSED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_FAILED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_NOT</span><span class="err">\</span><span class="n">_RUN</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_BLOCKED</span><span class="p">,</span> <span class="n">R</span><span class="p">.</span><span class="k">COUNT</span><span class="err">\</span><span class="n">_CAUTION</span> <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R</span><span class="err">\</span><span class="n">_Releases</span> <span class="k">as</span> <span class="n">R</span> <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT</span><span class="err">\</span><span class="n">_ID</span> <span class="o">=</span> <span class="err">\${</span><span class="n">ProjectId</span><span class="err">}\</span>
 <span class="k">and</span> <span class="n">R</span><span class="p">.</span><span class="k">IS</span><span class="err">\</span><span class="n">_DELETED</span> <span class="o">=</span> <span class="k">False</span>
 </code></pre></div>
-
 <p>Click on the <code>Preview Results</code> button again to display the data we want:</p>
 <table>
 <thead>
@@ -4649,7 +4636,6 @@ and</p>
     <span class="nt">&lt;/xsl:template&gt;</span>
 <span class="nt">&lt;/xsl:stylesheet&gt;</span>
 </code></pre></div>
-
 <p>To change the column headings to make them look better, we can change the template to look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span> <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span> <span class="na">xmlns:msxsl=</span><span class="s">&quot;urn:schemas-microsoft-com:xslt&quot;</span> <span class="na">exclude-result-prefixes=</span><span class="s">&quot;msxsl&quot;</span><span class="nt">&gt;</span>
@@ -4679,7 +4665,6 @@ and</p>
     <span class="nt">&lt;/xsl:template&gt;</span>
 <span class="nt">&lt;/xsl:stylesheet&gt;</span>
 </code></pre></div>
-
 <p>Once you are happy with the result, click on the <code>Save</code> button on the custom section and then the <code>Save</code> button on the report editing screen itself.</p>
 <p>You can now run the report through the main reports center and get something like:</p>
 <table>

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-with-NUnit/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3431,7 +3431,6 @@ properly installed.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>In your test root directory (the directory with your <em>.nunit</em> file),
 create a new file called <em>SpiraConfig.json</em>, and populate it like so:
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -3471,10 +3470,9 @@ method's test case ID in SpiraPlan. Only include the method name,
 without the parentheses.</p>
 <h3 id="running-the-tests-with-nunit">Running the Tests with NUnit<a class="headerlink" href="#running-the-tests-with-nunit" title="Permanent link">&para;</a></h3>
 <p>To execute the tests, you can use any of the standard ways that NUnit can be executed (Gui, Console, etc.), however the simplest way to get started is to use the NUnit console runner:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">nunit3-console &quot;NUnit 3.0\bin\Release\SampleTestSuite.dll&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>nunit3-console &quot;NUnit 3.0\bin\Release\SampleTestSuite.dll&quot;
 </code></pre></div>
 </td></tr></table>
-
 <p><em>(where you will need to adjust the path to match where the test suite assembly can be found)</em></p>
 <p>Once you run your tests with the NUnit Console Runner, you should see
 the results in SpiraPlan:</p>
@@ -3569,7 +3567,6 @@ follows:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The .NET class is marked as an NUnit test fixture by applying the
 [TestFixture] attribute to the class as a whole, and the [Test]
 attribute to each of the test assertion methods individually --
@@ -3658,7 +3655,6 @@ the NUnit test run are illustrated below:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The overall class is marked with a new [SpiraTestConfiguration]
 attribute that contains the following pieces of information needed to
 access the SpiraTest test repository:</p>

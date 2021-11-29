@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/RemoteLaunch-User-Guide/Squish/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3620,7 +3620,7 @@ illustrated below:</p>
     <span class="c1">// check that after entering city, the state is automatically chosen correctly</span>
     <span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;${state}&quot;</span><span class="p">;</span>
     <span class="nx">setFocus</span><span class="p">(</span><span class="s2">&quot;:_id0:state_text&quot;</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:state_text&#39;).value == state&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:state_text&#39;).value == state&quot;</span><span class="p">,</span> <span class="mf">10000</span><span class="p">)))</span>
     <span class="p">{</span>
         <span class="nx">clickButton</span><span class="p">(</span><span class="s2">&quot;:_id0:Reset_image&quot;</span><span class="p">);</span>
         <span class="k">continue</span><span class="p">;</span>
@@ -3631,7 +3631,7 @@ illustrated below:</p>
 
     <span class="c1">// check that submit button is enabled now</span>
     <span class="nx">setFocus</span><span class="p">(</span><span class="s2">&quot;:_id0:lastName_text&quot;</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:Submit_image&#39;).disabled == false&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">test</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">waitFor</span><span class="p">(</span><span class="s2">&quot;findObject(&#39;:_id0:Submit_image&#39;).disabled == false&quot;</span><span class="p">,</span> <span class="mf">10000</span><span class="p">)))</span>
     <span class="p">{</span>
         <span class="nx">clickButton</span><span class="p">(</span><span class="s2">&quot;:_id0:Reset_image&quot;</span><span class="p">);</span>
     <span class="p">}</span>
@@ -3651,7 +3651,6 @@ illustrated below:</p>
     <span class="nx">closeWindow</span><span class="p">(</span><span class="s2">&quot;:[Window]&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Once you are happy with the values, click [Save] to update the test
 case. Now you are ready to schedule the automated test case for
 execution.</p>

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Spira-User-Manual/Requirements-Management/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -4057,7 +4057,9 @@
 <p>This column shows a mini chart for the sum of each execution status against the requirement. It is calculated from the current execution status of each test case assigned to that requirement. If a requirement has no test case coverage then the mini chart will be empty. All requirements with at least one test case mapped against them will show a mini chart. For example, if a requirement has 3 test cases assigned to it, then the mini chart will show the results for those 3 test cases. If 2 of those test cases have passed and one has still not been run, the mini chart will show a green bar (for pass) that is &#8532; the length of the chart, and a gray bar (for not run) that is &#8531; the length of the bar.</p>
 <p>If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.</p>
 <p>When you have a hierarchy of requirements, the total number of test cases included in the mini chart is the sum of all of the test cases assigned to each of its children, added to the number of test cases directly assigned to the parent requirement.</p>
-<details class="note"><summary>Example: How Test Coverage Rolls up to Parent Requirements</summary><ul>
+<details class="note">
+<summary>Example: How Test Coverage Rolls up to Parent Requirements</summary>
+<ul>
 <li>You have 3 requirements (A, B, and C) nested one inside the other</li>
 <li>The most nested requirement (C) therefore has a parent (B) and a grandparent (A)</li>
 <li>We assign one test case to C: C has 1 test case against it in the mini chart; B will also have 1; and A will have 1 too</li>
@@ -4344,36 +4346,35 @@
 </ul>
 <p>To complete the split click the <code>Split</code> button.</p>
 <p>!!! info "Notes about how requirement splitting works</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">-</span> <span class="o">**</span><span class="k">New</span> <span class="n">estimate</span><span class="o">**</span><span class="p">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">-</span> <span class="o">**</span><span class="nv">New</span> <span class="nv">estimate</span><span class="o">**</span>:
 
-    <span class="o">-</span> <span class="n">this</span> <span class="k">defaults</span> <span class="k">to</span> <span class="n">blank</span> <span class="k">in</span> <span class="n">the</span> <span class="n">split</span> <span class="n">dialog</span><span class="p">.</span> <span class="n">This</span> <span class="n">will</span> <span class="k">move</span> <span class="k">all</span> <span class="n">the</span> <span class="n">remaining</span> <span class="n">effort</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="p">.</span> 
-    <span class="o">-</span> <span class="n">The</span> <span class="k">new</span> <span class="n">requirement</span><span class="s1">&#39;s estimate cannot be greater than the original requirement&#39;</span><span class="n">s</span> <span class="n">estimate</span> <span class="p">(</span><span class="n">because</span> <span class="n">this</span> <span class="k">is</span> <span class="n">moving</span> <span class="k">some</span> <span class="k">or</span> <span class="k">all</span> <span class="k">of</span> <span class="n">its</span> <span class="n">estimate</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="p">).</span>
+    <span class="o">-</span> <span class="nv">this</span> <span class="nv">defaults</span> <span class="nv">to</span> <span class="nv">blank</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">split</span> <span class="nv">dialog</span>. <span class="nv">This</span> <span class="nv">will</span> <span class="nv">move</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">remaining</span> <span class="nv">effort</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>. 
+    <span class="o">-</span> <span class="nv">The</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s estimate cannot be greater than the original requirement</span><span class="s1">&#39;</span><span class="nv">s</span> <span class="nv">estimate</span> <span class="ss">(</span><span class="nv">because</span> <span class="nv">this</span> <span class="nv">is</span> <span class="nv">moving</span> <span class="nv">some</span> <span class="nv">or</span> <span class="nv">all</span> <span class="nv">of</span> <span class="nv">its</span> <span class="nv">estimate</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="ss">)</span>.
 
-<span class="o">-</span> <span class="o">**</span><span class="n">Status</span><span class="o">**</span><span class="p">:</span>
+<span class="o">-</span> <span class="o">**</span><span class="nv">Status</span><span class="o">**</span>:
 
-    <span class="o">-</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span><span class="s1">&#39;s status will match that of the original requirement</span>
-<span class="s1">    - if the original requirement&#39;</span><span class="n">s</span> <span class="n">status</span> <span class="k">is</span> <span class="ss">&quot;In Progress&quot;</span> <span class="k">AND</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="n">takes</span> <span class="k">all</span> <span class="n">the</span> <span class="n">estimate</span> <span class="k">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">,</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="n">now</span> <span class="n">has</span> <span class="n">zero</span> <span class="n">estimate</span> <span class="k">left</span><span class="p">.</span> <span class="k">In</span> <span class="n">this</span> <span class="k">case</span><span class="p">,</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">status</span> <span class="k">is</span> <span class="n">automatically</span> <span class="n">moved</span> <span class="k">to</span> <span class="ss">&quot;Developed&quot;</span><span class="p">.</span> <span class="k">If</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="n">has</span> <span class="k">any</span> <span class="n">other</span> <span class="n">status</span><span class="p">,</span> <span class="k">no</span> <span class="n">change</span> <span class="n">occurs</span>
+    <span class="o">-</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s status will match that of the original requirement</span>
+    <span class="o">-</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s status is &quot;In Progress&quot; AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement</span><span class="s1">&#39;</span><span class="nv">s</span> <span class="nv">status</span> <span class="nv">is</span> <span class="nv">automatically</span> <span class="nv">moved</span> <span class="nv">to</span> <span class="s2">&quot;</span><span class="s">Developed</span><span class="s2">&quot;</span>. <span class="k">If</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span> <span class="nv">has</span> <span class="nv">any</span> <span class="nv">other</span> <span class="nv">status</span>, <span class="nv">no</span> <span class="nv">change</span> <span class="nv">occurs</span>
 
-<span class="o">-</span> <span class="o">**</span><span class="n">Tasks</span><span class="o">**</span> <span class="k">are</span> <span class="k">not</span> <span class="n">moved</span> <span class="k">or</span> <span class="n">cloned</span> <span class="k">from</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Test</span> <span class="n">Coverage</span><span class="o">**</span> <span class="k">is</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="p">(</span><span class="k">and</span> <span class="k">left</span> <span class="n">unchanged</span> <span class="k">on</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">)</span>
-<span class="o">-</span> <span class="o">**</span><span class="n">Attachments</span><span class="o">**</span> <span class="k">are</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span> <span class="p">(</span><span class="k">and</span> <span class="k">left</span> <span class="n">unchanged</span> <span class="k">on</span> <span class="n">the</span> <span class="n">original</span> <span class="n">requirement</span><span class="p">)</span>
-<span class="o">-</span> <span class="k">All</span> <span class="n">standard</span> <span class="k">and</span> <span class="n">custom</span> <span class="n">field</span> <span class="n">information</span> <span class="k">is</span> <span class="n">copied</span> <span class="n">over</span> <span class="k">to</span> <span class="n">the</span> <span class="k">new</span> <span class="n">requirement</span>
+<span class="o">-</span> <span class="o">**</span><span class="nv">Tasks</span><span class="o">**</span> <span class="nv">are</span> <span class="nv">not</span> <span class="nv">moved</span> <span class="nv">or</span> <span class="nv">cloned</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>
+<span class="o">-</span> <span class="o">**</span><span class="nv">Test</span> <span class="nv">Coverage</span><span class="o">**</span> <span class="nv">is</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span> <span class="ss">(</span><span class="nv">and</span> <span class="nv">left</span> <span class="nv">unchanged</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="ss">)</span>
+<span class="o">-</span> <span class="o">**</span><span class="nv">Attachments</span><span class="o">**</span> <span class="nv">are</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span> <span class="ss">(</span><span class="nv">and</span> <span class="nv">left</span> <span class="nv">unchanged</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="ss">)</span>
+<span class="o">-</span> <span class="nv">All</span> <span class="nv">standard</span> <span class="nv">and</span> <span class="nv">custom</span> <span class="nv">field</span> <span class="nv">information</span> <span class="nv">is</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>
 </code></pre></div>
 </td></tr></table>
-
 <h3 id="overview-details">Overview - Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Reporting/Custom-Reporting-Tokens/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3360,7 +3360,6 @@
 <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span> <span class="k">and</span> <span class="n">R</span><span class="p">.</span><span class="n">RELEASE_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ReleaseId</span><span class="err">}</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
 </code></pre></div>
-
 <h2 id="more-details-about-releaseandchildids">More details about ${ReleaseAndChildIds}<a class="headerlink" href="#more-details-about-releaseandchildids" title="Permanent link">&para;</a></h2>
 <p>This token limits the data to the selected release <strong>and to data from that release's children</strong>. </p>
 <p>If "All Releases" is selected data against all active releases in the current product will be returned. For example, if your custom graph shows requirements by release, with "All Releases" selected, the graph will show any requirement with an active release set on the release field (which matches the list of releases in the release dropdown). In other words, requirements with no release set will not be included.</p>

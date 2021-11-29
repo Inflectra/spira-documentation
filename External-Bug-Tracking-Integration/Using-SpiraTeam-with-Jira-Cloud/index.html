@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -2061,6 +2061,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#j-task-status-optional" class="md-nav__link">
+    j) Task Status (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-task-priority-optional" class="md-nav__link">
+    k) Task Priority (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-task-type-optional" class="md-nav__link">
+    l) Task Type (Optional)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2645,6 +2666,27 @@
           <li class="md-nav__item">
   <a href="#i-requirement-component-optional" class="md-nav__link">
     i) Requirement Component (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j-task-status-optional" class="md-nav__link">
+    j) Task Status (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-task-priority-optional" class="md-nav__link">
+    k) Task Priority (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-task-type-optional" class="md-nav__link">
+    l) Task Type (Optional)
   </a>
   
 </li>
@@ -3849,6 +3891,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#j-task-status-optional" class="md-nav__link">
+    j) Task Status (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-task-priority-optional" class="md-nav__link">
+    k) Task Priority (Optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-task-type-optional" class="md-nav__link">
+    l) Task Type (Optional)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3964,6 +4027,7 @@
 <li>make sure all new incidents (and requirements) made in SpiraPlan get created in Jira</li>
 <li>update SpiraPlan with changes made to issues in Jira</li>
 <li>(advanced) update Jira with changes made to incidents in SpiraPlan</li>
+<li>(advanced) create new Jira sub-tasks from tasks created in SpiraPlan</li>
 <li>make sure your sprints match between Jira and SpiraPlan</li>
 <li>connect together users so the right user is flagged against each issue and  incident</li>
 </ul>
@@ -3979,7 +4043,7 @@
 <p>Now that the data synchronization service / application itself is set up, we are ready to move to the next step.</p>
 <p>Now you need to configure the Jira integration to let you:</p>
 <ul>
-<li>export incidents into JIRA, </li>
+<li>export incidents and tasks into JIRA, </li>
 <li>import new issues from JIRA</li>
 <li>pick up subsequent status changes in JIRA and have them update SpiraPlan. </li>
 </ul>
@@ -4018,7 +4082,7 @@ time-zones here.</li>
 <li>
 <p><strong>Custom 01</strong>: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraPlan Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</p>
 </li>
-<li><strong>Custom 02</strong>: This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.</li>
+<li><strong>Custom 02</strong>: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.</li>
 <li>
 <p><strong>Custom 03</strong>: This determines how the synchronization of incidents works:</p>
 <ul>
@@ -4164,6 +4228,24 @@ time-zones here.</li>
 <p>The table lists each of the components available in SpiraPlan and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_35.png" /></p>
+<h4 id="j-task-status-optional">j) Task Status (Optional)<a class="headerlink" href="#j-task-status-optional" title="Permanent link">&para;</a></h4>
+<p>Click on the "Status" hyperlink under Task Standard Fields to bring up the Task status mapping configuration screen:</p>
+<p><img alt="" src="../img/jira-task-mapping-status.png" /></p>
+<p>The table lists each of the task statuses available in SpiraPlan and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper. <em>Please note, in Jira there are 5 default levels of Issue Priority, and only 4 (by default - this can be changed) in SpiraPlan.</em></p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_31.png" /></p>
+<h4 id="k-task-priority-optional">k) Task Priority (Optional)<a class="headerlink" href="#k-task-priority-optional" title="Permanent link">&para;</a></h4>
+<p>Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen:</p>
+<p><img alt="" src="../img/jira-task-mapping-priority.png" /></p>
+<p>The table lists each of the task priorities available in SpiraPlan and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_33.png" /></p>
+<h4 id="l-task-type-optional">l) Task Type (Optional)<a class="headerlink" href="#l-task-type-optional" title="Permanent link">&para;</a></h4>
+<p>Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen:</p>
+<p><img alt="" src="../img/jira-task-mapping-type.png" /></p>
+<p>The table lists each of the task types available in SpiraPlan and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields (e.g. Management and Other in SpiraPlan are both equivalent to Task in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
+<p>The JIRA ID can be found by using the <strong>Issue Types</strong> tab of the Jira configuration helper:</p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_29.png" /></p>
 <h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping<a class="headerlink" href="#configuring-the-custom-property-mapping" title="Permanent link">&para;</a></h3>
 <p>Now that the various SpiraPlan standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in SpiraPlan that map to custom fields in JIRA and also for custom properties in SpiraPlan that are used to map to standard fields in JIRA (Environment, Resolution and SecurityLevel) that don't exist in SpiraPlan.</p>
 <p>From the View/Edit Product Data Mapping screen, you need to click on the name of the Incident or Requirement Custom Property that you want to add data-mapping information for. We will consider the four different types of mapping that you might want to enter:</p>

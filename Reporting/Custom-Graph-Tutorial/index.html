@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Reporting/Custom-Graph-Tutorial/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3507,7 +3507,6 @@
 <p>This will automatically populate the following query in the <strong>Query</strong> editor:</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">value</span> <span class="n">R</span> <span class="k">from</span> <span class="n">SpiraTestEntities</span><span class="p">.</span><span class="n">R_TestRuns</span> <span class="k">as</span> <span class="n">R</span> <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
 </code></pre></div>
-
 <p>This query tells Spira to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking <strong>Display Data Grid</strong> to see all of the columns that you can use in the graph:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-5.png" /></p>
 <p>This will help you decide which columns are important for your graph. You can then adjust the query to only include those columns:</p>
@@ -3516,7 +3515,6 @@
 <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
 </code></pre></div>
-
 <p>In this modified query, we have replaced the keyword <strong>value</strong> with the specific column names. We have also added an aggregation function called <strong>COUNT</strong> to count the number of test runs and group by the execution status name column. Spira uses a modified SQL language called Entity SQL created by Microsoft that we'll be discussing in more detail in later articles in this series.</p>
 <p>You may have noticed that we had a special token in the query <strong>${ProjectId}</strong>, this token will be evaluated during the generation of the graph and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token <strong>${ProjectGroupId}</strong>. If you don't use either token, the graph will include all the items in the entire system, across all products and programs.</p>
 <p>There are some restrictions about the <strong>select</strong> clause of the query:</p>
@@ -3560,7 +3558,6 @@
 <span class="k">where</span> <span class="n">R</span><span class="p">.</span><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="err">${</span><span class="n">ProjectId</span><span class="err">}</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">EXECUTION_STATUS_NAME</span>
 </code></pre></div>
-
 <p>As we discussed, when using ESQL queries to display custom graphs, there are some restrictions about the <strong>select</strong> clause of the query:</p>
 <ul>
 <li>You need to make the first column in the query the category for the x-axis</li>
@@ -3581,7 +3578,6 @@
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span>
 </code></pre></div>
-
 <p>This will display the following data:</p>
 <table class="table table-striped">
     <tbody>
@@ -3647,7 +3643,6 @@
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">TruncateTime</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">)</span> <span class="k">as</span> <span class="n">DatePart</span>
 </code></pre></div>
-
 <p>This would now give the following results instead:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
@@ -3670,7 +3665,6 @@
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>which could be graphed as follows:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-15.png" /></p>
 <h2 id="2-aggregating-data-over-time-periods">2) Aggregating Data Over Time Periods<a class="headerlink" href="#2-aggregating-data-over-time-periods" title="Permanent link">&para;</a></h2>
@@ -3696,7 +3690,6 @@
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Suppose we wanted to group the data over a 20 day time period. We would need to modify the query as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span>
 <span class="n">DatePart</span><span class="p">,</span>
@@ -3710,7 +3703,6 @@
     <span class="n">R</span><span class="p">.</span><span class="n">ARTIFACT_TYPE_NAME</span> <span class="o">=</span> <span class="ss">&quot;Requirement&quot;</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">AddDays</span><span class="p">(</span><span class="n">CreateDateTime</span><span class="p">(</span><span class="k">Year</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">DayOfYear</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">CHANGE_DATE</span><span class="p">)</span><span class="o">/</span><span class="mi">20</span><span class="p">)</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span> <span class="k">as</span> <span class="n">DatePart</span>
 </code></pre></div>
-
 <p>Now when you execute the query, the system is using the following functions to combines the dates down into 20 day ranges:</p>
 <ul>
 <li><strong>DayOfYear</strong> to get the absolute day number this year (1-366)</li>
@@ -3735,7 +3727,6 @@
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>or in graphical form:</p>
 <p><img alt="" src="../img/custom-graph-tutorial-16.png" /></p>
 <h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>

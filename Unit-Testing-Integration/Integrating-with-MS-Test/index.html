@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-with-MS-Test/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3442,7 +3442,6 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The .NET class is marked as a MS-Test unit test fixture by applying the
 [TestClass] attribute to the class as a whole, and the [TestMethod]
 attribute to each of the test assertion methods individually -- shown
@@ -3544,7 +3543,6 @@ to record the MS-Test test run are illustrated below:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>And the following settings need to be added to the .config file
 associated with the test fixture assembly:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
@@ -3580,7 +3578,6 @@ associated with the test fixture assembly:</p>
     <span class="nt">&lt;/Inflectra.SpiraTest.AddOns.SpiraTestMSTestExtension.Properties.Settings&gt;</span>
   <span class="nt">&lt;/applicationSettings&gt;</span>
 </code></pre></div>
-
 <p>Firstly the settings in the .config file indicate the following
 information to the test fixture:</p>
 <p>The URL to the instance of SpiraTest being accessed. This needs to start

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Spira-Administration-Guide/System-Reporting/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3558,7 +3558,6 @@ reports center. An example XML report is partially shown below:</p>
   “/RequirementData”
 “/Report”
 </code></pre></div>
-
 <p>This XML data is then converted by the XSLT template into HTML format so
 that it can be included into the final generated report. An example
 fragment of the XSLT template looks like:</p>
@@ -3594,7 +3593,6 @@ fragment of the XSLT template looks like:</p>
     “/xsl:for-each”
   “/xsl:template”
 </code></pre></div>
-
 <p>So using a combination of XSLT and the Raw XML report format, you can
 generate a customized view of the standard report section that will be
 included in the final report.</p>
@@ -3661,7 +3659,7 @@ just these columns in a nice table format:</p>
 <p>You can now click the [Save] button to save your changes to the
 report.</p>
 <p>You may have noticed that we had a special token in the query
-<strong><span ProjectGroupId="ProjectGroupId"><span class="MathJax_Preview">{ProjectId}**, this token will be evaluated during the generation of
+<strong><span ProjectGroupId="ProjectGroupId" class="arithmatex"><span class="MathJax_Preview">{ProjectId}**, this token will be evaluated during the generation of
 the report and ensures that only items in the current product are
 included. If you want to include all the items in a specific Program,
 you should instead use the token **</span><script type="math/tex">{ProjectId}**, this token will be evaluated during the generation of

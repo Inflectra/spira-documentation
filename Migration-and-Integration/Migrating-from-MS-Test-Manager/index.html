@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Migration-and-Integration/Migrating-from-MS-Test-Manager/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrating-from-ms-test-manager" class="md-skip">
+        <a href="#migrating-from-ms-azure-devops-test-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -3314,8 +3314,8 @@
               
                 
                 
-                <h1 id="migrating-from-ms-test-manager">Migrating from MS Test Manager<a class="headerlink" href="#migrating-from-ms-test-manager" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the free Migration Tool for importing users, test plans, test suites, test cases and test runs from Microsoft Test Manager (MTM) 2010 or later.</p>
+                <h1 id="migrating-from-ms-azure-devops-test-manager">Migrating from MS Azure DevOps / Test Manager<a class="headerlink" href="#migrating-from-ms-azure-devops-test-manager" title="Permanent link">&para;</a></h1>
+<p>This section outlines how to use the free Migration Tool for importing users, releases, requirements, test plans, test suites, test cases, test runs and defects from Microsoft Azure DevOps (ADO) also known as Microsoft Test Manager (MTM).</p>
 <h2 id="installing-the-mtm-migration-tool">Installing the MTM Migration Tool<a class="headerlink" href="#installing-the-mtm-migration-tool" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the migration tool for MTM onto a workstation so that you can then migrate whole projects from MTM into SpiraTest (or SpiraTeam). It assumes that you already have a working installation of SpiraTest v4.0 or later. If you have an earlier version of SpiraTest you will need to upgrade to at least v4.0 before trying to migrate projects.</p>
 <p>The Windows installation package can be downloaded from the 'Add-Ons &amp; Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:</p>
@@ -3337,10 +3337,13 @@
 <p>The migration tool will import the following artifacts:</p>
 <ul>
 <li>Users (but not their roles and permissions)</li>
+<li>User story, feature and epic work items as requirements</li>
+<li>Releases / iterations as releases and sprints</li>
 <li>Test Plans and their associated Test Suites</li>
 <li>Test Cases and their associated steps, including any shared test steps</li>
 <li>Test Runs and their associated test results</li>
 <li>Test Sets and the association with the test cases</li>
+<li>Bug work items as incidents</li>
 <li>Any attachments associated with the requirements, test cases, test sets or design steps.</li>
 </ul>
                 

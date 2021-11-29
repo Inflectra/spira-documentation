@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/About/release-notes-v6/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3687,7 +3687,9 @@
 <p>We continue to round out our <a href="https://api.inflectra.com/Spira/Services/v6_0/RestService.aspx">extensive API</a> to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage all template managed fields for specific artifacts.</p>
 <p>Improved localization in the web application of fields that users are not able to customize (like requirement or test case statuses).</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>Implement new <a href="../../Spira-User-Manual/Application-Wide/#rich-text-editor">rich text editor</a> to enable more modern experience [RQ:3697]</li>
 <li>
 <p><a href="../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements">Requirements that have children</a> (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]</p>
@@ -3714,7 +3716,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Rich Text Editor</strong></p>
 <ul>
@@ -3754,7 +3758,9 @@
 </li>
 </ul>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>** Test Automation**: Can manage Rapise floating licenses inside Spira (will be available in the application at a later date) [RQ:3533]</li>
 <li>
 <p><strong>Industry specific sample data installed with new installations</strong></p>
@@ -3769,7 +3775,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Add product-level <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing setting</a> to allow product-based parameter refresh for large projects [IN:6671]</li>
 <li>Allow an incident's creation date to be after its start date and its closed on date (to avoid not being able to save an incident due to this validation criteria not being met) [IN:5505]</li>
 <li>Ensure full database schema parity between a clean installation and an upgraded on-premise installation [IN:6182]</li>
@@ -3793,12 +3801,16 @@
 <p><strong><a href="../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing">Edit requirements inline</a> on the requirements mind-map page</strong> in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]</p>
 <p><strong><a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29">Excel365</a></strong> addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>Users can add Multi-Factor Authentication (MFA) with a one-time password to improve login security [RQ:3522]</li>
 <li>Can create and edit diagrams as inline documents directly in the app (supports diagrams, mindmaps, and organization charts) [RQ:3507]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Fix TaraVault breaking on activation if Pull Requests have been added using the sample source code provider [IN:6535]</li>
 <li>Fix planning boards not letting you add a new item if you have create permissions but not bulk edit (introduced in 6.10.0.0) [IN:6536]</li>
 <li>Fix planning board and incident board detected release field on the incident popup not showing all releases (only active ones) [IN:6577]</li>
@@ -3833,11 +3845,15 @@
 <p><strong><a href="../../Spira-User-Manual/Planning-Board">Planning Board</a> enhancements</strong> (SpiraTeam and SpiraPlan): quality of life improvements, including: users can edit cards directly on the board in on-page popups (or view relevant information if you can't edit); improve tooltips, drag and drop; and more sensible defaults when creating items based on your view</p>
 <p><strong>Work faster and smarter with tasks</strong> (SpiraTeam and SpiraPlan): on the <a href="../../Spira-User-Manual/Task-Tracking/#task-list">task list page</a> you can now perform actions on a whole folders at once, not just specific tasks. This lets you quickly clone, export, or print tasks in folders.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li><strong>Planning Board</strong> (SpiraTeam and SpiraPlan): Product level planning boards (<a href="../../Spira-User-Manual/Planning-Board">planning board</a>, <a href="../../Spira-User-Manual/Requirements-Management/#requirements-agile-board">requirement board</a>, <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">incident board</a>, <a href="../../Spira-User-Manual/Task-Tracking/#task-board">task board</a>) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Planning Board</strong></p>
 <ul>
@@ -3903,7 +3919,9 @@
 </ul>
 <p><strong>NOTE</strong>: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>
 <p><strong><a href="../../Spira-User-Manual/Requirements-Management/#requirements-document-view">Requirements document view</a></strong></p>
 <ul>
@@ -3950,7 +3968,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Administration</strong></p>
 <ul>
@@ -3998,13 +4018,17 @@
 <p><strong>BDD and Gherkin Support</strong>: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the <a href="../../Spira-User-Manual/Document-Management">documents repository</a>, which includes workflow, checkout, and versioning support.</p>
 <p><strong><a href="../../Spira-User-Manual/Document-Management/#add-new-inline-documents">Inline content editing</a></strong>: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li><strong>Document Management</strong>: <a href="../../Spira-User-Manual/Document-Management/#edit">Inline editing</a> of Text/Markdown/HTML in the Documents Management module [RQ:1697]</li>
 <li><strong>Administration</strong>: Add support for future implementation of program, template and portfolio settings [RQ:3051]</li>
 <li>Add APIs for Risk management (including risk mitigations and reading risk template fields) [RQ:2544]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Testing and test coverage</strong></p>
 <ul>
@@ -4074,7 +4098,9 @@
 <p><strong><a href="../../Spira-User-Manual/Commits/#commit-file-details">Source code diff</a> view</strong> (SpiraTeam and SpiraPlan): by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.</p>
 <p><strong>Recording Product setting changes</strong> (SpiraTeam and SpiraPlan only): The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product history page</a>.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>
 <p><strong>Source Code</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
@@ -4094,7 +4120,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Source Code / Development</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
@@ -4154,7 +4182,9 @@
 <p><strong>We have revamped the <a href="../../Spira-User-Manual/Source-Code">source code management module</a></strong> (SpiraTeam and SpiraPlan only), and for the first time, there is now a native <a href="../../Spira-User-Manual/Commits/#commit-file-details">code difference viewing</a> capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <em>Note, source code is not included in SpiraTest</em>.</p>
 <p><strong>View rendered markdown files</strong> directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.</p>
 </div>
-<details class="success"><summary>New Features</summary><ul>
+<details class="success">
+<summary>New Features</summary>
+<ul>
 <li>Improve functionality and performance of Git source code control (for <a href="../../Version-Control-Integration/Integrating-with-Git">GitProvider</a> and <a href="../../TaraVault-User-Manual/Using-Git">TaraVault-Git</a>) [RQ:3033]</li>
 <li>Improve functionality and performance of Subversion source code control (for <a href="../../Version-Control-Integration/Integrating-with-Subversion">SubversionProvider</a> and <a href="../../TaraVault-User-Manual/Using-Subversion">TaraVault-Subversion</a>) [RQ:3034]</li>
 <li>Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]</li>
@@ -4173,7 +4203,9 @@
 <li>Ensure users can easily see how a file changed in a particular commit [RQ:3027]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Source Code</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
@@ -4233,7 +4265,9 @@
 <p class="admonition-title">Summary</p>
 <p><strong>Baselining Enhancements</strong> (SpiraTeam and SpiraPlan only): with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>Store source code branches and commit information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]</li>
 <li>
 <p>Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]</p>
@@ -4248,7 +4282,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>On Administration -&gt; Projects -&gt; Data Tools page, update the text to explain the new index refresh button [IN:3655]</li>
 <li>On Administration -&gt; Projects -&gt; Data Tools add a new option to fix Folder hierarchies [IN:5839]</li>
 <li>On Administration -&gt; Projects -&gt; Data Tools add a new option to fix Test Case Parameters cache [IN:5840]</li>
@@ -4269,7 +4305,9 @@
 <p><strong>Baselines</strong> (SpiraTeam and SpiraPlan only): View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.</p>
 <p><strong>Performance Improvements</strong>: The most frequent power-hungry operations by users have been reworked from the ground up to maximize performance. Operations like updating test coverage is up to 300% faster.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>
 <p>Administering baselining within a product (SpiraTeam and SpiraPlan only)</p>
 <ul>
@@ -4292,7 +4330,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Agile and Planning</strong> (SpiraTeam and SpiraPlan only)</p>
 <ul>
@@ -4352,7 +4392,9 @@
 <p><strong><a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">Testing Settings</a></strong>: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.</p>
 <p><strong>DevOps (SpiraTeam and SpiraPlan only)</strong>: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li><a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">Testing Settings</a> are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)</li>
 <li>
 <p>Users can <a href="../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task">create an Incident directly from a Task</a> [RQ:2971]</p>
@@ -4398,7 +4440,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>
 <p><strong>Testing</strong></p>
 <ul>
@@ -4451,7 +4495,9 @@
 <p class="admonition-title">Summary</p>
 <p><strong>Improved dashboard widgets</strong>: enhanced and new Recent Build widgets, let you get an easier handle on your CI/CD processes from <a href="../../Spira-User-Manual/Program-Homepage/#recent-builds">program</a>, <a href="../../Spira-User-Manual/Portfolio-Homepage/#recent-builds">portfolio</a>, and <a href="../../Spira-User-Manual/Enterprise-Homepage/#recent-builds">enterprise</a> home pages; a number of widgets on the program home page by default display data for active releases only to make their data more meaningful; a brand new <a href="../../Spira-User-Manual/Program-Homepage/#product-test-summary">product test summary table</a> on the program home page provides important information at a glance.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>
 <p>Baselining</p>
 <ul>
@@ -4490,7 +4536,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Global search and Association panel: improved search on different letter/number combinations [IN:4695]</li>
 <li>Logging in with an OAuth provider takes you any specified return url, to improve getting you to the right place faster [IN:5413]</li>
 <li>Deafault product role text descriptions have been improved for clarity [IN:5560]</li>
@@ -4530,7 +4578,9 @@
 <p><strong>New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)</strong>: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.</p>
 <p><em>Learn: <a href="../../Spira-User-Manual/Release-Management/#release-gantt-chart">release Gantt chart</a>; <a href="../../Spira-User-Manual/Release-Management/#release-mind-map">release mind map</a>; <a href="../../Spira-User-Manual/Release-Management/#release-gantt-chart">task Gantt chart</a>.</em></p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>Generic Project Settings Provider [RQ:2852]</li>
 <li>
 <p>Installer can upgrade successfully with required database additions [RQ:2850]</p>
@@ -4647,7 +4697,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Add a try/catch around IIS check, as when IIS isn't installed, the Admin DLL isn't available and will crash. [IN:5219]</li>
 <li>Add ability to see product role description as a tooltip when hovering over your product role in the global navigation subheader [IN:5541]</li>
 <li>Add an event in the event log after the event log is cleared by a user [IN:4818]</li>
@@ -4696,7 +4748,9 @@
 <p><strong>Single Sign On (SSO) Support</strong>: Built in integration with a number of OAuth 2.0 providers to provide more seamless and secure sign-on to the application. Initial providers will include Azure AD, GitHub, GitLab, Google, Microsoft ADFS, and Okta.</p>
 <p><strong>Improved reporting</strong>: With a single release picker you can now update every graph (including custom graphs) on the main reporting page. Report formatting for Word has also been improved</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>
 <p>Integration with OAuth2 Protocol</p>
 <ul>
@@ -4769,7 +4823,9 @@
 </li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Add release filter to incident/test run snapshot and time phased graphs [IN:1696]</li>
 <li>Two enhancements to the Test Run and Test Case graphs [IN:1776]</li>
 <li>Test Case Summary graph data displays for all releases (inconsistent with Project Home dashboard) [IN:2407]</li>
@@ -4815,7 +4871,9 @@
 <p><strong>Improvements to filters</strong>: Update your filters and shared filters easily. Create filters that also include information about which columns you have visible, their sort, order, and width. This is a great way for saving specific “views” you and your teams need.</p>
 <p><strong>Improved navigation between folders and hierarchies</strong>: Each folder now has its own unique url, so you can share links to specific folders with your team. For requirements, releases, and all artifacts with folders new clickable breadcrumbs making it easy to go straight to an artifact’s parent.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>Replace file upload with newer control on artifact detail pages and document list page [RQ:2359]</li>
 <li>TaraVault licensing has no restrictions [RQ:2530] </li>
 <li>Improvements to Convert Incident to Requirement feature [RQ:2600]</li>
@@ -4826,7 +4884,9 @@
 <li>Spira 6.3 Installer Tasks [RQ:2671]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Add tooltip to shared filter that shows the username of the filter creator [IN:4904]</li>
 <li>The ability to update a saved filter [IN:5048]</li>
 <li>Admin: User Edit page could potentially show TaraVault DataGrid on Self-Hosted  [IN:5133]</li>
@@ -4847,7 +4907,9 @@
 <p><strong>SpiraTeam and SpiraPlan cloud users can use any source code provider</strong>: In addition to our source code provider, TaraVault, cloud customers can choose to use any Git or Subversion provider they wish.</p>
 <p><strong>Bug fixes and UI improvements</strong>: The improvements include better access to the sidebars on all main pages, and improved search in dropdowns.</p>
 </div>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Build detail page: need ability to collapse description section, or confine it within a scrollable box [IN:4300]</li>
 <li>Detect and notify the user when they attempt to run a test set with a blank configuration [IN:4655]</li>
 <li>Html and body tags from rich text fields are not stripped out when rendered outside of CK editors [IN:4666]</li>
@@ -4881,12 +4943,16 @@
 <p class="admonition-title">Summary</p>
 <p><strong>Enhanced product template management</strong>: Users can migrate a product from one template to another. This will help you consolidate your templates and streamline your administration more easily.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>Project Template Migration Wizard implemented [RQ:2489]</li>
 <li>Installer tasks for cloud and download [RQ:2598]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Admin manual: Add info about Product Admin Home and Template Admin Home pages [IN:5020]</li>
 <li>Requirement - Tasks grid can display timezone based exception when certain dates are null [IN:5061]</li>
 <li>RSS Token on user profile and admin user/edit should be blurred like for TaraVault [IN:5072]</li>
@@ -4917,7 +4983,9 @@
 <p><strong>Additional Requirement List Views (SpiraTeam and SpiraPlan only)</strong>: In addition to the current hierarchical list view of requirements, additional views will make it easier for users to work with requirements in ways that work for them at the time.</p>
 <p><strong>Improved Risk Associations (SpiraPlan only)</strong>: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>MindMapping requirements functionality  [RQ:1708]</li>
 <li>Additional Task Board View (tasks by Requirement) [RQ:2357]</li>
 <li>Documentation links take you to new online documentation system [RQ:2587]</li>
@@ -4932,7 +5000,9 @@
 <li>Requirements use case diagram [RQ:2572]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Admin Product Membership: error when click save, if All Active is selected and there are inactive members [IN:5109]</li>
 <li>Project Membership table can have bad entries [IN:5165]</li>
 <li>License Key does not allow FIPS 140-2 compliance.. [IN:3305]</li>
@@ -4976,7 +5046,9 @@
 <p><strong>Improvements to Administration</strong>: With easier filtering and more intuitive controls for key pages like tables and managing workflow permissions, administration is now more user friendly than ever.</p>
 <p><strong>Version 6 of our SOAP and REST APIs</strong>: Our existing APIs are as compatible as they can be with version 6 of SpiraPlan. The new API version will allow access to new features, such as those from templates.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>Enable beta dark color mode for modern browsers [RQ:2557]</li>
 <li>Add new 6.0 API for existing calls [RQ:2308]</li>
 <li>All workflow status field permissions are set with radio buttons not checkboxes [RQ:2408]</li>
@@ -4987,7 +5059,9 @@
 <li>Planning Boards: Hide Statuses that have no transition to them or from them for RQs and TKs [RQ:2549]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>Issues with inactive products and templates  [IN:5045]</li>
 <li>Activating old project changes its assigned template [IN:5046]</li>
 <li>Project role artifact view permissions are being applied, when current user has sys admin permission [IN:4140]</li>
@@ -5040,7 +5114,9 @@
 <p><strong>New customizations at the template level</strong>: Requirement, Test Case, Document, and Task types are customizable. Documents can now be managed using workflows to allow you to control versioning and check-ins. Notifications now apply to products in a template and no longer the same system wide.</p>
 <p><strong>Improve navigation and new administration user interface</strong>: New login screens and a completely reworked navigation menu in the application make using SpiraPlan easier than ever. Navigation is more mobile friendly and intuitive. Administration menus are now only ever one click away.</p>
 </div>
-<details class="success"><summary>New features</summary><ul>
+<details class="success">
+<summary>New features</summary>
+<ul>
 <li>
 <p>Risk Administration (Project Template)</p>
 <ul>
@@ -5102,7 +5178,9 @@
 <li>Database support for multiple approvers [RQ:2503]</li>
 </ul>
 </details>
-<details class="bug"><summary>Bug fixes and enhancements</summary><ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
 <li>System Administration - Add/Edit Users: German translation for "Locked Out" misleading [IN:2230]</li>
 <li>security issue when having 2 projects open in browser tabs [IN:2651]</li>
 <li>Limited view role can access source code pages when should not be able to [IN:4754]</li>

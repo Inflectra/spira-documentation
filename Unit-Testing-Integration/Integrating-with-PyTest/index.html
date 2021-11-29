@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Unit-Testing-Integration/Integrating-with-PyTest/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3357,7 +3357,6 @@ working tests configured.</p>
 <span class="k">def</span> <span class="nf">test_add_3</span><span class="p">():</span>
   <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
 </code></pre></div>
-
 <p>Note how test_add_2 is used in the configuration file discussed below.</p>
 <p>In your test root folder (the folder you run the pytest command from),
 create a file named "spira.cfg" with the following:</p>
@@ -3379,7 +3378,6 @@ create a file named "spira.cfg" with the following:</p>
 <span class="c1"># Test case for a specific function</span>
 <span class="na">test_add_2</span> <span class="o">=</span> <span class="s">22</span>
 </code></pre></div>
-
 <p>For the plugin to work, you must have both settings groups (credentials
 and test_cases) with the following in the credentials group:</p>
 <ul>

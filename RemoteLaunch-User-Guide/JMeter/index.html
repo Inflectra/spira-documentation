@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/RemoteLaunch-User-Guide/JMeter/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-6.2.8">
     
     
       
@@ -3516,19 +3516,17 @@ selected in a production environment.</p>
 <p>To make this change, locate the following file - <strong>jmeter.properties</strong>:</p>
 <p><img alt="" src="../img/JMeter_111.png" /></p>
 <p>Open up this file and locate the following line:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.</span>
-<span class="err">    # jmeter.save.saveservice.output_format=csv</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.
+    # jmeter.save.saveservice.output_format=csv
 </code></pre></div>
 </td></tr></table>
-
 <p>Change this to be:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.</span>
-<span class="err">    jmeter.save.saveservice.output_format=xml</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    # legitimate values: xml, csv, db.  Only xml and csv are currently supported.
+    jmeter.save.saveservice.output_format=xml
 </code></pre></div>
 </td></tr></table>
-
 <p>Then save the <strong>jmeter.properties</strong> file.</p>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
 <p>This section describes the process for setting up a test case in
