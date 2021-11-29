@@ -1,5 +1,5 @@
 #  Migrating from MS Azure DevOps / Test Manager
-This section outlines how to use the free Migration Tool for importing users, test plans, test suites, test cases and test runs from Microsoft Azure DevOps (ADO) also known as Microsoft Test Manager (MTM).
+This section outlines how to use the free Migration Tool for importing users, releases, requirements, test plans, test suites, test cases, test runs and defects from Microsoft Azure DevOps (ADO) also known as Microsoft Test Manager (MTM).
 
 
 ## Installing the MTM Migration Tool
@@ -44,6 +44,8 @@ During the import process, as each of the types of artifact are imported, the pr
 The migration tool will import the following artifacts:
 
 - Users (but not their roles and permissions)
+- User story, feature and epic work items as requirements
+- Releases / iterations as releases and sprints
 - Test Plans and their associated Test Suites
 - Test Cases and their associated steps, including any shared test steps
 - Test Runs and their associated test results
