@@ -6,10 +6,6 @@ repo_name: Inflectra
 repo_url: https://www.inflectra.com
 site_url: https://spiradoc.inflectra.com/
 
-plugins:
-  - search:
-      separator: '[\s\(\)\,\-\:]+'
-
 # EXTENSIONS USED
 markdown_extensions:
   - attr_list
