@@ -3,7 +3,6 @@ This documentation uses [MkDocs](https://www.mkdocs.org/) - documentation using 
 
 We can fully change the theme used and its features using a basic templating language and normal CSS. If needed you can insert HTML into the Markdown files and it will get passed through as HTML.
 
-
 ## The broad workflow:
 - write and edit in markdown
 - make sure new pages are accessible using the main navigation (in the mkdocs.yml)
@@ -18,24 +17,19 @@ We can fully change the theme used and its features using a basic templating lan
 - There is a special branch called "gh-pages" that you should NEVER touch. It is the deployment branch and is handled automatically by MkDocs. 
 
 
-## Getting the build environment set up
+
+# Getting the build environment set up
 1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
+2. We use the Material theme for mkdocs. This has two versions - a public and an Insiders version.
+    
+    - **Public**: run `pip install mkdocs-material` it should also install MKdocs. 
+    - **Insiders** run `pip install git+https://${token}@github.com/squidfunk/mkdocs-material-insiders.git` - replace {token} with your relevant token
 
-### If NOT using custom material theme
-2. Run `pip install mkdocs-material` to install everything our base theme needs - it should also install MKdocs
 3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
 4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
-5. Go to mkdocs.yml and remove `theme: custom_dir` and `plugins: - search: separator`
+5. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
+6. Clone this repo to your local machine
 
-### If using custom material theme (for improved search)
-2. Run `pip install -r requirements.txt` to install everything our base theme needs - it should also install MKdocs
-3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
-4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
-
-### ALWAYS
-5. Clone this repo to your local machine
-6. Edit files as needed
-7. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
 
 
 # Working with the docs and Markdown

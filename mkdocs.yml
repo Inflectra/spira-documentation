@@ -54,7 +54,7 @@ theme:
     code: IBM Plex Mono
   favicon: images/favicon.ico
   logo: images/logo.svg
-  custom_dir: material
+  custom_dir: overrides
   
 extra_css:
   - stylesheets/spira.css
@@ -67,6 +67,9 @@ extra:
       link: https://twitter.com/inflectra
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/inflectra-corporation
+  analytics: 
+    provider: custom 
+    property: see the custom.html partial 
 
 
 # NAVIGATION MENU
