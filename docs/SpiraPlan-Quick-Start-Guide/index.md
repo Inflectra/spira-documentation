@@ -208,22 +208,22 @@ We have more tasks to add. The table below shows 12 tasks in total to add to 4 d
 
 | **Requirement / Task**            | **Est. Estimate**                 |
 |-----------------------------------|-----------------------------------|
-<td colspan="2"><b>System must allow entry of users</b></td>
-| Create user data tables         | 10.0h                             |
-| Develop user business object    | 10.0h                             |
-| Build user creation screens     | 20.0h                             |
-<td colspan="2"><b>System must allow the modification of users</b></td>
-| Extend user business object to handle updates | 5.0h                              |
-| Add user list page              | 15.0h                             |
-| Add user details page           | 20.0h                             |
-| Add user permissions page       | 15.0h                             |
-<td colspan="2"><b>System must allow the deletion of users</b></td>
-| Extend user business object to handle deletes | 5.0h                              |
-| Update user list page to add delete functionality   | 10.0h                             |
-<td colspan="2"><b>System should allow administrators to setup notifications</b></td>
-| Create user administration home  | 15.0h                             |
-| Add user settings for notifications to database          | 10.0h                             |
-| Create user notifications administration page      | 20.0h                             |
+| **System must allow entry of users**                                  |
+| Create user data tables         | 10.0h                               |
+| Develop user business object    | 10.0h                               |
+| Build user creation screens     | 20.0h                               |
+| **System must allow the modification of users**                       |
+| Extend user business object to handle updates | 5.0h                  |
+| Add user list page              | 15.0h                               |
+| Add user details page           | 20.0h                               |
+| Add user permissions page       | 15.0h                               |
+| **System must allow the deletion of users**                           |
+| Extend user business object to handle deletes | 5.0h                  |
+| Update user list page to add delete functionality   | 10.0h           |
+| **System should allow administrators to setup notifications**         |
+| Create user administration home  | 15.0h                              |
+| Add user settings for notifications to database  | 10.0h              |
+| Create user notifications administration page    | 20.0h              |
 
 On the main Navigation bar, click again on 'Requirements'. You should now have the following requirements list page. In this screenshot we have hidden the 'Author' field and shown the 'Task Effort' field to show the detailed task effort aggregated up to the requirements.
 

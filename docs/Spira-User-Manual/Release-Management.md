@@ -265,7 +265,7 @@ You can **edit releases** straight from the Gantt chart. Users with bulk edit pe
 
 ## Releases Mind Map
 
-The releases Mind Map / Pert chart displays the first 5,000 active releases[^active-release] in a product as a connected tree view / mindmap. The root node shows the name of the product at the tope. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
+The releases Mind Map / Pert chart displays the first 5,000 releases in the release hierarchy of the product as a connected tree view / mindmap. The root node shows the name of the product at the top. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
 
 ![](img/releases-mind-map.png)
 
