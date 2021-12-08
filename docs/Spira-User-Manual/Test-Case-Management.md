@@ -205,8 +205,9 @@ The top part of this tab displays the various standard fields and custom propert
 
 The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.
 
-The **Suspect** flag is automatically set on an approved test case, when one of the requirements linking to it changes. This lets you quickly find all the test cases impacted by a specific requirement change. For this to happen the requirement needs to be in an Accepted or later status (i.e. not Rejected, Rejected, Under Review, Obsolete) and the test case needs to be an approved status (i.e. not Draft, Obsolete, Rejected).
+The **Suspect** flag is automatically set on an approved test case, when one of the requirements linking to it changes[^rq-suspect]. This lets you quickly find all the test cases impacted by a specific requirement change. For this to happen the requirement needs to be in an Accepted or later status (i.e. not Rejected, Rejected, Under Review, Obsolete) and the test case needs to be an approved status (i.e. not Draft, Obsolete, Rejected).
 
+[^rq-suspect]: only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, assocations, attachments, use case steps, and custom properties will not trigger the suspect flag.
 
 ### Overview - Test Steps
 
