@@ -621,12 +621,38 @@
     Release Gantt Chart
   </a>
   
+    <nav class="md-nav" aria-label="Release Gantt Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gantt-chart-inline-editing" class="md-nav__link">
+    Gantt Chart Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#releases-mind-map" class="md-nav__link">
     Releases Mind Map
   </a>
+  
+    <nav class="md-nav" aria-label="Releases Mind Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mindmap-inline-editing" class="md-nav__link">
+    Mindmap Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4360,12 +4386,38 @@
     Release Gantt Chart
   </a>
   
+    <nav class="md-nav" aria-label="Release Gantt Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gantt-chart-inline-editing" class="md-nav__link">
+    Gantt Chart Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#releases-mind-map" class="md-nav__link">
     Releases Mind Map
   </a>
+  
+    <nav class="md-nav" aria-label="Releases Mind Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mindmap-inline-editing" class="md-nav__link">
+    Mindmap Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4715,8 +4767,19 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p>Part of a release may be shaded darker than normal, from its left (see Library System Release 1.1 below). This represents the <a href="#requirements-completion">requirements completion percentage</a> for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. </p>
 <p>The names of the releases on the left or in the horizontal bar are clickable and will open the specific release.</p>
 <p><img alt="Release Gantt Chart" src="../img/releases-gantt-chart.png" /></p>
+<p>Above the Gantt chart is a toolbar that lets you:</p>
+<ul>
+<li><strong>refresh</strong> the Gantt chart</li>
+<li><strong>add a new release</strong> or sprint: users with permissions to create releases can click the <code>Add</code> button to add a new release (or open the dropdown to add a new sprint or phase). Once you click <code>Add</code> you will have a popup to fill in information about the new release and then click <code>Add Release</code>. Adding the release inserts it at the bottom of the release hierarchy at the same indent level as the <em>previous</em> last release in the hierarchy.</li>
+<li><strong>filter the releases shown</strong>: use the dropdown to pick a release. This shows a list of all active releases<sup id="fnref2:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> and syncs up with the release you set in other parts of the system (for instance on the product home page, or the reporting home page).</li>
+</ul>
+<h3 id="gantt-chart-inline-editing">Gantt Chart Inline Editing<a class="headerlink" href="#gantt-chart-inline-editing" title="Permanent link">&para;</a></h3>
+<p>To <strong>view more information</strong> about a release, click its name from the left hand sidebar or in the relevant Gantt bar. This will open popup with much more detail. If you ctrl/cmd+click on the release name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields. These fields are visible or hidden based on the workflow step that applies to that specific release.</p>
+<p>You can <strong>edit releases</strong> straight from the Gantt chart. Users with bulk edit permissions can edit a release (including adding a new comment) at any time by clicking on the release name. This opens a popup with full information about that release. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific release. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).</p>
+<p><em>Note</em>: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. </p>
+<p><img alt="" src="../img/releases-gantt-chart-editing.png" /></p>
 <h2 id="releases-mind-map">Releases Mind Map<a class="headerlink" href="#releases-mind-map" title="Permanent link">&para;</a></h2>
-<p>The releases Mind Map / Pert chart displays the first 5,000 active releases<sup id="fnref2:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> in a product as a connected tree view / mindmap. The root node shows the name of the product at the tope. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. </p>
+<p>The releases Mind Map / Pert chart displays the first 5,000 releases in the release hierarchy of the product as a connected tree view / mindmap. The root node shows the name of the product at the top. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. </p>
 <p><img alt="" src="../img/releases-mind-map.png" /></p>
 <p>For each release the map displays the name and ID of the release, with a tooltip that additionally shows the release's version number. Each node is color coded by the release type: product is the darkest; major and minor releases are less dark; sprints and phases are the lightest.</p>
 <p>Clicking on the node will take you to the details page for that release.</p>
@@ -4726,7 +4789,11 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <li><strong>levels dropdown</strong>: lets you select how deep into the mindmap you wish to view. To only show the topmost level releases, select level 1; to select the top two levels, select level 2, or view everything by selecting "all levels"</li>
 <li><strong>zoom</strong>: you can change the zoom between 25% and 100% using the plus and minus buttons. To reset the zoom, click the magnifying glass</li>
 </ul>
-<p>Note: this view is unfortunately not compatible with Internet Explorer 11.</p>
+<h3 id="mindmap-inline-editing">Mindmap Inline Editing<a class="headerlink" href="#mindmap-inline-editing" title="Permanent link">&para;</a></h3>
+<p>To <strong>view more information</strong> about a release, click its name. This will open popup with much more detail. If you ctrl/cmd+click on the release name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields. These fields are visible or hidden based on the workflow step that applies to that specific release.</p>
+<p>You can <strong>edit releases</strong> straight from the mindmap. Users with bulk edit permissions can edit a release (including adding a new comment) at any time by clicking on the release name. This opens a popup with full information about that release. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific release. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).</p>
+<p><em>Note</em>: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. </p>
+<p><img alt="" src="../img/releases-mind-map-editing.png" /></p>
 <h2 id="release-details">Release Details<a class="headerlink" href="#release-details" title="Permanent link">&para;</a></h2>
 <p>When you click on release item in the <a href="#release-list">release list</a>, you are taken to the release details page illustrated below:</p>
 <p><img alt="" src="../img/Release_Management_263.png" /></p>

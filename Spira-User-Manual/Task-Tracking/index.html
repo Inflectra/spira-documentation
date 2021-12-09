@@ -832,6 +832,19 @@
     Task Gantt Chart
   </a>
   
+    <nav class="md-nav" aria-label="Task Gantt Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gantt-chart-inline-editing" class="md-nav__link">
+    Gantt Chart Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4108,6 +4121,19 @@
     Task Gantt Chart
   </a>
   
+    <nav class="md-nav" aria-label="Task Gantt Chart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gantt-chart-inline-editing" class="md-nav__link">
+    Gantt Chart Inline Editing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4389,6 +4415,17 @@ release / sprint organized by resource / person. Each of the users that is a mem
 <li>For tasks, this represents the percentage complete of the task itself.</li>
 </ul>
 <p><img alt="Task Gantt Chart" src="../img/tasks-gantt-chart.png" /></p>
+<p>Above the Gantt chart is a toolbar that lets you:</p>
+<ul>
+<li><strong>refresh</strong> the Gantt chart</li>
+<li><strong>add a new task</strong>: users with permissions to create tasks can click the <code>Add</code> button to add a new dispaly a popup to fill in information about the new task. The new task's release is filled in if you select a release on the Gantt chart, or otherwise by the release you are filtering the page on (see below).  Click <code>Add Task</code> to add the task into the product.</li>
+<li><strong>filter the releases and tasks shown</strong>: use the dropdown to pick a release. This shows a list of all active releases<sup id="fnref2:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> and syncs up with the release you set in other parts of the system (for instance on the product home page, or the reporting home page).</li>
+</ul>
+<h3 id="gantt-chart-inline-editing">Gantt Chart Inline Editing<a class="headerlink" href="#gantt-chart-inline-editing" title="Permanent link">&para;</a></h3>
+<p>To <strong>view more information</strong> about a release or task, click its name from the left hand sidebar or in the relevant Gantt bar. This will open popup with much more detail. If you ctrl/cmd+click on the artifact's name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields. These fields are visible or hidden based on the workflow step that applies to that specific release or to that specific task.</p>
+<p>You can <strong>edit releases and tasks</strong> straight from the Gantt chart. Users with bulk edit permissions for releases or tasks can edit each respective artifact (including adding a new comment) at any time by clicking on the artifact name. This opens a popup with full information about that artifact. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific artifact. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).</p>
+<p><em>Note</em>: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. </p>
+<p><img alt="" src="../img/tasks-gantt-chart-editing.png" /></p>
 <h2 id="task-details">Task Details<a class="headerlink" href="#task-details" title="Permanent link">&para;</a></h2>
 <p>When you click on a task item in the lists displayed on either the main task list page or on the requirement / release details pages, you are taken to the task details page illustrated below:</p>
 <p><img alt="" src="../img/Task_Tracking_294.png" /></p>
@@ -4499,7 +4536,7 @@ release / sprint organized by resource / person. Each of the users that is a mem
 <p>when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.&#160;<a class="footnote-backref" href="#fnref:folder-url" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:active-release">
-<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:active-release" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:in-tk">
 <p>To create an incident from a task, the user needs must have the permission to create incidents (which makes sense).</p>

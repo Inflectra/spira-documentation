@@ -1095,6 +1095,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#onelogin" class="md-nav__link">
+    OneLogin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect" class="md-nav__link">
+    OpenId Connect
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3874,6 +3888,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#onelogin" class="md-nav__link">
+    OneLogin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect" class="md-nav__link">
+    OpenId Connect
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4035,6 +4063,48 @@ When creating an app registration you should:</p>
 <li>Token URL:        https://<span authServerId="authServerId" class="arithmatex"><span class="MathJax_Preview">{yourOktaDomain}/oauth2/</span><script type="math/tex">{yourOktaDomain}/oauth2/</script></span>/v1/token</li>
 <li>Profile URL:       https://<span authServerId="authServerId" class="arithmatex"><span class="MathJax_Preview">{yourOktaDomain}/oauth2/</span><script type="math/tex">{yourOktaDomain}/oauth2/</script></span>/v1/userinfo</li>
 </ul>
+<h2 id="onelogin">OneLogin<a class="headerlink" href="#onelogin" title="Permanent link">&para;</a></h2>
+<p>First create the application in OneLogin</p>
+<ol>
+<li>Login to your OneLogin admin account</li>
+<li>Go to "Applications" from the main navigation</li>
+<li>Click the "Add App" button</li>
+<li>Search for "OpenId" in the list of applications and click the result "OpenId Connect (OIDC)</li>
+<li>
+<p>Fill in the basic information about the new app:</p>
+<ul>
+<li>INFO: A unique name (e.g. SpiraPlan) and any description you like</li>
+<li>CONFIGURATION: <ul>
+<li>Login URL: add the root url of your Spira application. For instance, if your Return URL shown on the provider page in SpiraPlan administration is "<a href="https://mysite.spiraservice.net/oauth">https://mysite.spiraservice.net/oauth</a>" enter "<a href="https://mysite.spiraservice.net">https://mysite.spiraservice.net</a>" here</li>
+<li>Redirect URI: add the Return URL shown on the provider page in SpiraPlan administration - e.g. "<a href="https://mysite.spiraservice.net/oauth">https://mysite.spiraservice.net/oauth</a>" (note that this will always end in "/oauth" - all lowercase)</li>
+<li>Post Logout Redirect URI: use the same URL as you did for "Login URL" above</li>
+</ul>
+</li>
+<li>Click "Save"</li>
+</ul>
+</li>
+<li>
+<p>Add existing users to the application to allow them to login to SpiraPlan using OneLogin via the "Users" tab</p>
+</li>
+<li>
+<p>Next, you need to get the necessary information for connecting to Spira. You will need several urls specific to your OneLogin domain. </p>
+<ul>
+<li>While still editing / creating the application, go to the "SSO" tab</li>
+<li>"Client ID" on this tab should be used for the "Client Id/Key" field in SpiraPlan</li>
+<li>Click the "Show Client Secret" link to get the secret to use in the "Client Secret Key" field in SpiraPlan</li>
+<li>
+<p>Use the "Issuer URL" (which will end in something like "onelogin.com/oidc/2") as the base url in SpiraPlan as below:</p>
+<ul>
+<li>Authorization URL: {Issuer URL}/auth</li>
+<li>Token URL: {Issuer URL}/token</li>
+<li>Profile URL: {Issuer URL}/me</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="openid-connect">OpenId Connect<a class="headerlink" href="#openid-connect" title="Permanent link">&para;</a></h2>
+<p>The generic OpenId providers accepts any standard complient OAuth Provider. The required configuration will vary based on how each provider works. However, make sure that, as with other providers, that the return URI entered into the OpenId provider matches that inside SpiraPlan.</p>
 
   
 

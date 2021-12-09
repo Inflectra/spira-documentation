@@ -3680,6 +3680,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-614-december-2021" class="md-nav__link">
+    Version 6.14 (December 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-613-november-2021" class="md-nav__link">
     Version 6.13 (November 2021)
   </a>
@@ -3987,6 +3994,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-614-december-2021" class="md-nav__link">
+    Version 6.14 (December 2021)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-613-november-2021" class="md-nav__link">
     Version 6.13 (November 2021)
   </a>
@@ -4197,6 +4211,68 @@
 
 
 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-614-december-2021">Version 6.14 (December 2021)<a class="headerlink" href="#version-614-december-2021" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>View, edit, and add releases inline on the <a href="../../Spira-User-Manual/Release-Management/#mindmap-inline-editing">release mindmap</a>, <a href="../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing">release Gantt chart</a>, or <a href="../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing">task Gantt chart</a> pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. (SpiraTeam and SpiraPlan only)</p>
+<p>View, edit, and add tasks inline on the <a href="../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing">task Gantt chart</a> pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. (SpiraTeam and SpiraPlan only)</p>
+<p>Support for two new Single Sign On (SSO) providers:  the popular OneLogin service and a generic OpenID provider. This makes it even easiser to integrate your external authentication system with Spira.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong><a href="../../Spira-Administration-Guide/System-Users/#login-providers">OAuth connectors are available for specific providers</a></strong></p>
+<ul>
+<li>OneLogin [RQ:3876]</li>
+<li>Generic OpenID Connect [RQ:3877]</li>
+</ul>
+</li>
+<li>
+<p><strong>Product Release List Page Changes (SpiraTeam and SpiraPlan only)</strong></p>
+<ul>
+<li>Allow releases to be edited inline on <a href="../../Spira-User-Manual/Release-Management/#mindmap-inline-editing">Release Mind Map View</a> [RQ:3716]</li>
+<li>Allow releases to be edited inline on <a href="../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing">Release Gantt Chart</a> [RQ:3714]</li>
+<li>Allow releases to be added on the <a href="../../Spira-User-Manual/Release-Management/#release-gantt-chart">Release Gantt Chart view</a> [RQ:3715]</li>
+</ul>
+</li>
+<li>
+<p><strong>Product Task List Page Changes (SpiraTeam and SpiraPlan only)</strong></p>
+<ul>
+<li>Allow tasks to be edited inline on <a href="../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing">Task Gantt Chart</a> [RQ:3686]</li>
+<li>Allow tasks to be added on the <a href="../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing">Task Gantt Chart</a> [RQ:3713]</li>
+<li>Allow releases to be edited inline on the <a href="../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing">Task Gantt Chart</a> [RQ:3687]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>On-premise installer</strong></p>
+<ul>
+<li>Fix the upgrade process from ever overwriting attachments with IDs 1 through 16 with sample attachments [IN:6714]</li>
+<li>Fix the upgrade process so that custom SSMS passwords are not reset to the default [IN:6709]</li>
+<li>No longer attempt to dynamically inform users which <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/#system-prerequisites">prerequisites</a> have been met during on premise installation, and instead shows users a static guide during installation for information only [IN:6718]</li>
+<li>Stop the on-premise installer showing a popup warning that uninstallation may not have completed successfully even when it had done so [IN:6520]</li>
+<li>The on-premise installer will no longer allow installation on servers older than SQL Server 2012 to match the application's minimum system requirements [IN:6492]</li>
+</ul>
+</li>
+<li>
+<p>Fix text not wrapping when editing rich text fields of test steps on a test case details page (introduced in 6.13) [IN:6833]</p>
+</li>
+<li>Fix error message appearing when creating new items on details pages when changing the type and on boards (introduced in 6.13) [IN:6834]</li>
+<li>
+<p>Fix the <a href="../../Spira-User-Manual/Release-Management/#use-case-diagrams">diagram tab</a> for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]</p>
+</li>
+<li>
+<p>Fix details pages for artifacts that use workflows so that the comments settings in the workflow always control the comment box [IN:4917]</p>
+</li>
+<li>Fix the <a href="../../Spira-User-Manual/Task-Tracking/#task-gantt-chart">Task Gantt Chart</a> not showing child sprints as part of their parent release (SpiraTeam and SpiraPlan only) [IN:6494]</li>
+<li>Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere (SpiraTeam and SpiraPlan only) [IN:6747]</li>
+</ul>
+</details>
 <h2 id="version-613-november-2021">Version 6.13 (November 2021)<a class="headerlink" href="#version-613-november-2021" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
