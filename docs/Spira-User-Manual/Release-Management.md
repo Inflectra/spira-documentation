@@ -245,11 +245,27 @@ The names of the releases on the left or in the horizontal bar are clickable and
 
 ![Release Gantt Chart](img/releases-gantt-chart.png)
 
+Above the Gantt chart is a toolbar that lets you:
+
+- **refresh** the Gantt chart
+- **add a new release** or sprint: users with permissions to create releases can click the `Add` button to add a new release (or open the dropdown to add a new sprint or phase). Once you click `Add` you will have a popup to fill in information about the new release and then click `Add Release`. Adding the release inserts it at the bottom of the release hierarchy at the same indent level as the *previous* last release in the hierarchy.
+- **filter the releases shown**: use the dropdown to pick a release. This shows a list of all active releases[^active-release] and syncs up with the release you set in other parts of the system (for instance on the product home page, or the reporting home page).
+
+### Gantt Chart Inline Editing
+To **view more information** about a release, click its name from the left hand sidebar or in the relevant Gantt bar. This will open popup with much more detail. If you ctrl/cmd+click on the release name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields. These fields are visible or hidden based on the workflow step that applies to that specific release.
+
+You can **edit releases** straight from the Gantt chart. Users with bulk edit permissions can edit a release (including adding a new comment) at any time by clicking on the release name. This opens a popup with full information about that release. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific release. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
+
+*Note*: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. 
+
+![](img/releases-gantt-chart-editing.png)
+
+
 [^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
 ## Releases Mind Map
 
-The releases Mind Map / Pert chart displays the first 5,000 active releases[^active-release] in a product as a connected tree view / mindmap. The root node shows the name of the product at the tope. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
+The releases Mind Map / Pert chart displays the first 5,000 releases in the release hierarchy of the product as a connected tree view / mindmap. The root node shows the name of the product at the top. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
 
 ![](img/releases-mind-map.png)
 
@@ -263,9 +279,14 @@ There are several other display options:
 - **levels dropdown**: lets you select how deep into the mindmap you wish to view. To only show the topmost level releases, select level 1; to select the top two levels, select level 2, or view everything by selecting "all levels"
 - **zoom**: you can change the zoom between 25% and 100% using the plus and minus buttons. To reset the zoom, click the magnifying glass
 
-Note: this view is unfortunately not compatible with Internet Explorer 11.
+### Mindmap Inline Editing
+To **view more information** about a release, click its name. This will open popup with much more detail. If you ctrl/cmd+click on the release name it will open the full details page for that artifact. Information shown in the popup includes all standard and custom fields. These fields are visible or hidden based on the workflow step that applies to that specific release.
 
+You can **edit releases** straight from the mindmap. Users with bulk edit permissions can edit a release (including adding a new comment) at any time by clicking on the release name. This opens a popup with full information about that release. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific release. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
 
+*Note*: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. 
+
+![](img/releases-mind-map-editing.png)
 
 ## Release Details
 

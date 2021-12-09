@@ -361,6 +361,8 @@ To **view more information** about a requirement, click its name. This will open
 
 You can **edit requirements** straight from the mindmap. Users with bulk edit permissions can edit a requirement (including adding a new comment) at any time by clicking on the requirement name. This opens a popup with full information about that requirement. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific requirement. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
 
+*Note*: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. 
+
 ![](img/requirements-mind-map-editing.png)
 
 ## Requirement Details

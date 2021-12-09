@@ -29,6 +29,7 @@ When creating an app registration you should:
     2. Token URL = "OAuth 2.0 token endpoint (v2)" url
     3. Profile URL = https://graph.microsoft.com/oidc/userinfo
 
+
 ## Github
 1. Create a [new application in Github](https://github.com/settings/applications/new)
 2. Fill in the required fields. 
@@ -38,7 +39,6 @@ When creating an app registration you should:
     - click `Settings`
     - click `Developer Settings`
     - click `Oauth Apps`
-
 
 ## Gitlab 
 1. Login to Gitlab
@@ -124,3 +124,35 @@ Broadly, the urls may take the following shape (discuss with Okta if you run int
 - Authorization URL: https://${yourOktaDomain}/oauth2/${authServerId}/v1/authorize
 - Token URL:        https://${yourOktaDomain}/oauth2/${authServerId}/v1/token
 - Profile URL:       https://${yourOktaDomain}/oauth2/${authServerId}/v1/userinfo
+
+
+## OneLogin
+First create the application in OneLogin
+
+1. Login to your OneLogin admin account
+2. Go to "Applications" from the main navigation
+3. Click the "Add App" button
+4. Search for "OpenId" in the list of applications and click the result "OpenId Connect (OIDC)
+5. Fill in the basic information about the new app:
+
+    - INFO: A unique name (e.g. SpiraPlan) and any description you like
+    - CONFIGURATION: 
+        - Login URL: add the root url of your Spira application. For instance, if your Return URL shown on the provider page in SpiraPlan administration is "https://mysite.spiraservice.net/oauth" enter "https://mysite.spiraservice.net" here
+        - Redirect URI: add the Return URL shown on the provider page in SpiraPlan administration - e.g. "https://mysite.spiraservice.net/oauth" (note that this will always end in "/oauth" - all lowercase)
+        - Post Logout Redirect URI: use the same URL as you did for "Login URL" above
+    - Click "Save"
+
+6. Add existing users to the application to allow them to login to SpiraPlan using OneLogin via the "Users" tab
+7. Next, you need to get the necessary information for connecting to Spira. You will need several urls specific to your OneLogin domain. 
+
+    - While still editing / creating the application, go to the "SSO" tab
+    - "Client ID" on this tab should be used for the "Client Id/Key" field in SpiraPlan
+    - Click the "Show Client Secret" link to get the secret to use in the "Client Secret Key" field in SpiraPlan
+    - Use the "Issuer URL" (which will end in something like "onelogin.com/oidc/2") as the base url in SpiraPlan as below:
+
+        - Authorization URL: {Issuer URL}/auth
+        - Token URL: {Issuer URL}/token
+        - Profile URL: {Issuer URL}/me
+
+## OpenId Connect
+The generic OpenId providers accepts any standard complient OAuth Provider. The required configuration will vary based on how each provider works. However, make sure that, as with other providers, that the return URI entered into the OpenId provider matches that inside SpiraPlan.

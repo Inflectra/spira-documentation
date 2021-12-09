@@ -206,7 +206,7 @@ If installing a fresh installation or upgrading, after making your selection the
 
 ![](img/Installing_SpiraPlan_21.png)
 
-The next page of the wizard will display a list of the required pre-requisites and whether the installer could find them or not. The checks here are not fool-proof (in particular where a question mark is shown) so it is recommended to manually check the prerequisites in full as described above. The system will not require all prerequisites to be met before allowing the installation, but the application may display incorrectly if any are missing.
+The next page of the wizard will display a list of the required pre-requisites. The installer does not attempt to verify if these pre-requisites have been met or not. The information is displayed for information purposes only. If a pre-requisite is missing the application may display incorrectly.
 
 ![](img/Installing_SpiraPlan_22.png)
 

@@ -10,9 +10,8 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.14 (December 2021)
-- View and edit details about artifacts "inline" while using product level Gantt charts
-- Bug fixes and improvements
+## Version 6.15 (Q1 2022)
+This section will be updated shortly with additional information.
 
 ## Future Releases
 ### Planning

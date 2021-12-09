@@ -115,7 +115,17 @@ Select the checkbox of any users you want to import and click "Import" to comple
 
 ## Login Providers
 
-You can connect your organization's identity provider for Single Sign On authentication with Spira. This works for both on premise and cloud versions of the application. We currently support integration with [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad), [Github](../../HowTo-Guides/Login-providers/#github), [Gitlab](../../HowTo-Guides/Login-providers/#gitlab), [Google](../../HowTo-Guides/Login-providers/#google), [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs), [Okta](../../HowTo-Guides/Login-providers/#okta).
+You can connect your organization's identity provider for Single Sign On (SSO) authentication with Spira. This works for both on premise and cloud versions of the application. We currently support integration with:
+
+- [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad)
+- [Github](../../HowTo-Guides/Login-providers/#github)
+- [Gitlab](../../HowTo-Guides/Login-providers/#gitlab)
+- [Google](../../HowTo-Guides/Login-providers/#google)
+- [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs)
+- [Okta](../../HowTo-Guides/Login-providers/#okta)
+- [OneLogin](../../HowTo-Guides/Login-providers/#onelogin)
+- [OpenId Connect](../../HowTo-Guides/Login-providers/#openid-connect)
+
 
 On the Provider List page you can see a list of all available providers, their status (active or inactive), and how many, if any, users are logging in to the application using that provider.  To configure a particular provide, click the "Edit" button for that row.
 
@@ -136,7 +146,17 @@ Below is a general set of instructions about how to set up the provider and Spir
 4. Create a new application / OAuth access with the provider
     - You will need to provide the homepage / originating URL: this is your main spira domain, e.g. `https://inflectra.spiraservice.net`
     - Use the "Return URL" from above in the field called something like return URL, callback URL, redirect URL
-    - A guide to set up each provider, and the specific permissions they each need are available here: [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad), [Github](../../HowTo-Guides/Login-providers/#github), [Gitlab](../../HowTo-Guides/Login-providers/#gitlab), [Google](../../HowTo-Guides/Login-providers/#google), [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs), [Okta](../../HowTo-Guides/Login-providers/#okta)
+    - A guide to set up each provider, and the specific permissions they each need are available here: 
+
+        - [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad)
+        - [Github](../../HowTo-Guides/Login-providers/#github)
+        - [Gitlab](../../HowTo-Guides/Login-providers/#gitlab)
+        - [Google](../../HowTo-Guides/Login-providers/#google)
+        - [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs)
+        - [Okta](../../HowTo-Guides/Login-providers/#okta)
+        - [OneLogin](../../HowTo-Guides/Login-providers/#onelogin)
+        - [OpenId Connect](../../HowTo-Guides/Login-providers/#openid-connect)
+
 7. Go back to Spira and enter the information for the required fields into the provider page and hit save.
 8. Test that you can login to Spira using the provider. This can be done in two ways: linking an existing account, or creating a new account. User will only be able to create a new account if users can register for a new account
 9. Start rolling out to your users - in other words encourage / suggest that they hook up their provider account to Spira (each user has to do this individually, it cannot be managed centrally)
