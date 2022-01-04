@@ -1,5 +1,10 @@
 # Release Notes for Spira v6
 
+## Version 6.14.0.1 (January 2022)
+
+!!! info "Patch Notes"
+    * Fix on premise installer upgrade process so that custom SSMS passwords are not reset to the default [IN:6709]
+
 ## Version 6.14 (December 2021)
 
 !!! info "Summary"
@@ -178,7 +183,7 @@
 
 ## Version 6.10.0.1 (June 2021)
 
-!!! info "Hotfix"
+!!! info "Patch Notes"
     * Fix exploratory testing not launching after upgrade to 6.10.0.0 [IN:6550]
     * Fix incident tab on test execution not setting fields based on the workflow until a step has been recorded after upgrade to 6.10.0.0 [IN:6549]
 
