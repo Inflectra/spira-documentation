@@ -10,8 +10,10 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
-## Version 6.15 (Q1 2022)
-This section will be updated shortly with additional information.
+## Version 6.15 (February 2022)
+- Improvements to the installer application
+- More useful and meaningful emails sent to new users of the application
+- Bug fixes and enhancements to the rich text editor (including adding find and replace functionality, and improved image handling)
 
 ## Future Releases
 ### Planning
