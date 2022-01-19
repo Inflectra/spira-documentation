@@ -82,3 +82,18 @@ Once you have made the appropriate changes, click the \[Save\] button to commit 
 
 You are now ready to use SpiraPlan® in conjunction with the test automation engine you added. For details on how to use the test automation features of SpiraPlan, please refer to the *SpiraPlan® User Manual*.
 
+
+## Floating Licenses
+Cloud users of SpiraPlan who have a floating license subscription addon to your SpiraPlan will see a "Floating Licenses" section in the Integrations section of the system administration menu. For example, if you have [Rapise](https://www.inflectra.com/Rapise/) floating licenses, you will see this menu item and page.
+
+Read more about how to purchase and use [Rapise floating licenses](https://rapisedoc.inflectra.com/Manuals/Rapise_Installation_Guide/#floating-license).
+
+When you go to the Floating Licenses page you will see how many floating licenses are available as well as how many are currently in use (initially the list will be empty):
+
+![floating licenses page](img/System_Integration_floating_licenses.png)
+
+Once you have floating licenses available, when you connect, for example, Rapise to Spira, Rapise will automatically requests a floating license from Spira. The application will use that license until Rapise is closed or a SpiraPlan administrator clicks the End Session button in SpiraPlan.
+
+The floating licenses page will show how many licenses are available and information about each currently active session. A system admin can end a session at any time by clicking the "End Session" button on a specific session.
+
+![floating licenses page](img/System_Integration_floating_licenses2.png)
