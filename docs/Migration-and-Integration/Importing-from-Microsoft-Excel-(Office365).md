@@ -175,6 +175,11 @@ Item 1
 * There is no need to number the test steps -- SpiraPlan adds this information automatically
 * If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
 
+Following is an example of how to add Test Cases and Test Steps to Spira:
+
+
+![Spreadsheet add test cases](img/excel365-test-cases.png)
+
 ### Incidents
 **Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
 

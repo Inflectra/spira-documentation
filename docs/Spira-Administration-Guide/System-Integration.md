@@ -92,7 +92,7 @@ When you go to the Floating Licenses page you will see how many floating license
 
 ![floating licenses page](img/System_Integration_floating_licenses.png)
 
-Once you have floating licenses available, when you connect, for example, Rapise to Spira, Rapise will automatically requests a floating license from Spira. The application will use that license until Rapise is closed or a SpiraPlan administrator clicks the End Session button in SpiraPlan.
+Once you have floating licenses available, when you connect, for example, Rapise to Spira, Rapise automatically requests a floating license from Spira. The application will use that license until Rapise is closed or a SpiraPlan administrator clicks the End Session button in SpiraPlan.
 
 The floating licenses page will show how many licenses are available and information about each currently active session. A system admin can end a session at any time by clicking the "End Session" button on a specific session.
 
