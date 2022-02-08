@@ -351,15 +351,35 @@ SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use
 - indent
 - outdent
 - quotes
-- code blocks
+- remove all formatting
 
 **Inserting content**:
 
 - links to other sites or urls
-- Tables using the powerful table editor
+- Images and screenshots
+    
+    - paste them straight into the editor
+    - click the button to upload an image
+    - click the image button's down arrow to add an image via a url (for security, only image on the same domain as SpiraPlan will display)
+    - format an inserted image by: adding or hiding a caption; align the image left, center, or right; have text only above and below the image or make text wrap on its left or right
+    - set alternate text on the image
+    - attach a url link to the image
+
+- Tables using the powerful table editor. After table creation you can:
+
+    - insert rows and columns
+    - edit the table's border, background, dimensions, or alignment in the editor (left, right, or center)
+    - edit any  cell's border, background, dimensions, or text alignment (left, right, center, justified, top, middle, bottom)
+
+- code blocks
+    
+    - click the button to insert a plain text code block
+    - click the code button's down arrow to add a code block for specific syntax, or edit the syntax of a selected code block
+
 - seperator lines
-- Images and screenshots (paste them in)
 - media from third parties (including YouTube and Vimeo)
-- Text from MS Word (paste it directly in - note that not all formatting is retained)
+- Text from MS Word and Google Docs (paste it directly in - note that not all formatting is retained)
+
+**Editing content**: use the magnifying glass button on the toolbar to access find and replace functionality.
 
 In many places the editor can also be made full screen to help editing of larger documents. To enter full screen mode, click on the computer monitor icon at the far right of the toolbar. Are you using dark mode? No problem - the editor works great in dark mode.
