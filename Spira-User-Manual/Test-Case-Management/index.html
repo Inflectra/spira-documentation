@@ -1149,6 +1149,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#import-steps-from-test-case" class="md-nav__link">
+    Import Steps from Test Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#refresh_1" class="md-nav__link">
     Refresh
   </a>
@@ -5853,6 +5860,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#import-steps-from-test-case" class="md-nav__link">
+    Import Steps from Test Case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#refresh_1" class="md-nav__link">
     Refresh
   </a>
@@ -6220,6 +6234,8 @@ gray.</p>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the currently selected test steps, and reorders the test step position numbers to close any gaps in numbering.</p>
 <h3 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Clone</em></strong>" button makes a duplicate of the current test step or linked test case and inserts the copied version directly above the original one.</p>
+<h3 id="import-steps-from-test-case">Import Steps from Test Case<a class="headerlink" href="#import-steps-from-test-case" title="Permanent link">&para;</a></h3>
+<p>Click the "<strong><em>Import</em></strong>" button to import all the test steps of another test case. When you click the button a popup will let you choose a single test case to import steps from. Only users who can modify the current test case and who can create test steps can use this functionality.</p>
 <h3 id="refresh_1">Refresh<a class="headerlink" href="#refresh_1" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Refresh</em></strong>" button simply reloads the list of test steps. This is useful if other people are making changes to the test list and you want to make sure that you have the most current version.</p>
 <h3 id="show-hide-columns_1">Show / Hide Columns<a class="headerlink" href="#show-hide-columns_1" title="Permanent link">&para;</a></h3>
@@ -6310,12 +6326,16 @@ gray.</p>
 <p>This tab displays the name of the test case together with the release mapping information for the test case in question. It functions in a similar way to the Requirements Coverage tab described above: the table at the bottom of the panel shows the releases, if any, mapped to this test case. Clicking on the hyperlinked names will jump you to the details screen for the item in question. You can search for and add releases to this list using the "<strong><em>Add</em></strong>" button, or remove them using the "<strong><em>Remove</em></strong>" button. Adding the release(s) will only add the release(s) selected (and not their children, if any). However, when adding a sprint, the sprint's immediate parent release (if it has one) is also added.</p>
 <p><img alt="" src="../img/Test_Case_Management_153.png" /></p>
 <h3 id="incidents">Incidents<a class="headerlink" href="#incidents" title="Permanent link">&para;</a></h3>
-<p>This tab displays the list of incidents associated with the current test case. The incidents have either been created during an execution of the test case (and are thereby linked to one of the test runs) or manually linked to one of the test steps in the test case.</p>
+<p>This tab displays the list of incidents associated with the current test case. The incidents have either been created during an execution of the test case (and are thereby linked to one of the test runs and their steps) or manually linked to one of the test steps in the test case from the <a href="#incidents_1">Incidents tab</a> of the test step details page.</p>
 <p><img alt="" src="../img/Test_Case_Management_154.png" /></p>
-<p>Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:</p>
-<p><strong>Refresh</strong> -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.</p>
-<p>You can also <strong>filter</strong> the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
-<p><strong>Edit</strong> -- Clicking the "<strong><em>Edit</em></strong>" button to the right of the incident allows you to edit the incident inline.</p>
+<p>Each incident is listed together with (by default) the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. On this tab you can perform the following actions:</p>
+<ul>
+<li>Customize the fields shown using the <strong>Show/Hide Columns</strong> dropdown</li>
+<li><strong>Refresh</strong>: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time</li>
+<li><strong>Remove</strong>: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and all relevant test run steps and test steps. Note: this feature is currently only available if baselining is disabled for the product.</li>
+<li><strong>Filter</strong> the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
+<li><strong>Edit</strong>: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.</li>
+</ul>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though SpiraPlan® will only display an icon for certain known types.</p>
 <p><img alt="" src="../img/Test_Case_Management_155.png" /></p>
@@ -6349,7 +6369,13 @@ gray.</p>
 <p><img alt="" src="../img/Test_Case_Management_160.png" /></p>
 <p>This page is made up of three areas; the left pane is the navigation window, the upper part of the right pane contains the test step detailed information itself, and the bottom part of the right pane contains related information about the test step.</p>
 <p>The navigation pane consists of a link that will take you back to the test step list, as well as a list of the peer test steps to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test steps by clicking on the navigation links without having to first return to the test step list page. You can also switch between seeing the list of test steps with the current filter applier or simply unfiltered.</p>
-<p>The top part of the right pane allows you to view and/or edit the details of the particular test step. You can edit the various fields (description, expected result and sample data) and custom properties. Once you are satisfied with them, click any "<strong><em>Save</em></strong>" button on the page to commit the changes. If you want to add a new test step to the test case, you should click "<strong><em>Save and New</em></strong>" from the dropdown menu of the "Save" button at the top of the page instead.</p>
+<p>The top part of the right pane allows you to view and/or edit the details of the particular test step. You can edit the various fields (description, expected result and sample data) and custom properties. Once you are satisfied with them, click any "<strong><em>Save</em></strong>" button on the page to commit the changes. </p>
+<p>If you can create test steps and want to add a new test step to the test case: </p>
+<ul>
+<li>click "<strong><em>Save and New</em></strong>" from the dropdown menu of the "Save" button, or </li>
+<li>click the "<strong><em>New</em></strong>" button in the toolbar, or</li>
+<li>to clone the current step, click the "Clone" option in the dropdown to the "New" button</li>
+</ul>
 <p>The lower part of the right pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be on "Incidents" tab, but it can be switched to "Attachments", "History" or "Requirements" tabs if so desired. Each of the views is described separately below.</p>
 <h3 id="incidents_1">Incidents<a class="headerlink" href="#incidents_1" title="Permanent link">&para;</a></h3>
 <p>In this mode, the main pane displays a list of any incidents that are associated with this test step. They can either be linked indirectly due to being logged during a test run, or directly linked after the fact:</p>
