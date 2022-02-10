@@ -76,6 +76,8 @@ Each test run step is displayed along with the description, expected result, sug
 
 Clicking on the link will open up a popup dialog box that displays a list of all the incidents associated with the selected test run step. Each of the incidents listed will reflect the most up-to-date information regarding that incident, including its type, status, priority, name, assigned owner, detection date and who first detected it. Clicking on the incident name will take you to the details page for that incident, which is described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details).
 
+If you have modify all permissions for test runs you will be able to click the small link button at the right of the test run step. This is the "link existing incident" button. This will display a popup that lets you link an existing incident to the selected test run step.
+
 
 ### Console Output
 
@@ -99,18 +101,17 @@ Read about [how the history tab works](Application-Wide.md#history)
 
 ### Incidents
 
-This tab displays the list of incidents associated with the current test run. The incidents will have been logged during the creation of the test run and will be linked to one of the steps in the test run:
+This tab displays the list of incidents associated with the current test run. The incidents have either been linked during test execution or can be linked to a test run step from the Overview tab of the test run details page.
 
 ![](img/Test_Case_Management_208.png)
 
-Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
+Each incident is listed together with (by default) the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. On this tab you can perform the following actions:
 
-**Refresh** -- updates the list of incidents, useful if other people are still adding incidents to this test run.
-
-You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
-
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
-
+- Customize the fields shown using the **Show/Hide Columns** dropdown
+- **Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time
+- **Remove**: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and any relevant test run steps of the test run. Note: this feature is currently only available if baselining is disabled for the product.
+- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
+- **Edit**: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.
 
 ### Tasks
 

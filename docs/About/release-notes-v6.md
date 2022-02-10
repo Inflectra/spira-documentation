@@ -1,5 +1,67 @@
 # Release Notes for Spira v6
 
+## Version 6.15 (February 2022)
+
+!!! info "Summary"
+    Improves the welcome emails users receive on getting their brand new SpiraPlan user account. The emails are now more clear and easier to read.
+
+    Building on the overhaul we did to our rich text editor in 6.13, the editor is now more powerful and feature-packed than ever. The editor supports find and replace, has more formatting options for tables and images, and is more performant.
+
+    UI tweaks under the hood to improve the user experience, particularly for users with more limited product permissions.
+
+??? success "New Features"
+    - Improvements and fixes to the SpiraPlan installer and upgrader application [RQ:3706]
+    - Send a clear and well designed email to a user if their pending user request is rejected [RQ:4040]
+    - Improve the design and usability of the email sent to a user after an admin creates a new user [RQ:4026]
+
+??? bug "Bug fixes and enhancements"
+
+    * **[Rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor)**
+    
+        - Add find and replace support to the rich text editor to let users make updates more easily [IN:6929]
+        - Add more image positioning options to the rich text editor, including left align [IN:6898]
+        - Add more table formatting options to the rich text editor [IN:6858]
+        - Allow certain HTML tags that the rich text editor does not use to still rendered (for example, <pre> tags) [IN:6887]
+        - Allow users to insert images with a URL in the rich text editor [IN:6893]
+        - Fix users not being able to add a hyperlink to text when in full screen mode of the rich text editor [IN:6872]
+        - Improve page rendering speed on pages with the new rich text editor by loading the editor asynchronously [IN:6909]
+        - Improve the performance of entering test step edit mode on the test case details page [IN:6884]
+        - Make the edges of the description rich text boxes always visible [IN:6845]
+        - When editing rich text fields, make numbering of a numbered list continue, even when you insert an image in the middle [IN:6839]
+
+    * **Testing**
+
+        - Let users delete links between incidents and test runs from the [test run](../../Spira-User-Manual/Test-Case-Management/#incidents) and [test case](../../Spira-User-Manual/Test-Run-Management/#incidents) details pages (when baselining is disabled) [IN:3249]
+        - Add the read-only "actual duration" field to the [test case details page](../../Spira-User-Manual/Test-Case-Management/#overview-details) [IN:5067]
+        - Fix the reporting [Testing Date Range's Test Run Progress graph](../../Spira-User-Manual/Reports-Center/#test-run-progress-rate-graph) and Product Home Page [Test Run Progress widget](../../Spira-User-Manual/Product-Homepage/#test-run-progress) so that they omit deleted test cases [IN:6722]
+    
+    * **Improvements for those with limited permissions**
+
+        - Disable the delete button on the folder edit popup dialog if you do not have delete permissions for that artifact [IN:6473]
+        - Disable the "link existing incident" button on [test run detail page](../../Spira-User-Manual/Test-Run-Management/#test-run-steps) if you do not have incident modify all permissions [IN:6975]
+        - Do not let users create or clone a test step on the [test step details page](../../Spira-User-Manual/Test-Case-Management/#test-step-details) if they cannot modify the test step's test case (even if they can create test cases) [IN:4661]
+        - Hide the new comment box on the [document details page](../../Spira-User-Manual/Document-Management/#comments) if you cannot add comments [IN:6974]
+        - If a user cannot edit a specific artifact, make the whole artifact read only (instead of letting them edit fields but then not be able to save) [IN:4257]
+        - Let users without bulk edit permissions still add comments to artifacts on inline editing popups (on planning boards, mindmaps, and Gantt charts) [IN:6955]
+        - Make sure you can only [import test steps](../../../../Spira-User-Manual/Test-Case-Management/#import-steps-from-test-case) on the test case detail page if your role lets you create test steps and you can modify the test case [IN:4662]
+    
+    * **Other**
+
+        - Allow changes to risks to be reverted and/or purged from the [product history changes](../../Spira-Administration-Guide/Product-Home/#product-history-changes) page [IN:6935]
+        - Database schema parity standardization on upgrading [IN:6181]
+        - Fix the on premise installer program to say "Removal Successful" when uninstalling (and not "Installation Successful") [IN:6891]
+        - Fix the requirement use case steps' context menu so that all options work and behave as expected on the requirement details page [IN:6079]
+        - Fix the risk mitigations' context menu so that all options work and behave as expected on the risk details page [IN:6080]
+        - Fix the task Gantt chart error messages when editing a release or task popup so that the error shows in the popup and not on the page behind it [IN:6895]
+        - If a user tries to create a release with a start date that is later than its end date, set the end date to match the start date [IN:6683]
+        - If a user tries to set a risk's closed date to be before its creation date, automatically set the closed date to match the creation date (instead of not allowing the risk to be saved as now) [IN:6684]
+        - Make sure all history and association tab dropdowns are fully localized [IN:6910]
+        - Make sure all fields on the history and association grids are fully localized [IN:7027]
+        - Record risk exposure and changes to exposure in the risk history to make it easier for users to meet audit and compliance needs [IN:6913]
+        - Show a tooltip with all selected values when you hover over a multi-select dropdown [IN:6987]
+        - Update REST documentation to provide the type IDs for custom property types added in SpiraPlan 6.13 [IN:6966]
+
+
 ## Version 6.14.0.1 (January 2022)
 
 !!! info "Patch Notes"

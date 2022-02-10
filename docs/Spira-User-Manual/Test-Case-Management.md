@@ -254,6 +254,9 @@ Clicking on the "***Delete***" button deletes the currently selected test steps,
 
 Clicking on the "***Clone***" button makes a duplicate of the current test step or linked test case and inserts the copied version directly above the original one.
 
+### Import Steps from Test Case
+Click the "***Import***" button to import all the test steps of another test case. When you click the button a popup will let you choose a single test case to import steps from. Only users who can modify the current test case and who can create test steps can use this functionality.
+
 
 ### Refresh
 
@@ -398,17 +401,17 @@ This tab displays the name of the test case together with the release mapping in
 
 ### Incidents
 
-This tab displays the list of incidents associated with the current test case. The incidents have either been created during an execution of the test case (and are thereby linked to one of the test runs) or manually linked to one of the test steps in the test case.
+This tab displays the list of incidents associated with the current test case. The incidents have either been created during an execution of the test case (and are thereby linked to one of the test runs and their steps) or manually linked to one of the test steps in the test case from the [Incidents tab](#incidents_1) of the test step details page.
 
 ![](img/Test_Case_Management_154.png)
 
-Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
+Each incident is listed together with (by default) the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. On this tab you can perform the following actions:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
-
-You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
-
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline.
+- Customize the fields shown using the **Show/Hide Columns** dropdown
+- **Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time
+- **Remove**: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and all relevant test run steps and test steps. Note: this feature is currently only available if baselining is disabled for the product.
+- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
+- **Edit**: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.
 
 
 ### Attachments
@@ -480,7 +483,13 @@ This page is made up of three areas; the left pane is the navigation window, the
 
 The navigation pane consists of a link that will take you back to the test step list, as well as a list of the peer test steps to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test steps by clicking on the navigation links without having to first return to the test step list page. You can also switch between seeing the list of test steps with the current filter applier or simply unfiltered.
 
-The top part of the right pane allows you to view and/or edit the details of the particular test step. You can edit the various fields (description, expected result and sample data) and custom properties. Once you are satisfied with them, click any "***Save***" button on the page to commit the changes. If you want to add a new test step to the test case, you should click "***Save and New***" from the dropdown menu of the "Save" button at the top of the page instead.
+The top part of the right pane allows you to view and/or edit the details of the particular test step. You can edit the various fields (description, expected result and sample data) and custom properties. Once you are satisfied with them, click any "***Save***" button on the page to commit the changes. 
+
+If you can create test steps and want to add a new test step to the test case: 
+
+- click "***Save and New***" from the dropdown menu of the "Save" button, or 
+- click the "***New***" button in the toolbar, or
+- to clone the current step, click the "Clone" option in the dropdown to the "New" button
 
 The lower part of the right pane can be switched between four different views by clicking the appropriate tab. Initially the pane will be on "Incidents" tab, but it can be switched to "Attachments", "History" or "Requirements" tabs if so desired. Each of the views is described separately below.
 
