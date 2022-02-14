@@ -26,7 +26,11 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tabbed
@@ -261,7 +265,7 @@ nav:
     - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
-    - IBM Rational Quality Manager: Migrating-from-IBM-Rational-Quality-Manager.md
+    - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
   - Build Servers:
     - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
