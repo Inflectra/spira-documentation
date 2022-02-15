@@ -69,10 +69,11 @@ This will button will prompt you to pick a product and artifact to send new data
 
 Click "Prepare Sheet" to create this template for your chosen product and artifact. Do not alter the worksheet structure in any way after the template has been created (for example do not merge cells, change formatting or delete columns).
 
-Once the template is ready you can start entering your new data. Once you have entered in all required data, click the "Send" button to add the data to Spira. **Note**: cells highlighted grey are not editable.
+Once the template is ready you can start entering your new data[^max-new-rows]. Once you have entered in all required data, click the "Send" button to add the data to Spira. **Note**: cells highlighted grey are not editable.
 
 If there are any errors during the sending process you will see relevant explanations, with the specific cells (as relevant) that are causing the problem highlighted in red.
 
+[^max-new-rows]: Please note that you can currently only send a maximum of 10,000 rows of data to Spira at a a time.
 
 ### Advanced Mode (optional)
 When you enable advanced mode, you have more options when sending data to or updating data in Spira that are normally not available. Advanced mode lets you create new comments and add associations between specific artifacts. Check the box 'Advanced Mode' to activate it for all modes of operation.
