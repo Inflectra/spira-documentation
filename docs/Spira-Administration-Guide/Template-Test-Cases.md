@@ -39,7 +39,17 @@ Clicking on the "Workflows" link under the Test Cases section, brings up the lis
 
 ![](img/Template_Test_Cases_138.png)
 
-You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions. The steps and transitions that make up the default workflow are illustrated in the diagram below:
+
+``` mermaid
+flowchart LR
+  Draft --> Rejected;
+  Draft <--> Ready-for-Review;
+  Ready-for-Review <--> Approved;
+  Ready-for-Review <--> Rejected;
+  Approved <--> Ready-for-Test;
+  Ready-for-Test <--> Obsolete;
+```
 
 Note: You can only assign an active workflow to a test case type, and similarly you cannot make a workflow inactive that is currently linked to a test case type. This is important as all test case types need to be linked to an active workflow at all times.
 
