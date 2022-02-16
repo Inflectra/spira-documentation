@@ -251,6 +251,9 @@ SpiraPlan ships with four different templates. Together these will cover most of
 
 
 ## Manage Sample Data
+!!! info 
+    This page is accessible under the Workspace subsection of the sytem admin menu. It is visible when you first get a new application. But as soon as the application gets updated to a new version, the page is no longer accessible and you will not see the entry in the admin menu.
+
 ![manage sample data admin page](img/System_ManageSampleData.png)
 
 The application includes different types of sample data, some about specific industries, to help you understand how the application works. For example, how products fit inside a program, or how different artifacts work together. There are six sample data sets available in the application. A system administrator can change which of these are available at any one time. The admin can make all available, none available, or anywhere in between.
