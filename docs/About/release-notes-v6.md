@@ -1,5 +1,10 @@
 # Release Notes for Spira v6
 
+## Version 6.15.0.1 (February 2022)
+
+!!! bug "Bug fix"
+    Fix on-premise upgrades to installations that use SQL Authentication not completing successfully [IN:7076]
+
 ## Version 6.15 (February 2022)
 
 !!! info "Summary"
