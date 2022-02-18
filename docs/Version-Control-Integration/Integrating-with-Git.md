@@ -44,6 +44,9 @@ Complete the form on this page as below:
 
 When finished, click "Insert". You will be taken back to the Source Code list page, with GitProvider listed as an available plug-in.
 
+!!! info "Using Github"
+    When connecting to repositories on Github please use a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of your password in the password field. Your password will likely work for public repos, but you will always need to use the Personal Access Token for private repos.
+
 ## Use Git for Your Product
 Once Git has been configured at the system level, you are ready to use it for any products you need to. 
 
