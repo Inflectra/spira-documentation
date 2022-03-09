@@ -157,7 +157,7 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ![](img/Document_Management_328.png)
 
-When viewing diagrams, mindmaps, or orgcharts there are two buttons above the diagram that you let you directly download a PNG or PDF formatted version of the diagram (you can download the diagram from the [Versions](#document-versions) tab but this downloads the raw data, not a formatted diagram).
+<!-- When viewing diagrams, mindmaps, or orgcharts there are two buttons above the diagram that you let you directly download a PNG or PDF formatted version of the diagram (you can download the diagram from the [Versions](#document-versions) tab but this downloads the raw data, not a formatted diagram). -->
 
 
 ### Edit

@@ -1,5 +1,20 @@
 # Release Notes for Spira v6
 
+## Version 6.15.1 (March 2022)
+
+!!! bug "Bug fixes and enhancements"
+    - Add a custom graph to the standard sample data to help users see how they can be used [IN:7096]
+    - Add an API call to let users update document properties (does not update versions) [IN:7072]
+    - Enable full screen editing on artifact description fields [IN:7109]
+    - Fix an issue with certain Brazilian Portuguese localization strings not displaying in the application correctly [IN:7028]
+    - Fix not being able to delete links between incidents and test cases, when the link was created from the incident tab of the test step details page [IN:7042]
+    - Fix the users not be able to to create items on boards if they can create the artifact but do not have modify all or bulk edit permissions (introduced in 6.15) [IN:7045]
+    - Fix users sometimes being able to add test coverage to a requirement if the artifacts are in different products (via the API) [IN:6686]
+    - Fix users sometimes being able to add test coverage to a release in a different product (via the API) [IN:6687]
+    - Fix users sometimes being able to add a test case to a test set in a different product (via the API) [IN:6688]
+    - Fix users sometimes being able to set the requirement or release of a task to one in a different product (via the API) [IN:6689]
+    - Improve the performance of exporting a document to another product by copying the raw file across more efficiently [IN:6461]
+
 ## Version 6.15.0.1 (February 2022)
 
 !!! bug "Bug fix"

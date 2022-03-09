@@ -90,6 +90,10 @@ After you have chosen which mode to use, select the product and artifact from th
 ### Fields: working with required fields
 * Required fields are marked by their name in the title row shown as bold black text (standard fields are regular light text)                  
 * For test steps, required fields are shown in black, but not bold text.
+* For a given artifact, the required fields are:
+
+    * System Standard fields that are required for artifact creation such as name/title, type, some dates, and others
+    * Custom Property fields if the `Allow Empty` at the custom property definition is toggled to `No`
 
 ### Fields: how certain 'special' fields work
 * **ID Fields**: This field MUST be left blank *__unchanged__* to add new items to Spira. Any rows with entries in the ID fields *__will be skipped over with error__* are skipped over.
