@@ -199,6 +199,32 @@ Many artifacts have a comments section that allows you to add and view discussio
 
 Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
 
+### Comments
+The Comments section of an artifact lets you add and view comments related to that artifact:
+
+![](img/Incident_Tracking_245.png)
+
+There are two parts to comments:
+
+**Viewing existing comments**: 
+
+- at the top of the comments section is a list of all comments previously made on the artifact
+- comments are shown in date order (you can pick either newest-first or oldest-first)
+- you can control whether comments are visible or not using the workflow controls for all artifacts that support workflows
+- existing comments are *not* shown on popup forms (like those for editing an artifact on the Planning Board)
+
+**Adding a new comment**:
+
+- There is a special permission on each product role that allows users with that role to add comments. Users who have this permission can add comments to all relevant artifacts. Users without this permission on their role can never add comments in that product.
+- To add a comment to the artifact, enter your text into the rich text box, then click the "***Add Comment***" button to save.
+
+**Deleting comments**:
+Users can delete comments that were made in error or that are no longer relevant. Who can delete what comments?
+
+- any user can always delete their own comments
+- system administrators can delete any comment
+
+Note that certain system created comments are marked as "permanent" and cannot be deleted, even by system adminstrators.
 
 ### Attachments
 
