@@ -119,12 +119,7 @@ If you are creating a new incident, the fields that are available and the fields
 Once you've filled out the appropriate incident fields, you can either click "***Save***" or one of the options from the "***Save***" dropdown list to commit the changes or click on "***Back to Incident List***" to discard the insertion and return back to the incident list.
 
 ### Overview - Comments
-
-The Comments section allows users to add and view discussions related to the incident:
-
-![](img/Incident_Tracking_245.png)
-
-Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the incident, enter your text into the textbox, then click the "***Add Comment***" button to save.
+Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Overview -- Dates and Times

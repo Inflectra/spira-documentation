@@ -346,12 +346,7 @@ The Detailed Information section contains the long, formatted description of the
 
 
 ### Overview - Comments
-
-The Comments tab shows the current discussion thread for this release:
-
-![](img/Release_Management_104.png)
-
-All existing comments are listed in order by entered date (either newest-first or oldest-first). To create a new comment, enter the text into the text box, and then click the "***Add Comment***" button.
+Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Overview - Builds

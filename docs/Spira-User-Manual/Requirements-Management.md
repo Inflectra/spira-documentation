@@ -450,13 +450,8 @@ The Detailed Information section contains the long, formatted description of the
 
 
 ### Overview - Comments
+Read about [how the comments works](Application-Wide.md#comments)
 
-The Comments section allows you to add and view discussions relating to the requirement:
-
-![](img/Requirements_Management_104.png)
-
-
-Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
 
 ### Overview -- Scenario
 

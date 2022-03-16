@@ -235,8 +235,7 @@ When editing a diagram type you can also select a specific connector and edit it
 This tab allows you to view and/or edit the document's details (thinks like the description, author, tags, any custom fields). Make any changes and then click `Save` to commit the changes.
 
 #### Comments
-
-The Comments section allows users to add and view discussions related to the Document. Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment, enter your text into the textbox, then click the "***Add Comment***" button. Clicking "Save" when there is text in the comment box will save any changes and add the new comment at the same time.
+Read about [how the comments works](Application-Wide.md#comments)
 
 ### Document Versions
 

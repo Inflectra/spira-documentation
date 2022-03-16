@@ -355,12 +355,7 @@ To view information about the follower, or to unfollow them from the item, hover
 
 
 ### Overview -- Comments
-
-The comments tab will display the comments associated with the task:
-
-![](img/Task_Tracking_299.png)
-
-All existing comments are displayed in date entered underneath the textbox. To enter a new comment, enter the text into the textbox, and then click the "***Add Comment***" button.
+Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Attachments

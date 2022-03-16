@@ -356,12 +356,7 @@ The automation screen includes the following fields that you should populate whe
 
 
 ### Overview - Comments
-
-The Comments section allows users to add and view discussions related to the Test Case:
-
-![](img/Test_Case_Management_149.png)
-
-Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Case, enter your text into the textbox, then click the "***Add Comment***" button.
+Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Requirements Coverage

@@ -224,7 +224,7 @@ Users can delete comments that were made in error or that are no longer relevant
 - any user can always delete their own comments
 - system administrators can delete any comment
 
-Note that certain system created comments are marked as "permanent" and cannot be deleted, even by system adminstrators.
+Note that certain system created comments "permanent" and cannot be deleted, even by system administrators. For example, comments are added when you create a test case from a use case and are marked as "permanent" behind the scenes.
 
 ### Attachments
 

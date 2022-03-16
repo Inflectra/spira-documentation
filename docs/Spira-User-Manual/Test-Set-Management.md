@@ -188,15 +188,6 @@ Use the **Schedule on Build** field:
 - With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.
 
 
-### Overview - Comments
-
-The Comments section allows users to add and view discussions relating to the test set:
-
-![](img/Test_Case_Management_149.png)
-
-Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "***Add Comment***" button.
-
-
 ### Overview - Parameters
 
 Test cases can have [parameters](../Test-Case-Management/#parameters) associated with them. This enables one test case to be called several times and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case. In addition these parameters may be used by certain test automation engines.
@@ -249,12 +240,7 @@ You can then specify the values of the parameters that the test set will pass to
 
 
 ### Overview - Comments
-
-The Comments section allows users to add and view discussions related to the Test Set:
-
-![](img/Test_Case_Management_226.png)
-
-Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "***Add Comment***" button.
+Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Test Runs

@@ -142,12 +142,8 @@ To move the mitigations around in the list, click and hold on the mitigation you
 If at least one mitigation is selected (using the checkboxes on the left-hand side), then clicking "***Clone***" will clone those mitigations and add them to the bottom of the list.
 
 ### Overview - Comments
+Read about [how the comments works](Application-Wide.md#comments)
 
-The Comments section allows you to add and view discussions relating to the risk:
-
-![](img/Risks_Management_468.png)
-
-Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
 
 ### Tasks
 
