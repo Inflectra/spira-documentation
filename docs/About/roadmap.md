@@ -11,7 +11,11 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-Stay tuned for more information. The roadmap will be updated shortly.
+### 6.16 (Spring 2022)
+Improvements to reporting and custom graphs, and quality of life changes to global navigation with improved searching and filtering.
+
+### 7.0 (Summer 2022)
+Native plugins to allow deeper integrations with 3rd party tools like GitLab and Github right from inside SpiraPlan.
 
 ## Future Releases
 ### Planning
