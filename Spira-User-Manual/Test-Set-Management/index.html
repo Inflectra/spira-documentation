@@ -1106,13 +1106,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overview-comments" class="md-nav__link">
-    Overview - Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#overview-parameters" class="md-nav__link">
     Overview - Parameters
   </a>
@@ -1127,7 +1120,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overview-comments_1" class="md-nav__link">
+  <a href="#overview-comments" class="md-nav__link">
     Overview - Comments
   </a>
   
@@ -5551,13 +5544,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overview-comments" class="md-nav__link">
-    Overview - Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#overview-parameters" class="md-nav__link">
     Overview - Parameters
   </a>
@@ -5572,7 +5558,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overview-comments_1" class="md-nav__link">
+  <a href="#overview-comments" class="md-nav__link">
     Overview - Comments
   </a>
   
@@ -5754,10 +5740,6 @@
 <li>Only builds that finish against the release or sprint that the test set is set to will trigger the test set to execute</li>
 <li>With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.</li>
 </ul>
-<h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
-<p>The Comments section allows users to add and view discussions relating to the test set:</p>
-<p><img alt="" src="../img/Test_Case_Management_149.png" /></p>
-<p>Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "<strong><em>Add Comment</em></strong>" button.</p>
 <h3 id="overview-parameters">Overview - Parameters<a class="headerlink" href="#overview-parameters" title="Permanent link">&para;</a></h3>
 <p>Test cases can have <a href="../Test-Case-Management/#parameters">parameters</a> associated with them. This enables one test case to be called several times and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case. In addition these parameters may be used by certain test automation engines.</p>
 <p>The Parameters section on the test set page lets you set a shared value for all of the parameters contained within the different test cases of the test set. The screenshot below shows that there are three parameters contained in the test cases that have been set at the test set level. In this example, every case that has a Parameter called 'browserName' will have its value set to 'Safari'. This is a quick way of setting values for many test cases at once. Test Set Values will override any default values of a Parameter (defined for each specific test case).</p>
@@ -5785,10 +5767,8 @@
 <p>As you change your test set over time, you may add and remove test cases. The list of test cases is always the currently included test cases. This means that if you are showing results for an old release, and since then you have REMOVED test cases from the test set, you will not see those test cases and their execution statuses in this list. The same happens if you have since ADDED test cases: they will show as Not Run, even if the test set's execution status has no Not Runs. When it was executed these new test cases weren't there to be run.</p>
 <p>In this way, the overall test set execution status may not always match what you see in the test case list. </p>
 </div>
-<h3 id="overview-comments_1">Overview - Comments<a class="headerlink" href="#overview-comments_1" title="Permanent link">&para;</a></h3>
-<p>The Comments section allows users to add and view discussions related to the Test Set:</p>
-<p><img alt="" src="../img/Test_Case_Management_226.png" /></p>
-<p>Existing comments are displayed by date (either newest-first or oldest-first) above the text box. To add a comment to the Test Set, enter your text into the textbox, then click the "<strong><em>Add Comment</em></strong>" button.</p>
+<h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
+<p>Read about <a href="../Application-Wide/#comments">how the comments works</a></p>
 <h3 id="test-runs">Test Runs<a class="headerlink" href="#test-runs" title="Permanent link">&para;</a></h3>
 <p>This tab displays the list of all the test runs executed against the test set. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the <a href="#test-run-details">actual test run details</a>. In addition, you can choose to display any of the custom properties associated with the test run.</p>
 <p><img alt="" src="../img/Test_Case_Management_227.png" /></p>

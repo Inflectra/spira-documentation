@@ -6331,36 +6331,31 @@
 <li>enter a comment to list against the association between the two requirements (visible after the split on the <a href="#associations">associations tab</a>)</li>
 </ul>
 <p>To complete the split click the <code>Split</code> button.</p>
-<p>!!! info "Notes about how requirement splitting works</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">-</span> <span class="o">**</span><span class="nv">New</span> <span class="nv">estimate</span><span class="o">**</span>:
-
-    <span class="o">-</span> <span class="nv">this</span> <span class="nv">defaults</span> <span class="nv">to</span> <span class="nv">blank</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">split</span> <span class="nv">dialog</span>. <span class="nv">This</span> <span class="nv">will</span> <span class="nv">move</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">remaining</span> <span class="nv">effort</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>. 
-    <span class="o">-</span> <span class="nv">The</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s estimate cannot be greater than the original requirement</span><span class="s1">&#39;</span><span class="nv">s</span> <span class="nv">estimate</span> <span class="ss">(</span><span class="nv">because</span> <span class="nv">this</span> <span class="nv">is</span> <span class="nv">moving</span> <span class="nv">some</span> <span class="nv">or</span> <span class="nv">all</span> <span class="nv">of</span> <span class="nv">its</span> <span class="nv">estimate</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="ss">)</span>.
-
-<span class="o">-</span> <span class="o">**</span><span class="nv">Status</span><span class="o">**</span>:
-
-    <span class="o">-</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s status will match that of the original requirement</span>
-    <span class="o">-</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="s1">&#39;</span><span class="s">s status is &quot;In Progress&quot; AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement</span><span class="s1">&#39;</span><span class="nv">s</span> <span class="nv">status</span> <span class="nv">is</span> <span class="nv">automatically</span> <span class="nv">moved</span> <span class="nv">to</span> <span class="s2">&quot;</span><span class="s">Developed</span><span class="s2">&quot;</span>. <span class="k">If</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span> <span class="nv">has</span> <span class="nv">any</span> <span class="nv">other</span> <span class="nv">status</span>, <span class="nv">no</span> <span class="nv">change</span> <span class="nv">occurs</span>
-
-<span class="o">-</span> <span class="o">**</span><span class="nv">Tasks</span><span class="o">**</span> <span class="nv">are</span> <span class="nv">not</span> <span class="nv">moved</span> <span class="nv">or</span> <span class="nv">cloned</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>
-<span class="o">-</span> <span class="o">**</span><span class="nv">Test</span> <span class="nv">Coverage</span><span class="o">**</span> <span class="nv">is</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span> <span class="ss">(</span><span class="nv">and</span> <span class="nv">left</span> <span class="nv">unchanged</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="ss">)</span>
-<span class="o">-</span> <span class="o">**</span><span class="nv">Attachments</span><span class="o">**</span> <span class="nv">are</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span> <span class="ss">(</span><span class="nv">and</span> <span class="nv">left</span> <span class="nv">unchanged</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">requirement</span><span class="ss">)</span>
-<span class="o">-</span> <span class="nv">All</span> <span class="nv">standard</span> <span class="nv">and</span> <span class="nv">custom</span> <span class="nv">field</span> <span class="nv">information</span> <span class="nv">is</span> <span class="nv">copied</span> <span class="nv">over</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">requirement</span>
-</code></pre></div>
-</td></tr></table>
+<div class="admonition info">
+<p class="admonition-title">Notes about how requirement splitting works</p>
+<ul>
+<li>
+<p><strong>New estimate</strong>: </p>
+<ul>
+<li>this defaults to blank in the split dialog. This will move all the remaining effort to the new requirement. </li>
+<li>The new requirement's estimate cannot be greater than the original requirement's estimate (because this is moving some or all of its estimate to the new requirement).</li>
+</ul>
+</li>
+<li>
+<p><strong>Status</strong>: </p>
+<ul>
+<li>the new requirement's status will match that of the original requirement</li>
+<li>if the original requirement's status is "In Progress" AND the new requirement takes all the estimate of the original requirement, the original requirement now has zero estimate left. In this case, the original requirement's status is automatically moved to "Developed". If the original requirement has any other status, no change occurs</li>
+</ul>
+</li>
+<li>
+<p><strong>Tasks</strong> are not moved or cloned from the original requirement to the new requirement</p>
+</li>
+<li><strong>Test Coverage</strong> is copied over to the new requirement (and left unchanged on the original requirement)</li>
+<li><strong>Attachments</strong> are copied over to the new requirement (and left unchanged on the original requirement)</li>
+<li>All standard and custom field information is copied over to the new requirement</li>
+</ul>
+</div>
 <h3 id="overview-details">Overview - Details<a class="headerlink" href="#overview-details" title="Permanent link">&para;</a></h3>
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
@@ -6369,9 +6364,7 @@
 <p>The Detailed Information section contains the long, formatted description of the requirement, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Requirements_Management_103.png" /></p>
 <h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
-<p>The Comments section allows you to add and view discussions relating to the requirement:</p>
-<p><img alt="" src="../img/Requirements_Management_104.png" /></p>
-<p>Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "<strong><em>Add Comment</em></strong>" button.</p>
+<p>Read about <a href="../Application-Wide/#comments">how the comments works</a></p>
 <h3 id="overview-scenario">Overview -- Scenario<a class="headerlink" href="#overview-scenario" title="Permanent link">&para;</a></h3>
 <p>If you are editing a 'Use Case' type of requirement, there will be a special 'Scenario' section where you can enter in the scenario steps that define the use case:</p>
 <p><img alt="" src="../img/Requirements_Management_105.png" /></p>
