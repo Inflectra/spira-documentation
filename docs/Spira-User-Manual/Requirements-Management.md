@@ -413,7 +413,7 @@ In this dialog you are focusing on the new requirement you are creating from per
 
 To complete the split click the `Split` button.
 
-!!! info "Notes about how requirement splitting works
+!!! info "Notes about how requirement splitting works"
 
     - **New estimate**: 
 
