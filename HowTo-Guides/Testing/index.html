@@ -1677,6 +1677,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-stop-users-being-able-to-edit-a-test-cases-test-steps" class="md-nav__link">
+    How to stop users being able to edit a test case's test steps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5311,6 +5318,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-stop-users-being-able-to-edit-a-test-cases-test-steps" class="md-nav__link">
+    How to stop users being able to edit a test case's test steps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5371,6 +5385,20 @@
 </ul>
 </li>
 </ol>
+<h2 id="how-to-stop-users-being-able-to-edit-a-test-cases-test-steps">How to stop users being able to edit a test case's test steps<a class="headerlink" href="#how-to-stop-users-being-able-to-edit-a-test-cases-test-steps" title="Permanent link">&para;</a></h2>
+<p>Test cases contain test steps. These steps can be edited in a number of ways: each step has properties that you can edit; you can add and remove steps; and you can change the order of the steps.</p>
+<p>You may want to control who can edit test steps, and when they can edit them. </p>
+<p><strong>Control who can edit test steps</strong>: set your <a href="../Spira-Administration-Guide/System-Users/#view-edit-product-roles">product roles</a> so that only users with certain roles can modify test steps. </p>
+<ul>
+<li>If a product role let's users with that role "Modify All" test steps then they can edit all test steps. </li>
+<li>If instead a product role is set with "Modify Owned" for test steps, then users with that role can only edit test steps inside of test cases where they are marked as the Owner. In other words, if you have "Modify Owned" you have to be a test case owner to edit its steps.</li>
+</ul>
+<p><strong>Control when anyone can edit test steps</strong>: using the <a href="../Spira-Administration-Guide/Template-Test-Cases/#edit-workflow-step">test case workflow</a>, you can control what fields of the test case are editable, disabled, hidden, or required. For each workflow step, make sure to review the "Test Steps?" row. </p>
+<ul>
+<li>If "Test Steps?" is set to <em>enabled</em> for a status/step, anyone with a role that lets them edit test steps can edit test cases with that status</li>
+<li>If "Test Steps?" is set to <em>disabled</em> for a status/step, noone will be able to edit test steps at all for test cases with that status</li>
+</ul>
+<p>Together, controlling who, and when, give you a lot of flexibility in managing your test steps (and other artifacts too).</p>
 
   
 
