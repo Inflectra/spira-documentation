@@ -45,3 +45,20 @@ To update part of a test set result you can optionally selectively execute just 
     - finish the execution
     - go to the relevant test run details page and update the test set field
     - repeat the above step for each test case concerned
+
+## How to stop users being able to edit a test case's test steps
+Test cases contain test steps. These steps can be edited in a number of ways: each step has properties that you can edit; you can add and remove steps; and you can change the order of the steps.
+
+You may want to control who can edit test steps, and when they can edit them. 
+
+**Control who can edit test steps**: set your [product roles](../Spira-Administration-Guide/System-Users/#view-edit-product-roles) so that only users with certain roles can modify test steps. 
+
+- If a product role let's users with that role "Modify All" test steps then they can edit all test steps. 
+- If instead a product role is set with "Modify Owned" for test steps, then users with that role can only edit test steps inside of test cases where they are marked as the Owner. In other words, if you have "Modify Owned" you have to be a test case owner to edit its steps.
+
+**Control when anyone can edit test steps**: using the [test case workflow](../Spira-Administration-Guide/Template-Test-Cases/#edit-workflow-step), you can control what fields of the test case are editable, disabled, hidden, or required. For each workflow step, make sure to review the "Test Steps?" row. 
+
+- If "Test Steps?" is set to *enabled* for a status/step, anyone with a role that lets them edit test steps can edit test cases with that status
+- If "Test Steps?" is set to *disabled* for a status/step, noone will be able to edit test steps at all for test cases with that status
+
+Together, controlling who, and when, give you a lot of flexibility in managing your test steps (and other artifacts too).
