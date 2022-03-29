@@ -46,7 +46,7 @@ To update part of a test set result you can optionally selectively execute just 
     - go to the relevant test run details page and update the test set field
     - repeat the above step for each test case concerned
 
-## How to stop users being able to edit a test case's test steps
+## How to stop users being able to edit a test case's test steps {: .section-break}
 Test cases contain test steps. These steps can be edited in a number of ways: each step has properties that you can edit; you can add and remove steps; and you can change the order of the steps.
 
 You may want to control who can edit test steps, and when they can edit them. 
