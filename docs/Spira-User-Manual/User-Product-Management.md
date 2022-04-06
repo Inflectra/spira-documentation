@@ -245,7 +245,7 @@ Under some of the icons and headings are secondary menu options that display whe
 
 - **Product Icon** (shown as SpiraPlan above): this will always take you to "My Page" as discussed above
 - **Workspace Icon**: this shows you the type of workspace you are on, for example a [program](#program-home) or a [product](#product-home). Clicking it will take you to that workspace's homepage
-- **Workspace Selector**: this shows the name of the current workspace. Clicking it will show all your available workspaces and clicking any of these will change you to that workspace
+- **Workspace Selector**: this shows the name of the current workspace. Clicking it will show all your available workspaces and clicking any of these will change you to that workspace. At the top of this dropdown is a filter box where you can type to filter the workspaces to only those that match your search
 - **Artifacts Selector**: when visible, this shows the name of the current artifact for the current workspace. Clicking it will show all your available artifacts and clicking any of these will change you to that artifacts main page. For product workspaces these artifacts are grouped as follows:
     - Planning
         - [Requirements](../Requirements-Management/)
@@ -279,11 +279,11 @@ Under some of the icons and headings are secondary menu options that display whe
 
 ## Global Search
 
-SpiraPlan includes a global search that can be used to search across product and artifact type for items that include the entered keywords in either the name or description field:
+SpiraPlan includes a global search that can be used to search across product and artifact type for items that include the entered keywords in either the name or description field. Clicking on the search icon in the global navigation will let you type in your search term. You will also see a popup below the search box that gives you quick access to recent artifacts you have looked at, and also to your most recent searches. After you search for something you see all matching results:
 
 ![](img/UserProduct_Management_46.png)
 
-You can search for individual keywords by simply entering them in the search box and clicking the arrow button on the right. You can search for phrases by enclosing the words in double quotes. You can also
+You can search for individual keywords by entering them in the search box and clicking the arrow button on the right. You can search for phrases by enclosing the words in double quotes. You can also
 **search for a specific artifact** by its unique **two-letter prefix and ID number**.
 
 For example, searching on **book name** will find any artifacts that include either of the two words book and name in the name or description. Searching on **"book name"** will only return items that have that exact phrase in either the name or description. Searching on

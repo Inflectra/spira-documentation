@@ -269,8 +269,11 @@ nav:
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
   - Build Servers:
     - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
-    - JetBrains TeamCity: Build-Server-Integration\JetBrains-TeamCity.md
     - Azure DevOps Pipelines: Build-Server-Integration\Microsoft-Azure-DevOps-Pipelines.md
+    - GitHub Actions: Build-Server-Integration\GitHub-Actions.md
+    - GitLab Pipelines: Build-Server-Integration\GitLab-Pipelines.md
+    - CircleCI Pipelines: Build-Server-Integration\CircleCI-Pipelines.md
+    - JetBrains TeamCity: Build-Server-Integration\JetBrains-TeamCity.md
     - Atlassian Bamboo: Build-Server-Integration\Atlassian-Bamboo.md
   - Requirements:
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md

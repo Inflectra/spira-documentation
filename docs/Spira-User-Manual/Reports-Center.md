@@ -515,20 +515,15 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 These are the graphs that a SpiraPlan administrator has created in the Administration section of the system and published for use by end users. They rely on specific ESQL data queries, so the data represented will depend on the query created by the administrator.
 
-To add a custom graph to your reports dashboard, click on the **Add Items** icon and choose Custom Graphs:
+To add a custom graph to your reports dashboard, click on the **Add Items** icon and click on the "Custom Graphs" button to show available custom graphs:
 
 ![](img/Reports_Center_387.png)
 
-Once you add the Custom Graphs widget to your dashboard, you will see the following:
+Once you add the Custom Graphs widget to your dashboard, it will look just like any other graph:
 
 ![](img/Reports_Center_388.png)
 
-You can change which custom graph will be used in this widget by simply changing the values in the dropdown list:
-
-![](img/Reports_Center_389.png)
-
-You can also change the graph display between the three display types:
-donut, bar, and line. The donut style of graph is only available for reports with a single data series:
+You can view the graph description from the "i" (for information) button at the top right of the graph. You can change the graph display between the three display types: donut, bar, and line. The donut style of graph is only available for reports with a single data series:
 
 ![](img/Reports_Center_390.png)
 
