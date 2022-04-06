@@ -13,11 +13,11 @@ interface.
 
 This section outlines how to install the SpiraTeam plug-in for Eclipse.
 It assumes that you already have a working installation of SpiraTest,
-SpiraPlan or SpiraTeam v5.0 or later and a working installation of
+SpiraPlan or SpiraTeam v6.0 or later and a working installation of
 Eclipse v4.6 (Neon) or later with the Mylyn plug-in installed.
 
 If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v5.0 before trying to integrate with Eclipse.
+at least v6.0 before trying to integrate with Eclipse.
 
 To obtain the Eclipse plug-in, open up the Eclipse application and click
 on Help \> Eclipse Marketplace. Enter "SpiraTeam" in the 'Find' text
@@ -117,10 +117,9 @@ inside Eclipse.
 **User ID** -- This needs to be a valid username that has access to
 SpiraTeam.
 
-**Password** -- This needs to be the correct password for the username
-specified.
+**Password** -- This needs to be the correct **API Key** for the username specified. *Although the Eclipse label says Password, you need to use the Spira username and API Key NOT password.*
 
-Once you have entered the information, click \[Finish\] to complete the
+Once you have entered the information, click `[Finish]` to complete the
 "Add Repository" wizard. Once this has been done, Eclipse will ask you
 if you would like to add a new query for this repository. You can choose
 either Yes or No. The process for adding a new query to the SpiraTeam
