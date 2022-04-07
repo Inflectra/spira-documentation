@@ -453,6 +453,12 @@
     
       
     
+      
+    
+      
+    
+      
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -4865,11 +4871,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
+      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    JetBrains TeamCity
+    Azure DevOps Pipelines
   </span>
 
       </a>
@@ -4884,11 +4890,68 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
+      <a href="../../Build-Server-Integration/GitHub-Actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Azure DevOps Pipelines
+    GitHub Actions
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/GitLab-Pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab Pipelines
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/CircleCI-Pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CircleCI Pipelines
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JetBrains TeamCity
   </span>
 
       </a>
@@ -5367,10 +5430,10 @@ interface.</p>
 <h2 id="installing-the-eclipse-plug-in">Installing the Eclipse Plug-In<a class="headerlink" href="#installing-the-eclipse-plug-in" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the SpiraTeam plug-in for Eclipse.
 It assumes that you already have a working installation of SpiraTest,
-SpiraPlan or SpiraTeam v5.0 or later and a working installation of
+SpiraPlan or SpiraTeam v6.0 or later and a working installation of
 Eclipse v4.6 (Neon) or later with the Mylyn plug-in installed.</p>
 <p>If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v5.0 before trying to integrate with Eclipse.</p>
+at least v6.0 before trying to integrate with Eclipse.</p>
 <p>To obtain the Eclipse plug-in, open up the Eclipse application and click
 on Help > Eclipse Marketplace. Enter "SpiraTeam" in the 'Find' text
 box. Once you hit enter, you should see the following result:</p>
@@ -5435,9 +5498,8 @@ are accessing.</p>
 inside Eclipse.</p>
 <p><strong>User ID</strong> -- This needs to be a valid username that has access to
 SpiraTeam.</p>
-<p><strong>Password</strong> -- This needs to be the correct password for the username
-specified.</p>
-<p>Once you have entered the information, click [Finish] to complete the
+<p><strong>Password</strong> -- This needs to be the correct <strong>API Key</strong> for the username specified. <em>Although the Eclipse label says Password, you need to use the Spira username and API Key NOT password.</em></p>
+<p>Once you have entered the information, click <code>[Finish]</code> to complete the
 "Add Repository" wizard. Once this has been done, Eclipse will ask you
 if you would like to add a new query for this repository. You can choose
 either Yes or No. The process for adding a new query to the SpiraTeam

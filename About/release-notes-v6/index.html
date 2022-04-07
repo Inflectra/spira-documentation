@@ -453,6 +453,12 @@
     
       
     
+      
+    
+      
+    
+      
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -4780,11 +4786,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
+      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    JetBrains TeamCity
+    Azure DevOps Pipelines
   </span>
 
       </a>
@@ -4799,11 +4805,68 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
+      <a href="../../Build-Server-Integration/GitHub-Actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Azure DevOps Pipelines
+    GitHub Actions
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/GitLab-Pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab Pipelines
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/CircleCI-Pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CircleCI Pipelines
+  </span>
+
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JetBrains TeamCity
   </span>
 
       </a>
@@ -5118,6 +5181,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-616-april-2022" class="md-nav__link">
+    Version 6.16 (April 2022)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#version-6151-march-2022" class="md-nav__link">
@@ -5487,6 +5557,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-616-april-2022" class="md-nav__link">
+    Version 6.16 (April 2022)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-6151-march-2022" class="md-nav__link">
     Version 6.15.1 (March 2022)
   </a>
@@ -5732,6 +5809,60 @@
 
 
 <h1 id="release-notes-for-spira-v6">Release Notes for Spira v6<a class="headerlink" href="#release-notes-for-spira-v6" title="Permanent link">&para;</a></h1>
+<h2 id="version-616-april-2022">Version 6.16 (April 2022)<a class="headerlink" href="#version-616-april-2022" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>The global navigation helps users understand what key features are available in the tool but not currently accessible to them [RQ:4154]</li>
+<li>
+<p>** Webhooks (inbound)**</p>
+<ul>
+<li>Integrate with <a href="../../Build-Server-Integration/GitHub-Actions/">GitHub Actions</a> so they can be saved against a release as a new build [RQ:4198]</li>
+<li>Integrate with <a href="../../Build-Server-Integration/GitLab-Pipelines/">GitLab Pipelines</a> so they can be saved against a release as a new build [RQ:4197]</li>
+<li>Integrate with <a href="../../Build-Server-Integration/CircleCI-Pipelines/">CircleCI Pipelines</a> so they can be saved against a release as a new build [RQ:4196]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>Navigation</strong></p>
+<ul>
+<li>Improve the <a href="../../Spira-User-Manual/User-Product-Management/#global-search">global search</a> by including not just recent searches, but also a list of recently viewed artifacts [IN:6922]</li>
+<li>Let users filter the <a href="../../Spira-User-Manual/User-Product-Management/#global-navigation">global navigation</a> workspace dropdown to make it easier to find the workspace a user [IN:6921]</li>
+<li>Show artifact icons in the headings of the template administration menu subsections to make them more visually clear [IN:7046]</li>
+</ul>
+</li>
+<li>
+<p><strong>Reporting</strong></p>
+<ul>
+<li>Fix not being able to generate the <a href="../../Spira-User-Manual/Reports-Center/#release-summary-report">Release Summary report</a> in PDF format [IN:5278]</li>
+<li>Let users add specific <a href="../../Spira-User-Manual/Reports-Center/#custom-graphs">custom graphs</a> to their reporting page and show the name of that custom graph in the widget header [IN:4787]</li>
+<li>Make the "associated task" tables in the the <a href="../../Spira-User-Manual/Reports-Center/#requirements-detailed-report">Requirement Detailed Report</a> more legible by removing non essential columns [IN:7132]</li>
+<li>Show the custom graph description when you hover on the help icon of a custom graph on the reporting page [IN:4700]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other</strong></p>
+<ul>
+<li>Fix the "Set Sample Data" popup from continuously popping up if you open the application for the first time only after it has been installed and then upgraded [IN:7123]</li>
+<li>Fix the app pool and database not being deleted on uninstall after an upgrade operation (app directory is deleted) [IN:7031]</li>
+<li>Fix the association type "prerequisite-for" not showing correctly for artifacts associated to an artifact that "depends-on" it (introduced in 6.15.1) [IN:7159]</li>
+<li>Fix the product home page failing with a system error with certain configurations of widgets and permissions [IN:7107]</li>
+<li>Fix updating a release via the API not recording history for the changes [IN:7131]</li>
+<li>Fix users and system admins not being able to turn off RSS Feeds (on user profile or system admin pages respectively) [IN:7098]</li>
+<li>Fix users not being able to see or set the "displaying" release dropdown on the product home page, if the Product Overview widget is not shown (introduced in 6.15.1) [IN:7138]</li>
+<li>Hide the attachment tab on artifact details pages if the user does not have document view permissions [IN:4779]</li>
+<li>Make code blocks inside the rich text editor more legible when in dark mode [IN:7140]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-6151-march-2022">Version 6.15.1 (March 2022)<a class="headerlink" href="#version-6151-march-2022" title="Permanent link">&para;</a></h2>
 <div class="admonition bug">
 <p class="admonition-title">Bug fixes and enhancements</p>
