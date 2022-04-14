@@ -7,7 +7,7 @@ For example, the quality assurance team can manage their requirements and test c
 With this integration you can, for each project/product you want to sync up:
 
 - have all new issues in Jira get created in SpiraPlan (as either incidents or requirements)
-- make sure all new incidents (and requirements) made in SpiraPlan get created in Jira
+- make sure all new incidents made in SpiraPlan get created in Jira
 - update SpiraPlan with changes made to issues in Jira
 - (advanced) update Jira with changes made to incidents in SpiraPlan
 - (advanced) create new Jira sub-tasks from tasks created in SpiraPlan

@@ -1,8 +1,19 @@
 # Using SpiraTeam with Jira Server (or DataCenter)
 
-This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the Jira Server or Jira DataCenter issue/bug tracking system version 5.0 and later. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into JIRA. Once the incidents are loaded into JIRA as issues, the development team can then manage the lifecycle of these issues in JIRA, and have the status changes in JIRA be reflected back in SpiraTeam. In addition, new tasks added in SpiraTeam get added to Jira as sub-tasks/tasks.
+## Introduction
+By integrating SpiraTest, SpiraTeam or SpiraPlan (called SpiraPlan from here on out) and Jira Server or Jira DataCenter (hereafter just Jira Server or Jira) your teams can work seamlessly across both applications. 
 
-In addition, any issues logged directly into JIRA will get imported into SpiraTeam as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.
+For example, the quality assurance team can manage their requirements and test cases in SpiraPlan, and execute test runs in SpiraPlan. Incident generated during testing wil be automatically loaded into Jira Server as new issues. The development team, working in Jira, can then manage the lifecycle of these issues in Jira. When they change the issue status or add comments, these changes are quickly updated to match back in SpiraPlan. You can choose which sort of Jira issues are made into incidents in SpiraPlan, and which get created as requirements (based on the issue type). This can be used as part of the planning and testing lifecycle.
+
+With this integration you can, for each project/product you want to sync up:
+
+- have all new issues in Jira get created in SpiraPlan (as either incidents or requirements)
+- make sure all new incidents made in SpiraPlan get created in Jira
+- update SpiraPlan with changes made to issues in Jira
+- (advanced) update Jira with changes made to incidents in SpiraPlan
+- (advanced) create new Jira sub-tasks from tasks created in SpiraPlan
+- make sure your sprints match between Jira and SpiraPlan
+- connect together users so the right user is flagged against each issue and  incident
 
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
@@ -14,11 +25,11 @@ This section outlines how to configure the integration service to export inciden
 
 The following versions of SpiraTeam and Jira Server are supported:
 
-- The JIRA 5.x plugin supports Jira Server 5.0 or later and SpiraTeam v5.0 or later
+- The JIRA 5.x plugin supports Jira 5.0 or later and SpiraTeam v5.0 or later
 
-- The JIRA 4.x plugin supports JIRA 4.0 or later and SpiraTeam v3.0 or later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
+- The JIRA 4.x plugin supports Jira 4.0 or later and SpiraTeam v3.0 or later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
 
-- The JIRA 3.x plugin supports JIRA 3.0 or later and SpiraTeam v2.3 or later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
+- The JIRA 3.x plugin supports Jira 3.0 or later and SpiraTeam v2.3 or later *(see [Using SpiraTeam with JIRA 3 / 4](../Using-SpiraTeam-with-JIRA-3--4/))*
 
 If you are using the Cloud version of Jira, please refer to the [Jira Cloud Documentation](../Using-SpiraTeam-with-Jira-Cloud) instead.
 
