@@ -64,7 +64,7 @@ Second, you need to add a dedicated webhook. This means that when the GitHub Act
 
 - Click "Add Webhook"
 - Enter the Payload URL (see below)
-- You can leave the content type at its default
+- Set the content type to "application/json"
 - The secret field is not used by SpiraPlan can be left blank
 - For webhook triggers, the default options will work. If you wish to select individual events you must enable "Workflow runs"
 - Click "Add webhook"
