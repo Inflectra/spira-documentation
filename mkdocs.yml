@@ -207,6 +207,7 @@ nav:
     - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
     - Jasmine: Unit-Testing-Integration\Integrating-with-Jasmine.md
     - Jest: Unit-Testing-Integration\Integrating-with-Jest.md
+    - Test Runner Excel Add-in: Migration-and-Integration/Using-Test-Runner-For-Excel.md
   - IDE Integration:
     - Visual Studio Code: IDE-Integration\Visual-Studio-Code.md
     - Visual Studio: IDE-Integration\Visual-Studio.md
