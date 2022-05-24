@@ -220,6 +220,7 @@ This artifact does not have any special factors to take into account.
 
 - work with version of Spira older than 6.3.0.1 
 - work with versions of Excel pre Excel 2015
-- create Test Runs
 - add new custom lists values
 - import and export test step custom properties
+
+**NOTE** Excel Classic can create test runs. This functionality is in the [SpiraPlan TestRunner](../Unit-Testing-Integration/Using-Test-Runner-For-Excel) Excel 365 addin, and not the Excel 365 import/export addin.

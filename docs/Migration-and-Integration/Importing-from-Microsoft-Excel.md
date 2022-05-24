@@ -608,7 +608,6 @@ Excel Classic can (and the Excel 365 plugin cannot):
 
 - work with version of Spira older than 6.3.0.1 
 - work with versions of Excel pre Excel 2015
-- create Test Runs
 - add new custom lists values
 - import and export test step custom properties
 
@@ -619,5 +618,7 @@ Excel Classic can (and the Excel 365 plugin cannot):
 - seamlessly integrates custom fields and standard fields
 - works across Windows, Mac OS, and the web
 - NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
+
+**NOTE** Excel Classic can create test runs. This functionality is in the [SpiraPlan TestRunner](../Unit-Testing-Integration/Using-Test-Runner-For-Excel) Excel 365 addin, and not the Excel 365 import/export addin.
 
 For more information about how the Excel Classic plugin works with version 6+ of SpiraPlan see [this blog post](https://www.inflectra.com/Ideas/Entry/migrating-to-60---changes-to-using-the-excel-addon-819.aspx).
