@@ -32,8 +32,6 @@ This Quick Start Guide is split into different parts. You can dip into any part 
 
 
 
-
-
 ## Application Overview
 
 !!! info "What you will learn"
@@ -44,3 +42,33 @@ This Quick Start Guide is split into different parts. You can dip into any part 
     - Artifacts (bugs, sprints, tests)
 
 
+### Logging In to the application
+
+You have a brand new SpiraPlan application ready to go. This is either in the cloud or on-premise. First, go to the home page of the application in your browser to get to the login page:
+
+![](img/qsg-intro-login.png)
+
+Login using the default admin account:
+
+- **User Name**: administrator
+- **Password**: PleaseChange
+
+You are now logged-in and will see the "My Page". The My Page looks pretty empty right now. This is normal.
+
+![](img/Logging_In_and_Selecting_a_Product_4.png)
+
+The first time you log in you will see a popup that gives you a quick orientation of the application.
+
+![](img/Logging_In_and_Selecting_a_Product_5.png)
+
+
+### Your user profile
+
+### Workspaces
+For this tutorial we want to start with an empty product that has no data in it, so click the hyperlink under 'My Products' for 'Sample Empty Product 2' / 'Sample Program'. That will select the empty product. Now to see the homepage for the product you just selected, click on the hexagon in the top left:
+
+![](img/Logging_In_and_Selecting_a_Product_6.png)
+
+The product home page shows various widgets containing key product metrics. These are empty now, because the product has no data in it. In the rest of this guide we are going to fix that.
+
+### Artifacts
