@@ -321,6 +321,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://spiradoc.inflectra.com/Migration-and-Integration/Migrating-from-Jira/</loc>
+         <lastmod>2022-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://spiradoc.inflectra.com/Migration-and-Integration/Migrating-from-MS-Test-Manager/</loc>
          <lastmod>2022-05-24</lastmod>
          <changefreq>daily</changefreq>
