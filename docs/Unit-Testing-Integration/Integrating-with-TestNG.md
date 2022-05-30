@@ -196,10 +196,10 @@ import java.util.*;
 @SpiraTestConfiguration(
 	url="http://localhost/SpiraTest",
 	login="fredbloggs",
-	password="fredbloggs",
+	apiKey="{00000000-0000-0000-0000-000000000000}",
 	projectId=1,
 	releaseId=1,
-	testSetId
+	testSetId=-1
 )
 @Test(groups={"unittest"})
 public class SimpleTest
@@ -279,7 +279,7 @@ needs to start with http:// or https://
 
 **Login** - A valid username for the instance of SpiraTest.
 
-**Password** - A valid password for the instance of SpiraTest.
+**apiKey** - A valid API Key / RSS Token for the instance of SpiraTest (for the user specified in Login).
 
 **Project Id** - The ID of the project (this can be found on the project
 homepage in the "Project Overview" section)
