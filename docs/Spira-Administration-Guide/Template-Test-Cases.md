@@ -98,13 +98,14 @@ This page also allows you to define the behavior of the various test case custom
 
 You can set each of the fields/custom properties as being:
 
-- **Hidden**: The field / custom property will not be displayed when the test case is in this status
-- **Disabled**: The field / custom property will be displayed, but will be greyed-out and read-only
-- **Required**: The field / custom property will be required when the test case is in this status
+- **Default**: the field or custom property will be displayed as normal (it can be edited and also be left empty)
+- **Hidden**: the field or custom property will not be completely hidden
+- **Disabled**: the field or custom property will be displayed but read-only (and grayed-out)
+- **Required**: the field or custom property is required and cannot be empty
 
-Note that you cannot set a field/property as being required and either disabled or hidden since this would prevent a user from ever updating the test case. For example, when a test case is in the Draft status, you might make the owner field hidden (since the author shouldn't need to know who will ultimately own it), when it gets to the Ready for Review status, you might make the field enabled and required, and when it gets to the Approve status, you might make it disabled. This allows you to tailor the information gathered to the appropriate place in the workflow.
+For example, when a test case is in the Draft status, you might make the owner field hidden (since the author shouldn't need to know who will ultimately own it), when it gets to the Ready for Review status, you might make the field enabled and required, and when it gets to the Approve status, you might make it disabled. This allows you to tailor the information gathered to the appropriate place in the workflow.
 
-To actually make these changes, all you need to do is select the appropriate checkboxes in the list of fields and custom properties and click the corresponding "Save" button.
+After you have made the desired changes, click "Save".
 
 Note that two test case fields have special meanings:
 
