@@ -182,15 +182,9 @@ The Email Configuration page is split into two sections. The first section cover
 ![](img/System_73.png)
 
 -   **Email Notifications Active?** -- Defaults to Yes. If changed to No, the system will not send out any emails, regardless of other settings. Note that this means that new user requests will not get sent either.
-
--   **From Email Address --** This is the email address specified in the
-'From:' field of email notifications sent from the application.
-
--   **Reply-To Email Address --** This is the address specified in the
-'ReplyTo:' field for notification emails sent from the application.
-
+-   **From Email Address --** This is the email address specified in the 'From:' field of email notifications sent from the application.
+-   **Reply-To Email Address --** This is the address specified in the 'ReplyTo:' field for notification emails sent from the application.
 -   **Send HTML Emails?** -- Defaults to Yes. This option specifies whether HTML or Plain-Text emails are sent from the system.
-
 -   **Allow Users Control of Receiving Emails?** -- Defaults to Yes. This specifies whether or not a user can modify their profile to not receive any emails from the system. If set to no, users' preference will be enabled and locked out.
 
 ![](img/System_74.png)
@@ -198,24 +192,20 @@ The Email Configuration page is split into two sections. The first section cover
 To use the internal IIS's default virtual SMTP server, leave all fields blank. The virtual server must then be configured to use proper SMTP server and network configuration. If you want the application to contact an SMTP server directly, use the following fields:
 
 -   **Host Name --** This is the SMTP server to connect to.
-
 -   **Port Number --** This is the port number to use, blank uses the default port 25.
-
 -   **SSL Connection --** Whether or not to use an SSL connection with the server. Be sure that the SMTP server's SSL certificate is trusted on the application server.
-
 -   **User Name --** When using an authentication method, this is the username to log in as.
-
 -   **Password --** When using an authentication method, this is the password to use.
 
 Example settings for connecting to Gmail/Google Mail for sending notifications:
 
 -   **Host Name:** smtp.gmail.com
-
 -   **Port Number:** 587
-
 -   **SSL Connection:** Yes
-
 -   **User Name:** "account"@gmail.com
-
 -   **Password:** "account password"
 
+## SpiraApps
+
+
+## SpiraApp Settings

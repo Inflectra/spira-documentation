@@ -235,3 +235,9 @@ This table shows the following columns. You can apply a filter using any of the 
 - New Value
 - Changed By
 - Change Type
+
+
+## SpiraApps
+
+
+## SpiraApp Settings
