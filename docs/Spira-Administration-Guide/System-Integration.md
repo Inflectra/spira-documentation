@@ -5,16 +5,27 @@
 
 SpiraPlan® is capable of synchronizing its data with a variety of other systems, including but not limited to requirements management systems and standalone bug-tracking tools. The various integration plug-ins for SpiraPlan® and the steps for configuring the data-synchronization settings are described in the *[SpiraTest External Bug-Tracking Integration Guide](../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization.md)*. Each individual tool has its own separate guide that builds on this setup guide.
 
-If you are synchronizing data between SpiraPlan® and one of these other systems, the 'Data Synchronization' administration page will show a list of active data-synchronizations services in user, together with the status and date/time of last synchronization:
+If you are synchronizing data between SpiraPlan and one of these other systems, the 'Data Synchronization' administration page will show a list of available data-synchronizations services:
 
 ![](img/System_Integration_Data_Synchronization_List.png)
 
-In the example above, we have three plug-ins active, with incidents being exported into Github, JIRA, and Microsoft Team Foundation Server / Azure DevOps. The data of last sync and the status indicate if there are problems with the plug-in. In this example we can see that TFS is active, but none of the plugins have synced yet.
+In the example above, we have six plug-ins available, with only Azure DevOps (ADO) active. For ADO, the data sync is active for a single product: Library Information System (Sample).
 
-The 'Refresh' button allows you to refresh the status of the page to ensure that you are seeing the most up to date information. In certain circumstances you may want to reset the date of last sync and force a particular plug-in to examine all the records in the system to see if any were not synchronized - clicking on the 'Force Complete Re-Sync'
-button will achieve this. The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan Data-Sync background Windows service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.
+This table shows the following information about each data sync plug-in:
 
-In the "Data Mapping" column each plugin has a dropdown that shows all the active products on the system, ordered alphabetically. The TFS plugin has this drodown open. You can see two different icons to the left of the product names: a full hexagon and an empty hexagon. A full hexagon means that the product is actively using this particular plugin. Selecting a product from the dropdown and then clicking the arrow to its right will take you to the detailed [product data synchronization page](Product-General-Settings.md#data-synchronization) for that plugin and product.
+- icon and name
+- a dropdown list of active products. Products with an empty hexagon icon do not use this data sync, and products with a full hexagon icon actively use this data sync. Select a product and click the arrow to its right to go to the detailed [product data synchronization page](Product-General-Settings.md#data-synchronization) for that plugin and product
+- the data and time of the last data sync
+- whether the data sync is active (system wide)
+- the status (N/A, Not Run, Error, or Success)
+- operations you can perform on each data sync. 
+    
+    - Reset sync. You should not routinely use the **Reset Sync**. This resets the date of last sync for that plug-in. This forces the plug-in to re-examine all records in the system to see if any were not synchronized - this can take a long time. The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan Data-Sync background Windows service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.
+    - Edit: this will open the data sync plug-in settings page. For many plug-ins this settings page will guide you in how to set up that specific data sync. Each data sync plug-in has detailed documentation about how to set it up (see the Integrations > Bug Tracking/DataSync section of the main SpiraDoc menu)
+    - Delete
+    - View data sync errors in the event log, 
+
+Above the table you can add a new data sync or refresh the status of the page to ensure that you are seeing the most up to date information. 
 
 
 ## Source Code Integration
