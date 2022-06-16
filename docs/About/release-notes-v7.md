@@ -3,39 +3,66 @@
 ## Version 7.0 (July 2022)
 
 !!! info "Summary"
+SpiraApps bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
+
+- The FMEA SpiraApp adds full support for Failure Mode & Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
+- New SpiraApps deepen the integration with Github Actions, GitLab Pipelines, and CircleCI Pipelines. Start a new Pipeline or Action directly from SpiraPlan.
+- Two new SpiraApps let you work faster than ever. Create rich descriptions that are automatically added when you create a new artifact. And quickly create a preset list of new tasks or test cases on a requirement or a release to manage workloads better than ever.
+
+We have updated our data synchronization platform to improve ease of use and simplify setup for administrators, with tailored guidance and information right inside the app.
+
+
+
 
 ??? success "New Features"
-    - The global navigation helps users understand what key features are available in the tool but not currently accessible to them [RQ:4154]
-    * ** Webhooks (inbound)**
+    * ** Data synchronization**
 
-        - Integrate with [GitHub Actions](../../Build-Server-Integration/GitHub-Actions/) so they can be saved against a release as a new build [RQ:4198]
-        - Integrate with [GitLab Pipelines](../../Build-Server-Integration/GitLab-Pipelines/) so they can be saved against a release as a new build [RQ:4197]
-        - Integrate with [CircleCI Pipelines](../../Build-Server-Integration/CircleCI-Pipelines/) so they can be saved against a release as a new build [RQ:4196]
+        - Improve ease of use when configuring the most common datasync plugins with better field names and additional helper text [RQ:4280]
+
+    * ** Testing**
+
+        - Add [testing setting to mark a whole test case during execution as N/A](../../Spira-Administration-Guide/Product-Planning/#testing-settings) with one click [RQ:4273]
+        - Ability to schedule test cases in a test set by Planned Date on the [test case section of the test set details page](../../Spira-User-Manual/Test-Set-Management/#overview-test-cases), and through the API when mapping a new test set to a test case, or updating an existing mapping [RQ:4277]
+
+    * ** SpiraApps**
+
+        - CircleCI SpiraApp integrations lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4141]
+        - GitLab CI SpiraApp integrations lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4142]
+        - GitHub CI SpiraApp integrations lets users launch actions from Spira and see their results in Spira as builds [RQ:4143]
+        - Extend the built-in risk functionality by supporting FMEA with a dedicated FMEA SpiraApp that calculates the Risk Priority Number [RQ:4140]
+        - Improved WorX Manual Testing Accelerator functionality, as a new SpiraApp [RQ:4225]
+        - Allow users to quickly create preset tasks or tests cases for a specific requirement or release [RQ:4176]
+        - Allow users to create artifacts from their details pages with pre-populated descriptions (as defined in the SpiraApp settings) [RQ:4224]
+
+    * ** SpiraApps Administration**
+
+        - The system SpiraApps list page lets admins see all available SpiraApps and enable or disable them [RQ:4200]
+        - The product SpiraApps list page lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
+        - The system SpiraApps settings page let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
+        - The product SpiraApps settings page let users manage any product-level settings for the SpiraApp [RQ:4203]
+        - SpiraApps Developer Pages (internal only - QA not required) [RQ:4204]
+
+    * ** SpiraApps Architecture**
+
+        - SpiraApps can be added by Inflectra, storing their functionality, logic, and descriptions in the system [RQ:4211]
+        - SpiraApps can be configured by users with system-wide settings [RQ:4212]
+        - SpiraApps can be configured by users with product-specific settings [RQ:4213]
+        - SpiraApps can run from the button menu toolbar on specific artifact detail pages [RQ:4207]
+        - SpiraApps can run from the button menu toolbar on specific artifact list pages [RQ:4206]
+        - SpiraApps can run from a custom column shown on artifact grids [RQ:4208]
+        - SpiraApps can display as a dashboard widget on the product and reporting home pages [RQ:4209]
+        - SpiraApps can run as behind-the-scenes actions, running user-driven events, on artifact details pages [RQ:4214]
+
 
 ??? bug "Bug fixes and enhancements"
 
-    * **Navigation**
-
-        - Improve the [global search](../../Spira-User-Manual/User-Product-Management/#global-search) by including not just recent searches, but also a list of recently viewed artifacts [IN:6922]
-        - Let users filter the [global navigation](../../Spira-User-Manual/User-Product-Management/#global-navigation) workspace dropdown to make it easier to find the workspace a user [IN:6921]
-        - Show artifact icons in the headings of the template administration menu subsections to make them more visually clear [IN:7046]
-
-    * **Reporting**
-
-        - Fix not being able to generate the [Release Summary report](../../Spira-User-Manual/Reports-Center/#release-summary-report) in PDF format [IN:5278]
-        - Let users add specific [custom graphs](../../Spira-User-Manual/Reports-Center/#custom-graphs) to their reporting page and show the name of that custom graph in the widget header [IN:4787]
-        - Make the "associated task" tables in the the [Requirement Detailed Report](../../Spira-User-Manual/Reports-Center/#requirements-detailed-report) more legible by removing non essential columns [IN:7132]
-        - Show the custom graph description when you hover on the help icon of a custom graph on the reporting page [IN:4700]
-
-    * **Other**
-
-        - Fix the "Set Sample Data" popup from continuously popping up if you open the application for the first time only after it has been installed and then upgraded [IN:7123]
-        - Fix the app pool and database not being deleted on uninstall after an upgrade operation (app directory is deleted) [IN:7031]
-        - Fix the association type "prerequisite-for" not showing correctly for artifacts associated to an artifact that "depends-on" it (introduced in 6.15.1) [IN:7159]
-        - Fix the product home page failing with a system error with certain configurations of widgets and permissions [IN:7107]
-        - Fix updating a release via the API not recording history for the changes [IN:7131]
-        - Fix users and system admins not being able to turn off RSS Feeds (on user profile or system admin pages respectively) [IN:7098]
-        - Fix users not being able to see or set the "displaying" release dropdown on the product home page, if the Product Overview widget is not shown (introduced in 6.15.1) [IN:7138]
-        - Hide the attachment tab on artifact details pages if the user does not have document view permissions [IN:4779]
-        - Make code blocks inside the rich text editor more legible when in dark mode [IN:7140]
-
+    - Add a new API call to get all requirements covered by a specific test case [IN:5862]
+    - Add a new API call to update an existing test set test case mapping (can update its owner, planned date, and isTeardown status)  [RQ:4277]
+    - Enforce a minimum of two minutes for authentication expiry settings [IN:7174]
+    - Fix GitHub Actions integration so that results are always recorded, even if the JSON body contains longs (previously only ints were supported) [IN:7215]
+    - Fix GitHub and CircleCI build creation dates not always being the correct timezone [IN:7270]
+    - Fix incorrect special character display on the incident and risk workflow transition detail pages [IN:7197]
+    - Fix LIS source code commit dates in sample data so that there are no commits in the future [IN:6881]
+    - Fix some accented characters not displaying correctly in certain places [IN:7103]
+    - Improve the experience of adding comments to an artifact by only showing the "Add Comment" button when a user cannot otherwise edit the artifact (but can add comments) [IN:7111]
+    - Let users define product level 'definitions of done' to apply to a requirement through using the new "Task and Test Case Presets" SpiraApp [IN:6052]
