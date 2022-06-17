@@ -84,24 +84,16 @@ The "Security Settings" administration page lets you specify the various securit
 
 The following settings can be changed within the system, once you are satisfied, click the "Save" button to commit the changes:
 
-**Allow User Registration**: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.
-
-**Maximum # Invalid Password Attempts**: Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
+- **Allow User Registration**: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.
+- **Maximum # Invalid Password Attempts**: Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
 password hacking attempts.
-
-**Minimum Required Password Length**: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.
-
-**Minimum Required Special Characters** - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.
-
-**Password Attempt Time Window**: Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).
-
-**Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
-
-**Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
-
-**Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
-
-**Enable 2-Step Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../../Spira-User-Manual/User-Product-Management/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](../System-Users/#edit-an-existing-user) page. 
+- **Minimum Required Password Length**: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.
+- **Minimum Required Special Characters** - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.
+- **Password Attempt Time Window**: Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).
+- **Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
+- **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
+- **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
+- **Enable 2-Step Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../../Spira-User-Manual/User-Product-Management/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](../System-Users/#edit-an-existing-user) page. 
 {: #enable-2-step-authentication}
 
 !!! hint "2-Step Authentication tips"
@@ -109,11 +101,9 @@ password hacking attempts.
     - If the global security setting is ever disabled, user with a one-time password will immediately not need to provide that password to login.
     - If installing on-premise, the web server must have the correct time. Any minor deviation from the correct time will mean users' one-time passwords will not be in sync with the server and they will not be able to login. 
 
-**Authentication Expiration**: This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.
-
-**Keep Me Logged-In Expiration**: This specifies the amount of time (in minutes) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.
-
-**Allowed Domains**: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. https://www.domain1.com, http://www.domain2.com) or an asterisk (\*) to denote all domains are allowed (not recommended).
+- **Authentication Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.
+- **Keep Me Logged-In Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.
+- **Allowed Domains**: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. https://www.domain1.com, http://www.domain2.com) or an asterisk (\*) to denote all domains are allowed (not recommended).
 
 
 ## TaraVault®
@@ -225,7 +215,7 @@ For each SpiraApp in the list you see:
 
 
 ## SpiraApp Settings
-The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../SpiraApps) 
+The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../../SpiraApps) 
 
 If the SpiraApp has no settings you can still access the page but there will be no settings to edit.
 

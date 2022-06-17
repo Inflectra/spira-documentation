@@ -1,11 +1,12 @@
 # GitLab Pipelines
 
 ## Introduction
-SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with GitLab in a number of ways. In this section we discuss SpiraPlan's GitLab Pipelines integration.
+SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with GitLab in a number of ways. In this section we discuss SpiraPlan's GitLab Pipelines reporting integration.
 
 You can easily configure your GitLab Pipelines to report against a release and create a new build in SpiraPlan each time they run. This let's you see the health of your CI/CD process within SpiraPlan. 
 
-**Note**: this integration requires SpiraPlan 6.16+.
+!!! check "GitLab SpiraApp"
+    You can also let end users start GitLab Pipelines from within SpiraPlan itself. To do so you will need to [enable and configure the GitLab SpiraApp](../../SpiraApps/GitLab)
 
 The integration has two parts, which are discussed below:
 
@@ -81,7 +82,7 @@ Second, you need to add a dedicated webhook. This means that when the GitLab Pip
 
 ## Run the Action
 
-When an Action on the GitLab project next runs it will report its results to SpiraPlan. SpiraPlan reads the product token to know what product the Action is for. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the GitLab Pipeline was run against.
+When an Action on the GitLab project next runs (either from GitLab, or with the GitLab SpiraApp)it will report its results to SpiraPlan. SpiraPlan reads the product token to know what product the Action is for. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the GitLab Pipeline was run against.
 
 SpiraPlan creates a build against that release, with the key information, including the build status.
 

@@ -1,11 +1,12 @@
 # CircleCI Pipelines
 
 ## Introduction
-SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with CircleCI in a number of ways. In this section we discuss SpiraPlan's CircleCI Pipelines integration.
+SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with CircleCI in a number of ways. In this section we discuss SpiraPlan's CircleCI Pipelines reporting integration.
 
 You can easily configure your CircleCI Pipelines to report against a release and create a new build in SpiraPlan each time they run. This let's you see the health of your CI/CD process within SpiraPlan. 
 
-**Note**: this integration requires SpiraPlan 6.16+.
+!!! check "CircleCI SpiraApp"
+    You can also let end users start CircleCI Pipelines from within SpiraPlan itself. To do so you will need to [enable and configure the CircleCI SpiraApp](../../SpiraApps/CircleCI)
 
 The integration has two parts, which are discussed below:
 
@@ -79,7 +80,7 @@ In CircleCI we now need to setup our repo to talk to the SpiraPlan each time a P
 
 ## Run the Action
 
-When an Action on the CircleCI project next runs it will report its results to SpiraPlan. SpiraPlan finds the first product that has the project name in its description. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the CircleCI Pipeline was run against.
+When an Action on the CircleCI project next runs (either from CircleCI, or with the CircleCI SpiraApp) it will report its results to SpiraPlan. SpiraPlan finds the first product that has the project name in its description. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the CircleCI Pipeline was run against.
 
 SpiraPlan creates a build against that release, with the key information, including the build status.
 
