@@ -3,15 +3,13 @@
 ## Version 7.0 (July 2022)
 
 !!! info "Summary"
-SpiraApps bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
+    SpiraApps bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
 
-- The FMEA SpiraApp adds full support for Failure Mode & Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
-- New SpiraApps deepen the integration with Github Actions, GitLab Pipelines, and CircleCI Pipelines. Start a new Pipeline or Action directly from SpiraPlan.
-- Two new SpiraApps let you work faster than ever. Create rich descriptions that are automatically added when you create a new artifact. And quickly create a preset list of new tasks or test cases on a requirement or a release to manage workloads better than ever.
+    - The FMEA SpiraApp adds full support for Failure Mode & Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
+    - New SpiraApps deepen the integration with Github Actions, GitLab Pipelines, and CircleCI Pipelines. Start a new Pipeline or Action directly from SpiraPlan.
+    - Two new SpiraApps let you work faster than ever. Create rich descriptions that are automatically added when you create a new artifact. And quickly create a preset list of new tasks or test cases on a requirement or a release to manage workloads better than ever.
 
-We have updated our data synchronization platform to improve ease of use and simplify setup for administrators, with tailored guidance and information right inside the app.
-
-
+    We have updated our data synchronization platform to improve ease of use and simplify setup for administrators, with tailored guidance and information right inside the app.
 
 
 ??? success "New Features"
@@ -36,12 +34,11 @@ We have updated our data synchronization platform to improve ease of use and sim
 
     * ** SpiraApps Administration**
 
-        - The system SpiraApps list page lets admins see all available SpiraApps and enable or disable them [RQ:4200]
-        - The product SpiraApps list page lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
-        - The system SpiraApps settings page let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
-        - The product SpiraApps settings page let users manage any product-level settings for the SpiraApp [RQ:4203]
-        - SpiraApps Developer Pages (internal only - QA not required) [RQ:4204]
-
+        - The [system SpiraApps list page](../../Spira-Administration-Guide/System/#spiraapps) lets admins see all available SpiraApps and enable or disable them [RQ:4200]
+        - The [system SpiraApps settings page](../../Spira-Administration-Guide/System/#spiraapps-settings) let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
+        - The [product SpiraApps list page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapps) lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
+        - The [product SpiraApps settings page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapps-settings) let users manage any product-level settings for the SpiraApp [RQ:4203]
+       
     * ** SpiraApps Architecture**
 
         - SpiraApps can be added by Inflectra, storing their functionality, logic, and descriptions in the system [RQ:4211]

@@ -35,13 +35,22 @@ If you are using the Cloud version of Jira, please refer to the [Jira Cloud Docu
 
 If you have an earlier version of SpiraTeam, you will need to upgrade to at least v2.3 before trying to integrate with Jira Server.
 
-The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the Jira server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System \> Data Synchronization administration option from the left-hand navigation:
+The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the Jira server. Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **JiraServerDataSync**, as shown below:
 
 ![](img/JiraServer-Plugin-Status.png)
 
-This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.
+!!! question "What do if the plug-in is not there"
+    If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
 
-If you already see an entry for **JiraServerDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, please click on the \[Add\] button instead. In either case you will be taken to the following screen where you can enter or modify the JIRA Data-Synchronization plug-in:
+    To start, fill in the following fields:
+
+    - Name: enter "JiraDataSync" exactly
+    - Connection Info: enter the the full URL to the JIRA installation (see "Jira URL" below)
+    - Login: enter your Atlassian cloud login
+
+    Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
+
+With the plug-in place, click on its "edit" button to open its detailed settings page.
 
 ![](img/JiraServer-Plugin-Config1.png)
 
@@ -50,10 +59,10 @@ You need to fill out the following fields for the JIRA Plug-in to operate correc
 - **Name** -- this needs to be set to **JiraServerDataSync**.
 - **Caption** -- this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraServerDataSync"
 - **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
-- **Connection Info** -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
+- **Jira URL** -- this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
 -   It is typically of the form: <http://myserver:8080> or <http://myserver:8080/jira>
-- **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
-- **Password** -- this should be set to either the password or the **API Key** of the login specified above. The ability to use your password vs. a special API Key will depend on your version of Jira.
+- **Jira Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
+- **Jira Password** -- this should be set to either the password or the **API Key** of the login specified above. The ability to use your password vs. a special API Key will depend on your version of Jira.
 
 ![](img/JiraServer-Plugin-Config2.png)
 
@@ -64,20 +73,20 @@ time-zones here.
     - **Set to Yes**: all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
     - **Set to No**: users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
-- **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
-- **Custom 02**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
-- **Custom 03**: This determines how the synchronization of incidents works:
+- **Severity Field**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Task Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
+- **Sync Direction**: This determines how the synchronization of incidents works:
 
     - **Default (leave blank)**: By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. *NOTE: This is the recommended option for most users.*
     - **"True"**: If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.
     - **"Both"**: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
     
-- **Custom 04**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
-- **Custom 05**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
+- **Requirement Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
+- **Link Type**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
-> **Note: For most users, we recommend leaving Custom 01 -- Custom 04 blank.**
+> **Note: For most users, we recommend leaving Severity Field, Task Types, Sync Direction, and Requirement Types fields blank.**
 
 
 ## Configuring the Data Mapping
@@ -239,7 +248,7 @@ Once you have created a custom field in JIRA to contain the list of severity val
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_37.png)
 
-On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **Custom 01 property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
+On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **Severity Field property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
