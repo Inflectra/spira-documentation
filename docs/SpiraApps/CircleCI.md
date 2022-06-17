@@ -6,7 +6,7 @@ This SpiraApp lets you integrate SpiraPlan and CircleCI so users can launch pipe
     - [x] system settings
     - [x] product settings 
     - [x] product template setup required
-    - [x] toolbar buttons on release details page
+    - [x] toolbar button on release details page
     - [x] additional integration required to record results in Spira
     - [x] configuration in CircleCI (for recording results in Spira)
 

@@ -6,7 +6,7 @@ This SpiraApp lets you integrate SpiraPlan and GitLab so users can launch pipeli
     - [x] system settings
     - [x] product settings 
     - [x] product template setup required
-    - [x] toolbar buttons on release details page
+    - [x] toolbar button on release details page
     - [x] additional integration required to record results in Spira
     - [x] configuration in GitLab (for recording results in Spira)
 
