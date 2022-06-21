@@ -257,7 +257,7 @@ For each SpiraApp in the list you see:
 
 
 ## SpiraApp Settings
-The SpiraApp Settings page shows any product level settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../SpiraApps) 
+The SpiraApp Settings page shows any product level settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../../SpiraApps) 
 
 If the SpiraApp has no product settings you can still access the page but there will be no settings to edit.
 

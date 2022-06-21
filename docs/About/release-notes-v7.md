@@ -30,7 +30,7 @@
         - Extend the built-in risk functionality by supporting FMEA with a dedicated [FMEA SpiraApp](../../SpiraApps/FMEA) that calculates the Risk Priority Number [RQ:4140]
         - Improved [WorX Manual Testing Accelerator](../../SpiraApps/WorX) functionality, as a new SpiraApp [RQ:4225]
         - Allow users to quickly create [preset tasks or tests cases](../../SpiraApps/Task-Test-Presets) for a specific requirement or release [RQ:4176]
-        - Allow users to create artifacts from their details pages with [pre-populated descriptions](../../SpiraApps/Deafult-Descriptions) (as defined in the SpiraApp settings) [RQ:4224]
+        - Allow users to create artifacts from their details pages with [pre-populated descriptions](../../SpiraApps/Default-Descriptions) (as defined in the SpiraApp settings) [RQ:4224]
 
     * **SpiraApps Administration**
 
