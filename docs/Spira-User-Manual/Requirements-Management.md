@@ -83,13 +83,20 @@ Requirements come in two main flavors (Both can be mapped against test cases for
 
 - **Standard requirements** are any requirements that are not parents (do not have children). These are shown in normal-type and with a normal icon (for either a requirement or a use case). Standard requirements, unlike parent requirements, can:
 
-    - change their status directly (you cannot edit it on the list pages, or on the details pages using the workflows)
     - assign a point estimate to themselves 
+    - change their status directly (you cannot edit it on the list pages, or on the details pages using the workflows). Note that combined with certain [Planning Options](../../Spira-Administration-Guide/Product-Planning/#requirements) the requirement status may be updated automatically
 
 - **Parent requirements** are any requirement that has at least one child inside it. Parents are shown in **bold-type** and have a special parent requirement icon. They are marked as "Yes" when viewing the "Is Parent?" column on the requirement list pages. Parent requirements get some information based on their children (and are therefore always read only):
 
-    - status, which is based on the status of their children and is a worst-case assessment of their statuses
     - estimate points, which is the sum of the estimates of its children
+    - status, which is based on the status of their children:
+        
+        - if any child has a status of "Under Review", "Accepted", "Planned", or "In Progress" the parent will match that status (statuses to the right override those to the left). For example, if a parent has 2 children with statuses of "Accepted" and "Planned", the parent status will be "Planned".
+        - if any child (but not all children) has a status of "Developed", "Tested", or "Completed" the parent will have a status of "In Progress"
+        - if all children have a mix of statuses "Developed", "Tested", or "Completed" the parent will have the "earliest" status. For example, if a parent has 2 children with statuses "Developed" and "Completed" the parent will have a status of "Developed", but if both children have a status of "Tested" the parent will also have a status of "Tested".
+        - if all children have the same status from one of the following, the parent will also have that status: "Rejected", "Obsolete", "Ready for Review", "Ready for Test", "Released", "Design in Process", "Design Approval", or "Documented".
+
+
 
 When you indent a requirement under an existing requirement, the normal requirement becomes a parent requirement. When you outdent a child item, its parent will return to a standard requirement immediately, if it has no other children. 
 
