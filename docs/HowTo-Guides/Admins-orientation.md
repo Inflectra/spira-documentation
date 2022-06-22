@@ -19,3 +19,20 @@ You can read about the different types of administration [here](../Spira-Adminis
 1. Each administration section has a dedicated homepage. For workspaces or templates, these homepages change based on the current workspace
 2. The administration home page gives you quick access to important information about that administration section through a series of homepage widgets
 3. You can click on links in each of these widgets to dive into the detail as needed
+
+## What happens when artifacts are deleted {: .section-break}
+Users can only delete artifacts if their product role has the delete permission enable for that specific artifact. The exception to this is folders: users who have "Bulk Edit" permissions for the relevant artifact can also add, edit, and delete those artifacts folders.
+
+- **Folder deletion**: Documents, Tasks, Test Cases, and Test Sets have folders. Deleting folders is permanent and cannot be undone
+
+    - Document folders can only be deleted when they are empty
+    - When deleting other folders (tasks, test cases, or test sets) any subfolders are also deleted. All contents of the folder and its subfolders are moved to the 'Root' folder.
+    
+- **Artifact deletion**: 
+
+    - Deleting documents and test runs is permanent and cannot be undone
+    - If any other artifact is deleted a log is kept and the deletion can be reverted.
+    - To see all deleted artifact go to Product Administration > Product History Changes (only accessible to product admins). You can filter this list by the action type (i.e. deletes), and the artifact type.
+    - You can see who deleted an artifact by clicking on it from the above page. This will show you more information about the delete
+    - You can revert any delete by clicking the "Revert" button. 
+    - Read more about product history [here](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes)

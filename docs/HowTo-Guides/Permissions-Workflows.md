@@ -57,6 +57,8 @@ Your product role is used to control if you:
 - can carry out a specific workflow transition
 - will receive a notification after a specific event (for example, when a new bug is logged)
 
+## How to stop users being able to delete artifacts {: .section-break}
+Product Role permissions control if users with that product role can or cannot delete a specific artifact. To stop users being able to delete artifacts, edit the product role. Make sure that the "Delete" checkboxes are NOT checked for all relevant artifacts.
 
 ## Why is a field disabled or hidden or required {: .section-break}
 Each field can be controlled by the relevant workflow to show, hide, disable, or be required. If you thought a field should be visible, but in reality it is hidden, this is the workflow at work.
