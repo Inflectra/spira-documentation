@@ -68,7 +68,7 @@ While on the risk details page (either creating a new risk or editing an existin
 
 The RPN is shown in the dedicated RPN custom property. The Risk Exposure is still calculated and shown at the top of the page, and is independent of the RPN.
 
-!!! info "Editing risk probability, impact, or detectability on the risk list page will not update the RPN"
+!!! warning "On the risk list page: users can but should not edit the RPN; editing risk probability, impact, or detectability on the risk list page will not update the RPN"
 
 ### Using the Top Open Risks by Risk Priority Number Widget
 This widget displays a breakdown of the top open risks in the product, in order of decreasing RPN score. The widget is available on any of the product home pages, and on the product reporting home page. 
