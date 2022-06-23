@@ -41,7 +41,7 @@ Enter a login and password that can connect to your Spira instance. This user ne
 
 Click on the 'Test' button to verify the credentials, and once they validate, make sure the 'Active' flag is checked and then click 'Save'. You have now configured the synchronization.
 
-You should now see a list of the plugins currently configured in your Spira instance:
+Now navigate to your Spira instance. Go to System Administration > Integration > Data Sychronization to see a list of the plugins currently configured (as in the example below):
 
 ![](img/Setting_up_Data_Synchronization_8.png)
 

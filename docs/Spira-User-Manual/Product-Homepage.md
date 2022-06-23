@@ -309,9 +309,19 @@ This section displays a two dimensional matrix of the open risks logged against 
 
 
 ## Top Open Risks
+This widget displays a breakdown of the top open risks in the product, in order of decreasing risk exposure.
 
-This section displays a breakdown of the top risks logged against the product, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical risks could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the risk item hyperlink will take you to the [risk details page](../Risks-Management/#risk-details) for the risk in question.
-*You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
+![add widget popup](img/fmea-widget-add.png)
+
+For each row you see:
+
+- **Risk name**: hovering shows more information about the risk, and clicking the name opens the risk details page
+- **Exposure**: the background color is consistent with that shown for exposure in other locations
+- **Type**
+- **Owned By**
+- **Review Date**
+
+You can edit the widget to: show/hide the risk owner column; show/hide the risk type column; and the number of rows to display (max of 50).
 
 
 ## Late Finishing Tasks

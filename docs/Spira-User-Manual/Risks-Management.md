@@ -55,8 +55,13 @@ When you have made your updates, you can either click "***Save***" to commit the
 
 ### Cloning Risks
 
-To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit \>
-"***Clone***". This will make a copy of the current risk with its name suffixed with '... - Copy' to distinguish itself from the original. Any file attachments and mitigations will also be copied along with the risk itself.
+To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit  "**Clone**". This makes a copy of the current risk with '... - Copy' added at the end of its name. When cloning the risks please be aware of the following:
+
+- file attachments are copied
+- risk mitigations are cloned
+- tasks associated to the risk are also cloned and associated to the new risk
+- an association between the original risk and cloned risk is created
+
 
 
 ### Exporting Risks
@@ -90,6 +95,7 @@ The navigation pane shows a list of the peer risks to the one selected. This lis
 -   The list of risks matching the current filter
 -   The list of all risks, irrespective of the current filter
 -   The list of risks assigned to the current user
+-   The list of risks detected by the current user
 
 The bottom part of the right pane can be switched between four views:
 "Overview", "Tasks", "Attachments", "History", each of which will be described in more detail below.

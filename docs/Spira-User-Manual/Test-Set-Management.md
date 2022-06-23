@@ -119,11 +119,11 @@ When you click on a test set item in the test set list described in the previous
 
 ![](img/Test_Case_Management_216.png)
 
-This page is made up of *three* areas;
+This page is made up of three areas:
 
-1.  the left pane displays the test set folders and list navigation;
-2.  the right pane's header, which displays: the operations toolbar; the [folder the test set is in](Application-Wide.md#breadcrumbs); the editable name of the selected test set; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
-3.  the right pane's tabbed interface with rich information related to the test set.
+1.  the left pane displays the test set folders and list navigation
+2.  the right pane's header, which displays: the operations toolbar; the [folder the test set is in](Application-Wide.md#breadcrumbs); the editable name of the selected test set; and the info bar (with a shaded background)
+3.  the right pane's tabbed interface with rich information related to the test set
 
 The navigation pane consists of a link that will take you back to the test set list, as well as a list of the peer test sets to the one selected. This latter list is useful as a navigation shortcut; you can quickly view the detailed information of all the peer test sets by clicking on the navigation links without having to first return to the test sets list page. The navigation list can be switched between three different modes:
 

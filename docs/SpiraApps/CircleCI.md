@@ -21,7 +21,7 @@ To record builds in SpiraPlan, you must [setup the webhook integration with Circ
 To configure this SpiraApp that lets users manually kick off a new Pipeline, you must additionally do the following:
 
 ### System settings
-- [x] Enter a [Personal API Token](https://circleci.com/docs/2.0/managing-api-tokens#creating-a-personal-api-token) - make sure the PAT has read and write API permissions
+- [x] Enter a user-level [Personal API Token](https://circleci.com/docs/2.0/managing-api-tokens#creating-a-personal-api-token) - make sure the PAT has read and write API permissions. Note: you can not use a project level API token.
 
 ![system settings page](img/circleci-system-settings.png)
 
