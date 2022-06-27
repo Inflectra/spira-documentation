@@ -162,7 +162,7 @@ You are now ready to use SpiraPlan® in conjunction with the source code tool yo
 
 
 ## Baselines
-NOTE: read about how baselining works and how to get started with it [here](../Spira-User-Manual/Release-Management.md/#baselining)
+NOTE: read about how baselining works and how to get started with it [here](../../Spira-User-Manual/Release-Management/#baselining)
 
 This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on. 
 

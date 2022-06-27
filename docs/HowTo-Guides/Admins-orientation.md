@@ -35,4 +35,4 @@ Users can only delete artifacts if their product role has the delete permission 
     - To see all deleted artifact go to Product Administration > Product History Changes (only accessible to product admins). You can filter this list by the action type (i.e. deletes), and the artifact type.
     - You can see who deleted an artifact by clicking on it from the above page. This will show you more information about the delete
     - You can revert any delete by clicking the "Revert" button. 
-    - Read more about product history [here](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes)
+    - Read more about product history [here](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes)

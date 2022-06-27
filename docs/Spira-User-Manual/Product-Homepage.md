@@ -309,11 +309,7 @@ This section displays a two dimensional matrix of the open risks logged against 
 
 
 ## Top Open Risks
-This widget displays a breakdown of the top open risks in the product, in order of decreasing risk exposure.
-
-![add widget popup](img/fmea-widget-add.png)
-
-For each row you see:
+This widget displays a breakdown of the top open risks in the product, in order of decreasing risk exposure. For each row you see:
 
 - **Risk name**: hovering shows more information about the risk, and clicking the name opens the risk details page
 - **Exposure**: the background color is consistent with that shown for exposure in other locations
