@@ -11,8 +11,8 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.0 (Summer 2022)
-Native plugins to allow deeper integrations with 3rd party tools like GitLab and Github right from inside SpiraPlan.
+### 7.1 (Late Summer 2022)
+More information to come shortly.
 
 ## Future Releases
 ### Planning
