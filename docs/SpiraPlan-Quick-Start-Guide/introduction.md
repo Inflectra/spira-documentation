@@ -110,24 +110,34 @@ The product home page shows various widgets containing key product metrics. Thes
 - Admin - custom properties
 
 ## Artifacts
-### Requirements
-Make the trip possible
-> Pack personal belongings
-> 
-Train to be an astronaut
+Creates 16 in total, which is about half of the current QSG - seems about right
 
+### Requirements
+Prepare the spaceship rq1 [rl2]
+> Pack my suitcase rq2 [rl2]
+> Take the right amount of rocket fuel rq3 [rl2]
+Get a cool spacesuit rq4 [rl3]
 
 ### Tasks
-
+buy a LOT of snacks tk1 [rq2]
+finalize flight path tk2 [rq3]
+Book a spacesuite test fitting tk3 [rq4]
+set 'out of office' before launch day tk4 [rl3]
 
 ### Risks
-
+Fly right on past Mars rk1 [rq3]
+Spaceship computer turns evil rk2 [rl3]
+> Be its friend mitgitation1
+> Know how to turn it off mitgitation2
 
 ### Test Cases
-
+Verify suitcase is well packed tc1 [rq2, rl2]
+Spaceship computer seems nice [rq1, rl2] 
 
 ### Releases
-
+Build spaceship rl1 [already complete]
+Prep for launch rl2 
+Lift off rl3
 
 ### Incidents
-
+There are too many snacks to fit in the suitcase in1 [tc1]
