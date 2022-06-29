@@ -1,6 +1,6 @@
 # META
 site_name: SpiraDocs
-copyright: © Copyright 2006-2021 Inflectra Corporation, All Rights Reserved | en-US
+copyright: © Copyright 2006-2022 Inflectra Corporation, All Rights Reserved | en-US
 
 repo_name: Inflectra
 repo_url: https://www.inflectra.com
@@ -154,6 +154,15 @@ nav:
     - Risks: Spira-Administration-Guide\Template-Risks.md
     - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
     - Notifications: Spira-Administration-Guide\Template-Notifications.md
+- SpiraApps: 
+  - Introduction to SpiraApps: SpiraApps\index.md
+  - FMEA: SpiraApps\FMEA.md
+  - GitLab: SpiraApps\GitLab.md
+  - GitHub: SpiraApps\GitHub.md
+  - CircleCI: SpiraApps\CircleCI.md
+  - Default Descriptions: SpiraApps\Default-Descriptions.md
+  - Task and Test Presets: SpiraApps\Task-Test-Presets.md
+  - Worx: SpiraApps\WorX.md
 - Reporting:
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
   - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
@@ -287,6 +296,7 @@ nav:
 - About:
   - Introduction to Spira: About/introduction-to-spira.md
   - Product Roadmap: About/roadmap.md
+  - Release Notes for v7: About/release-notes-v7.md
   - Release Notes for v6: About/release-notes-v6.md
   - Release Notes for v5: About/release-notes-v5.md
   - Release Notes for v4: About/release-notes-v4.md

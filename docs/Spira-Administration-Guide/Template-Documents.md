@@ -86,14 +86,14 @@ This page also allows you to define the behavior of the various document custom 
 
 You can set each of the fields/custom properties as being:
 
-- **Hidden**: The field / custom property will not be displayed when the document is in this status
-- **Disabled**: The field / custom property will be displayed, but will be greyed-out and read-only
-- **Required**: The field / custom property will be required when the document is in this status
+- **Default**: the field or custom property will be displayed as normal (it can be edited and also be left empty)
+- **Hidden**: the field or custom property will not be completely hidden
+- **Disabled**: the field or custom property will be displayed but read-only (and grayed-out)
+- **Required**: the field or custom property is required and cannot be empty
 
-Note that you cannot set a field/property as being required and either disabled or hidden since this would prevent a user from ever updating the document.
+After you have made the desired changes, click "Save".
 
-After you have made the changes, click the "Save" button.
-
+Note that **the "Versions" field has a special meaning**. It related to the Versions tab on the Document details page. When hidden, users are not able to see any version information (the whole tab is hidden). When disabled, users cannot upload a new version. When required, a new version must have been recently uploaded by the current user for the document to be saved, and no changes made to the document between the version being uploaded and now.  
 
 ## Example Workflow
 Below is a diagram that shows an example workflow (the one used by the sample product "Library Information System") for documents.

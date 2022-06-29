@@ -1,46 +1,56 @@
 # Using Spira with ServiceNow
+ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into SpiraPlan. Attachments will only be synced with creation.
 
-This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as SpiraPlan) in conjunction with tables in ServiceNow.
-
-!!! danger "Set up data synchronization"     **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
-
-ServiceNow tables are a highly configurable system that can now be used in conjunction with SpiraPlan. This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into SpiraPlan. Attachments will only be synced with creation.
+!!! danger "Set up data synchronization"     
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
 
 
 ## Configuring the Integration Service 
 
 This section outlines how to set up the integration service between ServiceNow and SpiraPlan. It assumes that you already have a working installation of SpiraPlan and appropriate ServiceNow tables. To setup the service, you must be logged into SpiraPlan as a user with System-Administrator level privileges.
 
-Inside SpiraPlan, go to the Administration page and navigate to the Integration \> Data Synchronization webpage. Check that you don't already have a Plug-In called "ServiceNowDataSync", as shown below:
+Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **ServiceNowDataSync**, as shown below:
 
 ![](img/Using_Spira_with_ServiceNow_223.png)
 
-If you already have a plug-in called **ServiceNowDataSync**, please click on its "edit" button, otherwise please click the "Add" button to create a new plug-in:
+!!! question "What do if the plug-in is not there"
+    If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
+
+    To start, fill in the following fields:
+
+    - Name: enter "ServiceNowDataSync" exactly
+    - Connection Info: enter the location of your ServiceNow account (see "SN URL" below)
+    - Login: enter your ServiceNow username
+
+    Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
+
+With the plug-in place, click on its "edit" button to open its detailed settings page.
+
+You need to fill out the following fields for the ServiceNow Data Sync plugin to work properly:
 
 ![](img/Using_Spira_with_ServiceNow_217.png)
 
-Now fill out this configuration page as follows:
-
 ![](img/Using_Spira_with_ServiceNow_224.png)
 
-You need to fill out the following fields for the ServiceNow Data Sync plugin to work properly:
 
 -   **Name**: This needs to be set to **ServiceNowDataSync**
 -   **Caption**: This is the display name of the plug-in, generally something generic like "ServiceNow" will work.
 -   **Description**: The description of what you're using the plug-in for. This field is entirely optional and is not used by the system in any way.
--   **Connection Info**: The location of your ServiceNow account. For example, if you're on a dev instance, your connection info should be https://devxxxxx.service-now.com
--   **Login**: Your ServiceNow username
--   **Password**: Your ServiceNow password
+-   **SN URL**: The location of your ServiceNow account. For example, if you're on a dev instance, your connection info should be https://devxxxxx.service-now.com
+-   **SN Login**: Your ServiceNow username
+-   **SN Password**: Your ServiceNow password
 -   **Time Offset**: Set this to how many hours *ahead* UTC is, so for EDT (UTC-4), you would put in *positive* 4.
--   **Auto-Map Users -- Set to yes** if you would like the plugin to map users one-to-one by checking first & last names. Set to no if you would like to map users manually.
--   **Custom 01**: The name of the table you would like to sync with incidents in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio.
--   **Custom 02**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.
--   **Custom 03**: The name of the table you would like to sync with requirements in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio. This *cannot* be the same as the table in Custom 01.
--   **Custom 04**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project a requirement is created in. This can be found in ServiceNow Studio under the column name.
+-   **Auto-Map Users**: Set to yes if you would like the plugin to map users one-to-one by checking first & last names. Set to no if you would like to map users manually.
+-   **Incidents Table**: The name of the table you would like to sync with incidents in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio.
+-   **Incidents Project Field**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.
+-   **Requirements Table**: The name of the table you would like to sync with requirements in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio. This *cannot* be the same as the "Incident Table".
+-   **Requirements Project Field**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project a requirement is created in. This can be found in ServiceNow Studio under the column name.
 
 ![](img/Using_Spira_with_ServiceNow_225.png)
 
-Custom 05 should be left blank. Once all those fields have been filled out, click the "Add" or "Save" button to save your changes.
+Click the "Save" button.
+
+NOTE: Leave any field called "(Not Used)" blank.
 
 
 ## Configuring Project Mappings
@@ -49,8 +59,8 @@ For this step, please ensure that you are in a SpiraPlan project you would like 
 
 Click on the "View Project Mappings" button for the ServiceNow Data Sync. You need to fill out the following fields to sync correctly:
 
-- **External Key** – A specific value that the table column name listed in *Custom 02/04* should have to map with this project (this must be a Choice field). For example, if the table column in ServiceNow that stores your project names is called "Project", and that column contains values like "alpha", "beta", "gamma", type "alpha" to map every alpha item to this product. In other words, do not type "Project".
--   **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
+- **External Key**: A specific value that the table column name listed in *Incidents Project Field/Requirements Project Field* should have to map with this project (this must be a Choice field). For example, if the table column in ServiceNow that stores your project names is called "Project", and that column contains values like "alpha", "beta", "gamma", type "alpha" to map every alpha item to this product. In other words, do not type "Project".
+- **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
 
 ![](img/Using_Spira_with_ServiceNow_226.png)
 

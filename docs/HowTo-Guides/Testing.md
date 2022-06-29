@@ -62,3 +62,28 @@ You may want to control who can edit test steps, and when they can edit them.
 - If "Test Steps?" is set to *disabled* for a status/step, noone will be able to edit test steps at all for test cases with that status
 
 Together, controlling who, and when, give you a lot of flexibility in managing your test steps (and other artifacts too).
+
+## Setting up scheduled test automation  {: .section-break}
+SpiraPlan gives users powerful ways to execute tests, integrate with external testing tools, and schedule automate testing right from inside the web application.
+
+Executing scheduled automated test cases in SpiraPlan needs the following setup:
+
+1. **Automation Engine Settings**: make sure the system level automation engines are setup correctly in SpiraPlan. To do so navigate to System Administration > Integration > [Test Automation](../../Spira-Administration-Guide/System-Integration/#test-automation).
+2. **Automation Engine Itself**: make sure you have an automation engine (application) installed and setup on a machine. For example, if using RemoteLaunch:
+
+    - Automation Host Token: is set to a specific text token that matches an Automation Host inside SpiraPlan (see #3 below)
+    - Polling Frequency: is correctly set to check with SpiraPlan if any test sets (see #4 below) can be executed. Note that you can click the "Force Poll" button in the Status monitor tab to poll immediately
+
+3. **Automation Host**: each product needs dedicated Automation Hosts. Setup one for each computer that is going to run an automated test case. Make sure that the token field is meaningful and unique (for example, that it is the same as the matching field in RemoteLaunch).
+
+    ![automation host and engine match](img/testing-automation1.png)
+
+4. **Test Set (with its test cases)**: create a test set to be the wrapper for your automated test (automated test cases can only be executed within a test set). Make sure to set the following fields on the test set:
+
+    - Automation Host: the correct host from the list (this comes from #2  and #3 above)
+    ![](img/testing-automation2.png)
+    - Planned Date: the date and time that you want the scenario to begin. Your Automation Engine will being execution the first time it polls for tests to execute after this time.  Please note that test sets are executed in order of their ID, when multiple items have the same execution date and time
+    - Status: this should be set to "Not Started" 
+    - Parameters: if you have parameterized test cases inside the automated test set, review their values or settings.
+
+5. **Wait**: when your planned dates go by, the automation engine will query for any tests that are now ready for its specific automation host and will then execute the test, reporting the results back to SpiraPlan.

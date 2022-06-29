@@ -172,7 +172,7 @@ You can click on the expand/collapse icons to hide any resources that are not re
 
 ![](img/Task_Tracking_309.png)
 
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain tasks that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the tasks between resources or to/from the release/sprint backlog. Any tasks not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
+Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain tasks that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the tasks between resources or to/from the release/sprint backlog (as long as the item has a status that let's you set or edit its owner field). Any tasks not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
 
 
 ### Tasks - By Release

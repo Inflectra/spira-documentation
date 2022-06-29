@@ -25,5 +25,8 @@ This widget shows the active components for the product. By default, 5 component
 ## Source Code
 If a source code provider has been set up by a system administrator and is active for the current product, it will be displayed here. Click View Details to configure it. 
 
+## SpiraApps
+This widget shows a list of all active SpiraApps at the system level. It shows the SpiraApp icon and name, its system active status (which will always be Yes), and whether or not it is enabled for the product.
+
 ## Data Synchronization
 If any Data Sync plug-ins have been set up by a system administrator, they will be displayed here. Click View Details to see more details and to configure them for the current product.

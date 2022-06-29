@@ -1,11 +1,12 @@
 # GitHub Actions
 
 ## Introduction
-SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with GitHub in a number of ways. In this section we discuss SpiraPlan's GitHub Actions integration.
+SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with GitHub in a number of ways. In this section we discuss SpiraPlan's GitHub Actions reporting integration.
 
 You can easily configure your GitHub Actions to report against a release and create a new build in SpiraPlan each time they run. This let's you see the health of your CI/CD process within SpiraPlan. 
 
-**Note**: this integration requires SpiraPlan 6.16+.
+!!! check "GitHub SpiraApp"
+    You can also let end users start GitHub Actions from within SpiraPlan itself. To do so you will need to [enable and configure the GitHub SpiraApp](../../SpiraApps/GitHub)
 
 The integration has two parts, which are discussed below:
 
@@ -66,7 +67,7 @@ Second, you need to add a dedicated webhook. This means that when the GitHub Act
 - Enter the Payload URL (see below)
 - Set the content type to "application/json"
 - The secret field is not used by SpiraPlan can be left blank
-- For webhook triggers, the default options will work. If you wish to select individual events you must enable "Workflow runs"
+- For webhook triggers, **you cannot use the default setting**. Either select "Send me everything" or "Let me select individual events" and enable "Workflow runs"
 - Click "Add webhook"
 
 ![Add webhook page](img/github-actions-repo-webhook.png)
@@ -83,7 +84,7 @@ Second, you need to add a dedicated webhook. This means that when the GitHub Act
 
 ## Run the Action
 
-When an Action on the GitHub project next runs it will report its results to SpiraPlan. SpiraPlan reads the product token to know what product the Action is for. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the GitHub Action was run against.
+When an Action on the GitHub project next runs (either from GitHub, or with the GitHub SpiraApp) it will report its results to SpiraPlan. SpiraPlan reads the product token to know what product the Action is for. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the GitHub Action was run against.
 
 SpiraPlan creates a build against that release, with the key information, including the build status.
 

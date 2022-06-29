@@ -162,7 +162,9 @@ You are now ready to use SpiraPlan® in conjunction with the source code tool yo
 
 
 ## Baselines
-This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on.
+NOTE: read about how baselining works and how to get started with it [here](../../Spira-User-Manual/Release-Management/#baselining)
+
+This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on. 
 
 ![product baseline list page](img/product_baseline_list.png)
 
@@ -235,3 +237,44 @@ This table shows the following columns. You can apply a filter using any of the 
 - New Value
 - Changed By
 - Change Type
+
+
+## SpiraApps
+The SpiraApps page shows product administrators every SpiraApp currently active in the system, sorted alphabetically[^app-compatibility].
+
+[^app-compatibility]: SpiraApps are shown even if they will not fully function in your application. For instance, the FMEA SpiraApp is only compatible with SpiraPlan but will still show in the list if you are using SpiraTest or SpiraTeam. 
+
+![SpiraApp list page view](img/Product_SpiraApps_List.png)
+
+For each SpiraApp in the list you see:
+
+- Its icon and name
+- The author orgnanization (e.g. Inflectra Corporation)
+- A short summary description of what the SpiraApp does
+- If the SpiraApp has been enabled for this product (in the screenshot above 3 of the 4 SpiraApps are Enabled)
+- Available operations
+
+    - Settings: opens the [product settings page](#spiraapp-settings) for the particular SpiraApp
+    - Enable/Disable: click the button to toggle if the SpiraApp is enabled or not for the product
+
+
+## SpiraApp Settings
+The SpiraApp Settings page shows any product level settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../../SpiraApps) 
+
+If the SpiraApp has no product settings you can still access the page but there will be no settings to edit.
+
+![SpiraApp list page view](img/Product_SpiraApps_Settings_None.png)
+
+If the SpiraApp has products settings you will see:
+
+- Some instructions about how edit the settings on the page (at the top of the page)
+- One or more grouping of settings
+- Within each group a list of avaiable settings:
+
+    - the setting name
+    - a tooltip about how to fill in the setting by hovering over the setting name
+    - the field to edit (when empty this may show some placeholder text).
+
+![SpiraApp list page view](img/Product_SpiraApps_Settings.png)
+
+Click the "Save" button to commit any edits.

@@ -82,6 +82,7 @@ NOTE: **Baselining is only available in SpiraTeam and SpiraPlan**.
 
     Once a product has baselines, product owners can explore each baseline to see what artifacts were added, changed, or deleted in a baseline.
 
+
 Here is a step by step overview on getting started with baselines:
 
 - First, enable baselining for your specific product via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. You have to a system or product admin to do this
@@ -96,6 +97,14 @@ Here is a step by step overview on getting started with baselines:
 [Below](#baselines) is more information below about how to create, edit, delete, and view your baselines against a specific release.
 
 **Product admins / product owners** can use the dedicated admin [list](../../Spira-Administration-Guide/Product-General-Settings/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details), to see all the artifacts changed, added, or deleed in a baseline.
+
+**What is captured when baselining is turned on?** Baselining leverages the change tracking tools built into SpiraPlan already. It does this by using the history stored against each artifact in the product to track what has changed between any two baselines. Some additional information is captured only when baselining is turned on (both for baselining use and general history tracking):
+
+- Reordering of test steps (shown as history changes to the test case)
+- Reordering of use case steps (shown as history changes to the use case)
+- Reordering of risk mitigations (shown as history changes to the risk)
+- Changes to test coverage on requirements (shown as history changes to the requirement)
+- Changes to test coverage on releases (shown as history changes to the release)
 
 
 ## Release List
@@ -413,7 +422,7 @@ You can perform the following actions on a task from this screen:
 - **Delete**: deletes the task from the product.
 - **Refresh**: updates the list of requirements and tasks from the server, useful if other people are adding requirements and/or tasks to this release/sprint at the same time.
 - You can **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
-- **Edit**: Clicking the "***Edit***" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable.
+- **Edit**: Clicking the "***Edit***" button to the right of the requirement or task allows you to edit the item inline directly on this screen. Only columns visible will be editable and task status cannot be edited.
 - **Show Level**: Allows you to quickly expand/collapse all the requirements in the list.
 
 

@@ -1,6 +1,7 @@
 # Using SpiraPlan with Jira Cloud
+
 ## Introduction
-By integrating SpiraTest, SpiraTeam or SpiraPlan (called SpiraPlan from here on out) and Jira Cloud your teams can work seamlessly across both applications. 
+By integrating SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on) and Jira Cloud your teams can work seamlessly across both applications. 
 
 For example, the quality assurance team can manage their requirements and test cases in SpiraPlan, and execute test runs in SpiraPlan. Incident generated during testing wil be automatically loaded into JIRA as new issues. The development team, working in Jira, can then manage the lifecycle of these issues in JIRA. When they change the issue status or add comments, these changes are quickly updated to match back in SpiraPlan. You can choose which sort of Jira issues are made into incidents in SpiraPlan, and which get created as requirements (based on the issue type). This can be used as part of the planning and testing lifecycle.
 
@@ -15,7 +16,6 @@ With this integration you can, for each project/product you want to sync up:
 - connect together users so the right user is flagged against each issue and  incident
 
 **Prerequisites**: The Jira Cloud plugin supports SpiraPlan v5.0 or later and the most recent version of Jira cloud hosted by Atlassian. For Jira Server, we have an alternate [Jira Server plugin](../Using-SpiraTeam-with-JIRA-5+) available.
-
 
 !!! danger "DO THIS FIRST"
     ## Set up the data synchronization
@@ -36,19 +36,22 @@ Now you need to configure the Jira integration to let you:
 - import new issues from JIRA
 - pick up subsequent status changes in JIRA and have them update SpiraPlan. 
 
-To do this, you need to tell SpiraPlan how to access your JIRA instance. 
-
-- Open SpiraPlan in your browser 
-- Login using a valid system administrator account
-- Go to System Administration > Integrations > Data Synchronization
+To do this, you need to tell SpiraPlan how to access your JIRA instance. Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **JiraDataSync**, as shown below:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_16.png)
 
-This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.
+!!! question "What do if the plug-in is not there"
+    If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
 
-If you already see an entry for **JiraDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, click `Add`. 
+    To start, fill in the following fields:
 
-You will now be on a page like the one below. Here you can enter or modify the JIRA Data-Synchronization plug-in:
+    - Name: enter "JiraDataSync" exactly
+    - Connection Info: enter the the full URL to the JIRA installation (see "Jira URL" below)
+    - Login: enter your Atlassian cloud login
+
+    Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
+
+With the plug-in place, click on its "edit" button to open its detailed settings page.
 
 ![](img/JiraCloud-Plugin-Config1.png)
 
@@ -57,10 +60,10 @@ You need to fill out the following fields for the JIRA Plug-in to operate correc
 - **Name**: this needs to be set to **JiraDataSync**.
 - **Caption**: this is the display name of the plugin. Normally you can use something generic such as "Jira", however if you have multiple JIRA instances you might want to name it something specific such as "Jira External". If you don't enter a value, the display name will be "JiraDataSync"
 - **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
-- **Connection Info**: this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
+- **Jira URL**: this should the full URL to the JIRA installation being connected to (including any custom port numbers). Entering this URL into a web browser should bring up the JIRA login page.
 -   It is typically of the form: <https://mycompany.atlassian.net>
-- **Login**: this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.
-- **Password**: this should be set to the **API Key** (*not password*) of the Atlassian login specified above.
+- **Jira Login**: this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA. Typically this is your Atlassian email address.
+- **Jira API Key**: this should be set to the **API Key** (*not password*) of the Atlassian login specified above.
 
 ![](img/JiraCloud-Plugin-Config2.png)
 
@@ -71,21 +74,21 @@ time-zones here.
     - **Set to Yes**: all users in SpiraPlan need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
     - **Set to No**: users in SpiraPlan and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
-- **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraPlan Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
-- **Custom 02**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
-- **Custom 03**: This determines how the synchronization of incidents works:
+- **Severity Field**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraPlan Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Task Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
+- **Sync Direction**: This determines how the synchronization of incidents works:
 
     - **Default (leave blank)**: By default the plugin will log new issues from SpiraPlan to JIRA, and from JIRA to SpiraPlan. Updates will only occur from JIRA to SpiraPlan. *NOTE: This is the recommended option for most users.*
     - **"True"**: If you enter the word "True" in this setting, the plugin will log new issues from SpiraPlan to JIRA. It will NOT log new issues from JIRA into SpiraPlan. Updates will only occur from JIRA to SpiraPlan.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraPlan.
     - **"Both"**: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraPlan and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
     
-- **Custom 04**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents (user stories/epics will not be synced at all).
-- **Custom 05**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
+- **Requirement Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents (user stories/epics will not be synced at all).
+- **Link Type**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
 !!! info
-    For most users, we recommend leaving Custom 01, Custom 02, and Custom 03 blank. Leave Custom 04 blank too if you do not want sync user stories/requirements.
+    For most users, we recommend leaving these fields blank: "Severity Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do not want sync user stories/requirements.
 
 
 ## Configuring the Data Mapping
@@ -118,6 +121,7 @@ Enter in the URL, login and password/API Key for your JIRA instance and click **
 
 Choose the project in JIRA that you will be connecting to SpiraPlan and then the list of issue types, issue statuses, issue priorities, components, versions and custom fields will be displayed. We will be using this tool later on when you want to get some of the ID values to populate in SpiraPlan .
 
+
 ### Configuring the Project Mapping
 
 From the data synchronization administration page, you need to click on the "View Product Mappings" hyperlink next to the JIRA plug-in name. This will take you to the data-mapping home page for the currently selected product:
@@ -141,6 +145,7 @@ Click "Update" to confirm these settings. Once you have enabled the product for 
     One SpiraPlan product can only be mapped to one Jira project, in other words it is a one-to-one mapping.
     
     Once you have successfully configured the product, when creating a new product, you should choose the option to "Create product from Existing product" rather than "Use Default Template" so that all the product mappings get copied across to the new product.***
+
 
 ### Configuring the User Mapping
 
@@ -192,6 +197,7 @@ The JIRA ID can be found using the Jira Configuration Helper using the
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_26.png)
 
+
 ### Configuring the Standard Field Mapping
 
 Now that the products, users and releases have been mapped correctly, we need to configure the standard incident and requirement fields. To do this, go to Administration \> System \> Data Synchronization and click on the "View Product Mappings" for the JiraDataSync plug-in entry:
@@ -199,6 +205,7 @@ Now that the products, users and releases have been mapped correctly, we need to
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
 
 From this screen, you need to click on Priority, Severity, Component, Status and Type in turn to configure the incident field mappings. If you're using the option to have JIRA also synchronize some issue types as requirements, then you'll need to also configure the Requirement Importance, Type, Component and Status fields.
+
 
 #### a) Incident Type
 
@@ -212,6 +219,7 @@ The table lists each of the incident types available in SpiraPlan and provides y
 The JIRA ID can be found by using the **Issue Types** tab of the Jira configuration helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
+
 
 #### b) Incident Status
 
@@ -228,6 +236,7 @@ The JIRA ID can be found by using the **Issue Statuses** tab of the Jira configu
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
+
 #### c) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:
@@ -239,6 +248,7 @@ The table lists each of the incident priorities available in SpiraPlan and provi
 The JIRA ID can be found by using the **Issue Priorities** tab of the Jira configuration helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
+
 
 #### d) Incident Component (Optional)
 
@@ -252,6 +262,7 @@ The JIRA ID can be found by using the **Components** tab of the Jira configurati
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
+
 #### e) Incident Severity (Optional)
 
 Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:
@@ -264,9 +275,10 @@ Once you have created a custom field in JIRA to contain the list of severity val
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_37.png)
 
-On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **Custom 01 property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
+On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **"Severity Field" property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
+
 
 #### f) Requirement Status (Optional)
 
@@ -306,6 +318,7 @@ The JIRA ID can be found by using the **Issue Types** tab of the Jira configurat
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
+
 #### i) Requirement Component (Optional)
 
 Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen:
@@ -317,6 +330,7 @@ The table lists each of the components available in SpiraPlan and provides you w
 The JIRA ID can be found by using the **Components** tab of the Jira configuration helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
+
 
 #### j) Task Status (Optional)
 
@@ -356,6 +370,7 @@ The JIRA ID can be found by using the **Issue Types** tab of the Jira configurat
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
+
 ### Configuring the Custom Property Mapping
 
 Now that the various SpiraPlan standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in SpiraPlan that map to custom fields in JIRA and also for custom properties in SpiraPlan that are used to map to standard fields in JIRA (Environment, Resolution and SecurityLevel) that don't exist in SpiraPlan.
@@ -363,6 +378,7 @@ Now that the various SpiraPlan standard fields have been mapped correctly, we ne
 From the View/Edit Product Data Mapping screen, you need to click on the name of the Incident or Requirement Custom Property that you want to add data-mapping information for. We will consider the four different types of mapping that you might want to enter:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
+
 
 #### a) Scalar Custom Properties
 
@@ -378,6 +394,7 @@ You need to lookup the ID of the custom field in JIRA that matches this custom p
 The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
+
 
 #### b) List Custom Properties
 
@@ -395,6 +412,7 @@ Next for each of the Property Values in the table (in the lower half of the page
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_45.png)
 
+
 #### c) JIRA's Resolution Field
 
 If you would like the values of the JIRA '**Resolution'** field to be synchronized back to SpiraPlan, then you will need to fill out this section. You first need to create an incident custom property in SpiraPlan of type 'LIST' that contains the various resolution names that exist inside JIRA.
@@ -409,6 +427,7 @@ Next for each of the Property Values in the table (in the lower half of the page
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_resolution.png)
 
+
 #### d) JIRA's Environment Field
 
 If your instance of JIRA requires that all new issues are submitted with an 'Environment' description specified, then you will need to fill out this section. You first need to create an incident custom property in SpiraPlan of type 'TEXT' that will be used to store the environment description within SpiraPlan.
@@ -418,6 +437,7 @@ Then click on the hyperlink of this new list custom property under Incident Cust
 ![](img/Using_SpiraTeam_with_JIRA_5+_47.png)
 
 All you need to do on this screen is enter the word "**Environment**" in the External Key textbox and the data-sync plug-in will know that this custom property is mapped to the built-in Environment field in JIRA.
+
 
 #### e) JIRA's Security Level Field
 
@@ -432,6 +452,7 @@ First you need to enter the word "**SecurityLevel**" as the External Key of the 
 
 Next for each of the Property Values in the table (in the lower half of the page) you need to enter the JIRA ID of the various Security Levels that are configured in JIRA. The external ID can be found by looking at the URL inside JIRA which choosing to View/Edit the security level name/description.
 
+
 #### f) JIRA's Issue Key Field
 
 To see the Jira ID on the Incident list page you need to create a SpiraPlan custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). The Jira DataSync id field will always show up on the details page, but not the list page. So if you wish to see the Jira ID on the list page follow these steps:
@@ -442,6 +463,7 @@ To see the Jira ID on the Incident list page you need to create a SpiraPlan cust
 ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
 - Enter the word "**JiraIssueKey**" in the External Key textbox. Hit Save. The data-sync plug-in will know that this custom property needs to be mapped to the built-in Issue Key field in JIRA.
+
 
 ## Using SpiraPlan with JIRA
 Now that all the mappings are done, you are now ready to use the integration.
@@ -466,11 +488,13 @@ To use SpiraPlan with JIRA on an ongoing basis, we recommend:
 
 You are now able to perform test coverage and incident reporting inside SpiraPlan /SpiraPlan using the test cases managed by SpiraPlan /SpiraPlan and the incidents managed on behalf of SpiraPlan /SpiraPlan inside JIRA.
 
+
 ### JIRA's Issue Key Field
 
 SpiraPlan automatically stores the unique id for each Jira issue that syncs with a SpiraPlan artifact. This field is visible on the artifact details page, in the "Properties" section. The field in SpiraPlan will be named based off plugin name in System Admin > Data Synchronization. The unique key in this field matches the one you will see in Jira for an issue: 
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
+
 
 ## Using the Jira Cloud Connector
 

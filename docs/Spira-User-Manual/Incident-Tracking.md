@@ -248,7 +248,7 @@ This view is designed to let you see the incidents in the current product / rele
 
 You can click on the expand/collapse icons to hide any people that are not relevant. The system will display a progress bar for each resource to illustrate the allocation for that resource. Any resource that has a progress bar that is completely green has been fully scheduled and should not have any additional incidents assigned. If the progress bar for that resource turns red, it means that they have been over-scheduled and you need to reassign some of the incidents.
 
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain incidents that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the incidents between resources or to/from the release/sprint backlog. Any incidents not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
+Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain incidents that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the incidents between resources or to/from the release/sprint backlog (as long as the item has a status that let's you set or edit its owner field). Any incidents not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
 
 
 ### Incidents - By Release
