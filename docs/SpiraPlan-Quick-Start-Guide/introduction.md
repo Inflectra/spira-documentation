@@ -30,8 +30,6 @@ This Quick Start Guide is split into different parts. You can dip into any part 
   style id1 fill:#fdcb26
 ```
 
-
-
 ## Application Overview
 
 !!! info "What you will learn"
@@ -72,3 +70,64 @@ For this tutorial we want to start with an empty product that has no data in it,
 The product home page shows various widgets containing key product metrics. These are empty now, because the product has no data in it. In the rest of this guide we are going to fix that.
 
 ### Artifacts
+
+
+
+# NOTES
+## Structure
+1. Planning (making stuff and linking)
+
+- What are your major goals (req)
+- Make some tasks for reqs (2 ways)
+- Think about the risks
+- Check your goals are being met with tests (TC - and link to RQ)
+- Plan your time with sprints
+- Map your work to sprints (add RQ to RL, TC to RL)
+
+2. Doing the work (editing)
+
+- Using the workflows on details pages - complete tasks, progress requirements (auto settings)
+- Move other things around using planning boards
+
+3. Checking your work (QA)
+
+- QA your goals and find a bug (test execution)
+- Triage your incidents
+
+4. Big picture review
+
+- Are you ready to launch? Using home pages
+- Ideally 1 or 2 small issues outstanding - resolve
+- Ready to release!
+
+5. Advanced section:
+
+- Test sets
+- Test parameters
+- Admin - planning
+- Admin - make a product
+- Admin - components
+- Admin - custom properties
+
+## Artifacts
+### Requirements
+Make the trip possible
+> Pack personal belongings
+> 
+Train to be an astronaut
+
+
+### Tasks
+
+
+### Risks
+
+
+### Test Cases
+
+
+### Releases
+
+
+### Incidents
+
