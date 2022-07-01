@@ -2,7 +2,7 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
-This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create 8 preset development tasks against a requirement, or generate 4 approval tasks for another requirement. Note that Tasks are not available in SpiraTest
+This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.
 
 !!! info "About this SpiraApp"
     - [ ] system settings
@@ -19,16 +19,18 @@ Once the SpiraApp has been activated system wide, and enabled for a product you 
 
 To create task or test case presets, fill in the relevant text boxes (tasks and test cases for requirements, and tasks and test cases for releases). Each preset should be on its own line. 
 
-Start each line with the preset name, then a colon, then a comma separated list of artifact names. To give the artifact a type add a | and the type name after the artifact name. Example task preset: 
+Start each line with the preset name, then a colon, then a comma separated list of artifact names. To give the artifact a type add a | and the type name after the artifact name. 
 
-`Development Checklist:Design Screen,Develop Screen,Write Test Cases|Testing,Update Documentation`.
+!!! info "Example task preset"
 
-In this example we are creating a preset:
+    `Development Checklist:Design Screen,Develop Screen,Write Test Cases|Testing,Update Documentation`.
 
-- called "Development Checklist"
-- it has 4 tasks in it
-- The "Write Test Cases" tasks should have a specific type of "Testing"
-- The 3 other tasks will get the default task type
+    In this example we are creating a preset:
+
+    - called "Development Checklist"
+    - it has 4 tasks in it
+    - The "Write Test Cases" tasks should have a specific type of "Testing"
+    - The 3 other tasks will get the default task type
 
 ## Using the SpiraApp
 When a user goes to the requirement or release details page, they will see an extra button in the toolbar. To add a preset group of tasks or test cases they should follow these steps:

@@ -249,7 +249,7 @@ The SpiraApps page shows product administrators every SpiraApp currently active 
 For each SpiraApp in the list you see:
 
 - Its icon and name
-- The author orgnanization (e.g. Inflectra Corporation)
+- The author organization (e.g. Inflectra Corporation)
 - A short summary description of what the SpiraApp does
 - If the SpiraApp has been enabled for this product (in the screenshot above 3 of the 4 SpiraApps are Enabled)
 - Available operations
@@ -269,7 +269,7 @@ If the SpiraApp has products settings you will see:
 
 - Some instructions about how edit the settings on the page (at the top of the page)
 - One or more grouping of settings
-- Within each group a list of avaiable settings:
+- Within each group a list of available settings:
 
     - the setting name
     - a tooltip about how to fill in the setting by hovering over the setting name

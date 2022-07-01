@@ -205,7 +205,7 @@ The SpiraApps page shows system administrators every SpiraApp currently installe
 For each SpiraApp in the list you see:
 
 - Its icon and name
-- The author orgnanization (e.g. Inflectra Corporation)
+- The author organization (e.g. Inflectra Corporation)
 - A short summary description of what the SpiraApp does
 - If the SpiraApp has been activated for the system (in the screenshot above 4 of the7  SpiraApps are Active)
 - Available operations
@@ -225,7 +225,7 @@ If the SpiraApp has system level settings you will see:
 
 - Some instructions about how edit the settings on the page (at the top of the page)
 - One or more grouping of settings
-- Within each group a list of avaiable settings:
+- Within each group a list of available settings:
 
     - the setting name
     - a tooltip about how to fill in the setting by hovering over the setting name

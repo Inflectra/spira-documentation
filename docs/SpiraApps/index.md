@@ -48,7 +48,7 @@ SpiraApps can do a range of different types of things:
 - Communicate securely with external services (like CI/CD or load testing tools) to, for instance, trigger a new build or test to run
 - Respond to events while looking at an artifact, such as saving or creating a new artifact, to update pre-configured fields. This can be used to update a custom field based on a calculation every time an artifact is saved
 
-Some SpiraApps may use only one of the features, others may use multiple. Some may be available on one only place of the application, others across multiple places and pages
+Some SpiraApps may use only one of the features, others may use multiple. Some may be available in a single part of the application, others across multiple places and pages.
 
 ## Available SpiraApps
 You can learn more about each of the currently available SpiraApps by accessing the other pages in this section of the documentation (see the menu on the left).

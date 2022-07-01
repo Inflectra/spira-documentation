@@ -18,11 +18,11 @@ To effectively implement FMEA in your product, you have to set up the fields tha
 ### Product Template Setup
 In the product template for each product that uses FMEA, you need to setup a few different fields:
 
-**1. Create a dedectability list** to store all the options available for detectability
+**1. Create a detectability list** to store all the options available for detectability
 
 - Go to Product Template Administration > Custom Properties > Edit Custom Lists
 - Create a dedicated custom list that will store the different options for "Detectability". You can call this list whatever you want, but we suggest something meaningful like "Detectabilities"
-- Add values to your custom list, where each  names in the list is in the format of "{number} - Name". For example, "1 - Very High", "3 - Moderate", and "5 - Very Low"
+- Add values to your custom list, where each name in the list is in the format of "{number} - Name". For example, "1 - Very High", "3 - Moderate", and "5 - Very Low"
 - You can have as many values as you like. The numbers at the front of the names are used to calculate the RPN (along with the probability and impact) and normally higher numbers means greater overall levels of risk.
 
 **2. Create a detectability property** to set the detectability of each risk
@@ -36,7 +36,7 @@ In the product template for each product that uses FMEA, you need to setup a few
 - Go to Product Template Administration > Risks > Custom Properties
 - Create a new custom custom property of type Integer. We recommend calling this "RPN"
 
-**4. Optionally, update workflows**. This is not required, but we recommend make the following changes to all risk workflows in templates whose products will use FMEA:
+**4. Optionally, update workflows**. This is not required, but we recommend making the following changes to all risk workflows in templates whose products will use FMEA:
 
 - Make the "Detectability" custom property required in all workflow steps where the standard risk fields "Probability" and "Impact" are required. This will ensure that the "Detectability" value is completed properly
 - Disable the "RPN" custom property for all workflow steps. This field is used to display the RPN number. It is calculated automatically as part of this SpiraApp and should not be adjusted by a user
