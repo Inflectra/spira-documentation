@@ -5771,7 +5771,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest</p>
 </div>
-<p>This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create 8 preset development tasks against a requirement, or generate 4 approval tasks for another requirement. Note that Tasks are not available in SpiraTest</p>
+<p>This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.</p>
 <div class="admonition info">
 <p class="admonition-title">About this SpiraApp</p>
 <ul class="task-list">
@@ -5787,7 +5787,9 @@
 <p>Once the SpiraApp has been activated system wide, and enabled for a product you can edit its product settings.</p>
 <p><img alt="product settings page" src="../img/taskTestPresets-product-settings.png" /></p>
 <p>To create task or test case presets, fill in the relevant text boxes (tasks and test cases for requirements, and tasks and test cases for releases). Each preset should be on its own line. </p>
-<p>Start each line with the preset name, then a colon, then a comma separated list of artifact names. To give the artifact a type add a | and the type name after the artifact name. Example task preset: </p>
+<p>Start each line with the preset name, then a colon, then a comma separated list of artifact names. To give the artifact a type add a | and the type name after the artifact name. </p>
+<div class="admonition info">
+<p class="admonition-title">Example task preset</p>
 <p><code>Development Checklist:Design Screen,Develop Screen,Write Test Cases|Testing,Update Documentation</code>.</p>
 <p>In this example we are creating a preset:</p>
 <ul>
@@ -5796,6 +5798,7 @@
 <li>The "Write Test Cases" tasks should have a specific type of "Testing"</li>
 <li>The 3 other tasks will get the default task type</li>
 </ul>
+</div>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <p>When a user goes to the requirement or release details page, they will see an extra button in the toolbar. To add a preset group of tasks or test cases they should follow these steps:</p>
 <ul>
