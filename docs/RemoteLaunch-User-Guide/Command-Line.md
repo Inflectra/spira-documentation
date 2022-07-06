@@ -173,7 +173,7 @@ the user that ran RemoteLaunch.
         - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
     - Any arguments for the command-line tool, with the filename specified as
-${filename}. This special token will be replaced by the actual filename
+{filename}. This special token will be replaced by the actual filename
 of the test script when RemoteLaunch downloads it from SpiraTeam. In
 addition, you can use the following additional tokens for some of the
 special SpiraTeam ID values:
@@ -187,7 +187,7 @@ special SpiraTeam ID values:
         - \[ProjectId\] -- the ID of the project
 
     - An example filename would be:
-C:\\Temp\\TestApp.exe\|-arg1 -arg2 "-arg3=${filename}"\|
+C:\\Temp\\TestApp.exe\|-arg1 -arg2 "-arg3={filename}"\|
 
 - **Document Type** -- If using SpiraTeam (not SpiraTest) you can choose
 which document type the automated test script will be categorized under.
