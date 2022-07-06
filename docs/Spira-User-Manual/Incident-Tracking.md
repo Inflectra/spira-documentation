@@ -132,11 +132,42 @@ This section displays the general schedule and completion status of the specific
 - actual effort
 - remaining effort
 
-From the above values, the system will display the calculated percent completion, progress indicator and projected (final) effort. 
-
 Any custom date fields set up by the system administrator or product owner will also appear in this section (as shown below with the Review Date field).
 
 ![](img/Incident_Tracking_246.png)
+
+!!! info "Calculating Incident Progress"
+    To help you better track incidents, there are three special calculated fields used for showing the progress of the incident:
+    
+    - projected effort
+    - percent complete
+    - progress indicator
+
+    **Projected Effort** is calculated by adding "Actual Effort" and "Remaining Effort" together.
+
+    **Percent Complete** is calculated as follows:
+    
+    - work out the effort already made by substracting "Remaining Effort" from "Estimated Effort"
+    - divide the above by the "Estimated Effort"
+    - in other words Percent Complete = `(Est. Effort - Remaining Effort) / Est. Effort * 100`
+    - For example, if Est. Effort is 7 hours and the Remaining effort is 1 hour, then the Percent Complete is about 85%
+
+    The **Progress Indicator** is a colorful progress bar of the percent completion:
+    
+    | Progress Indicator Color | Incident Progress % | Start Date Value      |
+    |--------------------------|---------------------|-----------------------|
+    | Fully gray               | 0%                  | None or in the future |
+    | Fully yellow             | 0%                  | In the past           |
+    | Partly green             | Between 0% and 100% | Anything              |
+    | Fully green              | 100%                | Anything              |
+
+    Examples of the progress indicator are shown in the screenshots below:
+
+    ![gray indicator](img/Incident_Tracking_ProgressGray.png)
+    ![yellow indicator](img/Incident_Tracking_ProgressYellow.png)
+    ![green indicator](img/Incident_Tracking_ProgressGreen.png)
+
+    Note, that unlike for tasks, the progress bar will never be red (because incidents do not have an end (due) date).  
 
 
 ### Attachments
