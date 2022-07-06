@@ -6303,9 +6303,62 @@
 <li>actual effort</li>
 <li>remaining effort</li>
 </ul>
-<p>From the above values, the system will display the calculated percent completion, progress indicator and projected (final) effort. </p>
 <p>Any custom date fields set up by the system administrator or product owner will also appear in this section (as shown below with the Review Date field).</p>
 <p><img alt="" src="../img/Incident_Tracking_246.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Calculating Incident Progress</p>
+<p>To help you better track incidents, there are three special calculated fields used for showing the progress of the incident:</p>
+<ul>
+<li>projected effort</li>
+<li>percent complete</li>
+<li>progress indicator</li>
+</ul>
+<p><strong>Projected Effort</strong> is calculated by adding "Actual Effort" and "Remaining Effort" together.</p>
+<p><strong>Percent Complete</strong> is calculated as follows:</p>
+<ul>
+<li>work out the effort already made by substracting "Remaining Effort" from "Estimated Effort"</li>
+<li>divide the above by the "Estimated Effort"</li>
+<li>in other words Percent Complete = <code>(Est. Effort - Remaining Effort) / Est. Effort * 100</code></li>
+<li>For example, if Est. Effort is 7 hours and the Remaining effort is 1 hour, then the Percent Complete is about 85%</li>
+</ul>
+<p>The <strong>Progress Indicator</strong> is a colorful progress bar of the percent completion:</p>
+<table>
+<thead>
+<tr>
+<th>Progress Indicator Color</th>
+<th>Incident Progress %</th>
+<th>Start Date Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fully gray</td>
+<td>0%</td>
+<td>None or in the future</td>
+</tr>
+<tr>
+<td>Fully yellow</td>
+<td>0%</td>
+<td>In the past</td>
+</tr>
+<tr>
+<td>Partly green</td>
+<td>Between 0% and 100%</td>
+<td>Anything</td>
+</tr>
+<tr>
+<td>Fully green</td>
+<td>100%</td>
+<td>Anything</td>
+</tr>
+</tbody>
+</table>
+<p>Examples of the progress indicator are shown in the screenshots below:</p>
+<p><img alt="gray indicator" src="../img/Incident_Tracking_ProgressGray.png" />
+<img alt="yellow indicator" src="../img/Incident_Tracking_ProgressYellow.png" />
+<img alt="green indicator" src="../img/Incident_Tracking_ProgressGreen.png" /></p>
+<p>Note, that unlike for tasks, the progress bar will never be red (because incidents do not have an end (due) date).  </p>
+</div>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
