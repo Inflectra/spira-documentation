@@ -35,9 +35,9 @@
     * **SpiraApps Administration**
 
         - The [system SpiraApps list page](../../Spira-Administration-Guide/System/#spiraapps) lets admins see all available SpiraApps and enable or disable them [RQ:4200]
-        - The [system SpiraApps settings page](../../Spira-Administration-Guide/System/#spiraapps-settings) let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
+        - The [system SpiraApps settings page](../../Spira-Administration-Guide/System/#spiraapp-settings) let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
         - The [product SpiraApps list page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapps) lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
-        - The [product SpiraApps settings page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapps-settings) let users manage any product-level settings for the SpiraApp [RQ:4203]
+        - The [product SpiraApps settings page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapp-settings) let users manage any product-level settings for the SpiraApp [RQ:4203]
        
     * **[SpiraApps](../../SpiraApps) Architecture**
 
