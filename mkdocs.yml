@@ -183,6 +183,7 @@ nav:
     - Selenium: RemoteLaunch-User-Guide\Selenium.md
     - Squish: RemoteLaunch-User-Guide\Squish.md
     - Command-Line: RemoteLaunch-User-Guide\Command-Line.md
+    - Eggplant: RemoteLaunch-User-Guide\Eggplant.md
     - LoadRunner: RemoteLaunch-User-Guide\LoadRunner.md
     - SoapUI: RemoteLaunch-User-Guide\SoapUI.md
     - FitNesse: RemoteLaunch-User-Guide\FitNesse.md
