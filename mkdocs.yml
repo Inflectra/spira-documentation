@@ -8,11 +8,12 @@ site_url: https://spiradoc.inflectra.com/
 
 # EXTENSIONS USED
 markdown_extensions:
-  - attr_list
-  - footnotes
   - admonition
+  - attr_list
   - codehilite:
       linenums: true
+  - footnotes
+  - md_in_html
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -23,6 +24,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -31,9 +33,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
   - pymdownx.tilde
   - toc:
       permalink: true
@@ -42,6 +45,7 @@ markdown_extensions:
 theme:
   features:
     - instant
+    - content.tabs.link
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
@@ -122,10 +126,9 @@ nav:
   - Testing: HowTo-Guides\Testing.md
   - Login Providers (Oauth): HowTo-Guides\Login-providers.md
   - Troubleshooting Integrations: HowTo-Guides\Integrations-Troubleshoot.md
-- Quick Start Guides:
-  - SpiraPlan: SpiraPlan-Quick-Start-Guide\index.md
-  - SpiraTeam: SpiraTeam-Quick-Start-Guide\index.md
-  - SpiraTest: SpiraTest-Quick-Start-Guide\index.md
+- Quick Start Guide:
+  - Introduction: SpiraPlan-Quick-Start-Guide\index.md
+  - Planning: SpiraTeam-Quick-Start-Guide\plan.md
 - Admin Guide:
   - How to use this guide: Spira-Administration-Guide\index.md
   - Installing Spira: Spira-Administration-Guide\Installing-SpiraPlan.md
