@@ -89,16 +89,16 @@ Throughout this guide we will be moving between the different artifacts in our s
 ![The artifact selector](img/01-intro-04.png)
 
 
-[Let's Start :rocket:](./plan.md){ .md-button .md-button--primary }
+[Let's Start :rocket:](./plan){ .md-button .md-button--primary }
 
 ## Overview
 1. Planning things out
 
   - Features and goals (req)
   - Tasks to get done (tasks for reqs - 2 ways)
-  - What are the risks
   - Map out your time
-  - Organize your work into sprints (add RQ to RL, TC to RL)
+  - Organize your work into sprints (add RQ to RL, TK to RL)
+  - What are the risks
 
 2. Doing the work (editing)
 
@@ -137,13 +137,18 @@ Prepare the spaceship rq1 [rl2]
 Get a cool spacesuit rq4 [rl3]
 
 ### Tasks
-buy a LOT of snacks tk1 [rq2]
-finalize flight path tk2 [rq3]
-Book a spacesuite test fitting tk3 [rq4]
+buy a LOT of snacks tk1 [rq2 -> rl2]
+finalize flight path tk2 [rq3 -> rl2]
+Book a spacesuite test fitting tk3 [rq4 -> rl3]
 set 'out of office' before launch day tk4 [rl3]
 
+### Releases
+Build spaceship rl1 [already complete]
+Prep for launch rl2 
+Lift off rl3
+
 ### Risks
-Fly right on past Mars rk1 [rq3]
+Fly right on past Mars rk1 [rl2]
 Spaceship computer turns evil rk2 [rl3]
 > Be its friend mitgitation1
 > Know how to turn it off mitgitation2
@@ -152,10 +157,6 @@ Spaceship computer turns evil rk2 [rl3]
 Verify suitcase is well packed tc1 [rq2, rl2]
 Spaceship computer seems nice [rq1, rl2] 
 
-### Releases
-Build spaceship rl1 [already complete]
-Prep for launch rl2 
-Lift off rl3
 
 ### Incidents
 There are too many snacks to fit in the suitcase in1 [tc1]
