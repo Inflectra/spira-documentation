@@ -11,12 +11,17 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.1 (Late Summer 2022)
-More information to come shortly.
+### 7.1 (August 2022)
+- New integration with OctoPerf load testing tools
+- Gives cloud hosted users more flexibility for source code management. Mix and match TaraVault for Git or SVN repos with any other source code provider on a product by product basis
+
+### 7.2 (Autumn 2022)
+- Create and use custom fields on product workspaces
+- Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
+
 
 ## Future Releases
 ### Planning
-- **New planning tools and visualizations**: Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes.
 - **Enhanced program level management (SpiraPlan only)**: Manage risks at the program level. Increased variety of portfolio and enterprise widgets. Program level planning, releases, and roadmapping.
 
 ### Testing
@@ -37,12 +42,11 @@ More information to come shortly.
 
 ### Cross-cutting
 - **New field types and handling**: Ability to set date-time values on list pages. Even more custom property types (for example, dependent dropdowns and hierarchical dropdowns).
-- **New custom fields in different workspace types**: Add optional custom properties that can be set on a workspace itself - for example, on a product or program.
+- **New custom fields in different workspace types**: Add optional custom properties that can be set on programs, portfolios, and users.
 - **Cross application tagging**: Tag support to provide a flexible way to connect different artifacts together, including resources. Add the ability to use mentions (eg @amycribbins) to reference a user or artifact in descriptions and comments.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Improved ‘first-time’ experience**: When the main administrator first logs in, a new welcome screen will guide them in setting up the application or to get help doing so.
 - **Review Center**: A single, central place to view all the areas across the application where your review is needed. This will streamline and simplify how know what they need to review and sign off and how that review is carried out.
 
 ### Wider ecosystem
-- **Simplified integration with third party tools**: clearer integration guidance in-app to make syncing with tools like JIRA and ADO quicker and easier.
-- **Improved extensibility**: Support for webhooks, increased API scope, potentially the ability for users to provide in-app UI changes to meet specific types of use case.
+- **Improved extensibility**: Support for webhooks, increased API scope, potentially the ability for users to provide in-app UI changes to meet specific types of use case using SpiraApps.
