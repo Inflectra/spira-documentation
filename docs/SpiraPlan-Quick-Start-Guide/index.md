@@ -23,7 +23,7 @@ All you need to get started is the application itself.
   id2(Plan) --> id3
   id3(Do the work) --> id4
   id4(Check the work) --> id5 & id3
-  id5(Big picture review)
+  id5(Big picture review) --> id1
 
   style id1 fill:#fdcb26
 ```
@@ -155,7 +155,7 @@ Spaceship computer turns evil rk2 [rl3]
 
 ### Test Cases
 Verify suitcase is well packed tc1 [rq2, rl2]
-Spaceship computer seems nice [rq1, rl2] 
+Check if the spaceship computer seems nice [rq1, rl2] 
 
 
 ### Incidents

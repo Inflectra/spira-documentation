@@ -6,7 +6,7 @@
   id2(Plan) --> id3
   id3(Do the work) --> id4
   id4(Check the work) --> id5 & id3
-  id5(Big picture review)
+  id5(Big picture review) --> id1
 
   style id2 fill:#fdcb26
 ```
@@ -56,11 +56,11 @@ We've made a great start. We have two requirements. Let's add a couple more and 
 - [x] Check the checkbox for the "Prepare the spaceship" requirement
 - [x] Click the dropdown arrow next to "Insert" button in the toolbar
 - [x] Click "Child Requirement" from the dropdown menu. You will see the new requirement directly underneath "Prepare the spaceship" and a little indented
-- [x] Give this new child requirement a name of "Pack my suitcase"
+- [x] Give this new child requirement a name of `Pack my suitcase`
 
 ![add third requirement](img/02-plan-04-features.gif)
 
-- [x] Click "Save and New" to add another requirement and give this is a name of "Take the right amount of rocket fuel"
+- [x] Click "Save and New" to add another requirement and give this is a name of `Take the right amount of rocket fuel`
 - [x] Finally, hit "Save" and then refresh the page
 
 You will see your 4 requirements and the top one has a different icon. This shows us that it is a parent requirement that has children nested inside it.
