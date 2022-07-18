@@ -6207,8 +6207,19 @@
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
-<li>create a duplicate of the current artifact by clicking <code>Clone</code></li>
-<li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
+<li>
+<p>create a duplicate of the current artifact by clicking <code>Clone</code> - note that:</p>
+<ul>
+<li>standard fields (like type and owner, except 'configuration' and 'scheduled on build') and custom fields are cloned</li>
+<li>description (with formatting) are cloned</li>
+<li>file attachments are cloned</li>
+<li>associated test runs and incidents are <em>not</em> cloned</li>
+<li>followers, comments, execution status and history are <em>not</em> cloned</li>
+</ul>
+</li>
+<li>
+<p>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</p>
+</li>
 <li>the <code>Execute</code> button will execute all the test cases in the set against the release specified in the test set and then take you to the
 <a href="#execute-test-cases">test execution screen</a></li>
 <li id="emailing">Emailing: read about <a href="../Application-Wide/#emailing">emailing an artifact to colleagues using Spira</a></li>

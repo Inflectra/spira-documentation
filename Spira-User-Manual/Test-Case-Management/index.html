@@ -6870,10 +6870,20 @@ gray.</p>
 </ul>
 <p>The operations toolbar lets you, amongst standard operations like save and delete:</p>
 <ul>
-<li>create a replica of the current test case by clicking <code>Clone</code></li>
+<li>create a replica of the current test case by clicking "Clone"</li>
 <li>discard any changes made by clicking <code>Refresh</code></li>
 <li>export to a number of files formats or print it via one of the options in the <code>Tools</code> dropdown menu</li>
 <li>the <code>Execute</code> button will immediately prepare the current test case for execution and then take you to the <a href="#execute-test-cases">test execution screen</a>. NOTE: if the product does not allow you to execute test cases this button will not be available.</li>
+</ul>
+<p>When cloning test cases note that:</p>
+<ul>
+<li>all standard fields (like type and owner) and custom fields are cloned</li>
+<li>description (with formatting) are cloned</li>
+<li>file attachments are cloned</li>
+<li>requirement coverage and its associated releases are cloned</li>
+<li>associated artifact and executions status are <em>not</em> cloned</li>
+<li>incidents and test runs are <em>not</em> cloned</li>
+<li>followers, comments, automation, and history are <em>not</em> cloned</li>
 </ul>
 <p>The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.</p>
 <h3 id="emailing">Emailing<a class="headerlink" href="#emailing" title="Permanent link">&para;</a></h3>

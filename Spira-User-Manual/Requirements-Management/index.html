@@ -6841,8 +6841,21 @@
 <li><strong>Edit</strong>: this works the same way as on the requirements hierarchy list - see <a href="#edit">above</a>.</li>
 <li><strong>Filter</strong>: Read about <a href="../Application-Wide/#filtering">how to create and manage filters, and how to sort the artifact list</a>.</li>
 <li><strong>Show / Hide Columns</strong>: this works the same way as on the requirements hierarchy list - see <a href="#show-hide-columns">above</a></li>
-<li><strong>Clone</strong>: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.</li>
-<li><strong>Tools</strong>: this dropdown allows to <a href="#exporting-requirements">export requirements</a>, <a href="#create-a-test-cases-from-requirements">create test cases</a> or <a href="#create-a-test-set-from-requirements">create test sets</a> from requirements, or to <a href="#printing-items">print items</a>.</li>
+<li><strong>Clone</strong>: To clone a requirement, select it and click "<strong><em>Clone</em></strong>" from the New menu option. When cloning a parent requirement all of its children are also cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.</li>
+</ul>
+<p>When cloning the requirements note that:</p>
+<ul>
+<li>all standard fields (like type, status and owner) and custom fields are cloned</li>
+<li>description (with formatting) is cloned</li>
+<li>file attachments are cloned</li>
+<li>associated tasks and tests are cloned</li>
+<li>associated incidents, requirements and risks are <em>not</em> cloned</li>
+<li>
+<p>followers, comments, and history are <em>not</em> cloned</p>
+</li>
+<li>
+<p><strong>Tools</strong>: this dropdown allows to <a href="#exporting-requirements">export requirements</a>, <a href="#create-a-test-cases-from-requirements">create test cases</a> or <a href="#create-a-test-set-from-requirements">create test sets</a> from requirements, or to <a href="#printing-items">print items</a>.</p>
+</li>
 </ul>
 <h3 id="right-click-context-menu_1">Right-Click Context Menu<a class="headerlink" href="#right-click-context-menu_1" title="Permanent link">&para;</a></h3>
 <p>To access the context menu, right-click on any of the rows in the requirements sorted list and the following menu will be displayed:</p>

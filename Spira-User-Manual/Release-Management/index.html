@@ -1072,6 +1072,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cloning-releasessprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning Releases/Sprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#moving-releasessprints" class="md-nav__link">
     <span class="md-ellipsis">
       Moving Releases/Sprints
@@ -6365,6 +6374,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cloning-releasessprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning Releases/Sprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#moving-releasessprints" class="md-nav__link">
     <span class="md-ellipsis">
       Moving Releases/Sprints
@@ -6837,6 +6855,22 @@ from the list, and the releases will be expanded / collapsed accordingly.</p>
 <h3 id="copying-releasessprints">Copying Releases/Sprints<a class="headerlink" href="#copying-releasessprints" title="Permanent link">&para;</a></h3>
 <p>To copy a release/sprint or set of releases/sprints, simply select the check-boxes of the release/sprint you want to copy and then select the Edit > Copy Items menu option. This will copy the current release/sprint selection to the clipboard. Then you should select the place where you want the releases/sprints to be inserted and choose the Edit > Paste Items option.</p>
 <p>The releases/sprints will now be copied into the destination location you specified. The name of the copied releases/sprints will be prefixed with "Copy of..." to distinguish them from the originals. Note that copied releases/sprints will also include the test mapping information from the originals.</p>
+<div class="admonition info">
+<p class="admonition-title">Copying parent and child releases together</p>
+<p>If you want to copy a parent release and its children only select the parent release. You do not need to also select each of its child releases. </p>
+</div>
+<h3 id="cloning-releasessprints">Cloning Releases/Sprints<a class="headerlink" href="#cloning-releasessprints" title="Permanent link">&para;</a></h3>
+<p>To clone a release/sprint or set of releases/sprints, open particular release and select "<strong><em>Clone</em></strong>" from the New menu option.
+Please note that if you're cloning from the child release details page then only child release will be cloned. If you're cloning the parent release then all the children releases is getting cloned as well.</p>
+<p>When cloning (or copying) a release note that:</p>
+<ul>
+<li>all standard fields (like type, status and owner) and custom fields are cloned</li>
+<li>description (with formatting) is cloned</li>
+<li>file attachments are cloned</li>
+<li>associated test cases are cloned</li>
+<li>associated incidents, requirements and tasks are <em>not</em> cloned</li>
+<li>followers, comments, and history are <em>not</em> cloned</li>
+</ul>
 <h3 id="moving-releasessprints">Moving Releases/Sprints<a class="headerlink" href="#moving-releasessprints" title="Permanent link">&para;</a></h3>
 <p>To move a release/sprint in the hierarchy, there are two options:</p>
 <ol>
