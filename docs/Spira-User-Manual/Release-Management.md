@@ -196,6 +196,22 @@ To copy a release/sprint or set of releases/sprints, simply select the check-box
 
 The releases/sprints will now be copied into the destination location you specified. The name of the copied releases/sprints will be prefixed with "Copy of..." to distinguish them from the originals. Note that copied releases/sprints will also include the test mapping information from the originals.
 
+!!! info "Copying parent and child releases together"
+    If you want to copy a parent release and its children only select the parent release. You do not need to also select each of its child releases. 
+
+### Cloning Releases/Sprints
+
+To clone a release/sprint or set of releases/sprints, open particular release and select "***Clone***" from the New menu option.
+Please note that if you're cloning from the child release details page then only child release will be cloned. If you're cloning the parent release then all the children releases is getting cloned as well.
+
+When cloning (or copying) a release note that:
+
+- all standard fields (like type, status and owner) and custom fields are cloned
+- description (with formatting) is cloned
+- file attachments are cloned
+- associated test cases are cloned
+- associated incidents, requirements and tasks are *not* cloned
+- followers, comments, and history are *not* cloned
 
 ### Moving Releases/Sprints
 

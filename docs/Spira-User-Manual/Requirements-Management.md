@@ -262,7 +262,17 @@ One major benefit of this view is that when you filter by a field, you only get 
 - **Edit**: this works the same way as on the requirements hierarchy list - see [above](#edit).
 - **Filter**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 - **Show / Hide Columns**: this works the same way as on the requirements hierarchy list - see [above](#show-hide-columns)
-- **Clone**: all selected requirements will be cloned and added to the requirement list. If a summary item is cloned, then it and all its children are cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.
+- **Clone**: To clone a requirement, select it and click "***Clone***" from the New menu option. When cloning a parent requirement all of its children are also cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.
+
+When cloning the requirements note that:
+
+- all standard fields (like type, status and owner) and custom fields are cloned
+- description (with formatting) is cloned
+- file attachments are cloned
+- associated tasks and tests are cloned
+- associated incidents, requirements and risks are *not* cloned
+- followers, comments, and history are *not* cloned
+
 - **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#create-a-test-cases-from-requirements) or [create test sets](#create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
 
 

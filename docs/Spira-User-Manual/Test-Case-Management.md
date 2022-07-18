@@ -172,13 +172,22 @@ The navigation pane consists of a link that will take you back to the test case 
 -   The list of all test cases, irrespective of the current filter
 -   The list of test cases assigned to the current user
 
-
 The operations toolbar lets you, amongst standard operations like save and delete:
 
-- create a replica of the current test case by clicking `Clone`
+- create a replica of the current test case by clicking "Clone"
 - discard any changes made by clicking `Refresh`
 - export to a number of files formats or print it via one of the options in the `Tools` dropdown menu
 - the `Execute` button will immediately prepare the current test case for execution and then take you to the [test execution screen](#execute-test-cases). NOTE: if the product does not allow you to execute test cases this button will not be available.
+
+When cloning test cases note that:
+
+- all standard fields (like type and owner) and custom fields are cloned
+- description (with formatting) are cloned
+- file attachments are cloned
+- requirement coverage and its associated releases are cloned
+- associated artifact and executions status are *not* cloned
+- incidents and test runs are *not* cloned
+- followers, comments, automation, and history are *not* cloned
 
 The lower part of the right pane can be switched between a number of different views by clicking the appropriate tab. Initially the pane will be in "Overview" mode, but it can be switched to "Requirements Coverage", "Test Runs", "Releases", "Incidents", "Attachments", "History", and "Test Sets" modes if so desired. Each of these views is described below.
 
