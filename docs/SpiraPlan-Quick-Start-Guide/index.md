@@ -103,7 +103,6 @@ Throughout this guide we will be moving between the different artifacts in our s
 2. Doing the work (editing)
 
 - Using the workflows on details pages - complete tasks, progress requirements (auto settings)
-- Move other things around using planning boards
 
 3. Checking your work (QA)
 
@@ -120,6 +119,7 @@ Throughout this guide we will be moving between the different artifacts in our s
 
 5. Advanced section:
 
+- Planning board
 - Test sets
 - Test parameters
 - Admin - planning

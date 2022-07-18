@@ -67,7 +67,7 @@ You will see your 4 requirements and the top one has a different icon. This show
 
 ![four requirements with one parent](img/02-plan-05-features.png)
 
-| Name                                   | Position  |
+| Requirement Name                       | Position  |
 |----------------------------------------|-----------|
 | Prepare the spaceship                  | Parent    |
 | > Pack my suitcase                     | Child     |
@@ -160,7 +160,7 @@ We now four tasks in total (two if you have only created standalone tasks). The 
 
     ![task list with 4 tasks](img/02-plan-10a-tasks.png)
 
-    | Name                                   | Requirement                          |
+    | Task Name                              | Requirement                          |
     |----------------------------------------|--------------------------------------|
     | Buy a LOT of snacks                    | Pack my suitcase                     |
     | Finalize flight path                   | Take the right amount of rocket fuel |
@@ -171,7 +171,7 @@ We now four tasks in total (two if you have only created standalone tasks). The 
 
     ![task list with 2 tasks](img/02-plan-10b-tasks.png)
 
-    | Name                                   | Requirement                          |
+    | Task Name                              | Requirement                          |
     |----------------------------------------|--------------------------------------|
     | Book a spacesuit test fitting          | N/A                                  |
     | Set 'out of office' before launch day  | N/A                                  |
@@ -220,11 +220,11 @@ Let's add two more releases - these won't be completed yet.
 
 ![3 releases](img/02-plan-14-releases.png)
 
-| Name             | Status (end date)       |
-|------------------|-------------------------|
-| Build spaceship  | Completed (in the past) |
-| Prep for launch  | In Progress (future)    |
-| Lift off         | Planned (future)        |
+| Release Name     | Status        | Start Date | End Date   |
+|------------------|---------------|------------|------------|
+| Build spaceship  | Completed     | Past       | Past       |
+| Prep for launch  | In Progress   | Past       | Future     |
+| Lift off         | Planned       | Future     | Future     |
 
 
 ## Link Work to Releases
@@ -246,7 +246,7 @@ First, we are going to set the release for our requirements.
 - [x] Give each requirement a release (see the table below)
 - [x] Once you are finished click the "Save" button
 
-| Name                                   | Release               |
+| Requirement Name                       | Release               |
 |----------------------------------------|-----------------------|
 | Prepare the spaceship                  | 2.0 - Prep for launch |
 | > Pack my suitcase                     | 2.0 - Prep for launch |
@@ -276,7 +276,7 @@ Let's hook our tasks up to releases.
 
     ![task list with releases set](img/02-plan-17a-linking.png)
 
-    | Name                                   | Requirement                          | Release               |
+    | Task Name                              | Requirement                          | Release               |
     |----------------------------------------|--------------------------------------|-----------------------|
     | Buy a LOT of snacks                    | Pack my suitcase                     | 2.0 - Prep for launch |
     | Finalize flight path                   | Take the right amount of rocket fuel | 2.0 - Prep for launch |
@@ -300,7 +300,7 @@ Let's hook our tasks up to releases.
 
     ![task list with releases set](img/02-plan-17b-linking.png)
 
-    | Name                                   | Release               |
+    | Task Name                              | Release               |
     |----------------------------------------|-----------------------|
     | Book a spacesuit test fitting          | 3.0 - Lift off        |
     | Set 'out of office' before launch day  | 3.0 - Lift off        |
@@ -354,7 +354,7 @@ Let's now add some ideas about how we can manage (or mitigate) this risk. We do 
 
 You have created two mitigations on this risk and created two risks in total. 
 
-| Name                                     | Release               |
+| Risk Name (with mitigations)             | Release               |
 |------------------------------------------|-----------------------|
 | Fly right on past Mars                   | 2.0 - Prep for launch |
 | Spaceship computer turns evil            | 3.0 - Lift off        |
