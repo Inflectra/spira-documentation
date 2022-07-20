@@ -29,7 +29,7 @@ Let's focus on just one of those releases "Prep for launch". Three of our requir
 
 {==
 
-**Test Cases** are the main unit of testing in SpiraPlan. A Test Case defines a scenario or user flow that you want to verify. A Test Case is made up of Test Steps. These steps are the sequence of steps the tester needs to go through and check. Each test step is an opportunity to verify functionality is working as it should, or recording where there are problems.
+**Test Cases** are the main unit of testing in SpiraPlan. A Test Case defines a scenario or user flow that you want to verify. A Test Case is made up of Test Steps. These steps are the sequence the tester needs to go through and check. Each test step is an opportunity to verify functionality is working as it should, or recording where there are problems.
 
 First you create your test cases, then you execute them. Test execution records the results of what you did or found. You can execute the same test many times and keep a list of records of what happened each time. These are called Test Runs. This system means you have test cases that you can reuse very efficiently. Each test run logs the execution status of that run (eg pass or fail). Together with requirements and releases, test cases help you have full traceability across your whole product.
 
@@ -71,4 +71,34 @@ These steps link each test case to the correct requirement. Because the requirem
 | Check if the spaceship computer seems nice | Prepare the spaceship  | 2.0 - Prep for launch |
 | Verify suitcase is well packed             | Pack my suitcase       | 2.0 - Prep for launch |
 
+
 ## Execute a Test Case
+Now that we have a very simple test case, we can execute it to check what should happen, or should have been done against reality. Above, we said that test cases in SpiraPlan are made up of Test Steps, which are the steps the tester needs to go through and check. You can add as many steps as you want to a test case, and customize them to exactly your needs. 
+
+We didn't make any steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These steps are emtpy, but they are enough for us to try out executing tests.
+
+- [x] Right (alt) click on the test case "Verify suitcase is well packed". This brings up the context menu
+- [x] Click "Execute" (with the play icon)
+
+![start test execution](img/04-test-05-execute.png)
+
+This will launch a popup showing you that the Test Run is being prepared for execution from the test case. Once it finishes, you will see the Test Execution Wizard. On this screen you can: pick a release to execute the test run against; and set any test run custom properties. You can see that the Release is currently set to "1.0.0.0 - Build Spaceship", because it is the first release in the list.
+
+The test case is about our suitcase packing, which is part of our sprint to prepare for launch (release 2.0). So let's make sure to run the test against the correct release.
+
+- [x] Select "2.0 - Prep for launch" from the Release dropdown
+- [x] Click "Next" to load the main test execution window
+
+![test execution wizard](img/04-test-06-execute.png)
+
+!!! faq 
+    When you go to this page for the first time, you can go through a guided tour of how the page works
+
+As a tester, you move through each of the test steps in the test run in order. Each test step needs a result: Pass, Fail, Blocked, Caution, or Not Applicable (N/A). If you enter any status other than Pass you need to enter a value for the "Actual Result". For a pass status, the Actual Result is optional.
+
+We only have one test step. If we thought our packing was great, we could mark the step as Passed. That means the whole test run has passed, so we could finish the test run and officially log its results. That's no fun, so let's do something else.
+
+- [x] Click the "Fail" button. This tries to mark the test step as failed. But it can't. Not Yet. Because we haven't entered an Actual Result yet. When we click fail, our cursor is automatically placed in the "Actual Result" box.
+- [x] Let's enter an "Actual Result". Type `
+
+![mark a test step as failed](img/04-test-07-execute.gif)

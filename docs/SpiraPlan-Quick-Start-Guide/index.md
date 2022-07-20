@@ -155,8 +155,28 @@ Spaceship computer turns evil rk2 [rl3]
 
 ### Test Cases
 Verify suitcase is well packed tc1 [rq2, rl2]
-Check if the spaceship computer seems nice [rq1, rl2] 
+Check if the spaceship computer seems nice tc2 [rq1, rl2] 
 
 
 ### Incidents
 There are too many snacks to fit in the suitcase in1 [tc1]
+
+``` mermaid
+  flowchart TB
+  subgraph one
+  rl1
+  end
+  subgraph two
+  rl2 --> rq1 & rq2 & rq3 & rk1
+  rq3 --> tk2
+  rq1 --> tc2
+  rq2 --> tk1 & tc1
+  tc2 --> in1
+  end
+  subgraph three
+  rl3 --> rq4 & tk4 & rk2
+  rq4 --> tk3
+  end
+  one --> two
+  two --> three
+```
