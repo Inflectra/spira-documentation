@@ -13,10 +13,10 @@
 
 !!! tldr annotate "The story so far (1)"
 
-    We are going on a vacation to Mars, (2). It's a long journey. We spent time planning the trip, and then doing the most important tasks. Before we blast off without a care in the world, let's check that we did everything right.
+    We are going on a vacation to Mars (2). It's a long journey. We spent time planning the trip, and then doing the most important tasks. Before we blast off without a care in the world, let's check that we did everything right.
 
 1.  :woman_raising_hand: Get a reminder or learn about the parts of the guide you missed (we recommend following the whole guide and it is pretty quick, but no pressure)
-2.  :rocket: Because we want to and it sounds fun
+2.  :rocket: Because why should robots be the only ones to enjoy it?
 
 ## What are we Testing
 There's a lot to check before going on any trip. All the more so when traveling over 100 million miles. We need to stay focused. We made a few releases and work happens in each. 
@@ -50,6 +50,9 @@ First you create your test cases, then you execute them. Test execution records 
 
 ![add second test case](img/04-test-03-prep.png)
 
+!!! info "Didn't make any requirements?"
+    [Skip Ahead](#execute-a-test-case)
+
 This is great. We have already created two test cases. We could start running these tests now, but first let's hook these tests up to requirements and releases.
 
 - [x] Check the checkbox for "Check if the spaceship computer seems nice"
@@ -73,6 +76,13 @@ These steps link each test case to the correct requirement. Because the requirem
 
 
 ## Execute a Test Case
+
+{==
+
+**Test Execution** in SpiraPlan has a dedicated module for running manual tests. This makes it easy for testers to see what they have to test each step of the way. They can quickly record results and log bugs. SpiraPlan also supports other types of tests, including automated tests and unit tests. These tests are not managed from the test execution module.
+
+==}
+
 Now that we have a very simple test case, we can execute it to check what should happen, or should have been done against reality. Above, we said that test cases in SpiraPlan are made up of Test Steps, which are the steps the tester needs to go through and check. You can add as many steps as you want to a test case, and customize them to exactly your needs. 
 
 We didn't make any steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These steps are emtpy, but they are enough for us to try out executing tests.
@@ -99,6 +109,54 @@ As a tester, you move through each of the test steps in the test run in order. E
 We only have one test step. If we thought our packing was great, we could mark the step as Passed. That means the whole test run has passed, so we could finish the test run and officially log its results. That's no fun, so let's do something else.
 
 - [x] Click the "Fail" button. This tries to mark the test step as failed. But it can't. Not Yet. Because we haven't entered an Actual Result yet. When we click fail, our cursor is automatically placed in the "Actual Result" box.
-- [x] Let's enter an "Actual Result". Type `
 
 ![mark a test step as failed](img/04-test-07-execute.gif)
+
+- [x] Let's enter an "Actual Result". Type `Cannot close suitcase because of all the snacks`
+- [x] Click either of the "Fail" buttons. You can see that the test step is now clearly marked as failed (see #1 in the screenshot below). Because the whole test run (with its single step) has been tested we can (but we won't yet) finish the test run (see the "Finish" button at #2 in the screenshot below)
+
+![test step is failed](img/04-test-08-execute.png)
+
+Before we finish testing, we have one more thing to do. We failed the test and now we should log this failure with an incident. 
+
+!!! faq "Why create an incident?" 
+    Creating an incident (or a bug) during testing is the perfect way to capture what is wrong so someone can fix it (like a developer, or here whoever has to pack the bags). The incident is linked to the exact test step that failed.
+    
+    You can then track this bug outside of testing. Once the bug is fixed, the test can rerun the test case and see if things are fixed.
+
+- [x] Click on the "Incidents" tab (this is just above where you typed in the actual result). This opens up a form we can fill in to record the incident
+- [x] Enter a name of `There are too many snacks to fit in the suitcase`
+- [x] Set the Type to "Bug"
+- [x] Pick any value you want for the "Difficulty", "Operating System", and "Web Browser" fields. These aren't relevant to us, but are a part of a more general incident workflow that is typically used for testing web applications. Noone thought to tweak it for interstellar vacations!
+- [x] Click the "Add" button at the bottom. You don't have to enter a descriptoin for the incident - this is automatically generated based on the test step and its actual result
+
+![prepared incident form](img/04-test-09-execute.png)
+
+After clicking "Add" the incident is created and the Incident tab shows us that the incident is linked to this test step.
+
+![incident logged on test run](img/04-test-10-execute.png)
+
+We are now ready to finish our test. 
+
+- [x] Click the "Finish" button in the top right (the yellow button with the stop icon in it)
+- [x] Click "OK" on the browser confirmation popup
+
+This will take you back to the Test Case list page. Here we see the two test cases, and we can see that "Verify suitcase is well packed" is marked as failed.
+
+![test case list page](img/04-test-11-execute.png)
+
+| Test Case Name                             | Execution Status |
+|--------------------------------------------|------------------|
+| Check if the spaceship computer seems nice | Not Run (gray)   |
+| Verify suitcase is well packed             | Failed (red)     |
+
+
+## Summary
+**Almost there!** 
+
+- We made a couple of test cases to check if our requirements are really complete, like we think
+- We linked those test cases to the right requirements (and releases)
+- We executed a test case using SpiraPlan's powerful test execution module
+- We saw how to fail (or pass) a test and how to log bugs of things we find during testing
+
+In the next and final part of this quick start guide we will review where things stand for our Mars vacation. How can SpiraPlan help us work out if we are ready to blast off, or if we are destined to stay stuck on Earth? Let's find out.

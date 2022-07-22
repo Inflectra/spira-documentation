@@ -91,41 +91,9 @@ Throughout this guide we will be moving between the different artifacts in our s
 
 [Let's Start :rocket:](./plan){ .md-button .md-button--primary }
 
-## Overview
-1. Planning things out
-
-  - Features and goals (req)
-  - Tasks to get done (tasks for reqs - 2 ways)
-  - Map out your time
-  - Organize your work into sprints (add RQ to RL, TK to RL)
-  - What are the risks
-
-2. Doing the work (editing)
-
-- Using the workflows on details pages - complete tasks, progress requirements (auto settings)
-
-3. Checking your work (QA)
-
-- Check your goals are being met with tests (TC - and link to RQ)
-- Map your QA work to sprints (add RQ to RL, TC to RL)
-- QA your goals and find a bug (test execution)
-- Triage your incidents
-
-4. Big picture review
-
 - Are you ready to launch? Using home pages
 - Ideally 1 or 2 small issues outstanding - resolve
 - Ready to release!
-
-5. Advanced section:
-
-- Planning board
-- Test sets
-- Test parameters
-- Admin - planning
-- Admin - make a product
-- Admin - components
-- Admin - custom properties
 
 ## Artifacts
 Creates 16 in total, which is about half of the current QSG - seems about right

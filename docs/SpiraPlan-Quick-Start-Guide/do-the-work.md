@@ -12,10 +12,10 @@
 
 !!! tldr annotate "The story so far (1)"
 
-    We are going on a vacation to Mars, (2). It's a long journey. Like you should do before any big trip, we started by planning out what we have to do. We made some reqirements, tasks, sprints, and even thought about the risks. Now its time to stop planning and start doing.
+    We are going on a vacation to Mars (2). It's a long journey. Like you should do before any big trip, we started by planning out what we have to do. We made some reqirements, tasks, sprints, and even thought about the risks. Now its time to stop planning and start doing.
 
 1.  :woman_raising_hand: Get a reminder or learn about the parts of the guide you missed (we recommend following the whole guide and it is pretty quick, but no pressure)
-2.  :rocket: Because we want to and it sounds fun
+2.  :rocket: Because of the awesome hiking everyone raves about
 
 ## Moving Through the Workflow
 {==

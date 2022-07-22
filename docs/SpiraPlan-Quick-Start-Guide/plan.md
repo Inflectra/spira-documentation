@@ -15,7 +15,7 @@ We will spend the first chunk of this guide planning things out. We start by out
 
 !!! tldr annotate "The story so far (1)"
 
-    We are going on a vacation to Mars, (2). It's a long journey. So it's a good idea to plan it out first, instead of jumping into the first rocket for Mars you can find. We've logged into SpiraPlan and we are ready to go.
+    We are going on a vacation to Mars (2). It's a long journey. So it's a good idea to plan it out first, instead of jumping into the first rocket for Mars you can find. We've logged into SpiraPlan and we are ready to go.
 
 1.  :woman_raising_hand: Get a reminder or learn about the parts of the guide you skipped
 2.  :rocket: Because we want to and it sounds fun
@@ -35,7 +35,19 @@ We've decided on our vacation destination: Mars. Currently, we're on Earth, don'
 - [x] Open the Artifact dropdown from the global navigation 
 - [x] Click "Requirements" under Planning. This shows the Requirements list page. The main list in the middle of the page is empty. This is expected.
 
-![empty requirements list page](img/02-plan-01-features.png)
+
+=== "SpiraPlan or SpiraTeam"
+
+    ![empty requirements list page](img/02-plan-01-features.png)
+
+=== "SpiraTest"
+
+    Not all features are available in SpiraTest. SpiraTeam takes SpiraTest and adds some features, SpiraPlan adds even more. Below you can see the requirements page as it looks for SpiraTest. Only features that SpiraTest supports are available in the app. Compared to SpiraTeam or SpiraPlan it does not have the "Task Progress" column, because SpiraTest does not include tasks.
+
+    In the rest of this guide we normally show screenshots of SpiraPlan. If you are using SpiraTest or SpiraTeam you may see columns or tabs or widgets on certain screenshots that you do not have. This is expected.
+
+    ![empty requirements list page](img/02-plan-01b-features.png)
+
 
 Let's make some requirements. In SpiraPlan, there is almost always more than one way to do something, but let's start out simple. 
 
@@ -307,7 +319,7 @@ Let's hook our tasks up to releases.
 
 
 ## What are the Risks
-!!! info "Skip this section if you are not using SpiraTeam or SpiraPlan"
+!!! info "Skip this section if you are not using SpiraPlan"
     [Skip ahead](./do-the-work)
 
 {==
