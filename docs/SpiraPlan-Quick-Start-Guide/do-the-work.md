@@ -5,7 +5,7 @@
   id2(Plan) --> id3
   id3(Do the work) --> id4
   id4(Check the work) --> id5 & id3
-  id5(Big picture review)
+  id5(Big picture review) --> id2
 
   style id3 fill:#fdcb26
 ```
