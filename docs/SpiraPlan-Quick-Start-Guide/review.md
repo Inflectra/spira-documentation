@@ -73,17 +73,17 @@ This quick start guide ends here. We've done a lot together, but the rest is up 
 
 For this vacation to happen you need:
 
-:fontawesome-solid-check: tasks done
+:grinning: tasks done
 
-:fontawesome-solid-times: tests to pass
+:cry: tests to pass
 
-:fontawesome-solid-times: bugs to be fixed
+:sob: bugs to be fixed
 
-:fontawesome-solid-times: risks to be managed
+:confounded: risks to be managed
 
-:fontawesome-solid-times: requirements completed
+:confused: requirements completed
 
-:fontawesome-solid-times: releases to be ready. 
+:angry: releases to be ready
 
 Even if we only focus on the "Prep for launch" release, apart from the tasks, you still have a lot to do. You can stop here, just like this guide. Or you can play around and and see if you can get this release looked 100% ready.
 
