@@ -91,11 +91,8 @@ Throughout this guide we will be moving between the different artifacts in our s
 
 [Let's Start :rocket:](./plan){ .md-button .md-button--primary }
 
-- Are you ready to launch? Using home pages
-- Ideally 1 or 2 small issues outstanding - resolve
-- Ready to release!
 
-## Artifacts
+<!-- ## Artifacts
 Creates 16 in total, which is about half of the current QSG - seems about right
 
 ### Requirements
@@ -147,4 +144,4 @@ There are too many snacks to fit in the suitcase in1 [tc1]
   end
   one --> two
   two --> three
-```
+``` -->
