@@ -1,5 +1,5 @@
 # Eggplant DAI
-Eggplant Digital Automation Intelligence (DAI) is a functional test automation system. Eggplany uses a command-line tool to allow users to more easily triggering automated tests remotely. RemoteLaunch's dedicated Eggplant engine uses this command-line tool to run automated tests in Eggplant, once triggered for a SpiraPlan test set. RemoteLaunch's Eggplant engine reports the results of the output from Eggplant back to SpiraPlan as test run results.
+Eggplant Digital Automation Intelligence (DAI) is a functional test automation system. Eggplant uses a command-line tool to allow users to more easily triggering automated tests remotely. RemoteLaunch's dedicated Eggplant engine uses this command-line tool to run automated tests in Eggplant, once triggered for a SpiraPlan test set. RemoteLaunch's Eggplant engine reports the results of the output from Eggplant back to SpiraPlan as test run results.
 
 This page describes how you can use SpiraTest, SpiraTeam, or SpiraPlan (hereafter SpiraPlan) together with RemoteLaunch to schedule and remotely launch Eggplant DAI tests and have the results transmitted back to SpiraPlan. This allows you to extend your SpiraPlan's test management capabilities to include automation.
 
