@@ -183,6 +183,7 @@ When cloning test cases note that:
 
 - all standard fields (like type and owner) and custom fields are cloned
 - description (with formatting) are cloned
+- parameters and their values are cloned
 - file attachments are cloned
 - requirement coverage and its associated releases are cloned
 - associated artifact and executions status are *not* cloned
