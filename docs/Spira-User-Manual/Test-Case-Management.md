@@ -220,7 +220,6 @@ The **Suspect** flag is automatically set on an approved test case, when one of 
 [^rq-suspect]: only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, assocations, attachments, use case steps, and custom properties will not trigger the suspect flag.
 
 ### Overview - Test Steps
-
 This view displays the name of the test case together with all the defined test steps that a tester would need to perform to verify that the functionality works as expected. The list of test steps displays the position number, the description, the expected result, some suggested sample data and the most recent execution status of the individual test step:
 
 ![](img/Test_Case_Management_141.png)
@@ -232,7 +231,6 @@ If you click on the step number hyperlink (e.g. Step 2) you will be taken to the
 
 
 ### Insert Step
-
 Clicking on the "***Insert Step***" button inserts a new test step *before* the currently selected (by means of the check-box) test step. Clicking the "***Insert Step***" button without selecting a test step will insert a new step at the end of the list. When a new step is inserted, the fields are displayed in "Edit" mode, so the description, expected result and sample data fields are editable, allowing you to enter the data:
 
 ![](img/Test_Case_Management_142.png)
@@ -241,7 +239,6 @@ Once you have entered the necessary information, you can click either "***Save a
 
 
 ### Insert Link
-
 Clicking on the "***Insert Link***" button brings up the following dialog box that allows you to either choose an existing test case to be inserted or create a new test case and step with parameters:
 
 ![](img/Test_Case_Management_143.png)
@@ -256,30 +253,33 @@ If you want to create a test step with specific parameters and parameter values,
 
 
 ### Delete
-
 Clicking on the "***Delete***" button deletes the currently selected test steps, and reorders the test step position numbers to close any gaps in numbering.
 
 
 ### Clone
-
 Clicking on the "***Clone***" button makes a duplicate of the current test step or linked test case and inserts the copied version directly above the original one.
+
+When cloning the test step note that:
+
+- description and custom fields (with formatting) are cloned
+- file attachments are cloned
+- associated incidents and requirements are *not* cloned
+- history and execution status are *not* cloned
+
 
 ### Import Steps from Test Case
 Click the "***Import***" button to import all the test steps of another test case. When you click the button a popup will let you choose a single test case to import steps from. Only users who can modify the current test case and who can create test steps can use this functionality.
 
 
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the list of test steps. This is useful if other people are making changes to the test list and you want to make sure that you have the most current version.
 
 
 ### Show / Hide Columns
-
 By default the test step list screen will display the Description, Expected Result and Sample Data fields. However the Expected Result and Sample Data fields are optional and can be hidden if necessary to make more space. If you have configured custom properties for test steps, you can use the Show/Hide features to display one or more of your custom properties instead. These fields will then be editable in this grid-view.
 
 
 ### Editing Test Steps
-
 To modify an existing Test Step you simply need to click on the "***Edit***" button to the right of the step, or just
 *double-click* on the cells in the row. That will switch the selected row into Edit mode. The various columns are turned into editable text-boxes, and "***Save***" and "***Cancel***" buttons are displayed in the last column:
 
@@ -289,7 +289,6 @@ If you click "***Edit***" on more than one row, the "***Save***" buttons are onl
 
 
 ### Editing Test Links
-
 To modify an existing Test Link you simply need to click on the "***Edit***" button to the right of the step, or double click on the cells in the row. This will open up the special dialog box used for editing the parameter values to pass into the specific linked test case:
 
 ![](img/Test_Case_Management_146.png)
@@ -298,12 +297,10 @@ This allows you to edit the parameters being passed from the current test step t
 
 
 ### Moving Test Steps
-
 To move test steps in the list, click on the row you want to move and drag it where you want it moved to within the list of test steps. An empty space will appear to show you where it will be inserted.
 
 
 ### Parameters
-
 Test cases can have parameters associated with them. This lets a single test case get called multiple times by another test case (as a link) and have different parameters passed in each case, making the operation different. 
 
 !!! info "Parameter Example"
