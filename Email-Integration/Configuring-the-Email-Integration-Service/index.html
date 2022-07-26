@@ -4677,6 +4677,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connecting-to-the-pop3-mail-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the POP3 Mail Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuring-the-advanced-settings" class="md-nav__link">
     <span class="md-ellipsis">
       Configuring the Advanced Settings
@@ -5708,6 +5717,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connecting-to-the-pop3-mail-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the POP3 Mail Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuring-the-advanced-settings" class="md-nav__link">
     <span class="md-ellipsis">
       Configuring the Advanced Settings
@@ -5731,154 +5749,56 @@
 
 
 <h1 id="configuring-the-email-integration-service">Configuring the Email Integration Service<a class="headerlink" href="#configuring-the-email-integration-service" title="Permanent link">&para;</a></h1>
-<p>Once you have completed the installation, you can configure the email
-integration service by going to Start > Program Files > Inflectra
-SpiraTeam > Tools > Email Integration which will bring up the
-management interface.</p>
+<p>Once you have completed the installation, you can configure the email integration service by going to Start > Program Files > Inflectra SpiraTeam > Tools > Email Integration which will bring up the management interface.</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_8.png" /></p>
 <h2 id="connecting-to-the-spirateam-server">Connecting to the SpiraTeam Server<a class="headerlink" href="#connecting-to-the-spirateam-server" title="Permanent link">&para;</a></h2>
-<p>The first tab lets you specify the SpiraTeam instances that the email
-integration service will connect to. To add a new SpiraTeam server,
-click on the green Add (+) icon to switch the screen to allow you to
-enter a new server:</p>
+<p>The first tab lets you specify the SpiraTeam instances that the email integration service will connect to. To add a new SpiraTeam server, click on the green Add (+) icon to switch the screen to allow you to enter a new server:</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_9.png" /></p>
 <p>You need to enter the following information:</p>
 <ul>
-<li>
-<p><strong>Server URL -</strong> The URL to SpiraTeam server</p>
-</li>
-<li>
-<p><strong>Account Login -</strong> The account login that will be used to connect
-to SpiraTeam. It needs to be a user with the "administrator" role.</p>
-</li>
-<li>
-<p><strong>Account Password -</strong> This is the password for the account</p>
-</li>
+<li><strong>Server URL</strong>: The URL to SpiraTeam server</li>
+<li><strong>Account Login</strong>: The account login that will be used to connect to SpiraTeam. It needs to be a user with the "administrator" role.</li>
+<li><strong>Account Password</strong>: This is the password for the account</li>
 </ul>
-<p>Click the "Test" button to verify the connection. Once it has passed,
-click the Save icon to save the new SpiraTeam server information.</p>
-<p>To modify an existing SpiraTeam server instance, just click on its name
-in the server list. To delete a server, select its name in the server
-list and click the Delete icon (X).</p>
-<p>Once you have entered all the SpiraTeam instances that you will be
-connecting to, click the "Next" button to move to the next tab and
-configure the mail server integration.</p>
-<p>3.2. Connecting to the POP3 Mail Server</p>
-<p>The "POP3 Accounts" tab displays a list of all the configured mail
-servers:</p>
+<p>Click the "Test" button to verify the connection. Once it has passed, click the Save icon to save the new SpiraTeam server information.</p>
+<p>To modify an existing SpiraTeam server instance, just click on its name in the server list. To delete a server, select its name in the server list and click the Delete icon (X).</p>
+<p>Once you have entered all the SpiraTeam instances that you will be connecting to, click the "Next" button to move to the next tab and configure the mail server integration.</p>
+<h2 id="connecting-to-the-pop3-mail-server">Connecting to the POP3 Mail Server<a class="headerlink" href="#connecting-to-the-pop3-mail-server" title="Permanent link">&para;</a></h2>
+<p>The "POP3 Accounts" tab displays a list of all the configured mail servers:</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_10.png" /></p>
-<p>Initially it will be empty, so just click the Add (+) icon to add a new
-mail server:</p>
+<p>Initially it will be empty, so just click the Add (+) icon to add a new mail server:</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_11.png" /></p>
 <p>You need to enter the following information:</p>
 <ul>
-<li>
-<p><strong>Account Email --</strong> This should be the email address that will be
-polled for new support emails.</p>
-</li>
-<li>
-<p><strong>Mail Server --</strong> This should be the fully-qualified name or IP
-address of your POP3 mail server.</p>
-</li>
-<li>
-<p><strong>Port --</strong> This is the port that your mail server expects incoming
-POP3 requests to use. The default for unencrypted POP3 requests is
-110 and the default for SSL encrypted POP3 requests is 995.</p>
-</li>
-<li>
-<p><strong>Use SSL --</strong> You should check this option if your mail server
-requires a secure SSL connection.</p>
-</li>
-<li>
-<p><strong>Login/Password --</strong> You should enter the login/password for the
-mail server that allows reading of inbound messages for the email
-address specified above.</p>
-</li>
-<li>
-<p><strong>Remove Messages --</strong> Checking this option will make the email
-integration service remove the email messages from in the Inbox of
-the user's email account. We recommend leaving this unchecked when
-first using the service. Once you are happy that the integration is
-correctly handling spam and not ignoring correct messages, you can
-check this option to prevent the email inbox getting too large.</p>
-</li>
-<li>
-<p><strong>Attach Message --</strong> Checking this option will attach the original
-email message to the new help desk ticket created in SpiraTeam as
-well as populating the ticket with the contents of the message. This
-is useful when debugging a new installation but typically would be
-unchecked during normal operation.</p>
-</li>
-<li>
-<p><strong>Application Server --</strong> You should specify the instance of
-SpiraTeam that this email account will be linked to.</p>
-</li>
-<li>
-<p><strong>Default Project</strong> -- When creating new incidents, this will be the
-default project that the new incident will be created in, unless the
-Match Content option is selected below. For any incoming email that
-has an artifact token (For example: [IN:45] for Incident #45, or
-[RQ:912] for Requirement #912), and the user's email is
-registered to a user in that project, then the email will be
-imported as a comment to that artifact.</p>
-</li>
-<li>
-<p><strong>RegEx Match Content</strong> -- Checking this option will allow the email
-integration service to do a name match in the body of the email for
-possible project names instead of just relying on the "default
-project". For example if your email contains "Project1" in the
-message text it will be routed to Product1 in SpiraTeam. Items
-looked for are Project tokens ([PR:##]), and then the Project
-name in the subject line of the email and the text of the email.</p>
-</li>
+<li><strong>Account Email</strong>: This should be the email address that will be polled for new support emails.</li>
+<li><strong>Mail Server</strong>: This should be the fully-qualified name or IP address of your POP3 mail server.</li>
+<li><strong>Port</strong>: This is the port that your mail server expects incoming POP3 requests to use. The default for unencrypted POP3 requests is 110 and the default for SSL encrypted POP3 requests is 995.</li>
+<li><strong>Use SSL/TSL?</strong>: You should check this option if your mail server requires a secure SSL/TSL connection (TSL versions supported 1.0, 1.1. and 1.2).</li>
+<li><strong>Login/Password</strong>: You should enter the login/password for the mail server that allows reading of inbound messages for the email address specified above.</li>
+<li><strong>Remove Messages</strong>: Checking this option will make the email integration service remove the email messages from in the Inbox of the user's email account. We recommend leaving this unchecked when first using the service. Once you are happy that the integration is correctly handling spam and not ignoring correct messages, you can check this option to prevent the email inbox getting too large.</li>
+<li><strong>Attach Message</strong>: Checking this option will attach the original email message to the new help desk ticket created in SpiraTeam as well as populating the ticket with the contents of the message. This is useful when debugging a new installation but typically would be unchecked during normal operation.</li>
+<li><strong>Application Server</strong>: You should specify the instance of SpiraTeam that this email account will be linked to.</li>
+<li><strong>Default Project</strong>: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: [IN:45] for Incident #45, or
+[RQ:912] for Requirement #912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.</li>
+<li><strong>RegEx Match Content</strong>: Checking this option will allow the email integration service to do a name match in the body of the email for possible project names instead of just relying on the "default project". For example if your email contains "Project1" in the message text it will be routed to Product1 in SpiraTeam. Items looked for are Project tokens ([PR:##]), and then the Project name in the subject line of the email and the text of the email.</li>
 </ul>
 <h2 id="configuring-the-advanced-settings">Configuring the Advanced Settings<a class="headerlink" href="#configuring-the-advanced-settings" title="Permanent link">&para;</a></h2>
-<p>Once you have finished configuring the SpiraTeam server instances and
-POP3 mail accounts, you can click on the "Advanced Settings" tab to
-setup special rules that prevent emails from specific accounts being
-processed as well as allow the email integration service to look for
-special mail headers and subject tokens that might indicate bulk / spam
-messages that should be ignored.</p>
+<p>Once you have finished configuring the SpiraTeam server instances and POP3 mail accounts, you can click on the "Advanced Settings" tab to setup special rules that prevent emails from specific accounts being processed as well as allow the email integration service to look for special mail headers and subject tokens that might indicate bulk / spam messages that should be ignored.</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_12.png" /></p>
 <p>You can configure the following settings:</p>
 <ul>
-<li>
-<p><strong>Enable Trace Logging --</strong> When this option is checked, the email
-integration service will log information messages to the Windows
-Application Event Log on the machine running the integration
-service. This is useful when first deploying the system or when you
-are encountering issues and Inflectra support personnel have asked
-you switch on trace logging to aid in support. For normal use we
-recommend turning this setting off to avoid too many messages being
-logged in the Event Log.</p>
-</li>
-<li>
-<p><strong>Minutes Between Polls --</strong> This setting specifies the interval (in
-minutes) between each time the email integration service attempts to
-retrieve new email messages from the email server.</p>
-</li>
-<li>
-<p><strong>Ignore Addresses --</strong> In this section you can add a list of any
-email addresses that you want to ignore and not use for creating new
-SpiraTeam help desk tickets. If there are any known senders or
-internal email accounts, you should add them in this section.</p>
-</li>
+<li><strong>Enable Trace Logging</strong>: When this option is checked, the email integration service will log information messages to the Windows Application Event Log on the machine running the integration service. This is useful when first deploying the system or when you are encountering issues and Inflectra support personnel have asked you switch on trace logging to aid in support. For normal use we recommend turning this setting off to avoid too many messages being logged in the Event Log.</li>
+<li><strong>Minutes Between Polls</strong>: This setting specifies the interval (in minutes) between each time the email integration service attempts to retrieve new email messages from the email server.</li>
+<li><strong>Ignore Addresses</strong>: In this section you can add a list of any email addresses that you want to ignore and not use for creating new SpiraTeam help desk tickets. If there are any known senders or internal email accounts, you should add them in this section.</li>
 </ul>
-<p>In addition, there are two other sub-tabs to the Advanced Settings tab
-that provide configuration options:</p>
+<p>In addition, there are two other sub-tabs to the Advanced Settings tab that provide configuration options:</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_13.png" /></p>
-<p>The "Ignore Headers" section allows you to specify any email message
-headers that if present in an email message will be ignored by the email
-integration service.</p>
-<p><strong>Note</strong>: Right now, the importer will only check the <em>presence</em> of a
-header, not its <em>contents</em>. As long as the header exists, even if it's
-value is null, the message will not be imported.</p>
+<p>The "Ignore Headers" section allows you to specify any email message headers that if present in an email message will be ignored by the email integration service.</p>
+<p><strong>Note</strong>: Right now, the importer will only check the <em>presence</em> of a header, not its <em>contents</em>. As long as the header exists, even if it's value is null, the message will not be imported.</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_14.png" /></p>
-<p>The "Ignore Keywords" section allows you to specify any keywords/phrases
-that if present in the subject-line or body of an email message will be
-ignored by the email integration service. Some mail servers that have
-built-in SPAM detection systems will automatically add SPAM-HIGH,
-SPAM-MEDIUM, SPAM-LOW to the subject line (for example).</p>
+<p>The "Ignore Keywords" section allows you to specify any keywords/phrases that if present in the subject-line or body of an email message will be ignored by the email integration service. Some mail servers that have built-in SPAM detection systems will automatically add SPAM-HIGH, SPAM-MEDIUM, SPAM-LOW to the subject line (for example).</p>
+<p><img alt="" src="../img/Configuring_the_Email_Integration_Service_15.png" /></p>
+<p>The "SpamAssasin" section allows you to enable SpamAssasin utility, if you have a server that is running SpamAssasin. If this is enabled, messages marked as  spam will not be imported, and be left on the mail server.  You can use SpamAssasin's own level, or override the value. For information and support on SpamAssasin, see their website  <a href="http://spamassasin.appache.org">http://spamassasin.appache.org</a></p>
 
 
 

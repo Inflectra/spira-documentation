@@ -6879,6 +6879,7 @@ gray.</p>
 <ul>
 <li>all standard fields (like type and owner) and custom fields are cloned</li>
 <li>description (with formatting) are cloned</li>
+<li>parameters and their values are cloned</li>
 <li>file attachments are cloned</li>
 <li>requirement coverage and its associated releases are cloned</li>
 <li>associated artifact and executions status are <em>not</em> cloned</li>
@@ -6919,6 +6920,13 @@ gray.</p>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes the currently selected test steps, and reorders the test step position numbers to close any gaps in numbering.</p>
 <h3 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Clone</em></strong>" button makes a duplicate of the current test step or linked test case and inserts the copied version directly above the original one.</p>
+<p>When cloning the test step note that:</p>
+<ul>
+<li>description and custom fields (with formatting) are cloned</li>
+<li>file attachments are cloned</li>
+<li>associated incidents and requirements are <em>not</em> cloned</li>
+<li>history and execution status are <em>not</em> cloned</li>
+</ul>
 <h3 id="import-steps-from-test-case">Import Steps from Test Case<a class="headerlink" href="#import-steps-from-test-case" title="Permanent link">&para;</a></h3>
 <p>Click the "<strong><em>Import</em></strong>" button to import all the test steps of another test case. When you click the button a popup will let you choose a single test case to import steps from. Only users who can modify the current test case and who can create test steps can use this functionality.</p>
 <h3 id="refresh_1">Refresh<a class="headerlink" href="#refresh_1" title="Permanent link">&para;</a></h3>

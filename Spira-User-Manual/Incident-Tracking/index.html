@@ -6272,7 +6272,15 @@
 <p>If you want to edit lots of items, first select their checkboxes and then click the "<strong><em>Edit</em></strong>" button on the same row as the Filters and it will switch all the selected items into edit mode.</p>
 <p>When you have made your updates, you can either click "<strong><em>Save</em></strong>" to commit the changes, or "<strong><em>Cancel</em></strong>" to revert back to the original information. Alternatively, pressing the &lt;ENTER> key will commit the changes and pressing the &lt;ESCAPE> key will cancel the changes.</p>
 <h3 id="cloning-incidents">Cloning Incidents<a class="headerlink" href="#cloning-incidents" title="Permanent link">&para;</a></h3>
-<p>To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "<strong><em>Clone</em></strong>". This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.</p>
+<p>To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "<strong><em>Clone</em></strong>" under the Edit menu (or click "<strong><em>Clone</em></strong>" from the "New" dropdown menu from the  Incident's details page). This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.</p>
+<p>When cloning the test case note that:</p>
+<ul>
+<li>all standard fields (like type and owner) and custom fields are cloned</li>
+<li>description (with formatting) are cloned</li>
+<li>file attachments are cloned</li>
+<li>associated artifacts are <em>not</em> cloned</li>
+<li>followers, comments, automation and history are <em>not</em> cloned</li>
+</ul>
 <h3 id="exporting-incidents">Exporting Incidents<a class="headerlink" href="#exporting-incidents" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#export-to-another-product">how to export artifacts from one product to another</a>.</p>
 <h3 id="creating-requirement-from-incidents">Creating Requirement from Incidents<a class="headerlink" href="#creating-requirement-from-incidents" title="Permanent link">&para;</a></h3>
