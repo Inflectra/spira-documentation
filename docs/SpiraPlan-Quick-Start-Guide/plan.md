@@ -269,7 +269,7 @@ First, we are going to set the release for our requirements.
 
 ### Set Releases for Tasks
 !!! info "Skip this section if you are not using SpiraTeam or SpiraPlan"
-    [Skip ahead](./do-the-work)
+    [Skip ahead](../do-the-work)
 
 Let's hook our tasks up to releases. 
 
@@ -295,7 +295,7 @@ Let's hook our tasks up to releases.
     | Book a spacesuit test fitting          | Get a cool spacesuit                 | 3.0 - Lift off        |
     | Set 'out of office' before launch day  | none                                 | 3.0 - Lift off        |
 
-    !!! question "Why is the Task Porgress bar yellow for some tasks?"
+    !!! question "Why is the Task Progress bar yellow for some tasks?"
         Because the release these tasks are linked to has been started (its status is "In Progress") but the tasks have **not** started yet, we flag their progress as yellow
 
 
@@ -320,7 +320,7 @@ Let's hook our tasks up to releases.
 
 ## What are the Risks
 !!! info "Skip this section if you are not using SpiraPlan"
-    [Skip ahead](./do-the-work)
+    [Skip ahead](../do-the-work)
 
 {==
 

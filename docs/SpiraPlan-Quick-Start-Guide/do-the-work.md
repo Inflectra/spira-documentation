@@ -27,7 +27,7 @@ For example, a task going from not done to done. In SpiraPlan the task starts as
 ==}
 
 !!! info "If you are starting the quick start guide here"
-    This part of the guide only works if you have already made some requirements and (optionally) tasks for those requirements. If you haven't done this, please [go back](./plan/#features-and-goals) and do so now.
+    This part of the guide only works if you have already made some requirements and (optionally) tasks for those requirements. If you haven't done this, please [go back](../plan/#features-and-goals) and do so now.
 
 
 ### Following along in full
