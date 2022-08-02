@@ -1,5 +1,28 @@
 # Release Notes for Spira v7
 
+
+## Version 7.1 (August 2022)
+
+!!! info "Summary"
+Cloud customers can now more easily and flexibly set up source code integration inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
+
+Our latest SpiraApp integrates SpiraPlan and OctoPerf seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
+
+??? Success "New Features"
+
+    - Ability to switch (at a product level) cloud Spira between TaraVault and external Git/Subversion
+    - Integrate with Octoperf to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
+
+??? bug "Bug fixes and enhancements"
+
+    - Export buttons when viewing a diagram on the document details page do not work [IN:7134]
+    - Replace Internet Explorer to Edge as the option from the custom list for web browsers, and in sample data test parameters [IN:7311]
+    - Do not let a product have more than one source code provider in active use [IN:7321]
+    - Let product admins disable / enable TaraVault for a product (instead of only deleting it as now) [IN:7324]
+    - Update the On Boarding tours Pop Up with corrected wording and screenshots [IN:7328]
+    - Fix documentation link on the System and Product Admin > SpiraApps settings pages [IN:7330]
+
+    
 ## Version 7.0 (July 2022)
 
 !!! info "Summary"
