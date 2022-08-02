@@ -10,17 +10,18 @@ Our latest SpiraApp integrates SpiraPlan and OctoPerf seamlessly. Kick off load 
 
 ??? Success "New Features"
 
-    - Ability to switch (at a product level) cloud Spira between TaraVault and external Git/Subversion
+    - Ability to switch (at a product level) cloud Spira between TaraVault and external Git/Subversion [RQ:4287]
     - Integrate with Octoperf to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
 
 ??? bug "Bug fixes and enhancements"
 
-    - Export buttons when viewing a diagram on the document details page do not work [IN:7134]
-    - Replace Internet Explorer to Edge as the option from the custom list for web browsers, and in sample data test parameters [IN:7311]
-    - Do not let a product have more than one source code provider in active use [IN:7321]
-    - Let product admins disable / enable TaraVault for a product (instead of only deleting it as now) [IN:7324]
-    - Update the On Boarding tours Pop Up with corrected wording and screenshots [IN:7328]
-    - Fix documentation link on the System and Product Admin > SpiraApps settings pages [IN:7330]
+    - Improve diagram export options when viewing a diagram on the document details page to save a diagram as an SVG [IN:7134]
+    - Replace Internet Explorer to Edge in sample data, as Internet Explorer has finally, officially retired [IN:7311]
+    - Do not let a product have more than one source code provider in active use at any one time [IN:7321]
+    - Let product admins disable / enable TaraVault for a product (in addition to full deactivation (hard deletion) as now) [IN:7324]
+    - Fix typos and a screenshot in the 7.0 walkthrough popup [IN:7328]
+    - Fix the documentation link on the System and Product Admin > SpiraApps settings pages [IN:7330]
+    - Fix Product Template custom lists letting you save a blank value name (even though it shows an error suggesting this not allowed) [IN:7384]
 
     
 ## Version 7.0 (July 2022)
