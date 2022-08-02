@@ -6,12 +6,12 @@
 !!! info "Summary"
 Cloud customers can now more easily and flexibly set up source code integration inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
 
-Our latest SpiraApp integrates SpiraPlan and OctoPerf seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
+Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../../SpiraApps/OctoPerf) seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
 
 ??? Success "New Features"
 
     - Ability to switch (at a product level) cloud Spira between TaraVault and external Git/Subversion [RQ:4287]
-    - Integrate with Octoperf to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
+    - A new [SpiraApp integrates SpiraPlan with Octoperf](../../SpiraApps/OctoPer) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
 
 ??? bug "Bug fixes and enhancements"
 
