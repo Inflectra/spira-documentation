@@ -13,7 +13,7 @@
 
 !!! tldr annotate "The story so far (1)"
 
-    We are going on a vacation to Mars (2). We've been busy planning, preparing, and checking things for the long journey ahead. Are we ready to leave or not? What is left to do? That's what we are going to find out in the is final core section of the SpiraPlan Quick Start Guide.
+    We are going on a vacation to Mars (2). We've been busy planning, preparing, and checking things for the long journey ahead. Are we ready to leave or not? What is left to do? That's what we are going to find out in this final core section of the SpiraPlan Quick Start Guide.
 
 1.  :woman_raising_hand: Get a reminder or learn about the parts of the guide you missed (we recommend following the whole guide and it is pretty quick, but no pressure)
 2.  :rocket: Because there's zero cell reception on the entire planet
@@ -85,7 +85,7 @@ For this vacation to happen you need:
 
 :angry: releases to be ready
 
-Even if we only focus on the "Prep for launch" release, apart from the tasks, you still have a lot to do. You can stop here, just like this guide. Or you can play around and and see if you can get this release looked 100% ready.
+Even if we only focus on the "Prep for launch" release, apart from the tasks, you still have a lot to do. You can stop here, just like this guide. Or you can play around and and see if you can get this release 100% ready.
 
 ??? tip "SPOILERS: Hints to finish the release"
     Want some help about what you need to do, to get everything looking great? We've got you!
@@ -99,7 +99,7 @@ Even if we only focus on the "Prep for launch" release, apart from the tasks, yo
 
         ![release page](img/05-review-06-hints.png)
 
-        **Product Home Page**: the screenshot below is only displaying data for the "Prep for launch" release (using the dropdown in the top left), and it is showing a customized set of widgets that show that our requirements, risks, and incidents are all looking good.
+        **Product Home Page**: the screenshot below only displays data for the "Prep for launch" release (using the dropdown in the top left). The layout here is customized with specific widgets that show that our requirements, risks, and incidents are all looking good.
 
         ![product home page](img/05-review-07-hints.png)
 

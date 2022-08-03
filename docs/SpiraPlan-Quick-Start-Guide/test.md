@@ -67,7 +67,7 @@ This is great. We have already created two test cases. We could start running th
 - [x] Click the dropdown arrow next to "Tools" button and select "Add to Requirement" to open the popup dialog
 - [x] Select "Pack my suitcase" from the dialog's dropdown, and then click "Add"
 
-These steps link each test case to the correct requirement. Because the requirements are already connected to a release, the test cases are automatically linked to the correct releases. So by adding a requirement to a test case we also added a release. Neat. You can link many requirements to a test case. And you can independently add many releases to a test case as well. Our setup for now looks like this:
+These actions link each test case to the correct requirement. Because the requirements are already connected to a release, the test cases are automatically linked to the correct releases. So by adding a requirement to a test case we also added a release. Neat. You can link many requirements to a test case. And you can independently add many releases to a test case as well. Our setup for now looks like this:
 
 | Test Case Name                             | Requirement Coverage   | Release Coverage      |
 |--------------------------------------------|------------------------|-----------------------|
@@ -83,9 +83,9 @@ These steps link each test case to the correct requirement. Because the requirem
 
 ==}
 
-Now that we have a very simple test case, we can execute it to check what should happen, or should have been done against reality. Above, we said that test cases in SpiraPlan are made up of Test Steps, which are the steps the tester needs to go through and check. You can add as many steps as you want to a test case, and customize them to exactly your needs. 
+Now that we have a very simple test case, we can execute it to check if things are working as they should. Above, we said that test cases in SpiraPlan are made up of Test Steps, which are the steps the tester needs to go through and check. You can add as many steps as you want to a test case, and customize them to exactly your needs. 
 
-We didn't make any steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These steps are emtpy, but they are enough for us to try out executing tests.
+We didn't make any test steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These test steps are emtpy, but they are enough for us to try out executing tests.
 
 - [x] Right (alt) click on the test case "Verify suitcase is well packed". This brings up the context menu
 - [x] Click "Execute" (with the play icon)
@@ -101,7 +101,7 @@ The test case is about our suitcase packing, which is part of our sprint to prep
 
 ![test execution wizard](img/04-test-06-execute.png)
 
-!!! faq 
+!!! faq ""
     When you go to this page for the first time, you can go through a guided tour of how the page works
 
 As a tester, you move through each of the test steps in the test run in order. Each test step needs a result: Pass, Fail, Blocked, Caution, or Not Applicable (N/A). If you enter any status other than Pass you need to enter a value for the "Actual Result". For a pass status, the Actual Result is optional.
@@ -122,13 +122,13 @@ Before we finish testing, we have one more thing to do. We failed the test and n
 !!! faq "Why create an incident?" 
     Creating an incident (or a bug) during testing is the perfect way to capture what is wrong so someone can fix it (like a developer, or here whoever has to pack the bags). The incident is linked to the exact test step that failed.
     
-    You can then track this bug outside of testing. Once the bug is fixed, the test can rerun the test case and see if things are fixed.
+    You can then track this bug outside of testing. Once the bug is fixed, the tester can rerun the test case and see if things are fixed.
 
 - [x] Click on the "Incidents" tab (this is just above where you typed in the actual result). This opens up a form we can fill in to record the incident
 - [x] Enter a name of `There are too many snacks to fit in the suitcase`
 - [x] Set the Type to "Bug"
 - [x] Pick any value you want for the "Difficulty", "Operating System", and "Web Browser" fields. These aren't relevant to us, but are a part of a more general incident workflow that is typically used for testing web applications. Noone thought to tweak it for interstellar vacations!
-- [x] Click the "Add" button at the bottom. You don't have to enter a descriptoin for the incident - this is automatically generated based on the test step and its actual result
+- [x] Click the "Add" button at the bottom. You don't have to enter a description for the incident - this is automatically generated based on the test step and its actual result
 
 ![prepared incident form](img/04-test-09-execute.png)
 
