@@ -5904,8 +5904,40 @@
 <p>Type in the 'Label' field of the choice, <em>not</em> the 'Value.'</p>
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_227.png" /></p>
 <p>A brief note about field syncing in ServiceNow: The sheer configurability of ServiceNow meant some assumptions were made in the designing of this data sync. Specific column names are mapped to their counterparts in SpiraPlan based on the list below. If a field is not present in ServiceNow, it will simply not be synced.</p>
-<p>SpiraPlan Field       ServiceNow Column Name Name                  name/short_description [both will work]
-Description           description Priority/Importance   priority Author/Detected By    opened_by Owner                 assigned_to Status                state</p>
+<table>
+<thead>
+<tr>
+<th>SpiraPlan Field</th>
+<th>ServiceNow Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>name / short_description (both will work)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>description</td>
+</tr>
+<tr>
+<td>Priority / Importance</td>
+<td>priority</td>
+</tr>
+<tr>
+<td>Author / Detected By</td>
+<td>opened_by</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>assigned_to</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>state</td>
+</tr>
+</tbody>
+</table>
 <h3 id="configuring-the-incidentrequirement-status-mappings">Configuring the Incident/Requirement Status Mappings<a class="headerlink" href="#configuring-the-incidentrequirement-status-mappings" title="Permanent link">&para;</a></h3>
 <p>Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the ServiceNow Data Sync plug-in knows what the equivalent status is in ServiceNow for an incident status in SpiraPlan. The process is identical for Requirement statuses, so repeat these steps with Requirement > Status instead if you are also/only syncing requirements.</p>
 <p>If you don't have a status equivalent in your table, you can ignore this section.</p>
