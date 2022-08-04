@@ -1,16 +1,5 @@
 # Checking the Work
 
-``` mermaid
-  flowchart LR
-  id1(Introduction) --> id2
-  id2(Plan) --> id3
-  id3(Do the work) --> id4
-  id4(Check the work) --> id5 & id3
-  id5(Big picture review) --> id2
-
-  style id4 fill:#fdcb26
-```
-
 !!! tldr annotate "The story so far (1)"
 
     We are going on a vacation to Mars (2). It's a long journey. We spent time planning the trip, and then doing the most important tasks. Before we blast off without a care in the world, let's check that we did everything right.

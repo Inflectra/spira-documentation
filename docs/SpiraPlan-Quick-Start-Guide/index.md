@@ -17,16 +17,6 @@ All you need to get started is the application itself.
 
 
 ## Introduction
-``` mermaid
-  flowchart LR
-  id1(Introduction) --> id2
-  id2(Plan) --> id3
-  id3(Do the work) --> id4
-  id4(Check the work) --> id5 & id3
-  id5(Big picture review) --> id2
-
-  style id1 fill:#fdcb26
-```
 
 Let's go on a journey together. In fact, let's go to Mars! For a vacation. We deserve it. In this Quick Start Guide we use SpiraPlan to help us plan and prepare for our Mars trip. 
 
@@ -92,8 +82,8 @@ Throughout this guide we will be moving between the different artifacts in our s
 [Let's Start :rocket:](./plan){ .md-button .md-button--primary }
 
 
-<!-- ## Artifacts
-Creates 16 in total, which is about half of the current QSG - seems about right
+<!-- ## Artifacts Overview
+Creates 16 in total
 
 ### Requirements
 Prepare the spaceship rq1 [rl2]
@@ -125,23 +115,4 @@ Check if the spaceship computer seems nice tc2 [rq1, rl2]
 
 ### Incidents
 There are too many snacks to fit in the suitcase in1 [tc1]
-
-``` mermaid
-  flowchart TB
-  subgraph one
-  rl1
-  end
-  subgraph two
-  rl2 --> rq1 & rq2 & rq3 & rk1
-  rq3 --> tk2
-  rq1 --> tc2
-  rq2 --> tk1 & tc1
-  tc2 --> in1
-  end
-  subgraph three
-  rl3 --> rq4 & tk4 & rk2
-  rq4 --> tk3
-  end
-  one --> two
-  two --> three
-``` -->
+ -->

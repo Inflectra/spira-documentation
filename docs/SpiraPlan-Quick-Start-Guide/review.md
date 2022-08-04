@@ -1,16 +1,5 @@
 # Review and Next Steps
 
-``` mermaid
-  flowchart LR
-  id1(Introduction) --> id2
-  id2(Plan) --> id3
-  id3(Do the work) --> id4
-  id4(Check the work) --> id5 & id3
-  id5(Big picture review) --> id2
-
-  style id5 fill:#fdcb26
-```
-
 !!! tldr annotate "The story so far (1)"
 
     We are going on a vacation to Mars (2). We've been busy planning, preparing, and checking things for the long journey ahead. Are we ready to leave or not? What is left to do? That's what we are going to find out in this final core section of the SpiraPlan Quick Start Guide.
