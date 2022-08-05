@@ -11,11 +11,7 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.1 (August 2022)
-- New integration with OctoPerf load testing tools
-- Gives cloud hosted users more flexibility for source code management. Mix and match TaraVault for Git or SVN repos with any other source code provider on a product by product basis
-
-### 7.2 (Autumn 2022)
+### 7.2 (Q4 2022)
 - Create and use custom fields on product workspaces
 - Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
 
