@@ -15,7 +15,7 @@ When creating an app registration you should:
 3. Enter a meaningful name
 4. Select which type of accounts to support. There are 3 options (as of March 2020). Pick the one that makes sense for your organization. 
 5. **Enter a Redirect URI of type Web**:
-    - this should be the full URL as shown at the bottom of the Azure AD provider page and **must** be HTTPS. 
+    - this should be the full URL as shown at the bottom of the Azure AD provider page in Spira and **must** be HTTPS. 
     - Note: Azure AD lets you add many redirect URIs but in our testing only the one we entered the very first time seemed to work - hopefully you will have better luck than us
 6. Once the app registration has been completed you will be taken to the App Registration Overview screen for this app. 
 7. You will need to enter the "Application (Client) ID" into Spira as your Client ID
@@ -155,4 +155,4 @@ First create the application in OneLogin
         - Profile URL: {Issuer URL}/me
 
 ## OpenId Connect
-The generic OpenId providers accepts any standard complient OAuth Provider. The required configuration will vary based on how each provider works. However, make sure that, as with other providers, that the return URI entered into the OpenId provider matches that inside SpiraPlan.
+The generic OpenId providers accepts any standard compliant OAuth Provider. The required configuration will vary based on how each provider works. However, make sure that, as with other providers, that the return URI entered into the OpenId provider matches that inside SpiraPlan.
