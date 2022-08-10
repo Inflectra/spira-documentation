@@ -485,6 +485,8 @@
     
       
     
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -5797,7 +5799,13 @@
 <p>To configure a source code provider, you need to click on the System Administration > Integration > Source Code link in the Administration navigation to bring up the list of configured source code providers:</p>
 <p><img alt="" src="../img/System_Integration_76.png" /></p>
 <p>By default the only provider listed will be the TestVersionControlProvider which is used for demonstration purposes only, and can be deleted from a production system by clicking on the "Delete" button to the right of it.</p>
-<p>To add a new source code provider, click the "Add" button to enter the Plug-in details page. The fields required are as follows:
+<p>To edit the system wide settings for an existing source code provider, click on the "Edit" button on the far right of the row for that provider. You can edit the same settings that were shown above when you first created that provider.</p>
+<p>If you want to change the settings for a particular product (including to turn that provider on or off for the product):</p>
+<ul>
+<li>make sure the product dropdown in that row has the correct product selected (the dropdown shows products that are either already using that provider, or that have no source code provider at all)</li>
+<li>click the arrow to the right of the product name to manage <a href="../Product-General-Settings/#source-code">that provider for that Product</a>.</li>
+</ul>
+<p>To add a new source code provider, click the "Add" button at the bottom to go to the Plug-in details page:
 <img alt="" src="../img/System_Integration_77.png" /></p>
 <ul>
 <li><strong>Name</strong>: The name of the source code provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the specific page for that provider in this documentation - eg <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>).</li>
@@ -5809,8 +5817,6 @@
 </ul>
 <p>When finished, click the "Insert" button and you will be taken back to the Source Code integration list page, with new provider listed as an available plug-in:</p>
 <p><img alt="" src="../img/System_Integration_78.png" /></p>
-<p>To edit the settings for an existing source code provider, click on the "Edit" button on the far right of the row for that provider. You can edit the same settings that were shown above when you first created that provider.</p>
-<p>If you want to change the settings for a particular product, make sure the product dropdown in that row has the correct product selected; and click the arrow to the right of the product name to manage <a href="../Product-General-Settings/#source-code">that provider for that Product</a>.</p>
 <h2 id="test-automation">Test Automation<a class="headerlink" href="#test-automation" title="Permanent link">&para;</a></h2>
 <p>SpiraPlan® can be used to manage the development, scheduling and execution of automated unit, functional and load tests written using a variety of test automation engines (e.g. HP QuickTest Pro, SmarteScript, TestComplete, etc.). This section allows you to configure the different engines that are available in your environment so that the testers know which tools they can use to schedule tests with.</p>
 <p>The information on using the various test automation engines for SpiraPlan® and the steps for configuring the engine-specific settings are described in the <em>SpiraTest/Team RemoteLaunch Automated Testing Integration Guide</em>.</p>

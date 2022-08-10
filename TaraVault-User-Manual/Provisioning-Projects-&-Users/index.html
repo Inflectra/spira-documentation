@@ -485,6 +485,8 @@
     
       
     
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -5767,12 +5769,19 @@
 <p>Click 'Activate' to complete the TaraVault setu for this product.</p>
 <p>In the screenshot below we have chosen 'libraryinformationsystem' as the product name and 'Git' as the type. The application will now:</p>
 <ul>
-<li>show that TaraVault is active</li>
+<li>show that TaraVault is active (there is a repository configured) and enabled (the repository is set to be in use)</li>
 <li>fills in the 'Client Connection' with the URL you need to connect to this TaraVault product</li>
 <li>shows the list of TaraVault users that are active for this product.</li>
 </ul>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_7.png" /></p>
-<p><strong>NOTE</strong>: Once TaraVault has been activated on a product, you can deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.</p>
+<p>Once TaraVault has been activated on a product, you can perform the following actions:</p>
+<ul>
+<li><strong>Disable/Enable</strong>: use this to temporarily disable TaraVault for this product. The TaraVault repository is not deleted and remains active but will no longer be available to view in the app. While disabled, you can, if <a href="../../Spira-Administration-Guide/System/#taravault-for-source-code">configured</a> a third party provider to the product. Once disabled you can re-enable TaraVault by clicking the Enable button</li>
+<li><strong>Delete</strong>: will permanently delete, deactivate, and disable TaraVault for this product. This is a destructive operation that deletes all source code. Make sure you have created all necessary backups before doing this operation</li>
+<li><strong>Refresh Cache</strong>: will force the cache to refresh right now - this is not normally required as the cache refreshes automatically as you use the application</li>
+<li><strong>Clear Cache</strong>: to wipe the cache completely and have it rebuild from scratch (note that for large repositories this process can take some time)
+deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.</li>
+</ul>
 <h2 id="managing-users">Managing Users<a class="headerlink" href="#managing-users" title="Permanent link">&para;</a></h2>
 <p>By default, the built-in system administrator account will be automatically enabled for TaraVault and will be added as a member of all TaraVault products. To enable other users to commit code/files to a TaraVault repository, go to Administration &gt; Users &gt; View/Edit Users menu item.</p>
 <p><img alt="" src="../img/Provisioning_Projects_%26_Users_8.png" /></p>
