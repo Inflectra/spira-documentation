@@ -162,6 +162,7 @@ nav:
   - CircleCI: SpiraApps\CircleCI.md
   - Default Descriptions: SpiraApps\Default-Descriptions.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
+  - OctoPerf: SpiraApps\OctoPerf.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
