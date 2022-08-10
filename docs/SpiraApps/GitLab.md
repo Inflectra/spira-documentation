@@ -32,7 +32,7 @@ To configure this SpiraApp that lets users manually kick off a new Pipeline, you
 ![product settings page](img/gitlab-product-settings.png)
 
 ### Product Template Setup
-- [x] Add a plain text custom property called "gitlab-branch-name" for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.
+- [x] Add a plain text custom property called `gitlab-branch-name` for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.
 
 ## Using the SpiraApp
 To use the SpiraApp to start a new GitLab Pipeline go to a release in that product. 

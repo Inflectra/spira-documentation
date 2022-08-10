@@ -1,5 +1,29 @@
 # Release Notes for Spira v7
 
+
+## Version 7.1 (August 2022)
+
+!!! info "Summary"
+Cloud customers can now [more easily and flexibly set up source code integration](../../Spira-Administration-Guide/System/#taravault-for-source-code) inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
+
+Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../../SpiraApps/OctoPerf) seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
+
+??? Success "New Features"
+
+    - Ability to switch (at a product level) cloud Spira between [TaraVault and external Git/Subversion](../../Spira-Administration-Guide/System/#taravault-for-source-code) [RQ:4287]
+    - A new [SpiraApp integrates SpiraPlan with Octoperf](../../SpiraApps/OctoPer) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
+
+??? bug "Bug fixes and enhancements"
+
+    - Improve diagram export options when viewing a diagram on the document details page to save a diagram as an SVG [IN:7134]
+    - Replace Internet Explorer to Edge in sample data, as Internet Explorer has finally, officially retired [IN:7311]
+    - Do not let a product have more than one source code provider in active use at any one time [IN:7321]
+    - Let product admins disable / enable TaraVault for a product (in addition to full deactivation (hard deletion) as now) [IN:7324]
+    - Fix typos and a screenshot in the 7.0 walkthrough popup [IN:7328]
+    - Fix the documentation link on the System and Product Admin > SpiraApps settings pages [IN:7330]
+    - Fix Product Template custom lists letting you save a blank value name (even though it shows an error suggesting this not allowed) [IN:7384]
+
+    
 ## Version 7.0 (July 2022)
 
 !!! info "Summary"

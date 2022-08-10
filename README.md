@@ -28,7 +28,8 @@ We can fully change the theme used and its features using a basic templating lan
 3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
 4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
 5. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
-6. Clone this repo to your local machine
+6. Run `pip install mkdocs-redirects` to enable proper redirect handling of old pages or links that we no longer need
+7. Clone this repo to your local machine
 
 
 
