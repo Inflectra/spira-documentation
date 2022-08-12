@@ -2,6 +2,7 @@
 This add-in lets you import a list of requirements or test cases (with folders and test steps) into any product in your SpiraTest, SpiraTeam, or SpiraPlan application. It lets you specify how your document is organized using its styles and headings so the data added to SpiraPlan will be hierarchically structured in the same way. It supports importing rich text, tables, lists, and images.
 
 This add-in requires:
+
 - a support version of Microsoft Word
 
     - Word 2019+ (Windows and Mac OS)
