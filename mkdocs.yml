@@ -266,8 +266,9 @@ nav:
     - Zendesk: Help-Desk-Integration\Zendesk.md
   - Migration: 
     - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
-    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
+    - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
+    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
     - Microsoft Word: Migration-and-Integration\Importing-from-Microsoft-Word.md
     - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
     - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
