@@ -180,14 +180,7 @@ In addition, information about any incidents linked to the ticket are clearly sh
 
 ![](img/Zendesk_39.png)
 
-Hovering over a particular incident pops up the description to give the agent quick access to additional information.
+Hovering over a particular incident gives the agent quick access to the additional information directly in Spira.
 
 ![](img/Zendesk_40.png)
 
-Finally, clicking on any incident will display a modal pop up table with fuller details about all linked incidents, including the incident ID to help the agent follow up as needed with the developers.
-
-![](img/Zendesk_41.png)
-
-Also shown on this table is the Last Updated date of the incident. Hovering over the data will display a tooltip with the time of the update.
-
- ![](img/Zendesk_42.png)  
