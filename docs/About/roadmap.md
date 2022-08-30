@@ -11,9 +11,12 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.2 (Q4 2022)
+### 7.2 (October 2022)
 - Create and use custom fields on product workspaces
+
+### 7.3 (Q4 2022)
 - Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
+- Ability to create teams and assign product members to specific teams (in beta - SpiraPlan only)
 
 
 ## Future Releases
