@@ -13,7 +13,7 @@ All you need to get started is the application itself.
     - SpiraTeam, which is SpiraTest plus some extra features
     - SpiraPlan, which takes all the features of SpiraTeam and adds a few more
 
-    Whatever flavor of Spira you have (we will say **"Spira"** from here on) you can use this Quick Start Guide. 
+    Whatever flavor of Spira you have (we will say **"Spira"** from here on) you can use this Quick Start Guide. To learn more about the differences between the different Spira editions, take a look at our [detailed comparison chart](https://www.inflectra.com/SpiraTeam/ProductComparison.aspx)
 
 
 ## Introduction
@@ -24,7 +24,7 @@ This Guide is split into different parts, the different stages of our preparatio
 
 - We start with planning things out (planning)
 - Then we get to work on doing what we planned (doing the work)
-- We can't stop there, we have to check the work for mistakes or bugs (checking the work). 
+- We can't stop there, we have to check the work for mistakes or bugs (checking the work)
 - As we iron out bugs in the vacation plan, we should check in on the overview of the project to see if we are on track (big picture review) 
 
 We recommend doing things in order if you can. This will really let you see the power of how SpiraPlan helps you connect your work together. This in turn helps you better understand your progress and better meet your goals. That being said, this is your time and your time is precious. We have designed this guide so that you can dip into any part you want at ant time. However you approach it and whatever edition of Spira you have, there will be clear signposts and tips to guide you along the way.
@@ -58,6 +58,10 @@ You are now logged-in and will see the "My Page". The My Page looks pretty empty
 
 The first time you log in you will see a popup that gives you a quick orientation of the application. Please follow this guide first.
 
+!!! question "Getting Help in the App"
+    On every page of the application there is a link to go to the documentation for that specific page. Feel free to use that at any time. 
+
+    To access it: click your icon / avatar in the upper right to open the user menu, then click on the link called "Documentation"
 
 ### Products
 To start getting things done in the application you need to select a workspace to explore, manage, or work on. The most common and important workspace is the product. This is where you and your team will spend most of their time in SpiraPlan. Products are long running areas of work with tangible outputs or goals. This can be a software or hardware product that gets new regular new releases, patches, and features. A product can also be used like a project, where the focus may be a different kind of output or to manage a process.

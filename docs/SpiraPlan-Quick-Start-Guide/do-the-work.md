@@ -19,9 +19,14 @@ For example, a task going from not done to done. In SpiraPlan the task starts as
 !!! info "If you are starting the quick start guide here"
     This part of the guide only works if you have already made some requirements and (optionally) tasks for those requirements. If you haven't done this, please [go back](../plan/#features-and-goals) and do so now.
 
+    **There are two different ways to "do the work" in this part of the guide - you only need to do one**:
 
-### Following along in full
-!!! info "Using SpiraTest?"
+    - Either complete tasks linked to requirements  (if you are using SpiraTeam or SpiraPlan and did all the steps on the Plan page)
+    - Or work with requirements directly (if you are using SpiraTest or if you worked on the Plan page already but did not create tasks)
+
+
+### Completing Tasks
+!!! info "Using SpiraTest or did not follow all steps on the Plan page?"
     [Skip ahead](#requirements-only)
 
 - [x] Open the Artifact dropdown from the global navigation and click "Requirements"
@@ -97,8 +102,8 @@ The task progress bars for 3 requirements are now green. This makes sense becaus
 | > Take the right amount of rocket fuel | Developed |
 | Get a cool spacesuit                   | Planned   |
 
-### Requirements Only
-!!! info "Following along in full?"
+### Completing Standalone Requirements
+!!! info "Already completed tasks (above)?"
     [Skip ahead](../test)
 
 - [x] Open the Artifact dropdown from the global navigation and click "Requirements"

@@ -12,7 +12,7 @@ We will spend the first chunk of this guide planning things out. We start by out
 ## Features and Goals
 {==
 
-**Requirements** are also known as features, or user stories. Different methodologies call them different things and use them in different ways. SpiraPlan is methodology agnostic so you can use requirements however you want. 
+**Requirements** are also known as features, or user stories. Different frameworks and methodologies call them different things and use them in different ways. SpiraPlan is methodology agnostic so you can use requirements however you want. 
 
 Often, as you work with requirements or features you need to structure your requirements with some nested inside others. SpiraPlan gives you full support for hierarchically arranging your requirements. 
 

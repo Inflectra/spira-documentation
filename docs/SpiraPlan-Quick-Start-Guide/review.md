@@ -102,7 +102,16 @@ Even if we only focus on the "Prep for launch" release, apart from the tasks, yo
 
         Collectively, these will move the three requirements in release 2.0 to the Tested Status. This in turn will make the requirement completion and test coverage for release 2.0 go 100% green.
 
+## How to learn more or get more help
+We have lots more ways to help you get to know SpiraPlan better!
 
+First, there is our online documentation that you are already reading. Here are some helpful links:
+
+- [Get started with the user manual](../../Spira-User-Manual)
+- If you are an administrator, [learn about admin functionality](../../Spira-Administrtation-Guide)
+- Use the navigation menus or search to browse the documentation and learn about the features and integrations that will be most useful for you
+
+There is also the [Inflectra support portal](https://www.inflectra.com/Support). Here you can read knowledge base articles, ask questions in the forum, or log a ticket with the support team.
 
 <!-- ## More to come
 - Planning board
