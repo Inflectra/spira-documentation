@@ -42,7 +42,14 @@ To configure a source code provider, you need to click on the System Administrat
 
 By default the only provider listed will be the TestVersionControlProvider which is used for demonstration purposes only, and can be deleted from a production system by clicking on the "Delete" button to the right of it.
 
-To add a new source code provider, click the "Add" button to enter the Plug-in details page. The fields required are as follows:
+To edit the system wide settings for an existing source code provider, click on the "Edit" button on the far right of the row for that provider. You can edit the same settings that were shown above when you first created that provider.
+
+If you want to change the settings for a particular product (including to turn that provider on or off for the product):
+
+- make sure the product dropdown in that row has the correct product selected (the dropdown shows products that are either already using that provider, or that have no source code provider at all)
+- click the arrow to the right of the product name to manage [that provider for that Product](../Product-General-Settings/#source-code).
+
+To add a new source code provider, click the "Add" button at the bottom to go to the Plug-in details page:
 ![](img/System_Integration_77.png)
 
 -   **Name**: The name of the source code provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the specific page for that provider in this documentation - eg [Git](../../Version-Control-Integration/Integrating-with-Git/)).
@@ -55,10 +62,6 @@ To add a new source code provider, click the "Add" button to enter the Plug-in d
 When finished, click the "Insert" button and you will be taken back to the Source Code integration list page, with new provider listed as an available plug-in:
 
 ![](img/System_Integration_78.png)
-
-To edit the settings for an existing source code provider, click on the "Edit" button on the far right of the row for that provider. You can edit the same settings that were shown above when you first created that provider.
-
-If you want to change the settings for a particular product, make sure the product dropdown in that row has the correct product selected; and click the arrow to the right of the product name to manage [that provider for that Product](../Product-General-Settings/#source-code).
 
 
 ## Test Automation

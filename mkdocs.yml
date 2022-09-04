@@ -162,6 +162,7 @@ nav:
   - CircleCI: SpiraApps\CircleCI.md
   - Default Descriptions: SpiraApps\Default-Descriptions.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
+  - OctoPerf: SpiraApps\OctoPerf.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
@@ -266,8 +267,9 @@ nav:
     - Zendesk: Help-Desk-Integration\Zendesk.md
   - Migration: 
     - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
-    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
+    - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
+    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
     - Microsoft Word: Migration-and-Integration\Importing-from-Microsoft-Word.md
     - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
     - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
@@ -305,3 +307,9 @@ nav:
   - Release Notes for v3: About/release-notes-v3.md
   - Release Notes for v2: About/release-notes-v2.md
   - Legal Notices: About/legal-notices.md
+
+
+# Redirects
+# plugins:
+#   - redirects:
+#        redirect_maps:

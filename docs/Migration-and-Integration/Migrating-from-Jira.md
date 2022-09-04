@@ -6,7 +6,10 @@ This section outlines how to use the included Migration Tool for importing proje
 
 ## Installing the Jira Migration Tool
 
-This section outlines how to install the migration tool for Jira onto a workstation so that you can then migrate whole projects from Jira to either SpiraTeam or SpiraPlan (hereafter referred to as SpiraTeam). It assumes that you already have a working installation of SpiraTeam v6.0 or later and a working version of Jira Cloud, Server or Data Center. If you have an earlier version of SpiraTeam you will need to upgrade to at least v6.0 before trying to migrate projects.
+This section outlines how to install the migration tool for Jira onto a workstation so that you can then migrate whole projects from Jira to either SpiraTeam or SpiraPlan (hereafter referred to as SpiraTeam). It assumes that you already have a working installation of SpiraTeam v6.0 or later and a working version of Jira Cloud, Server or Data Center. 
+
+!!! warning "Minimum Version of Spira"
+    **You must be on at least SpiraTeam 6.13 to use this tool**. If you have an earlier version of SpiraTeam you will need to upgrade to at least v6.13 before trying to migrate projects.
 
 The Windows installation package can be downloaded from the 'Add-Ons & Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:
 

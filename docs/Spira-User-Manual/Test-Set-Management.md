@@ -133,7 +133,14 @@ The navigation pane consists of a link that will take you back to the test set l
 
 The operations toolbar lets you, amongst standard operations like save and delete:
 
-- create a duplicate of the current artifact by clicking `Clone`
+- create a duplicate of the current artifact by clicking `Clone` - note that:
+
+    - standard fields (like type and owner, except 'configuration' and 'scheduled on build') and custom fields are cloned
+    - description (with formatting) are cloned
+    - file attachments are cloned
+    - associated test runs and incidents are *not* cloned
+    - followers, comments, execution status and history are *not* cloned
+
 - export to a number of files formats or print it via one of the options in the `Tools` dropdown menu
 - the `Execute` button will execute all the test cases in the set against the release specified in the test set and then take you to the
 [test execution screen](#execute-test-cases)

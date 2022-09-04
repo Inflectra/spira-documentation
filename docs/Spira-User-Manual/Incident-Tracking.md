@@ -57,17 +57,22 @@ When you have made your updates, you can either click "***Save***" to commit the
 
 
 ### Cloning Incidents
+To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "***Clone***" under the Edit menu (or click "***Clone***" from the "New" dropdown menu from the  Incident's details page). This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.
 
-To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "***Clone***". This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.
+When cloning the test case note that:
+
+- all standard fields (like type and owner) and custom fields are cloned
+- description (with formatting) are cloned
+- file attachments are cloned
+- associated artifacts are *not* cloned
+- followers, comments, automation and history are *not* cloned
 
 
 ### Exporting Incidents
-
 Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Creating Requirement from Incidents
-
 Sometimes you may have enhancements logged that now need to be converted into formal requirements. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create new requirements from selected incidents (1 or more); and it automatically creates an association between each new requirement and the corresponding incident.[^rq-in]
 
 To use this feature:
@@ -77,7 +82,6 @@ To use this feature:
  
 
 ### Printing Items
-
 To quickly print a single incident or list of incidents you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 
@@ -106,14 +110,12 @@ In addition to the left hand navigation, you can enter a specific incident numbe
 
 
 ### Editing an Existing Incident
-
 When editing an existing incident, the fields that are available and the fields that are required will depend on your stage in the incident workflow. Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows), and how [electronic signatures](Application-Wide.md#electronic-signatures) can further control how you progress an incident through the workflow.
 
 You can print the current incident by clicking Tools \> Print, which will display a printable version of the page in a separate window. Alternatively, you can export the incident to a number of formats by selecting the appropriate option from the Tools menu.
 
 
 ### Inserting a New Incident
-
 If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the *SpiraPlan Administration Guide* for details on configuring the incident workflows to meet their needs.
 
 Once you've filled out the appropriate incident fields, you can either click "***Save***" or one of the options from the "***Save***" dropdown list to commit the changes or click on "***Back to Incident List***" to discard the insertion and return back to the incident list.

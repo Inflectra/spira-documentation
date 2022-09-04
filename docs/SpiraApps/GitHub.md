@@ -33,8 +33,8 @@ To configure this SpiraApp that lets users manually kick off a new Action, you m
 ![product settings page](img/github-product-settings.png)
 
 ### Product Template Setup
-- [x] Add a plain text custom property called "github-branch-name" for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.
-- [x] Add a plain text custom property called "github-workflow-id" for Releases in the product's template.
+- [x] Add a plain text custom property called `github-branch-name` for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.
+- [x] Add a plain text custom property called `github-workflow-id` for Releases in the product's template.
 
 ## Using the SpiraApp
 To use the SpiraApp to start a new GitHub Action go to a release in that product. 

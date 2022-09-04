@@ -21,8 +21,23 @@ The available settings include:
 - **Instant Messenger**: SpiraPlan and SpiraTeam come with a built-in instant messenger that allows users to communicate with each other in real-time. This can result in higher levels of network traffic and some system administrators may wish to disable this feature. This option lets you disable the integrated instant messenger. In addition, you can specify how long (in days) instant messages are retained in the system.
 - **Event Log Retention**: As described in  [Event Log](#event-log), SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
 - **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
-- **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for a product that has its [equivalent setting](../Product-Planning/#testing-settings) set to Yes. This should not be done unless you have been told by the Inflectra Support team to do so.
-- **Use TaraVault for source code**: This toggle is only available to cloud hosted versions of SpiraTeam and SpiraPlan. Cloud hosted applications will, by default, use [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault) for source code management. Administrators can turn off TaraVault and then connect directly to any third party source code provider they choose.
+- **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](../Product-Planning/#testing-settings). 
+
+### TaraVault for Source code
+The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
+
+- **Use TaraVault for source code**: When enabled (the default), every Spira product will use [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault) for source code management. If disabled (set the toggle to no) each product can either use TaraVault or an external (and cloud accessible) Git or Subversion provider of your choice, such as BitBucket, GitLab or Azure DevOps. **Note**: You can enable/disable this setting at anytime, but doing so may impact your ability to access your source code settings.
+
+!!! question "Not exclusively using TaraVault"
+    If you set/leave the "Use TaraVault for source code" toggle discussed above to Yes, then you will only have access to the TaraVault admin pages at both the system and product level administration.
+
+    If you set the "Use TaraVault for source code" toggle to No, the administration menu will work a little differently for you. The system admin menu will always show two links for source code management in the Integration sub-section. This allows to easily access and configure TaraVault and any third party providers at any time. Meanwhile, the product admin menu will adapt to how you have setup source code for that particular product:
+
+    - If TaraVault is already enabled, the product admin "Source Code" link will open the product TaraVault page
+    - If instead a third party source code provide provider is configured for the product, the product admin "Source Code" link will open the admin page for that provider
+    - If no source code provider has been set up (neither TaraVault nor a third party) then the product admin menu will show two links, one for configuring TaraVault, and the other for configuring a third party provider (see below)
+
+    ![product admin menu with TaraVault and third party provider links](img/System_58b.png)
 
 
 ## File Type Icons

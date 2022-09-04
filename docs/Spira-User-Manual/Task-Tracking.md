@@ -69,7 +69,15 @@ To move a task / tasks between folders, click and drag the relevant task/tasks f
 {: #refresh}
 - **show-hide-columns**: This drop-down list allows you to change the fields that are displayed in the task list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 {: #Show / Hide Columns}
-- **Cloning Tasks**: To create a clone of a task, a set of tasks, or a folder of tasks, select the check-boxes of the tasks you want to clone and then click "***Clone***". This will make a clone of the current task in the current folder with its name changed to add " - Copy" added to the end, to distinguish itself from the original. Any file attachments will also be copied along with the task itself.
+- **Cloning Tasks**: To create a clone of a task, a set of tasks, or a folder of tasks, select the check-boxes of the tasks you want to clone and then click "***Clone***". This will make a clone of the current task in the current folder with its name changed to add " - Copy" added to the end, to distinguish itself from the original. When cloning a folder of tasks, only the folder name gets changed. When cloning tasks note that:
+
+- all standard fields (like status and owner) are cloned
+- description (with formatting) are cloned
+- remaining effort and execution progress are cloned
+- any associated requirement is cloned
+- file attachments are cloned
+- followers, comments, and history are *not* cloned
+
 {: #duplicating-tasks}
 - **Exporting Tasks to Another Product**: Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 {: #exporting-tasks-to-another-product}
@@ -309,6 +317,7 @@ To complete the split click the `Split` button.
 - **New remaining effort**: this defaults to blank in the split dialog. If this is left blank and the original task has the status of "In Progress" all the remaining effort will be moved to the new task. If the original task has any other status than "In Progress" the remaining effort will be split equally between the original and new task (if the remaining effort percentage is left blank).
 - **Status**: the new task's status will match that of the original task
 - **Attachments** are copied over to the new task (and left unchanged on the original task)
+- History, comments and followers are not copied over to the new task
 - All standard and custom field information is copied over to the new task
 
 

@@ -55,12 +55,16 @@ When you have made your updates, you can either click "***Save***" to commit the
 
 ### Cloning Risks
 
-To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit  "**Clone**". This makes a copy of the current risk with '... - Copy' added at the end of its name. When cloning the risks please be aware of the following:
+To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit then "**Clone**". You can also clone a rsiks from its detailed view (using the dropdown next to the "New" button). Cloning a risk makes a copy of the selected risk with '... - Copy' added at the end of its name. When cloning risks note that:
 
-- file attachments are copied
+- all standard and custom properties are cloned
+- description (with formatting) is cloned
 - risk mitigations are cloned
-- tasks associated to the risk are also cloned and associated to the new risk
+- comments are cloned
+- file attachments are cloned
+- tasks associated to the risk are cloned and associated to the new risk
 - an association between the original risk and cloned risk is created
+- followers and history are *not* cloned
 
 
 

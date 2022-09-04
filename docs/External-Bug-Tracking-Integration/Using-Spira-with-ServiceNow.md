@@ -72,8 +72,14 @@ Type in the 'Label' field of the choice, *not* the 'Value.'
 
 A brief note about field syncing in ServiceNow: The sheer configurability of ServiceNow meant some assumptions were made in the designing of this data sync. Specific column names are mapped to their counterparts in SpiraPlan based on the list below. If a field is not present in ServiceNow, it will simply not be synced.
 
-SpiraPlan Field       ServiceNow Column Name Name                  name/short\_description \[both will work\]
-Description           description Priority/Importance   priority Author/Detected By    opened\_by Owner                 assigned\_to Status                state
+| SpiraPlan Field       | ServiceNow Column                          | 
+|-----------------------|--------------------------------------------|
+| Name                  | name / short_description \(both will work) |
+| Description           | description                                |
+| Priority / Importance | priority                                   |
+| Author / Detected By  | opened_by                                  |
+| Owner                 | assigned_to                                |
+| Status                | state                                      |
 
 
 ### Configuring the Incident/Requirement Status Mappings

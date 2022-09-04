@@ -23,13 +23,19 @@ Click 'Activate' to complete the TaraVault setu for this product.
 
 In the screenshot below we have chosen 'libraryinformationsystem' as the product name and 'Git' as the type. The application will now:
 
-- show that TaraVault is active
+- show that TaraVault is active (there is a repository configured) and enabled (the repository is set to be in use)
 - fills in the 'Client Connection' with the URL you need to connect to this TaraVault product
 - shows the list of TaraVault users that are active for this product.
 
 ![](img/Provisioning_Projects_&_Users_7.png)
 
-**NOTE**: Once TaraVault has been activated on a product, you can deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.
+Once TaraVault has been activated on a product, you can perform the following actions:
+
+- **Disable/Enable**: use this to temporarily disable TaraVault for this product. The TaraVault repository is not deleted and remains active but will no longer be available to view in the app. While disabled, you can, if [configured](../../Spira-Administration-Guide/System/#taravault-for-source-code) a third party provider to the product. Once disabled you can re-enable TaraVault by clicking the Enable button
+- **Delete**: will permanently delete, deactivate, and disable TaraVault for this product. This is a destructive operation that deletes all source code. Make sure you have created all necessary backups before doing this operation
+- **Refresh Cache**: will force the cache to refresh right now - this is not normally required as the cache refreshes automatically as you use the application
+- **Clear Cache**: to wipe the cache completely and have it rebuild from scratch (note that for large repositories this process can take some time)
+deactivate it at anytime, by clicking the "Deactivate" button. This will completely remove the source code from SpiraPlan and from the remote source code repository. Be very careful before doing this destructive action.
 
 
 ## Managing Users

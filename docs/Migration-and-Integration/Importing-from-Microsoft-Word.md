@@ -138,4 +138,18 @@ If there is an error during the import of either requirements or test cases, the
 ![](img/Importing_from_Microsoft_Word_41.png)
 
 
+## Functionality Differences to the Microsoft Word365 plugin
 
+**What can the Word365 add-in do that the Classic Word add-in cannot?**
+
+* Parse test step tables without removing the first row (the "Using header rows?" option allows you to toggle this)
+* Enforce and validate hierarchy rules before sending requirements
+* Send Test cases / Requirements without requiring an empty last line under the rest of the selection
+* Parse an entire document without selection
+* Works not just on Windows but also Mac OS, iPad OS, and on the web
+
+**What can the Classic Word add-in do that the Word365 add-in cannot?**
+
+* Parse images of older formatting styles (Legacy Documents)
+* Work with versions of spira older than 6.3.0.1
+* Work with versions of Word 2016 or earlier
