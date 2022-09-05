@@ -121,7 +121,7 @@ report in Bamboo:
 The corresponding build entry will also be created in SpiraTeam under
 the specified project and release/iteration:
 
-![Figure 07](img/Atlassian_Bamboo_40.jpeg)
+![Figure 07](img/Atlassian_Bamboo_40.png)
 
 
 
@@ -130,7 +130,7 @@ If you have configured your Project Home to include the list of recent
 builds, the build information will also be displayed on the Project Home
 dashboard:
 
-![Figure 08](img/Atlassian_Bamboo_41.jpeg)
+![Figure 08](img/Atlassian_Bamboo_41.png)
 
 
 
@@ -138,7 +138,7 @@ dashboard:
 Clicking on either of the hyperlinks will allow you to navigate to the
 Build details page inside SpiraTeam:
 
-![Figure 09](img/Atlassian_Bamboo_42.jpeg)
+![Figure 09](img/Atlassian_Bamboo_42.png)
 
 
 
