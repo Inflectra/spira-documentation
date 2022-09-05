@@ -216,6 +216,7 @@ nav:
     - Perl TAP: Unit-Testing-Integration\Integrating-with-Perl-TAP.md
     - PHPUnit: Unit-Testing-Integration\Integrating-with-PHPUnit.md
     - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
+    - Cypress: Unit-Testing-Integration\Integrating-with-Cypress.md
     - Jasmine: Unit-Testing-Integration\Integrating-with-Jasmine.md
     - Jest: Unit-Testing-Integration\Integrating-with-Jest.md
     - Test Runner Excel Add-in: Unit-Testing-Integration/Using-Test-Runner-For-Excel.md
