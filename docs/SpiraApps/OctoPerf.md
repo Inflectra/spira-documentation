@@ -36,7 +36,7 @@ To complete the next part of the setup, login to your OctoPerf Application.
 
     - **Type**: Http
     - **Events**: "Test failed", "Test passed", and "Test error" (tip: click in the Events box to get a list of options to select from)
-    - **URL**: use a url in the form: `{{base url}}/Services/Webhooks/BuildService.svc/GitHub?username={{username}}&api-key={{api key}}`. This is the url that OctoPerf uses to talk to SpiraPlan. See the example below.
+    - **URL**: use a url in the form: `{{base url}}/Services/Webhooks/BuildService.svc/OctoPerf?username={{username}}&api-key={{api key}}`. This is the url that OctoPerf uses to talk to SpiraPlan. See the example below.
     - Leave every other field as the default
 
 !!! example "The webhook URL"
@@ -46,7 +46,7 @@ To complete the next part of the setup, login to your OctoPerf Application.
     - Add the following to the end of that URL `/Services/Webhooks/TestService.svc/OctoPerf`
     - Add your SpiraPlan user authentication to the end of this url. This needs a username and an [api-key](../../HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). The user must be a member of the relevant product and be able to create releases. This part of the URL looks like `?username={{username}}&api-key={{api key}}`
 
-    The final URL will look like this: `https://mysite.spiraservice.net/Services/Webhooks/TestService.svc/OctoPerf?username=github-actions&api-key={11111111-1111-1111-1111-111111111111}`
+    The final URL will look like this: `https://mysite.spiraservice.net/Services/Webhooks/TestService.svc/OctoPerf?username=hobi-actions&api-key={11111111-1111-1111-1111-111111111111}`
 
 ![OctoPerf notification](img/octoperf-notification.png)
 
