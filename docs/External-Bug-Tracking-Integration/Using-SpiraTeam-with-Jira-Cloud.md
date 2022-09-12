@@ -74,7 +74,7 @@ time-zones here.
     - **Set to Yes**: all users in SpiraPlan need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
     - **Set to No**: users in SpiraPlan and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
-- **Severity Field**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraPlan Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Severity/Est. Points Field**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on JIRA custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 - **Task Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
 - **Sync Direction**: This determines how the synchronization of incidents works:
 
@@ -83,12 +83,12 @@ time-zones here.
     - **"Both"**: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraPlan and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents (user stories/epics will not be synced at all).
-- **Link Type**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
+- **Link Type**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
 !!! info
-    For most users, we recommend leaving these fields blank: "Severity Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do not want sync user stories/requirements.
+    For most users, we recommend leaving these fields blank: "Severity/Est. Points Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do not want sync user stories/requirements.
 
 
 ## Configuring the Data Mapping
@@ -275,7 +275,7 @@ Once you have created a custom field in JIRA to contain the list of severity val
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_37.png)
 
-On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **"Severity Field" property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
+On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the **"Severity/Est. Points" property with this value** (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
@@ -332,7 +332,11 @@ The JIRA ID can be found by using the **Components** tab of the Jira configurati
 ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 
-#### j) Task Status (Optional)
+#### j) Requirement Estimate Points (Optional):
+
+To sync Estimate Points for Requirements in Spira, make sure you [added Estimates to your Jira issues](https://support.atlassian.com/jira-software-cloud/docs/enable-estimation/) as **Story points** or have a **numeric** custom property in Jira to map against. Use the Configuration Helper tool to find its ID (under the 'Custom Fields' tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the DataSync configuration page. For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
+
+#### k) Task Status (Optional)
 
 Click on the "Status" hyperlink under Task Standard Fields to bring up the Task status mapping configuration screen:
 
@@ -345,7 +349,7 @@ The JIRA ID can be found by using the **Issue Statuses** tab of the Jira configu
 ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 
-#### k) Task Priority (Optional)
+#### l) Task Priority (Optional)
 
 Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen:
 
@@ -358,7 +362,7 @@ The JIRA ID can be found by using the **Issue Priorities** tab of the Jira confi
 ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 
-#### l) Task Type (Optional)
+#### m) Task Type (Optional)
 
 Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen:
 
@@ -468,7 +472,7 @@ To see the Jira ID on the Incident list page you need to create a SpiraPlan cust
 ## Using SpiraPlan with JIRA
 Now that all the mappings are done, you are now ready to use the integration.
 
-Once the data sync service starts, at first any incidents created in SpiraPlan for the specified products will be imported into JIRA and any existing issues in JIRA get loaded into SpiraPlan as either incidents or requirements (depending on your configuration).
+Once the data sync service starts, at first any incidents created in SpiraPlan for the specified products will be imported into JIRA and any existing issues in JIRA get loaded into SpiraPlan as either incidents or requirements (depending on your configuration). Please note that links between Jira issues will be imported as Requirements associations.
 
 !!! info "Checking the logs"
     At this point we recommend checking the event log for any errors or useful messages. 
