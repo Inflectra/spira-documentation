@@ -96,12 +96,6 @@ below:
 
 -   **Primary** -- You must have exactly one primary key for each *monday* status. This is what status the plug-in should set the incident in SpiraPlan to when the status in *monday* changes. This is only used if there are more options in SpiraPlan than *monday*.
 
-### Configuring the Task Status Mapping
-
-Click the "Status" button within the "Task" section to map the
-task statuses together. Use the same logic as described in the `Incident Status Mapping` section.
-
-
 ### Configuring the Incident Priority Mapping
 
 Select the "Priority" button within the "Incident" section to map the
@@ -117,11 +111,6 @@ below:
 -   **External Key** -- Priority is a dropdown in *monday*, so please match the Priority names with the Spira priorities. Please make sure to type the exact name you see in *monday*. Also, make sure to use a single option dropdown menu for this option in *monday*, as Spira does not support having multiple Incident Priority.
 
 -   **Primary** -- You must have exactly one primary key for each *monday* priority. This is what status the plug-in should set the incident in SpiraPlan to when the priority in *monday* changes. This is only used if there are more options in SpiraPlan than *monday*.
-
-### Configuring the Task Priority Mapping
-
-Click the "Priority" button within the "Task" section to map the
-task priorities together. Use the same logic as described in the `Incident Priority Mapping` section.
 
 ### Configuring the Incident Type Mapping
 
@@ -139,15 +128,25 @@ below:
 
 -   **Primary** -- You must have exactly one primary key for each *monday* Type. This is what status the plug-in should set the incident in SpiraPlan to when the Type in *monday* changes. This is only used if there are more options in SpiraPlan than *monday*.
 
-### Configuring the Task Type Mapping
-
-Click the "Type" button within the "Task" section to map the
-task types together. Use the same logic as described in the `Incident Type Mapping` section.
-
 ### Configuring the Incident Severity Mapping
 
 Now click the "Severity" button within the "Incident" section to map the
 incident severities together. Use the same logic as described in the `Incident Priority Mapping` section.
+
+### Configuring the Task Status Mapping
+
+Click the "Status" button within the "Task" section to map the
+task statuses together. Use the same logic as described in the `Incident Status Mapping` section.
+
+### Configuring the Task Priority Mapping
+
+Click the "Priority" button within the "Task" section to map the
+task priorities together. Use the same logic as described in the `Incident Priority Mapping` section.
+
+### Configuring the Task Type Mapping
+
+Click the "Type" button within the "Task" section to map the
+task types together. Use the same logic as described in the `Incident Type Mapping` section.
 
 ### Configuring the User Mapping
 To configure the mapping of users in the two systems, you need to go to
