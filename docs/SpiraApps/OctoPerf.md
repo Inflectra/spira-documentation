@@ -46,7 +46,7 @@ To complete the next part of the setup, login to your OctoPerf Application.
     - Add the following to the end of that URL `/Services/Webhooks/TestService.svc/OctoPerf`
     - Add your SpiraPlan user authentication to the end of this url. This needs a username and an [api-key](../../HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). The user must be a member of the relevant product and be able to create releases. This part of the URL looks like `?username={{username}}&api-key={{api key}}`
 
-    The final URL will look like this: `https://mysite.spiraservice.net/Services/Webhooks/TestService.svc/OctoPerf?username=hobi-actions&api-key={11111111-1111-1111-1111-111111111111}`
+    The final URL will look like this: `https://mysite.spiraservice.net/Services/Webhooks/TestService.svc/OctoPerf?username=hobikdoc&api-key={11111111-1111-1111-1111-111111111111}`
 
 ![OctoPerf notification](img/octoperf-notification.png)
 
