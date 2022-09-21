@@ -491,6 +491,8 @@
     
       
     
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -3683,27 +3685,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#j-task-status-optional" class="md-nav__link">
+  <a href="#j-requirement-estimate-points-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      j) Task Status (Optional)
+      j) Requirement Estimate Points (Optional):
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#k-task-priority-optional" class="md-nav__link">
+  <a href="#k-task-status-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      k) Task Priority (Optional)
+      k) Task Status (Optional)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#l-task-type-optional" class="md-nav__link">
+  <a href="#l-task-priority-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      l) Task Type (Optional)
+      l) Task Priority (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-task-type-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      m) Task Type (Optional)
     </span>
   </a>
   
@@ -4586,27 +4597,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#j-task-status-optional" class="md-nav__link">
+  <a href="#j-requirement-estimate-points-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      j) Task Status (Optional)
+      j) Requirement Estimate Points (Optional):
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#k-task-priority-optional" class="md-nav__link">
+  <a href="#k-task-status-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      k) Task Priority (Optional)
+      k) Task Status (Optional)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#l-task-type-optional" class="md-nav__link">
+  <a href="#l-task-priority-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      l) Task Type (Optional)
+      l) Task Priority (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-task-type-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      m) Task Type (Optional)
     </span>
   </a>
   
@@ -4839,6 +4859,25 @@
   
   <span class="md-ellipsis">
     GitLab
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Spira-with-Monday/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    monday.com
   </span>
 
       </a>
@@ -6524,27 +6563,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#j-task-status-optional" class="md-nav__link">
+  <a href="#j-requirement-estimate-points-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      j) Task Status (Optional)
+      j) Requirement Estimate Points (Optional):
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#k-task-priority-optional" class="md-nav__link">
+  <a href="#k-task-status-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      k) Task Priority (Optional)
+      k) Task Status (Optional)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#l-task-type-optional" class="md-nav__link">
+  <a href="#l-task-priority-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      l) Task Type (Optional)
+      l) Task Priority (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-task-type-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      m) Task Type (Optional)
     </span>
   </a>
   
@@ -6743,7 +6791,7 @@ time-zones here.</li>
 </ul>
 </li>
 <li>
-<p><strong>Severity Field</strong>: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraPlan Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</p>
+<p><strong>Severity/Est. Points Field</strong>: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on JIRA custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in <a href="#configuring-the-data-mapping">Configuring the Data Mapping</a>.</p>
 </li>
 <li><strong>Task Types</strong>: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.</li>
 <li>
@@ -6757,12 +6805,12 @@ time-zones here.</li>
 <li>
 <p><strong>Requirement Types</strong>: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents (user stories/epics will not be synced at all).</p>
 </li>
-<li><strong>Link Type</strong>: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:</li>
+<li><strong>Link Type</strong>: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_18.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For most users, we recommend leaving these fields blank: "Severity Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do not want sync user stories/requirements.</p>
+<p>For most users, we recommend leaving these fields blank: "Severity/Est. Points Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do not want sync user stories/requirements.</p>
 </div>
 <h2 id="configuring-the-data-mapping">Configuring the Data Mapping<a class="headerlink" href="#configuring-the-data-mapping" title="Permanent link">&para;</a></h2>
 <p>Next, you need to configure the data mapping between SpiraPlan and JIRA. This allows the various products, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Enhancement" in SpiraPlan is the same as a "New Feature" in JIRA (for example).</p>
@@ -6865,7 +6913,7 @@ time-zones here.</li>
 <p>Unlike the other incident standard fields, JIRA doesn't actually have a built-in field for storing the severity of an issue, so if you want to be able to see the SpiraPlan incident severity in JIRA, you'll need to create a JIRA custom list field to store the different severity values. If you don't want to synchronize severity values with JIRA, you can skip the rest of this section.</p>
 <p>Once you have created a custom field in JIRA to contain the list of severity values, you need to now populate the above table <strong>with the name</strong> (Not the ID) of the severity custom property values inside JIRA and click Update. Secondly you need to go to the Plug-in configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_37.png" /></p>
-<p>On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the <strong>"Severity Field" property with this value</strong> (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
+<p>On this screen you need to enter the ID of the custom field that you're using to store severities in JIRA and populate the <strong>"Severity/Est. Points" property with this value</strong> (see above). The ID can be found by using the Custom Fields tab of the Jira Configuration Helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
 <h4 id="f-requirement-status-optional">f) Requirement Status (Optional)<a class="headerlink" href="#f-requirement-status-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen:</p>
@@ -6891,19 +6939,21 @@ time-zones here.</li>
 <p>The table lists each of the components available in SpiraPlan and provides you with the ability to enter the matching JIRA component ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
 <p>The JIRA ID can be found by using the <strong>Components</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_35.png" /></p>
-<h4 id="j-task-status-optional">j) Task Status (Optional)<a class="headerlink" href="#j-task-status-optional" title="Permanent link">&para;</a></h4>
+<h4 id="j-requirement-estimate-points-optional">j) Requirement Estimate Points (Optional):<a class="headerlink" href="#j-requirement-estimate-points-optional" title="Permanent link">&para;</a></h4>
+<p>To sync Estimate Points for Requirements in Spira, make sure you <a href="https://support.atlassian.com/jira-software-cloud/docs/enable-estimation/">added Estimates to your Jira issues</a> as <strong>Story points</strong> or have a <strong>numeric</strong> custom property in Jira to map against. Use the Configuration Helper tool to find its ID (under the 'Custom Fields' tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the DataSync configuration page. For example: '<code>10001,10033</code>' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.</p>
+<h4 id="k-task-status-optional">k) Task Status (Optional)<a class="headerlink" href="#k-task-status-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Status" hyperlink under Task Standard Fields to bring up the Task status mapping configuration screen:</p>
 <p><img alt="" src="../img/jira-task-mapping-status.png" /></p>
 <p>The table lists each of the task statuses available in SpiraPlan and provides you with the ability to enter the matching JIRA issue status ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Statuses</strong> tab of the Jira configuration helper. <em>Please note, in Jira there are 5 default levels of Issue Priority, and only 4 (by default - this can be changed) in SpiraPlan.</em></p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_31.png" /></p>
-<h4 id="k-task-priority-optional">k) Task Priority (Optional)<a class="headerlink" href="#k-task-priority-optional" title="Permanent link">&para;</a></h4>
+<h4 id="l-task-priority-optional">l) Task Priority (Optional)<a class="headerlink" href="#l-task-priority-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/jira-task-mapping-priority.png" /></p>
 <p>The table lists each of the task priorities available in SpiraPlan and provides you with the ability to enter the matching JIRA priority ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
 <p>The JIRA ID can be found by using the <strong>Issue Priorities</strong> tab of the Jira configuration helper:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_33.png" /></p>
-<h4 id="l-task-type-optional">l) Task Type (Optional)<a class="headerlink" href="#l-task-type-optional" title="Permanent link">&para;</a></h4>
+<h4 id="m-task-type-optional">m) Task Type (Optional)<a class="headerlink" href="#m-task-type-optional" title="Permanent link">&para;</a></h4>
 <p>Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen:</p>
 <p><img alt="" src="../img/jira-task-mapping-type.png" /></p>
 <p>The table lists each of the task types available in SpiraPlan and provides you with the ability to enter the matching JIRA issue type ID for each one. You can map multiple SpiraPlan fields to the same JIRA fields (e.g. Management and Other in SpiraPlan are both equivalent to Task in JIRA), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from JIRA to SpiraPlan).</p>
@@ -6960,7 +7010,7 @@ time-zones here.</li>
 </ul>
 <h2 id="using-spiraplan-with-jira">Using SpiraPlan with JIRA<a class="headerlink" href="#using-spiraplan-with-jira" title="Permanent link">&para;</a></h2>
 <p>Now that all the mappings are done, you are now ready to use the integration.</p>
-<p>Once the data sync service starts, at first any incidents created in SpiraPlan for the specified products will be imported into JIRA and any existing issues in JIRA get loaded into SpiraPlan as either incidents or requirements (depending on your configuration).</p>
+<p>Once the data sync service starts, at first any incidents created in SpiraPlan for the specified products will be imported into JIRA and any existing issues in JIRA get loaded into SpiraPlan as either incidents or requirements (depending on your configuration). Please note that links between Jira issues will be imported as Requirements associations.</p>
 <div class="admonition info">
 <p class="admonition-title">Checking the logs</p>
 <p>At this point we recommend checking the event log for any errors or useful messages. </p>
