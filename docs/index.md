@@ -1,3 +1,4 @@
+## Inflectra
 # Spira Platform Documentation
 
 !!! success "Documentation version"

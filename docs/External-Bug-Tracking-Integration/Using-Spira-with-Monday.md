@@ -34,9 +34,9 @@ changes are not being synced, try increasing the value to tell the
 plugin to offset timestamps.
 - **Sync Mode**: This option allows choosing between unidirectional or bidirectional syncing of items and/or artifacts between the systems. The valid values are shown below. Please enter the sync mode you want exactly as written. If this field is left blank, the sync will be bidirectional: 
 
-    - "monday_to_spira"
-    - "spira_to_monday"
-    - "bidirectional"
+    - `monday_to_spira` - new and updated items in *monday.com* are sent to Spira. No data or updates go from Spira to *monday.com*
+    - `spira_to_monday` - new and updated tasks and incidents in Spira are sent to *monday.com*. No data or updates go from *monday.com* to Spira
+    - `bidirectional` - new and updated items/artifacts go from *monday.com* to Spira, and from Spira to *monday.com*
 
 - **Artifact Sync Mode**: Use this field to set which artifacts and items get synced between the two systems. The valid values are shown below. By choosing "tasks_only", for example, you can limit the sync to just Tasks. If this field is blank, the data sync will look for changes in both artifacts. 
 
@@ -67,7 +67,7 @@ Use this as a reference to find the necessary names in *monday.com*:
 The *monday.com* plugin can synchronize Incidents and Tasks, so you will need to set up the status mappings for these artifacts, accordingly to the Artifact Sync Mode you chose. We shall discuss each in turn.
 
 
-### Configuring the Incident Status Mapping
+### Incident Status Mapping
 Now click the "Status" button within the "Incident" section to map the incident statuses together. The purpose of this is so that the *monday.com* Data Sync plug-in knows what the equivalent status is in *monday.com* for an incident status in Spira. Please make sure this is called `Status` in *monday.com*.
 
 ![](img/Using_Spira_with_monday_4.png)
@@ -78,7 +78,7 @@ You must map every status in the system. Descriptions of the field are below:
 - **Primary**: You must have exactly one primary key for each *monday.com* status. This is what status the plug-in should set the incident in SpiraPlan to when the status in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
 
 
-### Configuring the Incident Priority Mapping
+### Incident Priority Mapping
 Select the "Priority" button within the "Incident" section to map the incident priorities together. The purpose of this is so that the *monday.com* Data Sync plug-in knows what the equivalent priority is in *monday.com* for an incident priority in Spira. Please make sure this is called `Priority` in *monday.com*.
 
 ![](img/Using_Spira_with_monday_5.png)
@@ -89,7 +89,7 @@ You must map every priority in the system. Descriptions of the field are below:
 - **Primary**: You must have exactly one primary key for each *monday.com* priority. This is what status the plug-in should set the incident in SpiraPlan to when the priority in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
 
 
-### Configuring the Incident Type Mapping
+### Incident Type Mapping
 Select the "Type" button within the "Incident" section to map the incident types together. The purpose of this is so that the *monday.com*
 Data Sync plug-in knows what the equivalent type is in *monday.com* for an incident type in Spira. Please make sure this is called `Type` in *monday.com*.
 
@@ -101,24 +101,24 @@ You must map every Type in the system. Descriptions of the field are below:
 - **Primary**: You must have exactly one primary key for each *monday.com* Type. This is what status the plug-in should set the incident in SpiraPlan to when the Type in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
 
 
-### Configuring the Incident Severity Mapping
+### Incident Severity Mapping
 Now click the "Severity" button within the "Incident" section to map the incident severities together. Use the same logic as described in the `Incident Priority Mapping` section.
 
 
-### Configuring the Task Status Mapping
+### Task Status Mapping
 
 Click the "Status" button within the "Task" section to map the task statuses together. Use the same logic as described in the `Incident Status Mapping` section.
 
 
-### Configuring the Task Priority Mapping
+### Task Priority Mapping
 Click the "Priority" button within the "Task" section to map the task priorities together. Use the same logic as described in the `Incident Priority Mapping` section.
 
 
-### Configuring the Task Type Mapping
+### Task Type Mapping
 Click the "Type" button within the "Task" section to map the task types together. Use the same logic as described in the `Incident Type Mapping` section.
 
 
-### Configuring the User Mapping
+### User Mapping
 *If you have set the "Auto-Map Users" option in the *monday.com* plugin, you can skip this section completely.*
 
 To configure the mapping of users in the two systems, you need to go to Administration \> Users \> View Edit Users, which will bring up the list
@@ -129,7 +129,7 @@ of users in the system. Then click on the "Edit" button for a particular user th
 Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box next to the Monday.com Data-Sync plug-in you need to enter the display name for this user in *monday.com*. This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in *monday.com*. Click `Save` once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
 
 
-### Configuring *monday.com* fields
+### *monday.com* fields
 The flexibility  of *monday.com* means some assumptions were made in the design of this data sync. Specific column names are mapped to their counterparts in SpiraPlan based on the list below. If a field is not present in *monday.com*, it will not be synced.
 
 | Spira Field          | *monday.com* Field Name | *monday.com* Field Type  |
@@ -165,7 +165,7 @@ Additionally, please make sure that the board(s)/workspace names provided as an 
 Due to the nature of text fields in *monday.com* (only plain text is supported), descriptions will only be synced from Monday to Spira on creation and from Spira to Monday all the time.
 
 
-### Monday sub-items
+### *monday.com* sub-items
 *monday.com* allows users to create sub-items for any item in the boards. By default, the data sync will sync these subitems in Spira. They will have their parent linked under the 'Associations' tab in Spira. To turn off the subitems sync feature, change the **Sync subitems?** property of the data sync to `no`. It's not possible to create subitems in *monday.com* from Spira.
 
 ![](img/Using_Spira_with_monday_8.png)
