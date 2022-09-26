@@ -12,7 +12,7 @@ To install the Perforce Version Control plug-in, copy the following files to the
 Before you can start using Perforce in SpiraPlan you need to setup, at a system level, how Perforce and SpiraPlan should work together: 
 
 - Log in as a system admin, and go to System Admininstration > Integration > Source Code
-- If there is not already an antry for "PerforceProvider" click "Add" to go to the Plug-in details page
+- If there is not already an entry for "PerforceProvider" click "Add" to go to the Plug-in details page
 
 Complete the form on this page as below:
 
