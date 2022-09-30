@@ -72,6 +72,7 @@ The `Add New` dropdown has options for creating several files that are not uploa
 - **Markdown**: for creating a new markdown file
 - **Rich Text**: for creating a new rich text document file
 - **Feature**: for creating a new feature / BDD file
+- **Spreadsheet**: for creating a simple spreadsheet
 - **Diagram**: for creating a new drag and drop diagram file
 - **Mindmap**: for creating a new drag and drop mindmap file
 - **Orgchart**: for creating a new drag and drop organization chart
@@ -149,7 +150,7 @@ For documents, you can, depending on how the product administrator has set this 
 ### View {: #preview }
 <!-- id above set manually to preserve original link -->
 
-This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, diagram files (including mindmaps and org charts), and images).
+This tab shows the currently active version of the document. You can view the document contents here for many different file types (notably plain text files, code files, feature/BDD files, rich text html documents, spreadsheets, diagrams (including mindmaps and org charts), and images).
 
 ![](img/Document_Management_327.png)
 
@@ -157,7 +158,7 @@ If a format cannot be previewed (for example a PDF or Microsoft Word document), 
 
 ![](img/Document_Management_328.png)
 
-<!-- When viewing diagrams, mindmaps, or orgcharts there are two buttons above the diagram that you let you directly download a PNG or PDF formatted version of the diagram (you can download the diagram from the [Versions](#document-versions) tab but this downloads the raw data, not a formatted diagram). -->
+When viewing diagrams, mindmaps, or orgcharts there is a button above the diagram that you let you directly download an SVG of the diagram (you can download the diagram from the [Versions](#document-versions) tab but this downloads the raw data, not a formatted diagram).
 
 
 ### Edit
@@ -227,6 +228,9 @@ When editing a diagram type you can also select a specific connector and edit it
 - Termination style (arrow or straight)
 - Path (straight or angled)
 - Rounded corners (for angled path connectors)
+
+#### Editing Spreadsheets
+The SpiraPlan spreadsheet is a feature rich spreadsheet application that supports a wide array of common spreadsheet features. It is intuitive and easy to use, and should feel immediately familiar. It can work as a full spreadsheet replacement for a wide variety of use cases, and with the benefit of all the data and versioning living directly inside Spira. 
 
 
 ### Properties {: #overview-details }
