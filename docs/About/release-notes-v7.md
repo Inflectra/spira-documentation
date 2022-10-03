@@ -11,6 +11,7 @@ Along with existing support for creating and editing dynamic documents inside Sp
 ??? Success "New Features"
 
     - Allow users to create and [edit simple spreadsheets](../../Spira-User-Manual/Document-Management/#editing-spreadsheets) as an option for inline documents [RQ:4322]
+    - Email all system administrators every time that the concurrent user limit is exceeded by a user trying to login but can't due to license issues [RQ:4361]
     
     * **Improved Product Management and Customization**
         
