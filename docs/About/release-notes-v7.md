@@ -15,8 +15,8 @@ Along with existing support for creating and editing dynamic documents inside Sp
     
     * **Improved Product Management and Customization**
         
-        - System admins can add, edit, and remove up to 30 [custom properties](../../Spira-Administration-Guide/Custom-Properties/#edit-custom-properties), shared across all products [RQ:4147]
-        - System admins can add and manage [system-wide custom lists](../../Spira-Administration-Guide/Custom-Properties/#edit-custom-lists) and their values [RQ:4150]
+        - System admins can add, edit, and remove up to 30 [custom properties](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties), shared across all products [RQ:4147]
+        - System admins can add and manage [system-wide custom lists](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-lists) and their values [RQ:4150]
         - The program level [product list page](../../Spira-User-Manual/Program-Products/#product-list) shows all products in a program and lets users see, sort, and filter by any standard or custom field (but not edit) [RQ:4145]
         - The program level [product detail page](../../Spira-User-Manual/Program-Products/#product-details) lets users see all information about a specific product (including custom fields) [RQ:4146]
         - [Custom report views](../../Reporting/Custom-Report-Tables) support [product level custom properties](../../Reporting/Custom-Report-Tables/#global-system-custom-property-definitions), including on the [products report](../../Reporting/Custom-Report-Tables/#projects-products) [RQ:4192]
@@ -50,7 +50,7 @@ Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../../SpiraApps/OctoPerf
 ??? Success "New Features"
 
     - Ability to switch (at a product level) cloud Spira between [TaraVault and external Git/Subversion](../../Spira-Administration-Guide/System/#taravault-for-source-code) [RQ:4287]
-    - A new [SpiraApp integrates SpiraPlan with Octoperf](../../SpiraApps/OctoPer) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
+    - A new [SpiraApp integrates SpiraPlan with Octoperf](../../SpiraApps/OctoPerf) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
 
 ??? bug "Bug fixes and enhancements"
 

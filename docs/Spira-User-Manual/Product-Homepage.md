@@ -74,7 +74,7 @@ This section displays:
 
 - the name of the product
 - a brief description
-- a link to view the products details on the [program product details page](../ProgramProducts/#product-details) (only visible to program members)
+- a link to view the products details on the [program product details page](../Program-Products/#product-details) (only visible to program members)
 - the product's program
 - the web-site that points to any additional information about the product
 - the names of the owners of the product
