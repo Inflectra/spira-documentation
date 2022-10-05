@@ -493,6 +493,10 @@
     
       
     
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -2049,6 +2053,25 @@
   
   <span class="md-ellipsis">
     Reporting
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Custom-Properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Properties
   </span>
 
       </a>
@@ -5862,10 +5885,19 @@
 <li><strong>Remove Messages</strong>: Checking this option will make the email integration service remove the email messages from in the Inbox of the user's email account. We recommend leaving this unchecked when first using the service. Once you are happy that the integration is correctly handling spam and not ignoring correct messages, you can check this option to prevent the email inbox getting too large.</li>
 <li><strong>Attach Message</strong>: Checking this option will attach the original email message to the new help desk ticket created in SpiraTeam as well as populating the ticket with the contents of the message. This is useful when debugging a new installation but typically would be unchecked during normal operation.</li>
 <li><strong>Application Server</strong>: You should specify the instance of SpiraTeam that this email account will be linked to.</li>
-<li><strong>Default Project</strong>: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: [IN:45] for Incident #45, or
-[RQ:912] for Requirement #912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.</li>
+<li><strong>Default Project</strong>: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: [IN:45] for Incident #45, or [RQ:912] for Requirement #912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.</li>
 <li><strong>RegEx Match Content</strong>: Checking this option will allow the email integration service to do a name match in the body of the email for possible project names instead of just relying on the "default project". For example if your email contains "Project1" in the message text it will be routed to Product1 in SpiraTeam. Items looked for are Project tokens ([PR:##]), and then the Project name in the subject line of the email and the text of the email.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Using Gmail</p>
+<p>If you use Google Workspace (gmail) make sure to take the following two steps. Note that personal gmail accounts are not supported.</p>
+<ul>
+<li>enable POP - this defaults to disabled </li>
+<li>allow for <em>less secure app access</em> in the security settings</li>
+</ul>
+<p>To enable POP switch to an administrator account. This will open the Google Admin console. Follow <a href="https://support.google.com/a/answer/105694?hl=en">https://support.google.com/a/answer/105694?hl=en</a> to Google instructions to proceed.</p>
+<p>To allow <em>less secure app access</em> - starting from May 30, 2022, ​​Google no longer supports the use of third-party apps or devices which ask you to sign in to your Google Account using only your user name and password. This deadline does not apply to Google Workspace or Google Cloud Identity customers. For more information please refer to the Google Help: <a href="https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cuse-more-secure-apps%2Cuse-an-app-password">https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cuse-more-secure-apps%2Cuse-an-app-password</a></p>
+</div>
 <h2 id="configuring-the-advanced-settings">Configuring the Advanced Settings<a class="headerlink" href="#configuring-the-advanced-settings" title="Permanent link">&para;</a></h2>
 <p>Once you have finished configuring the SpiraTeam server instances and POP3 mail accounts, you can click on the "Advanced Settings" tab to setup special rules that prevent emails from specific accounts being processed as well as allow the email integration service to look for special mail headers and subject tokens that might indicate bulk / spam messages that should be ignored.</p>
 <p><img alt="" src="../img/Configuring_the_Email_Integration_Service_12.png" /></p>

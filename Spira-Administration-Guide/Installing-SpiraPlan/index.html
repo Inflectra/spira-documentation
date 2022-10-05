@@ -493,6 +493,10 @@
     
       
     
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1953,9 +1957,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-sql-server-2019-2017-2016-2014-2012" class="md-nav__link">
+  <a href="#install-sql-server-2019-2017-2016" class="md-nav__link">
     <span class="md-ellipsis">
-      Install SQL Server 2019, 2017, 2016, 2014, 2012
+      Install SQL Server 2019, 2017, 2016
     </span>
   </a>
   
@@ -2348,6 +2352,25 @@
   
   <span class="md-ellipsis">
     Reporting
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System-Custom-Properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Properties
   </span>
 
       </a>
@@ -6049,9 +6072,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-sql-server-2019-2017-2016-2014-2012" class="md-nav__link">
+  <a href="#install-sql-server-2019-2017-2016" class="md-nav__link">
     <span class="md-ellipsis">
-      Install SQL Server 2019, 2017, 2016, 2014, 2012
+      Install SQL Server 2019, 2017, 2016
     </span>
   </a>
   
@@ -6323,15 +6346,15 @@
 </tr>
 <tr>
 <td><strong>Operating System:</strong></td>
-<td>Windows Server 2019 (recommended) <br>Windows Server 2016 (recommended) <br>Windows Server 2012 R1 &amp; R2 <br>Windows 10, 8 (for demoing)</td>
+<td>Windows Server 2019 (recommended) <br>Windows Server 2016 (recommended) <br>Windows Server 2012 R1 &amp; R2 <br>Windows 10 (for demoing)</td>
 </tr>
 <tr>
 <td><strong>Database:</strong></td>
-<td>Microsoft SQL Server 2019 <br> Microsoft SQL Server 2019 Express Edition <br> Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition <br> Microsoft SQL Server 2014 <br> Microsoft SQL Server 2014 Express Edition <br> Microsoft SQL Server 2012 <br> Microsoft SQL Server 2012 Express Edition</td>
+<td>Microsoft SQL Server 2019 <br> Microsoft SQL Server 2019 Express Edition <br> Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition</td>
 </tr>
 <tr>
 <td><strong>Web Server:</strong></td>
-<td>Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.6 or higher</td>
+<td>Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.8 or higher</td>
 </tr>
 </tbody>
 </table>
@@ -6359,20 +6382,21 @@
 <p>Assuming that you have already installed the appropriate version of Microsoft Windows onto your computer (or that has been pre-installed for you), make sure that the various prerequisites have been correctly added to your installation before trying to install SpiraPlan<sup>®</sup>. The SpiraPlan<sup>®</sup> installer will check to ensure that the various prerequisites are in place, and will abort the installation if any are missing, indicating to you what action needs to be taken.</p>
 <p>We recommend that you install / configure the prerequisites in the following order:</p>
 <ul>
-<li>Install the .NET Framework v4.6</li>
-<li>Install SQL Server 2017, 2016, 2014, 2012</li>
+<li>Install the .NET Framework v4.8</li>
+<li>Install SQL Server 2017, 2016</li>
 <li>Install a modern web browser like Microsoft Edge</li>
 <li>Ensure that IIS is installed</li>
-<li>Ensure that ASP.NET 4.6 is enabled</li>
+<li>Ensure that ASP.NET 4.8 is enabled</li>
 </ul>
 <h3 id="install-the-net-framework-v46-v47">Install the .NET Framework v4.6, v4.7<a class="headerlink" href="#install-the-net-framework-v46-v47" title="Permanent link">&para;</a></h3>
-<p>On most modern Windows 10 and Windows Server installations, Microsoft .NET Framework v4.6 is usually installed as part of the factory configuration, whereas on earlier operating systems, you might need to manually add the .NET 4.6 components to the factory configuration.</p>
+<p>On most modern Windows 11 and Windows Server 2022+ installations, Microsoft .NET Framework v4.8 is usually already installed. On earlier operating systems, you may need to manually add the .NET 4.8 components to the factory configuration.</p>
 <p>To see which version of the Microsoft .NET framework installed, open up Windows Explorer® and navigate to <code>C:\WINDOWS\Microsoft.NET\Framework</code> and then the subfolders listed will indicate which version(s) of the framework you have installed:</p>
 <p><img alt="" src="../img/Installing_SpiraPlan_8.png" /></p>
-<p>To install the .NET Framework, launch your browser and enter the URL: <a href="https://www.inflectra.com/CustomerArea">https://www.inflectra.com/CustomerArea</a>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.6 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.6 has been installed if necessary.</p>
-<h3 id="install-sql-server-2019-2017-2016-2014-2012">Install SQL Server 2019, 2017, 2016, 2014, 2012<a class="headerlink" href="#install-sql-server-2019-2017-2016-2014-2012" title="Permanent link">&para;</a></h3>
+<p>To install the .NET Framework, launch your browser and enter the URL: <a href="https://www.inflectra.com/CustomerArea">https://www.inflectra.com/CustomerArea</a>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.8 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.8 has been installed if necessary.</p>
+<h3 id="install-sql-server-2019-2017-2016">Install SQL Server 2019, 2017, 2016<a class="headerlink" href="#install-sql-server-2019-2017-2016" title="Permanent link">&para;</a></h3>
 <p>If you do not have a SQL Server instance ready, you can install the appropriate version of the database software, following the instructions provided with the installation. We recommend SQL Server Express Edition®
 for most users. This free version of SQL Server will offer sufficient performance for most installations and can be easily downloaded from either the customer area of our website (<a href="http://www.inflectra.com/CustomerArea">http://www.inflectra.com/CustomerArea</a>) or directly from the Microsoft® web-site at <a href="http://www.microsoft.com/express/sql">http://www.microsoft.com/express/sql</a>.</p>
+<p>Ensure you have enabled the Full-Text Indexing feature enabled prior running installer of Spira application.</p>
 <h3 id="ensure-that-iis-is-installed">Ensure that IIS is installed<a class="headerlink" href="#ensure-that-iis-is-installed" title="Permanent link">&para;</a></h3>
 <p>On Windows Server OS installations, IIS is usually installed as part of the factory configuration, whereas on Windows workstation OS installations, you typically need to manually add the components to the factory configuration. The steps that you need to take to verify its installation are listed below:</p>
 <p>To check if you have IIS installed, click Start > Control Panel > Administrative Tools. Under the "Administrative Tools folder", you should see an icon for "Internet Information Services (IIS) Manager". If you don't see this icon, then it means that you need to add IIS to your computer:</p>

@@ -493,6 +493,10 @@
     
       
     
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -2049,6 +2053,25 @@
   
   <span class="md-ellipsis">
     Reporting
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/System-Custom-Properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Properties
   </span>
 
       </a>
@@ -5607,6 +5630,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-72-october-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 7.2 (October 2022)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-71-august-2022" class="md-nav__link">
     <span class="md-ellipsis">
       Version 7.1 (August 2022)
@@ -5781,6 +5813,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-72-october-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 7.2 (October 2022)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-71-august-2022" class="md-nav__link">
     <span class="md-ellipsis">
       Version 7.1 (August 2022)
@@ -5813,6 +5854,50 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-72-october-2022">Version 7.2 (October 2022)<a class="headerlink" href="#version-72-october-2022" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+</div>
+<p>Manage products in a whole new way (SpiraPlan only). New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more.</p>
+<p>Along with existing support for creating and editing dynamic documents inside Spira (including diagrams and documents), the new spreadsheet editor lets you create simple spreadsheets to better organize your teams and track work. You can have multiple sheets, apply formatting to cells, use a wide number of functions, and even import from and export to Excel spreadsheets.</p>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>Allow users to create and <a href="../../Spira-User-Manual/Document-Management/#editing-spreadsheets">edit simple spreadsheets</a> as an option for inline documents [RQ:4322]</li>
+<li>
+<p>Email all system administrators every time that the concurrent user limit is exceeded by a user trying to login but can't due to license issues [RQ:4361]</p>
+</li>
+<li>
+<p><strong>Improved Product Management and Customization</strong></p>
+<ul>
+<li>System admins can add, edit, and remove up to 30 <a href="../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties">custom properties</a>, shared across all products [RQ:4147]</li>
+<li>System admins can add and manage <a href="../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-lists">system-wide custom lists</a> and their values [RQ:4150]</li>
+<li>The program level <a href="../../Spira-User-Manual/Program-Products/#product-list">product list page</a> shows all products in a program and lets users see, sort, and filter by any standard or custom field (but not edit) [RQ:4145]</li>
+<li>The program level <a href="../../Spira-User-Manual/Program-Products/#product-details">product detail page</a> lets users see all information about a specific product (including custom fields) [RQ:4146]</li>
+<li><a href="../../Reporting/Custom-Report-Tables">Custom report views</a> support <a href="../../Reporting/Custom-Report-Tables/#global-system-custom-property-definitions">product level custom properties</a>, including on the <a href="../../Reporting/Custom-Report-Tables/#projects-products">products report</a> [RQ:4192]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add a link on the product home page, <a href="../../Spira-User-Manual/Product-Homepage/#product-overview">overview widget</a> to the new product details page, shown to program members only [IN:7501]</li>
+<li>Add a new dedicated "Account Lockout Period" <a href="../../Spira-Administration-Guide/System/#security-settings">security setting</a>, so system admins can specify how long a user is locked out for once they enter too many wrong passwords within the relevant window [IN:5010]</li>
+<li>Add a new system admin <a href="../../Spira-Administration-Guide/System/#security-settings">security setting</a> to enforce stricter security only possible on HTTPS sites [IN:7359]</li>
+<li>Fix a typo in the 7.1 onboarding tour about TaraVault [IN:7443]</li>
+<li>Fix editing tasks or requirements on the <a href="../../Spira-User-Manual/Release-Management/#reqs-tasks">release details page</a> not triggering notification events [IN:6954]</li>
+<li>Fix the documentation link on the user's <a href="../../Spira-User-Manual/User-Product-Management/#2-step-authentication">Add 2-Step Authentication</a> page [IN:7396]</li>
+<li>Improve explanatory text in two places in administration for the flag that <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">disables rollup calculations</a>, and also the 2 pop-up messages [IN:7338]</li>
+<li>Improve the error pages throughout the app, with a more consistent design in more places, and showing stack trace information to system admins only [IN:6293]</li>
+<li>Reduce css file sizes by removing Internet Explorer 11 specific rules and values [IN:7412]</li>
+<li>Show more of the test case names on the <a href="../../Spira-User-Manual/Test-Set-Management/#overview---test-cases">test case grid</a> of the test set details page (up to 150 characters) [IN:7299]</li>
+<li>Show the program artifact dropdown when a user goes to a program page before ever going to a product [IN:7474]</li>
+<li>Update the minimum SQL Server required version under which SpiraPlan can be installed to 2016 [IN:7424]</li>
+<li>Set the minimum required version of .NET that the application will work under to 4.8 [RQ:3085]</li>
+<li>When a product has <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">rollup calculations disabled</a>, also disable test case parameter hierarchy refreshes [IN:7422]</li>
+</ul>
+</details>
 <h2 id="version-71-august-2022">Version 7.1 (August 2022)<a class="headerlink" href="#version-71-august-2022" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
@@ -5823,7 +5908,7 @@
 <summary>New Features</summary>
 <ul>
 <li>Ability to switch (at a product level) cloud Spira between <a href="../../Spira-Administration-Guide/System/#taravault-for-source-code">TaraVault and external Git/Subversion</a> [RQ:4287]</li>
-<li>A new <a href="../../SpiraApps/OctoPer">SpiraApp integrates SpiraPlan with Octoperf</a> to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]</li>
+<li>A new <a href="../../SpiraApps/OctoPerf">SpiraApp integrates SpiraPlan with Octoperf</a> to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]</li>
 </ul>
 </details>
 <details class="bug">

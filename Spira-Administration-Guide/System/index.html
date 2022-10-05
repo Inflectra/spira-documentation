@@ -493,6 +493,10 @@
     
       
     
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -2197,6 +2201,25 @@
   
   <span class="md-ellipsis">
     Reporting
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System-Custom-Properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Properties
   </span>
 
       </a>
@@ -6062,11 +6085,12 @@ need to reinstall SpiraPlan®. All you need to do is change the
 <p>The following settings can be changed within the system, once you are satisfied, click the "Save" button to commit the changes:</p>
 <ul>
 <li><strong>Allow User Registration</strong>: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.</li>
-<li><strong>Maximum # Invalid Password Attempts</strong>: Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
-password hacking attempts.</li>
+<li><strong>HTTPS Only</strong>: Set this to Yes if the application will only be running on HTTPS. This enables tighter security that is only available on HTTPS.</li>
 <li><strong>Minimum Required Password Length</strong>: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.</li>
 <li><strong>Minimum Required Special Characters</strong> - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.</li>
-<li><strong>Password Attempt Time Window</strong>: Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).</li>
+<li><strong>Maximum # Invalid Password Attempts</strong>: Set this to the number of times a user can enter an incorrect password (during the time window specified in the setting below) before their account is temporarily locked out. This is important in preventing 'brute force' password hacking attempts.</li>
+<li><strong>Max Login Attempts Window</strong>: Set this to the number of minutes over which invalid login attempts are evaluated before locking the user's account.</li>
+<li><strong>Account Lockout Period</strong>: Set this to the duration (in minutes) to keep an account locked after too many invalid login attempts.</li>
 <li><strong>Password Change Interval</strong>: If set to a value, it will require all password to be changed after the specified number of days.</li>
 <li><strong>Require Password Change on First Login</strong>: Enabling this requires all new users to change their password on first login.</li>
 <li><strong>Disallow Names in Passwords</strong>: If enabled, passwords cannot contain the user's real name and/or username.</li>
