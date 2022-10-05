@@ -2,7 +2,7 @@
 # Spira Platform Documentation
 
 !!! success "Documentation version"
-    **This site was last updated for version 7.1.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
+    **This site was last updated for version 7.2.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
 
 
 This documentation is for the entire Spira suite of products: SpiraTest, SpiraTeam, SpiraPlan, and all relevant addons and extensions. 

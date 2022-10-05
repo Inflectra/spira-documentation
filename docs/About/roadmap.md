@@ -11,12 +11,9 @@
 Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.2 (October 2022)
-- Create and use custom fields on product workspaces
-
 ### 7.3 (Q4 2022)
-- Enhanced planning board, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
-- Ability to create teams and assign product members to specific teams (in beta - SpiraPlan only)
+- **Enhanced planning board**, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
+- **Group users by teams and tracks**: Create different teams and tracks at the system level and assign users to each on a per product basis (available exclusively in this release on the beta planning board).
 
 
 ## Future Releases
@@ -32,7 +29,6 @@ Please take a look at our [release notes](../release-notes-v6) to see a complete
 
 ### Tracking
 - **Time tracking**: Enhancements to existing timecard and time logging features. Add the ability for a named user or role to approve a timecard.
-- **Group users by teams and tracks**: Create different teams and tracks at the system level and assign users to each. These can then be used to plan, assign, and track work.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or team (e.g. with skills) can help with this.
 
 ### Reporting
@@ -46,6 +42,3 @@ Please take a look at our [release notes](../release-notes-v6) to see a complete
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Improved ‘first-time’ experience**: When the main administrator first logs in, a new welcome screen will guide them in setting up the application or to get help doing so.
 - **Review Center**: A single, central place to view all the areas across the application where your review is needed. This will streamline and simplify how know what they need to review and sign off and how that review is carried out.
-
-### Wider ecosystem
-- **Improved extensibility**: Support for webhooks, increased API scope, potentially the ability for users to provide in-app UI changes to meet specific types of use case using SpiraApps.

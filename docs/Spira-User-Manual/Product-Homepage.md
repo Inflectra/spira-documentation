@@ -22,40 +22,40 @@ Once in 'edit mode', each of the 'widgets' displayed on the product homepage can
 
 By default, the product home page shows the "General" view. The following table shows which widgets are displayed on the different views of the 'Product Home':
 
-| Widget Name                        | General   | Development   | Testing |
-| ---------------------------------  | --------- | ------------- | ------- |
-| Product Overview                   | Y         | Y             | Y
-| Activity Stream                    | Y         | Y             | 
-| Shared Searches                    | Y         |               | 
-| Schedule                           | Y         |               | 
-| Requirement Completion             | Y         |               |  
-| Requirement Incident Count         | Y         | Y             | Y
-| Requirements Coverage              | Y         |               | Y
-| Requirements Graphs                | Y         | Y             | 
-| Requirements Regression Coverage   |           |               | Y
-| Requirements Summary               | Y         | Y             | Y
-| Release Task Progress              | Y         | Y             | 
-| Release Test Summary               | Y         |               | Y
-| Releases/Sprints Completion        | Y         |               | 
-| Releases/Sprints Relative Size     | Y         |               | 
-| Recent Builds                      |           | Y             | 
-| Tag Cloud                          |           |               | 
-| Test Case Progress By Day          |           |               | Y
-| Test Execution Status              | Y         |               | Y
-| Test Set Status                    |           |               | Y
-| All Pending Test Runs              |           |               | Y
-| Test Run Progress                  |           |               | Y
-| Incident Aging                     |           | Y             | 
-| Incident Open Count                | Y         | Y             | Y
-| Incident Test Coverage             |           |               | 
-| Incident Summary                   | Y         | Y             | Y
-| Top Open Issues                    | Y         | Y             | 
-| Risk Summary                       | Y         |               | 
-| Top Open Risks                     | Y         |               | 
-| Late Finishing Tasks               | Y         | Y             | 
-| Late Starting Tasks                |           | Y             | 
-| Task Graphs                        | Y         | Y             | 
-| Source Code Commits                |           | Y             | 
+| Widget Name                      | General | Development | Testing |
+| -------------------------------- | ------- | ----------- | ------- |
+| Product Overview                 | Y       | Y           | Y       |
+| Activity Stream                  | Y       | Y           |         |
+| Shared Searches                  | Y       |             |         |
+| Schedule                         | Y       |             |         |
+| Requirement Completion           | Y       |             |         |
+| Requirement Incident Count       | Y       | Y           | Y       |
+| Requirements Coverage            | Y       |             | Y       |
+| Requirements Graphs              | Y       | Y           |         |
+| Requirements Regression Coverage |         |             | Y       |
+| Requirements Summary             | Y       | Y           | Y       |
+| Release Task Progress            | Y       | Y           |         |
+| Release Test Summary             | Y       |             | Y       |
+| Releases/Sprints Completion      | Y       |             |         |
+| Releases/Sprints Relative Size   | Y       |             |         |
+| Recent Builds                    |         | Y           |         |
+| Tag Cloud                        |         |             |         |
+| Test Case Progress By Day        |         |             | Y       |
+| Test Execution Status            | Y       |             | Y       |
+| Test Set Status                  |         |             | Y       |
+| All Pending Test Runs            |         |             | Y       |
+| Test Run Progress                |         |             | Y       |
+| Incident Aging                   |         | Y           |         |
+| Incident Open Count              | Y       | Y           | Y       |
+| Incident Test Coverage           |         |             |         |
+| Incident Summary                 | Y       | Y           | Y       |
+| Top Open Issues                  | Y       | Y           |         |
+| Risk Summary                     | Y       |             |         |
+| Top Open Risks                   | Y       |             |         |
+| Late Finishing Tasks             | Y       | Y           |         |
+| Late Starting Tasks              |         | Y           |         |
+| Task Graphs                      | Y       | Y           |         |
+| Source Code Commits              |         | Y           |         |
 
 Please note that different widgets are shown by default for the "Developer" and for the "Tester" views.
 
@@ -74,9 +74,10 @@ This section displays:
 
 - the name of the product
 - a brief description
+- a link to view the products details on the [program product details page](../Program-Products/#product-details) (only visible to program members)
+- the product's program
 - the web-site that points to any additional information about the product
 - the names of the owners of the product
-- the product's program
 - the product's template
 
 ## Activity Stream

@@ -22,7 +22,7 @@ Artifacts in SpiraPlan can have up to 99 different custom properties per artifac
 
 [^custom-artifacts]: the following artifacts support custom properties: requirements, releases, documents, test cases, test steps, test sets, test runs, automation hosts, incidents, tasks, risks. 
 
-To edit an existing custom property definition click the "Edit Definition" button for that specific property. To add new definition cluck the "Add Definition" button. In either case the following dialog will be displayed:
+To edit an existing custom property definition click the "Edit Definition" button for that specific property. To add a new definition click the "Add Definition" button. In either case the following dialog will be displayed:
 
 ![](img/Template_Custom_Properties_181.png)
 
@@ -79,7 +79,7 @@ The following screen is displayed when you choose the "Custom Lists" link from t
 
 ![](img/Template_Custom_Properties_177.png)
 
-The screen displays all the custom lists currently defined within the template, together the number of values associated with each list. By default the screen will initially be empty so the first thing you need to do is click "Add List" to create a new custom list:
+The screen displays all the custom lists currently defined within the template, together with the number of values associated with each list. By default the screen will initially be empty so the first thing you need to do is click "Add List" to create a new custom list:
 
 ![](img/Template_Custom_Properties_178.png)
 

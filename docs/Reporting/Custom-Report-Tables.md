@@ -221,6 +221,35 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 - DETAILS
 - EVENT_TYPE_NAME
 
+## Global / System Custom Property Definitions
+- CUSTOM_PROPERTY_ID
+- CUSTOM_PROPERTY_TYPE_ID
+- CUSTOM_PROPERTY_TYPE_NAME
+- WORKSPACE_TYPE_ID
+- WORKSPACE_TYPE_NAME
+- NAME
+- PROPERTY_NUMBER
+- IS_DELETED
+- CUSTOM_PROPERTY_LIST_ID
+- CUSTOM_PROPERTY_LIST_NAME
+- POSITION
+- DESCRIPTION
+
+## Global / System Custom Property Lists
+- CUSTOM_PROPERTY_LIST_ID
+- NAME
+- IS_ACTIVE
+- IS_SORTED_ON_VALUE
+
+## Global / System Custom Property List Values
+- CUSTOM_PROPERTY_VALUE_ID
+- NAME
+- IS_ACTIVE
+- IS_DELETED
+- CUSTOM_PROPERTY_LIST_ID
+- CUSTOM_PROPERTY_LIST_NAME
+- CUSTOM_PROPERTY_LIST_IS_ACTIVE
+
 ## History Change-Sets
 - CHANGESET_ID
 - USER_ID
@@ -387,6 +416,8 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 - END_DATE
 - PERCENT_COMPLETE
 - REQUIREMENT_COUNT
+- CUST_01...
+- CUST_30
 
 ## Project Groups (Programs)
 - PROJECT_GROUP_ID

@@ -100,11 +100,12 @@ The "Security Settings" administration page lets you specify the various securit
 The following settings can be changed within the system, once you are satisfied, click the "Save" button to commit the changes:
 
 - **Allow User Registration**: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.
-- **Maximum # Invalid Password Attempts**: Set this to the number of times a user can enter an incorrect password before their account is temporarily locked out. This is important in preventing 'brute force'
-password hacking attempts.
+- **HTTPS Only**: Set this to Yes if the application will only be running on HTTPS. This enables tighter security that is only available on HTTPS.
 - **Minimum Required Password Length**: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.
 - **Minimum Required Special Characters** - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.
-- **Password Attempt Time Window**: Set this to the duration (in minutes) after which a user's account will be automatically unlocked (due to repeated incorrect password attempts).
+- **Maximum # Invalid Password Attempts**: Set this to the number of times a user can enter an incorrect password (during the time window specified in the setting below) before their account is temporarily locked out. This is important in preventing 'brute force' password hacking attempts.
+- **Max Login Attempts Window**: Set this to the number of minutes over which invalid login attempts are evaluated before locking the user's account.
+- **Account Lockout Period**: Set this to the duration (in minutes) to keep an account locked after too many invalid login attempts.
 - **Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
 - **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
 - **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.

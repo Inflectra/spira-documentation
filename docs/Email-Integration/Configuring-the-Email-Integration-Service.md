@@ -41,9 +41,19 @@ You need to enter the following information:
 - **Remove Messages**: Checking this option will make the email integration service remove the email messages from in the Inbox of the user's email account. We recommend leaving this unchecked when first using the service. Once you are happy that the integration is correctly handling spam and not ignoring correct messages, you can check this option to prevent the email inbox getting too large.
 - **Attach Message**: Checking this option will attach the original email message to the new help desk ticket created in SpiraTeam as well as populating the ticket with the contents of the message. This is useful when debugging a new installation but typically would be unchecked during normal operation.
 - **Application Server**: You should specify the instance of SpiraTeam that this email account will be linked to.
-- **Default Project**: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: \[IN:45\] for Incident \#45, or
-\[RQ:912\] for Requirement \#912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.
+- **Default Project**: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: \[IN:45\] for Incident \#45, or \[RQ:912\] for Requirement \#912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.
 - **RegEx Match Content**: Checking this option will allow the email integration service to do a name match in the body of the email for possible project names instead of just relying on the "default project". For example if your email contains "Project1" in the message text it will be routed to Product1 in SpiraTeam. Items looked for are Project tokens (\[PR:\#\#\]), and then the Project name in the subject line of the email and the text of the email.
+
+!!! info "Using Gmail"
+
+    If you use Google Workspace (gmail) make sure to take the following two steps. Note that personal gmail accounts are not supported.
+
+    - enable POP - this defaults to disabled 
+    - allow for *less secure app access* in the security settings
+
+    To enable POP switch to an administrator account. This will open the Google Admin console. Follow https://support.google.com/a/answer/105694?hl=en to Google instructions to proceed.
+
+    To allow *less secure app access* - starting from May 30, 2022, ​​Google no longer supports the use of third-party apps or devices which ask you to sign in to your Google Account using only your user name and password. This deadline does not apply to Google Workspace or Google Cloud Identity customers. For more information please refer to the Google Help: https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cuse-more-secure-apps%2Cuse-an-app-password
 
 
 ## Configuring the Advanced Settings
@@ -72,3 +82,4 @@ The "Ignore Keywords" section allows you to specify any keywords/phrases that if
 ![](img/Configuring_the_Email_Integration_Service_15.png)
 
 The "SpamAssasin" section allows you to enable SpamAssasin utility, if you have a server that is running SpamAssasin. If this is enabled, messages marked as  spam will not be imported, and be left on the mail server.  You can use SpamAssasin's own level, or override the value. For information and support on SpamAssasin, see their website  http://spamassasin.appache.org
+
