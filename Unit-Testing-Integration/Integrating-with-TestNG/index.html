@@ -3680,6 +3680,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using TestNG with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-testng-tests-from-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the TestNG Tests from the Command-Line
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -5821,6 +5836,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Using TestNG with SpiraTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-the-testng-tests-from-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the TestNG Tests from the Command-Line
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -6113,19 +6143,19 @@ to add a reference to the
 <em>com.inflectra.spiratest.addons.testnglistener</em> package. This package is
 bundled within the supplied JAR-file library for Windows machines, and
 can be compiled from the provided source .java files on other platforms.</p>
+<h3 id="running-the-testng-tests-from-the-command-line">Running the TestNG Tests from the Command-Line<a class="headerlink" href="#running-the-testng-tests-from-the-command-line" title="Permanent link">&para;</a></h3>
 <p>Now all you need to do is compile your code and then launch TestNG by
 executing the test fixture through the command line (or through your
 choice of IDE, e.g. Eclipse) with the SpiraTest listener option
 specified as a command argument. E.g. for our sample test, you would use
 the following command:</p>
-<p>java\
--classpath " C:\Program
-Files\Selenium-RC-1.0.0\selenium-remote-control-1.0.0\selenium-java-client-driver-1.0.0\selenium-java-client-driver.jar;C:\Program
+<p><code>java
+-classpath "C:\Program
 Files\SpiraTestListener\TestNGListener.jar;C:\Program
-Files\TestNG-5.7\testng-5.7\testng-5.7-jdk15.jar" org.testng.TestNG\
+Files\TestNG-5.7\testng-5.7\testng-5.7-jdk15.jar" org.testng.TestNG
 -listener
 com.inflectra.spiratest.addons.testnglistener.SpiraTestListener
-com\inflectra\spiratest\addons\testnglistener\samples\unittests.xml</p>
+com\inflectra\spiratest\addons\testnglistener\samples\unittests.xml</code></p>
 <p>Once the test has run, you can view the test cases in SpiraTest, you
 should see a TestNG automated test run displayed in the list of executed
 test runs:</p>
