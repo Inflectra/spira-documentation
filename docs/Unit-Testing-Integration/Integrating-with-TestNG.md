@@ -309,20 +309,21 @@ to add a reference to the
 bundled within the supplied JAR-file library for Windows machines, and
 can be compiled from the provided source .java files on other platforms.
 
+### Running the TestNG Tests from the Command-Line
+
 Now all you need to do is compile your code and then launch TestNG by
 executing the test fixture through the command line (or through your
 choice of IDE, e.g. Eclipse) with the SpiraTest listener option
 specified as a command argument. E.g. for our sample test, you would use
 the following command:
 
-java\
--classpath " C:\\Program
-Files\\Selenium-RC-1.0.0\\selenium-remote-control-1.0.0\\selenium-java-client-driver-1.0.0\\selenium-java-client-driver.jar;C:\\Program
-Files\\SpiraTestListener\\TestNGListener.jar;C:\\Program
-Files\\TestNG-5.7\\testng-5.7\\testng-5.7-jdk15.jar" org.testng.TestNG\
+`java
+-classpath "C:\Program
+Files\SpiraTestListener\TestNGListener.jar;C:\Program
+Files\TestNG-5.7\testng-5.7\testng-5.7-jdk15.jar" org.testng.TestNG
 -listener
 com.inflectra.spiratest.addons.testnglistener.SpiraTestListener
-com\\inflectra\\spiratest\\addons\\testnglistener\\samples\\unittests.xml
+com\inflectra\spiratest\addons\testnglistener\samples\unittests.xml`
 
 Once the test has run, you can view the test cases in SpiraTest, you
 should see a TestNG automated test run displayed in the list of executed
