@@ -2,11 +2,9 @@
 
 ## Version 6.16 (April 2022)
 
-!!! info "Summary"
-
 ??? success "New Features"
     - The global navigation helps users understand what key features are available in the tool but not currently accessible to them [RQ:4154]
-    * ** Webhooks (inbound)**
+    * **Webhooks (inbound)**
 
         - Integrate with [GitHub Actions](../../Build-Server-Integration/GitHub-Actions/) so they can be saved against a release as a new build [RQ:4198]
         - Integrate with [GitLab Pipelines](../../Build-Server-Integration/GitLab-Pipelines/) so they can be saved against a release as a new build [RQ:4197]
