@@ -80,6 +80,8 @@ A brief note about field syncing in ServiceNow: The sheer configurability of Ser
 | Author / Detected By  | opened_by                                  |
 | Owner                 | assigned_to                                |
 | Status                | state                                      |
+| Incident Severity     | severity                                   |
+| Type                  | type                                       |
 
 
 ### Configuring the Incident/Requirement Status Mappings
@@ -101,6 +103,22 @@ Here are the corresponding statuses in ServiceNow
 ![](img/Using_Spira_with_ServiceNow_229.png)
 
 
+### Configuring the Incident/Requirement Type Mappings
+
+Click the "Type" button within the correspondent artifact section to map the Incident or Requirent types together. The process is identical to the mappings described previously, so repeat these steps with Incident Type and Requirements if you are also/only syncing them.
+
+
+![](img/Using_Spira_with_ServiceNow_242.png)
+
+You must map every type in SpiraPlan to ServiceNow. Descriptions of the field are below:
+
+-   **External Key**: If type is a dropdown in ServiceNow, it's the
+'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to **match it exactly** (case, spaces, etc)
+-   **Primary**: You must have exactly one primary key for each ServiceNow type. This is what type the plug-in should set the incident and/or requirement in SpiraPlan to when the type in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.
+
+![](img/Using_Spira_with_ServiceNow_243.png)
+
+
 ### Configuring the Priority/Importance Mapping
 
 Now click the "Priority" button within the "Incident" section to map incident priorities. This will tell the ServiceNow Data Sync plug-in which priorities in ServiceNow map to those in SpiraPlan. The process is identical for Requirement importance, so repeat these steps with Requirement \> Importance instead if you are also/only syncing requirements.
@@ -118,6 +136,7 @@ Here are the corresponding priorities in ServiceNow:
 
 ![](img/Using_Spira_with_ServiceNow_231.png)
 
+You can use the same logic to configure Incident Severity mappings.
 
 ### Cloning ServiceNow Fields
 
