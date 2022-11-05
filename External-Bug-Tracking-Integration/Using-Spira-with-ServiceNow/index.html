@@ -4324,6 +4324,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuring-the-incidentrequirement-type-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Incident/Requirement Type Mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuring-the-priorityimportance-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       Configuring the Priority/Importance Mapping
@@ -5894,6 +5903,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuring-the-incidentrequirement-type-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the Incident/Requirement Type Mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuring-the-priorityimportance-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       Configuring the Priority/Importance Mapping
@@ -6043,6 +6061,14 @@
 <td>Status</td>
 <td>state</td>
 </tr>
+<tr>
+<td>Incident Severity</td>
+<td>severity</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>type</td>
+</tr>
 </tbody>
 </table>
 <h3 id="configuring-the-incidentrequirement-status-mappings">Configuring the Incident/Requirement Status Mappings<a class="headerlink" href="#configuring-the-incidentrequirement-status-mappings" title="Permanent link">&para;</a></h3>
@@ -6057,6 +6083,15 @@
 </ul>
 <p>Here are the corresponding statuses in ServiceNow</p>
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_229.png" /></p>
+<h3 id="configuring-the-incidentrequirement-type-mappings">Configuring the Incident/Requirement Type Mappings<a class="headerlink" href="#configuring-the-incidentrequirement-type-mappings" title="Permanent link">&para;</a></h3>
+<p>Click the "Type" button for the relevant artifact to map the Incident or Requirent types between SpiraPlan and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.</p>
+<p><img alt="" src="../img/Using_Spira_with_ServiceNow_242.png" /></p>
+<p>You must map every type in SpiraPlan to ServiceNow. Descriptions of the field are below:</p>
+<ul>
+<li><strong>External Key</strong>: If type is a dropdown in ServiceNow, it's the 'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, write in the value of the string to be mapped to the SpiraPlan type. Please take care to <strong>match it exactly</strong> (case, spaces, etc)</li>
+<li><strong>Primary</strong>: You must have exactly one primary key for each ServiceNow type. This is what type the plug-in should set the incident and/or requirement in SpiraPlan to when the type in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.</li>
+</ul>
+<p><img alt="" src="../img/Using_Spira_with_ServiceNow_243.png" /></p>
 <h3 id="configuring-the-priorityimportance-mapping">Configuring the Priority/Importance Mapping<a class="headerlink" href="#configuring-the-priorityimportance-mapping" title="Permanent link">&para;</a></h3>
 <p>Now click the "Priority" button within the "Incident" section to map incident priorities. This will tell the ServiceNow Data Sync plug-in which priorities in ServiceNow map to those in SpiraPlan. The process is identical for Requirement importance, so repeat these steps with Requirement > Importance instead if you are also/only syncing requirements.</p>
 <p>If you don't have a priority equivalent in your table, you can ignore this section.</p>
@@ -6068,6 +6103,7 @@
 </ul>
 <p>Here are the corresponding priorities in ServiceNow:</p>
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_231.png" /></p>
+<p>You can use the same logic to configure Incident Severity mappings.</p>
 <h3 id="cloning-servicenow-fields">Cloning ServiceNow Fields<a class="headerlink" href="#cloning-servicenow-fields" title="Permanent link">&para;</a></h3>
 <p>Due to some of the assumptions made in the creation of this integration, it is often necessary to create a hidden compatibility layer between the fields you use in your ServiceNow table and those recognized by the SpiraPlan data sync. This section will lay out how to create 'hidden'
 fields that will be kept in sync with those in SpiraPlan.</p>
