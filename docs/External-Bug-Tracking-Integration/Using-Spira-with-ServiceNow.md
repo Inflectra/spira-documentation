@@ -105,15 +105,13 @@ Here are the corresponding statuses in ServiceNow
 
 ### Configuring the Incident/Requirement Type Mappings
 
-Click the "Type" button within the correspondent artifact section to map the Incident or Requirent types together. The process is identical to the mappings described previously, so repeat these steps with Incident Type and Requirements if you are also/only syncing them.
-
+Click the "Type" button for the relevant artifact to map the Incident or Requirent types between SpiraPlan and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.
 
 ![](img/Using_Spira_with_ServiceNow_242.png)
 
 You must map every type in SpiraPlan to ServiceNow. Descriptions of the field are below:
 
--   **External Key**: If type is a dropdown in ServiceNow, it's the
-'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to **match it exactly** (case, spaces, etc)
+-   **External Key**: If type is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, write in the value of the string to be mapped to the SpiraPlan type. Please take care to **match it exactly** (case, spaces, etc)
 -   **Primary**: You must have exactly one primary key for each ServiceNow type. This is what type the plug-in should set the incident and/or requirement in SpiraPlan to when the type in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.
 
 ![](img/Using_Spira_with_ServiceNow_243.png)
