@@ -16,7 +16,7 @@ The minimum hardware and software requirements for running the SpiraPlan<sup>®<
 | **Memory:**             | 4 GB, 8 GB recommended                            |
 | **Operating System:**   | Windows Server 2019 (recommended) <br>Windows Server 2016 (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10 (for demoing) |
 | **Database:**           | Microsoft SQL Server 2019 <br> Microsoft SQL Server 2019 Express Edition <br> Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition |
-| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.8 or higher |
+| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher |
 
 ---
 
@@ -34,22 +34,22 @@ Assuming that you have already installed the appropriate version of Microsoft Wi
 
 We recommend that you install / configure the prerequisites in the following order:
 
-- Install the .NET Framework v4.8
+- Install the .NET Framework v4.7.2
 - Install SQL Server 2017, 2016
 - Install a modern web browser like Microsoft Edge
 - Ensure that IIS is installed
-- Ensure that ASP.NET 4.8 is enabled
+- Ensure that ASP.NET 4.7.2 is enabled
 
 
 ### Install the .NET Framework v4.6, v4.7
 
-On most modern Windows 11 and Windows Server 2022+ installations, Microsoft .NET Framework v4.8 is usually already installed. On earlier operating systems, you may need to manually add the .NET 4.8 components to the factory configuration.
+On most modern Windows 11 and Windows Server 2022+ installations, Microsoft .NET Framework v4.7.2 is usually already installed. On earlier operating systems, you may need to manually add the .NET 4.7.2 components to the factory configuration.
 
 To see which version of the Microsoft .NET framework installed, open up Windows Explorer® and navigate to `C:\WINDOWS\Microsoft.NET\Framework` and then the subfolders listed will indicate which version(s) of the framework you have installed:
 
 ![](img/Installing_SpiraPlan_8.png)
 
-To install the .NET Framework, launch your browser and enter the URL: <https://www.inflectra.com/CustomerArea>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.8 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.8 has been installed if necessary.
+To install the .NET Framework, launch your browser and enter the URL: <https://www.inflectra.com/CustomerArea>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.7.2 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.7.2 has been installed if necessary.
 
 
 ### Install SQL Server 2019, 2017, 2016
@@ -99,9 +99,9 @@ Make sure that the following features are enabled within the 'Internet Informati
     - Application Development Features
 
         - .NET Extensibility 3.5
-        - .NET Extensibility 4.8
+        - .NET Extensibility 4.7.2
         - ASP.NET 3.5
-        - ASP.NET 4.8
+        - ASP.NET 4.7.2
         - ISAPI Extensions
         - ISAPI Filters
 
