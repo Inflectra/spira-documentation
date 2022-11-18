@@ -155,7 +155,7 @@ This tab allows you to see which users are members of the program and which prog
 
 The two program roles are "Executive" and "Program Owner":
 
-**Executive** -- This role allows the user to see the dashboard for this program, which contains all the key metrics for the contained products displayed in an aggregated manner. Please see the *SpiraPlan User Manual* for more details on this dashboard. In addition, the user is automatically granted 'observer' permissions for all the products in the program.
+**Executive** -- This role allows the user to see this [program's homepage](../../Spira-User-Manual/Program-Homepage), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program.
 
 **Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in additional allows the user to make changes to the Program itself in the Administration section.
 
