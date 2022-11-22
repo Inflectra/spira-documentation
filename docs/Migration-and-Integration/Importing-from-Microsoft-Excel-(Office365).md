@@ -91,7 +91,20 @@ This mode is only available for Spira administrator users. When login the add-in
 Select this under "Operations" and click on "Prepare Data Template Sheet" to load the template. Then, populate the sheet with at least the required (bold) fields and hit "Send Data". The just-created new users don't need to be approved in Spira.
 
 #### Add new Artifact Folders to Spira
-Select this option under "Operations", then select an Artifact type and a Product to create the folders. Finally, click on "Prepare Data Template" to load the template spreadsheet. Enter the new folder data in the spreadsheet. Finally, hit "Send  Data" and wait until the data is sent to Spira.
+Select this option under "Operations", then select an Artifact type and a Product to create the folders. Then, click on "Prepare Data Template" to load the template spreadsheet. Enter the new folder data in the spreadsheet. Finally, hit "Send  Data" and wait until the data is sent to Spira. To create subfolders, use a "> " character at the start of the "Name" field to mark the hierarchy. This is illustrated in the example below
+
+![folders hierarchy example](img/excel365-folders-hierarchy.png)
+
+```
+Folder 1 (root level)
+>Folder 2 (subfolder of Folder 1)
+>Folder 3 (subfolder of Folder 1)
+>>Folder 4 (subfolder of Folder 3)
+>>>Folder 5 (subfolder of Folder 4)
+>Folder 6 (subfolder of Folder 1)
+Folder 7 (root level)
+
+``` 
 
 #### Add new Custom Lists and Values
 Select this under "Operations" and then select the product template you want to add the new list(s) and value(s). Then, click on "Prepare Data Template Sheet" to load the template. Populate the sheet with at least the required (bold) fields. Please note that you must reserve one row for a list and one or more for its values. Finally, hit "Send Data" and wait until the data is sent to Spira.
