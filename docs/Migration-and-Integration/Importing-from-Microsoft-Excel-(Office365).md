@@ -90,6 +90,9 @@ This mode is only available for Spira administrator users. When login the add-in
 #### Add new users to Spira
 Select this under "Operations" and click on "Prepare Data Template Sheet" to load the template. Then, populate the sheet with at least the required (bold) fields and hit "Send Data". The just-created new users don't need to be approved in Spira.
 
+#### Add new Artifact Folders to Spira
+Select this option under "Operations", then select an Artifact type and a Product to create the folders. Finally, click on "Prepare Data Template" to load the template spreadsheet. Enter the new folder data in the spreadsheet. Finally, hit "Send  Data" and wait until the data is sent to Spira.
+
 #### Add new Custom Lists and Values
 Select this under "Operations" and then select the product template you want to add the new list(s) and value(s). Then, click on "Prepare Data Template Sheet" to load the template. Populate the sheet with at least the required (bold) fields. Please note that you must reserve one row for a list and one or more for its values. Finally, hit "Send Data" and wait until the data is sent to Spira.
 
