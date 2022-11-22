@@ -106,7 +106,7 @@ Once you are logged in to your Spira (and have your events selected) the popup w
 * **Selecting a product**: choose a product from the list of all the ones you have access to in Spira
 * **Select an Incident type**: pick the most relevant type available for the product you select
 * **Incident Name**: Type in the name to be given to the incident
-* **Incident Fields**: Incident fields for incidents within the product you selected will be loaded. Some of these fields may be required, as dictated by the workflow of the selected incident type, in the selected product, and the default status for incidents in that product. 
+* **Incident Fields**: Incident fields for incidents within the product you selected will be loaded. Some of these fields may be required, as dictated by the workflow of the selected incident type, in the selected product, and the default status for incidents in that product. Fields which are not required but still allowed by the workflow can be filled out by clicking the "Show optional fields" button to display them. Leaving some or all optional fields blank should not prevent incident creation. 
 
 Once these have been filled in, click the "Send data to Spira" button to connect to your Spira application and upload the incident. Once the incident has been created you will see a link next to the send button that will open the incident in Spira for you.
 
