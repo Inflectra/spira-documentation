@@ -84,7 +84,7 @@ The action bar has four buttons:
 
 
 ## Sending selected events to Spira
-You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. 
+You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product, fill out the incident creation form and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. 
 
 ### Connect to Spira
 First, make sure you have enabled API access to Spira. You do this from your Profile Page from within the Spira application. Make sure you **enable rss** and generate an **RSS Token**. This RSS token is the same token you use for API access, which is what SpiraCaptures uses.
@@ -101,11 +101,12 @@ Clicking the **Send selected events to Spira** button will show a popup. The fir
 * **API key/RSS Token**: as described above. Make sure to include it in full - including the { }. TIP: you can click on the RSS Token from your profile page in Spira to save it to the clipboard 
 
 ### Create the incident
-Once you are logged in to your Spira (and have your events selected) the popup will require 3 fields to be selected/filled in.
+Once you are logged in to your Spira (and have your events selected) the popup will require at least 3 fields to be selected/filled in.
 
 * **Selecting a product**: choose a product from the list of all the ones you have access to in Spira
 * **Select an Incident type**: pick the most relevant type available for the product you select
 * **Incident Name**: Type in the name to be given to the incident
+* **Incident Fields**: Incident fields for incidents within the product you selected will be loaded. Some of these fields may be required, as dictated by the workflow of the selected incident type, in the selected product, and the default status for incidents in that product. 
 
 Once these have been filled in, click the "Send data to Spira" button to connect to your Spira application and upload the incident. Once the incident has been created you will see a link next to the send button that will open the incident in Spira for you.
 
@@ -119,4 +120,5 @@ Once these have been filled in, click the "Send data to Spira" button to connect
 * If a link opens in a new tab or window it will not be recorded. You will need to click the capture button on that new tab to start capturing data
 * On newly installing or reinstalling the extension refresh any pages you would like to capture before starting to capture
 * To create incidents in Spira you must have version 6.1+
-* You may not be able to create an incident in Spira if your product is set up where a custom field cannot be left blank (as specified in the custom property definition)
+* You will not be able to create an incident in Spira if your product or workflow is set up such that a custom field cannot be left blank and it was not filled out within the form.
+* Some custom properties may have limitations on them such as maximum or minimum values which SpiraCapture cannot enforce directly. These will also block incident creation, but an error message should be displayed which explains where the issue is and why it occurred to provide an opportunity to fix it and try again. 
