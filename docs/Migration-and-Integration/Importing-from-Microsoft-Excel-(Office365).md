@@ -267,11 +267,13 @@ Only system administrators can create new users going to the first option of the
 - provide much easier data entry with dropdowns to show user names, releases, custom lists
 - seamlessly integrates custom fields and standard fields
 - works across Windows, Mac OS, and the web
-- NOTE: it is compatible only with Excel 2015+ and Spira 6.3.0.1+
+- NOTE: it is compatible only with Excel 2016+<sup>2</sup> and Spira 6.3.0.1+
+
+<small><sup>2</sup> Not compatible with Excel Professional 2016 and 2019 versions</small>
 
 **What can the Excel Classic add-in do that the Excel365 add-in cannot?**
 
 - work with version of Spira older than 6.3.0.1
-- work with versions of Excel pre Excel 2015
+- work with versions of Excel pre Excel 2016
 
 **NOTE** The classic version of our Excel importer can create test runs. Please refer to the [SpiraPlan TestRunner](../../Unit-Testing-Integration/Using-Test-Runner-For-Excel) for Excel 365 add-in to use these functionalities in our new generation of add-ins.
