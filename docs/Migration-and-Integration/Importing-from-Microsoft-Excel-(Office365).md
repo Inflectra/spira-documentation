@@ -14,6 +14,7 @@ This add-in works with Microsoft Excel 2016+, Excel in the cloud (via a web brow
 8.  Components <sup>1</sup>
 9.  Folders <sup>1</sup>
 10. Custom Lists and Values <sup>1</sup>
+11. Users<sup>1</sup>
 
 In legacy versions of this add-in, you needed to download a static excel template to help make sure you enter data into it in the correct way. However, this new add-in dynamically creates the sheet headers and cell validation based on the artifact and product you select.
 
@@ -88,7 +89,7 @@ If there are any errors during the sending process you will see relevant explana
 This mode is only available for Spira administrator users. When login the add-in with administrator credentials, you will see the extra button "Get or Send data", under the "Product Template and System Admin" section, at the bottom of the second screen. This mode allows you to:
 
 #### Add new users to Spira
-Select this under "Operations" and click on "Prepare Data Template Sheet" to load the template. Then, populate the sheet with at least the required (bold) fields and hit "Send Data". The just-created new users don't need to be approved in Spira.
+Select this under "Operations" and click on "Prepare Data Template Sheet" to load the template. Then, populate the sheet with at least the required (bold) fields and hit "Send Data". The just-created new users don't need to be approved in Spira. Please note that if an already existent username is attempeted creation, no data will actually be created or updated in Spira and the username's ID will be shown in the first column.
 
 #### Add new Artifact Folders to Spira
 Select this option under "Operations", then select an Artifact type and a Product to create the folders. Then, click on "Prepare Data Template" to load the template spreadsheet. Enter the new folder data in the spreadsheet. Finally, hit "Send  Data" and wait until the data is sent to Spira. To create subfolders, use a "> " character at the start of the "Name" field to mark the hierarchy. This is illustrated in the example below
