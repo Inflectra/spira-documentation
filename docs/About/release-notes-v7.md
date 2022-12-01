@@ -40,9 +40,9 @@
 
     * ** System Administration**
 
-        - System admins can enable or disable beta functionality across the application for their users [RQ:4317]
-        - System admins can create and manage a list of team names on a dedicate page (SpiraPlan only) [RQ:3689]
-        - Product admins can associate product users to specific teams [RQ:3690]
+        - System admins [can enable or disable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users [RQ:4317]
+        - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) (SpiraPlan only) [RQ:3689]
+        - Product admins can [associate product users to specific teams](../../Spira-Administration-Guide/Product-Users/#team-membership) [RQ:3690]
 
 
 ??? bug "Bug fixes and enhancements"
@@ -54,22 +54,29 @@
     - Do not restrict task start and end dates to its release's dates, so that changes to a task whose dates fall outside those of its release are not blocked [IN:7435]
     - Fix the status filter dropdown on the requirement sorted list page not being localized [IN:7470]
     - Show the correct testing settings for SpiraTest (show "Allow users to mark every step in a test case as N/A at once" and hide "Users can create tasks...") [IN:7488]
-    - Fix the help link used for the Rapise Floating Licenses administration page [IN:7490]
     - Fix concurrency dates and concurrency checks to serialize using the Invariant Culture to avoid problems using certain cultural settings (for example, Thai) [IN:7499]
-    - Record a success audit log message into the event log when any datasync 'Reset Sync' button is pressed. [IN:7525]
-    - Change the color of the message box about the best browser to use for the document spreadsheet from red to yellow [IN:7563]
-    - Fix a user being logged out and redirected to a broken URL by removing the product ID portion of this broken URL [IN:7584]
-    - Fix the browser from getting stuck in a loop if there is unsaved user input after client-side forced session termination [IN:7587]
-    - Fix the installer for on premise customers so that users are informed when they are using an incorrect SQL Version for an upgrade [IN:7588]
-    - Fix the error that can occur when starting test execution if you have lost the authorization in the current tab for any reason [IN:7607]
-    - Turn off logging for a specific "TaraVault active for a product" check to not confuse users with extra noise in the logs [IN:7608]
-    - When on premise customers upgrade, include the version they are upgrading from on the summary screen and in the log [IN:7610]
-    - Fix the wrong installer version number being recorded in the web.config file [IN:7612]
-    - Clarify the API documentation about what happens when the user create call is made but the user already exists [IN:7618]
-    - Edit Custom Reports - Header/Footer Not Being Saved [IN:7628]
-    - Fix edge case null reference exception in the installer [IN:7638]
-    - Correct the v6 SOAP API documentation example for the Document_AddFile method documentation [IN:7654]
-    - Fix some actions on the detail pages causing a logged out user to be redirected to a broken URL if their Form Manager, onRetrieve wasn't calling proper URL redirect on Auth Failure [IN:7669]
+    
+    * **Logging in and out**
+
+        - Fix a user being logged out and redirected to a broken URL by removing the product ID portion of this broken URL [IN:7584]
+        - Fix the browser from getting stuck in a loop if there is unsaved user input after client-side forced session termination [IN:7587]
+        - Fix the error that can occur when starting test execution if you have lost the authorization in the current tab for any reason [IN:7607]
+        - Fix some actions on the detail pages causing a logged out user to be redirected to a broken URL if their Form Manager, onRetrieve wasn't calling proper URL redirect on Auth Failure [IN:7669]
+
+    * **On premise installer**
+    
+        - Fix the installer for on premise customers so that users are informed when they are using an incorrect SQL Version for an upgrade [IN:7588]
+        - Fix the wrong installer version number being recorded in the web.config file [IN:7612]
+        - Fix edge case null reference exception in the installer [IN:7638]
+        - When on premise customers upgrade, include the version they are upgrading from on the summary screen and in the log [IN:7610]
+    
+    * **Documentation and logging**
+        - Change the color of the message box about the best browser to use for the document spreadsheet from red to yellow [IN:7563]
+        - Clarify the API documentation about what happens when the user create call is made but the user already exists [IN:7618]
+        - Fix the help link used for the Rapise Floating Licenses administration page [IN:7490]
+        - Correct the v6 SOAP API documentation example for the Document_AddFile method documentation [IN:7654]
+        - Record a success audit log message into the event log when any datasync 'Reset Sync' button is pressed. [IN:7525]
+        - Turn off logging for a specific "TaraVault active for a product" check to not confuse users with extra noise in the logs [IN:7608]
 
 
 ## Version 7.2 (October 2022)

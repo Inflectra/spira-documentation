@@ -22,6 +22,7 @@ The available settings include:
 - **Event Log Retention**: As described in  [Event Log](#event-log), SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
 - **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
 - **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](../Product-Planning/#testing-settings). 
+- **Enable Beta Features**: (default = no) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 
 ### TaraVault for Source code
 The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
