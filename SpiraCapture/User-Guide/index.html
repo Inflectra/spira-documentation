@@ -6105,7 +6105,7 @@
 <li><strong>Clear all events and stop capturing</strong>: This button closes the current data table page, clears all data in chrome storage, and stops capturing all tabs</li>
 </ul>
 <h2 id="sending-selected-events-to-spira">Sending selected events to Spira<a class="headerlink" href="#sending-selected-events-to-spira" title="Permanent link">&para;</a></h2>
-<p>You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. </p>
+<p>You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product, fill out the incident creation form and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. </p>
 <h3 id="connect-to-spira">Connect to Spira<a class="headerlink" href="#connect-to-spira" title="Permanent link">&para;</a></h3>
 <p>First, make sure you have enabled API access to Spira. You do this from your Profile Page from within the Spira application. Make sure you <strong>enable rss</strong> and generate an <strong>RSS Token</strong>. This RSS token is the same token you use for API access, which is what SpiraCaptures uses.</p>
 <p><img alt="" src="../img/enabling-rss.png" /></p>
@@ -6118,11 +6118,12 @@
 <li><strong>API key/RSS Token</strong>: as described above. Make sure to include it in full - including the { }. TIP: you can click on the RSS Token from your profile page in Spira to save it to the clipboard </li>
 </ul>
 <h3 id="create-the-incident">Create the incident<a class="headerlink" href="#create-the-incident" title="Permanent link">&para;</a></h3>
-<p>Once you are logged in to your Spira (and have your events selected) the popup will require 3 fields to be selected/filled in.</p>
+<p>Once you are logged in to your Spira (and have your events selected) the popup will require at least 3 fields to be selected/filled in.</p>
 <ul>
 <li><strong>Selecting a product</strong>: choose a product from the list of all the ones you have access to in Spira</li>
 <li><strong>Select an Incident type</strong>: pick the most relevant type available for the product you select</li>
 <li><strong>Incident Name</strong>: Type in the name to be given to the incident</li>
+<li><strong>Incident Fields</strong>: Incident fields for incidents within the product you selected will be loaded. Some of these fields may be required, as dictated by the workflow of the selected incident type, in the selected product, and the default status for incidents in that product. Fields which are not required but still allowed by the workflow can be filled out by clicking the "Show optional fields" button to display them. Leaving some or all optional fields blank should not prevent incident creation. </li>
 </ul>
 <p>Once these have been filled in, click the "Send data to Spira" button to connect to your Spira application and upload the incident. Once the incident has been created you will see a link next to the send button that will open the incident in Spira for you.</p>
 <p><img alt="" src="../img/logging-an-incident-in-spira.png" /></p>
@@ -6134,7 +6135,8 @@
 <li>If a link opens in a new tab or window it will not be recorded. You will need to click the capture button on that new tab to start capturing data</li>
 <li>On newly installing or reinstalling the extension refresh any pages you would like to capture before starting to capture</li>
 <li>To create incidents in Spira you must have version 6.1+</li>
-<li>You may not be able to create an incident in Spira if your product is set up where a custom field cannot be left blank (as specified in the custom property definition)</li>
+<li>You will not be able to create an incident in Spira if your product or workflow is set up such that a custom field cannot be left blank and it was not filled out within the form.</li>
+<li>Some custom properties may have limitations on them such as maximum or minimum values which SpiraCapture cannot enforce directly. These will also block incident creation, but an error message should be displayed which explains where the issue is and why it occurred to provide an opportunity to fix it and try again. </li>
 </ul>
 
 
