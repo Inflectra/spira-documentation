@@ -15,8 +15,15 @@ Please follow the steps below to download and install the add-in:
 
 - Download the add-in's zip file from the [Inflectra downloads page](http://www.inflectra.com/SpiraPlan/Downloads.aspx). 
 - Unzip the archive
-- Copy *SpiraTestNUnitAddIn.dll* and *Newtonsoft.Json.dll* into the the NUnit console addins folder (typically here: C:\Program Files (x86)\NUnit.org\nunit-console\addins) 
-- Once they've been copied, open the NUnit *addins* file (typically *nunit.bundle.addins* in the folder C:\Program Files (x86)\NUnit.org\nunit-console) and add *addins\SpiraTestNUnitAddIn.dll* on a new line in the file. Save the file. Note that the "addins" in the new line we add is to give NUnit the relative path of where the addin is now installed.
+- Copy *SpiraTestNUnitAddIn.dll* and *Newtonsoft.Json.dll* into the the NUnit console addins folder (typically here: C:\Program Files (x86)\NUnit.org\nunit-console\addins). The addins folder is also named "tools" in some newer versions of NUnit 3.
+- Once they've been copied, open the NUnit *addins* file (typically *nunit.bundle.addins* in the folder C:\Program Files (x86)\NUnit.org\nunit-console) and add *addins\SpiraTestNUnitAddIn.dll* on a new line in the file. For versions which do not contain the addins folder, place the .dll files next to nunit3-console.exe in the tools folder, and open the *nunit.console.nuget.addins* to add *SpiraTestNUnitAddIn.dll* on a new line instead. Save the file. Note that the "addins" in the new line we add is to give NUnit the relative path of where the addin is now installed.
+
+### If installing NUnit 3 and NUnit's Console Runner from NuGet
+- If integrating via NuGet, the filepaths provided above will be incorrect. Instead, find the location of the the version of the NUnit Console Runner referenced by the PATH variable in your windows environment variables. 
+- If you have installed the console runner via NuGet, this PATH variable will not be set for you, and it is [highly reccomended to do this manually](https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)). You should set this new PATH variable to a filepath which ends at the folder containing the nunit3-console.exe you wish to execute.
+- If you cannot or do not wish to add a new PATH variable, you must replace "nunit3-console" in each console command with a filepath to the correct nunit-console.exe file (the file its self, not the folder like the PATH variable expects). 
+- If installing globally via NuGet, there will be a folder approximately at C:/Users/{your username}/.nuget/packages/nunit.consolerunnner which contains different versions, it is important that the version you are executing is the version you place the .dll files next to and make the appropriate file changes.
+
 
 If you've followed all the steps correctly, the SpiraPlan NUnit add-in should now be properly installed. For reference your nunit.bundle.addins file may look something like this:
 ```
@@ -27,6 +34,8 @@ addins/vs-project-loader.dll
 addins/teamcity-event-listener.dll
 addins/SpiraTestNUnitAddIn.dll
 ```
+
+If your version of NUnit does not contain the addin folder, it may instead have *nunit.console.nuget.addins* which will look similar, but with relative file paths to the relevant .dll files. 
 
 ### Using NUnit 3 with SpiraTest
 For this example, we will be using the following sample test fixture:
@@ -92,7 +101,50 @@ Create a new file called (exactly) *SpiraConfig.json*. We recommend reating one 
 }
 ```
 
-For the plugin to work, you must have both settings groups (credentials and test_cases).
+You can also avoid using the test_cases property in the JSON file and instead place the TestCaseId's directly in the test suite's code. These 2 methods can be used together as well, but the TestCaseId set as a property will take priority over the ID set in the JSON file. An example of this usage:
+
+```C#
+using NUnit.Framework;
+
+namespace SampleTestSuite
+{
+    [TestFixture]
+    class SampleTest
+    {
+        int One, Two;
+        [SetUp]
+        protected void SetUp()
+        {
+            One = 1;
+            Two = 2;
+        }
+		//testcaseid is not case sensitive - any capitalization scheme will work
+        [Test, Property("testcaseid", 234)]
+        public void TestAdd()
+        {
+            int Result = One + Two;
+            //will succeed
+            Assert.AreEqual(Result, 3);
+        }
+        [Test, Property("TestCaseId", 235)]
+        public void TestMultiply()
+        {
+            int Result = One * Two;
+            //will fail
+            Assert.AreEqual(Result, 3);
+        }
+        [Test, Property("TESTCASEID", 236)]
+        public void TestConcat()
+        {
+            string Result = string.Concat(One, Two);
+            //will fail
+            Assert.AreEqual(Result, "21");
+        }   
+    }
+}
+```
+
+For the plugin to work, you must have credetials, and an assigned test case ID for each test either through the JSON file or the test file. Any combination of the 2 test case ID assigment methods can be used, and will not block the other one from working. The TestCaseId property assigned in test code will take priority over TestCaseId's assigned through the JSON file. 
 
 In the credentials group you must specify:
 
@@ -129,7 +181,7 @@ To execute the tests, you should use the NUnit console runner. To do this we nee
 	To correctly run the tests and record the results to SpiraPlan, run the following two commands:
 
 	1. `cd C:\TestProject`
-	2. `nunit3-console "C:\TestProject\bin\Release\SampleTestSuite.dll"`
+	2. `nunit3-console "C:\TestProject\bin\Release\SampleTestSuite.dll"` (If you installed NUnit via NuGet and have not assigned the PATH variable for this console command, you will have to manually reference the NUnit3-console.exe file using a file path instead - This must be inside of quotes just like the second part of the command is)
 
 Once you run your tests with the NUnit Console Runner, you should see the results in SpiraPlan:
 
