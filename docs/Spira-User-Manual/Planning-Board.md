@@ -305,3 +305,8 @@ If the product is using [Work in Progress (WIP) limits set](../../Spira-Administ
 - Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only.
 
 Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
+
+
+## Beta planning board
+!!! info "In beta, available in SpiraTeam and SpiraPlan"
+    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
