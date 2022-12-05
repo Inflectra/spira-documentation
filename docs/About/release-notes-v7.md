@@ -12,20 +12,20 @@
     * **[Beta Planning Board](../../Spira-User-Manual/Planning-Board/#beta-planning-board)**
 
         - The new beta planning board has powerful functionality with a new layout and overhauled design to let you plan work effortlessly [RQ:4286]
-        * **There are useful main display modes that dictate how you use the boards**
+        * **There are useful [main display modes](../../Spira-User-Manual/Planning-Board/#view-controls---planning) that dictate how you use the boards**
 
             - The Product backlog lets managers prioritize ("groom") unplanned work items that do not have a scheduled release [RQ:4368]
             - The Release backlog lets managers review planned or in progress work items [RQ:4369]
             - The sprint backlog lets managers review work in a release and its sprint, or for a single sprint [RQ:4370]
-            - When working on the release or sprint backlog there is a release dropdown [RQ:4381]
+            - When working on the release or sprint backlog there is a [release dropdown](../../Spira-User-Manual/Planning-Board/#view-controls---releases) [RQ:4381]
 
         * **The planning board makes it easy to customize how the board is organized to help you focus on the right information **
 
-            - Users can group the board by certain fields (based on the view) to show one board per member of the group [RQ:4372]
-            - Within a board users can choose what field to organize data by as columns (the x-axis) [RQ:4373]
-            - Within a board users can choose what field to organize data by as rows (the y-axis) [RQ:4374]
+            - [Users can group the board](../../Spira-User-Manual/Planning-Board/#grouping) by certain fields (based on the view) to show one board per member of the group [RQ:4372]
+            - Within a board users can choose what field to [organize data by as columns](../../Spira-User-Manual/Planning-Board/#columns) (the x-axis) [RQ:4373]
+            - Within a board users can choose what field to [organize data by as rows](../../Spira-User-Manual/Planning-Board/#rows) (the y-axis) [RQ:4374]
         
-        * **Planning board cards design updated with greater customization**
+        * **[Planning board cards design updated with greater customization](../../Spira-User-Manual/Planning-Board/#customizing-the-cards)**
 
             - Planning board cards always show a standard set of information that is useful and meaningful [RQ:4382]
             - Planning board cards can optionally show the artifact's description, type, status, and position [RQ:4375]

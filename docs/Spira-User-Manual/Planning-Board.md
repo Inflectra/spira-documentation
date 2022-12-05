@@ -337,6 +337,7 @@ The planning board page is is structured like this:
 6. **Cells**: A cell is the intersection of a row and column to give a single reference point (like on a spreadsheet)
 7. **Cards**: All items that match the settings of a cell (its group, row, and column) are shown as cards in that cell. You can customize what information to show on cards
 
+
 ### View controls - Planning
 The planning board has three different planning options. They impact what options are available in the other toolbar controls, and how the boards display:
 
@@ -562,6 +563,7 @@ Read more about [how to set up and use WIP limits](../../Spira-Administration-Gu
 **Add new cards**: if you are able to create the requirements then you will see plus (add) symbols at the top of each cell of the board. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be prepopulated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
 
 ### Example use cases
+
 #### Scrum Projects
 For Scrum projects, the boards support the most important agile ceremonies and planning activities. For example, you can show all the unplanned items in the product backlog for backlog grooming. In this example we are displaying user stories by parent (or epic) as rows, grouped by component and categorized into columns by priority.
 
