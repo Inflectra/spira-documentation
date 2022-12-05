@@ -65,6 +65,33 @@ You can have as many workflows as you like in a template, but only one can be ma
 
 ![](img/Template_Incidents_149.png)
 
+
+``` mermaid
+flowchart LR
+  A(open status)
+  B(closed status)
+
+  New --> Open;
+  New --> Assigned;
+  Assigned --> Duplicate;
+  Assigned ---> Resolved;
+  Assigned ---> NR[Not Reproducible];
+  Resolved --> Closed;
+  Open --> Assigned;
+  Open --> Duplicate;
+  Reopen --> Assigned;
+  Reopen <--> Duplicate;
+  Reopen <--> Resolved;
+  Reopen <--> NR;
+  Closed --> Reopen;
+
+  style B fill:#f9f
+  style Closed fill:#f9f
+  style NR fill:#f9f
+  style Duplicate fill:#f9f
+  style Resolved fill:#f9f
+```
+
 The notify flag is used to tell SpiraPlan® whether that particular workflow should have email notifications turned on or off. You define what transitions and which recipients should receive the emails in the workflow transition editor (see below), but you can globally turn on/off notifications here as well. This is useful if you find that the notifications are becoming an annoyance, or if the email server is unavailable for a period of time.
 
 Note: You can only assign an active workflow to an incident type, and similarly you cannot make a workflow inactive that is currently linked to an incident type. This is important as all incident types need to be linked to an active workflow at all times.
