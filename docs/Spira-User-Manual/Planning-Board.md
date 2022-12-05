@@ -360,7 +360,7 @@ The planning board has three different planning options. They impact what option
     - move work between releases
     - move planned items around ignoring releases
 
-- **Sprint backlog**" lets managers review work in a release and its sprint, or for a single sprint. This view displays all the planned items in a release and its sprints so that the project manager can:
+- **Sprint backlog**: lets managers review work in a release and its sprint, or for a single sprint. This view displays all the planned items in a release and its sprints so that the product owner or manager can:
 
     - assign work between sprints in a release
     - focus on a single sprint (if desired)
@@ -375,7 +375,7 @@ The release selector is only visible when the planning dropdown is set to either
 
 ![planning board release selector - release backlog](img/Planning_Board_release-backlog-releases.png)
 
-**When view the sprint backlog** the dropdown will show:
+**When viewing the sprint backlog** the dropdown will show:
 
 - any release with an "open" status: displays items planned for the selected release and its child sprints
 - child sprints (that are also "open") and any "open" parents: displays items planned for the selected sprint
@@ -395,8 +395,11 @@ The following options are available for grouping:
 - **Sprint backlog**: component, priority, sprint, or team (if available)
 
 There are buttons in the header area of each group that let you:
+
 - expand/collapse the group itself
 - expand/collapse the group and all of its rows at once (if rows are set)
+
+![planning board expand collapse for a group](img/Planning_Board_group-expand.png)
 
 Additionally, at the top of all the groups, there are buttons to expand/collapse all groups at once.
 
@@ -452,7 +455,7 @@ You can toggle whether to show each of the following features:
 
 - **Description**: this will show a snippet of the full artifact description below the artifact name
 - **Type**: the artifact type, shown to the right of the ID token
-- **Status**: the artifact statues, shown to the right of the ID token and the type
+- **Status**: the artifact statuses, shown to the right of the ID token and the type
 - **Test coverage**: a mini histogram chart of the requirement's test coverage, shown in the test coverage mini section on the card (hover to see a tooltip with detailed information)
 - **Test case indicators**: each test case covering the requirement is shown as a little circle, shaded based on its current execution status, in the test coverage mini section on the card (hover to see a tooltip with information about the test case, and click to open details about that test case)
 - **Task progress**: a mini histogram chart of the requirement's task progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
@@ -482,7 +485,7 @@ What cards show on the board depends on how the viewing controls are set. In add
 - when grouping by team, only cards that have owners who are members of that team are displayed in the cells for that group
 - incidents do not show at all if columns is set to status (because incidents and requirements have completely different statuses)
 - incidents do not show at all if rows are set to parent (because incidents do not have parent requirements)
-- incidents do not show when column or group is priority if there is match (see below for further information)
+- incidents show when column or group is priority, but only if there is match (see below for further information)
 
 ??? info "Incidents and priority matching"
     Incidents have a priority field, which is different to the requirement importance field. These two fields are customized independently by template administrators.
@@ -548,9 +551,9 @@ When grouping by release or sprint there are a number of special features availa
 - The group title will show additional information about the release or sprint on the right hand side of the group header. Hover on the group header to see this information in full. This shows:
 
     - Requirement completion: hover on the indicator to see a tooltip of the exact percentage complete
-    - Available effort: the number of available hours of work for tasks in the release based off the planning settings, the release dates and sources (this fields is called "Planned Effort" on the release pages)
-    - Utilized effort: the number of hours assigned to tasks in this release (this fields is called "Estimated Effort" on the release pages)
-    - Remaining effort: the hours left for tasks in the release - i.e. available effort minus utilized effort (this fields is called "Available Effort" on the release pages). The system will allow you to assign more backlog items to an sprint than it is possible to complete. In this case remaining effort will be negative and will be displayed in red. This alerts you that you need to move cards or change settings for the release.
+    - Available effort: the number of available hours of work for tasks in the release based off the planning settings, the release dates and sources (this field is called "Planned Effort" on the release pages)
+    - Utilized effort: the number of hours assigned to tasks in this release (this field is called "Estimated Effort" on the release pages)
+    - Remaining effort: the hours left for tasks in the release - i.e. available effort minus utilized effort (this field is called "Available Effort" on the release pages). The system will allow you to assign more backlog items to an sprint than it is possible to complete. In this case remaining effort will be negative and will be displayed in red. This alerts you that you need to move cards or change settings for the release.
 
 When you move requirements between releases or sprints, the fields described above are recalculated. For effort fields, all child tasks of requirements in that release/sprint are used for calculations. So moving a requirement into a sprint will increase the sprint's utilized effort by the hours of the relevant tasks in that requirement, and decrease the sprint's remaining effort by the same amount.
 
@@ -561,15 +564,15 @@ When organizing by person (for rows or columns) there are a number of special fe
 
 - Clicking on the person's name will open the details page for that individual
 - Under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
-- Moving cards into a person's cells will, as relevant, autommatically update their resource allocation
+- Moving cards into a person's cells will, as relevant, automatically update their resource allocation
 
 !!! info "Grouping by team and rows by person"
     When grouping by team, there is one group for every team. If rows is set to "by person", then within each team, all members of that team are shown. So if Amy is a member of the dev team, they will have a row in the dev team group and not in any other group.
 
 ### Status and Work in Progress Limits
-When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status columns. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
+When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
 
-There are different colors to indicator the status of the WIP limit:
+There are different colors to indicate the status of the WIP limit:
 
 - **No badge**: no WIP limits have been defined for that status and release type (release vs sprint), or the current view does not support WIP limits
 - **Green**: there is "space" in the status (the WIP limit has not been exceeded yet)
