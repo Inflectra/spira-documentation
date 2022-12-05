@@ -362,8 +362,7 @@ The top part of this tab displays the various standard fields and custom propert
 
 ![](img/Release_Management_266.png)
 
-When you make changes to the release/sprint's start-date, end-date, number of product personnel resources, or number of non-working *person*
-days, the system will automatically calculate how many hours of effort (planned effort) are available in the release/sprint for assigning tasks. As you begin assigning tasks -- either through the Tasks tab or the Sprint Planning screen -- the total estimated effort of the tasks is subtracted from this planned effort to give the "available effort".
+When you make changes to the release/sprint's start-date, end-date, number of product personnel resources, or number of non-working *person* days, the system will automatically calculate how many hours of effort (planned effort) are available in the release/sprint for assigning tasks. As you begin assigning tasks -- either through the Tasks tab or the Sprint Planning screen -- the total estimated effort of the tasks is subtracted from this planned effort to give the "available effort".
 
 
 ### Overview -- Detailed Information
