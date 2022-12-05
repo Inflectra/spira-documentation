@@ -337,6 +337,16 @@ The planning board page is is structured like this:
 6. **Cells**: A cell is the intersection of a row and column to give a single reference point (like on a spreadsheet)
 7. **Cards**: All items that match the settings of a cell (its group, row, and column) are shown as cards in that cell. You can customize what information to show on cards
 
+### Views summary
+Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available:
+
+| View options | Product Backlog                  | Release Backlog                             | Sprint Backlog                              |
+| ------------ | -------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| **Releases** | Not Available                    | Open releases (excluding sprints)           | Open relesaes<br> Open parents              |
+| **Grouping** | Component<br> Priority           | Component<br> Priority<br> Release<br> Team | Component<br> Priority<br> Sprint<br> Team  |
+| **Rows**     | Component<br> Parent Requirement | Component<br> Person<br> Parent Requirement | Component<br> Person<br> Parent Requirement |
+| **Columns**  | Priority<br> Status              | Priority<br> Person<br> Status              | Priority<br> Person<br> Status              |
+
 
 ### View controls - Planning
 The planning board has three different planning options. They impact what options are available in the other toolbar controls, and how the boards display:
@@ -358,17 +368,17 @@ The planning board has three different planning options. They impact what option
 ### View controls - Releases
 The release selector is only visible when the planning dropdown is set to either the release backlog or the sprint backlog. 
 
-When viewing the release backlog the dropdown will show:
+**When viewing the release backlog** the dropdown will show:
 
 - "all releases": displays items planned for any release
 - any release with an "open" status (a status of planned, in progress, or completed) that is not a sprint: displays items planned for the selected release and its child sprints
 
 ![planning board release selector - release backlog](img/Planning_Board_release-backlog-releases.png)
 
-When view the sprint backlog the dropdown will show:
+**When view the sprint backlog** the dropdown will show:
 
 - any release with an "open" status: displays items planned for the selected release and its child sprints
-- child sprints (that are also "open") of the displayed parents: displays items planned for the selected sprint
+- child sprints (that are also "open") and any "open" parents: displays items planned for the selected sprint
 
 ![planning board release selector - sprint backlog](img/Planning_Board_sprint-backlog-releases.png)
 
@@ -430,7 +440,8 @@ There are no expand/collapse buttons for columns.
 You can customize what information is shown on each card. For each artifact the following fields are always shown:
 
 - **Name** (click to open a popup with full details, or alt-click to open the details page for that item)
-- **ID token** of the artifact: shown beneath the name in a gray bubble)
+- **Artifact icon**: shown beneath the name in a gray bubble
+- **ID token** of the artifact: shown to the right of the artifact icon
 - **Story points** (if set): shown to the bottom right of the card (hover to see full information about the estimate and effort fields) 
 - **Priority** (if set): shown to the bottom right of the card in a circle the color of the priority
 - **Owner** (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
@@ -467,9 +478,17 @@ What cards show on the board depends on how the viewing controls are set. In add
 - requirements of all types are included on the board
 - parent requirements do not show as cards
 - requirements with a status of rejected or obsolete never show
-- when columns is set to status only requirements that match one of the displayed statuses will show
+- when columns is set to status, only requirements that match one of the displayed statuses will show
+- when grouping by team, only cards that have owners who are members of that team are displayed in the cells for that group
 - incidents do not show at all if columns is set to status (because incidents and requirements have completely different statuses)
 - incidents do not show at all if rows are set to parent (because incidents do not have parent requirements)
+- incidents do not show when column or group is priority if there is match (see below for further information)
+
+??? info "Incidents and priority matching"
+    Incidents have a priority field, which is different to the requirement importance field. These two fields are customized independently by template administrators.
+
+    However on the planning board, when organizing by priority, you may see both requirement cards *and* incident cards (if set to show). This is because the system automatically matches up incident priority and requirement importance. It does based on their names. If a requirement importance has an exactly matching incident priority (case sensitive), then any incidents with that priority will show in that "priority" column on the planning board. You can move incident cards between priorities and as long as there is match, the incident priority will be updated.
+
 
 #### What cards show when viewing the product backlog
 The following cards will show in this view (in combination with the relevant principles described above):
@@ -516,7 +535,7 @@ Click on a card to select it. Click on more cards to add them to your selection.
         - the user does not have bulk edit permissions for the relevant artifact
         - columns is set to status and bulk editing of statuses has been disabled at the template level
         - a requirement card has a status of completed
-        - requirements that have tasks attached, and if the product is set to use task status to control requirement status (in this case the card does not look disabled but its status cannot be changed)
+        - requirements that have tasks attached, and the product is set to use task status to control requirement status (in this case the card does not *look* disabled but its status cannot be changed - if you try to change its status the card will appear in its original column)
 
 
 ### Viewing by release or sprint
@@ -543,6 +562,9 @@ When organizing by person (for rows or columns) there are a number of special fe
 - Clicking on the person's name will open the details page for that individual
 - Under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
 - Moving cards into a person's cells will, as relevant, autommatically update their resource allocation
+
+!!! info "Grouping by team and rows by person"
+    When grouping by team, there is one group for every team. If rows is set to "by person", then within each team, all members of that team are shown. So if Amy is a member of the dev team, they will have a row in the dev team group and not in any other group.
 
 ### Status and Work in Progress Limits
 When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status columns. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
