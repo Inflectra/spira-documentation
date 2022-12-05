@@ -521,6 +521,8 @@ Click on a card to select it. Click on more cards to add them to your selection.
 ### Viewing by release or sprint
 When grouping by release or sprint there are a number of special features available in the header row (where you see the release/sprint name).
 
+![planning board release header](img/Planning_Board_release-header.png)
+
 - Clicking on the release or sprint name will open that release/sprint's details page
 - At the end of the release or sprint name is a little "display for" icon (a pair of glasses). Clicking this will set the release dropdown to that release/sprint and reload the board with information just for that chosen release/sprint
 - The group title will show additional information about the release or sprint on the right hand side of the group header. Hover on the group header to see this information in full. This shows:
@@ -533,10 +535,24 @@ When grouping by release or sprint there are a number of special features availa
 When you move requirements between releases or sprints, the fields described above are recalculated. For effort fields, all child tasks of requirements in that release/sprint are used for calculations. So moving a requirement into a sprint will increase the sprint's utilized effort by the hours of the relevant tasks in that requirement, and decrease the sprint's remaining effort by the same amount.
 
 ### Viewing by Person
-TODO
+When organizing by person (for rows or columns) there are a number of special features available in the header row (where you see the person's name).
+
+![planning board person header](img/Planning_Board_person-header.png)
+
+- Clicking on the person's name will open the details page for that individual
+- Under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
+- Moving cards into a person's cells will, as relevant, autommatically update their resource allocation
 
 ### Status and Work in Progress Limits
-TODO
+When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status columns. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
+
+There are different colors to indicator the status of the WIP limit:
+
+- **No badge**: no WIP limits have been defined for that status and release type (release vs sprint), or the current view does not support WIP limits
+- **Green**: there is "space" in the status (the WIP limit has not been exceeded yet)
+- **Red**: there are too many cards in this status (the WIP limit has been exceeded). In this case the cell will be shaded a pale red. Note that even in this status, you can still move cards into this status - the color is an indicator only.
+
+Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
 
 ### Editing and viewing cards
 **Viewing cards**: to view more information about the card you can click on the card's name to open a popup with much more detail; or ctrl/cmd+click on the card's name to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. Users who cannot bulk edit the artifact but who can add comments can add comments when viewing the card.
