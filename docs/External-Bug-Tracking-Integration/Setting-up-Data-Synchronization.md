@@ -117,7 +117,7 @@ The sections that need to be verified and possibly changed are the values for th
 
 For each of these, check the following information:
 
-The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value no smaller than 5 minutes (i.e. 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead.
+The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value around 2-5 minutes (i.e. 120,000 - 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead. When you are using a bidirectional synchronization plugin, a shorter value with avoid conflicting changes being made in the system systems.
 
 The base URL to your instance Spira. It is typically of the form http://<server name\>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.
 
