@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -2303,16 +2313,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2326,7 +2336,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -2341,11 +2351,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -2360,11 +2370,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -7068,8 +7116,7 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p>The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the requirement.</p>
 <p>The top part of this tab displays the various standard fields and custom properties associated with the requirement. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.</p>
 <p><img alt="" src="../img/Release_Management_266.png" /></p>
-<p>When you make changes to the release/sprint's start-date, end-date, number of product personnel resources, or number of non-working <em>person</em>
-days, the system will automatically calculate how many hours of effort (planned effort) are available in the release/sprint for assigning tasks. As you begin assigning tasks -- either through the Tasks tab or the Sprint Planning screen -- the total estimated effort of the tasks is subtracted from this planned effort to give the "available effort".</p>
+<p>When you make changes to the release/sprint's start-date, end-date, number of product personnel resources, or number of non-working <em>person</em> days, the system will automatically calculate how many hours of effort (planned effort) are available in the release/sprint for assigning tasks. As you begin assigning tasks -- either through the Tasks tab or the Sprint Planning screen -- the total estimated effort of the tasks is subtracted from this planned effort to give the "available effort".</p>
 <h3 id="overview-detailed-information">Overview -- Detailed Information<a class="headerlink" href="#overview-detailed-information" title="Permanent link">&para;</a></h3>
 <p>The Detailed Information section contains the long, formatted description of the requirement, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
@@ -7221,6 +7268,8 @@ days, the system will automatically calculate how many hours of effort (planned 
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -7321,7 +7370,7 @@ days, the system will automatically calculate how many hours of effort (planned 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>

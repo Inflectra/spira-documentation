@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1745,16 +1755,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1768,7 +1778,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -1783,11 +1793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -1802,11 +1812,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -6055,7 +6103,7 @@
 <li>name="Password" </li>
 </ul>
 <p>For each of these, check the following information:</p>
-<p>The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value no smaller than 5 minutes (i.e. 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead.</p>
+<p>The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value around 2-5 minutes (i.e. 120,000 - 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead. When you are using a bidirectional synchronization plugin, a shorter value with avoid conflicting changes being made in the system systems.</p>
 <p>The base URL to your instance Spira. It is typically of the form http://&lt;server name>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.</p>
 <p>A valid login name and password to your instance of Spira. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
 permissions in these projects.</p>
@@ -6096,6 +6144,8 @@ permissions in these projects.</p>
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -6196,7 +6246,7 @@ permissions in these projects.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>

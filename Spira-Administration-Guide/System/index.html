@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1745,16 +1755,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1768,7 +1778,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -1783,11 +1793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -1802,11 +1812,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -6030,6 +6078,7 @@
 <li><strong>Event Log Retention</strong>: As described in  <a href="#event-log">Event Log</a>, SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.</li>
 <li><strong>Enable Free Text Indexes</strong>: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.</li>
 <li><strong>Disable Rollup Calculations</strong>: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level <a href="../Product-Planning/#testing-settings">equivalent setting</a>. </li>
+<li><strong>Enable Beta Features</strong>: (default = no) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.</li>
 </ul>
 <h3 id="taravault-for-source-code">TaraVault for Source code<a class="headerlink" href="#taravault-for-source-code" title="Permanent link">&para;</a></h3>
 <p>The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.</p>
@@ -6231,6 +6280,8 @@ link to add new SCM users to the product.</p>
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -6331,7 +6382,7 @@ link to add new SCM users to the product.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>

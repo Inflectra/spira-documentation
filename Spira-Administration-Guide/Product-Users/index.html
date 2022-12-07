@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1745,16 +1755,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1768,7 +1778,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -1783,11 +1793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -1802,11 +1812,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -2215,6 +2263,15 @@
   <a href="#product-membership" class="md-nav__link">
     <span class="md-ellipsis">
       Product Membership
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Membership
     </span>
   </a>
   
@@ -5805,6 +5862,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#team-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Membership
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5821,14 +5887,31 @@
 
 <h1 id="product-users">Product: Users<a class="headerlink" href="#product-users" title="Permanent link">&para;</a></h1>
 <h2 id="product-membership">Product Membership<a class="headerlink" href="#product-membership" title="Permanent link">&para;</a></h2>
-<p>The following screen is displayed when you choose the "Product Membership" link from the Administration menu:</p>
+<p>The following page is displayed when you choose the "Product Membership" link from the Administration menu:</p>
 <p><img alt="" src="../img/Product_Users_107.png" /></p>
-<p>This screen displays the name of the current product together with a list of all the users who are currently members of the product along with their currently assigned product role. If you want to modify the membership for a different product, click the "Change Product" button to be taken back to View/Edit Products screen where you can select a different product.</p>
+<p>This page displays the name of the current product together with a list of all the users who are currently members of the product along with their currently assigned product role. If you want to modify the membership for a different product, click the "Change Product" button to be taken back to View/Edit Products screen where you can select a different product.</p>
 <p>To modify the role of a user assigned to the product, change the role for that user's entry in the drop-down menu and click the "Save" button. </p>
 <p>To remove a user from the product, check the box to the left of the user's name and click the "Delete" button. Note that this only removes them from the product, not the entire system. See the <a href="../System-Users/#view-edit-roles">product roles documentation</a> for more information.</p>
 <p>To add a user to the product, so that they can access its information, click the "Add" button and you will be taken to the following screen that lists all the users in the system that are not currently members of the product:</p>
 <p><img alt="" src="../img/Product_Users_108.png" /></p>
 <p>You now should narrow down the list of users by entering filter criteria and clicking [Filter]; you can also sort the results to make viewing easier. Once you have located the appropriate user(s), just select a product role for them from the drop-down list and click [Add] to add them to the product in the specified role.</p>
+<h2 id="team-membership">Team Membership<a class="headerlink" href="#team-membership" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">In beta, available in SpiraPlan only</p>
+<p>System admins <a href="../../Spira-Administration-Guide/System/#general-settings">can enable</a> beta functionality across the application for their users from the System Admin &gt; General Settings page.</p>
+</div>
+<p>SpiraPlan lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.</p>
+<p><img alt="" src="../img/Product_Users_109.png" /></p>
+<p>This page displays the name of the current product and a list of all the users who are currently members of the product (sorted alphabetically by full name). For each product member you can see their:</p>
+<ul>
+<li>Full name</li>
+<li>User name</li>
+<li>Department</li>
+<li>Organization</li>
+<li>Team</li>
+</ul>
+<p>To change a user's current team, change the selected value in the dropdown. Once all changes to teams are made click "Save" to commit the changes.</p>
+<p>Only currently active teams are shown. If a user is not in any team (for this product), or in an inactive or deleted team, their team will show as "-- None --".</p>
 
 
 
@@ -5839,6 +5922,8 @@
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -5939,7 +6024,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>

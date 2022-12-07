@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1745,16 +1755,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1768,7 +1778,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -1783,11 +1793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -1802,11 +1812,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -2126,6 +2174,15 @@
   <a href="#view-edit-product-roles" class="md-nav__link">
     <span class="md-ellipsis">
       View / Edit Product Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-edit-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      View / Edit Teams
     </span>
   </a>
   
@@ -5973,6 +6030,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#view-edit-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      View / Edit Teams
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6171,6 +6237,23 @@
 <p>In addition, there are some artifact-wide permissions that can be specified for each role:</p>
 <p><img alt="" src="../img/System_Users_56.png" /></p>
 <p>This section lets you specify if the role allows users to add new documents to the product, edit existing documents, delete documents, edit the document folders, and view/edit source code commits.</p>
+<h2 id="view-edit-teams">View / Edit Teams<a class="headerlink" href="#view-edit-teams" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">In beta, available in SpiraPlan only</p>
+<p>System admins <a href="../../Spira-Administration-Guide/System/#general-settings">can enable</a> beta functionality across the application for their users from the System Admin &gt; General Settings page.</p>
+</div>
+<p>SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.</p>
+<p><img alt="" src="../img/System_Users_57.png" /></p>
+<p>This page lets you display the list of teams sorted alphabetically by name, based on three predefined filters:</p>
+<ul>
+<li><strong>All Active</strong> -- This displays only the teams that are listed as Active = Yes. Only active teams will be displayed inside the main application.</li>
+<li><strong>All But Deleted</strong> -- This displays all the teams (active and inactive) except those that have been deleted.</li>
+<li><strong>All</strong> -- This displays all the teams (active, inactive, and deleted).</li>
+</ul>
+<p>Click the 'Add Team' button at the bottom of the list to add a new team:</p>
+<p><img alt="" src="../img/System_Users_58.png" /></p>
+<p>After entering the name of the new team, optionally entering a description, and choosing its Active status (active by default), click 'Save' to commit the new item. To edit an existing team, change its name, description, or active status and click 'Save'. To delete a team, click the 'Delete' option for that row. Once deleted, an item can be undeleted by changing the display to 'All' and then clicking 'Undelete'.</p>
+<p><a href="../Product-Users/#team-membership">Learn about how to manage team membership at the product level</a>. </p>
 
 
 
@@ -6181,6 +6264,8 @@
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -6281,7 +6366,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>

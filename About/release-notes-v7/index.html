@@ -497,6 +497,16 @@
     
       
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1745,16 +1755,16 @@
             
   
   <span class="md-ellipsis">
-    Quick Start Guides
+    Quick Start Guide
   </span>
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" aria-label="Quick Start Guides" data-md-level="1">
+        <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Quick Start Guides
+            Quick Start Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1768,7 +1778,7 @@
         
   
   <span class="md-ellipsis">
-    SpiraPlan
+    Introduction
   </span>
 
       </a>
@@ -1783,11 +1793,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTeam-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTeam
+    Plan
   </span>
 
       </a>
@@ -1802,11 +1812,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SpiraTest-Quick-Start-Guide/" class="md-nav__link">
+      <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SpiraTest
+    Do the Work
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final Review
   </span>
 
       </a>
@@ -5630,6 +5678,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-73-december-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 7.3 (December 2022)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-72-october-2022" class="md-nav__link">
     <span class="md-ellipsis">
       Version 7.2 (October 2022)
@@ -5813,6 +5870,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-73-december-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 7.3 (December 2022)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-72-october-2022" class="md-nav__link">
     <span class="md-ellipsis">
       Version 7.2 (October 2022)
@@ -5854,6 +5920,109 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-73-december-2022">Version 7.3 (December 2022)<a class="headerlink" href="#version-73-december-2022" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Introducing our next generation planning board for SpiraTeam and SpiraPlan. Available as a beta alongside the existing planning board, the new board has a brand new look, big new features (including swimlanes), and simpler to use than ever.</p>
+<p>SpiraPlan admins can create teams and assign members of a product to those teams (in beta). Currently teams are available exclusively on the beta planning board.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Planning-Board/#beta-planning-board">Beta Planning Board</a></strong></p>
+<ul>
+<li>The new beta planning board has powerful functionality with a new layout and overhauled design to let you plan work effortlessly [RQ:4286]</li>
+<li>
+<p><strong>There are useful <a href="../../Spira-User-Manual/Planning-Board/#view-controls---planning">main display modes</a> that dictate how you use the boards</strong></p>
+<ul>
+<li>The Product backlog lets managers prioritize ("groom") unplanned work items that do not have a scheduled release [RQ:4368]</li>
+<li>The Release backlog lets managers review planned or in progress work items [RQ:4369]</li>
+<li>The sprint backlog lets managers review work in a release and its sprint, or for a single sprint [RQ:4370]</li>
+<li>When working on the release or sprint backlog there is a <a href="../../Spira-User-Manual/Planning-Board/#view-controls---releases">release dropdown</a> [RQ:4381]</li>
+</ul>
+</li>
+<li>
+<p>**The planning board makes it easy to customize how the board is organized to help you focus on the right information **</p>
+<ul>
+<li><a href="../../Spira-User-Manual/Planning-Board/#grouping">Users can group the board</a> by certain fields (based on the view) to show one board per member of the group [RQ:4372]</li>
+<li>Within a board users can choose what field to <a href="../../Spira-User-Manual/Planning-Board/#columns">organize data by as columns</a> (the x-axis) [RQ:4373]</li>
+<li>Within a board users can choose what field to <a href="../../Spira-User-Manual/Planning-Board/#rows">organize data by as rows</a> (the y-axis) [RQ:4374]</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Planning-Board/#customizing-the-cards">Planning board cards design updated with greater customization</a></strong></p>
+<ul>
+<li>Planning board cards always show a standard set of information that is useful and meaningful [RQ:4382]</li>
+<li>Planning board cards can optionally show the artifact's description, type, status, and position [RQ:4375]</li>
+<li>Planning board cards can optionally show the artifact's task progress and task mini indicators [RQ:4376]</li>
+<li>Planning board cards can optionally show the artifact's test coverage and test case mini indicators [RQ:4377]</li>
+</ul>
+</li>
+<li>
+<p><strong>Incident cards can be shown alongside requirement cards for certain views of the Planning Board</strong></p>
+<ul>
+<li>When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]</li>
+<li>Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]</li>
+<li>Teams/Tracks Support in Boards (SpiraPlan only) [RQ:2316]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>** System Administration**</p>
+<ul>
+<li>System admins <a href="../../Spira-Administration-Guide/System/#general-settings">can enable or disable</a> beta functionality across the application for their users [RQ:4317]</li>
+<li>System admins can create and manage <a href="../../Spira-Administration-Guide/System-Users/#view--edit-teams">a list of team names</a> (SpiraPlan only) [RQ:3689]</li>
+<li>Product admins can <a href="../../Spira-Administration-Guide/Product-Users/#team-membership">associate product users to specific teams</a> [RQ:3690]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Retain the user-designated ordering on the planning board in all cases (including the first time a card is moved, and moving a card to the end of a stack) [IN:6467]</li>
+<li>Ensure all incident progress tooltips are shown in the user's local time zone and not in UTC [IN:6573]</li>
+<li>Improve performance by caching user avatar images in the browser [IN:7287]</li>
+<li>Fix the SpiraApp for WorX actions that happen when you click the buttons in the column grids [IN:7391]</li>
+<li>Do not restrict task start and end dates to its release's dates, so that changes to a task whose dates fall outside those of its release are not blocked [IN:7435]</li>
+<li>Fix the status filter dropdown on the requirement sorted list page not being localized [IN:7470]</li>
+<li>Show the correct testing settings for SpiraTest (show "Allow users to mark every step in a test case as N/A at once" and hide "Users can create tasks...") [IN:7488]</li>
+<li>
+<p>Fix concurrency dates and concurrency checks to serialize using the Invariant Culture to avoid problems using certain cultural settings (for example, Thai) [IN:7499]</p>
+</li>
+<li>
+<p><strong>Logging in and out</strong></p>
+<ul>
+<li>Fix a user being logged out and redirected to a broken URL by removing the product ID portion of this broken URL [IN:7584]</li>
+<li>Fix the browser from getting stuck in a loop if there is unsaved user input after client-side forced session termination [IN:7587]</li>
+<li>Fix the error that can occur when starting test execution if you have lost the authorization in the current tab for any reason [IN:7607]</li>
+<li>Fix some actions on the detail pages causing a logged out user to be redirected to a broken URL if their Form Manager, onRetrieve wasn't calling proper URL redirect on Auth Failure [IN:7669]</li>
+</ul>
+</li>
+<li>
+<p><strong>On premise installer</strong></p>
+<ul>
+<li>Fix the installer for on premise customers so that users are informed when they are using an incorrect SQL Version for an upgrade [IN:7588]</li>
+<li>Fix the wrong installer version number being recorded in the web.config file [IN:7612]</li>
+<li>Fix edge case null reference exception in the installer [IN:7638]</li>
+<li>When on premise customers upgrade, include the version they are upgrading from on the summary screen and in the log [IN:7610]</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation and logging</strong></p>
+<ul>
+<li>Change the color of the message box about the best browser to use for the document spreadsheet from red to yellow [IN:7563]</li>
+<li>Clarify the API documentation about what happens when the user create call is made but the user already exists [IN:7618]</li>
+<li>Fix the help link used for the Rapise Floating Licenses administration page [IN:7490]</li>
+<li>Correct the v6 SOAP API documentation example for the Document_AddFile method documentation [IN:7654]</li>
+<li>Record a success audit log message into the event log when any datasync 'Reset Sync' button is pressed. [IN:7525]</li>
+<li>Turn off logging for a specific "TaraVault active for a product" check to not confuse users with extra noise in the logs [IN:7608]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-72-october-2022">Version 7.2 (October 2022)<a class="headerlink" href="#version-72-october-2022" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
@@ -6011,6 +6180,8 @@
               
             </article>
             
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var input,hash=location.hash.slice(1);hash.startsWith("__tabbed_")&&((input=document.getElementById(hash)).checked=!0)</script>
           </div>
         </div>
@@ -6111,7 +6282,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.2131bdac.min.js"></script>
