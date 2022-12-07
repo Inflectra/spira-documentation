@@ -1,5 +1,8 @@
 # SpiraTest Quick Start Guide
 
+!!! tip "Want to access the new and improved Quick Start Guide?"
+    This SpiraTest quick start guide still works great, but we have a newer and greater quick start guide. Please feel free to [check it out](../../SpiraPlan-Quick-Start-Guide/).
+
 ## Logging in and Selecting a Product
 
 Once you have installed a self-hosted trial or signed up for a hosted
