@@ -8,12 +8,11 @@
     If you have any feedback or suggestions regarding this roadmap, please email us at support@inflectra.com.
 
 ## What has been released
-Please take a look at our [release notes](../release-notes-v6) to see a complete list of the changes large and small that we have recently delivered.
+Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes large and small that we have recently delivered.
 
 ## Upcoming release
-### 7.3 (Q4 2022)
-- **Enhanced planning board**, including being able to apply filters, additional ways to group data, and swim lanes (released as a beta)
-- **Group users by teams and tracks**: Create different teams and tracks at the system level and assign users to each on a per product basis (available exclusively in this release on the beta planning board).
+### 7.4 (early 2022)
+- Maintenance and bug fixes
 
 
 ## Future Releases
