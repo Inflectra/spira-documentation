@@ -71,7 +71,7 @@ namespace SampleTestSuite
 }
 ```
 
-Create a new file called (exactly) *SpiraConfig.json*. We recommend reating one of these files for your entire solution and saving it in a convenient location. This can be in the root folder of your unit tests, or the root folder of your whole solution. 
+Create a new file called (exactly) *SpiraConfig.json*. We recommend creating one of these files for your entire solution and saving it in a convenient location. This can be in the root folder of your unit tests, or the root folder of your whole solution. 
 
 ```JSON
 {

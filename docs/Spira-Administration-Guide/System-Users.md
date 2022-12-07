@@ -248,4 +248,24 @@ In addition, there are some artifact-wide permissions that can be specified for 
 This section lets you specify if the role allows users to add new documents to the product, edit existing documents, delete documents, edit the document folders, and view/edit source code commits.
 
 
+## View / Edit Teams
+!!! info "In beta, available in SpiraPlan only"
+    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
+SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
+
+![](img/System_Users_57.png)
+
+This page lets you display the list of teams sorted alphabetically by name, based on three predefined filters:
+
+-   **All Active** -- This displays only the teams that are listed as Active = Yes. Only active teams will be displayed inside the main application.
+-   **All But Deleted** -- This displays all the teams (active and inactive) except those that have been deleted.
+-   **All** -- This displays all the teams (active, inactive, and deleted).
+
+Click the 'Add Team' button at the bottom of the list to add a new team:
+
+![](img/System_Users_58.png)
+
+After entering the name of the new team, optionally entering a description, and choosing its Active status (active by default), click 'Save' to commit the new item. To edit an existing team, change its name, description, or active status and click 'Save'. To delete a team, click the 'Delete' option for that row. Once deleted, an item can be undeleted by changing the display to 'All' and then clicking 'Undelete'.
+
+[Learn about how to manage team membership at the product level](../Product-Users/#team-membership). 

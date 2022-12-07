@@ -305,3 +305,308 @@ If the product is using [Work in Progress (WIP) limits set](../../Spira-Administ
 - Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only.
 
 Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
+
+
+## Beta planning board
+!!! info "In beta, available in SpiraTeam and SpiraPlan"
+    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+
+    To access the beta board, navigate to the Planning Board as normal. This loads the standard Planning Board. Then click on the "**Try the Beta**" button the top-right to go to the new beta board.
+
+    ![button to access the beta board](img/Planning_Board_access-beta.png)
+
+    You will now stay on the beta planning boards for the remainder of your session. To leave the beta, click on "Exit the Beta". This will return you to the old boards.
+
+
+### Page Structure
+The planning board is designed to provide a consistent user interface across its different views and:
+
+- supports multiple boards in a product
+- provides a wide range of intuitive customization options
+- lets you see both horizontal and vertical swim lanes in a single view
+
+The planning board page is is structured like this:
+
+![planning board page layout guide](img/Planning_Board_page-layout.png)
+
+1. **Top toolbar**: this is where you configure the board itself (and all of the features below)
+2. **View controls**: this part of the toolbar lets you select the planning view (product backlog, release backlog, or sprint backlog), and choose, where relevant, a release or sprint
+3. **Grouping**: divide up the list of items into a major grouping. Each grouping is its own independent board on the page
+4. **Rows**: within each board / group create rows (swim-lanes) to divide up the data
+5. **Columns**: within each board / group, you must choose a field to show across the columns
+6. **Cells**: A cell is the intersection of a row and column to give a single reference point (like on a spreadsheet)
+7. **Cards**: All items that match the settings of a cell (its group, row, and column) are shown as cards in that cell. You can customize what information to show on cards
+
+### Views summary
+Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available:
+
+| View options | Product Backlog                  | Release Backlog                             | Sprint Backlog                              |
+| ------------ | -------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| **Releases** | Not Available                    | Open releases (excluding sprints)           | Open relesaes<br> Open parents              |
+| **Grouping** | Component<br> Priority           | Component<br> Priority<br> Release<br> Team | Component<br> Priority<br> Sprint<br> Team  |
+| **Rows**     | Component<br> Parent Requirement | Component<br> Person<br> Parent Requirement | Component<br> Person<br> Parent Requirement |
+| **Columns**  | Priority<br> Status              | Priority<br> Person<br> Status              | Priority<br> Person<br> Status              |
+
+
+### View controls - Planning
+The planning board has three different planning options. They impact what options are available in the other toolbar controls, and how the boards display:
+
+![planning board planning dropdown](img/Planning_Board_planning-dropdown.png)
+
+- **Product backlog**: lets managers prioritize ("groom") unplanned work items that do not have a scheduled release. This view displays all unplanned items so the manager can prioritize work before assigning to a specific release or sprint. This is often called "backlog grooming" but is essentially prioritizing and categorizing unplanned work
+- **Release backlog**: lets managers review planned or in progress work items. This view displays all the planned items (based on status) so that the project manager can:
+
+    - assign work to a release
+    - move work between releases
+    - move planned items around ignoring releases
+
+- **Sprint backlog**: lets managers review work in a release and its sprint, or for a single sprint. This view displays all the planned items in a release and its sprints so that the product owner or manager can:
+
+    - assign work between sprints in a release
+    - focus on a single sprint (if desired)
+
+### View controls - Releases
+The release selector is only visible when the planning dropdown is set to either the release backlog or the sprint backlog. 
+
+**When viewing the release backlog** the dropdown will show:
+
+- "all releases": displays items planned for any release
+- any release with an "open" status (a status of planned, in progress, or completed) that is not a sprint: displays items planned for the selected release and its child sprints
+
+![planning board release selector - release backlog](img/Planning_Board_release-backlog-releases.png)
+
+**When viewing the sprint backlog** the dropdown will show:
+
+- any release with an "open" status: displays items planned for the selected release and its child sprints
+- child sprints (that are also "open") and any "open" parents: displays items planned for the selected sprint
+
+![planning board release selector - sprint backlog](img/Planning_Board_sprint-backlog-releases.png)
+
+
+### Grouping
+Boards have the option to have multiple, separate boards displayed. This is used when you want to display a complete board for each item in a selection (for example each release). Inside each group, the rows and columns will show based on your selections. For example, when you are displaying the Release Backlog, you may want to group by release. In the screenshot below we have columns set to status, and rows to component
+
+![planning board group by release](img/Planning_Board_group-by-release.png)
+
+The following options are available for grouping:
+
+- **Product backlog**: component, or priority
+- **Release backlog**: component, priority, release, or team (if available) 
+- **Sprint backlog**: component, priority, sprint, or team (if available)
+
+There are buttons in the header area of each group that let you:
+
+- expand/collapse the group itself
+- expand/collapse the group and all of its rows at once (if rows are set)
+
+![planning board expand collapse for a group](img/Planning_Board_group-expand.png)
+
+Additionally, at the top of all the groups, there are buttons to expand/collapse all groups at once.
+
+![planning board expand collapse](img/Planning_Board_expand-collapse.png)
+
+### Rows
+Inside each of the boards you can organize the cards into rows. This is optional. For example, in the screenshot below we are displaying the product backlog with rows set to "parent". In the example, the grouping is by component and the board is smart enough to know that it should only show you those parents in rows that are tagged with that component (so different component groups will show different parent requirements as their rows).
+
+![planning board rows example](img/Planning_Board_rows-example.png)
+
+The following options are available for rows:
+
+- **Product backlog**: component, or parent requirement
+- **Release backlog**: component, person, or parent requirement
+- **Sprint backlog**: component, person, or parent requirement
+
+Note that when rows is set to parent requirement, rows are also included for parents with no unplanned children.
+
+There are buttons by the title of each row that let you expand/collapse that row.
+
+### Columns
+Inside each of the boards you can choose to organize the cards by column. Unlike groups and rows, this selection is required. For example, in the screenshot below we are displaying the product with columns set to "priority".
+
+![planning board columns example](img/Planning_Board_columns-example.png)
+
+The following options are available for columns:
+
+- **Product backlog**: priority, or status (only columns for Requested, Under Review, Rejected, and Accepted are shown)
+- **Release backlog**: priority, person, or status (see additional information below)
+- **Sprint backlog**: priority, person, or status (see additional information below)
+
+!!! info "What statuses show on the release or sprint backlogs"
+    In the release backlog and sprint backlog, the following rules are applied to determine what columns show (what statuses are visible):
+
+    - The statuses Requested, Under Review, Rejected, and Accepted are not visible
+    - Other statuses are shown if, across all workflows, the status has at least one transition from it to another status *and* are transitioned to from another status. For example, "Developed" will be shown if you can transition to it (e.g. from "In Progress") and you can transition from it (e.g. to "Tested")
+
+There are no expand/collapse buttons for columns.
+
+### Customizing the cards
+You can customize what information is shown on each card. For each artifact the following fields are always shown:
+
+- **Name** (click to open a popup with full details, or alt-click to open the details page for that item)
+- **Artifact icon**: shown beneath the name in a gray bubble
+- **ID token** of the artifact: shown to the right of the artifact icon
+- **Story points** (if set): shown to the bottom right of the card (hover to see full information about the estimate and effort fields) 
+- **Priority** (if set): shown to the bottom right of the card in a circle the color of the priority
+- **Owner** (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
+
+You can toggle whether to show each of the following features:
+
+![planning board card options](img/Planning_Board_card-options.png)
+
+- **Description**: this will show a snippet of the full artifact description below the artifact name
+- **Type**: the artifact type, shown to the right of the ID token
+- **Status**: the artifact statuses, shown to the right of the ID token and the type
+- **Test coverage**: a mini histogram chart of the requirement's test coverage, shown in the test coverage mini section on the card (hover to see a tooltip with detailed information)
+- **Test case indicators**: each test case covering the requirement is shown as a little circle, shaded based on its current execution status, in the test coverage mini section on the card (hover to see a tooltip with information about the test case, and click to open details about that test case)
+- **Task progress**: a mini histogram chart of the requirement's task progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
+- **Task indicators**: each child task of the the requirement is shown as a little circle, shaded based on its current progress, in the task progress mini section on the card (hover to see a tooltip with information about the task, and click to open details about that test case)
+- **Position**: this shows a number in the bottom left of the card that represents the position of that card within the cell. For example, the topmost card will have position 1, and the card beneath it 2.
+
+Note that the test coverage mini section shows the number of test cases covering the requirement in parentheses after its title. The task progress mini section shows the number of the requirement's child tasks in parentheses after its title.
+
+Here's a typical card with all of the features described above turned off.
+
+![planning board basic card](img/Planning_Board_card-basic.png)
+
+In the example below, is a card with all of the features described above turned on.
+
+![planning board fully featured card](img/Planning_Board_card-all.png)
+
+Finally, you can, based on your view, toggle other artifact cards to show. When this option is available you can toggle relevant artifact cards (eg Incidents) on or off. See below to learn [what cards and card artifact show when](#what-cards-show-when).
+
+
+### What cards show when
+What cards show on the board depends on how the viewing controls are set. In additional the following broad principles apply:
+
+- requirements of all types are included on the board
+- parent requirements do not show as cards
+- requirements with a status of rejected or obsolete never show
+- when columns is set to status, only requirements that match one of the displayed statuses will show
+- when grouping by team, only cards that have owners who are members of that team are displayed in the cells for that group
+- incidents do not show at all if columns is set to status (because incidents and requirements have completely different statuses)
+- incidents do not show at all if rows are set to parent (because incidents do not have parent requirements)
+- incidents show when column or group is priority, but only if there is match (see below for further information)
+
+??? info "Incidents and priority matching"
+    Incidents have a priority field, which is different to the requirement importance field. These two fields are customized independently by template administrators.
+
+    However on the planning board, when organizing by priority, you may see both requirement cards *and* incident cards (if set to show). This is because the system automatically matches up incident priority and requirement importance. It does based on their names. If a requirement importance has an exactly matching incident priority (case sensitive), then any incidents with that priority will show in that "priority" column on the planning board. You can move incident cards between priorities and as long as there is match, the incident priority will be updated.
+
+
+#### What cards show when viewing the product backlog
+The following cards will show in this view (in combination with the relevant principles described above):
+
+- requirements with no release
+- incidents with no planned release
+
+
+#### What cards show when viewing the release backlog
+The following rules apply to what cards will show (note that more than one of these rules may apply at once):
+
+| View selected                                             | Requirements shown                                          | Incidents shown                                    |
+| --------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
+| **Release is all releases** (Group by is not release)     | all requirements with a release set                         | incidents with a planned release                   |
+| **Release is a single release** (Group by is not release) | requirements with that release, or any of its child sprints | incidents with that release as its planned release |
+| **Group is release** (Groups that are for a release)      | requirements with that release, or any of its child sprints | incidents with that release as its planned release |
+| **Group is release** (in the "unassigned" group)          | requirements with no release                                | incidents with no planned release                  |
+
+
+#### What cards show when viewing the sprint backlog
+The following rules apply to what cards will show (note that more than one of these rules may apply at once):
+
+| View selected                                                 | Requirements shown                                          | Incidents shown                                              |
+| ------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| **Release is a single release** (Group by is not release)     | requirements with that release, or any of its child sprints | incidents with that release as its planned release           |
+| **Release is a single sprint** (Group by is not release)      | requirements with that sprint                               | incidents with that sprint as its planned release            |
+| **Group is sprint** (Groups that are for a sprint or release) | requirements with that specific sprint or release           | incidents with that sprint or release as its planned release |
+| **Group is sprint** (in the "unassigned" group)               | requirements with no release                                | incidents with no planned release                            |
+
+
+### Moving and ordering cards
+Cards can be moved between any cell on the board a card is currently in. You can also move cards between groups, if you are grouping by a particular field. Moving a card updates all relevant fields about that item. For instance, moving a card to a different row and column will change that cards values for both fields at once.
+
+You can also move cards within a cell to change their order. When you drop a card, it will be inserted between the relevant cards in the cell, or at the top or bottom of the list. Moving a card between cells and dropping the card within a list of cards will place the card in that exact position.
+
+Click on a card to select it. Click on more cards to add them to your selection. Then click and drag on any selected to move them together.
+
+!!! info "Things to be aware of"
+
+    - The purpose of a planning board or Kanban board, is to make it straightforward for users to move cards around. Therefore we do not enforce workflow restrictions on the planning board when moving cards.
+    - Only users with permissions to bulk edit the relevant artifact can move cards
+    - Cards are disabled (cannot be moved) if any of the following are true:
+
+        - the user does not have bulk edit permissions for the relevant artifact
+        - columns is set to status and bulk editing of statuses has been disabled at the template level
+        - a requirement card has a status of completed
+        - requirements that have tasks attached, and the product is set to use task status to control requirement status (in this case the card does not *look* disabled but its status cannot be changed - if you try to change its status the card will appear in its original column)
+
+
+### Viewing by release or sprint
+When grouping by release or sprint there are a number of special features available in the header row (where you see the release/sprint name).
+
+![planning board release header](img/Planning_Board_release-header.png)
+
+- Clicking on the release or sprint name will open that release/sprint's details page
+- At the end of the release or sprint name is a little "display for" icon (a pair of glasses). Clicking this will set the release dropdown to that release/sprint and reload the board with information just for that chosen release/sprint
+- The group title will show additional information about the release or sprint on the right hand side of the group header. Hover on the group header to see this information in full. This shows:
+
+    - Requirement completion: hover on the indicator to see a tooltip of the exact percentage complete
+    - Available effort: the number of available hours of work for tasks in the release based off the planning settings, the release dates and sources (this field is called "Planned Effort" on the release pages)
+    - Utilized effort: the number of hours assigned to tasks in this release (this field is called "Estimated Effort" on the release pages)
+    - Remaining effort: the hours left for tasks in the release - i.e. available effort minus utilized effort (this field is called "Available Effort" on the release pages). The system will allow you to assign more backlog items to an sprint than it is possible to complete. In this case remaining effort will be negative and will be displayed in red. This alerts you that you need to move cards or change settings for the release.
+
+When you move requirements between releases or sprints, the fields described above are recalculated. For effort fields, all child tasks of requirements in that release/sprint are used for calculations. So moving a requirement into a sprint will increase the sprint's utilized effort by the hours of the relevant tasks in that requirement, and decrease the sprint's remaining effort by the same amount.
+
+### Viewing by Person
+When organizing by person (for rows or columns) there are a number of special features available in the header row (where you see the person's name).
+
+![planning board person header](img/Planning_Board_person-header.png)
+
+- Clicking on the person's name will open the details page for that individual
+- Under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
+- Moving cards into a person's cells will, as relevant, automatically update their resource allocation
+
+!!! info "Grouping by team and rows by person"
+    When grouping by team, there is one group for every team. If rows is set to "by person", then within each team, all members of that team are shown. So if Amy is a member of the dev team, they will have a row in the dev team group and not in any other group.
+
+### Status and Work in Progress Limits
+When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
+
+There are different colors to indicate the status of the WIP limit:
+
+- **No badge**: no WIP limits have been defined for that status and release type (release vs sprint), or the current view does not support WIP limits
+- **Green**: there is "space" in the status (the WIP limit has not been exceeded yet)
+- **Red**: there are too many cards in this status (the WIP limit has been exceeded). In this case the cell will be shaded a pale red. Note that even in this status, you can still move cards into this status - the color is an indicator only.
+
+Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
+
+### Editing and viewing cards
+**Viewing cards**: to view more information about the card you can click on the card's name to open a popup with much more detail; or ctrl/cmd+click on the card's name to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. Users who cannot bulk edit the artifact but who can add comments can add comments when viewing the card.
+
+**Editing cards**: users with bulk edit permissions can edit a planning board card at any time by clicking on the card's name (this includes letting you add a new comment). This opens a popup with full information about that card. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific card. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
+    
+**Add new cards**: if you are able to create the requirements then you will see plus (add) symbols at the top of each cell of the board. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be prepopulated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
+
+### Example use cases
+
+#### Scrum Projects
+For Scrum projects, the boards support the most important agile ceremonies and planning activities. For example, you can show all the unplanned items in the product backlog for backlog grooming. In this example we are displaying user stories by parent (or epic) as rows, grouped by component and categorized into columns by priority.
+
+![backlog grooming](img/Planning_Board_backlog-grooming.png)
+
+**Release planning**: for a typical release planning section, you can use the following release backlog view. In this example, we are displaying all the releases, with the ability to take items from the product backlog (at the top) and assign them to a specific release.
+
+![release-planning](img/Planning_Board_release-planning.png)
+
+**Sprint planning**: for a sprint planning session, the following view will let you assign work to each sprint from the release backlog:
+
+![sprint-planning](img/Planning_Board_sprint-planning.png)
+
+Finally, you can drill down to look at an individual sprint and see the team's progress. This is useful for daily standup meetings:
+
+![daily standups](img/Planning_Board_daily-standups.png)
+
+#### Kanban Projects
+For Kanban projects, in addition to the functionality described above, you have the ability to see the different releases by status, with the [Work In Progress Limits](#status-and-work-in-progress-limits) clearly visible in each of the swim-lanes. In this example, we are showing the release backlog for a specific release, with the columns set to display by status and the planning options set to include WIP limits for the In-Progress and Developed columns.
+
+![kanban project](img/Planning_Board_kanban.png)

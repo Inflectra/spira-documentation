@@ -1,5 +1,83 @@
 # Release Notes for Spira v7
 
+## Version 7.3 (December 2022)
+
+!!! info "Summary"
+    Introducing our next generation planning board for SpiraTeam and SpiraPlan. Available as a beta alongside the existing planning board, the new board has a brand new look, big new features (including swimlanes), and simpler to use than ever.
+
+    SpiraPlan admins can create teams and assign members of a product to those teams (in beta). Currently teams are available exclusively on the beta planning board.
+
+??? Success "New Features"
+
+    * **[Beta Planning Board](../../Spira-User-Manual/Planning-Board/#beta-planning-board)**
+
+        - The new beta planning board has powerful functionality with a new layout and overhauled design to let you plan work effortlessly [RQ:4286]
+        * **There are useful [main display modes](../../Spira-User-Manual/Planning-Board/#view-controls---planning) that dictate how you use the boards**
+
+            - The Product backlog lets managers prioritize ("groom") unplanned work items that do not have a scheduled release [RQ:4368]
+            - The Release backlog lets managers review planned or in progress work items [RQ:4369]
+            - The sprint backlog lets managers review work in a release and its sprint, or for a single sprint [RQ:4370]
+            - When working on the release or sprint backlog there is a [release dropdown](../../Spira-User-Manual/Planning-Board/#view-controls---releases) [RQ:4381]
+
+        * **The planning board makes it easy to customize how the board is organized to help you focus on the right information **
+
+            - [Users can group the board](../../Spira-User-Manual/Planning-Board/#grouping) by certain fields (based on the view) to show one board per member of the group [RQ:4372]
+            - Within a board users can choose what field to [organize data by as columns](../../Spira-User-Manual/Planning-Board/#columns) (the x-axis) [RQ:4373]
+            - Within a board users can choose what field to [organize data by as rows](../../Spira-User-Manual/Planning-Board/#rows) (the y-axis) [RQ:4374]
+        
+        * **[Planning board cards design updated with greater customization](../../Spira-User-Manual/Planning-Board/#customizing-the-cards)**
+
+            - Planning board cards always show a standard set of information that is useful and meaningful [RQ:4382]
+            - Planning board cards can optionally show the artifact's description, type, status, and position [RQ:4375]
+            - Planning board cards can optionally show the artifact's task progress and task mini indicators [RQ:4376]
+            - Planning board cards can optionally show the artifact's test coverage and test case mini indicators [RQ:4377]
+        
+        * **Incident cards can be shown alongside requirement cards for certain views of the Planning Board**
+
+            - When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]
+            - Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]
+            - Teams/Tracks Support in Boards (SpiraPlan only) [RQ:2316]
+
+    * ** System Administration**
+
+        - System admins [can enable or disable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users [RQ:4317]
+        - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) (SpiraPlan only) [RQ:3689]
+        - Product admins can [associate product users to specific teams](../../Spira-Administration-Guide/Product-Users/#team-membership) [RQ:3690]
+
+
+??? bug "Bug fixes and enhancements"
+
+    - Retain the user-designated ordering on the planning board in all cases (including the first time a card is moved, and moving a card to the end of a stack) [IN:6467]
+    - Ensure all incident progress tooltips are shown in the user's local time zone and not in UTC [IN:6573]
+    - Improve performance by caching user avatar images in the browser [IN:7287]
+    - Fix the SpiraApp for WorX actions that happen when you click the buttons in the column grids [IN:7391]
+    - Do not restrict task start and end dates to its release's dates, so that changes to a task whose dates fall outside those of its release are not blocked [IN:7435]
+    - Fix the status filter dropdown on the requirement sorted list page not being localized [IN:7470]
+    - Show the correct testing settings for SpiraTest (show "Allow users to mark every step in a test case as N/A at once" and hide "Users can create tasks...") [IN:7488]
+    - Fix concurrency dates and concurrency checks to serialize using the Invariant Culture to avoid problems using certain cultural settings (for example, Thai) [IN:7499]
+    
+    * **Logging in and out**
+
+        - Fix a user being logged out and redirected to a broken URL by removing the product ID portion of this broken URL [IN:7584]
+        - Fix the browser from getting stuck in a loop if there is unsaved user input after client-side forced session termination [IN:7587]
+        - Fix the error that can occur when starting test execution if you have lost the authorization in the current tab for any reason [IN:7607]
+        - Fix some actions on the detail pages causing a logged out user to be redirected to a broken URL if their Form Manager, onRetrieve wasn't calling proper URL redirect on Auth Failure [IN:7669]
+
+    * **On premise installer**
+    
+        - Fix the installer for on premise customers so that users are informed when they are using an incorrect SQL Version for an upgrade [IN:7588]
+        - Fix the wrong installer version number being recorded in the web.config file [IN:7612]
+        - Fix edge case null reference exception in the installer [IN:7638]
+        - When on premise customers upgrade, include the version they are upgrading from on the summary screen and in the log [IN:7610]
+    
+    * **Documentation and logging**
+        - Change the color of the message box about the best browser to use for the document spreadsheet from red to yellow [IN:7563]
+        - Clarify the API documentation about what happens when the user create call is made but the user already exists [IN:7618]
+        - Fix the help link used for the Rapise Floating Licenses administration page [IN:7490]
+        - Correct the v6 SOAP API documentation example for the Document_AddFile method documentation [IN:7654]
+        - Record a success audit log message into the event log when any datasync 'Reset Sync' button is pressed. [IN:7525]
+        - Turn off logging for a specific "TaraVault active for a product" check to not confuse users with extra noise in the logs [IN:7608]
+
 
 ## Version 7.2 (October 2022)
 
