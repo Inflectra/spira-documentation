@@ -161,7 +161,7 @@ Click on the "Data mapping" tab to list all the configured data-syncronization p
 
 ## Limitations syncing from Spira to ClickUp
 
-Not all of the features of this data sync are utilized when syncing from Spira to ClickUp. Below is a list of limitations of this directionality, these also apply to the sync moving data in this direction when set to "bidirectional":
+Not all of the features of this data sync are utilized when syncing from Spira to ClickUp. Below is a list of limitations of this directionality. These also apply to the sync moving data in this direction when set to "bidirectional":
 
 - Tasks created in ClickUp from artifacts in Spira will not be updated after creation - the data sync only creates tasks in ClickUp, it does not update them.
 - Requirements, releases (Folders in ClickUp), associations, and files will not be synced from Spira to ClickUp. 
