@@ -145,7 +145,7 @@ namespace SampleTestSuite
 }
 ```
 
-For the plugin to work, you must have credetials, and an assigned test case ID for each test either through the JSON file or the test file. Any combination of the 2 test case ID assigment methods can be used, and will not block the other one from working. The TestCaseId property assigned in test code will take priority over TestCaseId's assigned through the JSON file. 
+For the plugin to work, you must have credetials, and an assigned test case ID for each test either through the JSON file or the test file. Any combination of the 2 test case ID assigment methods can be used, and will not block the other one from working. The TestCaseId property assigned in test code will take priority over TestCaseId's assigned through the JSON file. If a test case id cannot be found for a given method in either of these locations and there is no default, a warning will be logged above the NUnit test summary which says which method was not reported to Spira.
 
 In the credentials group you must specify:
 
