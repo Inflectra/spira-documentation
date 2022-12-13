@@ -102,7 +102,7 @@ Create a new file called (exactly) *SpiraConfig.json*. We recommend reating one 
 }
 ```
 
-You can also avoid using the test_cases property in the JSON file and instead place the TestCaseId's directly in the test suite's code. These 2 methods can be used together as well, but the TestCaseId set as a property will take priority over the ID set in the JSON file. An example of this usage:
+You can also avoid setting test case IDs through the JSON file and instead place the TestCaseId's directly in the test suite's code. These 2 methods can be used together as well, but the TestCaseId set as a property will take priority over the ID set in the JSON file. This does not entirely remove the need for the JSON file, and it must still contain the credentials as well as a "default" test case ID. An example of this usage:
 
 ```C#
 using NUnit.Framework;
