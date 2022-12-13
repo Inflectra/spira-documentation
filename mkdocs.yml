@@ -241,6 +241,7 @@ nav:
     - Azure DevOps: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
     - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
     - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
+    - ClickUp: External-Bug-Tracking-Integration\Using-Spira-with-ClickUp.md
     - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
     - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
     - monday.com: External-Bug-Tracking-Integration\Using-Spira-with-Monday.md
