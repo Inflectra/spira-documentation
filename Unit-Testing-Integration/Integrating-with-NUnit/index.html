@@ -6004,21 +6004,37 @@
 
 <h1 id="integrating-with-nunit">Integrating with NUnit<a class="headerlink" href="#integrating-with-nunit" title="Permanent link">&para;</a></h1>
 <h2 id="nunit-3">NUnit 3<a class="headerlink" href="#nunit-3" title="Permanent link">&para;</a></h2>
-<p>SpiraTest/SpiraTeam/SpiraPlan (hereon called SpiraPlan) integrates seamlessly with NUnit 3 with our dedicated Nunit add-in. The add-in lets you run unit tests against a .NET application and get the results recorded in SpiraPlan as a test run against a specific test case. The add-in is designed to let you run your suite of unit tests against the application as part of your CI/CD pipeline. The add-in does not and does not need to integrate with your CI/CD engine. </p>
+<p>SpiraTest/SpiraTeam/SpiraPlan (hereon called SpiraPlan) integrates seamlessly with NUnit 3, using our dedicated NUnit add-in. The add-in lets you run unit tests against a .NET application and get the results recorded in SpiraPlan as a test run against a specific test case. The add-in is designed to let you run your suite of unit tests against the application as part of your CI/CD pipeline. The add-in does not - and does not need to - integrate with your CI/CD engine. </p>
 <p>To use the add-in you must have:</p>
 <ul>
 <li>a working installation of SpiraPlan v5.0 or later</li>
 <li>NUnit v3+ installed</li>
-<li>Nunit v3+ Console Runner installed. This is required for batch execution, which is the expected use case for the add-in</li>
+<li>Nunit v3+ Console Runner installed. This is required for batch execution, which is the expected use case for the add-in (either as a standalone installation or as a nuget package)</li>
 </ul>
 <h3 id="installing-the-nunit-3-add-in">Installing the NUnit 3 Add-In<a class="headerlink" href="#installing-the-nunit-3-add-in" title="Permanent link">&para;</a></h3>
 <p>Please follow the steps below to download and install the add-in:</p>
 <ul>
 <li>Download the add-in's zip file from the <a href="http://www.inflectra.com/SpiraPlan/Downloads.aspx">Inflectra downloads page</a>. </li>
 <li>Unzip the archive</li>
-<li>Copy <em>SpiraTestNUnitAddIn.dll</em> and <em>Newtonsoft.Json.dll</em> into the the NUnit console addins folder (typically here: C:\Program Files (x86)\NUnit.org\nunit-console\addins) </li>
-<li>Once they've been copied, open the NUnit <em>addins</em> file (typically <em>nunit.bundle.addins</em> in the folder C:\Program Files (x86)\NUnit.org\nunit-console) and add <em>addins\SpiraTestNUnitAddIn.dll</em> on a new line in the file. Save the file. Note that the "addins" in the new line we add is to give NUnit the relative path of where the addin is now installed.</li>
+<li>Copy <em>SpiraTestNUnitAddIn.dll</em> and <em>Newtonsoft.Json.dll</em> into the the NUnit console runner's addins/tools folder. If the runner is installed as a standalone application, this is typically either: "C:\Program Files (x86)\NUnit.org\nunit-console\addins" or "C:\Program Files (x86)\NUnit.org\nunit-console\tools". See the box below if you are using nuget.</li>
+<li>
+<p>Once copied, open the NUnit <em>addins</em> file:</p>
+<ul>
+<li>if your NUnit has an addins folder: open the <em>nunit.bundle.addins</em> file in the folder "C:\Program Files (x86)\NUnit.org\nunit-console" and add a new line to the file that says <code>addins\SpiraTestNUnitAddIn.dll</code></li>
+<li>if your NUnit has a tools folder: open the <em>nunit.console.nuget.addins</em> file in that tools folder and add a new line to the file that says <code>SpiraTestNUnitAddIn.dll</code></li>
 </ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Using NUnit and the console runner from NuGet</p>
+<p>If integrating via NuGet, find the location of the the version of the NUnit Console Runner referenced by the PATH variable in your windows environment variables. </p>
+<p>When installing the console runner via NuGet, this PATH variable will not be set for you. We <a href="https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)">recommended you do this manually</a>. You should set this new PATH variable to a filepath which ends at the folder containing the nunit3-console.exe you wish to execute.</p>
+<ul>
+<li>If you cannot or do not wish to add a new PATH variable, you must replace "nunit3-console" in each console command with a filepath to the correct nunit-console.exe file (the file its self, not the folder like the PATH variable expects). </li>
+<li>If installing globally via NuGet, there will be a folder approximately at C:/Users/{your username}/.nuget/packages/nunit.consolerunnner which contains different versions, it is important that the version you are executing is the version you place the .dll files next to and make the appropriate file changes. .nuget is hidden so make sure to have show hidden folders enabled or manually navigate to the folder. </li>
+<li>If installing within a solution's packages folder instead of globally (not recommended), the files you are looking for will be within that solutions packages folder.</li>
+</ul>
+</div>
 <p>If you've followed all the steps correctly, the SpiraPlan NUnit add-in should now be properly installed. For reference your nunit.bundle.addins file may look something like this:
 <div class="highlight"><pre><span></span><code>addins/nunit.v2.driver.dll
 addins/nunit-v2-result-writer.dll
@@ -6067,7 +6083,7 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Create a new file called (exactly) <em>SpiraConfig.json</em>. We recommend creating one of these files for your entire solution and saving it in a convenient location. This can be in the root folder of your unit tests, or the root folder of your whole solution. </p>
+<p>Create a new file called (exactly) <code>SpiraConfig.json</code>. We recommend creating one of these files for your entire solution and saving it in a convenient location. This can be in the root folder of your unit tests, or the root folder of your whole solution. </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/SpiraPlan&quot;</span><span class="p">,</span><span class="w"></span>
@@ -6085,7 +6101,64 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>For the plugin to work, you must have both settings groups (credentials and test_cases).</p>
+<p>You can also avoid setting specific test case IDs through the JSON file and instead place the TestCaseId's directly in the test suite's code. These 2 methods can be used together, with the test suite property for TestCaseId taking priority over the ID set in the JSON file. If using properties you still need the JSON file to store credentials and the "default" test case ID. </p>
+<p>A minimum JSON file, if only using properties for test case ids is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/SpiraPlan&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="nt">&quot;release_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test_set_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;test_cases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>An example of using properties inside C# is:</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">NUnit.Framework</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">SampleTestSuite</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">[TestFixture]</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">SampleTest</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">One</span><span class="p">,</span><span class="w"> </span><span class="n">Two</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="na">[SetUp]</span><span class="w"></span>
+<span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetUp</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">One</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">Two</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//testcaseid is not case sensitive - any capitalization scheme will work</span>
+<span class="w">        </span><span class="na">[Test, Property(&quot;testcaseid&quot;, 234)]</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TestAdd</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">One</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">Two</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="c1">//will succeed</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="na">[Test, Property(&quot;TestCaseId&quot;, 235)]</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TestMultiply</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">One</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">Two</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="c1">//will fail</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="na">[Test, Property(&quot;TESTCASEID&quot;, 236)]</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TestConcat</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Concat</span><span class="p">(</span><span class="n">One</span><span class="p">,</span><span class="w"> </span><span class="n">Two</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">//will fail</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="n">Result</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;21&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w">   </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>For the plugin to work, you must have credentials, and an assigned test case ID for each test either through the JSON file or the test file. Any combination of the 2 test case ID assignment methods can be used, and will not block the other one from working. The TestCaseId property assigned in test code will take priority over TestCaseId's assigned through the JSON file. If a test case id cannot be found for a given method in either of these locations and there is no default, a warning will be logged above the NUnit test summary which says which method was not reported to Spira.</p>
 <p>In the credentials group you must specify:</p>
 <ul>
 <li><strong>url</strong> -- The base url to your SpiraPlan installation, without a '/' at the end.</li>
@@ -6109,7 +6182,7 @@ addins/SpiraTestNUnitAddIn.dll
 <p>To execute the tests, you should use the NUnit console runner. To do this we need to do two things: </p>
 <ul>
 <li>make sure the command line is in the directory where your SpiraConfig.json is</li>
-<li>tell the NUnit console to run the relevat test suite (note that you can use all features of the CLI to handle parameters and filter tests and this will not impact the Spira add-in at all)</li>
+<li>tell the NUnit console to run the relevant test suite (note that you can use all features of the CLI to handle parameters and filter tests and this will not impact the Spira add-in at all)</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Example command line commands</p>
@@ -6122,7 +6195,7 @@ addins/SpiraTestNUnitAddIn.dll
 <p>To correctly run the tests and record the results to SpiraPlan, run the following two commands:</p>
 <ol>
 <li><code>cd C:\TestProject</code></li>
-<li><code>nunit3-console "C:\TestProject\bin\Release\SampleTestSuite.dll"</code></li>
+<li><code>nunit3-console "C:\TestProject\bin\Release\SampleTestSuite.dll"</code> (If you installed NUnit via NuGet and have not assigned the PATH variable for this console command, you will have to manually reference the NUnit3-console.exe file using a file path instead - This must be inside of quotes just like the second part of the command is)</li>
 </ol>
 </div>
 <p>Once you run your tests with the NUnit Console Runner, you should see the results in SpiraPlan:</p>
