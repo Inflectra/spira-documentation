@@ -1,22 +1,21 @@
-# SoapUI
+# SoapUI (ReadyAPI)
 
-SmartBear SoapUI (hereafter SoapUI) is an open source Web Service
+SmartBear SoapUI / ReadyAPI (hereafter SoapUI) is an open source Web Service
 testing tool for Service Oriented Architectures (SOAs). There is also a
-Pro version that is released as a commercial product. Its functionality
+Pro version (Now known as ReadyAPI) that is released as a commercial product. Its functionality
 mainly covers Web Service Inspection, Invoking, Development, Simulation
 and Mocking, Functional testing, Load and Compliance testing.
-Productivity enhancement features can be found in the soapUI pro
-version.[^2]
+Productivity enhancement features can be found in ReadyAPI (previously known as SoapUI Pro).
 
-This section describes how you can use SpiraTest / SpiraTeam (hereafter
+This section describes how you can use SpiraPlan / SpiraTest / SpiraTeam (hereafter
 SpiraTeam) together with RemoteLaunch to schedule and remotely launch
 instances of soapUI on different computers and have the testing results
 be transmitted back to SpiraTeam. This allows you to extend your
 SpiraTeam's test management capabilities to include automated web
 service testing.
 
-*Note: This integration requires at least version 4.0 of SpiraTest/Team
-and an instance of SoapUI or SoapUI Pro running on a Windows® platform.*
+*Note: This integration requires at least version 4.0 of SpiraPlan/Team/Test
+and an instance of SoapUI, SoapUI Pro, or ReadyAPI running on a Windows® platform.*
 
 ## Installing the SoapUI Engine
 
