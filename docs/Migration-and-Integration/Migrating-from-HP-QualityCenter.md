@@ -1,4 +1,8 @@
 #  Migrating from HP QualityCenter
+!!! warning "This is for Legacy HP QualityCenter installs only"
+    You should only use this guide if you are using HP QualityCenter 10.0 or older.
+
+    **If your HP QC/ALM installation is 11.5 or newer please follow the [instructions here](../Migrating-from-HP-ALM).**
 
 This section outlines how to use the included Migration Tool for importing Requirements, Test Cases, Test Runs and Incidents from HP QualityCenter (formerly known as Mercury TestDirector).
 
