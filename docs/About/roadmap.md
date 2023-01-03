@@ -24,26 +24,26 @@ Please take a look at our [release notes](../release-notes-v7) to see a complete
 - Multi-approver workflows enabled with a new dedicated SpiraApp (SpiraTeam and SpiraPlan)
 
 ## Q2 2023
-**We will deliver core features of scaled agile at the program level (SpiraPlan)**
+**We will deliver core features of "scaled agile" at the program level (SpiraPlan)**
 
 - Brand new hierarchical "Program Capabilities" that can be linked to product-level requirements and to "Program Milestones"
 - Brand new "Program Milestones" that can be linked to "Program Capabilities" and to product-level releases
 - Customizations for "Program Capabilities" and "Program Milestones" with system-wide statuses and types for each
-- New custom report views so you can create your own scaled agile reports
+- New custom report views so you can create your own "scaled agile" reports
 - Further planning board enhancements
 
 ## Q3 and Q4 2023
-**We will complete the new planning board rollout, and finish the first round of features for program level scaled agile**
+**We will complete the new planning board rollout, and finish the first round of features for program level "scaled agile"**
 
 - Product level planning boards are converted to the new board design, which comes out of beta (SpiraTeam and SpiraPlan)
 - Program level standard reports for "Program Capabilities" and "Program Milestones" (SpiraPlan)
-- New scaled agile program home page and reporting widgets (SpiraPlan)
+- New "scaled agile" program home page and reporting widgets (SpiraPlan)
 - Risk enhancements, including in reporting  (SpiraPlan)
 - Native tagging for all product artifacts (like we currently have for documents)
 - The ability to @ mention people in comments and descriptions
 
 ## 2024
-**We will extend our scaled agile approach further with portfolio level features, like "Portfolio Outcomes" and "Portfolio Milestones", and deeper risk integration**
+**We will extend our "scaled agile" approach further with portfolio level features, like "Portfolio Outcomes" and "Portfolio Milestones", and deeper risk integration**
 
 
 ## Longer term thematic ideas
