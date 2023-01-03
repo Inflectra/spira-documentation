@@ -83,6 +83,23 @@
 | PROJECT_NAME                        |
 | PROJECT_GROUP_ID                    |
 
+## Attachment Versions
+| R_AttachmentVersions  |
+| --------------------- |
+| ATTACHMENT_VERSION_ID |
+| ATTACHMENT_ID         |
+| AUTHOR_ID             |
+| FILENAME              |
+| DESCRIPTION           |
+| UPLOAD_DATE           |
+| SIZE                  |
+| VERSION_NUMBER        |
+| IS_CURRENT            |
+| CHANGESET_ID          |
+| AUTHOR_NAME           |
+| ATTACHMENT_TYPE_ID    |
+| PROJECT_ID            |
+
 ## Automation Hosts
 | R_AutomationHosts  |
 | ------------------ |
@@ -439,6 +456,19 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 | END_DATE          |
 | PERCENT_COMPLETE  |
 | REQUIREMENT_COUNT |
+
+## Project Artifacts Sharing 
+Retrieves data about cross product associations
+
+| R_ProjectArtifactSharings |
+| ------------------------- |
+| SOURCE_PROJECT_ID         |
+| DEST_PROJECT_ID           |
+| ARTIFACT_TYPE_ID          |
+| SOURCE_PROJECT_NAME       |
+| DEST_PROJECT_NAME         |
+| ARTIFACT_TYPE_NAME        |
+| ARTIFACT_TYPE_PREFIX      |
 
 ## Projects (Products)
 | R_Projects                  |
@@ -809,6 +839,40 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 | PROJECT_TEMPLATE_ID   |
 | RISK_WORKFLOW_ID      |
 | PROJECT_TEMPLATE_NAME |
+
+## Source Code Associations
+| R_SourceCodeAssociations         |
+| -------------------------------- |
+| ARTIFACT_SOURCE_CODE_REVISION_ID |
+| ARTIFACT_TYPE_ID                 |
+| ARTIFACT_ID                      |
+| REVISION_KEY                     |
+| COMMENT                          |
+| CREATION_DATE                    |
+| ARTIFACT_TYPE_NAME               |
+| ARTIFACT_TYPE_PREFIX             |
+
+
+## Source Code Commits
+| R_SourceCodeCommits                |
+| ---------------------------------- |
+| VERSION_CONTROL_SYSTEM_ID          |
+| PROJECT_ID                         |
+| REVISION_ID                        |
+| NAME                               |
+| REVISION_KEY                       |
+| AUTHOR_NAME                        |
+| MESSAGE                            |
+| UPDATE_DATE                        |
+| CONTENT_CHANGED                    |
+| PROPERTIES_CHANGED                 |
+| VERSION_CONTROL_SYSTEM_NAME        |
+| VERSION_CONTROL_SYSTEM_DESCRIPTION |
+| VERSION_CONTROL_SYSTEM_IS_ACTIVE   |
+| PROJECT_NAME                       |
+| BRANCH_NAME                        |
+| BRANCH_PATH                        |
+| BRANCH_IS_HEAD                     |
 
 ## Tasks
 | R_Tasks                |

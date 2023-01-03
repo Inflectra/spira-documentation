@@ -41,6 +41,10 @@ markdown_extensions:
   - toc:
       permalink: true
 
+# PLUGINS
+plugins:
+  - search
+
 # THEME INFORMATION
 theme:
   features:
@@ -316,9 +320,3 @@ nav:
   - Release Notes for v3: About/release-notes-v3.md
   - Release Notes for v2: About/release-notes-v2.md
   - Legal Notices: About/legal-notices.md
-
-
-# Redirects
-# plugins:
-#   - redirects:
-#        redirect_maps:

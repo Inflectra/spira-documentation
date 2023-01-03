@@ -1,5 +1,29 @@
 # Release Notes for Spira v7
 
+## Version 7.4 (January 2023)
+
+??? Success "Bug fixes and enhancements"
+
+    * **Enhancements**
+    
+        - Add an API call to retrieve all test sets that contain a specific test case to mirror the functionality on the test set tab of the test case details page in the application [IN:6894]
+        - Add API calls to get all releases / requirements that are children of a specified parent release / requirement [IN:5482]
+        - Add custom report table for [Attachment Versions] [IN:7757]
+        - Add custom report table for [Cross Product Associations](../../Reporting/Custom-Report-Tables/#project-artifacts-sharing) [IN:4242]
+        - Add custom report tables for [Source Code Associations](../../Reporting/Custom-Report-Tables/#source-code-associations) and [Source Code Commits](../../Reporting/Custom-Report-Tables/#source-code-commits) [IN:7632]
+        - Add JSON File for displaying names of custom data sync fields in [ClickUp Data Sync](../../External-Bug-Tracking-Integration/Using-Spira-with-ClickUp) [IN:7737]
+        - Change [WorX SpiraApp](../../SpiraApps/WorX) summary text and description as per software owner's request [IN:7634]
+        - If no release provided for a [test execution](../../Spira-User-Manual/Test-Execution), set the wizard's release dropdown to a "Please Select" value and ensure a valid release is provide for execution to start [IN:1205]
+    
+    * **Bug Fixes**
+
+        - Fix API calls not properly creating manual test runs that have no end date [IN:7596]
+        - Fix API to get test sets or test sets for a folder not correctly filtering by a release [IN:7303]
+        - Fix blank password custom properties blocking certain API calls [IN:7058]
+        - Fix intermittent XSRF error that can show up when having multiple Spira tabs open at the same time [IN:7694]
+        - Hide the vertical arrows showing up on grids when users zoom in / out of the page [IN:7630]
+
+
 ## Version 7.3 (December 2022)
 
 !!! info "Summary"

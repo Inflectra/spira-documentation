@@ -2,7 +2,7 @@
 # Spira Platform Documentation
 
 !!! success "Documentation version"
-    **This site was last updated for version 7.3.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
+    **This site was last updated for version 7.4.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
 
     **Current available beta features**
 
@@ -20,13 +20,8 @@ To search, use the text box at the top of the page. Already know the exact phras
 Please send comments and questions to:
 
 > Technical Publications
->
 > Inflectra Corporation
->
 > 8121 Georgia Ave, Suite 504
->
 > Silver Spring, MD 20910-4957
->
-> U.S.A.
->
+> USA
 > [*support@inflectra.com*](mailto:support@inflectra.com)
