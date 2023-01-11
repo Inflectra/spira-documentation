@@ -80,7 +80,7 @@ Once the template is ready you can start entering your new data[^max-new-rows]. 
 
 If there are any errors during the sending process you will see relevant explanations, with the specific cells (as relevant) that are causing the problem highlighted in red.
 
-** *Show Advanced Fields (optional):* ** When you enable this, you have more options when sending data to or updating data in Spira that are normally not available. This lets you create new comments and add associations between specific artifacts. Check the box 'Show Advanced Fields' to activate it for the two previous modes of operation.
+**Show Advanced Fields (optional):** When you enable this, you have more options when sending data to or updating data in Spira that are normally not available. This lets you create new comments and add associations between specific artifacts. Check the box 'Show Advanced Fields' to activate it for the two previous modes of operation.
 
 [^max-new-rows]: Please note that you can currently only send a maximum of 10,000 rows of data to Spira at a a time.
 
