@@ -18,7 +18,7 @@ Please take a look at our [release notes](../release-notes-v7) to see a complete
 - Enhancements to the beta Planning Board released in v7.2 based on initial customer feedback (SpiraTeam and SpiraPlan)
 - Brand new beta task board (SpiraTeam and SpiraPlan)
 - History tracking of product custom property changes
-- Improvements for background s (like report generation) for users in load-balanced environments
+- Improvements for background operations (like report generation) for users in load-balanced environments
 - Initial release of v7 of our API (all prior versions of the API will remain 100% supported)
 - Release to requirement, and release to release associations
 - Multi-approver workflows enabled with a new dedicated SpiraApp (SpiraTeam and SpiraPlan)
