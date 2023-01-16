@@ -4,7 +4,6 @@ There are actually two separate versions of RemoteLaunch® that are available fr
 
 1.  The Microsoft Windows® compatible **Spira RemoteLaunch®**
 application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured SpiraTest/SpiraTeam server.
-
 2.  The cross-platform **Spira RemoteLaunchX™** Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured SpiraTest/SpiraTeam server. This application can be used in **Microsoft Windows®, Linux or Apple MacOS X®**
 computers provided that they have the Java 1.8 (or later) runtime installed.
 
@@ -345,22 +344,17 @@ You need to enter the following fields:
 
 **Script Type** -- This can be set to Attached or Linked (see below for the difference).
 
-**Filename** -- This needs to consist of the following **three**
-sections separated by a pipe (\|) character:
+**Filename** -- This needs to consist of the following **three** sections separated by a pipe (\|) character:
 
-1.  The full path to the command-line tool being executed.
+- 1) The full path to the command-line tool being executed.
+- 2) Any arguments for the command-line tool. In addition, you can use the following additional tokens for some of the special RemoteLaunchX values:
 
-2.  Any arguments for the command-line tool. In addition, you can use the following additional tokens for some of the special RemoteLaunchX values:
+    - \[TestCaseId\] -- the ID of the test case
+    - \[TestSetId\] -- the ID of the test set
+    - \[ReleaseId\] -- the ID of the release (if specified)
+    - \[Filename\] - This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.
 
-\[TestCaseId\] -- the ID of the test case
-
-\[TestSetId\] -- the ID of the test set
-
-\[ReleaseId\] -- the ID of the release (if specified)
-
-\[Filename\] - This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.
-
-3.  The mask for converting any parameter values from SpiraTeam into valid command line arguments. If parameters are not accepted by the command-line tool, you can leave this section out.
+-  3) The mask for converting any parameter values from SpiraTeam into valid command line arguments. If parameters are not accepted by the command-line tool, you can leave this section out.
 
 The mask can include any symbols together with "name" to refer to the parameter name and "value" to refer to the parameter value.
 
