@@ -7711,14 +7711,10 @@
 <h1 id="remotelaunch-guide">RemoteLaunch Guide<a class="headerlink" href="#remotelaunch-guide" title="Permanent link">&para;</a></h1>
 <p>There are actually two separate versions of RemoteLaunch® that are available from Inflectra:</p>
 <ol>
-<li>
-<p>The Microsoft Windows® compatible <strong>Spira RemoteLaunch®</strong>
-application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured SpiraTest/SpiraTeam server.</p>
-</li>
-<li>
-<p>The cross-platform <strong>Spira RemoteLaunchX™</strong> Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured SpiraTest/SpiraTeam server. This application can be used in <strong>Microsoft Windows®, Linux or Apple MacOS X®</strong>
-computers provided that they have the Java 1.8 (or later) runtime installed.</p>
-</li>
+<li>The Microsoft Windows® compatible <strong>Spira RemoteLaunch®</strong>
+application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured SpiraTest/SpiraTeam server.</li>
+<li>The cross-platform <strong>Spira RemoteLaunchX™</strong> Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured SpiraTest/SpiraTeam server. This application can be used in <strong>Microsoft Windows®, Linux or Apple MacOS X®</strong>
+computers provided that they have the Java 1.8 (or later) runtime installed.</li>
 </ol>
 <p>The first part of this section will describe how to use the Windows-only RemoteLaunch® GUI application and the second part will describe how to use the cross-platform RemoteLaunchX**™** console application.</p>
 <h2 id="installing-remotelaunch">Installing RemoteLaunch<a class="headerlink" href="#installing-remotelaunch" title="Permanent link">&para;</a></h2>
@@ -8026,23 +8022,22 @@ exist in project PR3.</p>
 <p>You need to enter the following fields:</p>
 <p><strong>Automation Engine</strong> - Choose the Command-Line Automation Engine that you created in the previous section from the drop-down list.</p>
 <p><strong>Script Type</strong> -- This can be set to Attached or Linked (see below for the difference).</p>
-<p><strong>Filename</strong> -- This needs to consist of the following <strong>three</strong>
-sections separated by a pipe (|) character:</p>
-<ol>
+<p><strong>Filename</strong> -- This needs to consist of the following <strong>three</strong> sections separated by a pipe (|) character:</p>
+<ul>
+<li>1) The full path to the command-line tool being executed.</li>
 <li>
-<p>The full path to the command-line tool being executed.</p>
+<p>2) Any arguments for the command-line tool. In addition, you can use the following additional tokens for some of the special RemoteLaunchX values:</p>
+<ul>
+<li>[TestCaseId] -- the ID of the test case</li>
+<li>[TestSetId] -- the ID of the test set</li>
+<li>[ReleaseId] -- the ID of the release (if specified)</li>
+<li>[Filename] - This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.</li>
+</ul>
 </li>
 <li>
-<p>Any arguments for the command-line tool. In addition, you can use the following additional tokens for some of the special RemoteLaunchX values:</p>
+<p>3) The mask for converting any parameter values from SpiraTeam into valid command line arguments. If parameters are not accepted by the command-line tool, you can leave this section out.</p>
 </li>
-</ol>
-<p>[TestCaseId] -- the ID of the test case</p>
-<p>[TestSetId] -- the ID of the test set</p>
-<p>[ReleaseId] -- the ID of the release (if specified)</p>
-<p>[Filename] - This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.</p>
-<ol>
-<li>The mask for converting any parameter values from SpiraTeam into valid command line arguments. If parameters are not accepted by the command-line tool, you can leave this section out.</li>
-</ol>
+</ul>
 <p>The mask can include any symbols together with "name" to refer to the parameter name and "value" to refer to the parameter value.</p>
 <p>Example 1: If you want parameters to be provided in the form:
 -param1=value1 --param2=value2 you would use the following mask:
