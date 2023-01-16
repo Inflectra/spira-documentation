@@ -664,7 +664,6 @@ Retrieves data about cross product associations
 | ESTIMATE_POINTS          |
 | ESTIMATED_EFFORT         |
 | RANK                     |
-| THEME_ID                 |
 | GOAL_ID                  |
 | START_DATE               |
 | END_DATE                 |
