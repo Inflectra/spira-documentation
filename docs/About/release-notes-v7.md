@@ -62,7 +62,7 @@
             - Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]
             - Teams/Tracks Support in Boards (SpiraPlan only) [RQ:2316]
 
-    * ** System Administration**
+    * **System Administration**
 
         - System admins [can enable or disable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users [RQ:4317]
         - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) (SpiraPlan only) [RQ:3689]
