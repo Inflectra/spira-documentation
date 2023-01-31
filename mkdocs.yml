@@ -287,13 +287,14 @@ nav:
     - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
     - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
-    - MS Test Manager: Migration-and-Integration\Migrating-from-MS-Test-Manager.md
+    - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
     - qTest: Migration-and-Integration\Migrating-from-qTest.md
     - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
     - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
+    - MS Test Manager (Legacy): Migration-and-Integration\Migrating-from-MS-Test-Manager.md
     - HP QualityCenter (Legacy): Migration-and-Integration\Migrating-from-HP-QualityCenter.md
   - Build Servers:
     - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
