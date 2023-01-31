@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Migration-and-Integration/Migrating-from-MS-Test-Manager/">
       
       
-        <link rel="prev" href="../Migrating-from-Jira/">
+        <link rel="prev" href="../Project-Backup-and-Migration/">
       
       
-        <link rel="next" href="../Migrating-from-qTest/">
+        <link rel="next" href="../Migrating-from-HP-QualityCenter/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>MS Test Manager - SpiraDocs</title>
+        <title>MS Test Manager (Legacy) - SpiraDocs</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrating-from-ms-azure-devops-test-manager" class="md-skip">
+        <a href="#migrating-from-microsoft-test-manager-mtm" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MS Test Manager
+              MS Test Manager (Legacy)
             
           </span>
         </div>
@@ -6211,41 +6211,15 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    MS Test Manager
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Migrating-from-MS-Azure-DevOps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    MS Test Manager
+    MS Azure DevOps
   
 
     
@@ -6254,48 +6228,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installing-the-mtm-migration-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing the MTM Migration Tool
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-mtm-migration-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using the MTM Migration Tool
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6452,6 +6384,100 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    MS Test Manager (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MS Test Manager (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-mtm-migration-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing the MTM Migration Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-mtm-migration-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the MTM Migration Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7286,8 +7312,8 @@
 
 
 
-<h1 id="migrating-from-ms-azure-devops-test-manager">Migrating from MS Azure DevOps / Test Manager<a class="headerlink" href="#migrating-from-ms-azure-devops-test-manager" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the free Migration Tool for importing users, releases, requirements, test plans, test suites, test cases, test runs and defects from Microsoft Azure DevOps (ADO) also known as Microsoft Test Manager (MTM).</p>
+<h1 id="migrating-from-microsoft-test-manager-mtm">Migrating from Microsoft Test Manager (MTM)<a class="headerlink" href="#migrating-from-microsoft-test-manager-mtm" title="Permanent link">&para;</a></h1>
+<p>This section outlines how to use the free Migration Tool for importing users, releases, requirements, test plans, test suites, test cases, test runs and defects from Microsoft Test Manager (MTM).</p>
 <h2 id="installing-the-mtm-migration-tool">Installing the MTM Migration Tool<a class="headerlink" href="#installing-the-mtm-migration-tool" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the migration tool for MTM onto a workstation so that you can then migrate whole projects from MTM into SpiraTest (or SpiraTeam). It assumes that you already have a working installation of SpiraTest v4.0 or later. If you have an earlier version of SpiraTest you will need to upgrade to at least v4.0 before trying to migrate projects.</p>
 <p>The Windows installation package can be downloaded from the 'Add-Ons &amp; Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:</p>
