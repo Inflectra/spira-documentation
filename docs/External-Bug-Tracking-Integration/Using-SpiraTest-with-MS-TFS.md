@@ -474,6 +474,17 @@ You are now able to perform test coverage and incident reporting inside SpiraTes
 
 You can create project requirements and associated tasks in either SpiraTeam or TFS, however the synchronization service is only unidirectional for requirements and tasks, so when you create or update a requirement or task in TFS, the change will be reflected in SpiraTeam, but not the other way around.
 
+## Description Handling
+
+Whereas Spira has a single artifact **Description** field, ADO/TFS has three possible "Description" fields depending on the templates setup by an administrator:
+
+- `Microsoft.VSTS.TCM.ReproSteps` (rich text)
+- `Microsoft.VSTS.Common.DescriptionHtml` (rich text)
+- `System.Description` (plain text)
+
+The plugin checks for each of them in the order above. It will sync the Description in Spira with whichever one of these it finds first. So if you have both ReproSteps and Description (for example) then it will use ReproSteps.
+
+If you need both fields in Spira, then we recommend making two separate rich text custom properties and map each of those to the ones in ADO/TFS.
 
 ## Troubleshooting
 
