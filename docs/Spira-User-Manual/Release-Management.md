@@ -96,7 +96,7 @@ Here is a step by step overview on getting started with baselines:
 
 [Below](#baselines) is more information below about how to create, edit, delete, and view your baselines against a specific release.
 
-**Product admins / product owners** can use the dedicated admin [list](../../Spira-Administration-Guide/Product-General-Settings/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details), to see all the artifacts changed, added, or deleed in a baseline.
+**Product admins / product owners** can use the dedicated admin [list](../../Spira-Administration-Guide/Product-General-Settings/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details), to see all the artifacts changed, added, or deleted in a baseline.
 
 **What is captured when baselining is turned on?** Baselining leverages the change tracking tools built into SpiraPlan already. It does this by using the history stored against each artifact in the product to track what has changed between any two baselines. Some additional information is captured only when baselining is turned on (both for baselining use and general history tracking):
 
