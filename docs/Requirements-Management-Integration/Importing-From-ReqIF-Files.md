@@ -82,6 +82,10 @@ C:\ProgramData\SpiraTeamReqIFImporter.log
 
 ## ReqIF & SpiraTeam Importing Notes
 
+- The importer uses the [ReqIFSharp library](https://reqifsharp.org/) and supports the following ReqIF versions:
+  - ReqIF v1.0.1
+  - ReqIF v1.1
+  - ReqIF v1.2
 - The importer will bring across the requirements hierarchy from the ReqIF file.
 - It will also import any cross-relationships between requirements.
 - It will store the special unique ReqIF identifier field for each requirement in a special 'identifier' custom property. 
