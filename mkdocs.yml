@@ -311,13 +311,15 @@ nav:
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
+- Release Notes:
+  - Product Roadmap: About/roadmap.md
+  - Version 7: About/release-notes-v7.md
+  - Version 6: About/release-notes-v6.md
+  - Version 5: About/release-notes-v5.md
+  - Version 4: About/release-notes-v4.md
+  - Version 3: About/release-notes-v3.md
+  - Version 2: About/release-notes-v2.md
+  - Addons and Integrations: About/release-notes-addons-1.md
 - About:
   - Introduction to Spira: About/introduction-to-spira.md
-  - Product Roadmap: About/roadmap.md
-  - Release Notes for v7: About/release-notes-v7.md
-  - Release Notes for v6: About/release-notes-v6.md
-  - Release Notes for v5: About/release-notes-v5.md
-  - Release Notes for v4: About/release-notes-v4.md
-  - Release Notes for v3: About/release-notes-v3.md
-  - Release Notes for v2: About/release-notes-v2.md
   - Legal Notices: About/legal-notices.md

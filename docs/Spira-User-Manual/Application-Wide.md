@@ -280,6 +280,7 @@ You can associate artifacts to one another. For instance, you can associate (or 
 
 - Documents
 - Incidents
+- Releases
 - Requirements
 - Risks
 - Source code commits
@@ -340,16 +341,17 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Assocation Tab Of          | Available artifacts | 
-    |----------------------------|---------------------|
-    | **Documents**              | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Incidents**              | Requirements, Test Steps, Tasks, Incidents, Risks |
-    | **Requirements**           | Requirements, Incidents, Risks |
-    | **Risks**                  | Requirements, Incidents, Risks, Test Cases |
-    | **Source code commits**    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Source code files**      | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Tasks**                  | Tasks, Incidents |
-    | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks |
+    | Assocation Tab Of                                | Available artifacts                                                                                             |
+    | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+    | **Documents**                                    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Incidents**                                    | Requirements, Test Steps, Tasks, Incidents, Risks                                                               |
+    | **Releases**                                     | Releases, Requirements                                                                                          |
+    | **Requirements**                                 | Releases, Requirements, Incidents, Risks                                                                        |
+    | **Risks**                                        | Requirements, Incidents, Risks, Test Cases                                                                      |
+    | **Source code commits**                          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Source code files**                            | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
+    | **Tasks**                                        | Tasks, Incidents                                                                                                |
+    | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
 
 
 ### Rich Text Editor
