@@ -427,15 +427,15 @@ Inside each of the boards you can choose to organize the cards by column. Unlike
 
 The following options are available for columns:
 
-- **Product backlog**: priority, or status (only columns for Requested, Under Review, Rejected, and Accepted are shown)
+- **Product backlog**: priority, or status
 - **Release backlog**: priority, person, or status (see additional information below)
 - **Sprint backlog**: priority, person, or status (see additional information below)
 
-!!! info "What statuses show on the release or sprint backlogs"
-    In the release backlog and sprint backlog, the following rules are applied to determine what columns show (what statuses are visible):
-
-    - The statuses Requested, Under Review, Rejected, and Accepted are not visible
-    - Other statuses are shown if, across all workflows, the status has at least one transition from it to another status *and* are transitioned to from another status. For example, "Developed" will be shown if you can transition to it (e.g. from "In Progress") and you can transition from it (e.g. to "Tested")
+!!! info "What statuses show"
+    What statuses shown on the board depends on how the [template](../../Spira-Administration-Guide/Template-Requirements/#statuses) has been configured. In short:
+        
+    - if the template does not have requirement statuses customized for the boards, then all statuses with a transition to and from them will show in the order they appear on the workflow admin screens
+    - if the template has customized requirement statuses for boards, then statuses chosen to be shown will show, in the order specified in the template.
 
 There are no expand/collapse buttons for columns.
 

@@ -14,12 +14,12 @@
 
         - Move background processes from an in memory dictionary to a database table to reduce errors with multiple CPU cores in IIS (and maybe load balancing) [RQ:4505]
         - As a manager, I can [manage associations between requirements and releases](../../Spira-User-Manual/Application-Wide/#associations), and from releases to other releases (in same product only), so it is easy to see/report all requirements that are active for a release [RQ:4510]
-        - As a requirement analyst, I can request approval of multiple managers before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
+        - As a requirement analyst, I can request [approval of multiple managers](../../SpiraApps/Requirement-Multi-Approvers) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
     
     * **Beta Planning Board**
 
         - As a manager using the planning board, when columns are set to status, I can see only the requirement statuses I need and in the correct order for my product, so I can better track and manage work [RQ:4420]
-        - As a product template admin, I can set what statuses should show on the planning and requirement boards and in what order, so product teams can use the boards more efficiently [RQ:4419]
+        - As a product template admin, I can [set what statuses should show on the beta planning board](../../Spira-Administration-Guide/Template-Requirements/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
     
     * **As a manager, I can use the new beta task board, so I can better oversee and track the work of my teams**
 

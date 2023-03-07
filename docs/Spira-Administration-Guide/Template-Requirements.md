@@ -15,6 +15,26 @@ Note that you can either enter the hexadecimal RRGGBB code for the color or use 
 
 You can't delete an existing requirement importance, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new requirement importance, click the "Add" button and a new row will be added to the list which you can now edit.
 
+## Statuses
+!!! info "In beta, available in SpiraTeam and SpiraPlan only"
+    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+
+Requirement statuses are fixed. Admins cannot add or rename requirement statuses. The requirement status page lets template admins manage how these statuses are displayed to users on relevant planning boards (currently the beta planning board only).
+
+This page shows every requirement status (in the same order you will see them on the requirement workflow pages). For each status you can:
+
+- set the position order it will display in on the planning board
+- toggle whether it will shown on the planning board at all
+
+By default, no statuses have a position or are toggled to show. In this state, the board will show all statuses that have a transition in and out (across all active workflows), in the default order.
+
+If you turn on one or more statuses to show on boards, then those statuses will always show (whether or not they have transitions). Statuses that show and do not have a position are shown before those that do have a position. In the example below, the following statuses will show in the following order:
+
+1. Under Review (this is shown first because it does not have a position set)
+2. Planned (because it has a position of 1)
+2. Requested (because it has a position of 2)
+
+![](img/Template_Requirements_Statuses.png)
 
 ## Types
 

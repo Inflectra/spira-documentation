@@ -44,7 +44,7 @@ When a user goes to the requirement or release details page, they will see an ex
 - Select the desired preset
 - Click "Create"
 
-![toolbar button](img/taskTestPresets-popup.png)
+![popup](img/taskTestPresets-popup.png)
 
 A message will show at the top of the page stating how many tasks or test cases are being created. This message will disappear after all the artifacts have been created. You can see the new items by going to the relevant tab. Below is an example task tab of a requirement where we have added some preset tasks.
 
