@@ -91,6 +91,7 @@ Each of the multi approval tasks created has the following fields set:
 - Requirement linked up
 - Release (taken from any set on the requirement)
 - Priority (taken from the requirement's importance)
+- Start and End dates (taken from the dates of a release if any is set on the requirement)
 - the IsApprovalTask custom property (if present) is set to true / yes
 
 

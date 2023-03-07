@@ -25,13 +25,13 @@ In addition, you can view a more detailed description of the task by positioning
 
 One special column that is unique to tasks is the 'progress indicator'. This illustrates graphically both the percentage completion of the task and also if the task is either starting late or finishing late. The following table illustrates the different type of status that can be conveyed by the indicator:
 
-| Indicator Display | Progress Description |
-| ----------------- | -------------------- |
-| ![](img/Task_Tracking_283.png) |  Task has not yet started, but the scheduled start date is still in the future. |
-| ![](img/Task_Tracking_284.png) |  Task has not yet started, and the start date has elapsed. This is considered a 'Late Starting Task' |
-| ![](img/Task_Tracking_285.png) |  Task has started, and is approximately 25% complete. The scheduled end date is still in the future. |
-| ![](img/Task_Tracking_286.png) |  Task has started, and is approximately 50% complete. However the scheduled end date has elapsed already. This is a considered a 'Late Finishing Task'. |
-| ![](img/Task_Tracking_287.png) |  Task has been 100% completed. |
+| Indicator Display              | Progress Description                                                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](img/Task_Tracking_283.png) | Task has not yet started, but the scheduled start date is still in the future.                                                                         |
+| ![](img/Task_Tracking_284.png) | Task has not yet started, and the start date has elapsed. This is considered a 'Late Starting Task'                                                    |
+| ![](img/Task_Tracking_285.png) | Task has started, and is approximately 25% complete. The scheduled end date is still in the future.                                                    |
+| ![](img/Task_Tracking_286.png) | Task has started, and is approximately 50% complete. However the scheduled end date has elapsed already. This is a considered a 'Late Finishing Task'. |
+| ![](img/Task_Tracking_287.png) | Task has been 100% completed.                                                                                                                          |
 
 Essentially, the gray section of the bar indicates the % of the task yet to be completed, and the green/red section of the bar indicates the % of the task that has already been completed. If the bar changes from green to red it means that the end date has been reached and the task is not yet complete, and if the background changes from gray to yellow it means that the task has not yet started, but the scheduled start date has passed.
 
@@ -221,6 +221,79 @@ In this case, the left hand side displays the requirements currently assigned to
 
 
 [^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
+
+
+## Beta task board
+!!! info "In beta, available in SpiraTeam and SpiraPlan"
+    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+
+To learn more about how the task board is structured or how to enter the beta please refer to our [general information about the beta boards](../ApplicationWide/#beta-boards).
+
+![task board](task-board-overview.png)
+
+### Views summary
+Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available (you cannot select the same value for multiple view options at the same time):
+
+Releases can display "all releases" or a specific releases. The dropdown shows all open releases and sprints.
+
+| View options | All releases                                                 | A specific release or sprint |
+| ------------ | ------------------------------------------------------------ | ---------------------------- |
+| **Grouping** | Priority<br> Release<br> Status<br> Type<br> Person<br> Team | ... and Requirement          |
+| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
+| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
+
+
+### View controls
+The **release dropdown** shows:
+
+- "all releases": displays items planned for any release
+- any release or sprint with an "open" status (a status of planned, in progress, or completed): displays items planned for the selected release and its children
+
+![planning board release selector - release backlog](img/task-board-release-selector.png)
+
+Read about [**how grouping works**](../ApplicationWide/#board-grouping).
+
+Read about [**how to use columns**](../ApplicationWide/#board-columns).
+
+Read about [**how to use rows**](../ApplicationWide/#board-rows).
+
+Read about [**what cards show when**](../ApplicationWide/#board-what-cards-show-when).
+
+### Customizing the cards
+You can customize what information is shown on each card. For each artifact the following fields are always shown:
+
+- **Name** (click to open a popup with full details, or alt-click to open the details page for that item)
+- **Artifact icon**: shown beneath the name in a gray bubble
+- **ID token** of the artifact: shown to the right of the artifact icon
+- **Effort** (if set): shown to the bottom right of the card (hover to see full information about the effort fields)
+- **Priority** (if set): shown to the bottom right of the card in a circle the color of the priority
+- **Owner** (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
+
+You can toggle whether to show each of the following features:
+
+![planning board card options](img/task-board-card-options.png)
+
+- **Description**: this will show a snippet of the full artifact description below the artifact name
+- **Type**: the artifact type, shown to the right of the ID token
+- **Status**: the artifact statuses, shown to the right of the ID token and the type
+- **Progress**: a mini histogram chart of the task's progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
+- **Position**: this shows a number in the bottom left of the card that represents the position of that card within the cell. For example, the topmost card will have position 1, and the card beneath it 2.
+
+Below is an example of a task card showing all available data
+
+![full task card](img/task-board-card-full.png)
+
+### Moving and ordering cards
+Read about this [here](../ApplicationWide/#board-moving-and-ordering-cards).
+
+### Editing and viewing cards
+Read about this [here](../ApplicationWide/#board-editing-and-viewing-cards).
+
+### Viewing by release or sprint
+Read about this [here](../ApplicationWide/#board-viewing-by-release-or-sprint).
+
+### Viewing by Person
+Read about this [here](../ApplicationWide/#board-viewing-by-person).
 
 
 ## Task Gantt Chart

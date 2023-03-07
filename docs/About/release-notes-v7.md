@@ -21,7 +21,7 @@
         - As a manager using the planning board, when columns are set to status, I can see only the requirement statuses I need and in the correct order for my product, so I can better track and manage work [RQ:4420]
         - As a product template admin, I can [set what statuses should show on the beta planning board](../../Spira-Administration-Guide/Template-Requirements/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
     
-    * **As a manager, I can use the new beta task board, so I can better oversee and track the work of my teams**
+    * **As a manager, I can use the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board), so I can better oversee and track the work of my teams**
 
         - As a manager, I can filter the task board by any currently active release or sprint, so I can focus on the most relevant work at any time [RQ:4408]
         - As a manager, I can set the group by, rows, and columns, so I can quickly and intuitively arrange the board to help me see and manage relevant tasks [RQ:4409]
@@ -32,7 +32,7 @@
         - As a task board user, I can change the way a task card looks, so I can see the most meaningful information at that moment [RQ:4411]
         - As a task board user, I can view more information about a task and, if I have permissions, edit the task right from the task board, so I can work more efficiently [RQ:4412]
 
-    * **Administration**
+    * **Administration (SpiraPlan only)**
 
         - As an administrator, I want to see a list of changes made in the system, to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
