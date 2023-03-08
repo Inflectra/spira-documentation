@@ -6,7 +6,8 @@
 
     **Current available beta features**
 
-    - Planning board beta with powerful new functionality and improved user experience (SpiraTeam and SpiraPlan)
+    - Planning board and task board beta with powerful new functionality and improved user experience (SpiraTeam and SpiraPlan)
+    - Improved requirement status handling on the beta planning board (SpiraTeam and SpiraPlan)
     - Create and manage teams, and assign users to teams in each product (SpiraPlan)
     - Teams support on the beta planning board (SpiraPlan)
 
