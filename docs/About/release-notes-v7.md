@@ -1,8 +1,81 @@
 # Release Notes for Spira v7
 
+## Version 7.5 (March 2023)
+
+!!! info "Summary"
+
+    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
+    - Template admins can now fully customize exactly what [requirement statuses](../../Spira-Administration-Guide/Template-Requirements/#statuses) show on the beta planning board, and in what order. This helps you tailor the beta planning board even further to your needs.
+    - A new SpiraApp for SpiraTeam and SpiraPlan lets you conduct [multiple parallel approvals of a requirement](../../SpiraApps/Requirement-Multi-Approvers), with a one click creation of tasks that can be pre-named, and pre-assigned to relevant reviewers
+
+??? success "New Features"
+
+    * **APIs**
+        - Implement a v7 of the SOAP API [RQ:4418]
+        - Implement a v7 of the REST API [RQ:4417]
+    
+    * **Cross-Cutting Functionality**
+
+        - As a requirement analyst, I can request [approval of multiple managers](../../SpiraApps/Requirement-Multi-Approvers) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
+        - Move background processes from an in memory dictionary to a database table to reduce errors with multiple CPU cores in IIS (and maybe load balancing) [RQ:4505]
+        - As a manager, I can [manage associations between requirements and releases](../../Spira-User-Manual/Application-Wide/#associations), and from releases to other releases (in same product only), so it is easy to see/report all requirements that are active for a release [RQ:4510]
+    
+    * **Beta Planning Board**
+
+        - As a manager using the planning board, when columns are set to status, I can see only the requirement statuses I need and in the correct order for my product, so I can better track and manage work [RQ:4420]
+        - As a product template admin, I can [set what statuses should show on the beta planning board](../../Spira-Administration-Guide/Template-Requirements/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
+    
+    * **As a manager, I can use the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board), so I can better oversee and track the work of my teams**
+
+        - As a manager, I can filter the task board by any currently active release or sprint, so I can focus on the most relevant work at any time [RQ:4408]
+        - As a manager, I can set the group by, rows, and columns, so I can quickly and intuitively arrange the board to help me see and manage relevant tasks [RQ:4409]
+        - As a task board user, I can group the board by to release, requirement, status, priority, type, person, or team, so I can focus on the most important data [RQ:4413]
+        - As a task board user, I can set the columns on the board to release, requirement, status, priority, type, or person, so I can focus on the most important data [RQ:4414]
+        - As a task board user, I can set the rows to release, parent requirement, status, priority, type, or person, so I can focus on the most important data [RQ:4415]
+        - As a task board user, cards always show in the correct place and can be quickly moved or reordered, so my team can see and manage our work [RQ:4410]
+        - As a task board user, I can change the way a task card looks, so I can see the most meaningful information at that moment [RQ:4411]
+        - As a task board user, I can view more information about a task and, if I have permissions, edit the task right from the task board, so I can work more efficiently [RQ:4412]
+
+    * **Administration (SpiraPlan only)**
+
+        - As an administrator, I want to see a [list of changes made in the system](../../Spira-Administration-Guide/System/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
+        - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
+
+??? bug "Bug fixes and enhancements"
+
+    - Add an [email option](../../Spira-Administration-Guide/System/#email-configuration) to never include the password in a new user confirmation email (when users are created by a system admin) [IN:7805]
+
+    * **APIs**
+
+        - Add ability to see product custom property values on RemoteProject API Object [IN:7771]
+        - Add API call to retrieve a paginated set of users [IN:6780]
+        - Add API endpoints to allow users to perform full CRUD operations on workflows [IN:7841]
+        - Add CRUD operations for Pull Requests in the API [IN:7833]
+        - Data Mapping API Endpoints do not validate permissions beyond project membership [IN:7779]
+        - Expand User API Object to include all information from admin user screen [IN:7936]
+        - Fix the REST API when retrieving active Releases [IN:6835]
+        - Improve the naming of API calls to get workflow transitions from ..._RetrieveWorkflowTransitions to ..._RetrieveWorkflowTransitionsForUser [IN:7827]
+        - Users without permissions to view certain artifact types should not be able to view and make comments on those artifacts through the API [IN:7773]
+
+    * **Bug Fixes**
+
+        - Add the ability to set limits in the database for the rate at which large calculation stored procedures run (like test case parameter cache refresh) to improve performance [IN:7864]
+        - Do not let users be able to select the same option for more than one dropdown on the beta planning boards [IN:7813]
+        - Fix description for 'Edit Custom Lists' and 'Product Definitions' (system-wide custom properties) [IN:7781]
+        - Fix the product icon missing from the Schedule dashboard widgets [IN:7534]
+        - Fix the default sort order on the beta Planning Board to be by Importance/Priority [IN:7740]
+        - Fix the export to svg button not displaying on the document details page when working with diagrams [IN:7885]
+        - Fix Worx SpiraApp URLs to add slash between artifact token letters and ID [IN:7832]
+        - Installer: On 'failQuietly' SQL Commands, change logging behavior to only give summary message, and not full output. [IN:7807]
+        - Installer: Renaming indexes should not cause an error, even if index does not exist [IN:7808]
+        - Improve performance by improving how attachments are retrieved [IN:7850]
+        - Remove all entries of a SpiraApp that are no longer in us [IN:7894]
+
+
+
 ## Version 7.4 (January 2023)
 
-??? Success "Bug fixes and enhancements"
+??? success "Bug fixes and enhancements"
 
     * **Enhancements**
     

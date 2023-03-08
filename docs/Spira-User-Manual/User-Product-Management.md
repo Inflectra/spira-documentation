@@ -152,7 +152,6 @@ This section lists all the test cases you are the owner of, across *all products
 - its last execution status (for example failed or passed) - hover to see a tooltip showing the last execution date
 - its last execution date (not shown by default)
 - its workflow status
-- a reassign button that let's users with the right permissions assign the test case to another test in that product
 - a play (execute) button. This will execute the test case in the [test-case execution module](../Test-Case-Management/#execute-test-cases). This button will not be there if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
 
 If you edit the widget you can: change the number of rows to show; show or hide the last executed date; and show or hide and the workflow status.

@@ -321,11 +321,10 @@ To **view / change the parameters** associated with the current test case, click
 
 ![](img/Test_Case_Management_147.png)
 
-Existing parameters are shown in a list. For each paramenter you can: 
+Existing parameters are shown in a list. For each parameter you can: 
 
 - edit a parameter - you can change the token name, and update/add/remove the default value
 - delete an existing parameter
-- copy the parameter token to the clipboard. 
 - insert the parameter token at the current cursor position. To do this:
 
     - edit the relevant test step

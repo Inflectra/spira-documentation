@@ -59,13 +59,13 @@ When you have made your updates, you can either click "***Save***" to commit the
 ### Cloning Incidents
 To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "***Clone***" under the Edit menu (or click "***Clone***" from the "New" dropdown menu from the  Incident's details page). This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.
 
-When cloning the test case note that:
+When cloning Incidents please note that:
 
 - all standard fields (like type and owner) and custom fields are cloned
-- description (with formatting) are cloned
+- description and comment (with formatting) are cloned
 - file attachments are cloned
-- associated artifacts are *not* cloned
-- followers, comments, automation and history are *not* cloned
+- associations to artifacts are cloned
+- followers and history are *not* cloned
 
 
 ### Exporting Incidents
