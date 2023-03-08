@@ -872,14 +872,14 @@ Click on the `Preview Results` button to display the table of all the release 
 Now change the query to only include the data that we want:
 
 ``` sql
-select R.NAME, R.VERSION\_NUMBER, R.COUNT\_PASSED, R.COUNT\_FAILED, R.COUNT\_NOT\_RUN, R.COUNT\_BLOCKED, R.COUNT\_CAUTION from SpiraTestEntities.R\_Releases as R where R.PROJECT\_ID = \${ProjectId}
+select R.NAME, R.VERSION_NUMBER, R.COUNT_PASSED, R.COUNT_FAILED, R.COUNT_NOT_RUN, R.COUNT_BLOCKED, R.COUNT_CAUTION from SpiraTestEntities.R_Releases as R where R.PROJECT_ID = ${ProjectId}
 ```
 
 This will display the release name, and the test case counts for the current project. It will also include the deleted releases, so we need to add on a clause to the WHERE part of the query to make sure they are excluded:
 
 ``` sql
-select R.NAME, R.VERSION\_NUMBER, R.COUNT\_PASSED, R.COUNT\_FAILED, R.COUNT\_NOT\_RUN, R.COUNT\_BLOCKED, R.COUNT\_CAUTION from SpiraTestEntities.R\_Releases as R where R.PROJECT\_ID = \${ProjectId}\
-and R.IS\_DELETED = False
+select R.NAME, R.VERSION_NUMBER, R.COUNT_PASSED, R.COUNT_FAILED, R.COUNT_NOT_RUN, R.COUNT_BLOCKED, R.COUNT_CAUTION from SpiraTestEntities.R_Releases as R where R.PROJECT_ID = ${ProjectId}
+and R.IS_DELETED = False
 ```
 
 Click on the `Preview Results` button again to display the data we want:

@@ -77,8 +77,8 @@ Each of the views is now described in more detail in the sections below.
 
     The statuses shown are based on the template's workflows.
 
-    - Product backlog: the default status ("Requested") is always shown. The statuses of "Under Review", "Rejected", and "Accepted" are shown - as long as the status has a transition to another status *and* if another status has a transition to it. For example, if "Under Review" can transition to "Rejected" but "Rejected" has no transitions at all, it will not be visible in this view 
-    - All releases / a release or sprint: here you are shown all statuses *not* shown on the product backlog view that transition to another status *and* are transitioned to from another status has a transition to it. For example, "Under Review" will never be shown, but "Developed" will be shown if you can transition to it (e.g. from "In Progress") and you can transition from it (e.g. to "Tested")
+    - Product backlog: the default status ("Requested") is always shown. The statuses of "Under Review", "Rejected", and "Accepted" are shown - as long as the status has a transition to another status *and* if another status has a transition to it, in any active workflow. For example, if "Under Review" can transition to "Rejected" but "Rejected" has no transitions at all, it will not be visible in this view 
+    - All releases / a release or sprint: here you are shown all statuses *not* shown on the product backlog view that transition to another status *and* are transitioned to from another status has a transition to it, in any active workflow. For example, "Under Review" will never be shown, but "Developed" will be shown if you can transition to it (e.g. from "In Progress") and you can transition from it (e.g. to "Tested")
  
 
 ## Product Backlog Planning
