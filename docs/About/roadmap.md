@@ -12,19 +12,8 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q1 2023
-**We will continue the rollout our newly designed planning board**
-
-- Enhancements to the beta Planning Board released in v7.2 based on initial customer feedback (SpiraTeam and SpiraPlan)
-- Brand new beta task board (SpiraTeam and SpiraPlan)
-- History tracking of product custom property changes
-- Improvements for background operations (like report generation) for users in load-balanced environments
-- Initial release of v7 of our API (all prior versions of the API will remain 100% supported)
-- Release to requirement, and release to release associations
-- Multi-approver workflows enabled with a new dedicated SpiraApp (SpiraTeam and SpiraPlan)
-
 ## Q2 2023
-**We will deliver core features of "Scaled Agile" at the program level (SpiraPlan)**
+**Early in the quarter we will roll out a number of important performance improvements to streamline user experience. Later in the quarter we will deliver core features of "Scaled Agile" at the program level (SpiraPlan)**
 
 - Brand new hierarchical "Program Capabilities" that can be linked to product-level requirements and to "Program Milestones"
 - Brand new "Program Milestones" that can be linked to "Program Capabilities" and to product-level releases

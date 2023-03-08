@@ -192,21 +192,22 @@ The Email Configuration page is split into two sections. The first section cover
 
 ![](img/System_73.png)
 
--   **Email Notifications Active?** -- Defaults to Yes. If changed to No, the system will not send out any emails, regardless of other settings. Note that this means that new user requests will not get sent either.
--   **From Email Address --** This is the email address specified in the 'From:' field of email notifications sent from the application.
--   **Reply-To Email Address --** This is the address specified in the 'ReplyTo:' field for notification emails sent from the application.
--   **Send HTML Emails?** -- Defaults to Yes. This option specifies whether HTML or Plain-Text emails are sent from the system.
--   **Allow Users Control of Receiving Emails?** -- Defaults to Yes. This specifies whether or not a user can modify their profile to not receive any emails from the system. If set to no, users' preference will be enabled and locked out.
+- **Email Notifications Active?**: Defaults to Yes. If changed to No, the system will not send out any emails, regardless of other settings. Note that this means that new user requests will not get sent either.
+- **From Email Address:** This is the email address specified in the 'From:' field of email notifications sent from the application.
+- **Reply-To Email Address:** This is the address specified in the 'ReplyTo:' field for notification emails sent from the application.
+- **Send HTML Emails?**: Defaults to Yes. This option specifies whether HTML or Plain-Text emails are sent from the system.
+- **Allow Users Control of Receiving Emails?**: Defaults to Yes. This specifies whether or not a user can modify their profile to not receive any emails from the system. If set to no, users' preference will be enabled and locked out.
+- **Hide passwords in new user emails?**: Default to No. If enabled, the automated email sent to new users when an account is created by a system admin will not include the user's password.
 
 ![](img/System_74.png)
 
 To use the internal IIS's default virtual SMTP server, leave all fields blank. The virtual server must then be configured to use proper SMTP server and network configuration. If you want the application to contact an SMTP server directly, use the following fields:
 
--   **Host Name --** This is the SMTP server to connect to.
--   **Port Number --** This is the port number to use, blank uses the default port 25.
--   **SSL Connection --** Whether or not to use an SSL connection with the server. Be sure that the SMTP server's SSL certificate is trusted on the application server.
--   **User Name --** When using an authentication method, this is the username to log in as.
--   **Password --** When using an authentication method, this is the password to use.
+- **Host Name**: This is the SMTP server to connect to.
+- **Port Number**: This is the port number to use, blank uses the default port 25.
+- **SSL Connection**: Whether or not to use an SSL connection with the server. Be sure that the SMTP server's SSL certificate is trusted on the application server.
+- **User Name**: When using an authentication method, this is the username to log in as.
+- **Password**: When using an authentication method, this is the password to use.
 
 Example settings for connecting to Gmail/Google Mail for sending notifications:
 
@@ -255,3 +256,40 @@ If the SpiraApp has system level settings you will see:
 ![SpiraApp list page view](img/System_SpiraApps_Settings.png)
 
 Click the "Save" button to commit any edits.
+
+
+## System History Changes
+This page displays a list of relevant changes made to system level artifacts. **Currently, only changes to product custom properties are recorded**.
+ 
+![system history list page](img/system-history-list.png)
+
+The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
+
+- **Change ID**: unique identified. Clicking this will open the history details page for that change (see below)
+- **Change date**: when the change was made
+- **Change by**: who is recorded as having made the change (the user's name and ID)
+- **Artifact Type**: the system level artifact (e.g. product)
+- **Artifact ID**: the unique identifier of the artifact
+- **Artifact Name**: the name field of the artifact
+- **Change Type**: what sort of change was made:
+
+    -   **Modified**: when one or more fields in the system artifact were changed.
+    -   **Added**: when a new system artifact is created.
+    -   **Deleted**: when the system artifact is deleted from the system.
+
+- **Workspace**: the workspace type of that artifact (product, program, portfolio, or system)
+- **Workspace ID**: the unique identifier of the workspace 
+
+
+The system history details screen will show basic information as well as fields that were changed in this change set. 
+
+![system history details page](img/system-history-details.png)
+
+The top part of the page shows relevant **properties**: change date, changed by, change type, workspace, artifact type, artifact (name).
+
+Below this, the **change actions** are shown. This shows one row for each field that was changed in this change set. It shows:
+
+- **Field Category**: the type of field changed (for example, standard field or custom property)
+- **Field Name**: the name of the field that was changed 
+- **Old Value**: the value of the field before the change
+- **New Value**:  the value the field was changed to

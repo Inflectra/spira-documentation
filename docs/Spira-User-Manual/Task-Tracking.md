@@ -227,9 +227,9 @@ In this case, the left hand side displays the requirements currently assigned to
 !!! info "In beta, available in SpiraTeam and SpiraPlan"
     System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
-To learn more about how the task board is structured or how to enter the beta please refer to our [general information about the beta boards](../ApplicationWide/#beta-boards).
+To learn more about how the task board is structured or how to enter the beta please refer to our [general information about the beta boards](../Application-Wide/#beta-boards).
 
-![task board](task-board-overview.png)
+![task board](img/task-board-overview.png)
 
 ### Views summary
 Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available (you cannot select the same value for multiple view options at the same time):
@@ -251,13 +251,13 @@ The **release dropdown** shows:
 
 ![planning board release selector - release backlog](img/task-board-release-selector.png)
 
-Read about [**how grouping works**](../ApplicationWide/#board-grouping).
+Read about [**how grouping works**](../Application-Wide/#board-grouping).
 
-Read about [**how to use columns**](../ApplicationWide/#board-columns).
+Read about [**how to use columns**](../Application-Wide/#board-columns).
 
-Read about [**how to use rows**](../ApplicationWide/#board-rows).
+Read about [**how to use rows**](../Application-Wide/#board-rows).
 
-Read about [**what cards show when**](../ApplicationWide/#board-what-cards-show-when).
+Read about [**what cards show when**](../Application-Wide/#board-what-cards-show-when).
 
 ### Customizing the cards
 You can customize what information is shown on each card. For each artifact the following fields are always shown:
@@ -284,16 +284,16 @@ Below is an example of a task card showing all available data
 ![full task card](img/task-board-card-full.png)
 
 ### Moving and ordering cards
-Read about this [here](../ApplicationWide/#board-moving-and-ordering-cards).
+Read about this [here](../Application-Wide/#board-moving-and-ordering-cards).
 
 ### Editing and viewing cards
-Read about this [here](../ApplicationWide/#board-editing-and-viewing-cards).
+Read about this [here](../Application-Wide/#board-editing-and-viewing-cards).
 
 ### Viewing by release or sprint
-Read about this [here](../ApplicationWide/#board-viewing-by-release-or-sprint).
+Read about this [here](../Application-Wide/#board-viewing-by-release-or-sprint).
 
 ### Viewing by Person
-Read about this [here](../ApplicationWide/#board-viewing-by-person).
+Read about this [here](../Application-Wide/#board-viewing-by-person).
 
 
 ## Task Gantt Chart

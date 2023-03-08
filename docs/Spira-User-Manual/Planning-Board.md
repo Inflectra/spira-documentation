@@ -312,7 +312,7 @@ Read more about [how to set up and use WIP limits](../../Spira-Administration-Gu
     System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
 
-To learn more about how the planning board is structured or how to enter the beta please refer to our [general information about the beta boards](../ApplicationWide/#beta-boards).
+To learn more about how the planning board is structured or how to enter the beta please refer to our [general information about the beta boards](../Application-Wide/#beta-boards).
 
 
 ### Views summary
@@ -362,10 +362,10 @@ The release selector is only visible when the planning dropdown is set to either
 
 
 ### Grouping
-Read about this [here](../ApplicationWide/#board-grouping).
+Read about this [here](../Application-Wide/#board-grouping).
 
 ### Columns
-Read about this [here](../ApplicationWide/#board-columns).
+Read about this [here](../Application-Wide/#board-columns).
 
 !!! info "What statuses show"
     What statuses shown on the board depends on how the [template](../../Spira-Administration-Guide/Template-Requirements/#statuses) has been configured. In short:
@@ -374,7 +374,7 @@ Read about this [here](../ApplicationWide/#board-columns).
     - if the template has customized requirement statuses for boards, then statuses chosen to be shown will show, in the order specified in the template.
 
 ### Rows
-Read about this [here](../ApplicationWide/#board-rows).
+Read about this [here](../Application-Wide/#board-rows).
 
 ### Customizing the cards
 You can customize what information is shown on each card. For each artifact the following fields are always shown:
@@ -413,7 +413,7 @@ Finally, you can, based on your view, toggle other artifact cards to show. When 
 
 
 ### What cards show when
-Read about this [here](../ApplicationWide/#board-what-cards-show-when). In addition to the rules explained there, the following rules apply to how incident card display on the planning board:
+Read about this [here](../Application-Wide/#board-what-cards-show-when). In addition to the rules explained there, the following rules apply to how incident card display on the planning board:
 
 - incidents do not show at all if columns is set to status (because incidents and requirements have completely different statuses)
 - incidents do not show at all if rows are set to parent (because incidents do not have parent requirements)
@@ -455,13 +455,13 @@ The following rules apply to what cards will show (note that more than one of th
 
 
 ### Moving and ordering cards
-Read about this [here](../ApplicationWide/#board-moving-and-ordering-cards).
+Read about this [here](../Application-Wide/#board-moving-and-ordering-cards).
 
 ### Viewing by release or sprint
-Read about this [here](../ApplicationWide/#board-viewing-by-release-or-sprint).
+Read about this [here](../Application-Wide/#board-viewing-by-release-or-sprint).
 
 ### Viewing by Person
-Read about this [here](../ApplicationWide/#board-viewing-by-person).
+Read about this [here](../Application-Wide/#board-viewing-by-person).
 
 ### Status and Work in Progress Limits
 When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
@@ -475,7 +475,7 @@ There are different colors to indicate the status of the WIP limit:
 Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
 
 ### Editing and viewing cards
-Read about this [here](../ApplicationWide/#board-editing-and-viewing-cards).
+Read about this [here](../Application-Wide/#board-editing-and-viewing-cards).
 
 ### Example use cases
 #### Scrum Projects

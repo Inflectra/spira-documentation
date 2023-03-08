@@ -4,6 +4,10 @@
 
 !!! info "Summary"
 
+    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
+    - Template admins can now fully customize exactly what [requirement statuses](../../Spira-Administration-Guide/Template-Requirements/#statuses) show on the beta planning board, and in what order. This helps you tailor the beta planning board even further to your needs.
+    - A new SpiraApp for SpiraTeam and SpiraPlan lets you conduct [multiple parallel approvals of a requirement](../../SpiraApps/Requirement-Multi-Approvers), with a one click creation of tasks that can be pre-named, and pre-assigned to relevant reviewers
+
 ??? success "New Features"
 
     * **APIs**
@@ -12,9 +16,9 @@
     
     * **Cross-Cutting Functionality**
 
+        - As a requirement analyst, I can request [approval of multiple managers](../../SpiraApps/Requirement-Multi-Approvers) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
         - Move background processes from an in memory dictionary to a database table to reduce errors with multiple CPU cores in IIS (and maybe load balancing) [RQ:4505]
         - As a manager, I can [manage associations between requirements and releases](../../Spira-User-Manual/Application-Wide/#associations), and from releases to other releases (in same product only), so it is easy to see/report all requirements that are active for a release [RQ:4510]
-        - As a requirement analyst, I can request [approval of multiple managers](../../SpiraApps/Requirement-Multi-Approvers) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
     
     * **Beta Planning Board**
 
@@ -34,12 +38,12 @@
 
     * **Administration (SpiraPlan only)**
 
-        - As an administrator, I want to see a list of changes made in the system, to be able to audit and review products and schedules more easily. [RQ:4477]
+        - As an administrator, I want to see a [list of changes made in the system](../../Spira-Administration-Guide/System/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
 
 ??? bug "Bug fixes and enhancements"
 
-    - Add an email option to never include the password in a new user confirmation email (when users are created by a system admin) [IN:7805]
+    - Add an [email option](../../Spira-Administration-Guide/System/#email-configuration) to never include the password in a new user confirmation email (when users are created by a system admin) [IN:7805]
 
     * **APIs**
 
