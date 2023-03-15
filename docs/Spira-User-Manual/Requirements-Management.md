@@ -172,7 +172,7 @@ This drop-down list allows you to change the fields that are displayed in the re
 
 To copy a requirement or set of requirements, simply select the check-boxes of the requirements you want to copy and then select the Edit \> Copy Items menu option. This will copy the current requirements selection to the clipboard. Then you should select the place where you want the requirements to be inserted and choose the Edit \> Paste Items option.
 
-The requirements will now be copied into the destination location you specified. The name of the copied requirements will be prefixed with "Copy of..." to distinguish them from the originals. Note that copied requirements will also include the test coverage information from the originals.
+The requirements will now be copied into the destination location you specified. The name of the copied requirements will have " - Copy" at the end, to distinguish them from the originals. Note that copied requirements will also include the test coverage information from the originals.
 
 ### Moving Requirements
 
