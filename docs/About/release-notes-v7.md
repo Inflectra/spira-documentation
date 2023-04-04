@@ -1,5 +1,31 @@
 # Release Notes for Spira v7
 
+## Version 7.6 (April 2023)
+
+!!! info "Summary"
+
+    This release includes a number of performance improvements and bug fixes to streamline user experience.
+
+??? bug "Bug fixes and enhancements"
+
+    **Performance improvements**
+    
+    - Improve performance when retrieving documents/attachments by caching them locally in the user's browser [IN:7925]
+    - Improve performance of product list and details pages with faster and more streamlined loading of dropdowns for users, releases, and requirements [IN:7823]
+    - Improve performance when loading the global navigation workspace dropdown to not block initial page loads [IN:7838]
+
+    **Bug fixes**
+
+    - Auto opt-in new installations to beta features by setting the "[enable beta features](../../Spira-Administration-Guide/System/#general-settings)" flag to Yes by default [IN:7977]
+    - Fix a bug for on premise customers upgrading from 5.4 to this release or later [IN:7919]
+    - Fix test coverage for releases getting out of sync in certain situations (and can otherwise only be resolved by running data tools) [IN:7077]
+    - Fix the user's chosen artifact persisting when switching to or from a program (introduced in 7.5) [IN:7959]
+    - Fix translation of the yes/no filter field on certain system admin pages like the workspace and user list pages [IN:7982]
+    - Fix translation on the System Admin > Edit User page when confirm removing a user from a product [IN:7981]
+    - Improve error handling when generating a MS-Word 2007 with large image files [IN:7938]
+    - On the beta task board, when grouping by release and filtering by a release with no children, hide the "unassigned items" group [IN:7943]
+
+
 ## Version 7.5 (March 2023)
 
 !!! info "Summary"
