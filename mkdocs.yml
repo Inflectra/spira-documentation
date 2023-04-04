@@ -282,9 +282,6 @@ nav:
     - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
     - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
-    - Excel: Migration-and-Integration\Importing-from-Microsoft-Excel.md
-    - Microsoft Word: Migration-and-Integration\Importing-from-Microsoft-Word.md
-    - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
     - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
     - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
@@ -294,6 +291,9 @@ nav:
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
     - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
+    - Excel (Legacy): Migration-and-Integration\Importing-from-Microsoft-Excel.md
+    - Microsoft Word (Legacy): Migration-and-Integration\Importing-from-Microsoft-Word.md
+    - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
     - MS Test Manager (Legacy): Migration-and-Integration\Migrating-from-MS-Test-Manager.md
     - HP QualityCenter (Legacy): Migration-and-Integration\Migrating-from-HP-QualityCenter.md
   - Build Servers:
