@@ -225,7 +225,7 @@ This screen displays the list of templates in the system (both inactive and acti
 
 You can filter the list of products by either choosing an active status, ID, or entering a portion of the name into the appropriate text box. When you click the "Filter" button, the list of templates will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filter" button. To sort the list of templates, click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending).
 
-To permanently delete a template, click the "Delete" button to the right of the template details. This is irreversible. If you want to temporarily delete a product, set its Active flag to 'No' instead. Neither of these actions will be possible if any product (active or inactive) is controlled by the template.
+To permanently delete a template, click the "Delete" button to the right of the template details. This is irreversible. If you want to temporarily delete a template, set its Active flag to 'No' instead. Neither of these actions will be possible if any product (active or inactive) is controlled by the template.
 
 To add a new template to the system, you need to create a new template when creating a new product (as described in [View/Edit Products](#viewedit-products)). To edit the details of an existing template, click the "Edit" button in the right hand column of the template list box, and you will be taken to the following screen that allows you modify the template details:
 
