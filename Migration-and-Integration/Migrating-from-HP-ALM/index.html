@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://spiradoc.inflectra.com/Migration-and-Integration/Migrating-from-HP-ALM/">
       
       
-        <link rel="prev" href="../Importing-from-Microsoft-Project/">
+        <link rel="prev" href="../Importing-from-Microsoft-Word-%28Office365%29/">
       
       
         <link rel="next" href="../Migrating-from-Jira/">
@@ -6107,84 +6107,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../Importing-from-Microsoft-Excel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Excel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Importing-from-Microsoft-Word/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Word
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Importing-from-Microsoft-Project/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Project
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -6520,6 +6442,84 @@
     
   
     Project Backup and Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Importing-from-Microsoft-Excel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Importing-from-Microsoft-Word/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Word (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Importing-from-Microsoft-Project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Project
   
 
     
@@ -7576,7 +7576,7 @@
 <p><img alt="" src="../img/Migrating_from_HP_ALM_75.png" /></p>
 <p>At this point, you can add or remove artifacts from the session. Please note that artifacts that already started importing can not now be deselected. In our example, only Test Runs, Users, and Attachments are not disabled. Since we didn't select Attachments originally, if you check off that box, it will include attachments for <strong>new</strong> artifacts - changes will not be made to artifact attachments already imported to Spira. Press 'Start Import' and wait a few seconds until the program loads the previous session data and continues from the point it stopped previously:</p>
 <p><img alt="" src="../img/Migrating_from_HP_ALM_76.png" /></p>
-<p>Wait until the import session successfully ends. If for any reason, the importer fails or you canceled this import session, the next time you want to continue, please select it as the restoring session (instead of the first one). In other words, <u>always select the most recent session</u>. Otherwise, errors and duplicate data may occur, as some of the artifacts were already imported.</p>
+<p>Wait until the import session successfully ends. If for any reason, the importer fails or you canceled this import session, make sure to select a session with complete data mapping to proceed. This is usually the most recent session. However, sometimes a session can be created in an incomplete state (if it was interrupted before starting to import - for example, if the server crashed). If you are not sure which session to use, you can compare the session files of one session (B) with an older session (A). If the newer session (B) has fewer files than the older (A) session, ignore it and select the older session (A) instead. This will avoid errors and possible duplicate data as some of the artifacts were already imported.</p>
 
 
 

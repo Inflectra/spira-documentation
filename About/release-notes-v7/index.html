@@ -6105,84 +6105,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Excel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Word
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Project
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/" class="md-nav__link">
         
   
@@ -6398,6 +6320,84 @@
     
   
     Project Backup and Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Word (Legacy)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Project
   
 
     
@@ -7056,6 +7056,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-76-april-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.6 (April 2023)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-75-march-2023" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7423,6 +7434,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-76-april-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.6 (April 2023)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-75-march-2023" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7505,6 +7527,31 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-76-april-2023">Version 7.6 (April 2023)<a class="headerlink" href="#version-76-april-2023" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>This release includes a number of performance improvements and bug fixes to streamline user experience.</p>
+</div>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<p><strong>Performance improvements</strong></p>
+<ul>
+<li>Improve performance when retrieving documents/attachments by caching them locally in the user's browser [IN:7925]</li>
+<li>Improve performance of product list and details pages with faster and more streamlined loading of dropdowns for users, releases, and requirements [IN:7823]</li>
+<li>Improve performance when loading the global navigation workspace dropdown to not block initial page loads [IN:7838]</li>
+</ul>
+<p><strong>Bug fixes</strong></p>
+<ul>
+<li>Auto opt-in new installations to beta features by setting the "<a href="../../Spira-Administration-Guide/System/#general-settings">enable beta features</a>" flag to Yes by default [IN:7977]</li>
+<li>Fix a bug for on premise customers upgrading from 5.4 to this release or later [IN:7919]</li>
+<li>Fix test coverage for releases getting out of sync in certain situations (and can otherwise only be resolved by running data tools) [IN:7077]</li>
+<li>Fix the user's chosen artifact persisting when switching to or from a program (introduced in 7.5) [IN:7959]</li>
+<li>Fix translation of the yes/no filter field on certain system admin pages like the workspace and user list pages [IN:7982]</li>
+<li>Fix translation on the System Admin &gt; Edit User page when confirm removing a user from a product [IN:7981]</li>
+<li>Improve error handling when generating a MS-Word 2007 with large image files [IN:7938]</li>
+<li>On the beta task board, when grouping by release and filtering by a release with no children, hide the "unassigned items" group [IN:7943]</li>
+</ul>
+</details>
 <h2 id="version-75-march-2023">Version 7.5 (March 2023)<a class="headerlink" href="#version-75-march-2023" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
