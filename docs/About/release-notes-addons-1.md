@@ -1,6 +1,10 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## May 2023
+- **[SalesForce DataSync](../../External-Bug-Tracking-Integration/Using-Spira-with-Salesforce.com)** v1.1.4.0: general performance enhancements, fixes a potential bug that could cause error "429 Too Many Requests" on SalesForce
+- **[HP ALM Importer](../../Migration-and-Integration/Migrating-from-HP-ALM)** v6.0.23.0: fixes restoring a corrupted session
+
 ## March 2023
 - **[Google Sheets](../../Migration-and-Integration/Importing-from-Google-Sheets)** v3.0.0.0: this major release adds support for: adding/editing custom lists and components; adding users and folders; test step custom properties; pagination to handle large amounts of data; and includes general bug fixes.
 - **[SalesForce DataSync](../../External-Bug-Tracking-Integration/Using-Spira-with-Salesforce.com)** v1.1.3.0: this release fixes a bug that could cause repeated error messages in the system log
