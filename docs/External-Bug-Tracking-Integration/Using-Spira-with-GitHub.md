@@ -1,7 +1,7 @@
 # Using Spira with GitHub
 GitHub's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. 
 
-You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).
+You can use this integration to sync new incidents, new comments, statuses, pull requests, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
@@ -41,10 +41,11 @@ You need to fill out the following fields for the GitHub Data Sync plugin to wor
 - **Time Offset**: This should be set to 0, but if you find that changes are not being synced, try increasing the value to tell the plugin to offset timestamps
 - **Auto-Map Users**: Set to Yes to map users one-to-one by checking first & last names. Set to no if you would like to map users manually. Please note that duplicate names in the external system will be ignored.
 - **On-Premise URL**: For on-premise GitHub Enterprise installations only, please enter the name of your server (e.g. <http://myserver>), if left blank, the data synchronization will assume you are using the cloud URL for GitHub (<https://www.github.com>)
+- **Artifact Selection**: Enter the names of artifacts you wish to sync to and from GitHub. The options are issues, pullrequests, and milestones (Typed as shown here). By default, issues and milestones are synced. Milestones cannot be synced alone - they must be paired with issues and/or pull requests. 
 
 Click the "Save" button.
 
-NOTE: Leave any field called "(Not Used)" blank. 
+NOTE: Leave any field called "(Not Used)" blank.
 
 
 ## Configuring Project Mappings
@@ -75,3 +76,33 @@ Click "Save" and assuming everything was done correctly, the plug-in should work
 
 Congratulations, you have just integrated your Spira instance with GitHub's integrated issue tracker!
 
+## Syncing Pull Requests
+
+!!! danger "Set Up GitHub As A Source Code Provider"
+    If you do not [set up GitHub as a source code provider](/Version-Control-Integration/Integrating-with-Git/) before enabling this functionality, this functionality will not work.
+
+
+In order to sync pull requests, the GitHub repository that is being synced must be connected to the same project both as an issue tracker (As outlined in this guide) and as a source code provider. Pull requests are synced from GitHub into Spira only. 
+
+### Configuring Project Mappings & Project Template
+
+Syncing pull requests has additional requirements in terms of project mappings & project template configuration. 
+
+### Task Types
+
+In order for pull requests to be synced as pull requests, there must be a type of task with "Pull Request?" set to Yes in each relevant project template. If there are multiple, the type which is the nearest to the top of the list will be selected by the data sync. 
+
+![](img/Using_Spira_with_GitHub_216.png)
+
+### Task Status Mappings
+
+In task status mappings, there are 3 possible statuses from GitHub that need to be accounted for.
+The possible statuses are "open", "closed", and "merged". 
+"open" represents an open pull request in GitHub, "closed" represents a rejected pull request, and "merged" represents an accepted and merged pull request. 
+
+![](img/Using_Spira_with_GitHub_217.png)
+
+### General Pull Request Notes
+
+- Pull requests which use branches that do not exist in your Spira source code cache will not be synced into Spira. 
+- The "Owner" field in Spira is populated using the first user in the "Assignee" field on GitHub. 
