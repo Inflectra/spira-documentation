@@ -13,7 +13,7 @@
 Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q2 2023
-**Early in the quarter we will roll out a number of important performance improvements to streamline user experience. Later in the quarter we will deliver core features of "Scaled Agile" at the program level (SpiraPlan)**
+**We will deliver core features of "Scaled Agile" at the program level (SpiraPlan)**
 
 - Brand new hierarchical "Program Capabilities" that can be linked to product-level requirements and to "Program Milestones"
 - Brand new "Program Milestones" that can be linked to "Program Capabilities" and to product-level releases
