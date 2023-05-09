@@ -11,15 +11,29 @@ In addition, any issues logged directly into the external bug-tracker will get i
 There are three possible deployment options for the Spira data synchronization:
 
 1.  You have both Spira and the External Bug Tracker cloud-hosted
-
 2.  You have Spira installed on-premise (External Bug Tracker can be either)
-
 3.  You have Spira cloud-hosted, but the External Bug Tracker installed on-premise
 
 We shall provide the configuration steps for each option:
 
 
 ## Spira & External Tool Cloud Hosted
+
+!!! info "Using the Customer Area to Manage the Spira DataSync"
+
+    The "Spira DataSync" is a cloud based data synchronization tool that can be used to synchronize your cloud Spira to a number of cloud hosted external tools. Configuration is minimal and is managed from the **[Customer Area](https://www.inflectra.com/CustomerArea/)** of your Inflectra account.
+
+    The [Customer Area](https://www.inflectra.com/CustomerArea/) is your organization's dedicated portal on the Inflectra website for managing your account and subscriptions with us. It is used for:
+
+    - making purchases
+    - changing contact information
+    - changing subscriptions
+    - configuring addons like the "Spira DataSync", TaraVault, or Rapise floating licenses
+
+    Access to the [Customer Area](https://www.inflectra.com/CustomerArea/) is restricted to only a couple of people in each organization. This is to ensure that only select authorized people are able to manage and make payments on their account.
+
+    If you do not have access to your organization's customer area, and you wish to edit or manage the "Spira DataSync" you will need to contact the owner of the Inflectra account in your organization. They will be able to assist you in configuring any settings as required.
+
 
 When you sign up for Spira for a cloud-hosted trial, you can add on the Spira DataSync service to the trial for free. **NOTE**: the DataSync service is only free during the free trial period - there is a nominal charge for the service once you start your subscription.
 
@@ -35,7 +49,12 @@ Once your trial (or subscription) is provisioned, you will be able to configure 
 
 ![](img/Setting_up_Data_Synchronization_6.png)
 
-Enter a login and password that can connect to your Spira instance. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least **Incident create/modify/view** permissions and **Release create/modify/view** permissions in these projects.
+Enter a login and password that can connect to your Spira instance. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:
+
+- be a **product admin** 
+- have **Incident create/modify/view** permissions
+- have **Release create/modify/view** permissions
+- may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)
 
 ![](img/Setting_up_Data_Synchronization_7.png)
 
@@ -121,8 +140,12 @@ The polling interval allows you to specify how frequently the data-synchronizati
 
 The base URL to your instance Spira. It is typically of the form http://<server name\>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.
 
-A valid login name and password to your instance of Spira. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least **Incident create/modify/view** permissions and **Release create/modify/view**
-permissions in these projects.
+A valid login name and password to your instance of Spira. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:
+
+- be a **product admin** 
+- have **Incident create/modify/view** permissions
+- have **Release create/modify/view** permissions
+- may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)
 
 Once you have made these changes, please refer to the section in this document that covers the specific bug-tracking tool you will be integrating with.
 

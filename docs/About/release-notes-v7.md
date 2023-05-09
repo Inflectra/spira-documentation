@@ -1,5 +1,19 @@
 # Release Notes for Spira v7
 
+## Version 7.6 (May 023)
+
+!!! info "Summary"
+
+    This release includes a number of performance improvements and bug fixes to streamline user experience.
+
+??? bug "Bug fixes and enhancements"
+
+    - Fix sortable list pages bulk edit "fill with value" feature not working (introduced in 7.6) [IN:8038]
+    - Fix sortable list pages bulk edit not working if the left-most column is not the Name field (introduced in 7.6) [IN:8039]
+    - Improve performance when editing Test Case parameters by better managing when parameters are refreshed [IN:7996]
+    - Improve checking and error handling of full text indexing during upgrades in the installer [IN:8044]
+    
+
 ## Version 7.6 (April 2023)
 
 !!! info "Summary"
