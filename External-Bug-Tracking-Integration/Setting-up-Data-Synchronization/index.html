@@ -836,6 +836,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Products/" class="md-nav__link">
+        Products
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Releases/" class="md-nav__link">
         Releases
       </a>
@@ -4460,18 +4474,25 @@
 <p>In addition, any issues logged directly into the external bug-tracker will get imported into Spira as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.</p>
 <p>There are three possible deployment options for the Spira data synchronization:</p>
 <ol>
-<li>
-<p>You have both Spira and the External Bug Tracker cloud-hosted</p>
-</li>
-<li>
-<p>You have Spira installed on-premise (External Bug Tracker can be either)</p>
-</li>
-<li>
-<p>You have Spira cloud-hosted, but the External Bug Tracker installed on-premise</p>
-</li>
+<li>You have both Spira and the External Bug Tracker cloud-hosted</li>
+<li>You have Spira installed on-premise (External Bug Tracker can be either)</li>
+<li>You have Spira cloud-hosted, but the External Bug Tracker installed on-premise</li>
 </ol>
 <p>We shall provide the configuration steps for each option:</p>
 <h2 id="spira-external-tool-cloud-hosted">Spira &amp; External Tool Cloud Hosted<a class="headerlink" href="#spira-external-tool-cloud-hosted" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Using the Customer Area to Manage the Spira DataSync</p>
+<p>The "Spira DataSync" is a cloud based data synchronization tool that can be used to synchronize your cloud Spira to a number of cloud hosted external tools. Configuration is minimal and is managed from the <strong><a href="https://www.inflectra.com/CustomerArea/">Customer Area</a></strong> of your Inflectra account.</p>
+<p>The <a href="https://www.inflectra.com/CustomerArea/">Customer Area</a> is your organization's dedicated portal on the Inflectra website for managing your account and subscriptions with us. It is used for:</p>
+<ul>
+<li>making purchases</li>
+<li>changing contact information</li>
+<li>changing subscriptions</li>
+<li>configuring addons like the "Spira DataSync", TaraVault, or Rapise floating licenses</li>
+</ul>
+<p>Access to the <a href="https://www.inflectra.com/CustomerArea/">Customer Area</a> is restricted to only a couple of people in each organization. This is to ensure that only select authorized people are able to manage and make payments on their account.</p>
+<p>If you do not have access to your organization's customer area, and you wish to edit or manage the "Spira DataSync" you will need to contact the owner of the Inflectra account in your organization. They will be able to assist you in configuring any settings as required.</p>
+</div>
 <p>When you sign up for Spira for a cloud-hosted trial, you can add on the Spira DataSync service to the trial for free. <strong>NOTE</strong>: the DataSync service is only free during the free trial period - there is a nominal charge for the service once you start your subscription.</p>
 <p>Make sure to include the 'Spira DataSync' add-on with your trial. </p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_5.png" /></p>
@@ -4479,7 +4500,13 @@
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_5b.png" /></p>
 <p>Once your trial (or subscription) is provisioned, you will be able to configure the connection to Spira by going to your secure Customer Area on our website. Click on the 'Configure' button associated with the <strong>Spira-DataSync</strong> addon row:</p>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_6.png" /></p>
-<p>Enter a login and password that can connect to your Spira instance. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong> permissions in these projects.</p>
+<p>Enter a login and password that can connect to your Spira instance. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:</p>
+<ul>
+<li>be a <strong>product admin</strong> </li>
+<li>have <strong>Incident create/modify/view</strong> permissions</li>
+<li>have <strong>Release create/modify/view</strong> permissions</li>
+<li>may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)</li>
+</ul>
 <p><img alt="" src="../img/Setting_up_Data_Synchronization_7.png" /></p>
 <p>Click on the 'Test' button to verify the credentials, and once they validate, make sure the 'Active' flag is checked and then click 'Save'. You have now configured the synchronization.</p>
 <p>Now navigate to your Spira instance. Go to System Administration &gt; Integration &gt; Data Sychronization to see a list of the plugins currently configured (as in the example below):</p>
@@ -4541,8 +4568,13 @@
 <p>For each of these, check the following information:</p>
 <p>The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value around 2-5 minutes (i.e. 120,000 - 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead. When you are using a bidirectional synchronization plugin, a shorter value with avoid conflicting changes being made in the system systems.</p>
 <p>The base URL to your instance Spira. It is typically of the form http://&lt;server name>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.</p>
-<p>A valid login name and password to your instance of Spira. This user needs to be a member of the project(s) that will be synchronized with the external bug-tracker and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong>
-permissions in these projects.</p>
+<p>A valid login name and password to your instance of Spira. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:</p>
+<ul>
+<li>be a <strong>product admin</strong> </li>
+<li>have <strong>Incident create/modify/view</strong> permissions</li>
+<li>have <strong>Release create/modify/view</strong> permissions</li>
+<li>may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)</li>
+</ul>
 <p>Once you have made these changes, please refer to the section in this document that covers the specific bug-tracking tool you will be integrating with.</p>
 <p>Note: If you are using the MS-TFS plugin on premise, you will also need to switch over your IIS application pool running Spira to "Enable 32-bit Applications. You will also need to download the recompiled 32-bit version of the DataSyncService.exe application from our support knowledge base - <a href="https://www.inflectra.com/Support/KnowledgeBase/KB14.aspx">KB14 - Using SpiraTeam Data Synchronization with TFS on a 64-bit system</a>.</p>
 <h3 id="starting-the-data-synchronization-service">Starting the Data-Synchronization Service<a class="headerlink" href="#starting-the-data-synchronization-service" title="Permanent link">&para;</a></h3>
