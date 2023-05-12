@@ -237,7 +237,7 @@ On this screen you can edit the template's:
 - Description
 - Program
 - Active status
-- Status Bulk Edit status: this defaults to enabled / yes. When this option is enabled, users with "Bulk Edit" permissions can make bulk changes (on list pages and planning boards) to the status of artifacts they have bulk edit permissions for, outside of workflow controls. If you do not want any user of any product in the template to be able to change the status except on the details page of that artifact (where workflows are enforced) set this to disabled / no.
+- Status Bulk Edit: this defaults to enabled / yes. When this option is enabled, users with "Bulk Edit" permissions can make bulk changes (on list pages and planning boards) to the status of artifacts they have bulk edit permissions for, outside of workflow controls. If you do not want any user of any product in the template to be able to change the status except on the details page of that artifact (where workflows are enforced) set this to disabled / no.
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 

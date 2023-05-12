@@ -194,6 +194,7 @@ For each pending user request you can choose to either Approve or Deny the reque
 ## View / Edit Product Roles
 Read an [overview](../System-Administration/#how-user-permissions-are-set) of how permissions work across the application and all its workspaces.
 
+### Default Product Roles
 There are six (6) default product roles that a user may be assigned to a product with:
 
 - **Product Owner** -- the same rights as a Manager, but in addition can access the product administration tools
@@ -206,6 +207,7 @@ There are six (6) default product roles that a user may be assigned to a product
 !!! info "The Special case of user administrator"
     The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
 
+### Role wide customizations
 You can make changes to the permissions associated with each of these default roles, and also create as many additional roles as you like. To customize the roles in your installation of SpiraPlan®, click on the "View / Edit Roles" link in the Administration menu:
 
 ![](img/System_Users_53.png)
@@ -218,30 +220,35 @@ Clicking on the edit button will take you to the following screen:
 
 On the top of the screen, you can edit the name, description, product admin, limited view and active flags:
 
-**Product Admin** -- this flag denotes whether this role has administration-level access to the product (for example the product owner role has this set by default)
+- **Product Admin**: this flag denotes whether this role has administration-level access to the product (for example the product owner role has this set by default)
+- **Template Admin**: this flag denotes whether this role has administration-level access to the template that controls this product. You can be a product admin, without also being a template admin. However, you cannot be a template admin, without also being a product admin.
+- **Limited View**: this flag denotes that the role has a restricted view of the product, with the user only allowed to see the artifacts that they have either *created* or been *assigned*
+- **Active**: This flag denotes if the role is active in the system
 
-**Template Admin** -- this flag denotes whether this role has administration-level access to the template that controls this product. You can be a product admin, without also being a template admin. However, you cannot be a template admin, without also being a product admin.
-
-**Limited View** -- this flag denotes that the role has a restricted view of the product, with the user only allowed to see the artifacts that they have either *created* or been *assigned*
-
-**Active** -- This flag denotes if the role is active in the system
-
-Underneath you can specify the various artifact-specific permissions for the role:
+### Artifact specific permissions
+Underneath the role wide customizations, you can specify the various artifact-specific permissions for the role:
 
 ![](img/System_Users_55.png)
 
-These permission options allow you to specify if a user can **create**,
-**modify**, **delete** or **view** each of the artifacts in the system. If a user does not have view permissions for the artifact, then the corresponding tab in the system will also be disabled. There are three kinds of Modify permission available:
+These permission options allow you to specify if a user can view, create, delete, or modify (in three different ways) each type of artifact in the product:
 
-**Modify All** -- this option specifies that the user can modify all the artifacts of this type in the product (e.g. the user can edit all test cases)
+- **View**: lets a user view all items of that artifact. If the product role does not let a user view an artifact, that artifact will not appear in their navigation menu
+- **Create**: lets user create a new item of that artifact
+- **Delete**: lets a user delete any artifact item in the product
+- **Modify Owned**: lets a user modify only those items in an artifact that they created or have been assigned (e.g. the user can edit only the requirements they created or have been assigned). This is the most restrictive type of modify permission and can only be carried out on the artifact details page, subject to any workflow
+- **Modify All**: lets a user modify any items for an artifacts on the artifact details page, subject to any workflow (e.g. the user can edit all test cases)
+- **Bulk Edit**: lets users modify items outside of the scope of any workflow in a number of places. This means users can bypass workflow restrictions, allowing them to make status changes (including without electronic signatures) and not enter fields required by workflows. This permission should be applied carefully. Note that you can deny status changes in this with the "Status bulk edit" flag on the [edit template page](../System-Workspaces/#viewedit-templates). Bulk edit works in the following places:
 
-**Modify Owned** -- this option specifies that the user can modify only the artifacts in the product that were either created or assigned to this user (e.g. the user can edit only the requirements they created or have been assigned)
-
-**Bulk Edit** -- this option means that the user can modify items on the artifact list pages and on the various planning boards. This means the user can bypass the workflow restrictions on changing status and the need to enter required fields and electronic signatures. This should be disabled in a system that is being used for a regulated product that requires electronic signatures.
+    - editing artifacts on artifact list pages
+    - editing, creating, deleting folders on artifact list pages of those artifacts with folders
+    - moving requirements and releases around the hierarchy on their hierarchical list pages
+    - moving cards around on all planning and kanban boards
+    - edit cards on planning and kanban boards (this editing *does* enforce workflow required fields and does *not* allow status transitions) 
 
 *Note: The permission needed to execute a test case is the "Create + Test Run" permission since that initiates the creation of a new test run.*
 
-In addition, there are some artifact-wide permissions that can be specified for each role:
+### Cross artifact permissions
+In addition, there are some permissions that can be specified for each role, that apply across all relevant artifacts:
 
 ![](img/System_Users_56.png)
 
