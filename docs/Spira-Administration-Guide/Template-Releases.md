@@ -78,11 +78,6 @@ For example, when a release is in the Planned status, you might make the owner f
 Set the fields as desired and click "Save".
 
 
-## Example Workflow Below is a diagram that shows an example workflow (the one used by the sample product "Library Information System") for releases.
-
-![example workflow diagram](img/Template_Releases_WorkflowDiagram.png)
-
-
 ## Example Workflow
 Below is a diagram that shows an example workflow (the one used by the sample product "Library Information System") for releases.
 
