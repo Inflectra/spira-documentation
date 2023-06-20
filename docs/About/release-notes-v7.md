@@ -1,6 +1,71 @@
 # Release Notes for Spira v7
 
-## Version 7.6 (May 023)
+## Version 7.7 (June 2023)
+
+!!! info "Summary"
+
+    - SpiraPlan (only) gains powerful new program features to help you manage delivery of features and releases across multiple products at once. Brand new program level artifacts let you scale your agile practices beyond products like never before.
+    - Capabilities let you define cross-product, program-level features. Customize them with types, statuses, priorities, and fully customizable fields. Link capabilities to product requirements to track their progress at a higher level.
+    - Program Milestones help you manage deadlines and delivery of product releases. Think of them as sprints for programs. Customize their types, statuses, and more. Tie releases to a milestone to easily see if things are at risk of delay.
+    - By linking Capabilities to Program Milestones you can manage multiple capabilities and easily track if relevant features are ready for delivery. Is your Q3 target for a complex interconnected program on time? Are its features at risk? Scaled agile in SpiraPlan surfaces these insights with ease.
+
+??? success "New Features"
+
+    - As a developer I can use **SOAP and REST APIs** to manage system level custom properties and lists [RQ:4618]
+      
+    * **As a program manager, I can plan out the necessary work of the program with **[capabilities](../../Spira-User-Manual/Program-Capabilities)**, linked to product requirements, and release management at the program level, so I can ensure the program objectives will be delivered**
+
+        - As a system admin, I can create, edit, and manage program **capability [types](../../Spira-Administration-Guide/Program-Capabilities/#types)**, so that managers can use this property inside their programs [RQ:4488]
+        - As a system admin, I can create, edit, and manage program **capability [priorities](../../Spira-Administration-Guide/Program-Capabilities/#priorities)**, so that managers can use this property inside their programs [RQ:4489]
+        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../../Spira-Administration-Guide/System-Custom-Properties)** for program capabilities, so that managers can use these properties inside their programs [RQ:4427]
+        - As a system admin, I can create, edit, and manage program **capability [statuses](../../Spira-Administration-Guide/Program-Capabilities/#statuses)**, so that managers can use this property inside their programs [RQ:4423]
+        - As a program member, I can view, create, and edit program capabilities on a filterable **[list page](../../Spira-User-Manual/Program-Capabilities/#capability-list)**, so I can plan out program level work needs [RQ:4424]
+        - As a program member, I can organize the program **[capability hierarchy](../../Spira-User-Manual/Program-Capabilities/#capability-list)** on the list page (with one level of children only), so that the requirement structure simple to use but adds meaning [RQ:4425]
+        - As a program member, I can view, create, and edit program capabilities on a **[details page](../../Spira-User-Manual/Program-Capabilities/#capability-details)**, so I can plan out program level work needs [RQ:4504]
+        - As a program member, I can add or remove **[associations](../../Spira-User-Manual/Program-Capabilities/#requirement-associations)** between program requirements and this program's product requirements, so I can correctly organize my products' requirements [RQ:4426]
+        - As a program member, I can see the capability **[percentage complete](../../Spira-User-Manual/Program-Capabilities/#percentage-complete)** based off its linked requirements, so I can track progress [RQ:4508]
+
+    * **As a program manager, I can monitor the progress of work in the program so I can analyze current performance and ensure the program is compliant with any reporting or audit standards**
+
+        - As a system admin, I can see changes made to all capabilities **standard fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4430]
+        - As a system admin, I can see changes made to all capability **custom fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4431]
+        - As a developer, I can use **SOAP or REST APIs** to manage all relevant information about program capabilities, so that I can automate and extend how my org uses them [RQ:4501]
+        - As a report admin, I can create **[custom reports](../../Reporting/Custom-Report-Tables/#capabilities)** of program capabilities, to provide my org with any reports required in this area [RQ:4435]
+
+    * **As a program manager, I can plan out the program delivery timetable, and content, so I can ensure we meet our program objectives on time**
+
+        - As a system admin, I can create, edit, and manage **program milestone [statuses](../../Spira-Administration-Guide/Program-Milestones/#statuses)**, so that managers can use them inside their programs - Copy [RQ:4500]
+        - As a system admin, I can create, edit, and manage **program milestone [types](../../Spira-Administration-Guide/Program-Milestones/#types)**, so that managers can use them inside their programs [RQ:4442]
+        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../../Spira-Administration-Guide/System-Custom-Properties)** for program milestones, so that managers can use these properties inside their programs [RQ:4443]
+        - As a program member, I can view program milestones on a filterable **[list page](../../Spira-User-Manual/Program-Milestones/#milestone-list)**, so I can plan out program level work needs [RQ:4437]
+        - As a program member, I can **filter and sort** the program milestones [list page](../../Spira-User-Manual/Program-Milestones/#milestone-list) by any available field, so that I can organize my releases into the view I need at that moment [RQ:4438]
+        - As a program member, I can view and edit program milestones on a **[details page](../../Spira-User-Manual/Program-Milestones/#milestone-details)**, so I can plan out program level work needs [RQ:4507]
+        - As a program member, I can add or remove **[associations](../../Spira-User-Manual/Program-Milestones/#release-associations)** between program releases and this program's product releases, so I can plan out the scope of the milestone [RQ:4439]
+        - As a program member, I can view program milestones' **release [start and end dates](../../Spira-User-Manual/Program-Milestones/#start-and-end-dates)**, to better manage product level timetables [RQ:4509]
+        - As a program member, I can view **capability [associations](../../Spira-User-Manual/Program-Milestones/#capability-associations)** to each program milestone, to give me flexibility in seeing how the program data is organized [RQ:4440]
+        - As a program member, I can see the total **[progress](../../Spira-User-Manual/Program-Milestones/#progress) of capabilities** for each milestone, so that I can track and manage the program milestone performance [RQ:4441]
+
+    * **As a program manager, I want to monitor the progress of program releases so I can analyze trends and ensure the program is compliant with any reporting or audit standards**
+
+        - As a system admin, I can see changes made to all program milestone **standard fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4447]
+        - As a system admin, I can see changes made to all program milestone **custom fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4446]
+        - As a developer, I can use **SOAP or REST APIs** to manage all relevant information about program milestones, so that I can automate and extend how my org uses them [RQ:4502]
+        - As a report admin, I can create **[custom reports](../../Reporting/Custom-Report-Tables/#program-milestones)** of program milestones, to provide my org with any reports required in this area [RQ:4448]
+    
+    - As a new user, I can see **relevant and meaningful sample data** for program scaled agile, so I can easily understand how the tools works [RQ:4506]
+
+
+??? bug "Bug fixes and enhancements"
+
+    - Add Eggplant as an active Test Automation Engine option in sample data [IN:7934]
+    - Fix the installer so that SQL login and DB user credentials are correctly stored during advanced operations [IN:8123]
+    - Fix the installer so the correct credentials are always used during upgrades [IN:8126]
+    - Fix the installer so the correct connection information is stored in the settings and the log is cleaned up accordingly [IN:8127]
+    - Fix the installer so the correct connection information is used when performing backups [IN:8128]
+    - When creating a new user with the v7 API set the report admin flag if passed in [IN:8025]
+
+
+## Version 7.6.1 (May 2023)
 
 !!! info "Summary"
 

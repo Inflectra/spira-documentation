@@ -120,7 +120,7 @@
 | LAST_CONTACT_DATE  |
 
 ## Baselines
-See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for some examples of using this custom report table.
+See | this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for some examples of using this custom report table |
 
 | R_Baselines             |
 | ----------------------- |
@@ -155,6 +155,81 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 | PROJECT_ID      |
 | NAME            |
 | DESCRIPTION     |
+
+## Capabilities
+| R_ProjectGroup_Capabilities |
+| --------------------------- |
+| CAPABILITY_ID               |
+| PROJECT_GROUP_ID            |
+| MILESTONE_ID                |
+| STATUS_ID                   |
+| TYPE_ID                     |
+| PRIORITY_ID                 |
+| NAME                        |
+| DESCRIPTION                 |
+| IS_DELETED                  |
+| PERCENT_COMPLETE            |
+| PROJECT_REQUIREMENT_COUNT   |
+| INDENT_LEVEL                |
+| CONCURRENCY_GUID            |
+| CREATOR_ID                  |
+| OWNER_ID                    |
+| CREATION_DATE               |
+| LAST_UPDATED_DATE           |
+| IS_SUMMARY                  |
+| STATUS_NAME                 |
+| STATUS_IS_OPEN              |
+| TYPE_NAME                   |
+| PRIORITY_NAME               |
+| PRIORITY_COLOR              |
+| PRIORITY_SCORE              |
+| MILESTONE_NAME              |
+| CREATOR_NAME                |
+| OWNER_NAME                  |
+| PROJECT_GROUP_NAME          |
+| CUST_01...                  |
+| CUST_30                     |
+
+## Capability Priorities
+| R_ProjectGroup_Capability_Priorities |
+| ------------------------------------ |
+| PRIORITY_ID                          |
+| NAME                                 |
+| COLOR                                |
+| IS_ACTIVE                            |
+| IS_DELETED                           |
+| SCORE                                |
+
+## Capability Requirement Associations
+| R_ProjectGroup_Capability_Project_Requirements |
+| ---------------------------------------------- |
+| CAPABILITY_ID                                  |
+| REQUIREMENT_ID                                 |
+| ARTIFACT_LINK_TYPE_ID                          |
+| CAPABILITY_NAME                                |
+| REQUIREMENT_NAME                               |
+| ARTIFACT_LINK_TYPE_NAME                        |
+
+## Capability Statuses
+| R_ProjectGroup_Capability_Statuses |
+| ---------------------------------- |
+| STATUS_ID                          |
+| NAME                               |
+| POSITION                           |
+| IS_ACTIVE                          |
+| IS_DELETED                         |
+| IS_DEFAULT                         |
+| IS_OPEN                            |
+| ON_BOARD                           |
+
+## Capability Types
+| R_ProjectGroup_Capability_Types |
+| ------------------------------- |
+| TYPE_ID                         |
+| NAME                            |
+| IS_ACTIVE                       |
+| IS_DELETED                      |
+| IS_DEFAULT                      |
 
 ## Comments
 | R_Comments         |
@@ -456,6 +531,66 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 | END_DATE          |
 | PERCENT_COMPLETE  |
 | REQUIREMENT_COUNT |
+
+## Program Milestones
+| R_ProjectGroup_Milestones       |
+| ------------------------------- |
+| PROJECT_GROUP_MILESTONE_ID      |
+| PROJECT_GROUP_ID                |
+| TYPE_ID                         |
+| STATUS_ID                       |
+| NAME                            |
+| DESCRIPTION                     |
+| IS_DELETED                      |
+| START_DATE                      |
+| END_DATE                        |
+| PERCENT_COMPLETE                |
+| CHILDREN_START_DATE             |
+| CHILDREN_END_DATE               |
+| PROJECT_RELEASE_COUNT           |
+| PROJECT_GROUP_REQUIREMENT_COUNT |
+| CONCURRENCY_GUID                |
+| CREATOR_ID                      |
+| OWNER_ID                        |
+| CREATION_DATE                   |
+| LAST_UPDATED_DATE               |
+| STATUS_NAME                     |
+| STATUS_IS_OPEN                  |
+| TYPE_NAME                       |
+| CREATOR_NAME                    |
+| OWNER_NAME                      |
+| PROJECT_GROUP_NAME              |
+| CUST_01...                      |
+| CUST_30                         |
+
+## Program Milestone Releases
+| R_ProjectGroup_Milestone_Project_Releases |
+| ----------------------------------------- |
+| PROJECT_GROUP_MILESTONE_ID                |
+| RELEASE_ID                                |
+| ARTIFACT_LINK_TYPE_ID                     |
+| PROJECT_GROUP_MILESTONE_NAME              |
+| RELEASE_NAME                              |
+| ARTIFACT_LINK_TYPE_NAME                   |
+
+## Program Milestone Statuses
+| R_ProjectGroup_Milestone_Statuses |
+| --------------------------------- |
+| STATUS_ID                         |
+| NAME                              |
+| IS_ACTIVE                         |
+| IS_DELETED                        |
+| IS_DEFAULT                        |
+| IS_OPEN                           |
+
+## Program Milestone Types
+| R_ProjectGroup_Milestone_Types |
+| ------------------------------ |
+| TYPE_ID                        |
+| NAME                           |
+| IS_ACTIVE                      |
+| IS_DELETED                     |
+| IS_DEFAULT                     |
 
 ## Project Artifacts Sharing 
 Retrieves data about cross product associations

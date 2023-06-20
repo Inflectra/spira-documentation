@@ -114,6 +114,8 @@ nav:
   - Programs: 
     - Homepage: Spira-User-Manual\Program-Homepage.md
     - Products: Spira-User-Manual\Program-Products.md
+    - Capabilities: Spira-User-Manual\Program-Capabilities.md
+    - Program Milestones: Spira-User-Manual\Program-Milestones.md
     - Releases: Spira-User-Manual\Program-Releases.md
     - Planning Board: Spira-User-Manual\Program-Planning-Board.md
     - Incidents: Spira-User-Manual\Program-Incidents.md
@@ -166,6 +168,9 @@ nav:
     - Risks: Spira-Administration-Guide\Template-Risks.md
     - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
     - Notifications: Spira-Administration-Guide\Template-Notifications.md
+  - Program:
+    - Capabilities: Spira-Administration-Guide\Program-Capabilities.md
+    - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
   - FMEA: SpiraApps\FMEA.md
