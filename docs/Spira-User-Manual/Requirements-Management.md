@@ -116,7 +116,7 @@ Click the `Insert` button to add requirements. This button let's you add require
 
 - to insert a requirement *above* a requirement, select that requirement (click its checkbox) then click Insert
 - to insert a requirement below an existing item, use the Insert > Child Requirement option. 
-- to insdert a requirement at the end of the list, click Insert with no reqirement selected. Note that if the full list of requirements are paginated, the new requirement will be at the bottom of the last page.
+- to insdert a requirement at the end of the list, click Insert with nothing selected. Note that if the full list of requirements are paginated, the new requirement will be at the bottom of the last page.
 
 Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.
 

@@ -8,6 +8,7 @@
     - Capabilities let you define cross-product, program-level features. Customize them with types, statuses, priorities, and fully customizable fields. Link capabilities to product requirements to track their progress at a higher level.
     - Program Milestones help you manage deadlines and delivery of product releases. Think of them as sprints for programs. Customize their types, statuses, and more. Tie releases to a milestone to easily see if things are at risk of delay.
     - By linking Capabilities to Program Milestones you can manage multiple capabilities and easily track if relevant features are ready for delivery. Is your Q3 target for a complex interconnected program on time? Are its features at risk? Scaled agile in SpiraPlan surfaces these insights with ease.
+    - All these new features have matching new API calls to allow you to extend how you use program artifacts even further.
 
 ??? success "New Features"
 

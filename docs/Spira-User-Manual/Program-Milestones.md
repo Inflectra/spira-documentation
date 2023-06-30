@@ -1,5 +1,7 @@
 # Program Milestones
 
+!!! info "These features are only available in SpiraPlan"
+
 ## Progress
 
 ## Start and End Dates
