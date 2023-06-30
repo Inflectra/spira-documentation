@@ -2,19 +2,19 @@
 
 !!! info "These features are only available in SpiraPlan"
 
-SpiraPlan allows you to customize the product workspace by adding up to 30 system-level custom properties in addition to the built-in fields. Product custom properties are shared across every product in the system. The properties are visible in the following places:
+Spira allows you to customize different workspaces or program-level artifacts. For each type (e.g. products, program capabilities, or program milestones) you can create up to 30 system custom properties. System custom properties are shared across every relevant workspace or program-level artifact in the system. For example, all products will share the same set of available custom properties; and all capabilities will share a different set of available custom properties. These system custom properties are visible in the following places:
 
-- **Product list page** available when viewing a program: you can choose to show or hide them the same as standard fields
-- **Product details page**: each custom property is shown in the section on the page with other fields of that type - all rich text fields are shown together, all date fields together etc. In each section, custom properties are shown after standard fields. By default, custom properties are ordered based off of their number (the row number they are at on the custom property admin page), but you can change this by setting the properties' display positions (see below). Custom properties with position numbers are shown after those that do not. All custom properties with position numbers are shown in the order of their position numbers.
+- **Relevant list pages**: you can choose to show or hide them the same as standard fields (for example on the program product list page)
+- **Relevant details pages**: each custom property is shown in the section on the page with other fields of that type - all rich text fields are shown together, all date fields together etc (for example on the details page for a capability). In each section, custom properties are shown after standard fields. By default, custom properties are ordered based off of their number (the row number they are at on the custom property admin page), but you can change this by setting the properties' display positions (see below). Custom properties with position numbers are shown after those that do not. All custom properties with position numbers are shown in the order of their position numbers.
 - **Custom Reports**
 
-You can create a variety of different types of custom properties. You can create as many custom lists as you need with each having as many values as you need. Custom lists are shared at the system level and available for any product custom property to use. This page describes how to setup different custom lists and custom properties for products.
+You can create a variety of different types of custom properties. You can create as many custom lists as you need with each having as many values as you need. Custom lists are shared at the system level and available for any custom property to use. This page describes how to setup different custom lists and custom properties for relevant workspaces and artifacts.
 
 
 ## Edit Custom Properties
-To access the product custom properties definitions, you must be a system administrator. Open the system admin menu and click the "Product Defintions" link from the "Custom Properties" sub-section. This opens the product custom properties page where you can quickly see the name, field number, type, and actions (edit and delete) for each custom property.
+To access the custom properties definitions for a specific workspace or artifact, you must be a system administrator. Open the system admin menu and click the relevant link, either in the "Custom Properties" or relevant artifact sub-section of the menu. This opens the custom properties page for that workspace or artifact where you can quickly see the name, field number, type, and actions (edit and delete) for each custom property.
 
-In the example below we see 7 custom properties defined. The custom properties page has rows for each available custom property.
+In the example below we see 7 custom properties defined for products. The custom properties page has rows for each available custom property.
 
 ![product custom property page](img/System_Custom_Properties_01.png)
 
@@ -57,11 +57,11 @@ Each custom property can have optional settings applied to it to further control
 When finished, click the `Save` button.
 
 !!! danger "Renaming or Removing Custom Properties"
-    When changing a custom property's type or removing a custom property, the data is not actually removed from the product. Therefore, if you change a custom property from a date type to a text custom property, the field may display the old date value until it is changed by the user.
+    When changing a custom property's type or removing a custom property, the data is not actually removed from the workspace or artifact. Therefore, if you change a custom property from a date type to a text custom property, the field may display the old date value until it is changed by the user.
 
 
 ## Edit Custom Lists
-If you are planning on having any list based custom properties at the system level, you need to create and populate the system custom lists that the user will be able to select from. These lists are stored separately from the individual product custom property definitions so that you can have one set of values (e.g. list of operating systems under test) be reused by multiple custom properties.
+If you are planning on having any list-based custom properties at the system level, you need to create and populate the system custom lists that the user will be able to select from. These lists are stored separately from the individual custom property definitions so that you can have one set of values (e.g. list of operating systems under test) be reused by multiple custom properties.
 
 The following screen is displayed when you choose the "Custom Lists" link from the Administration menu:
 
