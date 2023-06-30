@@ -30,7 +30,7 @@ The popup dialog gives you the following options:
 - or create a reset copy of the product
 - and optionally clone the template for whichever of the above options you choose 
 
-Whichver copy / clone option you choose, product settings (planning options and testing settigns), components and product membership will all be copied over to the new product.
+Whichever copy / clone option you choose, product settings (planning options and testing settings), components and product membership will all be copied over to the new product.
 
 **Full clone of the product**: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin [Data Tools page](../Product-General-Settings/#product-data-tools), and after this coverage and traceability should look identical between the original and new product.
 
@@ -157,7 +157,7 @@ The two program roles are "Executive" and "Program Owner":
 
 **Executive** -- This role allows the user to see this [program's homepage](../../Spira-User-Manual/Program-Homepage), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program.
 
-**Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in additional allows the user to make changes to the Program itself in the Administration section.
+**Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
 
 To change the role of an existing program member, just change the role in the drop-down list and click \[Save\]. To remove a member from the program, just select the appropriate checkboxes and click \[Delete\]. Finally, to add a new user to the program, click on the \[Add\] button:
 
@@ -247,12 +247,12 @@ SpiraPlan ships with four different templates. Together these will cover most of
 - **Default**: This basic default template matches the one the system automatically generates when you create a completely new template. It is a good basis for customizing your template if no other template fit your needs
 - **Library Information System (Sample)**: This template is designed to work with the sample product Library Information System. The template showcases a number of different parts of the system, through that product. It is not designed to be used for real life products.
 - **Regulated Industries**: This template is designed specifically for products that are developed in a regulated environment. For example life sciences. The workflows have been configured to help you meet requirements in your work, such as those arising from FDA 21 CFR Part 11. Workflows include the use of electronic signatures for key stages of sign-off; limit who can transition an artifact between statuses, and manages which fields are disabled or required at each workflow step.
-- **Flexible**: This template is designed to alllow users to be as unconstrained from workflow requirements as possible. All relevant fields are available and editable (and not required) at all times. Active statuses are streamlined. This template should be used only for times when process controls are not required or are very lightweight.
+- **Flexible**: This template is designed to allow users to be as unconstrained from workflow requirements as possible. All relevant fields are available and editable (and not required) at all times. Active statuses are streamlined. This template should be used only for times when process controls are not required or are very lightweight.
 
 
 ## Manage Sample Data
 !!! info 
-    This page is accessible under the Workspace subsection of the sytem admin menu. It is visible when you first get a new application. But as soon as the application gets updated to a new version, the page is no longer accessible and you will not see the entry in the admin menu.
+    This page is accessible under the Workspace subsection of the system admin menu. It is visible when you first get a new application. But as soon as the application gets updated to a new version, the page is no longer accessible and you will not see the entry in the admin menu.
 
     ![manage sample data admin menu](img/System_ManageSampleDataMenu.png)
 
@@ -262,13 +262,13 @@ The application includes different types of sample data, some about specific ind
 
 When you load this page the sample data sets currently active will have the checkbox next to them checked. By default the "Basic Samples" are the only ones enabled. To change which sample data sets are active, check the relevant checkboxes and click save.
 
-Please note that for users to be able to see these samples they can either login with a user who is already a member of the data or they can be added as a member by a system admin. The users with username "adminstrator" and "fredbloggs" have access to all of the sample data by default.
+Please note that for users to be able to see these samples they can either login with a user who is already a member of the data or they can be added as a member by a system admin. The users with username "administrator" and "fredbloggs" have access to all of the sample data by default.
 
 ### Delete Sample Data
 If you click the "Delete" button, a popup will show a warning. If you decide to proceed the system will attempt to delete all sample data, including users, products, artifact information, programs, and portfolios. This method will not delete:
 
 - the default program
-- the root administrator (with username "adminstrator" and an ID of "1")
+- the root administrator (with username "administrator" and an ID of "1")
 - any sample user, product, program, or portfolio whose name has been changed 
 - any sample user who has been used to create, comment or has been assigned any artifacts in non-sample data products
 
@@ -278,5 +278,5 @@ If you click the "Delete" button, a popup will show a warning. If you decide to 
     - uncheck all the sample data sets and save the page
     - mark each user as inactive
     
-    These inactive items will still be visible on the relevant administration pages, but noone will see them in the main application. 
+    These inactive items will still be visible on the relevant administration pages, but no one will see them in the main application. 
 
