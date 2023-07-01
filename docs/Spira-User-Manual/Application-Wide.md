@@ -355,7 +355,7 @@ You can add a comment that explains the rationale for the association and choose
     | **Tasks**                                        | Tasks, Incidents                                                                                                |
     | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
     | **Program Capabilities** (SpiraPlan only)        | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called requirements, comments and association type not supported)                          |
+    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                          |
 
 
 ### Rich Text Editor

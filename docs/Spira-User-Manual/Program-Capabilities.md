@@ -2,9 +2,9 @@
 
 !!! info "These features are only available in SpiraPlan"
 
-Capabilities and [Program Milestones](../Spira-User-Manual/Program-Milestones) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Capabilities let you define cross-product, program-level features (requirements). You can customize capabilities with system-wide [types](../../Spira-Administration-Guide/Program-Capabilities/#types), [statuses](../../Spira-Administration-Guide/Program-Capabilities/#statuses), [priorities](../../Spira-Administration-Guide/Program-Capabilities/#priorities), and fully [customizable fields](../../Spira-Administration-Guide/System-Custom-Properties). You can link capabilities to product requirements to track their progress at a higher level.
+Capabilities and [Program Milestones](../Program-Milestones) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Capabilities let you define cross-product, program-level features (requirements). You can customize capabilities with system-wide [types](../../Spira-Administration-Guide/Program-Capabilities/#types), [statuses](../../Spira-Administration-Guide/Program-Capabilities/#statuses), [priorities](../../Spira-Administration-Guide/Program-Capabilities/#priorities), and fully [customizable fields](../../Spira-Administration-Guide/System-Custom-Properties). You can link capabilities to product requirements to track their progress at a higher level, and tag them with a program milestone to manage their delivery timetable.
 
-!!! info "Use cases for capabilities"
+!!! question "Use cases for capabilities"
     You can think of capabilities as program-level requirements. With deep customizations, you can use them in a variety of different ways. Here are a few to help guide you using them.
 
     - You have two **separate but similar products** - one for an iOS app, the other for an Android app. Create a capability for a common feature (e.g. a new user interaction), and link the relevant requirements to that capability. You can now easily see how those requirements are doing. This lets you know when the higher level capability is ready so you can release the feature to both platforms at the same time. In this way, you can track progress of similar or complimentary features delivered across multiple products.
@@ -40,7 +40,7 @@ You can carry out a number of useful operations with the toolbar:
 - **Indent**: indents the selected capabilities under the root capability above them. You can only have one level of indents - you will not be able to indent a capability under one that is already a child
 - **Outdent**: outdents the selected child capabilities back to the root level
 - **Refresh**: this button will reload the capabilities list (not the entire page)
-- **Filter**: read about [how to create and manage filters](Application-Wide.md#filtering) - note that capabilities does not support saving or sharing filters
+- **Filter**: read about [how to create and manage filters](Application-Wide.md#filtering) - note that capabilities do not support saving or sharing filters
 - **Edit**: this will switch any selected capabilities into Edit mode. You can achieve the same thing by clicking the "Edit" button at the top of the list itself. You can switch on edit mode for capabilities one at a time by clicking the "Edit" button for each specific row or by double clicking one of the cells in a row. When in edit mode, the row will show a "Save" button to commit the changes, and "Cancel" to discard them. The edit menu also has a dropdown of other options
 
     - **Copy Items**: to copy the selected capability/capabilities to the clipboard
@@ -49,7 +49,7 @@ You can carry out a number of useful operations with the toolbar:
 
 - **Show / Hide Columns**: By default the following columns are shown: ID, name, progress, type, status, and owner. The columns dropdown lets you change the columns shown (for standard and custom properties). Toggle a column's visibility by clicking on it from the dropdown. The shown columns is saved for each user and for each program.
 
-Using the cut and paste buttons described above, you can move capabilities around the hierarchy. Alternatively, you can select the capabilities and drag and drop them into their new position
+Using the cut and paste buttons described above, you can move capabilities around the hierarchy. Alternatively, you can select the capabilities and drag and drop them into their new position.
 
 ## Capability Details
 When you click on a capability it will open its capability details page:
@@ -87,7 +87,7 @@ The navigation pane shows a list of capabilities. This list is useful as a navig
 - **Delete**: deletes the current capability. If it is a parent, its child capabilities are also deleted
 
 ### Info bar
-The info bar shows the following information for the capability: name, ID, icon (different for parent and children), type, status, and [progress](#progress) mini chart
+The info bar shows the following information for the capability: name, icon (different for parent and children), ID, type, status, and [progress](#progress) mini chart
 
 ### Overview
 The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. Each section displays fields of a similar type. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
@@ -97,6 +97,6 @@ The bottom most section contains the long, formatted description, followed by an
 ### Requirement Associations
 You can associate requirements from any product inside the current program to a capability from this tab. Any requirements linked to the capability feed into the [progress](#progress) calculation of the capability. The associated requirements show the following information: name, status, product name, owner, and ID. 
 
-![Capability details page](img/program-capabilities-03.png)
+![Capability requirement associations tab](img/program-capabilities-03.png)
 
 Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)

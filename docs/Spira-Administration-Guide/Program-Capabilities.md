@@ -18,6 +18,7 @@ To edit an existing status: change the name, open check-box, set a default statu
 - The default radio button allows you to specify which type should be the default for newly created items 
 - You must have at least one active status, and you cannot set an inactive status as the default.
 
+
 ## Types
 The following screen is displayed when you choose the "Types" link from the Capabilities section of the system administration menu:
 
@@ -31,6 +32,7 @@ To edit an existing type: change the name, set a default type, and/or change the
 - To add a new type, click the "Add" button and a new row will be added to the list which you can now edit
 - The default radio button allows you to specify which type should be the default for newly created items 
 - You must have at least one active type, and you cannot set an inactive type as the default
+
 
 ## Priorities
 The following screen is displayed when you choose the "Priority" link from the Capabilities section of the system administration menu:

@@ -78,6 +78,8 @@ extra:
   analytics: 
     provider: custom 
     property: see the custom.html partial 
+  version:
+    provider: mike
 
 
 # NAVIGATION MENU
