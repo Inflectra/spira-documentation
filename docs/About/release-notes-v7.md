@@ -24,7 +24,7 @@
         - As a program member, I can organize the program **[capability hierarchy](../../Spira-User-Manual/Program-Capabilities/#capability-list)** on the list page (with one level of children only), so that the requirement structure simple to use but adds meaning [RQ:4425]
         - As a program member, I can view, create, and edit program capabilities on a **[details page](../../Spira-User-Manual/Program-Capabilities/#capability-details)**, so I can plan out program level work needs [RQ:4504]
         - As a program member, I can add or remove **[associations](../../Spira-User-Manual/Program-Capabilities/#requirement-associations)** between program requirements and this program's product requirements, so I can correctly organize my products' requirements [RQ:4426]
-        - As a program member, I can see the capability **[percentage complete](../../Spira-User-Manual/Program-Capabilities/#percentage-complete)** based off its linked requirements, so I can track progress [RQ:4508]
+        - As a program member, I can see the capability **[progress](../../Spira-User-Manual/Program-Capabilities/#progress)** based off its linked requirements, so I can track progress [RQ:4508]
 
     * **As a program manager, I can monitor the progress of work in the program so I can analyze current performance and ensure the program is compliant with any reporting or audit standards**
 
@@ -58,7 +58,7 @@
 
 ??? bug "Bug fixes and enhancements"
 
-    - Add Eggplant as an active Test Automation Engine option in sample data [IN:7934]
+    - Add [Eggplant](https://www.keysight.com/us/en/cmp/2023/eggplant-test-automation.html) as an active Test Automation Engine option in sample data [IN:7934]
     - Fix the installer so that SQL login and DB user credentials are correctly stored during advanced operations [IN:8123]
     - Fix the installer so the correct credentials are always used during upgrades [IN:8126]
     - Fix the installer so the correct connection information is stored in the settings and the log is cleaned up accordingly [IN:8127]
