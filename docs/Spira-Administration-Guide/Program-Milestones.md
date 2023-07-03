@@ -11,7 +11,7 @@ The screen displays a list of all the defined statuses in the system. By default
 
 To edit an existing status: change the name, open check-box, set a default status, a position, and/or change the active flag then click "Save". Note that:
 
-- The open flag is used to set whether a capability is open or closed
+- The open flag is used to set whether a program milestone is open or closed
 - The position field determines the order of the statuses
 - You can't delete an existing status, but to prevent it appearing in the application, change its active flag to "No" and click "Save"
 - To add a new status, click the "Add" button and a new row will be added to the list which you can now edit.

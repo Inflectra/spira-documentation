@@ -44,10 +44,10 @@ The screen displays a list of all the defined priorities in the system. By defau
 
 To edit an existing type: change the name, color, score, and active flag then click "Save". Note that:
 
-- Score is used to ranking the priorities and is reflected in how the order the priorities are displayed
+- Score is used to rank the priorities and is reflected in the order that the priorities are displayed
 - You can set a color by either entering the hexadecimal RRGGBB code for the color or use the pop-up color picker
 - You can't delete an existing priority, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". 
-- To add a new task priority, click the "Add" button and a new row will be added to the list which you can now edit.
+- To add a new priority, click the "Add" button and a new row will be added to the list which you can now edit.
 - You must have at least one active priority
 
 
