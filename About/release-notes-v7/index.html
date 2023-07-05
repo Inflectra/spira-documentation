@@ -95,6 +95,10 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
     
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG49V2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--
   Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
@@ -838,6 +842,34 @@
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Products/" class="md-nav__link">
         Products
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Capabilities/" class="md-nav__link">
+        Capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Milestones/" class="md-nav__link">
+        Program Milestones
       </a>
     </li>
   
@@ -1689,6 +1721,68 @@
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Notifications/" class="md-nav__link">
         Notifications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Program-Capabilities/" class="md-nav__link">
+        Capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Program-Milestones/" class="md-nav__link">
+        Program Milestones
       </a>
     </li>
   
@@ -4141,8 +4235,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-76-may-023" class="md-nav__link">
-    Version 7.6 (May 023)
+  <a href="#version-77-june-2023" class="md-nav__link">
+    Version 7.7 (June 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-761-may-2023" class="md-nav__link">
+    Version 7.6.1 (May 2023)
   </a>
   
 </li>
@@ -4385,8 +4486,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#version-76-may-023" class="md-nav__link">
-    Version 7.6 (May 023)
+  <a href="#version-77-june-2023" class="md-nav__link">
+    Version 7.7 (June 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-761-may-2023" class="md-nav__link">
+    Version 7.6.1 (May 2023)
   </a>
   
 </li>
@@ -4456,7 +4564,87 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
-<h2 id="version-76-may-023">Version 7.6 (May 023)<a class="headerlink" href="#version-76-may-023" title="Permanent link">&para;</a></h2>
+<h2 id="version-77-june-2023">Version 7.7 (June 2023)<a class="headerlink" href="#version-77-june-2023" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>SpiraPlan (only) gains powerful new program features to help you manage delivery of features and releases across multiple products at once. Brand new program level artifacts let you scale your agile practices beyond products like never before.</li>
+<li>Capabilities let you define cross-product, program-level features. Customize them with types, statuses, priorities, and fully customizable fields. Link capabilities to product requirements to track their progress at a higher level.</li>
+<li>Program Milestones help you manage deadlines and delivery of product releases. Think of them as sprints for programs. Customize their types, statuses, and more. Tie releases to a milestone to easily see if things are at risk of delay.</li>
+<li>By linking Capabilities to Program Milestones you can manage multiple capabilities and easily track if relevant features are ready for delivery. Is your Q3 target for a complex interconnected program on time? Are its features at risk? Scaled agile in SpiraPlan surfaces these insights with ease.</li>
+<li>All these new features have matching new API calls to allow you to extend how you use program artifacts even further.</li>
+</ul>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p>As a developer I can use <strong>SOAP and REST APIs</strong> to manage system level custom properties and lists [RQ:4618]</p>
+</li>
+<li>
+<p><strong>As a program manager, I can plan out the necessary work of the program with **<a href="../../Spira-User-Manual/Program-Capabilities">capabilities</a></strong>, linked to product requirements, and release management at the program level, so I can ensure the program objectives will be delivered**</p>
+<ul>
+<li>As a system admin, I can create, edit, and manage program <strong>capability <a href="../../Spira-Administration-Guide/Program-Capabilities/#types">types</a></strong>, so that managers can use this property inside their programs [RQ:4488]</li>
+<li>As a system admin, I can create, edit, and manage program <strong>capability <a href="../../Spira-Administration-Guide/Program-Capabilities/#priorities">priorities</a></strong>, so that managers can use this property inside their programs [RQ:4489]</li>
+<li>As a system admin, I can create, edit, and manage up to 30 <strong><a href="../../Spira-Administration-Guide/System-Custom-Properties">custom properties</a></strong> for program capabilities, so that managers can use these properties inside their programs [RQ:4427]</li>
+<li>As a system admin, I can create, edit, and manage program <strong>capability <a href="../../Spira-Administration-Guide/Program-Capabilities/#statuses">statuses</a></strong>, so that managers can use this property inside their programs [RQ:4423]</li>
+<li>As a program member, I can view, create, and edit program capabilities on a filterable <strong><a href="../../Spira-User-Manual/Program-Capabilities/#capability-list">list page</a></strong>, so I can plan out program level work needs [RQ:4424]</li>
+<li>As a program member, I can organize the program <strong><a href="../../Spira-User-Manual/Program-Capabilities/#capability-list">capability hierarchy</a></strong> on the list page (with one level of children only), so that the requirement structure simple to use but adds meaning [RQ:4425]</li>
+<li>As a program member, I can view, create, and edit program capabilities on a <strong><a href="../../Spira-User-Manual/Program-Capabilities/#capability-details">details page</a></strong>, so I can plan out program level work needs [RQ:4504]</li>
+<li>As a program member, I can add or remove <strong><a href="../../Spira-User-Manual/Program-Capabilities/#requirement-associations">associations</a></strong> between capabilities and this program's product requirements, so I can correctly organize my products' requirements [RQ:4426]</li>
+<li>As a program member, I can see the capability <strong><a href="../../Spira-User-Manual/Program-Capabilities/#progress">progress</a></strong> based off its linked requirements, so I can track progress [RQ:4508]</li>
+</ul>
+</li>
+<li>
+<p><strong>As a program manager, I can monitor the progress of work in the program so I can analyze current performance and ensure the program is compliant with any reporting or audit standards</strong></p>
+<ul>
+<li>As a system admin, I can see changes made to all capabilities <strong>standard fields on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> pages</strong>, to help with internal auditing [RQ:4430]</li>
+<li>As a system admin, I can see changes made to all capability <strong>custom fields on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> pages</strong>, to help with internal auditing [RQ:4431]</li>
+<li>As a developer, I can use <strong>SOAP or REST APIs</strong> to manage all relevant information about program capabilities, so that I can automate and extend how my org uses them [RQ:4501]</li>
+<li>As a report admin, I can create <strong><a href="../../Reporting/Custom-Report-Tables/#capabilities">custom reports</a></strong> of program capabilities, to provide my org with any reports required in this area [RQ:4435]</li>
+</ul>
+</li>
+<li>
+<p><strong>As a program manager, I can plan out the program delivery timetable with <a href="../../Spira-Administration-Guide/Program-Milestones">program milestones</a>, so I can ensure we meet our program objectives on time</strong></p>
+<ul>
+<li>As a system admin, I can create, edit, and manage <strong>program milestone <a href="../../Spira-Administration-Guide/Program-Milestones/#statuses">statuses</a></strong>, so that managers can use them inside their programs - Copy [RQ:4500]</li>
+<li>As a system admin, I can create, edit, and manage <strong>program milestone <a href="../../Spira-Administration-Guide/Program-Milestones/#types">types</a></strong>, so that managers can use them inside their programs [RQ:4442]</li>
+<li>As a system admin, I can create, edit, and manage up to 30 <strong><a href="../../Spira-Administration-Guide/System-Custom-Properties">custom properties</a></strong> for program milestones, so that managers can use these properties inside their programs [RQ:4443]</li>
+<li>As a program member, I can view program milestones on a filterable <strong><a href="../../Spira-User-Manual/Program-Milestones/#milestone-list">list page</a></strong>, so I can plan out program level work needs [RQ:4437]</li>
+<li>As a program member, I can <strong>filter and sort</strong> the program milestones <a href="../../Spira-User-Manual/Program-Milestones/#milestone-list">list page</a> by any available field, so that I can organize my releases into the view I need at that moment [RQ:4438]</li>
+<li>As a program member, I can view and edit program milestones on a <strong><a href="../../Spira-User-Manual/Program-Milestones/#milestone-details">details page</a></strong>, so I can plan out program level work needs [RQ:4507]</li>
+<li>As a program member, I can add or remove <strong><a href="../../Spira-User-Manual/Program-Milestones/#release-associations">associations</a></strong> between program milestones and this program's product releases, so I can plan out the scope of the milestone [RQ:4439]</li>
+<li>As a program member, I can view program milestones' <strong>release <a href="../../Spira-User-Manual/Program-Milestones/#start-and-end-dates">start and end dates</a></strong>, to better manage product level timetables [RQ:4509]</li>
+<li>As a program member, I can view <strong>capability <a href="../../Spira-User-Manual/Program-Milestones/#capability-associations">associations</a></strong> to each program milestone, to give me flexibility in seeing how the program data is organized [RQ:4440]</li>
+<li>As a program member, I can see the total <strong><a href="../../Spira-User-Manual/Program-Milestones/#progress">progress</a> of capabilities</strong> for each milestone, so that I can track and manage the program milestone performance [RQ:4441]</li>
+</ul>
+</li>
+<li>
+<p><strong>As a program manager, I want to monitor the progress of program milestones so I can analyze trends and ensure the program is compliant with any reporting or audit standards</strong></p>
+<ul>
+<li>As a system admin, I can see changes made to all program milestone <strong>standard fields on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> pages</strong>, to help with internal auditing [RQ:4447]</li>
+<li>As a system admin, I can see changes made to all program milestone <strong>custom fields on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> pages</strong>, to help with internal auditing [RQ:4446]</li>
+<li>As a developer, I can use <strong>SOAP or REST APIs</strong> to manage all relevant information about program milestones, so that I can automate and extend how my org uses them [RQ:4502]</li>
+<li>As a report admin, I can create <strong><a href="../../Reporting/Custom-Report-Tables/#program-milestones">custom reports</a></strong> of program milestones, to provide my org with any reports required in this area [RQ:4448]</li>
+</ul>
+</li>
+<li>
+<p>As a new user, I can see <strong>relevant and meaningful sample data</strong> for program scaled agile, so I can easily understand how the tools works [RQ:4506]</p>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add <a href="https://www.keysight.com/us/en/cmp/2023/eggplant-test-automation.html">Eggplant</a> as an active Test Automation Engine option in sample data [IN:7934]</li>
+<li>Fix the installer so that SQL login and DB user credentials are correctly stored during advanced operations [IN:8123]</li>
+<li>Fix the installer so the correct credentials are always used during upgrades [IN:8126]</li>
+<li>Fix the installer so the correct connection information is stored in the settings and the log is cleaned up accordingly [IN:8127]</li>
+<li>Fix the installer so the correct connection information is used when performing backups [IN:8128]</li>
+<li>When creating a new user with the v7 API set the report admin flag if passed in [IN:8025]</li>
+</ul>
+</details>
+<h2 id="version-761-may-2023">Version 7.6.1 (May 2023)<a class="headerlink" href="#version-761-may-2023" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
 <p>This release includes a number of performance improvements and bug fixes to streamline user experience.</p>
@@ -4950,7 +5138,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>

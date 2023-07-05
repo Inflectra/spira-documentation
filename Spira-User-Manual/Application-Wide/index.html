@@ -95,6 +95,10 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
     
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG49V2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--
   Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
@@ -1120,6 +1124,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Program-Capabilities/" class="md-nav__link">
+        Capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Program-Milestones/" class="md-nav__link">
+        Program Milestones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Program-Releases/" class="md-nav__link">
         Releases
       </a>
@@ -1959,6 +1991,68 @@
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Notifications/" class="md-nav__link">
         Notifications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Program-Capabilities/" class="md-nav__link">
+        Capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-Administration-Guide/Program-Milestones/" class="md-nav__link">
+        Program Milestones
       </a>
     </li>
   
@@ -4994,11 +5088,13 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <li>Source code files</li>
 <li>Tasks</li>
 <li>Test cases (in SpiraTeam and SpiraPlan only)</li>
+<li>Program Capabilities (SpiraPlan only)</li>
+<li>Program Milestones (SpiraPlan only)</li>
 </ul>
 <p>From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.</p>
 <p><img alt="" src="../img/Requirements_Management_118.png" /></p>
 <p>The requirements and risks in this list are those a user has decided are relevant to the current artifact. They therefore created a direct link between them.</p>
-<p>Each association is displayed with the:</p>
+<p>Each association is for product level associations displayed with the:</p>
 <ul>
 <li>type of association (related-to, dependency, etc)</li>
 <li>name of the artifact being linked-to</li>
@@ -5013,7 +5109,7 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <li><strong>Refresh</strong>: updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.</li>
 <li><strong>Filter / Apply Filter</strong>: Applies the entries in the filter boxes to the list of associations</li>
 <li><strong>Clear Filters</strong>: Clears the current filter, so that all associations for the current requirement are shown.</li>
-<li><strong>Edit</strong>: Clicking the "<strong><em>Edit</em></strong>" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.</li>
+<li><strong>Edit</strong>: Clicking the "<strong><em>Edit</em></strong>" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen. Note that this is not available in all cases (for example, on program level artifact association tabs)</li>
 </ol>
 <p>To create a new association, click the "<strong><em>Add</em></strong>" button to display the add association panel (below is an example from requirements):</p>
 <p><img alt="" src="../img/Requirements_Management_119.png" /></p>
@@ -5076,6 +5172,14 @@ who made the change. This allows a complete audit trail to be maintained of all 
 <tr>
 <td><strong>Test cases</strong> (in SpiraTeam and SpiraPlan only)</td>
 <td>Tasks, Risks</td>
+</tr>
+<tr>
+<td><strong>Program Capabilities</strong> (SpiraPlan only)</td>
+<td>Requirements (the tab is called requirements, comments and association type not supported)</td>
+</tr>
+<tr>
+<td><strong>Program Milestones</strong> (SpiraPlan only)</td>
+<td>Releases (the tab is called releases, comments and association type not supported)</td>
 </tr>
 </tbody>
 </table>
@@ -5336,7 +5440,7 @@ who made the change. This allows a complete audit trail to be maintained of all 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
