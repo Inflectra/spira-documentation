@@ -287,6 +287,8 @@ You can associate artifacts to one another. For instance, you can associate (or 
 - Source code files
 - Tasks
 - Test cases (in SpiraTeam and SpiraPlan only)
+- Program Capabilities (SpiraPlan only)
+- Program Milestones (SpiraPlan only)
 
 From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.
 
@@ -294,7 +296,7 @@ From the associations tab you can see and manage the list of artifacts associate
 
 The requirements and risks in this list are those a user has decided are relevant to the current artifact. They therefore created a direct link between them.
 
-Each association is displayed with the:
+Each association is for product level associations displayed with the:
 
 - type of association (related-to, dependency, etc)
 - name of the artifact being linked-to
@@ -310,7 +312,7 @@ You can perform the following actions on the list of associations:
 2. **Refresh**: updates the list of associations from the server, useful if other people are adding associations to this requirement at the same time.
 3. **Filter / Apply Filter**: Applies the entries in the filter boxes to the list of associations
 4. **Clear Filters**: Clears the current filter, so that all associations for the current requirement are shown.
-5. **Edit**: Clicking the "***Edit***" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen.
+5. **Edit**: Clicking the "***Edit***" button to the right of the associations allows you to edit the association type and comment fields inline directly on this screen. Note that this is not available in all cases (for example, on program level artifact association tabs)
 
 To create a new association, click the "***Add***" button to display the add association panel (below is an example from requirements):
 
@@ -352,6 +354,8 @@ You can add a comment that explains the rationale for the association and choose
     | **Source code files**                            | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
     | **Tasks**                                        | Tasks, Incidents                                                                                                |
     | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
+    | **Program Capabilities** (SpiraPlan only)        | Requirements (the tab is called requirements, comments and association type not supported)                      |
+    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                          |
 
 
 ### Rich Text Editor

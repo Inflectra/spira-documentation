@@ -14,10 +14,12 @@ The minimum hardware and software requirements for running the SpiraPlan<sup>®<
 | **Requirement**         | **Minimum Specification**                         |
 | **Processor:**          | Intel® or AMD® x86 or x64 compatible processor    |
 | **Memory:**             | 4 GB, 8 GB recommended                            |
-| **Operating System:**   | Windows Server 2019 (recommended) <br>Windows Server 2016 (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10 (for demoing) |
-| **Database:**           | Microsoft SQL Server 2019 <br> Microsoft SQL Server 2019 Express Edition <br> Microsoft SQL Server 2017 <br> Microsoft SQL Server 2017 Express Edition <br> Microsoft SQL Server 2016 <br> Microsoft SQL Server 2016 Express Edition |
+| **Operating System:**   | Windows Server 2016+ (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10 (for demoing) |
+| **Database:**           | Microsoft SQL Server 2016+<br> Microsoft SQL Server 2016+ Express Edition* |
 | **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher |
 
+**Note**:
+Please consider there are some limitations for FREE SQL Express [That may significantly affect performance thus we don't recommend it to be used on production/handling large amounts of data).
 ---
 
 | **Client Requirements** |                                                   |
@@ -35,7 +37,7 @@ Assuming that you have already installed the appropriate version of Microsoft Wi
 We recommend that you install / configure the prerequisites in the following order:
 
 - Install the .NET Framework v4.7.2
-- Install SQL Server 2017, 2016
+- Install SQL Server 2016+
 - Install a modern web browser like Microsoft Edge
 - Ensure that IIS is installed
 - Ensure that ASP.NET 4.7.2 is enabled
@@ -45,39 +47,64 @@ We recommend that you install / configure the prerequisites in the following ord
 
 On most modern Windows 11 and Windows Server 2022+ installations, Microsoft .NET Framework v4.7.2 is usually already installed. On earlier operating systems, you may need to manually add the .NET 4.7.2 components to the factory configuration.
 
-To see which version of the Microsoft .NET framework installed, open up Windows Explorer® and navigate to `C:\WINDOWS\Microsoft.NET\Framework` and then the subfolders listed will indicate which version(s) of the framework you have installed:
+To see which version of the Microsoft .NET framework installed please follow the below steps:
+
+- Open the file explorer or press the “CTRL + e” shortcut keys.
+- Browse the following path: C:\Windows\Microsoft.NET\Framework
+- Then open the folder showing like: v4.0.30319
+- Right-click on any of the “.dll” files and select the Properties option.
+- Select the Details tab.
+
+You can find the version under “Product version” property.
+See the below screenshot:
 
 ![](img/Installing_SpiraPlan_8.png)
 
 To install the .NET Framework, launch your browser and enter the URL: <https://www.inflectra.com/CustomerArea>. Once you have logged-in to the customer area, under the "My Downloads" section there will be hyperlinks to download and install the appropriate version of the .NET Framework (version 4.7.2 at time of writing). Click on the option to download and install the .NET Framework, and follow the instructions provided. Once you have completed the install, verify that the installation was successful by looking in the "Administrative Tools" folder as illustrated above. You also need to make sure that .NET 4.7.2 has been installed if necessary.
 
 
-### Install SQL Server 2019, 2017, 2016
+### Install SQL Server version 2016 (or higher) 
 
-If you do not have a SQL Server instance ready, you can install the appropriate version of the database software, following the instructions provided with the installation. We recommend SQL Server Express Edition®
-for most users. This free version of SQL Server will offer sufficient performance for most installations and can be easily downloaded from either the customer area of our website (<http://www.inflectra.com/CustomerArea>) or directly from the Microsoft® web-site at <http://www.microsoft.com/express/sql>.
+If you do not have a SQL Server instance ready, you can install the appropriate version of the database software, following the instructions provided with the installation. For basic or trial use, we recommend SQL Server Express Edition. This free version of SQL Server will offer sufficient performance where performance and storage are not important (such as during a trial). SQL Express can be downloaded from either the customer area of our website (<http://www.inflectra.com/CustomerArea>) or directly from Microsoft's website.
+
+You must setup the built-in **SA** (SysAdmin) account on SQL Server. Make sure SQL Server setup allows ***mixed-mode*** authentication so it allows both SQL Server and Windows logins:
+
+1. In SQL Server Management Studio Object Explorer, right-click the server, and then click Properties.
+2. On the Security page, under Server authentication, select 'SQL Server and Windows Authentication Mode', and then click OK.
+3. In the SQL Server Management Studio dialog box, click OK, to acknowledge the need to restart SQL Server.
+4. In Object Explorer, right-click your server, and then click Restart. If SQL Server Agent is running, it must also be restarted.
+5. In Object Explorer, expand Security, expand Logins, right-click sa, and then click Properties.
+6. On the General page, you may have to create and confirm a password for the **SA** login.
+7. On the Status page, in the Login section, click Enabled, and then click OK.
+
+**SA** user is required during the installation/upgrade to create the Database and required Logins, and this can be done using a SysAdmin user only.
 
 Ensure you have enabled the Full-Text Indexing feature enabled prior running installer of Spira application.
 
 ### Ensure that IIS is installed
 
-On Windows Server OS installations, IIS is usually installed as part of the factory configuration, whereas on Windows workstation OS installations, you typically need to manually add the components to the factory configuration. The steps that you need to take to verify its installation are listed below:
+On Windows Server OS installations, IIS is usually installed as part of the factory configuration, whereas on Windows workstation OS installations, you typically need to **manually** add the components to the factory configuration. The steps that you need to take to verify its installation are listed below:
 
-To check if you have IIS installed, click Start \> Control Panel \> Administrative Tools. Under the "Administrative Tools folder", you should see an icon for "Internet Information Services (IIS) Manager". If you don't see this icon, then it means that you need to add IIS to your computer:
+- To check if you have IIS installed, click Start \> Control Panel \> Administrative Tools. Under the "Administrative Tools folder" 
+- You should see an icon for "Internet Information Services (IIS) Manager"
 
 ![](img/Installing_SpiraPlan_9.png)
+
+- If you don't see this icon, then it means that you need to add IIS to your computer
+- To install IIS refer to IT System Administrator or 
+- Follow the instructions from Microsoft® official documentation https://learn.microsoft.com/en-us/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-1-install-iis-and-asp-net-modules
 
 #### Windows 8, Windows 8.1
 
 On **Windows 8 or 8.1**, to install IIS, you need to click Start \>
-Control Panel \> Programs and Features, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
+Control Panel \> Programs and Features or type *appwiz.cpl* in Run, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
 
 ![](img/Installing_SpiraPlan_11.png)
 
 
 #### Windows 10
 
-On **Windows 10**, to install IIS, you need to click Start \> Control Panel \> Programs and Features, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
+On **Windows 10 and Windows 11**, to install IIS, you need to click Start \> Control Panel \> Programs and Features or type *appwiz.cpl* in Run, then choose the option to "Turn Windows features on or off". This will bring up the list of features and roles that can be configured on the server:
 
 ![](img/Installing_SpiraPlan_12.png)
 
@@ -132,7 +159,9 @@ To verify that this IIS is now installed, type "[http://localhost](http://localh
 
 #### Windows Server 2012, 2016, 2019
 
-On **Windows Server 2012, 2016, 2019**, you need to click on Server Manager, then under the "Roles" heading, choose the option to "Add Role" followed by selecting the new role "Web Server / IIS". Then click "Next" to bring up the role configuration screen:
+On **Windows Server 2012, 2016, 2019**, you need to click on Server Manager, then under the "Roles" heading, choose the option to "Add Role" (Add Roles and Features in Windows Server 2019+) followed by selecting the new role "Web Server (IIS)" or using a PowerShell command `Install-WindowsFeature -name Web-Server -IncludeManagementTools`
+
+Then click "Next" to bring up the role configuration screen:
 
 ![](img/Installing_SpiraPlan_17.png)
 
@@ -183,11 +212,16 @@ You should see a section called "ASP.NET" occupying the top third of the IIS scr
 
 ## Installing the Software
 
-Once all of the prerequisites are correctly installed, you are now ready to install SpiraPlan<sup>®</sup>. To perform the installation you will need the items listed below (all of which are available in the customer area of the Inflectra<sup>®</sup> website):
+Once all of the prerequisites are correctly installed, you are now ready to install SpiraPlan<sup>®</sup>. To start and successfully finish the installation you will need the items listed below (all of which are available in the customer area of the Inflectra<sup>®</sup> website):
 
-1. the installation package
-2. the name of the organization the software is licensed to
-3. the license key code
+- **The installation package** - can be found under "My Downloads" section:
+
+![](img/Installing_SpiraPlan_18_1.png)
+
+- **The name of the organization** the software is licensed to
+- **The license key code** 
+
+![](img/Installing_SpiraPlan_18_2.png)
 
 To start the installation, double-click on the SpiraPlan<sup>®</sup> installation package (it will have a filename in the form of SpiraPlan-vX.X.X.exe). The Installer will display the following dialog box:
 
@@ -257,16 +291,26 @@ This is the easiest option when the application and database will be residing on
 
 **b) SQL Server Authentication (advanced mode only)**
 
-This is the easiest option when the application and databases will be residing on *different* servers across the network. In this case, choose "SQL Server Authentication" and provide a SQL Server Login that has full sysadmin permissions -- e.g. the built in System Administrator (SA) account. The installer will use this sysadmin account to create the database objects, and SpiraPlan<sup>®</sup> will use a special login (called "SpiraPlan" by default) for normal application operations.
+This is the easiest option when the application and databases will be residing on *different* servers across the network. In this case, choose "SQL Server Authentication" under "Connection Information" section and provide SQL Server Login that has **full sysadmin** permissions -- e.g. the built in System Administrator (SA) account. The installer will use this SysAdmin account to create the database objects. The password for SA account is set in SQL Server itself and should be saved carefully.
+
+Note that using this account under the 'Connection Info' part of the installer is not a security risk, as the installer does not remember this login and after the database is created, it's never used again. With SQL Server authentication, the IIS application pool will run as a low-credentialed system user, typically the 'NETWORK SERVICE' account. This lets the application pool access the local system resources only. User listed under "Database Settings" for SpiraPlan<sup>®</sup> will use a special login (called "SpiraPlan" by default, created automatically) for normal application operations. The username should not be changed as it is used by the application to operate.
 
 **Setting the Correct Server Instance**
 
-In the "Server" box, you need to enter the name of the Microsoft SQL Server instance that is running on your system; the installer will default it to the hostname of the server (which in many cases will be correct). The easiest way to find out the database server name is to open up the SQL Server Administrative console (typically by clicking Start \> Programs \> Microsoft SQL Server \> Enterprise Manager) and look for the name of the server.
+In the "Server" box, you need to enter the name of the Microsoft SQL Server instance that is running on your system; the installer will default it to the hostname of the server (which in many cases will be correct). The easiest way to find out the database server name is to:
 
-For SQL Server Express edition installations, the Server name is usually the name of your computer followed by "\\SQLEXPRESS", so for example, if your computer is called MyComputer, the server name would be MyComputer\\SQLEXPRESS. Omitting the second part (called the instance name) would lead to a "host not found" error.
+- open up the SQL Server Administrative console (typically by clicking Start \> Programs \> Microsoft SQL Server \> Enterprise Manager) and look for the name of the server or
+- open SQL Management Studio -> Object Explorer
+
+![](img/Installing_SpiraPlan_26_1.png)
+
+For SQL Server Express edition installations, the Server name is usually the name of your computer followed by "\\SQLEXPRESS", so for example, if your computer is called MyComputer, the server name would be MyComputer\\SQLEXPRESS or simply use **.\SQLEXPRESS** (Omitting the second part (called the instance name) would lead to a "host not found" error):
+
+![](img/Installing_SpiraPlan_26_2.png)
 
 You can also choose whether to install the sample products or not - typically we recommend installing the sample products for evaluation installations and excluding them for production installs.
 
+![](img/Installing_SpiraPlan_26_3.png)
 
 ### Complete the Installation
 
@@ -283,11 +327,15 @@ Congratulations! You have successfully installed SpiraPlan<sup>®</sup> onto you
 
 ### Upgrading
 
-You can upgrade any SpiraPlan version that is 5.4.0.4 or newer using our v6 installer (for instance you can upgrade from 5.4.0.4 to 6.10, or from 6.9.0.1 to 6.10 using the exact same installer exe). To upgrade an existing installation:
+You can upgrade any SpiraPlan version that is 5.4.0.4 or newer using the latest installer (for instance you can upgrade from 5.4 to 7.7, or from 6.9.0.1 to 7.7 using the exact same installer exe). To upgrade from versions older than 5.4.0.4 you first need to upgrade to 5.4.0.4 and then upgrade to the latest version. 
 
-1. download the latest version of the installer exe application from your customer area
-2. run the installer on the machine the application is on
-3. on the Installation Type screen, select the "Upgrade" button and follow the steps below
+For example, to upgrade from SpiraTest v2.3.1 to v5.4, you would first upgrade from SpiraTest v2.3.1 > v3.2, then upgrade from SpiraTest v3.2 > v4.2, next step is to upgrade from v4.2 > 5.4
+
+To upgrade an existing installation:
+
+1. Download the latest version of the installer exe application from your Customer Area
+2. Run the installer on the machine the application is on
+3. On the Installation Type screen, select the "Upgrade" button and follow the steps below
 
 ![](img/Installing_SpiraPlan_20.png)
 
@@ -313,19 +361,26 @@ You need to enter:
 - the organization that was issued the software license
 - the full license key for the relevant version of the software 
 
+![](img/Installing_SpiraPlan_18_2.png)
+
 The installer will verify the license information as you enter it. If the details entered are valid then the information will be displayed beneath the entry fields. This allows you to check that the correct application and license will be installed. On clicking Next, the installer will warn you of any discrepancies, and will not allow you to proceed until valid information has been provided.
 
 If for any reason you are unable to get the provided license key to work, please contact Inflectra<sup>®</sup> customer support for help resolving the issue.
 
 ### Upgrade location
 
-The installer will default to the default installation location for the licensed version. If this is not correct, click the folder icon to select the proper installation location. 
+The installer points the upgrade to the default installation location for the licensed version. If this is not correct, click the folder icon to select the proper installation location. 
 
 After verifying the location, the installer will display the screen that shows the summary of actions to be performed. Confirm to proceed with the upgrade.
 
-Just in case of problems, a backup of the existing database is made when upgrading. The location is given on the summary screen, and is usually the default backup directory for SQL Server. To recover your system, restore the backup over top of the existing corrupted database. You can then try the upgrade again.
+In case of problems, a backup of the existing database is made when upgrading. The backup can be manually selected to ensure safety of the current database. The location is given on the summary screen, and is usually the default backup directory for SQL Server. 
 
-If problems persist, contact the support department, and they will explain how to retrieve the logs for remediation.
+![](img/Installing_SpiraPlan_23_1.png)
+
+To recover your system, restore the backup over top of the existing corrupted database. You can then try the upgrade again.
+
+If problems persist, contact the Inflectra support team, and they will explain how to retrieve the logs for remediation.
+
 
 ## Advanced Install Scenarios
 There may be a few cases where you need to customize the installation or upgrade of SpiraPlan<sup>®</sup>. To enable the installer's advanced mode, make sure to check the "Advanced" checkbox at the relevant screen of the wizard.
@@ -341,6 +396,16 @@ Including the options listed above with "(advanced mode only)" next to them, Adv
 
 ![](img/Installing_SpiraPlan_advanced-options.png)
 
+### SQL Server authentication details
+
+Without a UserId/password listed in your connection string, Windows Authentication is used (the default). There are two different users to consider here:
+
+- when asked for the username/password under "Connection Info", that user needs to be a SQL Account that is a sys admin, since the database and logins are going to be created
+- the database user is listed under 'Database settings', and those can be ignored as the installer will set those and create them automatically
+
+The 'sa' account is a built-in SQL account ('system admin'), and the password is usually set in SQL Server itself. Note that you can use this under the 'Connection Info' part of the installer - it's not a security risk, as the installer does not remember this login and after the database is created.
+
+Leave 'Database Settings' section unchanged in most circumstances (make sure the Database name is the actual database you'd like to upgrade).
 
 ### Adding An Application Server
 Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#Installing-the-Software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
