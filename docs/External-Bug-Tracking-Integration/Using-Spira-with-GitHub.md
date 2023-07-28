@@ -108,9 +108,16 @@ In order for pull requests to be synced as pull requests, there must be a type o
 
 ### Task Status Mappings
 
-In task status mappings, there are 3 possible statuses from GitHub that need to be accounted for.
-The possible statuses are "open", "closed", and "merged". 
-"open" represents an open pull request in GitHub, "closed" represents a rejected pull request, and "merged" represents an accepted and merged pull request. 
+In task status mappings, there are 4 possible statuses from GitHub that need to be accounted for.
+The possible statuses are "open", "started", "closed", and "merged". These are case sensitive. 
+
+These external keys mean the following:
+
+- open: The pull request is either open or a draft in GitHub, but nobody has commented on it
+- started: The pull request is either open or a draft and includes a comment
+- closed: the pull request was rejected & closed
+- merged: the pull request was merged & closed
+
 
 ![](img/Using_Spira_with_GitHub_217.png)
 
