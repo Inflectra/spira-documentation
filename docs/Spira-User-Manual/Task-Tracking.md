@@ -435,6 +435,9 @@ To view information about the follower, or to unfollow them from the item, hover
 
 ![](img/Task_Tracking_102.png)
 
+### Component
+For tasks, the component field works differently than it does normal as with other artifacts. The component field for a task is disabled and is derived from the component of any requirement that the task is associated with. If the task has no requirement associated with it, then the task's component field will be empty.
+
 
 ### Overview -- Comments
 Read about [how the comments works](Application-Wide.md#comments)

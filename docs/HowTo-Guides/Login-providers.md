@@ -125,6 +125,9 @@ Broadly, the urls may take the following shape (discuss with Okta if you run int
 - Token URL:        https://${yourOktaDomain}/oauth2/${authServerId}/v1/token
 - Profile URL:       https://${yourOktaDomain}/oauth2/${authServerId}/v1/userinfo
 
+The Redirect URI (or return URL) can be found at the bottom of the Okta administration page in Spira.
+
+![](img/LoginProviders-Okta.png)
 
 ## OneLogin
 First create the application in OneLogin

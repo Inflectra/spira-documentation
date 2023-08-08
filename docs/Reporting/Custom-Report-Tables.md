@@ -1233,6 +1233,7 @@ Retrieves data about cross product associations
 ## Test Run Incidents
 | R_TestRunIncidents  |
 | ------------------- |
+| TEST_RUN_ID         |
 | INCIDENT_ID         |
 | DETECTED_RELEASE_ID |
 | RESOLVED_RELEASE_ID |

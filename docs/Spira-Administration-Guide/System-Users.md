@@ -137,6 +137,10 @@ Note that you can only deactivate a provider that does not have any users linked
 
 ![user administration login provider details page for Google](img/System_Users_oauth-admin-provider.png)
 
+Once you have setup a login provider, users will see a button for that provider on the Spira login page:
+
+![user administration login provider details page for AzureAD](img/System_Users_oauth-admin-provider-AzureAD.png)
+
 ### How to set up a provider to integrate with Spira
 Below is a general set of instructions about how to set up the provider and Spira to work together. However, the providers may have changed their process or documentation, so please consult the provider about configuring their system.
 
