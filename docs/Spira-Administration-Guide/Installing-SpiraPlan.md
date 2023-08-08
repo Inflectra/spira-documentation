@@ -43,7 +43,7 @@ We recommend that you install / configure the prerequisites in the following ord
 - Ensure that ASP.NET 4.7.2 is enabled
 
 
-### Install the .NET Framework v4.6, v4.7
+### Install the .NET Framework v4.6, v4.7, v4.8
 
 On most modern Windows 11 and Windows Server 2022+ installations, Microsoft .NET Framework v4.7.2 is usually already installed. On earlier operating systems, you may need to manually add the .NET 4.7.2 components to the factory configuration.
 
@@ -293,7 +293,11 @@ This is the easiest option when the application and database will be residing on
 
 This is the easiest option when the application and databases will be residing on *different* servers across the network. In this case, choose "SQL Server Authentication" under "Connection Information" section and provide SQL Server Login that has **full sysadmin** permissions -- e.g. the built in System Administrator (SA) account. The installer will use this SysAdmin account to create the database objects. The password for SA account is set in SQL Server itself and should be saved carefully.
 
-Note that using this account under the 'Connection Info' part of the installer is not a security risk, as the installer does not remember this login and after the database is created, it's never used again. With SQL Server authentication, the IIS application pool will run as a low-credentialed system user, typically the 'NETWORK SERVICE' account. This lets the application pool access the local system resources only. User listed under "Database Settings" for SpiraPlan<sup>®</sup> will use a special login (called "SpiraPlan" by default, created automatically) for normal application operations. The username should not be changed as it is used by the application to operate.
+Note that using this account for the 'Connection Info' fields is not a security risk as the installer does not remember this login and after the database is created. The credentials are used once and discarded.
+
+With SQL Server authentication, the IIS application pool will run as a low-credentialed system user, typically the 'NETWORK SERVICE' account. This lets the application pool access the local system resources only:
+
+Inside SQL Server SpiraPlan will use a dedicated login (called "SpiraPlan" by default, created automatically) for normal application operations. The username should not be changed as it is required by the application for it to operate.
 
 **Setting the Correct Server Instance**
 
@@ -379,8 +383,7 @@ In case of problems, a backup of the existing database is made when upgrading. T
 
 To recover your system, restore the backup over top of the existing corrupted database. You can then try the upgrade again.
 
-If problems persist, contact the Inflectra support team, and they will explain how to retrieve the logs for remediation.
-
+If problems persist, please contact the Inflectra support team, and they will explain how to retrieve the logs for remediation.
 
 ## Advanced Install Scenarios
 There may be a few cases where you need to customize the installation or upgrade of SpiraPlan<sup>®</sup>. To enable the installer's advanced mode, make sure to check the "Advanced" checkbox at the relevant screen of the wizard.
@@ -398,14 +401,11 @@ Including the options listed above with "(advanced mode only)" next to them, Adv
 
 ### SQL Server authentication details
 
-Without a UserId/password listed in your connection string, Windows Authentication is used (the default). There are two different users to consider here:
+Without a UserId/password listed in your connection string, Windows Authentication is used (the default). When asked for the username/password under "Connection Info", that user needs to be a SQL Account that is a sys admin, since the database and logins are going to be created. The database user is listed under 'Database settings', and should be left as their defaults as the installer sets and creates those automatically.
 
-- when asked for the username/password under "Connection Info", that user needs to be a SQL Account that is a sys admin, since the database and logins are going to be created
-- the database user is listed under 'Database settings', and those can be ignored as the installer will set those and create them automatically
+The 'sa' account is a built-in SQL account ('system admin'), and the password is usually set in SQL Server itself. Note that you can use this under the 'Connection Info' part of the installer. Please note that the installer does not remember this login after the database is created.
 
-The 'sa' account is a built-in SQL account ('system admin'), and the password is usually set in SQL Server itself. Note that you can use this under the 'Connection Info' part of the installer - it's not a security risk, as the installer does not remember this login and after the database is created.
-
-Leave 'Database Settings' section unchanged in most circumstances (make sure the Database name is the actual database you'd like to upgrade).
+Leave 'Database Settings' section unchanged, as filled by default (make sure the Database name is the actual database you'd like to upgrade).
 
 ### Adding An Application Server
 Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#Installing-the-Software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
