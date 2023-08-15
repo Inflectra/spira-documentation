@@ -512,7 +512,7 @@ You can install the connector by following these instructions:
 
 1.  Log into your Jira instance as an admin.
 2.  Click the admin dropdown and choose Add-ons. The Find new apps or Find new add-ons screen loads.
-3.  Locate SpiraPlan app for Jira.
+3.  Locate the "SpiraTest" app for Jira.
 4.  Click Install to download and install your app.
 5.  Click Close in the "Installed and ready to go" dialog.
 6.  Now you need to configure the add-on to connect to your SpiraPlan instance.
@@ -524,7 +524,7 @@ Please enter the following information:
 -   **SpiraPlan URL**: this needs to be the base URL for your SpiraPlan instance, typically of the form:
 -   <https://mysite.spiraservice.net>
 -   <https://demo.spiraservice.net/mysite>
--   **Username**: This is the login you use to connect to SpiraPlan 
+-   **Username**: This is the login you use to connect to SpiraPlan (set this to a user who only has read-only permissions so that they are not able to write to any product or part of your Spira instance)
 -   **API Key / RSS Token**: This is the RSS Token / API key for the user name you specified.
 
 You can get the SpiraPlan API Key from within the User Profile screen of SpiraPlan :
