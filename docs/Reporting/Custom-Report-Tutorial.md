@@ -412,10 +412,6 @@ This fragment of the report lets you see all of the data that is available for d
 
 
 ### Understanding XPATH
-
-(this section includes material from the website:
-<http://www.whoishostingthis.com/resources/xslt/>)
-
 XPath is used to navigate through elements and attributes in an XML document. XPath uses path expressions to select nodes or node-sets in an XML document. These path expressions look very much like the expressions you see when you work with a traditional computer file system.
 
 In XPath, there are seven kinds of nodes:
