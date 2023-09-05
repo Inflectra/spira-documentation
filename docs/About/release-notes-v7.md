@@ -1,5 +1,66 @@
 # Release Notes for Spira v7
 
+## Version 7.8 (August 2023)
+
+!!! info "Summary"
+
+    - SpiraPlan (only) adds brand new [program-level reporting](../../Spira-User-Manual/Program-Reports) functionality. Four new standard reports for program milestones and capabilities are now included, or create your own program-level custom reports.
+    - Our upgraded [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) lets you use @ to quickly find any product member and mention them in comments or a description. Any mentioned user is, where relevant, automatically added to the artifact as a [follower](../../Spira-User-Manual/Application-Wide/#followers).
+    - System admins can now quickly see all the programs a user is a member of, with a dedicated tab on the [View/Edit user detailed](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) screen in system administration.
+
+??? success "New Features"
+
+    - As a product member, [I can add followers to artifacts](../../Spira-User-Manual/Application-Wide/#mentions) I am working on using an @ mention feature, so I can keep my colleagues informed on relevant artifacts [RQ:4653]
+    
+    * **As a program manager, I can monitor the progress of work in the program using [offline reporting](../../Spira-User-Manual/Program-Reports), so I can analyze current performance**
+
+        - As a report admin, I can create custom reports of system level history changes, to provide my org with any reports required in this area [RQ:4432]
+        - As a report admin, I can create saved custom reports of program milestones and capabilities, that will help users' reporting needs [RQ:4626]
+        - As a program report user of SpiraPlan, I can access program level reports for my program, so that I can create useful reports [RQ:4503]
+        - As a program report user, I can generate a capability summary report, to help me track their progress [RQ:4644]
+        - As a program report user, I can generate a capability details report, to help me track progress [RQ:4645]
+        
+            - As a program report user, I can view associated requirements in a capability details report, to help me track progress [RQ:4666]
+            - As a program report user, I can view the history of a capability in its details report, to help me track progress [RQ:4665]
+        
+        - As a program report user, I can generate a program milestone summary report, to help me track their progress [RQ:4642]
+        - As a program report user, I can generate a program milestone details report, to help me track progress [RQ:4643]
+            
+            - As a program report user, I can view the associated capabilities for a program milestone in its details report, to help me track progress [RQ:4668]
+            - As a program report user, I can view the associated releases for a program milestone in its details report, to help me track progress [RQ:4667]
+            - As a program report user, I can view the history of a program milestone in its details report, to help me track progress [RQ:4669]
+
+
+??? bug "Bug fixes and enhancements"
+
+    - Add API operations to let users create, update, and delete product roles [IN:8480]
+    - Add a confirmation dialog when an admin [resets a data sync](../../Spira-Administration-Guide/System-Integration/#data-synchronization) to provide options about how far back the data sync should be reset [IN:8384]
+    - Add a new API operation to update only FixedBuildId property of an incident to provide faster integration with CI/CD systems [IN:8529]
+    - Add an API operation to let users create a blank template with minimal pre-populated fields like statuses, types, or workflows [IN:8437]
+    - Add a new API call to let users delete builds [IN:7881]
+    - Allow system admins to see a user's program membership with a new Program Membership tab on the admin [edit user page](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) [IN:3005]
+
+    - Fix non system admins not being able to save changes to test configuration properties on its [detail page](../../Spira-User-Manual/Test-Configuration-Management/#test-configuration-details) [IN:4566]
+    - Fix the API to not accept an test case folder, priority, or type ID from invalid products or templates on creation or updates [IN:7320]
+    - Fix [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) so that it also clones the product's custom properties [IN:7472]
+    - Fix editing test set test case mapping using the API so that it requires both test case and test set relevant permissions [IN:7811]
+    - Fix the API to create a requirement without a child to set its type [IN:7845]
+    - Fix tooltips on the [system history list page](../../Spira-Administration-Guide/System/#system-history-changes) not showing the description for product, program milestone, and capability entries [IN:7874]
+    - Fix emoji with skin tones like "🤚🏽" in description fields causing the [Recent Artifacts](../../Spira-User-Manual/User-Product-Management/#recent-artifacts) and [Subscribed Artifacts](../../Spira-User-Manual/User-Product-Management/#my-subscribed-artifacts) widgets on the My Page to break the page [IN:7916]
+    - Fix purging a single item from the [product admin history pages](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) showing an error "System.guid does not contain a definition for 'Progress''' [IN:8098]
+    - Fix getting an error when filtering documents by a custom property on the [document list page](../../Spira-User-Manual/Document-Management/#document-list) or attachment tab [IN:8231]
+    - Fix the system admin system-level [custom property definitions page](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties) not loading correctly if you try to delete a definition that has system history entries [IN:8319]
+    - Fix not being able to filter system history records for deleting a program on the [system history list page](../../Spira-Administration-Guide/System/#system-history-changes) [IN:8356]
+    - Fix an error message showing when you try and save a capability or program milestone and the creator dropdown is left blank [IN:8357]
+    - Fix the [program milestone list page](../../Spira-User-Manual/Program-Milestones/#milestone-list) so that it does not show the release count or requirement count columns [IN:8362]
+    - Fix error logging when creating a new program milestone in specific edge cases [IN:8376]
+    - Fix the [program milestone](../../Spira-User-Manual/Program-Milestones/#milestone-details) and [capability detail](../../Spira-User-Manual/Program-Capabilities/#capability-details) pages to have fully responsive designs [IN:8388]
+    - Fix some idiosyncrasies in the structure of certain translation files to prepare for improvements in German and French translations [IN:8391]
+    - Fix the [program milestone](../../Spira-User-Manual/Program-Milestones/#milestone-details) and [risk detail](../../Spira-User-Manual/Risks-Management/#risk-details) pages' toolbar buttons hiding and showing responsively in the correct way [IN:8416]
+    - Fix the installer to provide consistent internal file names (inside the installer itself not the application) when upgrading to v7.7 [IN:8473]
+    - Fix upgrading to or through Spira v7.7 not unnecessarily upgrading the full-text indexes [IN:8474]
+
+
 ## Version 7.7 (June 2023)
 
 !!! info "Summary"
