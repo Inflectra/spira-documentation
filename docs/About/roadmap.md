@@ -12,20 +12,17 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q3 2023
-- Program level standard reports for "Program Capabilities" and "Program Milestones" (SpiraPlan)
-- New "Scaled Agile" program home page and reporting widgets (SpiraPlan)
-- The ability to @ mention people in comments and descriptions
-
 ## Q4 2023
-**We will complete the new planning board rollout, and finish the first round of features for program level "Scaled Agile"**
-
-- Product level planning boards are converted to the new board design, which comes out of beta (SpiraTeam and SpiraPlan)
+- Product level planning boards will be converted to a new and further enhanced design, taking on board feedback from the beta (SpiraTeam and SpiraPlan)
+- New program level widgets for the program home page to help you manage program milestones and capabilities
+- Improvements to program level reporting and custom graphs
 - Native tagging for all product artifacts (like we currently have for documents)
 - Risk enhancements, including in reporting  (SpiraPlan)
 
 ## 2024
 **We will extend our "Scaled Agile" approach further with portfolio level features, like "Portfolio Outcomes" and "Portfolio Milestones", and deeper risk integration**
+
+**Further planning board improvements, including at the program level**
 
 
 ## Longer term thematic ideas
