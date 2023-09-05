@@ -9,7 +9,11 @@ You do not have to use these tokens. You can hard code a report to query only ag
 ## Available Tokens
 
 - **${ProjectId}**: limits the data to items in the current product only (a "product" in the tool is referred to as a "Project" in the database)
-- **${ProjectGroupId}**: limits the data to items in the current program only (a "program" in the tool is referred to as a "ProjectGroup" in the database)
+- **${ProjectGroupId}**: limits the data to items in the current program (a "program" in the tool is referred to as a "ProjectGroup" in the database)
+
+    - when used for a product-level custom report it will show all artifacts in each product of the current program (the program that the current product is in) 
+    - when used for a porgram-level custom report it will show relevant artifacts for the currently selected program
+
 - **${ReleaseId}**: limits the data to a specific single release (selected via a dropdown)
 - **${ReleaseAndChildIds}**: limits the data to a specific release and all of its 'active' children (selected via a dropdown)
 

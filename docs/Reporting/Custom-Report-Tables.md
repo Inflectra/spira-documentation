@@ -380,6 +380,43 @@ See | this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for s
 | CUSTOM_PROPERTY_LIST_NAME      |
 | CUSTOM_PROPERTY_LIST_IS_ACTIVE |
 
+## Global / System History Change-Sets
+| R_Global_HistoryChangeSets |
+| -------------------------- |
+| CHANGESET_ID               |
+| USER_ID                    |
+| CHANGE_DATE                |
+| CHANGETYPE_ID              |
+| ARTIFACT_TYPE_ID           |
+| ARTIFACT_ID                |
+| ARTIFACT_DESC              |
+| WORKSPACE_TYPE_ID          |
+| WORKSPACE_ID               |
+| CHANGETYPE_NAME            |
+| USER_NAME                  |
+| ARTIFACT_TYPE_NAME         |
+| WORKSPACE_TYPE_NAME        |
+
+## Global / System History Details
+| R_Global_HistoryDetails |
+| ----------------------- |
+| ARTIFACT_HISTORY_ID     |
+| FIELD_NAME              |
+| OLD_VALUE               |
+| NEW_VALUE               |
+| CHANGESET_ID            |
+| FIELD_TYPE_ID           |
+| CUSTOM_PROPERTY_ID      |
+| ARTIFACT_ID             |
+| USER_ID                 |
+| ARTIFACT_TYPE_ID        |
+| CHANGE_DATE             |
+| USER_NAME               |
+| CHANGE_NAME             |
+| CHANGETYPE_ID           |
+| ARTIFACT_FIELD_TYPE_ID  |
+| ARTIFACT_TYPE_NAME      |
+
 ## History Change-Sets
 | R_HistoryChangeSets |
 | ------------------- |
