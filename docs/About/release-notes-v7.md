@@ -17,14 +17,14 @@
         - As a report admin, I can create custom reports of [system level history changes](../../Reporting/Custom-Report-Tables/#global--system-history-change-sets), to provide my org with any reports required in this area [RQ:4432]
         - As a report admin, I can create saved [custom reports](../../Spira-Administration-Guide/System-Reporting) of program milestones and capabilities, that will help users' reporting needs [RQ:4626]
         - As a program report user of SpiraPlan, I can access [program level reports for my program](../../Spira-User-Manual/Program-Reports/#reporting-home-page), so that I can create useful reports [RQ:4503]
-        - As a program report user, I can generate a [capability summary report](../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track their progress [RQ:4644]
-        - As a program report user, I can generate a [capability details report](../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track progress [RQ:4645]
+        - As a program report user, I can generate a [capability summary report](../../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track their progress [RQ:4644]
+        - As a program report user, I can generate a [capability details report](../../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track progress [RQ:4645]
         
             - As a program report user, I can view associated requirements in a capability details report, to help me track progress [RQ:4666]
             - As a program report user, I can view the history of a capability in its details report, to help me track progress [RQ:4665]
         
-        - As a program report user, I can generate a [program milestone summary report](../Spira-User-Manual/Program-Reports/#program-milestone-summary-report), to help me track their progress [RQ:4642]
-        - As a program report user, I can generate a [program milestone details report(../Spira-User-Manual/Program-Reports/#program-milestone-detailed-report)], to help me track progress [RQ:4643]
+        - As a program report user, I can generate a [program milestone summary report](../../Spira-User-Manual/Program-Reports/#program-milestone-summary-report), to help me track their progress [RQ:4642]
+        - As a program report user, I can generate a [program milestone details report(../../Spira-User-Manual/Program-Reports/#program-milestone-detailed-report)], to help me track progress [RQ:4643]
             
             - As a program report user, I can view the associated capabilities for a program milestone in its details report, to help me track progress [RQ:4668]
             - As a program report user, I can view the associated releases for a program milestone in its details report, to help me track progress [RQ:4667]
