@@ -90,7 +90,7 @@ Read about [how to create and manage filters, and how to sort the artifact list]
 
 By default, when you view the list of test cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
 
-To change the test case list to just display test cases and execution status for a particular release, change the release selected in the drop-down list located in the top-right from "All Releases" to a specific release:
+To change the test case list to just display test cases and execution status for a particular active release, change the release selected in the drop-down list located in the top-right from "All Releases" to a specific release:
 
 ![](img/Test_Case_Management_133.png)
 
