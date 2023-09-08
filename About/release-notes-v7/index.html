@@ -918,6 +918,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Reports/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4235,6 +4249,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-78-august-2023" class="md-nav__link">
+    Version 7.8 (August 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-77-june-2023" class="md-nav__link">
     Version 7.7 (June 2023)
   </a>
@@ -4486,6 +4507,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-78-august-2023" class="md-nav__link">
+    Version 7.8 (August 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-77-june-2023" class="md-nav__link">
     Version 7.7 (June 2023)
   </a>
@@ -4564,6 +4592,84 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-78-august-2023">Version 7.8 (August 2023)<a class="headerlink" href="#version-78-august-2023" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>SpiraPlan (only) adds brand new <a href="../../Spira-User-Manual/Program-Reports">program-level reporting</a> functionality. Four new standard reports for program milestones and capabilities are now included, or create your own program-level custom reports.</li>
+<li>Our upgraded <a href="../../Spira-User-Manual/Application-Wide/#rich-text-editor">rich text editor</a> lets you use @ to quickly find any product member and mention them in comments or a description. Any mentioned user is, where relevant, automatically added to the artifact as a <a href="../../Spira-User-Manual/Application-Wide/#followers">follower</a>.</li>
+<li>System admins can now quickly see all the programs a user is a member of, with a dedicated tab on the <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">View/Edit user detailed</a> screen in system administration.</li>
+</ul>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p>As a product member, <a href="../../Spira-User-Manual/Application-Wide/#mentions">I can add followers to artifacts</a> I am working on using an @ mention feature, so I can keep my colleagues informed on relevant artifacts [RQ:4653]</p>
+</li>
+<li>
+<p><strong>As a program manager, I can monitor the progress of work in the program using <a href="../../Spira-User-Manual/Program-Reports">offline reporting</a>, so I can analyze current performance</strong></p>
+<ul>
+<li>As a report admin, I can create custom reports of <a href="../../Reporting/Custom-Report-Tables/#global--system-history-change-sets">system level history changes</a>, to provide my org with any reports required in this area [RQ:4432]</li>
+<li>As a report admin, I can create saved <a href="../../Spira-Administration-Guide/System-Reporting">custom reports</a> of program milestones and capabilities, that will help users' reporting needs [RQ:4626]</li>
+<li>As a program report user of SpiraPlan, I can access <a href="../../Spira-User-Manual/Program-Reports/#reporting-home-page">program level reports for my program</a>, so that I can create useful reports [RQ:4503]</li>
+<li>As a program report user, I can generate a <a href="../../Spira-User-Manual/Program-Reports/#capability-summary-report">capability summary report</a>, to help me track their progress [RQ:4644]</li>
+<li>
+<p>As a program report user, I can generate a <a href="../../Spira-User-Manual/Program-Reports/#capability-summary-report">capability details report</a>, to help me track progress [RQ:4645]</p>
+<ul>
+<li>As a program report user, I can view associated requirements in a capability details report, to help me track progress [RQ:4666]</li>
+<li>As a program report user, I can view the history of a capability in its details report, to help me track progress [RQ:4665]</li>
+</ul>
+</li>
+<li>
+<p>As a program report user, I can generate a <a href="../../Spira-User-Manual/Program-Reports/#program-milestone-summary-report">program milestone summary report</a>, to help me track their progress [RQ:4642]</p>
+</li>
+<li>
+<p>As a program report user, I can generate a [program milestone details report(../../Spira-User-Manual/Program-Reports/#program-milestone-detailed-report)], to help me track progress [RQ:4643]</p>
+<ul>
+<li>As a program report user, I can view the associated capabilities for a program milestone in its details report, to help me track progress [RQ:4668]</li>
+<li>As a program report user, I can view the associated releases for a program milestone in its details report, to help me track progress [RQ:4667]</li>
+<li>As a program report user, I can view the history of a program milestone in its details report, to help me track progress [RQ:4669]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add API operations to let users create, update, and delete product roles [IN:8480]</li>
+<li>Add a confirmation dialog when an admin <a href="../../Spira-Administration-Guide/System-Integration/#data-synchronization">resets a data sync</a> to provide options about how far back the data sync should be reset [IN:8384]</li>
+<li>Add a new API operation to update only FixedBuildId property of an incident to provide faster integration with CI/CD systems [IN:8529]</li>
+<li>Add an API operation to let users create a blank template with minimal pre-populated fields like statuses, types, or workflows [IN:8437]</li>
+<li>Add a new API call to let users delete builds [IN:7881]</li>
+<li>
+<p>Allow system admins to see a user's program membership with a new Program Membership tab on the admin <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">edit user page</a> [IN:3005]</p>
+</li>
+<li>
+<p>Fix non system admins not being able to save changes to test configuration properties on its <a href="../../Spira-User-Manual/Test-Configuration-Management/#test-configuration-details">detail page</a> [IN:4566]</p>
+</li>
+<li>Fix the API to not accept an test case folder, priority, or type ID from invalid products or templates on creation or updates [IN:7320]</li>
+<li>Fix <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">product cloning</a> so that it also clones the product's custom properties [IN:7472]</li>
+<li>Fix editing test set test case mapping using the API so that it requires both test case and test set relevant permissions [IN:7811]</li>
+<li>Fix the API to create a requirement without a child to set its type [IN:7845]</li>
+<li>Fix tooltips on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history list page</a> not showing the description for product, program milestone, and capability entries [IN:7874]</li>
+<li>Fix emoji with skin tones like "🤚🏽" in description fields causing the <a href="../../Spira-User-Manual/User-Product-Management/#recent-artifacts">Recent Artifacts</a> and <a href="../../Spira-User-Manual/User-Product-Management/#my-subscribed-artifacts">Subscribed Artifacts</a> widgets on the My Page to break the page [IN:7916]</li>
+<li>Fix purging a single item from the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product admin history pages</a> showing an error "System.guid does not contain a definition for 'Progress''' [IN:8098]</li>
+<li>Fix getting an error when filtering documents by a custom property on the <a href="../../Spira-User-Manual/Document-Management/#document-list">document list page</a> or attachment tab [IN:8231]</li>
+<li>Fix the system admin system-level <a href="../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties">custom property definitions page</a> not loading correctly if you try to delete a definition that has system history entries [IN:8319]</li>
+<li>Fix not being able to filter system history records for deleting a program on the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history list page</a> [IN:8356]</li>
+<li>Fix an error message showing when you try and save a capability or program milestone and the creator dropdown is left blank [IN:8357]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Program-Milestones/#milestone-list">program milestone list page</a> so that it does not show the release count or requirement count columns [IN:8362]</li>
+<li>Fix error logging when creating a new program milestone in specific edge cases [IN:8376]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Program-Milestones/#milestone-details">program milestone</a> and <a href="../../Spira-User-Manual/Program-Capabilities/#capability-details">capability detail</a> pages to have fully responsive designs [IN:8388]</li>
+<li>Fix some idiosyncrasies in the structure of certain translation files to prepare for improvements in German and French translations [IN:8391]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Program-Milestones/#milestone-details">program milestone</a> and <a href="../../Spira-User-Manual/Risks-Management/#risk-details">risk detail</a> pages' toolbar buttons hiding and showing responsively in the correct way [IN:8416]</li>
+<li>Fix the installer to provide consistent internal file names (inside the installer itself not the application) when upgrading to v7.7 [IN:8473]</li>
+<li>Fix upgrading to or through Spira v7.7 not unnecessarily upgrading the full-text indexes [IN:8474]</li>
+</ul>
+</details>
 <h2 id="version-77-june-2023">Version 7.7 (June 2023)<a class="headerlink" href="#version-77-june-2023" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

@@ -918,6 +918,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Reports/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4509,15 +4523,16 @@
 <li>whether the data sync is active (system wide)</li>
 <li>the status (N/A, Not Run, Error, or Success)</li>
 <li>
-<p>operations you can perform on each data sync. </p>
+<p>operations you can perform on each data sync: </p>
 <ul>
-<li>Reset sync. You should not routinely use the <strong>Reset Sync</strong>. This resets the date of last sync for that plug-in. This forces the plug-in to re-examine all records in the system to see if any were not synchronized - this can take a long time. The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan Data-Sync background Windows service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.</li>
+<li>Reset sync. You should not routinely use the <strong>Reset Sync</strong> (see image below). This opens a dialog to let you reset the date of last sync for that plug-in. The dialog lets you reset the sync to 1 hour ago, 1 day ago, 1 week ago, or for all time. Each of these options forces the plug-in to re-examine all records in the system within the relevant time period to see if any were not synchronized - this can take a long time (especially for "all time" which should almost never be used). The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.</li>
 <li>Edit: this will open the data sync plug-in settings page. For many plug-ins this settings page will guide you in how to set up that specific data sync. Each data sync plug-in has detailed documentation about how to set it up (see the Integrations &gt; Bug Tracking/DataSync section of the main SpiraDoc menu)</li>
 <li>Delete</li>
 <li>View data sync errors in the event log, </li>
 </ul>
 </li>
 </ul>
+<p><img alt="" src="../img/System_Integration_reset-data-sync.png" /></p>
 <p>Above the table you can add a new data sync or refresh the status of the page to ensure that you are seeing the most up to date information. </p>
 <h2 id="source-code-integration">Source Code Integration<a class="headerlink" href="#source-code-integration" title="Permanent link">&para;</a></h2>
 <p><em>This section refers to the functionality available to on-premise customers of SpiraPlan or those customers that have disabled TaraVault. If you are using the cloud / hosted version of SpiraPlan and have not disabled TaraVault, please refer to <a href="../System/#taravault">TaraVault Configuration</a> instead.</em></p>

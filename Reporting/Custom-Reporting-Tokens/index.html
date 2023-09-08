@@ -918,6 +918,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Reports/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4500,8 +4514,16 @@
 <h2 id="available-tokens">Available Tokens<a class="headerlink" href="#available-tokens" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>${ProjectId}</strong>: limits the data to items in the current product only (a "product" in the tool is referred to as a "Project" in the database)</li>
-<li><strong>${ProjectGroupId}</strong>: limits the data to items in the current program only (a "program" in the tool is referred to as a "ProjectGroup" in the database)</li>
-<li><strong>${ReleaseId}</strong>: limits the data to a specific single release (selected via a dropdown)</li>
+<li>
+<p><strong>${ProjectGroupId}</strong>: limits the data to items in the current program (a "program" in the tool is referred to as a "ProjectGroup" in the database)</p>
+<ul>
+<li>when used for a product-level custom report it will show all artifacts in each product of the current program (the program that the current product is in) </li>
+<li>when used for a porgram-level custom report it will show relevant artifacts for the currently selected program</li>
+</ul>
+</li>
+<li>
+<p><strong>${ReleaseId}</strong>: limits the data to a specific single release (selected via a dropdown)</p>
+</li>
 <li><strong>${ReleaseAndChildIds}</strong>: limits the data to a specific release and all of its 'active' children (selected via a dropdown)</li>
 </ul>
 <h2 id="more-details-about-releaseid">More details about ${ReleaseId}<a class="headerlink" href="#more-details-about-releaseid" title="Permanent link">&para;</a></h2>

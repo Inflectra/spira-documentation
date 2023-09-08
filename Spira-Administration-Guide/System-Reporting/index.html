@@ -918,6 +918,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Program-Reports/" class="md-nav__link">
+        Reporting
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1468,6 +1482,26 @@
   <a href="#edit-reports" class="md-nav__link">
     Edit Reports
   </a>
+  
+    <nav class="md-nav" aria-label="Edit Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-sections" class="md-nav__link">
+    Standard Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-section" class="md-nav__link">
+    Custom Section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4443,6 +4477,26 @@
     Edit Reports
   </a>
   
+    <nav class="md-nav" aria-label="Edit Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-sections" class="md-nav__link">
+    Standard Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-section" class="md-nav__link">
+    Custom Section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4468,117 +4522,87 @@
 
 
 <h1 id="system-reporting">System: Reporting<a class="headerlink" href="#system-reporting" title="Permanent link">&para;</a></h1>
-<p>SpiraPlan has a powerful set of reports and charts available out of the
-box that cover most product's needs. However, there is often a need to
-be able to generate custom reports and graphs that are specific to your
-organization. In this section, you can create custom graphs and reports
-for your users to use.</p>
+<p>SpiraPlan has a powerful set of reports and charts available out of the box that cover most needs. However, there is often a need to be able to generate custom reports and graphs that are specific to your organization. In this section, you can create custom graphs and reports for your users to use.</p>
 <h2 id="edit-reports">Edit Reports<a class="headerlink" href="#edit-reports" title="Permanent link">&para;</a></h2>
-<p>The "Edit Reports" administration page lets you create custom reports in
-the system that your users can run in the various products they have
-access to. Note that the report definitions themselves are global to the
-system and therefore available in all products.</p>
-<p><img alt="" src="../img/System_Reporting_82.png" /></p>
-<p>The list of report definitions contains both the standard (default)
-reports that ship with the system and any custom reports that you have
-defined. However, any of the reports listed with the "Default" option
-checked will not be editable. So, if you want to modify one of the
-built-in reports to make it better suit your needs, you should instead
-click on the "Clone" button next to the report and make a copy of the
-report that you can then modify. You can view any of the default reports
-by clicking on the associated "View" button.</p>
-<p>To edit an existing non-default report, click on the "Edit" button. To
-add a new report from scratch, click on the "Add New Report" option at
-the bottom of the list. Either of these will take you to the Report
-editing screen:</p>
-<p><img alt="" src="../img/System_Reporting_83.png" /></p>
-<p>The top-half of this screen (illustrated above) lets you specify the
-name of the report, the long description (displayed in tooltips but not
-in the report itself) and a rich-text footer and header. The header and
-footer will be displayed at the top and bottom of the generated report.</p>
-<p>In addition, you can specify whether the report is active (and therefore
-can be used in the SpiraPlan reports center) and which report category
-heading the report will appear in. This is also used to determine which
-role(s) are able to run the report (e.g. a user that has permissions to
-view requirements will be able to run all reports listed under the
-"Requirement Reports" category).</p>
-<p>The lower-half of the screen displays the list of formats, standard
-sections and custom sections that make up the report:</p>
-<p><img alt="" src="../img/System_Reporting_84.png" /></p>
-<p>The list of formats is fixed in the system, you can simply choose which
-formats this specific report will be available in. The reporting engine
-will take care of converting your report into the target format, you
-just need to specify which type(s) are applicable.</p>
-<p>a) Standard Sections</p>
-<p>The list of <strong>standard sections</strong> contains a list of the various
-pre-defined report sections that are to be included in the report. A
-standard section consists of a set of nested queries and embedded
-elements that will return back data. For example, the "Requirements
-Details" section consists of a list of all the requirements in a
-product, together with the associated test cases, tasks, custom
-properties, attachments, discussions, change history, source code
-commits, and other related items.</p>
-<p>With a standard section, you cannot change the underlying data query,
-but you can change the header, footer and XSLT template used to format
-the results:</p>
-<p><img alt="" src="../img/System_Reporting_85.png" /></p>
-<p>When you either click on "Add New Standard Section" or the "Customize"
-link next to an existing standard section, the popup dialog illustrated
-above will be displayed. On this page you can change the following
-fields:</p>
+<p>The "Edit Reports" administration page lets you create custom reports in the system that your users can run in relevant workspaces they have access to. </p>
+<p>Custom reports you create are available in all relevant workspaces. For example:</p>
 <ul>
-<li>
-<p><strong>Name --</strong> Choose the name of the standard report section you want
-to use from the dropdown list. Changing the name of the section will
-automatically update the Description field below.</p>
-</li>
-<li>
-<p><strong>Description</strong> -- This is the description of the report section, it
-is not displayed in the final report.</p>
-</li>
-<li>
-<p><strong>Header</strong> -- This is the header that will be displayed <em>before</em> the
-dynamic data retrieved as part of the report section. You can enter
-in formatted rich text in this field.</p>
-</li>
-<li>
-<p><strong>Footer</strong> -- This is the footer that will be displayed <em>after</em> the
-dynamic data retrieved as part of the report section. You can enter
-in formatted rich text in this field.</p>
-</li>
-<li>
-<p><strong>Template</strong> -- This is the eXtensible Markup Language Stylesheet
-Transform (XSLT) used to transform the raw XML data from the report
-query into the final HTML display format. When you choose/change the
-name dropdown list, clicking on the "Create Default Template" will
-populate this field with the default template used to render the
-data.</p>
-</li>
+<li>any report with a "requirements" category can be run from any product </li>
+<li>any report with a "capabilities" category can be run from any program (but will not be available at the product level)</li>
 </ul>
-<p>When you first create a new standard report section, we recommend using
-the option to "Create Default Template". This will then allow you to run
-the report in the main reports center and have all the available data
-fields displayed in the standard format. If you would like to customize
-the content of the section, you have several options:</p>
+<p>The available report categories are:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Workspace Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirement Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Test Case Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Incident Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Task Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Release Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Risk Reports</td>
+<td>product</td>
+</tr>
+<tr>
+<td>Capability Reports</td>
+<td>program</td>
+</tr>
+<tr>
+<td>Program Milestone Reports</td>
+<td>program</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="../img/System_Reporting_82.png" /></p>
+<p>The list of report definitions contains both the standard (default) reports that ship with the system and any custom reports that you have defined. However, any of the reports listed with the "Default" option checked will not be editable. So, if you want to modify one of the built-in reports to make it better suit your needs, you should instead click on the "Clone" button next to the report and make a copy of the report that you can then modify. You can view any of the default reports by clicking on the associated "View" button.</p>
+<p>To edit an existing non-default report, click on the "Edit" button. To add a new report from scratch, click on the "Add New Report" option at the bottom of the list. Either of these will take you to the Report editing screen:</p>
+<p><img alt="" src="../img/System_Reporting_83.png" /></p>
+<p>The top-half of this screen (illustrated above) lets you specify the name of the report, the long description (displayed in tooltips but not in the report itself) and a rich-text footer and header. The header and footer will be displayed at the top and bottom of the generated report.</p>
+<p>In addition, you can specify whether the report is active (and therefore can be used in the SpiraPlan reports center) and which report category heading the report will appear in. This is used to determine which workspaces the report will be available in and which roles can run the report (e.g. a user that has permissions to view requirements will be able to run all reports listed under the "Requirement Reports" category).</p>
+<p>The lower-half of the screen displays the list of formats, standard sections and custom sections that make up the report:</p>
+<p><img alt="" src="../img/System_Reporting_84.png" /></p>
+<p>The list of formats is fixed in the system, you can choose which formats this specific report will be available in. The reporting engine will convert the report into the target format.</p>
+<h3 id="standard-sections">Standard Sections<a class="headerlink" href="#standard-sections" title="Permanent link">&para;</a></h3>
+<p>The list of <strong>standard sections</strong> contains a list of the various pre-defined report sections that are to be included in the report. A standard section consists of a set of nested queries and embedded elements that will return back data. For example, the "Requirements Details" section consists of a list of all the requirements in a product, together with the associated test cases, tasks, custom properties, attachments, discussions, change history, source code commits, and other related items.</p>
+<p>With a standard section, you cannot change the underlying data query, but you can change the header, footer and XSLT template used to format the results:</p>
+<p><img alt="" src="../img/System_Reporting_85.png" /></p>
+<p>When you either click on "Add New Standard Section" or the "Customize" link next to an existing standard section, the popup dialog illustrated above will be displayed. On this page you can change the following fields:</p>
 <ul>
-<li>
-<p><strong>Customize Header/Footer</strong> -- if you want to keep the data and
-layout as-is, you can simply add a custom header and footer to add
-organization specific information into the report.</p>
-</li>
-<li>
-<p><strong>Customize the Data/Layout</strong> -- if you want to customize how the
-data is displayed and formatted, you will need to edit the XSLT
-Template. You can learn more about XSLT at <a href="https://www.w3schools.com/xml/xsl_intro.asp">W3Schools</a>. However, the recommended approach
-is to first run the "Raw XML" format report from the main SpiraPlan
-reports center. An example XML report is partially shown below:</p>
-</li>
+<li><strong>Name</strong>: Choose the name of the standard report section you want to use from the dropdown list. Changing the name of the section will automatically update the Description field below.</li>
+<li><strong>Description</strong>: This is the description of the report section, it is not displayed in the final report.</li>
+<li><strong>Header</strong>: This is the header that will be displayed <em>before</em> the dynamic data retrieved as part of the report section. You can enter in formatted rich text in this field.</li>
+<li><strong>Footer</strong>: This is the footer that will be displayed <em>after</em> the dynamic data retrieved as part of the report section. You can enter in formatted rich text in this field.</li>
+<li><strong>Template</strong>: This is the eXtensible Markup Language Stylesheet Transform (XSLT) used to transform the raw XML data from the report query into the final HTML display format. When you choose/change the name dropdown list, clicking on the "Create Default Template" will populate this field with the default template used to render the data.</li>
+</ul>
+<p>When you first create a new standard report section, we recommend using the option to "Create Default Template". This will then allow you to run the report in the main reports center and have all the available data fields displayed in the standard format. If you would like to customize the content of the section, you have several options:</p>
+<ul>
+<li><strong>Customize Header/Footer</strong>: if you want to keep the data and layout as-is, you can simply add a custom header and footer to add organization specific information into the report.</li>
+<li><strong>Customize the Data/Layout</strong>: if you want to customize how the data is displayed and formatted, you will need to edit the XSLT Template. You can learn more about XSLT at <a href="https://www.w3schools.com/xml/xsl_intro.asp">W3Schools</a>. However, the recommended approach is to first run the "Raw XML" format report from the main SpiraPlan reports center. An example XML report is partially shown below:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>“?xml<span class="w"> </span>version=&quot;1.0&quot;<span class="w"> </span>encoding=&quot;UTF-8&quot;<span class="w"> </span>standalone=&quot;yes&quot;?”
 “Report”
 <span class="w">  </span>“Title”
-<span class="w">    </span>Requirements<span class="w"> </span>Detailed<span class="w"> </span>Report
-<span class="w">  </span>“/Title”
+<span class="w">    </span>Requirements<span class="w"> </span>Detailed<span class="w"> </span>Report<span class="w">   </span>“/Title”
 <span class="w">  </span>“ProductData”
 <span class="w">    </span>“Product”
 <span class="w">      </span>“ProjectId”1”/ProjectId”
@@ -4711,9 +4735,7 @@ reports center. An example XML report is partially shown below:</p>
 <span class="w">  </span>“/RequirementData”
 “/Report”
 </code></pre></div>
-<p>This XML data is then converted by the XSLT template into HTML format so
-that it can be included into the final generated report. An example
-fragment of the XSLT template looks like:</p>
+<p>This XML data is then converted by the XSLT template into HTML format so that it can be included into the final generated report. An example fragment of the XSLT template looks like:</p>
 <div class="highlight"><pre><span></span><code>“?xml<span class="w"> </span>version=&quot;1.0&quot;<span class="w"> </span>encoding=&quot;utf-8&quot;?”
 “xsl:stylesheet<span class="w"> </span>version=&quot;1.0&quot;<span class="w"> </span>xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;<span class="w"> </span>xmlns:msxsl=&quot;urn:schemas-microsoft-com:xslt&quot;<span class="w"> </span>exclude-result-prefixes=&quot;msxsl&quot;“
 <span class="w">  </span>“xsl:template<span class="w"> </span>match=&quot;/RequirementData&quot;“
@@ -4746,206 +4768,91 @@ fragment of the XSLT template looks like:</p>
 <span class="w">    </span>“/xsl:for-each”
 <span class="w">  </span>“/xsl:template”
 </code></pre></div>
-<p>So using a combination of XSLT and the Raw XML report format, you can
-generate a customized view of the standard report section that will be
-included in the final report.</p>
-<p>Sometimes, however you want to be able to create a completely custom
-report that includes customized data as well as a custom format. In
-which case you need to use a <strong>custom report section</strong> instead.</p>
-<p>b) Custom Section</p>
-<p>Back on the main report details page, if you click on "Add New Custom
-Section", the following dialog box will be displayed:</p>
+<p>So using a combination of XSLT and the Raw XML report format, you can generate a customized view of the standard report section that will be included in the final report.</p>
+<p>Sometimes, however you want to be able to create a completely custom report that includes customized data as well as a custom format. In which case you need to use a <strong>custom report section</strong> instead.</p>
+<h3 id="custom-section">Custom Section<a class="headerlink" href="#custom-section" title="Permanent link">&para;</a></h3>
+<p>Back on the main report details page, if you click on "Add New Custom Section", the following dialog box will be displayed:</p>
 <p><img alt="" src="../img/System_Reporting_86.png" /></p>
 <p>On this page you can enter / change the following fields:</p>
 <ul>
-<li>
-<p><strong>Name --</strong> Enter the name of the new custom report section that you
-will be adding to the report. This is not displayed in the final
-report</p>
-</li>
-<li>
-<p><strong>Description</strong> -- This is the description of the custom section, it
-is not displayed in the final report.</p>
-</li>
-<li>
-<p><strong>Header</strong> -- This is the header that will be displayed <em>before</em> the
-dynamic data retrieved as part of the report section. You can enter
-in formatted rich text in this field.</p>
-</li>
-<li>
-<p><strong>Footer</strong> -- This is the footer that will be displayed <em>after</em> the
-dynamic data retrieved as part of the report section. You can enter
-in formatted rich text in this field.</p>
-</li>
-<li>
-<p><strong>Active</strong> -- You should make sure this checkbox is checked if you
-want the custom section to appear in the final report.</p>
-</li>
+<li><strong>Name</strong>: Enter the name of the new custom report section that you will be adding to the report. This is not displayed in the final report</li>
+<li><strong>Description</strong>: This is the description of the custom section, it is not displayed in the final report.</li>
+<li><strong>Header</strong>: This is the header that will be displayed <em>before</em> the dynamic data retrieved as part of the report section. You can enter in formatted rich text in this field.</li>
+<li><strong>Footer</strong>: This is the footer that will be displayed <em>after</em> the dynamic data retrieved as part of the report section. You can enter in formatted rich text in this field.</li>
+<li><strong>Active</strong>: You should make sure this checkbox is checked if you want the custom section to appear in the final report.</li>
 </ul>
-<p>Further down on the page you can actually enter the custom query and
-associated XSLT template:</p>
+<p>Further down on the page you can actually enter the custom query and associated XSLT template:</p>
 <p><img alt="" src="../img/System_Reporting_87.png" /></p>
-<p>On this page you need to first choose the appropriate <strong>reportable
-entity</strong> from the dropdown list. In the example illustrated above, we
-have selected the "Requirements" reportable entity. This will
-automatically populate the following query in the <strong>Query</strong> editor:</p>
-<p>select value R from SpiraTestEntities.R_Requirements as R where
-R.PROJECT_ID = ${ProjectId}</p>
-<p>This query tells SpiraPlan to select all of the rows in the
-R_Requirements collection that are in the current product and include
-all of the columns in the final report. This generally will result in
-more columns than is desirable, so you should click on the "Preview
-Results" option to view a list of the various columns and the sample
-data. That will help you decide which columns are important for your
-report. You can then adjust the query to only include those columns:</p>
-<p>select R.REQUIREMENT_ID, R.NAME from SpiraTestEntities.R_Requirements
-as R where R.PROJECT_ID = ${ProjectId}</p>
-<p>In this modified query, we have replaced the keyword <strong>value</strong> with the
-specific column names. When you use the "Preview Results" option on this
-query, you will only see the two desired columns:</p>
+<p>On this page you need to first choose the appropriate <strong>reportable entity</strong> from the dropdown list. In the example illustrated above, we have selected the "Requirements" reportable entity. This will automatically populate the following query in the <strong>Query</strong> editor:</p>
+<p>select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}</p>
+<p>This query tells SpiraPlan to select all of the rows in the R_Requirements collection that are in the current product and include all of the columns in the final report. This generally will result in more columns than is desirable, so you should click on the "Preview Results" option to view a list of the various columns and the sample data. That will help you decide which columns are important for your report. You can then adjust the query to only include those columns:</p>
+<p><code>select R.REQUIREMENT\_ID, R.NAME from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_ID = ${ProjectId}</code></p>
+<p>In this modified query, we have replaced the keyword <strong>value</strong> with the specific column names. When you use the "Preview Results" option on this query, you will only see the two desired columns:</p>
 <p><img alt="" src="../img/System_Reporting_88.png" /></p>
-<p>Once you have verified that the data being returned matches your
-requirements, click on the "Create Default Template" option and
-SpiraPlan will automatically generate a new XSLT template that displays
-just these columns in a nice table format:</p>
+<p>Once you have verified that the data being returned matches your requirements, click on the "Create Default Template" option and SpiraPlan will automatically generate a new XSLT template that displays just these columns in a nice table format:</p>
 <p><img alt="" src="../img/System_Reporting_89.png" /></p>
-<p>You can now click the [Save] button to save your changes to the
-report.</p>
-<p>You may have noticed that we had a special token in the query
-<strong><span ProjectGroupId="ProjectGroupId" class="arithmatex"><span class="MathJax_Preview">{ProjectId}**, this token will be evaluated during the generation of
-the report and ensures that only items in the current product are
-included. If you want to include all the items in a specific Program,
-you should instead use the token **</span><script type="math/tex">{ProjectId}**, this token will be evaluated during the generation of
-the report and ensures that only items in the current product are
-included. If you want to include all the items in a specific Program,
-you should instead use the token **</script></span></strong>. If you don't
-use either token, the report will include all the items in the entire
-system, across all products and groups.</p>
+<p>You can now click the [Save] button to save your changes to the report.</p>
+<p>You may have noticed that we had a special token in the query <strong><span ProjectGroupId="ProjectGroupId" class="arithmatex"><span class="MathJax_Preview">{ProjectId}**, this token will be evaluated during the generation of the report and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token **</span><script type="math/tex">{ProjectId}**, this token will be evaluated during the generation of the report and ensures that only items in the current product are included. If you want to include all the items in a specific Program, you should instead use the token **</script></span></strong>. If you don't use either token, the report will include all the items in the entire system, across all products and groups.</p>
 <p>For example:</p>
 <ul>
-<li>
-<p>select value R from SpiraTestEntities.R_Requirements as R where
-R.PROJECT_ID = ${ProjectId}
-<strong>will display all the requirements in the specific product</strong></p>
-</li>
-<li>
-<p>select value R from SpiraTestEntities.R_Requirements as R where
-R.PROJECT_GROUP_ID = ${ProjectGroupId}
-<strong>will display all the requirements in the specific program</strong></p>
-</li>
-<li>
-<p>select value R from SpiraTestEntities.R_Requirements as R
-<strong>will display all the requirements in the entire system</strong></p>
-</li>
+<li><code>select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_ID = ${ProjectId}</code> will display all the requirements in the specific product</li>
+<li><code>select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_GROUP\_ID = ${ProjectGroupId}</code> will display all the requirements in the specific program</li>
+<li><code>select value R from SpiraTestEntities.R\_Requirements as R</code> will display all the requirements in the entire system</li>
 </ul>
-<p>For more information on creating custom report queries, please refer to
-the knowledge base articles on the Inflectra customer support website:
+<p>For more information on creating custom report queries, please refer to the knowledge base articles on the Inflectra customer support website:
 <a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>.</p>
-<p><em>Warning: If you create a report that doesn't have either ${ProjectId}
-or ${ProjectGroupId} in the WHERE clause you could end up displaying
-data to a user that shouldn't have permission to see that data.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you create a report that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.</p>
+</div>
 <h2 id="edit-graphs">Edit Graphs<a class="headerlink" href="#edit-graphs" title="Permanent link">&para;</a></h2>
-<p>The "Edit Graphs" administration page lets you create custom graphs and
-charts in the system that your users can run in the various products
-they have access to. Note that the graph definitions themselves are
-global to the system and therefore available in all products.</p>
-<p>When you click on the 'Edit Graphs' menu option, the system will display
-a list of any existing custom graphs that have been already defined (it
-will not list the standard graphs that come with the system):</p>
+<p>The "Edit Graphs" administration page lets you create custom graphs and charts in the system that your users can run in the various products they have access to. Note that the graph definitions themselves are global to the system and therefore available in all products.</p>
+<p>When you click on the 'Edit Graphs' menu option, the system will display a list of any existing custom graphs that have been already defined (it will not list the standard graphs that come with the system):</p>
 <p><img alt="" src="../img/System_Reporting_90.png" /></p>
-<p>To add a new graph, click on the '<strong>Add New Custom Graph</strong>' option in
-the bottom of the table:</p>
+<p>To add a new graph, click on the "Add New Custom Graph" option in the bottom of the table:</p>
 <p><img alt="" src="../img/System_Reporting_91.png" /></p>
-<p>This is the same screen you will see if you click on the <strong>Edit</strong> button
-for an existing graph. In addition, the graph list page has the
-following additional operations:</p>
+<p>This is the same screen you will see if you click on the <strong>Edit</strong> button for an existing graph. In addition, the graph list page has the following additional operations:</p>
 <ul>
-<li>
-<p><strong>Clone</strong> -- this will make a copy of the graph with '- Copy'
-appended to the name</p>
-</li>
-<li>
-<p><strong>Delete</strong> -- this will permanently delete the selected custom
-graph.</p>
-</li>
+<li><strong>Clone</strong>: this will make a copy of the graph with '- Copy' appended to the name</li>
+<li><strong>Delete</strong>: this will permanently delete the selected custom graph.</li>
 </ul>
 <p><img alt="" src="../img/System_Reporting_92.png" /></p>
 <p>On the graph editing page, you can enter the following fields:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- This is the short name of the graph that will be
-displayed to users when they choose to display a custom graph.</p>
-</li>
-<li>
-<p><strong>Description</strong> -- This is the longer description of the graph, and
-should be used to explain what the data in the graph shows, what the
-purpose of the graph is and how the data should be interpreted. This
-is what the user will see when they click on the help link on the
-graph.</p>
-</li>
-<li>
-<p><strong>Active</strong> -- If you set this to "No", the graph will not be
-accessible by end users</p>
-</li>
-<li>
-<p><strong>Position</strong> -- use this to specify the relative position of the
-graph in the list of custom graphs.</p>
-</li>
-<li>
-<p><strong>Query</strong> -- this is where you enter the actual query used to
-generate the graph data. We shall discuss this below.</p>
-</li>
+<li><strong>Name</strong>: This is the short name of the graph that will be displayed to users when they choose to display a custom graph.</li>
+<li><strong>Description</strong>: This is the longer description of the graph, and should be used to explain what the data in the graph shows, what the purpose of the graph is and how the data should be interpreted. This is what the user will see when they click on the help link on the graph.</li>
+<li><strong>Active</strong>: If you set this to "No", the graph will not be accessible by end users</li>
+<li><strong>Position</strong>: use this to specify the relative position of the graph in the list of custom graphs.</li>
+<li><strong>Query</strong>: this is where you enter the actual query used to generate the graph data. We shall discuss this below.</li>
 </ul>
 <p>Entering the Query</p>
-<p>We recommend that you first choose the appropriate <strong>reportable entity</strong>
-from the dropdown list. In the example illustrated above, we have
-selected the "Test Runs" reportable entity.</p>
+<p>We recommend that you first choose the appropriate <strong>reportable entity</strong> from the dropdown list. In the example illustrated above, we have selected the "Test Runs" reportable entity.</p>
 <p><img alt="" src="../img/System_Reporting_93.png" /></p>
-<p>This will automatically populate the following query in the <strong>Query</strong>
-editor:</p>
-<p>select value R from SpiraTestEntities.R_TestRuns as R where
-R.PROJECT_ID = ${ProjectId}</p>
-<p>This query tells SpiraPlan to select all of the rows in the R_TestRuns
-collection that are in the current product and include all of the
-columns in the final report. You cannot graph non-numeric columns, so
-usually we'd recommend clicking <strong>Display Data Grid</strong> to see all of the
-columns that you can use in the graph:</p>
+<p>This will automatically populate the following query in the <strong>Query</strong> editor: <code>select value R from SpiraTestEntities.R\_TestRuns as R where R.PROJECT\_ID = ${ProjectId}</code></p>
+<p>This query tells SpiraPlan to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking <strong>Display Data Grid</strong> to see all of the columns that you can use in the graph:</p>
 <p><img alt="" src="../img/System_Reporting_94.png" /></p>
-<p>This will help you decide which columns are important for your graph.
-You can then adjust the query to only include those columns:</p>
-<p>select R.EXECUTION_STATUS_NAME, COUNT (R.TEST_RUN_ID) as COUNT</p>
-<p>from SpiraTestEntities.R_TestRuns as R</p>
-<p>where R.PROJECT_ID = ${ProjectId}</p>
-<p>group by R.EXECUTION_STATUS_NAME</p>
-<p>In this modified query, we have replaced the keyword <strong>value</strong> with the
-specific column names. We have also added an aggregation function called
-<strong>COUNT</strong> to count the number of test runs and group by the execution
-status name column. SpiraPlan uses a modified SQL language called Entity
-SQL. For more information on creating custom graph queries, please refer
-to the knowledge base articles on the Inflectra customer support
-website: <a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>.</p>
+<p>This will help you decide which columns are important for your graph. You can then adjust the query to only include those columns:</p>
+<div class="highlight"><pre><span></span><code>select R.EXECUTION\_STATUS\_NAME, COUNT (R.TEST\_RUN\_ID) as COUNT
+from SpiraTestEntities.R\_TestRuns as R
+where R.PROJECT\_ID = ${ProjectId}
+group by R.EXECUTION\_STATUS\_NAME
+</code></pre></div>
+<p>In this modified query, we have replaced the keyword <strong>value</strong> with the specific column names. We have also added an aggregation function called <strong>COUNT</strong> to count the number of test runs and group by the execution status name column. SpiraPlan uses a modified SQL language called Entity SQL. For more information on creating custom graph queries, please refer to the knowledge base articles on the Inflectra customer support website: <a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>.</p>
 <p>When you click <strong>Display Data Grid</strong>, you will now see:</p>
 <p><img alt="" src="../img/System_Reporting_95.png" /></p>
-<p>The graphing module requires that the first column be the list of
-categories to display on the x-axis of the graph. It can be any format
-(text, numeric, dates, etc.). The remaining columns have to be numeric
-and will be used to display the different data ranges. The column name
-will be used to display the data range. For donut graphs, only one data
-range is supported, for line/bar charts, you can have multiple ranges.</p>
-<p>You can see how the graph looks in the three different styles (donuts,
-bar, line):</p>
-<p>a) Donut Graph</p>
+<p>The graphing module requires that the first column be the list of categories to display on the x-axis of the graph. It can be any format (text, numeric, dates, etc.). The remaining columns have to be numeric and will be used to display the different data ranges. The column name will be used to display the data range. For donut graphs, only one data range is supported, for line/bar charts, you can have multiple ranges.</p>
+<p>You can see how the graph looks in the three different styles (donuts, bar, line):</p>
+<p><strong>Donut Graph</strong></p>
 <p><img alt="" src="../img/System_Reporting_96.png" /></p>
-<p>b) Bar Graph</p>
+<p><strong>Bar Graph</strong></p>
 <p><img alt="" src="../img/System_Reporting_97.png" /></p>
-<p>c) Line Graph</p>
+<p><strong>Line Graph</strong></p>
 <p><img alt="" src="../img/System_Reporting_98.png" /></p>
-<p>Once you are happy with your custom graph, click the <strong>Save</strong> button to
-commit the changes. If the Active flag is set to "Yes" then the graph
-will be available for end users to use.</p>
-<p><em>Warning: If you create a graph that doesn't have either ${ProjectId}
-or ${ProjectGroupId} in the WHERE clause you could end up displaying
-data to a user that shouldn't have permission to see that data.</em></p>
+<p>Once you are happy with your custom graph, click the <strong>Save</strong> button to commit the changes. If the Active flag is set to "Yes" then the graph will be available for end users to use.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>If you create a graph that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.</p>
 
 
   
