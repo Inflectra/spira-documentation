@@ -75,8 +75,10 @@ Once you have made the necessary changes, click the "Save" button to commit them
 
 At the top of the page you can also see information relating to the activity of the user on the system, such as when they last logged in.
 
-In addition, there are three tabs that allow you to:
+In addition, there are up to four tabs at the bottom of the page called "Membership and Mapping" that allow you to:
+
 - add/remove the user from products
+- view the user's program membership
 - update the data-mapping used when synchronizing artifacts that are assigned or created by the current user
 - where relevant, specify whether the user can access the linked TaraVault™ source code management service
 
@@ -90,11 +92,20 @@ You can change the role that the user has on the various products, by choosing t
 
 Then click \[Add\] to add the selected product(s) to the user's product membership.
 
-To view/change the list of usernames that a user has in an external bug-tracking system, click on the "Data Mapping" tab. This section is used by the SpiraPlan data-synchronization service to map incidents from SpiraPlan to other bug-tracking systems
+![](img/System_Users_48b.png)
+
+The program membership tab shows a list of all programs that the user is a member of. It shows the following information for each program:
+
+- program name
+- if the program is active or not
+- the program ID
+- the user's role in that program
+
+To view/change the list of usernames that a user has in an external bug-tracking system, click on the "Data Mapping" tab. This section is used by the SpiraPlan data-synchronization service to map incidents from SpiraPlan to other bug-tracking systems.
 
 ![](img/System_Users_49.png)
 
-Please see the *SpiraPlan External Bug-Tracking Integration Guide* for more details on using the data-mapping tab.
+Please see the documentation for the relevant data sync for more details on using the data-mapping tab.
 
 If you click on the TaraVault membership tab, you can choose whether or not the user has access the linked TaraVault source code repository. This service is only available for hosted/cloud instances of SpiraPlan, and more details can be found in [LDAP Configuration](../System/#ldap-configuration).
 

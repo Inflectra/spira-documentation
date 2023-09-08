@@ -18,12 +18,14 @@ This table shows the following information about each data sync plug-in:
 - the data and time of the last data sync
 - whether the data sync is active (system wide)
 - the status (N/A, Not Run, Error, or Success)
-- operations you can perform on each data sync. 
-    
-    - Reset sync. You should not routinely use the **Reset Sync**. This resets the date of last sync for that plug-in. This forces the plug-in to re-examine all records in the system to see if any were not synchronized - this can take a long time. The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan Data-Sync background Windows service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.
+- operations you can perform on each data sync: 
+
+    - Reset sync. You should not routinely use the **Reset Sync** (see image below). This opens a dialog to let you reset the date of last sync for that plug-in. The dialog lets you reset the sync to 1 hour ago, 1 day ago, 1 week ago, or for all time. Each of these options forces the plug-in to re-examine all records in the system within the relevant time period to see if any were not synchronized - this can take a long time (especially for "all time" which should almost never be used). The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.
     - Edit: this will open the data sync plug-in settings page. For many plug-ins this settings page will guide you in how to set up that specific data sync. Each data sync plug-in has detailed documentation about how to set it up (see the Integrations > Bug Tracking/DataSync section of the main SpiraDoc menu)
     - Delete
     - View data sync errors in the event log, 
+    
+![](img/System_Integration_reset-data-sync.png)
 
 Above the table you can add a new data sync or refresh the status of the page to ensure that you are seeing the most up to date information. 
 

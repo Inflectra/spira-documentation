@@ -408,13 +408,21 @@ SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use
     - click the button to insert a plain text code block
     - click the code button's down arrow to add a code block for specific syntax, or edit the syntax of a selected code block
 
-- seperator lines
+- separator lines
 - media from third parties (including YouTube and Vimeo)
 - Text from MS Word and Google Docs (paste it directly in - note that not all formatting is retained)
 
 **Editing content**: use the magnifying glass button on the toolbar to access find and replace functionality.
 
 In many places the editor can also be made full screen to help editing of larger documents. To enter full screen mode, click on the computer monitor icon at the far right of the toolbar. Are you using dark mode? No problem - the editor works great in dark mode.
+
+### Mentions
+You can quickly mention anyone in the product using the "@ mentions" feature of the rich text editor.
+
+From any rich text editor for a product artifact (including custom properties and comments) you can type the `@` symbol and start typing the name of member of the product. This will give you a list of possible name matches, that gets more precise the more you type. To mention someone click on their name (or press the enter key with it selected). This will insert the person as a mention token into the rich text editor.
+
+In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
+
 
 ## Beta Boards
 !!! info "In beta, available in SpiraTeam and SpiraPlan"

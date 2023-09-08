@@ -40,7 +40,7 @@ This allows you to specify the display format of the report. Depending on the sp
 - displayed as a web-page (HTML)
 - downloaded as a Microsoft Word document (there are two Word versions: one for newer versions of Word and one for legacy versions of Word)
 - downloaded as a Microsoft Excel spreadsheet (there are two Excel versions: one is better for printing, while the other is more suited to data manipulation)
-- downloaded as a Microsoft Product file
+- downloaded as a PDF
 - there is also a raw-XML format that allows you to export the underlying report data into any external reporting system that supports XML import.
 
 ![](img/Reports_Center_338.png)
