@@ -1,6 +1,6 @@
 # Release Notes for Spira v7
 
-## Version 7.8 (August 2023)
+## Version 7.8 (September 2023)
 
 !!! info "Summary"
 
