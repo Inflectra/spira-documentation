@@ -1,5 +1,56 @@
 # Release Notes for Spira v7
 
+## Version 7.9 (October 2023)
+
+!!! info "Summary"
+
+    - This release brings a brand new planning board. Streamlined and beautiful by default. Powerful customizations when you need them for columns, cards, and swimlanes (rows). This takes the beta board released earlier this year to the next level, thanks to the invaluable feedback from customers. The legacy board remains available to help users with the transition. (not available in SpiraTest)
+    - Like the planning board, the task board is all new, setting the beta board as the new default. The legacy task board currently remains available. (not available in SpiraTest)
+    - What requirement statuses show on the planning board can be tailored per product template. This feature was previously only available as a beta, but is now always available (note that it only applies on the new planning board). (not available in SpiraTest)
+
+??? success "New Features"
+
+    * ** Planning Board (not available in SpiraTest)**
+
+        - As a board user, I use the new planning and task boards by default, but can still access the equivalent legacy board if I need to [RQ:4649]
+        - As a task board user, I can change the board setting by dropdowns in a popup, to organize the board to meet my needs [RQ:4687]
+        - As a planning board user, I can change the board setting by dropdowns in a popup, to organize the board to meet my needs [RQ:4681]
+        - As a board user, I do not see the "All Items" banner header on the boards when no grouping is selected to simplify how I use the board [RQ:4683]
+        - As a board user, I do not see the "All items" row when no rows are selected on the boards to simplify how I use the board [RQ:4684]
+        - As a board user, I can easily view the planning boards, by improving the spacing and layout of the headers for columns, rows, and groups so I can see more information in less space [RQ:4685]
+        - As a board user, I can see the number of cards in the column, row, and group headers of the planning board, to make it easier to know what has data in it [RQ:4686]
+        - As a task board user, I can exclusively group by teams and only when rows is set to By Person, to streamline how I can use the board [RQ:4652]
+        - As a planning board user, I can use grouping to sometimes improve specific use cases for how I organize the board to meet my needs [RQ:4651]
+        - As a planning board user, I can freely pick from any standard list field for either rows or columns, so I can organize the board to meet my needs [RQ:4650]
+        - As a board user, when I group by teams I only see teams with people in them for the current product, so I do not see irrelevant information [RQ:4670]
+        - As a board user, I can easily expand and collapse rows and groups in a clear and understandable way, to help me setup the board how I need [RQ:4672]
+        - As a board user, I do not see columns, rows, or groups for unassigned items by default, to streamline and simplify how I use the board [RQ:4674]
+   
+   - As a document user, I can associate a set of documents to any single artifact in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]
+
+??? bug "Bug fixes and enhancements"
+
+    - Add ability to associate a set of documents to an single artifact from the document list page [IN:8512]
+    - Fix boards not sorting user names alphabetically when a release is provided [IN:8603]
+    - Fix not being able to retrieve program milestones using the API, if there are no program milestone custom property definitions [IN:8627]
+    - Fix showing duplicate cards on the beta planning board when moving from Release or Product backlog with no release set to the sprint backlog [IN:8602]
+    - Hide the "All Items" banner header on the boards when no grouping is selected to declutter and improve the user experience [IN:8521]
+    - Hide the "All items" row when no rows are selected on the boards to streamline the user experience [IN:8524]
+    - Improve the design of new boards when showing groups to make it clearer what group the user is currently focused on [IN:8507]
+    - Improve the feel of the new planning boards with clearer column and cell differentiation [IN:8539]
+    - Improve the usability of the boards when showing rows by making empty rows shorter [IN:8537]
+    - Improve the use of vertical space on the new planning boards, by improving the spacing and layout of the headers for columns, rows, and groups [IN:8531]
+    - Make it clearer which row a user is looking at on the board by making the row name stick to the left when scrolling horizontally to the right [IN:8540]
+    - Make the boards work better when cells have many cards in them by limiting the maximum height of a cell [IN:8543]
+    - Make the planning board cards take up less vertical space while still being readable, particularly for the cards showing minimal extra information [IN:8546]
+    - Move the save, add and cancel buttons for the default product artifact boards on the artifact popups to make saving changes easier [IN:8562]
+    - Replace "k.A." with "N/A" in German in the N/A all testing setting to better align with test execution localization [IN:8672]
+    - Show the number of cards in the column, row, and group headers of the planning board, to make it easier to know what has data in it [IN:8560]
+    - Simplify the planning board top toolbar by moving the dropdowns into a board settings popup [IN:8503]
+    - Simplify the task board top toolbar by moving the dropdowns into a board settings popup [IN:8504]
+    - Switch the current beta boards to be the primary board for those pages, and the old main board the legacy board [IN:8381]
+    - When showing rows on the board, put row information as a new mini row header bar, instead of in a dedicated column, to preserve horizontal space and improve the user experience [IN:8522]
+
 ## Version 7.8 (September 2023)
 
 !!! info "Summary"
