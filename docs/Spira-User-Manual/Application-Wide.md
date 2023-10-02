@@ -424,16 +424,7 @@ From any rich text editor for a product artifact (including custom properties an
 In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
 
 
-## Beta Boards
-!!! info "In beta, available in SpiraTeam and SpiraPlan"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
-
-    To access the beta board, navigate to the relevant board as normal. This loads the standard planning or artifact board. Then click on the "**Try the Beta**" button the top-right to go to the new beta board.
-
-    ![button to access the beta board](img/Planning_Board_access-beta.png)
-
-    You will now stay on the beta boards for the remainder of your session. To leave the beta, click on "Exit the Beta". This will return you to the old boards.
-
+## Boards
 ### Page Structure
 The beta boards are designed to provide a consistent user interface across its different views and:
 

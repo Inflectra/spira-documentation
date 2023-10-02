@@ -122,7 +122,7 @@ From the tools button sub menu, if you click the "Add association" button you wi
 
 - Click the "Add" button to associate that artifact to each of the selected documents
 
-**Note**: if you enter an invalid token or a token to an artifact in a different product, or that is not supported, you will see an error message. You can see the full list of supported artifacts in the box called "What can you associate to what?" [here](../Application-Wide/#associations)
+**Note**: if you enter an invalid token or a token to an artifact in a different product, or that is not supported, you will see an error message. You can see the full list of supported artifacts in the box called "What can you associate to what?" [here](../Application-Wide/#associations). In addition, you can associate documents to a specific document - in this case the document will show on the attachments tab of the document(s), not the association tab.
 
 ## Document Details
 
