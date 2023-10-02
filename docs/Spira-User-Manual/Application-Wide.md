@@ -343,7 +343,7 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Assocation Tab Of                                | Available artifacts                                                                                             |
+    | Association Tab Of                               | Available artifacts                                                                                             |
     | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
     | **Documents**                                    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
     | **Incidents**                                    | Requirements, Test Steps, Tasks, Incidents, Risks                                                               |
@@ -355,7 +355,7 @@ You can add a comment that explains the rationale for the association and choose
     | **Tasks**                                        | Tasks, Incidents                                                                                                |
     | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
     | **Program Capabilities** (SpiraPlan only)        | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                          |
+    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                              |
 
 
 ### Rich Text Editor
