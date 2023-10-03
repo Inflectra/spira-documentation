@@ -120,73 +120,50 @@ You can pick between each of these views using the view selection button group a
     - [special board views](../Application-Wide/#special-board-views) 
     - [working with board cards](../Application-Wide/#board-cards) 
 
-    Specific aspects applying to the Planning Board of these features are discussed more fully below.
+    **Specific features of or differences in the task board are discussed more fully below**.
 
-![task board](img/task-board-overview.png)
+### Board configuration
+The task board configuration button has a number of options to configure the board to your needs. 
 
-### Views summary
-Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available (you cannot select the same value for multiple view options at the same time):
+The [releases dropdown](#release-options) can be set to either "all releases" or a specific releases. The dropdown shows all open releases and sprints.The table below shows what options are available, when. Certain configuration are discussed in more detail in subsequent sections:
 
-Releases can display "all releases" or a specific releases. The dropdown shows all open releases and sprints.
+| View options | All releases                                        | A specific release or sprint                                                |
+| ------------ | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Person | Priority<br> Release<br> Status<br> Type<br> Person<br>Parent (requirement) |
+| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Person | Priority<br> Release<br> Status<br> Type<br> Person<br>Parent (requirement) |
+| **Grouping** | Team (if rows is person)                            | Team (if rows is person)                                                    |
 
-| View options | All releases                                                 | A specific release or sprint |
-| ------------ | ------------------------------------------------------------ | ---------------------------- |
-| **Grouping** | Priority<br> Release<br> Status<br> Type<br> Person<br> Team | ... and Requirement          |
-| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
-| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
+The following options support showing unassigned items[^unassigned-with-group]:
+
+- priority
+- release (only when viewing "All Releases")
+- parent
+- person
+
+[^unassigned-with-group]: when rows is set to either person or parent, and grouping is applied, then unassigned sections will show as normal, but the feature is more limited than usual to ensure consistency.
 
 
-### View controls
+#### Release options
 The **release dropdown** shows:
 
-- "all releases": displays items planned for any release
-- any release or sprint with an "open" status (a status of planned, in progress, or completed): displays items planned for the selected release and its children
+| Options                                    | Meaning                                                     | What cards will show                                                       |
+| ------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| All Releases                               | All open[^open-release-definition] releases combined        | Those planned for any open release                                         |
+| Any open[^open-release-definition] release | Any single open[^open-release-definition] release or sprint | Those planned for the selected release and its child sprints (if relevant) |
 
 ![planning board release selector - release backlog](img/task-board-release-selector.png)
 
-Read about [**how grouping works**](../Application-Wide/#board-grouping).
 
-Read about [**how to use columns**](../Application-Wide/#board-columns).
-
-Read about [**how to use rows**](../Application-Wide/#board-rows).
-
-Read about [**what cards show when**](../Application-Wide/#board-what-cards-show-when).
-
-### Customizing the cards
-You can customize what information is shown on each card. For each artifact the following fields are always shown:
-
-- **Name** (click to open a popup with full details, or alt-click to open the details page for that item)
-- **Artifact icon**: shown beneath the name in a gray bubble
-- **ID token** of the artifact: shown to the right of the artifact icon
-- **Effort** (if set): shown to the bottom right of the card (hover to see full information about the effort fields)
-- **Priority** (if set): shown to the bottom right of the card in a circle the color of the priority
-- **Owner** (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
-
-You can toggle whether to show each of the following features:
-
+#### Customizing cards
 ![planning board card options](img/task-board-card-options.png)
 
-- **Description**: this will show a snippet of the full artifact description below the artifact name
-- **Type**: the artifact type, shown to the right of the ID token
-- **Status**: the artifact statuses, shown to the right of the ID token and the type
+In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
+
 - **Progress**: a mini histogram chart of the task's progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
-- **Position**: this shows a number in the bottom left of the card that represents the position of that card within the cell. For example, the topmost card will have position 1, and the card beneath it 2.
 
 Below is an example of a task card showing all available data
 
 ![full task card](img/task-board-card-full.png)
-
-### Moving and ordering cards
-Read about this [here](../Application-Wide/#board-moving-and-ordering-cards).
-
-### Editing and viewing cards
-Read about this [here](../Application-Wide/#board-editing-and-viewing-cards).
-
-### Viewing by release or sprint
-Read about this [here](../Application-Wide/#board-viewing-by-release-or-sprint).
-
-### Viewing by Person
-Read about this [here](../Application-Wide/#board-viewing-by-person).
 
 
 ## Legacy Task Board

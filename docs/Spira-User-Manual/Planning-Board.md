@@ -10,7 +10,7 @@
     - [special board views](../Application-Wide/#special-board-views) 
     - [working with board cards](../Application-Wide/#board-cards) 
 
-    Specific aspects applying to the Planning Board of these features are discussed more fully below.
+    **Specific features of or differences in the Planning Board are discussed more fully below**.
 
 
 ## Board configuration
