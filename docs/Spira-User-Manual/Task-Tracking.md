@@ -110,10 +110,17 @@ You can pick between each of these views using the view selection button group a
 
 
 ## Task board
-!!! info "In beta, available in SpiraTeam and SpiraPlan"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+!!! info "Task Board Overview"
+    
+    The SpiraPlan task board is a streamlined and highly customizable "kanban" style board. It lets you visualize tasks in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the task board is a great tool for planning and managing tasks.
 
-To learn more about how the task board is structured or how to enter the beta please refer to our [general information about the beta boards](../Application-Wide/#beta-boards).
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+
+    - [board structure and configuration](../Application-Wide/#board-structure)
+    - [special board views](../Application-Wide/#special-board-views) 
+    - [working with board cards](../Application-Wide/#board-cards) 
+
+    Specific aspects applying to the Planning Board of these features are discussed more fully below.
 
 ![task board](img/task-board-overview.png)
 
