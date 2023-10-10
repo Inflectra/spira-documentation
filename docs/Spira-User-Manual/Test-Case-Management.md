@@ -37,7 +37,7 @@ Once the new test case has been inserted, the item is switched to "Edit" mode so
 
 ### Delete
 
-Clicking on the "***Delete***" button deletes all the test cases and/or test folders whose check-boxes have been selected. If any of the items are test folders, then the entire contents of that folder will also be deleted (as you would expect in Microsoft Windows® Explorer or OS X Finder).
+Clicking on the "***Delete***" button deletes all the test cases and/or test folders whose check-boxes have been selected. If any of the items are test folders, then the contents of the folder(s) are not deleted, but instead moved to the root folder.
 
 
 ### Execute
