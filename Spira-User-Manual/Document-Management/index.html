@@ -554,6 +554,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-associations-in-bulk" class="md-nav__link">
+    Add Associations in Bulk
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4749,6 +4756,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-associations-in-bulk" class="md-nav__link">
+    Add Associations in Bulk
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4988,6 +5002,7 @@
 <li><a href="#add-new-document">add documents</a> to the current folder</li>
 <li>delete selected documents</li>
 <li>refresh the list of documents</li>
+<li><a href="#add-associations-in-bulk">add associations</a> to other artifacts in the same product</li>
 <li>export selected documents to another product</li>
 <li>apply, update, clear, and save <a href="../Application-Wide/#filtering">filters</a></li>
 <li>toggle whether to show documents in the current folder only or a flat list of all documents across all folders</li>
@@ -5040,6 +5055,24 @@
 <p>To edit or delete a specific folder, click on the 'Edit' button next to the folder:</p>
 <p><img alt="" src="../img/Document_Management_323.png" /></p>
 <p>You can change the parent folder and/or name of the folder and click "<strong><em>Update</em></strong>" to commit the change or click "<strong><em>Delete</em></strong>" to delete the folder entirely (including its contents).<sup id="fnref:folder-url"><a class="footnote-ref" href="#fn:folder-url">1</a></sup></p>
+<h3 id="add-associations-in-bulk">Add Associations in Bulk<a class="headerlink" href="#add-associations-in-bulk" title="Permanent link">&para;</a></h3>
+<p>From the tools button sub menu, if you click the "Add association" button you will be able to quickly add any currently selected documents to a single artifact. To do so follow these steps:</p>
+<ul>
+<li>Prepare your document list to show those you want</li>
+<li>Select all relevant documents (at least one and note that you cannot select folders)</li>
+<li>Click Tools &gt; Add Association. This will display the popup dialog box shown below</li>
+</ul>
+<p><img alt="" src="../img/Document_Management_addassociation_1.png" /></p>
+<ul>
+<li>Enter the token of a specific artifact in the same product as the documents. This should be in the form of "[RQ:1]", ""[RQ1]", or "RQ1" (case insensitive)</li>
+<li>Click the "Search" button on the dialog box</li>
+<li>The dialog will validate the artifact and show its name and a plain text extract of its description so you can verify it is the correct artifact</li>
+</ul>
+<p><img alt="" src="../img/Document_Management_addassociation_2.png" /></p>
+<ul>
+<li>Click the "Add" button to associate that artifact to each of the selected documents</li>
+</ul>
+<p><strong>Note</strong>: if you enter an invalid token or a token to an artifact in a different product, or that is not supported, you will see an error message. You can see the full list of supported artifacts in the box called "What can you associate to what?" <a href="../Application-Wide/#associations">here</a>. In addition, you can associate documents to a specific document - in this case the document will show on the attachments tab of the document(s), not the association tab.</p>
 <h2 id="document-details">Document Details<a class="headerlink" href="#document-details" title="Permanent link">&para;</a></h2>
 <p>When you click on an item in the document list described above, you are taken to the document details page illustrated below:</p>
 <p><img alt="" src="../img/Document_Management_324.png" /></p>

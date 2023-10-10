@@ -4249,6 +4249,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-79-october-2023" class="md-nav__link">
+    Version 7.9 (October 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-78-september-2023" class="md-nav__link">
     Version 7.8 (September 2023)
   </a>
@@ -4507,6 +4514,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-79-october-2023" class="md-nav__link">
+    Version 7.9 (October 2023)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-78-september-2023" class="md-nav__link">
     Version 7.8 (September 2023)
   </a>
@@ -4592,6 +4606,72 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-79-october-2023">Version 7.9 (October 2023)<a class="headerlink" href="#version-79-october-2023" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>This release brings a brand new <a href="../../Spira-User-Manual/Planning-Board">planning board</a>. Streamlined and beautiful by default. Powerful customizations when you need them for columns, cards, and swimlanes (rows). This takes the beta board released earlier this year to the next level, thanks to the invaluable feedback from customers. The legacy board remains available to help users with the transition. (not available in SpiraTest)</li>
+<li>Like the planning board, the <a href="../../Spira-User-Manual/Task-Tracking/#task-board">task board</a> is all new, setting the beta board as the new default. The legacy task board currently remains available. (not available in SpiraTest)</li>
+<li>What <a href="../../Spira-Administration-Guide/Template-Requirements/#statuses">requirement statuses</a> show on the planning board can be tailored per product template. This feature was previously only available as a beta, but is now always available (note that it only applies on the new planning board). (not available in SpiraTest)</li>
+</ul>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Planning-Board">Planning Board</a> and <a href="../../Spira-User-Manual/Task-Tracking/#task-board">Task Board</a> (not available in SpiraTest)</strong></p>
+<ul>
+<li>As a board user, I use the new planning and task boards by default, but can still access the equivalent legacy board if I need to [RQ:4649]</li>
+<li>As a task board user, I can change the board setting by dropdowns in a popup, to organize the board to meet my needs [RQ:4687]</li>
+<li>As a planning board user, I can change the board setting by dropdowns in a popup, to organize the board to meet my needs [RQ:4681]</li>
+<li>As a board user, I do not see the "All Items" banner header on the boards when no grouping is selected to simplify how I use the board [RQ:4683]</li>
+<li>As a board user, I do not see the "All items" row when no rows are selected on the boards to simplify how I use the board [RQ:4684]</li>
+<li>As a board user, I can easily view the planning boards, by improving the spacing and layout of the headers for columns, rows, and groups so I can see more information in less space [RQ:4685]</li>
+<li>As a board user, I can see the number of cards in the column, row, and group headers of the planning board, to make it easier to know what has data in it [RQ:4686]</li>
+<li>As a task board user, I can exclusively group by teams and only when rows is set to By Person, to streamline how I can use the board [RQ:4652]</li>
+<li>As a planning board user, I can use grouping to sometimes improve specific use cases for how I organize the board to meet my needs [RQ:4651]</li>
+<li>As a planning board user, I can freely pick from any standard list field for either rows or columns, so I can organize the board to meet my needs [RQ:4650]</li>
+<li>As a board user, when I group by teams I only see teams with people in them for the current product, so I do not see irrelevant information [RQ:4670]</li>
+<li>As a board user, I can easily expand and collapse rows and groups in a clear and understandable way, to help me setup the board how I need [RQ:4672]</li>
+<li>As a board user, I do not see columns, rows, or groups for unassigned items by default, to streamline and simplify how I use the board [RQ:4674]</li>
+</ul>
+</li>
+</ul>
+</details>
+<ul>
+<li>As a document user, I can <a href="../../Spira-User-Manual/Document-Management/#add-associations-in-bulk">associate a set of documents to any single artifact</a> in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]</li>
+</ul>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>Board improvements</strong></p>
+<ul>
+<li>Fix boards not sorting user names alphabetically when a release is provided [IN:8603]</li>
+<li>Fix showing duplicate cards on the beta planning board when moving from Release or Product backlog with no release set to the sprint backlog [IN:8602]</li>
+<li>Hide the "All Items" banner header on the boards when no grouping is selected to declutter and improve the user experience [IN:8521]</li>
+<li>Hide the "All items" row when no rows are selected on the boards to streamline the user experience [IN:8524]</li>
+<li>Improve the design of new boards when showing groups to make it clearer what group the user is currently focused on [IN:8507]</li>
+<li>Improve the feel of the new planning boards with clearer column and cell differentiation [IN:8539]</li>
+<li>Improve the usability of the boards when showing rows by making empty rows shorter [IN:8537]</li>
+<li>Improve the use of vertical space on the new planning boards, by improving the spacing and layout of the headers for columns, rows, and groups [IN:8531]</li>
+<li>Make it clearer which row a user is looking at on the board by making the row name stick to the left when scrolling horizontally to the right [IN:8540]</li>
+<li>Make the boards work better when cells have many cards in them by limiting the maximum height of a cell [IN:8543]</li>
+<li>Make the planning board cards take up less vertical space while still being readable, particularly for the cards showing minimal extra information [IN:8546]</li>
+<li>Move the save, add and cancel buttons for the default product artifact boards on the artifact popups to make saving changes easier [IN:8562]</li>
+<li>Show the number of cards in the column, row, and group headers of the planning board, to make it easier to know what has data in it [IN:8560]</li>
+<li>Simplify the planning board top toolbar by moving the dropdowns into a board settings popup [IN:8503]</li>
+<li>Simplify the task board top toolbar by moving the dropdowns into a board settings popup [IN:8504]</li>
+<li>Switch the current beta boards to be the primary board for those pages, and the old main board the legacy board [IN:8381]</li>
+<li>When showing rows on the board, put row information as a new mini row header bar, instead of in a dedicated column, to preserve horizontal space and improve the user experience [IN:8522]</li>
+</ul>
+</li>
+<li>
+<p>Fix not being able to retrieve program milestones using the API, if there are no program milestone custom property definitions [IN:8627]</p>
+</li>
+<li>Replace "k.A." with "N/A" in German in the N/A all testing setting to better align with test execution localization [IN:8672]</li>
+</ul>
+</details>
 <h2 id="version-78-september-2023">Version 7.8 (September 2023)<a class="headerlink" href="#version-78-september-2023" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
