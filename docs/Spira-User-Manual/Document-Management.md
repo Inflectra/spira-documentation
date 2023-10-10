@@ -31,18 +31,17 @@ The main toolbar has operations you can perform on the document list or selected
 - [add documents](#add-new-document) to the current folder
 - delete selected documents
 - refresh the list of documents
+- [add associations](#add-associations-in-bulk) to other artifacts in the same product
 - export selected documents to another product
 - apply, update, clear, and save [filters](Application-Wide.md#filtering)
 - toggle whether to show documents in the current folder only or a flat list of all documents across all folders
 - show or hide specific fields on the main grid
 
 ### Filtering
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### Add New Document
-
 To create a new document, click the `Add New` button. This opens the "Add New Document" dialog box for uploading a single file (not multiple). Drag and drop a file onto the upload box, or click to browse for a file on your device. Each type of "Add New Document" dialog (see below) will let you:
 
 - add a description (optional and can be edited later)
@@ -52,7 +51,6 @@ To create a new document, click the `Add New` button. This opens the "Add New Do
 - Click "Add" to add the document, or "Cancel" to cancel
 
 ![](img/Document_Management_114.png)
-
 
 #### Add New Files
 The `Add New` button has a dropdown with more options - each option shows you a slightly different dialog box (the bottom part is the same but the top part differs).
@@ -64,7 +62,6 @@ The `Add New` button has a dropdown with more options - each option shows you a 
 ![](img/Document_Management_114b.png)
 
 Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.
-
 
 #### Add New Inline Documents
 The `Add New` dropdown has options for creating several files that are not uploaded at all. Instead you choose a file name (and enter description and tag and type information), then when you click "Add" you are taken straight to the blank document, so you can start editing it live inside SpiraPlan itself from the [document details](#edit) page.
@@ -80,16 +77,13 @@ The `Add New` dropdown has options for creating several files that are not uploa
 
 ![](img/Document_Management_114c.png)
 
-
 ### View Document Information
-
 When you hover the mouse pointer over any of the documents displayed in the document list, an information panel will be displayed that contains the name, description, version, document type and meta-tags of the document.
 
 You can click on the document URL to actually open the document itself in a new window, click on the meta-tag links to find related documents that contain the same meta-tag, or click on "***View Details***" to see more information regarding the document, including an ability to edit its meta-information and see the different versions of the document.
 
 
 ### Edit Document Folders
-
 If you are a product administrator, you will see the "Edit" and "Add" buttons beneath the folder tree:
 
 ![](img/Document_Management_320.png)
@@ -110,6 +104,25 @@ To edit or delete a specific folder, click on the 'Edit' button next to the fold
 
 You can change the parent folder and/or name of the folder and click "***Update***" to commit the change or click "***Delete***" to delete the folder entirely (including its contents).[^folder-url]
 
+
+### Add Associations in Bulk 
+From the tools button sub menu, if you click the "Add association" button you will be able to quickly add any currently selected documents to a single artifact. To do so follow these steps:
+
+- Prepare your document list to show those you want
+- Select all relevant documents (at least one and note that you cannot select folders)
+- Click Tools > Add Association. This will display the popup dialog box shown below
+
+![](img/Document_Management_addassociation_1.png)
+
+- Enter the token of a specific artifact in the same product as the documents. This should be in the form of "[RQ:1]", ""[RQ1]", or "RQ1" (case insensitive)
+- Click the "Search" button on the dialog box
+- The dialog will validate the artifact and show its name and a plain text extract of its description so you can verify it is the correct artifact
+
+![](img/Document_Management_addassociation_2.png)
+
+- Click the "Add" button to associate that artifact to each of the selected documents
+
+**Note**: if you enter an invalid token or a token to an artifact in a different product, or that is not supported, you will see an error message. You can see the full list of supported artifacts in the box called "What can you associate to what?" [here](../Application-Wide/#associations). In addition, you can associate documents to a specific document - in this case the document will show on the attachments tab of the document(s), not the association tab.
 
 ## Document Details
 

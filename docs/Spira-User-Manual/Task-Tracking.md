@@ -57,6 +57,7 @@ You can change the parent folder and/or name of the folder and click "***Update*
 
 To move a task / tasks between folders, click and drag the relevant task/tasks from the table on the right, and drag them over the desired folder in the tree view on the left. The destination folder will be highlighted to show where the task will be placed.[^folder-url]
 
+[^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
 
 ### Actions
 - **Filtering & Sorting**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
@@ -101,15 +102,71 @@ When you have made your updates, you can either click "***Save***" to commit the
 There are two additional task list views. These views are:
 
 2. Task Board
-1. Gantt chart view (beta)
+1. Gantt chart view
 
 You can pick between each of these views using the view selection button group at the top right of any requirement list page.
 
 ![](img/tasks-list-selector.png)
 
 
-## Task Board
+## Task board
+!!! info "Task Board Overview"
+    
+    The SpiraPlan task board is a streamlined and highly customizable "kanban" style board. It lets you visualize tasks in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the task board is a great tool for planning and managing tasks.
 
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+
+    - [board structure and configuration](../Application-Wide/#board-structure)
+    - [special board views](../Application-Wide/#special-board-views) 
+    - [working with board cards](../Application-Wide/#board-cards) 
+
+    **Specific features of or differences in the task board are discussed more fully below**.
+
+### Board configuration
+The task board configuration button has a number of options to configure the board to your needs. 
+
+The [releases dropdown](#release-options) can be set to either "all releases" or a specific releases. The dropdown shows all open releases and sprints.The table below shows what options are available, when. Certain configuration are discussed in more detail in subsequent sections:
+
+| View options | All releases                                        | A specific release or sprint                                                |
+| ------------ | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Person | Priority<br> Release<br> Status<br> Type<br> Person<br>Parent (requirement) |
+| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Person | Priority<br> Release<br> Status<br> Type<br> Person<br>Parent (requirement) |
+| **Grouping** | Team (if rows is person)                            | Team (if rows is person)                                                    |
+
+The following options support showing unassigned items[^unassigned-with-group]:
+
+- priority
+- release (only when viewing "All Releases")
+- parent
+- person
+
+[^unassigned-with-group]: when rows is set to either person or parent, and grouping is applied, then unassigned sections will show as normal, but the feature is more limited than usual to ensure consistency.
+
+
+#### Release options
+The **release dropdown** shows:
+
+| Options                                    | Meaning                                                     | What cards will show                                                       |
+| ------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| All Releases                               | All open[^open-release-definition] releases combined        | Those planned for any open release                                         |
+| Any open[^open-release-definition] release | Any single open[^open-release-definition] release or sprint | Those planned for the selected release and its child sprints (if relevant) |
+
+![planning board release selector - release backlog](img/task-board-release-selector.png)
+
+
+#### Customizing cards
+![planning board card options](img/task-board-card-options.png)
+
+In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
+
+- **Progress**: a mini histogram chart of the task's progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
+
+Below is an example of a task card showing all available data
+
+![full task card](img/task-board-card-full.png)
+
+
+## Legacy Task Board
 The task board is an alternative to the [task list page](#task-list) designed to let you view the tasks planned for the current product. You can access this feature by clicking on the **Board** icon in the top-right of the Tasks list page. You can switch back to the Task list page by clicking on the **Table** view.
 
 The task board has the following different display modes:
@@ -136,41 +193,20 @@ The task board has the following different display modes:
 
 Each of these views is described below.
 
-!!! info "Planning Boards and Editing"
-    **Moving cards**: Please note that the purpose of a planning board or Kanban board, is to make it straightforward for users to move cards around the interface to plan out their work. Therefore we do **not** enforce workflow restrictions on the planning board when moving cards. Therefore only users with permissions to bulk edit the relevant artifact can move cards. If the template admin has prevented status changes while bulk editing, then noone can change a card's status by moving its card on the planning.
-
-    **Viewing cards**: to view more information about the card you can: turn on Detailed View; hover on the card name to see a rich tooltip; click on the card's id to open a popup with much more detail; or ctrl/cmd+click on the card's id to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. 
-
-    **Editing cards**: users with bulk edit permissions can edit a planning board card at any time by click on the card's id (including adding a new comment). This opens a popup with full information about that card. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific card. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you cand do this from the popup by clicking the button next to the artifact's id at the top).
-    
-    **Add new cards**: if you are able to create the requirements then you will see plus (add) symbols in different locations on the board. Clicking any of these will open an popup screen with all relevant fields available. Some of these fields may be prepopulated based on what add button you clicked and how you are using the board. For instance, if you are viewing for a release, that release will be preselected. And if you are grouping by person and click on a particular person, that person will be set as the owner of the artifact. The fields visible and required is driven based on what workflow step will apply to that new card.  
-
-
 ### Tasks -- By Priority
-
-This view is designed to let you see the list of planned tasks organized by priority. Each of the possible priority values is displayed on the left-hand side and the tasks displayed in the same row on the right:
+This view is designed to let you see the list of planned tasks organized by priority. Each of the possible priority values is displayed on the left-hand side and the tasks displayed in the same row on the right. The top section will contain the list of tasks that are not assigned a priority, with the other sections containing the tasks that have been assigned to the specific priority.
 
 ![](img/Task_Tracking_305.png)
 
-The top section will contain the list of tasks that are not assigned a priority, with the other sections containing the tasks that have been assigned to the specific priority.
-
-
 ### Tasks -- By Status
-
 This view is designed to let you see the tasks in the current product /
-release / sprint organized by their status. Each task status (not started, in progress, completed, blocked, deferred) is displayed as a heading, with the tasks displayed in the same column underneath:
+release / sprint organized by their status. Each task status (not started, in progress, completed, blocked, deferred) is displayed as a heading, with the tasks displayed in the same column underneath. You can click on the expand/collapse icons to hide any resources that are not relevant. Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the tasks between statuses or to/from the release/sprint backlog. Any tasks not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
 
 ![](img/Task_Tracking_306.png)
 
-You can click on the expand/collapse icons to hide any resources that are not relevant.
-
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the tasks between statuses or to/from the release/sprint backlog. Any tasks not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
-
 ![](img/Task_Tracking_307.png)
 
-
 ### Tasks - By Person
-
 This view is designed to let you see the tasks in the current product /
 release / sprint organized by resource / person. Each of the users that is a member of the current product is displayed as a heading, with the tasks displayed in the same column underneath. This view is often called the **Task Board**:
 
@@ -182,118 +218,21 @@ You can click on the expand/collapse icons to hide any resources that are not re
 
 Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain tasks that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the tasks between resources or to/from the release/sprint backlog (as long as the item has a status that let's you set or edit its owner field). Any tasks not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
 
-
 ### Tasks - By Release
-
 This view is only available when you are displaying the task board for
-'all releases'. Each of the active releases defined for the current product is displayed as a heading, with the tasks displayed in the same column underneath
+'all releases'. Each of the active releases defined for the current product is displayed as a heading, with the tasks displayed in the same column underneath. You can drag and drop the tasks between the different releases. Once the task has been added to the release, the utilized effort for the release will increase, and the available effort will decrease by the same amount. Note: The system will allow you to assign more tasks to a release than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the release length or add product personnel resources to the release. Clicking on the release hyperlinks in the headers will switch the task board into the release view.
 
 ![](img/Task_Tracking_310.png)
 
-You can drag and drop the tasks between the different releases. Once the task has been added to the release, the utilized effort for the release will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more tasks to a release than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the release length or add product personnel resources to the release.
-
-Clicking on the release hyperlinks in the headers will switch the task board into the release view.
-
-
 ### Tasks - By Sprint
-
-This view is only available when you are displaying the task board for a specific release. Each of the sprints defined for the current release is displayed as a heading, with the tasks displayed in the same column underneath. This view is commonly used in **Scrum** products:
+This view is only available when you are displaying the task board for a specific release. Each of the sprints defined for the current release is displayed as a heading, with the tasks displayed in the same column underneath. This view is commonly used in **Scrum** products. You can drag and drop the tasks between the different sprints. Once the task has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount. Note: The system will allow you to assign more tasks to a sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint. Clicking on the sprint hyperlinks in the headers will switch the task board into the sprint view.
 
 ![](img/Task_Tracking_311.png)
 
-You can drag and drop the tasks between the different sprints. Once the task has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more tasks to a sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint.
-
-Clicking on the sprint hyperlinks in the headers will switch the task board into the sprint view.
-
-
 ### Tasks - By Requirement
-
-This option is only available when you are displaying the task board for a specific release or sprint. 
-
-In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.
+This option is only available when you are displaying the task board for a specific release or sprint. In this case, the left hand side displays the requirements currently assigned to the current release / sprint, and the right hand column contains the tasks (in a card format) that are associated with that specific requirement, complete with color-coded progress bars. This view lets you quickly see all of the current user stories being worked, and the progress of completing the related tasks, in a single unified view.
 
 ![](img/task-board-by-requirement.png)
-
-
-
-[^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
-
-
-## Beta task board
-!!! info "In beta, available in SpiraTeam and SpiraPlan"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
-
-To learn more about how the task board is structured or how to enter the beta please refer to our [general information about the beta boards](../Application-Wide/#beta-boards).
-
-![task board](img/task-board-overview.png)
-
-### Views summary
-Details about what combinations of views is possible and how each feature works is discussed in detail the sections below. For ease of reference, here is a summary of the different options available (you cannot select the same value for multiple view options at the same time):
-
-Releases can display "all releases" or a specific releases. The dropdown shows all open releases and sprints.
-
-| View options | All releases                                                 | A specific release or sprint |
-| ------------ | ------------------------------------------------------------ | ---------------------------- |
-| **Grouping** | Priority<br> Release<br> Status<br> Type<br> Person<br> Team | ... and Requirement          |
-| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
-| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Person          | ... and Requirement          |
-
-
-### View controls
-The **release dropdown** shows:
-
-- "all releases": displays items planned for any release
-- any release or sprint with an "open" status (a status of planned, in progress, or completed): displays items planned for the selected release and its children
-
-![planning board release selector - release backlog](img/task-board-release-selector.png)
-
-Read about [**how grouping works**](../Application-Wide/#board-grouping).
-
-Read about [**how to use columns**](../Application-Wide/#board-columns).
-
-Read about [**how to use rows**](../Application-Wide/#board-rows).
-
-Read about [**what cards show when**](../Application-Wide/#board-what-cards-show-when).
-
-### Customizing the cards
-You can customize what information is shown on each card. For each artifact the following fields are always shown:
-
-- **Name** (click to open a popup with full details, or alt-click to open the details page for that item)
-- **Artifact icon**: shown beneath the name in a gray bubble
-- **ID token** of the artifact: shown to the right of the artifact icon
-- **Effort** (if set): shown to the bottom right of the card (hover to see full information about the effort fields)
-- **Priority** (if set): shown to the bottom right of the card in a circle the color of the priority
-- **Owner** (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
-
-You can toggle whether to show each of the following features:
-
-![planning board card options](img/task-board-card-options.png)
-
-- **Description**: this will show a snippet of the full artifact description below the artifact name
-- **Type**: the artifact type, shown to the right of the ID token
-- **Status**: the artifact statuses, shown to the right of the ID token and the type
-- **Progress**: a mini histogram chart of the task's progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
-- **Position**: this shows a number in the bottom left of the card that represents the position of that card within the cell. For example, the topmost card will have position 1, and the card beneath it 2.
-
-Below is an example of a task card showing all available data
-
-![full task card](img/task-board-card-full.png)
-
-### Moving and ordering cards
-Read about this [here](../Application-Wide/#board-moving-and-ordering-cards).
-
-### Editing and viewing cards
-Read about this [here](../Application-Wide/#board-editing-and-viewing-cards).
-
-### Viewing by release or sprint
-Read about this [here](../Application-Wide/#board-viewing-by-release-or-sprint).
-
-### Viewing by Person
-Read about this [here](../Application-Wide/#board-viewing-by-person).
 
 
 ## Task Gantt Chart

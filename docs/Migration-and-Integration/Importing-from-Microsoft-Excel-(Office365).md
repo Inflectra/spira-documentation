@@ -268,7 +268,7 @@ Only system administrators can Add/Edit Custom Lists and Values going to the sec
 Only system administrators can create new users going to the first option of the "Product Template/System Admin Operations" menu.
 
 
-## Other actions you can do on after you have logged in to the add-in
+## Other actions you can do after you have logged in to the add-in
 * **Back**: Go back to select which add-in mode to run
 * **Help**: Open the add-ins help menu to this page
 * **Logout**: Close your connection with Spira and take you back to the login page

@@ -343,7 +343,7 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Assocation Tab Of                                | Available artifacts                                                                                             |
+    | Association Tab Of                               | Available artifacts                                                                                             |
     | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
     | **Documents**                                    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
     | **Incidents**                                    | Requirements, Test Steps, Tasks, Incidents, Risks                                                               |
@@ -355,7 +355,7 @@ You can add a comment that explains the rationale for the association and choose
     | **Tasks**                                        | Tasks, Incidents                                                                                                |
     | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
     | **Program Capabilities** (SpiraPlan only)        | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                          |
+    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                              |
 
 
 ### Rich Text Editor
@@ -424,76 +424,88 @@ From any rich text editor for a product artifact (including custom properties an
 In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
 
 
-## Beta Boards
-!!! info "In beta, available in SpiraTeam and SpiraPlan"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+## Boards
+Boards allow users to see artifacts visually in columns and/or rows, and move cards around to progress them along their workflow. This is like moving sticky notes around on a white board. It is a very visual way of working with your artifacts.
 
-    To access the beta board, navigate to the relevant board as normal. This loads the standard planning or artifact board. Then click on the "**Try the Beta**" button the top-right to go to the new beta board.
+!!! info "What boards where"
+    
+    There are currently two different types of boards in Spira: new and legacy. We are currently transitioning from the legacy format to the new format. 
 
-    ![button to access the beta board](img/Planning_Board_access-beta.png)
+    | Page           | Board format |
+    | -------------- | ------------ |
+    | Requirements   | Legacy       |
+    | Planning Board | New, Legacy  |
+    | Incident Board | Legacy       |
+    | Task Board     | New, Legacy  |
+    | Program Board  | Legacy       |
 
-    You will now stay on the beta boards for the remainder of your session. To leave the beta, click on "Exit the Beta". This will return you to the old boards.
+    **This guide focuses solely on the new boards**
 
-### Page Structure
-The beta boards are designed to provide a consistent user interface across its different views and:
+Boards are designed to provide a consistent user interface across its different views and:
 
-- supports multiple boards in a product
-- provides a wide range of intuitive customization options
-- lets you see both horizontal and vertical swim lanes in a single view
+- give similar functionality on different pages
+- provide a wide range of intuitive customization options
+- let you see both columns and rows (commonly called "swim lanes") in a single view
 
-The board pages are structured like this (in this example we are looking at the Planning Board but the high level features and layout is consistent across all boards):
+### Board Structure
+A board page can be divided into different areas (in this example we are looking at the Planning Board but the high level features and layout is consistent across all boards):
 
 ![planning board page layout guide](img/Planning_Board_page-layout.png)
 
-1. **Top toolbar**: this is where you configure the board itself (and all of the features below)
-2. **View controls**: this part of the toolbar lets you select the planning view (product backlog, release backlog, or sprint backlog), and choose, where relevant, a release or sprint
-3. **Grouping**: divide up the list of items into a major grouping. Each grouping is its own independent board on the page
-4. **Rows**: within each board / group create rows (swim-lanes) to divide up the data
-5. **Columns**: within each board / group, you must choose a field to show across the columns
-6. **Cells**: A cell is the intersection of a row and column to give a single reference point (like on a spreadsheet)
-7. **Cards**: All items that match the settings of a cell (its group, row, and column) are shown as cards in that cell. You can customize what information to show on cards
+1. **Toolbar**: normally with two buttons to configure the board (button with cogs), and customize how cards look (button with a card on it) 
+2. **Groups (optional)**: while not often used, groups can optionally allow you to group similar rows together to aid in organizing the board.
+3. **Columns**: every board must have a field set for columns, with one column for each value of that field
+4. **Rows (optional)**: optionally add rows (swim-lanes) to columns to further divide up your data.
+5. **Cells**: A cell is the place where cards live. It is either the area below a column, or the area for a specific column and row combination (like on a spreadsheet)
+6. **Cards**: All items that match the settings of a cell (its column and, if set, row) are shown as cards in that cell. You can customize what information to show on cards
 
+Boards also have a number of other useful features:
 
-### Board Grouping
-Boards have the option to have multiple, separate boards displayed. This is used when you want to display a complete board for each item in a selection (for example each release). Inside each group, the rows and columns will show based on your selections. For example, when you are displaying the Release Backlog on the Planning Board, you may want to group by release. In the screenshot below of the Planning Board we have columns set to status, and rows to component
+- **Extra title information**: depending on the selection for columns or rows, you may see different information next to the column or row title. This may include a user avatar, an icon, information about resource usage or progress.
+- **Card counts**: to the right of each column, row, and group title you may see a tiny card-shaped badge with a number in it. These badges tell you the number of cards in that column, row, or group. For example, if a column has a badge saying 4 (as in the screenshot above for the "Planned" column), then there will be 4 cards in that column (across all its rows, if relevant)
+- **Expand and collapse buttons**: you can show or hide different parts of the current board by expanding or collapsing different sections. The system will remember your choices automatically for you:
 
-![planning board group by release](img/Planning_Board_group-by-release.png)
+    - columns cannot be collapsed
+    - expand or collapse rows (if set) by clicking on the arrow to the left of the row title
+    - expand or collapse all rows on the board by clicking the arrow to the left of the column titles (if not grouping by anything)
+    - if a group is set, expand or collapse the group by clicking the arrow to the left of the group title. Hold the Ctrl key down while clicking this arrow to also expand or collapse all of the rows in that group, along with the group itself
 
-There are buttons in the header area of each group that let you:
+#### Board configuration options
+The toolbar configuration button (cogs) lets you control how the board will look and what data it will show. Different boards may show different options, but in general you can:
 
-- expand/collapse the group itself
-- expand/collapse the group and all of its rows at once (if rows are set)
+- Set the **display type** (some boards only): for example the Planning Board has three options here "Product Backlog", "Release Backlog", and "Sprint Backlog"
+- Filter the **release** to either show items across all releases, or a specific release (or, if relevant, a sprint)
+- Choose a field for **columns** so that each column is a value of that field. Note that the options available may change based off the display type and release selected
+- Choose a field for **rows** to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected
+- Choose a **group** option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you
+- Show or hide **unassigned** items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column. 
 
-![planning board expand collapse for a group](img/Planning_Board_group-expand.png)
+#### Board card options
+The toolbar card customization button (a mini card) lets you customize what information will be visible on the cards. You will always see the following information on a card:
 
-Additionally, at the top of all the groups, there are buttons to expand/collapse all groups at once.
+- Name (click to open a popup with [full details](#editing-and-viewing-cards))
+- Artifact icon: shown beneath the name in a gray bubble
+- ID token of the artifact: shown to the right of the artifact icon
+- Story points (if set and relevant to the artifact): shown to the bottom right of the card (hover to see full information about the estimate and effort fields) 
+- Priority (if set): shown to the bottom right of the card in a circle the color of the priority
+- Owner (if set): shown at the bottom right of the card in a circle with the avatar or initials of the person (hover on this to see their full name)
 
-![planning board expand collapse](img/Planning_Board_expand-collapse.png)
+Different boards may show different options, but in general you can toggle showing the artifact's:
 
-### Board Columns
-Inside each of the boards you can choose to organize the cards by column. Unlike groups and rows, this selection is required. For example, in the screenshot below we are displaying the Planning Board's product backlog with columns set to "priority".
+- mini description
+- type
+- status
+- position (its place in the stack of cards in its cell)
+- extra metrics about the artifact's progress (like task progress, or test coverage)
 
-![planning board columns example](img/Planning_Board_columns-example.png)
+### Special board views
+#### Board by release or sprint
+When columns or rows are set to show releases or sprints the column or row title has some special features:
 
-There are no expand/collapse buttons for columns.
+![planning board release title](img/Planning_Board_release-header.png)
 
-### Board Rows
-Inside each of the boards you can organize the cards into rows. This is optional. For example, in the screenshot below we are displaying the Planning Board' product backlog with rows set to "parent". In the example, the grouping is by component and the board is smart enough to know that it should only show you those parents in rows that are tagged with that component (so different component groups will show different parent requirements as their rows).
-
-![planning board rows example](img/Planning_Board_rows-example.png)
-
-Note that when rows is set to parent / parent requirement, rows are also included for parents with no unplanned children.
-
-There are buttons by the title of each row that let you expand/collapse that row.
-
-### Board Viewing by release or sprint
-When organizing by release or sprint there are a number of special features available in the header row (where you see the release/sprint name).
-
-![planning board release header](img/Planning_Board_release-header.png)
-
-- Clicking on the release or sprint name will open that release/sprint's details page
-- At the end of the release or sprint name is a little "display for" icon (a pair of glasses). Clicking this will set the release dropdown to that release/sprint and reload the board with information just for that chosen release/sprint
-- The group title will show additional information about the release or sprint on the right hand side of the group header. Hover on the group header to see this information in full. This shows:
+- Clicking on the name will open its details page
+- Underneath the name additional information about the artifact:
 
     - Requirement completion: hover on the indicator to see a tooltip of the exact percentage complete
     - Available effort: the number of available hours of work for tasks in the release based off the planning settings, the release dates and sources (this field is called "Planned Effort" on the release pages)
@@ -502,7 +514,15 @@ When organizing by release or sprint there are a number of special features avai
 
 When you move a card between releases or sprints, the fields described above may be recalculated. For effort fields, all child tasks of requirements in that release/sprint are used for calculations. For example, moving a requirement on a board into a sprint will increase the sprint's utilized effort by the hours of the relevant tasks in that requirement, and decrease the sprint's remaining effort by the same amount.
 
-### Board Viewing by Person
+#### Board by parent
+When columns or rows are set to show parents (e.g. requirements) the column or row title has some special features:
+
+![planning board parent header](img/Planning_Board_parent-header.png)
+
+- Clicking on the name will open its details page
+- Under the name is a small indicator bar showing the percentage progress. Hover on the indicator to see a tooltip with more information
+
+#### Board by Person
 When organizing by person there are a number of special features available in the header row (where you see the person's name).
 
 ![planning board person header](img/Planning_Board_person-header.png)
@@ -512,30 +532,31 @@ When organizing by person there are a number of special features available in th
 - Moving cards into a person's cells will, as relevant, automatically update their resource allocation
 
 !!! info "Grouping by team and rows by person"
-    When grouping by team, there is one group for every team. If rows is set to "by person", then within each team, all members of that team are shown. So if Amy is a member of the dev team, they will have a row in the dev team group and not in any other group.
-
-### Board what cards show when
-What cards show on the board depends on how the viewing controls are set. In additional the following broad principles apply:
-
-- when grouping by team, only cards that have owners who are members of that team are displayed in the cells for that group
-- when viewing by status (e.g. when column is set to status), only cards that match one of the displayed statuses will show
-- requirement cards:
-    
-    - requirements of all types are included on the board
-    - parent requirements do not show as cards
-    - requirements with a status of rejected or obsolete never show
+    When rows is set to "By Person" you can group "By Team". This will create one group for every active team in the product (teams with users in them). Within each team's group, all members of that team are shown. So if Amy is a member of the dev team, they will have a row in the dev team group and not in any other group.
 
 
-### Board Moving and ordering cards
-Cards can be moved between any cell on the board a card is currently in. You can also move cards between groups, if you are grouping by a particular field. Moving a card updates all relevant fields about that item. For instance, moving a card to a different row and column will change that cards values for both fields at once.
+### Board cards
+#### What cards show when
+What cards show on the board depends on how the board is configured (what display, columns, and rows are set). Cards that match all relevant criteria will be shown in the appropriate cell. Here are some examples:
 
-You can also move cards within a cell to change their order. When you drop a card, it will be inserted between the relevant cards in the cell, or at the top or bottom of the list. Moving a card between cells and dropping the card within a list of cards will place the card in that exact position.
+| Column                 | Row                     | Cards shown in each cell                                 |
+| ---------------------- | ----------------------- | -------------------------------------------------------- |
+| Status "In Progress"   | None set                | Items with a status of "In Progress"                     |
+| Status "In Progress"   | Type "Epic"             | Items with a status of "In Progress" and type of "Epic"  |
+| Priority "High"        | Component "Admin"       | Items with a priority of "High" and component of "Admin" |
+| Priority "High"        | Component unassigned    | Items with a priority of "High" and no component set     |
+| Priority is unassigned | Component is unassigned | Items with no priority and no component set              |
+
+#### Moving and ordering cards
+Cards can be moved between any cell of the board. Moving a card updates all relevant fields about that item. For instance, moving a card to a different row and column will change the values for both of those fields for the card at once.
+
+You can also move cards within a cell to change their order. When you drop a card, it will be placed between the relevant cards in the cell, or at the top or bottom of the list. Moving a card between cells and dropping the card within a list of cards will place the card in that exact position.
 
 Click on a card to select it. Click on more cards to add them to your selection. Then click and drag on any selected to move them together.
 
 !!! info "Things to be aware of"
 
-    - The purpose of a planning board or Kanban board, is to make it straightforward for users to move cards around. Therefore we do not enforce workflow restrictions on the planning board when moving cards.
+    - The purpose of boards like this is to make it straightforward for users to move cards around. Therefore we do not enforce workflow restrictions on the planning board when moving cards.
     - Only users with permissions to bulk edit the relevant artifact can move cards
     - Cards are disabled (cannot be moved) if any of the following are true:
 
@@ -544,10 +565,9 @@ Click on a card to select it. Click on more cards to add them to your selection.
         - a requirement card has a status of completed
         - requirements that have tasks attached, and the product is set to use task status to control requirement status (in this case the card does not *look* disabled but its status cannot be changed - if you try to change its status the card will appear in its original column)
 
-
-### Board Editing and viewing cards
+#### Editing and viewing cards
 **Viewing cards**: to view more information about the card you can click on the card's name to open a popup with much more detail; or ctrl/cmd+click on the card's name to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. Users who cannot bulk edit the artifact but who can add comments can add comments when viewing the card.
 
-**Editing cards**: users with bulk edit permissions can edit a planning board card at any time by clicking on the card's name (this includes letting you add a new comment). This opens a popup with full information about that card. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific card. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
+**Editing cards**: users with bulk edit permissions can edit a planning board card at any time when viewing the popup of that card (this includes letting you add a new comment). To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
     
-**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus (add) symbols at the top of each cell of the board. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
+**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
