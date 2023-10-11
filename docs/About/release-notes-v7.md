@@ -25,7 +25,8 @@
         - As a board user, when I group by teams I only see teams with people in them for the current product, so I do not see irrelevant information [RQ:4670]
         - As a board user, I can easily expand and collapse rows and groups in a clear and understandable way, to help me setup the board how I need [RQ:4672]
         - As a board user, I do not see columns, rows, or groups for unassigned items by default, to streamline and simplify how I use the board [RQ:4674]
-        - As a document user, I can [associate a set of documents to any single artifact](../../Spira-User-Manual/Document-Management/#add-associations-in-bulk) in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]
+        
+    - As a document user, I can [associate a set of documents to any single artifact](../../Spira-User-Manual/Document-Management/#add-associations-in-bulk) in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]
 
 ??? bug "Bug fixes and enhancements"
 
