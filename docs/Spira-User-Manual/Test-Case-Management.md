@@ -16,7 +16,15 @@ When you click on the Testing \> Test Cases link on the global navigation bar, y
 
 ![](img/Test_Case_Management_124.png)
 
-The test case list consists of a hierarchical arrangement of the various test folders and test cases. The structure is very similar to the folder structure in Microsoft Windows® Explorer, and users will find this very familiar and intuitive to use. A folder tree is on the left hand side---with triangle icons to expand / collapse each folder. Contents of the selected folder (the one marked in bold on the folder tree) are shown on the right hand side.
+The test case list consists of:
+
+- A sidebar on the left that shows:
+
+    - the folder tree with triangle icons to expand / collapse each folder
+    - a quick filter panel to filter by any saved filters or component with a single click
+    - a charts panel with a donut chart that shows the release test coverage for the currently displaying release. You can read how this data is prepared [here](../Product-Homepage/#release-test-summary)
+
+- The right hand side shows all the test cases in the product by folder, in a filterable, sortable grid. 
 
 When you create a new product, this list will initially be empty, and you will have to use the "***New Test Case***" button to start adding test cases to the system. A new product will also not have any test folders---only the base "Root" folder will be visible. To add a test folder, you click the "***Add***' button at the bottom of the folder tree on the left.
 
