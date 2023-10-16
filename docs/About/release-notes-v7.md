@@ -1,5 +1,12 @@
 # Release Notes for Spira v7
 
+## Version 7.9.0.1 (October 2023)
+
+!!! bug "Bug fixes"
+
+    - Fix details pages not opening correctly when the application is localized to French [IN:8822]
+
+
 ## Version 7.9 (October 2023)
 
 !!! info "Summary"
