@@ -2403,7 +2403,7 @@
   
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Report-Tables/" class="md-nav__link">
-        Available Database Tables
+        Available Report Tables
       </a>
     </li>
   
@@ -5314,7 +5314,13 @@ release / sprint organized by resource / person. Each of the users that is a mem
 <li><strong>Estimated Effort</strong> -- This is the original estimate for how long the task would take to complete.</li>
 <li><strong>Actual Effort</strong> -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress</li>
 <li><strong>Remaining Effort</strong> -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about <a href="#task-progress">task progress</a></li>
-<li><strong>Projected Effort</strong> -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Projected Effort = (Actual Effort + Remaining Effort)</li>
+<li>
+<p><strong>Projected Effort</strong> -- This is value that the system predicts it will take to complete the task:</p>
+<ul>
+<li>If the task is Not Started or Completed, projected effort = the actual effort, or if the actual effort is blank then the estimated effort</li>
+<li>If the task is neither Not Started or Completed, projected effort = the actual effort + remaining effort, or if the actual effort is blank then the estimated effort</li>
+</ul>
+</li>
 </ul>
 <p><strong>Note</strong>: If the actual effort is not specified, the projected effort will be the same as the estimated effort.</p>
 <p><strong>Note:</strong> if the task is currently assigned to a release or sprint, the start-date and end-date of the task must lie within the date-range of the parent release/sprint. If your task looks like it will not be completed in the available timeframe, you will need to contact the product manager to get them to either extend the date-range of the task, or consider moving the task to the next sprint.</p>
