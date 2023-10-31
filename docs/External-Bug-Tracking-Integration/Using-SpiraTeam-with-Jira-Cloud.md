@@ -1,30 +1,36 @@
 # Using SpiraPlan with Jira Cloud
+## Overview
+Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jira Cloud data sync engine to keep key information in sync between both applications.
 
-## Introduction
-By integrating SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on) and Jira Cloud your teams can work seamlessly across both applications. 
+!!! example "Real world example"
+    - The QA team uses Spira for requirements and test management.
+    - When the QA team finds bugs during testing incidents are created in Spira, and then sync to Jira
+    - The Dev team manages the bug in Jira, with changes reflected back in Spira
 
-For example, the quality assurance team can manage their requirements and test cases in SpiraPlan, and execute test runs in SpiraPlan. Incident generated during testing wil be automatically loaded into JIRA as new issues. The development team, working in Jira, can then manage the lifecycle of these issues in JIRA. When they change the issue status or add comments, these changes are quickly updated to match back in SpiraPlan. You can choose which sort of Jira issues are made into incidents in SpiraPlan, and which get created as requirements (based on the issue type). This can be used as part of the planning and testing lifecycle.
+**This data syncs can sync the follow information** (what exactly syncs and is user configurable and discussed more below) 
+| Jira artifact | Spira artifact             |
+| ------------- | -------------------------- |
+| Project       | Product                    |
+| Users         | Users                      |
+| Sprints       | Releases                   |
+| Issues        | Incidents and Requirements |
+| Sub-tasks     | Tasks                      |
+| Comments      | Comments                   |
+| Attachments   | Documents                  |
 
-With this integration you can, for each project/product you want to sync up:
 
-- have all new issues in Jira get created in SpiraPlan (as either incidents or requirements)
-- make sure all new incidents made in SpiraPlan get created in Jira
-- update SpiraPlan with changes made to issues in Jira
-- (advanced) update Jira with changes made to incidents in SpiraPlan
-- (advanced) create new Jira sub-tasks from tasks created in SpiraPlan
-- make sure your sprints match between Jira and SpiraPlan
-- connect together users so the right user is flagged against each issue and  incident
+## Setup
+For the data sync to work correctly make sure you meet all of the steps below:
 
-**Prerequisites**: The Jira Cloud plugin supports SpiraPlan v5.0 or later and the most recent version of Jira cloud hosted by Atlassian. For Jira Server, we have an alternate [Jira Server plugin](../Using-SpiraTeam-with-JIRA-5+) available.
+- [x] Use Spira v5+
+- [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](../Using-SpiraTeam-with-JIRA-5+).)
+- [x] [Setup a data sync application service](../Setting-up-Data-Synchronization/) - either in Inflectra's cloud or on your own servers
+- [x] Configure the plugin
 
-!!! danger "DO THIS FIRST"
-    ## Set up the data synchronization
-
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
-
-    Once you have completed the above you are ready to start configuring the plug-in.
-
-    You must also have a working installation of SpiraPlan and a cloud subscription to Jira.
+!!! danger "Don't forget"
+    Setting up the datasync requires two different things: running the datasync (outside of Spira), and setting things up in Spira.
+    
+    **Please make sure to [set up  the datasync](../Setting-up-Data-Synchronization/) before continuing with the rest of this guide**
 
 
 ## Configuring the Plug-In
