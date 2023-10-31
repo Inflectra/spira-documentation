@@ -351,7 +351,10 @@ The different effort values mean the following:
 - **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
 - **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
 - **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
-- **Projected Effort** -- This is value that the system is producting it will take to complete the task. This is calculated from the Actual Effort and Remaining Effort: Projected Effort = (Actual Effort + Remaining Effort)
+- **Projected Effort** -- This is value that the system predicts it will take to complete the task:
+
+    - If the task is Not Started or Completed, projected effort = the actual effort, or if the actual effort is blank then the estimated effort
+    - If the task is neither Not Started or Completed, projected effort = the actual effort + remaining effort, or if the actual effort is blank then the estimated effort
 
 **Note**: If the actual effort is not specified, the projected effort will be the same as the estimated effort.
 

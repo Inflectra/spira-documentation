@@ -191,7 +191,7 @@ nav:
   - OData Tutorial: Reporting\OData-Tutorial.md
   - Understanding Entity SQL: Reporting\Understanding-Entity-SQL.md
   - Custom Report Tokens: Reporting\Custom-Reporting-Tokens.md
-  - Available Database Tables: Reporting\Custom-Report-Tables.md
+  - Available Report Tables: Reporting\Custom-Report-Tables.md
 - Optional Features:
   - TaraVault:
     - Activating: TaraVault-User-Manual\Activating-TaraVault.md

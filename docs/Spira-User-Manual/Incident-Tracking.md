@@ -145,11 +145,11 @@ Any custom date fields set up by the system administrator or product owner will 
     - percent complete
     - progress indicator
 
-    **Projected Effort** is calculated by adding "Actual Effort" and "Remaining Effort" together.
+    **Projected Effort** is calculated by adding "Actual Effort" and "Remaining Effort" together, or if the "Actual Effort" is blank then the "Estimated Effort"
 
     **Percent Complete** is calculated as follows:
     
-    - work out the effort already made by substracting "Remaining Effort" from "Estimated Effort"
+    - work out the effort already made by subtracting "Remaining Effort" from "Estimated Effort"
     - divide the above by the "Estimated Effort"
     - in other words Percent Complete = `(Est. Effort - Remaining Effort) / Est. Effort * 100`
     - For example, if Est. Effort is 7 hours and the Remaining effort is 1 hour, then the Percent Complete is about 85%

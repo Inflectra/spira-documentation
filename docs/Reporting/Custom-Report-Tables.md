@@ -1,6 +1,6 @@
-# Available Custom Reports
+# Available Custom Reports Tables
 !!! info "How to use this page"
-    SpiraPlan has a number of database views available for creating custom reports using ESQL queries. Below, each available table is listed with all of their exact field names. 
+    Spira has a number of database views available for creating custom reports using ESQL queries. Below, each available table is listed with all of their exact field names. 
 
 ## Artifact Associations
 | R_ArtifactAssociations    |
