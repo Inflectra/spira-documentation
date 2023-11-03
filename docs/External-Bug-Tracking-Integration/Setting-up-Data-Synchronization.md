@@ -1,97 +1,108 @@
 # Setting up Data Synchronization
+## Introduction
+To use any of Inflectra's data sync integrations, you need a special data sync service. This lives outside of Spira and the application it is syncing with. The data sync service needs to run 24/7 to keep everything in sync. It needs to be able to "see" both applications. In addition to the service, there are dedicated plugins for the most popular third-party applications.These plugins work with the data sync service to manage all communication between Spira and the application(s) it syncs with.
 
-This section outlines the general data synchronization configuration to use any of the supported bug trackers with SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira).
+We provide you with three different options for this service to sync things for you: 
 
-► Please read this section first, before performing the configuration steps specific to your bug-tracker.
+- **Cloud** with "Spira Datasync", which runs in Inflectra's cloud
+- built-in **service** with on premise Spira
+- as a standalone "**Desktop** Datasync" application you run on your own server
 
-The built-in data-synchronization service that comes with Spira, allows the quality assurance team to manage their requirements and test cases in Spira, execute their test runs, and then have the new defects/bugs generated during the run be automatically loaded into an external bug-tracker. Once the incidents are loaded into the external bug-tracker, the development team can then manage the lifecycle of these defects/bugs in their chosen tool, and have the status changes be reflected back in Spira.
+This guide explains what option is right for you, and then gives how to instructions for each of the above 3 options.
 
-In addition, any issues logged directly into the external bug-tracker will get imported into Spira as either new incidents or new requirements (depending on their type) so that they can be used as part of the planning and testing lifecycle.
+!!! warning
+    After completing the relevant steps in this guide, make sure to refer to the documentation on this site for the specific application you are syncing with. That will explain how to configure Spira itself for the data sync to work correctly for you.
 
-There are three possible deployment options for the Spira data synchronization:
-
-1.  You have both Spira and the External Bug Tracker cloud-hosted
-2.  You have Spira installed on-premise (External Bug Tracker can be either)
-3.  You have Spira cloud-hosted, but the External Bug Tracker installed on-premise
-
-We shall provide the configuration steps for each option:
-
-
-## Spira & External Tool Cloud Hosted
-
-!!! info "Using the Customer Area to Manage the Spira DataSync"
-
-    The "Spira DataSync" is a cloud based data synchronization tool that can be used to synchronize your cloud Spira to a number of cloud hosted external tools. Configuration is minimal and is managed from the **[Customer Area](https://www.inflectra.com/CustomerArea/)** of your Inflectra account.
-
-    The [Customer Area](https://www.inflectra.com/CustomerArea/) is your organization's dedicated portal on the Inflectra website for managing your account and subscriptions with us. It is used for:
-
-    - making purchases
-    - changing contact information
-    - changing subscriptions
-    - configuring addons like the "Spira DataSync", TaraVault, or Rapise floating licenses
-
-    Access to the [Customer Area](https://www.inflectra.com/CustomerArea/) is restricted to only a couple of people in each organization. This is to ensure that only select authorized people are able to manage and make payments on their account.
-
-    If you do not have access to your organization's customer area, and you wish to edit or manage the "Spira DataSync" you will need to contact the owner of the Inflectra account in your organization. They will be able to assist you in configuring any settings as required.
+## Which option to choose
+The table below explains the different options available, as well the option we recommend for each use case. The uses cases vary based on where your Spira and the application Spira is syncing with live (in the cloud or managed by you on premise). 
 
 
-When you sign up for Spira for a cloud-hosted trial, you can add on the Spira DataSync service to the trial for free. **NOTE**: the DataSync service is only free during the free trial period - there is a nominal charge for the service once you start your subscription.
+| Spira Location | Application to sync with | Recommended data sync option | Other possible options |
+| -------------- | ------------------------ | ---------------------------- | ---------------------- |
+| Cloud          | Cloud                    | **Cloud** Spira Datasync     | **Desktop** Datasync   |
+| Cloud          | On premise               | **Desktop** Datasync         | None                   |
+| On premise     | Cloud                    | Datasync **service**         | **Desktop** Datasync   |
+| On premise     | On premise               | Datasync **service**         | **Desktop** Datasync   |
 
-Make sure to include the 'Spira DataSync' add-on with your trial. 
+For example, if you use Spira in the cloud, and the application to sync with is also in the cloud, then we recommend you use our Inflectra Cloud data sync. That is because it is the simplest to configure and maintain. However, this may not suit your specific needs, and in that case you can run the Desktop Datasync to manage the data sync yourself, on any Windows machine.
 
+
+## Setup Spira Datasync in the Cloud
+!!! info "Checklist"
+    - [x] Spira and the application it syncs with are both in the cloud
+    - [x] [Add the cloud Spira Datasync service](#add-spira-datasync-to-your-hosted-site) to your hosted Spira site
+    - [x] [Configure the Spira Datasync](#configure-the-spira-datasync)
+
+ The "Spira DataSync" is a cloud-based data synchronization tool. It is used to synchronize your cloud Spira to a number of cloud-hosted external applications. Setup is straightforward and managed from your **[Customer Area](https://www.inflectra.com/CustomerArea/)** on Inflectra's website. If you do not have access to the customer area, you will need to contact someone at your organization who does have access. They will be able to assist you in configuring any settings.
+
+??? question "What is the Inflectra Customer Area?"
+    The [Customer Area](https://www.inflectra.com/CustomerArea/) is your organization's dedicated portal on the Inflectra website for managing your account and subscriptions with us. It is used to:
+
+    - make purchases
+    - change contact information
+    - change subscriptions
+    - configure addons like the "Spira DataSync", TaraVault, or Rapise floating licenses
+
+    Access to the [Customer Area](https://www.inflectra.com/CustomerArea/) is restricted to very limited set of authorized people in an organization. 
+
+### Add Spira Datasync to your hosted site 
+The Spira Datasync is an optional feature you can add to your cloud-hosted Spira. You can get this feature for trials (free) and production subscriptions (nominal monthly charge). 
+
+If you want, add the Spira Datasync when signing up for the trial or production site.
 ![](img/Setting_up_Data_Synchronization_5.png)
 
-If you did *not* include the Spira DataSync with your trial, you can add one at any time once your subscription starts. Go to the customer area; find the "My Cloud Subscriptions" section and click "Customize" next to the subscription you want to add the Spira DataSync to:
+Or add it at any time from the Customer Area:
+- find the "My Cloud Subscriptions" section
+- click "Customize" next to the subscription you want to add the Spira Datasync to
+- add the Spira Datasync
 
 ![](img/Setting_up_Data_Synchronization_5b.png)
 
-Once your trial (or subscription) is provisioned, you will be able to configure the connection to Spira by going to your secure Customer Area on our website. Click on the 'Configure' button associated with the **Spira-DataSync** addon row:
+### Configure the Spira Datasync
+When the Spira Datasync feature has been successfully added to your cloud Spira, you need to configure it:
+
+- go to the Customer Area at inflectra.com
+- find the "My Cloud Subscriptions" section
+- click the "Configure" button on the Spira Datasync row
 
 ![](img/Setting_up_Data_Synchronization_6.png)
 
-Enter a login and password that can connect to your Spira instance. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:
-
-- be a **product admin** 
-- have **Incident create/modify/view** permissions
-- have **Release create/modify/view** permissions
-- may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)
+- enter the login and password for a user in your Spira instance (see [guidelines below](#what-user-to-use-for-datasync))
 
 ![](img/Setting_up_Data_Synchronization_7.png)
 
-Click on the 'Test' button to verify the credentials, and once they validate, make sure the 'Active' flag is checked and then click 'Save'. You have now configured the synchronization.
+- click the "Test" button to verify the credentials
+- make sure the "Active" flag is checked
+- click "Save"
 
-Now navigate to your Spira instance. Go to System Administration > Integration > Data Sychronization to see a list of the plugins currently configured (as in the example below):
-
-![](img/Setting_up_Data_Synchronization_8.png)
-
-If you click on any of the 'Manage' buttons you will be taken to your Spira instance where you can complete the plugin configuration:
-
-![](../Spira-Administration-Guide/img/System_Integration_Data_Synchronization_List.png)
-
-The steps for configuring each plugin are specific to each external bug-tracking tool. Please refer to the appropriate section in this document for the tool you are using.
+Now that the cloud configuration is done, you need to complete the datasync setup in Spira itself. These steps will be specific to the application you are syncing with, and can be found on the navigation system for this site. 
 
 
-## Spira Installed On-Premise
+## Setup the Datasync service on premise
+!!! info "Checklist"
+    - [x] Spira is on premise
+    - [x] [Download the plugin](#download-plugins-for-the-service) for the application you will sync with
+    - [x] [Configure the service](#configure-the-service)
+    - [x] [Start the Datasync service](#start-the-datasync-service)
 
-With Spira installed on-premise, there is a built-in Windows® service that is installed with Spira that is not running by default, but is available for data-synchronization.
+When you install Spira on-premise, it comes with a built-in datasync service for Windows. This lets you sync Spira with other applications.
 
-The steps that need to be performed to configure integration are as follows:
+### Download Plugins for the service
+Each application Spira syncs with has a dedicated plugin. This is required for the datasync to work. If the service is like traffic signals, the plugin is the GPS app, making sure the right data goes to the right place in the right way. 
 
-- Download appropriate plug-in for Spira from our website
-- Configure the DataSync Service
-- Start the service and proceed to the plugin specific section of this manual
+- Go to the [downloads page on the Inflectra website](https://www.inflectra.com/SpiraPlan/Downloads.aspx#BugTrackers)
+- Find the plugin for the application you want to sync Spira with
+- Download the plugin as a zip file to the server where Spira is installed
+- Unzip the zip file, which will contain a number of DLL files
+- Move the DLL files into the folder `{root folder of where Spira is installed}\DataSync`. By default this is likely to be `C:\Program Files (x86)\SpiraPlan\DataSync`, but it may vary based on your setup
+- Check that the folder contains files called "DataSyncService.exe" and "DataSyncService.exe.config"
 
+### Configure the Service
+The datasync service is configured in an XML based text file. This tells the service, once running, where to look and what to do.
 
-### Download the Data-Sync Plug-In
-
-Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<http://www.inflectra.com/SpiraTeam/Downloads.aspx>). Listed on this page will be the data-synchronization plug-In for your desired bug-tracking tool. Right-click on this link and save the Zip compressed folder to the hard-drive of the server where Spira is installed.
-
-Open up the compressed folder and extract the DLL assembly files and place them in the ``C:\\Program Files (x86)\\SpiraTeam\\DataSync`` folder (it may be SpiraTest or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.
-
-
-### Configuring the Synchronization Service
-
-To configure the integration service, please open up the DataSyncService.exe.config file located in ``C:\\Program Files (x86)\\SpiraTeam\\DataSync`` with a text editor such as Notepad. Once open, it should look like:
+- Go to the folder `{root folder of where Spira is installed}\DataSync`. By default this is likely to be `C:\Program Files (x86)\SpiraPlan\DataSync`, but it may vary based on your setup
+- Find the file called "DataSyncService.exe.config"
+- Open this file in a text editor (it should look similar to below)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,19 +115,19 @@ To configure the integration service, please open up the DataSyncService.exe.con
  <applicationSettings>
   <Inflectra.SpiraTest.DataSyncService.Properties.Settings>
    <setting name="PollingInterval" serializeAs="String">
-    <value>600000</value>
+    <value>300000</value>
    </setting>
    <setting name="WebServiceUrl" serializeAs="String">
-    <value>http://localhost/SpiraTeam</value>
+    <value>http://localhost/SpiraPlan</value>
    </setting>
    <setting name="Login" serializeAs="String">
     <value>fredbloggs</value>
    </setting>
    <setting name="Password" serializeAs="String">
-    <value>fredbloggs</value>
+    <value>PleaseChange</value>
    </setting>
    <setting name="EventLogSource" serializeAs="String">
-    <value>SpiraTeam Data Sync Service</value>
+    <value>Spira Data Sync Service</value>
    </setting>
    <setting name="TraceLogging" serializeAs="String">
     <value>False</value>
@@ -127,76 +138,77 @@ To configure the integration service, please open up the DataSyncService.exe.con
 
 ```
 
-The sections that need to be verified and possibly changed are the values for the following 4 setting XML tags above. 
+As you can see above, there are various `<setting>` fields that have a name and then below them a `<value>`. You need to change the *values* for certain *names*:
 
-- name="PollingInterval"
-- name="WebServiceUrl"
-- name="Login"
-- name="Password" 
-
-For each of these, check the following information:
-
-The polling interval allows you to specify how frequently the data-synchronization service will ask Spira and the external system for new data updates. The value is specified in milliseconds and we recommend a value around 2-5 minutes (i.e. 120,000 - 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead. When you are using a bidirectional synchronization plugin, a shorter value with avoid conflicting changes being made in the system systems.
-
-The base URL to your instance Spira. It is typically of the form http://<server name\>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.
-
-A valid login name and password to your instance of Spira. This user, for all of the product(s) that will be synchronize with the external bug-tracker, needs to:
-
-- be a **product admin** 
-- have **Incident create/modify/view** permissions
-- have **Release create/modify/view** permissions
-- may require additional permissions for other artifacts, depending on how the sync is set up (for instance requirements, documents, or tasks)
-
-Once you have made these changes, please refer to the section in this document that covers the specific bug-tracking tool you will be integrating with.
-
-Note: If you are using the MS-TFS plugin on premise, you will also need to switch over your IIS application pool running Spira to "Enable 32-bit Applications. You will also need to download the recompiled 32-bit version of the DataSyncService.exe application from our support knowledge base - [KB14 - Using SpiraTeam Data Synchronization with TFS on a 64-bit system](https://www.inflectra.com/Support/KnowledgeBase/KB14.aspx).
+- **name="PollingInterval"**: this tells the service how frequently to check for new data. The value is in milliseconds. We recommend going for 2-5 minutes (e.g. `<value>300000</value>` for 5 minutes). The larger the number, the longer the gap between the service checking for data and the lower the network and server overhead. For two-way syncs, go on the lower end of the range (2 minutes) to avoid the chance of conflicts
+- **name="WebServiceUrl"**: this is the base URL to your Spira instance. It is typically of the form `http://<server name\>/SpiraPlan`. When you go to this URL in the server's browser, the Spira login page should appear.
+- **name="Login"** and **name="Password"**: enter the login and password for a user in your Spira instance (see [guidelines below](#what-user-to-use-for-datasync))
 
 
-### Starting the Data-Synchronization Service
+??? info "Using on premise TFS"
+    If you are using the MS-TFS plugin on premise, you will also need to switch over your IIS application pool running Spira to "Enable 32-bit Applications. You will also need to download the recompiled 32-bit version of the DataSyncService.exe application from our support knowledge base - [KB14 - Using SpiraTeam Data Synchronization with TFS on a 64-bit system](https://www.inflectra.com/Support/KnowledgeBase/KB14.aspx).
 
-When Spira is installed, a Windows Service -- SpiraTeam Data Sync Service -- is installed along with the web application. However to avoid wasting system resources, this service is initially set to run manually. To ensure continued synchronization of SpiraTeam with the external tool, we recommend starting the service and setting its startup-type to Automatic.
 
-To make these changes, open up the Windows Control Panel, click on the "Administrative Tools" link, and then choose the Services option. This will bring up the Windows Service control panel:
+### Start the Datasync service
+By default, the datasync service is not running. This is to conserve system resource. To make sure that the service is running and will always run:
+
+- Open the Services application in Windows
+- Find the `SpiraTest Data Sync Service`
+- Right click on the service and set the start up to "Automatic"
+- Make sure the service has started - manually start it if needed
 
 ![](img/Setting_up_Data_Synchronization_10.png)
 
-Click on the 'SpiraTeam Data Sync Service' entry and click on the link to start the service. Then right-click the service entry and choose the option to set the startup type to 'Automatic'. This will ensure that synchronization continues after a reboot of the server.
+Now that the datasync service configuration is done, you need to complete the datasync setup in Spira itself. These steps will be specific to the application you are syncing with, and can be found on the navigation system for this site. 
+
+## Setup the Desktop Datasync
+!!! info "Checklist"
+    - [x] [Install the Desktop Datasync](#install-the-desktop-datasync) on a Microsoft Windows device
+    - [x] [Download the plugin(s)](#download-plugins-for-the-desktop-datasync) for the applications Spira will sync with
+    - [x] [Configure the desktop datasync](#configure-the-desktop-datasync)
 
 
-## Spira Cloud Hosted, External Tool On-Premise
+The "Desktop Datasync" is a standalone Windows application than can be used to run the various datasync plugins. It works independently of Spira, and works with both cloud and on-premise instances of Spira. It is especially useful if your Spira is in the cloud, but the application it is syncing with is not. It can be used in other scenarios as well.
 
-The Desktop Data Synchronization utility (hereafter referred to as the "Desktop DataSync") is a standalone utility than can be used to run the various Data Synchronization PlugIns without a server installation of Spira.
-
-This is useful where you have your SpiraTeam instance cloud hosted, but the external tool is locally installed behind your firewall.
-
-
-### Installation
-
-To obtain the Desktop DataSync, go to the Inflectra website and under the "Downloads and Add-Ons" section you will find a Windows Installation (MSI) package that will install the Desktop DataSync onto your computer. The installer will install both a 64-bit version of the Desktop Data Sync and a 32-bit version. You should use the 64-bit version for all plugins except the Microsoft TFS plugin which will require the 32-bit version.
+### Install the Desktop Datasync
+- Go to the [downloads page on the Inflectra website](https://www.inflectra.com/SpiraPlan/Downloads.aspx)
+- Find the Windows Installation (MSI) package for the Desktop Datasync (there are 64-bit and 32-bit versions - unless you need to sync with on-premise TFS, use the 64-bit version)
+- Download the installer onto the machine the Desktop Datasync will run from 
+- Go through the installation wizard
 
 ![](img/Setting_up_Data_Synchronization_11.png)
 
-Next you need to download the appropriate plug-in(s) for the various bug-trackers (as described in the appropriate section of this document) and place the assemblies (DLL files) into the same folder that contains the DesktopDataSync.exe application:
+### Download Plugins for the Desktop Datasync
+Each application Spira syncs with has a dedicated plugin. This is required for the datasync to work. If the desktop datasync is like traffic signals, the plugin is the GPS app, making sure the right data goes to the right place in the right way. 
+
+- Go to the [downloads page on the Inflectra website](https://www.inflectra.com/SpiraPlan/Downloads.aspx#BugTrackers)
+- Find the plugin for the application you want to sync Spira with
+- Download the plugin as a zip file to the server where Spira is installed
+- Unzip the zip file, which will contain a number of DLL files
+- Move the DLL files into the folder `{root folder of where Desktop Datasync is installed}`. This is likely to be `C:\Program Files (x86)\Inflectra\Spira Desktop DataSync`, but it may vary based on your setup
+- Check that the folder contains files called "DataSyncService.exe" and "DataSyncService.exe.config"
 
 ![](img/DesktopDataSync.png)
 
-### Usage
-
-Once you have downloaded and installed the application and appropriate plug-ins, go to Start \> Programs \> Inflectra \> Desktop DataSync to launch the application.
+### Configure the Desktop Datasync
+- Go to Start > Programs > Inflectra > Desktop Datasync. This launches the application and shows its options screen
 
 ![](img/Setting_up_Data_Synchronization_12.png)
 
-This will bring up the main options window of the application:
 
 ![](img/Setting_up_Data_Synchronization_13.png)
 
-You should then enter the URL, login and password to your Spira installation and click \[Test\]. Assuming that this information is correct, you will see a confirmation message:
+As you can see above, there are a number of options that you can configure:
 
-![](img/Setting_up_Data_Synchronization_14.png)
+- **Spira URL**: enter the URL of the Spira this is the base URL to your Spira instance. It is typically of the form `http://<server name\>/SpiraPlan`. When you go to this URL in the server's browser, the Spira login page should appear.
+- **User Name** and **Password"**: enter the login and password for a user in your Spira instance (see [guidelines below](#what-user-to-use-for-datasync)) and click Test to validate
+- **PollingInterval**: this tells the service how frequently to check for new data. We recommend going for 2-5 minutes. The larger the number, the longer the gap between the service checking for data and the lower the network and server overhead. For two-way syncs, go on the lower end of the range (2 minutes) to avoid the chance of conflicts
+- **Enable Trace Logging**: this is not normally required, but can be useful when verifying data mappings. Leaving it on will fill up the application log, so leave it unchecked in normal use)
+- **Continue After Errors**: if you wish to stop as soon as the Desktop Datasync gets to an error, make sure this is checked. This can be useful to avoid one wrong thing snowballing to many wrong things, but in normal use, one error should not disrupt the whole sync
 
-Now you should complete the configuation by setting the Polling Interval (how often the utility will synchronize data between Spira and the external system) and whether Trace Logging is enabled (useful when verifying your data mapping, but will fill up the application log, so leave unchecked for production use). Then click the \[Update\] button to save your settings or \[Start\] to save your settings and start synchronization immediately.
+Once you are happy with the options, click "Update" to save the options, or "Start" to save things and start the datasync immediately. 
 
-Once the Options window closes, the application will remain active in the system tray of your computer:
+Note: if you close the application window, the application will still be running. it ca nbe accessed from the system tray
 
 ![](img/Setting_up_Data_Synchronization_15.png)
 
@@ -204,3 +216,11 @@ You can then use the right-click context menu to start synchronization, stop syn
 
 During synchronization, any errors will be logged to the Windows Application Event Log and you can use those logs to diagnose any issues connecting to the external bug-tracker or any data mapping configuration changes that need to be made.
 
+## What user to use for datasync
+!!! question "What user to use for Datasync"
+    This user is used for all data syncing so it is important to pick the right user with the right permissions. To do so, the user should be:
+
+  - an active user in Spira
+  - a "service" account just for data syncing. This means that the user is not used for other purposes (so do not use credentials of someone who uses the tool) - this will help manage permissions and also help with auditing and troubleshooting
+  - a member of all products in Spira you need to sync
+  - using a product role with enough permission to do everything required. They should be able to view, create and modify all artifacts used by the data sync. This is typically releases, incidents, documents, and requirements, but may include other artifacts like test cases or tasks.
