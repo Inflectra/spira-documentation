@@ -5395,9 +5395,9 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use Spira v6.3.0.1+</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Use Jira Cloud (we have a <a href="../Using-SpiraTeam-with-Jira-5+">separate data sync for Jira Server / DataCenter</a>.)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="../Setting-up-Data-Synchronization/">Setup a datasync  service</a> - either in Inflectra's cloud or on your own servers</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#jira-configuration-helper">Download the Jira configuration helper application</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#configure-the-plugin">Configure the plugin in Spira</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#user-mapping">Configure system wide user mapping</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#jira-configuration-helper">Download the Jira configuration helper application</a></li>
 </ul>
 <p>Then, for each product you want to sync:</p>
 <ul class="task-list">
@@ -5489,7 +5489,7 @@
 <summary>Valid Jira user identifiers</summary>
 <p><strong>Email Address</strong>: use the email address of the user as it is used in Jira. This will only work if the user's profile is set to public and that the profile's email address visibility set to <em>Anyone</em> in Jira:</p>
 <p><img alt="Email visibility setting in Jira" src="../img/JiraCloud-User-Mapping-User-Profile-Visibility.png" /></p>
-<p><strong>Atlassian AccountID</strong>: you can always use this value - it does not matter if the user's profile is public or private.</p>
+<p><strong><a href="https://community.atlassian.com/t5/Jira-questions/where-can-i-find-my-Account-ID/qaq-p/976527">Atlassian AccountID</a></strong>: you can always use this value - it does not matter if the user's profile is public or private.</p>
 <p><img alt="User Data Mapping Tab in Spira using Account ID" src="../img/JiraCloud-User-Mapping-3.png" /></p>
 </details>
 <h2 id="product-configuration">Product Configuration<a class="headerlink" href="#product-configuration" title="Permanent link">&para;</a></h2>
@@ -5703,7 +5703,7 @@
 <p>To start, go to the data mapping home page for the selected product you were on to <a href="#activate-the-datasync">activate the datasync</a>. Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use</p>
 <h4 id="scalar-custom-properties">Scalar Custom Properties<a class="headerlink" href="#scalar-custom-properties" title="Permanent link">&para;</a></h4>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_43.png" /></p>
-<p>This refers to custom properties of all types <strong>except</strong> List** and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.</p>
+<p>This refers to custom properties of all types <strong>except</strong> List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.</p>
 <p>Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the <a href="#jira-configuration-helper">Jira configuration helper</a>.</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
 <h4 id="list-custom-properties">List Custom Properties<a class="headerlink" href="#list-custom-properties" title="Permanent link">&para;</a></h4>
@@ -5733,7 +5733,7 @@
 <li>create an incident custom property in Spira of type Text</li>
 <li>go to the product's Jira datasync configuration page (as used above)</li>
 <li>click on the hyperlink for the custom property you created</li>
-<li>enter "Environment**" as the External Key of the custom property</li>
+<li>enter "Environment" as the External Key of the custom property</li>
 <li>click "Save"</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_47.png" /></p>
@@ -5758,7 +5758,7 @@
 <li>create an incident custom property in Spira of type Text</li>
 <li>go to the product's Jira datasync configuration page (as used above)</li>
 <li>click on the hyperlink for the custom property you created</li>
-<li>enter "JiraIssueKey**" as the External Key of the custom property</li>
+<li>enter "JiraIssueKey" as the External Key of the custom property</li>
 <li>click "Save"</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_48.png" /></p>
