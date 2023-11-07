@@ -4715,13 +4715,13 @@
 <td>Cloud</td>
 <td>Cloud</td>
 <td><strong>Cloud</strong> Spira Datasync</td>
-<td><strong>Desktop</strong> Datasync</td>
+<td>Datasync <strong>service</strong>, <strong>Desktop</strong> Datasync</td>
 </tr>
 <tr>
 <td>Cloud</td>
 <td>On premise</td>
+<td>Datasync <strong>service</strong></td>
 <td><strong>Desktop</strong> Datasync</td>
-<td>None</td>
 </tr>
 <tr>
 <td>On premise</td>
@@ -4790,13 +4790,18 @@
 <div class="admonition info">
 <p class="admonition-title">Checklist</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Spira is on premise</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Spira is on premise OR you have installed the standalone service</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#download-plugins-for-the-service">Download the plugin</a> for the application you will sync with</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#configure-the-service">Configure the service</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <a href="#start-the-datasync-service">Start the Datasync service</a></li>
 </ul>
 </div>
-<p>When you install Spira on-premise, it comes with a built-in datasync service for Windows. This lets you sync Spira with other applications.</p>
+<p>When you install Spira on-premise, it comes with a built-in datasync service for Windows. This lets you sync Spira with other applications. If you are using Spira in the cloud, please:</p>
+<ul>
+<li><a href="https://www.inflectra.com/SpiraPlan/Downloads.aspx">download</a> the "Standalone Data-Synchronization Windows Service" onto a Windows machine</li>
+<li>unzip it </li>
+<li>run the "InstallService.bat" file to install the service and the config file </li>
+</ul>
 <h3 id="download-plugins-for-the-service">Download Plugins for the service<a class="headerlink" href="#download-plugins-for-the-service" title="Permanent link">&para;</a></h3>
 <p>Each application Spira syncs with has a dedicated plugin. This is required for the datasync to work. If the service is like traffic signals, the plugin is the GPS app, making sure the right data goes to the right place in the right way. </p>
 <ul>
