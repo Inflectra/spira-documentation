@@ -76,9 +76,9 @@ For the data sync to work correctly make sure you meet **all** of the steps belo
 - [x] Use Spira v6.3.0.1+
 - [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](../Using-SpiraTeam-with-Jira-5+).)
 - [x] [Setup a datasync  service](../Setting-up-Data-Synchronization/) - either in Inflectra's cloud or on your own servers
+- [x] [Download the Jira configuration helper application](#jira-configuration-helper)
 - [x] [Configure the plugin in Spira](#configure-the-plugin)
 - [x] [Configure system wide user mapping](#user-mapping)
-- [x] [Download the Jira configuration helper application](#jira-configuration-helper)
 
 Then, for each product you want to sync:
 
@@ -170,7 +170,7 @@ If you are not auto mapping users (the field is set to no in the plugin configur
 
     ![Email visibility setting in Jira](img/JiraCloud-User-Mapping-User-Profile-Visibility.png)
 
-    **Atlassian AccountID**: you can always use this value - it does not matter if the user's profile is public or private.
+    **[Atlassian AccountID](https://community.atlassian.com/t5/Jira-questions/where-can-i-find-my-Account-ID/qaq-p/976527)**: you can always use this value - it does not matter if the user's profile is public or private.
 
     ![User Data Mapping Tab in Spira using Account ID](img/JiraCloud-User-Mapping-3.png)
 
@@ -448,7 +448,7 @@ To start, go to the data mapping home page for the selected product you were on 
 #### Scalar Custom Properties
 ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-This refers to custom properties of all types **except** List** and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
 Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -492,7 +492,7 @@ If your instance of Jira requires that all new issues are submitted with an "Env
 - create an incident custom property in Spira of type Text
 - go to the product's Jira datasync configuration page (as used above)
 - click on the hyperlink for the custom property you created
-- enter "Environment**" as the External Key of the custom property
+- enter "Environment" as the External Key of the custom property
 - click "Save"
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_47.png)
@@ -522,7 +522,7 @@ To also see the Jira ID on the Incident list page:
 - create an incident custom property in Spira of type Text
 - go to the product's Jira datasync configuration page (as used above)
 - click on the hyperlink for the custom property you created
-- enter "JiraIssueKey**" as the External Key of the custom property
+- enter "JiraIssueKey" as the External Key of the custom property
 - click "Save"
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
