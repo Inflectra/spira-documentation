@@ -19,8 +19,8 @@ The table below explains the different options available, as well the option we 
 
 | Spira Location | Application to sync with | Recommended data sync option | Other possible options |
 | -------------- | ------------------------ | ---------------------------- | ---------------------- |
-| Cloud          | Cloud                    | **Cloud** Spira Datasync     | **Desktop** Datasync   |
-| Cloud          | On premise               | **Desktop** Datasync         | None                   |
+| Cloud          | Cloud                    | **Cloud** Spira Datasync     | Datasync **service**, **Desktop** Datasync   |
+| Cloud          | On premise               | Datasync **service**         | **Desktop** Datasync   |
 | On premise     | Cloud                    | Datasync **service**         | **Desktop** Datasync   |
 | On premise     | On premise               | Datasync **service**         | **Desktop** Datasync   |
 
@@ -80,12 +80,16 @@ Now that the cloud configuration is done, you need to complete the datasync setu
 
 ## Setup the Datasync service on premise
 !!! info "Checklist"
-    - [x] Spira is on premise
+    - [x] Spira is on premise OR you have installed the standalone service
     - [x] [Download the plugin](#download-plugins-for-the-service) for the application you will sync with
     - [x] [Configure the service](#configure-the-service)
     - [x] [Start the Datasync service](#start-the-datasync-service)
 
-When you install Spira on-premise, it comes with a built-in datasync service for Windows. This lets you sync Spira with other applications.
+When you install Spira on-premise, it comes with a built-in datasync service for Windows. This lets you sync Spira with other applications. If you are using Spira in the cloud, please:
+
+- [download](https://www.inflectra.com/SpiraPlan/Downloads.aspx) the "Standalone Data-Synchronization Windows Service" onto a Windows machine
+- unzip it 
+- run the "InstallService.bat" file to install the service and the config file 
 
 ### Download Plugins for the service
 Each application Spira syncs with has a dedicated plugin. This is required for the datasync to work. If the service is like traffic signals, the plugin is the GPS app, making sure the right data goes to the right place in the right way. 
