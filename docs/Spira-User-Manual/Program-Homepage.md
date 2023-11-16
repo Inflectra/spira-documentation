@@ -26,21 +26,22 @@ Together, these editing options let you change the page to suit your needs. If y
 
 By default, the program home page shows the "General" view. The following table shows which widgets are displayed on the different views of the 'Product Home':
 
-| Widget Name                        | General   | Development   | Testing |
-| ---------------------------------  | --------- | ------------- | ------- |
-| Program Overview                   | Y         | Y             | Y
-| Product List                       | Y         | Y             | Y
-| Products: Completion               | Y         |               | 
-| Products: Relative Size            | Y         |               | 
-| Schedule                           | Y         |               | 
-| Requirement Completion             | Y         |               | Y
-| Requirements Coverage              | Y         |               | Y
-| Recent Builds                      |           | Y             | Y
-| Test Execution Status              |           | Y             | Y
-| Incident Aging                     |           | Y             | Y
-| Top Open Issues                    | Y         | Y             | 
-| Top Open Risks                     | Y         |               | 
-| Task Progress                      |           | Y             | 
+| Widget Name             | General | Development | Testing |
+| ----------------------- | ------- | ----------- | ------- |
+| Program Overview        | Y       | Y           | Y       |
+| Product List            | Y       | Y           | Y       |
+| Products: Completion    | Y       |             |         |
+| Products: Relative Size | Y       |             |         |
+| Products: Test Summary  |         |             | Y       |
+| Schedule                | Y       |             |         |
+| Requirement Completion  | Y       |             | Y       |
+| Requirements Coverage   | Y       |             | Y       |
+| Recent Builds           |         | Y           | Y       |
+| Test Execution Status   |         | Y           | Y       |
+| Incident Aging          |         | Y           | Y       |
+| Top Open Issues         | Y       | Y           |         |
+| Top Open Risks          | Y       |             |         |
+| Task Progress           |         | Y           |         |
 
 
 ## Program Overview
