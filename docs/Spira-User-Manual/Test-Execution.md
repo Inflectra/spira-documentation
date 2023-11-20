@@ -43,6 +43,12 @@ The rest of the page contains the "**test execution area**". This has details ab
 
 Note: on first accessing this screen, the user will be given a guided tour of many of the features of this page. This can be accessed at any time via the options menu (discussed below)
 
+!!! bug "What to do if you see an error"
+    Sometimes, you will not be able to start a test execution because the system is blocked and cannot continue. If this happens to you check the following:
+
+    - if the product has a release, make sure to select a release from the dropdown at the start of test execution
+    - to execute a test case it must have test steps. If a test case does not have any test steps, then you will not be able to execute it
+    - if you are executing a test set and see this message "There are no test runs in this pending set to be resumed" it means that the test set is using a test configuration that is empty (it has no entries). To resolve, either remove the test configuration from the test set or edit the test configuration to populate its entries.
 
 ## Display Modes
 
