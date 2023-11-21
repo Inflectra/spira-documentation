@@ -79,7 +79,7 @@ You can export the following artifacts from the current product to any other pro
 - tasks
 - test cases
 
-The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product (the system will try and match up fields as best it can).
+The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
 *Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.*
 
@@ -423,6 +423,8 @@ From any rich text editor for a product artifact (including custom properties an
 
 In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
 
+### Tags
+Many artifacts have tag support. You can use tags to 
 
 ## Boards
 Boards allow users to see artifacts visually in columns and/or rows, and move cards around to progress them along their workflow. This is like moving sticky notes around on a white board. It is a very visual way of working with your artifacts.

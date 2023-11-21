@@ -20,11 +20,10 @@ When you choose the Documents artifact from the global navigation bar, you open 
 
 ![](img/Document_Management_319.png)
 
-This screen is made up of three sections:
+This screen is made up of two sections:
 
-1. The top left displays a hierarchical list of the document folders. You can expand or collapse a folder to see its subfolders. Click on a folder to show its contents in the main part of the screen.
-2. The bottom left shows the "Tag Cloud". This lists all the tags associated with documents in the product. The size of the font is proportional to the number of documents associated with the tag. Clicking on a tag filters the list of documents to show items that contain the selected tag.
-3. The main right-hand section displays a list of all the documents contained within the currently selected folder. This list can be filtered and sorted, and you can choose how many rows of documents to display on the page at one time.
+1. The left displays a hierarchical list of the document folders. You can expand or collapse a folder to see its subfolders. Click on a folder to show its contents in the main part of the screen.
+2. The main right-hand section displays a list of all the documents contained within the currently selected folder. This list can be filtered and sorted, and you can choose how many rows of documents to display on the page at one time.
 
 The main toolbar has operations you can perform on the document list or selected documents. You can:
 

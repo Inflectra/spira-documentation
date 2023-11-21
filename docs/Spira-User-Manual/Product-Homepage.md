@@ -221,15 +221,6 @@ This widget displays a list of the most recent builds that have been performed a
 For each build it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](../Release-Management/#build-details). Note: If no release or sprint is selected then the widget will not display any data.
 
 
-## Tag Cloud
-
-This widget lets you see the list of document tags being used in the product:
-
-![](img/UserProduct_Management_69.png)
-
-The size of the tag name indicates the relative frequency of its usage in the product. Clicking on a document tag will open up the [Document List](../Document-Management/#document-list) page with the filter set to the tag you clicked on. This will display a list of related documents that have been tagged with the same tag name.
-
-
 ## Test Case Cumulative Progress
 
 This section consists of a chart that displays the last 30 days of test case executions cumulatively. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category. For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.
