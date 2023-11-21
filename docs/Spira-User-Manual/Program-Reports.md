@@ -1,13 +1,19 @@
 # Program Reports
-With program level reporting, users of SpiraPlan (only) can see and generate reports relevant to their program, to help you monitor the progress of work and to analyze current performance.
+<span class="pill">SpiraPlan</span> With program level reporting, users can see and generate reports relevant to their program, to help you monitor the progress of work and to analyze current performance.
 
 ## Reporting Home Page 
 ![](img/program-reports-homepage.png)
 
-The program reporting page consists of two main areas:
+The program reporting page consists of three areas:
 
-1. The top bar shows the program name
+1. The top bar shows:
+
+    - the program name
+    - controls for changing the graph widgets
+    - the program milestone picker. This shows all open program milestones and selecting an option will update relevant widgets to display information for that program milestone. The selection here is synced with that on the program home page.
+
 2. The left-hand pane displays a list of the printable reports available in the system, categorized by the artifact they primarily relate to (for example, capabilities or program milestones). This includes both standard and custom reports. Clicking on a report name opens its [configuration page](#reports-configuration).
+3. The right-hand pane displays any graph widgets configured by the current user. By default this is empty. To add widgets click the "Add Items" button to see all available widgets, limited to [program level custom graphs](../../Spira-Administration-Guide/System-Reporting/#edit-graphs) created in your system.
 
 
 ## Reports Configuration
@@ -29,6 +35,13 @@ This allows you to specify the display format of the report. Depending on the sp
 ### Report Elements
 This allows you to determine which types of information to include in the report. This varies by report type, but may include associated artifacts, or the artifacts' history. Certain elements are pre-selected by default.
 
+### Report Filtering
+Filter the report by any standard or custom field available for that specific artifact. There are different types of filter for different types of field. For instance, for date fields you can filter by specific date ranges.
+
+![](img/program-reports-configuration2.png)
+
+### Report Sorting
+If the artifact can be sorted (for example program milestones can be but capabilities can not), then you can choose which field to sort the report by and whether to sort ascending or descending. By default, the sort order is typically by ascending ID.
 
 ## Capability Reports
 ### Capability Summary Report

@@ -4,17 +4,19 @@
 
 !!! info "Summary"
 
-    - Brings new widgets to the program home page, letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
-    - Improves program level reporting with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
-    - Adds tagging support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
-    - Let users leverage the power of OpenAI in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
+    - Brings new widgets to the [program home page](../../Spira-User-Manual/Program-Homepage), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
+    - Improves [program level reporting](../../Spira-User-Manual/Program-Reports) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
+    - Adds [tagging](../../Spira-User-Manual/Application-Wide/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
+    - Let users leverage the power of [ChatGPT](../../SpiraApps/ChatGPT) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
 
 ??? success "New Features"
-    - As an incident user, I can add and remove tags to incidents easily from the details page and APIs, to more easily manage product incidents [RQ:4695]
-    - As a task user, I can add and remove tags to tasks easily from the details page and APIs, to more easily manage product tasks [RQ:4694]
-    - As a release user, I can add and remove tags to releases easily from the details page and APIs, to more easily manage product releases [RQ:4693]
-    - As a requirement user, I can add and remove tags to requirements easily from the details page and APIs, to more easily manage product requirements [RQ:4692]
-    - As a document user, I can add and remove tags to documents easily on the document details page, to more easily manage product documents [RQ:2590]
+    * **[Extended tag support](../../Spira-User-Manual/Application-Wide/#tags)**
+
+        - As an incident user, I can add and remove tags to incidents easily from the details page and APIs, to more easily manage product incidents [RQ:4695]
+        - As a task user, I can add and remove tags to tasks easily from the details page and APIs, to more easily manage product tasks [RQ:4694]
+        - As a release user, I can add and remove tags to releases easily from the details page and APIs, to more easily manage product releases [RQ:4693]
+        - As a requirement user, I can add and remove tags to requirements easily from the details page and APIs, to more easily manage product requirements [RQ:4692]
+        - As a document user, I can add and remove tags to documents easily on the document details page, to more easily manage product documents [RQ:2590]
     
     * **As a program manager, I can view meaningful charts and summaries about program milestones and capabilities on the program home page, so I can quickly see the state of the program and spot problems**
 
@@ -25,10 +27,10 @@
     
     * **As a program manager, I want to monitor the progress of program releases, using charts, live widgets, and offline reporting, so I can analyze trends and ensure the program is compliant with any reporting or audit standards**
 
-        - As a program manager, I can view program reporting page widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
-        - As a program manager, I can view my program home page by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
+        - As a program manager, I can view [program reporting page](../../Spira-User-Manual/Program-Reports) widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
+        - As a program manager, I can view my [program home page](../../Spira-User-Manual/Program-Homepage) by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
+        - As a report admin, I can specify the workspace a [custom graph](../../Spira-Administration-Guide/System-Reporting/#edit-graphs) should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
         - As a program report user, I can filter & sort custom program level reports by relevant fields, to better show me the data I need [RQ:4659]
-        - As a report admin, I can specify the workspace a custom graph should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
         - As a program report user, I can filter the capability summary report, to help me tailor the report to my needs [RQ:4660]
         - As a program report user, I can filter the capability details report, to help me tailor the report to my needs [RQ:4661]
         - As a program report user, I can filter and sort the program milestone summary report, to help me tailor the report to my needs [RQ:4662]

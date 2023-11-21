@@ -111,7 +111,7 @@ For each recent product visited, the widget shows name for:
 
 - the product itself
 - the product's program
-- the product's portfolio (SpiraPlan only)
+- the product's portfolio <span class="pill">SpiraPlan</span>
 
 Each product name is a link to that product's home page. The program and portfolio names are links to the relevant home pages if you have access to view those home pages.  
 
@@ -224,9 +224,9 @@ This widget displays a list of all the artifacts in the system that you have sub
 This widget allows you to subscribe to an external newsfeed and have the results be displayed inside SpiraPlan. By default it will be set to the newsfeed from the Inflectra website that displays a list of recent company and product announcements. You can add multiple instances of the widget to the dashboard, allowing you to read multiple news sources at once. Typical uses for this widget are to add news from product management and testing news sites/blogs or to add information from other tools in your organization that can display their data in RSS format.
 
 
-## My Assigned Risks (SpiraPlan only)
+## My Assigned Risks
 
-This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
+<span class="pill">SpiraPlan</span> This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 
 
 ## My Assigned Documents

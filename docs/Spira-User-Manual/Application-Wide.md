@@ -286,9 +286,9 @@ You can associate artifacts to one another. For instance, you can associate (or 
 - Source code commits
 - Source code files
 - Tasks
-- Test cases (in SpiraTeam and SpiraPlan only)
-- Program Capabilities (SpiraPlan only)
-- Program Milestones (SpiraPlan only)
+- Test cases <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Program Capabilities <span class="pill">SpiraPlan</span>
+- Program Milestones <span class="pill">SpiraPlan</span>
 
 From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.
 
@@ -353,9 +353,9 @@ You can add a comment that explains the rationale for the association and choose
     | **Source code commits**                          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
     | **Source code files**                            | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
     | **Tasks**                                        | Tasks, Incidents                                                                                                |
-    | **Test cases** (in SpiraTeam and SpiraPlan only) | Tasks, Risks                                                                                                    |
-    | **Program Capabilities** (SpiraPlan only)        | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** (SpiraPlan only)          | Releases (the tab is called releases, comments and association type not supported)                              |
+    | **Test cases** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> | Tasks, Risks                                                                                                    |
+    | **Program Capabilities** <span class="pill">SpiraPlan</span>        | Requirements (the tab is called requirements, comments and association type not supported)                      |
+    | **Program Milestones** <span class="pill">SpiraPlan</span>          | Releases (the tab is called releases, comments and association type not supported)                              |
 
 
 ### Rich Text Editor
@@ -424,7 +424,13 @@ From any rich text editor for a product artifact (including custom properties an
 In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
 
 ### Tags
-Many artifacts have tag support. You can use tags to 
+Each product has a unique set of tags that you can set and use on many artifacts. You can quickly add existing tags to an artifact or you can create a brand new tag. You can add as many tags as you want to an artifact (and its product). Any user who can edit an artifact can edit its tags or make new tags. The artifact that support tags are:
+
+- documents
+- incidents
+- releases
+- requirements
+- tasks
 
 ## Boards
 Boards allow users to see artifacts visually in columns and/or rows, and move cards around to progress them along their workflow. This is like moving sticky notes around on a white board. It is a very visual way of working with your artifacts.

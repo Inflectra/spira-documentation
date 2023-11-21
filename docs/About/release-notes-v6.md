@@ -127,9 +127,9 @@
 ## Version 6.14 (December 2021)
 
 !!! info "Summary"
-    View, edit, and add releases inline on the [release mindmap](../../Spira-User-Manual/Release-Management/#mindmap-inline-editing), [release Gantt chart](../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing), or [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. (SpiraTeam and SpiraPlan only)
+    View, edit, and add releases inline on the [release mindmap](../../Spira-User-Manual/Release-Management/#mindmap-inline-editing), [release Gantt chart](../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing), or [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    View, edit, and add tasks inline on the [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. (SpiraTeam and SpiraPlan only)
+    View, edit, and add tasks inline on the [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
     Support for two new Single Sign On (SSO) providers:  the popular OneLogin service and a generic OpenID provider. This makes it even easiser to integrate your external authentication system with Spira.
 
@@ -140,13 +140,13 @@
         - OneLogin [RQ:3876]
         - Generic OpenID Connect [RQ:3877]
 
-    * **Product Release List Page Changes (SpiraTeam and SpiraPlan only)**
+    * **Product Release List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
 
         - Allow releases to be edited inline on [Release Mind Map View](../../Spira-User-Manual/Release-Management/#mindmap-inline-editing) [RQ:3716]
         - Allow releases to be edited inline on [Release Gantt Chart](../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing) [RQ:3714]
         - Allow releases to be added on the [Release Gantt Chart view](../../Spira-User-Manual/Release-Management/#release-gantt-chart) [RQ:3715]
 
-    * **Product Task List Page Changes (SpiraTeam and SpiraPlan only)**
+    * **Product Task List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
 
         - Allow tasks to be edited inline on [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) [RQ:3686]
         - Allow tasks to be added on the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) [RQ:3713]
@@ -168,8 +168,8 @@
     - Fix the [diagram tab](../../Spira-User-Manual/Release-Management/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
 
     - Fix details pages for artifacts that use workflows so that the comments settings in the workflow always control the comment box [IN:4917]
-    - Fix the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) not showing child sprints as part of their parent release (SpiraTeam and SpiraPlan only) [IN:6494]
-    - Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere (SpiraTeam and SpiraPlan only) [IN:6747]
+    - Fix the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) not showing child sprints as part of their parent release <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6494]
+    - Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6747]
 
 
 ## Version 6.13 (November 2021)
@@ -396,7 +396,7 @@
 
     * **Report Customization**
 
-        - Allow access to custom report views via API using the ODATA standard (SpiraPlan only) - read our [in-depth tutorial](../../Reporting/OData-Tutorial) [RQ:3037]
+        - Allow access to custom report views via API using the ODATA standard - read our [in-depth tutorial](../../Reporting/OData-Tutorial) <span class="pill">SpiraPlan</span> [RQ:3037]
         - Users can have a dedicated [Report Admin role](../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
 
     * **Other**
@@ -517,24 +517,24 @@
 
     **[Source code diff](../../Spira-User-Manual/Commits/#commit-file-details) view** (SpiraTeam and SpiraPlan): by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.
 
-    **Recording Product setting changes** (SpiraTeam and SpiraPlan only): The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the [product history page](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes).
+    **Recording Product setting changes** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>: The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the [product history page](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes).
 
 ??? success "New Features"
-    * **Source Code** (SpiraTeam and SpiraPlan only)
+    * **Source Code** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Add [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list) to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
         - Can create a new pull request on the [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list), specifying the source branch and the destination branch [RQ:3006]
         - Task pages shows pull request with different icon [RQ:3045]
         - [Pull Request task details page](../../Spira-User-Manual/Pull-Requests#pull-request-details) shows source code commits [RQ:3046]
 
-    * **Enhanced history tracking** (SpiraTeam and SpiraPlan only)
+    * **Enhanced history tracking** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Enhance history to track position changes of test steps, use case steps, and risk mitigations [RQ:2659]
         - Enhance History to record Product Setting Changes (this includes toggling baseling, testing settings, and some planning options) [RQ:3044]
         - Ability to [save a report directly into documents](../../Spira-User-Manual/Reports-Center/#saving-and-sharing) on generating the report, and specify a document name and folder for the report [RQ:2295]
 
 ??? bug "Bug fixes and enhancements"
-    * **Source Code / Development** (SpiraTeam and SpiraPlan only)
+    * **Source Code / Development** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]
         - Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]
@@ -583,7 +583,7 @@
 !!! info "Summary"
     This release focused on **improving the experience and functionality for developers and development teams** using SpiraTeam and SpiraPlan. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
     
-    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)** (SpiraTeam and SpiraPlan only), and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. *Note, source code is not included in SpiraTest*.
+    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
     **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
 
@@ -606,7 +606,7 @@
     - Ensure users can easily see how a file changed in a particular commit [RQ:3027]
 
 ??? bug "Bug fixes and enhancements"
-    * **Source Code** (SpiraTeam and SpiraPlan only)
+    * **Source Code** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
         - Fix source code files missing their author and date information [IN:4526]
         - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
@@ -656,13 +656,13 @@
 
 !!! info "Summary"
 
-    **Baselining Enhancements** (SpiraTeam and SpiraPlan only): with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
+    **Baselining Enhancements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>: with baselining enabled, you can now still revert recent changes in a product. Additionally, with baselining enabled, test coverage changes to requirements and releases are tracked and recorded. This release also includes a number of further bug fixes and enhancements.
 
 ??? success "New features"
-    - Store source code branches and commit information directly in the database to improve reliability and performance (SpiraTeam and SpiraPlan only) [RQ:2975]
+    - Store source code branches and commit information directly in the database to improve reliability and performance <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2975]
     - Show a warning about future deprecation (after March 31, 2021) on the login page if user is using Internet Explorer 11 [RQ:2987]
     
-    * Baselining (SpiraTeam and SpiraPlan only)
+    * Baselining <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - Product admins can purge or revert recent history changes (those not covered by any baselines) [RQ:2988]
         - Enhanced history to track release test coverage (if baselining is enabled for a product) [RQ:3015]
         - Enhanced history to track requirement test coverage (if baselining is enabled for a product) [RQ:2991]
@@ -678,28 +678,28 @@
     - On the Test Run details page, the console output should better force the wrapping of long lines [IN:5780]
     - On the Requirements List page, a new requirement inserted at the end of the requirements list should have the correct indent level [IN:5864]
     - Improve performance of the RELEASE_REFRESH_PROGRESS_AND_EFFORT stored procedure [IN:5801]
-    - Fix the documentation links on the Enterprise and Portfolio home pages (SpiraPlan only) [IN:5814]
+    - Fix the documentation links on the Enterprise and Portfolio home pages <span class="pill">SpiraPlan</span> [IN:5814]
 
 
 ## Version 6.6 (August 2020)
 
 !!! info "Summary"
 
-    **Planning Improvements** (SpiraTeam and SpiraPlan only): Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements.
+    **Planning Improvements**: Planning and kanban boards have some great new features like new display options and improved design. Set a product to estimate releases and requirements only with points (not hours). Use dynamic WIP limits on the planning board to help manage your kanban flow of requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    **Baselines** (SpiraTeam and SpiraPlan only): View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity.
+    **Baselines**: View all baselines created across all releases in a product, and drill down into a baseline to review every artifact that changed during that baselines period of activity <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
     **Performance Improvements**: The most frequent power-hungry operations by users have been reworked from the ground up to maximize performance. Operations like updating test coverage is up to 300% faster.
 
 ??? success "New features"
-    * Administering baselining within a product (SpiraTeam and SpiraPlan only)
+    * Administering baselining within a product <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - With baselining turned on, product admins can access the product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) [RQ:2939]
         - Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]
         - Product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) shows all baselines in a products across all releases [RQ:2977]
         - Product admin [baseline detail page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
         - The [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) of the release details page lets a product admin access the details page for that baseline [RQ:2665]
     
-    * Product Planning (SpiraTeam and SpiraPlan only)
+    * Product Planning <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#requirements) allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
         - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits) page lets you set dynamic WIP Limits for each status on the [Planning Board](../../Spira-User-Manual/Planning-Board/#work-in-progress-limits) [RQ:2970]
         - Improve Expand/Collapse behavior on planning boards [RQ:2969]
@@ -707,7 +707,7 @@
         - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]
 
 ??? bug "Bug fixes and enhancements"
-    * **Agile and Planning** (SpiraTeam and SpiraPlan only)
+    * **Agile and Planning** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - If the Planned Release field is blank, changing it should always enable the save button (including if the new planned release has builds associated with it) [IN:2086]
         - If planned by points is enabled for a product, hide the hours label next to the requirement point estimate [IN:5250]
         - Task Board JavaScript can error out and cause the page to not load properly [IN:5627]
@@ -748,13 +748,13 @@
 ## Version 6.5.2 (July 2020)
 
 !!! info "Summary"
-    **Baselining (SpiraTeam and SpiraPlan only)**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint. 
+    **Baselining**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
     *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../../Spira-User-Manual/Release-Management/#baselining)*
 
     **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
-    **DevOps (SpiraTeam and SpiraPlan only)**: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts.
+    **DevOps**: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 ??? success "New features"
     - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
@@ -763,7 +763,7 @@
     * Custom Reports
         - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} [tokens](../../Reporting/Custom-Reporting-Tokens) in their ESQL as is already possible for custom graphs [RQ:2976]
 
-    * [Baselining](../../Spira-User-Manual/Release-Management/#baselining) (SpiraTeam and SpiraPlan only)
+    * [Baselining](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the [Admin Product page](../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product) [RQ:2672] (released but disabled in 6.5.1)
         - Turning on baselining for a product disables the ability to purge or revert [product history](../../Spira-Administration-Guide/Product-General-Settings/#history-details-screen) [RQ:2938] (released but disabled in 6.5.1)
         - Turning on baselining for a product shows the [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) on the release details page [RQ:2940]
@@ -780,7 +780,7 @@
         - A new "Regulated Industries" Template provides out-the-box best practice for workflows across all artifacts [RQ:2825]
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
-    * Source Code Management (SpiraTeam and SpiraPlan only)
+    * Source Code Management <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
         - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show commits from all branches, not just the branch being filtered on in the source code view [RQ:2973]
         - There is a background feature flag to disable Source Code Commits in Documents/Associations (available to IT on-premise only) [RQ:2974]
 
@@ -834,10 +834,10 @@
     * Baselining
         - On generating a test run the system automatically links it to the most recent history changeset to improve auditing [RQ:2655]
     
-    * Enterprise Dashboard (SpiraPlan only)
+    * Enterprise Dashboard <span class="pill">SpiraPlan</span>
         - Add an Enterprise [Recent Builds](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) widget [RQ:2937]
     
-    * Porfolio Dashboard (SpiraPlan only)
+    * Porfolio Dashboard <span class="pill">SpiraPlan</span>
         - Add a Portfolio [Recent Builds](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds) widget [RQ:2934]
     
     * Program Dashboard
@@ -884,7 +884,7 @@
 ## Version 6.5 (May 2020)
 
 !!! info "Summary"
-    **Portfolio management (SpiraPlan only)**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view. 
+    **Portfolio management**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view. <span class="pill">SpiraPlan</span>
     
     *Learn: [editing portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios); [letting users see portfolio and enterprise pages](../../Spira-Administration-Guide/System-Administration/#how-user-permissions-are-set).*
 
@@ -892,7 +892,7 @@
 
     *Learn: [the portfolio dashboard](../../Spira-User-Manual/Portfolio-Homepage/); [the enterprise dashboard](../../Spira-User-Manual/Enterprise-Homepage/).*
 
-    **New release and task views to better manage workloads (SpiraTeam and SpiraPlan only)**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints.
+    **New release and task views to better manage workloads**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
     *Learn: [release Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart); [release mind map](../../Spira-User-Manual/Release-Management/#release-mind-map); [task Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart).*
 
@@ -902,14 +902,14 @@
     - Installer can upgrade successfully with required database additions [RQ:2850]
 
 
-    * [Enterprise Dashboard](../../Spira-User-Manual/Enterprise-Homepage/) (SpiraPlan only)
+    * [Enterprise Dashboard](../../Spira-User-Manual/Enterprise-Homepage/) <span class="pill">SpiraPlan</span>
         - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Enterprise-Homepage/#requirement-completion) [RQ:2743]
         - [Portfolios: Completion](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-completion) [RQ:2744]
         - [Portfolios: Relative Size](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-relative-size) [RQ:2745]
         - [Top Open Risks](../../Spira-User-Manual/Enterprise-Homepage/#top-open-risks) [RQ:2746]
         - [Enterprise Schedule Gantt Chart](../../Spira-User-Manual/Enterprise-Homepage/#schedule) [RQ:2747]
 
-    * Porfolio Dashboard (SpiraPlan only)
+    * Portfolio Dashboard <span class="pill">SpiraPlan</span>
         - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Portfolio-Homepage/#requirement-completion) [RQ:2749]
         - [Programs: Completion](../../Spira-User-Manual/Portfolio-Homepage/#programs-completion) [RQ:2750]
         - [Programs: Relative Size](../../Spira-User-Manual/Portfolio-Homepage/#programs-relative-size) [RQ:2751]
@@ -938,10 +938,10 @@
         - Add column for total # points [RQ:2774]
         - Add column for total # requirements [RQ:2775]
         - Add progress bar for requirements [RQ:2776]
-        - [Release Hierarchical Diagram View](../../Spira-User-Manual/Release-Management/#releases-mind-map) - read only (SpiraTeam and SpiraPlan only) [RQ:2777]
-        - [Release Gantt Chart View](../../Spira-User-Manual/Release-Management/#release-gantt-chart) - read only (SpiraTeam and SpiraPlan only) [RQ:2778]
+        - [Release Hierarchical Diagram View](../../Spira-User-Manual/Release-Management/#releases-mind-map) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2777]
+        - [Release Gantt Chart View](../../Spira-User-Manual/Release-Management/#release-gantt-chart) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2778]
 
-    * Program Release List Page (SpiraPlan only)
+    * Program Release List Page <span class="pill">SpiraPlan</span>
         - Add column for total # points for all requirements in the release [RQ:2836]
         - Add column for total # requirements [RQ:2837]
         - Add [progress bar for requirements](../../Spira-User-Manual/Release-Management/#requirements-completion) [RQ:2838]
@@ -965,7 +965,7 @@
         - [Task Effort calculations for requirements](../../Spira-User-Manual/Requirements-Management/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
         - [Task effort calculations for releases](../../Spira-User-Manual/Release-Management/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]
 
-    * Permissions to control access to portfolios and enterprise views (SpiraPlan only)
+    * Permissions to control access to portfolios and enterprise views <span class="pill">SpiraPlan</span>
         - New Portfolio Viewer attribute on the user profile to allow access to all portfolios (and enterprise view) [RQ:2834]
         - Access to portfolios admin pages and visibility in UI restricted by permissions and Spira version [RQ:2851]
         - Access to portfolios features pages and visibility in UI restricted by permissions and Spira version [RQ:2846]
@@ -1222,9 +1222,9 @@
 ## Version 6.2 (August 2019)
 
 !!! info "Summary"
-    **Additional Requirement List Views (SpiraTeam and SpiraPlan only)**: In addition to the current hierarchical list view of requirements, additional views will make it easier for users to work with requirements in ways that work for them at the time.
+    **Additional Requirement List Views**: In addition to the current hierarchical list view of requirements, additional views will make it easier for users to work with requirements in ways that work for them at the time <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    **Improved Risk Associations (SpiraPlan only)**: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements.
+    **Improved Risk Associations**: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements <span class="pill">SpiraPlan</span>
 
 ??? success "New features"
 
@@ -1347,7 +1347,7 @@
 ## Version 6.0 (April 2019)
 
 !!! info "Summary"
-    **Enterprise Risk Management [SpiraPlan only]**: Risks have their own types, statuses, workflows, and mitigations. New reports for risks, as well as charts and a risk cube have been added. 
+    **Enterprise Risk Management**: Risks have their own types, statuses, workflows, and mitigations. New reports for risks, as well as charts and a risk cube have been added <span class="pill">SpiraPlan</span>
 
     **Changes to certain names in the system**: Projects are now called Products; Project Groups are now Programs; and Iterations are now Sprints.
 
