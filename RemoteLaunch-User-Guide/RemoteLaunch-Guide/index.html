@@ -2396,6 +2396,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#execution-modes" class="md-nav__link">
+    Execution modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-planned-date-and-polling" class="md-nav__link">
+    Using the Planned Date and Polling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-spira-execute-button" class="md-nav__link">
+    Using the Spira Execute Button
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-remotelaunchx" class="md-nav__link">
     Using RemoteLaunchX
   </a>
@@ -2411,11 +2438,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-up-automated-tests-in-spiratest" class="md-nav__link">
-    Setting up Automated Tests in SpiraTest
+  <a href="#setting-up-automated-tests-in-spira" class="md-nav__link">
+    Setting up Automated Tests in Spira
   </a>
   
-    <nav class="md-nav" aria-label="Setting up Automated Tests in SpiraTest">
+    <nav class="md-nav" aria-label="Setting up Automated Tests in Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4692,6 +4719,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#execution-modes" class="md-nav__link">
+    Execution modes
+  </a>
+  
+    <nav class="md-nav" aria-label="Execution modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-planned-date-and-polling" class="md-nav__link">
+    Using the Planned Date and Polling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-spira-execute-button" class="md-nav__link">
+    Using the Spira Execute Button
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-remotelaunchx" class="md-nav__link">
     Using RemoteLaunchX
   </a>
@@ -4707,11 +4761,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-up-automated-tests-in-spiratest" class="md-nav__link">
-    Setting up Automated Tests in SpiraTest
+  <a href="#setting-up-automated-tests-in-spira" class="md-nav__link">
+    Setting up Automated Tests in Spira
   </a>
   
-    <nav class="md-nav" aria-label="Setting up Automated Tests in SpiraTest">
+    <nav class="md-nav" aria-label="Setting up Automated Tests in Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4771,8 +4825,8 @@
 <p>There are actually two separate versions of RemoteLaunch® that are available from Inflectra:</p>
 <ol>
 <li>The Microsoft Windows® compatible <strong>Spira RemoteLaunch®</strong>
-application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured SpiraTest/SpiraTeam server.</li>
-<li>The cross-platform <strong>Spira RemoteLaunchX™</strong> Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured SpiraTest/SpiraTeam server. This application can be used in <strong>Microsoft Windows®, Linux or Apple MacOS X®</strong>
+application that provides a graphic user interface application for executing automated tests on remote computers using various plugins for different testing technologies and have the results be sent to the configured Spira server.</li>
+<li>The cross-platform <strong>Spira RemoteLaunchX™</strong> Java application that provides a lightweight console application that can execute simple command line scripts on the target computer and send the results back to the configured Spira server. This application can be used in <strong>Microsoft Windows®, Linux or Apple MacOS X®</strong>
 computers provided that they have the Java 1.8 (or later) runtime installed.</li>
 </ol>
 <p>The first part of this section will describe how to use the Windows-only RemoteLaunch® GUI application and the second part will describe how to use the cross-platform RemoteLaunchX**™** console application.</p>
@@ -4792,7 +4846,7 @@ computers provided that they have the Java 1.8 (or later) runtime installed.</li
 <li>you should now see the engine name in the RemoteLaunch tab</li>
 </ul>
 <h3 id="registration">Registration<a class="headerlink" href="#registration" title="Permanent link">&para;</a></h3>
-<p>Spira RemoteLaunch has its own License key needed for using the program. You cannot use your existing SpiraTest/Plan/Team key in Spira RemoteLaunch. Upon the first launch of the program, you will be asked to update your license information:</p>
+<p>Spira RemoteLaunch has its own License key needed for using the program. You cannot use your existing Spira/Plan/Team key in Spira RemoteLaunch. Upon the first launch of the program, you will be asked to update your license information:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_3.png" /></p>
 <p>Enter in your organization name and license key in the email that was sent when you purchased the license, or as listed on your customer information page at <a href="http://inflectra.com">http://inflectra.com</a>.</p>
 <p>Trial licenses are good until the 28<sup>th</sup> day of the listed month. The next time the program is run after the 28<sup>th</sup> of the month, you will be prompted to re-enter a new permanent license key, or the program will be unusable.</p>
@@ -4830,16 +4884,16 @@ computers provided that they have the Java 1.8 (or later) runtime installed.</li
   unique among all testing machines.
      <strong><em>Important</em></strong>: This field must match the string that is entered into the Automation Host Details screen in the <strong>Token</strong>: field, or scheduled tests will not be recognized.</li>
 <li><strong>Automatically Run Overdue Tests</strong>: When this is checked, any tests
-  that are pulled from the SpiraTest server that has a scheduled date
+  that are pulled from the Spira server that has a scheduled date
   in the past will be marked as Overdue. Normally, overdue tests will
   not be executed. With this check, they will be executed as soon as
   the poll is finished.</li>
 <li><strong>Continue polling server after a connect error:</strong> When this is
   checked, if RemoteLaunch receives an error connecting to the
-  SpiraTest server, it will continue polling in the future. If this is
+  Spira server, it will continue polling in the future. If this is
   unchecked, RemoteLaunch will switch to the error status upon
   encountering a connection error. It is important to check this
-  option if your SpiraTest server will be periodically unavailable for
+  option if your Spira server will be periodically unavailable for
   server maintenance.</li>
 <li><strong>Polling Frequency</strong>: How often in minutes the application will
   poll the SpiraTeam server for updates to the automation host's
@@ -4865,18 +4919,10 @@ computers provided that they have the Java 1.8 (or later) runtime installed.</li
 <p>The status screen is usually hidden, but can be brought up for display by double-clicking on the system tray icon. The top of the screen shows the current status, whether it's running a test or waiting to poll the server for an update. It will also show any errors present on the application, like a registration error or configuration issue. Under the status bar is a list of any pending or executing tests that are scheduled for this testing machine. The list will get cleared at every poll, so tests that have executed since the previous poll will still be on the list, and will show their execution status:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_6.png" /></p>
 <ul>
-<li>
-<p><strong>Green Arrow</strong>: A green arrow indicates that the test is still running, or RemoteLaunch is waiting for a reply from the testing engine / test application.</p>
-</li>
-<li>
-<p><strong>Blue Checkbox</strong>: A blue checkbox indicates that the test is completed, regardless of status of the individual test steps in the scheduled test set.</p>
-</li>
-<li>
-<p><strong>Red Error</strong>: A red error indicator indicates that the test extension or the testing application ran into an issue (outside of test results). In this case, any further tests that require the extension will be marked as blocked, as the issue needs to be corrected within the extension settings or testing application.</p>
-</li>
-<li>
-<p><strong>No Indication</strong>: No indication means that the test is currently awaiting for its scheduled date to start. Note that only one test will be launched at a time, so that if two tests are scheduled at the same time, the one with the lower TestSet ID will be executed first, then as soon as it's finished, the second scheduled test will be run.</p>
-</li>
+<li><strong>Green Arrow</strong>: A green arrow indicates that the test is still running, or RemoteLaunch is waiting for a reply from the testing engine / test application.</li>
+<li><strong>Blue Checkbox</strong>: A blue checkbox indicates that the test is completed, regardless of status of the individual test steps in the scheduled test set.</li>
+<li><strong>Red Error</strong>: A red error indicator indicates that the test extension or the testing application ran into an issue (outside of test results). In this case, any further tests that require the extension will be marked as blocked, as the issue needs to be corrected within the extension settings or testing application.</li>
+<li><strong>No Indication</strong>: No indication means that the test is currently awaiting for its scheduled date to start. Note that only one test will be launched at a time, so that if two tests are scheduled at the same time, the one with the lower TestSet ID will be executed first, then as soon as it's finished, the second scheduled test will be run.</li>
 </ul>
 <p>By highlighting a test that has not been executed yet, you can click the Force Execute button. This will cause the selected test to have its scheduled date to the current time, causing it to be immediately executed (or, if another test is already running, next in line for execution).</p>
 <p>At any time the Force Poll button can be clicked, causing RemoteLaunch to initiate an immediate poll of the SpiraTeam server to check for pending runs. The timers for the next server poll will be reset when the button is clicked.</p>
@@ -4884,24 +4930,12 @@ computers provided that they have the Java 1.8 (or later) runtime installed.</li
 <p>Instead of operating from the application window, all functions exist on the tray icon menu as well, as well as some additional commands:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_7.png" /></p>
 <ul>
-<li>
-<p><strong>Pause / Resume</strong>: The Pause/Resume option pauses or resumes the timers for polling and executing tests. If a test or server poll is already in progress, it will not cancel these. However, after they are finished, no further polls or tests will be run.</p>
-</li>
-<li>
-<p><strong>Poll Now</strong>: This will force a server poll for upcoming tests, and reset the poll timer.</p>
-</li>
-<li>
-<p><strong>Configuration</strong>: Opens the main window to the Configuration page.</p>
-</li>
-<li>
-<p><strong>Help -> About</strong>: Opens the About window, which displays the current license information and any loaded extensions.</p>
-</li>
-<li>
-<p><strong>Help -> View Help</strong>: Opens this PDF file in a browser.</p>
-</li>
-<li>
-<p><strong>Exit</strong>: Will completely exit the program. Doing this will cancel any tests currently running and shut down the program. Any tests that were waiting to be executed will not execute until the program is restarted and the polling is resumed.</p>
-</li>
+<li><strong>Pause / Resume</strong>: The Pause/Resume option pauses or resumes the timers for polling and executing tests. If a test or server poll is already in progress, it will not cancel these. However, after they are finished, no further polls or tests will be run.</li>
+<li><strong>Poll Now</strong>: This will force a server poll for upcoming tests, and reset the poll timer.</li>
+<li><strong>Configuration</strong>: Opens the main window to the Configuration page.</li>
+<li><strong>Help -> About</strong>: Opens the About window, which displays the current license information and any loaded extensions.</li>
+<li><strong>Help -> View Help</strong>: Opens this PDF file in a browser.</li>
+<li><strong>Exit</strong>: Will completely exit the program. Doing this will cancel any tests currently running and shut down the program. Any tests that were waiting to be executed will not execute until the program is restarted and the polling is resumed.</li>
 </ul>
 <p>You can double-click the try icon to bring up the main window on the Status page.</p>
 <h2 id="test-execution-and-reporting">Test Execution and Reporting<a class="headerlink" href="#test-execution-and-reporting" title="Permanent link">&para;</a></h2>
@@ -4959,24 +4993,36 @@ computers provided that they have the Java 1.8 (or later) runtime installed.</li
 </tr>
 </tbody>
 </table>
+<h2 id="execution-modes">Execution modes<a class="headerlink" href="#execution-modes" title="Permanent link">&para;</a></h2>
+<p>There are two ways that RemoteLaunch can be used:</p>
+<ul>
+<li>scheduled polling mode (default)</li>
+<li>immediately execute a test set from the Spira UI</li>
+</ul>
+<h3 id="using-the-planned-date-and-polling">Using the Planned Date and Polling<a class="headerlink" href="#using-the-planned-date-and-polling" title="Permanent link">&para;</a></h3>
+<p>The primary way RemoteLaunch expects tests to be run is using the Planned Date option in Spira together with setting the appropriate Automation Host. In this mode, RemoteLaunch sits in the system tray and polling automatically. This gives the widest possible flexibility since it allows Spira to schedule tests on machines anywhere, instead of having it limited to the machine the current user is sitting at, viewing with their browser.</p>
+<p>For this to be used effectively, you need to be logged in to the Windows desktop. We recommend that you add RemoteLaunch to the Windows Startup Program Group so that it always starts on login.</p>
+<h3 id="using-the-spira-execute-button">Using the Spira Execute Button<a class="headerlink" href="#using-the-spira-execute-button" title="Permanent link">&para;</a></h3>
+<p>The use of the 'Execute' button in Spira is there to help people get up and running with Remotelaunch on their local machine, when they are first using it. For production use, we don't expect people to be using just their local machine.</p>
+<p>If you have RemoteLaunch set to poll automatically, it may not let you execute the tests immediately, so if you want to use RemoteLaunch in this mode, we recommend the following steps:</p>
+<ul>
+<li>Make sure RemoteLaunch is not already running</li>
+<li>Click the Execute button on an automated test set</li>
+<li>Spira will try and download a .TST file (this is normal)</li>
+<li>When you click Open, RemoteLaunch will read this file and execute the test</li>
+<li>RemoteLaunch will then exit completely.</li>
+</ul>
+<p>If RemoteLaunch is already running, it may not execute this test, since it will be then in "polling" mode, vs. "manual" mode.</p>
 <h2 id="using-remotelaunchx">Using RemoteLaunchX<a class="headerlink" href="#using-remotelaunchx" title="Permanent link">&para;</a></h2>
 <p>When you need to run automated tests on a variety of different platforms (Windows, MacOS X, Linux, Unix, etc.) the RemoteLaunchX cross-platform automated testing agent is a better choice than the standard RemoteLaunch® GUI application.</p>
 <p>To start using RemoteLaunchX, please go to the Customer Area of the Inflectra website and download the latest version of the RemoteLaunchX application. It will be packaged as a simple .zip compressed folder that you can extract onto the target computer:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_11.png" /></p>
 <p>The following four files are included:</p>
 <ul>
-<li>
-<p><strong>RemoteLaunchX.jar</strong> -- this is the main application, packaged as a Java JAR file. This version of RemoteLaunch requires Java 1.8 SE or later to be installed.</p>
-</li>
-<li>
-<p><strong>config.properties</strong> -- this contains all the settings used by RemoteLaunchX. You will need to edit this file in a text editor to configure RemoteLaunchX for use.</p>
-</li>
-<li>
-<p><strong>RemoteLaunchX.bat</strong> -- this is a sample Windows® batch file that can be used to simplify running RemoteLaunchX on Windows® systems.</p>
-</li>
-<li>
-<p><strong>RemoteLaunchX.sh</strong> -- this is a sample UNIX/Linux/MacOS X shell script that can be used to run RemoteLaunchX on UNIX, Linux or Mac OS X.</p>
-</li>
+<li><strong>RemoteLaunchX.jar</strong>: this is the main application, packaged as a Java JAR file. This version of RemoteLaunch requires Java 1.8 SE or later to be installed.</li>
+<li><strong>config.properties</strong>: this contains all the settings used by RemoteLaunchX. You will need to edit this file in a text editor to configure RemoteLaunchX for use.</li>
+<li><strong>RemoteLaunchX.bat</strong>: this is a sample Windows® batch file that can be used to simplify running RemoteLaunchX on Windows® systems.</li>
+<li><strong>RemoteLaunchX.sh</strong>: this is a sample UNIX/Linux/MacOS X shell script that can be used to run RemoteLaunchX on UNIX, Linux or Mac OS X.</li>
 </ul>
 <p>In addition, there is a <strong>lib</strong> folder that also needs to be extracted. It contains various third-party libraries that RemoteLaunchX uses. Currently it only uses the Google json parser library (gson v2.8.6):</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_11a.png" /></p>
@@ -5008,24 +5054,12 @@ default-test-status = Not Run
 </code></pre></div>
 <p>The following changes need to be made to this configuration file:</p>
 <ul>
-<li>
-<p><strong>server-url</strong> -- This is the URL of the SpiraTest or SpiraTeam installation (hereafter referred to as just SpiraTest). Be sure to not put /Login.aspx or any other page in the string, this should be just the root URL of the application's install.</p>
-</li>
-<li>
-<p><strong>server-login</strong> -- This is the SpiraTest login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.</p>
-</li>
-<li>
-<p><strong>server-token</strong> -- The RSS Token of the SpiraTest login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.</p>
-</li>
-<li>
-<p><strong>host-token</strong> -- This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on SpiraTest will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  <strong><em>Important</em></strong>: This field must match the string that is entered into the Automation Host Details screen in the <strong>Token</strong>: field, or scheduled tests will not be recognized.</p>
-</li>
-<li>
-<p><strong>license-organization</strong> -- The name of the "Organization" that your RemoteLaunch license key was issued to. This is listed in the Customer Area of the Inflectra website alongside the license key. Note: RemoteLaunch and RemoteLaunchX use the same license keys, so you don't need to have a separate RemoteLaunchX one.</p>
-</li>
-<li>
-<p><strong>license-key</strong> -- The RemoteLaunch license key that is listed in the secure Customer Area of the Inflectra website</p>
-</li>
+<li><strong>server-url</strong> -- This is the URL of the Spira or SpiraTeam installation (hereafter referred to as just Spira). Be sure to not put /Login.aspx or any other page in the string, this should be just the root URL of the application's install.</li>
+<li><strong>server-login</strong> -- This is the Spira login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.</li>
+<li><strong>server-token</strong> -- The RSS Token of the Spira login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.</li>
+<li><strong>host-token</strong> -- This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on Spira will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  <strong><em>Important</em></strong>: This field must match the string that is entered into the Automation Host Details screen in the <strong>Token</strong>: field, or scheduled tests will not be recognized.</li>
+<li><strong>license-organization</strong> -- The name of the "Organization" that your RemoteLaunch license key was issued to. This is listed in the Customer Area of the Inflectra website alongside the license key. Note: RemoteLaunch and RemoteLaunchX use the same license keys, so you don't need to have a separate RemoteLaunchX one.</li>
+<li><strong>license-key</strong> -- The RemoteLaunch license key that is listed in the secure Customer Area of the Inflectra website</li>
 </ul>
 <p>You should leave the four <strong>regex</strong> settings alone for now, they can be changed when you start executing tests and need to fine-tune how RemoteLaunchX interprets the results.</p>
 <p>Now that you have configured the plugin, you can execute the RemoteLaunchX console application by either running the provided batch /
@@ -5044,53 +5078,49 @@ shell command or just executing the JAR file directly:</p>
 <p>Production License Key in Use.</p>
 <p>Testing connection to Spira...</p>
 <p>Successfully connected to Spira.</p>
-<p>WARNING: Unable to retrieve test runs for SpiraTest project PR2, so
+<p>WARNING: Unable to retrieve test runs for Spira project PR2, so
 skipping this project - Automation Host with token 'MyHost1' doesn't
 exist in project PR2.</p>
-<p>WARNING: Unable to retrieve test runs for SpiraTest project PR3, so
+<p>WARNING: Unable to retrieve test runs for Spira project PR3, so
 skipping this project - Automation Host with token 'MyHost1' doesn't
 exist in project PR3.</p>
-<p><strong>Retrieved 0 test run(s) from SpiraTest.</strong></p>
+<p><strong>Retrieved 0 test run(s) from Spira.</strong></p>
 <p>Exiting RemoteLaunch...</p>
 <p>========================</p>
 </blockquote>
-<p>The system will report back zero Test Runs at this point because nothing has been scheduled in SpiraTest. In the next section we shall setup an automated test set that contains an automated test case.</p>
-<h3 id="setting-up-automated-tests-in-spiratest">Setting up Automated Tests in SpiraTest<a class="headerlink" href="#setting-up-automated-tests-in-spiratest" title="Permanent link">&para;</a></h3>
-<p>This section assumes that you already have a working installation of SpiraTest or SpiraTeam and have installed RemoteLaunchX on the various test automation hosts following the instructions above. Once those prerequisites are in place, please follow these steps:</p>
+<p>The system will report back zero Test Runs at this point because nothing has been scheduled in Spira. In the next section we shall setup an automated test set that contains an automated test case.</p>
+<h3 id="setting-up-automated-tests-in-spira">Setting up Automated Tests in Spira<a class="headerlink" href="#setting-up-automated-tests-in-spira" title="Permanent link">&para;</a></h3>
+<p>This section assumes that you already have a working installation of Spira or SpiraTeam and have installed RemoteLaunchX on the various test automation hosts following the instructions above. Once those prerequisites are in place, please follow these steps:</p>
 <p>Log in to SpiraTeam as a system administrator and go into SpiraTeam main Administration page and click on the "Test Automation" link under
 <strong>Integration</strong>.</p>
 <p>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_12.png" /></p>
 <ul>
-<li>
-<p><strong>Name</strong>: This is the short display name of the automation engine. It can be anything that is meaningful to your users.</p>
-</li>
-<li>
-<p><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</p>
-</li>
-<li>
-<p><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine to actually use for a given test case. For Command-Line this should be simply <strong>"CommandLine"</strong>.</p>
-</li>
+<li><strong>Name</strong>: This is the short display name of the automation engine. It can be anything that is meaningful to your users.</li>
+<li><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</li>
+<li><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</li>
+<li><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine to actually use for a given test case. For Command-Line this should be simply <strong>"CommandLine"</strong>.</li>
 </ul>
 <p>Once you have finished, click the "Insert &amp; Close" button and you will be taken back to the Test Automation list page, with Command-Line listed as an available automation engine.</p>
 <p>Next you need to display the list of test cases in SpiraTeam (by clicking Testing > Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Automation" tab:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_13.png" /></p>
 <p>You need to enter the following fields:</p>
-<p><strong>Automation Engine</strong> - Choose the Command-Line Automation Engine that you created in the previous section from the drop-down list.</p>
-<p><strong>Script Type</strong> -- This can be set to Attached or Linked (see below for the difference).</p>
-<p><strong>Filename</strong> -- This needs to consist of the following <strong>three</strong> sections separated by a pipe (|) character:</p>
 <ul>
-<li>1) The full path to the command-line tool being executed.</li>
+<li><strong>Automation Engine</strong>: Choose the Command-Line Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: This can be set to Attached or Linked (see below for the difference).</li>
+<li>
+<p><strong>Filename</strong>: This needs to consist of the following <strong>three</strong> sections separated by a pipe (|) character:</p>
+</li>
+<li>
+<p>1) The full path to the command-line tool being executed.</p>
+</li>
 <li>
 <p>2) Any arguments for the command-line tool. In addition, you can use the following additional tokens for some of the special RemoteLaunchX values:</p>
 <ul>
-<li>[TestCaseId] -- the ID of the test case</li>
-<li>[TestSetId] -- the ID of the test set</li>
-<li>[ReleaseId] -- the ID of the release (if specified)</li>
-<li>[Filename] - This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.</li>
+<li>[TestCaseId]: the ID of the test case</li>
+<li>[TestSetId]: the ID of the test set</li>
+<li>[ReleaseId]: the ID of the release (if specified)</li>
+<li>[Filename]: This special token will be replaced by the actual filename of the test script when RemoteLaunchX downloads it from SpiraTeam.</li>
 </ul>
 </li>
 <li>
@@ -5107,13 +5137,15 @@ exist in project PR3.</p>
 <p>Some example filenames would be:
 C:\Temp\TestApp.exe|-arg1 -arg2|-name=value C:\Temp\TestApp.exe|-arg1 -arg2 "-arg3=[Filename]"|</p>
 <p>where the first one is for a <strong>Linked</strong> test and the second one is for an <strong>Attached</strong> test.</p>
-<p><strong>Document Type</strong> -- You can choose which document type the automated test script will be categorized under.</p>
-<p><strong>Document Folder</strong> -- You can choose which document folder the automated test script will be stored in.</p>
-<p><strong>Version</strong> -- The version of the test script (1.0 is used if no value specified)</p>
-<p><strong>Test Script</strong> -- For <strong>Attached</strong> test scripts, this needs to contain the complete test script in whatever language and syntax is being expected by the command-line application. For <strong>Linked</strong> test scripts, you should leave this blank.</p>
+<ul>
+<li><strong>Document Type</strong>: You can choose which document type the automated test script will be categorized under.</li>
+<li><strong>Document Folder</strong>: You can choose which document folder the automated test script will be stored in.</li>
+<li><strong>Version</strong>: The version of the test script (1.0 is used if no value specified)</li>
+<li><strong>Test Script</strong>: For <strong>Attached</strong> test scripts, this needs to contain the complete test script in whatever language and syntax is being expected by the command-line application. For <strong>Linked</strong> test scripts, you should leave this blank.</li>
+</ul>
 <p>If you would like to have SpiraTeam pass any parameter values to this test script you can specify them by using the syntax
 ${parameterName} <strong>inside the test script</strong>.</p>
-<p>here is an advanced feature of SpiraTest/Team and RemoteLaunch that lets you pass parameters from SpiraTeam to your command-line automated testing tool. This is very useful if you want to have a data-driven test script that be executed multiple times with different parameter values.</p>
+<p>here is an advanced feature of Spira/Team and RemoteLaunch that lets you pass parameters from SpiraTeam to your command-line automated testing tool. This is very useful if you want to have a data-driven test script that be executed multiple times with different parameter values.</p>
 <p>To setup the automated test case for parameters, click on the "Edit Parameters" hyperlink above the "Test Script" box:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_14.png" /></p>
 <p>The name of the parameter ${login} needs to match the name of a parameter accepted by the command-line tool.</p>
@@ -5127,31 +5159,23 @@ Test Sets to create the test sets that will contain the automated test case. Not
 <p><img alt="" src="../img/RemoteLaunch_Guide_16.png" /></p>
 <p>You need to add at least one automated test case to the test set and then configure the following fields:</p>
 <ul>
-<li>
-<p><strong>Automation Host</strong> -- This needs to be set to the name of the automation host that will be running the automated test set.</p>
-</li>
-<li>
-<p><strong>Planned Date</strong> -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</p>
-</li>
-<li>
-<p><strong>Status</strong> -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</p>
-</li>
-<li>
-<p><strong>Type</strong> -- This needs to be set to "Automated" for automated testing</p>
-</li>
+<li><strong>Automation Host</strong>: This needs to be set to the name of the automation host that will be running the automated test set.</li>
+<li><strong>Planned Date</strong>: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</li>
+<li><strong>Status</strong>: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</li>
+<li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
 <p>If you have parameterized test cases inside the automated test set you can set their values in three different ways:</p>
 <ul>
 <li>
-<p><strong>Test Set Parameter Values</strong> -- this lets you set the same value of a parameter for all the test cases in the test set:
+<p><strong>Test Set Parameter Values</strong>: this lets you set the same value of a parameter for all the test cases in the test set:
 <img alt="" src="../img/RemoteLaunch_Guide_17.png" /></p>
 </li>
 <li>
-<p><strong>Test Case Parameter Values</strong> -- this lets you set a specific value for a parameter for a particular test case in the test set:
+<p><strong>Test Case Parameter Values</strong>: this lets you set a specific value for a parameter for a particular test case in the test set:
 <img alt="" src="../img/RemoteLaunch_Guide_18.png" /></p>
 </li>
 <li>
-<p><strong>Test Configurations</strong> -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+<p><strong>Test Configurations</strong>: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 <img alt="" src="../img/RemoteLaunch_Guide_19.png" /></p>
 </li>
 </ul>
@@ -5181,13 +5205,13 @@ shell command or just executing the JAR file directly:</p>
 <p>Production License Key in Use.</p>
 <p>Testing connection to Spira...</p>
 <p>Successfully connected to Spira.</p>
-<p>WARNING: Unable to retrieve test runs for SpiraTest project PR2, so
+<p>WARNING: Unable to retrieve test runs for Spira project PR2, so
 skipping this project - Automation Host with token 'MyHost1' doesn't
 exist in projec PR2.</p>
-<p>WARNING: Unable to retrieve test runs for SpiraTest project PR3, so
+<p>WARNING: Unable to retrieve test runs for Spira project PR3, so
 skipping this project - Automation Host with token 'MyHost1' doesn't
 exist in projec PR3.</p>
-<p>Retrieved 1 test run(s) from SpiraTest.</p>
+<p>Retrieved 1 test run(s) from Spira.</p>
 <p>Executing test case TC18 with filename
 'C:\Windows\System32\ipconfig.exe|/all'</p>
 <p>This is a Linked test script</p>
@@ -5199,25 +5223,29 @@ exist in projec PR3.</p>
 </blockquote>
 <p>This can be seen graphically below:</p>
 <p><img alt="" src="../img/RemoteLaunchX_Guide1.png" /></p>
-<p>The console output will indicate which test sets are being executed and what the final result was. Inside SpiraTest, once execution begins the status of the test set will change from "Not Started" to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed (passed or failed) -- or "Blocked" -- RemoteLaunchX was not able to execute the test.</p>
+<p>The console output will indicate which test sets are being executed and what the final result was. Inside Spira, once execution begins the status of the test set will change from "Not Started" to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed (passed or failed) -- or "Blocked" -- RemoteLaunchX was not able to execute the test.</p>
 <p>In addition, the individual test cases in the set will display a status based on the results of the command-line test that was executed:</p>
-<p><strong>Passed</strong> -- The automated test ran successfully and matched the PASS regular expression.</p>
-<p><strong>Failed</strong> -- The automated test ran successfully, and matched the FAIL regular expression.</p>
-<p><strong>Caution</strong> -- The automated test ran successfully, and matched the CAUTION regular expression.</p>
-<p><strong>Blocked</strong> -- The automated test did not run successfully or it matched the BLOCKED regular expression.</p>
+<ul>
+<li><strong>Passed</strong>: The automated test ran successfully and matched the PASS regular expression.</li>
+<li><strong>Failed</strong>: The automated test ran successfully, and matched the FAIL regular expression.</li>
+<li><strong>Caution</strong>: The automated test ran successfully, and matched the CAUTION regular expression.</li>
+<li><strong>Blocked</strong>: The automated test did not run successfully or it matched the BLOCKED regular expression.</li>
+</ul>
 <p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Test Run that was recorded and the Console output section will contain the underlying error message(s).</p>
-<p>Once the tests have completed, you can log back into SpiraTest and see the execution status of your test cases. If you click on a Test Run that was generated by the command-line tool, you will see the following information:</p>
+<p>Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by the command-line tool, you will see the following information:</p>
 <p><img alt="" src="../img/RemoteLaunch_Guide_20.png" /></p>
 <p>This screen indicates the status of the test run that was reported back from command-line tool together with any messages or other information. The execution status will be set according to the rules described above, the Message field will contain the first line of console output and the large details box will contain the full console output from the command-line tool.</p>
-<p>Congratulations... You are now able to run a custom command-line test, and have the results be recorded within SpiraTest / SpiraTeam.</p>
+<p>Congratulations... You are now able to run a custom command-line test, and have the results be recorded within Spira / SpiraTeam.</p>
 <h3 id="scheduling-remotelaunchx">Scheduling RemoteLaunchX<a class="headerlink" href="#scheduling-remotelaunchx" title="Permanent link">&para;</a></h3>
 <p>Unlike the main RemoteLaunch application, RemoteLaunchX does not have a built-in timer and so when executed it will run once, check for pending test sets and then exit. If you want to have it run on a periodic basis, you will need to schedule it externally. If you are using Microsoft Windows® you would use the Windows Task Scheduler and in other operating systems you would setup a CRON job. We recommend scheduling RemoteLaunchX to run every 5 minutes.</p>
 <h3 id="customizing-the-reporting">Customizing the Reporting<a class="headerlink" href="#customizing-the-reporting" title="Permanent link">&para;</a></h3>
 <p>By default, RemoteLaunchX will use the following rules to determine if a test has passed, failed, blocked or passed with warnings (caution) Note that regular expressions are case sensitive by default. To make them case insensitive, simply add the <code>(?i)</code> flag to the beginning just as in the <code>fail-regex</code> below.</p>
-<p><strong>Passed</strong> -- The test completed and the console output didn't contain any of the error phrases listed in the other rules (below).</p>
-<p><strong>Failed</strong> -- The test completed and the console output contained the phrases "Error", "Fail" or "Fatal".</p>
-<p><strong>Caution</strong> -- The test completed and the console output contained the phrases "Warning", or "Caution".</p>
-<p><strong>Blocked</strong> -- The automated test did not run successfully or the console output contained the phrase "Blocked".</p>
+<ul>
+<li><strong>Passed</strong>: The test completed and the console output didn't contain any of the error phrases listed in the other rules (below).</li>
+<li><strong>Failed</strong>: The test completed and the console output contained the phrases "Error", "Fail" or "Fatal".</li>
+<li><strong>Caution</strong>: The test completed and the console output contained the phrases "Warning", or "Caution".</li>
+<li><strong>Blocked</strong>: The automated test did not run successfully or the console output contained the phrase "Blocked".</li>
+</ul>
 <p>You can customize the reporting by changing the Regular Expressions (Regex) and the default test status stored in the config.properties files:</p>
 <div class="highlight"><pre><span></span><code>#The regular expressions for each of the possible execution statuses
 
