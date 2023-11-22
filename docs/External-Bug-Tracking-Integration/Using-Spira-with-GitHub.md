@@ -1,11 +1,37 @@
 # Using Spira with GitHub
-GitHub's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. 
+## Overview
+Teams can work seamlessly using both Spira and GitHub, using Inflectra's GitHub data sync engine to keep key information in sync between both applications.
 
-You can use this integration to sync new incidents, new comments, statuses, pull requests, and releases (milestones) with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).
+!!! example "Real world example"
+    - The QA team uses Spira for requirements and test management.
+    - When the QA team finds bugs during testing incidents are created in Spira, and then sync to GitHub
+    - The Dev team manages issues and pull requests in GitHub, with changes reflected back in Spira
+    
+**This datasync can sync the follow information**:
+
+| GitHub artifact | Spira artifact |
+| --------------- | -------------- |
+| Repo            | Product        |
+| Users           | Users          |
+| Milestones      | Releases       |
+| Issues          | Incidents      |
+| Comments        | Comments       |
+
+**The table below shows a summary of how data is synced from/to Spira and GitHub**:
+
+| Artifact          | Type of Change | What syncs                                              |
+| ----------------- | -------------- | ------------------------------------------------------- |
+| **releases**      | new            | GitHub :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **incidents**     | new            | GitHub :fontawesome-solid-arrow-right-arrow-left: Spira |
+|                   | updates        | GitHub :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **pull requests** | new            | GitHub :fontawesome-solid-arrow-right: Spira            |
+|                   | updates        | GitHub :fontawesome-solid-arrow-right: Spira            |
+
+
+Note that code and commits can also sync to Spira (read only). This is handled by our [Git](../Version-Control-Integration/Integrating-with-Git.md) integration.
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
-
 
 ## Configuring the Integration Service 
 
@@ -51,7 +77,7 @@ NOTE: Leave any field called "(Not Used)" blank.
 
 If the display names of users on GitHub do not match the format of their names in SpiraPlan, then the auto-mapping feature will not work, and user mappings will need to be configured manually. If there is not a user mapping for a given GitHub account, the SpiraPlan account used by the data sync will be assigned as the creator of pull requests and the owner field will be left blank where relevant.
 
-To configure the mapping of users in the two systems, go to Administration > Users > View / Edit Users to see the list of users in the SpiraPlansystem. Click the "Edit" button for a particular user that has an equivalent user in GitHub:
+To configure the mapping of users in the two systems, go to Administration > Users > View / Edit Users to see the list of users in the Spira. Click the "Edit" button for a particular user that has an equivalent user in GitHub:
 
 ![](img/Using_Spira_with_GitHub_218.png)
 
@@ -87,7 +113,7 @@ You must map every status in the system. Descriptions of the field are below:
 
 Click "Save" and assuming everything was done correctly, the plug-in should work. Start your Data Sync service and verify that issues in GitHub appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
-Congratulations, you have just integrated your SpiraPlaninstance with GitHub's integrated issue tracker!
+Congratulations, you have just integrated Spira with GitHub's integrated issue tracker!
 
 
 ## Syncing Pull Requests
