@@ -19,55 +19,27 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The tables below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. These are explained on each tab below. 
+**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
+
+| Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        |
+| ---------------- | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
+|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
+| **incidents**    | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             |
+|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            |
+| **tasks**        | new            | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             |
+|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            |
 
 Notes about syncing:
 
+- The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
+- The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **NoRequirements** sync mode is for cases where Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
 - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
-
-=== "Default"
-
-    The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
-
-    | Artifact         | Type of Change | What syncs                                            |
-    | ---------------- | -------------- | ----------------------------------------------------- |
-    | **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    | **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            |
-    |                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-    | **incidents**    | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    |                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-    | **tasks**        | new            | Jira :fontawesome-solid-arrow-left: Spira             |
-    |                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-
-=== "Both"
-
-    The **Both** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
-
-    | Artifact         | Type of Change | What syncs                                            |
-    | ---------------- | -------------- | ----------------------------------------------------- |
-    | **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    | **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            |
-    |                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-    | **incidents**    | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    |                  | updates        | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    | **tasks**        | new            | Jira :fontawesome-solid-arrow-left: Spira             |
-    | **tasks**        | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-
-
-=== "True"
-    
-    The **True** sync mode is for cases where Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
-
-    | Artifact      | Type of Change | What syncs                                            |
-    | ------------- | -------------- | ----------------------------------------------------- |
-    | **releases**  | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-    | **incidents** | new            | Jira :fontawesome-solid-arrow-left: Spira             |
-    |               | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
-    | **tasks**     | new            | Jira :fontawesome-solid-arrow-left: Spira             |
-    |               | updates        | Jira :fontawesome-solid-arrow-right: Spira            |
 
 
 ## Checklist
@@ -133,8 +105,8 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Sync Direction**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
     - Default (leave blank): *recommended for most users.*
-    - True: enter the word "True" to use this mode
-    - Both: enter the word "Both" to use this mode *recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
+    - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
+    - NoRequirements: enter the word "NoRequirements" to use this mode
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all).
 - **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
@@ -198,14 +170,7 @@ It is difficult to find the unique IDs for various fields and items in Jira from
 
 - Choose the project in Jira you want to get IDs for
 
-You will then see tabs for the following information:
-
-- issue types
-- issue statuses
-- issue priorities
-- components
-- versions 
-- custom fields
+You will then see tabs for the following information: issue types, issue statuses, issue priorities, components, versions, and custom fields.
 
 Keep the helper application open so you can refer to it as you go through the remaining configuration steps below
 
@@ -273,166 +238,160 @@ This process starts on data mapping home page for the selected product you were 
 For many of the fields, you can **map multiple Spira field values** to the same Jira field value (e.g. Bug and Incident in Spira may both map to Bug in Jira). If you map the same Jira ID for different Spira field values, make sure to set "Primary" to Yes on one of the field values. This will be the value used when syncing from Jira to Spira.
 
 
-#### Incident Type
-!!! info "This field mapping is required and supports mapping multiple values"
+#### Incidents
+=== "Type"
+    
+    !!! info "This field mapping is required and supports mapping multiple values"
 
-![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
 
-Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen. The table lists each of the incident types available in Spira. Enter the matching Jira issue type ID for each one. 
+    Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen. The table lists each of the incident types available in Spira. Enter the matching Jira issue type ID for each one. 
 
-The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper).
+    The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
+=== "Status"
+    !!! info "This field mapping is required and supports mapping multiple values"
 
-#### Incident Status
-!!! info "This field mapping is required and supports mapping multiple values"
+    ![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
+    Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen. The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
 
-Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen. The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+    We recommend that you map the New and Open Spira statuses to the Jira ID for "Open" and make the Spira status of Open the primary status. This means that when new incidents in Spira get synced over to Jira, they will get switched to the Open status in Jira which will then be synched back to "Open" in Spira. This helps you easily see which incidents have been synced with Jira and those that haven't.
 
-We recommend that you map the New and Open Spira statuses to the Jira ID for "Open" and make the Spira status of Open the primary status. This means that when new incidents in Spira get synced over to Jira, they will get switched to the Open status in Jira which will then be synched back to "Open" in Spira. This helps you easily see which incidents have been synced with Jira and those that haven't.
+    The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
+    ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
+=== "Priority"
+    !!! info "This field mapping is required and supports mapping multiple values"
 
+    ![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
 
-#### Incident Priority
-!!! info "This field mapping is required and supports mapping multiple values"
+    Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen. The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching Jira priority ID for each one.
 
-![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
+    The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen. The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching Jira priority ID for each one.
+    ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
-The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
+=== "Component"
+    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
 
-![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
 
+    Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen. The table lists each of the components available in Spira and provides you with the ability to enter the matching Jira component ID for each one.
 
-#### Incident Component
-!!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    The Jira ID can be found by using the "Components" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
-Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen. The table lists each of the components available in Spira and provides you with the ability to enter the matching Jira component ID for each one.
+=== "Severity"
+    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
 
-The Jira ID can be found by using the "Components" tab of the [Jira configuration helper](#jira-configuration-helper).
+    ![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
+    Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen. Unlike the other incident standard fields, Jira doesn't have a built-in severity field. If you want to see Spira incident severities in Jira, create a Jira custom list field to store the different severity values. If you don't want to synchronize severity values with Jira, you can skip the rest of this section.
 
+    Once you have created a severity custom list field in Jira, you need to:
+    - populate the field mappings **with the name** (Not the ID) of the severity custom property values in Jira
+    - go to the [Plugin configuration](#configure-the-plugin) screen
+    - Enter the ID of the custom field you're using to store severities in Jira in the "Severity/Est. Points" field. You can fin the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-#### Incident Severity
-!!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
-Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen. Unlike the other incident standard fields, Jira doesn't have a built-in severity field. If you want to see Spira incident severities in Jira, create a Jira custom list field to store the different severity values. If you don't want to synchronize severity values with Jira, you can skip the rest of this section.
+#### Requirements
+=== "Status"
+    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+        If you are not syncing requirements you can skip this section
 
-Once you have created a severity custom list field in Jira, you need to:
-- populate the field mappings **with the name** (Not the ID) of the severity custom property values in Jira
-- go to the [Plugin configuration](#configure-the-plugin) screen
-- Enter the ID of the custom field you're using to store severities in Jira in the "Severity/Est. Points" field. You can fin the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
+    ![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
+    Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
 
+    The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-#### Requirement Status
-!!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
-    If you are not syncing requirements you can skip this section
+    ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
+=== "Importance"
+    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+        If you are not syncing requirements you can skip this section
 
-Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+    ![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
 
-The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
+    Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen. The table lists each of the requirement importances available in Spira and provides you with the ability to enter the matching Jira priority ID for each one. 
 
-![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
+    The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
 
+    ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
-#### Requirement Importance
-!!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
-    If you are not syncing requirements you can skip this section
+=== "Type"
+    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+        If you are not syncing requirements you can skip this section
 
-![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
 
-Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen. The table lists each of the requirement importances available in Spira and provides you with the ability to enter the matching Jira priority ID for each one. 
+    Click on the "Type" hyperlink under Requirement Standard Fields to bring up the Requirement type mapping configuration screen. The table lists each of the requirement types available in Spira and provides you with the ability to enter the matching Jira issue type ID for each one. 
 
-The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
+    The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper). 
 
-![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
+=== "Component"
+    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+        If you are not syncing requirements you can skip this section
 
-#### Requirement Type
-!!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
-    If you are not syncing requirements you can skip this section
+    ![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
+    Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen. The table lists each of the components available in Spira and provides you with the ability to enter the matching Jira component ID for each one. 
 
-Click on the "Type" hyperlink under Requirement Standard Fields to bring up the Requirement type mapping configuration screen. The table lists each of the requirement types available in Spira and provides you with the ability to enter the matching Jira issue type ID for each one. 
+    The Jira ID can be found by using the "Components" tab of the [Jira configuration helper](#jira-configuration-helper). 
 
-The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper). 
+    ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
+=== "Estimate Points"
+    !!! info "This field mapping is optional if syncing requirements"
+        If you are not syncing requirements you can skip this section
 
+    To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the [Jira configuration helper](#jira-configuration-helper) to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the [Datasync configuration page](#configure-the-plugin). For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
 
-#### Requirement Component
-!!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
-    If you are not syncing requirements you can skip this section
+#### Tasks
+=== "Status"
+    !!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
+        If you are not syncing tasks you can skip this section
 
-![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
+    ![](img/jira-task-mapping-status.png)
 
-Click on the "Component" hyperlink under Requirement Standard Fields to bring up the Requirement component mapping configuration screen. The table lists each of the components available in Spira and provides you with the ability to enter the matching Jira component ID for each one. 
+    Click on the "Status" hyperlink under Task Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the task statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
 
-The Jira ID can be found by using the "Components" tab of the [Jira configuration helper](#jira-configuration-helper). 
+    The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
+=== "Priority"
+    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+        If you are not syncing tasks you can skip this section
 
-#### Requirement Estimate Points
-!!! info "This field mapping is optional if syncing requirements"
-    If you are not syncing requirements you can skip this section
+    ![](img/jira-task-mapping-priority.png)
 
-To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the [Jira configuration helper](#jira-configuration-helper) to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the [Datasync configuration page](#configure-the-plugin). For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
+    Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen. The table lists each of the task priorities available in Spira and provides you with the ability to enter the matching Jira priority ID for each one.
 
-#### Task Status
-!!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
-    If you are not syncing tasks you can skip this section
+    The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-![](img/jira-task-mapping-status.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
-Click on the "Status" hyperlink under Task Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the task statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+=== "Type"
+    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+        If you are not syncing tasks you can skip this section
 
-The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
+    ![](img/jira-task-mapping-type.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
+    Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen. The table lists each of the task types available in Spira and provides you with the ability to enter the matching Jira issue type ID for each one.
 
+    The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-#### Task Priority
-!!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
-    If you are not syncing tasks you can skip this section
-
-![](img/jira-task-mapping-priority.png)
-
-Click on the "Priority" hyperlink under Task Standard Fields to bring up the Task Priority mapping configuration screen. The table lists each of the task priorities available in Spira and provides you with the ability to enter the matching Jira priority ID for each one.
-
-The Jira ID can be found by using the "Issue Priorities" tab of the [Jira configuration helper](#jira-configuration-helper).
-
-![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
-
-
-#### Task Type
-!!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
-    If you are not syncing tasks you can skip this section
-
-![](img/jira-task-mapping-type.png)
-
-Click on the "Type" hyperlink under Task Standard Fields to bring up the Task type mapping configuration screen. The table lists each of the task types available in Spira and provides you with the ability to enter the matching Jira issue type ID for each one.
-
-The Jira ID can be found by using the "Issue Types" tab of the [Jira configuration helper](#jira-configuration-helper).
-
-![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 
 ### Custom Property Mapping
@@ -445,87 +404,86 @@ You can map:
 
 To start, go to the data mapping home page for the selected product you were on to [activate the datasync](#activate-the-datasync). Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use
 
-#### Scalar Custom Properties
-![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
+=== "Scalar properties"
+    ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-This refers to custom properties of all types **except** List** and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+    This refers to custom properties of all types **except** List** and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
-Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
+    Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
+=== "List properties"
+    ![](img/Using_SpiraTeam_with_JIRA_5+_44.png)
 
-#### List Custom Properties
-![](img/Using_SpiraTeam_with_JIRA_5+_44.png)
+    This refers to custom properties that are either of type **List** or **Multi-List** (in Jira called cascading, multiple choice, or single choice). 
 
-This refers to custom properties that are either of type **List** or **Multi-List** (in Jira called cascading, multiple choice, or single choice). 
+    Fill in the "External Key" field with the Jira ID of the custom field. The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
-Fill in the "External Key" field with the Jira ID of the custom field. The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
+    ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
+    For each of the property values on the lower half of the page, enter the full name (not the id) of the custom field value as specified in Jira:
 
-For each of the property values on the lower half of the page, enter the full name (not the id) of the custom field value as specified in Jira:
+    ![](img/Using_SpiraTeam_with_JIRA_5+_45.png)
 
-![](img/Using_SpiraTeam_with_JIRA_5+_45.png)
+#### Special Jira fields
+=== "Resolution Field"
+    If you would like the values of the Jira Resolution field to sync with Spira, work through these steps:
 
+    - create a custom list in Spira
+    - add the resolution names that exist in Jira as values in the list
+    - create an incident custom property of type List in Spira that uses the list you just created
+    - go to the product's Jira datasync configuration page (as used above)
+    - click on the hyperlink for the custom property you created
+    - enter "**Resolution**" as the External Key of the custom property
+    - for each of the property values in the table, enter the Jira ID of the various Resolutions that are configured in Jira
 
-#### Jira's Resolution Field
-If you would like the values of the Jira Resolution field to sync with Spira, work through these steps:
+    ![](img/Using_SpiraTeam_with_JIRA_5+_46.png)
 
-- create a custom list in Spira
-- add the resolution names that exist in Jira as values in the list
-- create an incident custom property of type List in Spira that uses the list you just created
-- go to the product's Jira datasync configuration page (as used above)
-- click on the hyperlink for the custom property you created
-- enter "**Resolution**" as the External Key of the custom property
-- for each of the property values in the table, enter the Jira ID of the various Resolutions that are configured in Jira
+    The external ID can be found by looking at the URL inside Jira when choosing to View/Edit the resolution name/description.
 
-![](img/Using_SpiraTeam_with_JIRA_5+_46.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_resolution.png)
 
-The external ID can be found by looking at the URL inside Jira when choosing to View/Edit the resolution name/description.
+=== "Environment Field"
+    If your instance of Jira requires that all new issues are submitted with an "Environment" description, you need to fill out this section.
 
-![](img/Using_SpiraTeam_with_JIRA_5+_resolution.png)
+    - create an incident custom property in Spira of type Text
+    - go to the product's Jira datasync configuration page (as used above)
+    - click on the hyperlink for the custom property you created
+    - enter "Environment**" as the External Key of the custom property
+    - click "Save"
 
-#### Jira's Environment Field
-If your instance of Jira requires that all new issues are submitted with an "Environment" description, you need to fill out this section.
+    ![](img/Using_SpiraTeam_with_JIRA_5+_47.png)
 
-- create an incident custom property in Spira of type Text
-- go to the product's Jira datasync configuration page (as used above)
-- click on the hyperlink for the custom property you created
-- enter "Environment**" as the External Key of the custom property
-- click "Save"
+=== "Security Level Field"
+    If your instance of Jira requires that all new issues are submitted with a "Security Level" you need to fill out this section. 
 
-![](img/Using_SpiraTeam_with_JIRA_5+_47.png)
+    - create a custom list in Spira
+    - add the security level names that exist in Jira as values in the list
+    - create an incident custom property of type List in Spira that uses the list you just created
+    - go to the product's Jira datasync configuration page (as used above)
+    - click on the hyperlink for the custom property you created
+    - enter "**SecurityLevel**" as the External Key of the custom property
+    - for each of the property values in the table, enter the Jira ID of the various Security Levels that are configured in Jira
 
-#### Jira's Security Level Field
-If your instance of Jira requires that all new issues are submitted with a "Security Level" you need to fill out this section. 
+    ![](img/Using_SpiraTeam_with_JIRA_5+_security.png)
 
-- create a custom list in Spira
-- add the security level names that exist in Jira as values in the list
-- create an incident custom property of type List in Spira that uses the list you just created
-- go to the product's Jira datasync configuration page (as used above)
-- click on the hyperlink for the custom property you created
-- enter "**SecurityLevel**" as the External Key of the custom property
-- for each of the property values in the table, enter the Jira ID of the various Security Levels that are configured in Jira
+    The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.
 
-![](img/Using_SpiraTeam_with_JIRA_5+_security.png)
+=== "Issue Key Field"
+    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named aftr the plugin name
 
-The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.
+    ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
-#### Jira's Issue Key Field
-Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named aftr the plugin name
+    To also see the Jira ID on the Incident list page:
 
-![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
+    - create an incident custom property in Spira of type Text
+    - go to the product's Jira datasync configuration page (as used above)
+    - click on the hyperlink for the custom property you created
+    - enter "JiraIssueKey**" as the External Key of the custom property
+    - click "Save"
 
-To also see the Jira ID on the Incident list page:
-
-- create an incident custom property in Spira of type Text
-- go to the product's Jira datasync configuration page (as used above)
-- click on the hyperlink for the custom property you created
-- enter "JiraIssueKey**" as the External Key of the custom property
-- click "Save"
-
-![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
 
 ## Using Spira with Jira
