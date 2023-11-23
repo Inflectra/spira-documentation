@@ -73,20 +73,21 @@ time-zones here.
     - **Set to Yes**: all users in SpiraTeam need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
     - **Set to No**: users in SpiraTeam and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping)
 
-- **Severity Field**: This is used to specify a JIRA custom property that should be mapped to the built-in SpiraTeam Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Jira Custom Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 - **Task Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraPlan tasks instead of incidents. If you leave this blank, tasks in SpiraPlan will not be synched with Jira at all.
 - **Sync Direction**: This determines how the synchronization of incidents works:
 
     - **Default (leave blank)**: By default the plugin will log new issues from SpiraTeam to JIRA, and from JIRA to SpiraTeam. Updates will only occur from JIRA to SpiraTeam. *NOTE: This is the recommended option for most users.*
-    - **"True"**: If you enter the word "True" in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.
-    - **"Both"**: If you enter the word "Both" in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
+    - **noRequirements**: If you enter <i>noRequirements</i> in this setting, the plugin will log new issues from SpiraTeam to JIRA. It will NOT log new issues from JIRA into SpiraTeam. Updates will only occur from JIRA to SpiraTeam.. This is useful if you want to prevent existing issues in JIRA from being loaded into SpiraTeam.
+    - **Bidirectional**: If you enter the word <i>Bidirectional</i> in this setting, the plugin will allow full bidirectional synchronization of new incidents/issues and also updates to existing incidents/issues in both SpiraTeam and JIRA. This option should only be used if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. *NOTE: This option is not recommended for novice users.*
+    - **NoIncidents**: enter the word <i>NoIncidents</i> to use this mode. Requirements and Tasks will be synced, Incidents won't.
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any JIRA issue types that you want to be synchronized with SpiraTeam requirements instead of incidents. If you leave this blank, all JIRA issue types will be synchronized with incidents.
 - **Link Type**: This field should either be set to the name of a JIRA issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. You can get the list of issue link types from the following screen in JIRA:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
-> **Note: For most users, we recommend leaving Severity Field, Task Types, Sync Direction, and Requirement Types fields blank.**
+> **Note: For most users, we recommend leaving Jira Custom Fields, Task Types, Sync Direction, and Requirement Types fields blank.**
 
 
 ## Configuring the Data Mapping
@@ -434,6 +435,13 @@ All you need to do on this screen is enter the word "**JiraIssueKey**" in the Ex
 
 Once you have updated the various mapping sections, you are now ready to use the integration.
 
+
+#### g) Estimate Points
+To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the Jira configuration helper to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the Datasync configuration page. For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
+
+
+#### h) JIRA's Due Date field
+ If you are not syncing requirements you can skip this. To sync Due Date from Jira for Requirements in Spira, create a a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter <i>duedate</i> as the external key for it. This field only syncs Jira to Spira.
 
 ## Using SpiraTeam with JIRA
 

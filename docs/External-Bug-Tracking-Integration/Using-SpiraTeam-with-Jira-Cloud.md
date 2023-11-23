@@ -21,7 +21,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 
 **The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
 
-| Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        | NoRequirements                                        |
+| Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        | NoIncidents                                           |
 | ---------------- | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
 | **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
@@ -36,6 +36,7 @@ Notes about syncing:
 - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
 - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
 - The **NoRequirements** sync mode is for cases where Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
+- The **NoIncidents** sync mode is designed for cases where the team wants to see in Spira the Requirements created in Jira, but all the updates will be performed in Jira. Optionally, Tasks can also be used in this mode.
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
@@ -98,15 +99,16 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
 !!! info "In normal use, keep the fields below blank"
-    For most users, we recommend leaving these fields blank: "Severity/Est. Points Field"; "Task Types"; and "Sync Direction". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements.
+    For most users, we recommend leaving these fields blank: "Jira Custom Fields"; "Task Types"; and "Sync Mode". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements (not valid for the NoIncidents mode).
 
-- **Severity/Est. Points Field**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Jira Custom Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 - **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synched with Jira at all.
-- **Sync Direction**: This determines how the synchronization works. How each mode works is explained [above](#overview):
+- **Sync Mode**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
     - Default (leave blank): *recommended for most users.*
     - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
     - NoRequirements: enter the word "NoRequirements" to use this mode
+    - NoIncidents: enter the word "NoIncidents" to use this mode
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all).
 - **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
@@ -296,7 +298,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     Once you have created a severity custom list field in Jira, you need to:
     - populate the field mappings **with the name** (Not the ID) of the severity custom property values in Jira
     - go to the [Plugin configuration](#configure-the-plugin) screen
-    - Enter the ID of the custom field you're using to store severities in Jira in the "Severity/Est. Points" field. You can fin the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
+    - Enter the ID of the custom field you're using to store severities in Jira in the "Jira Custom Fields" field. You can fin the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
@@ -356,6 +358,11 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
     To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the [Jira configuration helper](#jira-configuration-helper) to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the [Datasync configuration page](#configure-the-plugin). For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
 
+=== "Due Date"
+    !!! info "This field mapping is optional if syncing requirements"
+        If you are not syncing requirements you can skip this section
+
+    To sync Due Date from Jira for Requirements in Spira, create a a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter <i>duedate</i> as the external key for it. This field only syncs Jira to Spira.
 #### Tasks
 === "Status"
     !!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
