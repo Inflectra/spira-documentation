@@ -1,6 +1,6 @@
-# Using Spira with Jira Cloud
+# Using Spira with Jira Server (or DataCenter)
 ## Overview
-Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jira Cloud data sync engine to keep key information in sync between both applications.
+Teams can work seamlessly using both Spira and Jira Server or Jira DataCenter (hereafter just Jira Server or Jira), using Inflectra's Jira data sync engine to keep key information in sync between both applications.
 
 !!! example "Real world example"
     - The QA team uses Spira for requirements and test management.
@@ -19,7 +19,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
+**The table below shows a summary of how data is synced from/to Spira and Jira Server**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
 
 | Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        | NoIncidents                                           |
 | ---------------- | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
@@ -47,8 +47,8 @@ Notes about syncing:
 For the data sync to work correctly make sure you meet **all** of the steps below:
 
 - [x] Use Spira v6.3.0.1+
-- [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](../Using-SpiraTeam-with-Jira-5+).)
-- [x] [Setup a datasync  service](../Setting-up-Data-Synchronization/) - either in Inflectra's cloud or on your own servers
+- [x] Use Jira Server or DataCenter 5+
+- [x] [Setup a datasync  service](../Setting-up-Data-Synchronization/) on your own servers
 - [x] [Configure the plugin in Spira](#configure-the-plugin)
 - [x] [Configure system wide user mapping](#user-mapping)
 - [x] [Download the Jira configuration helper application](#jira-configuration-helper)
@@ -67,22 +67,22 @@ Then, for each product you want to sync:
 - Login to Spira as a system administrator
 - Go to System Administration > Integrations > Data Synchronization
 
-![](img/Using_SpiraTeam_with_JIRA_5+_16.png)
+![](img/Using_SpiraTeam_with_JIRA_5+_16-server.png)
 
-- Find the plugin called **JiraDataSync** and click the "Edit" button to open the settings page
+- Find the plugin called **JiraServerDataSync** and click the "Edit" button to open the settings page
 
 ??? question "What do if the plugin is not there"
     If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
 
     To start, fill in the following fields:
 
-    - Name: enter "JiraDataSync" exactly
+    - Name: enter "JiraServerDataSync" exactly
     - Connection Info: enter the the full URL to the Jira instance (see "Jira URL" below)
-    - Login: enter your Atlassian cloud login
+    - Login: enter your Jira login credentials
 
     Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
 
-![](img/JiraCloud-Plugin-Config1.png)
+![](img/JiraServer-Plugin-Config1.png)
 
 You need to fill in the following fields for the plugin to operate correctly:
 
