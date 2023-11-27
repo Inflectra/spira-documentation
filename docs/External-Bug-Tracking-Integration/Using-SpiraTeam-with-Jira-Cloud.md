@@ -35,8 +35,8 @@ Notes about syncing:
 
 - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
 - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
-- The **NoRequirements** sync mode is for cases where Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
-- The **NoIncidents** sync mode is designed for cases where the team wants to see in Spira the Requirements created in Jira, but all the updates will be performed in Jira. Optionally, Tasks can also be used in this mode.
+- The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
+- The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact.
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
@@ -362,7 +362,9 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     !!! info "This field mapping is optional if syncing requirements"
         If you are not syncing requirements you can skip this section
 
-    To sync Due Date from Jira for Requirements in Spira, create a a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter <i>duedate</i> as the external key for it. This field only syncs Jira to Spira.
+    To sync Due Date from Jira with Spira Requirements, create a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter *duedate* as its external key. This field only syncs Jira to Spira.
+
+
 #### Tasks
 === "Status"
     !!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
