@@ -12,26 +12,48 @@
 ## What has been released
 Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q4 2023
-- New program level widgets for the program home page to help you manage program milestones and capabilities
-- Improvements to program level reporting and custom graphs
-- Improved tagging for documents (to then be extended to all product artifacts)
+## Q1 2024
+- Upgrade the requirement and incident boards to the new board experience
+- Track changes to product membership and product role changes
+- Additional security admin settings for those using Single Sign On
+- Add a new program level capability board <span class="pill">SpiraPlan</span>
+- Streamline the first time user experience of the "My Page"
+- Roll out tag support to all relevant remaining product artifacts
 
-## 2024
-**We will extend our "Scaled Agile" approach further with portfolio level features, like "Portfolio Outcomes" and "Portfolio Milestones", and deeper risk integration**
 
-**Further planning board improvements, including at the program level**
+## Rest of 2024
+Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
+
+New product team features so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
+
+Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
+
+Update the user experience with more user friendly design, including navigating the application, reading long descriptions, and using the My Page.
+
+Extend Spira’s powerful test set features even further, so users can run test sets in series, and can add test cases from other products into a test set.
+
+Provide audit tracking of changes made by administrators, focused on product roles, product membership, users, and workspaces.
+
+Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
+
+## 2025
+Add functionality to portfolios with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
+
+Enhance traceability with new requirement views and widgets, integrated risk traceability <span class="pill">SpiraPlan</span>, and integrated analysis of different association types.
+
+Upgrade the user experience for key parts of the application, based on user feedback in 2024.
+
+Further enhance administrative audit tracking with system and template level change tracking.
+
 
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
 
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
-- **Enhanced Test Set Management**: Add the ability to run a test set in series, with parts being handed off to multiple people in sequence 
 - **Enhanced source code management**: the ability to tie a branch to a sprint or release. Code review tools built into the application.
 - **Time tracking**: Enhancements to existing timecard and time logging features. Add the ability for a named user or role to approve a timecard.
-- **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or team (e.g. with skills) can help with this.
-- **Improved reporting templating**: The ability to create a specific using a preset document template, so that the report format can more closely resemble your company style.
-- **New field types and handling**: Ability to set date-time values on list pages. Even more custom property types (for example, dependent dropdowns and hierarchical dropdowns).
+- **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.
+- **Improved reporting templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
-- **Improved ‘first-time’ experience**: When the main administrator first logs in, a new welcome screen will guide them in setting up the application or to get help doing so.
+- **Enhanced Support for BDD**: Improve handling of BDD scenarios, and add the ability to convert BDD scenarios into executable automation scripts.

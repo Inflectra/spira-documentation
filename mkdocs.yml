@@ -35,6 +35,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true 
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
@@ -49,7 +52,6 @@ plugins:
 theme:
   features:
     - instant
-    - content.tabs.link
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
@@ -176,6 +178,7 @@ nav:
     - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
+  - ChatGPT: SpiraApps\ChatGPT.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
   - GitHub: SpiraApps\GitHub.md

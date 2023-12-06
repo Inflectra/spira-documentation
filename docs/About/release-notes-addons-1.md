@@ -1,6 +1,22 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## December 2023
+- **[Jira Cloud DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud) v6.0 and - **[Jira Server DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+) v6: these updates includes a number of enhancements and bug fixes:
+
+    - Add support for JIRA estimate fields [IN:6345]
+    - Add the ability to sync requirements and not import new incidents with a new dedicated "NoIncidents" sync mode [IN:6341]
+    - Allow the Jira Due Date field to be mapped to a Spira requirement custom property [IN:6672]
+    - Fix the first Comment from Jira Cloud sometimes being duplicated in Spira [IN:7689]
+    - Fix artifact associations not always syncing for incidents and requirements, and never syncing for tasks [IN:8864]
+    - Improve Jira field mapping for "release" fields [IN:8831]
+    - Improve logging by capturing the ProjectID from Jira to help debugging [IN:8684]
+    - Improve logging by reducing warning entries for similar issues [IN:8815]
+    - Improve the names of the different data sync modes to be more meaningful for end users (True becomes noRequirements and Both becomes Bidirectional) [IN:8936]
+
+- [Jira Configuration Helper](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/#jira-configuration-helper) adds the ability to filter statuses by project [IN:8686]
+
+
 ## May 2023
 - **[SalesForce DataSync](../../External-Bug-Tracking-Integration/Using-Spira-with-Salesforce.com)** v1.1.4.0: general performance enhancements, fixes a potential bug that could cause error "429 Too Many Requests" on SalesForce
 - **[HP ALM Importer](../../Migration-and-Integration/Migrating-from-HP-ALM)** v6.0.23.0: fixes restoring a corrupted session

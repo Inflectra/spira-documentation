@@ -78,7 +78,7 @@ You need to:
 - select which program it belongs to and optionally enter a detailed description and/or web-site URL;
 - decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, and customizations;
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
-- (SpiraTeam and SpiraPlan only) decide whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining).
+- decide whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - you should initially make sure that the product is marked as "Active";
 
 
@@ -96,7 +96,7 @@ On this screen you can:
 - edit the website URL
 - change the program
 - view the current template for the product. Next to the template name is a "Change" button. Clicking this will let you [change the product to use a different template](../Product-Changing-Template)
-- enable/disable [baselining](../../Spira-User-Manual/Release-Management/#baselining) (SpiraTeam and SpiraPlan only)
+- enable/disable [baselining](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
 
@@ -112,7 +112,7 @@ The following screen is displayed when you choose the "View/Edit Programs" link 
 
 ![](img/System_Workspaces_36.png)
 
-This screen displays the list of programs in the system (both inactive and active) together with their portfolio (SpiraPlan only), template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
+This screen displays the list of programs in the system (both inactive and active) together with their portfolio <span class="pill">SpiraPlan</span>, template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
 
 You can filter the list of programs by either choosing an active status, or entering a portion of the name, web-site or date into the appropriate text box. When you click the "Filter" button, the list of programs will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of programs, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of programs is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the list.
 
@@ -127,7 +127,7 @@ You need to enter:
 
 - a name for the program
 - optionally enter a detailed description and/or web-site URL
-- SpiraPlan only: optionally select a portfolio for the program to belong to, by default "none" is selected 
+- <span class="pill">SpiraPlan</span> optionally select a portfolio for the program to belong to, by default "none" is selected 
 - you should initially make sure that the program is marked as "Active": this mean the program and its products will be accessible to users  
 - you can choose to make this program the default one (meaning that it cannot be deleted and products get added to it when their programs are deleted)
 - in addition you can optionally choose to associate the program with a product template. The template only controls the products that use it. It does not control the program, but it can affect what data is visible from some of the program pages
@@ -140,7 +140,7 @@ In a similar way, to edit the details of an existing program, click the "Edit" b
 
 ![](img/System_Workspaces_38.png)
 
-On the top part of this screen you can edit the name, description, website URL, portfolio (SpiraPlan only), active flag and default flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On the top part of this screen you can edit the name, description, website URL, portfolio <span class="pill">SpiraPlan</span>, active flag and default flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 !!! question "What happens when you make a program inactive"
     If you set a programs's active flag to "No" then it will be hidden from the global navigation for all users. All products in that program will also be hidden from the global navigation for all users.

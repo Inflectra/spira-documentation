@@ -1,5 +1,78 @@
 # Release Notes for Spira v7
 
+## Version 7.10 (December 2023)
+
+!!! info "Summary"
+
+    - Brings new widgets to the [program home page](../../Spira-User-Manual/Program-Homepage), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
+    - Improves [program level reporting](../../Spira-User-Manual/Program-Reports) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
+    - Adds [tagging](../../Spira-User-Manual/Application-Wide/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
+    - Let users leverage the power of [ChatGPT](../../SpiraApps/ChatGPT) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
+
+??? success "New Features"
+    * **[Extended tag support](../../Spira-User-Manual/Application-Wide/#tags)**
+
+        - As an incident user, I can add and remove tags to incidents easily from the details page and APIs, to more easily manage product incidents [RQ:4695]
+        - As a task user, I can add and remove tags to tasks easily from the details page and APIs, to more easily manage product tasks [RQ:4694]
+        - As a release user, I can add and remove tags to releases easily from the details page and APIs, to more easily manage product releases [RQ:4693]
+        - As a requirement user, I can add and remove tags to requirements easily from the details page and APIs, to more easily manage product requirements [RQ:4692]
+        - As a document user, I can add and remove tags to documents easily on the document details page, to more easily manage product documents [RQ:2590]
+    
+    * **As a program manager, I can view meaningful charts and summaries about program milestones and capabilities on the program home page, so I can quickly see the state of the program and spot problems**
+
+        - As a capability user, I can view [open vs closed capability and the priorities](../../Spira-User-Manual/Program-Homepage/#capability-open-count) of all open capabilities in an easy to read program home page widget, to help me review current work [RQ:4675]
+        - As a capability user, I can view a [summary of capabilities](../../Spira-User-Manual/Program-Homepage/#capability-summary) in a dedicated program home page widget, to help me review current work [RQ:4677]
+        - As a program milestone user, I can track the progress of [open program milestones](../../Spira-User-Manual/Program-Homepage/#program-milestone-capability-progress) in an easy to read program home page widget, to help me review current work [RQ:4676]
+        - As a program milestone user, I can see a chart of [progress and schedule for program milestones in](../../Spira-User-Manual/Program-Homepage/#program-milestone-completion) a program home page widget, to help me review current work [RQ:4678]
+    
+    * **As a program manager, I want to monitor the progress of program releases, using charts, live widgets, and offline reporting, so I can analyze trends and ensure the program is compliant with any reporting or audit standards**
+
+        - As a program manager, I can view [program reporting page](../../Spira-User-Manual/Program-Reports) widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
+        - As a program manager, I can view my [program home page](../../Spira-User-Manual/Program-Homepage) by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
+        - As a report admin, I can specify the workspace a [custom graph](../../Spira-Administration-Guide/System-Reporting/#edit-graphs) should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
+        - As a program report user, I can filter & sort custom program level reports by relevant fields, to better show me the data I need [RQ:4659]
+        - As a program report user, I can filter the capability summary report, to help me tailor the report to my needs [RQ:4660]
+        - As a program report user, I can filter the capability details report, to help me tailor the report to my needs [RQ:4661]
+        - As a program report user, I can filter and sort the program milestone summary report, to help me tailor the report to my needs [RQ:4662]
+        - As a program report user, I can filter and sort to include in the program milestone details report, to help me tailor the report to my needs [RQ:4663]
+
+    - Let users leverage the power of OpenAI in Spira with a new SpiraApp that auto-generates test cases, scenarios, or tasks from a requirement [RQ:4705]
+
+??? bug "Bug fixes and enhancements"
+    - Add more space between columns on the Report Edit page so that the Program Milestone report titles don't appear too close [IN:8496]
+    - Create temporary web.config.old and DataSyncService.exe.config files during upgrades using the installer to protect against corruption during upgrades [IN:8371]
+    - Do not automatically add "WHERE R.PROJECT_ID = ${projectId}" when adding queries for custom graphs for tables that do not have a PROJECT_ID column [IN:8534]
+    - Do not automatically add "WHERE R.PROJECT_ID = ${projectId}" when adding queries for custom reports for tables that do not have a PROJECT_ID column [IN:7704]
+    - Fix adding a task to a "Tested" requirement and then completing that task not rolling that requirement's completion up correctly to a parent release [IN:5805]
+    - Fix assigning requirements to child sprints not updating the requirement count of the parent release (without using data tools) [IN:6041]
+    - Fix potential database concurrency issues when upgrading from 5.4 to the latest version [IN:8610]
+    - Fix exporting a test case to a product not recording the exported test steps in the product history [IN:8848]
+    - Fix exporting a test case to a product using same template not exporting its test steps' or linked test steps' custom property values [IN:6286]
+    - Fix inconsistent authorization checks when an admin attempts to preview a custom report [IN:8824]
+    - Fix not always seeing an error message when trying to add a new child capability to an existing child [IN:8355]
+    - Fix product level custom reports with a ${ProjectGroupID} token to show data for the product's program [IN:8935]
+    - Fix projected effort for incidents not being calculated correctly - it should work the same as tasks currently does [IN:5806]
+    - Fix report administrators not being able to preview custom graphs on the report admin pages [IN:7645]
+    - Fix requirement completion from a cancelled release so that it does rollup to any parent release [IN:5760]
+    - Fix test coverage for releases getting out of sync in edge case scenarios when indenting, outdenting, or moving releases [IN:8004]
+    - Fix the default sort order for the 'IsAutoScheduled' column for test sets [IN:8939]
+    - Fix the parent requirement status not moving to "Tested" if all its children have a status of tested [IN:7315]
+    - Fix the report admin graph editing page from throwing an error when a user tries to display the data grid [IN:8646]
+    - Fix the workspace dropdown always showing loading if a user is not a member of any workspaces or on a system with no workspaces [IN:8018]
+    - Fix users not being able to show the "Last Updated" field on the program milestone list page [IN:8621]
+    - Fix users of SpiraTest or SpiraTeam seeing the program-level artifacts menu when viewing a program and never having viewed a product [IN:8644]
+    - Fix widgets a user added to their product reporting page from showing on the program reporting page [IN:8626]
+    - Fully localize the report configuration page's report element names [IN:8508]
+    - Improve performance of association tabs by removing duplicate SQL code from the relevant stored procedure [IN:8436]
+    - Improve the on premise installer to be more fault tolerant when creating the database [IN:8600]
+    - Improve the on premise installer to log out more information from SQL Server to aid in troubleshooting [IN:8612]
+    - Improve usability of the HTML report view by making the report spacing wider and easy to scroll horizontally [IN:8530]
+    - Prevent users from being able to paste a screenshot into rich text fields of program milestones and capabilities [IN:8618]
+    - Remove the tag cloud product home page widget and the document list page tag cloud sidebar graph [IN:8882]
+    - Update JiraDataSync explanation notes in Spira to match updates to the data sync [IN:8942]
+    - Update the field name from "ModifiedDate" to "Last Updated" on the capability list page [IN:8620]
+
+
 ## Version 7.9.0.1 (October 2023)
 
 !!! bug "Bug fixes"
@@ -264,7 +337,7 @@
         - As a task board user, I can change the way a task card looks, so I can see the most meaningful information at that moment [RQ:4411]
         - As a task board user, I can view more information about a task and, if I have permissions, edit the task right from the task board, so I can work more efficiently [RQ:4412]
 
-    * **Administration (SpiraPlan only)**
+    * **Administration <span class="pill">SpiraPlan</span>**
 
         - As an administrator, I want to see a [list of changes made in the system](../../Spira-Administration-Guide/System/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
@@ -361,12 +434,12 @@
 
             - When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]
             - Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]
-            - Teams/Tracks Support in Boards (SpiraPlan only) [RQ:2316]
+            - Teams/Tracks Support in Boards <span class="pill">SpiraPlan</span> [RQ:2316]
 
     * **System Administration**
 
         - System admins [can enable or disable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users [RQ:4317]
-        - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) (SpiraPlan only) [RQ:3689]
+        - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) <span class="pill">SpiraPlan</span> [RQ:3689]
         - Product admins can [associate product users to specific teams](../../Spira-Administration-Guide/Product-Users/#team-membership) [RQ:3690]
 
 
@@ -407,7 +480,7 @@
 ## Version 7.2 (October 2022)
 
 !!! info "Summary"
-    Manage products in a whole new way (SpiraPlan only). New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more.
+    Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more. <span class="pill">SpiraPlan</span>
 
     Along with existing support for creating and editing dynamic documents inside Spira (including diagrams and documents), the new spreadsheet editor lets you create simple spreadsheets to better organize your teams and track work. You can have multiple sheets, apply formatting to cells, use a wide number of functions, and even import from and export to Excel spreadsheets.
 

@@ -284,8 +284,7 @@ For example:
 -   `select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_GROUP\_ID = ${ProjectGroupId}` will display all the requirements in the specific program
 -   `select value R from SpiraTestEntities.R\_Requirements as R` will display all the requirements in the entire system
 
-For more information on creating custom report queries, please refer to the knowledge base articles on the Inflectra customer support website:
-<http://www.inflectra.com/Support>.
+Follow our [detailed reporting tutorials](../../Reporting/Custom-Report-Tutorial) to learn more.
 
 !!! warning 
     If you create a report that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.
@@ -302,7 +301,7 @@ To add a new graph, click on the "Add New Custom Graph" option in the bottom of 
 
 ![](img/System_Reporting_91.png)
 
-This is the same screen you will see if you click on the **Edit** button for an existing graph. In addition, the graph list page has the following additional operations:
+This is the same screen you will see if you click on the **Edit** button for an existing graph (note that the Workspace field can only be edited when you first create the custom graph). In addition, the graph list page has the following additional operations:
 
 -   **Clone**: this will make a copy of the graph with '- Copy' appended to the name
 -   **Delete**: this will permanently delete the selected custom graph.
@@ -314,6 +313,7 @@ On the graph editing page, you can enter the following fields:
 -   **Name**: This is the short name of the graph that will be displayed to users when they choose to display a custom graph.
 -   **Description**: This is the longer description of the graph, and should be used to explain what the data in the graph shows, what the purpose of the graph is and how the data should be interpreted. This is what the user will see when they click on the help link on the graph.
 -   **Active**: If you set this to "No", the graph will not be accessible by end users
+-   **Workspace**: select which workspace reporting page the graph should be available in (product by default). If the graph will show program level data set this to program, so it will be available on the program reporting page.
 -   **Position**: use this to specify the relative position of the graph in the list of custom graphs.
 -   **Query**: this is where you enter the actual query used to generate the graph data. We shall discuss this below.
 

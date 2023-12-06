@@ -27,6 +27,9 @@
   /* Code block color shades */
   --md-code-bg-color:                  hsla(0, 0%, 92.5%, 0.5);
   --md-code-fg-color:                  hsla(200, 18%, 26%, 1);
+
+  /* Inflectra colors*/
+  --yolk:                              #fdcb26;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,4 +67,13 @@
 .section-break {
   border-bottom: 2px solid var(--md-default-fg-color);
   padding: 2rem 0 .5rem 0;
+}
+
+.pill {
+  background-color: var(--yolk);
+  border-radius: 0.25rem;
+  font-size: 66%;
+  font-weight: bold;
+  padding: 0.125rem 0.5rem;
+  vertical-align: middle;
 }
