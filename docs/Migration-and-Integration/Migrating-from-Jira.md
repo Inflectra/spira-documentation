@@ -1,12 +1,13 @@
 #  Migrating from Atlassian Jira
 
-This section outlines how to use the included Migration Tool for importing projects, versions, requirements, issues, tasks and associated attachments from Atlassian Jira to SpiraTeam.
+This guide explains how to use Inflectra's "Jira Migration Tool" for importing projects, versions, requirements, issues, tasks and associated attachments from Atlassian Jira to SpiraTeam. This tool works with Jira Cloud, Server and Data Center editions.
 
-*Note: This migration tool works with Jira Cloud, Server and Data Center editions.*
+!!! info "Advanced Migration"
+    If the functions of this migration tool are not sufficient for your needs, please consider using our "[Advanced Jira to Spira Migration Tool](https://github.com/Inflectra/spira-jira-migration-advanced)". This is an open source tool specifically for migration from Jira Server/DataCenter. It is developed by Inflectra's partner Tietoevry.
 
 ## Installing the Jira Migration Tool
 
-This section outlines how to install the migration tool for Jira onto a workstation so that you can then migrate whole projects from Jira to either SpiraTeam or SpiraPlan (hereafter referred to as SpiraTeam). It assumes that you already have a working installation of SpiraTeam v6.0 or later and a working version of Jira Cloud, Server or Data Center. 
+This guide outlines how to install the migration tool for Jira onto a workstation so that you can then migrate whole projects from Jira to either SpiraTeam or SpiraPlan (hereafter referred to as SpiraTeam). It assumes that you already have a working installation of SpiraTeam v6.0 or later and a working version of Jira Cloud, Server or Data Center. 
 
 !!! warning "Minimum Version of Spira"
     **You must be on at least SpiraTeam 6.13 to use this tool**. If you have an earlier version of SpiraTeam you will need to upgrade to at least v6.13 before trying to migrate projects.

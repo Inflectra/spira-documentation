@@ -2,7 +2,7 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
 ## December 2023
-- **[Jira Cloud DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud) v6.0 and - **[Jira Server DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+) v6: these updates includes a number of enhancements and bug fixes:
+- **[Jira Cloud DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud) v6.0** and - **[Jira Server DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+) v6**: these updates includes a number of enhancements and bug fixes:
 
     - Add support for JIRA estimate fields [IN:6345]
     - Add the ability to sync requirements and not import new incidents with a new dedicated "NoIncidents" sync mode [IN:6341]
@@ -14,7 +14,8 @@ This page shows summary information about releases in Spira's addons, data syncs
     - Improve logging by reducing warning entries for similar issues [IN:8815]
     - Improve the names of the different data sync modes to be more meaningful for end users (True becomes noRequirements and Both becomes Bidirectional) [IN:8936]
 
-- [Jira Configuration Helper](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/#jira-configuration-helper) adds the ability to filter statuses by project [IN:8686]
+- [Jira Configuration Helper](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/#jira-configuration-helper): adds the ability to filter statuses by project [IN:8686]
+- [Jira Migration Tool](../../Migration-and-Integration/Migrating-from-Jira) : fixes not being able to import users from Jira due to breaking changes in Atlassian's APIs [IN:8840]
 
 
 ## May 2023
