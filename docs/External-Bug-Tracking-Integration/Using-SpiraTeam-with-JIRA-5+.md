@@ -159,7 +159,7 @@ Now that the datasync and user mapping has been setup system wide, you are ready
 It is difficult to find the unique IDs for various fields and items in Jira from the web application. To make the product configuration and all the required data mapping easier, please use our helper application. This is a Windows application that connects to your Jira instance (cloud or on premise) and helps you find the IDs for all various fields in Jira.
 
 
-- [Download the helper here](https://www.inflectra.com/Downloads/JiraConfigurationHelper.zip). 
+- [Download the helper here](https://www.inflectra.com/Downloads/JiraConfigurationHelper.msi). 
 - Unzip the contents
 - Run the **JiraConfigurationHelper.exe**. You will see the screen below:
 
