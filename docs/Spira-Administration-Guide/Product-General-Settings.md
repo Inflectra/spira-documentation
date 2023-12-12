@@ -78,32 +78,16 @@ You can revert multiple items from the History List page -- however, the only it
 
 ## Product Associations
 
-By default, all products in SpiraPlan are completely self-contained. Artifacts in one product can only be linked or associated with artifacts in the same product. However, for some customers, they need a way to share artifacts between products. This administration screen lets the product admin specify which other products can access artifacts in the current product:
+By default, all products in SpiraPlan are completely self-contained. Artifacts in one product can only be linked or associated with artifacts in the same product. However, sometimes you may need to share artifacts between products. This administration screen lets the product admin specify which other products can access artifacts in the current product:
 
 ![](img/Product_General_Settings_101.png)
 
 !!! info "Permissions when sharing artifacts across products"
-    When you share artifacts from the current product to another product, the permissions and membership in the other product determine who can see what items. You therefore need to think about the impact of this before enabling cross product associations.
+    When you share artifacts from the current product to another product, the permissions and membership in the other product determine who can see what items. This gives admins the power to manage who can see what artifacts from any associated products. You therefore need to think about the impact of this before enabling cross product associations.
 
-    For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product B shares its requirements with Product A, anyone who can see Product A's requirements (like Marie can) will now be able to see (not edit - only see) all of Product B's requirements too.
+    For example: Marie is a member of Product A and can see its requirements. She is not a member of Product B and cannot see anything in Product B at all. If Product B shares its requirements with Product A, Marie can see Product A's requirements *and* can also now see (not edit - only see) all of Product B's requirements too. Someone who can only see Product B and not Product A, will still only be able to see requirements in Product B. To change this, you will need to *also* associate requirements in Product A to Product B.
 
-### What artifacts can be shared across products
-You can share the following artifacts from one product to another:
-
-- Incidents
-- Requirements
-- Risks
-- Tasks
-- Test Cases
-
-When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts in a number of places in the other product (the one being shared with). For example:
-
-- Incidents: from the association panels of incidents, requirements, and risks
-- Requirements: from the association panels of incidents, risks, and test cases; from the requirement coverage panel of test cases; by selecting "All Products" in the upper right on the requirement list page
-- Risks: from the association panels of incidents, requirements, test cases, and risks
-- Tasks: from the association panels of incidents and tasks
-- Test Cases: from the test coverage panel of requirements; from the association panel of risks
-
+Product Associations are a one-way relation only. This is very important. It means that a product admin in one product decides to give access to view relevant artifacts to the receiving product. But doing so, does not change, in any way, who can view artifacts from the receiving product. To do that, the receiving product's admin needs to add associations.
 
 ### How to share artifacts with another product
 
@@ -119,7 +103,37 @@ When you click the 'Add' button, SpiraPlan will add the new product association 
 
 You can change the product association (for example to change which artifacts are shared) by clicking on the 'Edit' button to the right. This updates the association list.
 
-To remove an association, simply select its checkbox and click 'Remove'.
+To remove an association, select its checkbox and click 'Remove'.
+
+
+### What artifacts can be shared across products
+You can share the following artifacts from one product to another:
+
+- Incidents
+- Requirements
+- Risks
+- Tasks
+- Test Cases
+
+When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).
+
+- **Incidents**: from the association panels of incidents, requirements, and risks
+
+- **Requirements**: 
+  
+    - from the association panels of incidents, risks, and test cases
+    - from the requirement coverage panel of test cases
+    - by selecting "All Products" in the upper right on the requirement list page
+
+    ![](img/Product_General_Settings_101_3.png)
+
+- **Risks**: from the association panels of incidents, requirements, test cases, and risks
+- **Tasks**: from the association panels of incidents and tasks
+- **Test Cases**: from the test coverage panel of requirements; from the association panel of risks
+
+To see artifacts from other products from association panels and similar parts of the application, click the dropdown that by default will say "Current Product". This will show you the list of associated products that you can select.
+
+![](img/Product_General_Settings_101_4.png)
 
 
 ## Data Synchronization
