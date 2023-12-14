@@ -36,6 +36,8 @@ Provide audit tracking of changes made by administrators, focused on product rol
 
 Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
 
+Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
+
 ## 2025
 Add functionality to portfolios with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
 
