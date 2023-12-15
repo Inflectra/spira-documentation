@@ -13,7 +13,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | ------------- | -------------------------- |
 | Project       | Product                    |
 | Users         | Users                      |
-| Sprints       | Releases                   |
+| Versions      | Releases                   |
 | Issues        | Incidents and Requirements |
 | Sub-tasks     | Tasks                      |
 | Comments      | Comments                   |
