@@ -1,5 +1,25 @@
 # Release Notes for Spira v7
 
+## Version 7.11 (January 2024)
+
+!!! success "New Features"
+    - Add a security setting to let system admins enforce users to login using an OAuth Login Provider [RQ:4707]
+    - Update the fonts to a consolidated and more legible font [IN:8832]
+
+??? bug "Bug fixes and enhancements"
+    - Add extra information to the [user custom report table](../../Reporting/Custom-Report-Tables/#users) to make it easier for report admins to extract and analyze user information [IN:8836]
+    - Fix exploratory test execution when moving between steps so that rich text boxes of linked test steps are set to read only and the incident form is cleared [IN:8829]
+    - Fix test case, test set, and task reports so that reports can be filtered correctly by folder (introduced in 7.10) [IN:9078]
+    - Fix the program reporting page from showing an error message when adding a program custom graph [IN:9032]
+    - Fix the v7 API so that when getting workflow transitions, all artifacts only return data about which roles can execute the transition, and not also which roles will be notified of a transition [IN:9086]
+    - Fix the v7 API to improve handling when adding the first status or type for each relevant artifact in a completely blank template [IN:9040]
+    - Fix the v7 API to update incident workflow field and custom property states to match changes on status IDs to improve reliability and consistency [IN:9108]
+    - Fix the v7 REST API to handle receiving branch_ids in the url that have "/" in them, by accepting ".." to represent the "/" [IN:9087]
+    - Improve manual test execution performance for larger products by lazy loading releases and users [IN:8941]
+    - Localize the program report configuration page report elements [IN:8953]
+    - Update v7 API incident status creation handling to make a created status the default if it is the first status created in a template [IN:9067]
+
+
 ## Version 7.10 (December 2023)
 
 !!! info "Summary"
