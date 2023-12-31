@@ -10,9 +10,9 @@ well.
 ## Installing the pytest plugin
 
 This section outlines how to install the SpiraTest plugin for pytest. It
-assumes that you already have a working installation of SpiraTest v2.3
+assumes that you already have a working installation of SpiraTest v6.0
 or later. If you have an earlier version of SpiraTest you will need to
-upgrade to at least v2.3 before trying to use this plugin. You will also
+upgrade to at least v6.0 before trying to use this plugin. You will also
 need to have Python (with pip) and pytest version 3.0 or later.
 
 To obtain the latest version of the SpiraTest plugin, simply run the
