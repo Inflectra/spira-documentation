@@ -8,20 +8,11 @@
       
       
       
+      
         <link rel="canonical" href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11/">
       
-      
-        <link rel="prev" href="../Using-SpiraTeam-with-Mantis/">
-      
-      
-        <link rel="next" href="../Using-SpiraTeam-with-Redmine/">
-      
-      
-        
-      
-      
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10+insiders-4.43.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -29,33 +20,33 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0ab26e37.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"IBM Plex Mono"}</style>
       
+    
     
     
       <link rel="stylesheet" href="../../stylesheets/spira.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
   
 
 
@@ -68,9 +59,6 @@
     })(window,document,'script','dataLayer','GTM-NG49V2B');
     <!-- End Google Tag Manager -->
 </script>
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
 
     
     
@@ -82,8 +70,10 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="amber">
   
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -99,11 +89,6 @@
     <div data-md-component="announce">
       
     </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
     
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG49V2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--
   Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
@@ -132,7 +117,7 @@
 <header class="md-header" data-md-component="header">
   <nav
     class="md-header__inner md-grid"
-    aria-label="Header"
+    aria-label=""
   >
 
     <!-- Link to home -->
@@ -150,7 +135,7 @@
 
     <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
 
     <!-- Header title -->
@@ -179,52 +164,15 @@
 
     <!-- Button to open search modal -->
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-
-      <!-- Search interface -->
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
 
     <!-- Repository information -->
     
       <div class="md-header__source">
-        <a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-component="source">
+        
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Inflectra
@@ -256,7 +204,6 @@
                     
 
 
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="SpiraDocs" class="md-nav__button md-logo" aria-label="SpiraDocs" data-md-component="logo">
@@ -268,10 +215,11 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-component="source">
+      
+<a href="https://www.inflectra.com" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     Inflectra
@@ -283,5441 +231,3032 @@
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          User Manual
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Manual" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Manual
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    User Manual
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    User Manual
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use this manual
-  
-
-    
-  </span>
-  
-  
-
+        How to use this manual
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Functionality-Overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Functionality Overview
-  
-
-    
-  </span>
-  
-  
-
+        Functionality Overview
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Application-Wide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Common Elements Across the Application
-  
-
-    
-  </span>
-  
-  
-
+        Common Elements Across the Application
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/User-Product-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    User Management
-  
-
-    
-  </span>
-  
-  
-
+        User Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Products" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Products
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Products
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Product-Homepage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Homepage
-  
-
-    
-  </span>
-  
-  
-
+        Homepage
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_2" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_2">
+          Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planning" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_5_2" id="__nav_1_5_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Planning
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Requirements-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirements Management
-  
-
-    
-  </span>
-  
-  
-
+        Requirements Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Release-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Release Management
-  
-
-    
-  </span>
-  
-  
-
+        Release Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Document-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Document Management
-  
-
-    
-  </span>
-  
-  
-
+        Document Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Planning-Board/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning Board
-  
-
-    
-  </span>
-  
-  
-
+        Planning Board
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_3" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_3" type="checkbox" id="__nav_1_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_3">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Testing" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_5_3" id="__nav_1_5_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Testing
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Testing
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Test-Case-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Case Management
-  
-
-    
-  </span>
-  
-  
-
+        Test Case Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Test-Execution/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Execution
-  
-
-    
-  </span>
-  
-  
-
+        Test Execution
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Test-Set-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Set Management
-  
-
-    
-  </span>
-  
-  
-
+        Test Set Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Test-Run-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Run Management
-  
-
-    
-  </span>
-  
-  
-
+        Test Run Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Automation-Host-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Automation Host Management
-  
-
-    
-  </span>
-  
-  
-
+        Automation Host Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Test-Configuration-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Configuration Management
-  
-
-    
-  </span>
-  
-  
-
+        Test Configuration Management
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_4" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_4" type="checkbox" id="__nav_1_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_4">
+          Developing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developing" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_5_4" id="__nav_1_5_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Developing
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Developing
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Source-Code/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Source Code
-  
-
-    
-  </span>
-  
-  
-
+        Source Code
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Commits/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Commits
-  
-
-    
-  </span>
-  
-  
-
+        Commits
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Pull-Requests/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pull Requests
-  
-
-    
-  </span>
-  
-  
-
+        Pull Requests
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_5" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5_5">
+          Tracking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tracking" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tracking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_5_5" id="__nav_1_5_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Tracking
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tracking
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Incident-Tracking/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Incident Tracking
-  
-
-    
-  </span>
-  
-  
-
+        Incident Tracking
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Risks-Management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Risk Management
-  
-
-    
-  </span>
-  
-  
-
+        Risk Management
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Task-Tracking/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Task Tracking
-  
-
-    
-  </span>
-  
-  
-
+        Task Tracking
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Resource-Tracking/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Resource Tracking
-  
-
-    
-  </span>
-  
-  
-
+        Resource Tracking
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Reports-Center/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Reporting
-  
-
-    
-  </span>
-  
-  
-
+        Reporting
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Programs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Programs
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Programs
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Homepage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Homepage
-  
-
-    
-  </span>
-  
-  
-
+        Homepage
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Products/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Products
-  
-
-    
-  </span>
-  
-  
-
+        Products
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Capabilities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Capabilities
-  
-
-    
-  </span>
-  
-  
-
+        Capabilities
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Milestones/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Program Milestones
-  
-
-    
-  </span>
-  
-  
-
+        Program Milestones
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Releases/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Releases
-  
-
-    
-  </span>
-  
-  
-
+        Releases
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Planning-Board/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning Board
-  
-
-    
-  </span>
-  
-  
-
+        Planning Board
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Incidents/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Incidents
-  
-
-    
-  </span>
-  
-  
-
+        Incidents
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Program-Reports/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Reporting
-  
-
-    
-  </span>
-  
-  
-
+        Reporting
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Portfolio-Homepage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Portfolio Homepage
-  
-
-    
-  </span>
-  
-  
-
+        Portfolio Homepage
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Enterprise-Homepage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Enterprise Homepage
-  
-
-    
-  </span>
-  
-  
-
+        Enterprise Homepage
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Mobile-Access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Mobile Access
-  
-
-    
-  </span>
-  
-  
-
+        Mobile Access
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Keyboard Shortcuts
-  
-
-    
-  </span>
-  
-  
-
+        Keyboard Shortcuts
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Tips and Tricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tips and Tricks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tips and Tricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Tips and Tricks
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tips and Tricks
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Users-orientation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Moving Around the Application
-  
-
-    
-  </span>
-  
-  
-
+        Moving Around the Application
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Users-profile-management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Managing Your User Profile
-  
-
-    
-  </span>
-  
-  
-
+        Managing Your User Profile
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Admins-orientation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting to Know Administration
-  
-
-    
-  </span>
-  
-  
-
+        Getting to Know Administration
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Admins-templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Template Administration
-  
-
-    
-  </span>
-  
-  
-
+        Template Administration
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Permissions-Workflows/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Permissions & Workflows
-  
-
-    
-  </span>
-  
-  
-
+        Permissions & Workflows
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Requirements/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirements
-  
-
-    
-  </span>
-  
-  
-
+        Requirements
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Testing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Testing
-  
-
-    
-  </span>
-  
-  
-
+        Testing
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Login-providers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Login Providers (Oauth)
-  
-
-    
-  </span>
-  
-  
-
+        Login Providers (Oauth)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../HowTo-Guides/Integrations-Troubleshoot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Troubleshooting Integrations
-  
-
-    
-  </span>
-  
-  
-
+        Troubleshooting Integrations
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Quick Start Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quick Start Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Quick Start Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Quick Start Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraPlan-Quick-Start-Guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
+        Introduction
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraPlan-Quick-Start-Guide/plan/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Plan
-  
-
-    
-  </span>
-  
-  
-
+        Plan
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraPlan-Quick-Start-Guide/do-the-work/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Do the Work
-  
-
-    
-  </span>
-  
-  
-
+        Do the Work
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraPlan-Quick-Start-Guide/test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Testing
-  
-
-    
-  </span>
-  
-  
-
+        Testing
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraPlan-Quick-Start-Guide/review/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Final Review
-  
-
-    
-  </span>
-  
-  
-
+        Final Review
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Admin Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Admin Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Admin Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Admin Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Admin Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use this guide
-  
-
-    
-  </span>
-  
-  
-
+        How to use this guide
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Installing-SpiraPlan/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Installing Spira
-  
-
-    
-  </span>
-  
-  
-
+        Installing Spira
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Administration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    System Administration
-  
-
-    
-  </span>
-  
-  
-
+        System Administration
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          System
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="System" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          System
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    System
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    System
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Workspaces/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Workspaces
-  
-
-    
-  </span>
-  
-  
-
+        Workspaces
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Home/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    System Home page
-  
-
-    
-  </span>
-  
-  
-
+        System Home page
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Users/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Users
-  
-
-    
-  </span>
-  
-  
-
+        Users
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    System
-  
-
-    
-  </span>
-  
-  
-
+        System
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Integration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Integration
-  
-
-    
-  </span>
-  
-  
-
+        Integration
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Reporting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Reporting
-  
-
-    
-  </span>
-  
-  
-
+        Reporting
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/System-Custom-Properties/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Properties
-  
-
-    
-  </span>
-  
-  
-
+        Custom Properties
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Product
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Product" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Product
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Product
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Product
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Product-Home/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Home page
-  
-
-    
-  </span>
-  
-  
-
+        Home page
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Product-General-Settings/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    General Settings
-  
-
-    
-  </span>
-  
-  
-
+        General Settings
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Product-Users/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Users
-  
-
-    
-  </span>
-  
-  
-
+        Users
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Product-Planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Planning
-  
-
-    
-  </span>
-  
-  
-
+        Planning
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Product-Changing-Template/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Changing Templates
-  
-
-    
-  </span>
-  
-  
-
+        Changing Templates
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Template
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Template" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Template
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Template
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Template
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Home/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Home page
-  
-
-    
-  </span>
-  
-  
-
+        Home page
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Requirements/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirements
-  
-
-    
-  </span>
-  
-  
-
+        Requirements
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Releases/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Releases
-  
-
-    
-  </span>
-  
-  
-
+        Releases
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Documents/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Documents
-  
-
-    
-  </span>
-  
-  
-
+        Documents
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Test-Cases/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Cases
-  
-
-    
-  </span>
-  
-  
-
+        Test Cases
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Incidents/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Incidents
-  
-
-    
-  </span>
-  
-  
-
+        Incidents
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Tasks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Tasks
-  
-
-    
-  </span>
-  
-  
-
+        Tasks
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Risks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Risks
-  
-
-    
-  </span>
-  
-  
-
+        Risks
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Custom-Properties/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Properties
-  
-
-    
-  </span>
-  
-  
-
+        Custom Properties
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Template-Notifications/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Notifications
-  
-
-    
-  </span>
-  
-  
-
+        Notifications
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Program
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Program" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Program
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Program
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Program
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Program-Capabilities/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Capabilities
-  
-
-    
-  </span>
-  
-  
-
+        Capabilities
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Spira-Administration-Guide/Program-Milestones/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Program Milestones
-  
-
-    
-  </span>
-  
-  
-
+        Program Milestones
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          SpiraApps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SpiraApps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          SpiraApps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    SpiraApps
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    SpiraApps
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction to SpiraApps
-  
-
-    
-  </span>
-  
-  
-
+        Introduction to SpiraApps
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/ChatGPT/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ChatGPT
-  
-
-    
-  </span>
-  
-  
-
+        ChatGPT
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/FMEA/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    FMEA
-  
-
-    
-  </span>
-  
-  
-
+        FMEA
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/GitLab/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitLab
-  
-
-    
-  </span>
-  
-  
-
+        GitLab
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/GitHub/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub
-  
-
-    
-  </span>
-  
-  
-
+        GitHub
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/CircleCI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CircleCI
-  
-
-    
-  </span>
-  
-  
-
+        CircleCI
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/Default-Descriptions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Default Descriptions
-  
-
-    
-  </span>
-  
-  
-
+        Default Descriptions
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/Task-Test-Presets/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Task and Test Presets
-  
-
-    
-  </span>
-  
-  
-
+        Task and Test Presets
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/Requirement-Multi-Approvers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirement Multi Approvers
-  
-
-    
-  </span>
-  
-  
-
+        Requirement Multi Approvers
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/OctoPerf/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    OctoPerf
-  
-
-    
-  </span>
-  
-  
-
+        OctoPerf
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraApps/WorX/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Worx
-  
-
-    
-  </span>
-  
-  
-
+        Worx
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Reporting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reporting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Reporting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Reporting
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Reporting
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Report-Tutorial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Reports Tutorial
-  
-
-    
-  </span>
-  
-  
-
+        Custom Reports Tutorial
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Graph-Tutorial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Graph Tutorial
-  
-
-    
-  </span>
-  
-  
-
+        Custom Graph Tutorial
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/OData-Tutorial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    OData Tutorial
-  
-
-    
-  </span>
-  
-  
-
+        OData Tutorial
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/Understanding-Entity-SQL/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Understanding Entity SQL
-  
-
-    
-  </span>
-  
-  
-
+        Understanding Entity SQL
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Reporting-Tokens/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Report Tokens
-  
-
-    
-  </span>
-  
-  
-
+        Custom Report Tokens
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Reporting/Custom-Report-Tables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Available Report Tables
-  
-
-    
-  </span>
-  
-  
-
+        Available Report Tables
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Optional Features" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Optional Features
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Optional Features
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          TaraVault
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TaraVault" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          TaraVault
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    TaraVault
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    TaraVault
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../TaraVault-User-Manual/Activating-TaraVault/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Activating
-  
-
-    
-  </span>
-  
-  
-
+        Activating
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../TaraVault-User-Manual/Provisioning-Projects-%26-Users/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Provisioning Projects & Users
-  
-
-    
-  </span>
-  
-  
-
+        Provisioning Projects & Users
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../TaraVault-User-Manual/Using-Git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Using Git
-  
-
-    
-  </span>
-  
-  
-
+        Using Git
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../TaraVault-User-Manual/Using-Subversion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Using Subversion
-  
-
-    
-  </span>
-  
-  
-
+        Using Subversion
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          RemoteLaunch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="RemoteLaunch" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          RemoteLaunch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    RemoteLaunch
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    RemoteLaunch
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/RemoteLaunch-Guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Guide
-  
-
-    
-  </span>
-  
-  
-
+        Guide
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/HP-UFT--QTP/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    UFT/QTP
-  
-
-    
-  </span>
-  
-  
-
+        UFT/QTP
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/TestComplete/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestComplete
-  
-
-    
-  </span>
-  
-  
-
+        TestComplete
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Selenium/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Selenium
-  
-
-    
-  </span>
-  
-  
-
+        Selenium
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Squish/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Squish
-  
-
-    
-  </span>
-  
-  
-
+        Squish
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Command-Line/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Command-Line
-  
-
-    
-  </span>
-  
-  
-
+        Command-Line
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Eggplant/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Eggplant
-  
-
-    
-  </span>
-  
-  
-
+        Eggplant
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/LoadRunner/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    LoadRunner
-  
-
-    
-  </span>
-  
-  
-
+        LoadRunner
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/SoapUI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    SoapUI
-  
-
-    
-  </span>
-  
-  
-
+        SoapUI
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/FitNesse/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    FitNesse
-  
-
-    
-  </span>
-  
-  
-
+        FitNesse
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/NeoLoad/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    NeoLoad
-  
-
-    
-  </span>
-  
-  
-
+        NeoLoad
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Tosca/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Tosca
-  
-
-    
-  </span>
-  
-  
-
+        Tosca
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/JMeter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    JMeter
-  
-
-    
-  </span>
-  
-  
-
+        JMeter
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Ranorex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Ranorex
-  
-
-    
-  </span>
-  
-  
-
+        Ranorex
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Rational-Functional-Tester/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Rational Functional Tester
-  
-
-    
-  </span>
-  
-  
-
+        Rational Functional Tester
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/WebLOAD/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    WebLOAD
-  
-
-    
-  </span>
-  
-  
-
+        WebLOAD
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/Worksoft-Certify/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Worksoft Certify
-  
-
-    
-  </span>
-  
-  
-
+        Worksoft Certify
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/ZAPTEST/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ZAPTEST
-  
-
-    
-  </span>
-  
-  
-
+        ZAPTEST
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/TestPartner/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestPartner
-  
-
-    
-  </span>
-  
-  
-
+        TestPartner
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/BadBoy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    BadBoy
-  
-
-    
-  </span>
-  
-  
-
+        BadBoy
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/TestingAnywhere/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestingAnywhere
-  
-
-    
-  </span>
-  
-  
-
+        TestingAnywhere
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../RemoteLaunch-User-Guide/SmarteScript/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    SmarteScript
-  
-
-    
-  </span>
-  
-  
-
+        SmarteScript
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../SpiraCapture/User-Guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    SpiraCapture
-  
-
-    
-  </span>
-  
-  
-
+        SpiraCapture
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
     
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Integrations
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Integrations
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-Jira-Cloud/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jira Cloud
-  
-
-    
-  </span>
-  
-  
-
+        Jira Cloud
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-JIRA-5%2B/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jira Server
-  
-
-    
-  </span>
-  
-  
-
+        Jira Server
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Testing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Testing
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Testing
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-NUnit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    NUnit
-  
-
-    
-  </span>
-  
-  
-
+        NUnit
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-JUnit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    JUnit
-  
-
-    
-  </span>
-  
-  
-
+        JUnit
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-TestNG/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestNG
-  
-
-    
-  </span>
-  
-  
-
+        TestNG
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Selenium/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Selenium
-  
-
-    
-  </span>
-  
-  
-
+        Selenium
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-PyUnit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    PyUnit
-  
-
-    
-  </span>
-  
-  
-
+        PyUnit
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-PyTest/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    PyTest
-  
-
-    
-  </span>
-  
-  
-
+        PyTest
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-MS-Test/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    MS-Test
-  
-
-    
-  </span>
-  
-  
-
+        MS-Test
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Ruby-TestUnit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Ruby Test::Unit
-  
-
-    
-  </span>
-  
-  
-
+        Ruby Test::Unit
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Perl-TAP/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Perl TAP
-  
-
-    
-  </span>
-  
-  
-
+        Perl TAP
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-PHPUnit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    PHPUnit
-  
-
-    
-  </span>
-  
-  
-
+        PHPUnit
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-UnitJS-%26-NodeJS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    UnitJS & NodeJS
-  
-
-    
-  </span>
-  
-  
-
+        UnitJS & NodeJS
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Cypress/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Cypress
-  
-
-    
-  </span>
-  
-  
-
+        Cypress
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Jasmine/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jasmine
-  
-
-    
-  </span>
-  
-  
-
+        Jasmine
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Integrating-with-Jest/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jest
-  
-
-    
-  </span>
-  
-  
-
+        Jest
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Unit-Testing-Integration/Using-Test-Runner-For-Excel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Test Runner Excel Add-in
-  
-
-    
-  </span>
-  
-  
-
+        Test Runner Excel Add-in
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4">
+          IDE Integration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IDE Integration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          IDE Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    IDE Integration
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    IDE Integration
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Visual-Studio-Code/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Visual Studio Code
-  
-
-    
-  </span>
-  
-  
-
+        Visual Studio Code
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Visual-Studio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Visual Studio
-  
-
-    
-  </span>
-  
-  
-
+        Visual Studio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Jetbrains-IDEs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jetbrains
-  
-
-    
-  </span>
-  
-  
-
+        Jetbrains
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Eclipse--Mylyn/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Eclipse
-  
-
-    
-  </span>
-  
-  
-
+        Eclipse
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Visual-Studio-2010/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Visual Studio 2010
-  
-
-    
-  </span>
-  
-  
-
+        Visual Studio 2010
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../IDE-Integration/Visual-Studio-2005---2008/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Visual Studio 2005-2008
-  
-
-    
-  </span>
-  
-  
-
+        Visual Studio 2005-2008
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
     
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" checked>
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_5">
+          Bug Tracking/DataSync
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bug Tracking/DataSync" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bug Tracking/DataSync
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Bug Tracking/DataSync
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Bug Tracking/DataSync
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Setting-up-Data-Synchronization/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Setup
-  
-
-    
-  </span>
-  
-  
-
+        Setup
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-Jira-Cloud/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jira Cloud
-  
-
-    
-  </span>
-  
-  
-
+        Jira Cloud
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-JIRA-5%2B/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jira Server
-  
-
-    
-  </span>
-  
-  
-
+        Jira Server
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTest-with-MS-TFS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Azure DevOps
-  
-
-    
-  </span>
-  
-  
-
+        Azure DevOps
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-Asana/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Asana
-  
-
-    
-  </span>
-  
-  
-
+        Asana
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-Axosoft-14%2B/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Axosoft
-  
-
-    
-  </span>
-  
-  
-
+        Axosoft
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-ClickUp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ClickUp
-  
-
-    
-  </span>
-  
-  
-
+        ClickUp
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-GitHub/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub
-  
-
-    
-  </span>
-  
-  
-
+        GitHub
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-GitLab/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitLab
-  
-
-    
-  </span>
-  
-  
-
+        GitLab
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-Monday/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    monday.com
-  
-
-    
-  </span>
-  
-  
-
+        monday.com
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-Salesforce.com/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Salesforce.com
-  
-
-    
-  </span>
-  
-  
-
+        Salesforce.com
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-ServiceNow/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ServiceNow
-  
-
-    
-  </span>
-  
-  
-
+        ServiceNow
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-VersionOne/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    VersionOne
-  
-
-    
-  </span>
-  
-  
-
+        VersionOne
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-Spira-with-YouTrack/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    YouTrack
-  
-
-    
-  </span>
-  
-  
-
+        YouTrack
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTest-with-Bugzilla/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Bugzilla
-  
-
-    
-  </span>
-  
-  
-
+        Bugzilla
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-ClearQuest/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ClearQuest
-  
-
-    
-  </span>
-  
-  
-
+        ClearQuest
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTest-with-FogBugz/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    FogBugz
-  
-
-    
-  </span>
-  
-  
-
+        FogBugz
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-JIRA-3--4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    JIRA 3, 4
-  
-
-    
-  </span>
-  
-  
-
+        JIRA 3, 4
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-Mantis/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Mantis
-  
-
-    
-  </span>
-  
-  
-
+        Mantis
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
     
@@ -5725,46 +3264,23 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    OnTime
-  
-
-    
-  </span>
-  
-  
-
+          OnTime
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    OnTime
-  
-
-    
-  </span>
-  
-  
-
+        OnTime
       </a>
       
         
+
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
@@ -5781,11 +3297,7 @@
       
         <li class="md-nav__item">
   <a href="#configuring-the-integration-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Integration Service
-      
-    </span>
+    Configuring the Integration Service
   </a>
   
     <nav class="md-nav" aria-label="Configuring the Integration Service">
@@ -5793,44 +3305,28 @@
         
           <li class="md-nav__item">
   <a href="#install-and-configure-the-ontime-sdk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install and Configure the OnTime SDK
-      
-    </span>
+    Install and Configure the OnTime SDK
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#download-the-ontime-plug-in" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Download the OnTime Plug-In
-      
-    </span>
+    Download the OnTime Plug-In
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Service
-      
-    </span>
+    Configuring the Service
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-plug-in" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Plug-In
-      
-    </span>
+    Configuring the Plug-In
   </a>
   
 </li>
@@ -5842,11 +3338,7 @@
       
         <li class="md-nav__item">
   <a href="#configuring-the-data-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Data Mapping
-      
-    </span>
+    Configuring the Data Mapping
   </a>
   
     <nav class="md-nav" aria-label="Configuring the Data Mapping">
@@ -5854,55 +3346,35 @@
         
           <li class="md-nav__item">
   <a href="#configuring-the-project-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Project Mapping
-      
-    </span>
+    Configuring the Project Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-user-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the User Mapping
-      
-    </span>
+    Configuring the User Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-release-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Release Mapping
-      
-    </span>
+    Configuring the Release Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-standard-field-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Standard Field Mapping
-      
-    </span>
+    Configuring the Standard Field Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-custom-property-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Custom Property Mapping
-      
-    </span>
+    Configuring the Custom Property Mapping
   </a>
   
 </li>
@@ -5914,11 +3386,7 @@
       
         <li class="md-nav__item">
   <a href="#enabling-the-data-synchronization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling the Data-Synchronization
-      
-    </span>
+    Enabling the Data-Synchronization
   </a>
   
     <nav class="md-nav" aria-label="Enabling the Data-Synchronization">
@@ -5926,22 +3394,14 @@
         
           <li class="md-nav__item">
   <a href="#starting-the-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Starting the Service
-      
-    </span>
+    Starting the Service
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#using-spirateam-with-ontime" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using SpiraTeam with OnTime
-      
-    </span>
+    Using SpiraTeam with OnTime
   </a>
   
 </li>
@@ -5958,1879 +3418,1053 @@
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-Redmine/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Redmine
-  
-
-    
-  </span>
-  
-  
-
+        Redmine
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../Using-SpiraTeam-with-IBM-RTC/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    RTC
-  
-
-    
-  </span>
-  
-  
-
+        RTC
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6">
+          Source Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Source Code" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Source Code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Source Code
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Source Code
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-Git/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Git
-  
-
-    
-  </span>
-  
-  
-
+        Git
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-Subversion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Subversion
-  
-
-    
-  </span>
-  
-  
-
+        Subversion
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-Mercurial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Mercurial
-  
-
-    
-  </span>
-  
-  
-
+        Mercurial
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-Perforce/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Perforce
-  
-
-    
-  </span>
-  
-  
-
+        Perforce
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-TFS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TFS
-  
-
-    
-  </span>
-  
-  
-
+        TFS
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-CVS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CVS
-  
-
-    
-  </span>
-  
-  
-
+        CVS
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-VSS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    VSS
-  
-
-    
-  </span>
-  
-  
-
+        VSS
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Version-Control-Integration/Integrating-with-Tortoise/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Tortoise
-  
-
-    
-  </span>
-  
-  
-
+        Tortoise
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_7" type="checkbox" id="__nav_8_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_7">
+          Email
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Email" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_7">
+          <span class="md-nav__icon md-icon"></span>
+          Email
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Email
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Email
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Email-Integration/Installing-the-Email-Integration-Service/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Installing
-  
-
-    
-  </span>
-  
-  
-
+        Installing
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Email-Integration/Configuring-the-Email-Integration-Service/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuring
-  
-
-    
-  </span>
-  
-  
-
+        Configuring
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Using
-  
-
-    
-  </span>
-  
-  
-
+        Using
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_8" type="checkbox" id="__nav_8_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_8">
+          Help Desk
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Help Desk" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_8">
+          <span class="md-nav__icon md-icon"></span>
+          Help Desk
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Help Desk
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Help Desk
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Help-Desk-Integration/KronoDesk/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    KronoDesk
-  
-
-    
-  </span>
-  
-  
-
+        KronoDesk
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Help-Desk-Integration/Zendesk/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Zendesk
-  
-
-    
-  </span>
-  
-  
-
+        Zendesk
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_9" type="checkbox" id="__nav_8_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_9">
+          Migration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Migration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_9">
+          <span class="md-nav__icon md-icon"></span>
+          Migration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Migration
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Migration
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Excel (Office 365)
-  
-
-    
-  </span>
-  
-  
-
+        Excel (Office 365)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Google-Sheets/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Google Sheets
-  
-
-    
-  </span>
-  
-  
-
+        Google Sheets
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word-%28Office365%29/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Word (Office 365)
-  
-
-    
-  </span>
-  
-  
-
+        Word (Office 365)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-HP-ALM/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    HP ALM
-  
-
-    
-  </span>
-  
-  
-
+        HP ALM
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-Jira/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jira
-  
-
-    
-  </span>
-  
-  
-
+        Jira
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-MS-Azure-DevOps/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    MS Azure DevOps
-  
-
-    
-  </span>
-  
-  
-
+        MS Azure DevOps
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-qTest/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    qTest
-  
-
-    
-  </span>
-  
-  
-
+        qTest
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-PractiTest/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    PractiTest
-  
-
-    
-  </span>
-  
-  
-
+        PractiTest
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-TestLink/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestLink
-  
-
-    
-  </span>
-  
-  
-
+        TestLink
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-TestRail/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TestRail
-  
-
-    
-  </span>
-  
-  
-
+        TestRail
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-IBM-Rational-Quality-Manager/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    IBM Rational Quality Manager
-  
-
-    
-  </span>
-  
-  
-
+        IBM Rational Quality Manager
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Project-Backup-and-Migration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Project Backup and Migration
-  
-
-    
-  </span>
-  
-  
-
+        Project Backup and Migration
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Microsoft-Excel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Excel (Legacy)
-  
-
-    
-  </span>
-  
-  
-
+        Excel (Legacy)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Microsoft-Word/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Word (Legacy)
-  
-
-    
-  </span>
-  
-  
-
+        Microsoft Word (Legacy)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Importing-from-Microsoft-Project/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Microsoft Project
-  
-
-    
-  </span>
-  
-  
-
+        Microsoft Project
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-MS-Test-Manager/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    MS Test Manager (Legacy)
-  
-
-    
-  </span>
-  
-  
-
+        MS Test Manager (Legacy)
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-HP-QualityCenter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    HP QualityCenter (Legacy)
-  
-
-    
-  </span>
-  
-  
-
+        HP QualityCenter (Legacy)
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_10" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_10" type="checkbox" id="__nav_8_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_10">
+          Build Servers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Build Servers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_10">
+          <span class="md-nav__icon md-icon"></span>
+          Build Servers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Build Servers
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Build Servers
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/Jenkins--Hudson/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jenkins/Hudson
-  
-
-    
-  </span>
-  
-  
-
+        Jenkins/Hudson
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Azure DevOps Pipelines
-  
-
-    
-  </span>
-  
-  
-
+        Azure DevOps Pipelines
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/GitHub-Actions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub Actions
-  
-
-    
-  </span>
-  
-  
-
+        GitHub Actions
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/GitLab-Pipelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    GitLab Pipelines
-  
-
-    
-  </span>
-  
-  
-
+        GitLab Pipelines
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/CircleCI-Pipelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CircleCI Pipelines
-  
-
-    
-  </span>
-  
-  
-
+        CircleCI Pipelines
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/JetBrains-TeamCity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    JetBrains TeamCity
-  
-
-    
-  </span>
-  
-  
-
+        JetBrains TeamCity
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Build-Server-Integration/Atlassian-Bamboo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Atlassian Bamboo
-  
-
-    
-  </span>
-  
-  
-
+        Atlassian Bamboo
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_11" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_11">
+          Requirements
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Requirements" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          Requirements
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_8_11" id="__nav_8_11_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Requirements
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_11">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Requirements
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-DOORS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DOORS
-  
-
-    
-  </span>
-  
-  
-
+        DOORS
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-EnterpriseArchitect/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    EnterpriseArchitect
-  
-
-    
-  </span>
-  
-  
-
+        EnterpriseArchitect
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-ReqIF-Files/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ReqIF Files
-  
-
-    
-  </span>
-  
-  
-
+        ReqIF Files
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-Jama-Contour/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jama Contour
-  
-
-    
-  </span>
-  
-  
-
+        Jama Contour
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-RequisitePro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    RequisitePro
-  
-
-    
-  </span>
-  
-  
-
+        RequisitePro
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../Requirements-Management-Integration/Importing-From-VersionOne/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    VersionOne
-  
-
-    
-  </span>
-  
-  
-
+        VersionOne
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Release Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    Release Notes
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Release Notes
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/roadmap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Product Roadmap
-  
-
-    
-  </span>
-  
-  
-
+        Product Roadmap
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v7/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 7
-  
-
-    
-  </span>
-  
-  
-
+        Version 7
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v6/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 6
-  
-
-    
-  </span>
-  
-  
-
+        Version 6
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v5/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 5
-  
-
-    
-  </span>
-  
-  
-
+        Version 5
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 4
-  
-
-    
-  </span>
-  
-  
-
+        Version 4
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 3
-  
-
-    
-  </span>
-  
-  
-
+        Version 3
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-v2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 2
-  
-
-    
-  </span>
-  
-  
-
+        Version 2
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/release-notes-addons-1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Addons and Integrations
-  
-
-    
-  </span>
-  
-  
-
+        Addons and Integrations
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
+      
+
   
   
   
-    
-    
-    
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    About
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/introduction-to-spira/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction to Spira
-  
-
-    
-  </span>
-  
-  
-
+        Introduction to Spira
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
   
   
   
     <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Legal Notices
-  
-
-    
-  </span>
-  
-  
-
+        Legal Notices
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -7848,6 +4482,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -7863,11 +4498,7 @@
       
         <li class="md-nav__item">
   <a href="#configuring-the-integration-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Integration Service
-      
-    </span>
+    Configuring the Integration Service
   </a>
   
     <nav class="md-nav" aria-label="Configuring the Integration Service">
@@ -7875,44 +4506,28 @@
         
           <li class="md-nav__item">
   <a href="#install-and-configure-the-ontime-sdk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install and Configure the OnTime SDK
-      
-    </span>
+    Install and Configure the OnTime SDK
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#download-the-ontime-plug-in" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Download the OnTime Plug-In
-      
-    </span>
+    Download the OnTime Plug-In
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Service
-      
-    </span>
+    Configuring the Service
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-plug-in" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Plug-In
-      
-    </span>
+    Configuring the Plug-In
   </a>
   
 </li>
@@ -7924,11 +4539,7 @@
       
         <li class="md-nav__item">
   <a href="#configuring-the-data-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Data Mapping
-      
-    </span>
+    Configuring the Data Mapping
   </a>
   
     <nav class="md-nav" aria-label="Configuring the Data Mapping">
@@ -7936,55 +4547,35 @@
         
           <li class="md-nav__item">
   <a href="#configuring-the-project-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Project Mapping
-      
-    </span>
+    Configuring the Project Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-user-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the User Mapping
-      
-    </span>
+    Configuring the User Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-release-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Release Mapping
-      
-    </span>
+    Configuring the Release Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-standard-field-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Standard Field Mapping
-      
-    </span>
+    Configuring the Standard Field Mapping
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configuring-the-custom-property-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring the Custom Property Mapping
-      
-    </span>
+    Configuring the Custom Property Mapping
   </a>
   
 </li>
@@ -7996,11 +4587,7 @@
       
         <li class="md-nav__item">
   <a href="#enabling-the-data-synchronization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling the Data-Synchronization
-      
-    </span>
+    Enabling the Data-Synchronization
   </a>
   
     <nav class="md-nav" aria-label="Enabling the Data-Synchronization">
@@ -8008,22 +4595,14 @@
         
           <li class="md-nav__item">
   <a href="#starting-the-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Starting the Service
-      
-    </span>
+    Starting the Service
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#using-spirateam-with-ontime" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using SpiraTeam with OnTime
-      
-    </span>
+    Using SpiraTeam with OnTime
   </a>
   
 </li>
@@ -8041,15 +4620,12 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
               
-              <article class="md-content__inner md-typeset">
                 
-                  
-
-
-<h1 id="using-spira-with-ontime-11">Using Spira with OnTime 11<a class="headerlink" href="#using-spira-with-ontime-11" title="Permanent link">&para;</a></h1>
+                
+                <h1 id="using-spira-with-ontime-11">Using Spira with OnTime 11<a class="headerlink" href="#using-spira-with-ontime-11" title="Permanent link">&para;</a></h1>
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) in conjunction with the OnTime 11+
 defect tracking system from AxoSoft. The built-in integration service allows the quality assurance team to manage their requirements and test cases in SpiraTeam, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into OnTime.</p>
 <p>Once the incidents are loaded into OnTime as defects, the development team can then manage the lifecycle of these defects in OnTime, and have the status changes in OnTime be reflected back in SpiraTeam.</p>
@@ -8114,11 +4690,11 @@ defect tracking system from AxoSoft. The built-in integration service allows the
 </code></pre></div>
 <p>The sections that need to be verified and possibly changed are marked in yellow above. You need to check the following information:</p>
 <p>The polling interval allows you to specify how frequently the data-synchronization service will ask SpiraTeam and the external system for new data updates. The value is specified in milliseconds and we recommend a value no smaller than 5 minutes (i.e. 300,000ms). The larger the number, the longer it will take for data to be synchronized, but the lower the network and server overhead.</p>
-<p>The base URL to your instance SpiraTeam. It is typically of the form http://&lt;server name>/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.</p>
+<p>The base URL to your instance SpiraTeam. It is typically of the form http://&lt;server name&gt;/SpiraTeam. Make sure that when you enter this URL on a browser on the server itself, the application login page appears.</p>
 <p>A valid login name and password to your instance of SpiraTeam. This user needs to be a member of the project(s) that will be synchronized with OnTime and needs to have at least <strong>Incident create/modify/view</strong> permissions and <strong>Release create/modify/view</strong> permissions in these projects.</p>
 <p>Once you have made these changes, save the file and proceed to the next stage.</p>
 <h3 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h3>
-<p>The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the OnTime server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System > Data Synchronization administration option from the left-hand navigation:</p>
+<p>The next step is to configure the plug-in within SpiraTeam so that the system knows how to access the OnTime server. To start the configuration, please open up SpiraTeam in a web browser, log in using a valid account that has System-Administration level privileges and click on the System &gt; Data Synchronization administration option from the left-hand navigation:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_199.png" /></p>
 <p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
 <p>If you already see an entry for <strong>OnTimeDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the OnTime Data-Synchronization plug-in:</p>
@@ -8132,7 +4708,7 @@ defect tracking system from AxoSoft. The built-in integration service allows the
 <p><strong>Description</strong> -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</p>
 </li>
 <li>
-<p><strong>Connection Info</strong> -- this should the full URL to the OnTime SDK. This is typically something like: http://&lt;OnTime server name>/OnTimeSdk. You may need to check in the IIS Management Console of the OnTime server to verify the virtual directory name.</p>
+<p><strong>Connection Info</strong> -- this should the full URL to the OnTime SDK. This is typically something like: http://&lt;OnTime server name&gt;/OnTimeSdk. You may need to check in the IIS Management Console of the OnTime server to verify the virtual directory name.</p>
 </li>
 <li>
 <p><strong>Login</strong> -- this should be set to the GUID that you specified in the Web.Config file in step 13.1.1 above.</p>
@@ -8172,35 +4748,35 @@ time-zones here.</p>
 <p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
 <p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
-<p>To configure the mapping of users in the two systems, you need to go to Administration > Users > View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing defects in OnTime:</p>
+<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing defects in OnTime:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_203.png" /></p>
 <p>You will notice that below the Active flag for the user is a list of all the configured data-synchronization plug-ins. In the text box next to the OnTime Data-Sync plug-in you need to enter the <strong>Login ID</strong> for this username in OnTime. This will allow the data-synchronization plug-in to know which user in SpiraTeam match which equivalent user in OnTime. Click [Update] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping<a class="headerlink" href="#configuring-the-release-mapping" title="Permanent link">&para;</a></h3>
 <p>When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding Release in OnTime. Similarly if it comes across a new Release in OnTime that it has not seen before, it will create a new Release in SpiraTeam. Therefore when using both systems together, it is recommended that you only enter new Releases in one system and let the data-synchronization service add them to the other system.</p>
-<p>However you may start out with the situation where you already have pre-existing Releases in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore for any Releases/Iterations that already exist in BOTH systems please navigate to Planning > Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
+<p>However you may start out with the situation where you already have pre-existing Releases in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore for any Releases/Iterations that already exist in BOTH systems please navigate to Planning &gt; Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_163.png" /></p>
 <p>In addition to the standard fields and custom properties configured for Releases, you will see an additional text property called "<strong>OnTimeDataSync ID</strong>" that is used to store the mapped external identifier for the equivalent Version in OnTime. You need to locate the ID of the equivalent version in OnTime, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>
 <p><em>Note: The OnTime ID can be found by looking at the URL inside OnTime when choosing to Edit the release in question. The URL will include the section: <strong>ReleaseId=X</strong> where X is the numeric ID of the version inside OnTime:</em></p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_204.png" /></p>
 <h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping<a class="headerlink" href="#configuring-the-standard-field-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration > System > Data Synchronization and click on the "View Project Mappings" for the OnTimeDataSync plug-in entry:</p>
+<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration &gt; System &gt; Data Synchronization and click on the "View Project Mappings" for the OnTimeDataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_201.png" /></p>
 <p>From this screen, you need to click on Priority, Severity and Status in turn to configure their values (OnTime doesn't support different defect types):</p>
 <p>a) Incident Status</p>
 <p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_205.png" /></p>
-<p>The table lists each of the incident statuses available in SpiraTeam and provides you with the ability to enter the matching OnTime defect status names for each one. You can map multiple SpiraTeam fields to the same OnTime fields (e.g. New and Open in SpiraTeam are both equivalent to Open in OnTime), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime > SpiraTeam).</p>
+<p>The table lists each of the incident statuses available in SpiraTeam and provides you with the ability to enter the matching OnTime defect status names for each one. You can map multiple SpiraTeam fields to the same OnTime fields (e.g. New and Open in SpiraTeam are both equivalent to Open in OnTime), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime &gt; SpiraTeam).</p>
 <p>We recommend that you always point the New and Open statuses inside SpiraTeam to point to the "Open" status inside OnTime and make Open in SpiraTeam the Primary status of the two. This is recommended so that as new incidents in SpiraTeam get synched over to OnTime, they will get switched to the Open status in OnTime which will then be synched back to "Open" in SpiraTeam. That way you'll be able to see at a glance which incidents have been synched with OnTime and those that haven't.</p>
 <p><em>Note: The OnTime external key needs to exactly match the display name of the status inside OnTime. If you change the name of a status in OnTime, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>b) Incident Priority</p>
 <p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_206.png" /></p>
-<p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching OnTime priority name for each one. You can map multiple SpiraTeam fields to the same OnTime fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime > SpiraTeam).</p>
+<p>The table lists each of the incident priorities available in SpiraTeam and provides you with the ability to enter the matching OnTime priority name for each one. You can map multiple SpiraTeam fields to the same OnTime fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime &gt; SpiraTeam).</p>
 <p><em>Note: The OnTime external key needs to exactly match the display name of the priority inside OnTime. If you change the name of a priority in OnTime, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>c) Incident Severity</p>
 <p>Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_OnTime_11_207.png" /></p>
-<p>The table lists each of the incident severities available in SpiraTeam and provides you with the ability to enter the matching OnTime severity name for each one. You can map multiple SpiraTeam fields to the same OnTime fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime > SpiraTeam).</p>
+<p>The table lists each of the incident severities available in SpiraTeam and provides you with the ability to enter the matching OnTime severity name for each one. You can map multiple SpiraTeam fields to the same OnTime fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from OnTime &gt; SpiraTeam).</p>
 <p><em>Note: The OnTime external key needs to exactly match the display name of the severity inside OnTime. If you change the name of a severity in OnTime, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping<a class="headerlink" href="#configuring-the-custom-property-mapping" title="Permanent link">&para;</a></h3>
 <p>Now that the various SpiraTeam standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in SpiraTeam that map to custom fields in OnTime and also for custom properties in SpiraTeam that are used to map to standard fields in OnTime (currently only Replication Procedures) that don't exist in SpiraTeam.</p>
@@ -8236,85 +4812,105 @@ time-zones here.</p>
 <p>At this point, the incident should not be acted upon inside SpiraTeam, and all data changes to the defect should be made inside OnTime. To enforce this, you can modify the workflows set up in SpiraTeam so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in SpiraTeam, but will prevent them making changes in conflict with OnTime after that point.</p>
 <p>As the defect progresses through the OnTime workflow, changes to the status, priority, severity, and resolution will be updated automatically in SpiraTeam. In essence, SpiraTeam acts as a read-only viewer of these incidents.</p>
 <p>You are now able to perform test coverage and incident reporting inside SpiraTeam using the test cases managed by SpiraTeam and the incidents managed on behalf of SpiraTeam inside OnTime.</p>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
                 
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+              
+              
+                
+
+
+              
+            </article>
+          </div>
         </div>
         
       </main>
       
-        <footer class="md-footer">
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Using-SpiraTeam-with-Mantis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mantis" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Mantis
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Using-SpiraTeam-with-Redmine/" class="md-footer__link md-footer__link--next" aria-label="Next: Redmine" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Redmine
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      © Copyright 2006-2022 Inflectra Corporation, All Rights Reserved | en-US
-    </div>
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs Insiders
-    </a>
-  
-</div>
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Copyright 2006-2022 Inflectra Corporation, All Rights Reserved | en-US
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
       
-        <div class="md-social">
-  
-    
-    
-    
+  <div class="md-footer-social">
     
       
       
-    
-    <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-    </a>
-  
-    
-    
-    
+        
+        
+      
+      <a href="https://github.com/inflectra" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
     
       
       
-    
-    <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-    </a>
-  
-    
-    
-    
+        
+        
+      
+      <a href="https://twitter.com/inflectra" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
     
       
       
-    
-    <a href="https://www.linkedin.com/company/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-    </a>
-  
-</div>
+        
+        
       
+      <a href="https://www.linkedin.com/company/inflectra-corporation" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
@@ -8323,12 +4919,10 @@ time-zones here.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": {"provider": "mike"}}</script>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.6981e6db.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
