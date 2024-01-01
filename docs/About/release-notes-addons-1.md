@@ -1,6 +1,9 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## January 2024
+- [Robot Framework Integration](../../Unit-Testing-Integration/Integrating-with-Robot-Framework/): New integration with Robot Framework released [RQ:4753].
+
 ## December 2023
 - **[Jira Cloud DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud) v6.0** and - **[Jira Server DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+) v6**: these updates includes a number of enhancements and bug fixes:
 
@@ -16,6 +19,7 @@ This page shows summary information about releases in Spira's addons, data syncs
 
 - [Jira Configuration Helper](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/#jira-configuration-helper): adds the ability to filter statuses by project [IN:8686]
 - [Jira Migration Tool](../../Migration-and-Integration/Migrating-from-Jira) : fixes not being able to import users from Jira due to breaking changes in Atlassian's APIs [IN:8840]
+- [PyTest Integration](../../Unit-Testing-Integration/Integrating-with-PyTest/): fixes a bug reporting back test results with the correct timezone [IN:9119].
 
 
 ## May 2023

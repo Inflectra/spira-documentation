@@ -237,6 +237,7 @@ nav:
     - PyTest: Unit-Testing-Integration\Integrating-with-PyTest.md
     - MS-Test: Unit-Testing-Integration\Integrating-with-MS-Test.md
     - 'Ruby Test::Unit': Unit-Testing-Integration\Integrating-with-Ruby-TestUnit.md
+    - Robot Framework: Unit-Testing-Integration\Integrating-with-Robot-Framework.md
     - Perl TAP: Unit-Testing-Integration\Integrating-with-Perl-TAP.md
     - PHPUnit: Unit-Testing-Integration\Integrating-with-PHPUnit.md
     - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
