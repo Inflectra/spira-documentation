@@ -3,7 +3,7 @@
 ## Version 7.11 (January 2024)
 
 !!! success "New Features"
-    - Add a security setting to let system admins enforce users to login using an OAuth Login Provider [RQ:4707]
+    - Add a security setting to let system admins [enforce users to login using an OAuth Login Provider](../../Spira-Administration-Guide/System/#enforce-provider-login) [RQ:4707]
     - Update the fonts to a consolidated and more legible font [IN:8832]
 
 ??? bug "Bug fixes and enhancements"
