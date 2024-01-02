@@ -2796,6 +2796,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Integrating-with-Robot-Framework/" class="md-nav__link">
+        Robot Framework
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Integrating-with-Perl-TAP/" class="md-nav__link">
         Perl TAP
       </a>
@@ -4423,95 +4437,56 @@
                 
                 <h1 id="integrating-with-pyunit">Integrating with PyUnit<a class="headerlink" href="#integrating-with-pyunit" title="Permanent link">&para;</a></h1>
 <h2 id="installing-the-pyunit-extension">Installing the PyUnit Extension<a class="headerlink" href="#installing-the-pyunit-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Extension for PyUnit
-onto a workstation so that you can then run automated PyUnit tests
-against a Python application and have the results be recorded as test
-runs inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v2.3 or later, and a working Python
-development environment. If you have an earlier version of SpiraTest you
-will need to upgrade to at least v2.3 before trying to use this
-extension.</p>
-<p>To obtain the version of the PyUnit extension that is compatible with
-your version of SpiraTest, you simply need to log-in as a project-level
-administrator to SpiraTest, go to the Administration home page and
-download the PyUnit Extension compressed archive (.zip). This process is
-described in the <em>SpiraTest Administration Guide</em> in more detail.</p>
-<ul>
-<li>Note: there are two versions of the PyUnit extension, one compatible
-with Python 2.x, and one compatible with Python 3.x. Please make
-sure you use the correct version.</li>
-</ul>
-<p>The PyUnit extension is provided as a set of Python source files that
-can be imported into your existing unit tests to add the SpiraTest
-reporting functionality. Once you have downloaded the Zip archive, you
-simply need to uncompress it into a folder of your choice on your local
-system (e.g. C:\Program Files\SpiraTest\PyUnit Extension)</p>
-<p>Now to use the extension within your test cases, you need to first make
-sure that the folder is added to the Python <em>PYTHONPATH</em>. The method for
-doing this is dependent on the platform you're using, so please refer to
-the documentation on <a href="http://www.junit.org">python.org</a> for details on
-the appropriate method for your platform. As an example, on a Windows
-platform, the folder would be added to the PYTHONPATH by typing the
-following:</p>
-<p>set PYTHONPATH=%PYTHONPATH%; C:\Program Files\SpiraTest\PyUnit
-Extension</p>
-<p>Once you have completed this step, you are now ready to begin using your
-PyUnit test fixtures with SpiraTest.</p>
+<p>This section outlines how to install the SpiraTest plugin for Python unittesting (pyunit). It
+assumes that you already have a working installation of SpiraTest v6.0
+or later. If you have an earlier version of SpiraTest you will need to
+upgrade to at least v6.0 before trying to use this plugin. You will also
+need to have Python v3.6 (with pip) or later.</p>
+<p>To obtain the latest version of the SpiraTest plugin, simply run the
+following command:</p>
+<p><code>pip install pyunit-spiratest</code></p>
+<p>This command will install the latest version of the plugin straight from
+the <a href="https://pypi.org/project/pyunit-spiratest/">Python Package Index</a>
+(PyPI). Once the SpiraTest plugin is successfully installed, you are now ready to begin using your PyUnit test fixtures with SpiraTest.</p>
 <h2 id="using-pyunit-with-spiratest">Using PyUnit with SpiraTest<a class="headerlink" href="#using-pyunit-with-spiratest" title="Permanent link">&para;</a></h2>
 <p>The typical code structure for a PyUnit test fixture coded in Python is
 as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-
 <span class="kn">import</span> <span class="nn">unittest</span>
 
-\<span class="c1"># sample PyUnit test case</span>
-
+<span class="c1"># sample PyUnit test case</span>
 <span class="k">class</span> <span class="nc">TestSequenceFunctions</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">testshuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># make sure the shuffled sequence does not lose any elements</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">testchoice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">testshuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">testfail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
 
-\<span class="c1"># make sure the shuffled sequence does not lose any elements</span>
+    <span class="k">def</span> <span class="nf">testsample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">testchoice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">testfail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">testsample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="n">suite</span> <span class="o">=</span>
-<span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
-
-<span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
+    <span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 <p>The Python class is marked as a PyUnit test fixture by inheriting from
 the unittest.TestCase base class, and the individual test methods are
-identified by using the 'test' prefix, with special setUp() and
-tearDown() methods reserved for the respective purposes. When you open
+identified by using the <code>test</code> prefix, with special <code>setUp()</code> and
+<code>tearDown()</code> methods reserved for the respective purposes. When you open
 up the class in a PyUnit runner or execute from the command line it
 loads all the test classes and executes all the methods marked with
-'test...' in turn.</p>
+<code>test...</code> in turn.</p>
 <p>Each of the Assert statements is used to test the state of the
 application after executing some sample code that calls the
 functionality being tested. If the condition in the assertion is true,
@@ -4525,104 +4500,77 @@ testing and therefore have no defined test steps. In either case, the
 changes that need to be made to the PyUnit test fixture for SpiraTest to
 record the PyUnit test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-
 <span class="kn">import</span> <span class="nn">unittest</span>
-
 <span class="kn">import</span> <span class="nn">spiratestextension</span>
 
-\<span class="c1"># sample PyUnit test case</span>
-
+<span class="c1"># sample PyUnit test case</span>
 <span class="k">class</span> <span class="nc">TestSequenceFunctions</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">testshuffle__2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># make sure the shuffled sequence does not lose any elements</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">testchoice__3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">testshuffle</span>\<span class="n">_</span>\<span class="n">_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">testfail__4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
 
-\<span class="c1"># make sure the shuffled sequence does not lose any elements</span>
+    <span class="k">def</span> <span class="nf">testsample__5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assert_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
 
-<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
+    <span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">testchoice</span>\<span class="n">_</span>\<span class="n">_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">testfail</span>\<span class="n">_</span>\<span class="n">_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;1==2 Should fail&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">testsample</span>\<span class="n">_</span>\<span class="n">_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-
-<span class="bp">self</span><span class="o">.</span><span class="k">assert</span>\<span class="n">_</span><span class="p">(</span><span class="n">element</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
-
-<span class="n">suite</span> <span class="o">=</span>
-<span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
-
-<span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
-
-<span class="n">releaseId</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">testSetId</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">spiraTestExtension</span> <span class="o">=</span> <span class="n">spiratestextension</span><span class="o">.</span><span class="n">SpiraTestExtension</span><span class="p">()</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">ssl</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;SpiraTest&quot;</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;PleaseChange&quot;</span>
-
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span>
-<span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">)</span>
+    <span class="n">releaseId</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">testSetId</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">spiraTestExtension</span> <span class="o">=</span> <span class="n">spiratestextension</span><span class="o">.</span><span class="n">SpiraTestExtension</span><span class="p">()</span>
+    <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost/Spira&quot;</span>
+    <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
+    <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">apiKey</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{xxxxxxxxxxxxxxxxxxxxx}</span><span class="s2">&quot;</span>
+    <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span>
+    <span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">)</span>
 </code></pre></div>
 <p>Firstly, each of the individual test methods is appended with two
 underscores followed by the ID of the corresponding test case in
-SpiraTest. So for example testshuffle() is now testshuffle__2() as it
-maps to test case TC00002 inside SpiraTest.</p>
-<p>Second, at the end of the test run, the testResults object generated by
-the test run is passed to a special SpiraTestExtension() class via the
-recordResults() method. This class takes the results from the test run
+SpiraTest. So for example <code>testshuffle()</code> is now <code>testshuffle__2()</code> as it
+maps to test case <code>TC:2</code> inside SpiraTest.</p>
+<p>Second, at the end of the test run, the <code>testResults</code> object generated by
+the test run is passed to a special <code>SpiraTestExtension()</code> class via the
+<code>recordResults()</code> method. This class takes the results from the test run
 and uses it to generate the web-service messages that are sent to
 SpiraTest to communicate the test results.</p>
 <p>The following attributes need to be set on the instance of the
-SpiraTestExtension() object so that the extension can access the
+<code>SpiraTestExtension()</code> object so that the extension can access the
 SpiraTest repository:</p>
+<ul>
+<li>
 <p><strong>spiraTestExtension.projectId</strong> -- The ID of the project inside
 SpiraTest (this can be found on the project homepage in the "Project
 Overview" section)</p>
-<p><strong>spiraTestExtension.server</strong> - The name of the web server that
-SpiraTest is installed on</p>
-<p><strong>spiraTestExtension.port</strong> -- The port used to access SpiraTest over
-the network (typically 80 unless you have a custom port setup)</p>
-<p><strong>spiraTestExtension.ssl</strong> -- This should be set to False for HTTP and
-True for HTTPS</p>
-<p><strong>spiraTestExtension.path</strong> -- The path to SpiraTest on your webserver
-(typically just 'SpiraTest')</p>
+</li>
+<li>
+<p><strong>spiraTestExtension.url</strong> - The base url of your SpiraTest instance</p>
+</li>
+<li>
 <p><strong>spiraTestExtension.userName</strong> - A valid username for the instance of
 SpiraTest that has access to the project specified above</p>
-<p><strong>spiraTestExtension.password</strong> - A valid password for the user
+</li>
+<li>
+<p><strong>spiraTestExtension.apiKey</strong> - A valid API Key / RSS Token for the user
 specified above</p>
-<p>In addition, when calling the recordResults() method, you should also
-pass the Release ID and the Test Set ID which is used to tell SpiraTest
+</li>
+</ul>
+<p>In addition, when calling the <code>recordResults()</code> method, you should also
+pass the <strong>Release ID</strong> and the <strong>Test Set ID</strong> which is used to tell SpiraTest
 which release and/or test set to associate the test execution with.</p>
 <p>The Release ID can be found on the releases list page (click on the
 Planning &gt; Releases tab) -- just remove the RL prefix from the number
@@ -4642,7 +4590,7 @@ error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_PyUnit_15.png" /></p>
 <p>Congratulations... You are now able to run PyUnit automated tests and
 have the results be recorded within SpiraTest. The sample test fixture
-testsequencefunctions.py is provided with the
+<code>testsequencefunctions.py</code> is provided with the
 installation.</p>
                 
               
