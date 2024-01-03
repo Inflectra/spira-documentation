@@ -183,3 +183,11 @@ Below are common questions and answers related to common errors you may face whe
 !!! warning "5. After clicking on 'Get from Spira' or 'Send to Spira', nothing happens for a long time - the add-in is stuck"
 
     Make sure you are not editing any cell when clicking on any add-in button. Excel does not allow add-ins to modify the spreadsheet when in editing mode. To solve this, click on any blank cell or press the ESC key. If it still does not work, check your internet connection and try again.
+
+## Have Questions or Need Assistance?
+If you are an Inflectra customer, please contact our customer support at:
+- Email: support@inflectra.com
+- Help Desk: https://www.inflectra.com/Support/
+
+Otherwise, please feel free to post a question on our public forums:
+- [Spira Data Importers Forum](https://www.inflectra.com/Support/Forum/integrations/importers/List.aspx)

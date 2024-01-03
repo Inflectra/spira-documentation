@@ -57,3 +57,11 @@ Once you have added the SpiraReporter to jest as described above, you are all se
 
 ## Using the SpiraTest Reporter
 Actually, you don't do anything different! Just run `npm test` or however you ran jest before and you should see test runs created in the project you specified!
+
+## Have Questions or Need Assistance?
+If you are an Inflectra customer, please contact our customer support at:
+- Email: support@inflectra.com
+- Help Desk: https://www.inflectra.com/Support/
+
+Otherwise, please feel free to post a question on our public forums:
+- [Test Case Integration Forum](https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx)

@@ -351,3 +351,10 @@ Congratulations. You are now able to run MSTest automated tests and have
 the results be recorded within SpiraTest. The sample test project
 SampleMSTest is provided with the installation.
 
+## Have Questions or Need Assistance?
+If you are an Inflectra customer, please contact our customer support at:
+- Email: support@inflectra.com
+- Help Desk: https://www.inflectra.com/Support/
+
+Otherwise, please feel free to post a question on our public forums:
+- [Test Case Integration Forum](https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx)

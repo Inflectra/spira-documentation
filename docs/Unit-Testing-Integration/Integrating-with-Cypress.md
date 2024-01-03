@@ -144,3 +144,11 @@ If you would like to learn more about the Inflectra Spira suite, please go to th
 - [SpiraTest](https://www.inflectra.com/SpiraTest/), powerful requirements and test management
 - [SpiraTeam](https://www.inflectra.com/SpiraTeam/), agile planning and test management for teams
 - [SpiraPlan](https://www.inflectra.com/SpiraPlan/), enterprise planning and testing platform
+
+## Have Questions or Need Assistance?
+If you are an Inflectra customer, please contact our customer support at:
+- Email: support@inflectra.com
+- Help Desk: https://www.inflectra.com/Support/
+
+Otherwise, please feel free to post a question on our public forums:
+- [Test Case Integration Forum](https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx)
