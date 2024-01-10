@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Nunito Sans";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
@@ -8347,7 +8347,7 @@ need to reinstall SpiraPlan®. All you need to do is change the
 <li><strong>Password Change Interval</strong>: If set to a value, it will require all password to be changed after the specified number of days.</li>
 <li><strong>Require Password Change on First Login</strong>: Enabling this requires all new users to change their password on first login.</li>
 <li><strong>Disallow Names in Passwords</strong>: If enabled, passwords cannot contain the user's real name and/or username.</li>
-<li id="enable-2-step-authentication"><strong>Enable 2-Step Authentication</strong>: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their <a href="../../Spira-User-Manual/User-Product-Management/#2-step-authentication">User Profile</a>. Administrators can remove a one-time password for a user from <a href="../System-Users/#edit-an-existing-user">Edit User</a> page. </li>
+<li id="enable-2-step-authentication"><strong>Enable <a href="#enable-2-step-authentication">2-Step</a> Authentication</strong>: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their <a href="../../Spira-User-Manual/User-Product-Management/#2-step-authentication">User Profile</a>. Administrators can remove a one-time password for a user from <a href="../System-Users/#edit-an-existing-user">Edit User</a> page. </li>
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">2-Step Authentication tips</p>
@@ -8355,6 +8355,31 @@ need to reinstall SpiraPlan®. All you need to do is change the
 <li>Once enabled, users with a one-time password must enter it on each login to access the system.</li>
 <li>If the global security setting is ever disabled, user with a one-time password will immediately not need to provide that password to login.</li>
 <li>If installing on-premise, the web server must have the correct time. Any minor deviation from the correct time will mean users' one-time passwords will not be in sync with the server and they will not be able to login. </li>
+</ul>
+</div>
+<ul>
+<li id="enforce-provider-login"><strong><a href="#enforce-provider-login">Enforce</a> Provider Login</strong>: If enabled (default is disabled), users cannot connect an existing user to a Provider account, and cannot unlink an account for a Provider. Users must register new accounts using a Provider account </li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">How does enforcing Provider login work?</p>
+<p>This setting is useful for organizations who have at least one <a href="../System-Users/#login-providers">login provider</a> configured (where users can login with an SSO provider like Google or Microsoft). It limits the way that users can manage their account and that new users can register. We recommend it for organization looking to make sure all their users only login using a provider.</p>
+<p>With this setting enabled the following changes are made to the system:</p>
+<ul>
+<li>the option to register a new account is removed from the login page</li>
+<li>To create a Spira account, users must click the button for the relevant provider on the login page to add that provider account as a new SSO user in Spira</li>
+<li>users who login with a provider can no longer go to their <a href="../../Spira-User-Manual/User-Product-Management/#my-profile">My Profile</a> and disconnect from that provider</li>
+</ul>
+<p>The following functionality is not affected by this change:</p>
+<ul>
+<li>Users who already login with a username and password can continue to login as normal (note that the username and password fields remain visible on the login page but are de-emphasized)</li>
+<li>LDAP users can continue to login as normal</li>
+<li>System administrators can create new users with standard username and password credentials</li>
+<li>System administrators can unlink an existing user from a provider</li>
+</ul>
+<p>Before enabling this setting, consider the following points:</p>
+<ul>
+<li>Make sure you have at least one login provider configured, active, and working correctly</li>
+<li>If you have existing users, check if any of them are logging in with LDAP or a standard username and password. If you want them to login with a provider, migrate them before enabling this setting (as they will not be able to do with the setting enabled)</li>
 </ul>
 </div>
 <ul>
