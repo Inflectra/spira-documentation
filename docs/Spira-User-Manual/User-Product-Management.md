@@ -5,7 +5,7 @@ This section outlines how you can log into SpiraPlan®, view your personalized h
 
 ## Login Screen
 
-Upon entering the SpiraPlan® URL provided by your system administrator into your browser, you will see the following login screen:
+Upon entering the Spira URL provided by your system administrator into your browser, you will see the following login screen:
 
 ![](img/UserProduct_Management_33.png)
 
@@ -36,22 +36,20 @@ Since SpiraPlan® is licensed to organizations for a specific number of concurre
 This means that one of the other users who is already logged-in, needs to click the "Log Out" button so that one of the concurrent licenses is freed for your use. If the user has logged out by closing the browser, the system may not have detected the logout. In this case, the other user needs to log back in, and then click the "Log Out" link.
 
 ## Logging in Using An External Provider
-If your organisation uses a Single Sign On / OAuth provider like Okta or Google, underneath the standard username and password field you will see a button for each enabled provider. 
+If your organization uses a Single Sign On / OAuth provider like Okta or Google, above the standard username and password field you will see a button for each enabled provider. 
 
 ![sign in to Spira using an external provider](img/UserProduct_Management_oauth-login-page.png)
 
 To login using your account with this provider:
 
-1. click on the provider button
-2. follow the instructions from the provider (eg log in to or select your account, and provide authorisation)
-3. when you get back to the SpiraPlan login screen, you can connect that provider account to an existing SpiraPlan user
-4. Follow the on screen instructions to enter the username and password of your SpiraPlan user and click `Login`. You are now connected to this provider!
-5. Alternatively, you can choose to set up a new SpiraPlan account with that external provider account (if allowed by your system admin). Click the link and follow the on screen instructions to complete the registration. Once successful, your system admin will be alerted to the new user request
-6. Once they have approved you, you are all set
+1. Click on the provider button
+2. Follow the instructions from the provider (eg log in to or select your account, and provide authorization)
+4. When you get back to the Spira login screen, you can set up a new SpiraPlan account with that external provider account. Click the link and follow the on screen instructions to complete the registration. Once successful, your system admin will be alerted to the new user request. Once they have approved you, you can login.
+3. Alternatively, you can, if allowed by your organization, connect that provider account to an existing Spira user. Follow the on screen instructions to enter the username and password of your Spira user and click `Login`. You are now connected to this provider. 
 
 ![options to connect to an external provider](img/UserProduct_Management_oauth-login-connect-account.png)
 
-Once you have a SpiraPlan user that authenticates with the provider, to log in to Spira click the provider button on the login page.
+Once you have a Spira user that authenticates with the provider, to log in to Spira click the provider button on the login page.
 
 
 
