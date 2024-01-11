@@ -570,7 +570,7 @@ Click on a card to select it. Click on more cards to add them to your selection.
 
         - the user does not have bulk edit permissions for the relevant artifact
         - columns is set to status and bulk editing of statuses has been disabled at the template level
-        - columns is set to status and a requirement card has a status of either completed or obsolete (because these are considered non-plannable statuses)
+        - a requirement card has a status of either completed or obsolete (because these are considered non-plannable statuses)
         - requirements that have tasks attached, and the product is set to use task status to control requirement status (in this case the card does not *look* disabled but its status cannot be changed - if you try to change its status the card will appear in its original column)
 
 #### Editing and viewing cards
