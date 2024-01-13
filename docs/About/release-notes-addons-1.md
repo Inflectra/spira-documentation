@@ -3,6 +3,7 @@ This page shows summary information about releases in Spira's addons, data syncs
 
 ## January 2024
 - [Robot Framework Integration](../../Unit-Testing-Integration/Integrating-with-Robot-Framework/): New integration with Robot Framework released [RQ:4753].
+- [xUnit Test Integration](../../Unit-Testing-Integration/Integrating-with-xUnit-Python/): New Python parser for xUnit compatible testing frameworks released.
 
 ## December 2023
 - **[Jira Cloud DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud) v6.0** and - **[Jira Server DataSync](../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+) v6**: these updates includes a number of enhancements and bug fixes:
