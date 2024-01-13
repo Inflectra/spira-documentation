@@ -114,13 +114,37 @@ The following settings can be changed within the system, once you are satisfied,
 - **Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
 - **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
 - **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
-- **Enable 2-Step Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../../Spira-User-Manual/User-Product-Management/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](../System-Users/#edit-an-existing-user) page. 
+- **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../../Spira-User-Manual/User-Product-Management/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](../System-Users/#edit-an-existing-user) page. 
 {: #enable-2-step-authentication}
 
-!!! hint "2-Step Authentication tips"
+!!! hint "2-Step Authentication tips"   
     - Once enabled, users with a one-time password must enter it on each login to access the system.
     - If the global security setting is ever disabled, user with a one-time password will immediately not need to provide that password to login.
     - If installing on-premise, the web server must have the correct time. Any minor deviation from the correct time will mean users' one-time passwords will not be in sync with the server and they will not be able to login. 
+
+- **[Enforce](#enforce-provider-login) Provider Login**: If enabled (default is disabled), users cannot connect an existing user to a Provider account, and cannot unlink an account for a Provider. Users must register new accounts using a Provider account 
+{: #enforce-provider-login}
+
+!!! hint "How does enforcing Provider login work?"
+    This setting is useful for organizations who have at least one [login provider](../System-Users/#login-providers) configured (where users can login with an SSO provider like Google or Microsoft). It limits the way that users can manage their account and that new users can register. We recommend it for organization looking to make sure all their users only login using a provider.
+    
+    With this setting enabled the following changes are made to the system:
+
+    - the option to register a new account is removed from the login page
+    - To create a Spira account, users must click the button for the relevant provider on the login page to add that provider account as a new SSO user in Spira
+    - users who login with a provider can no longer go to their [My Profile](../../Spira-User-Manual/User-Product-Management/#my-profile) and disconnect from that provider
+    
+    The following functionality is not affected by this change:
+
+    - Users who already login with a username and password can continue to login as normal (note that the username and password fields remain visible on the login page but are de-emphasized)
+    - LDAP users can continue to login as normal
+    - System administrators can create new users with standard username and password credentials
+    - System administrators can unlink an existing user from a provider
+
+    Before enabling this setting, consider the following points:
+
+    - Make sure you have at least one login provider configured, active, and working correctly
+    - If you have existing users, check if any of them are logging in with LDAP or a standard username and password. If you want them to login with a provider, migrate them before enabling this setting (as they will not be able to do with the setting enabled)
 
 - **Authentication Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.
 - **Keep Me Logged-In Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.

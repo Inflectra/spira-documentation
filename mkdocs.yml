@@ -62,6 +62,7 @@ theme:
     accent: amber
   font:
     code: IBM Plex Mono
+    text: Nunito Sans
   favicon: images/favicon.ico
   logo: images/logo.svg
   custom_dir: overrides

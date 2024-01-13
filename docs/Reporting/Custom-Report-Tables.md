@@ -1099,16 +1099,17 @@ Retrieves data about cross product associations
 | PROJECT_TEMPLATE_NAME |
 
 ## Task Types
-| R_TaskTypes                           |
-| ------------------------------------- |
-| TASK_TYPE_ID                          |
-| PROJECT_TEMPLATE_ID                   |
-| TASK_WORKFLOW_ID                      |
-| NAME                                  |
-| POSITION                              |
-| IS_ACTIVE                             |
-| IS_DEFAULT                            |
-| IS_PULL_REQUEST	PROJECT_TEMPLATE_NAME |
+| R_TaskTypes           |
+| --------------------- |
+| TASK_TYPE_ID          |
+| PROJECT_TEMPLATE_ID   |
+| TASK_WORKFLOW_ID      |
+| NAME                  |
+| POSITION              |
+| IS_ACTIVE             |
+| IS_DEFAULT            |
+| IS_PULL_REQUEST       |
+| PROJECT_TEMPLATE_NAME | 
 
 ## Test Cases
 | R_TestCases              |
@@ -1420,20 +1421,29 @@ Retrieves data about cross product associations
 | PRECONDITION          |
 
 ## Users
-| R_Users                |
-| ---------------------- |
-| USER_NAME              |
-| EMAIL_ADDRESS          |
-| IS_ACTIVE              |
-| CREATION_DATE          |
-| LDAP_DN                |
-| FIRST_NAME             |
-| LAST_NAME              |
-| MIDDLE_INITIAL         |
-| DEPARTMENT             |
-| LAST_UPDATE_DATE       |
-| TIMEZONE               |
-| LAST_OPENED_PROJECT_ID |
-| IS_APPROVED            |
-| LAST_LOGIN_DATE        |
-| LAST_ACTIVITY_DATE     |
+| R_Users                         |
+| ------------------------------- |
+| USER_ID                         |
+| USER_NAME                       |
+| EMAIL_ADDRESS                   |
+| IS_ACTIVE                       |
+| CREATION_DATE                   |
+| LDAP_DN                         |
+| FIRST_NAME                      |
+| LAST_NAME                       |
+| MIDDLE_INITIAL                  |
+| DEPARTMENT                      |
+| LAST_UPDATE_DATE                |
+| TIMEZONE                        |
+| LAST_OPENED_PROJECT_ID          |
+| IS_APPROVED                     |
+| LAST_LOGIN_DATE                 |
+| LAST_ACTIVITY_DATE              |
+| ORGANIZATION                    |
+| LAST_OPENED_PROJECT_GROUP_ID    |
+| LAST_OPENED_PROJECT_TEMPLATE_ID |
+| IS_ADMIN                        |
+| IS_REPORT_ADMIN                 |
+| IS_RESOURCE_ADMIN               |
+| IS_PORTFOLIO_ADMIN              |
+| LAST_PASSWORD_CHANGED_DATE      |

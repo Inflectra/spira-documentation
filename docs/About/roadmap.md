@@ -15,7 +15,6 @@ Please take a look at our [release notes](../release-notes-v7) to see a complete
 ## Q1 2024
 - Upgrade the requirement and incident boards to the new board experience
 - Track changes to product membership and product role changes
-- Additional security admin settings for those using Single Sign On
 - Add a new program level capability board <span class="pill">SpiraPlan</span>
 - Streamline the first time user experience of the "My Page"
 - Roll out tag support to all relevant remaining product artifacts
