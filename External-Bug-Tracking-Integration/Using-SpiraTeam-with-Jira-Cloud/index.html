@@ -9107,23 +9107,14 @@
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_27.png" /></p>
 <p>To start, go to the data mapping home page for the selected product you were on to <a href="#activate-the-datasync">activate the datasync</a>. Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="scalar-properties" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="scalar-properties">Scalar properties</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="scalar-properties" name="__tabbed_4" type="radio" /><input id="list-properties" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="scalar-properties">Scalar properties</label><label for="list-properties">List properties</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_43.png" /></p>
-</div>
-</div>
-</div>
 <p>This refers to custom properties of all types <strong>except</strong> List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Fill in the &quot;External Key&quot; field with the Jira ID of the custom field and click &quot;Save&quot;. The ID can be found by using the &quot;Custom Fields&quot; tab of the [Jira configuration helper](#jira-configuration-helper).
-
-![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
-</code></pre></div></td></tr></table></div>
-
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="list-properties" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="list-properties">List properties</label></div>
-<div class="tabbed-content">
+<p>Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the <a href="#jira-configuration-helper">Jira configuration helper</a>.</p>
+<p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_38.png" /></p>
+</div>
 <div class="tabbed-block">
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_44.png" /></p>
 <p>This refers to custom properties that are either of type <strong>List</strong> or <strong>Multi-List</strong> (in Jira called cascading, multiple choice, or single choice). </p>
@@ -9135,7 +9126,7 @@
 </div>
 </div>
 <h4 id="special-jira-fields">Special Jira fields<a class="headerlink" href="#special-jira-fields" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="resolution-field" name="__tabbed_6" type="radio" /><input id="environment-field" name="__tabbed_6" type="radio" /><input id="security-level-field" name="__tabbed_6" type="radio" /><input id="issue-key-field" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="resolution-field">Resolution Field</label><label for="environment-field">Environment Field</label><label for="security-level-field">Security Level Field</label><label for="issue-key-field">Issue Key Field</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="resolution-field" name="__tabbed_5" type="radio" /><input id="environment-field" name="__tabbed_5" type="radio" /><input id="security-level-field" name="__tabbed_5" type="radio" /><input id="issue-key-field" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="resolution-field">Resolution Field</label><label for="environment-field">Environment Field</label><label for="security-level-field">Security Level Field</label><label for="issue-key-field">Issue Key Field</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>If you would like the values of the Jira Resolution field to sync with Spira, work through these steps:</p>
@@ -9206,13 +9197,13 @@
 </div>
 <p>To use Spira with Jira on an ongoing basis, we recommend:</p>
 <ul>
-<li>When running tests in Spira or Spira, defects found should be logged through the Test Execution Wizard as normal.</li>
+<li>When running tests in Spira, defects found should be logged through the Test Execution Wizard as normal.</li>
 <li>Developers can log new defects into either Spira or Jira. In either case they will get loaded into the other system.</li>
 <li>Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside Spira</li>
 <li>At this point, the incident should not be acted upon inside Spira and all data changes to the issue should be made inside Jira. To enforce this, you should modify the workflows set up in Spira so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in Spira, but will prevent them making changes in conflict with Jira after that point.</li>
 <li>As the issue progresses through the customized Jira workflow, changes to the type of issue, changes to its status, priority, description and resolution will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.</li>
 </ul>
-<p>You are now able to perform test coverage and incident reporting inside Spira /Spira using the test cases managed by Spira /Spira and the incidents managed on behalf of Spira /Spira inside Jira.</p>
+<p>You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed on behalf of Spira inside Jira.</p>
 <h2 id="using-the-jira-cloud-connector">Using the Jira Cloud Connector<a class="headerlink" href="#using-the-jira-cloud-connector" title="Permanent link">&para;</a></h2>
 <p>Once you have the data-synchronization established between Spira and Jira Cloud, we have an additional Atlassian marketplace connector that you can use (see
 <a href="https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-Jira">https://marketplace.atlassian.com/apps/1218742/spiratest-app-for-Jira</a>):</p>
