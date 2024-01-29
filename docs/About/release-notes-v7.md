@@ -1,5 +1,55 @@
 # Release Notes for Spira v7
 
+## Version 7.12 (February 2024)
+!!! info "Summary"
+    This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+ 
+
+!!! success "New Features"
+    * **Requirement Views** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+        - As a requirement user, I can manage requirements on a dedicated requirements board that matches the style of the Planning Board [RQ:4755]
+    
+    * **As an incident user, I can view and manage incidents on a dedicated incident board** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+        - As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]
+        - As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]
+        - As an incident user, I can view detailed information about each card easily on the incident board, to help me review incidents quickly [RQ:4701]
+        - As an incident user, I can edit information about each card from the incident board, to update information without leaving the board [RQ:4702]
+        - As an incident user, I can add new incidents to any cell on the incident board, to help me quickly add new cards [RQ:4703]
+        - As an incident user, I can move cards around, including within each cell, to update their details and position, to help me manage incidents [RQ:4704]
+        - Let template admins sort incident statuses with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
+
+??? bug "Bug fixes and enhancements"
+    - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+        - Add option to planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
+        - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
+        - Allow users to move requirement cards when rows or columns is by status, and the status is completed [IN:9145]
+        - Change how the boards update when updating their settings on the page to avoid edge cases where the wrong cards or duplicate cards may show (particularly on slower networks) [IN:8697]
+        - Fix adding a new requirement on the planning board when rows is set to "By Parent" not having a parent requirement set [IN:8786]
+        - Fix column counts on the planning board set to rows By Parent and groups By Component showing unassigned, in certain edge cases [IN:8787]
+        - Fix duplicate cards showing if you change any card option or the unassigned toggle really quickly [IN:8716]
+        - Fix not being able to set WIP limits for all requirement statuses [IN:8776]
+        - Fix the planning board and task board letting users move cards when rows is set to status but the template does not allow status bulk editing [IN:8929]
+        - Fix the task board not loading if the user is not able to view requirements [IN:8966]
+        - Hide the "Other artifact cards to show" on the Planning Board Card Features popup if there are no artifacts to show [IN:8927]
+        - Remove the legacy task board so users can only use the new and improved task board [IN:8958]
+        - Remove the projected effort field from the incident popup on the incident board and on the planning board [IN:9130]
+    
+    - **Other fixes and enhancements**
+
+        - Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+        - Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029] <span class="pill">SpiraPlan</span>
+        - Fix changes to custom properties not being saved when editing documents of type URL [IN:7710]
+        - Fix product level custom reports containing PROJECT_GROUP_ID and ${ProjectId} in a single query not being able to be generated [IN:9099]
+        - Fix the API to retrieve an associated test run [IN:9126]
+        - Improve ease of understanding of a button toggled into an active state, especially while in dark mode [IN:8928]
+        - Improve showing errors on user profile page, especially when trying to change a password [IN:9038]
+        - Migrating a product between templates removes history IDs for system wide lookup fields such as requirement & release statuses [IN:9112]
+        - Remove unnecessary debugging information when the installer runs for on premise customers [IN:9132]
+
+
 ## Version 7.11 (January 2024)
 
 !!! success "New Features"
