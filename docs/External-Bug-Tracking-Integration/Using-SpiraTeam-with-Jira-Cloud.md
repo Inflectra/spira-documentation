@@ -416,7 +416,7 @@ To start, go to the data mapping home page for the selected product you were on 
 === "Scalar properties"
     ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
     Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -510,13 +510,13 @@ Once the data sync service starts, at first any artifacts created in Spira for t
 
 To use Spira with Jira on an ongoing basis, we recommend:
 
-- When running tests in Spira or Spira, defects found should be logged through the Test Execution Wizard as normal.
+- When running tests in Spira, defects found should be logged through the Test Execution Wizard as normal.
 - Developers can log new defects into either Spira or Jira. In either case they will get loaded into the other system.
 - Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside Spira
 - At this point, the incident should not be acted upon inside Spira and all data changes to the issue should be made inside Jira. To enforce this, you should modify the workflows set up in Spira so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in Spira, but will prevent them making changes in conflict with Jira after that point.
 - As the issue progresses through the customized Jira workflow, changes to the type of issue, changes to its status, priority, description and resolution will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.
 
-You are now able to perform test coverage and incident reporting inside Spira /Spira using the test cases managed by Spira /Spira and the incidents managed on behalf of Spira /Spira inside Jira.
+You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed on behalf of Spira inside Jira.
 
 
 ## Using the Jira Cloud Connector
