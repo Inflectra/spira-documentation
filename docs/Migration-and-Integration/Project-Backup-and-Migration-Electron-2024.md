@@ -2,9 +2,11 @@
 
 This application allows a Spira Template to be exported to a backup file (*.templ*), for archiving and offline storage. You can also use this tool to migrate a *.templ* file to a Spira instance. The minimum Spira version required for backup or migration is [**7.11**](https://spiradoc.inflectra.com/About/release-notes-v7/).
 
+The Spira Template Backup and Migration Tool is available for Windows and macOS systems. To get it, please go to our [Downloads Page](https://www.inflectra.com/SpiraTest/Downloads.aspx) and choose the correct version according to your system. Then, follow the instructions on the screen to install it on your machine.
+
 ## What is Backed-up/Migrated
 
-The application creates a template file that contains:
+The application creates a backup file that contains the following Template data:
 
 - User Product Roles
 
@@ -101,13 +103,10 @@ When running the application, you will see the main screen, which gives you two 
 
 ![main](img/Project_Backup_and_Migration_Electron_01.png)
 
-###Start New Backup
+- **Start New Backup**: Select this option to save a Spira Template to a template file. You will need to provide valid administrator credentials to proceed.
 
-Select this option to save a Spira Template to a template file. You will need to provide valid administrator credentials to proceed.
 
-###Open Backup File
-
-Select this option to either export data from a backup file to a Spira instance or when you need to restore and continue a previously interrupted backup or migration session. See 'Session Restoring' to learn more.
+- **Open Backup File**: Select this option to either export data from a backup file to a Spira instance or when you need to restore and continue a previously interrupted backup or migration session. See 'Session Restoring' to learn more.
 
 
 
@@ -119,7 +118,7 @@ In the next screen, select the Template you want to export from the list, a vali
 
 ![main](img/Project_Backup_and_Migration_Electron_02.png)
 
-Finally, confirm the information you see is correct and click 'Start Backup'. This will lead you to the progress screen, where you can check the progress of the operation and details in the Event History. The application creates a log in the same directory of the backup file in which the session details and any errors or warnings are saved.
+Finally, confirm the information you see is correct and click 'Start Backup'. This will lead you to the progress screen, where you can check the progress of the operation and details in the Event History. The application creates a log in the same directory of the backup file in which the session details and any errors or warnings are saved for future reference.
 
 ![main](img/Project_Backup_and_Migration_Electron_03.png)
 
@@ -152,4 +151,4 @@ If for any reason your backup or migration session was interrupted before comple
 
 ***Notes:***
 
-<sup>1</sup> Due to an API limitation, currently the Requirement Status properties *Position* and *Show on Boards* and the Incident Status properties *Position* and *Default* are not saved neither migated.
+<sup>1</sup> Due to an API limitation, currently, the Requirement Status properties Position and Show on Boards and the Incident Status properties Position and Default are not saved nor migrated.
