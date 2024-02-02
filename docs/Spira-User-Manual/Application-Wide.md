@@ -441,10 +441,10 @@ Boards allow users to see artifacts visually in columns and/or rows, and move ca
 
     | Page           | Board format |
     | -------------- | ------------ |
-    | Requirements   | Legacy       |
+    | Requirements   | New          |
     | Planning Board | New, Legacy  |
-    | Incident Board | Legacy       |
-    | Task Board     | New, Legacy  |
+    | Incident Board | New          |
+    | Task Board     | New          |
     | Program Board  | Legacy       |
 
     **This guide focuses solely on the new boards**

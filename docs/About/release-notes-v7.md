@@ -8,9 +8,9 @@
 !!! success "New Features"
     * **Requirement Views** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-        - As a requirement user, I can manage requirements on a dedicated requirements board that matches the style of the Planning Board [RQ:4755]
+        - As a requirement user, I can manage requirements on a [dedicated requirements board](../../Spira-User-Manual/Requirements-Management/#requirements-agile-board) that matches the style of the Planning Board [RQ:4755]
     
-    * **As an incident user, I can view and manage incidents on a dedicated incident board** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../../Spira-User-Manual/Incident-Tracking/#incident-board)** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]
         - As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]
@@ -23,7 +23,7 @@
 ??? bug "Bug fixes and enhancements"
     - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-        - Add option to planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
+        - Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
         - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
         - Allow users to move requirement cards when rows or columns is by status, and the status is completed [IN:9145]
         - Change how the boards update when updating their settings on the page to avoid edge cases where the wrong cards or duplicate cards may show (particularly on slower networks) [IN:8697]
