@@ -128,8 +128,7 @@ In addition, the Planning Board has extra "rules" that control what cards will s
 **Requirements** follow the rules below:
 
 - parent requirements are never shown
-- if columns is anything other than status, then requirements with statuses of either rejected or obsolete will not show
-- it does not matter what type the requirement has
+- requirements with a status of either rejected or obsolete will only show if you are on the "Product Backlog" and columns is set to status
 
 **Incidents** follow the rules below:
 
