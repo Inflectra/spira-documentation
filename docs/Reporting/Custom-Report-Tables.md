@@ -844,6 +844,7 @@ Retrieves data about cross product associations
 ## Requirement Incidents
 | R_RequirementIncidents |
 | ---------------------- |
+| REQUIREMENT_ID         |
 | INCIDENT_ID            |
 | DETECTED_RELEASE_ID    |
 | IS_OPEN_STATUS         |
