@@ -25,7 +25,7 @@
 
         - Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
         - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
-        - Allow users to [move requirement cards](../Spira-User-Manual/Application-Wide/#moving-and-ordering-cards) when rows or columns is by status, and the status is completed [IN:9145]
+        - Allow users to [move requirement cards](../../Spira-User-Manual/Application-Wide/#moving-and-ordering-cards) when rows or columns is by status, and the status is completed [IN:9145]
         - Change how the boards update when updating their settings on the page to avoid edge cases where the wrong cards or duplicate cards may show (particularly on slower networks) [IN:8697]
         - Fix adding a new requirement on the planning board when rows is set to "By Parent" not having a parent requirement set [IN:8786]
         - Fix column counts on the planning board set to rows By Parent and groups By Component showing unassigned, in certain edge cases [IN:8787]

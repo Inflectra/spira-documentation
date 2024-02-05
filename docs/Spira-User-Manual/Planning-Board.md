@@ -380,7 +380,7 @@ The lower section of the board allows you to segment the items by either status 
 
 ![](img/Planning_Board_429.png)
 
-### :egacy Board Work In Progress Limits
+### Legacy Board Work In Progress Limits
 If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.
 
 - A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green
