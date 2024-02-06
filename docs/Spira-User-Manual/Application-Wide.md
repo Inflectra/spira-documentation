@@ -489,7 +489,7 @@ The toolbar configuration button (cogs) lets you control how the board will look
 - Show or hide **effort data** (off by default): when shown, column and row titles show extra information for people, releases and sprints, parent requirement,  and statuses (for requirements in column mode only). See the [special board views](#special-board-views) below and details about [work in progress limits](../Planning-Board/#work-in-progress-limits) for more information about what data is shown.
 - Show or hide **unassigned** items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column.[^unassigned-data]
 
-[^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, or priority; grouping by component or team; releases is set to "all releases" and columns set to release
+[^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release
 
 
 
