@@ -213,101 +213,61 @@ Read about [how to add and manage followers to an artifact](Application-Wide.md#
 
 
 ## Incident Board
-
-The incident board is an alternative to the [incident list](#incident-list) page designed to let you view the incidents planned for the current product. You can access this feature by clicking on the **Board** icon in the top-right of the Incidents list page. You can switch back to the Incident list page by clicking on the **Table**
-view.
-
-The incident board has the following different display modes:
-
--   **All Releases**
-
-    -   By Release
-    -   By Priority
-    -   By Status
-    -   By Person
-
--   **Release** (select a specific release from the release dropdown - only incidents with a Planned Release matching this selection will be displayed)
-
-    -   By Sprint
-    -   By Priority
-    -   By Status
-    -   By Person
-
--   **Sprint** (select a specific sprint from the release dropdown - only incidents with a Planned Release matching this selection will be displayed)
-
-    -   By Priority
-    -   By Status
-    -   By Person
-
-Each of these views is described below.
-
-!!! info "Planning Boards and Editing"
-    **Moving cards**: Please note that the purpose of a planning board or Kanban board, is to make it straightforward for users to move cards around the interface to plan out their work. Therefore we do **not** enforce workflow restrictions on the planning board when moving cards. Therefore only users with permissions to bulk edit the relevant artifact can move cards. If the template admin has prevented status changes while bulk editing, then noone can change a card's status by moving its card on the planning.
-
-    **Viewing cards**: to view more information about the card you can: turn on Detailed View; hover on the card name to see a rich tooltip; click on the card's id to open a popup with much more detail; or ctrl/cmd+click on the card's id to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. 
-
-    **Editing cards**: users with bulk edit permissions can edit a planning board card at any time by click on the card's id (including adding a new comment). This opens a popup with full information about that card. At all times, which fields are shown, required, or hidden is based on the workflow step that applies to that specific card. To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you cand do this from the popup by clicking the button next to the artifact's id at the top).
+!!! info "Incident Board Overview"
     
-    **Add new cards**: if you are able to create the requirements then you will see plus (add) symbols in different locations on the board. Clicking any of these will open an popup screen with all relevant fields available. Some of these fields may be prepopulated based on what add button you clicked and how you are using the board. For instance, if you are viewing for a release, that release will be preselected. And if you are grouping by person and click on a particular person, that person will be set as the owner of the artifact. The fields visible and required is driven based on what workflow step will apply to that new card.  
+    The SpiraPlan incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.
+
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+
+    - [board structure and configuration](../Application-Wide/#board-structure)
+    - [special board views](../Application-Wide/#special-board-views) 
+    - [working with board cards](../Application-Wide/#board-cards) 
+
+    **Specific features of or differences in the incident board are discussed more fully below**.
+
+### Board configuration
+The incident board configuration button has a number of options to configure the board to your needs. 
+
+The [releases dropdown](#release-options) can be set to either "all releases" or a specific release. The dropdown shows all open releases and sprints.The table below shows what options are available, when. Certain configuration are discussed in more detail in subsequent sections:
+
+| View options | All releases                                        | A specific release or sprint                                                |
+| ------------ | --------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Columns**  | Priority<br> Release<br> Status<br> Type<br> Severity<br> Person | Priority<br> Release<br> Status<br> Type<br> Severity<br> Person<br> |
+| **Rows**     | Priority<br> Release<br> Status<br> Type<br> Severity<br> Person | Priority<br> Release<br> Status<br> Type<br> Severity<br> Person<br> |
+| **Grouping** | Team (if rows is person)                            | Team (if rows is person)                                                    |
+
+The following options support showing unassigned items[^unassigned-with-group]:
+
+- priority
+- release (only when viewing "All Releases")
+- severity
+- person
+
+[^unassigned-with-group]: when rows is set to person, and grouping is applied, then unassigned sections will show as normal, but the feature is more limited than usual to ensure consistency.
 
 
-### Incidents -- By Priority
+#### Release options
+The **release dropdown** shows:
 
-This view is designed to let you see the list of planned incidents organized by priority. Each of the possible priority values is displayed on the left-hand side and the incidents displayed in the same row on the right:
+| Options                                    | Meaning                                                     | What cards will show                                                       |
+| ------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| All Releases                               | All open[^open-release-definition] releases combined        | Those planned for any open release                                         |
+| Any open[^open-release-definition] release | Any single open[^open-release-definition] release or sprint | Those planned for the selected release and its child sprints (if relevant) |
 
-![](img/Incident_Tracking_252.png)
-
-The top section will contain the list of incidents that are not assigned a priority, with the other sections containing the incidents that have been assigned to the specific priority.
-
-
-### Incidents -- By Status
-
-This view is designed to let you see the incidents in the current product / release / sprint organized by their status. Each incident status (not started, in progress, completed, blocked, deferred) is displayed as a heading, with the incidents displayed in the same column underneath:
-
-![](img/Incident_Tracking_253.png)
-
-You can click on the expand/collapse icons to hide any statuses that are not relevant.
-
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name. You can drag and drop the incidents between statuses or to/from the release/sprint backlog. Any incidents not assigned to a release/sprint will be listed in the (Unassigned Items) section at the top.
-
-![](img/Incident_Tracking_254.png)
+![incident board release selector](img/incident-board-release-selector.png)
 
 
-### Incidents - By Person
+#### Customizing cards
+![incident board card options](img/incident-board-card-options.png)
 
-This view is designed to let you see the incidents in the current product / release / sprint organized by resource / person. Each of the users that is a member of the current product is displayed as a heading, with the incidents displayed in the same column underneath:
+In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
 
-![](img/Incident_Tracking_255.png)
+- **Progress**: a mini histogram chart of the incident's progress (hover to see a tooltip with detailed information)
 
-You can click on the expand/collapse icons to hide any people that are not relevant. The system will display a progress bar for each resource to illustrate the allocation for that resource. Any resource that has a progress bar that is completely green has been fully scheduled and should not have any additional incidents assigned. If the progress bar for that resource turns red, it means that they have been over-scheduled and you need to reassign some of the incidents.
+Below is an example of an incident card showing all available data
 
-Depending on the view (all releases, release, or sprint), there may be sections with the release and sprint name; they contain incidents that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the incidents between resources or to/from the release/sprint backlog (as long as the item has a status that let's you set or edit its owner field). Any incidents not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.
+![full incident card](img/incident-board-card-full.png)
 
-
-### Incidents - By Release
-
-This view is only available when you are displaying the incident board for 'all releases'. Each of the active releases defined for the current product is displayed as a heading. Incidents are displayed in the release column that matches their Planned Release. 
-
-![](img/Incident_Tracking_256.png)
-
-You can drag and drop the incidents between the different releases. Once the incident has been added to the release, the utilized effort for the release will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more incidents to a release than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the release length or add product personnel resources to the release.
-
-Clicking on the release hyperlinks in the headers will switch the incident board into the release view.
-
-
-### Incidents - By Sprint
-
-This view is only available when you are displaying the incident board for a specific release. Each of the sprints defined for the current release is displayed as a heading. Incidents are displayed in the sprint column that matches their Planned Release. This view is commonly used in **Scrum** products:
-
-![](img/Incident_Tracking_257.png)
-
-You can drag and drop the incidents between the different sprints. Once the incident has been added to the sprint, the utilized effort for the sprint will increase, and the available effort will decrease by the same amount.
-
-Note: The system will allow you to assign more incidents to a sprint than it is possible to complete, however this will result in a negative value for 'available effort'. If this happens, the "Available Effort" value will be displayed in red, and you need to rebalance the items, extend the sprint length or add product personnel resources to the sprint.
-
-Clicking on the sprint hyperlinks in the headers will switch the incident board into the sprint view.
 
 
 [^rq-in]: 

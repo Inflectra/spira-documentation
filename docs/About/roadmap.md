@@ -13,7 +13,6 @@
 Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q1 2024
-- Upgrade the requirement and incident boards to the new board experience
 - Track changes to product membership and product role changes
 - Add a new program level capability board <span class="pill">SpiraPlan</span>
 - Streamline the first time user experience of the "My Page"

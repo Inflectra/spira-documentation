@@ -106,7 +106,7 @@ What statuses shown on the board depends on how the [template](../../Spira-Admin
 - if the template has customized requirement statuses for boards, then statuses chosen to be shown will show, in the order specified in the template.
 
 ### Work in Progress Limits
-When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
+When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the "effort data" configuration is set to "Yes", and if the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
 
 There are different colors to indicate the status of the WIP limit:
 
@@ -128,8 +128,7 @@ In addition, the Planning Board has extra "rules" that control what cards will s
 **Requirements** follow the rules below:
 
 - parent requirements are never shown
-- if columns is anything other than status, then requirements with statuses of either rejected or obsolete will not show
-- it does not matter what type the requirement has
+- requirements with a status of either rejected or obsolete will only show if you are on the "Product Backlog" and columns is set to status
 
 **Incidents** follow the rules below:
 
@@ -381,7 +380,7 @@ The lower section of the board allows you to segment the items by either status 
 
 ![](img/Planning_Board_429.png)
 
-### :egacy Board Work In Progress Limits
+### Legacy Board Work In Progress Limits
 If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.
 
 - A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green

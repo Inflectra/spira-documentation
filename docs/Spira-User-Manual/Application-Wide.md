@@ -441,10 +441,10 @@ Boards allow users to see artifacts visually in columns and/or rows, and move ca
 
     | Page           | Board format |
     | -------------- | ------------ |
-    | Requirements   | Legacy       |
+    | Requirements   | New          |
     | Planning Board | New, Legacy  |
-    | Incident Board | Legacy       |
-    | Task Board     | New, Legacy  |
+    | Incident Board | New          |
+    | Task Board     | New          |
     | Program Board  | Legacy       |
 
     **This guide focuses solely on the new boards**
@@ -486,7 +486,12 @@ The toolbar configuration button (cogs) lets you control how the board will look
 - Choose a field for **columns** so that each column is a value of that field. Note that the options available may change based off the display type and release selected
 - Choose a field for **rows** to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected
 - Choose a **group** option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you
-- Show or hide **unassigned** items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column. 
+- Show or hide **effort data** (off by default): when shown, column and row titles show extra information for people, releases and sprints, parent requirement,  and statuses (for requirements in column mode only). See the [special board views](#special-board-views) below and details about [work in progress limits](../Planning-Board/#work-in-progress-limits) for more information about what data is shown.
+- Show or hide **unassigned** items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column.[^unassigned-data]
+
+[^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release
+
+
 
 #### Board card options
 The toolbar card customization button (a mini card) lets you customize what information will be visible on the cards. You will always see the following information on a card:
@@ -513,7 +518,7 @@ When columns or rows are set to show releases or sprints the column or row title
 ![planning board release title](img/Planning_Board_release-header.png)
 
 - Clicking on the name will open its details page
-- Underneath the name additional information about the artifact:
+- If the "effort data" configuration is set to "Yes", you will see additional information about the artifact under the name:
 
     - Requirement completion: hover on the indicator to see a tooltip of the exact percentage complete
     - Available effort: the number of available hours of work for tasks in the release based off the planning settings, the release dates and sources (this field is called "Planned Effort" on the release pages)
@@ -528,7 +533,7 @@ When columns or rows are set to show parents (e.g. requirements) the column or r
 ![planning board parent header](img/Planning_Board_parent-header.png)
 
 - Clicking on the name will open its details page
-- Under the name is a small indicator bar showing the percentage progress. Hover on the indicator to see a tooltip with more information
+- If the "effort data" configuration is set to "Yes", under the name is a small indicator bar showing the percentage progress. Hover on the indicator to see a tooltip with more information
 
 #### Board by Person
 When organizing by person there are a number of special features available in the header row (where you see the person's name).
@@ -536,7 +541,7 @@ When organizing by person there are a number of special features available in th
 ![planning board person header](img/Planning_Board_person-header.png)
 
 - Clicking on the person's name will open the details page for that individual
-- Under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
+- If the "effort data" configuration is set to "Yes", under the name is a small indicator bar showing the percentage of resource allocation. This lets you see how much capacity the person has. Hover on the indicator to see a tooltip with more information
 - Moving cards into a person's cells will, as relevant, automatically update their resource allocation
 
 !!! info "Grouping by team and rows by person"
@@ -570,7 +575,6 @@ Click on a card to select it. Click on more cards to add them to your selection.
 
         - the user does not have bulk edit permissions for the relevant artifact
         - columns is set to status and bulk editing of statuses has been disabled at the template level
-        - a requirement card has a status of either completed or obsolete (because these are considered non-plannable statuses)
         - requirements that have tasks attached, and the product is set to use task status to control requirement status (in this case the card does not *look* disabled but its status cannot be changed - if you try to change its status the card will appear in its original column)
 
 #### Editing and viewing cards
