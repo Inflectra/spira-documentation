@@ -7679,6 +7679,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-712-february-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.12 (February 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-711-january-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8145,6 +8156,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-712-february-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.12 (February 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-711-january-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8316,6 +8338,71 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-712-february-2024">Version 7.12 (February 2024)<a class="headerlink" href="#version-712-february-2024" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">New Features</p>
+<ul>
+<li>
+<p><strong>Requirement Views</strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<ul>
+<li>As a requirement user, I can manage requirements on a <a href="../../Spira-User-Manual/Requirements-Management/#requirements-agile-board">dedicated requirements board</a> that matches the style of the Planning Board [RQ:4755]</li>
+</ul>
+</li>
+<li>
+<p><strong>As an incident user, I can view and manage incidents on a <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">dedicated incident board</a></strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<ul>
+<li>As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]</li>
+<li>As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]</li>
+<li>As an incident user, I can view detailed information about each card easily on the incident board, to help me review incidents quickly [RQ:4701]</li>
+<li>As an incident user, I can edit information about each card from the incident board, to update information without leaving the board [RQ:4702]</li>
+<li>As an incident user, I can add new incidents to any cell on the incident board, to help me quickly add new cards [RQ:4703]</li>
+<li>As an incident user, I can move cards around, including within each cell, to update their details and position, to help me manage incidents [RQ:4704]</li>
+<li>Let template admins sort incident statuses with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>Board improvements</strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<ul>
+<li>Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]</li>
+<li>Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]</li>
+<li>Allow users to <a href="../../Spira-User-Manual/Application-Wide/#moving-and-ordering-cards">move requirement cards</a> when rows or columns is by status, and the status is completed [IN:9145]</li>
+<li>Change how the boards update when updating their settings on the page to avoid edge cases where the wrong cards or duplicate cards may show (particularly on slower networks) [IN:8697]</li>
+<li>Fix adding a new requirement on the planning board when rows is set to "By Parent" not having a parent requirement set [IN:8786]</li>
+<li>Fix column counts on the planning board set to rows By Parent and groups By Component showing unassigned, in certain edge cases [IN:8787]</li>
+<li>Fix duplicate cards showing if you change any card option or the unassigned toggle really quickly [IN:8716]</li>
+<li>Fix not being able to set WIP limits for all requirement statuses [IN:8776]</li>
+<li>Fix the planning board and task board letting users move cards when rows is set to status but the template does not allow status bulk editing [IN:8929]</li>
+<li>Fix the task board not loading if the user is not able to view requirements [IN:8966]</li>
+<li>Hide the "Other artifact cards to show" on the Planning Board Card Features popup if there are no artifacts to show [IN:8927]</li>
+<li>Remove the legacy task board so users can only use the new and improved task board [IN:8958]</li>
+<li>Remove the projected effort field from the incident popup on the incident board and on the planning board [IN:9130]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other fixes and enhancements</strong></p>
+<ul>
+<li>Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
+<li>Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029] <span class="pill">SpiraPlan</span></li>
+<li>Fix changes to custom properties not being saved when editing documents of type URL [IN:7710]</li>
+<li>Fix product level custom reports containing PROJECT_GROUP_ID and ${ProjectId} in a single query not being able to be generated [IN:9099]</li>
+<li>Fix the API to retrieve an associated test run [IN:9126]</li>
+<li>Improve ease of understanding of a button toggled into an active state, especially while in dark mode [IN:8928]</li>
+<li>Improve showing errors on user profile page, especially when trying to change a password [IN:9038]</li>
+<li>Migrating a product between templates removes history IDs for system wide lookup fields such as requirement &amp; release statuses [IN:9112]</li>
+<li>Remove unnecessary debugging information when the installer runs for on premise customers [IN:9132]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-711-january-2024">Version 7.11 (January 2024)<a class="headerlink" href="#version-711-january-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">New Features</p>

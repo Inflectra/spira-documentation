@@ -954,10 +954,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#egacy-board-work-in-progress-limits" class="md-nav__link">
+  <a href="#legacy-board-work-in-progress-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        :egacy Board Work In Progress Limits
+        Legacy Board Work In Progress Limits
       
     </span>
   </a>
@@ -8501,10 +8501,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#egacy-board-work-in-progress-limits" class="md-nav__link">
+  <a href="#legacy-board-work-in-progress-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        :egacy Board Work In Progress Limits
+        Legacy Board Work In Progress Limits
       
     </span>
   </a>
@@ -8684,7 +8684,7 @@
 <li>if the template has customized requirement statuses for boards, then statuses chosen to be shown will show, in the order specified in the template.</li>
 </ul>
 <h3 id="work-in-progress-limits">Work in Progress Limits<a class="headerlink" href="#work-in-progress-limits" title="Permanent link">&para;</a></h3>
-<p>When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the product is using <a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Work in Progress (WIP) limits set</a>, the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "&#8532;" - 2 of 3 requirements.</p>
+<p>When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the "effort data" configuration is set to "Yes", and if the product is using <a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Work in Progress (WIP) limits set</a>, the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "&#8532;" - 2 of 3 requirements.</p>
 <p>There are different colors to indicate the status of the WIP limit:</p>
 <ul>
 <li><strong>No badge</strong>: no WIP limits have been defined for that status and release type (release vs sprint), or the current view does not support WIP limits</li>
@@ -8702,8 +8702,7 @@
 <p><strong>Requirements</strong> follow the rules below:</p>
 <ul>
 <li>parent requirements are never shown</li>
-<li>if columns is anything other than status, then requirements with statuses of either rejected or obsolete will not show</li>
-<li>it does not matter what type the requirement has</li>
+<li>requirements with a status of either rejected or obsolete will only show if you are on the "Product Backlog" and columns is set to status</li>
 </ul>
 <p><strong>Incidents</strong> follow the rules below:</p>
 <ul>
@@ -8943,7 +8942,7 @@
 <li><strong>Sprint Backlog -- By Person</strong>: This view is designed to let you see the sprint plan organized by resource / person. Each of the users that is a member of the current sprint is displayed as a heading, with the backlog items displayed in the same column underneath. The backlog items in this view can be either requirements (with associated tasks and test cases) or incidents. You can click on the expand/collapse icons to hide any resources that are not relevant. The system will display a progress bar for each resource to illustrate the allocation for that resource. Any resource that has a progress bar that is completely green has been fully scheduled and should not have any additional items assigned. If the progress bar for that resource turns red, it means that they have been over-scheduled and you need to reassign some of the items. Above the resource headings there are sections with the release and sprint name; they contain backlog items that are scheduled for the current release or sprint but have not yet been assigned to a resource. You can drag and drop the backlog items between resources or to/from the release/sprint backlog (as long as the item has a status that let's you set or edit its owner field). Any backlog items not assigned to a resource and release/sprint will be listed in the (Unassigned Items) section at the top.</li>
 </ul>
 <p><img alt="" src="../img/Planning_Board_429.png" /></p>
-<h3 id="egacy-board-work-in-progress-limits">:egacy Board Work In Progress Limits<a class="headerlink" href="#egacy-board-work-in-progress-limits" title="Permanent link">&para;</a></h3>
+<h3 id="legacy-board-work-in-progress-limits">Legacy Board Work In Progress Limits<a class="headerlink" href="#legacy-board-work-in-progress-limits" title="Permanent link">&para;</a></h3>
 <p>If the product is using <a href="../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits">Work in Progress (WIP) limits set</a>, they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.</p>
 <ul>
 <li>A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green</li>
