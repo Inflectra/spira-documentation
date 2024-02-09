@@ -19,16 +19,26 @@ The issue check-boxes allow you to specify if the incident type is an issue, whi
 
 
 ## Edit Statuses
-
 The following screen is displayed when you choose the "Statuses" link from the Incidents section of the administration menu:
 
 ![](img/Template_Incidents_145.png)
 
-The screen displays a list of all the defined incident statuses for the current template. By default, the screen will be populated with the standard SpiraPlan® incident statuses. To edit an existing incident status, change the name, open check-box, set it as the default status and/or change the active flag then click "Save".
+The screen shows a list of all the defined incident statuses for the current template. By default, it shows the standard Spira incident statuses. From here you can edit existing statuses or add new ones (by clicking the "Add" button). After making any changes click "Save". You can not delete an existing status, instead you mark ones no longer in use as inactive.
 
-You can't delete an existing incident status, but to prevent it appearing in any drop-down-lists, all you need to do is change its active flag to "No" and click "Save". To add a new incident status, click the "Add" button and a new row will be added to the list which you can now edit.
+Above the list of statuses is a Displaying dropdown that lets you choose which statuses to show:
 
-The open check-box allow you to specify if the incident status should be considered open or not, which means it is would be eligible for display in the various sections of the user's home page and the product home page that list open incidents. The default radio button allows you to specify which incident status should be the default for newly created incidents. This is the status that a new incident will be set to when first created, and acts as the first step in the incident workflow. Note that you must have at least one active incident status, and you cannot set an inactive status as the default.
+- All active (default) shows only the active statuses
+- All: shows both active and inactive statuses
+
+ The list of statuses shows the following information:
+
+- **ID** (not editable) 
+- **Name** (maximum of 20 characters)
+- **Open**: when checked, the status is considered open, when unchecked it is considered closed. Incidents with an open status are considered active and will show up in various "todo" lists of incidents, like on the My Page.
+- **Default**: one status and only one is the default status from the list. This controls which status will be set automatically when you make a new incident. It therefore also acts as the first step in the incident workflow. Note that you must have at least one active incident status, and you cannot set an inactive status as the default.
+- **Position**: controls the order that the statuses are displayed on the [workflow](#edit-workflow-details) page and on the [incident planning board](../../Spira-User-Manual/Incident-Tracking/#incident-board). The position for each status can be empty or a unique number (not in use by another status). Statuses are ordered in ascending order of their position. Statuses with no position are sorted alphabetically by their names and will show before those with a position.
+- **Active**: sets if the status is active or not. Only active statuses are available in workflows and in the application.
+
 
 
 ## Priorities

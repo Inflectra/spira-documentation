@@ -18,7 +18,7 @@
         - As an incident user, I can edit information about each card from the incident board, to update information without leaving the board [RQ:4702]
         - As an incident user, I can add new incidents to any cell on the incident board, to help me quickly add new cards [RQ:4703]
         - As an incident user, I can move cards around, including within each cell, to update their details and position, to help me manage incidents [RQ:4704]
-        - Let template admins sort incident statuses with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
+        - Let template admins sort [incident statuses](../../Spira-Administration-Guide/Template-Incidents/#edit-statuses) with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
 
 ??? bug "Bug fixes and enhancements"
     - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
