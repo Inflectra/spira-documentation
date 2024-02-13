@@ -65,10 +65,3 @@ There are online resources to help you create an avatar in the right way, such a
 6. Look at the "RSS / API Key": if this is blank, click "Generate New"
 7. Wait for the RSS key to display and **click "Save"**
 8. You can now click on the RSS key to copy it automatically to your clipboard
-
-## How to view in-app help {: .section-break}
-Every page in Spira has a link to the exact right place in our online documentation for that page. To open the help:
-
-1. Click on your user avatar from the top right of any page in the app
-2. Click on the "Documentation" entry from the dropdown
-3. This will open the correct page and place in a new tab

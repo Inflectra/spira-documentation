@@ -12,6 +12,13 @@
     * the user menu (shown by your user avatar)
     * the dynamic administration menu, where relevant
 
+## How to view in-app help {: .section-break}
+Every page in Spira has a link to the exact right place in our online documentation for that page. To open the help:
+
+1. Click on your user avatar from the top right of any page in the app
+2. Click on the "Documentation" entry from the dropdown
+3. This will open the correct page and place in a new tab
+
 ## What are workspaces and how to pick one {: .section-break}
 1. To start getting things done in the application you need to select a workspace to explore, manage, or work on. Workspaces can be products (e.g. for a specific application) or programs (that groups a number of products together)
 2. Change your workspace by using the workspace selector dropdown on the global navigation bar
