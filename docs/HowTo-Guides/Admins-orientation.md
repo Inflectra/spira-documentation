@@ -36,3 +36,37 @@ Users can only delete artifacts if their product role has the delete permission 
     - You can see who deleted an artifact by clicking on it from the above page. This will show you more information about the delete
     - You can revert any delete by clicking the "Revert" button. 
     - Read more about product history [here](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes)
+
+## How to add a new product {: .section-break}
+Only system administrators can create new products in Spira.
+
+1. Login as a system administrator and open the [system administration menu](#how-to-access-the-administration-menu)
+2. Look for the "Workspaces" section and click the "View/Edit Products" link
+3. This will open the "Product list" page
+4. From here click the "Add" button at the bottom of the page and follow [these instructions](../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product)
+
+## How to add a new user {: .section-break}
+There are two ways to add new users to Spira: a system administrator creates the user; or the user registers for a new account, which a system admin then approves. 
+
+To create a new user directly:
+
+1. Login as a system administrator and open the [system administration menu](#how-to-access-the-administration-menu)
+2. Look for the "Users" section and click the "View/Edit Users" link
+3. This will open the "User list" page
+4. From here click the "Add" button at the bottom of the page and follow [these instructions](../../Spira-Administration-Guide/System-Users/#add-a-new-user)
+
+For users to register for an account themselves:
+
+1. Your security settings must [allow user registration](../../Spira-Administration-Guide/System/#security-settings) 
+2. The prospective user should [register for a new account](../../Spira-User-Manual/User-Product-Management/#register-for-an-account)
+3. Login as a system administrator and open the [system administration menu](#how-to-access-the-administration-menu)
+4. Look for the "Users" section and click the "Pending Requests" link
+5. Review any pending requests and approve them or not, as described [here](../../Spira-Administration-Guide/System-Users/#pending-requests)
+
+## How to add a user to a product {: .section-break}
+Only product or system administrators can add or remove a user from a product. When you add a user to a product you must give them a specific product role. This role gives them specific permissions. To add a user to a product:
+
+1. Login as a system administrator or product administrator and open the [product administration menu](#how-to-access-the-administration-menu)
+2. Look for the "Users" section and click the "Product Membership" link
+3. This will open the "Product Membership" page.
+4. From here follow these [instructions](../../Spira-Administration-Guide/Product-Users/#add-a-user-to-a-product) to add an existing user to that product by given them the correct role

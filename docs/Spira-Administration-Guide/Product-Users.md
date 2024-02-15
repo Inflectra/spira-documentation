@@ -13,6 +13,7 @@ To modify the role of a user assigned to the product, change the role for that u
 
 To remove a user from the product, check the box to the left of the user's name and click the "Delete" button. Note that this only removes them from the product, not the entire system. See the [product roles documentation](System-Users.md#view-edit-roles) for more information.
 
+### Add a user to a product
 To add a user to the product, so that they can access its information, click the "Add" button and you will be taken to the following screen that lists all the users in the system that are not currently members of the product:
 
 ![](img/Product_Users_108.png)

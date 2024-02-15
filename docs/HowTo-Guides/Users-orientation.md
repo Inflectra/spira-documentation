@@ -25,6 +25,13 @@ Every page in Spira has a link to the exact right place in our online documentat
 3. Each workspace has a dedicated dashboard which provides a "one-stop shop" for understanding the overall status of the current workspace, with comprehensive, easily digestible (and customizable) information. 
 4. Access the workspace dashboard by clicking the large workspace icon on the navigation bar
 
+## How to open a product {: .section-break}
+1. Open the workspace dropdown from the global navigation bar
+2. Each workspace type has a unique icon. The icon for products is a single hexagon. They are nested inside of programs (this icon is three hexagons)
+3. Click on the product you want to open
+4. By default this will open the [product home page](../../Spira-User-Manual/Product-Homepage)
+5. But if you are changing from one product to another then the page you are on will stay the same, but for the new product 
+
 ## What are artifacts and how to pick one {: .section-break}
 1. Artifacts are the building blocks of a product or program and contain all of their data. 
 2. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They both work differently, and are not interchangable.

@@ -1,5 +1,15 @@
 # Requirements
 
+## How to create a requirement {: .section-break}
+1. Select requirements from the "Artifact" dropdown on the global navigation bar
+2. This will open the requirements list view
+3. Click the "Insert" button from the toolbar. 
+    
+    - If you have no requirement selected then the new requirement is added at the bottom of the list (this will be on the last page if you have multiple pages of requirements)
+    - If you have one requirement selected, the new requirement is added immediately above that requirement, as its sibling
+
+4. Note that the dropdown for this button has two options and the second lets you insert a new requirement as a child of an existing requirement, if one is selected
+
 ## How to fix the requirement hierarchy {: .section-break}
 Sometimes the requirement list will not look as you expect (on the main list view or in the sidebar when looking at a single requirement). Some nodes may be hidden that should be visible, or vice versa. This can happen due to the combination of expanding/collapsing different nodes / parent requirements, and filtering requirements by different fields. You can get this back to normal by doing the following:
 
