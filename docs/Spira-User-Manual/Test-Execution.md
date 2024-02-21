@@ -178,7 +178,7 @@ If the inspector is visible, go to the "Incidents" tab. This will show any alrea
 
 ![](img/Test_Case_Management_189.png)
 
-You can instead link the test step to an existing incident (by clicking the "***Link Existing Incident***" button). The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.
+You can instead link the test step to an existing incident (by clicking the "***Link Existing Incident***" button)[^link-existing-incident]. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.
 
 ![](img/Test_Case_Management_190.png)
 
@@ -186,6 +186,7 @@ When in the table display mode, open the "+" dropdown menu to show options to ei
 
 **NOTE**: via [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.
 
+[^link-existing-incident]: to link an existing incident to a test run step you must have permissions to modify incidents
 
 ### Attachments
 If you need to attach documents to the test run (in addition to any screenshots), you can either attach a new or link an existing document. From the inspector, go to the "Attachments" tab to see any documents already linked, or to add a document as needed. In the table display mode, select either "Add New Attachment" or "Link Existing Attachment" from the "+" dropdown menu. See [Attachments](#attachments) for additional information about how to the different available options (e.g. either upload a document, url link, or screenshot, or to link a document or from source code).
