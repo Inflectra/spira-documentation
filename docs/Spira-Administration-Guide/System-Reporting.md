@@ -260,11 +260,11 @@ Further down on the page you can actually enter the custom query and associated 
 
 On this page you need to first choose the appropriate **reportable entity** from the dropdown list. In the example illustrated above, we have selected the "Requirements" reportable entity. This will automatically populate the following query in the **Query** editor:
 
-select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_ID = ${ProjectId}
+select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}
 
-This query tells SpiraPlan to select all of the rows in the R\_Requirements collection that are in the current product and include all of the columns in the final report. This generally will result in more columns than is desirable, so you should click on the "Preview Results" option to view a list of the various columns and the sample data. That will help you decide which columns are important for your report. You can then adjust the query to only include those columns:
+This query tells SpiraPlan to select all of the rows in the R_Requirements collection that are in the current product and include all of the columns in the final report. This generally will result in more columns than is desirable, so you should click on the "Preview Results" option to view a list of the various columns and the sample data. That will help you decide which columns are important for your report. You can then adjust the query to only include those columns:
 
-`select R.REQUIREMENT\_ID, R.NAME from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_ID = ${ProjectId}`
+`select R.REQUIREMENT_ID, R.NAME from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}`
 
 In this modified query, we have replaced the keyword **value** with the specific column names. When you use the "Preview Results" option on this query, you will only see the two desired columns:
 
@@ -280,11 +280,11 @@ You may have noticed that we had a special token in the query **${ProjectId}**, 
 
 For example:
 
--   `select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_ID = ${ProjectId}` will display all the requirements in the specific product
--   `select value R from SpiraTestEntities.R\_Requirements as R where R.PROJECT\_GROUP\_ID = ${ProjectGroupId}` will display all the requirements in the specific program
--   `select value R from SpiraTestEntities.R\_Requirements as R` will display all the requirements in the entire system
+-   `select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}` will display all the requirements in the specific product
+-   `select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_GROUP_ID = ${ProjectGroupId}` will display all the requirements in the specific program
+-   `select value R from SpiraTestEntities.R_Requirements as R` will display all the requirements in the entire system
 
-Follow our [detailed reporting tutorials](../../Reporting/Custom-Report-Tutorial) to learn more.
+Follow our [detailed reporting tutorials](../../Reporting/Custom-Report-Tutorial) to learn more, or refer to our collection of [custom report knowledge base articles](https://www.inflectra.com/Support/KnowledgeBase/spira-reports/List.aspx).
 
 !!! warning 
     If you create a report that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.
@@ -323,19 +323,19 @@ We recommend that you first choose the appropriate **reportable entity** from th
 
 ![](img/System_Reporting_93.png)
 
-This will automatically populate the following query in the **Query** editor: `select value R from SpiraTestEntities.R\_TestRuns as R where R.PROJECT\_ID = ${ProjectId}`
+This will automatically populate the following query in the **Query** editor: `select value R from SpiraTestEntities.R_TestRuns as R where R.PROJECT_ID = ${ProjectId}`
 
-This query tells SpiraPlan to select all of the rows in the R\_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking **Display Data Grid** to see all of the columns that you can use in the graph:
+This query tells SpiraPlan to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking **Display Data Grid** to see all of the columns that you can use in the graph:
 
 ![](img/System_Reporting_94.png)
 
 This will help you decide which columns are important for your graph. You can then adjust the query to only include those columns:
 
 ```
-select R.EXECUTION\_STATUS\_NAME, COUNT (R.TEST\_RUN\_ID) as COUNT
-from SpiraTestEntities.R\_TestRuns as R
-where R.PROJECT\_ID = ${ProjectId}
-group by R.EXECUTION\_STATUS\_NAME
+select R.EXECUTION_STATUS_NAME, COUNT (R.TEST_RUN_ID) as COUNT
+from SpiraTestEntities.R_TestRuns as R
+where R.PROJECT_ID = ${ProjectId}
+group by R.EXECUTION_STATUS_NAME
 ```
 
 In this modified query, we have replaced the keyword **value** with the specific column names. We have also added an aggregation function called **COUNT** to count the number of test runs and group by the execution status name column. SpiraPlan uses a modified SQL language called Entity SQL. For more information on creating custom graph queries, please refer to the knowledge base articles on the Inflectra customer support website: <http://www.inflectra.com/Support>.

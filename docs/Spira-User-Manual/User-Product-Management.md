@@ -19,10 +19,12 @@ If for any reason you are unable to login with the provided username/password co
 
 ![](img/UserProduct_Management_34.png)
 
+### Register for an account
 If you don't have a SpiraPlan® account setup, clicking on the "Register for an account?" link will take you to a form that you need to fill-in, which will be forwarded to the system administrator, who will need to approve your account before it is active in the system. This screen is illustrated below:
 
 ![](img/UserProduct_Management_35.png)
 
+### Controlling where you are logged in
 In addition, the system will prevent you logging on to the system with the same username *at the same time* on multiple computers. This is to avoid the system getting confused by a user trying to make contradictory actions at the same time. If for any reason you do try and log in to the system when you already have an active session in progress, you will see the following screen:
 
 ![](img/UserProduct_Management_36.png)
