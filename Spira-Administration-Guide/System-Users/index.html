@@ -8550,14 +8550,14 @@
 <ul>
 <li><strong>View</strong>: lets a user view all items of that artifact. If the product role does not let a user view an artifact, that artifact will not appear in their navigation menu</li>
 <li><strong>Create</strong>: lets user create a new item of that artifact</li>
-<li><strong>Delete</strong>: lets a user delete any artifact item in the product</li>
+<li><strong>Delete</strong>: lets a user delete any artifact item in the product, or folders of artifacts with folders</li>
 <li><strong>Modify Owned</strong>: lets a user modify only those items in an artifact that they created or have been assigned (e.g. the user can edit only the requirements they created or have been assigned). This is the most restrictive type of modify permission and can only be carried out on the artifact details page, subject to any workflow</li>
 <li><strong>Modify All</strong>: lets a user modify any items for an artifacts on the artifact details page, subject to any workflow (e.g. the user can edit all test cases)</li>
 <li>
 <p><strong>Bulk Edit</strong>: lets users modify items outside of the scope of any workflow in a number of places. This means users can bypass workflow restrictions, allowing them to make status changes (including without electronic signatures) and not enter fields required by workflows. This permission should be applied carefully. Note that you can deny status changes in this with the "Status bulk edit" flag on the <a href="../System-Workspaces/#viewedit-templates">edit template page</a>. Bulk edit works in the following places:</p>
 <ul>
 <li>editing artifacts on artifact list pages</li>
-<li>editing, creating, deleting folders on artifact list pages of those artifacts with folders</li>
+<li>creating and editing folders of artifacts with folders</li>
 <li>moving requirements and releases around the hierarchy on their hierarchical list pages</li>
 <li>moving cards around on all planning and kanban boards</li>
 <li>edit cards on planning and kanban boards (this editing <em>does</em> enforce workflow required fields and does <em>not</em> allow status transitions) </li>
