@@ -249,13 +249,13 @@ These permission options allow you to specify if a user can view, create, delete
 
 - **View**: lets a user view all items of that artifact. If the product role does not let a user view an artifact, that artifact will not appear in their navigation menu
 - **Create**: lets user create a new item of that artifact
-- **Delete**: lets a user delete any artifact item in the product
+- **Delete**: lets a user delete any artifact item in the product, or folders of artifacts with folders
 - **Modify Owned**: lets a user modify only those items in an artifact that they created or have been assigned (e.g. the user can edit only the requirements they created or have been assigned). This is the most restrictive type of modify permission and can only be carried out on the artifact details page, subject to any workflow
 - **Modify All**: lets a user modify any items for an artifacts on the artifact details page, subject to any workflow (e.g. the user can edit all test cases)
 - **Bulk Edit**: lets users modify items outside of the scope of any workflow in a number of places. This means users can bypass workflow restrictions, allowing them to make status changes (including without electronic signatures) and not enter fields required by workflows. This permission should be applied carefully. Note that you can deny status changes in this with the "Status bulk edit" flag on the [edit template page](../System-Workspaces/#viewedit-templates). Bulk edit works in the following places:
 
     - editing artifacts on artifact list pages
-    - editing, creating, deleting folders on artifact list pages of those artifacts with folders
+    - creating and editing folders of artifacts with folders
     - moving requirements and releases around the hierarchy on their hierarchical list pages
     - moving cards around on all planning and kanban boards
     - edit cards on planning and kanban boards (this editing *does* enforce workflow required fields and does *not* allow status transitions) 
