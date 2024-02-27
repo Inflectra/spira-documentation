@@ -68,6 +68,7 @@ Now we need to modify it to enable the Spira custom reporter and configure its s
         }
     });
 
+
 Notice that we have added `reporterOptions` object that specifies how the Cypress reporter will communicate with Spira:
 
 - **projectId** - this should be the ID of the Spira project (e.g. `PR:5` would be just `5`)
@@ -77,8 +78,22 @@ Notice that we have added `reporterOptions` object that specifies how the Cypres
 - **apiKey** - this is the API Key / RSS Token associated with the Spira user
 - **protocol** - this should be either `http` or `https`
 - **host** - this should be the domain name of your Spira instance (e.g. demo-us.spiraservice.net or myinstance.spiraservice.net)
-- **vdir** - this should be the name of any virtual directory in your instance (e.g. `mysite`) or just empty if you have a URL that is just the domain (e.g. https://mysite.spiraservice.net)
+- **vdir** - this should be the name of any virtual directory in your instance (e.g. `mysite`). If there is no virtual directly, leave this field empty - see below for troubleshooting.
 - **mapping**  - this is where we map our spec files to the test cases, we will explain this next.
+
+!!! info "Troubleshooting when you do not have a virtual directory"
+    If you have set the **vdir** property to "" (an empty string), you may have problems connecting to Spira, depending on your version of Cypress and/or Node.js. Some versions do not accept empty entries for the vdir parameter. 
+
+    To fix this issue, you need to add 'video: true' in the cypress.config.js file:
+
+    ```
+    const { defineConfig } = require("cypress");
+
+    module.exports = defineConfig({
+        video:true,
+        e2e: { ... }
+    })
+    ```
 
 ### Mapping the Test Cases
 
