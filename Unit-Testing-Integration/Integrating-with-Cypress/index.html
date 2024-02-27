@@ -8300,9 +8300,21 @@
 <li><strong>apiKey</strong> - this is the API Key / RSS Token associated with the Spira user</li>
 <li><strong>protocol</strong> - this should be either <code>http</code> or <code>https</code></li>
 <li><strong>host</strong> - this should be the domain name of your Spira instance (e.g. demo-us.spiraservice.net or myinstance.spiraservice.net)</li>
-<li><strong>vdir</strong> - this should be the name of any virtual directory in your instance (e.g. <code>mysite</code>) or just empty if you have a URL that is just the domain (e.g. <a href="https://mysite.spiraservice.net">https://mysite.spiraservice.net</a>)</li>
+<li><strong>vdir</strong> - this should be the name of any virtual directory in your instance (e.g. <code>mysite</code>). If there is no virtual directly, leave this field empty - see below for troubleshooting.</li>
 <li><strong>mapping</strong>  - this is where we map our spec files to the test cases, we will explain this next.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Troubleshooting when you do not have a virtual directory</p>
+<p>If you have set the <strong>vdir</strong> property to "" (an empty string), you may have problems connecting to Spira, depending on your version of Cypress and/or Node.js. Some versions do not accept empty entries for the vdir parameter. </p>
+<p>To fix this issue, you need to add 'video: true' in the cypress.config.js file:</p>
+<div class="highlight"><pre><span></span><code>const { defineConfig } = require(&quot;cypress&quot;);
+
+module.exports = defineConfig({
+    video:true,
+    e2e: { ... }
+})
+</code></pre></div>
+</div>
 <h3 id="mapping-the-test-cases">Mapping the Test Cases<a class="headerlink" href="#mapping-the-test-cases" title="Permanent link">&para;</a></h3>
 <p>The <code>mapping</code> section is where we map the name of each test suite in a spec file with a corresponding Spira test case. For example, if we have a spec file that has this <code>context</code> section:</p>
 <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
