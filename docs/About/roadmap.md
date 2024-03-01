@@ -16,27 +16,33 @@ Please take a look at our [release notes](../release-notes-v7) to see a complete
 - Track changes to product membership and product role changes
 - Add a new program level capability board <span class="pill">SpiraPlan</span>
 - Streamline the first time user experience of the "My Page"
-- Roll out tag support to all relevant remaining product artifacts
+- Roll out tag support to all relevant product artifacts
 
+## Q2 2024
+- Enhance the Spira timecard to record the date and time of activities, and provide administrators access to historical time tracking entries 
+- Extend Spira’s powerful test set features even further, so users can add test cases from other products into a test set.
+- Provide audit tracking of changes made by administrators to product roles, product settings, and components.
+- Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
+- Add a new Azure CoPilot SpiraApp
 
 ## Rest of 2024
-Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
+Update the user experience for navigating the application.
 
 New product team features so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
 
+New program level planning board. <span class="pill">SpiraPlan</span>
+
 Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
 
-Update the user experience with more user friendly design, including navigating the application, reading long descriptions, and using the My Page.
-
-Extend Spira’s powerful test set features even further, so users can run test sets in series, and can add test cases from other products into a test set.
-
-Provide audit tracking of changes made by administrators, focused on product roles, product membership, users, and workspaces.
-
-Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
+Provide audit tracking of changes made by administrators to users and workspaces.
 
 Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
 
+Further extend Spira’s powerful test set features to allow users to run test sets in series.
+
 ## 2025
+Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
+
 Add functionality to portfolios with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
 
 Enhance traceability with new requirement views and widgets, integrated risk traceability <span class="pill">SpiraPlan</span>, and integrated analysis of different association types.
@@ -52,7 +58,7 @@ The list below are features that we are focused on delivering but not in the abo
 
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
 - **Enhanced source code management**: the ability to tie a branch to a sprint or release. Code review tools built into the application.
-- **Time tracking**: Enhancements to existing timecard and time logging features. Add the ability for a named user or role to approve a timecard.
+- **Time tracking**: Add the ability for a named user or role to approve a timecard, and provide additional time tracking features like hourly rates and bands.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.
 - **Improved reporting templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.

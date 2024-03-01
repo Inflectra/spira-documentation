@@ -716,6 +716,14 @@ Retrieves data about cross product associations
 | INCIDENT_EFFORT           |
 | TASK_EFFORT               |
 
+## Project (Product) Templates
+| R_ProjectTemplates  |
+| ------------------- |
+| PROJECT_TEMPLATE_ID |
+| NAME                |
+| DESCRIPTION         |
+| IS_ACTIVE           |
+
 ## Releases
 | R_Releases               |
 | ------------------------ |
@@ -1110,7 +1118,7 @@ Retrieves data about cross product associations
 | IS_ACTIVE             |
 | IS_DEFAULT            |
 | IS_PULL_REQUEST       |
-| PROJECT_TEMPLATE_NAME | 
+| PROJECT_TEMPLATE_NAME |
 
 ## Test Cases
 | R_TestCases              |
