@@ -85,11 +85,11 @@ You can use each artifact by itself and tag them in many different ways. An arti
     | ![](img/artifact-component.png) &nbsp; Component                       | CP    | Used to represent common parts of your product that any artifact can be tagged with components.                                                        |
 
 !!! info "Program artifact glossary"
-    | Artifact icon and name                                         | Token | Description                                                                                                    |
-    | -------------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------- |
-    | ![](img/artifact-cp.png) &nbsp; Capability                     | CP    | Tracks program-scale features <span class="pill">SpiraPlan</span>                                              |
-    | ![](img/artifact-cp-parent.png) &nbsp; Capability (parent)            | CP    | Any capability that has one or more child capabilities <span class="pill">SpiraPlan</span>                     |
-    | ![](img/artifact-gm.png) &nbsp; Program Milestone | GM    | A way to group large scale deliverables together to hit a certain deadline <span class="pill">SpiraPlan</span> |
+    | Artifact icon and name                                     | Token | Description                                                                                                    |
+    | ---------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------- |
+    | ![](img/artifact-cp.png) &nbsp; Capability                 | CP    | Tracks program-scale features <span class="pill">SpiraPlan</span>                                              |
+    | ![](img/artifact-cp-parent.png) &nbsp; Capability (parent) | CP    | Any capability that has one or more child capabilities <span class="pill">SpiraPlan</span>                     |
+    | ![](img/artifact-gm.png) &nbsp; Program Milestone          | GM    | A way to group large scale deliverables together to hit a certain deadline <span class="pill">SpiraPlan</span> |
 
 ## Guidance and Tips
 Below are explanations and guidance about how to do different things in Spira, or use its different features and artifacts (or links for where to read more). This includes good practice tips, tricks, do's and don'ts, and how different artifacts link to others. These are designed to help you get the most of out of Spira, and to help you work with the design of the tool, and not against it.
@@ -147,7 +147,7 @@ Each person using Spira should have a dedicated user. A user by itself has no pe
 ### Artifacts
 See the links below to read specific information about each artifact.
 
-- [Requirements](../Requirements-Management.md/#feature-overview-and-tips)
+- [Requirements](./Requirements-Management.md/#feature-overview-and-tips)
 - **Releases** are also know as sprints. They help you divide up your product or project into smaller blocks of time or goals. By themselves releases are simple, but as you link up more and more artifacts to them, the more powerful they become. Like requirements, they can be organized in a hierarchical structure.
 
 ## Legacy artifact overviews

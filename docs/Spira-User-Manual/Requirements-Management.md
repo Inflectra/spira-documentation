@@ -1,10 +1,10 @@
 # Requirements Management
-| Artifact icon and name                                                    | Token | Description                                                                |
-| ------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- |
-| ![](img/Functionality_Overview_10.png) &nbsp; Requirement                 | RQ    | Tracks large pieces of work or product features                            |
-| ![](img/Functionality_Overview_9.png) &nbsp; Requirement (parent)         | RQ    | Any requirement that has one or more child requirements                    |
-| ![](img/Functionality_Overview_11.png) &nbsp; Requirement (has use cases) | RQ    | Any requirement of a type that allows for use case steps                   |
-| ![](img/Functionality_Overview_12.png) &nbsp; Requirement Step            | RS    | Small steps or scenarios on a requirement that show how that feature works |
+| Artifact icon and name                                               | Token | Description                                                                |
+| -------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- |
+| ![](img/artifact-rq.png) &nbsp; Requirement                          | RQ    | Tracks large pieces of work or product features                            |
+| ![](img/artifact-rq-parent.png) &nbsp; Requirement (parent)          | RQ    | Any requirement that has one or more child requirements                    |
+| ![](img/artifact-rq-use-case.png) &nbsp; Requirement (has use cases) | RQ    | Any requirement of a type that allows for use case steps                   |
+| ![](img/artifact-rs.png) &nbsp; Requirement Step                     | RS    | Small steps or scenarios on a requirement that show how that feature works |
 
 ## Feature Overview and Tips
 Also known as features or user stories, requirements are used for tracking larger pieces of work and have special features to help you track their progress. You can arrange requirements hierarchically to help you organize them. Use story points to estimate the time required to deliver the feature. When you first start a product, you usually begin by building up the requirements.
