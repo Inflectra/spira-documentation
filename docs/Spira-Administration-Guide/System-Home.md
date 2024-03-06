@@ -16,7 +16,7 @@ The system information widget displays an overview of your Spira instance, inclu
 ### Manage Sample Data
 <span id="delete-sample-data"></span>
 
-On fresh installations that include the sample data that ships with the application there is a button on this widget to direct you to the admin page to set and [manage sample data](../System-Workspaces/#manage-sample-data). This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
+On fresh installations that include the sample data that ships with the application there is a button on this widget to direct you to the admin page to set and [manage sample data](System-Workspaces.md/#manage-sample-data). This can be helpful if want to start with a clean slate following a trial and not have the sample data cluttering your system. 
 
 ## Event Log
 This widget shows the latest events from the system event log. By default, 5 events are shown, but this number can be changed. To view the complete event log, click View All.

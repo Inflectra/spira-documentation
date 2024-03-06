@@ -16,7 +16,7 @@ can then manage the lifecycle of these defects in V1, and have the
 status changes in V1 be reflected back in SpiraTeam.
 
 !!! danger "Set up data synchronization"
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 ## Configuring the Plug-In
 

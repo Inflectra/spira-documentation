@@ -7,7 +7,7 @@ The built-in integration service allows the quality assurance team to manage the
 Similarly, as the requirements are decomposed into discrete project tasks in SpiraTeam, the integration service will automatically load these new tasks into TFS as task work items where the development team can manage their lifecycle, with schedule and progress changes in TFS being reflected back in SpiraTeam.
 
 !!! danger "Set up data synchronization"     
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 
 ## Configuring the Plug-In

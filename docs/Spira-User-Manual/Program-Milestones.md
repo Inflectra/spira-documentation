@@ -2,7 +2,7 @@
 
 !!! info "These features are only available in SpiraPlan"
 
-Program Milestones and [Capabilities](../Program-Capabilities) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Program milestones let you define cross-product, program-level date goals / milestones (like releases or sprints). You can customize program milestones with system-wide [types](../../Spira-Administration-Guide/Program-Milestones/#types), [statuses](../../Spira-Administration-Guide/Program-Milestones/#statuses), and fully [customizable fields](../../Spira-Administration-Guide/System-Custom-Properties). You can link program milestones to product releases to track their scheduling at a higher level. Program milestones also let you track capabilities' delivery.
+Program Milestones and [Capabilities](Program-Capabilities.md) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Program milestones let you define cross-product, program-level date goals / milestones (like releases or sprints). You can customize program milestones with system-wide [types](../Spira-Administration-Guide/Program-Milestones.md/#types), [statuses](../Spira-Administration-Guide/Program-Milestones.md/#statuses), and fully [customizable fields](../Spira-Administration-Guide/System-Custom-Properties.md). You can link program milestones to product releases to track their scheduling at a higher level. Program milestones also let you track capabilities' delivery.
 
 !!! question "Use cases for program milestones"
     You can think of program milestones as program-level releases. With deep customizations, you can use them in a variety of different ways. Here are a few to help guide you using them.
@@ -29,7 +29,7 @@ The mini chart shows different colors to help you quickly see if progress is on 
 | 100                | Anything      | Anything      | Green                     |
 
 !!! example "Examples"
-    - A program milestone has 3 capabilities linked to it, where 1 is in a closed status and the other 2 in open statuses (as defined on the [admin page](../../Spira-Administration-Guide/Program-Capabilities/#statuses)). The progress will be 33%.
+    - A program milestone has 3 capabilities linked to it, where 1 is in a closed status and the other 2 in open statuses (as defined on the [admin page](../Spira-Administration-Guide/Program-Capabilities.md/#statuses)). The progress will be 33%.
     - A program milestone has 6 capabilities linked to it, where all 6 are in different open statuses. The progress will be 0%.
     - A program milestone has 2 capabilities linked to it, and both are in a closed status. The progress will be 100%.
 

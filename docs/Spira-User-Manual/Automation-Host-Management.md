@@ -4,7 +4,7 @@
 
 This section outlines how to use the Automation Host Management features of SpiraPlan® to manage the different host systems that will be running automated tests in your environment. Typically when scheduling automated tests you will want to execute the same tests on multiple computers running different environments.
 
-SpiraPlan allows you to build a master list of automation hosts in each product, which can be used to [schedule test sets](../Test-Set-Management/#scheduling-test-sets) containing automated test cases against. 
+SpiraPlan allows you to build a master list of automation hosts in each product, which can be used to [schedule test sets](Test-Set-Management.md/#scheduling-test-sets) containing automated test cases against. 
 
 When you click on the Testing \> Automation Hosts global navigation link, you will open the automation host list page:
 

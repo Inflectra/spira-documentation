@@ -29,7 +29,7 @@ Every page in Spira has a link to the exact right place in our online documentat
 1. Open the workspace dropdown from the global navigation bar
 2. Each workspace type has a unique icon. The icon for products is a single hexagon. They are nested inside of programs (this icon is three hexagons)
 3. Click on the product you want to open
-4. By default this will open the [product home page](../../Spira-User-Manual/Product-Homepage)
+4. By default this will open the [product home page](../Spira-User-Manual/Product-Homepage.md)
 5. But if you are changing from one product to another then the page you are on will stay the same, but for the new product 
 
 ## What are artifacts and how to pick one {: .section-break}

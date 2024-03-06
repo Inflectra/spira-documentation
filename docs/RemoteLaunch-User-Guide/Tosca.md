@@ -9,7 +9,7 @@ This page describes the steps for using SpiraTest with Tosca. The plugin works w
 
 ## Installing the Tosca Engine
 
-This section assumes that you already have a working installation of SpiraTest and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch-Guide/). Once those prerequisites are in place, please follow these steps:
+This section assumes that you already have a working installation of SpiraTest and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md). Once those prerequisites are in place, please follow these steps:
 
 - Download and extract the [TricentisToscaEngine.zip](https://www.inflectra.com/Downloads/TricentisToscaEngine.zip) file from the Inflectra website and extract the file
 `ToscaEngine.dll` from inside the zipfile. You may need to right-click on the DLL and choose **Unblock** in Windows to confirm that you want to use the downloaded file.

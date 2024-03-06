@@ -8,7 +8,7 @@ The Template Administration Home page is accessible to users whose product role 
 ![](img/Template_Admin_Home.png)
 
 ## Template Overview
-This widget shows a list of its owners. Click the Edit link to go to the [template editing page](../System-Workspaces/#viewedit-templates). From here you can edit a number of properties about the template, including its name.
+This widget shows a list of its owners. Click the Edit link to go to the [template editing page](System-Workspaces.md/#viewedit-templates). From here you can edit a number of properties about the template, including its name.
 
 ## Product List
 This widget shows a list of the products which use this template.

@@ -21,13 +21,13 @@ The available settings include:
 - **Instant Messenger**: SpiraPlan and SpiraTeam come with a built-in instant messenger that allows users to communicate with each other in real-time. This can result in higher levels of network traffic and some system administrators may wish to disable this feature. This option lets you disable the integrated instant messenger. In addition, you can specify how long (in days) instant messages are retained in the system.
 - **Event Log Retention**: As described in  [Event Log](#event-log), SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
 - **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
-- **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](../Product-Planning/#testing-settings). 
+- **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](Product-Planning.md/#testing-settings). 
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 
 ### TaraVault for Source code
 The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
 
-- **Use TaraVault for source code**: When enabled (the default), every Spira product will use [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault) for source code management. If disabled (set the toggle to no) each product can either use TaraVault or an external (and cloud accessible) Git or Subversion provider of your choice, such as BitBucket, GitLab or Azure DevOps. **Note**: You can enable/disable this setting at anytime, but doing so may impact your ability to access your source code settings.
+- **Use TaraVault for source code**: When enabled (the default), every Spira product will use [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) for source code management. If disabled (set the toggle to no) each product can either use TaraVault or an external (and cloud accessible) Git or Subversion provider of your choice, such as BitBucket, GitLab or Azure DevOps. **Note**: You can enable/disable this setting at anytime, but doing so may impact your ability to access your source code settings.
 
 !!! question "Not exclusively using TaraVault"
     If you set/leave the "Use TaraVault for source code" toggle discussed above to Yes, then you will only have access to the TaraVault admin pages at both the system and product level administration.
@@ -114,7 +114,7 @@ The following settings can be changed within the system, once you are satisfied,
 - **Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
 - **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
 - **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
-- **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../../Spira-User-Manual/User-Product-Management/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](../System-Users/#edit-an-existing-user) page. 
+- **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](System-Users.md/#edit-an-existing-user) page. 
 {: #enable-2-step-authentication}
 
 !!! hint "2-Step Authentication tips"   
@@ -126,13 +126,13 @@ The following settings can be changed within the system, once you are satisfied,
 {: #enforce-provider-login}
 
 !!! hint "How does enforcing Provider login work?"
-    This setting is useful for organizations who have at least one [login provider](../System-Users/#login-providers) configured (where users can login with an SSO provider like Google or Microsoft). It limits the way that users can manage their account and that new users can register. We recommend it for organization looking to make sure all their users only login using a provider.
+    This setting is useful for organizations who have at least one [login provider](System-Users.md/#login-providers) configured (where users can login with an SSO provider like Google or Microsoft). It limits the way that users can manage their account and that new users can register. We recommend it for organization looking to make sure all their users only login using a provider.
     
     With this setting enabled the following changes are made to the system:
 
     - the option to register a new account is removed from the login page
     - To create a Spira account, users must click the button for the relevant provider on the login page to add that provider account as a new SSO user in Spira
-    - users who login with a provider can no longer go to their [My Profile](../../Spira-User-Manual/User-Product-Management/#my-profile) and disconnect from that provider
+    - users who login with a provider can no longer go to their [My Profile](../Spira-User-Manual/User-Product-Management.md/#my-profile) and disconnect from that provider
     
     The following functionality is not affected by this change:
 
@@ -153,7 +153,7 @@ The following settings can be changed within the system, once you are satisfied,
 
 ## TaraVault®
 
-*This section refers to the functionality available to hosted/cloud customers of SpiraPlan. If you are using the on-premise version of SpiraPlan, please refer to [Version Control Integration](../System-Integration/#version-control-integration-on-premise-customers-only) instead.*
+*This section refers to the functionality available to hosted/cloud customers of SpiraPlan. If you are using the on-premise version of SpiraPlan, please refer to [Version Control Integration](System-Integration.md/#version-control-integration-on-premise-customers-only) instead.*
 
 TaraVault® is the hosted source code repository and software configuration management (SCM) system provided by Inflectra. When you signed-up or purchased a subscription to either SpiraPlan or SpiraTeam, it will have come with an entry-level subscription to TaraVault.
 
@@ -261,7 +261,7 @@ For each SpiraApp in the list you see:
 
 
 ## SpiraApp Settings
-The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../../SpiraApps) 
+The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../SpiraApps/index.md) 
 
 If the SpiraApp has no settings you can still access the page but there will be no settings to edit.
 

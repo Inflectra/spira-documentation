@@ -1,8 +1,8 @@
 # Incident Tracking
 
-This section outlines how the incident/defect tracking features of SpiraPlan® can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the [product dashboard](../User-Product-Management/#product-home) it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.
+This section outlines how the incident/defect tracking features of SpiraPlan® can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the [product dashboard](User-Product-Management.md/#product-home) it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.
 
-Unlike a standalone bug/issue tracking tool however, you can trace the incidents/defects back to the test case and the underlying requirement that generated them, giving the product manager unprecedented power in analyzing the "in-process" quality of a system during its lifecycle. This power is clearly illustrated in the "Requirement Incident Count" pane in the Product Home dashboard (see [User/Product Management > Requirements Coverage](../User-Product-Management/#requirements-coverage)).
+Unlike a standalone bug/issue tracking tool however, you can trace the incidents/defects back to the test case and the underlying requirement that generated them, giving the product manager unprecedented power in analyzing the "in-process" quality of a system during its lifecycle. This power is clearly illustrated in the "Requirement Incident Count" pane in the Product Home dashboard (see [User/Product Management > Requirements Coverage](User-Product-Management.md/#requirements-coverage)).
 
 
 ## Incident List
@@ -18,7 +18,7 @@ The sidebar on the left gives you quick access to saved filters, along with some
 - a donut chart of the ratio of all incidents in the product that have an open status vs closed status
 - a donut chart showing the mix of priorities assigned to all incidents with an open status
 
-In addition, you can view a more detailed description of the incident (along with a resolution if any) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the incident name hyperlink, you will be taken to the incident details page described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of incidents in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
+In addition, you can view a more detailed description of the incident (along with a resolution if any) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the incident name hyperlink, you will be taken to the incident details page described in [Incident Tracking > Incident Details](Incident-Tracking.md/#incident-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of incidents in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
 
 ### Filtering & Sorting
@@ -26,11 +26,11 @@ Read about [how to create and manage filters, and how to sort the artifact list]
 
 Incidents can be filtered in special ways when filtering by incident status or incident type:
 
-- **Incident Type**: Issues are a special subset of Incidents. [Admins define](../../Spira-Administration-Guide/Template-Incidents/#edit-types) which types of incident should be considered issues. When filtering by incident type you can choose to filter by Issues. Doing this will show you all incidents that have any type that is marked as also being an "issue."
-- **Incident Status**: Incidents have customizable statuses, each of which can be marked as ["open" or "closed" by the admin](../../Spira-Administration-Guide/Template-Incidents/#edit-statuses). When filtering by incident status you can choose to filter by specific statuses, or "all open" or "all closed" - these last two options automatically filter by all statuses that are considered open or closed respectively. 
+- **Incident Type**: Issues are a special subset of Incidents. [Admins define](../Spira-Administration-Guide/Template-Incidents.md/#edit-types) which types of incident should be considered issues. When filtering by incident type you can choose to filter by Issues. Doing this will show you all incidents that have any type that is marked as also being an "issue."
+- **Incident Status**: Incidents have customizable statuses, each of which can be marked as ["open" or "closed" by the admin](../Spira-Administration-Guide/Template-Incidents.md/#edit-statuses). When filtering by incident status you can choose to filter by specific statuses, or "all open" or "all closed" - these last two options automatically filter by all statuses that are considered open or closed respectively. 
 
 ### New Incident
-Clicking on the "***New Incident***" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in [Incident Details](../Incident-Tracking/#incident-details) except, depending on how the [workflow has been configured](../../Spira-Administration-Guide/Template-Incidents/#incident-workflows) for this product, certain fields may be disabled.
+Clicking on the "***New Incident***" button takes you to the new incident screen. This is essentially the same screen as the incident details screen shown in [Incident Details](Incident-Tracking.md/#incident-details) except, depending on how the [workflow has been configured](../Spira-Administration-Guide/Template-Incidents.md/#incident-workflows) for this product, certain fields may be disabled.
 
 ### Delete
 Clicking on the "***Delete***" button deletes the incidents whose check-boxes have been selected in the incident list.
@@ -217,11 +217,11 @@ Read about [how to add and manage followers to an artifact](Application-Wide.md#
     
     The SpiraPlan incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.
 
-    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 
-    - [board structure and configuration](../Application-Wide/#board-structure)
-    - [special board views](../Application-Wide/#special-board-views) 
-    - [working with board cards](../Application-Wide/#board-cards) 
+    - [board structure and configuration](Application-Wide.md/#board-structure)
+    - [special board views](Application-Wide.md/#special-board-views) 
+    - [working with board cards](Application-Wide.md/#board-cards) 
 
     **Specific features of or differences in the incident board are discussed more fully below**.
 
@@ -260,7 +260,7 @@ The **release dropdown** shows:
 #### Customizing cards
 ![incident board card options](img/incident-board-card-options.png)
 
-In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
+In addition to the standard [board card options](Application-Wide.md/#board-card-options), you can toggle whether to show each of the following features:
 
 - **Progress**: a mini histogram chart of the incident's progress (hover to see a tooltip with detailed information)
 

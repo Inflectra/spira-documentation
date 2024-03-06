@@ -17,7 +17,7 @@ For example, a task going from not done to done. In SpiraPlan the task starts as
 ==}
 
 !!! info "If you are starting the quick start guide here"
-    This part of the guide only works if you have already made some requirements and (optionally) tasks for those requirements. If you haven't done this, please [go back](../plan/#features-and-goals) and do so now.
+    This part of the guide only works if you have already made some requirements and (optionally) tasks for those requirements. If you haven't done this, please [go back](plan.md/#features-and-goals) and do so now.
 
     **There are two different ways to "do the work" in this part of the guide - you only need to do one**:
 
@@ -104,7 +104,7 @@ The task progress bars for 3 requirements are now green. This makes sense becaus
 
 ### Completing Standalone Requirements
 !!! info "Already completed tasks (above)?"
-    [Skip ahead](../test)
+    [Skip ahead](test.md)
 
 - [x] Open the Artifact dropdown from the global navigation and click "Requirements"
 - [x] Click the "Edit" button in the list of requirements for the task "Pack my suitcase"

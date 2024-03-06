@@ -258,7 +258,7 @@ First, we are going to set the release for our requirements.
 
 ### Set Releases for Tasks
 !!! info "Skip this section if you are not using SpiraTeam or SpiraPlan"
-    [Skip ahead](../do-the-work)
+    [Skip ahead](do-the-work.md)
 
 Let's hook our tasks up to releases. 
 
@@ -309,7 +309,7 @@ Let's hook our tasks up to releases.
 
 ## What are the Risks
 !!! info "Skip this section if you are not using SpiraPlan"
-    [Skip ahead](../do-the-work)
+    [Skip ahead](do-the-work.md)
 
 {==
 

@@ -20,7 +20,7 @@ This page outlines how to use the HP ALM Migration Tool to import projects from 
 ## Installing the HP ALM Migration Tool
 To get started, you will need to install the migration tool onto a workstation that can access both your HP ALM server, and your Spira application.
 
-You must already have a working installation of Spira v4.0 or later and a working version of HP ALM 11.5 or later. If you are using HP QualityCenter 10.0 or older, please refer to the migration tool and [documentation here](../Migrating-from-HP-QualityCenter).
+You must already have a working installation of Spira v4.0 or later and a working version of HP ALM 11.5 or later. If you are using HP QualityCenter 10.0 or older, please refer to the migration tool and [documentation here](Migrating-from-HP-QualityCenter.md).
 
 The Windows installation package can be downloaded from the "Add-Ons & Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:
 

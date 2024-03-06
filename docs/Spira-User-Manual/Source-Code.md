@@ -9,16 +9,16 @@ SpiraTeam®'s and SpiraPlan®'s source code integration features let you:
 - link source code commits and files to SpiraPlan artifacts. 
 - view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.
 
-SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or plugins for the different SCM's (including [Git](../../Version-Control-Integration/Integrating-with-Git/) and [Subversion](../../Version-Control-Integration/Integrating-with-Subversion/)). If you want to learn more about using a source code provider, read our intro guides to  [using Git](../../TaraVault-User-Manual/Using-Git/) and [using Subversion](../../TaraVault-User-Manual/Using-Subversion/).
+SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or plugins for the different SCM's (including [Git](../Version-Control-Integration/Integrating-with-Git.md) and [Subversion](../Version-Control-Integration/Integrating-with-Subversion.md)). If you want to learn more about using a source code provider, read our intro guides to  [using Git](../TaraVault-User-Manual/Using-Git.md) and [using Subversion](../TaraVault-User-Manual/Using-Subversion.md).
 
-This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](../Commits) outlines viewing and working with commits and the changes made in them.
+This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](Commits.md) outlines viewing and working with commits and the changes made in them.
 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
 
-1. a system administrator has setup the source code provider (for example, Inflectra's cloud-hosted [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or [Git](../../Version-Control-Integration/Integrating-with-Git/#configuring-git-in-spiraplan))
-2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [TaraVault](../../TaraVault-User-Manual/Activating-TaraVault/) or [Git](../../Version-Control-Integration/Integrating-with-Git/#use-git-for-your-product))
-3. SpiraPlan users have a [role](../../Spira-Administration-Guide/System-Users/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
+1. a system administrator has setup the source code provider (for example, Inflectra's cloud-hosted [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spiraplan))
+2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or [Git](../Version-Control-Integration/Integrating-with-Git.md/#use-git-for-your-product))
+3. SpiraPlan users have a [role](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
 
 Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.
 
@@ -83,7 +83,7 @@ The detailed information available at the top of the page is:
 - a link to open or download the raw version of the file as it is/was at the most recent commit of the current branch
 - the icon for the file type
 - the file size
-- the identifier of the latest commit for this file (in the current branch) and a link to the [detailed page for the file at that commit](../Commits/#commit-file-details)
+- the identifier of the latest commit for this file (in the current branch) and a link to the [detailed page for the file at that commit](Commits.md/#commit-file-details)
 - date and time of the above commit
 
 There are 3 tabs on this page that each show additional information about the file. These are discussed below.
@@ -103,7 +103,7 @@ This shows the full commit history for that file in the current branch. The list
 
 Each commit is displayed with:
 
-- its name/identifier - clicking on the commit identifier will open the [Commit File Details](../Commits/#commit-file-details) page for that file at that specific commit
+- its name/identifier - clicking on the commit identifier will open the [Commit File Details](Commits.md/#commit-file-details) page for that file at that specific commit
 - the date of the commit (hovering over this date will show a tooltip with the date and time)
 - its commit message (or summary) - any artifact tokens (eg "[IN:7]") in the message are clickable and will open the details page for that artifact
 - the type of action that was done to the file (eg added, or modified),
@@ -117,7 +117,7 @@ This shows all current associations between this file and any artifacts in Spira
 You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations).
 
 ## Source Code Revision List 
-Updated documentation is [here](../Commits/#commit-list).
+Updated documentation is [here](Commits.md/#commit-list).
 
 ## Source Code Revision Details 
-Updated documentation is [here](../Commits/#commit-details).
+Updated documentation is [here](Commits.md/#commit-details).

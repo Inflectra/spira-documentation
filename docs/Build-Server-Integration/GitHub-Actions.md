@@ -6,7 +6,7 @@ SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated s
 You can easily configure your GitHub Actions to report against a release and create a new build in SpiraPlan each time they run. This let's you see the health of your CI/CD process within SpiraPlan. 
 
 !!! check "GitHub SpiraApp"
-    You can also let end users start GitHub Actions from within SpiraPlan itself. To do so you will need to [enable and configure the GitHub SpiraApp](../../SpiraApps/GitHub)
+    You can also let end users start GitHub Actions from within SpiraPlan itself. To do so you will need to [enable and configure the GitHub SpiraApp](../SpiraApps/GitHub.md)
 
 The integration has two parts, which are discussed below:
 
@@ -77,7 +77,7 @@ Second, you need to add a dedicated webhook. This means that when the GitHub Act
 
     - First get the base url of your instance - for instance `https://mysite.spiraservice.net`. This is the start of every URL you use when using SpiraPlan
     - Add the following to the end of that URL `/Services/Webhooks/BuildService.svc/GitHub`
-    - Add your SpiraPlan user authentication to the end of this url. This needs a username and an [api-key](../../HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). The user must be a member of the relevant product and be able to create releases. This part of the URL looks like `?username={{username}}&api-key={{api key}}`
+    - Add your SpiraPlan user authentication to the end of this url. This needs a username and an [api-key](../HowTo-Guides/Users-profile-management.md/#how-to-get-or-make-your-rss-token-or-api-key). The user must be a member of the relevant product and be able to create releases. This part of the URL looks like `?username={{username}}&api-key={{api key}}`
 
     The final URL will look like this: `https://mysite.spiraservice.net/Services/Webhooks/BuildService.svc/GitHub?username=github-actions&api-key={11111111-1111-1111-1111-111111111111}`
 

@@ -1,5 +1,5 @@
 # Commits
-Go [here](../Source-Code/#getting-started-with-source-code) to read about how to connect your source code to your SpiraPlan product.
+Go [here](Source-Code.md/#getting-started-with-source-code) to read about how to connect your source code to your SpiraPlan product.
 
 ## Linking To Artifacts In Commit Messages
 When developers are working on source code, it is often to fix a bug, create a feature described in a user story, or deal with a task. SpiraPlan lets you trace what commits (and therefore file changes) contributed to a bug fix. To do this SpiraPlan reads commit messages for special tokens that it turns into links between the commit and those artifacts. If SpiraPlan finds any links in the commit message it automatically creates the association between the commit and the artifact(s). You can view these associations from the [commit details](#commit-details) page, or from the associations tab of any artifact.
@@ -52,7 +52,7 @@ The detailed information available at the top of the page is the:
 - commit message (artifacts tokens are links that will open that artifact)
 - author of the commit
 - date and time the commit was made
-- associated build, if there is one (clicking on the build will open the [build details](../Release-Management/#build-details) page for that build)
+- associated build, if there is one (clicking on the build will open the [build details](Release-Management.md/#build-details) page for that build)
 
 There are 3 tabs on this page that each show additional information about the commit. These are discussed below.
 
@@ -97,7 +97,7 @@ This page is made up of three areas:
 2. the bottom of the left-hand pane shows the currently selected branch, and the other commits in this branch that changed the file currently being viewed (the icon represents the commit action for this file). Newer commits are at the top. 
 
     - Clicking on a commit will update the page for the current file at that commit (hovering over the name will show you the commit message in a tooltip). 
-    - Above the list of commits is the file name - clicking on this will open the [file details](../Source-Code/#source-code-file-details) page for this file (hovering over the name will show you the full file path and file name in a tooltip).
+    - Above the list of commits is the file name - clicking on this will open the [file details](Source-Code.md/#source-code-file-details) page for this file (hovering over the name will show you the full file path and file name in a tooltip).
 
 3. the right-hand pane shows detailed information about the file for the particular commit. This pane is discussed more below.
 
@@ -107,7 +107,7 @@ The detailed information available at the top of the page is:
 - the commit name: click to open its [commit details](#commit-details) page (hovering over the name will show you the commit message in a tooltip)
 - the name of the file, along with its file extension
 - a link to open or download the raw version of the file as it was at this particular commit
-- a link to open the [file details](../Source-Code/#source-code-file-details) page for this file
+- a link to open the [file details](Source-Code.md/#source-code-file-details) page for this file
 - the icon for the file type
 - the file size
 - the name of the person who made the commit

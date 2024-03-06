@@ -10,7 +10,7 @@ This section covers installing and using the Engine to report back the success o
 
 ## Installing the WebLOAD Engine
 
-This section assumes that you already have a working installation of SpiraTest or SpiraPplan and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch-Guide/). Once those prerequisites are in place, please follow these steps:
+This section assumes that you already have a working installation of SpiraTest or SpiraPplan and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md). Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the WebLOADEngine.zip file from the Inflectra website and locate the appropriate WebLoad.dll for the version of WebLOAD that you are using.
 -   If you don't see the version listed, just use the nearest version that is *lower* than your current version.

@@ -83,12 +83,12 @@ Throughout this guide we will be moving between the different artifacts in our s
 ![The artifact selector](img/01-intro-04.png)
 
 
-[Let's Start :rocket:](./plan){ .md-button .md-button--primary }
+[Let's Start :rocket:](./plan.md){ .md-button .md-button--primary }
 
 
 
 ??? question "How to access legacy quick start guides"
-    The legacy version of the quick start guides are available for [SpiraTest](../../SpiraTest-Quick-Start-Guide/), [SpiraTeam](../../SpiraTeam-Quick-Start-Guide/), and [SpiraPlan](../../SpiraPlan-Quick-Start-Guide-Legacy/). Click on the name of the product to access its legacy guide.
+    The legacy version of the quick start guides are available for [SpiraTest](../SpiraTest-Quick-Start-Guide/index.md), [SpiraTeam](../SpiraTeam-Quick-Start-Guide/index.md), and [SpiraPlan](../SpiraPlan-Quick-Start-Guide-Legacy/index.md). Click on the name of the product to access its legacy guide.
 
 
 <!-- ## Artifacts Overview

@@ -108,7 +108,7 @@ For each requirement each effort column is calculated from the sum of effort fro
 - Remaining Effort: the sum of all tasks' remaining efforts
 - Projected Effort: the sum of all task projected efforts
 
-Task effort calculations are described in more detail [here](../Product-Homepage/#release-task-progress). 
+Task effort calculations are described in more detail [here](Product-Homepage.md/#release-task-progress). 
 
 ## Standard Requirements and Parent Requirements
 Requirements come in two main flavors (Both can be mapped against test cases for test coverage): 
@@ -116,7 +116,7 @@ Requirements come in two main flavors (Both can be mapped against test cases for
 - **Standard requirements** are any requirements that are not parents (do not have children). These are shown in normal-type and with a normal icon (for either a requirement or a use case). Standard requirements, unlike parent requirements, can:
 
     - assign a point estimate to themselves 
-    - change their status directly (you cannot edit it on the list pages, or on the details pages using the workflows). Note that combined with certain [Planning Options](../../Spira-Administration-Guide/Product-Planning/#requirements) the requirement status may be updated automatically
+    - change their status directly (you cannot edit it on the list pages, or on the details pages using the workflows). Note that combined with certain [Planning Options](../Spira-Administration-Guide/Product-Planning.md/#requirements) the requirement status may be updated automatically
 
 - **Parent requirements** are any requirement that has at least one child inside it. Parents are shown in **bold-type** and have a special parent requirement icon. They are marked as "Yes" when viewing the "Is Parent?" column on the requirement list pages. Parent requirements get some information based on their children (and are therefore always read only):
 
@@ -416,7 +416,7 @@ You can **edit requirements** straight from the mindmap. Users with bulk edit pe
 
 ## Requirement Details
 
-When you click on a requirement item in the requirements list described in [Requirements Management > Requirements List](../Requirements-Management/#requirements-list), you are taken to the requirement details page illustrated below:
+When you click on a requirement item in the requirements list described in [Requirements Management > Requirements List](Requirements-Management.md/#requirements-list), you are taken to the requirement details page illustrated below:
 
 ![](img/Requirements_Management_93.png)
 
@@ -557,7 +557,7 @@ This tab shows the list of product tasks that need to be completed for the requi
 ![](img/Requirements_Management_112.png)
 
 
-Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, projected effort and numeric task identifier. Clicking on the task name will bring up the [Task Details page](../Task-Tracking/#task-details). This allows you to edit the details of an existing task.
+Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, projected effort and numeric task identifier. Clicking on the task name will bring up the [Task Details page](Task-Tracking.md/#task-details). This allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:
 
@@ -570,7 +570,7 @@ You can perform the following actions on a task from this screen:
 - **Edit**: Clicking the "***Edit***" button to the right of the task allows you to edit the task inline directly on this screen. Only columns visible will be editable.
 - **Show/Hide Columns**: Allows you to choose which Task columns are visible
 
-The system has a series of shortcuts that simplify the editing of requirements and tasks (these can be changed as required in [product administration](../../Spira-Administration-Guide/Product-Planning/#requirements)):
+The system has a series of shortcuts that simplify the editing of requirements and tasks (these can be changed as required in [product administration](../Spira-Administration-Guide/Product-Planning.md/#requirements)):
 
 - If you create a new task on the requirements page, the priority, release/sprint and owner are automatically copied from the parent requirement. You can change these suggested values before clicking "***Save***"
 - When you assign a release/sprint to a requirement, its status automatically changes to "Planned"

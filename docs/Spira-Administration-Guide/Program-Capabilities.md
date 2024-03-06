@@ -52,4 +52,4 @@ To edit an existing type: change the name, color, score, and active flag then cl
 
 
 ## Custom properties
-Clicking this link from the Capabilities section of the system administration menu will open the [system custom properties](../System-Custom-Properties) page for capabilities.
+Clicking this link from the Capabilities section of the system administration menu will open the [system custom properties](System-Custom-Properties.md) page for capabilities.

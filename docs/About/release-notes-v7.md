@@ -8,9 +8,9 @@
 !!! success "New Features"
     * **Requirement Views** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-        - As a requirement user, I can manage requirements on a [dedicated requirements board](../../Spira-User-Manual/Requirements-Management/#requirements-agile-board) that matches the style of the Planning Board [RQ:4755]
+        - As a requirement user, I can manage requirements on a [dedicated requirements board](../Spira-User-Manual/Requirements-Management.md/#requirements-agile-board) that matches the style of the Planning Board [RQ:4755]
     
-    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../../Spira-User-Manual/Incident-Tracking/#incident-board)** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board)** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]
         - As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]
@@ -18,14 +18,14 @@
         - As an incident user, I can edit information about each card from the incident board, to update information without leaving the board [RQ:4702]
         - As an incident user, I can add new incidents to any cell on the incident board, to help me quickly add new cards [RQ:4703]
         - As an incident user, I can move cards around, including within each cell, to update their details and position, to help me manage incidents [RQ:4704]
-        - Let template admins sort [incident statuses](../../Spira-Administration-Guide/Template-Incidents/#edit-statuses) with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
+        - Let template admins sort [incident statuses](../Spira-Administration-Guide/Template-Incidents.md/#edit-statuses) with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
 
 ??? bug "Bug fixes and enhancements"
     - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
         - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
-        - Allow users to [move requirement cards](../../Spira-User-Manual/Application-Wide/#moving-and-ordering-cards) when rows or columns is by status, and the status is completed [IN:9145]
+        - Allow users to [move requirement cards](../Spira-User-Manual/Application-Wide.md/#moving-and-ordering-cards) when rows or columns is by status, and the status is completed [IN:9145]
         - Change how the boards update when updating their settings on the page to avoid edge cases where the wrong cards or duplicate cards may show (particularly on slower networks) [IN:8697]
         - Fix adding a new requirement on the planning board when rows is set to "By Parent" not having a parent requirement set [IN:8786]
         - Fix column counts on the planning board set to rows By Parent and groups By Component showing unassigned, in certain edge cases [IN:8787]
@@ -53,11 +53,11 @@
 ## Version 7.11 (January 2024)
 
 !!! success "New Features"
-    - Add a security setting to let system admins [enforce users to login using an OAuth Login Provider](../../Spira-Administration-Guide/System/#enforce-provider-login) [RQ:4707]
+    - Add a security setting to let system admins [enforce users to login using an OAuth Login Provider](../Spira-Administration-Guide/System.md/#enforce-provider-login) [RQ:4707]
     - Update the fonts to a consolidated and more legible font [IN:8832]
 
 ??? bug "Bug fixes and enhancements"
-    - Add extra information to the [user custom report table](../../Reporting/Custom-Report-Tables/#users) to make it easier for report admins to extract and analyze user information [IN:8836]
+    - Add extra information to the [user custom report table](../Reporting/Custom-Report-Tables.md/#users) to make it easier for report admins to extract and analyze user information [IN:8836]
     - Fix exploratory test execution when moving between steps so that rich text boxes of linked test steps are set to read only and the incident form is cleared [IN:8829]
     - Fix test case, test set, and task reports so that reports can be filtered correctly by folder (introduced in 7.10) [IN:9078]
     - Fix the program reporting page from showing an error message when adding a program custom graph [IN:9032]
@@ -74,13 +74,13 @@
 
 !!! info "Summary"
 
-    - Brings new widgets to the [program home page](../../Spira-User-Manual/Program-Homepage), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
-    - Improves [program level reporting](../../Spira-User-Manual/Program-Reports) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
-    - Adds [tagging](../../Spira-User-Manual/Application-Wide/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
-    - Let users leverage the power of [ChatGPT](../../SpiraApps/ChatGPT) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
+    - Brings new widgets to the [program home page](../Spira-User-Manual/Program-Homepage.md), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
+    - Improves [program level reporting](../Spira-User-Manual/Program-Reports.md) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
+    - Adds [tagging](../Spira-User-Manual/Application-Wide.md/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
+    - Let users leverage the power of [ChatGPT](../SpiraApps/ChatGPT.md) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
 
 ??? success "New Features"
-    * **[Extended tag support](../../Spira-User-Manual/Application-Wide/#tags)**
+    * **[Extended tag support](../Spira-User-Manual/Application-Wide.md/#tags)**
 
         - As an incident user, I can add and remove tags to incidents easily from the details page and APIs, to more easily manage product incidents [RQ:4695]
         - As a task user, I can add and remove tags to tasks easily from the details page and APIs, to more easily manage product tasks [RQ:4694]
@@ -90,16 +90,16 @@
     
     * **As a program manager, I can view meaningful charts and summaries about program milestones and capabilities on the program home page, so I can quickly see the state of the program and spot problems**
 
-        - As a capability user, I can view [open vs closed capability and the priorities](../../Spira-User-Manual/Program-Homepage/#capability-open-count) of all open capabilities in an easy to read program home page widget, to help me review current work [RQ:4675]
-        - As a capability user, I can view a [summary of capabilities](../../Spira-User-Manual/Program-Homepage/#capability-summary) in a dedicated program home page widget, to help me review current work [RQ:4677]
-        - As a program milestone user, I can track the progress of [open program milestones](../../Spira-User-Manual/Program-Homepage/#program-milestone-capability-progress) in an easy to read program home page widget, to help me review current work [RQ:4676]
-        - As a program milestone user, I can see a chart of [progress and schedule for program milestones in](../../Spira-User-Manual/Program-Homepage/#program-milestone-completion) a program home page widget, to help me review current work [RQ:4678]
+        - As a capability user, I can view [open vs closed capability and the priorities](../Spira-User-Manual/Program-Homepage.md/#capability-open-count) of all open capabilities in an easy to read program home page widget, to help me review current work [RQ:4675]
+        - As a capability user, I can view a [summary of capabilities](../Spira-User-Manual/Program-Homepage.md/#capability-summary) in a dedicated program home page widget, to help me review current work [RQ:4677]
+        - As a program milestone user, I can track the progress of [open program milestones](../Spira-User-Manual/Program-Homepage.md/#program-milestone-capability-progress) in an easy to read program home page widget, to help me review current work [RQ:4676]
+        - As a program milestone user, I can see a chart of [progress and schedule for program milestones in](../Spira-User-Manual/Program-Homepage.md/#program-milestone-completion) a program home page widget, to help me review current work [RQ:4678]
     
     * **As a program manager, I want to monitor the progress of program releases, using charts, live widgets, and offline reporting, so I can analyze trends and ensure the program is compliant with any reporting or audit standards**
 
-        - As a program manager, I can view [program reporting page](../../Spira-User-Manual/Program-Reports) widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
-        - As a program manager, I can view my [program home page](../../Spira-User-Manual/Program-Homepage) by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
-        - As a report admin, I can specify the workspace a [custom graph](../../Spira-Administration-Guide/System-Reporting/#edit-graphs) should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
+        - As a program manager, I can view [program reporting page](../Spira-User-Manual/Program-Reports.md) widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
+        - As a program manager, I can view my [program home page](../Spira-User-Manual/Program-Homepage.md) by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
+        - As a report admin, I can specify the workspace a [custom graph](../Spira-Administration-Guide/System-Reporting.md/#edit-graphs) should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
         - As a program report user, I can filter & sort custom program level reports by relevant fields, to better show me the data I need [RQ:4659]
         - As a program report user, I can filter the capability summary report, to help me tailor the report to my needs [RQ:4660]
         - As a program report user, I can filter the capability details report, to help me tailor the report to my needs [RQ:4661]
@@ -154,13 +154,13 @@
 
 !!! info "Summary"
 
-    - This release brings a brand new [planning board](../../Spira-User-Manual/Planning-Board). Streamlined and beautiful by default. Powerful customizations when you need them for columns, cards, and swimlanes (rows). This takes the beta board released earlier this year to the next level, thanks to the invaluable feedback from customers. The legacy board remains available to help users with the transition. (not available in SpiraTest)
-    - Like the planning board, the [task board](../../Spira-User-Manual/Task-Tracking/#task-board) is all new, setting the beta board as the new default. The legacy task board currently remains available. (not available in SpiraTest)
-    - What [requirement statuses](../../Spira-Administration-Guide/Template-Requirements/#statuses) show on the planning board can be tailored per product template. This feature was previously only available as a beta, but is now always available (note that it only applies on the new planning board). (not available in SpiraTest)
+    - This release brings a brand new [planning board](../Spira-User-Manual/Planning-Board.md). Streamlined and beautiful by default. Powerful customizations when you need them for columns, cards, and swimlanes (rows). This takes the beta board released earlier this year to the next level, thanks to the invaluable feedback from customers. The legacy board remains available to help users with the transition. (not available in SpiraTest)
+    - Like the planning board, the [task board](../Spira-User-Manual/Task-Tracking.md/#task-board) is all new, setting the beta board as the new default. The legacy task board currently remains available. (not available in SpiraTest)
+    - What [requirement statuses](../Spira-Administration-Guide/Template-Requirements.md/#statuses) show on the planning board can be tailored per product template. This feature was previously only available as a beta, but is now always available (note that it only applies on the new planning board). (not available in SpiraTest)
 
 ??? success "New Features"
 
-    * **[Planning Board](../../Spira-User-Manual/Planning-Board) and [Task Board](../../Spira-User-Manual/Task-Tracking/#task-board) (not available in SpiraTest)**
+    * **[Planning Board](../Spira-User-Manual/Planning-Board.md) and [Task Board](../Spira-User-Manual/Task-Tracking.md/#task-board) (not available in SpiraTest)**
 
         - As a board user, I use the new planning and task boards by default, but can still access the equivalent legacy board if I need to [RQ:4649]
         - As a task board user, I can change the board setting by dropdowns in a popup, to organize the board to meet my needs [RQ:4687]
@@ -176,7 +176,7 @@
         - As a board user, I can easily expand and collapse rows and groups in a clear and understandable way, to help me setup the board how I need [RQ:4672]
         - As a board user, I do not see columns, rows, or groups for unassigned items by default, to streamline and simplify how I use the board [RQ:4674]
         
-    - As a document user, I can [associate a set of documents to any single artifact](../../Spira-User-Manual/Document-Management/#add-associations-in-bulk) in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]
+    - As a document user, I can [associate a set of documents to any single artifact](../Spira-User-Manual/Document-Management.md/#add-associations-in-bulk) in my product from the document list page, to make it quicker to add lots of documents to an artifact [RQ:4682]
 
 ??? bug "Bug fixes and enhancements"
 
@@ -208,27 +208,27 @@
 
 !!! info "Summary"
 
-    - SpiraPlan (only) adds brand new [program-level reporting](../../Spira-User-Manual/Program-Reports) functionality. Four new standard reports for program milestones and capabilities are now included, or create your own program-level custom reports.
-    - Our upgraded [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) lets you use @ to quickly find any product member and mention them in comments or a description. Any mentioned user is, where relevant, automatically added to the artifact as a [follower](../../Spira-User-Manual/Application-Wide/#followers).
-    - System admins can now quickly see all the programs a user is a member of, with a dedicated tab on the [View/Edit user detailed](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) screen in system administration.
+    - SpiraPlan (only) adds brand new [program-level reporting](../Spira-User-Manual/Program-Reports.md) functionality. Four new standard reports for program milestones and capabilities are now included, or create your own program-level custom reports.
+    - Our upgraded [rich text editor](../Spira-User-Manual/Application-Wide.md/#rich-text-editor) lets you use @ to quickly find any product member and mention them in comments or a description. Any mentioned user is, where relevant, automatically added to the artifact as a [follower](../Spira-User-Manual/Application-Wide.md/#followers).
+    - System admins can now quickly see all the programs a user is a member of, with a dedicated tab on the [View/Edit user detailed](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) screen in system administration.
 
 ??? success "New Features"
 
-    - As a product member, [I can add followers to artifacts](../../Spira-User-Manual/Application-Wide/#mentions) I am working on using an @ mention feature, so I can keep my colleagues informed on relevant artifacts [RQ:4653]
+    - As a product member, [I can add followers to artifacts](../Spira-User-Manual/Application-Wide.md/#mentions) I am working on using an @ mention feature, so I can keep my colleagues informed on relevant artifacts [RQ:4653]
     
-    * **As a program manager, I can monitor the progress of work in the program using [offline reporting](../../Spira-User-Manual/Program-Reports), so I can analyze current performance**
+    * **As a program manager, I can monitor the progress of work in the program using [offline reporting](../Spira-User-Manual/Program-Reports.md), so I can analyze current performance**
 
-        - As a report admin, I can create custom reports of [system level history changes](../../Reporting/Custom-Report-Tables/#global--system-history-change-sets), to provide my org with any reports required in this area [RQ:4432]
-        - As a report admin, I can create saved [custom reports](../../Spira-Administration-Guide/System-Reporting) of program milestones and capabilities, that will help users' reporting needs [RQ:4626]
-        - As a program report user of SpiraPlan, I can access [program level reports for my program](../../Spira-User-Manual/Program-Reports/#reporting-home-page), so that I can create useful reports [RQ:4503]
-        - As a program report user, I can generate a [capability summary report](../../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track their progress [RQ:4644]
-        - As a program report user, I can generate a [capability details report](../../Spira-User-Manual/Program-Reports/#capability-summary-report), to help me track progress [RQ:4645]
+        - As a report admin, I can create custom reports of [system level history changes](../Reporting/Custom-Report-Tables.md/#global--system-history-change-sets), to provide my org with any reports required in this area [RQ:4432]
+        - As a report admin, I can create saved [custom reports](../Spira-Administration-Guide/System-Reporting.md) of program milestones and capabilities, that will help users' reporting needs [RQ:4626]
+        - As a program report user of SpiraPlan, I can access [program level reports for my program](../Spira-User-Manual/Program-Reports.md/#reporting-home-page), so that I can create useful reports [RQ:4503]
+        - As a program report user, I can generate a [capability summary report](../Spira-User-Manual/Program-Reports.md/#capability-summary-report), to help me track their progress [RQ:4644]
+        - As a program report user, I can generate a [capability details report](../Spira-User-Manual/Program-Reports.md/#capability-summary-report), to help me track progress [RQ:4645]
         
             - As a program report user, I can view associated requirements in a capability details report, to help me track progress [RQ:4666]
             - As a program report user, I can view the history of a capability in its details report, to help me track progress [RQ:4665]
         
-        - As a program report user, I can generate a [program milestone summary report](../../Spira-User-Manual/Program-Reports/#program-milestone-summary-report), to help me track their progress [RQ:4642]
-        - As a program report user, I can generate a [program milestone details report(../../Spira-User-Manual/Program-Reports/#program-milestone-detailed-report)], to help me track progress [RQ:4643]
+        - As a program report user, I can generate a [program milestone summary report](../Spira-User-Manual/Program-Reports.md/#program-milestone-summary-report), to help me track their progress [RQ:4642]
+        - As a program report user, I can generate a [program milestone details report(../Spira-User-Manual/Program-Reports.md/#program-milestone-detailed-report)], to help me track progress [RQ:4643]
             
             - As a program report user, I can view the associated capabilities for a program milestone in its details report, to help me track progress [RQ:4668]
             - As a program report user, I can view the associated releases for a program milestone in its details report, to help me track progress [RQ:4667]
@@ -238,29 +238,29 @@
 ??? bug "Bug fixes and enhancements"
 
     - Add API operations to let users create, update, and delete product roles [IN:8480]
-    - Add a confirmation dialog when an admin [resets a data sync](../../Spira-Administration-Guide/System-Integration/#data-synchronization) to provide options about how far back the data sync should be reset [IN:8384]
+    - Add a confirmation dialog when an admin [resets a data sync](../Spira-Administration-Guide/System-Integration.md/#data-synchronization) to provide options about how far back the data sync should be reset [IN:8384]
     - Add a new API operation to update only FixedBuildId property of an incident to provide faster integration with CI/CD systems [IN:8529]
     - Add an API operation to let users create a blank template with minimal pre-populated fields like statuses, types, or workflows [IN:8437]
     - Add a new API call to let users delete builds [IN:7881]
-    - Allow system admins to see a user's program membership with a new Program Membership tab on the admin [edit user page](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) [IN:3005]
+    - Allow system admins to see a user's program membership with a new Program Membership tab on the admin [edit user page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) [IN:3005]
 
-    - Fix non system admins not being able to save changes to test configuration properties on its [detail page](../../Spira-User-Manual/Test-Configuration-Management/#test-configuration-details) [IN:4566]
+    - Fix non system admins not being able to save changes to test configuration properties on its [detail page](../Spira-User-Manual/Test-Configuration-Management.md/#test-configuration-details) [IN:4566]
     - Fix the API to not accept an test case folder, priority, or type ID from invalid products or templates on creation or updates [IN:7320]
-    - Fix [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) so that it also clones the product's custom properties [IN:7472]
+    - Fix [product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) so that it also clones the product's custom properties [IN:7472]
     - Fix editing test set test case mapping using the API so that it requires both test case and test set relevant permissions [IN:7811]
     - Fix the API to create a requirement without a child to set its type [IN:7845]
-    - Fix tooltips on the [system history list page](../../Spira-Administration-Guide/System/#system-history-changes) not showing the description for product, program milestone, and capability entries [IN:7874]
-    - Fix emoji with skin tones like "🤚🏽" in description fields causing the [Recent Artifacts](../../Spira-User-Manual/User-Product-Management/#recent-artifacts) and [Subscribed Artifacts](../../Spira-User-Manual/User-Product-Management/#my-subscribed-artifacts) widgets on the My Page to break the page [IN:7916]
-    - Fix purging a single item from the [product admin history pages](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) showing an error "System.guid does not contain a definition for 'Progress''' [IN:8098]
-    - Fix getting an error when filtering documents by a custom property on the [document list page](../../Spira-User-Manual/Document-Management/#document-list) or attachment tab [IN:8231]
-    - Fix the system admin system-level [custom property definitions page](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties) not loading correctly if you try to delete a definition that has system history entries [IN:8319]
-    - Fix not being able to filter system history records for deleting a program on the [system history list page](../../Spira-Administration-Guide/System/#system-history-changes) [IN:8356]
+    - Fix tooltips on the [system history list page](../Spira-Administration-Guide/System.md/#system-history-changes) not showing the description for product, program milestone, and capability entries [IN:7874]
+    - Fix emoji with skin tones like "🤚🏽" in description fields causing the [Recent Artifacts](../Spira-User-Manual/User-Product-Management.md/#recent-artifacts) and [Subscribed Artifacts](../Spira-User-Manual/User-Product-Management.md/#my-subscribed-artifacts) widgets on the My Page to break the page [IN:7916]
+    - Fix purging a single item from the [product admin history pages](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes) showing an error "System.guid does not contain a definition for 'Progress''' [IN:8098]
+    - Fix getting an error when filtering documents by a custom property on the [document list page](../Spira-User-Manual/Document-Management.md/#document-list) or attachment tab [IN:8231]
+    - Fix the system admin system-level [custom property definitions page](../Spira-Administration-Guide/System-Custom-Properties.md/#edit-custom-properties) not loading correctly if you try to delete a definition that has system history entries [IN:8319]
+    - Fix not being able to filter system history records for deleting a program on the [system history list page](../Spira-Administration-Guide/System.md/#system-history-changes) [IN:8356]
     - Fix an error message showing when you try and save a capability or program milestone and the creator dropdown is left blank [IN:8357]
-    - Fix the [program milestone list page](../../Spira-User-Manual/Program-Milestones/#milestone-list) so that it does not show the release count or requirement count columns [IN:8362]
+    - Fix the [program milestone list page](../Spira-User-Manual/Program-Milestones.md/#milestone-list) so that it does not show the release count or requirement count columns [IN:8362]
     - Fix error logging when creating a new program milestone in specific edge cases [IN:8376]
-    - Fix the [program milestone](../../Spira-User-Manual/Program-Milestones/#milestone-details) and [capability detail](../../Spira-User-Manual/Program-Capabilities/#capability-details) pages to have fully responsive designs [IN:8388]
+    - Fix the [program milestone](../Spira-User-Manual/Program-Milestones.md/#milestone-details) and [capability detail](../Spira-User-Manual/Program-Capabilities.md/#capability-details) pages to have fully responsive designs [IN:8388]
     - Fix some idiosyncrasies in the structure of certain translation files to prepare for improvements in German and French translations [IN:8391]
-    - Fix the [program milestone](../../Spira-User-Manual/Program-Milestones/#milestone-details) and [risk detail](../../Spira-User-Manual/Risks-Management/#risk-details) pages' toolbar buttons hiding and showing responsively in the correct way [IN:8416]
+    - Fix the [program milestone](../Spira-User-Manual/Program-Milestones.md/#milestone-details) and [risk detail](../Spira-User-Manual/Risks-Management.md/#risk-details) pages' toolbar buttons hiding and showing responsively in the correct way [IN:8416]
     - Fix the installer to provide consistent internal file names (inside the installer itself not the application) when upgrading to v7.7 [IN:8473]
     - Fix upgrading to or through Spira v7.7 not unnecessarily upgrading the full-text indexes [IN:8474]
 
@@ -279,44 +279,44 @@
 
     - As a developer I can use **SOAP and REST APIs** to manage system level custom properties and lists [RQ:4618]
       
-    * **As a program manager, I can plan out the necessary work of the program with **[capabilities](../../Spira-User-Manual/Program-Capabilities)**, linked to product requirements, and release management at the program level, so I can ensure the program objectives will be delivered**
+    * **As a program manager, I can plan out the necessary work of the program with **[capabilities](../Spira-User-Manual/Program-Capabilities.md)**, linked to product requirements, and release management at the program level, so I can ensure the program objectives will be delivered**
 
-        - As a system admin, I can create, edit, and manage program **capability [types](../../Spira-Administration-Guide/Program-Capabilities/#types)**, so that managers can use this property inside their programs [RQ:4488]
-        - As a system admin, I can create, edit, and manage program **capability [priorities](../../Spira-Administration-Guide/Program-Capabilities/#priorities)**, so that managers can use this property inside their programs [RQ:4489]
-        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../../Spira-Administration-Guide/System-Custom-Properties)** for program capabilities, so that managers can use these properties inside their programs [RQ:4427]
-        - As a system admin, I can create, edit, and manage program **capability [statuses](../../Spira-Administration-Guide/Program-Capabilities/#statuses)**, so that managers can use this property inside their programs [RQ:4423]
-        - As a program member, I can view, create, and edit program capabilities on a filterable **[list page](../../Spira-User-Manual/Program-Capabilities/#capability-list)**, so I can plan out program level work needs [RQ:4424]
-        - As a program member, I can organize the program **[capability hierarchy](../../Spira-User-Manual/Program-Capabilities/#capability-list)** on the list page (with one level of children only), so that the requirement structure simple to use but adds meaning [RQ:4425]
-        - As a program member, I can view, create, and edit program capabilities on a **[details page](../../Spira-User-Manual/Program-Capabilities/#capability-details)**, so I can plan out program level work needs [RQ:4504]
-        - As a program member, I can add or remove **[associations](../../Spira-User-Manual/Program-Capabilities/#requirement-associations)** between capabilities and this program's product requirements, so I can correctly organize my products' requirements [RQ:4426]
-        - As a program member, I can see the capability **[progress](../../Spira-User-Manual/Program-Capabilities/#progress)** based off its linked requirements, so I can track progress [RQ:4508]
+        - As a system admin, I can create, edit, and manage program **capability [types](../Spira-Administration-Guide/Program-Capabilities.md/#types)**, so that managers can use this property inside their programs [RQ:4488]
+        - As a system admin, I can create, edit, and manage program **capability [priorities](../Spira-Administration-Guide/Program-Capabilities.md/#priorities)**, so that managers can use this property inside their programs [RQ:4489]
+        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../Spira-Administration-Guide/System-Custom-Properties.md)** for program capabilities, so that managers can use these properties inside their programs [RQ:4427]
+        - As a system admin, I can create, edit, and manage program **capability [statuses](../Spira-Administration-Guide/Program-Capabilities.md/#statuses)**, so that managers can use this property inside their programs [RQ:4423]
+        - As a program member, I can view, create, and edit program capabilities on a filterable **[list page](../Spira-User-Manual/Program-Capabilities.md/#capability-list)**, so I can plan out program level work needs [RQ:4424]
+        - As a program member, I can organize the program **[capability hierarchy](../Spira-User-Manual/Program-Capabilities.md/#capability-list)** on the list page (with one level of children only), so that the requirement structure simple to use but adds meaning [RQ:4425]
+        - As a program member, I can view, create, and edit program capabilities on a **[details page](../Spira-User-Manual/Program-Capabilities.md/#capability-details)**, so I can plan out program level work needs [RQ:4504]
+        - As a program member, I can add or remove **[associations](../Spira-User-Manual/Program-Capabilities.md/#requirement-associations)** between capabilities and this program's product requirements, so I can correctly organize my products' requirements [RQ:4426]
+        - As a program member, I can see the capability **[progress](../Spira-User-Manual/Program-Capabilities.md/#progress)** based off its linked requirements, so I can track progress [RQ:4508]
 
     * **As a program manager, I can monitor the progress of work in the program so I can analyze current performance and ensure the program is compliant with any reporting or audit standards**
 
-        - As a system admin, I can see changes made to all capabilities **standard fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4430]
-        - As a system admin, I can see changes made to all capability **custom fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4431]
+        - As a system admin, I can see changes made to all capabilities **standard fields on the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) pages**, to help with internal auditing [RQ:4430]
+        - As a system admin, I can see changes made to all capability **custom fields on the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) pages**, to help with internal auditing [RQ:4431]
         - As a developer, I can use **SOAP or REST APIs** to manage all relevant information about program capabilities, so that I can automate and extend how my org uses them [RQ:4501]
-        - As a report admin, I can create **[custom reports](../../Reporting/Custom-Report-Tables/#capabilities)** of program capabilities, to provide my org with any reports required in this area [RQ:4435]
+        - As a report admin, I can create **[custom reports](../Reporting/Custom-Report-Tables.md/#capabilities)** of program capabilities, to provide my org with any reports required in this area [RQ:4435]
 
-    * **As a program manager, I can plan out the program delivery timetable with [program milestones](../../Spira-Administration-Guide/Program-Milestones), so I can ensure we meet our program objectives on time**
+    * **As a program manager, I can plan out the program delivery timetable with [program milestones](../Spira-Administration-Guide/Program-Milestones.md), so I can ensure we meet our program objectives on time**
 
-        - As a system admin, I can create, edit, and manage **program milestone [statuses](../../Spira-Administration-Guide/Program-Milestones/#statuses)**, so that managers can use them inside their programs - Copy [RQ:4500]
-        - As a system admin, I can create, edit, and manage **program milestone [types](../../Spira-Administration-Guide/Program-Milestones/#types)**, so that managers can use them inside their programs [RQ:4442]
-        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../../Spira-Administration-Guide/System-Custom-Properties)** for program milestones, so that managers can use these properties inside their programs [RQ:4443]
-        - As a program member, I can view program milestones on a filterable **[list page](../../Spira-User-Manual/Program-Milestones/#milestone-list)**, so I can plan out program level work needs [RQ:4437]
-        - As a program member, I can **filter and sort** the program milestones [list page](../../Spira-User-Manual/Program-Milestones/#milestone-list) by any available field, so that I can organize my releases into the view I need at that moment [RQ:4438]
-        - As a program member, I can view and edit program milestones on a **[details page](../../Spira-User-Manual/Program-Milestones/#milestone-details)**, so I can plan out program level work needs [RQ:4507]
-        - As a program member, I can add or remove **[associations](../../Spira-User-Manual/Program-Milestones/#release-associations)** between program milestones and this program's product releases, so I can plan out the scope of the milestone [RQ:4439]
-        - As a program member, I can view program milestones' **release [start and end dates](../../Spira-User-Manual/Program-Milestones/#start-and-end-dates)**, to better manage product level timetables [RQ:4509]
-        - As a program member, I can view **capability [associations](../../Spira-User-Manual/Program-Milestones/#capability-associations)** to each program milestone, to give me flexibility in seeing how the program data is organized [RQ:4440]
-        - As a program member, I can see the total **[progress](../../Spira-User-Manual/Program-Milestones/#progress) of capabilities** for each milestone, so that I can track and manage the program milestone performance [RQ:4441]
+        - As a system admin, I can create, edit, and manage **program milestone [statuses](../Spira-Administration-Guide/Program-Milestones.md/#statuses)**, so that managers can use them inside their programs - Copy [RQ:4500]
+        - As a system admin, I can create, edit, and manage **program milestone [types](../Spira-Administration-Guide/Program-Milestones.md/#types)**, so that managers can use them inside their programs [RQ:4442]
+        - As a system admin, I can create, edit, and manage up to 30 **[custom properties](../Spira-Administration-Guide/System-Custom-Properties.md)** for program milestones, so that managers can use these properties inside their programs [RQ:4443]
+        - As a program member, I can view program milestones on a filterable **[list page](../Spira-User-Manual/Program-Milestones.md/#milestone-list)**, so I can plan out program level work needs [RQ:4437]
+        - As a program member, I can **filter and sort** the program milestones [list page](../Spira-User-Manual/Program-Milestones.md/#milestone-list) by any available field, so that I can organize my releases into the view I need at that moment [RQ:4438]
+        - As a program member, I can view and edit program milestones on a **[details page](../Spira-User-Manual/Program-Milestones.md/#milestone-details)**, so I can plan out program level work needs [RQ:4507]
+        - As a program member, I can add or remove **[associations](../Spira-User-Manual/Program-Milestones.md/#release-associations)** between program milestones and this program's product releases, so I can plan out the scope of the milestone [RQ:4439]
+        - As a program member, I can view program milestones' **release [start and end dates](../Spira-User-Manual/Program-Milestones.md/#start-and-end-dates)**, to better manage product level timetables [RQ:4509]
+        - As a program member, I can view **capability [associations](../Spira-User-Manual/Program-Milestones.md/#capability-associations)** to each program milestone, to give me flexibility in seeing how the program data is organized [RQ:4440]
+        - As a program member, I can see the total **[progress](../Spira-User-Manual/Program-Milestones.md/#progress) of capabilities** for each milestone, so that I can track and manage the program milestone performance [RQ:4441]
 
     * **As a program manager, I want to monitor the progress of program milestones so I can analyze trends and ensure the program is compliant with any reporting or audit standards**
 
-        - As a system admin, I can see changes made to all program milestone **standard fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4447]
-        - As a system admin, I can see changes made to all program milestone **custom fields on the [system history](../../Spira-Administration-Guide/System/#system-history-changes) pages**, to help with internal auditing [RQ:4446]
+        - As a system admin, I can see changes made to all program milestone **standard fields on the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) pages**, to help with internal auditing [RQ:4447]
+        - As a system admin, I can see changes made to all program milestone **custom fields on the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) pages**, to help with internal auditing [RQ:4446]
         - As a developer, I can use **SOAP or REST APIs** to manage all relevant information about program milestones, so that I can automate and extend how my org uses them [RQ:4502]
-        - As a report admin, I can create **[custom reports](../../Reporting/Custom-Report-Tables/#program-milestones)** of program milestones, to provide my org with any reports required in this area [RQ:4448]
+        - As a report admin, I can create **[custom reports](../Reporting/Custom-Report-Tables.md/#program-milestones)** of program milestones, to provide my org with any reports required in this area [RQ:4448]
     
     - As a new user, I can see **relevant and meaningful sample data** for program scaled agile, so I can easily understand how the tools works [RQ:4506]
 
@@ -361,7 +361,7 @@
 
     **Bug fixes**
 
-    - Auto opt-in new installations to beta features by setting the "[enable beta features](../../Spira-Administration-Guide/System/#general-settings)" flag to Yes by default [IN:7977]
+    - Auto opt-in new installations to beta features by setting the "[enable beta features](../Spira-Administration-Guide/System.md/#general-settings)" flag to Yes by default [IN:7977]
     - Fix a bug for on premise customers upgrading from 5.4 to this release or later [IN:7919]
     - Fix test coverage for releases getting out of sync in certain situations (and can otherwise only be resolved by running data tools) [IN:7077]
     - Fix the user's chosen artifact persisting when switching to or from a program (introduced in 7.5) [IN:7959]
@@ -375,9 +375,9 @@
 
 !!! info "Summary"
 
-    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
-    - Template admins can now fully customize exactly what [requirement statuses](../../Spira-Administration-Guide/Template-Requirements/#statuses) show on the beta planning board, and in what order. This helps you tailor the beta planning board even further to your needs.
-    - A new SpiraApp for SpiraTeam and SpiraPlan lets you conduct [multiple parallel approvals of a requirement](../../SpiraApps/Requirement-Multi-Approvers), with a one click creation of tasks that can be pre-named, and pre-assigned to relevant reviewers
+    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#beta-task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
+    - Template admins can now fully customize exactly what [requirement statuses](../Spira-Administration-Guide/Template-Requirements.md/#statuses) show on the beta planning board, and in what order. This helps you tailor the beta planning board even further to your needs.
+    - A new SpiraApp for SpiraTeam and SpiraPlan lets you conduct [multiple parallel approvals of a requirement](../SpiraApps/Requirement-Multi-Approvers.md), with a one click creation of tasks that can be pre-named, and pre-assigned to relevant reviewers
 
 ??? success "New Features"
 
@@ -387,16 +387,16 @@
     
     * **Cross-Cutting Functionality**
 
-        - As a requirement analyst, I can request [approval of multiple managers](../../SpiraApps/Requirement-Multi-Approvers) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
+        - As a requirement analyst, I can request [approval of multiple managers](../SpiraApps/Requirement-Multi-Approvers.md) before a requirement can proceed through the workflow, so we can have strong oversight and audit trails [RQ:4513]
         - Move background processes from an in memory dictionary to a database table to reduce errors with multiple CPU cores in IIS (and maybe load balancing) [RQ:4505]
-        - As a manager, I can [manage associations between requirements and releases](../../Spira-User-Manual/Application-Wide/#associations), and from releases to other releases (in same product only), so it is easy to see/report all requirements that are active for a release [RQ:4510]
+        - As a manager, I can [manage associations between requirements and releases](../Spira-User-Manual/Application-Wide.md/#associations), and from releases to other releases (in same product only), so it is easy to see/report all requirements that are active for a release [RQ:4510]
     
     * **Beta Planning Board**
 
         - As a manager using the planning board, when columns are set to status, I can see only the requirement statuses I need and in the correct order for my product, so I can better track and manage work [RQ:4420]
-        - As a product template admin, I can [set what statuses should show on the beta planning board](../../Spira-Administration-Guide/Template-Requirements/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
+        - As a product template admin, I can [set what statuses should show on the beta planning board](../Spira-Administration-Guide/Template-Requirements.md/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
     
-    * **As a manager, I can use the [new beta task board](../../Spira-User-Manual/Task-Tracking/#beta-task-board), so I can better oversee and track the work of my teams**
+    * **As a manager, I can use the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#beta-task-board), so I can better oversee and track the work of my teams**
 
         - As a manager, I can filter the task board by any currently active release or sprint, so I can focus on the most relevant work at any time [RQ:4408]
         - As a manager, I can set the group by, rows, and columns, so I can quickly and intuitively arrange the board to help me see and manage relevant tasks [RQ:4409]
@@ -409,12 +409,12 @@
 
     * **Administration <span class="pill">SpiraPlan</span>**
 
-        - As an administrator, I want to see a [list of changes made in the system](../../Spira-Administration-Guide/System/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
+        - As an administrator, I want to see a [list of changes made in the system](../Spira-Administration-Guide/System.md/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
 
 ??? bug "Bug fixes and enhancements"
 
-    - Add an [email option](../../Spira-Administration-Guide/System/#email-configuration) to never include the password in a new user confirmation email (when users are created by a system admin) [IN:7805]
+    - Add an [email option](../Spira-Administration-Guide/System.md/#email-configuration) to never include the password in a new user confirmation email (when users are created by a system admin) [IN:7805]
 
     * **APIs**
 
@@ -453,11 +453,11 @@
         - Add an API call to retrieve all test sets that contain a specific test case to mirror the functionality on the test set tab of the test case details page in the application [IN:6894]
         - Add API calls to get all releases / requirements that are children of a specified parent release / requirement [IN:5482]
         - Add custom report table for [Attachment Versions] [IN:7757]
-        - Add custom report table for [Cross Product Associations](../../Reporting/Custom-Report-Tables/#project-artifacts-sharing) [IN:4242]
-        - Add custom report tables for [Source Code Associations](../../Reporting/Custom-Report-Tables/#source-code-associations) and [Source Code Commits](../../Reporting/Custom-Report-Tables/#source-code-commits) [IN:7632]
-        - Add JSON File for displaying names of custom data sync fields in [ClickUp Data Sync](../../External-Bug-Tracking-Integration/Using-Spira-with-ClickUp) [IN:7737]
-        - Change [WorX SpiraApp](../../SpiraApps/WorX) summary text and description as per software owner's request [IN:7634]
-        - If no release provided for a [test execution](../../Spira-User-Manual/Test-Execution), set the wizard's release dropdown to a "Please Select" value and ensure a valid release is provide for execution to start [IN:1205]
+        - Add custom report table for [Cross Product Associations](../Reporting/Custom-Report-Tables.md/#project-artifacts-sharing) [IN:4242]
+        - Add custom report tables for [Source Code Associations](../Reporting/Custom-Report-Tables.md/#source-code-associations) and [Source Code Commits](../Reporting/Custom-Report-Tables.md/#source-code-commits) [IN:7632]
+        - Add JSON File for displaying names of custom data sync fields in [ClickUp Data Sync](../External-Bug-Tracking-Integration/Using-Spira-with-ClickUp.md) [IN:7737]
+        - Change [WorX SpiraApp](../SpiraApps/WorX.md) summary text and description as per software owner's request [IN:7634]
+        - If no release provided for a [test execution](../Spira-User-Manual/Test-Execution.md), set the wizard's release dropdown to a "Please Select" value and ensure a valid release is provide for execution to start [IN:1205]
     
     * **Bug Fixes**
 
@@ -477,23 +477,23 @@
 
 ??? Success "New Features"
 
-    * **[Beta Planning Board](../../Spira-User-Manual/Planning-Board/#beta-planning-board)**
+    * **[Beta Planning Board](../Spira-User-Manual/Planning-Board.md/#beta-planning-board)**
 
         - The new beta planning board has powerful functionality with a new layout and overhauled design to let you plan work effortlessly [RQ:4286]
-        * **There are useful [main display modes](../../Spira-User-Manual/Planning-Board/#view-controls---planning) that dictate how you use the boards**
+        * **There are useful [main display modes](../Spira-User-Manual/Planning-Board.md/#view-controls---planning) that dictate how you use the boards**
 
             - The Product backlog lets managers prioritize ("groom") unplanned work items that do not have a scheduled release [RQ:4368]
             - The Release backlog lets managers review planned or in progress work items [RQ:4369]
             - The sprint backlog lets managers review work in a release and its sprint, or for a single sprint [RQ:4370]
-            - When working on the release or sprint backlog there is a [release dropdown](../../Spira-User-Manual/Planning-Board/#view-controls---releases) [RQ:4381]
+            - When working on the release or sprint backlog there is a [release dropdown](../Spira-User-Manual/Planning-Board.md/#view-controls---releases) [RQ:4381]
 
         * **The planning board makes it easy to customize how the board is organized to help you focus on the right information **
 
-            - [Users can group the board](../../Spira-User-Manual/Planning-Board/#grouping) by certain fields (based on the view) to show one board per member of the group [RQ:4372]
-            - Within a board users can choose what field to [organize data by as columns](../../Spira-User-Manual/Planning-Board/#columns) (the x-axis) [RQ:4373]
-            - Within a board users can choose what field to [organize data by as rows](../../Spira-User-Manual/Planning-Board/#rows) (the y-axis) [RQ:4374]
+            - [Users can group the board](../Spira-User-Manual/Planning-Board.md/#grouping) by certain fields (based on the view) to show one board per member of the group [RQ:4372]
+            - Within a board users can choose what field to [organize data by as columns](../Spira-User-Manual/Planning-Board.md/#columns) (the x-axis) [RQ:4373]
+            - Within a board users can choose what field to [organize data by as rows](../Spira-User-Manual/Planning-Board.md/#rows) (the y-axis) [RQ:4374]
         
-        * **[Planning board cards design updated with greater customization](../../Spira-User-Manual/Planning-Board/#customizing-the-cards)**
+        * **[Planning board cards design updated with greater customization](../Spira-User-Manual/Planning-Board.md/#customizing-the-cards)**
 
             - Planning board cards always show a standard set of information that is useful and meaningful [RQ:4382]
             - Planning board cards can optionally show the artifact's description, type, status, and position [RQ:4375]
@@ -508,9 +508,9 @@
 
     * **System Administration**
 
-        - System admins [can enable or disable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users [RQ:4317]
-        - System admins can create and manage [a list of team names](../../Spira-Administration-Guide/System-Users/#view--edit-teams) <span class="pill">SpiraPlan</span> [RQ:3689]
-        - Product admins can [associate product users to specific teams](../../Spira-Administration-Guide/Product-Users/#team-membership) [RQ:3690]
+        - System admins [can enable or disable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users [RQ:4317]
+        - System admins can create and manage [a list of team names](../Spira-Administration-Guide/System-Users.md/#view--edit-teams) <span class="pill">SpiraPlan</span> [RQ:3689]
+        - Product admins can [associate product users to specific teams](../Spira-Administration-Guide/Product-Users.md/#team-membership) [RQ:3690]
 
 
 ??? bug "Bug fixes and enhancements"
@@ -556,47 +556,47 @@
 
 ??? Success "New Features"
 
-    - Allow users to create and [edit simple spreadsheets](../../Spira-User-Manual/Document-Management/#editing-spreadsheets) as an option for inline documents [RQ:4322]
+    - Allow users to create and [edit simple spreadsheets](../Spira-User-Manual/Document-Management.md/#editing-spreadsheets) as an option for inline documents [RQ:4322]
     - Email all system administrators every time that the concurrent user limit is exceeded by a user trying to login but can't due to license issues [RQ:4361]
     
     * **Improved Product Management and Customization**
         
-        - System admins can add, edit, and remove up to 30 [custom properties](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-properties), shared across all products [RQ:4147]
-        - System admins can add and manage [system-wide custom lists](../../Spira-Administration-Guide/System-Custom-Properties/#edit-custom-lists) and their values [RQ:4150]
-        - The program level [product list page](../../Spira-User-Manual/Program-Products/#product-list) shows all products in a program and lets users see, sort, and filter by any standard or custom field (but not edit) [RQ:4145]
-        - The program level [product detail page](../../Spira-User-Manual/Program-Products/#product-details) lets users see all information about a specific product (including custom fields) [RQ:4146]
-        - [Custom report views](../../Reporting/Custom-Report-Tables) support [product level custom properties](../../Reporting/Custom-Report-Tables/#global-system-custom-property-definitions), including on the [products report](../../Reporting/Custom-Report-Tables/#projects-products) [RQ:4192]
+        - System admins can add, edit, and remove up to 30 [custom properties](../Spira-Administration-Guide/System-Custom-Properties.md/#edit-custom-properties), shared across all products [RQ:4147]
+        - System admins can add and manage [system-wide custom lists](../Spira-Administration-Guide/System-Custom-Properties.md/#edit-custom-lists) and their values [RQ:4150]
+        - The program level [product list page](../Spira-User-Manual/Program-Products.md/#product-list) shows all products in a program and lets users see, sort, and filter by any standard or custom field (but not edit) [RQ:4145]
+        - The program level [product detail page](../Spira-User-Manual/Program-Products.md/#product-details) lets users see all information about a specific product (including custom fields) [RQ:4146]
+        - [Custom report views](../Reporting/Custom-Report-Tables.md) support [product level custom properties](../Reporting/Custom-Report-Tables.md/#global-system-custom-property-definitions), including on the [products report](../Reporting/Custom-Report-Tables.md/#projects-products) [RQ:4192]
 
 
 ??? bug "Bug fixes and enhancements"
 
-    - Add a link on the product home page, [overview widget](../../Spira-User-Manual/Product-Homepage/#product-overview) to the new product details page, shown to program members only [IN:7501]
-    - Add a new dedicated "Account Lockout Period" [security setting](../../Spira-Administration-Guide/System/#security-settings), so system admins can specify how long a user is locked out for once they enter too many wrong passwords within the relevant window [IN:5010]
-    - Add a new system admin [security setting](../../Spira-Administration-Guide/System/#security-settings) to enforce stricter security only possible on HTTPS sites [IN:7359]
+    - Add a link on the product home page, [overview widget](../Spira-User-Manual/Product-Homepage.md/#product-overview) to the new product details page, shown to program members only [IN:7501]
+    - Add a new dedicated "Account Lockout Period" [security setting](../Spira-Administration-Guide/System.md/#security-settings), so system admins can specify how long a user is locked out for once they enter too many wrong passwords within the relevant window [IN:5010]
+    - Add a new system admin [security setting](../Spira-Administration-Guide/System.md/#security-settings) to enforce stricter security only possible on HTTPS sites [IN:7359]
     - Fix a typo in the 7.1 onboarding tour about TaraVault [IN:7443]
-    - Fix editing tasks or requirements on the [release details page](../../Spira-User-Manual/Release-Management/#reqs-tasks) not triggering notification events [IN:6954]
-    - Fix the documentation link on the user's [Add 2-Step Authentication](../../Spira-User-Manual/User-Product-Management/#2-step-authentication) page [IN:7396]
-    - Improve explanatory text in two places in administration for the flag that [disables rollup calculations](../../Spira-Administration-Guide/Product-Planning/#testing-settings), and also the 2 pop-up messages [IN:7338]
+    - Fix editing tasks or requirements on the [release details page](../Spira-User-Manual/Release-Management.md/#reqs-tasks) not triggering notification events [IN:6954]
+    - Fix the documentation link on the user's [Add 2-Step Authentication](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication) page [IN:7396]
+    - Improve explanatory text in two places in administration for the flag that [disables rollup calculations](../Spira-Administration-Guide/Product-Planning.md/#testing-settings), and also the 2 pop-up messages [IN:7338]
     - Improve the error pages throughout the app, with a more consistent design in more places, and showing stack trace information to system admins only [IN:6293]
     - Reduce css file sizes by removing Internet Explorer 11 specific rules and values [IN:7412]
-    - Show more of the test case names on the [test case grid](../../Spira-User-Manual/Test-Set-Management/#overview---test-cases) of the test set details page (up to 150 characters) [IN:7299]
+    - Show more of the test case names on the [test case grid](../Spira-User-Manual/Test-Set-Management.md/#overview---test-cases) of the test set details page (up to 150 characters) [IN:7299]
     - Show the program artifact dropdown when a user goes to a program page before ever going to a product [IN:7474]
     - Update the minimum SQL Server required version under which SpiraPlan can be installed to 2016 [IN:7424]
     - Set the minimum required version of .NET that the application will work under to 4.8 [RQ:3085]
-    - When a product has [rollup calculations disabled](../../Spira-Administration-Guide/Product-Planning/#testing-settings), also disable test case parameter hierarchy refreshes [IN:7422]
+    - When a product has [rollup calculations disabled](../Spira-Administration-Guide/Product-Planning.md/#testing-settings), also disable test case parameter hierarchy refreshes [IN:7422]
 
 
 ## Version 7.1 (August 2022)
 
 !!! info "Summary"
-    Cloud customers can now [more easily and flexibly set up source code integration](../../Spira-Administration-Guide/System/#taravault-for-source-code) inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
+    Cloud customers can now [more easily and flexibly set up source code integration](../Spira-Administration-Guide/System.md/#taravault-for-source-code) inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
 
-    Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../../SpiraApps/OctoPerf) seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
+    Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../SpiraApps/OctoPerf.md) seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
 
 ??? Success "New Features"
 
-    - Ability to switch (at a product level) cloud Spira between [TaraVault and external Git/Subversion](../../Spira-Administration-Guide/System/#taravault-for-source-code) [RQ:4287]
-    - A new [SpiraApp integrates SpiraPlan with Octoperf](../../SpiraApps/OctoPerf) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
+    - Ability to switch (at a product level) cloud Spira between [TaraVault and external Git/Subversion](../Spira-Administration-Guide/System.md/#taravault-for-source-code) [RQ:4287]
+    - A new [SpiraApp integrates SpiraPlan with Octoperf](../SpiraApps/OctoPerf.md) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
 
 ??? bug "Bug fixes and enhancements"
 
@@ -612,7 +612,7 @@
 ## Version 7.0 (July 2022)
 
 !!! info "Summary"
-    [SpiraApps](../../SpiraApps) bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
+    [SpiraApps](../SpiraApps/index.md) bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
 
     - The FMEA SpiraApp adds full support for Failure Mode & Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
     - New SpiraApps deepen the integration with Github Actions, GitLab Pipelines, and CircleCI Pipelines. Start a new Pipeline or Action directly from SpiraPlan.
@@ -628,27 +628,27 @@
 
     * **Testing**
 
-        - Add [testing setting to mark a whole test case during execution as N/A](../../Spira-Administration-Guide/Product-Planning/#testing-settings) with one click [RQ:4273]
-        - Ability to schedule test cases in a test set by Planned Date on the [test case section of the test set details page](../../Spira-User-Manual/Test-Set-Management/#overview-test-cases), and through the API when mapping a new test set to a test case, or updating an existing mapping [RQ:4277]
+        - Add [testing setting to mark a whole test case during execution as N/A](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) with one click [RQ:4273]
+        - Ability to schedule test cases in a test set by Planned Date on the [test case section of the test set details page](../Spira-User-Manual/Test-Set-Management.md/#overview-test-cases), and through the API when mapping a new test set to a test case, or updating an existing mapping [RQ:4277]
 
-    * **[SpiraApps](../../SpiraApps)**
+    * **[SpiraApps](../SpiraApps/index.md)**
 
-        - [CircleCI SpiraApp](../../SpiraApps/CircleCI) integration lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4141]
-        - [GitLab CI SpiraApp](../../SpiraApps/GitLab) integration lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4142]
-        - [GitHub CI SpiraApp](../../SpiraApps/GitHub) integration lets users launch actions from Spira and see their results in Spira as builds [RQ:4143]
-        - Extend the built-in risk functionality by supporting FMEA with a dedicated [FMEA SpiraApp](../../SpiraApps/FMEA) that calculates the Risk Priority Number [RQ:4140]
-        - Improved [WorX Manual Testing Accelerator](../../SpiraApps/WorX) functionality, as a new SpiraApp [RQ:4225]
-        - Allow users to quickly create [preset tasks or tests cases](../../SpiraApps/Task-Test-Presets) for a specific requirement or release [RQ:4176]
-        - Allow users to create artifacts from their details pages with [pre-populated descriptions](../../SpiraApps/Default-Descriptions) (as defined in the SpiraApp settings) [RQ:4224]
+        - [CircleCI SpiraApp](../SpiraApps/CircleCI.md) integration lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4141]
+        - [GitLab CI SpiraApp](../SpiraApps/GitLab.md) integration lets users launch pipelines from Spira and see their results in Spira as builds [RQ:4142]
+        - [GitHub CI SpiraApp](../SpiraApps/GitHub.md) integration lets users launch actions from Spira and see their results in Spira as builds [RQ:4143]
+        - Extend the built-in risk functionality by supporting FMEA with a dedicated [FMEA SpiraApp](../SpiraApps/FMEA.md) that calculates the Risk Priority Number [RQ:4140]
+        - Improved [WorX Manual Testing Accelerator](../SpiraApps/WorX.md) functionality, as a new SpiraApp [RQ:4225]
+        - Allow users to quickly create [preset tasks or tests cases](../SpiraApps/Task-Test-Presets.md) for a specific requirement or release [RQ:4176]
+        - Allow users to create artifacts from their details pages with [pre-populated descriptions](../SpiraApps/Default-Descriptions.md) (as defined in the SpiraApp settings) [RQ:4224]
 
     * **SpiraApps Administration**
 
-        - The [system SpiraApps list page](../../Spira-Administration-Guide/System/#spiraapps) lets admins see all available SpiraApps and enable or disable them [RQ:4200]
-        - The [system SpiraApps settings page](../../Spira-Administration-Guide/System/#spiraapp-settings) let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
-        - The [product SpiraApps list page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapps) lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
-        - The [product SpiraApps settings page](../../Spira-Administration-Guide/Product-General-Settings/#spiraapp-settings) let users manage any product-level settings for the SpiraApp [RQ:4203]
+        - The [system SpiraApps list page](../Spira-Administration-Guide/System.md/#spiraapps) lets admins see all available SpiraApps and enable or disable them [RQ:4200]
+        - The [system SpiraApps settings page](../Spira-Administration-Guide/System.md/#spiraapp-settings) let sys admins manage any system-level settings for the SpiraApp [RQ:4202]
+        - The [product SpiraApps list page](../Spira-Administration-Guide/Product-General-Settings.md/#spiraapps) lets users see all system-wide active SpiraApps and enable or disable them for the product [RQ:4201]
+        - The [product SpiraApps settings page](../Spira-Administration-Guide/Product-General-Settings.md/#spiraapp-settings) let users manage any product-level settings for the SpiraApp [RQ:4203]
        
-    * **[SpiraApps](../../SpiraApps) Architecture**
+    * **[SpiraApps](../SpiraApps/index.md) Architecture**
 
         - SpiraApps can be added by Inflectra, storing their functionality, logic, and descriptions in the system [RQ:4211]
         - SpiraApps can be configured by users with system-wide settings [RQ:4212]
@@ -664,7 +664,7 @@
 
     - Add a new API call to get all requirements covered by a specific test case [IN:5862]
     - Add a new API call to update an existing test set test case mapping (can update its owner, planned date, and isTeardown status)  [RQ:4277]
-    - Enforce a minimum of two minutes for [authentication expiry settings](../../Spira-Administration-Guide/System/#security-settings) [IN:7174]
+    - Enforce a minimum of two minutes for [authentication expiry settings](../Spira-Administration-Guide/System.md/#security-settings) [IN:7174]
     - Fix GitHub Actions integration so that results are always recorded, even if the JSON body contains longs (previously only ints were supported) [IN:7215]
     - Fix GitHub and CircleCI build creation dates not always being the correct timezone [IN:7270]
     - Fix incorrect special character display on the incident and risk workflow transition detail pages [IN:7197]

@@ -4,7 +4,7 @@ The *monday.com* products are cloud-based platforms that allows users to create 
 This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira from here on) with *monday.com* products. This data sync engine lets you add new *monday.com* items to Spira as Tasks and Incidents (and vice versa). The data sync also lets you update artifacts and items in both systems/directions.
 
 !!! danger "Set up data synchronization"
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 
 ## Configuring the Plug-In

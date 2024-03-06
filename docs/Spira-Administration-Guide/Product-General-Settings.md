@@ -168,15 +168,15 @@ The first thing you need to do (regardless of whether you'll be overriding any o
 
 ![](img/Product_General_Settings_106.png)
 
-Now you can decide whether you want to override any of the default settings for this product. Any field left blank will automatically get its settings from the default values entered at the [system level](../System-Integration/#source-code-integration-on-premise-customers-only). In the example above, we have specified a product-specific repository path, login and password. Once you have correctly configured the product, click \[Save\] to commit the changes.
+Now you can decide whether you want to override any of the default settings for this product. Any field left blank will automatically get its settings from the default values entered at the [system level](System-Integration.md/#source-code-integration-on-premise-customers-only). In the example above, we have specified a product-specific repository path, login and password. Once you have correctly configured the product, click \[Save\] to commit the changes.
 
 To improve performance, SpiraPlan will cache some of the data it receives from the source code provider. Normally SpiraPlan will know when to update the cached data based on changes made in the source code system automatically. However, sometimes you may wish to force the cache to refresh right now. To do so, click the "Refresh Cache" button. If you ever want to wipe the cache completely and have it rebuild from scratch, click  "Clear Cache".
 
-You are now ready to use SpiraPlan® in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see [here](../../Spira-User-Manual/Source-Code/).
+You are now ready to use SpiraPlan® in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see [here](../Spira-User-Manual/Source-Code.md).
 
 
 ## Baselines
-NOTE: read about how baselining works and how to get started with it [here](../../Spira-User-Manual/Release-Management/#baselining)
+NOTE: read about how baselining works and how to get started with it [here](../Spira-User-Manual/Release-Management.md/#baselining)
 
 This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on. 
 
@@ -199,7 +199,7 @@ To filter and sort the list of baselines, use the filter and sort controls at th
 
 
 ## Baseline Details
-This page displays detailed information about a single baseline. You cannot edit information about the baseline on this page. That can only be done from the [release details page](../../Spira-User-Manual/Release-Management/#baselines).
+This page displays detailed information about a single baseline. You cannot edit information about the baseline on this page. That can only be done from the [release details page](../Spira-User-Manual/Release-Management.md/#baselines).
 
 Information about the baseline is divided into 4 sections:
 
@@ -273,7 +273,7 @@ For each SpiraApp in the list you see:
 
 
 ## SpiraApp Settings
-The SpiraApp Settings page shows any product level settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../../SpiraApps) 
+The SpiraApp Settings page shows any product level settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../SpiraApps/index.md) 
 
 If the SpiraApp has no product settings you can still access the page but there will be no settings to edit.
 

@@ -48,7 +48,7 @@ For the data sync to work correctly make sure you meet **all** of the steps belo
 
 - [x] Use Spira v6.3.0.1+
 - [x] Use Jira Server or DataCenter 5+
-- [x] [Setup a datasync  service](../Setting-up-Data-Synchronization/) on your own servers
+- [x] [Setup a datasync  service](Setting-up-Data-Synchronization.md) on your own servers
 - [x] [Configure the plugin in Spira](#configure-the-plugin)
 - [x] [Configure system wide user mapping](#user-mapping)
 - [x] [Download the Jira configuration helper application](#jira-configuration-helper)

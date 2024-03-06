@@ -67,9 +67,9 @@ How are the different categories calculated?
 
 
 ### Task Effort
-Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../../Spira-Administration-Guide/Product-Planning/#planning-options) page of product administration.
+Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../Spira-Administration-Guide/Product-Planning.md/#planning-options) page of product administration.
 
-Task effort calculations are described in more detail [here](../Product-Homepage/#release-task-progress). 
+Task effort calculations are described in more detail [here](Product-Homepage.md/#release-task-progress). 
 
 
 ## Baselining
@@ -85,7 +85,7 @@ NOTE: **Baselining is only available in SpiraTeam and SpiraPlan**.
 
 Here is a step by step overview on getting started with baselines:
 
-- First, enable baselining for your specific product via the [edit product](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. You have to a system or product admin to do this
+- First, enable baselining for your specific product via the [edit product](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product) page. You have to a system or product admin to do this
 - To make sure you cannot accidentally change anything that has already been baselined, when baselining is enabled, product admins will not be able to revert or purge any history items
 - With baselining turned on you can create, edit, and delete baselines against any release in the product. The permissions for this are based off your release permissions. If you can view releases, you can view any baselines against that release. If you can create releases, you can create baselines. If you can edit a release you can edit its baselines. And if you can delete releases you can delete baselines.
 - Go to the list of releases and click on the release you want to manage baselines for
@@ -96,7 +96,7 @@ Here is a step by step overview on getting started with baselines:
 
 [Below](#baselines) is more information below about how to create, edit, delete, and view your baselines against a specific release.
 
-**Product admins / product owners** can use the dedicated admin [list](../../Spira-Administration-Guide/Product-General-Settings/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details), to see all the artifacts changed, added, or deleted in a baseline.
+**Product admins / product owners** can use the dedicated admin [list](../Spira-Administration-Guide/Product-General-Settings.md/#baselines) page to see all baselines across all releases in a product. They can also explore a baseline in [detail](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-details), to see all the artifacts changed, added, or deleted in a baseline.
 
 **What is captured when baselining is turned on?** Baselining leverages the change tracking tools built into SpiraPlan already. It does this by using the history stored against each artifact in the product to track what has changed between any two baselines. Some additional information is captured only when baselining is turned on (both for baselining use and general history tracking):
 
@@ -393,7 +393,7 @@ Resolved in this Release -- This will display a list of all the incidents that h
 
 Verified in this Release -- This will display a list of the incidents that have been verified as being fixed in this release. This is useful for generating release notes for a specific release indicating what changes and enhancements have been made in the release.
 
-Regardless of the mode, each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual [incident details](../Incident-Tracking/#incident-details):
+Regardless of the mode, each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual [incident details](Incident-Tracking.md/#incident-details):
 
 ![](img/Release_Management_268.png)
 
@@ -429,7 +429,7 @@ Each of the requirements and associated tasks is displayed together with its:
 - story points (requirements only)
 - and numeric task identifier
 
-Clicking on a requirement will bring up the [requirement details page](../Requirements-Management/#requirement-details). Clicking the triangle by a requirement will expand/collapse its list of tasks. Clicking on a task name will bring up the Task Details page which is described in more detail in [Task Tracking > Task Details](../Task-Tracking/#task-details). This allows you to edit the details of an existing task.
+Clicking on a requirement will bring up the [requirement details page](Requirements-Management.md/#requirement-details). Clicking the triangle by a requirement will expand/collapse its list of tasks. Clicking on a task name will bring up the Task Details page which is described in more detail in [Task Tracking > Task Details](Task-Tracking.md/#task-details). This allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:
 
@@ -471,7 +471,7 @@ Finally, as a shortcut you can click the "***Create Test Set from This Release**
 
 ### Test Runs
 
-This view displays the list of all the test runs executed against the release. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual [test run details](../Test-Case-Management/#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
+This view displays the list of all the test runs executed against the release. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual [test run details](Test-Case-Management.md/#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
 
 ![](img/Release_Management_274.png)
 
@@ -493,7 +493,7 @@ This view displays the list of all baselines created for this release. If you ha
 
 You can view the following information about a baseline here:
 
-- Name (for product admins this links to the [baseline details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details))
+- Name (for product admins this links to the [baseline details page](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-details))
 - Description
 - Creator
 - Date (hover to see a tooltip of the date and time)

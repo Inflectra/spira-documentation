@@ -32,7 +32,7 @@ The popup dialog gives you the following options:
 
 Whichever copy / clone option you choose, product settings (planning options and testing settings), components and product membership will all be copied over to the new product.
 
-**Full clone of the product**: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin [Data Tools page](../Product-General-Settings/#product-data-tools), and after this coverage and traceability should look identical between the original and new product.
+**Full clone of the product**: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin [Data Tools page](Product-General-Settings.md/#product-data-tools), and after this coverage and traceability should look identical between the original and new product.
 
 While we attempt to create as perfect a clone as possible using this method, there are some limitations to this process:
 
@@ -78,7 +78,7 @@ You need to:
 - select which program it belongs to and optionally enter a detailed description and/or web-site URL;
 - decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, and customizations;
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
-- decide whether the product should have baselining enabled or not. Read more about baselining [here](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - you should initially make sure that the product is marked as "Active";
 
 
@@ -95,8 +95,8 @@ On this screen you can:
 - edit the description
 - edit the website URL
 - change the program
-- view the current template for the product. Next to the template name is a "Change" button. Clicking this will let you [change the product to use a different template](../Product-Changing-Template)
-- enable/disable [baselining](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- view the current template for the product. Next to the template name is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md)
+- enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
 
@@ -155,7 +155,7 @@ This tab allows you to see which users are members of the program and which prog
 
 The two program roles are "Executive" and "Program Owner":
 
-**Executive** -- This role allows the user to see this [program's homepage](../../Spira-User-Manual/Program-Homepage), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program.
+**Executive** -- This role allows the user to see this [program's homepage](../Spira-User-Manual/Program-Homepage.md), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program.
 
 **Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
 
@@ -233,7 +233,7 @@ To add a new template to the system, you need to create a new template when crea
 
 On this screen you can edit the template's:
 
-- Name (click on the name to open the template's [home page](../Template-Home))
+- Name (click on the name to open the template's [home page](Template-Home.md))
 - Description
 - Program
 - Active status

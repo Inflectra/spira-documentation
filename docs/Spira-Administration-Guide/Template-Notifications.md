@@ -2,7 +2,7 @@
 
 Each template has a separate notification system. This lets admins control what events trigger a notification being sent (via email), with what subject line, and who it should go to. You can create as many event triggers as you want, to give you fine grained control over when notifications are created. Each template has a single notification template (email body with tokens) per artifact. You can have, for example, 20 different requirement event triggers for a product template, each with their own rules and subjects; but they will all send the same email body, because they will all use the same requirement notification template.
 
-To configure emails across the entire system see [Email Configuration](../System/#email-configuration).
+To configure emails across the entire system see [Email Configuration](System.md/#email-configuration).
 
 ## Notification Templates
 

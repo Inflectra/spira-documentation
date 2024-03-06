@@ -112,7 +112,7 @@ As with all of the graphs on the reporting dashboard, you can export the data-gr
 
 
 ## Understanding Entity SQL (ESQL)
-The language that we use for creating custom graphs and reports in Spira is called "_Entity SQL_" (abbreviated to **ESQL**). Please read our [dedicated tutorial](../Understanding-Entity-SQL) to learn how ESQL works and how it is similar and different to standard SQL. This includes an overview, <span id="entity-sql-syntax-basics">Entity SQL Syntax Basics</span>, and the <span id="differences-between-esql-and-traditional-database-sql">differences Between ESQL and Traditional Database SQL</span>.
+The language that we use for creating custom graphs and reports in Spira is called "_Entity SQL_" (abbreviated to **ESQL**). Please read our [dedicated tutorial](Understanding-Entity-SQL.md) to learn how ESQL works and how it is similar and different to standard SQL. This includes an overview, <span id="entity-sql-syntax-basics">Entity SQL Syntax Basics</span>, and the <span id="differences-between-esql-and-traditional-database-sql">differences Between ESQL and Traditional Database SQL</span>.
 
 
 

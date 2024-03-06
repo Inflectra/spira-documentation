@@ -8,7 +8,7 @@ ClickUp is a cloud based project management system that can be synced with Spira
 Details of how to set this up and things to watch out for are explained below.
 
 !!! danger "Set up data synchronization"     
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 ## System Setup
 This section outlines how to set up the integration between ClickUp and Spira. It assumes you already have a working installation of Spira (**Version 7.3+**) as well as a workspace in ClickUp. To setup the service, you must be logged into a Spira user with System-Administrator level privileges.

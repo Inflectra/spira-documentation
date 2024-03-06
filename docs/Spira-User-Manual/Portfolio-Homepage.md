@@ -43,7 +43,7 @@ This widget displays the description of the portfolio.
 This chart shows the proportion of all active requirements that have been completed across all active programs in this portfolio. When 100% of the requirements are completed, the color changes so that it is easy to tell what is in progress vs completed.
 
 ## Top Open Risks
-This widget lists the top risks logged against any of the products in the portfolio, ordered by exposure. Clicking on the risk name will open the [risk details](../Risks-Management/#risk-details) page for the risk in question. *Note: you can configure the widget settings to control the maximum number of risks to show.*
+This widget lists the top risks logged against any of the products in the portfolio, ordered by exposure. Clicking on the risk name will open the [risk details](Risks-Management.md/#risk-details) page for the risk in question. *Note: you can configure the widget settings to control the maximum number of risks to show.*
 
 
 ## Programs: Completion
@@ -82,8 +82,8 @@ This Gantt chart shows all active programs, products, releases, and sprints in t
 ## Recent Builds
 This widget displays a list of the most recent builds for each active release (organized alphabetically by program and then product; in each product the builds are listed by date). For each build it shows: 
 
-- the release name (which links to the specific [release](../Release-Management/#release-details))
-- the build name (which links to the specific [build details](../Release-Management/#build-details))
+- the release name (which links to the specific [release](Release-Management.md/#release-details))
+- the build name (which links to the specific [build details](Release-Management.md/#build-details))
 - the build status (did it succeed or fail)
 - the date of the build
 

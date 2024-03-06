@@ -22,7 +22,7 @@ The test case list consists of:
 
     - the folder tree with triangle icons to expand / collapse each folder
     - a quick filter panel to filter by any saved filters or component with a single click
-    - a charts panel with a donut chart that shows the release test coverage for the currently displaying release. You can read how this data is prepared [here](../Product-Homepage/#release-test-summary)
+    - a charts panel with a donut chart that shows the release test coverage for the currently displaying release. You can read how this data is prepared [here](Product-Homepage.md/#release-test-summary)
 
 - The right hand side shows all the test cases in the product by folder, in a filterable, sortable grid. 
 
@@ -344,7 +344,7 @@ To **add a new parameter** to the test case, use the form at the bottom of the p
 
 ### Overview - Automation
 
-The Automation section displays the automated test script associated with the test case. To activate this section, choose an Automation Engine from the dropdown in the section. Automation can only run if it has an engine that it will run on - the application / framework that will actually run the script (e.g. Rapise). You can set up automation engines in [system administration](../../Spira-Administration-Guide/System-Integration/#test-automation). 
+The Automation section displays the automated test script associated with the test case. To activate this section, choose an Automation Engine from the dropdown in the section. Automation can only run if it has an engine that it will run on - the application / framework that will actually run the script (e.g. Rapise). You can set up automation engines in [system administration](../Spira-Administration-Guide/System-Integration.md/#test-automation). 
 
 There are three types of automated test:
 
@@ -358,7 +358,7 @@ The screenshot below illustrates a sample Rapise automated test script attached 
 
 The automation screen includes the following fields that you should populate when using SpiraPlan® to store an automated test script:
 
-- **Automation Engine (required)**: this should be the name of the test automation engine that the test script should be executed with, as set up in [system administration](../../Spira-Administration-Guide/System-Integration/#test-automation).
+- **Automation Engine (required)**: this should be the name of the test automation engine that the test script should be executed with, as set up in [system administration](../Spira-Administration-Guide/System-Integration.md/#test-automation).
 - **Script Type**: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in SpiraPlan. If you choose linked, the test script is stored externally and SpiraPlan just stores a reference to it. The "repository" option is never selectable within SpiraPlan and will be automatically set by Rapise when it attaches a test script to the test case.
 - **Filename**: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneathe filename is a link to open the test script attachment's dedicated document page
 - **Document Type**: This should be set to the document type that you want the test script associated with.

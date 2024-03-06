@@ -23,7 +23,7 @@ You now should narrow down the list of users by entering filter criteria and cli
 
 ## Team Membership
 !!! info "In beta, available in SpiraPlan only"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
 SpiraPlan lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 

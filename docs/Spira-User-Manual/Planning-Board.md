@@ -4,11 +4,11 @@
     
     The SpiraPlan planning board is a streamlined and highly customizable "kanban" style board. It lets you visualize backlog requirements and incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the planning board is a great tool for planning and managing agile products.
 
-    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 
-    - [board structure and configuration](../Application-Wide/#board-structure)
-    - [special board views](../Application-Wide/#special-board-views) 
-    - [working with board cards](../Application-Wide/#board-cards) 
+    - [board structure and configuration](Application-Wide.md/#board-structure)
+    - [special board views](Application-Wide.md/#special-board-views) 
+    - [working with board cards](Application-Wide.md/#board-cards) 
 
     **Specific features of or differences in the Planning Board are discussed more fully below**.
 
@@ -76,7 +76,7 @@ The release selector is only visible when the planning dropdown is set to either
 ### Customizing cards
 ![planning board card options](img/Planning_Board_card-options.png)
 
-In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
+In addition to the standard [board card options](Application-Wide.md/#board-card-options), you can toggle whether to show each of the following features:
 
 - **Test coverage**: a mini histogram chart of the requirement's test coverage, shown in the test coverage mini section on the card (hover to see a tooltip with detailed information)
 - **Test case indicators**: each test case covering the requirement is shown as a little circle, shaded based on its current execution status, in the test coverage mini section on the card (hover to see a tooltip with information about the test case, and click to open details about that test case)
@@ -97,16 +97,16 @@ Finally, you can, based on your view, toggle other artifact cards to show. When 
 
 
 ## Special board views
-[Certain board configurations](../Application-Wide/#special-board-views) will provide additional information or will work in a specific way.
+[Certain board configurations](Application-Wide.md/#special-board-views) will provide additional information or will work in a specific way.
 
 ### Statuses
-What statuses shown on the board depends on how the [template](../../Spira-Administration-Guide/Template-Requirements/#statuses) has been configured. In short:
+What statuses shown on the board depends on how the [template](../Spira-Administration-Guide/Template-Requirements.md/#statuses) has been configured. In short:
         
 - if the template does not have requirement statuses customized for the boards, then all statuses with a transition to and from them will show in the order they appear on the workflow admin screens
 - if the template has customized requirement statuses for boards, then statuses chosen to be shown will show, in the order specified in the template.
 
 ### Work in Progress Limits
-When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the "effort data" configuration is set to "Yes", and if the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
+When viewing by status and either grouping by releases/sprints or displaying for a release/sprint, extra information may show on each status column. If the "effort data" configuration is set to "Yes", and if the product is using [Work in Progress (WIP) limits set](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits), the relevant limit for each status will show in a little pill shaped badge in the header for that status, along with the number of requirement cards in that status for that release/sprint. For example, if the limit is 3 and there are 2 cards then the pill will read "2/3" - 2 of 3 requirements.
 
 There are different colors to indicate the status of the WIP limit:
 
@@ -114,14 +114,14 @@ There are different colors to indicate the status of the WIP limit:
 - **Green**: there is "space" in the status (the WIP limit has not been exceeded yet)
 - **Red**: there are too many cards in this status (the WIP limit has been exceeded). In this case the cell will be shaded a pale red. Note that even in this status, you can still move cards into this status - the color is an indicator only.
 
-Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
+Read more about [how to set up and use WIP limits](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits).
 
 
 ## Board cards
-There are [general rules](../Application-Wide/#what-cards-show-when) that apply to how what cards show when on the Planning Board. The Planning Board also has the following standard board features: 
+There are [general rules](Application-Wide.md/#what-cards-show-when) that apply to how what cards show when on the Planning Board. The Planning Board also has the following standard board features: 
 
-- [Moving and ordering cards](../Application-Wide/#moving-and-ordering-cards)
-- [Editing, adding, and viewing cards](../Application-Wide/#editing-and-viewing-cards)
+- [Moving and ordering cards](Application-Wide.md/#moving-and-ordering-cards)
+- [Editing, adding, and viewing cards](Application-Wide.md/#editing-and-viewing-cards)
 
 In addition, the Planning Board has extra "rules" that control what cards will show:
     
@@ -148,7 +148,7 @@ The following cards will show in this view (in combination with the relevant pri
 - incidents with no planned release
 
 ### What cards show in the release backlog
-In addition to [how releases show on the board](../Application-Wide/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
+In addition to [how releases show on the board](Application-Wide.md/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
 
 | View selected                   | Requirements shown                                          | Incidents shown                                    |
 | ------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
@@ -156,7 +156,7 @@ In addition to [how releases show on the board](../Application-Wide/#board-viewi
 | **Release is a single release** | requirements with that release, or any of its child sprints | incidents with that release as its planned release |
 
 ### What cards show in the sprint backlog
-In addition to [how releases show on the board](../Application-Wide/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
+In addition to [how releases show on the board](Application-Wide.md/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
 
 | View selected                   | Requirements shown                                          | Incidents shown                                    |
 | ------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
@@ -381,9 +381,9 @@ The lower section of the board allows you to segment the items by either status 
 ![](img/Planning_Board_429.png)
 
 ### Legacy Board Work In Progress Limits
-If the product is using [Work in Progress (WIP) limits set](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits), they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.
+If the product is using [Work in Progress (WIP) limits set](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits), they will be shown in a little pill shaped badge on each relevant status, along with the number of requirement cards in that status for that release/sprint.
 
 - A status with "space" in it - one where the WIP limit has not been exceeded yet - will be shown in green
 - Any status that has exceeded its WIP limit will be shown in red. You can still move cards into this status: the color is there as an indicator only.
 
-Read more about [how to set up and use WIP limits](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits).
+Read more about [how to set up and use WIP limits](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits).

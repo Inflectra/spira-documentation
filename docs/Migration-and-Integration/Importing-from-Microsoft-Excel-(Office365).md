@@ -291,4 +291,4 @@ Only system administrators can create new users going to the first option of the
 - work with version of Spira older than 6.3.0.1
 - work with versions of Excel pre Excel 2016
 
-**NOTE** The classic version of our Excel importer can create test runs. Please refer to the [SpiraPlan TestRunner](../../Unit-Testing-Integration/Using-Test-Runner-For-Excel) for Excel 365 add-in to use these functionalities in our new generation of add-ins.
+**NOTE** The classic version of our Excel importer can create test runs. Please refer to the [SpiraPlan TestRunner](../Unit-Testing-Integration/Using-Test-Runner-For-Excel.md) for Excel 365 add-in to use these functionalities in our new generation of add-ins.

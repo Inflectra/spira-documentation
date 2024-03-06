@@ -28,8 +28,8 @@ The same folders and files are typically stored inside each of the Branches, Tag
 
 ## Getting Started with Subversion
 
-This section assumes that you have already provisioned at least one Subversion project in TaraVault following the steps in [Activating TaraVault](../Activating-TaraVault/) and 
-[Provisioning Projects & Users](../Provisioning-Projects-&-Users/). So you should now have a TaraVault user/password and a Subversion project with a connection URL:
+This section assumes that you have already provisioned at least one Subversion project in TaraVault following the steps in [Activating TaraVault](Activating-TaraVault.md) and 
+[Provisioning Projects & Users](Provisioning-Projects-&-Users.md). So you should now have a TaraVault user/password and a Subversion project with a connection URL:
 
 ![](img/Using_Subversion_21.png)
 
@@ -133,6 +133,6 @@ Click on the "Source Code" or "Commits" menu items under the Developing tab to n
 
 You can read more about working with source code in SpiraPlan at the links below:
 
-- [Source code files](../../Spira-User-Manual/Source-Code/#source-code-file-list)
-- [Commits](../../Spira-User-Manual/Commits/#commit-list)
-- [Linking to artifacts in commit messages](../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages)
+- [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
+- [Commits](../Spira-User-Manual/Commits.md/#commit-list)
+- [Linking to artifacts in commit messages](../Spira-User-Manual/Commits.md/#linking-to-artifacts-in-commit-messages)

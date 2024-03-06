@@ -1,5 +1,5 @@
 # Login Providers
-For more information about using login providers see the [admin guide](../../Spira-Administration-Guide/System-Users/#login-providers)
+For more information about using login providers see the [admin guide](../Spira-Administration-Guide/System-Users.md/#login-providers)
 
 !!! warning "Please Note"
     We have tried to give up to date and accurate information, but many providers do not themselves have correct information on their site. Hopefully they do not change things too much, but if they do and you cannot figure out what to do please contact our support team.

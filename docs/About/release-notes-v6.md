@@ -6,23 +6,23 @@
     - The global navigation helps users understand what key features are available in the tool but not currently accessible to them [RQ:4154]
     * **Webhooks (inbound)**
 
-        - Integrate with [GitHub Actions](../../Build-Server-Integration/GitHub-Actions/) so they can be saved against a release as a new build [RQ:4198]
-        - Integrate with [GitLab Pipelines](../../Build-Server-Integration/GitLab-Pipelines/) so they can be saved against a release as a new build [RQ:4197]
-        - Integrate with [CircleCI Pipelines](../../Build-Server-Integration/CircleCI-Pipelines/) so they can be saved against a release as a new build [RQ:4196]
+        - Integrate with [GitHub Actions](../Build-Server-Integration/GitHub-Actions.md) so they can be saved against a release as a new build [RQ:4198]
+        - Integrate with [GitLab Pipelines](../Build-Server-Integration/GitLab-Pipelines.md) so they can be saved against a release as a new build [RQ:4197]
+        - Integrate with [CircleCI Pipelines](../Build-Server-Integration/CircleCI-Pipelines.md) so they can be saved against a release as a new build [RQ:4196]
 
 ??? bug "Bug fixes and enhancements"
 
     * **Navigation**
 
-        - Improve the [global search](../../Spira-User-Manual/User-Product-Management/#global-search) by including not just recent searches, but also a list of recently viewed artifacts [IN:6922]
-        - Let users filter the [global navigation](../../Spira-User-Manual/User-Product-Management/#global-navigation) workspace dropdown to make it easier to find the workspace a user [IN:6921]
+        - Improve the [global search](../Spira-User-Manual/User-Product-Management.md/#global-search) by including not just recent searches, but also a list of recently viewed artifacts [IN:6922]
+        - Let users filter the [global navigation](../Spira-User-Manual/User-Product-Management.md/#global-navigation) workspace dropdown to make it easier to find the workspace a user [IN:6921]
         - Show artifact icons in the headings of the template administration menu subsections to make them more visually clear [IN:7046]
 
     * **Reporting**
 
-        - Fix not being able to generate the [Release Summary report](../../Spira-User-Manual/Reports-Center/#release-summary-report) in PDF format [IN:5278]
-        - Let users add specific [custom graphs](../../Spira-User-Manual/Reports-Center/#custom-graphs) to their reporting page and show the name of that custom graph in the widget header [IN:4787]
-        - Make the "associated task" tables in the the [Requirement Detailed Report](../../Spira-User-Manual/Reports-Center/#requirements-detailed-report) more legible by removing non essential columns [IN:7132]
+        - Fix not being able to generate the [Release Summary report](../Spira-User-Manual/Reports-Center.md/#release-summary-report) in PDF format [IN:5278]
+        - Let users add specific [custom graphs](../Spira-User-Manual/Reports-Center.md/#custom-graphs) to their reporting page and show the name of that custom graph in the widget header [IN:4787]
+        - Make the "associated task" tables in the the [Requirement Detailed Report](../Spira-User-Manual/Reports-Center.md/#requirements-detailed-report) more legible by removing non essential columns [IN:7132]
         - Show the custom graph description when you hover on the help icon of a custom graph on the reporting page [IN:4700]
 
     * **Other**
@@ -73,7 +73,7 @@
 
 ??? bug "Bug fixes and enhancements"
 
-    * **[Rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor)**
+    * **[Rich text editor](../Spira-User-Manual/Application-Wide.md/#rich-text-editor)**
     
         - Add find and replace support to the rich text editor to let users make updates more easily [IN:6929]
         - Add more image positioning options to the rich text editor, including left align [IN:6898]
@@ -88,23 +88,23 @@
 
     * **Testing**
 
-        - Let users delete links between incidents and test runs from the [test run](../../Spira-User-Manual/Test-Case-Management/#incidents) and [test case](../../Spira-User-Manual/Test-Run-Management/#incidents) details pages (when baselining is disabled) [IN:3249]
-        - Add the read-only "actual duration" field to the [test case details page](../../Spira-User-Manual/Test-Case-Management/#overview-details) [IN:5067]
-        - Fix the reporting [Testing Date Range's Test Run Progress graph](../../Spira-User-Manual/Reports-Center/#test-run-progress-rate-graph) and Product Home Page [Test Run Progress widget](../../Spira-User-Manual/Product-Homepage/#test-run-progress) so that they omit deleted test cases [IN:6722]
+        - Let users delete links between incidents and test runs from the [test run](../Spira-User-Manual/Test-Case-Management.md/#incidents) and [test case](../Spira-User-Manual/Test-Run-Management.md/#incidents) details pages (when baselining is disabled) [IN:3249]
+        - Add the read-only "actual duration" field to the [test case details page](../Spira-User-Manual/Test-Case-Management.md/#overview-details) [IN:5067]
+        - Fix the reporting [Testing Date Range's Test Run Progress graph](../Spira-User-Manual/Reports-Center.md/#test-run-progress-rate-graph) and Product Home Page [Test Run Progress widget](../Spira-User-Manual/Product-Homepage.md/#test-run-progress) so that they omit deleted test cases [IN:6722]
     
     * **Improvements for those with limited permissions**
 
         - Disable the delete button on the folder edit popup dialog if you do not have delete permissions for that artifact [IN:6473]
-        - Disable the "link existing incident" button on [test run detail page](../../Spira-User-Manual/Test-Run-Management/#test-run-steps) if you do not have incident modify all permissions [IN:6975]
-        - Do not let users create or clone a test step on the [test step details page](../../Spira-User-Manual/Test-Case-Management/#test-step-details) if they cannot modify the test step's test case (even if they can create test cases) [IN:4661]
-        - Hide the new comment box on the [document details page](../../Spira-User-Manual/Document-Management/#comments) if you cannot add comments [IN:6974]
+        - Disable the "link existing incident" button on [test run detail page](../Spira-User-Manual/Test-Run-Management.md/#test-run-steps) if you do not have incident modify all permissions [IN:6975]
+        - Do not let users create or clone a test step on the [test step details page](../Spira-User-Manual/Test-Case-Management.md/#test-step-details) if they cannot modify the test step's test case (even if they can create test cases) [IN:4661]
+        - Hide the new comment box on the [document details page](../Spira-User-Manual/Document-Management.md/#comments) if you cannot add comments [IN:6974]
         - If a user cannot edit a specific artifact, make the whole artifact read only (instead of letting them edit fields but then not be able to save) [IN:4257]
         - Let users without bulk edit permissions still add comments to artifacts on inline editing popups (on planning boards, mindmaps, and Gantt charts) [IN:6955]
-        - Make sure you can only [import test steps](../../../../Spira-User-Manual/Test-Case-Management/#import-steps-from-test-case) on the test case detail page if your role lets you create test steps and you can modify the test case [IN:4662]
+        - Make sure you can only [import test steps](../Spira-User-Manual/Test-Case-Management.md/#import-steps-from-test-case) on the test case detail page if your role lets you create test steps and you can modify the test case [IN:4662]
     
     * **Other**
 
-        - Allow changes to risks to be reverted and/or purged from the [product history changes](../../Spira-Administration-Guide/Product-Home/#product-history-changes) page [IN:6935]
+        - Allow changes to risks to be reverted and/or purged from the [product history changes](../Spira-Administration-Guide/Product-Home.md/#product-history-changes) page [IN:6935]
         - Database schema parity standardization on upgrading [IN:6181]
         - Fix the on premise installer program to say "Removal Successful" when uninstalling (and not "Installation Successful") [IN:6891]
         - Fix the requirement use case steps' context menu so that all options work and behave as expected on the requirement details page [IN:6079]
@@ -127,30 +127,30 @@
 ## Version 6.14 (December 2021)
 
 !!! info "Summary"
-    View, edit, and add releases inline on the [release mindmap](../../Spira-User-Manual/Release-Management/#mindmap-inline-editing), [release Gantt chart](../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing), or [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    View, edit, and add releases inline on the [release mindmap](../Spira-User-Manual/Release-Management.md/#mindmap-inline-editing), [release Gantt chart](../Spira-User-Manual/Release-Management.md/#gantt-chart-inline-editing), or [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    View, edit, and add tasks inline on the [task Gantt chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    View, edit, and add tasks inline on the [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
     Support for two new Single Sign On (SSO) providers:  the popular OneLogin service and a generic OpenID provider. This makes it even easiser to integrate your external authentication system with Spira.
 
 ??? success "New Features"
 
-    * **[OAuth connectors are available for specific providers](../../Spira-Administration-Guide/System-Users/#login-providers)**
+    * **[OAuth connectors are available for specific providers](../Spira-Administration-Guide/System-Users.md/#login-providers)**
 
         - OneLogin [RQ:3876]
         - Generic OpenID Connect [RQ:3877]
 
     * **Product Release List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
 
-        - Allow releases to be edited inline on [Release Mind Map View](../../Spira-User-Manual/Release-Management/#mindmap-inline-editing) [RQ:3716]
-        - Allow releases to be edited inline on [Release Gantt Chart](../../Spira-User-Manual/Release-Management/#gantt-chart-inline-editing) [RQ:3714]
-        - Allow releases to be added on the [Release Gantt Chart view](../../Spira-User-Manual/Release-Management/#release-gantt-chart) [RQ:3715]
+        - Allow releases to be edited inline on [Release Mind Map View](../Spira-User-Manual/Release-Management.md/#mindmap-inline-editing) [RQ:3716]
+        - Allow releases to be edited inline on [Release Gantt Chart](../Spira-User-Manual/Release-Management.md/#gantt-chart-inline-editing) [RQ:3714]
+        - Allow releases to be added on the [Release Gantt Chart view](../Spira-User-Manual/Release-Management.md/#release-gantt-chart) [RQ:3715]
 
     * **Product Task List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
 
-        - Allow tasks to be edited inline on [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) [RQ:3686]
-        - Allow tasks to be added on the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) [RQ:3713]
-        - Allow releases to be edited inline on the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#gantt-chart-inline-editing) [RQ:3687]
+        - Allow tasks to be edited inline on [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) [RQ:3686]
+        - Allow tasks to be added on the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) [RQ:3713]
+        - Allow releases to be edited inline on the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) [RQ:3687]
 
 ??? bug "Bug fixes and enhancements"
 
@@ -158,30 +158,30 @@
 
         - Fix the upgrade process from ever overwriting attachments with IDs 1 through 16 with sample attachments [IN:6714]
         - Fix the upgrade process so that custom SSMS passwords are not reset to the default [IN:6709]
-        - No longer attempt to dynamically inform users which [prerequisites](../../Spira-Administration-Guide/Installing-SpiraPlan/#system-prerequisites) have been met during on premise installation, and instead shows users a static guide during installation for information only [IN:6718]
+        - No longer attempt to dynamically inform users which [prerequisites](../Spira-Administration-Guide/Installing-SpiraPlan.md/#system-prerequisites) have been met during on premise installation, and instead shows users a static guide during installation for information only [IN:6718]
         - Stop the on-premise installer showing a popup warning that uninstallation may not have completed successfully even when it had done so [IN:6520]
         - The on-premise installer will no longer allow installation on servers older than SQL Server 2012 to match the application's minimum system requirements [IN:6492]
 
 
     - Fix text not wrapping when editing rich text fields of test steps on a test case details page (introduced in 6.13) [IN:6833]
     - Fix error message appearing when creating new items on details pages when changing the type and on boards (introduced in 6.13) [IN:6834]
-    - Fix the [diagram tab](../../Spira-User-Manual/Release-Management/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
+    - Fix the [diagram tab](../Spira-User-Manual/Release-Management.md/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
 
     - Fix details pages for artifacts that use workflows so that the comments settings in the workflow always control the comment box [IN:4917]
-    - Fix the [Task Gantt Chart](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) not showing child sprints as part of their parent release <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6494]
+    - Fix the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) not showing child sprints as part of their parent release <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6494]
     - Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6747]
 
 
 ## Version 6.13 (November 2021)
 
 !!! info "Summary"
-    Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously [parent requirements (those with children)](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
+    Give users increased flexibility when managing requirements with requirement types now always being user editable and controllable. Previously [parent requirements (those with children)](../Spira-User-Manual/Requirements-Management.md/#standard-requirements-and-parent-requirements) had a fixed type of "Epic" that users could never change. Now parent requirements can have any type at any time.
 
-    Improve the user experience and features of the [built-in rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor). This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
+    Improve the user experience and features of the [built-in rich text editor](../Spira-User-Manual/Application-Wide.md/#rich-text-editor). This lets users more easily add and view links, create checklists, highlight text, and strikethrough text
 
     Add support for more custom property types to let users customize even more how they use SpiraPlan. This release adds support for passwords (encrypted text), release, and automation host custom properties.
 
-    The built-in [diagram tools](../../Spira-User-Manual/Document-Management/#editing-diagrams) get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
+    The built-in [diagram tools](../Spira-User-Manual/Document-Management.md/#editing-diagrams) get even more powerful with additional shapes and option. You can now make diagrams that group individual shapes together to form kanban board diagrams and swim lane diagrams.
 
     We continue to round out our [extensive API](https://api.inflectra.com/Spira/Services/v6_0/RestService.aspx) to let users automate more and more of their workflows in SpiraPlan. Each of our APIs (REST and SOAP) already had over 375 individual API calls. This release adds API calls to manage all template managed fields for specific artifacts.
 
@@ -189,8 +189,8 @@
 
 ??? success "New Features"
 
-    - Implement new [rich text editor](../../Spira-User-Manual/Application-Wide/#rich-text-editor) to enable more modern experience [RQ:3697]
-    - [Requirements that have children](../../Spira-User-Manual/Requirements-Management/#standard-requirements-and-parent-requirements) (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
+    - Implement new [rich text editor](../Spira-User-Manual/Application-Wide.md/#rich-text-editor) to enable more modern experience [RQ:3697]
+    - [Requirements that have children](../Spira-User-Manual/Requirements-Management.md/#standard-requirements-and-parent-requirements) (parent requirements) retain their type and are not forced to be "Epics" [RQ:3703]
 
     * **APIs**
 
@@ -225,7 +225,7 @@
 
         - Localize workflow status and other hard coded fields throughout the web application and UI [IN:6262]
         - Complete the integration with Rapise to enable floating licenses in Rapise [IN:6735]
-        - Enhance [document diagrams](../../Spira-User-Manual/Document-Management/#editing-diagrams) with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]
+        - Enhance [document diagrams](../Spira-User-Manual/Document-Management.md/#editing-diagrams) with improved shapes and the ability to group shapes and create swimlane style diagrams [IN:6726]
         - Fix cloud and on premise upgrading to stop system admins seeing links to manage sample data [IN:6745]
         - Fix making a new incident or risk so that the list of followers from any previous incident or risk does not show [IN:6308]
         - Fix the requirement (if set on a task) being removed from the task when editing on the task board pop-up dialog [IN:6732]
@@ -235,7 +235,7 @@
 ## Version 6.12 (September 2021)
 
 !!! info "Summary"
-    - New installs come with improved [sample data](../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data). On first trying out SpiraPlan, users can select from a number of industry specific example products, programs, and portfolios to see how the tool can work for them. 
+    - New installs come with improved [sample data](../Spira-Administration-Guide/System-Workspaces.md/#manage-sample-data). On first trying out SpiraPlan, users can select from a number of industry specific example products, programs, and portfolios to see how the tool can work for them. 
 
     - Bug fixes and performance improvements
 
@@ -244,7 +244,7 @@
     * ** Test Automation**: Can manage Rapise floating licenses inside Spira (will be available in the application at a later date) [RQ:3533]
     * **Industry specific sample data installed with new installations**
 
-        - Allow system admins to [manage sample data](../../Spira-Administration-Guide/System-Workspaces/#manage-sample-data) by selecting which industry data to make active and display, showing a popup selector to the admin after a new install [RQ:2946]
+        - Allow system admins to [manage sample data](../Spira-Administration-Guide/System-Workspaces.md/#manage-sample-data) by selecting which industry data to make active and display, showing a popup selector to the admin after a new install [RQ:2946]
         - **Manufacturing** portfolio: Inventory Systems and Automotive programs (2) and products (4)
         - **Aerospace** portfolio: Aviation and Space Platforms programs (2) and products (4)
         - **Financial Services** portfolio: Back Office and Customer Experience programs (2) and products (4)
@@ -253,10 +253,10 @@
 
 ??? bug "Bug fixes and enhancements"
 
-    - Add product-level [testing setting](../../Spira-Administration-Guide/Product-Planning/#testing-settings) to allow product-based parameter refresh for large projects [IN:6671]
+    - Add product-level [testing setting](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) to allow product-based parameter refresh for large projects [IN:6671]
     - Allow an incident's creation date to be after its start date and its closed on date (to avoid not being able to save an incident due to this validation criteria not being met) [IN:5505]
     - Ensure full database schema parity between a clean installation and an upgraded on-premise installation [IN:6182]
-    - Ensure grid for [adding product memberships to a specific user](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) (UserDetailsAddProjectMembership page) does not disappear on small screen sizes [IN:6618]
+    - Ensure grid for [adding product memberships to a specific user](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) (UserDetailsAddProjectMembership page) does not disappear on small screen sizes [IN:6618]
     - Fix navigating to a deleted Test Step showing the wrong error message about which artifact was deleted [IN:5394]
     - Fix not being able to filter by custom properties on the document list page and on the attachment tab [IN:6269]
     - Fix Pull Request popup dialog Name field excessively limiting the character limit of the field [IN:6622]
@@ -270,13 +270,13 @@
 ## Version 6.11 (August 2021)
 
 !!! info "Summary"
-    **Multi-Factor Authentication** (MFA) support for all users to improve security. Users can [add a one-time password](../../Spira-User-Manual/User-Product-Management/#2-step-authentication) to Spira from within the application. Admins can [enable/disable](../../Spira-Administration-Guide/System/#enable-2-step-authentication), [monitor](../../Spira-Administration-Guide/System-Users/#view-edit-users), and [manage](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) one-time passwords.
+    **Multi-Factor Authentication** (MFA) support for all users to improve security. Users can [add a one-time password](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication) to Spira from within the application. Admins can [enable/disable](../Spira-Administration-Guide/System.md/#enable-2-step-authentication), [monitor](../Spira-Administration-Guide/System-Users.md/#view-edit-users), and [manage](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) one-time passwords.
 
-    **Create and edit a [wide array of diagrams](../../Spira-User-Manual/Document-Management/#add-new-inline-documents)** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
+    **Create and edit a [wide array of diagrams](../Spira-User-Manual/Document-Management.md/#add-new-inline-documents)** live from within the application. This includes mindmaps, org charts, and general diagrams to meet all of your needs. Like all documents in the application, diagrams are versioned, have beautiful previews, can be downloaded, and can be controlled with robust workflows.
 
-    **[Edit requirements inline](../../Spira-User-Manual/Requirements-Management/#mindmap-inline-editing) on the requirements mind-map page** in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
+    **[Edit requirements inline](../Spira-User-Manual/Requirements-Management.md/#mindmap-inline-editing) on the requirements mind-map page** in a new popup. View full details about each requirement without leaving the mindmap, or edit and save changes right there. [IN:6570]
 
-    **[Excel365](../../Migration-and-Integration/Importing-from-Microsoft-Excel-%28Office365%29)** addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
+    **[Excel365](../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365).md)** addin support risks and test sets, and existing artifacts support even more fields. You can now update existing records using the tools. Advanced users can create new comments and test coverage and traceability links right from the spreadsheet.
 
 ??? success "New Features"
     - Users can add Multi-Factor Authentication (MFA) with a one-time password to improve login security [RQ:3522]
@@ -309,12 +309,12 @@
 ## Version 6.10 (June 2021)
 
 !!! info "Summary"
-    **[Planning Board](../../Spira-User-Manual/Planning-Board) enhancements** (SpiraTeam and SpiraPlan): quality of life improvements, including: users can edit cards directly on the board in on-page popups (or view relevant information if you can't edit); improve tooltips, drag and drop; and more sensible defaults when creating items based on your view
+    **[Planning Board](../Spira-User-Manual/Planning-Board.md) enhancements** (SpiraTeam and SpiraPlan): quality of life improvements, including: users can edit cards directly on the board in on-page popups (or view relevant information if you can't edit); improve tooltips, drag and drop; and more sensible defaults when creating items based on your view
 
-    **Work faster and smarter with tasks** (SpiraTeam and SpiraPlan): on the [task list page](../../Spira-User-Manual/Task-Tracking/#task-list) you can now perform actions on a whole folders at once, not just specific tasks. This lets you quickly clone, export, or print tasks in folders.
+    **Work faster and smarter with tasks** (SpiraTeam and SpiraPlan): on the [task list page](../Spira-User-Manual/Task-Tracking.md/#task-list) you can now perform actions on a whole folders at once, not just specific tasks. This lets you quickly clone, export, or print tasks in folders.
 
 ??? success "New Features"
-    * **Planning Board** (SpiraTeam and SpiraPlan): Product level planning boards ([planning board](../../Spira-User-Manual/Planning-Board), [requirement board](../../Spira-User-Manual/Requirements-Management/#requirements-agile-board), [incident board](../../Spira-User-Manual/Incident-Tracking/#incident-board), [task board](../../Spira-User-Manual/Task-Tracking/#task-board)) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]
+    * **Planning Board** (SpiraTeam and SpiraPlan): Product level planning boards ([planning board](../Spira-User-Manual/Planning-Board.md), [requirement board](../Spira-User-Manual/Requirements-Management.md/#requirements-agile-board), [incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board), [task board](../Spira-User-Manual/Task-Tracking.md/#task-board)) allow quick viewing and editing of artifacts in popups on the planning boards [RQ:3373]
  
 
 ??? bug "Bug fixes and enhancements"
@@ -344,85 +344,85 @@
         
     * **Other**
 
-        - Add tool and edit functions to task folders on the main [task list](../../Spira-User-Manual/Task-Tracking/#task-list) page grid, as you can with test cases and test sets [IN:6229]
+        - Add tool and edit functions to task folders on the main [task list](../Spira-User-Manual/Task-Tracking.md/#task-list) page grid, as you can with test cases and test sets [IN:6229]
         - Darken the workspace Releases/Sprint Completion widget's overdue color and label [IN:6114]
         - Fix document detail page styling potentially being changed by inline styling in HTML documents [IN:6444]
         - Fix Firefox sporadically not loading some controls (due to timing issues) [IN:6487]
-        - Fix Risk Detail Page > [Tasks Tab](../../Spira-User-Manual/Risks-Management/#tasks) Clone and Task Split buttons not associating the new task with the original task's Risk [IN:6216]
+        - Fix Risk Detail Page > [Tasks Tab](../Spira-User-Manual/Risks-Management.md/#tasks) Clone and Task Split buttons not associating the new task with the original task's Risk [IN:6216]
         - Fix some movable dialog boxes being shown too far to the bottom of the screen [IN:6321]
         - Fix the follower card showing behind the artifact title, which is particularly problematic on the test case details page [IN:6481]
-        - Improve the performance of retrieving [history data](../../Spira-User-Manual/Application-Wide/#history) for products that use baselining [IN:6466]
-        - Remove the duplicate "Delete" entry from the [task list page](../../Spira-User-Manual/Task-Tracking/#task-list) context menu [IN:6252]
+        - Improve the performance of retrieving [history data](../Spira-User-Manual/Application-Wide.md/#history) for products that use baselining [IN:6466]
+        - Remove the duplicate "Delete" entry from the [task list page](../Spira-User-Manual/Task-Tracking.md/#task-list) context menu [IN:6252]
         - Schedule widgets for programs, portfolio and enterprise should calculate the product start and end date using the min max of active releases (using same definition as for releases / sprints of active) [IN:6228]
-        - Show the "is user Locked out" toggle on the system admin [user details page](../../Spira-Administration-Guide/System-Users/#edit-an-existing-user) only when the user is locked out, and show it for all authentication methods (normal, LDAP, Oauth) [IN:6482]
-        - Show which release data is being shown for on the [Release](../../Spira-User-Manual/Release-Management/#release-gantt-chart) and [Task Gantt](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) views (syncs with release dropdowns used on product home page and elsewhere) [IN:6201]
+        - Show the "is user Locked out" toggle on the system admin [user details page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) only when the user is locked out, and show it for all authentication methods (normal, LDAP, Oauth) [IN:6482]
+        - Show which release data is being shown for on the [Release](../Spira-User-Manual/Release-Management.md/#release-gantt-chart) and [Task Gantt](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) views (syncs with release dropdowns used on product home page and elsewhere) [IN:6201]
 
 
 ## Version 6.9 (May 2021)
 
 !!! info "Summary"
-    - **Improved [requirement document view](../../Spira-User-Manual/Requirements-Management/#requirements-document-view)** (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.
+    - **Improved [requirement document view](../Spira-User-Manual/Requirements-Management.md/#requirements-document-view)** (SpiraTeam and SpiraPlan): Users can now customize which fields to display; edit requirement names, descriptions, and other rich text fields; and display the requirement hierarchy position as an outline code (e.g. 1.2.11). Navigation and pagination have also been improved.
     
-    - **Baselining enhancements** (SpiraTeam and SpiraPlan): There are now [new views](../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details) and existing views improved to make it easier to see what changed in a baseline.
+    - **Baselining enhancements** (SpiraTeam and SpiraPlan): There are now [new views](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-artifact-details) and existing views improved to make it easier to see what changed in a baseline.
 
-    - **Access custom report data from external tools** (SpiraPlan): First, we've added [lots more reporting views](../../Reporting/Custom-Report-Tables) to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our [in-depth tutorial](../../Reporting/OData-Tutorial)). This takes custom reports to a whole new level of integration and ease of use.
+    - **Access custom report data from external tools** (SpiraPlan): First, we've added [lots more reporting views](../Reporting/Custom-Report-Tables.md) to help build out even more queries (available in all editions of Spira). Next, SpiraPlan customers can use 3rd party tools like spreadsheets and database reporting packages to query and report against all custom report tables in the application via the ODATA standard (read our [in-depth tutorial](../Reporting/OData-Tutorial.md)). This takes custom reports to a whole new level of integration and ease of use.
 
-    - **Customize custom fields**: [Custom properties](../../Spira-Administration-Guide/Template-Custom-Properties) have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
+    - **Customize custom fields**: [Custom properties](../Spira-Administration-Guide/Template-Custom-Properties.md) have been turned up to 100 (minus 1). You can now have 99 custom properties for each artifact in a template. Order your custom properties how you like, and add a useful tooltip description for users to read on details pages. 
 
     **NOTE**: Internet Explorer is no longer supported by SpiraTest, SpiraTeam, or SpiraPlan. You should use a modern and secure browser instead.
 
 ??? success "New Features"
 
-    * **[Requirements document view](../../Spira-User-Manual/Requirements-Management/#requirements-document-view)**
+    * **[Requirements document view](../Spira-User-Manual/Requirements-Management.md/#requirements-document-view)**
 
-        - Users with bulk edit permission can [edit the name and rich text fields inline](../../Spira-User-Manual/Requirements-Management/#editing-the-requirements-documents) on the requirements documents list view [RQ:2953]
-        - Users can [show or hide key standard fields](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) on the requirements documents view [RQ:2954]
-        - Users can [show or hide rich text custom properties](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) on the requirements documents view [RQ:3047]
-        - The requirements document view can optionally show the requirement's position in the hierarchy as an [outline number code](../../Spira-User-Manual/Requirements-Management/#requirements-document-options) (in a form like 1.1.2.4) [RQ:2958]
-        - The requirements document view has improved [navigation](../../Spira-User-Manual/Requirements-Management/#requirements-document-navigation) where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]
+        - Users with bulk edit permission can [edit the name and rich text fields inline](../Spira-User-Manual/Requirements-Management.md/#editing-the-requirements-documents) on the requirements documents list view [RQ:2953]
+        - Users can [show or hide key standard fields](../Spira-User-Manual/Requirements-Management.md/#requirements-document-options) on the requirements documents view [RQ:2954]
+        - Users can [show or hide rich text custom properties](../Spira-User-Manual/Requirements-Management.md/#requirements-document-options) on the requirements documents view [RQ:3047]
+        - The requirements document view can optionally show the requirement's position in the hierarchy as an [outline number code](../Spira-User-Manual/Requirements-Management.md/#requirements-document-options) (in a form like 1.1.2.4) [RQ:2958]
+        - The requirements document view has improved [navigation](../Spira-User-Manual/Requirements-Management.md/#requirements-document-navigation) where click an epic in the sidebar loads only that epic and its children, and the system remembers your selection [RQ:3065]
         - Users can quickly print the current requirement documents list with the addition of a dedicated on-page print button [RQ:3066]
 
     * **Custom Properties**
 
-        - You can [optionally set a position](../../Spira-Administration-Guide/Template-Custom-Properties) for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
-        - You can optionally add [help tooltip text](../../Spira-Administration-Guide/Template-Custom-Properties/#edit-custom-properties) to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
-        - Each artifact that has [custom properties](../../Spira-Administration-Guide/Template-Custom-Properties) already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
+        - You can [optionally set a position](../Spira-Administration-Guide/Template-Custom-Properties.md) for custom properties to change the order custom properties are displayed in each section on details pages [RQ:3053]
+        - You can optionally add [help tooltip text](../Spira-Administration-Guide/Template-Custom-Properties.md/#edit-custom-properties) to custom properties to explain to users how to use the field (they show as tooltips on details pages) [RQ:3055]
+        - Each artifact that has [custom properties](../Spira-Administration-Guide/Template-Custom-Properties.md) already now supports an additional 69 custom properties in each template, bringing the total to 99 [RQ:3052]
 
     * **History and Baselining**
 
-        - Clicking on Artifact Name on the [baseline details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) opens the [baseline artifact details page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-artifact-details) to view all changes made in that baseline to that artifact [RQ:2989]
-        - Show enhanced history tracking on the [product admin history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) pages and [baseline details](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) page (including test coverage and step position changes) [RQ:3040]
+        - Clicking on Artifact Name on the [baseline details page](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-details) opens the [baseline artifact details page](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-artifact-details) to view all changes made in that baseline to that artifact [RQ:2989]
+        - Show enhanced history tracking on the [product admin history](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes) pages and [baseline details](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-details) page (including test coverage and step position changes) [RQ:3040]
         - Enhance history to track document versioning (history records are created for adding, deleting, and setting a version active) [RQ:3064]
 
     * **Report Customization**
 
-        - Allow access to custom report views via API using the ODATA standard - read our [in-depth tutorial](../../Reporting/OData-Tutorial) <span class="pill">SpiraPlan</span> [RQ:3037]
-        - Users can have a dedicated [Report Admin role](../../Spira-Administration-Guide/System-Users/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
+        - Allow access to custom report views via API using the ODATA standard - read our [in-depth tutorial](../Reporting/OData-Tutorial.md) <span class="pill">SpiraPlan</span> [RQ:3037]
+        - Users can have a dedicated [Report Admin role](../Spira-Administration-Guide/System-Users.md/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
 
     * **Other**
 
-        - Release artifacts support [notification events and templates](../../Spira-Administration-Guide/Template-Notifications) [RQ:2979]
-        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../../Spira-Administration-Guide/System-Workspaces/#view-edit-templates) [RQ:3049]
+        - Release artifacts support [notification events and templates](../Spira-Administration-Guide/Template-Notifications.md) [RQ:2979]
+        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../Spira-Administration-Guide/System-Workspaces.md/#view-edit-templates) [RQ:3049]
         - Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]
         - Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]
-        - Improve [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
+        - Improve [product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
 
 ??? bug "Bug fixes and enhancements"
 
     * **Administration**
 
-        - Stop [product cloning](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]
-        - Improve the performance of [cloning a product](../../Spira-Administration-Guide/System-Workspaces/#product-cloning) by improving how attachments are copied into the new product [IN:6172]
-        - Add [product](../../Spira-Administration-Guide/Product-Planning/#testing-settings) and [system](../../Spira-Administration-Guide/System/#general-settings) admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]
-        - Add direct links to '[Custom Properties](../../Spira-Administration-Guide/Template-Custom-Properties)' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]
+        - Stop [product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) exiting midway with a failure message if an attachment file is missing from the directory [IN:5611]
+        - Improve the performance of [cloning a product](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) by improving how attachments are copied into the new product [IN:6172]
+        - Add [product](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) and [system](../Spira-Administration-Guide/System.md/#general-settings) admin settings option to disable various calculations and updates to temporarily improve performance [IN:6207]
+        - Add direct links to '[Custom Properties](../Spira-Administration-Guide/Template-Custom-Properties.md)' in the Admin Menu under each Artifact Type to make navigation easier [IN:6239]
 
     * **Enhancements**
 
-        - Convert the [Saved](../../Spira-User-Manual/User-Product-Management/#my-saved-reports) [Reports](../../Spira-User-Manual/Reports-Center) Widget's hyperlinks to make them shareable [IN:6106]
-        - Add [additional views for custom reporting](../../Reporting/Custom-Report-Tables) to give more flexibility in what data can be queried [IN:6307]
-        - Add an [attachments tab for documents](../../Spira-User-Manual/Document-Management/#attachments), to enable, for example, pasting of images into inline rich text documents [IN:6243]
-        - Allow document names to be edited on [list](../../Spira-User-Manual/Document-Management/#document-list) and [details](../../Spira-User-Manual/Document-Management/#document-details) pages (note that the filename will be overwritten when you upload a new version) [IN:6292]
-        - Add an option on the [requirement detail page](../../Spira-User-Manual/Requirements-Management/#requirement-details) to insert a child requirement to the current requirement [IN:4913]
+        - Convert the [Saved](../Spira-User-Manual/User-Product-Management.md/#my-saved-reports) [Reports](../Spira-User-Manual/Reports-Center.md) Widget's hyperlinks to make them shareable [IN:6106]
+        - Add [additional views for custom reporting](../Reporting/Custom-Report-Tables.md) to give more flexibility in what data can be queried [IN:6307]
+        - Add an [attachments tab for documents](../Spira-User-Manual/Document-Management.md/#attachments), to enable, for example, pasting of images into inline rich text documents [IN:6243]
+        - Allow document names to be edited on [list](../Spira-User-Manual/Document-Management.md/#document-list) and [details](../Spira-User-Manual/Document-Management.md/#document-details) pages (note that the filename will be overwritten when you upload a new version) [IN:6292]
+        - Add an option on the [requirement detail page](../Spira-User-Manual/Requirements-Management.md/#requirement-details) to insert a child requirement to the current requirement [IN:4913]
         - Improve the performance of associations tabs by adding a database index to speed up the most common retrieval [IN:6173]
         - Navigating tabs on details pages updates the URL with the tab name to make it easier to share your current view with others [IN:6194]
         - Make it clear when using the application with Internet Explorer that the browser is no longer supported [IN:6246]
@@ -445,37 +445,37 @@
 ## Version 6.8 (March 2021)
 
 !!! info "Summary"
-    **BDD and Gherkin Support**: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the [documents repository](../../Spira-User-Manual/Document-Management), which includes workflow, checkout, and versioning support.
+    **BDD and Gherkin Support**: Create and write BDD style requirements and test cases 100% in Spira using Gherkin syntax with automatic syntax highlighting. Managed through the [documents repository](../Spira-User-Manual/Document-Management.md), which includes workflow, checkout, and versioning support.
 
-    **[Inline content editing](../../Spira-User-Manual/Document-Management/#add-new-inline-documents)**: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.
+    **[Inline content editing](../Spira-User-Manual/Document-Management.md/#add-new-inline-documents)**: Write plain text, rich text, and markdown inside Spira and have all of the versioning and workflow capabilities at your disposal. Of course, you can link this content to your requirements, test cases, and other Spira artifacts.
 
 ??? success "New Features"
-    - **Document Management**: [Inline editing](../../Spira-User-Manual/Document-Management/#edit) of Text/Markdown/HTML in the Documents Management module [RQ:1697]
+    - **Document Management**: [Inline editing](../Spira-User-Manual/Document-Management.md/#edit) of Text/Markdown/HTML in the Documents Management module [RQ:1697]
     - **Administration**: Add support for future implementation of program, template and portfolio settings [RQ:3051]
     - Add APIs for Risk management (including risk mitigations and reading risk template fields) [RQ:2544]
 
 ??? bug "Bug fixes and enhancements"
     * **Testing and test coverage**
 
-        - [My Assigned Test Cases](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-cases) widget adds options to show or hide the last executed date and the workflow status [IN:3935]
+        - [My Assigned Test Cases](../Spira-User-Manual/User-Product-Management.md/#my-assigned-test-cases) widget adds options to show or hide the last executed date and the workflow status [IN:3935]
         - Fix package not changing status to "Tested" once all its child features are marked "Tested" [IN:4008]
         - Requirement test coverage for test cases in a different product should always reflect those tests' execution results [IN:4856]
         - Limited View role: do not show error message when the user creates an incident during test execution by clicking the Add button [IN:5984]
         - Generic test case/set list URL should always open the test case list to the last folder (this was not the case if the folder has an ID of 1) [IN:5989]
-        - Improve performance of [test case parameter](../../Spira-User-Manual/Test-Case-Management/#parameters) hierarchy refresh [IN:6094]
+        - Improve performance of [test case parameter](../Spira-User-Manual/Test-Case-Management.md/#parameters) hierarchy refresh [IN:6094]
         - Fix not being able to reassign pending test runs from product home page or My Page (introduced in 6.7.1) [IN:6161]
         - Fix system error that occurred when baselining was on for a product and you attempted an operation that added or edit test steps [IN:6179]
-        - Test Case > [Automation Section](../../Spira-User-Manual/Test-Case-Management/#overview-automation): add file icon and link to document details page for filename [IN:6196]
+        - Test Case > [Automation Section](../Spira-User-Manual/Test-Case-Management.md/#overview-automation): add file icon and link to document details page for filename [IN:6196]
         - Do not associate a test case with a release if the test case is a different product to the release [IN:4863]
     
     * **Home pages and reporting**
 
         - The image saved from a graph should look the same as the original (without oddly shaped black shaded areas) [IN:4960]
-        - Program Home page [Test Execution Status](../../Spira-User-Manual/Program-Homepage/#test-execution-status) widget: when specified in the options, the number of test runs should be limited to active releases only [IN:5844]
-        - [Incident Summary Report](../../Spira-User-Manual/Reports-Center/#incident-summary-report) has a field called "Resolved Release" but it should read "Planned Release" [IN:5943]
+        - Program Home page [Test Execution Status](../Spira-User-Manual/Program-Homepage.md/#test-execution-status) widget: when specified in the options, the number of test runs should be limited to active releases only [IN:5844]
+        - [Incident Summary Report](../Spira-User-Manual/Reports-Center.md/#incident-summary-report) has a field called "Resolved Release" but it should read "Planned Release" [IN:5943]
         - Improve Performance by switching My Page widget pagination to be fully handled by the database [IN:6102]
-        - Fix My Page, [Recent Artifacts](../../Spira-User-Manual/User-Product-Management/#recent-artifacts): Test Run and Document links had 0 for the product ID, so the links did not work [IN:6092]
-        - Tooltips on the My Page [My Assigned Test Cases](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-cases) and [My Assigned Test Sets](../../Spira-User-Manual/User-Product-Management/#my-assigned-test-sets) widgets should always display [IN:6167]
+        - Fix My Page, [Recent Artifacts](../Spira-User-Manual/User-Product-Management.md/#recent-artifacts): Test Run and Document links had 0 for the product ID, so the links did not work [IN:6092]
+        - Tooltips on the My Page [My Assigned Test Cases](../Spira-User-Manual/User-Product-Management.md/#my-assigned-test-cases) and [My Assigned Test Sets](../Spira-User-Manual/User-Product-Management.md/#my-assigned-test-sets) widgets should always display [IN:6167]
 
     * **API**
 
@@ -487,12 +487,12 @@
 
     * **Other**
     
-        - Add a [product setting](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) to filter list page name field by name only (not name and description as now) - this can speed up search for very large lists of artifacts [IN:5969]
-        - [Build details](../../Spira-User-Manual/Release-Management/#build-details) page: improve the display of logs and, for long logs, cut out the middle of the log not the end [IN:6145]
-        - Ignore extra spaces around a product or between words when attempting to [change templates](../../Spira-Administration-Guide/Product-Changing-Template) or [delete a product](../../Spira-Administration-Guide/System-Workspaces/#view-edit-products) [IN:5949]
-        - Fix [Data Tools](../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools) operation to fix releases missing the required field of Percent Complete [IN:6109]
-        - Pull Request tasks should show the correct icon on the [task tab](../../Spira-User-Manual/Requirements-Management/#tasks) of the requirement details page (currently shows no icon) [IN:6156]
-        - Document detail page, [versions tab](../../Spira-User-Manual/Document-Management/#document-versions): buttons should be hidden if the user does not have permission to edit the current document [IN:6214]
+        - Add a [product setting](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product) to filter list page name field by name only (not name and description as now) - this can speed up search for very large lists of artifacts [IN:5969]
+        - [Build details](../Spira-User-Manual/Release-Management.md/#build-details) page: improve the display of logs and, for long logs, cut out the middle of the log not the end [IN:6145]
+        - Ignore extra spaces around a product or between words when attempting to [change templates](../Spira-Administration-Guide/Product-Changing-Template.md) or [delete a product](../Spira-Administration-Guide/System-Workspaces.md/#view-edit-products) [IN:5949]
+        - Fix [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools) operation to fix releases missing the required field of Percent Complete [IN:6109]
+        - Pull Request tasks should show the correct icon on the [task tab](../Spira-User-Manual/Requirements-Management.md/#tasks) of the requirement details page (currently shows no icon) [IN:6156]
+        - Document detail page, [versions tab](../Spira-User-Manual/Document-Management.md/#document-versions): buttons should be hidden if the user does not have permission to edit the current document [IN:6214]
         - When another users has changed the same artifact as you, you see the wrong message if that other user changed status, and there is no transition from the new status back to the old status [IN:4822]
         - Clicking "Save And New" on a requirement/release should always add the subsequent artifact as a sibling, not add it at the bottom of the list [IN:4878]
         - Fix opening a details page directly to a specific tab via a dedicated url like requirements/1/Tasks.aspx [IN:5730]
@@ -510,50 +510,50 @@
 ## Version 6.7.1 (February 2021)
 
 !!! info "Summary"
-    **[Pull Requests](../../Spira-User-Manual/Pull-Requests)** (SpiraTeam and SpiraPlan): The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../../Spira-User-Manual/Pull-Requests/#pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
+    **[Pull Requests](../Spira-User-Manual/Pull-Requests.md)** (SpiraTeam and SpiraPlan): The Developing menu in the global navigation now includes Pull Requests, where you can create and manage pull requests. For each [pull request](../Spira-User-Manual/Pull-Requests.md/#pull-request-details) you can see all of the relevant commits, their code changes, and discuss any code changes.
 
-    **The [build details](../../Spira-User-Manual/Release-Management/#build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
+    **The [build details](../Spira-User-Manual/Release-Management.md/#build-details) page** has been overhauled to improve usability and bring the most important information to your fingertips. Key information is more clearly displayed at the top of the page and source code commits and artifact associations are more prominent.
 
 
-    **[Source code diff](../../Spira-User-Manual/Commits/#commit-file-details) view** (SpiraTeam and SpiraPlan): by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.
+    **[Source code diff](../Spira-User-Manual/Commits.md/#commit-file-details) view** (SpiraTeam and SpiraPlan): by default, source code files now collapse unchanged sections, making it easier to quickly review the changes in larger files. You can quickly toggle the page to view the entire file, if you need to.
 
-    **Recording Product setting changes** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>: The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the [product history page](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes).
+    **Recording Product setting changes** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>: The application now automatically tracks when certain settings on a product change (turning baselining on and off, changing testing settings, or changing some planning options) and who made the change. This is our first step to better tracing admin level changes. Changes are shown on the [product history page](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes).
 
 ??? success "New Features"
     * **Source Code** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-        - Add [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list) to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
-        - Can create a new pull request on the [Pull Request list page](../../Spira-User-Manual/Pull-Requests#pull-request-list), specifying the source branch and the destination branch [RQ:3006]
+        - Add [Pull Request list page](../Spira-User-Manual/Pull-Requests.md/#pull-request-list) to display and create pull requests (tasks with a type that enables pull requests) [RQ:3005]
+        - Can create a new pull request on the [Pull Request list page](../Spira-User-Manual/Pull-Requests.md/#pull-request-list), specifying the source branch and the destination branch [RQ:3006]
         - Task pages shows pull request with different icon [RQ:3045]
-        - [Pull Request task details page](../../Spira-User-Manual/Pull-Requests#pull-request-details) shows source code commits [RQ:3046]
+        - [Pull Request task details page](../Spira-User-Manual/Pull-Requests.md/#pull-request-details) shows source code commits [RQ:3046]
 
     * **Enhanced history tracking** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Enhance history to track position changes of test steps, use case steps, and risk mitigations [RQ:2659]
         - Enhance History to record Product Setting Changes (this includes toggling baseling, testing settings, and some planning options) [RQ:3044]
-        - Ability to [save a report directly into documents](../../Spira-User-Manual/Reports-Center/#saving-and-sharing) on generating the report, and specify a document name and folder for the report [RQ:2295]
+        - Ability to [save a report directly into documents](../Spira-User-Manual/Reports-Center.md/#saving-and-sharing) on generating the report, and specify a document name and folder for the report [RQ:2295]
 
 ??? bug "Bug fixes and enhancements"
     * **Source Code / Development** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
         - Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]
         - Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]
-        - [Source code clone popup](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#connecting-to-the-source-code-repository) for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
-        - Improve the design of the [build details](../../Spira-User-Manual/Release-Management/#build-details) page to make it easier to use [IN:5665]
-        - [Build details](../../Spira-User-Manual/Release-Management/#build-details) page truncates very large console logs to improve performance page load time [IN:6056]
+        - [Source code clone popup](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#connecting-to-the-source-code-repository) for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
+        - Improve the design of the [build details](../Spira-User-Manual/Release-Management.md/#build-details) page to make it easier to use [IN:5665]
+        - [Build details](../Spira-User-Manual/Release-Management.md/#build-details) page truncates very large console logs to improve performance page load time [IN:6056]
         - Add ability to copy to clipboard the full canonical commit ids for git and subversion (not the shorthand version) on the commit details page [IN:6026]
-        - [File diff view for source code](../../Spira-User-Manual/Commits/#commit-file-details) auto collapses to only show changed lines (with option to expand) [IN:6006]
+        - [File diff view for source code](../Spira-User-Manual/Commits.md/#commit-file-details) auto collapses to only show changed lines (with option to expand) [IN:6006]
         - Association Panel (source code): build associations are added by the system (like commits) so users should not be able to remove or edit [IN:6010]
         - Add preview and syntax highlighting for .ignore and .gitignore files for documents and source code [IN:5999]
         - Add preview and syntax highlighting for a range of common development file formats (including csv, sql, scss, log, swift) and image formats (ico and webp) [IN:6037]
         - Add preview and syntax highlighting for all powershell file types [IN:6067]
         - Fix not being able to activate TaraVault if host site name is too long or contains the word "demo" [IN:6063]
-        - Fix [activating TaraVault](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#provisioning-products) for a product causing errors in other products that use the TestProvider for source code [IN:6066]
-        - With new cloud instance, [activating and deactivating TaraVault](../../TaraVault-User-Manual/Provisioning-Projects-&-Users/#provisioning-products) on a product should not cause any errors [IN:6069]
+        - Fix [activating TaraVault](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#provisioning-products) for a product causing errors in other products that use the TestProvider for source code [IN:6066]
+        - With new cloud instance, [activating and deactivating TaraVault](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#provisioning-products) on a product should not cause any errors [IN:6069]
         - Display list of products using source code on TaraVault's main administration page [IN:6013]
-        - [Source code product admin](../../Spira-Administration-Guide/Product-General-Settings/#source-code) page: do not display "source code up to date" if it has never been initialized successfully [IN:6034]
-        - [Source code product admin](../../Spira-Administration-Guide/Product-General-Settings/#source-code) page: the test button should correctly check and verify the connection to git repositories [IN:6035]
-        - [Source code file list](../../Spira-User-Manual/Source-Code/#source-code-file-list) page: when a fatal error has occurred during cache refresh, give a message to that effect [IN:6036]
+        - [Source code product admin](../Spira-Administration-Guide/Product-General-Settings.md/#source-code) page: do not display "source code up to date" if it has never been initialized successfully [IN:6034]
+        - [Source code product admin](../Spira-Administration-Guide/Product-General-Settings.md/#source-code) page: the test button should correctly check and verify the connection to git repositories [IN:6035]
+        - [Source code file list](../Spira-User-Manual/Source-Code.md/#source-code-file-list) page: when a fatal error has occurred during cache refresh, give a message to that effect [IN:6036]
         - Different commit grids should each have a separately saved filter and sort [IN:6016]
         - Fix some source code commits sometimes not being shown if the commits are from a deleted branch [IN:6054]
         - Fix SubversionProvider problem where it may not work on hosted systems due to event log permission issues
@@ -561,16 +561,16 @@
     * **Other**
 
         - Cloning releases or test cases should record in the history the user who performed the clone, not the artifact's author [IN:5208]
-        - [Test set details page](../../Spira-User-Manual/Test-Set-Management/#test-set-details): the dropdowns for setting parameters should never contain duplicates, even if multiple test cases in the set have same parameter names [IN:5855]
+        - [Test set details page](../Spira-User-Manual/Test-Set-Management.md/#test-set-details): the dropdowns for setting parameters should never contain duplicates, even if multiple test cases in the set have same parameter names [IN:5855]
         - Remove the loophole where under very particular circumstances a user could log back in to the application after their password had expired [IN:5893]
         - When adding test cases to a requirement, automatically map them to the same release as the requirement [IN:5899]
         - Improve the contrast of widget config icons whe in dark mode on home pages or the reporting page [IN:5965]
         - Improve performance of loading any application URL by reformatting the regular expressions used to parse and rewrite all application URLs (including API calls) [IN:5997]
         - Administration: sort all template dropdowns alphabetically, not by ID, and include the ID after the name [IN:5998]
-        - Allow users to delete tasks from the [requirements](../../Spira-User-Manual/Requirements-Management/#tasks) and [risks detail](../../Spira-User-Manual/Risks-Management/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
+        - Allow users to delete tasks from the [requirements](../Spira-User-Manual/Requirements-Management.md/#tasks) and [risks detail](../Spira-User-Manual/Risks-Management.md/#tasks) pages (not just remove the link to the task(s)) [IN:6020]
         - Association history records should not be visible on the Product Admin Product History Widget [IN:6027]
-        - [Product Home Page](../../Spira-User-Manual/Product-Homepage) (Development) should not show error if no source code providers are active [IN:6050]
-        - Admin [product history](../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes) changes: allow users to revert more than one change at a time (as in earlier versions) [IN:6081]
+        - [Product Home Page](../Spira-User-Manual/Product-Homepage.md) (Development) should not show error if no source code providers are active [IN:6050]
+        - Admin [product history](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes) changes: allow users to revert more than one change at a time (as in earlier versions) [IN:6081]
         - Installer: display an error message on upgrading to v6+ if the database had not been DB properly upgraded to v5.4.0.4 first [IN:6086]
 
     * **API**
@@ -581,21 +581,21 @@
 ## Version 6.7 (December 2020)
 
 !!! info "Summary"
-    This release focused on **improving the experience and functionality for developers and development teams** using SpiraTeam and SpiraPlan. On top of integrating with the top [IDEs](../../IDE-Integration/Visual-Studio), your [CI/CD](../../Build-Server-Integration/Jenkins--Hudson) processes, and unit test, this release brings massive improvements to our [source code](../../Spira-User-Manual/Source-Code) features.
+    This release focused on **improving the experience and functionality for developers and development teams** using SpiraTeam and SpiraPlan. On top of integrating with the top [IDEs](../IDE-Integration/Visual-Studio.md), your [CI/CD](../Build-Server-Integration/Jenkins--Hudson.md) processes, and unit test, this release brings massive improvements to our [source code](../Spira-User-Manual/Source-Code.md) features.
     
-    **We have revamped the [source code management module](../../Spira-User-Manual/Source-Code)**, and for the first time, there is now a native [code difference viewing](../../Spira-User-Manual/Commits/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    **We have revamped the [source code management module](../Spira-User-Manual/Source-Code.md)**, and for the first time, there is now a native [code difference viewing](../Spira-User-Manual/Commits.md/#commit-file-details) capability in Spira. We have also improved views of branches, commits, files and given the source code system a huge performance boost. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
     **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
 
 ??? success "New Features"
-    - Improve functionality and performance of Git source code control (for [GitProvider](../../Version-Control-Integration/Integrating-with-Git) and [TaraVault-Git](../../TaraVault-User-Manual/Using-Git)) [RQ:3033]
-    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../../Version-Control-Integration/Integrating-with-Subversion) and [TaraVault-Subversion](../../TaraVault-User-Manual/Using-Subversion)) [RQ:3034]
+    - Improve functionality and performance of Git source code control (for [GitProvider](../Version-Control-Integration/Integrating-with-Git.md) and [TaraVault-Git](../TaraVault-User-Manual/Using-Git.md)) [RQ:3033]
+    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../Version-Control-Integration/Integrating-with-Subversion.md) and [TaraVault-Subversion](../TaraVault-User-Manual/Using-Subversion.md)) [RQ:3034]
     - Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]
-    - Enhance and improve the Source Code [File list](../../Spira-User-Manual/Source-Code/#source-code-file-list) page [RQ:3016]
-    - Enhance and improve the Source Code [File details](../../Spira-User-Manual/Source-Code/#source-code-file-details) page [RQ:3018]
-    - Enhance and improve the Source Code [Commit list](../../Spira-User-Manual/Commits/#commit-list) page [RQ:3010]
-    - Enhance and improve the Source Code [Commit details](../../Spira-User-Manual/Commits/#commit-details) page [RQ:3014]
-    - Add a new Source Code [Commit File details](../../Spira-User-Manual/Commits/#commit-file-details) page to show diffs between current and previous commits [RQ:3013]
+    - Enhance and improve the Source Code [File list](../Spira-User-Manual/Source-Code.md/#source-code-file-list) page [RQ:3016]
+    - Enhance and improve the Source Code [File details](../Spira-User-Manual/Source-Code.md/#source-code-file-details) page [RQ:3018]
+    - Enhance and improve the Source Code [Commit list](../Spira-User-Manual/Commits.md/#commit-list) page [RQ:3010]
+    - Enhance and improve the Source Code [Commit details](../Spira-User-Manual/Commits.md/#commit-details) page [RQ:3014]
+    - Add a new Source Code [Commit File details](../Spira-User-Manual/Commits.md/#commit-file-details) page to show diffs between current and previous commits [RQ:3013]
     - Global navigation bar's artifact dropdown has a new "Developing" section for Source Code and Commits [RQ:3003]
     - Change the source code branch selector from showing a fake 'master' to "(None)" when there are no branches to avoid confusion [RQ:3004]
     - Change the source code branch selector to a hierarchical dropdown using slash separator to represent folders [RQ:3007]
@@ -610,27 +610,27 @@
     
         - Fix source code files missing their author and date information [IN:4526]
         - Adding a source code file via the Add Existing Document dialog should succeed when not on the main branch / trunk [IN:4827]
-        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details): fix the commits tab to always show complete information [IN:5701]
-        - [Build details page](../../Spira-User-Manual/Release-Management/#build-details) > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
+        - [Build details page](../Spira-User-Manual/Release-Management.md/#build-details): fix the commits tab to always show complete information [IN:5701]
+        - [Build details page](../Spira-User-Manual/Release-Management.md/#build-details) > Associations Tab: do not show duplicates items if the commit message has the same token more than once [IN:5703]
         - Improve the performance of source code on artifact details pages (specifically on the association and attachment panels) [IN:5710]
         - Add preview support in documents and source code for additional filetypes (bat, feature, markdown, json, yaml, typescript, svg files) [IN:5859]
-        - [Source Code File Details](../../Spira-User-Manual/Source-Code/#source-code-file-details) > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
+        - [Source Code File Details](../Spira-User-Manual/Source-Code.md/#source-code-file-details) > Associations tab: should not show duplicate rows if the file exists in more than one branch [IN:5860]
         - Fix the GitProvider to not require event log entries that can block usage of third party git providers on cloud installs [IN:5867]
         - Add preview support for Markdown in Source Code Files [IN:5912]
         - Update the use of the word "Revision" to "Commit" throughout the application [IN:5920]
-        - Product Home page > [Source Code Commits widget](../../Spira-User-Manual/Product-Homepage/#source-code-commits): improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
+        - Product Home page > [Source Code Commits widget](../Spira-User-Manual/Product-Homepage.md/#source-code-commits): improve the widget to make the branch selectable and show the most recent 5 commits [IN:6003]
         - Source code file preview for binary files (like png or jpeg) should work correctly for TaraVault Git [IN:6005]
         - Rename sample source code "master" branch to "main" [IN:5945]
 
     * **Other**
 
-        - Product Admin > [Planning Options](../../Spira-Administration-Guide/Product-Planning/#requirements): improve the description of "Use Task Status" [IN:2612]
+        - Product Admin > [Planning Options](../Spira-Administration-Guide/Product-Planning.md/#requirements): improve the description of "Use Task Status" [IN:2612]
         - Ensure all requirement statuses roll up correctly to parent requirements [IN:5664]
         - Allow full artifact tag search (eg [IN:123]) in association panels, global search, and filtering on grids (outside of admin) [IN:5706]
         - Clicking Insert or Add while editing rows on a list page should save all current edits before adding the new row/artifact [IN:5786]
         - System Admin > Product Create page: make the template dropdown list existing templates alphabetically and show their IDs [IN:5811]
-        - [Document details](../../Spira-User-Manual/Document-Management/#document-details) page: add new overview tab to match the design of other detail pages [IN:5869]
-        - [Document details](../../Spira-User-Manual/Document-Management/#document-details) page > Associations tab: add the ability to create an association to a risk [IN:5952]
+        - [Document details](../Spira-User-Manual/Document-Management.md/#document-details) page: add new overview tab to match the design of other detail pages [IN:5869]
+        - [Document details](../Spira-User-Manual/Document-Management.md/#document-details) page > Associations tab: add the ability to create an association to a risk [IN:5952]
         - Add preview support for Markdown in Documents [IN:5913]
         - Release detail page > test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]
         - Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]
@@ -638,11 +638,11 @@
         - Fix e-signatures for some artifacts not correctly checking passwords or RSS Tokens [IN:5962]
         - Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]
         - Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]
-        - Product Admin > [Data Tools](../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools): upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
-        - [Task list](../../Spira-User-Manual/Task-Tracking/#task-list) page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
+        - Product Admin > [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools): upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]
+        - [Task list](../Spira-User-Manual/Task-Tracking.md/#task-list) page: ensure in-progress tasks with no end date do not cause the page to load correctly [IN:5950]
         - System Admin > Template Edit page: make the active selector disabled if the template has any products associated with it [IN:5956]
-        - [Test Run details](../../Spira-User-Manual/Test-Run-Management/#test-run-details) page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
-        - Add test runs (as an option) to the [requirements detailed report](../../Spira-User-Manual/Reports-Center/#requirements-detailed-report) [IN:5947]
+        - [Test Run details](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) page: strip html and body tags from all rich text fields that can render due to importing data from applications that do not correctly generate HTML [IN:5960]
+        - Add test runs (as an option) to the [requirements detailed report](../Spira-User-Manual/Reports-Center.md/#requirements-detailed-report) [IN:5947]
         - Reports default to not automatically generating history or attachment sections [IN:5947]
         - Ensure moving or adding requirement to a release add history records for any test cases that are automatically add to the release [IN:5973]
     
@@ -693,15 +693,15 @@
 
 ??? success "New features"
     * Administering baselining within a product <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - With baselining turned on, product admins can access the product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) [RQ:2939]
+        - With baselining turned on, product admins can access the product admin [baseline list page](../Spira-Administration-Guide/Product-General-Settings.md/#baselines) [RQ:2939]
         - Label on the Product Admin home page widget tells you if baselining is enabled [RQ:2978]
-        - Product admin [baseline list page](../../Spira-Administration-Guide/Product-General-Settings/#baselines) shows all baselines in a products across all releases [RQ:2977]
-        - Product admin [baseline detail page](../../Spira-Administration-Guide/Product-General-Settings/#baseline-details) shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
-        - The [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) of the release details page lets a product admin access the details page for that baseline [RQ:2665]
+        - Product admin [baseline list page](../Spira-Administration-Guide/Product-General-Settings.md/#baselines) shows all baselines in a products across all releases [RQ:2977]
+        - Product admin [baseline detail page](../Spira-Administration-Guide/Product-General-Settings.md/#baseline-details) shows all baseline details, including all artifacts changed in that baseline [RQ:2670]
+        - The [baseline tab](../Spira-User-Manual/Release-Management.md/#baselines) of the release details page lets a product admin access the details page for that baseline [RQ:2665]
     
     * Product Planning <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#requirements) allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
-        - [Product planning options](../../Spira-Administration-Guide/Product-Planning/#kanban-work-in-progress-limits) page lets you set dynamic WIP Limits for each status on the [Planning Board](../../Spira-User-Manual/Planning-Board/#work-in-progress-limits) [RQ:2970]
+        - [Product planning options](../Spira-Administration-Guide/Product-Planning.md/#requirements) allows users to show points not hours on the planning board and requirement and release pages [RQ:2944]
+        - [Product planning options](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits) page lets you set dynamic WIP Limits for each status on the [Planning Board](../Spira-User-Manual/Planning-Board.md/#work-in-progress-limits) [RQ:2970]
         - Improve Expand/Collapse behavior on planning boards [RQ:2969]
         - Planning board and requirements board lets you group by component or epic for releases [RQ:2945]
         - Planning board and requirements board shows the requirement completion progress bar for each release [RQ:2865]
@@ -750,38 +750,38 @@
 !!! info "Summary"
     **Baselining**: Enable baselining by product to add baselines to releases or sprints. Use baselines to create snapshots of the entire product at a specific point in time, for instance what it looked like at the start and then at the end of a sprint <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
     
-    *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../../Spira-User-Manual/Release-Management/#baselining)*
+    *Learn: read our blog about this feature [here](http://www.inflectra.com/Ideas/Entry/spira-652-requirements-test-case-baselining-1051.aspx), or read our [documentation overview](../Spira-User-Manual/Release-Management.md/#baselining)*
 
-    **[Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
+    **[Testing Settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings)**: testing settings are now managed at the product, not system, level. Not only that but there are now lots more ways to tailor how testing behaves.
 
     **DevOps**: streamlined and improved traceability between source code commits, CI builds, DevOps pipelines, and SpiraPlan artifacts <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 ??? success "New features"
-    - [Testing Settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
-    - Users can [create an Incident directly from a Task](../../Spira-User-Manual/Task-Tracking/#creating-an-incident-from-a-task) [RQ:2971]
+    - [Testing Settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) are scoped to a product instead of at the system Level [RQ:2961] (see specific enhancements below)
+    - Users can [create an Incident directly from a Task](../Spira-User-Manual/Task-Tracking.md/#creating-an-incident-from-a-task) [RQ:2971]
 
     * Custom Reports
-        - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} [tokens](../../Reporting/Custom-Reporting-Tokens) in their ESQL as is already possible for custom graphs [RQ:2976]
+        - Enable custom reports to use ${ReleaseId} and ${ReleaseAndChildIds} [tokens](../Reporting/Custom-Reporting-Tokens.md) in their ESQL as is already possible for custom graphs [RQ:2976]
 
-    * [Baselining](../../Spira-User-Manual/Release-Management/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the [Admin Product page](../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product) [RQ:2672] (released but disabled in 6.5.1)
-        - Turning on baselining for a product disables the ability to purge or revert [product history](../../Spira-Administration-Guide/Product-General-Settings/#history-details-screen) [RQ:2938] (released but disabled in 6.5.1)
-        - Turning on baselining for a product shows the [baseline tab](../../Spira-User-Manual/Release-Management/#baselines) on the release details page [RQ:2940]
+    * [Baselining](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+        - Baselining toggle is visible and usable in SpiraTeam and SpiraPlan on the [Admin Product page](../Spira-Administration-Guide/System-Workspaces.md/#add-a-new-product) [RQ:2672] (released but disabled in 6.5.1)
+        - Turning on baselining for a product disables the ability to purge or revert [product history](../Spira-Administration-Guide/Product-General-Settings.md/#history-details-screen) [RQ:2938] (released but disabled in 6.5.1)
+        - Turning on baselining for a product shows the [baseline tab](../Spira-User-Manual/Release-Management.md/#baselines) on the release details page [RQ:2940]
         - Baseline tab on the release details page lets you view existing baselines [RQ:2664]
         - Users with equivalent release permissions can add/edite/delete a new baseline from the baseline tab on a release details page [RQ:2662]
-        - A new [custom reportable entity](../../Reporting/Custom-Report-Tables/#baselines) lets users create custom reports for baselines [RQ:2873]
+        - A new [custom reportable entity](../Reporting/Custom-Report-Tables.md/#baselines) lets users create custom reports for baselines [RQ:2873]
     
     * Security Enhancements
         - Implement CSRF Anti-Forgery Tokens on Postback Pages [RQ:2959]
         - Implement CSRF Anti-Forgery Tokens on WCF Ajax Services [RQ:2960]
     
-    * Improve included [sample templates](../../Spira-Administration-Guide/System-Workspaces/#included-templates)
-        - Update and refresh notification event subject lines and [notification templates](../../Spira-Administration-Guide/Template-Notifications/#notification-templates) [RQ:2843]
+    * Improve included [sample templates](../Spira-Administration-Guide/System-Workspaces.md/#included-templates)
+        - Update and refresh notification event subject lines and [notification templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates) [RQ:2843]
         - A new "Regulated Industries" Template provides out-the-box best practice for workflows across all artifacts [RQ:2825]
         - A new "Lightweight" template lets users work in a very streamlined way with effectively no workflow constraints [RQ:2823]
 
     * Source Code Management <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - [Artifact associations](../../Spira-User-Manual/Application-Wide/#associations) show commits from all branches, not just the branch being filtered on in the source code view [RQ:2973]
+        - [Artifact associations](../Spira-User-Manual/Application-Wide.md/#associations) show commits from all branches, not just the branch being filtered on in the source code view [RQ:2973]
         - There is a background feature flag to disable Source Code Commits in Documents/Associations (available to IT on-premise only) [RQ:2974]
 
 
@@ -791,13 +791,13 @@
         - Product admins can require that an actual result is entered for every test step during test execution (including pass) [IN:3496]
         - Product admins can block users from marking a test step as any of Caution, Blocked, N/A, or from passing all steps at once (for normal and exploratory testing) [IN:5685]
         - Product admins can limit users to only execute tests from test sets, not from test cases [IN:5686]
-        - Product admins can allow [tasks](../../Spira-User-Manual/Test-Execution/#tasks) to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]
+        - Product admins can allow [tasks](../Spira-User-Manual/Test-Execution.md/#tasks) to be added during test execution (affecting both normal and exploratory testing) defaults to off [IN:5479]
         - Include an Add button on the incident tab of the test execution page to make it clearer to users how to create an incident during testing [IN:5474]
         - In exploratory testing adding/deleting steps did not correctly reset the ability to "finish" the test [IN:5581]
         - Like we have done for exploratory testing since we introduced it, auto save actual results during normal test execution [IN:5626]
 
     * **Home pages**
-        - Improve the styling of the My Page [News Reader widget](../../Spira-User-Manual/User-Product-Management/#my-news-feeds) [IN:5718]
+        - Improve the styling of the My Page [News Reader widget](../Spira-User-Manual/User-Product-Management.md/#my-news-feeds) [IN:5718]
         - The default Product Home page should not show an authorization error if requirement view permission is lacking [IN:5661]
         - The Product Home page should not show an authorization error if attempting to view the commits widget but you do not have the permission to view source code [IN:5714]
         - Program, portfolio, enterprise schedule widgets should not show releases with an inactive parent detached from a workspace [IN:5687]
@@ -818,7 +818,7 @@
         - Test Case list: issues if the user's current folder has been deleted [IN:5658]
         - Test Set list: issues if the user's current folder has been deleted [IN:5659]
         - Document list: issues if the user's current folder has been deleted [IN:5662]
-        - Performance fixes for projects with large numbers of releases by introducing a [product setting](../../Spira-Administration-Guide/Product-Planning/#general) to optionally use active releases only for detected release dropdown [IN:5671]
+        - Performance fixes for projects with large numbers of releases by introducing a [product setting](../Spira-Administration-Guide/Product-Planning.md/#general) to optionally use active releases only for detected release dropdown [IN:5671]
         - Relax the incident closed/start date validation as it can break data-syncs [IN:5693]
         - Make filtering by release more consistent between the hierarchical and sorted requirement list pages to always include any child releases/sprints [IN:5709]
 
@@ -828,24 +828,24 @@
 ## Version 6.5.1 (June 2020)
 
 !!! info "Summary"
-    **Improved dashboard widgets**: enhanced and new Recent Build widgets, let you get an easier handle on your CI/CD processes from [program](../../Spira-User-Manual/Program-Homepage/#recent-builds), [portfolio](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds), and [enterprise](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) home pages; a number of widgets on the program home page by default display data for active releases only to make their data more meaningful; a brand new [product test summary table](../../Spira-User-Manual/Program-Homepage/#product-test-summary) on the program home page provides important information at a glance.
+    **Improved dashboard widgets**: enhanced and new Recent Build widgets, let you get an easier handle on your CI/CD processes from [program](../Spira-User-Manual/Program-Homepage.md/#recent-builds), [portfolio](../Spira-User-Manual/Portfolio-Homepage.md/#recent-builds), and [enterprise](../Spira-User-Manual/Enterprise-Homepage.md/#recent-builds) home pages; a number of widgets on the program home page by default display data for active releases only to make their data more meaningful; a brand new [product test summary table](../Spira-User-Manual/Program-Homepage.md/#product-test-summary) on the program home page provides important information at a glance.
 
 ??? success "New features"
     * Baselining
         - On generating a test run the system automatically links it to the most recent history changeset to improve auditing [RQ:2655]
     
     * Enterprise Dashboard <span class="pill">SpiraPlan</span>
-        - Add an Enterprise [Recent Builds](../../Spira-User-Manual/Enterprise-Homepage/#recent-builds) widget [RQ:2937]
+        - Add an Enterprise [Recent Builds](../Spira-User-Manual/Enterprise-Homepage.md/#recent-builds) widget [RQ:2937]
     
     * Porfolio Dashboard <span class="pill">SpiraPlan</span>
-        - Add a Portfolio [Recent Builds](../../Spira-User-Manual/Portfolio-Homepage/#recent-builds) widget [RQ:2934]
+        - Add a Portfolio [Recent Builds](../Spira-User-Manual/Portfolio-Homepage.md/#recent-builds) widget [RQ:2934]
     
     * Program Dashboard
-        - Change the [Requirements Coverage](../../Spira-User-Manual/Program-Homepage/#requirements-coverage) widget to, by default, show data for active releases only [RQ:2761]
-        - Change the [Test Execution Status](../../Spira-User-Manual/Program-Homepage/#test-execution-status) widget to, by default, show data for active releases only [RQ:2762]
-        - Change the [Task Progress](../../Spira-User-Manual/Program-Homepage/#task-progress) widget to, by default, show data for active releases only [RQ:2763]
-        - Improve the [Program Recent Builds](../../Spira-User-Manual/Program-Homepage/#recent-builds) Widget [RQ:2936]
-        - Add new [Product Test Summary](../../Spira-User-Manual/Program-Homepage/#product-test-summary) Widget [RQ:2858]
+        - Change the [Requirements Coverage](../Spira-User-Manual/Program-Homepage.md/#requirements-coverage) widget to, by default, show data for active releases only [RQ:2761]
+        - Change the [Test Execution Status](../Spira-User-Manual/Program-Homepage.md/#test-execution-status) widget to, by default, show data for active releases only [RQ:2762]
+        - Change the [Task Progress](../Spira-User-Manual/Program-Homepage.md/#task-progress) widget to, by default, show data for active releases only [RQ:2763]
+        - Improve the [Program Recent Builds](../Spira-User-Manual/Program-Homepage.md/#recent-builds) Widget [RQ:2936]
+        - Add new [Product Test Summary](../Spira-User-Manual/Program-Homepage.md/#product-test-summary) Widget [RQ:2858]
     
     * Sample Data installed with new installations
         - Improve data consistency in sample product Library Information System [RQ:2948]
@@ -886,15 +886,15 @@
 !!! info "Summary"
     **Portfolio management**: Allow users to collect programs together into portfolios, which can then be collected into a single enterprise view. Key data (like percent complete) will flow from a product, all the way up to the enterprise view. <span class="pill">SpiraPlan</span>
     
-    *Learn: [editing portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios); [letting users see portfolio and enterprise pages](../../Spira-Administration-Guide/System-Administration/#how-user-permissions-are-set).*
+    *Learn: [editing portfolios](../Spira-Administration-Guide/System-Workspaces.md/#viewedit-portfolios); [letting users see portfolio and enterprise pages](../Spira-Administration-Guide/System-Administration.md/#how-user-permissions-are-set).*
 
     **New dashboard views to assess overall progress**: Key data about percent complete for sprints, releases, products, programs, and portfolios will be displayed in a new widget on relevant dashboards. This will be based on the requirements that are part of each active sprint and release.
 
-    *Learn: [the portfolio dashboard](../../Spira-User-Manual/Portfolio-Homepage/); [the enterprise dashboard](../../Spira-User-Manual/Enterprise-Homepage/).*
+    *Learn: [the portfolio dashboard](../Spira-User-Manual/Portfolio-Homepage.md); [the enterprise dashboard](../Spira-User-Manual/Enterprise-Homepage.md).*
 
     **New release and task views to better manage workloads**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    *Learn: [release Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart); [release mind map](../../Spira-User-Manual/Release-Management/#release-mind-map); [task Gantt chart](../../Spira-User-Manual/Release-Management/#release-gantt-chart).*
+    *Learn: [release Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart); [release mind map](../Spira-User-Manual/Release-Management.md/#release-mind-map); [task Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart).*
 
 ??? success "New features"
 
@@ -902,52 +902,52 @@
     - Installer can upgrade successfully with required database additions [RQ:2850]
 
 
-    * [Enterprise Dashboard](../../Spira-User-Manual/Enterprise-Homepage/) <span class="pill">SpiraPlan</span>
-        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Enterprise-Homepage/#requirement-completion) [RQ:2743]
-        - [Portfolios: Completion](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-completion) [RQ:2744]
-        - [Portfolios: Relative Size](../../Spira-User-Manual/Enterprise-Homepage/#portfolios-relative-size) [RQ:2745]
-        - [Top Open Risks](../../Spira-User-Manual/Enterprise-Homepage/#top-open-risks) [RQ:2746]
-        - [Enterprise Schedule Gantt Chart](../../Spira-User-Manual/Enterprise-Homepage/#schedule) [RQ:2747]
+    * [Enterprise Dashboard](../Spira-User-Manual/Enterprise-Homepage.md) <span class="pill">SpiraPlan</span>
+        - [Requirement Completion Gauge Chart](../Spira-User-Manual/Enterprise-Homepage.md/#requirement-completion) [RQ:2743]
+        - [Portfolios: Completion](../Spira-User-Manual/Enterprise-Homepage.md/#portfolios-completion) [RQ:2744]
+        - [Portfolios: Relative Size](../Spira-User-Manual/Enterprise-Homepage.md/#portfolios-relative-size) [RQ:2745]
+        - [Top Open Risks](../Spira-User-Manual/Enterprise-Homepage.md/#top-open-risks) [RQ:2746]
+        - [Enterprise Schedule Gantt Chart](../Spira-User-Manual/Enterprise-Homepage.md/#schedule) [RQ:2747]
 
     * Portfolio Dashboard <span class="pill">SpiraPlan</span>
-        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Portfolio-Homepage/#requirement-completion) [RQ:2749]
-        - [Programs: Completion](../../Spira-User-Manual/Portfolio-Homepage/#programs-completion) [RQ:2750]
-        - [Programs: Relative Size](../../Spira-User-Manual/Portfolio-Homepage/#programs-relative-size) [RQ:2751]
-        - [Top Open Risks](../../Spira-User-Manual/Portfolio-Homepage/#top-open-risks) [RQ:2752]
-        - [Portfolio Schedule Gantt Chart](../../Spira-User-Manual/Portfolio-Homepage/#schedule) [RQ:2753]
+        - [Requirement Completion Gauge Chart](../Spira-User-Manual/Portfolio-Homepage.md/#requirement-completion) [RQ:2749]
+        - [Programs: Completion](../Spira-User-Manual/Portfolio-Homepage.md/#programs-completion) [RQ:2750]
+        - [Programs: Relative Size](../Spira-User-Manual/Portfolio-Homepage.md/#programs-relative-size) [RQ:2751]
+        - [Top Open Risks](../Spira-User-Manual/Portfolio-Homepage.md/#top-open-risks) [RQ:2752]
+        - [Portfolio Schedule Gantt Chart](../Spira-User-Manual/Portfolio-Homepage.md/#schedule) [RQ:2753]
 
     * Program Dashboard
         - Add General, Development, and Test Views [RQ:2755]
-        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Program-Homepage/#requirement-completion) [RQ:2756]
-        - [Products: Completion](../../Spira-User-Manual/Program-Homepage/#products-completion) [RQ:2757]
-        - [Products: Relative Size](../../Spira-User-Manual/Program-Homepage/#products-relative-size) [RQ:2758]
-        - [Program Schedule Gantt Chart](../../Spira-User-Manual/Program-Homepage/#schedule) [RQ:2759]
+        - [Requirement Completion Gauge Chart](../Spira-User-Manual/Program-Homepage.md/#requirement-completion) [RQ:2756]
+        - [Products: Completion](../Spira-User-Manual/Program-Homepage.md/#products-completion) [RQ:2757]
+        - [Products: Relative Size](../Spira-User-Manual/Program-Homepage.md/#products-relative-size) [RQ:2758]
+        - [Program Schedule Gantt Chart](../Spira-User-Manual/Program-Homepage.md/#schedule) [RQ:2759]
         - Program Overview widget shows the portfolio, where relevant [RQ:2854]
 
     * Product Dashboard
-        - [Requirement Completion Gauge Chart](../../Spira-User-Manual/Product-Homepage/#requirement-completion) [RQ:2765]
-        - [Releases: Completion](../../Spira-User-Manual/Product-Homepage/#releasessprints-completion) [RQ:2766]
-        - [Releases: Relative Size](../../Spira-User-Manual/Product-Homepage/#releasessprints-relatize-size) [RQ:2767]
-        - [Product Schedule Gantt Chart](../../Spira-User-Manual/Product-Homepage/#schedule) [RQ:2768]
+        - [Requirement Completion Gauge Chart](../Spira-User-Manual/Product-Homepage.md/#requirement-completion) [RQ:2765]
+        - [Releases: Completion](../Spira-User-Manual/Product-Homepage.md/#releasessprints-completion) [RQ:2766]
+        - [Releases: Relative Size](../Spira-User-Manual/Product-Homepage.md/#releasessprints-relatize-size) [RQ:2767]
+        - [Product Schedule Gantt Chart](../Spira-User-Manual/Product-Homepage.md/#schedule) [RQ:2768]
 
     * My Page
-        - Add [Recent Products widget](../../Spira-User-Manual/User-Product-Management/#recent-products) [RQ:2770]
-        - Add [Recent Artifacts widget](../../Spira-User-Manual/User-Product-Management/#recent-artifacts) [RQ:2771]
+        - Add [Recent Products widget](../Spira-User-Manual/User-Product-Management.md/#recent-products) [RQ:2770]
+        - Add [Recent Artifacts widget](../Spira-User-Manual/User-Product-Management.md/#recent-artifacts) [RQ:2771]
 
     * Release List Page Changes
         - Add column for total # points [RQ:2774]
         - Add column for total # requirements [RQ:2775]
         - Add progress bar for requirements [RQ:2776]
-        - [Release Hierarchical Diagram View](../../Spira-User-Manual/Release-Management/#releases-mind-map) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2777]
-        - [Release Gantt Chart View](../../Spira-User-Manual/Release-Management/#release-gantt-chart) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2778]
+        - [Release Hierarchical Diagram View](../Spira-User-Manual/Release-Management.md/#releases-mind-map) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2777]
+        - [Release Gantt Chart View](../Spira-User-Manual/Release-Management.md/#release-gantt-chart) - read only <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [RQ:2778]
 
     * Program Release List Page <span class="pill">SpiraPlan</span>
         - Add column for total # points for all requirements in the release [RQ:2836]
         - Add column for total # requirements [RQ:2837]
-        - Add [progress bar for requirements](../../Spira-User-Manual/Release-Management/#requirements-completion) [RQ:2838]
+        - Add [progress bar for requirements](../Spira-User-Manual/Release-Management.md/#requirements-completion) [RQ:2838]
 
     * Product Task List Page Changes
-        - Add a [Task GANTT Chart View](../../Spira-User-Manual/Task-Tracking/#task-gantt-chart) [RQ:2780]
+        - Add a [Task GANTT Chart View](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) [RQ:2780]
 
     * Sample Data installed with new installations
         - Remove data and rename Sample Barebones Product to Sample Empty Product 1 [RQ:2782]
@@ -962,8 +962,8 @@
         - Program changes trigger updates in all parent workspaces [RQ:2831]
         - Porfolio changes trigger updates to the enterprise level [RQ:2832]
         - Requirements calculations for counts and completion work as expected [RQ:2855]
-        - [Task Effort calculations for requirements](../../Spira-User-Manual/Requirements-Management/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
-        - [Task effort calculations for releases](../../Spira-User-Manual/Release-Management/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]
+        - [Task Effort calculations for requirements](../Spira-User-Manual/Requirements-Management.md/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
+        - [Task effort calculations for releases](../Spira-User-Manual/Release-Management.md/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]
 
     * Permissions to control access to portfolios and enterprise views <span class="pill">SpiraPlan</span>
         - New Portfolio Viewer attribute on the user profile to allow access to all portfolios (and enterprise view) [RQ:2834]
@@ -971,10 +971,10 @@
         - Access to portfolios features pages and visibility in UI restricted by permissions and Spira version [RQ:2846]
 
     * Administration changes
-        - [Ability to create, edit, delete portfolios](../../Spira-Administration-Guide/System-Workspaces/#viewedit-portfolios) [RQ:2840]
-        - [Ability to assign programs to a portfolio](../../Spira-Administration-Guide/System-Workspaces/#edit-a-program) [RQ:2841]
+        - [Ability to create, edit, delete portfolios](../Spira-Administration-Guide/System-Workspaces.md/#viewedit-portfolios) [RQ:2840]
+        - [Ability to assign programs to a portfolio](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-program) [RQ:2841]
         - Handle the default portfolio for new programs [RQ:2844]
-        - [Ability to delete sample data](../../Spira-Administration-Guide/System-Home/#delete-sample-data) (all sample products, programs, and portfolios) and where possible sample users [RQ:2845]
+        - [Ability to delete sample data](../Spira-Administration-Guide/System-Home.md/#delete-sample-data) (all sample products, programs, and portfolios) and where possible sample users [RQ:2845]
 
 
 ??? bug "Bug fixes and enhancements"

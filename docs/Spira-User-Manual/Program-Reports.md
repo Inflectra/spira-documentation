@@ -13,7 +13,7 @@ The program reporting page consists of three areas:
     - the program milestone picker. This shows all open program milestones and selecting an option will update relevant widgets to display information for that program milestone. The selection here is synced with that on the program home page.
 
 2. The left-hand pane displays a list of the printable reports available in the system, categorized by the artifact they primarily relate to (for example, capabilities or program milestones). This includes both standard and custom reports. Clicking on a report name opens its [configuration page](#reports-configuration).
-3. The right-hand pane displays any graph widgets configured by the current user. By default this is empty. To add widgets click the "Add Items" button to see all available widgets, limited to [program level custom graphs](../../Spira-Administration-Guide/System-Reporting/#edit-graphs) created in your system.
+3. The right-hand pane displays any graph widgets configured by the current user. By default this is empty. To add widgets click the "Add Items" button to see all available widgets, limited to [program level custom graphs](../Spira-Administration-Guide/System-Reporting.md/#edit-graphs) created in your system.
 
 
 ## Reports Configuration

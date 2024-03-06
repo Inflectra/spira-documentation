@@ -1,7 +1,7 @@
 # SpiraPlan Quick Start Guide
 
 !!! tip "Want to access the new and improved Quick Start Guide?"
-    This SpiraPlan quick start guide still works great, but we have a newer and greater quick start guide. Please feel free to [check it out](../../SpiraPlan-Quick-Start-Guide/).
+    This SpiraPlan quick start guide still works great, but we have a newer and greater quick start guide. Please feel free to [check it out](../SpiraPlan-Quick-Start-Guide/index.md).
 
 ## Logging In and Selecting a Product
 

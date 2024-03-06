@@ -2,9 +2,9 @@
 
 ## Introduction
 !!! info "Customizing Test Execution"
-    There are a number of ways that a product admin can tailor or customize test execution. Certain features can be disabled / enabled via the [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) page. The below describes using test execution with default settings and flags the key places where customizing these settings can change testers' experiences. 
+    There are a number of ways that a product admin can tailor or customize test execution. Certain features can be disabled / enabled via the [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) page. The below describes using test execution with default settings and flags the key places where customizing these settings can change testers' experiences. 
 
-This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the [incident tracking module](../Incident-Tracking/) and, optionally, to [tasks](../Task-Tracking/).
+This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the [incident tracking module](Incident-Tracking.md) and, optionally, to [tasks](Task-Tracking.md).
 
 You start test case execution in SpiraPlan by either:
 
@@ -114,7 +114,7 @@ The same colors and symbols used to show a status are used on the buttons to rec
 
 Depending on the display mode and device, the buttons may show the text name of the status along with the symbol (see examples below---the top button set is that on the inspector, the bottom from the table (when the display mode is set to table).
 
-**NOTE**: by default all of the above buttons are visible during testing. However, a product admin can remove any or all of the "Caution", "Blocked", or "N/A" buttons on the [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) page.
+**NOTE**: by default all of the above buttons are visible during testing. However, a product admin can remove any or all of the "Caution", "Blocked", or "N/A" buttons on the [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) page.
 
 ![](img/Test_Case_Management_180.png)
 
@@ -130,7 +130,7 @@ You will notice that softer shades are used above compared to the buttons. Simil
 
 The status of a test case is determined by its test steps. If any of the steps are marked as "Caution", "Blocked", or "Fail" then the overall test case is marked with the most severe status of those statuses applied to any of the test steps from "Caution", to "Blocked", to "Fail" (e.g. if one is marked as "Caution, the test case will be marked "Caution"; but if one is marked as "Caution", and another "Blocked", the case will be marked "Blocked). If *all* the test steps passed, or if steps are marked either passed or "N/A", then the overall test case is marked as "Passed"; any other case results in the test case being marked as "Not Run".
 
-If the expected results are indeed observed, then you simply need to click the "***Pass***" button to mark the test step as passed, and advance to the next test step, or if all the steps have passed, you can click "***Pass All***" to pass all the steps at once (this ability can be disabled by product admins in [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings)).
+If the expected results are indeed observed, then you simply need to click the "***Pass***" button to mark the test step as passed, and advance to the next test step, or if all the steps have passed, you can click "***Pass All***" to pass all the steps at once (this ability can be disabled by product admins in [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings)).
 
 On the inspector, the "***Pass All***" button is visible via a dropdown to the right of the "***Pass***" button whenever the parent test case information is also displayed with the test step (typically only for the first step in a test case). This is illustrated in the screen shot below:
 
@@ -146,7 +146,7 @@ The second tab displays a list of attachments that are related to the current te
 
 Once all the test steps have passed, you will be automatically be taken to the first step in the next test; if it is the last test case being executed, the <Finish\> button will be displayed instead.
 
-If the actual results differ from those expected, you need to enter a description of the actual result observed and click one of `Fail`, `Caution`, or `Blocked` buttons (if enabled). If you don't enter anything into the actual result description box, the system will display an error message and re-prompt you again for input. By default, you will not see this prompt for passing a step, however product admins can force testers to enter an actual result when passing a step on the [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) page.
+If the actual results differ from those expected, you need to enter a description of the actual result observed and click one of `Fail`, `Caution`, or `Blocked` buttons (if enabled). If you don't enter anything into the actual result description box, the system will display an error message and re-prompt you again for input. By default, you will not see this prompt for passing a step, however product admins can force testers to enter an actual result when passing a step on the [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) page.
 
 In the inspector, the actual results text box is shown in the first tab below the information provided to the tester for a test step, as illustrated below:
 
@@ -172,7 +172,7 @@ Often, testers will want to provide visual documentation of what they have found
 In addition to logging the result of a test step, you can optionally choose to generate a new incident at the point of logging the execution status of a test step. When the incident form is visible (see below) enter a name, select a type and fill in any other required fields. The description for the new incident is automatically populated from the test step details. To add the new incident either click the `Add` button at the bottom of the incident form, or clicking an execution status button for that test step.
 
 The newly created incident will also be linked to the test step, allowing traceability from within the incidents module. The functionality for managing incidents is described in more detail in
-[Incident Tracking](../Incident-Tracking/).
+[Incident Tracking](Incident-Tracking.md).
 
 If the inspector is visible, go to the "Incidents" tab. This will show any already linked incidents, show a detailed form for creating a new incident.
 
@@ -184,7 +184,7 @@ You can instead link the test step to an existing incident (by clicking the "***
 
 When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking `Add` the incident will be immediately linked to the selected test step.
 
-**NOTE**: via [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.
+**NOTE**: via [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.
 
 [^link-existing-incident]: to link an existing incident to a test run step you must have permissions to modify incidents
 
@@ -196,7 +196,7 @@ If you need to attach documents to the test run (in addition to any screenshots)
 ### Tasks
 By default you will not see a Task tab during test execution. But a "Tasks" tab will be visible if:
 
-- this feature has been enabled for a product on the [testing settings](../../Spira-Administration-Guide/Product-Planning/#testing-settings) page
+- this feature has been enabled for a product on the [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) page
 - you are using SpiraTeam or SpiraPlan
 - you have permissions to view and create tasks
 

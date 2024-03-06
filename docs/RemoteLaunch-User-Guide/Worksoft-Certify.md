@@ -20,7 +20,7 @@ version 10.0 of Worksoft Certify.*
 
 This section assumes that you already have a working installation of
 SpiraTeam and have installed RemoteLaunch on the various test automation
-hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch-Guide/). Once those
+hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md). Once those
 prerequisites are in place, please follow these steps:
 
 -   Download and extract the WorksoftCertifyEngine.zip

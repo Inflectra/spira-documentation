@@ -3,8 +3,8 @@
 ## How to delete a pending test run {: .section-break}
 When you run a test case or a test set it creates a "Pending Test Run". This is a test run that is in progress. You can see pending test runs in 2 places. From there you can also, if allowed, delete the pending test run. This will permanently delete the pending test run from everywhere for all users. 
 
-- The ["My Pending Test Runs"](../../Spira-User-Manual/User-Product-Management/#my-pending-test-runs) widget on My Page. You can always delete your own pending test runs
-- The ["All Pending Test Runs"](../../Spira-User-Manual/Product-Homepage/#all-pending-test-runs) on the Product home page. All product members can see this widget. Only users who are product admins can delete pending test runs in this list
+- The ["My Pending Test Runs"](../Spira-User-Manual/User-Product-Management.md/#my-pending-test-runs) widget on My Page. You can always delete your own pending test runs
+- The ["All Pending Test Runs"](../Spira-User-Manual/Product-Homepage.md/#all-pending-test-runs) on the Product home page. All product members can see this widget. Only users who are product admins can delete pending test runs in this list
 
 ## How to delete test runs {: .section-break}
 Pending test runs are works in progress and can be deleted (see above). Once a test has been finalized it becomes a Test Run. This is designed to be an immutable record of what happened during testing. Therefore we strongly discourage every deleting a test run. Instead we recommend running the test case or test set again. That is why, by default, no roles have permission to delete test runs.
@@ -51,12 +51,12 @@ Test cases contain test steps. These steps can be edited in a number of ways: ea
 
 You may want to control who can edit test steps, and when they can edit them. 
 
-**Control who can edit test steps**: set your [product roles](../../Spira-Administration-Guide/System-Users/#view-edit-product-roles) so that only users with certain roles can modify test steps. 
+**Control who can edit test steps**: set your [product roles](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) so that only users with certain roles can modify test steps. 
 
 - If a product role let's users with that role "Modify All" test steps then they can edit all test steps. 
 - If instead a product role is set with "Modify Owned" for test steps, then users with that role can only edit test steps inside of test cases where they are marked as the Owner. In other words, if you have "Modify Owned" you have to be a test case owner to edit its steps.
 
-**Control when anyone can edit test steps**: using the [test case workflow](../../Spira-Administration-Guide/Template-Test-Cases/#edit-workflow-step), you can control what fields of the test case are editable, disabled, hidden, or required. For each workflow step, make sure to review the "Test Steps?" row. 
+**Control when anyone can edit test steps**: using the [test case workflow](../Spira-Administration-Guide/Template-Test-Cases.md/#edit-workflow-step), you can control what fields of the test case are editable, disabled, hidden, or required. For each workflow step, make sure to review the "Test Steps?" row. 
 
 - If "Test Steps?" is set to *enabled* for a status/step, anyone with a role that lets them edit test steps can edit test cases with that status
 - If "Test Steps?" is set to *disabled* for a status/step, noone will be able to edit test steps at all for test cases with that status
@@ -68,7 +68,7 @@ SpiraPlan gives users powerful ways to execute tests, integrate with external te
 
 Executing scheduled automated test cases in SpiraPlan needs the following setup:
 
-1. **Automation Engine Settings**: make sure the system level automation engines are setup correctly in SpiraPlan. To do so navigate to System Administration > Integration > [Test Automation](../../Spira-Administration-Guide/System-Integration/#test-automation).
+1. **Automation Engine Settings**: make sure the system level automation engines are setup correctly in SpiraPlan. To do so navigate to System Administration > Integration > [Test Automation](../Spira-Administration-Guide/System-Integration.md/#test-automation).
 2. **Automation Engine Itself**: make sure you have an automation engine (application) installed and setup on a machine. For example, if using RemoteLaunch:
 
     - Automation Host Token: is set to a specific text token that matches an Automation Host inside SpiraPlan (see #3 below)

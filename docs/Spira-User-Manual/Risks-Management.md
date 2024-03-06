@@ -162,7 +162,7 @@ This tab shows the list of product tasks that need to be completed for the risk 
 ![](img/Risks_Management_469.png)
 
 Each of the tasks is displayed together with, by default, its name, description (by hovering the mouse over the name), progress, priority, start-date, current owner, estimated effort, projected effort and numeric task identifier. Clicking on the task name will bring up the
-[Task Details page](../Task-Tracking/#task-details). This allows you to edit the details of an existing task.
+[Task Details page](Task-Tracking.md/#task-details). This allows you to edit the details of an existing task.
 
 You can perform the following actions on a task from this screen:
 

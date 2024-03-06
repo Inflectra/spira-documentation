@@ -339,3 +339,8 @@ nav:
 - About:
   - Introduction to Spira: About/introduction-to-spira.md
   - Legal Notices: About/legal-notices.md
+
+# validation customization
+validation:
+  nav:
+    omitted_files: ignore

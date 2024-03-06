@@ -47,8 +47,8 @@ Notes about syncing:
 For the data sync to work correctly make sure you meet **all** of the steps below:
 
 - [x] Use Spira v6.3.0.1+
-- [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](../Using-SpiraTeam-with-Jira-5+).)
-- [x] [Setup a datasync  service](../Setting-up-Data-Synchronization/) - either in Inflectra's cloud or on your own servers
+- [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](./Using-SpiraTeam-with-JIRA-5+.md))
+- [x] [Setup a datasync  service](Setting-up-Data-Synchronization.md) - either in Inflectra's cloud or on your own servers
 - [x] [Download the Jira configuration helper application](#jira-configuration-helper)
 - [x] [Configure the plugin in Spira](#configure-the-plugin)
 - [x] [Configure system wide user mapping](#user-mapping)

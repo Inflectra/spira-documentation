@@ -32,11 +32,11 @@ Above the table you can add a new data sync or refresh the status of the page to
 
 ## Source Code Integration
 
-*This section refers to the functionality available to on-premise customers of SpiraPlan or those customers that have disabled TaraVault. If you are using the cloud / hosted version of SpiraPlan and have not disabled TaraVault, please refer to [TaraVault Configuration](../System/#taravault) instead.*
+*This section refers to the functionality available to on-premise customers of SpiraPlan or those customers that have disabled TaraVault. If you are using the cloud / hosted version of SpiraPlan and have not disabled TaraVault, please refer to [TaraVault Configuration](System.md/#taravault) instead.*
 
 SpiraPlan® is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
 
-The information on using the various source code providers for SpiraPlan® and the steps for configuring the provider-specific settings are described elsewhere - for example for [Git](../../Version-Control-Integration/Integrating-with-Git/).
+The information on using the various source code providers for SpiraPlan® and the steps for configuring the provider-specific settings are described elsewhere - for example for [Git](../Version-Control-Integration/Integrating-with-Git.md).
 
 To configure a source code provider, you need to click on the System Administration \> Integration \> Source Code link in the Administration navigation to bring up the list of configured source code providers:
 
@@ -49,12 +49,12 @@ To edit the system wide settings for an existing source code provider, click on 
 If you want to change the settings for a particular product (including to turn that provider on or off for the product):
 
 - make sure the product dropdown in that row has the correct product selected (the dropdown shows products that are either already using that provider, or that have no source code provider at all)
-- click the arrow to the right of the product name to manage [that provider for that Product](../Product-General-Settings/#source-code).
+- click the arrow to the right of the product name to manage [that provider for that Product](Product-General-Settings.md/#source-code).
 
 To add a new source code provider, click the "Add" button at the bottom to go to the Plug-in details page:
 ![](img/System_Integration_77.png)
 
--   **Name**: The name of the source code provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the specific page for that provider in this documentation - eg [Git](../../Version-Control-Integration/Integrating-with-Git/)).
+-   **Name**: The name of the source code provider that you're adding. This needs to match the name of the Plug-in DLL file that you're using (see the specific page for that provider in this documentation - eg [Git](../Version-Control-Integration/Integrating-with-Git.md)).
 -   **Description**: The description is for your use only, and does not affect operation of the plug-in.
 -   **Active**: If checked, the plug-in is active and able to be used for any product.
 -   **Connection Info**: This field holds the root of the repository for any product accessing the plug-in, unless overridden in the Product Settings. Use the syntax that is described for your tool on the relevant docs page for that provider. 

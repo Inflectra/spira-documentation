@@ -22,15 +22,15 @@ Another major difference between Git and Subversion is that Git has built-in sup
 
 To be able to work on any Git project, you need to know how to manage your remote repositories. Remote repositories the versions of your project that are hosted TaraVault itself. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work. Managing remote repositories includes knowing how to add remote repositories, remove remotes that are no longer valid, manage various remote branches and define them as being tracked or not, and more.
 
-This is in stark contrast to [Subversion](../Using-Subversion/) where every commit and update is being performed directly on the central TaraVault remote repository. So when you make changes to your local repository, the will need to explicitly synchronized with TaraVault for other users to see them, and for them to appear in Spira:
+This is in stark contrast to [Subversion](Using-Subversion.md) where every commit and update is being performed directly on the central TaraVault remote repository. So when you make changes to your local repository, the will need to explicitly synchronized with TaraVault for other users to see them, and for them to appear in Spira:
 
 ![http://alexdiliberto.com/talks/all-things-git/img/git\_local\_to\_remote.png](img/Using_Git_48.png)
 
 
 ## Getting Started with Git
 
-This section assumes that you have already provisioned at least one Git project in TaraVault following the steps in [Activating TaraVault](../Activating-TaraVault/) and 
-[Provisioning Projects & Users](../Provisioning-Projects-&-Users/). So you should now have a TaraVault user/password and a Git project with a connection URL:
+This section assumes that you have already provisioned at least one Git project in TaraVault following the steps in [Activating TaraVault](./Activating-TaraVault.md) and 
+[Provisioning Projects & Users](./Provisioning-Projects-&-Users.md/). So you should now have a TaraVault user/password and a Git project with a connection URL:
 
 ![](img/Using_Git_18.png)
 
@@ -146,6 +146,6 @@ Click on the "Source Code" or "Commits" menu items under the Developing tab to n
 
 You can read more about working with source code in SpiraPlan at the links below:
 
-- [Source code files](../../Spira-User-Manual/Source-Code/#source-code-file-list)
-- [Commits](../../Spira-User-Manual/Commits/#commit-list)
-- [Linking to artifacts in commit messages](../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages)
+- [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
+- [Commits](../Spira-User-Manual/Commits.md/#commit-list)
+- [Linking to artifacts in commit messages](../Spira-User-Manual/Commits.md/#linking-to-artifacts-in-commit-messages)

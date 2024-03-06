@@ -67,15 +67,15 @@ Source code setup for your product is complete. Click on the "Source Code" or "C
 
 You can read more about working with source code in SpiraPlan at the links below:
 
-- [Source code files](../../Spira-User-Manual/Source-Code/#source-code-file-list)
-- [Commits](../../Spira-User-Manual/Commits/#commit-list)
-- [Linking to artifacts in commit messages](../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages)
-- [Troubleshooting source code integration](../../Spira-User-Manual/Source-Code/#troubleshooting-source-code-integration)
+- [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
+- [Commits](../Spira-User-Manual/Commits.md/#commit-list)
+- [Linking to artifacts in commit messages](../Spira-User-Manual/Commits.md/#linking-to-artifacts-in-commit-messages)
+- [Troubleshooting source code integration](../Spira-User-Manual/Source-Code.md/#troubleshooting-source-code-integration)
 
 
 ## Enforcing Associations with a Custom Policy
 
-As described in [Linking to artifacts in commit messages](../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages), you can easily associate check-ins of code in TFS with relevant SpiraTeam artifacts by adding the appropriate artifact identifier in the commit messages.
+As described in [Linking to artifacts in commit messages](../Spira-User-Manual/Commits.md/#linking-to-artifacts-in-commit-messages), you can easily associate check-ins of code in TFS with relevant SpiraTeam artifacts by adding the appropriate artifact identifier in the commit messages.
 
 In order to enforce this process, one of our customers has written a custom Visual Studio 2008 and 2010/2012+ Team System check-in policy that will force users to enter at least one SpiraTeam artifact in each of the check-in comments. This policy will also check the IDs of the supplied artifacts to make sure they exist in the appropriate SpiraTeam installation.
 

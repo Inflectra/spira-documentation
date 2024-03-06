@@ -284,7 +284,7 @@ For example:
 -   `select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_GROUP_ID = ${ProjectGroupId}` will display all the requirements in the specific program
 -   `select value R from SpiraTestEntities.R_Requirements as R` will display all the requirements in the entire system
 
-Follow our [detailed reporting tutorials](../../Reporting/Custom-Report-Tutorial) to learn more, or refer to our collection of [custom report knowledge base articles](https://www.inflectra.com/Support/KnowledgeBase/spira-reports/List.aspx).
+Follow our [detailed reporting tutorials](../Reporting/Custom-Report-Tutorial.md) to learn more, or refer to our collection of [custom report knowledge base articles](https://www.inflectra.com/Support/KnowledgeBase/spira-reports/List.aspx).
 
 !!! warning 
     If you create a report that doesn't have either ${ProjectId} or ${ProjectGroupId} in the WHERE clause you could end up displaying data to a user that shouldn't have permission to see that data.

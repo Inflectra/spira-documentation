@@ -74,7 +74,7 @@ Each test run step is displayed along with the description, expected result, sug
 
 ![](img/Test_Case_Management_205.png)
 
-Clicking on the link will open up a popup dialog box that displays a list of all the incidents associated with the selected test run step. Each of the incidents listed will reflect the most up-to-date information regarding that incident, including its type, status, priority, name, assigned owner, detection date and who first detected it. Clicking on the incident name will take you to the details page for that incident, which is described in [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details).
+Clicking on the link will open up a popup dialog box that displays a list of all the incidents associated with the selected test run step. Each of the incidents listed will reflect the most up-to-date information regarding that incident, including its type, status, priority, name, assigned owner, detection date and who first detected it. Clicking on the incident name will take you to the details page for that incident, which is described in [Incident Tracking > Incident Details](Incident-Tracking.md/#incident-details).
 
 If you have modify all permissions for test runs you will be able to click the small link button at the right of the test run step. This is the "link existing incident" button. This will display a popup that lets you link an existing incident to the selected test run step.
 

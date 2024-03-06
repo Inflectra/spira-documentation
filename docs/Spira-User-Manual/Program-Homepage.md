@@ -141,18 +141,18 @@ Under the main bar graph is displayed a table containing each product in the pro
 
 ## Top Open Issues
 
-This section displays a breakdown of the top issues logged against any of the products in the program, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see [Incident Tracking > Incident Details](../Incident-Tracking/#incident-details)). *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
+This section displays a breakdown of the top issues logged against any of the products in the program, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see [Incident Tracking > Incident Details](Incident-Tracking.md/#incident-details)). *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
 
 ## Top Open Risks
-This widget lists the top risks logged against any of the products in the portfolio, ordered by exposure. Clicking on the risk name will open the [risk details](../Risks-Management/#risk-details) page for the risk in question. *Note: you can configure the widget settings to control the maximum number of risks to show.*
+This widget lists the top risks logged against any of the products in the portfolio, ordered by exposure. Clicking on the risk name will open the [risk details](Risks-Management.md/#risk-details) page for the risk in question. *Note: you can configure the widget settings to control the maximum number of risks to show.*
 
 
 ## Recent Builds
 This widget displays a list of the most recent builds for each active release (organized alphabetically by product; in each product the builds are listed by date). For each build it shows: 
 
-- the release name (which links to the specific [release](../Release-Management/#release-details))
-- the build name (which links to the specific [build details](../Release-Management/#build-details))
+- the release name (which links to the specific [release](Release-Management.md/#release-details))
+- the build name (which links to the specific [build details](Release-Management.md/#build-details))
 - the build status (did it succeed or fail)
 - the date of the build
 

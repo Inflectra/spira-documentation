@@ -16,7 +16,7 @@ This SpiraApp has two independent parts (you do not need one for the other to wo
 - a button on the release details page so users can manually kick off a new CircleCI Pipeline 
 - backend integration (using webhooks) so the results of all relevant Pipelines are recorded in Spira as new builds
 
-To record builds in SpiraPlan, you must [setup the webhook integration with CircleCI](../../Build-Server-Integration/CircleCI-Pipelines/). 
+To record builds in SpiraPlan, you must [setup the webhook integration with CircleCI](../Build-Server-Integration/CircleCI-Pipelines.md). 
 
 To configure this SpiraApp that lets users manually kick off a new Pipeline, you must additionally do the following:
 

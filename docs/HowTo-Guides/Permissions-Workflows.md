@@ -23,7 +23,7 @@ At each step you can control:
 - what fields are visible
 - what fields are disable (cannot be edited)
 - what fields cannot be empty (you will not be able to save the artifact until these fields are filled in)
-- which steps you can move to next - this is called a transtion
+- which steps you can move to next - this is called a transition
 
 Transition are how you move from one step (status) to another. At each workflow step you can make as many transitions as you want. Each transition will move the workflow to a new step. For each transition you can control:
 
@@ -105,7 +105,7 @@ Read more about these issues [below](#why-does-a-user-not-see-the-right-transiti
 ## Why does a user not see the right transitions {: .section-break}
 When a user goes to look at the detail of an artifact they may be able to change the status by transitioning from one status to another. This is called a transition. What transitions show up when for what users is controlled by a number of things.
 
-To troubleshoot the issue you need to be a template administrator. The summary steps to review are below. Please refer to the [admin guide](../../Spira-Administration-Guide) for more information.
+To troubleshoot the issue you need to be a template administrator. The summary steps to review are below. Please refer to the [admin guide](../Spira-Administration-Guide/index.md) for more information.
 
 1. Is the right workflow in use? 
     - You can have lots of workflows for an artifact

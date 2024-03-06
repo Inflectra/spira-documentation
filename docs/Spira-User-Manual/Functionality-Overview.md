@@ -3,7 +3,7 @@ Spira is an easy to use, quick to configure, application designed to work wherev
 
 This guide explains Spira's approach, what its different pieces are, how they fit together, and how you can use them together most effectively. This guide will explain the happy "good practice" paths to using it successfully. Most people work these ways and very successfully. Others take full use of Spira's flexibility and customization options to stretch the application to work outside the lines. These users are usually very successful too.  The opening tip to this guide is this: where possible, work with the application not against it to have the greatest and easiest success. 
 
-This guide will hopefully be a useful learning resource, reference, and companion to the rest of the documentation. In particular, we recommend that brand new users, read this alongside the [quick start guide](../../SpiraPlan-Quick-Start-Guide), which will give you practical hands-on steps to learn Spira.
+This guide will hopefully be a useful learning resource, reference, and companion to the rest of the documentation. In particular, we recommend that brand new users, read this alongside the [quick start guide](../SpiraPlan-Quick-Start-Guide/index.md), which will give you practical hands-on steps to learn Spira.
 
 !!! tip "You say SpiraTest, I say SpiraPlan"
 

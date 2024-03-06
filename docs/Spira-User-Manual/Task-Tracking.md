@@ -6,9 +6,9 @@ Tasks can be organized into different folders and categorized by different types
 Tasks can be used in a number of different parts of the system to manage and track work:
 
 - standalone tasks: tasks not specifically linked to any other work.
-- [tasks on a requirement](../Requirements-Management/#tasks): you can create tasks against any requirement to break down the work into smaller chunks and potentially divide up amongst the team. You may have some tasks on a requirement for developers, others for business analysts, others for QA, and others for marketing, and so on.
-- [tasks resulting from testing](../Test-Execution/#tasks): if enabled for a product, testers can create tasks for developers during testing. This is a lighter touch way than incidents to communicate with others about your findings, or to ask questions.
-- [pull request tasks](../Pull-Requests): pull requests are special types of tasks that let a developer flag that their feature branch is ready for merging into the main development branch.
+- [tasks on a requirement](Requirements-Management.md/#tasks): you can create tasks against any requirement to break down the work into smaller chunks and potentially divide up amongst the team. You may have some tasks on a requirement for developers, others for business analysts, others for QA, and others for marketing, and so on.
+- [tasks resulting from testing](Test-Execution.md/#tasks): if enabled for a product, testers can create tasks for developers during testing. This is a lighter touch way than incidents to communicate with others about your findings, or to ask questions.
+- [pull request tasks](Pull-Requests.md): pull requests are special types of tasks that let a developer flag that their feature branch is ready for merging into the main development branch.
 
 
 ## Task List
@@ -114,11 +114,11 @@ You can pick between each of these views using the view selection button group a
     
     The SpiraPlan task board is a streamlined and highly customizable "kanban" style board. It lets you visualize tasks in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the task board is a great tool for planning and managing tasks.
 
-    To learn more about how boards in Spira are structured and their general features refer to our [board overview](../Application-Wide/#boards). Here you can learn about:
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 
-    - [board structure and configuration](../Application-Wide/#board-structure)
-    - [special board views](../Application-Wide/#special-board-views) 
-    - [working with board cards](../Application-Wide/#board-cards) 
+    - [board structure and configuration](Application-Wide.md/#board-structure)
+    - [special board views](Application-Wide.md/#special-board-views) 
+    - [working with board cards](Application-Wide.md/#board-cards) 
 
     **Specific features of or differences in the task board are discussed more fully below**.
 
@@ -157,7 +157,7 @@ The **release dropdown** shows:
 #### Customizing cards
 ![planning board card options](img/task-board-card-options.png)
 
-In addition to the standard [board card options](../Application-Wide/#board-card-options), you can toggle whether to show each of the following features:
+In addition to the standard [board card options](Application-Wide.md/#board-card-options), you can toggle whether to show each of the following features:
 
 - **Progress**: a mini histogram chart of the task's progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
 
@@ -176,7 +176,7 @@ To the right of the names is the timeline bar, which graphically shows the lengt
 
 Part of a release or task may be shaded darker than normal, from its left - this is based on how complete the release or task is.
 
-- For releases, this represents the [requirements completion percentage](../Release-Management/#requirements-completion) for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. 
+- For releases, this represents the [requirements completion percentage](Release-Management.md/#requirements-completion) for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. 
 - For tasks, this represents the percentage complete of the task itself.
 
 ![Task Gantt Chart](img/tasks-gantt-chart.png)
@@ -324,7 +324,7 @@ Read about [how the attachments tab works](Application-Wide.md#attachments)
 You can associate other tasks and to a task from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 ### Commits
-Tasks that are pull requests will show the commits tab. Read more about the [commits tab](../Pull-Requests/#commits).
+Tasks that are pull requests will show the commits tab. Read more about the [commits tab](Pull-Requests.md/#commits).
 
 ### History
 Read about [how the history tab works](Application-Wide.md#history)

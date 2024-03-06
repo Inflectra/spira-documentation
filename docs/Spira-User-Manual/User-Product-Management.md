@@ -147,12 +147,12 @@ This section lists all the requirements you have been made owner of, across *all
 
 This section lists all the test cases you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing these test scripts. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs. For each test case in the list you can see:
 
-- its name (this is a link to the to the [details page for this test-case](../Test-Case-Management/#test-case-details))
+- its name (this is a link to the to the [details page for this test-case](Test-Case-Management.md/#test-case-details))
 - the product it belongs to
 - its last execution status (for example failed or passed) - hover to see a tooltip showing the last execution date
 - its last execution date (not shown by default)
 - its workflow status
-- a play (execute) button. This will execute the test case in the [test-case execution module](../Test-Case-Management/#execute-test-cases). This button will not be there if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
+- a play (execute) button. This will execute the test case in the [test-case execution module](Test-Case-Management.md/#execute-test-cases). This button will not be there if the product the test case belongs to does not allow you to execute test cases (instead only letting you execute test sets).
 
 If you edit the widget you can: change the number of rows to show; show or hide the last executed date; and show or hide and the workflow status.
 
@@ -160,11 +160,11 @@ If you edit the widget you can: change the number of rows to show; show or hide 
 
 This section lists all the test sets (groups of test cases) you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs. For each test set in the list you can see:
 
-- its name (this is a link to the to the [details page for this test-set](../Test-Set-Management/#test-set-details)) - in a badge at the end of the name is a mini badge showing the number of remaining test cases to be executed
+- its name (this is a link to the to the [details page for this test-set](Test-Set-Management.md/#test-set-details)) - in a badge at the end of the name is a mini badge showing the number of remaining test cases to be executed
 - the product it belongs to
 - its due date
 - its status 
-- a play (execute) button. This will [execute the test set](../Test-Case-Management/#execute-test-cases)
+- a play (execute) button. This will [execute the test set](Test-Case-Management.md/#execute-test-cases)
 
 
 ## My Pending Test Runs
@@ -176,7 +176,7 @@ Any pending test run can be either deleted or resumed by clicking on the appropr
 
 ## My Assigned Tasks
 
-This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed by priority: tasks with no priority at the top, and after that the highest priority tasks. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](../Task-Tracking/) -- task management for details of the different progress indicators.
+This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed by priority: tasks with no priority at the top, and after that the highest priority tasks. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](Task-Tracking.md) -- task management for details of the different progress indicators.
 
 Clicking on the task name hyperlink will take you to the task details page. This page will describe the task in more detail, illustrate which requirement and release it is associated with, and also allow you to view the change log of actions that have been performed on it.
 
@@ -185,7 +185,7 @@ Clicking on the task name hyperlink will take you to the task details page. This
 
 This section lists all the open incidents you are the owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for resolving the incident. In the case of a bug, this can mean actually fixing the problem, whereas for other incident types (e.g. training item) it may mean simply documenting a workaround. In either event, this section highlights the open incidents you need to manage, ranked by priority (incidents with no priority are at the top) and categorized by type, with the open date displayed to give you a sense of the age of the incident.
 
-Clicking on the incident name hyperlink takes you to the [incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
+Clicking on the incident name hyperlink takes you to the [incident details page](Incident-Tracking.md/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
 ## My Detected Incidents
@@ -193,7 +193,7 @@ Clicking on the incident name hyperlink takes you to the [incident details page]
 This section lists all the open incidents that you have detected, across
 *all the different products* you are a member of. These incidents are not necessarily ones that you need to take an active role in resolving, but since you were the originator -- either by executing a test case or just logging a standalone incident -- you can watch them to make sure that they are resolved in a timely manner. The incidents shown are ranked by last updated date (most recent at the top).
 
-Clicking on the incident name hyperlink takes you to the [incident details page](../Incident-Tracking/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
+Clicking on the incident name hyperlink takes you to the [incident details page](Incident-Tracking.md/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
 ## Quick Launch
@@ -247,30 +247,30 @@ Under some of the icons and headings are secondary menu options that display whe
 - **Workspace Selector**: this shows the name of the current workspace. Clicking it will show all your available workspaces and clicking any of these will change you to that workspace. At the top of this dropdown is a filter box where you can type to filter the workspaces to only those that match your search
 - **Artifacts Selector**: when visible, this shows the name of the current artifact for the current workspace. Clicking it will show all your available artifacts and clicking any of these will change you to that artifacts main page. For product workspaces these artifacts are grouped as follows:
     - Planning
-        - [Requirements](../Requirements-Management/)
-        - [Planning Board](../Planning-Board/)
-        - [Releases](../Release-Management/)
-        - [Documents](../Document-Management/)
+        - [Requirements](Requirements-Management.md)
+        - [Planning Board](Planning-Board.md)
+        - [Releases](Release-Management.md)
+        - [Documents](Document-Management.md)
     - Testing
-        - [Test Cases](../Test-Case-Management/)
-        - [Test Sets](../Test-Case-Management/#test-set-list)
-        - [Test Runs](../Test-Case-Management/#test-run-list)
-        - [Automation Hosts](../Test-Case-Management/#automation-host-list)
+        - [Test Cases](Test-Case-Management.md)
+        - [Test Sets](Test-Case-Management.md/#test-set-list)
+        - [Test Runs](Test-Case-Management.md/#test-run-list)
+        - [Automation Hosts](Test-Case-Management.md/#automation-host-list)
     - Tracking
-        - [Incidents](../Incident-Tracking/)
-        - [Tasks](../Task-Tracking/)
-        - [Risks](../Risks-Management/)
-        - [Resources](../Resource-Tracking/)
-        - [Source Code](../Source-Code/)
+        - [Incidents](Incident-Tracking.md)
+        - [Tasks](Task-Tracking.md)
+        - [Risks](Risks-Management.md)
+        - [Resources](Resource-Tracking.md)
+        - [Source Code](Source-Code.md)
 
-- [**Reporting**](../Reports-Center/)
+- [**Reporting**](Reports-Center.md)
 - **User Profile Icon**
 
     - [My Profile](#my-profile)
     - [My Timecard](#my-timecard)
     - [Documentation](#documentation)
     - [Show on boarding tours](#show-onboarding-tours)
-    - [Keyboard shortcuts](../Appendix-1-Keyboard-Shortcuts/)
+    - [Keyboard shortcuts](Appendix-1-Keyboard-Shortcuts.md)
     - [Log Out](#log-out)
 
 - **Administration Icon**: This is visible if you are a system administrator, or if you are an owner/administrator of the current workspace or its template. Clicking the icon will display the relevant administration menu. This is described in the separate *SpiraPlan Administration Guide*.
@@ -469,5 +469,5 @@ Each task or incident will be displayed along with its priority, severity, start
 
 
 ## Redirects
-- <span data-date="changed in 6.5 May 2020" id="product-home">[Product Homepage](../Product-Homepage)</span>
-- <span data-date="changed in 6.5 May 2020" id="program-home">[Program Homepage](../Program-Homepage)</span>
+- <span data-date="changed in 6.5 May 2020" id="product-home">[Product Homepage](Product-Homepage.md)</span>
+- <span data-date="changed in 6.5 May 2020" id="program-home">[Program Homepage](Program-Homepage.md)</span>

@@ -36,7 +36,7 @@ Above the list of statuses is a Displaying dropdown that lets you choose which s
 - **Name** (maximum of 20 characters)
 - **Open**: when checked, the status is considered open, when unchecked it is considered closed. Incidents with an open status are considered active and will show up in various "todo" lists of incidents, like on the My Page.
 - **Default**: one status and only one is the default status from the list. This controls which status will be set automatically when you make a new incident. It therefore also acts as the first step in the incident workflow. Note that you must have at least one active incident status, and you cannot set an inactive status as the default.
-- **Position**: controls the order that the statuses are displayed on the [workflow](#edit-workflow-details) page and on the [incident planning board](../../Spira-User-Manual/Incident-Tracking/#incident-board). The position for each status can be empty or a unique number (not in use by another status). Statuses are ordered in ascending order of their position. Statuses with no position are sorted alphabetically by their names and will show before those with a position.
+- **Position**: controls the order that the statuses are displayed on the [workflow](#edit-workflow-details) page and on the [incident planning board](../Spira-User-Manual/Incident-Tracking.md/#incident-board). The position for each status can be empty or a unique number (not in use by another status). Statuses are ordered in ascending order of their position. Statuses with no position are sorted alphabetically by their names and will show before those with a position.
 - **Active**: sets if the status is active or not. Only active statuses are available in workflows and in the application.
 
 

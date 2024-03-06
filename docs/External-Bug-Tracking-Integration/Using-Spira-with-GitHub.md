@@ -31,7 +31,7 @@ Teams can work seamlessly using both Spira and GitHub, using Inflectra's GitHub 
 Note that code and commits can also sync to Spira (read only). This is handled by our [Git](../Version-Control-Integration/Integrating-with-Git.md) integration.
 
 !!! danger "Set up data synchronization"     
-    **STOP! Please make sure you have first read the instructions to [set up the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 ## Configuring the Integration Service 
 
@@ -118,7 +118,7 @@ Congratulations, you have just integrated Spira with GitHub's integrated issue t
 
 ## Syncing Pull Requests
 !!! danger "Set Up GitHub As A Source Code Provider"
-    **If you do not [set up GitHub as a source code provider](/Version-Control-Integration/Integrating-with-Git/) pull request syncing will not work. Once the source code integration is set up, pull request syncing will work after the cache in SpiraPlan has been.**
+    **If you do not [set up GitHub as a source code provider](../Version-Control-Integration/Integrating-with-Git.md) pull request syncing will not work. Once the source code integration is set up, pull request syncing will work after the cache in SpiraPlan has been.**
 
 To sync pull requests, the GitHub repository that is being synced must be connected to the same product both as an issue tracker (as outlined in this guide) and as a source code provider. Pull requests are synced from GitHub into SpiraPlan only. 
 

@@ -15,7 +15,7 @@ previous released versions.*
 
 This section assumes that you already have a working installation of
 SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in [RemoteLaunch Guide](../RemoteLaunch-Guide/).
+test automation hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md).
 Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the LoadRunner11Engine.zip file

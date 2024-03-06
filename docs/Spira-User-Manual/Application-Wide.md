@@ -41,7 +41,7 @@ To **see your saved filters** for this artifact, go to `Filter` > `Retrieve Filt
 
 ![](img/Requirements_Management_87.png)
 
-From your "My Page" you can **see all your save filters** across all artifacts and products. You can also delete any filter from there. This is all through the [My Saved Searches](User-Product-Management.md#my-saved-searches) widget.
+From your "My Page" you can **see all your save filters** across all artifacts and products. You can also delete any filter from there. This is all through the [My Saved Searches](User-Product-Management.md/#my-saved-searches) widget.
 
 #### Quick Filter Side Panel
 As a shortcut, the left hand panel on artifact list pages includes a set of **Quick Filters**. Click the name of the filter in this panel to apply it. This panel is NOT visible for list pages that do not have a side panel at all - i.e. Releases, Automation Hosts, Test Configurations, and Resources.
@@ -139,13 +139,13 @@ Once you've made the changes to the appropriate artifact fields, you can either 
 
 Workflows are managed by the product's template. Read more about workflow administration for:
 
-- [Requirements](../../Spira-Administration-Guide/Template-Requirements/#workflows)
-- [Releases](../../Spira-Administration-Guide/Template-Releases/#release-workflows)
-- [Documents](../../Spira-Administration-Guide/Template-Documents/#document-workflows)
-- [Test Cases](../../Spira-Administration-Guide/Template-Test-Cases/#test-case-workflows)
-- [Incidents](../../Spira-Administration-Guide/Template-Incidents/#incident-workflows)
-- [Tasks](../../Spira-Administration-Guide/Template-Tasks/#task-workflows)
-- [Risks](../../Spira-Administration-Guide/Template-Risks/#risk-workflows)
+- [Requirements](../Spira-Administration-Guide/Template-Requirements.md/#workflows)
+- [Releases](../Spira-Administration-Guide/Template-Releases.md/#release-workflows)
+- [Documents](../Spira-Administration-Guide/Template-Documents.md/#document-workflows)
+- [Test Cases](../Spira-Administration-Guide/Template-Test-Cases.md/#test-case-workflows)
+- [Incidents](../Spira-Administration-Guide/Template-Incidents.md/#incident-workflows)
+- [Tasks](../Spira-Administration-Guide/Template-Tasks.md/#task-workflows)
+- [Risks](../Spira-Administration-Guide/Template-Risks.md/#risk-workflows)
 
 
 ### Electronic Signatures
@@ -160,7 +160,7 @@ On attempting to save changes made after clicking a workflow operation that requ
 ![](img/Requirements_Management_96.png)
 
 !!! info  "How to digitally sign if using OAuth"
-    If you login to Spira using an OAuth / Single Sign On provider like Google or Okta, instead of entering your password use your RSS Key. This is visible on your [My Profile](../User-Product-Management/#my-profile) page.
+    If you login to Spira using an OAuth / Single Sign On provider like Google or Okta, instead of entering your password use your RSS Key. This is visible on your [My Profile](User-Product-Management.md/#my-profile) page.
 
 
 ### Emailing
@@ -169,7 +169,7 @@ Using the "***Email***" button on the toolbar, you can send an email containing 
 
 ![](img/Requirements_Management_97.png)
 
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../../Spira-Administration-Guide/Template-Notifications/#notification-templates). [Notification events](../../Spira-Administration-Guide/Template-Notifications/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes).
+You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates). [Notification events](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes).
 
 
 ### Followers
@@ -359,7 +359,7 @@ You can add a comment that explains the rationale for the association and choose
 
 
 ### Rich Text Editor
-There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](../Document-Management/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
+There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](Document-Management.md/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
 
 ![](img/Application-Wide_editor.png)
 
@@ -486,7 +486,7 @@ The toolbar configuration button (cogs) lets you control how the board will look
 - Choose a field for **columns** so that each column is a value of that field. Note that the options available may change based off the display type and release selected
 - Choose a field for **rows** to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected
 - Choose a **group** option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you
-- Show or hide **effort data** (off by default): when shown, column and row titles show extra information for people, releases and sprints, parent requirement,  and statuses (for requirements in column mode only). See the [special board views](#special-board-views) below and details about [work in progress limits](../Planning-Board/#work-in-progress-limits) for more information about what data is shown.
+- Show or hide **effort data** (off by default): when shown, column and row titles show extra information for people, releases and sprints, parent requirement,  and statuses (for requirements in column mode only). See the [special board views](#special-board-views) below and details about [work in progress limits](Planning-Board.md/#work-in-progress-limits) for more information about what data is shown.
 - Show or hide **unassigned** items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column.[^unassigned-data]
 
 [^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release

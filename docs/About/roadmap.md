@@ -10,7 +10,7 @@
     If you have any feedback or suggestions regarding this roadmap, please email us at [support@inflectra.com](mailto:support@inflectra.com).
 
 ## What has been released
-Please take a look at our [release notes](../release-notes-v7) to see a complete list of the changes (large and small) that we have recently delivered.
+Please take a look at our [release notes](release-notes-v7.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q1 2024
 - Track changes to product membership and product role changes

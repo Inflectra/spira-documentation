@@ -49,7 +49,7 @@ The navigation pane has a link to take you back to the product list, as well as 
 
 The top part of the right pane has buttons to refresh the product information or save any changes made. The product logo beneath this (to the left of the product ID) can be clicked to open the product home page for that product.
 
-If you have the required permissions for that product (see [below](#editing-the-product-details)) you can edit some of its fields. Many of the fields are always read only and can only be edited by system administrators from the [System Admin Product Edit](../../Spira-Administration-Guide/System-Workspaces/#edit-a-product) page. The fields that are editable on this page are:
+If you have the required permissions for that product (see [below](#editing-the-product-details)) you can edit some of its fields. Many of the fields are always read only and can only be edited by system administrators from the [System Admin Product Edit](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product) page. The fields that are editable on this page are:
 
 - Website
 - Description

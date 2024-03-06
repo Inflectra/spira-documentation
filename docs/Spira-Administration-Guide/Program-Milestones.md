@@ -35,4 +35,4 @@ To edit an existing type: change the name, set a default type, and/or change the
 
 
 ## Custom properties
-Clicking this link from the Program Milestones section of the system administration menu will open the [system custom properties](../System-Custom-Properties) page for program milestones.
+Clicking this link from the Program Milestones section of the system administration menu will open the [system custom properties](System-Custom-Properties.md) page for program milestones.

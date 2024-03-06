@@ -2,7 +2,7 @@
 ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into SpiraPlan. Attachments will only be synced with creation.
 
 !!! danger "Set up data synchronization"     
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](../Setting-up-Data-Synchronization/) before proceeding!**
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 
 ## Configuring the Integration Service 

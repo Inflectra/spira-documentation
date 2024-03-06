@@ -16,7 +16,7 @@ This SpiraApp has two independent parts (you do not need one for the other to wo
 - a button on the release details page so users can manually kick off a new GitHub Action 
 - backend integration (using webhooks) so the results of all relevant Actions are recorded in Spira as new builds
 
-To record builds in SpiraPlan, you must [setup the webhook integration with GitHub](../../Build-Server-Integration/GitHub-Actions/). 
+To record builds in SpiraPlan, you must [setup the webhook integration with GitHub](../Build-Server-Integration/GitHub-Actions.md). 
 
 To configure this SpiraApp that lets users manually kick off a new Action, you must additionally do the following:
 

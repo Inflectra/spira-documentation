@@ -7,7 +7,7 @@ This page describes how you can use SpiraTest, SpiraTeam, or SpiraPlan (hereafte
 
 
 ## Installing the Eggplant Engine
-This section assumes that you already have a working installation of SpiraPlan and of RemoteLaunch as described [here](../RemoteLaunch-Guide/). Once these prerequisites are in place, please follow these steps:
+This section assumes that you already have a working installation of SpiraPlan and of RemoteLaunch as described [here](RemoteLaunch-Guide.md). Once these prerequisites are in place, please follow these steps:
 
 - Download the Eggplant Runner Tool for Windows and save it in a convenient directory, of your choice.
 - Download and extract the *EggplantAutomationEngine.zip* file from the Inflectra website and locate the *Eggplant.dll*

@@ -74,7 +74,7 @@ This section displays:
 
 - the name of the product
 - a brief description
-- a link to view the products details on the [program product details page](../Program-Products/#product-details) (only visible to program members)
+- a link to view the products details on the [program product details page](Program-Products.md/#product-details) (only visible to program members)
 - the product's program
 - the web-site that points to any additional information about the product
 - the names of the owners of the product
@@ -113,7 +113,7 @@ This chart shows the proportion of all active requirements that have been comple
 
 ## Requirement Incident Count
 This section displays a count of the total number of incidents, and the number of open incidents mapped against requirements in the system, sorted by the requirements that have the most open incidents first. This section is useful for determining the parts of the application that have the most instability, as you can look at the requirements that have yielded the greatest number of incidents. Clicking on any of the requirements hyperlinks will take you to the 
-[detail page](../Requirements-Management/#requirements-details) for the requirement in question. *You can configure in the settings whether to include requirements with no open incidents, and also how many rows of data to display.*
+[detail page](Requirements-Management.md/#requirements-details) for the requirement in question. *You can configure in the settings whether to include requirements with no open incidents, and also how many rows of data to display.*
 
 
 ## Requirements Coverage
@@ -123,14 +123,14 @@ This section consists of a bar graph that displays the aggregated count of requi
 
 In addition to the five statuses for the covered requirements, the sixth ("Not Covered") bar depicts the total number of requirements that have no tests covering them, putting the five other bars into perspective. Typically a product is in good health if the "Not Covered" bar is zero, and the count of "Passed" requirements is greater than "Failed", "Caution" or "Not Run". The greatest risk lies with the "Blocked", "Not Covered" and "Not Run" status codes, since the severity/quantity of any bugs lurking within is not yet fully known.
 
-If you position the mouse pointer over any of the four bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on the any of the bars in the chart will take you to the [requirements list page](../Requirements-Management/#requirements-list) with the corresponding filters set.
+If you position the mouse pointer over any of the four bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on the any of the bars in the chart will take you to the [requirements list page](Requirements-Management.md/#requirements-list) with the corresponding filters set.
 
 When you filter the product home by release/sprint, this widget will filter the requirements coverage graph to only include ***requirements that are specifically mapped to the selected release/sprint***. This is useful when you want to determine the test coverage of new requirements that are being added to the specific release/sprint. If instead you want to determine the regression test coverage for a release, you should add the separate "Requirements Regression Coverage" widget to the page instead.
 
 
 ## Requirements Graphs
 
-This widget lets you quickly view four different graphs used when measuring the progress of requirements in an agile methodology. They are described in more detail in [Reports](../Reports-Center/#snapshot-graphs).
+This widget lets you quickly view four different graphs used when measuring the progress of requirements in an agile methodology. They are described in more detail in [Reports](Reports-Center.md/#snapshot-graphs).
 
 1.  **Requirement Velocity** -- this graph shows the actual velocity delivered in each product release and/or sprint compared to the product average and the rolling average.
 
@@ -218,7 +218,7 @@ This widget displays a list of the most recent builds that have been performed a
 
 ![](img/UserProduct_Management_70.png)
 
-For each build it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](../Release-Management/#build-details). Note: If no release or sprint is selected then the widget will not display any data.
+For each build it will display whether the build succeeded or failed, the date the build occurred and the name of the build together with a hyperlink to the [build details](Release-Management.md/#build-details). Note: If no release or sprint is selected then the widget will not display any data.
 
 
 ## Test Case Cumulative Progress
@@ -232,7 +232,7 @@ This section consists of a chart that displays the last 30 days of test case exe
 
 This section consists of a bar graph that displays the aggregated count of test cases in each execution status for the product. Note that this graph does not consider past test-runs when calculating the totals in each status (Passed, Failed, Not Run, etc.), it simply looks at each test-case and uses the last-run status as the best health indicator. Thus if a test case that previously passed, has subsequently failed upon re-execution, it will be considered a failure only.
 
-If you position the mouse pointer over any of the five bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on any of the bars will bring up the [product test case list](../Test-Case-Management/#test-case-list) with the appropriate filter applied.
+If you position the mouse pointer over any of the five bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on any of the bars will bring up the [product test case list](Test-Case-Management.md/#test-case-list) with the appropriate filter applied.
 
 In addition to the bar-chart, there is also a display of the total number of test runs recorded for the product, and a list of the *five most recent* days of recorded test-runs, together with the daily count.
 
@@ -245,7 +245,7 @@ This section consists of a bar graph that displays the aggregated count of test 
 
 Therefore if you have the same test cases stored in multiple test sets, then this widget will display the total test case count for all combinations of test set. This is useful if you have the same test cases being executed in different environments -- represented by different test sets -- and you need to make sure that the tests passed successfully in all environments.
 
-If you position the mouse pointer over any of the five bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on any of the bars brings up the [product test set list](../Test-Case-Management/#test-run-details) page with the appropriate filter applied. In addition to the bar-chart, there is also a display of (up to) the *five most overdue test sets in the product*.
+If you position the mouse pointer over any of the five bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on any of the bars brings up the [product test set list](Test-Case-Management.md/#test-run-details) page with the appropriate filter applied. In addition to the bar-chart, there is also a display of (up to) the *five most overdue test sets in the product*.
 
 
 ## All Pending Test Runs
@@ -288,9 +288,9 @@ This section displays a bar-graph that illustrates the execution status of any t
 
 
 ## Top Open Issues
-Issues are a subset of Incidents. [Admins can control](../../Spira-Administration-Guide/Template-Incidents/#edit-types) which types of incident should be considered issues. All incidents that have a type marked in this way are considered "issues." 
+Issues are a subset of Incidents. [Admins can control](../Spira-Administration-Guide/Template-Incidents.md/#edit-types) which types of incident should be considered issues. All incidents that have a type marked in this way are considered "issues." 
 
-This widget shows a breakdown of the top issues logged in the product, in order of decreasing priority. Issues that do not have a priority are listed at the top, since critical issues could be lurking in that list. Only open issues are shown. Clicking on the issue's hyperlink opens [incident details page](../Incident-Tracking/#incident-details) for that issue. 
+This widget shows a breakdown of the top issues logged in the product, in order of decreasing priority. Issues that do not have a priority are listed at the top, since critical issues could be lurking in that list. Only open issues are shown. Clicking on the issue's hyperlink opens [incident details page](Incident-Tracking.md/#incident-details) for that issue. 
 
 *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
@@ -332,7 +332,7 @@ This widget lets you quickly view the three main graphs used when measuring the 
 
 1.  **Task Velocity**: this graph shows the total estimated and actual effort delivered in each product release and/or sprint
 2.  **Task Burnup**: this graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
-3.  **Task Burndown**: Read more about how this graph works here [here](../Reports-Center/#task-burndown-chart).
+3.  **Task Burndown**: Read more about how this graph works here [here](Reports-Center.md/#task-burndown-chart).
 
 
 ## Source Code Commits
@@ -343,4 +343,4 @@ This section consists of a chart that displays the last 3 months of code commits
 
 Above the chart is a branch selector. This shows you the current branch and lets you choose which branch in the source code repository to view. This is stored for your user across the whole product, which means that you will see information for this same branch in other relevant places - eg when viewing files, or when viewing commits.
 
-Below the chart is a list of the five most recent commits, along with the date they were made (hovering over the commit name will show a tooltip with the commit message and exact time of the commit). Click the "View All" button to open the [commit list](../Commits/#commit-list) page.
+Below the chart is a list of the five most recent commits, along with the date they were made (hovering over the commit name will show a tooltip with the commit message and exact time of the commit). Click the "View All" button to open the [commit list](Commits.md/#commit-list) page.

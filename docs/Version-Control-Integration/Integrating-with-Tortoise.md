@@ -5,17 +5,17 @@ Tortoise is a family of Windows Explorer shell extensions that helps programmers
 There are different versions of Tortoise that are compatible with different version control systems.
 
 ## TortoiseSVN
-TortoiseSVN is a [Subversion](../Integrating-with-Subversion) client, implemented as a Microsoft Windows shell extension, that helps programmers manage different versions of the source code for their programs. 
+TortoiseSVN is a [Subversion](Integrating-with-Subversion.md) client, implemented as a Microsoft Windows shell extension, that helps programmers manage different versions of the source code for their programs. 
 
 In Windows Explorer, besides showing context menu items for Subversion commands, TortoiseSVN provides icon overlay that indicates the status of Subversion working copies. 
 
 ## TortoiseGit
-TortoiseGit is a [Git](../Integrating-with-Git) commit control client, implemented as a Windows shell extension and based on TortoiseSVN.
+TortoiseGit is a [Git](Integrating-with-Git.md) commit control client, implemented as a Windows shell extension and based on TortoiseSVN.
 
 In Windows Explorer, besides showing context menu items for Git commands, TortoiseGit provides icon overlays that indicate the status of Git working trees and files. It also comes with the TortoiseGitMerge utility to visually compare two files and resolve conflicts. 
 
 ## TortoiseCVS
-TortoiseCVS is a [CVS](../Integrating-with-CVS) client for Microsoft Windows. Unlike most CVS tools, it includes itself in Windows' shell by adding entries in the contextual menu of the file explorer, therefore it does not run in its own window. Moreover, it adds icons onto files and directories controlled by CVS, giving additional information to the user without having to run a full-scale stand-alone application.
+TortoiseCVS is a [CVS](Integrating-with-CVS.md) client for Microsoft Windows. Unlike most CVS tools, it includes itself in Windows' shell by adding entries in the contextual menu of the file explorer, therefore it does not run in its own window. Moreover, it adds icons onto files and directories controlled by CVS, giving additional information to the user without having to run a full-scale stand-alone application.
 
 ## Using the Spira Plugin for Tortoise
 The Spira [issue-tracker plugin](https://tortoisesvn.net/issuetrackerplugins.html) for Tortoise (called **TurtleSpira**) works with all variants of Tortoise, including TortoiseGit,TortoiseSVN, and TortoiseCVS, and lets you streamline your workflow for linking source code commits / commits to assigned artifacts in SpiraTeam, SpiraPlan, or SpiraTest.

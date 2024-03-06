@@ -65,7 +65,7 @@ On this screen you can edit key information and security about the user:
 - LDAP connection (if managed by LDAP - see below)
 - 2-step authentication (if active for a user, admins can click the "Deactivate" button to deactivate this feature for the specific user)
 
-If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](../System/#ldap-configuration) for more details.
+If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](System.md/#ldap-configuration) for more details.
 
 If a user's account uses an external provider for authentication (like LDAP or Okta) you can unlink the user from that authentication provider on this page. Click the `Unlink Account` button to display a popup that requires you to add the new security information for that user.
 
@@ -107,12 +107,12 @@ To view/change the list of usernames that a user has in an external bug-tracking
 
 Please see the documentation for the relevant data sync for more details on using the data-mapping tab.
 
-If you click on the TaraVault membership tab, you can choose whether or not the user has access the linked TaraVault source code repository. This service is only available for hosted/cloud instances of SpiraPlan, and more details can be found in [LDAP Configuration](../System/#ldap-configuration).
+If you click on the TaraVault membership tab, you can choose whether or not the user has access the linked TaraVault source code repository. This service is only available for hosted/cloud instances of SpiraPlan, and more details can be found in [LDAP Configuration](System.md/#ldap-configuration).
 
 
 ## Importing LDAP Users
 
-If your organization already has an LDAP compatible user management system in place (e.g. Windows Active Directory, Novell eDirectory, OpenLDAP, IBM Tivoli, etc.), then instead of having to manually enter users one by one into SpiraPlan®, you can simply import them from your LDAP Server. Before doing this however, you need to first setup the [LDAP Configuration](../System/#ldap-configuration).
+If your organization already has an LDAP compatible user management system in place (e.g. Windows Active Directory, Novell eDirectory, OpenLDAP, IBM Tivoli, etc.), then instead of having to manually enter users one by one into SpiraPlan®, you can simply import them from your LDAP Server. Before doing this however, you need to first setup the [LDAP Configuration](System.md/#ldap-configuration).
 
 Once you have setup your LDAP server configuration in SpiraPlan®, clicking on the "Import Users From and LDAP Server" will bring up the following screen:
 
@@ -128,14 +128,14 @@ Select the checkbox of any users you want to import and click "Import" to comple
 
 You can connect your organization's identity provider for Single Sign On (SSO) authentication with Spira. This works for both on premise and cloud versions of the application. We currently support integration with:
 
-- [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad)
-- [Github](../../HowTo-Guides/Login-providers/#github)
-- [Gitlab](../../HowTo-Guides/Login-providers/#gitlab)
-- [Google](../../HowTo-Guides/Login-providers/#google)
-- [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs)
-- [Okta](../../HowTo-Guides/Login-providers/#okta)
-- [OneLogin](../../HowTo-Guides/Login-providers/#onelogin)
-- [OpenId Connect](../../HowTo-Guides/Login-providers/#openid-connect)
+- [Azure AD](../HowTo-Guides/Login-providers.md/#azure-ad)
+- [Github](../HowTo-Guides/Login-providers.md/#github)
+- [Gitlab](../HowTo-Guides/Login-providers.md/#gitlab)
+- [Google](../HowTo-Guides/Login-providers.md/#google)
+- [Microsoft ADFS](../HowTo-Guides/Login-providers.md/#microsoft-adfs)
+- [Okta](../HowTo-Guides/Login-providers.md/#okta)
+- [OneLogin](../HowTo-Guides/Login-providers.md/#onelogin)
+- [OpenId Connect](../HowTo-Guides/Login-providers.md/#openid-connect)
 
 
 On the Provider List page you can see a list of all available providers, their status (active or inactive), and how many, if any, users are logging in to the application using that provider.  To configure a particular provide, click the "Edit" button for that row.
@@ -163,14 +163,14 @@ Below is a general set of instructions about how to set up the provider and Spir
     - Use the "Return URL" from above in the field called something like return URL, callback URL, redirect URL
     - A guide to set up each provider, and the specific permissions they each need are available here: 
 
-        - [Azure AD](../../HowTo-Guides/Login-providers/#azure-ad)
-        - [Github](../../HowTo-Guides/Login-providers/#github)
-        - [Gitlab](../../HowTo-Guides/Login-providers/#gitlab)
-        - [Google](../../HowTo-Guides/Login-providers/#google)
-        - [Microsoft ADFS](../../HowTo-Guides/Login-providers/#microsoft-adfs)
-        - [Okta](../../HowTo-Guides/Login-providers/#okta)
-        - [OneLogin](../../HowTo-Guides/Login-providers/#onelogin)
-        - [OpenId Connect](../../HowTo-Guides/Login-providers/#openid-connect)
+        - [Azure AD](../HowTo-Guides/Login-providers.md/#azure-ad)
+        - [Github](../HowTo-Guides/Login-providers.md/#github)
+        - [Gitlab](../HowTo-Guides/Login-providers.md/#gitlab)
+        - [Google](../HowTo-Guides/Login-providers.md/#google)
+        - [Microsoft ADFS](../HowTo-Guides/Login-providers.md/#microsoft-adfs)
+        - [Okta](../HowTo-Guides/Login-providers.md/#okta)
+        - [OneLogin](../HowTo-Guides/Login-providers.md/#onelogin)
+        - [OpenId Connect](../HowTo-Guides/Login-providers.md/#openid-connect)
 
 7. Go back to Spira and enter the information for the required fields into the provider page and hit save.
 8. Test that you can login to Spira using the provider. This can be done in two ways: linking an existing account, or creating a new account. User will only be able to create a new account if users can register for a new account
@@ -195,7 +195,7 @@ Administrators can end a session that is in use to make it available for others.
 
 ## Pending Requests
 
-If you have enabled the ability for users to [register for new SpiraPlan accounts themselves](../System/#security-settings), clicking on the "Pending Requests" administration option allows you to view a list of all the outstanding requests for new user accounts:
+If you have enabled the ability for users to [register for new SpiraPlan accounts themselves](System.md/#security-settings), clicking on the "Pending Requests" administration option allows you to view a list of all the outstanding requests for new user accounts:
 
 ![](img/System_Users_52.png)
 
@@ -207,7 +207,7 @@ For each pending user request you can choose to either Approve or Deny the reque
 
 
 ## View / Edit Product Roles
-Read an [overview](../System-Administration/#how-user-permissions-are-set) of how permissions work across the application and all its workspaces.
+Read an [overview](System-Administration.md/#how-user-permissions-are-set) of how permissions work across the application and all its workspaces.
 
 ### Default Product Roles
 There are six (6) default product roles that a user may be assigned to a product with:
@@ -252,7 +252,7 @@ These permission options allow you to specify if a user can view, create, delete
 - **Delete**: lets a user delete any artifact item in the product, or folders of artifacts with folders
 - **Modify Owned**: lets a user modify only those items in an artifact that they created or have been assigned (e.g. the user can edit only the requirements they created or have been assigned). This is the most restrictive type of modify permission and can only be carried out on the artifact details page, subject to any workflow
 - **Modify All**: lets a user modify any items for an artifacts on the artifact details page, subject to any workflow (e.g. the user can edit all test cases)
-- **Bulk Edit**: lets users modify items outside of the scope of any workflow in a number of places. This means users can bypass workflow restrictions, allowing them to make status changes (including without electronic signatures) and not enter fields required by workflows. This permission should be applied carefully. Note that you can deny status changes in this with the "Status bulk edit" flag on the [edit template page](../System-Workspaces/#viewedit-templates). Bulk edit works in the following places:
+- **Bulk Edit**: lets users modify items outside of the scope of any workflow in a number of places. This means users can bypass workflow restrictions, allowing them to make status changes (including without electronic signatures) and not enter fields required by workflows. This permission should be applied carefully. Note that you can deny status changes in this with the "Status bulk edit" flag on the [edit template page](System-Workspaces.md/#viewedit-templates). Bulk edit works in the following places:
 
     - editing artifacts on artifact list pages
     - creating and editing folders of artifacts with folders
@@ -272,7 +272,7 @@ This section lets you specify if the role allows users to add new documents to t
 
 ## View / Edit Teams
 !!! info "In beta, available in SpiraPlan only"
-    System admins [can enable](../../Spira-Administration-Guide/System/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
 SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
@@ -290,4 +290,4 @@ Click the 'Add Team' button at the bottom of the list to add a new team:
 
 After entering the name of the new team, optionally entering a description, and choosing its Active status (active by default), click 'Save' to commit the new item. To edit an existing team, change its name, description, or active status and click 'Save'. To delete a team, click the 'Delete' option for that row. Once deleted, an item can be undeleted by changing the display to 'All' and then clicking 'Undelete'.
 
-[Learn about how to manage team membership at the product level](../Product-Users/#team-membership). 
+[Learn about how to manage team membership at the product level](Product-Users.md/#team-membership). 
