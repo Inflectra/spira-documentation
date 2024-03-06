@@ -1,6 +1,38 @@
 # Requirements Management
+| Artifact icon and name                                                    | Token | Description                                                                |
+| ------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- |
+| ![](img/Functionality_Overview_10.png) &nbsp; Requirement                 | RQ    | Tracks large pieces of work or product features                            |
+| ![](img/Functionality_Overview_9.png) &nbsp; Requirement (parent)         | RQ    | Any requirement that has one or more child requirements                    |
+| ![](img/Functionality_Overview_11.png) &nbsp; Requirement (has use cases) | RQ    | Any requirement of a type that allows for use case steps                   |
+| ![](img/Functionality_Overview_12.png) &nbsp; Requirement Step            | RS    | Small steps or scenarios on a requirement that show how that feature works |
 
-This section outlines how the requirements management features of SpiraPlan® can be used to develop a requirements / scope matrix for a product, and how you can map any existing test-cases to the requirements. Typically when starting a product, developing the requirements list is the first activity after the Administrator has set up the product in the system.
+## Feature Overview and Tips
+Also known as features or user stories, requirements are used for tracking larger pieces of work and have special features to help you track their progress. You can arrange requirements hierarchically to help you organize them. Use story points to estimate the time required to deliver the feature. When you first start a product, you usually begin by building up the requirements.
+
+=== "Tips and Tricks"
+    - Do not put all your requirements under a single parent (a requirement at the root level that is fully outdented)
+    - Do make your requirement structure as shallow as possible. This will improve reporting and performance
+    - Try to limit the total number of requirements to under 20,000 per product. If you think your product needs a lot more requirements than this, consider splitting the product into several products under a single program
+    - Set the requirement's release to the one when the requirement was first released 
+    - Use associations to link a requirement to other releases that are meaningful to you
+    - Add all test cases that evidence if a requirement is working as expected or not to the requirement's test coverage
+
+=== "Key Artifact Links"
+    - **Releases**: link a requirement directly to the release it was first delivered in. You can add associate it to other releases as well, as needed
+    - **Test cases**: called "Requirement Test Coverage" this lets you track testing all aspects of a feature and see if all test cases have passed or not
+    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything
+
+=== "Association Chart"
+    ``` mermaid
+    graph TD
+    RQ{{"`**Requirement**`"}} --> RL(Release);
+    TC(Test Cases) --> RQ;
+    TK(Tasks) --> RQ;
+    RQ -.-> RL;
+    RQ <-.-> RQ2(Other requirements);
+    RQ <-.-> IN(Incident);
+    RQ <-.-> RK(Risk);
+    ```
 
 ## Requirement Traceability and Coverage
 From the requirement list page you can see a number of columns that show calculated data for each requirement, based off:

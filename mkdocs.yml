@@ -89,7 +89,7 @@ extra:
 nav:
 - User Manual:
   - How to use this manual: Spira-User-Manual\index.md
-  - Functionality Overview: Spira-User-Manual\Functionality-Overview.md
+  - Application Overview and Tips: Spira-User-Manual\Functionality-Overview.md
   - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
   - User Management: Spira-User-Manual\User-Product-Management.md
   - Products:
