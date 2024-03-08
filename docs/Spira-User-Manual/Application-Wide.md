@@ -343,19 +343,19 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Association Tab Of                               | Available artifacts                                                                                             |
-    | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-    | **Documents**                                    | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Incidents**                                    | Requirements, Test Steps, Tasks, Incidents, Risks                                                               |
-    | **Releases**                                     | Releases, Requirements                                                                                          |
-    | **Requirements**                                 | Releases, Requirements, Incidents, Risks                                                                        |
-    | **Risks**                                        | Requirements, Incidents, Risks, Test Cases                                                                      |
-    | **Source code commits**                          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Source code files**                            | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Tasks**                                        | Tasks, Incidents                                                                                                |
-    | **Test cases** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> | Tasks, Risks                                                                                                    |
-    | **Program Capabilities** <span class="pill">SpiraPlan</span>        | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** <span class="pill">SpiraPlan</span>          | Releases (the tab is called releases, comments and association type not supported)                              |
+    | Association Tab Of                                           | Available artifacts                                                                                                      |
+    | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+    | **Documents**                                                | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
+    | **Incidents**                                                | Requirements, Test Steps, Tasks, Incidents, Risks                                                                        |
+    | **Releases**                                                 | Releases, Requirements                                                                                                   |
+    | **Requirements**                                             | Releases, Requirements, Incidents, Risks                                                                                 |
+    | **Risks**                                                    | Requirements, Incidents, Risks, Test Cases                                                                               |
+    | **Source code commits**                                      | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
+    | **Source code files**                                        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
+    | **Tasks**                                                    | Tasks, Incidents                                                                                                         |
+    | **Test cases**                                               | Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span> |
+    | **Program Capabilities** <span class="pill">SpiraPlan</span> | Requirements (the tab is called requirements, comments and association type not supported)                               |
+    | **Program Milestones** <span class="pill">SpiraPlan</span>   | Releases (the tab is called releases, comments and association type not supported)                                       |
 
 
 ### Rich Text Editor

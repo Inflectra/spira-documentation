@@ -1,6 +1,36 @@
-## Test Set List
+# Test Set Management
+| Artifact icon and name                   | Token | Description                           |
+| ---------------------------------------- | ----- | ------------------------------------- |
+| ![](img/artifact-tx.png) &nbsp; Test Set | TX    | Combine test cases together to create |
 
-As well as being able to organize test cases into folders, you can also create separate groupings of test cases called test sets which can then be assigned to testers as a package. To view the list of test sets for a product, click on Testing \> Test Sets in the global navigation:
+## Feature Overview and Tips
+As well as being able to organize test cases into folders, you can also create separate groupings of test cases called test sets which can then be assigned to testers as a package. Test sets are a way to group test cases together. They are useful to manage larger and more complex manual test executions. Additionally, test sets let you automate test case execution if you are using automation tools like [Rapise](https://www.inflectra.com/Rapise/), so you can schedule tests to run automatically. 
+
+=== "Tips and Tricks"
+    - Use test sets to organize a series of test cases in a specific order
+    - If your needs are met with test cases, there is no need to use tests sets - use them when you need more than test cases alone can do
+    - You can add the same test case multiple times to the same test set if you want
+    - Test sets should contain a focused number of test cases that cover a specific feature. 
+    - Try and keep the total number of test cases in a test set to around 10-20
+    - Set the release on a test set to make it easier to record results against the right release
+    - To track test runs from test sets against test coverage for a release add the test cases to the release directly 
+
+=== "Key Artifact Links"
+    - **Releases**: like most artifacts, test sets are set with a single release at a time that they will run and record results against
+    - **Test Cases**: test cases are the core building block of test sets
+    - **Configurations**: using test configurations on a test set is an advanced feature that lets you test many different test scenarios dynamically
+
+=== "Association Chart"
+    ``` mermaid
+    graph TD
+    TX{{"`**Test Set**`"}} --> RL(Release);
+    TC(Test Case) --> TX;
+    TG(Configuration) --> TX;
+    ```
+
+
+## Test Set List
+To view the list of test sets for a product, click on Testing > Test Sets in the global navigation:
 
 ![](img/Test_Case_Management_211.png)
 

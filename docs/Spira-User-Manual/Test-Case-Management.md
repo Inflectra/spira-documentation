@@ -1,13 +1,41 @@
 # Test Case Management
+| Artifact icon and name                                                 | Token | Description                                                                                |
+| ---------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------ |
+| ![](img/artifact-ts.png) &nbsp; Test Step                              | TS    | A single scenario or step to validate during a test                                        |
+| ![](img/artifact-ts-linked.png) &nbsp; Test Step (linked)              | TS    | A step in a test case that contains a whole other test case inside it                      |
+| ![](img/artifact-tc.png) &nbsp; Test Case (with test steps)            | TC    | Stores how to test a feature or process, and tracks the results of each test               |
+| ![](img/artifact-tc-no-step.png) &nbsp; Test Case (without test steps) | TC    | Like a normal test case, but usually used for automated tests where steps are not required |
 
-This section outlines how the use-case / test-case management features of SpiraPlan® can be used to develop the business use-cases for the system, which specify how the different pieces of functionality are expected to work in practice. In addition, these use/test-cases form the basis of the business specification of the system when associated with the underlying requirements matrix. Typically when starting a new product:
 
-- The requirements matrix is entered first
-- Then the list of use-cases is developed to outline the key scenarios that need to supported to implement the requirement
-- Then the use-cases are fleshed out into full test-cases by adding the detailed test-steps with the expected result and suggested sample-data
-- Finally the tests are grouped into test-sets so that they can be assigned to users in batches for execution and tracking.
+## Feature Overview and Tips
+Test cases are the primary building block of Spira's powerful testing features. Test cases often contain test steps - one test step for each scenario to validate. To run a test case you execute it. This creates a test execution environment for testers with effectively a copy of the test case at that time. Once execution has finished, an immutable test run is created as a permanent record of that execution (whether it passed, failed, and so on). 
 
-However when migrating existing products into SpiraPlan®, you may need to migrate the test-case list first, and then add the supporting requirements matrix afterwards.
+Use properties on test cases themselves like their type and component, and test case folders to help organize test cases. Extend the power of test cases further with parameters, linked test steps, and test sets.
+
+=== "Tips and Tricks"
+    - Link test cases to the requirements that they test the functionality of, and make sure every requirement has at least one test case covering it
+    - Adding test cases to a release is the best way to track if a release has full test coverage 
+    - Don’t clone your test cases for each release. Instead add the same test cases to each release. You can then track test case result over many releases
+    - For manual testing, scope a test case as the work that one tester can reasonably do in a single testing session
+    - Keep the number of total test steps in a test case to around 50 and not more than 100 
+    - For automated test cases, either don’t use test steps at all or have only one test step in the test case
+    - Test case parameters, especially with linked test steps can make your test cases more modular and powerful
+
+=== "Key Artifact Links"
+    - **Releases**: each test case can be added to many releases - every release that the test case should be used to provide test coverage / validate
+    - **Requirements**: each test case be added to many requirements, in cases where a test case helps validate multiple pieces of functionality 
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
+
+=== "Association Chart"
+    ``` mermaid
+    graph TD
+    TC{{"`**Test Case**`"}} --> RL(Release);
+    TC --> RQ(Requirement);
+    TC --> TX(Test Set);
+    TS(Test Step) --> TC;
+    TK(Task) -.-> TC;
+    RK(Risk) -.-> TC;
+    ```
 
 
 ## Test Case List
@@ -476,10 +504,11 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
+| Association Tab Of | Available artifacts                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| **Test cases**     | Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span> |
 
-You can associate tasks and risks to a test case from this tab (which is only available to SpiraTeam and SpiraPlan users). Apart from creating links to an existing task from this tab, any tasks created during exploratory test execution will also be shown here.
-
-Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
+Any tasks created during exploratory test execution will automatically be be shown here. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 
 ## Test Step Details

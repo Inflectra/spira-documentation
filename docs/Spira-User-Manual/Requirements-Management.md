@@ -16,19 +16,24 @@ Also known as features or user stories, requirements are used for tracking large
     - Set the requirement's release to the one when the requirement was first released 
     - Use associations to link a requirement to other releases that are meaningful to you
     - Add all test cases that evidence if a requirement is working as expected or not to the requirement's test coverage
+    - You can add the same test case to different requirements if you need
+    - Quickly create test coverage by creating a test case directly from the requirement (from the Test Coverage tab). If the requirement has use case steps, each one will become a test step in the test case
 
 === "Key Artifact Links"
     - **Releases**: link a requirement directly to the release it was first delivered in. You can add associate it to other releases as well, as needed
     - **Test cases**: called "Requirement Test Coverage" this lets you track testing all aspects of a feature and see if all test cases have passed or not
-    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything
+    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - **Capabilities**: oversee requirements at the program level by linking them to program capabilities <span class="pill">SpiraPlan</span>
 
 === "Association Chart"
     ``` mermaid
     graph TD
     RQ{{"`**Requirement**`"}} --> RL(Release);
+    RQ --> CP(Capabilities);
     TC(Test Cases) --> RQ;
     TK(Tasks) --> RQ;
     RQ -.-> RL;
+    TS(Test Step) -.-> RQ;
     RQ <-.-> RQ2(Other requirements);
     RQ <-.-> IN(Incident);
     RQ <-.-> RK(Risk);
@@ -587,10 +592,11 @@ Read about [how the attachments tab works](Application-Wide.md#attachments)
 Read about [how the history tab works](Application-Wide.md#history)
 
 ### Associations
+| Association Tab Of | Available artifacts                      |
+| ------------------ | ---------------------------------------- |
+| **Requirements**   | Releases, Requirements, Incidents, Risks |
 
-You can associate other requirements, incidents, or risks to a requirement from this tab.
-
-The associated requirements and risks are those a user has decided are relevant to the current requirement and has created a direct link between them. In the case of incidents, the association can be either due to the creator of an incident directly linking the incident to the requirement, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
+Note that incidents can be associated to requirements either due to the directly linking the incident, or as the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
 
 Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 

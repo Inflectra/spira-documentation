@@ -1,16 +1,39 @@
 # Release Management
+| Artifact icon and name                                  | Token | Description                                                   |
+| ------------------------------------------------------- | ----- | ------------------------------------------------------------- |
+| ![](img/artifact-rl.png) &nbsp; Release                 | RL    | A way to group work together to deliver by a certain deadline |
+| ![](img/artifact-rl-sprint.png) &nbsp; Release (sprint) | RL    | A mini release, popular in agile workflows                    |
+| ![](img/artifact-bl.png) &nbsp; Build                   | BL    | Results of CI/CD processes recorded against a release         |
 
-## Introduction
-This section outlines how to use the Release Management features of SpiraPlan® to manage different versions of the system being tested in a particular product. This is an optional feature of the system, and you can manage the testing for a product successfully without tracking individual releases. Typically, when you develop a system, it is important to ensure that features introduced in successive versions do not impair existing functionality - this is known as *regression testing*.
+## Feature Overview and Tips
+Also known as sprints or iterations, releases help you divide up your product or project into smaller blocks of time or goals. By themselves releases are simple, but as you link up more and more artifacts to them, the more powerful they become. They can be organized in a hierarchical structure. Releases give you powerful ways to track delivery, quality, risks, and more over time, allowing you to easily see if a new change has impaired existing functionality.
 
-In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.
+Spira uses releases and sprints differently. Sprints cannot have child releases/sprints, but releases can. Sprint metrics roll up to their parent release, while the metrics of major child releases do not roll up to their parent release.
 
-There are two types of release artifact in SpiraPlan® - product releases that are displayed with the release icon and represent major or minor versions of the system, and release Sprints that are displayed with the sprint icon. *Note: Sprints can be contained within a Release, but not the other way round.*
+=== "Tips and Tricks"
+    - Try to limit the total number of releases to under 10,000 per product. If you think your product needs a lot more releases than this, consider splitting the product into several products under a single program
+    - Link other artifacts to releases so you can see, track, and report on all work that happened in a release
+    - Once a release is completed, close the release (change its status to Closed) to not clutter up the list of open releases
+    - Track notional resources against sprints by setting the number of non-working days, so Spira can calculate the available planned effort
 
-The main differences between releases and sprints are as follows:
+=== "Key Artifact Links"
+    - Almost every artifact can have a release set on it, to denote when the work is planned, or what release it relates to
+    - **Builds**: results of CI/CD processes recorded against a release, giving you insights about the latest state of the product and its build steps 
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
 
-- Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.
-- When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).
+=== "Association Chart"
+    ``` mermaid
+    graph TD
+    RL{{"`**Release**`"}} --> GM(Program Milestone);
+    BL(Build) --> RL;
+    RQ(Requirement) --> RL;
+    DC(Document) --> RL
+    TC(Test Case) --> RL;
+    TX(Test Set) --> RL;
+    IN(Incident) --> RL;
+    TK(Task) --> RL;
+    RK(Risk) --> RL;
+    ```
 
 
 ## Release Traceability and Coverage
