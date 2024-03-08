@@ -9217,21 +9217,26 @@
 <li>Set the requirement's release to the one when the requirement was first released </li>
 <li>Use associations to link a requirement to other releases that are meaningful to you</li>
 <li>Add all test cases that evidence if a requirement is working as expected or not to the requirement's test coverage</li>
+<li>You can add the same test case to different requirements if you need</li>
+<li>Quickly create test coverage by creating a test case directly from the requirement (from the Test Coverage tab). If the requirement has use case steps, each one will become a test step in the test case</li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
 <li><strong>Releases</strong>: link a requirement directly to the release it was first delivered in. You can add associate it to other releases as well, as needed</li>
 <li><strong>Test cases</strong>: called "Requirement Test Coverage" this lets you track testing all aspects of a feature and see if all test cases have passed or not</li>
-<li><strong>Tasks</strong>: break down the work in a requirement into smaller chunks to help divide up and track everything</li>
+<li><strong>Tasks</strong>: break down the work in a requirement into smaller chunks to help divide up and track everything <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
+<li><strong>Capabilities</strong>: oversee requirements at the program level by linking them to program capabilities <span class="pill">SpiraPlan</span></li>
 </ul>
 </div>
 <div class="tabbed-block">
 <pre class="mermaid"><code>graph TD
 RQ{{"`**Requirement**`"}} --&gt; RL(Release);
+RQ --&gt; CP(Capabilities);
 TC(Test Cases) --&gt; RQ;
 TK(Tasks) --&gt; RQ;
 RQ -.-&gt; RL;
+TS(Test Step) -.-&gt; RQ;
 RQ &lt;-.-&gt; RQ2(Other requirements);
 RQ &lt;-.-&gt; IN(Incident);
 RQ &lt;-.-&gt; RK(Risk);</code></pre>
@@ -9642,8 +9647,21 @@ RQ &lt;-.-&gt; RK(Risk);</code></pre>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
-<p>You can associate other requirements, incidents, or risks to a requirement from this tab.</p>
-<p>The associated requirements and risks are those a user has decided are relevant to the current requirement and has created a direct link between them. In the case of incidents, the association can be either due to the creator of an incident directly linking the incident to the requirement, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.</p>
+<table>
+<thead>
+<tr>
+<th>Association Tab Of</th>
+<th>Available artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Requirements</strong></td>
+<td>Releases, Requirements, Incidents, Risks</td>
+</tr>
+</tbody>
+</table>
+<p>Note that incidents can be associated to requirements either due to the directly linking the incident, or as the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.</p>
 <p>Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
 <h3 id="use-case-diagrams">Use Case Diagrams<a class="headerlink" href="#use-case-diagrams" title="Permanent link">&para;</a></h3>
 <p>Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.</p>

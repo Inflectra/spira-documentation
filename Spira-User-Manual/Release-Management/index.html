@@ -655,10 +655,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#feature-overview-and-tips" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Feature Overview and Tips
       
     </span>
   </a>
@@ -8614,10 +8614,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#feature-overview-and-tips" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        Feature Overview and Tips
       
     </span>
   </a>
@@ -9250,15 +9250,66 @@
 
 
 <h1 id="release-management">Release Management<a class="headerlink" href="#release-management" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to use the Release Management features of SpiraPlan® to manage different versions of the system being tested in a particular product. This is an optional feature of the system, and you can manage the testing for a product successfully without tracking individual releases. Typically, when you develop a system, it is important to ensure that features introduced in successive versions do not impair existing functionality - this is known as <em>regression testing</em>.</p>
-<p>In such situations, you will want to be able to execute the same set of test scripts against multiple versions of the system and be able to track failures by version. A feature that works correctly in version 1.0 may fail in version 1.1, and the maintenance team may be testing the existing lifecycle of v1.0 in parallel with the development team testing v1.1. Therefore, by developing a master set of releases/versions in the Release Management module, you can have the different testing teams correctly assign their testing actions to the appropriate version.</p>
-<p>There are two types of release artifact in SpiraPlan® - product releases that are displayed with the release icon and represent major or minor versions of the system, and release Sprints that are displayed with the sprint icon. <em>Note: Sprints can be contained within a Release, but not the other way round.</em></p>
-<p>The main differences between releases and sprints are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact icon and name</th>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/artifact-rl.png" /> &nbsp; Release</td>
+<td>RL</td>
+<td>A way to group work together to deliver by a certain deadline</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/artifact-rl-sprint.png" /> &nbsp; Release (sprint)</td>
+<td>RL</td>
+<td>A mini release, popular in agile workflows</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/artifact-bl.png" /> &nbsp; Build</td>
+<td>BL</td>
+<td>Results of CI/CD processes recorded against a release</td>
+</tr>
+</tbody>
+</table>
+<h2 id="feature-overview-and-tips">Feature Overview and Tips<a class="headerlink" href="#feature-overview-and-tips" title="Permanent link">&para;</a></h2>
+<p>Also known as sprints or iterations, releases help you divide up your product or project into smaller blocks of time or goals. By themselves releases are simple, but as you link up more and more artifacts to them, the more powerful they become. They can be organized in a hierarchical structure. Releases give you powerful ways to track delivery, quality, risks, and more over time, allowing you to easily see if a new change has impaired existing functionality.</p>
+<p>Spira uses releases and sprints differently. Sprints cannot have child releases/sprints, but releases can. Sprint metrics roll up to their parent release, while the metrics of major child releases do not roll up to their parent release.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="tips-and-tricks" name="__tabbed_1" type="radio" /><input id="key-artifact-links" name="__tabbed_1" type="radio" /><input id="association-chart" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="tips-and-tricks">Tips and Tricks</label><label for="key-artifact-links">Key Artifact Links</label><label for="association-chart">Association Chart</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
-<li>Releases are independent versions of the system being tested and as such, you can map a requirement directly to a release, indicating the release of the system that the requirement will be fulfilled in.</li>
-<li>When you report on a release (e.g. on the product home or in one of the reports) any child sprints are automatically taken into account, and test runs and incidents that are related to the child sprints will get included in the release reports. Child releases on the other hand are not aggregated up into the parent release (in particular a major release never rolls up to a parent major release).</li>
+<li>Try to limit the total number of releases to under 10,000 per product. If you think your product needs a lot more releases than this, consider splitting the product into several products under a single program</li>
+<li>Link other artifacts to releases so you can see, track, and report on all work that happened in a release</li>
+<li>Once a release is completed, close the release (change its status to Closed) to not clutter up the list of open releases</li>
+<li>Track notional resources against sprints by setting the number of non-working days, so Spira can calculate the available planned effort</li>
 </ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Almost every artifact can have a release set on it, to denote when the work is planned, or what release it relates to</li>
+<li><strong>Builds</strong>: results of CI/CD processes recorded against a release, giving you insights about the latest state of the product and its build steps </li>
+<li><strong>Program Milestones</strong>: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>graph TD
+RL{{"`**Release**`"}} --&gt; GM(Program Milestone);
+BL(Build) --&gt; RL;
+RQ(Requirement) --&gt; RL;
+DC(Document) --&gt; RL
+TC(Test Case) --&gt; RL;
+TX(Test Set) --&gt; RL;
+IN(Incident) --&gt; RL;
+TK(Task) --&gt; RL;
+RK(Risk) --&gt; RL;</code></pre>
+</div>
+</div>
+</div>
 <h2 id="release-traceability-and-coverage">Release Traceability and Coverage<a class="headerlink" href="#release-traceability-and-coverage" title="Permanent link">&para;</a></h2>
 <p>From the release list page you can see a number of columns that show calculated data for each release, based off:</p>
 <ul>

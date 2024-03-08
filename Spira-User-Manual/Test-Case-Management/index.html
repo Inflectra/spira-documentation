@@ -791,6 +791,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#feature-overview-and-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Overview and Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-case-list" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8651,6 +8662,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#feature-overview-and-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Overview and Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-case-list" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9324,14 +9346,71 @@
 
 
 <h1 id="test-case-management">Test Case Management<a class="headerlink" href="#test-case-management" title="Permanent link">&para;</a></h1>
-<p>This section outlines how the use-case / test-case management features of SpiraPlan® can be used to develop the business use-cases for the system, which specify how the different pieces of functionality are expected to work in practice. In addition, these use/test-cases form the basis of the business specification of the system when associated with the underlying requirements matrix. Typically when starting a new product:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact icon and name</th>
+<th>Token</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/artifact-ts.png" /> &nbsp; Test Step</td>
+<td>TS</td>
+<td>A single scenario or step to validate during a test</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/artifact-ts-linked.png" /> &nbsp; Test Step (linked)</td>
+<td>TS</td>
+<td>A step in a test case that contains a whole other test case inside it</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/artifact-tc.png" /> &nbsp; Test Case (with test steps)</td>
+<td>TC</td>
+<td>Stores how to test a feature or process, and tracks the results of each test</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/artifact-tc-no-step.png" /> &nbsp; Test Case (without test steps)</td>
+<td>TC</td>
+<td>Like a normal test case, but usually used for automated tests where steps are not required</td>
+</tr>
+</tbody>
+</table>
+<h2 id="feature-overview-and-tips">Feature Overview and Tips<a class="headerlink" href="#feature-overview-and-tips" title="Permanent link">&para;</a></h2>
+<p>Test cases are the primary building block of Spira's powerful testing features. Test cases often contain test steps - one test step for each scenario to validate. To run a test case you execute it. This creates a test execution environment for testers with effectively a copy of the test case at that time. Once execution has finished, an immutable test run is created as a permanent record of that execution (whether it passed, failed, and so on). </p>
+<p>Use properties on test cases themselves like their type and component, and test case folders to help organize test cases. Extend the power of test cases further with parameters, linked test steps, and test sets.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="tips-and-tricks" name="__tabbed_1" type="radio" /><input id="key-artifact-links" name="__tabbed_1" type="radio" /><input id="association-chart" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="tips-and-tricks">Tips and Tricks</label><label for="key-artifact-links">Key Artifact Links</label><label for="association-chart">Association Chart</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
-<li>The requirements matrix is entered first</li>
-<li>Then the list of use-cases is developed to outline the key scenarios that need to supported to implement the requirement</li>
-<li>Then the use-cases are fleshed out into full test-cases by adding the detailed test-steps with the expected result and suggested sample-data</li>
-<li>Finally the tests are grouped into test-sets so that they can be assigned to users in batches for execution and tracking.</li>
+<li>Link test cases to the requirements that they test the functionality of, and make sure every requirement has at least one test case covering it</li>
+<li>Adding test cases to a release is the best way to track if a release has full test coverage </li>
+<li>Don’t clone your test cases for each release. Instead add the same test cases to each release. You can then track test case result over many releases</li>
+<li>For manual testing, scope a test case as the work that one tester can reasonably do in a single testing session</li>
+<li>Keep the number of total test steps in a test case to around 50 and not more than 100 </li>
+<li>For automated test cases, either don’t use test steps at all or have only one test step in the test case</li>
+<li>Test case parameters, especially with linked test steps can make your test cases more modular and powerful</li>
 </ul>
-<p>However when migrating existing products into SpiraPlan®, you may need to migrate the test-case list first, and then add the supporting requirements matrix afterwards.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Releases</strong>: each test case can be added to many releases - every release that the test case should be used to provide test coverage / validate</li>
+<li><strong>Requirements</strong>: each test case be added to many requirements, in cases where a test case helps validate multiple pieces of functionality </li>
+<li><strong>Program Milestones</strong>: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>graph TD
+TC{{"`**Test Case**`"}} --&gt; RL(Release);
+TC --&gt; RQ(Requirement);
+TC --&gt; TX(Test Set);
+TS(Test Step) --&gt; TC;
+TK(Task) -.-&gt; TC;
+RK(Risk) -.-&gt; TC;</code></pre>
+</div>
+</div>
+</div>
 <h2 id="test-case-list">Test Case List<a class="headerlink" href="#test-case-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Testing &gt; Test Cases link on the global navigation bar, you will initially be taken to the test case list screen illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_124.png" /></p>
@@ -9612,8 +9691,21 @@ gray.</p>
 <p>The "show/hide columns" drop-down list allows you to change the fields that are displayed in the test set list as columns. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. The displayed columns can be any standard field or custom property.</p>
 <p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
-<p>You can associate tasks and risks to a test case from this tab (which is only available to SpiraTeam and SpiraPlan users). Apart from creating links to an existing task from this tab, any tasks created during exploratory test execution will also be shown here.</p>
-<p>Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
+<table>
+<thead>
+<tr>
+<th>Association Tab Of</th>
+<th>Available artifacts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Test cases</strong></td>
+<td>Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span></td>
+</tr>
+</tbody>
+</table>
+<p>Any tasks created during exploratory test execution will automatically be be shown here. Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
 <h2 id="test-step-details">Test Step Details<a class="headerlink" href="#test-step-details" title="Permanent link">&para;</a></h2>
 <p>When you click on one of the hyperlinks next to a test step in the test step list (see above), you will be taken to the test step details screen illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_160.png" /></p>
