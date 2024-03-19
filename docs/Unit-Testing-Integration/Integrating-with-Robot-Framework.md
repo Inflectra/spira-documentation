@@ -1,6 +1,8 @@
 # Robot Framework Integration for Spira
 This repository contains the source code for the integration between Robot Framework and the Inflectra Spira platform. This plugin lets you execute Robot Framework test suites, and have the results automatically transmitted back to Spira. It can be run locally or as part of a CI/CD pipeline.
 
+!!! warning "The minimum Python version required for this integration is Python 3.11"
+
 ## About Robot Framework
 [Robot Framework](https://robotframework.org/) is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA).
 
