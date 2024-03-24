@@ -147,6 +147,8 @@ See | this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for s
 | CHANGESET_TYPE_NAME     |
 
 ## Builds
+Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted.
+
 | R_Builds        |
 | --------------- |
 | BUILD_ID        |
@@ -234,6 +236,7 @@ See | this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for s
 ## Comments
 | R_Comments         |
 | ------------------ |
+| ARTIFACT_TYPE_ID   |
 | ARTIFACT_ID        |
 | CREATOR_ID         |
 | COMMENT_TEXT       |
@@ -971,6 +974,7 @@ Retrieves data about cross product associations
 | R_RiskMitigations        |
 | ------------------------ |
 | RISK_ID                  |
+| RISK_MITIGATION_ID       |
 | POSITION                 |
 | DESCRIPTION              |
 | IS_DELETED               |
@@ -1183,6 +1187,7 @@ Retrieves data about cross product associations
 ## Test Case Incidents
 | R_TestCaseIncidents |
 | ------------------- |
+| TEST_CASE_ID        |
 | INCIDENT_ID         |
 | DETECTED_RELEASE_ID |
 | RESOLVED_RELEASE_ID |
@@ -1206,6 +1211,7 @@ Retrieves data about cross product associations
 ## Test Configuration Entries
 | R_TestConfigurationEntries       |
 | -------------------------------- |
+| TEST_CONFIGURATION_ID            |
 | TEST_CONFIGURATION_SET_ID        |
 | POSITION                         |
 | TEST_CONFIGURATION_SET_NAME      |
@@ -1232,6 +1238,8 @@ Retrieves data about cross product associations
 | PROJECT_GROUP_ID          |
 
 ## Test Runs
+Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
+
 | R_TestRuns             |
 | ---------------------- |
 | TEST_RUN_ID            |
@@ -1383,6 +1391,7 @@ Retrieves data about cross product associations
 ## Test Set Incidents
 | R_TestSetIncidents  |
 | ------------------- |
+| TEST_SET_ID         |
 | INCIDENT_ID         |
 | DETECTED_RELEASE_ID |
 | RESOLVED_RELEASE_ID |
