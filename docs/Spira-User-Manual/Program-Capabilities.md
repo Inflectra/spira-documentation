@@ -51,6 +51,7 @@ You can carry out a number of useful operations with the toolbar:
 
 Using the cut and paste buttons described above, you can move capabilities around the hierarchy. Alternatively, you can select the capabilities and drag and drop them into their new position.
 
+
 ## Capability Details
 When you click on a capability it will open its capability details page:
 
@@ -100,3 +101,61 @@ You can associate requirements from any product inside the current program to a 
 ![Capability requirement associations tab](img/program-capabilities-03.png)
 
 Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
+
+
+## Capability Board
+!!! info "Capability Board Overview"
+    
+    The SpiraPlan capability board is a streamlined and highly customizable "kanban" style board. It lets you visualize, manage, and plan capabilities across a program.
+
+    To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
+
+    - [board structure and configuration](Application-Wide.md/#board-structure)
+    - [special board views](Application-Wide.md/#special-board-views) 
+    - [working with board cards](Application-Wide.md/#board-cards) 
+
+    **Specific features of or differences in the capability board are discussed more fully below**.
+
+![capability board](img/capability-board-example.png)
+
+### Board configuration
+The capability board configuration button has a number of options to configure the board to your needs. 
+
+The [program milestone dropdown](#program-milestone-options) can be set to either "all program milestones" or a specific program milestone. The dropdown shows all open program milestones.The table below shows what options are available, when. Certain configuration are discussed in more detail in subsequent sections:
+
+| View options | All program milestones                                        | A specific program milestone                                  |
+| ------------ | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Columns**  | Priority<br> Program Milestone<br> Status<br> Type<br> Person | Priority<br> Program Milestone<br> Status<br> Type<br> Person |
+| **Rows**     | Priority<br> Program Milestone<br> Status<br> Type<br> Person | Priority<br> Program Milestone<br> Status<br> Type<br> Person |
+
+The following options support showing unassigned items:
+
+- priority (rows and columns)
+- program milestone (columns if showing all program milestones)
+- person (rows and columns)
+
+
+#### Program Milestone options
+The **release dropdown** shows:
+
+| Options                                    | Meaning                                                     | What cards will show                                                       |
+| ------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| All Program Milestones                               | All open[^open-program-milestones-definition] program milestones combined        | Those planned for any open program milestones                                         |
+| Any open[^open-program-milestones-definition] program milestones | Any single open[^open-program-milestones-definition] program milestones | Those planned for the selected release and its child sprints (if relevant) |
+
+![capability board release selector](img/capability-board-program-milestone-selector.png)
+
+[^open-program-milestones-definition]: any program milestone with a status marked as "open"
+
+
+#### Customizing cards
+![capability board card options](img/capability-board-card-options.png)
+
+In addition to the standard [board card options](Application-Wide.md/#board-card-options), you can toggle whether to show each of the following features:
+
+- **Progress**: a mini histogram chart of the capability's progress (hover to see a tooltip with detailed information)
+- **Requirement Indicators**: each requirement associated to the capability is shown as a little circle, shaded based on whether or not it has been completed (hover to see a tooltip with information about the requirement, and click to open details about that requirement)
+
+Below is an example of an capability card showing all available data
+
+![full capability card](img/capability-board-card-full.png)

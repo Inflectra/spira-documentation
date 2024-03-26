@@ -81,7 +81,7 @@ In addition to the standard [board card options](Application-Wide.md/#board-card
 - **Test coverage**: a mini histogram chart of the requirement's test coverage, shown in the test coverage mini section on the card (hover to see a tooltip with detailed information)
 - **Test case indicators**: each test case covering the requirement is shown as a little circle, shaded based on its current execution status, in the test coverage mini section on the card (hover to see a tooltip with information about the test case, and click to open details about that test case)
 - **Task progress**: a mini histogram chart of the requirement's task progress, shown in the task progress mini section on the card (hover to see a tooltip with detailed information)
-- **Task indicators**: each child task of the the requirement is shown as a little circle, shaded based on its current progress, in the task progress mini section on the card (hover to see a tooltip with information about the task, and click to open details about that test case)
+- **Task indicators**: each child task of the the requirement is shown as a little circle, shaded based on its current progress, in the task progress mini section on the card (hover to see a tooltip with information about the task, and click to open details about that task)
 
 Turning on either of the test options will show a test coverage mini section, with the number of test cases covering the requirement in parentheses after the title. In the same way, turning on either of the task options will show a task progress mini section, with the number of the requirement's child tasks in parentheses after the title.
 
@@ -196,6 +196,8 @@ For Kanban projects, in addition to the functionality described above, you have 
 
 
 ## Legacy Planning Board
+!!! warning "The legacy planning board will be removed from Spira in 7.15"
+
 To access the SpiraPlan **product** planning board, select a product and go to Artifacts \> Planning Board and the following screen will be displayed:
 
 ![](img/Planning_Board_406.png)

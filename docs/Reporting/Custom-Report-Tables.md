@@ -33,6 +33,16 @@
 | PROJECT_ID            |
 | ARTIFACT_STATUS_NAME  |
 
+## Artifact Tags
+| R_ArtifactTags     |
+| ------------------ |
+| ARTIFACT_ID        |
+| ARTIFACT_TYPE_ID   |
+| TAGS               |
+| PROJECT_ID         |
+| PROJECT_NAME       |
+| ARTIFACT_TYPE_NAME |
+
 ## Artifact Types
 | R_ArtifactTypes  |
 | ---------------- |
@@ -514,6 +524,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | RESOLVED_BUILD_ID               |
 | DETECTED_BUILD_NAME             |
 | RESOLVED_BUILD_NAME             |
+| TAGS                            |
 
 ## Incident Priorities
 | R_IncidentPriorities  |
@@ -719,6 +730,13 @@ Retrieves data about cross product associations
 | INCIDENT_EFFORT           |
 | TASK_EFFORT               |
 
+## Project (Product) Tags
+| R_ProjectTags |
+| ------------- |
+| PROJECT_ID    |
+| TAG           |
+| PROJECT_NAME  |
+
 ## Project (Product) Templates
 | R_ProjectTemplates  |
 | ------------------- |
@@ -781,6 +799,7 @@ Retrieves data about cross product associations
 | PLANNED_POINTS           |
 | REQUIREMENT_POINTS       |
 | REQUIREMENT_COUNT        |
+| TAGS                     |
 
 ## Release Test Case Mapping
 | R_ReleaseTestCases     |
@@ -851,6 +870,7 @@ Retrieves data about cross product associations
 | START_DATE               |
 | END_DATE                 |
 | PERCENT_COMPLETE         |
+| TAGS                     |
 
 ## Requirement Incidents
 | R_RequirementIncidents |
@@ -957,6 +977,7 @@ Retrieves data about cross product associations
 | PROJECT_NAME             |
 | CUST_01...               |
 | CUST_99                  |
+| TAGS                     |
 
 ## Risk Impacts
 | R_RiskImpacts         |
@@ -1099,6 +1120,7 @@ Retrieves data about cross product associations
 | COMPONENT_ID           |
 | COMPONENT_NAME         |
 | RISK_ID                |
+| TAGS                   |
 
 ## Task Priorities
 | R_TaskPriorities      |
@@ -1162,6 +1184,7 @@ Retrieves data about cross product associations
 | TEST_CASE_TYPE_NAME      |
 | COMPONENT_IDS            |
 | IS_SUSPECT               |
+| TAGS                     |
 
 ## Test Case Folders
 | R_TestCaseFolders          |
@@ -1284,6 +1307,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | PROJECT_ID             |
 | CHANGESET_ID           |
 | TEST_CONFIGURATION_ID  |
+| TAGS                   |
 
 ## Test Run Incidents
 | R_TestRunIncidents  |
@@ -1365,6 +1389,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | DYNAMIC_QUERY               |
 | IS_AUTO_SCHEDULED           |
 | TEST_CONFIGURATION_SET_ID   |
+| TAGS                        |
 
 ## Test Set Folders
 | R_TestSetFolders          |

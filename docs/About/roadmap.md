@@ -12,18 +12,12 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v7.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q1 2024
-- Track changes to product membership and product role changes
-- Add a new program level capability board <span class="pill">SpiraPlan</span>
-- Streamline the first time user experience of the "My Page"
-- Roll out tag support to all relevant product artifacts
-
 ## Q2 2024
-- Enhance the Spira timecard to record the date and time of activities, and provide administrators access to historical time tracking entries 
+- Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
 - Extend Spira’s powerful test set features even further, so users can add test cases from other products into a test set.
-- Provide audit tracking of changes made by administrators to product roles, product settings, and components.
 - Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
-- Add a new Azure CoPilot SpiraApp
+- Provide audit tracking of changes made by administrators to product roles, product settings, and components.
+- Enhance the Spira timecard to record the date and time of activities, and provide administrators access to historical time tracking entries 
 
 ## Rest of 2024
 Update the user experience for navigating the application.
@@ -32,7 +26,6 @@ New product team features so that members can receive notifications and let user
 
 New program level planning board. <span class="pill">SpiraPlan</span>
 
-Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
 
 Provide audit tracking of changes made by administrators to users and workspaces.
 

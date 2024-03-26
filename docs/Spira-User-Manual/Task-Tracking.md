@@ -153,6 +153,7 @@ The **release dropdown** shows:
 
 ![planning board release selector - release backlog](img/task-board-release-selector.png)
 
+[^open-release-definition]: any release with a status of planned, in progress, or completed
 
 #### Customizing cards
 ![planning board card options](img/task-board-card-options.png)

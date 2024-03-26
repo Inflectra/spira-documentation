@@ -1,5 +1,83 @@
 # Release Notes for Spira v7
 
+## Version 7.13 (April 2024)
+!!! info "Summary"
+    - Easily focus on what is important, with a new default view that declutters the [My Page](../Spira-User-Manual/User-Product-Management.md/#my-page) by hiding all empty widgets. Less really is more.
+    - This release introduces a brand new program level [capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board) to track and manage capabilities in powerful new ways, including tracking them against program milestones <span class="pill">SpiraPlan</span>.
+    - As part of our efforts to enhance the auditability and traceability of administrator activities, every change to product membership (adding a user, removing them, changing roles) is now tracked in both product history and system history.
+    - Tags are now available for test runs, test cases, test sets, and risks, giving you even more flexibility. Additionally, tag changes can be reverted, and you can build out custom reports with tags.
+    - Due to popular demand, we are expanding our GenAI integrations, with a new [Azure OpenAI SpiraApp](../SpiraApps/Azure-OpenAI.md) to auto-generate test cases, scenarios, or tasks from a requirement
+
+!!! success "New Features"
+    * **Tags**
+
+        - As a test set user, I can add and remove tags to test sets easily from the list and details pages, to more easily manage test sets [RQ:4768]
+        - As a test run user, I can add and remove tags to test runs easily from the list, details, and test execution pages, to more easily manage test runs [RQ:4766]
+        - As a risk user, I can add and remove tags to risks easily from the list and details pages, to more easily manage risks [RQ:4767]
+        - As an test case user, I can add and remove tags to test cases easily from the list and details pages, to more easily manage test cases [RQ:4765]
+    
+    * **Administration Auditing**
+
+        - As a system admin, I can see a read only history of product membership and role changes in the system history, so I can quickly audit product membership changes [RQ:4734]
+        - As a product admin, I can see a read only history of product membership and role changes in product history, so I can quickly audit product membership changes [RQ:4706]
+
+    * **As a capability user, I can view and manage capabilities on a [dedicated capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board)**
+
+        - As a capability user, I can organize the capability board easily, so I can effectively manage capabilities [RQ:4763]
+        - As a capability user, I can tailor what information I see on capability board cards, to help me quickly manage capabilities [RQ:4758]
+        - As a capability user, I can view detailed information about each card easily on the capability board, to help me review capabilities quickly [RQ:4759]
+        - As a capability user, I can move cards around, including within each cell, to update their details and position, to help me manage capabilities [RQ:4762]
+        - As a capability user, I can edit information about each card from the capability board, to update information without leaving the board [RQ:4760]
+        - As a capability user, I can add new capabilities to any cell on the capability board, to help me quickly add new cards [RQ:4761]
+
+    * **My Page During Trials**
+
+        - As a first time user during a trial, I am guided in how to use the application on a new [My Page](../Spira-User-Manual/User-Product-Management.md/#my-page) widget, so that I can get more familiar with the application [RQ:4770]
+
+??? bug "Bug fixes and enhancements"
+    * **Tags**
+        
+        - Add a tag field to all relevant custom report tables so that report writers can easily show tag information in their reports [IN:9174]
+        - Add tag custom report tables so that writers can create reports with tags for [artifacts](../Reporting/Custom-Report-Tables.md/#artifact-tags) and [products](../Reporting/Custom-Report-Tables.md/#project-product-tags) [IN:9183]
+        - Add tag fields to the artifact popups on the [planning board](../Spira-User-Manual/Planning-Board.md), [requirement board](../Spira-User-Manual/Requirements-Management.md/#requirements-agile-board), [task board](../Spira-User-Manual/Task-Tracking.md/#task-board), and [incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board) [IN:9176]
+        - Add tags to [test execution incident creation](../Spira-User-Manual/Test-Execution.md/#incidents) tabs [IN:9274]
+        - Fix not being able to create new tags on the [requirement hierarchical list page](../Spira-User-Manual/Requirements-Management.md/#requirements-list) and the [document list page](../Spira-User-Manual/Document-Management.md/#document-list) when editing rows [IN:9339]
+        - Fix product history to record changes to tag fields across all artifacts [IN:8957]
+        - Fix the tag field to not be visible on the template administration [notifications events page](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) for documents [IN:8986]
+
+    * **Administration and History**
+
+        - Add the test case "Name" field to the list of fields that can be managed for a [workflow step](../Spira-Administration-Guide/Template-Test-Cases.md/#edit-workflow-step) [IN:9136]
+        - Allow users to filter on the product [activity list](../Spira-User-Manual/Product-Homepage.md/#activity-list-page) by 'User' to display product membership history entries [IN:9212]
+        - Fix the [activity list](../Spira-User-Manual/Product-Homepage.md/#activity-list-page)'s artifact type dropdown to include product, and its change type dropdown to include association types [IN:6449]
+        - Fix the [activity list](../Spira-User-Manual/Product-Homepage.md/#activity-list-page)'s change type dropdown so that it is fully localized [IN:9261]
+        - Hide signature hash fields on the [product admin history details page](../Spira-Administration-Guide/Product-General-Settings.md/#history-details-screen) when displaying a history record not about artifacts [IN:9156]
+        - Remove the item "placeholder" from the artifact type dropdown on the [product history list page](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes) [IN:9080]
+
+    * **Performance**
+
+        - Improve general application performance by upgrading the internal Entity Framework library from v4 to v5 [IN:9245]
+        - Improve loading the [test case details page](../Spira-User-Manual/Test-Case-Management.md/#test-case-details) in products with a very large number of document folders [IN:9206]
+        - Improve performance when using test cases and [test execution](../Spira-User-Manual/Test-Execution.md) by implementing additional database optimizations [IN:9106]
+
+    * **Other Enhancements**
+
+        - Add a banner on the [legacy Planning Board](../Spira-User-Manual/Planning-Board.md/#legacy-planning-board) to notify users that it will be deprecated and removed in 7.15 [IN:9215]
+        - Add a new API call to let users update their saved filters [IN:9197]
+        - Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]
+        - Add department and any other user profile fields to the user object retrieved when getting users via the API, to make those API calls more useful [IN:9285]
+        - Dynamically hide widgets on the [My Page](../Spira-User-Manual/User-Product-Management.md/#my-page) if they do not have any data to show, to give a less cluttered view of the My Page  [IN:9161]
+        - Let users leverage the power of [Azure OpenAI](../SpiraApps/Azure-OpenAI.md) in Spira with a new SpiraApp that auto-generates test cases, scenarios, or tasks from a requirement [IN:9297]
+
+    * **Bug Fixes**
+
+        - Fix tooltips for builds not correctly loading for non-admins (introduced in 7.12) [IN:9301]
+        - Fix tooltips for pull requests not correctly loading for non-admins (introduced in 7.12) [IN:9223]
+        - Fix tooltips for risk mitigations not correctly loading for non-admins (introduced in 7.12) [IN:9222]
+        - Fix tooltips for test configurations not correctly loading for non-admins (introduced in 7.12) [IN:9224]
+        - When a user has an OAuth provider configured but logs in with a username and password, fix using the "enter" key to log in the user (and not attempt to login with OAuth) [IN:9167]
+
+
 ## Version 7.12 (February 2024)
 !!! info "Summary"
     This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>

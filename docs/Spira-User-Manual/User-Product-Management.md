@@ -54,23 +54,26 @@ To login using your account with this provider:
 Once you have a Spira user that authenticates with the provider, to log in to Spira click the provider button on the login page.
 
 
-
 ## My Page
-
-Once you have successfully logged in, you will initially be taken to your personalized home page called "My Page". Please note, that the very first time you log in you will be asked if you want to take a quick orientation tour of the application (which will look similar to the screenshot below).
+When you log in, you will go to your personalized "My Page". The very first time you log in you will also be asked if you want to take a quick orientation tour of the application (which will look similar to the screenshot below).
 
 ![](img/UserProduct_Management_38.png)
 
-Note that once you have successfully logged-in and chosen a product, SpiraPlan® remembers this selection, and on subsequent log-ins will automatically select that product, and highlight it for you in the ["My Products" list](#my-products).
+!!! tip "Onboarding help during a trial"
+    If you are trialing Spira you will see a special widget at the top of the My Page. This shows you a list of tasks to complete that will help you on your journey to learning about Spira and how to use it effectively. 
 
-Your homepage contains all the information relevant to you---consolidated onto a single page for you to take immediate action. By default the page lists the information for all products that you are a member of. However, you can choose to filter by the current product, to get a more focused list.
+Initially you will not have a workspace selected, but whenever you pick one, the system remembers it for you and automatically selects it for you each time you log in.
 
-Next to some of the widgets is an RSS icon (![](img/UserProduct_Management_39.png)
+Your My Page may look empty at first. It automatically hides empty widgets so that only information relevant to you is shown. As you use Spira more, and are assigned more artifacts (incidents, user stories, tests), you will see more widgets with information about these artifacts. 
 
-), this allows you to subscribe to the information as a Really Simple Syndication (RSS) newsfeed. This can be useful if you want to be notified about recently assigned items without having to setup email notifications or being logged into SpiraPlan continuously. If you don't see an RSS icon next to the widgets on your My Page it means that you have not enabled RSS newsfeeds in your profile. For more details on configuring your RSS preferences, please refer to [My Profile](#my-profile).
+By default the My Page:
 
-Initially the page is loaded in 'view mode' which means that the various
-'widgets' on the page are displayed with minimum visual clutter (no toolbars or control icons) that makes it easy to scan the items on the page and see what work has been assigned. To switch the page to 'edit mode', click on the button with the cog icon (![](img/UserProduct_Management_40.png)) on the right:
+- Shows information from all products you are a member of. You can choose to only see data for the current product, to get a more focused list using the "All Products" / "Current Product" toggle buttons at the top right of the page
+- Automatically hides empty widgets to make the page cleaner and easier to use. You can choose to always show all configured widgets by unchecking the checkbox next to "Automatically hide empty widgets" in the top right.
+
+Next to some of the widgets is an RSS icon (![](img/UserProduct_Management_39.png)), this allows you to subscribe to the information as a Really Simple Syndication (RSS) newsfeed. This can be useful if you want to be notified about recently assigned items without having to setup email notifications or being logged into SpiraPlan continuously. If you don't see an RSS icon next to the widgets on your My Page it means that you have not enabled RSS newsfeeds in your profile. For more details on configuring your RSS preferences, please refer to [My Profile](#my-profile).
+
+Initially the page is loaded in 'view mode' which means that the various 'widgets' on the page are displayed with minimum visual clutter (no toolbars or control icons) that makes it easy to scan the items on the page and see what work has been assigned. To switch the page to 'edit mode', click on the button with the cog icon (![](img/UserProduct_Management_40.png)) on the right:
 ![](img/UserProduct_Management_41.png)
 
 In this mode, each of the 'widgets' displayed on the page can be minimized by clicking on the arrow icon (![](img/UserProduct_Management_42.png)) in the top-left of the window, or closed by clicking-on the cross icon (![](img/UserProduct_Management_43.png)) in the top-right of the window. This allows you to customize your page to reflect the types of information that are relevant. If you have closed a widget that you subsequently decide you want to reopen, you can add them back to the page display by clicking the "Add Items" button at the top of the page. In addition, the various widgets have a "settings" icon (![](img/UserProduct_Management_40.png)) that allows you to customize how that widget appears. The settings are specific to each widget and in general allow you to specify how many rows of data are displayed and what columns are displayed.

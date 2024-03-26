@@ -88,6 +88,7 @@ This section shows a list of the most recent changes made by any product member 
 
 You can configure how many recent changes to display.
 
+### Activity List Page
 Clicking the "View All" button at the top of this section will open the "Activity List" page. This page shows every change ever made in the product in a single, paginated list for artifacts that the current user is allowed to view (based on their product role).The list can be sorted on or filtered by any field. The list shows the following columns:
 
 - Change Date
