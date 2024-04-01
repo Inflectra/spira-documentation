@@ -391,6 +391,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://spiradoc.inflectra.com/Migration-and-Integration/Spira-Migration-Tool/</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://spiradoc.inflectra.com/RemoteLaunch-User-Guide/BadBoy/</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
