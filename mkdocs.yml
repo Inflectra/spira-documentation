@@ -306,6 +306,7 @@ nav:
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
     - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
+    - Spira Migration Tool: Migration-and-Integration\Spira-Migration-Tool.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
     - Excel (Legacy): Migration-and-Integration\Importing-from-Microsoft-Excel.md
     - Microsoft Word (Legacy): Migration-and-Integration\Importing-from-Microsoft-Word.md
