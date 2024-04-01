@@ -1,6 +1,9 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## April 2024
+- [Spira Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md): New desktop tool (Mac OS and Windows) to backup and migration Spira product templates with ease. 
+
 ## January 2024
 - [Robot Framework Integration](../Unit-Testing-Integration/Integrating-with-Robot-Framework.md): New integration with Robot Framework released [RQ:4753].
 - [xUnit Test Integration](../Unit-Testing-Integration/Integrating-with-xUnit-Python.md): New Python parser for xUnit compatible testing frameworks released.
