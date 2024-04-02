@@ -8147,45 +8147,45 @@
 
 
 <h1 id="spira-template-backup-and-migration-tool">Spira Template Backup and Migration Tool<a class="headerlink" href="#spira-template-backup-and-migration-tool" title="Permanent link">&para;</a></h1>
-<p>This application lets you save a copy of a Spira product template to a .templ file on your local computer. It lets you migrate that everything about the template to any Spira instance. </p>
+<p>This application lets you save a copy of a Spira product template to a .templ file on your local computer. It also lets you migrate everything about the template to any Spira instance. </p>
 <div class="admonition info">
 <p class="admonition-title">Example uses</p>
-<p>Being able to store, share, and migrate Spira product templates gives you lots of powerful workflows For example:</p>
+<p>Being able to store, share, and migrate Spira product templates gives you lots of powerful workflows. For example:</p>
 <ul>
 <li>the backup file can be used to audit a live product template in Spira to see if it has changed</li>
 <li>you can restore a backup to your main Spira instance to clone the template quickly or to help you revert to a template before a serious of now unwanted changes</li>
-<li>share templates with others that serve a specific need such as for a certain industry, or process</li>
+<li>share templates with others that serve a specific need such as for a certain industry or process</li>
 </ul>
 </div>
-<p>The application runs on either Windows or Mac OS and is available to <a href="https://www.inflectra.com/SpiraTest/Downloads.aspx">download</a> - to install follow the instructions in the application on your platform.</p>
+<p>The application runs on either Windows or Mac OS and is available to <a href="https://www.inflectra.com/SpiraTest/Downloads.aspx">download</a>. To install it follow the instructions in the application installer on your platform.</p>
 <div class="admonition warning">
 <p class="admonition-title">This app is compatible with Spira 7.11 and above</p>
 </div>
 <h2 id="what-data-is-saved">What data is saved<a class="headerlink" href="#what-data-is-saved" title="Permanent link">&para;</a></h2>
 <p>The application creates a backup file that contains the following product template and related data:</p>
 <ul>
-<li>Requirement importances, statuses<sup id="fnref:statuses"><a class="footnote-ref" href="#fn:statuses">1</a></sup>, types, custom properties, workflow steps, and workflow transitions    </li>
-<li>Release statuses, custom properties, workflow steps, and workflow transitions     </li>
-<li>Document statuses, types, custom properties, workflow steps, and workflow transitions</li>
-<li>Test Case priorities, types, custom properties, workflow steps, and workflow transitions</li>
-<li>Incident priorities, statuses<sup id="fnref2:statuses"><a class="footnote-ref" href="#fn:statuses">1</a></sup>, severities, types, custom properties, workflow steps, and workflow transitions</li>
-<li>Task priorities types, custom properties, workflow steps, and workflow transitions</li>
-<li>Risk impacts, probabilities, statuses, types, custom properties, workflow steps, and workflow transitions</li>
-<li>Test Step custom properties</li>
-<li>Test Set custom properties</li>
-<li>Test Run custom properties</li>
-<li>Automation Host custom properties    </li>
-<li>Custom lists and their values</li>
-<li>User product poles</li>
+<li><strong>Requirement</strong> importances, statuses<sup id="fnref:statuses"><a class="footnote-ref" href="#fn:statuses">1</a></sup>, types, custom properties, workflow steps, and workflow transitions    </li>
+<li><strong>Release</strong> statuses, custom properties, workflow steps, and workflow transitions     </li>
+<li><strong>Document</strong> statuses, types, custom properties, workflow steps, and workflow transitions</li>
+<li><strong>Test Case</strong> priorities, types, custom properties, workflow steps, and workflow transitions</li>
+<li><strong>Incident</strong> priorities, statuses<sup id="fnref2:statuses"><a class="footnote-ref" href="#fn:statuses">1</a></sup>, severities, types, custom properties, workflow steps, and workflow transitions</li>
+<li><strong>Task</strong> priorities types, custom properties, workflow steps, and workflow transitions</li>
+<li><strong>Risk</strong> impacts, probabilities, statuses, types, custom properties, workflow steps, and workflow transitions</li>
+<li><strong>Test Step</strong> custom properties</li>
+<li><strong>Test Set</strong> custom properties</li>
+<li><strong>Test Run</strong> custom properties</li>
+<li><strong>Automation Host</strong> custom properties    </li>
+<li><strong>Custom lists</strong> and their values</li>
+<li><strong>User</strong> product poles</li>
 </ul>
 <h2 id="welcome-screen">Welcome screen<a class="headerlink" href="#welcome-screen" title="Permanent link">&para;</a></h2>
 <p>When you open the application you see the main welcome screen. </p>
 <p><img alt="welcome screen" src="../img/Project_Backup_and_Migration_Electron_01.png" /></p>
 <p>From here you have two options (note that you must be a system administrator to proceed):</p>
 <ul>
-<li><strong>Start New Backup</strong>: starts a new process to save a Spira product template to a new template file</li>
+<li><strong>Start New Backup</strong>: starts a new process to save a Spira product template to a template file</li>
 <li>
-<p><strong>Open Backup File</strong>: continues a previous process based on the state of the template file selected. The application will automatically decide what is available to you:</p>
+<p><strong>Open Backup File</strong>: continues a previous process based on the state of the template file selected. The application will automatically decide what is available to you out of the following options:</p>
 <ul>
 <li>resume an existing backup</li>
 <li>start a new migration</li>
@@ -8193,27 +8193,27 @@
 </ul>
 </li>
 </ul>
-<p>These options are discussed in more detail below</p>
+<p>These options are discussed in more detail below.</p>
 <h2 id="template-backup">Template backup<a class="headerlink" href="#template-backup" title="Permanent link">&para;</a></h2>
 <p>To start a new backup of a product template to a local file:</p>
 <ul>
-<li>select 'Start New Backup' from the welcome screen.</li>
+<li>select "Start New Backup" from the welcome screen.</li>
 <li>on the next screen enter valid administrator credentials for the Spira instance you want to backup a template from</li>
-<li>then select the product template to backup and a place to save it on your computer (note that the extension for the file is .templ for template)</li>
+<li>then select the product template to backup and a place to save it on your computer (the file extension will be .templ)</li>
 </ul>
 <p><img alt="product template selection for backup" src="../img/Project_Backup_and_Migration_Electron_02.png" /></p>
 <ul>
 <li>confirm that all the details selected are correct</li>
 <li>start the backup by clicking "Start Backup"</li>
 </ul>
-<p>During the backup process, you will see the overall progress and details about what actions have been completed. Note that just in case there are any issues or errors, the application saves a log alongside the backup file. If you click "Stop" during the backup, the process will pause, so you can <a href="#continue-an-operation">resume</a> it later (note that you can only migrate after the backup has 100% completed).</p>
+<p>During the backup process, you will see the progress and details about what actions have been completed. If you click "Stop" during the backup, the process will pause, so you can <a href="#continue-an-operation">resume</a> it later (you can only migrate after the backup has 100% completed). Just in case there are any issues or errors, the application saves a log alongside the backup file.</p>
 <p><img alt="backup progress screen" src="../img/Project_Backup_and_Migration_Electron_03.png" /></p>
 <p>Once the backup has finished, you have two options:</p>
 <ul>
 <li>"Return to Start" to go back to the welcome screen. Choose this option to either make another backup, or to then quit the application</li>
-<li>"Migrate" to immediately start the process to migrate the template to a different Spira instance</li>
+<li>"Migrate" to immediately start the process of migrating the template to a different Spira instance</li>
 </ul>
-<p>You can also close the application safely at this time if you wish.</p>
+<p>You can also close the application safely at this time, if you wish.</p>
 <p><img alt="backup complete" src="../img/Project_Backup_and_Migration_Electron_04.png" /></p>
 <h2 id="template-migration">Template Migration<a class="headerlink" href="#template-migration" title="Permanent link">&para;</a></h2>
 <p>Once you have completed a product template backup, you can migrate the product template to another Spira instance. To do so:</p>
@@ -8228,13 +8228,13 @@
 <li>confirm that all the details selected are correct</li>
 <li>start the migration by clicking "Start Migration"</li>
 </ul>
-<p>During the migration process, you will see the overall progress and details about what actions have been completed. Note that just in case there are any issues or errors, the application saves a log alongside the backup file. If you click "Stop" during the migration, the process will pause, so you can <a href="#continue-an-operation">resume</a> it later (note that the new product template will not be usable in Spira until the migration has 100% completed).</p>
+<p>During the migration process, you will see the progress and details about what actions have been completed. If you click "Stop" during the migration, the process will pause, so you can <a href="#continue-an-operation">resume</a> it later (the new product template will not be usable in Spira until the migration has 100% completed). Just in case there are any issues or errors, the application saves a log alongside the backup file.</p>
 <div class="admonition info">
 <p class="admonition-title">How to migrate a product template multiple times</p>
-<p>The *.templ file stores information about the progress to backup and migrate the product template. Once a migration has successfully completed, the file cannot currently be migrated again. If you may want to migrate the same product template more than once, we recommend that you make copies of the file before you start any migration.</p>
+<p>The *.templ file stores information about the progress to backup and migrate the product template. Once a migration has successfully completed, the file cannot be migrated again. If you may want to migrate the same product template more than once, we recommend that you make copies of the file before you start any migration.</p>
 </div>
 <h2 id="continue-an-operation">Continue an operation<a class="headerlink" href="#continue-an-operation" title="Permanent link">&para;</a></h2>
-<p>If for any reason your backup or migration session was interrupted before completion, you can continue where it left off without losing any data. To do this:</p>
+<p>If for any reason your backup or migration session was interrupted before completion, you can continue where it left off without losing any data. To do so:</p>
 <ul>
 <li>click "Open Backup File" from the welcome screen. </li>
 <li>select the relevant *.templ file</li>
@@ -8246,7 +8246,7 @@
 <hr />
 <ol>
 <li id="fn:statuses">
-<p>Due to an API limitation, currently, the Requirement Status properties Position and Show on Boards and the Incident Status properties Position and Default are not saved nor migrated.&#160;<a class="footnote-backref" href="#fnref:statuses" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:statuses" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Due to an API limitation the current properties are not saved or migrated: requirement status position and "show on boards" fields; and incident status position and default fields.&#160;<a class="footnote-backref" href="#fnref:statuses" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:statuses" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
