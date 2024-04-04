@@ -62,7 +62,7 @@
 
     * **Other Enhancements**
 
-        - Add a banner on the [legacy Planning Board](../Spira-User-Manual/Planning-Board.md/#legacy-planning-board) to notify users that it will be deprecated and removed in 7.15 [IN:9215]
+        - Add a banner on the [legacy Planning Board](../Spira-User-Manual/Planning-Board.md/#legacy-planning-board) to notify users that it will be deprecated and removed in 8.1 [IN:9215]
         - Add a new API call to let users update their saved filters [IN:9197]
         - Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]
         - Add department and any other user profile fields to the user object retrieved when getting users via the API, to make those API calls more useful [IN:9285]

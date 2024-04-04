@@ -1,18 +1,40 @@
 # Task Tracking
-Task Tracking in SpiraPlan® and SpiraPlan® lets you view and manage tasks assigned to each person in the product. Each task can be assigned to an individual user and linked to a particular release or sprint. Product managers can track the the progress of tasks to see if the product is on schedule.
+| Artifact icon and name                              | Token | Description                                                                                                                                            |
+| --------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
+| ![](img/artifact-pr.png) &nbsp; Task (pull request) | PR    | Review pull requests in Spira <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                  |
 
-Tasks can be organized into different folders and categorized by different types (development, testing, infrastructure, etc.), each of which can have its own *workflow* which defines the way the task can change status during the product lifecycle.
+## Feature Overview and Tips
+A task is a single piece of work. Tasks are flexible and can be used for lots of different activities. If you link tasks to a specific release or sprint, you can easily see the progress of all tasks in that release - this makes tasks a very powerful part of release management. You can break down [requirements](Requirements-Management.md/#tasks) or user stories into smaller chunks of work using tasks, to more easily divide up and manage the work.
 
-Tasks can be used in a number of different parts of the system to manage and track work:
+Tasks have time tracking features so a user can record the expected time required to complete a task, as well as the actual time spent. 
 
-- standalone tasks: tasks not specifically linked to any other work.
-- [tasks on a requirement](Requirements-Management.md/#tasks): you can create tasks against any requirement to break down the work into smaller chunks and potentially divide up amongst the team. You may have some tasks on a requirement for developers, others for business analysts, others for QA, and others for marketing, and so on.
-- [tasks resulting from testing](Test-Execution.md/#tasks): if enabled for a product, testers can create tasks for developers during testing. This is a lighter touch way than incidents to communicate with others about your findings, or to ask questions.
-- [pull request tasks](Pull-Requests.md): pull requests are special types of tasks that let a developer flag that their feature branch is ready for merging into the main development branch.
+=== "Tips and Tricks"
+    - Adding tasks to a requirement helps you break down the work into smaller chunks and divide things up amongst the team
+    - The easiest way to link a task to a requirement is from the requirement itself (from the task tab), but you can link an existing task to a requirement from the task details page
+    - If enabled for a product, testers can create tasks for developers to work on, for issues they find during testing
+    - You can make tasks that are not linked to any other work if you want to
+    - [Pull requests](Pull-Requests.md) are a special type of task that help you track and manage requests to merge one branch into another, from within Spira
+    - A task's "component" is not editable. This is because it is derived from its associated requirement.
+    - Task statuses are not configurable by administrators
 
+=== "Key Artifact Links"
+    - **Releases**: a task can be added to a single release and the tasks linked to a release are used to determine the release's task progress
+    - **[Requirements](Requirements-Management.md/#tasks)**: break down a requirement into smaller task and use the tasks to track a requirement's task progress
+    - **[Test Cases](Test-Execution.md/#tasks)**: you can create tasks during test execution and track their progress against the test case (just like you can with test cases and incidents)
+
+=== "Association Chart"
+    ``` mermaid
+    graph TD
+    TK{{"`**Task**`"}} --> RL(Release);
+    TK --> RQ(Requirement);
+    TK --> IN(Incident);
+    TK --> TK;
+    TK -.-> TC(Test Case);
+    (Source code commits) -.-> TK;
+    ```
 
 ## Task List
-
 When you click on the Tracking \> Tasks global navigation link, you will initially be taken to the tasks list screen illustrated below:
 
 ![](img/Task_Tracking_282.png)
@@ -153,7 +175,6 @@ The **release dropdown** shows:
 
 ![planning board release selector - release backlog](img/task-board-release-selector.png)
 
-[^open-release-definition]: any release with a status of planned, in progress, or completed
 
 #### Customizing cards
 ![planning board card options](img/task-board-card-options.png)
