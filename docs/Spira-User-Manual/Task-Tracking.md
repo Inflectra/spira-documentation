@@ -2,7 +2,7 @@
 | Artifact icon and name                              | Token | Description                                                                                                                                            |
 | --------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
-| ![](img/artifact-pr.png) &nbsp; Task (pull request) | PR    | Review pull requests in Spira <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                  |
+| ![](img/artifact-pr.png) &nbsp; Task (pull request) | TK    | Review pull requests in Spira <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                  |
 
 ## Feature Overview and Tips
 A task is a single piece of work. Tasks are flexible and can be used for lots of different activities. If you link tasks to a specific release or sprint, you can easily see the progress of all tasks in that release - this makes tasks a very powerful part of release management. You can break down [requirements](Requirements-Management.md/#tasks) or user stories into smaller chunks of work using tasks, to more easily divide up and manage the work.
