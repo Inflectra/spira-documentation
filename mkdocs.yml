@@ -179,6 +179,8 @@ nav:
     - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
+  - Developers:
+    - Spira API Tutorial: Developers\API-Tutorial.md
   - ChatGPT: SpiraApps\ChatGPT.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
