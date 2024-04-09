@@ -179,8 +179,6 @@ nav:
     - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
-  - Developers:
-    - Spira API Tutorial: Developers\API-Tutorial.md
   - ChatGPT: SpiraApps\ChatGPT.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
@@ -330,6 +328,12 @@ nav:
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
+- Developers:
+    - API Tutorial: Developers\API-Tutorial.md
+    - SpiraApp Development:
+      - Overview: Developers\SpiraApps-Overview.md
+      - Reference: Developers\SpiraApps-Reference.md
+      - Tutorial: Developers\SpiraApps-Tutorial.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
   - Version 7: About/release-notes-v7.md
