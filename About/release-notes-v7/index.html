@@ -3180,6 +3180,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/Azure-OpenAI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure OpenAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/ChatGPT/" class="md-nav__link">
         
   
@@ -7706,6 +7733,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-713-april-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.13 (April 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-712-february-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8183,6 +8221,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-713-april-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 7.13 (April 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-712-february-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8365,6 +8414,112 @@
 
 
 <h1 id="release-notes-for-spira-v7">Release Notes for Spira v7<a class="headerlink" href="#release-notes-for-spira-v7" title="Permanent link">&para;</a></h1>
+<h2 id="version-713-april-2024">Version 7.13 (April 2024)<a class="headerlink" href="#version-713-april-2024" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Easily focus on what is important, with a new default view that declutters the <a href="../../Spira-User-Manual/User-Product-Management/#my-page">My Page</a> by hiding all empty widgets. Less really is more.</li>
+<li>This release introduces a brand new program level <a href="../../Spira-User-Manual/Program-Capabilities/#capability-board">capability board</a> to track and manage capabilities in powerful new ways, including tracking them against program milestones <span class="pill">SpiraPlan</span>.</li>
+<li>As part of our efforts to enhance the auditability and traceability of administrator activities, every change to product membership (adding a user, removing them, changing roles) is now tracked in both product history and system history.</li>
+<li>Tags are now available for test runs, test cases, test sets, and risks, giving you even more flexibility. Additionally, tag changes can be reverted, and you can build out custom reports with tags.</li>
+<li>Due to popular demand, we are expanding our GenAI integrations, with a new <a href="../../SpiraApps/Azure-OpenAI/">Azure OpenAI SpiraApp</a> to auto-generate test cases, scenarios, or tasks from a requirement</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">New Features</p>
+<ul>
+<li>
+<p><strong>Tags</strong></p>
+<ul>
+<li>As a test set user, I can add and remove tags to test sets easily from the list and details pages, to more easily manage test sets [RQ:4768]</li>
+<li>As a test run user, I can add and remove tags to test runs easily from the list, details, and test execution pages, to more easily manage test runs [RQ:4766]</li>
+<li>As a risk user, I can add and remove tags to risks easily from the list and details pages, to more easily manage risks [RQ:4767]</li>
+<li>As an test case user, I can add and remove tags to test cases easily from the list and details pages, to more easily manage test cases [RQ:4765]</li>
+</ul>
+</li>
+<li>
+<p><strong>Administration Auditing</strong></p>
+<ul>
+<li>As a system admin, I can see a read only history of product membership and role changes in the system history, so I can quickly audit product membership changes [RQ:4734]</li>
+<li>As a product admin, I can see a read only history of product membership and role changes in product history, so I can quickly audit product membership changes [RQ:4706]</li>
+</ul>
+</li>
+<li>
+<p><strong>As a capability user, I can view and manage capabilities on a <a href="../../Spira-User-Manual/Program-Capabilities/#capability-board">dedicated capability board</a></strong></p>
+<ul>
+<li>As a capability user, I can organize the capability board easily, so I can effectively manage capabilities [RQ:4763]</li>
+<li>As a capability user, I can tailor what information I see on capability board cards, to help me quickly manage capabilities [RQ:4758]</li>
+<li>As a capability user, I can view detailed information about each card easily on the capability board, to help me review capabilities quickly [RQ:4759]</li>
+<li>As a capability user, I can move cards around, including within each cell, to update their details and position, to help me manage capabilities [RQ:4762]</li>
+<li>As a capability user, I can edit information about each card from the capability board, to update information without leaving the board [RQ:4760]</li>
+<li>As a capability user, I can add new capabilities to any cell on the capability board, to help me quickly add new cards [RQ:4761]</li>
+</ul>
+</li>
+<li>
+<p><strong>My Page During Trials</strong></p>
+<ul>
+<li>As a first time user during a trial, I am guided in how to use the application on a new <a href="../../Spira-User-Manual/User-Product-Management/#my-page">My Page</a> widget, so that I can get more familiar with the application [RQ:4770]</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>Tags</strong></p>
+<ul>
+<li>Add a tag field to all relevant custom report tables so that report writers can easily show tag information in their reports [IN:9174]</li>
+<li>Add tag custom report tables so that writers can create reports with tags for <a href="../../Reporting/Custom-Report-Tables/#artifact-tags">artifacts</a> and <a href="../../Reporting/Custom-Report-Tables/#project-product-tags">products</a> [IN:9183]</li>
+<li>Add tag fields to the artifact popups on the <a href="../../Spira-User-Manual/Planning-Board/">planning board</a>, <a href="../../Spira-User-Manual/Requirements-Management/#requirements-agile-board">requirement board</a>, <a href="../../Spira-User-Manual/Task-Tracking/#task-board">task board</a>, and <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">incident board</a> [IN:9176]</li>
+<li>Add tags to <a href="../../Spira-User-Manual/Test-Execution/#incidents">test execution incident creation</a> tabs [IN:9274]</li>
+<li>Fix not being able to create new tags on the <a href="../../Spira-User-Manual/Requirements-Management/#requirements-list">requirement hierarchical list page</a> and the <a href="../../Spira-User-Manual/Document-Management/#document-list">document list page</a> when editing rows [IN:9339]</li>
+<li>Fix product history to record changes to tag fields across all artifacts [IN:8957]</li>
+<li>Fix the tag field to not be visible on the template administration <a href="../../Spira-Administration-Guide/Template-Notifications/#notification-events">notifications events page</a> for documents [IN:8986]</li>
+</ul>
+</li>
+<li>
+<p><strong>Administration and History</strong></p>
+<ul>
+<li>Add the test case "Name" field to the list of fields that can be managed for a <a href="../../Spira-Administration-Guide/Template-Test-Cases/#edit-workflow-step">workflow step</a> [IN:9136]</li>
+<li>Allow users to filter on the product <a href="../../Spira-User-Manual/Product-Homepage/#activity-list-page">activity list</a> by 'User' to display product membership history entries [IN:9212]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Product-Homepage/#activity-list-page">activity list</a>'s artifact type dropdown to include product, and its change type dropdown to include association types [IN:6449]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Product-Homepage/#activity-list-page">activity list</a>'s change type dropdown so that it is fully localized [IN:9261]</li>
+<li>Hide signature hash fields on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#history-details-screen">product admin history details page</a> when displaying a history record not about artifacts [IN:9156]</li>
+<li>Remove the item "placeholder" from the artifact type dropdown on the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product history list page</a> [IN:9080]</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance</strong></p>
+<ul>
+<li>Improve general application performance by upgrading the internal Entity Framework library from v4 to v5 [IN:9245]</li>
+<li>Improve loading the <a href="../../Spira-User-Manual/Test-Case-Management/#test-case-details">test case details page</a> in products with a very large number of document folders [IN:9206]</li>
+<li>Improve performance when using test cases and <a href="../../Spira-User-Manual/Test-Execution/">test execution</a> by implementing additional database optimizations [IN:9106]</li>
+</ul>
+</li>
+<li>
+<p><strong>Other Enhancements</strong></p>
+<ul>
+<li>Add a banner on the <a href="../../Spira-User-Manual/Planning-Board/#legacy-planning-board">legacy Planning Board</a> to notify users that it will be deprecated and removed in 8.1 [IN:9215]</li>
+<li>Add a new API call to let users update their saved filters [IN:9197]</li>
+<li>Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]</li>
+<li>Add department and any other user profile fields to the user object retrieved when getting users via the API, to make those API calls more useful [IN:9285]</li>
+<li>Dynamically hide widgets on the <a href="../../Spira-User-Manual/User-Product-Management/#my-page">My Page</a> if they do not have any data to show, to give a less cluttered view of the My Page  [IN:9161]</li>
+<li>Let users leverage the power of <a href="../../SpiraApps/Azure-OpenAI/">Azure OpenAI</a> in Spira with a new SpiraApp that auto-generates test cases, scenarios, or tasks from a requirement [IN:9297]</li>
+</ul>
+</li>
+<li>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fix tooltips for builds not correctly loading for non-admins (introduced in 7.12) [IN:9301]</li>
+<li>Fix tooltips for pull requests not correctly loading for non-admins (introduced in 7.12) [IN:9223]</li>
+<li>Fix tooltips for risk mitigations not correctly loading for non-admins (introduced in 7.12) [IN:9222]</li>
+<li>Fix tooltips for test configurations not correctly loading for non-admins (introduced in 7.12) [IN:9224]</li>
+<li>When a user has an OAuth provider configured but logs in with a username and password, fix using the "enter" key to log in the user (and not attempt to login with OAuth) [IN:9167]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-712-february-2024">Version 7.12 (February 2024)<a class="headerlink" href="#version-712-february-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
