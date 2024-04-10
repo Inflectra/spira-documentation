@@ -256,6 +256,7 @@ The **release dropdown** shows:
 
 ![incident board release selector](img/incident-board-release-selector.png)
 
+[^open-release-definition]: any release with a status of planned, in progress, or completed
 
 #### Customizing cards
 ![incident board card options](img/incident-board-card-options.png)

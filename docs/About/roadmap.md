@@ -12,54 +12,38 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v7.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q1 2024
-- Track changes to product membership and product role changes
-- Add a new program level capability board <span class="pill">SpiraPlan</span>
-- Streamline the first time user experience of the "My Page"
-- Roll out tag support to all relevant product artifacts
-
 ## Q2 2024
-- Enhance the Spira timecard to record the date and time of activities, and provide administrators access to historical time tracking entries 
-- Extend Spira’s powerful test set features even further, so users can add test cases from other products into a test set.
-- Provide audit tracking of changes made by administrators to product roles, product settings, and components.
+- AWS Code Build integration <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Extend Spira's powerful test set features even further, so users can add test cases from other products into a test set.
 - Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
-- Add a new Azure CoPilot SpiraApp
+- Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
+- Provide audit tracking of changes made by administrators to product roles.
+- Enhance the Spira timecard to record the date and time of activities against incidents and tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 ## Rest of 2024
-Update the user experience for navigating the application.
-
-New product team features so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
-
-New program level planning board. <span class="pill">SpiraPlan</span>
-
-Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
-
-Provide audit tracking of changes made by administrators to users and workspaces.
-
-Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
-
-Further extend Spira’s powerful test set features to allow users to run test sets in series.
+- Enhance traceability with a new requirement view with integrated test case analysis and potentially other artifacts.
+- Further enhancements to Spira timecard features <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
+- Improve devops integrations and workflows based on user feedback <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Provide audit tracking of changes made by administrators to users.
+- Update the user experience for navigating the application.
 
 ## 2025
-Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
-
-Add functionality to portfolios with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
-
-Enhance traceability with new requirement views and widgets, integrated risk traceability <span class="pill">SpiraPlan</span>, and integrated analysis of different association types.
-
-Upgrade the user experience for key parts of the application, based on user feedback in 2024.
-
-Further enhance administrative audit tracking with system and template level change tracking.
-
+- Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
+- Further enhance administrative audit tracking with system and template level change tracking.
+- Further extend Spira’s powerful test set features to allow users to run test sets in series.
+- New product team features so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
+- New program level planning board. <span class="pill">SpiraPlan</span>
+- Upgrade the user experience for key parts of the application, based on user feedback in 2024.
 
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
 
+- **Portfolio level planning** with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
 - **Enhanced source code management**: the ability to tie a branch to a sprint or release. Code review tools built into the application.
-- **Time tracking**: Add the ability for a named user or role to approve a timecard, and provide additional time tracking features like hourly rates and bands.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.
-- **Improved reporting templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
+- **Improved report templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Enhanced Support for BDD**: Improve handling of BDD scenarios, and add the ability to convert BDD scenarios into executable automation scripts.
