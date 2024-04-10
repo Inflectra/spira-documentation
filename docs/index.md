@@ -2,12 +2,12 @@
 # Spira Platform Documentation
 
 !!! success "Documentation version"
-    **This site was last updated for version 7.12.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
+    **This site was last updated for version 7.13.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
 
     **Current available beta features**
 
     - Create and manage teams, and assign users to teams in each product (SpiraPlan)
-    - Teams support on the beta planning board (SpiraPlan)
+    - Teams support on the planning board (SpiraPlan)
 
 
 This documentation is for the entire Spira suite of products: SpiraTest, SpiraTeam, SpiraPlan, and all relevant addons and extensions. 

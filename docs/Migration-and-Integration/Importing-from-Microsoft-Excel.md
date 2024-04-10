@@ -3,7 +3,7 @@
 !!! danger
     If you are using recent versions of Excel and Spira, then do not use this Add-In. This is legacy addon only. 
     
-    Please use our [Excel365 importer](./Importing-from-Google-Sheets.md) instead.
+    Please use our [Excel365 importer](./Importing-from-Microsoft-Excel-(Office365).md) instead.
 
 
 The web-based interface of SpiraTeam® is ideal for creating and managing

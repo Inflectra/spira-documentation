@@ -14,7 +14,7 @@ Please take a look at our [release notes](release-notes-v7.md) to see a complete
 
 ## Q2 2024
 - AWS Code Build integration <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Extend Spira’s powerful test set features even further, so users can add test cases from other products into a test set.
+- Extend Spira's powerful test set features even further, so users can add test cases from other products into a test set.
 - Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
 - Open up our SpiraApp ecosystem to third parties, with an online "marketplace" for customers to browse and install SpiraApps, so users can benefit from richer and more diverse features.
 - Provide audit tracking of changes made by administrators to product roles.
