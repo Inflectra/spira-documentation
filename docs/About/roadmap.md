@@ -5,7 +5,7 @@
     
     It is not set in stone. We are always listening to feedback from our customers and new ideas that will have the most impact to users.
 
-    It is not reflect all the work and changes we have planned. The roadmap focuses on large scale features. It does not include small scale features, enhancements, or bug fixes. [We do not provide a public list of open bugs](https://www.inflectra.com/Support/KnowledgeBase/KB698.aspx) or enhancement requests at this time.
+    It does not reflect all the work and changes we have planned. The roadmap focuses on large scale features. It does not include small scale features, enhancements, or bug fixes. [We do not provide a public list of open bugs](https://www.inflectra.com/Support/KnowledgeBase/KB698.aspx) or enhancement requests at this time.
     
     If you have any feedback or suggestions regarding this roadmap, please email us at [support@inflectra.com](mailto:support@inflectra.com).
 
