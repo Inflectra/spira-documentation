@@ -19,6 +19,8 @@ The following IDs are allowed for the settingTypeId property for system admin se
 | 9   | Multi line plain text          |
 
 ### Artifact Types
+The list below shows the relevant IDs for different artifacts in Spira.
+
 | ID  | Artifact Type    |
 | --- | ---------------- |
 | 1   | Requirement      |
@@ -35,3 +37,24 @@ The following IDs are allowed for the settingTypeId property for system admin se
 | 13  | Document         |
 | 14  | Risk             |
 | 15  | RiskMitigation   |
+
+### Pages
+
+| ID  | Page               |
+| --- | ------------------ |
+| 1   | TestCaseList       |
+| 2   | TestCaseDetails    |
+| 3   | TestRunList        |
+| 4   | TestRunDetails     |
+| 5   | ReleaseDetails     |
+| 6   | RiskList           |
+| 7   | RiskDetails        |
+| 8   | RequirementList    |
+| 9   | RequirementDetails |
+| 10  | ReleaseList        |
+| 11  | TestSetList        |
+| 12  | TestSetDetails     |
+| 13  | TaskList           |
+| 14  | TaskDetails        |
+| 15  | DocumentList       |
+| 16  | DocumentDetails    |

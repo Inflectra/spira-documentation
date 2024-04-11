@@ -171,10 +171,32 @@ The settings is an array of objects, each object must be in the form as below. S
         name: customProperty1
         caption: Select a release custom property
         artifactTypeId: 1
-        isSecure: false
         position: 1
         tooltip: Please select a requirement custom property from the dropdown list
         settingGroupName: groupAlpha
+    ```
+
+### Menu entries
+A SpiraApp can add a menu button to a [wide number of product pages](./SpiraApps-Reference.md/#pages) 
+
+=== "Explanation"
+
+=== "Example"
+
+    ```yaml
+    menus:
+    - pageId: 1 [see possible values below]
+      caption: User facing name
+      icon: fas fa-play [FontAwesome or custom css classes]
+      isActive: true
+      entries:
+      - name: CodeFriendlyName
+        caption: User facing name
+        tooltip: On hover tooltip
+        icon_class: fas fa-circle [FontAwesome or custom css classes]
+        isActive: true
+        actionTypeId: 1 [see possible values below]
+        action: [URL or a codeFriendlyName to create an element ID]
     ```
 
 Menu buttons on toolbars on specific pages: menus
@@ -191,8 +213,10 @@ Code (JS) to add onto specified dashboard pages in widgets: dashboards
 - React v16
 - **FontAwesome 6**: 
 - Mustache
-- Inflectra unity utility library of classes
+- Inflectra CSS utility library
 - Spira theming variables for light and dark mode
 - SpiraApp helper functions
 - Make internal API calls to Spira
 - Make external API calls
+
+## Submission Process
