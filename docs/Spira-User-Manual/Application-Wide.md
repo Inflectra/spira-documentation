@@ -430,7 +430,11 @@ Each product has a unique set of tags that you can set and use on many artifacts
 - incidents
 - releases
 - requirements
+- risks
 - tasks
+- test cases
+- test runs
+- test sets
 
 ## Boards
 Boards allow users to see artifacts visually in columns and/or rows, and move cards around to progress them along their workflow. This is like moving sticky notes around on a white board. It is a very visual way of working with your artifacts.
