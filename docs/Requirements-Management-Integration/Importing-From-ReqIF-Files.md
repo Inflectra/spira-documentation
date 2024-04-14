@@ -39,6 +39,13 @@ want to use for importing.
 model to map to the Name and Description fields in SpiraTeam. Any
 other fields will be imported as custom properties.**
 
+The field mappings will depend on the tool you are importing from. The default values are:
+- **Name:** ReqIf.Name
+- **Chapter Name:** ReqIf.ChapterName
+- **Description:** ReqIf.Text
+
+*See the appendix for how Rational DOORS and Rational Requirements Composer ReqIF Files Work*
+
 Once the file is selected, and the name/description attributes mapped,
 click *Next* to continue to the screen where
 you enter your SpiraTeam project information:
@@ -100,3 +107,34 @@ In addition, the importer will create the necessary custom properties as needed 
 ![](img/ReqIF-9.png)
 
 If you run the same import twice, the importer will create a new requirements hierarchy each time, but it will reuse the existing custom properties if they are already defined in the SpiraTeam product.
+
+## Appendix A: IBM Rational ReqIF Format Notes
+
+### IBM Rational DOORS
+
+In the ReqIF files produced by IBM Rational DOORS, typically each Specification has its own type and only contains Items of a single type.
+
+Because the association between specification and item type is only defined indirectly via:Specification > > SpecHierarchy > SpecObject > SpecObjectType, the item type of an empty specification is undefined, and will be listed under the non-exclusive/shared item types.
+
+DOORS requirements also have (along with lots of other attributes), each a
+- `ReqIF.ChapterName`
+- `ReqIF.Name`
+- `ReqIF.Text`
+
+But whether the attribute actually has a value, depends upon the type of the requirement:
+- A DOORS Heading has a value for the `ReqIF.ChapterName`, but `ReqIF.Name` and `ReqIF.Text` are typically empty.
+- Non-Heading types, for example requirement have a value for `ReqIF.Text`, but both, `ReqIF.ChapterName` and `ReqIF.Name` are typically empty.
+
+### IBM Rational DOORS Next Gen / Requirements Composer
+
+In ReqIF files produced by IBM Rational Requirements Composer (aka DOORS Next Generation), Specifications typically contain items of different types, *for example,. Heading, Information, Requirement etc.*
+
+Because all these items are mapped to the same target tracker, each item type must have a unique set of qualifiers, to identify items of this type in the tracker. *For example, Heading items are those items in the target tracker, where Type == Folder*
+
+Specifications can also refer to (config) items, that are not part of the Specification itself, *for example Actor.*
+
+These separate Item Types should typically be mapped to appropriate config item trackers, for example, Actor.
+
+In IBM Rational Requirements, all item types have a `ReqIF.Name` and a `ReqIF.Text`, that should be mapped to Spira `Name` and `Description`.
+
+The item type Heading also has a `ReqIF.ChapterName`, but the value of this attribute is the same as `ReqIF.Name`, so it can be safely ignored.
