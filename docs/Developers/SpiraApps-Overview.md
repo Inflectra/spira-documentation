@@ -78,41 +78,41 @@ Code (JS) to add onto specified dashboard pages in widgets: dashboards
 
 
 ## Submission Process
+declare any external urls accessed and why
 
 
 ## Tips and Tricks
-| Design pattern | Allowed |
-| -- | -- |
-| Using internal Spira functions or properties | N |
-| Links to or importing external libraries  | N (including any CDN) |
-| External links to images | N |
-| Base64 encoded images | Y but we need to verify (either check it against the mimetype or have the bundler do this for the images) |
-| Implement or change a CSP | N |
-| Import any JS library | N |
-| Provide code pre minified | N |
-| Use mustache from Spira | Y |
-| Use React from Spira (we may want to have a version for them and a different one for us) | Y |
-| Use JQuery from Spira | N |
-| Write out encoded HTML strings to render inside the allocated dom ID | N |
-| Write out <style> tags inside the allocated dom ID | N |
-| Hardcode the GUID in CSS | Y (because no other way - Simon to research)
-| Hardcode the GUID in JS | N |
-| Use local storage | Y  (but must be namspaced with GUID) |
-| Use local DB | N |
-| Hard code secrets in code | N |
-| Have external URLs for interaction with 3rd party APIs | Y (but declare them and why needed in manifest - new section, and to customers) |
-| Provided user facing documentation consistent with our guidance | Y |
-| Access any browser APIs like Camera, Bluetooth, Location, Notifications, NFC, fonts installed, etc | N |
-| Use any data tracking | N |
-| Share any data with third parties without explicit disclosure and opt-in consent | N |
-| Creating, saving, reading, updating browser cookies | N |
-| WebAssembly use | N |
-| WebSockets | N |
-Background polling or high frequency API usage | Discouraged to improve performance |
-| Focus on code that is performant | Y |
-| Use of any deprecated browser APIs | N |
-| Match browser compatibility to Spira’s standards | Y |
-| Can be code reviewed by a human being with general web development skills | Y |
-| Iframes | N |
-| Save script files pre-minified | N |
+| Design pattern                                                                                  | Allowed                                      |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Using internal Spira functions or properties                                                    | N                                            |
+| Links to or importing external libraries                                                        | N (including any CDN)                        |
+| External links to images                                                                        | N                                            |
+| Base64 encoded and embedded resources                                                           | N                                            |
+| Implement or change a CSP                                                                       | N                                            |
+| Import any JS library                                                                           | N                                            |
+| Provide code pre minified                                                                       | N                                            |
+| Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources | Y                                            |
+| Use JQuery                                                                                      | N                                            |
+| Write out encoded HTML strings using javascript                                                 | N                                            |
+| Write out <style> tags using javascript                                                         | N                                            |
+| Hardcode the GUID in CSS                                                                        | N (CSS is pre-nested)                        |
+| Hardcode the GUID in JS                                                                         | N (use provided const)                       |
+| Directly use local storage                                                                      | N                                            |
+| Directly use localDB                                                                            | N                                            |
+| Hard code secrets in code                                                                       | N                                            |
+| Use external URLs or APIs                                                                       | Y (provide a list and details in submission) |
+| Provided user facing documentation consistent with our guidance                                 | Y                                            |
+| Access browser APIs like Camera, Bluetooth, Location, Notifications, NFC, fonts installed, etc  | N                                            |
+| Use of any data tracking techniques                                                             | N                                            |
+| Share data with any third party without explicit disclosure and opt-in consent                  | N                                            |
+| Create, save, read, or update browser cookies                                                   | N                                            |
+| Use WebAssembly                                                                                 | N                                            |
+| Use WebSockets                                                                                  | N                                            |
+| Frequent background polling or high frequency API usage                                         | N                                            |
+| Focus on code that is performant                                                                | Y                                            |
+| Use of any deprecated browser APIs                                                              | N                                            |
+| Match browser compatibility to Spira’s standards                                                | Y                                            |
+| Write code that can be reviewed by a web developer                                              | Y                                            |
+| Use Iframes                                                                                     | N                                            |
+| Save script files pre-minified                                                                  | N                                            |
 

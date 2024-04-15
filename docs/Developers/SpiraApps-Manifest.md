@@ -38,7 +38,7 @@ The metadata below provides essential information to identify and explain the Sp
     - **productDescription**: Shown on the product admin SpiraApp details page
     - **author**: Organization who owns the SpiraApp
     - **url**: Where should users go to get help, documentation, and support for this SpiraApp?
-    - **icon**: Optionally provide a base 64 encoded SVG (be mindful of file size and keep it as small as possible)
+    - **icon**: Optionally provide the relative path to a single SVG file in the form of `"data:image/svg+xml;file://{filename.svg}"` (note the use of double quotes)
     - **license**: The type of license the SpiraApp is under
     - **copyright**: Any copyright information
     - **version**: Version number in the form a decimal
