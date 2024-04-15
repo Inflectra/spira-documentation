@@ -40,26 +40,26 @@ The list below shows the relevant IDs for different artifacts in Spira.
 | 15  | RiskMitigation   |
 
 ### Pages
-The list below shows the relevant IDs for different pages where SpiraApps can run from
+The list below shows the relevant IDs for different pages where SpiraApps can run from. Every page below support [pageContents](./SpiraApps-Manifest.md/#page-contents) and [menus](./SpiraApps-Manifest.md/#menus), but only list pages support [columns](./SpiraApps-Manifest.md/#page-columns).
 
-| ID  | Page               |
-| --- | ------------------ |
-| 1   | TestCaseList       |
-| 2   | TestCaseDetails    |
-| 3   | TestRunList        |
-| 4   | TestRunDetails     |
-| 5   | ReleaseDetails     |
-| 6   | RiskList           |
-| 7   | RiskDetails        |
-| 8   | RequirementList    |
-| 9   | RequirementDetails |
-| 10  | ReleaseList        |
-| 11  | TestSetList        |
-| 12  | TestSetDetails     |
-| 13  | TaskList           |
-| 14  | TaskDetails        |
-| 15  | DocumentList       |
-| 16  | DocumentDetails    |
+| ID  | Page               | Supports columns |
+| --- | ------------------ | ---------------- |
+| 1   | TestCaseList       | Y                |
+| 2   | TestCaseDetails    | N                |
+| 3   | TestRunList        | Y                |
+| 4   | TestRunDetails     | N                |
+| 5   | ReleaseDetails     | N                |
+| 6   | RiskList           | Y                |
+| 7   | RiskDetails        | N                |
+| 8   | RequirementList    | Y                |
+| 9   | RequirementDetails | N                |
+| 10  | ReleaseList        | Y                |
+| 11  | TestSetList        | Y                |
+| 12  | TestSetDetails     | N                |
+| 13  | TaskList           | Y                |
+| 14  | TaskDetails        | N                |
+| 15  | DocumentList       | Y                |
+| 16  | DocumentDetails    | N                |
 
 ### Action Types
 The list below shows the IDs for different action types.

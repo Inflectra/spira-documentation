@@ -51,7 +51,22 @@ flowchart LR
 ```
 
 ## Creating the manifest
-The [manifest](./SpiraApps-Manifest.md) is an essential part of a SpiraApp. It 
+The [manifest](./SpiraApps-Manifest.md) is an essential part of a SpiraApp. It lets admins configure the SpiraApp, and tells Spira where and how inside the application to deploy your SpiraApp. Without a proper and well crafted manifest you will not be able to test or deploy your SpiraApp.
+
+A SpiraApp can exist in multiple places in Spira and it can have different types of settings. While a very large SpiraApp may be deployed in many ways and places and offer differ functionality on each, most SpiraApps will be targeted on a single page or very focused subset of pages.
+
+For example, Inflectra's [FMEA](../SpiraApps/FMEA.md) has:
+
+- a number of admin settings
+- runs code in the background on the risk details page (no user interaction)
+- has a product dashboard / product home page widget
+
+!!! tip "Determining scope"
+    We recommend starting your SpiraApp by understanding what it will do, where, and how. This will help narrow your focus. 
+
+    Start small and built up from there. That will help validate your concept, 
+
+
 
 ## Coding the SpiraApp
 Code (JS and / or CSS) to add into specific pages: pageContents
@@ -63,3 +78,41 @@ Code (JS) to add onto specified dashboard pages in widgets: dashboards
 
 
 ## Submission Process
+
+
+## Tips and Tricks
+| Design pattern | Allowed |
+| -- | -- |
+| Using internal Spira functions or properties | N |
+| Links to or importing external libraries  | N (including any CDN) |
+| External links to images | N |
+| Base64 encoded images | Y but we need to verify (either check it against the mimetype or have the bundler do this for the images) |
+| Implement or change a CSP | N |
+| Import any JS library | N |
+| Provide code pre minified | N |
+| Use mustache from Spira | Y |
+| Use React from Spira (we may want to have a version for them and a different one for us) | Y |
+| Use JQuery from Spira | N |
+| Write out encoded HTML strings to render inside the allocated dom ID | N |
+| Write out <style> tags inside the allocated dom ID | N |
+| Hardcode the GUID in CSS | Y (because no other way - Simon to research)
+| Hardcode the GUID in JS | N |
+| Use local storage | Y  (but must be namspaced with GUID) |
+| Use local DB | N |
+| Hard code secrets in code | N |
+| Have external URLs for interaction with 3rd party APIs | Y (but declare them and why needed in manifest - new section, and to customers) |
+| Provided user facing documentation consistent with our guidance | Y |
+| Access any browser APIs like Camera, Bluetooth, Location, Notifications, NFC, fonts installed, etc | N |
+| Use any data tracking | N |
+| Share any data with third parties without explicit disclosure and opt-in consent | N |
+| Creating, saving, reading, updating browser cookies | N |
+| WebAssembly use | N |
+| WebSockets | N |
+Background polling or high frequency API usage | Discouraged to improve performance |
+| Focus on code that is performant | Y |
+| Use of any deprecated browser APIs | N |
+| Match browser compatibility to Spira’s standards | Y |
+| Can be code reviewed by a human being with general web development skills | Y |
+| Iframes | N |
+| Save script files pre-minified | N |
+

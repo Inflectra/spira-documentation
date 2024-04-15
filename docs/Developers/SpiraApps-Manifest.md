@@ -14,6 +14,15 @@ The manifest can have up to 8 different sections, but all of them are optional, 
 7. [Columns](#page-columns) on grids with custom HTML
 8. [Dashboard](#dashboards) widgets with embedded js code
 
+There are some potential gotchas or restrictions to keep in mind. You can only have one:
+
+- menu item on each unique page
+- pageContent item (so one js and css file) on each unique page
+- column on a grid for each relevant page
+- dashboard widget on each dashboard type
+- setting, product setting, and setting group with a specific name (unique in each category - you can reuse a name between settings and product settings, for example)
+
+
 Below, we describe each manifest section along with example yaml.
 
 ## SpiraApp metadata
