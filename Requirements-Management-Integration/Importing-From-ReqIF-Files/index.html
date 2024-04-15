@@ -7570,6 +7570,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-a-ibm-rational-reqif-format-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A: IBM Rational ReqIF Format Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A: IBM Rational ReqIF Format Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-rational-doors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Rational DOORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-rational-doors-next-gen-requirements-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Rational DOORS Next Gen / Requirements Composer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8112,6 +8151,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-a-ibm-rational-reqif-format-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix A: IBM Rational ReqIF Format Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix A: IBM Rational ReqIF Format Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ibm-rational-doors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Rational DOORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-rational-doors-next-gen-requirements-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Rational DOORS Next Gen / Requirements Composer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8157,6 +8235,11 @@ want to use for importing.</p>
 <p><strong>Choose the requirements attributes you want from the .ReqIF file
 model to map to the Name and Description fields in SpiraTeam. Any
 other fields will be imported as custom properties.</strong></p>
+<p>The field mappings will depend on the tool you are importing from. The default values are:
+- <strong>Name:</strong> ReqIf.Name
+- <strong>Chapter Name:</strong> ReqIf.ChapterName
+- <strong>Description:</strong> ReqIf.Text</p>
+<p><em>See the appendix for how Rational DOORS and Rational Requirements Composer ReqIF Files Work</em></p>
 <p>Once the file is selected, and the name/description attributes mapped,
 click <em>Next</em> to continue to the screen where
 you enter your SpiraTeam project information:</p>
@@ -8202,6 +8285,24 @@ C:\ProgramData\SpiraTeamReqIFImporter.log
 <p>In addition, the importer will create the necessary custom properties as needed automatically:</p>
 <p><img alt="" src="../img/ReqIF-9.png" /></p>
 <p>If you run the same import twice, the importer will create a new requirements hierarchy each time, but it will reuse the existing custom properties if they are already defined in the SpiraTeam product.</p>
+<h2 id="appendix-a-ibm-rational-reqif-format-notes">Appendix A: IBM Rational ReqIF Format Notes<a class="headerlink" href="#appendix-a-ibm-rational-reqif-format-notes" title="Permanent link">&para;</a></h2>
+<h3 id="ibm-rational-doors">IBM Rational DOORS<a class="headerlink" href="#ibm-rational-doors" title="Permanent link">&para;</a></h3>
+<p>In the ReqIF files produced by IBM Rational DOORS, typically each Specification has its own type and only contains Items of a single type.</p>
+<p>Because the association between specification and item type is only defined indirectly via:Specification &gt; &gt; SpecHierarchy &gt; SpecObject &gt; SpecObjectType, the item type of an empty specification is undefined, and will be listed under the non-exclusive/shared item types.</p>
+<p>DOORS requirements also have (along with lots of other attributes), each a
+- <code>ReqIF.ChapterName</code>
+- <code>ReqIF.Name</code>
+- <code>ReqIF.Text</code></p>
+<p>But whether the attribute actually has a value, depends upon the type of the requirement:
+- A DOORS Heading has a value for the <code>ReqIF.ChapterName</code>, but <code>ReqIF.Name</code> and <code>ReqIF.Text</code> are typically empty.
+- Non-Heading types, for example requirement have a value for <code>ReqIF.Text</code>, but both, <code>ReqIF.ChapterName</code> and <code>ReqIF.Name</code> are typically empty.</p>
+<h3 id="ibm-rational-doors-next-gen-requirements-composer">IBM Rational DOORS Next Gen / Requirements Composer<a class="headerlink" href="#ibm-rational-doors-next-gen-requirements-composer" title="Permanent link">&para;</a></h3>
+<p>In ReqIF files produced by IBM Rational Requirements Composer (aka DOORS Next Generation), Specifications typically contain items of different types, <em>for example,. Heading, Information, Requirement etc.</em></p>
+<p>Because all these items are mapped to the same target tracker, each item type must have a unique set of qualifiers, to identify items of this type in the tracker. <em>For example, Heading items are those items in the target tracker, where Type == Folder</em></p>
+<p>Specifications can also refer to (config) items, that are not part of the Specification itself, <em>for example Actor.</em></p>
+<p>These separate Item Types should typically be mapped to appropriate config item trackers, for example, Actor.</p>
+<p>In IBM Rational Requirements, all item types have a <code>ReqIF.Name</code> and a <code>ReqIF.Text</code>, that should be mapped to Spira <code>Name</code> and <code>Description</code>.</p>
+<p>The item type Heading also has a <code>ReqIF.ChapterName</code>, but the value of this attribute is the same as <code>ReqIF.Name</code>, so it can be safely ignored.</p>
 
 
 
