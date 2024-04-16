@@ -2,6 +2,10 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
 ## April 2024
+- [Jira Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md): Enhanced bidirectional incident synchronization for both **Jira Cloud** and **Jira Server** plugins:
+    - Apply more precise timestamp checking to prevent recent Jira updates from blocking a Spira change being processed
+    - Update Jira issue before and after executing a status transition to ensure all required fields are submitted
+
 - [Spira Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md): New desktop tool (Mac OS and Windows) to backup and migration Spira product templates with ease. 
 
 ## January 2024
