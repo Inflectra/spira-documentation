@@ -7,11 +7,11 @@ Before we start, we need to figure what is the endpoint of the API service for y
 
 `https://{Spira_instance_URL}/Services/v7_0/RestService.svc/`
 
-where {Spira_instance_URL} is the address you use to access Spira. For most cloud customers, it is usually `company-name.spiraservice.net`. On-prem customers use different, customized instance URLs. If you are unsure about it, please check with your system administrator. Similarly, the API documentation is available at:
+where <i>{Spira_instance_URL}</i> is the address you use to access Spira. For most cloud customers, it is usually `company-name.spiraservice.net`. On-prem customers use different, customized instance URLs. If you are unsure about it, please check with your system administrator. Similarly, the API documentation is available at:
 
 `https://{Spira_instance_URL}/Services/v7_0/RestService.aspx`
 
-Save this address for your future reference, as it contains the complete list and description of operations available in this version. Alternatively, you can find both your API endpoint and documentation by going to Integration > Web Services in Spira. Then, under <i>Version 7.0</i>, in the REST row, click the link that leads to the documentation page. The base URL of your instance is shown in the first topic.
+Save this address for your future reference, as it contains the complete list and description of operations available in this version. Alternatively, you can find both your API endpoint and documentation by going to Integration > Web Services in Spira. Then, under <i>Version 7.0</i>, in the REST row, click the link that leads to the documentation page. The documentation page you see there is customized for your instance, including the correct base URL.
 
 ## Request Headers
 For every request made to the Spira API, you must provide a valid username and API Key. Learn how to activate and get your API Key [here](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). The following table summarizes all the parameters you should include when sending requests to the API:
@@ -144,7 +144,12 @@ For every request made to the Spira API, you must provide a valid username and A
         ```
 
 ## Spira API and Postman
-TODO
+[Postman](https://www.postman.com/) is a simple, yet powerful tool for testing web APIs. If you decide to use it to test and perform operations in the Spira API, make sure to:
+
+- Enter the credentials at the end of the request URL: `?username=my_username&api-key={}`
+- For GET requests, enter at least one character in its Body (select Body > raw to edit it) as this avoids incorrect request errors.
+
+![Postman GET example](img/api-guide-01.jpg)
 
 ## Pagination
 
@@ -186,7 +191,30 @@ In order to retrieve, create, edit, or delete data in Spira through the API, the
     First, verify if the provided credentials are correct and the user is not locked out. Then, make sure the provided credentials have enough authority to perform the operation in Spira. You can check if the user's role for the given product allows performing the operation against the given artifact, and if the user is a system administrator, a program member or owner, depending on the requirements of the target operation.
 
 ## Custom Properties
-TODO
+When creating or editing artifacts in the Spira API, you can use the `CustomProperties` field to set and update template or system custom properties. Each custom property type requires different data in the API request to be set or modified. The easiest way to figure out the correct values for fields such as `PropertyNumber` and `CustomPropertyId` is by sending a GET request, and then copying and modifying the response data accordingly. Following is an example of the required fields for the custom property type 'Text'.
+
+!!! example "Example: Required Fields for Custom Propery type Text"
+    ```json
+        "CustomProperties": [
+                {
+                    "PropertyNumber": 1,
+                    "StringValue": "This is the custom text field data to be created or modified!",
+                    "Definition": {
+                        "CustomPropertyId": 13,
+                        "ProjectTemplateId": 1,
+                        "ArtifactTypeId": 7
+                    }
+                }
+		    ]
+    ```
+
+For other custom property types, instead of the `StringValue` field, please use one of the following, accordingly:
+
+- `IntegerValue`: for custom properties type 'Integer', 'User' (userId), 'Release' (releaseId), 'Automation Host' (automationHostId), and 'List' (valueId)
+- `BooleanValue`: for custom properties type 'Boolean'
+- `DateTimeValue`: for custom properties type 'Date', 'Date & Time'
+- `DecimalValue`: for custom properties type 'Decimal'
+- `IntegerListValue`: for custom properties type 'Multiselect List'. Example: `"IntegerListValue": [2, 3, 1]`
 
 ## Filtering
 TODO
