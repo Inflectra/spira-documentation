@@ -1,6 +1,6 @@
 # Using the Spira REST API
 ## Overview
-The Spira products (SpiraTest, SpiraTeam, and SpiraPlan) include SOAP and REST API services with your subscription. This guide explains how to use the Spira REST API version 7 (hereafter 'API'), from the basic operations to the advanced ones, so you can effectively integrate your applications with Spira.
+The Spira products (SpiraTest, SpiraTeam, and SpiraPlan) include SOAP and REST API services with your subscription. This guide explains how to use the Spira REST API version 7 (hereafter 'API') and provides some examples, so you can effectively integrate your applications with Spira.
 
 ## Documentation and Service URL
 Before we start, we need to figure what is the endpoint of the API service for your Spira instance. Typically, it should be:
@@ -217,46 +217,45 @@ For other custom property types, instead of the `StringValue` field, please use 
 - `IntegerListValue`: for custom properties type 'Multiselect List'. Example: `"IntegerListValue": [2, 3, 1]`
 
 ## Filtering
-TODO
-https://www.inflectra.com/Support/Ticket/71169.aspx
+Some API operations allow you to filter the data before requesting it. This is useful when working with large data sets. Look for POST methods that have the `sort_field` property on their URL. To configure the filter, send the pair of filtering properties for the field name and field value.
 
-## Use Cases
+!!! example "Example: Retrieve Test Runs of Release 82 in Spira"
+    <i>Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000}). Also, replace 82 by the target release.</i>
+    ```json
+        ###Search Test-Run
+        POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/test-runs/search?starting_row=1&number_of_rows=200&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        content-type: application/json
+        Accept: application/json
 
-Following, there are a few common use cases related to the Spira API:
+        [
+            {
+            "PropertyName": "ReleaseId",
+            "IntegerValue": "82"
+            }
+        ]
+    ```
 
+Make sure you pick the correct field type. Available options are: `StringValue`, `IntValue`, `MultiValue`, or `DateRangeValue`. For MultiValue, enter an array of integers as its value. Learn more about filtering by Date Ranges [here](https://www.inflectra.com/Support/KnowledgeBase/KB327.aspx).
 
-### Create an Incident and Set Custom Properties
-TODO
-TYPE RELEASE https://www.inflectra.com/Support/Ticket/88169.aspx
-
-### Add a new Document Version
-TODO
-
-### Record an Automated Test Run Result
-TODO
-
-### Associate XX to YY
-TODO
-
-### Add TestCase to Release
-TODO
-https://www.inflectra.com/Support/Ticket/66096.aspx
-
-### Custom Lists
-TODO
-
-### Add new users to the system
-TODO
 
 ## Common Error Messages
 If something goes wrong with your request, the system will return the error code 404 and a message describing the error. Following are the most common error messages and how to solve them:
 
-TODO
--You need to be a Product Administrator to use this function!
-Method not allowed - https://www.inflectra.com/Support/Ticket/70993.aspx
--Access Denied
--Unable to connect Using Postman: https://www.inflectra.com/Support/Ticket/70905.aspx
--Unable to locate requested artifact
+!!! danger "Access Denied"
+    - Verify the provided username and API Key
+    - Generate a new API Key ([here's how](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key)) and try again
+    - Check if the user is not locked out
+    - Check if the user is part of the workspace (product, program, etc.)
+
+!!! danger "You need to be a Product Administrator to use this function!"
+    - For security reasons, some operations require higher System Administrator privileges. Change the provided credentials to a system administrator one and try again.
+
+!!! danger "Method not allowed"
+    - Check the API documentation to make sure the given method is indeed supported. Example: Trying to use POST, but the method only supports GET.
+
+!!! danger "Unable to locate requested artifact"
+    - Check if the artifact was not deleted
+    - Make sure the provided workspaceId (product, program, etc.) matches the artifact's workspaceId
 
 ## Learn More
 The following articles explores different use cases for the Spira API:
