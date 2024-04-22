@@ -1,27 +1,25 @@
 # Using the Spira REST API
 ## Overview
-The Spira products (SpiraTest, SpiraTeam, and SpiraPlan) include SOAP and REST API services with your subscription. This guide explains how to use the Spira REST API version 7 (hereafter 'API') and provides some examples, so you can effectively integrate your applications with Spira.
+Spira has extensive and powerful SOAP and REST API services. These APIs allow developers to build rich integrations with Spira, or automate Spira to help speed up how you work.
+
+This guide focused on how to use the Spira REST API version 7 (hereafter 'API') with examples.
 
 ## Documentation and Service URL
-Before we start, we need to figure what is the endpoint of the API service for your Spira instance. Typically, it should be:
+Before we start, we need to figure what is the endpoint of the API service for your Spira instance. Typically, it should be: `https://{Spira_instance_URL}/Services/v7_0/RestService.svc/`
 
-`https://{Spira_instance_URL}/Services/v7_0/RestService.svc/`
+The `{Spira_instance_URL}` is the address you use to access Spira. For cloud customers, it is in the form of "company-name.spiraservice.net". On premise customers use different, customized URLs.
 
-where <i>{Spira_instance_URL}</i> is the address you use to access Spira. For most cloud customers, it is usually `company-name.spiraservice.net`. On-prem customers use different, customized instance URLs. If you are unsure about it, please check with your system administrator. Similarly, the API documentation is available at:
-
-`https://{Spira_instance_URL}/Services/v7_0/RestService.aspx`
-
-Save this address for your future reference, as it contains the complete list and description of operations available in this version. Alternatively, you can find both your API endpoint and documentation by going to Integration > Web Services in Spira. Then, under <i>Version 7.0</i>, in the REST row, click the link that leads to the documentation page. The documentation page you see there is customized for your instance, including the correct base URL.
+Similarly, the API documentation is available at `https://{Spira_instance_URL}/Services/v7_0/RestService.aspx` and contains the complete list and description of available API calls, with URLs customized to your instance. If you are a system admin of your Spira you can find the API documentation hub from the system admin menu (under Integrations > Web Services).
 
 ## Request Headers
 For every request made to the Spira API, you must provide a valid username and API Key. Learn how to activate and get your API Key [here](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). The following table summarizes all the parameters you should include when sending requests to the API:
 
-| Header        | Description|
-| ------------- | --------------------------|
-| username      | Your Spira username|
-| api-key       | Your Spira API Key. Remember to include the curly brackets. Example: `{00000000-0000-0000-0000-000000000000}`.|
-| Accept        | This defines what format the response from the server should have. JSON format is supported so use `Accept: application/json`|
-| Content-Type  | This defines the format of the request payload data sent to the server. For POST and PUT methods use `Content-Type: application/json`|
+| Header       | Description                                                                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| username     | Your Spira username                                                                                                                   |
+| api-key      | Your Spira API Key. Remember to include the curly brackets. Example: `{00000000-0000-0000-0000-000000000000}`.                        |
+| Accept       | This defines what format the response from the server should have. JSON format is supported so use `Accept: application/json`         |
+| Content-Type | This defines the format of the request payload data sent to the server. For POST and PUT methods use `Content-Type: application/json` |
 
 ## Available Methods
 === "GET"
@@ -30,7 +28,8 @@ For every request made to the Spira API, you must provide a valid username and A
 
     === "REQUEST"
         !!! example "Example: Retrieving Task #2 from Product #1"
-            <i>Remember to replace the instance URL, project ID (1), Task ID (2), username (my_username), and API Key ({000...000})</i>
+            *Remember to replace the instance URL, project ID (1), Task ID (2), username (my_username), and API Key ({000...000})*
+
             ```json
             GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/2?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
             Accept: application/json
@@ -88,7 +87,8 @@ For every request made to the Spira API, you must provide a valid username and A
     
     === "REQUEST"
         !!! example "Example: Creating a new Tasks from Product #1"
-            <i>Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})</i>
+            *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
+
             ```json
             POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
             content-type: application/json
@@ -101,7 +101,8 @@ For every request made to the Spira API, you must provide a valid username and A
             ```
     === "RESPONSE"
         !!! example "Example: Creating a new Tasks from Product #1"
-            <i>Note that the newly created Task has the ID 49 in the system.</i>
+            *Note that the newly created Task has the ID 49 in the system.*
+
             ```json
             {
                 "TaskId": 49,
@@ -116,7 +117,7 @@ For every request made to the Spira API, you must provide a valid username and A
     PUT methods are used to update existing data in Spira. They usually require the `Accept` and `Content-Type` headers, the workspace ID (product, program, portfolio), and sometimes the artifact ID that must be provided in the request URL. To update artifacts in Spira, you must provide a valid `ConcurrencyDate` value in the request body, to avoid concurrency issues. Send a GET request to the server to retrieve the target artifact, copy the value of the `ConcurrencyDate` field, and use it in the PUT request body. If the request is successful, the server returns only the HTTP code 200 and no data.
 
     !!! example "Example: Updating the Task #49 of Product #1"
-        <i>Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})</i>
+        *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
         ```json
         PUT https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
         content-type: application/json
@@ -138,7 +139,7 @@ For every request made to the Spira API, you must provide a valid username and A
     DELETE methods are used to remove existing data from Spira. They usually require the workspace ID (product, program, portfolio), and the artifact ID that must be provided in the request URL. If the request is successful, the server returns only the HTTP code 200 and no data.
 
     !!! example "Example: Removing the Task #49 of Product #1"
-        <i>Remember to replace the instance URL, project ID (1), Task ID (49), username (my_username), and API Key ({000...000})</i>
+        *Remember to replace the instance URL, project ID (1), Task ID (49), username (my_username), and API Key ({000...000})*
         ```json
         DELETE https://my-company.spiraservice.net/Spira/Services/v7_0/RestService.svc/projects/1/tasks/49?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
         ```
@@ -160,22 +161,32 @@ Some Spira GET API operations can return a huge amount of data, which can lead t
 - **number_of_rows** : The maximum number of records to return. The bigger the number, the more time it takes for the request to be processed. If you are seeing timeout errors, reduce this value and make more requests to retrieve the data.
 
     !!! example "Example: Retrieving all new tasks added in the product #1 since 01/01/2021"
-        <i>Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})</i>
-        Using page size of 10 records.<br>
+        *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
+        
+        Using page size of 10 records.
+
         Page 1: Records 01 to 10  
+        
         ```json
         GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=1&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
         ```
+        
         Page 2: Records 11 to 20  
+        
         ```json
         GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=11&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
         ```
+        
         Page 3: Records 21 to 30  
+        
         ```json
         GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=21&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
         ```
-        and so on...<br>
+        
+        and so on...
+
         When the end of the list is reached, the system returns an empty result:
+        
         ```json
         []
         ```
@@ -193,7 +204,7 @@ In order to retrieve, create, edit, or delete data in Spira through the API, the
 ## Custom Properties
 When creating or editing artifacts in the Spira API, you can use the `CustomProperties` field to set and update template or system custom properties. Each custom property type requires different data in the API request to be set or modified. The easiest way to figure out the correct values for fields such as `PropertyNumber` and `CustomPropertyId` is by sending a GET request, and then copying and modifying the response data accordingly. Following is an example of the required fields for the custom property type 'Text'.
 
-!!! example "Example: Required Fields for Custom Propery type Text"
+!!! example "Example: Required Fields for Custom Property type Text"
     ```json
         "CustomProperties": [
                 {
@@ -210,17 +221,18 @@ When creating or editing artifacts in the Spira API, you can use the `CustomProp
 
 For other custom property types, instead of the `StringValue` field, please use one of the following, accordingly:
 
-- `IntegerValue`: for custom properties type 'Integer', 'User' (userId), 'Release' (releaseId), 'Automation Host' (automationHostId), and 'List' (valueId)
-- `BooleanValue`: for custom properties type 'Boolean'
-- `DateTimeValue`: for custom properties type 'Date', 'Date & Time'
-- `DecimalValue`: for custom properties type 'Decimal'
-- `IntegerListValue`: for custom properties type 'Multiselect List'. Example: `"IntegerListValue": [2, 3, 1]`
+- **IntegerValue**: for custom properties type 'Integer', 'User' (userId), 'Release' (releaseId), 'Automation Host' (automationHostId), and 'List' (valueId)
+- **BooleanValue**: for custom properties type 'Boolean'
+- **DateTimeValue**: for custom properties type 'Date', 'Date & Time'
+- **DecimalValue**: for custom properties type 'Decimal'
+- **IntegerListValue**: for custom properties type 'Multiselect List'. Example: `"IntegerListValue": [2, 3, 1]`
 
 ## Filtering
 Some API operations allow you to filter the data before requesting it. This is useful when working with large data sets. Look for POST methods that have the `sort_field` property on their URL. To configure the filter, send the pair of filtering properties for the field name and field value.
 
 !!! example "Example: Retrieve Test Runs of Release 82 in Spira"
-    <i>Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000}). Also, replace 82 by the target release.</i>
+    *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000}). Also, replace 82 by the target release.*
+
     ```json
         ###Search Test-Run
         POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/test-runs/search?starting_row=1&number_of_rows=200&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
