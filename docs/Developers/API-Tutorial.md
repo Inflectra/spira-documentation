@@ -28,10 +28,10 @@ For every request made to the Spira API, you must provide a valid username and A
 
     === "REQUEST"
         !!! example "Example: Retrieving Task #2 from Product #1"
-            *Remember to replace the instance URL, project ID (1), Task ID (2), username (my_username), and API Key ({000...000})*
+            *Remember to replace the instance URL, project ID (1), Task ID (2), and include the parameters username and api-key*
 
             ```json
-            GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/2?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+            GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/2?
             Accept: application/json
             ```
 
@@ -87,10 +87,10 @@ For every request made to the Spira API, you must provide a valid username and A
     
     === "REQUEST"
         !!! example "Example: Creating a new Tasks from Product #1"
-            *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
+            *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key*
 
             ```json
-            POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+            POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?
             content-type: application/json
             Accept: application/json
             
@@ -117,9 +117,9 @@ For every request made to the Spira API, you must provide a valid username and A
     PUT methods are used to update existing data in Spira. They usually require the `Accept` and `Content-Type` headers, the workspace ID (product, program, portfolio), and sometimes the artifact ID that must be provided in the request URL. To update artifacts in Spira, you must provide a valid `ConcurrencyDate` value in the request body, to avoid concurrency issues. Send a GET request to the server to retrieve the target artifact, copy the value of the `ConcurrencyDate` field, and use it in the PUT request body. If the request is successful, the server returns only the HTTP code 200 and no data.
 
     !!! example "Example: Updating the Task #49 of Product #1"
-        *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
+        *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key*
         ```json
-        PUT https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        PUT https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks?
         content-type: application/json
         Accept: application/json
             
@@ -139,9 +139,9 @@ For every request made to the Spira API, you must provide a valid username and A
     DELETE methods are used to remove existing data from Spira. They usually require the workspace ID (product, program, portfolio), and the artifact ID that must be provided in the request URL. If the request is successful, the server returns only the HTTP code 200 and no data.
 
     !!! example "Example: Removing the Task #49 of Product #1"
-        *Remember to replace the instance URL, project ID (1), Task ID (49), username (my_username), and API Key ({000...000})*
+        *Remember to replace the instance URL, project ID (1), Task ID (49), and include the parameters username and api-key*
         ```json
-        DELETE https://my-company.spiraservice.net/Spira/Services/v7_0/RestService.svc/projects/1/tasks/49?username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        DELETE https://my-company.spiraservice.net/Spira/Services/v7_0/RestService.svc/projects/1/tasks/49?
         ```
 
 ## Spira API and Postman
@@ -161,26 +161,26 @@ Some Spira GET API operations can return a huge amount of data, which can lead t
 - **number_of_rows** : The maximum number of records to return. The bigger the number, the more time it takes for the request to be processed. If you are seeing timeout errors, reduce this value and make more requests to retrieve the data.
 
     !!! example "Example: Retrieving all new tasks added in the product #1 since 01/01/2021"
-        *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000})*
+        *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key*
         
         Using page size of 10 records.
 
         Page 1: Records 01 to 10  
         
         ```json
-        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=1&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=1&number_of_rows=10
         ```
         
         Page 2: Records 11 to 20  
         
         ```json
-        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=11&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=11&number_of_rows=10
         ```
         
         Page 3: Records 21 to 30  
         
         ```json
-        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=21&number_of_rows=10&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        GET https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/tasks/new?creation_date=2021-01-01T00:00:00.000&start_row=21&number_of_rows=10
         ```
         
         and so on...
@@ -231,11 +231,11 @@ For other custom property types, instead of the `StringValue` field, please use 
 Some API operations allow you to filter the data before requesting it. This is useful when working with large data sets. Look for POST methods that have the `sort_field` property on their URL. To configure the filter, send the pair of filtering properties for the field name and field value.
 
 !!! example "Example: Retrieve Test Runs of Release 82 in Spira"
-    *Remember to replace the instance URL, project ID (1), username (my_username), and API Key ({000...000}). Also, replace 82 by the target release.*
+    *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key. Also, replace 82 by the target release.*
 
     ```json
         ###Search Test-Run
-        POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/test-runs/search?starting_row=1&number_of_rows=200&username=my_username&api-key={00000000-0000-0000-0000-000000000000}
+        POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/test-runs/search?starting_row=1&number_of_rows=200
         content-type: application/json
         Accept: application/json
 
