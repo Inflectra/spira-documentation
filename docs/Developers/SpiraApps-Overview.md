@@ -69,10 +69,34 @@ For example, Inflectra's [FMEA](../SpiraApps/FMEA.md) has:
 
 
 ## Coding the SpiraApp
+### Overview
 Code (JS and / or CSS) to add into specific pages: pageContents
 HTML (currently) data to add as columns on specific grids: pageColumns
 Code (JS) to add onto specified dashboard pages in widgets: dashboards
 
+### Page Contents
+A SpiraApp can include the contents of a single CSS file and a single JS file on each / any of the [relevant pages](./SpiraApps-Reference.md/#pages). You specify what files to load on what pages in the [manifest](./SpiraApps-Manifest.md/#page-contents). The file contents are then loaded automatically onto the page(s). 
+
+CSS files are used for storing logos as SVGs, or helping to style widgets. You should primarily use class based selectors in your CSS. When loaded onto the page, the CSS contents is [nested](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) inside a class based off of the guid of the SpiraApp. Any UI elements created on the page will have a wrapper with this same class defined on it. In this way you can be flexible in how you use CSS as you are not able to pollute any other CSS.  
+
+JavaScript files are the core part of most SpiraApps and should be written in dedicated JS files. When dynamically inserted onto the page, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
+
+
+### Menus
+Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus and entries to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 
+
+XXXXXX 
+You have to manage this code trigger by:
+
+- Setting the correct action type on the menu entry
+- Giving the menu entry a name unique to your app on that page
+- Write JS code to run when the entry is clicked
+- Connect your code function to the menu entry click event by calling the SpiraAppManager and registering the event.
+
+### Widgets
+You can put a single JS file into a dashboard. Your final code will be wrapped in an IIFE block and set to use strict. The code is responsible for rendering the widget. Here you can use either string literals in JS or the mustache templating library which is available for you to use.
+
+### Columns
 
 
 
@@ -82,37 +106,38 @@ declare any external urls accessed and why
 
 
 ## Tips and Tricks
-| Design pattern                                                                                  | Allowed                                      |
-| ----------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| Using internal Spira functions or properties                                                    | N                                            |
-| Links to or importing external libraries                                                        | N (including any CDN)                        |
-| External links to images                                                                        | N                                            |
-| Base64 encoded and embedded resources                                                           | N                                            |
-| Implement or change a CSP                                                                       | N                                            |
-| Import any JS library                                                                           | N                                            |
-| Provide code pre minified                                                                       | N                                            |
-| Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources | Y                                            |
-| Use JQuery                                                                                      | N                                            |
-| Write out encoded HTML strings using javascript                                                 | N                                            |
-| Write out <style> tags using javascript                                                         | N                                            |
-| Hardcode the GUID in CSS                                                                        | N (CSS is pre-nested)                        |
-| Hardcode the GUID in JS                                                                         | N (use provided const)                       |
-| Directly use local storage                                                                      | N                                            |
-| Directly use localDB                                                                            | N                                            |
-| Hard code secrets in code                                                                       | N                                            |
-| Use external URLs or APIs                                                                       | Y (provide a list and details in submission) |
-| Provided user facing documentation consistent with our guidance                                 | Y                                            |
-| Access browser APIs like Camera, Bluetooth, Location, Notifications, NFC, fonts installed, etc  | N                                            |
-| Use of any data tracking techniques                                                             | N                                            |
-| Share data with any third party without explicit disclosure and opt-in consent                  | N                                            |
-| Create, save, read, or update browser cookies                                                   | N                                            |
-| Use WebAssembly                                                                                 | N                                            |
-| Use WebSockets                                                                                  | N                                            |
-| Frequent background polling or high frequency API usage                                         | N                                            |
-| Focus on code that is performant                                                                | Y                                            |
-| Use of any deprecated browser APIs                                                              | N                                            |
-| Match browser compatibility to Spira’s standards                                                | Y                                            |
-| Write code that can be reviewed by a web developer                                              | Y                                            |
-| Use Iframes                                                                                     | N                                            |
-| Save script files pre-minified                                                                  | N                                            |
+### Design patterns to follow
+- [x] Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources
+- [x] Use external URLs or APIs (make sure to provide details in submission)
+- [x] Focus on code that is performant
+- [x] Match browser compatibility to Spira’s standards
+- [x] Write code that can be reviewed by a web developer
+
+## Design patterns to avoid
+- [ ] Access the global namespace of the browser
+- [ ] Using internal Spira functions or properties
+- [ ] Links to or importing external libraries  (including any CDN)
+- [ ] External links to images
+- [ ] Base64 encoded and embedded resources
+- [ ] Implement or change a CSP
+- [ ] Import any JS library or module
+- [ ] Provide code pre minified
+- [ ] Use JQuery
+- [ ] Write out encoded HTML strings using javascript
+- [ ] Write out `<style>` tags using javascript
+- [ ] Hardcode the GUID in CSS (CSS is pre-nested)
+- [ ] Hardcode the GUID in JS (use provided const)
+- [ ] Directly use local storage
+- [ ] Directly use localDB
+- [ ] Hard code secrets in code
+- [ ] Access browser APIs like Camera, Bluetooth, Location, Notifications, NFC, fonts installed, 
+- [ ] Use of any data tracking techniques
+- [ ] Share data with any third party without explicit disclosure and opt-in consent
+- [ ] Create, save, read, or update browser cookies
+- [ ] Use WebAssembly
+- [ ] Use WebSockets
+- [ ] Frequent background polling or high frequency API usage
+- [ ] Use of any deprecated browser APIs
+- [ ] Use Iframes
+- [ ] Save script files pre-minified
 
