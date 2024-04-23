@@ -208,6 +208,20 @@ The Description section contains the long, formatted description of the test set
     - Manual: the test set can be executed (manually) by a tester from their "My Page". 
     - Automated: the test set will be executed by the automation host you specified.
 
+
+!!! question "How is the Test Set Last Execution Date Calculated"
+    The test set last execution date varies based on the release being viewed (if any). It is calculated by:
+    
+    - get the most recent test run for each test case in the test set (for the release being viewed if selected, otherwise across any release)
+    - look at the execution dates for those test cases 
+    - find the earliest execution date 
+    - set the test set's last execution date from this value
+
+    **For example**: imagine you are viewing a test set against release "bravo", and that test set has three test cases. Spira looks for the most recent time each test case was run against release "bravo". Let's imagine that the execution dates for each test run are: 14 March, 23 February, and 2 March. The test set's last execution date will be 23 February because it is the earliest date of the three.
+
+    In this way, the last execution date field can help test managers identify potentially outdated test runs of the test set more easily. If instead, the last executed date was the most recent execution date of one of the relevant test runs, it would be very hard to know if part of the test set had not been tested recently enough.
+
+
 #### Scheduling Test Sets
 How do you say *when* the test set should execute? You have two options.
 
@@ -255,13 +269,6 @@ To move the test cases, click the test case icon and drag it to the appropriate 
 To modify an existing Test Case click the "***Edit***" button in the right-most column, or *double-click* on the cells in the row. That will switch the selected row into Edit mode. The Owner and Planned Date fields (if visible) can then be set at the test case level. Setting the owner field here is useful if you want the different test cases in the set to be executed by different testers (e.g. in integrated, scenario tests).
 
 ![](img/Test_Case_Management_223.png)
-
-!!! question "How test set last execution date is determined"
-    The test set last execution date will be set to the oldest last execution date of any test case which has been run within the context of that test set & the viewed testing release. 
-    
-    In the above image of the list of test cases in a test set, we can see 3 test cases have a last executed date. The test set's last execution date will be November 7th 2018, since that is the oldest last execution date of any test case in the test set for the given release we are viewing. Not run test cases do not influence this date.
-
-    This is done to help users identify potentially outdated test runs on specific test cases within thier test sets from the list page, rather than being forced to go through each test set 1 at a time on the details page.
 
 To add a new test case to the Test Set, click on the "***Add***" button to display the panel:
 
