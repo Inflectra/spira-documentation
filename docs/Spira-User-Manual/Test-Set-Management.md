@@ -256,6 +256,13 @@ To modify an existing Test Case click the "***Edit***" button in the right-most 
 
 ![](img/Test_Case_Management_223.png)
 
+!!! question "How test set last execution date is determined"
+    The test set last execution date will be set to the oldest last execution date of any test case which has been run within the context of that test set & the viewed testing release. 
+    
+    In the above image of the list of test cases in a test set, we can see 3 test cases have a last executed date. The test set's last execution date will be November 7th 2018, since that is the oldest last execution date of any test case in the test set for the given release we are viewing. Not run test cases do not influence this date.
+
+    This is done to help users identify potentially outdated test runs on specific test cases within thier test sets from the list page, rather than being forced to go through each test set 1 at a time on the details page.
+
 To add a new test case to the Test Set, click on the "***Add***" button to display the panel:
 
 ![](img/Test_Case_Management_224.png)
