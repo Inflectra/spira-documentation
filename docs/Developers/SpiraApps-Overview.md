@@ -83,29 +83,37 @@ JavaScript files are the core part of most SpiraApps and should be written in de
 
 
 ### Menus
-Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus and entries to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 
+Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 
 
-XXXXXX 
-You have to manage this code trigger by:
+For the user interaction to work you must:
 
-- Setting the correct action type on the menu entry
-- Giving the menu entry a name unique to your app on that page
-- Write JS code to run when the entry is clicked
-- Connect your code function to the menu entry click event by calling the SpiraAppManager and registering the event.
+- Set the correct action type on the menu entry
+- Give the menu entry a name unique to your app on that page
+- If the action is JavaScript, write code to run when the entry is clicked
+- Connect your code function to the menu entry click event by calling the `registerEvent_menuEntryClick` API on the spiraAppManager
+
+If the **action type is URL**, you can use `{project_id}` or `{artifact_id}` in the url and these will be automatically converted to the current product ID or artifact ID respectively.
+
+If the **action type is a function**, make sure to also provide valid Page Contents information in the manifest.
 
 ### Widgets
-You can put a single JS file into a dashboard. Your final code will be wrapped in an IIFE block and set to use strict. The code is responsible for rendering the widget. Here you can use either string literals in JS or the mustache templating library which is available for you to use.
+A SpiraApp can be used to generate a widget on one of the [relevant dashboard pages](./SpiraApps-Reference.md/#dashboard-types). The widget requires JavaScript code to run. Just like with Page Contents, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
+
+The code is responsible for rendering the widget. You can render the contents of the widget using one or all of:
+
+- JavaScript string literals
+- mustache templating
+- React
+
+Note that the widget will not display by default on the dashboard. The end user will need to manually add the widget to show.
 
 ### Columns
+SpiraApps can show buttons in columns on [list pages](./SpiraApps-Reference.md/#pages). This uses HTML only, provided in the [manifest](./SpiraApps-Manifest.md/#page-columns). You can use `{project_id}` or `{artifact_id}` in this HTML (typically used for URLs) and these will be automatically converted to the current product ID or artifact ID respectively. 
+
+CSS styling can be done with classes provided to SpiraApps. To provide additionally styling add a CSS file to the relevant page as [page contents](#page-contents).
 
 
-
-
-## Submission Process
-declare any external urls accessed and why
-
-
-## Tips and Tricks
+## Development Tips and Tricks
 ### Design patterns to follow
 - [x] Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources
 - [x] Use external URLs or APIs (make sure to provide details in submission)
@@ -141,3 +149,7 @@ declare any external urls accessed and why
 - [ ] Use Iframes
 - [ ] Save script files pre-minified
 
+## Submission Process
+
+
+declare any external urls accessed and why

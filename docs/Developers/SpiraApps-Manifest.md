@@ -195,7 +195,7 @@ The menu setting is an array of objects, one for each page the menu should be on
     - **icon_class**: CSS classes to use for displaying an icon button. These can either be Font Awesome classes, or custom css classes from the SpiraApp
     - **isActive**: boolean whether the menu should be visible or not. If set to false or omitted the menu will not show
     - **actionTypeId**: an integer for the [type of action](./SpiraApps-Reference.md/#action-types) to run when the user clicks on the entry
-    - **action**: the details of the action to run on user interaction (for example the URL to open or function to execute)
+    - **action**: the details of the action to run on user interaction (used for providing the URL to open if that is the action type)
 
 === "Example"
 

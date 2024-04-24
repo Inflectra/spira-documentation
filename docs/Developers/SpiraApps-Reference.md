@@ -98,7 +98,6 @@ The following third party libraries and tools are available to SpiraApps
 - Spira theming variables for light and dark mode
 
 ## SpiraApp helper class
-
 - SpiraApp helper functions
 - Make internal API calls to Spira
 - Make external API calls
