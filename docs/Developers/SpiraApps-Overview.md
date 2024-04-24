@@ -125,6 +125,7 @@ CSS styling can be done with classes provided to SpiraApps. To provide additiona
 - [ ] Access the global namespace of the browser
 - [ ] Using internal Spira functions or properties
 - [ ] Links to or importing external libraries  (including any CDN)
+- [ ] Editing or deleting any const or helper class provided by Spira for the SpiraApp, such as the spiraAppManager
 - [ ] External links to images
 - [ ] Base64 encoded and embedded resources
 - [ ] Implement or change a CSP
