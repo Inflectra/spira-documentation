@@ -217,7 +217,7 @@ The Description section contains the long, formatted description of the test set
     - find the earliest execution date 
     - set the test set's last execution date from this value
 
-    **For example**: imagine you are viewing a test set against release "bravo", and that test set has three test cases. Spira looks for the most recent time each test case was run against release "bravo". Let's imagine that the execution dates for each test run are: 14 March, 23 February, and 2 March. The test set's last execution date will be 23 February because it is the earliest date of the three.
+    **For example**: imagine you are viewing a test set against release "bravo", and that test set has three test cases. Spira looks for the most recent time each test case was run against release "bravo". Let's imagine that the most recent test run of each test case in the test set are: 14 March, 23 February, and 2 March. The test set's last execution date will be 23 February because it is the earliest date of the three.
 
     In this way, the last execution date field can help test managers identify potentially outdated test runs of the test set more easily. If instead, the last executed date was the most recent execution date of one of the relevant test runs, it would be very hard to know if part of the test set had not been tested recently enough.
 
