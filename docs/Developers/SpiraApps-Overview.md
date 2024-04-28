@@ -151,6 +151,72 @@ CSS styling can be done with classes provided to SpiraApps. To provide additiona
 - [ ] Save script files pre-minified
 
 ## Submission Process
+!!! tip "Give us feedback"
+    The submission process will evolve over time based on developer feedback. Please share your views with us at spiraapps@inflectra.com.
 
+Once you have a working SpiraApp that you are happy with and are looking to release to other users, you need to submit the SpiraApp to Inflectra. Inflectra carefully reviews all SpiraApps to make sure that they:
 
-declare any external urls accessed and why
+- adhere to the guidance in this documentation
+- are secure and performant
+- does not duplicate existing functionality (of Spira itself or other SpiraApps)
+- add value to end users
+- works as expected with easy to follow documentation
+
+Below the submissions process steps are outlined
+
+### Prepare your code
+Host the SpiraApp in a repo on GitHub.
+
+Create a branch for the current work. Mke sure to commit to a feature branch and not the main branch to make PRs easier to manage.
+
+### Prepare your documentation
+Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. 
+
+This documentation should clearly list any third party URLs contacted by the SpiraApp with a brief explanation of why each is needed.
+
+!!! tip "Documentation Examples"
+    Inflectra's SpiraApps all have detailed documentation [available](../SpiraApps/index.md). We recommend this format and level of content as a good practice example to use for your own documentation for SpiraApps.
+
+### Create a PR for Inflectra
+Invite the user spiraapps@inflectra.com to the repo. Then create a PR using the template below and assign it to spiraapps@inflectra.com for review.
+
+```md title="GitHub Pull Request Template"
+# {Public name of SpiraApp} for version {latest version number}
+
+- **goal of SpiraApp**: {summarize the purpose of the SpiraApp and how it helps users}
+- **documentation**: {link to help and setup documentation - this must be public on release, but may be a readme during the submission process}
+- **support contact**: {email contact for users to get support or ask questions - make sure this is also in the documentation}
+- **third party URL domains**: {list any third party (non Spira) domains used by the SpiraApp with a brief note about why this access is needed}
+- **test setup**: {if any special test setup is required for Inflectra to get the SpiraApp working please provide simple steps or other information}
+
+{any other information you wish to share}
+
+```
+
+The Inflectra team will review the PR and the SpiraApp. Their process follows these steps:
+
+- static code analysis on GitHub of the SpiraApp
+- verifying the manifest and code match the details provided in the PR template
+- reviewing the help documentation
+- downloading the source code and checking that it creates a valid SpiraApp package
+- installing the SpiraApp package on a VM and performing a happy path test that the SpiraApp can be configured and works as expected
+
+If Inflectra finds any issues or has any questions they will raise them on the PR. Discussion between you and the Inflectra team can happen on that PR to keep everything in one place. 
+
+Once Inflectra completes all validation and review, it will approve the PR.
+
+### Publishing a SpiraApp
+Once a PR completes successfully, Inflectra will take the latest code from the GitHub repo and prepare it for publication:
+
+- create a SpiraApp bundle for distribution
+- validate that the URL in the manifest has the correct documentation and clearly lists the support contact
+- publish the bundle on the Inflectra SpiraApp page with the following attributes
+
+    - name: the name from the manifest
+    - author: the author from the manifest
+    - summary: the summary from the manifest
+    - version number: the version number from the manifest
+    - support link: url from the manifest
+    - support email: the email address provided in the PR (and that matches the support contact in the documentation)
+
+The Inflectra team will communicate over email via the support email address you provide regarding any logistics regarding publication. Note that you should expect the SpiraApp to go live normally within 2 business days of the PR being approved.

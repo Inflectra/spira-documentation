@@ -52,6 +52,8 @@ plugins:
 theme:
   features:
     - instant
+    - content.code.annotate
+    - content.code.copy
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
@@ -335,6 +337,7 @@ nav:
       - Tutorial: Developers\SpiraApps-Tutorial.md
       - Manifest File: Developers\SpiraApps-Manifest.md
       - Reference: Developers\SpiraApps-Reference.md
+      - SpiraAppManager: Developers\SpiraApps-Manager.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
   - Version 7: About/release-notes-v7.md
