@@ -34,9 +34,7 @@ The following properties are available from the spiraAppManager. They are useful
     - **currentUtcOffset**: returns the user's offset from UTC (string)
     - **currentCulture**: returns the name of the user's chosen culture setting (string)
     - **productType**: returns the product type installed (string). The value will be one of "SpiraTest", "SpiraTeam", or "SpiraPlan".
-    - **gridIds**: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are:
-
-        - requirementSteps
+    - **gridIds**: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are shown [here](./SpiraApps-Reference.md/#available-grid-ids)
 
 === "Example"
 
@@ -231,28 +229,39 @@ There are a number of events that a SpiraApp can register against. This allows S
     };
     ```
 
-## page actions
+## Page actions
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
 
 === "Explanation"
     - **reloadForm**: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-    - **updateFormField**: updates a single field on a details page, and takes two parameters XXXXX
-    - **getDataItemField**:
-    - **reloadGrid**:
-    - **setWindowLocation**:
+    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the name of the field and the data property. There is currently no easy way to obtain a full list of fields. The best way to do so is to inspect the network requests on the details page and the data returned from a `Form_Retrieve` service call. The JSON will include a `Fields` object, with objects for each field. When you have found the object for the field, use the `FieldName` as the name property, and the `{type}Value` that has the data in as the data property. 
+    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the name of the field, the data property, and the new value. Obtain the data about the required field in the same way as is done for the "getDataItemField" function. 
+    - **reloadGrid**: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds [property function](#properties) (string)
+    - **setWindowLocation**: loads a new page in the browser. Takes a single parameter, which is the full URL (string)
 
 === "Example"
 
     ```js
     spiraAppManager.reloadForm();
 
-    spiraAppManager.updateFormField
+    /* example extract of a single property from the Fields object from a Form_Retrieve
+    {
+        "__type": "DataItemField:tst.dataObjects",
+        "caption": "Name",
+        "editable": true,
+        "fieldName": "Name",
+        "fieldType": 6,
+        "hidden": false,
+        "lookupName": "",
+        "required": true,
+        "textValue": "Fix the icon used to save"
+    } */
+    spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
+    spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this tasks");
 
-    spiraAppManager.getDataItemField
+    spiraAppManager.reloadGrid(spiraAppManager.gridIds.requirementSteps);
 
-    spiraAppManager.reloadGrid
-
-    spiraAppManager.setWindowLocation
+    spiraAppManager.setWindowLocation("https://inflectra.com");
     ```
 
 
@@ -264,31 +273,66 @@ createComboDialog
 
 
 
-## logic helpers
+## Logic helpers
+The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.
+
 === "Explanation"
-canViewArtifactType
-canCreateArtifactType
-canModifyArtifactType
+    - **canViewArtifactType**: returns true if the current user can **view** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. Takes the artifact type ID as the parameter (integer)
+    - **canCreateArtifactType**: returns true if the current user can **create** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. Takes the artifact type ID as the parameter (integer)
+    - **canModifyArtifactType**: returns true if the current user can **modify** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. Takes the artifact type ID as the parameter (integer). Note that this does not check if the actual artifact ID itself can be modified (only if they can ever modify the artifact, including limited view)
 
 === "Example"
 
+    ```js
+    spiraAppManager.canViewArtifactType(1); // returns true if the user can view requirements in this product
 
+    spiraAppManager.canCreateArtifactType(2); // returns true if the user can create test cases in this product
 
-## format helpers
+    spiraAppManager.canModifyArtifactType(3); // returns true if the user can modify incidents in this product
+    ```
+
+## Format Helpers
+
 === "Explanation"
-formatDate
-formatDateTime
-formatCustomFieldName
+    - **formatDate**: formats an ISO datetime into the correct date format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter
+    - **formatDateTime**: formats an ISO datetime into the correct datetime format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter
+    - **formatCustomFieldName**: returns the custom property field name in the form `Custom_01`  for a passed in integer
 
 === "Example"
 
+    ```js
+    spiraAppManager.formatDate("1993-05-16T14:48:00.000Z"); // returns "5/16/1993" if the user's culture is en-US
 
-## localStorage
+    spiraAppManager.formatDateTime("1993-05-16T14:48:00.000Z"); // returns "5/16/1993 10:48:00 AM" if the user's culture is en-US
+
+    spiraAppManager.formatCustomFieldName(5); // returns "Custom_07"
+    ```
+
+## Local Storage
+Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use the SpiraApp guid.
+
 === "Explanation"
-getLocalData
-setLocalData
-removeLocalData
+    - **getLocalData**: retrieve the local storage object for this user, on this browser, for this SpiraApp. Takes the app guid as its parameter (string)
+    - **setLocalData**: sets or updates the local storage. Takes the app guid (string) as the first parameter, and a string for the data to be set as the second parameter (string).
+    - **removeLocalData**: deletes all local storage for this user, in this browser, for this SpiraApp. Takes the app guid as its parameter (string)
 
 === "Example"
+
+    ```js linenums="1"
+    // use a single object to store all the settings in memory
+    let storageData = { /* arbitrary data here */  };
+
+    // convert the object to a string before setting it into local storage
+    spiraAppManager.setLocalData(APP_GUID,JSON.stringify(storageData));
+
+    // retrieve the data - do not forget to parse it back into JSON if needed
+    storageData = JSON.parse(spiraAppManager.getLocalData(APP_GUID));
+
+    // to update the storage, update the object in memory, then stringify it, and set it on local storage
+    spiraAppManager.setLocalData(APP_GUID,JSON.stringify(storageData));
+
+    // finally, fully remove the data
+    spiraAppManager.removeLocalData(APP_GUID);
+    ```
 
 

@@ -167,7 +167,7 @@ Below the submissions process steps are outlined
 ### Prepare your code
 Host the SpiraApp in a repo on GitHub.
 
-Create a branch for the current work. Mke sure to commit to a feature branch and not the main branch to make PRs easier to manage.
+Create a branch for the current work. Make sure to commit to a feature branch and not the main branch to make PRs easier to manage.
 
 ### Prepare your documentation
 Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. 

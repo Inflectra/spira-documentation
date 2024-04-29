@@ -82,6 +82,11 @@ The list below shows the IDs for different dashboard pages in Spira.
 | 6   | EnterpriseHome | N                      |
 | 7   | ProgramReports | N                      |
 
+### Available Grid IDs
+The following gridIDs are available when calling the `spiraAppManager.gridIds` [function](./SpiraApps-Manager.md/#properties).
+
+- requirementSteps
+
 
 ## Available resources
 ### Inflectra Javascript helpers
