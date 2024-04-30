@@ -353,7 +353,7 @@ This page is made up of *three* areas;
     - and the info bar (with a shaded background), showing:
         
         - the version number,
-        - Token ID
+        - token ID
         - release type 
         - [workflow status transitions](#workflows-and-statuses)
         - requirement completion 

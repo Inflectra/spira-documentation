@@ -339,6 +339,7 @@ nav:
       - SpiraAppManager: Developers\SpiraApps-Manager.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
+  - Version 8: About/release-notes-v8.md
   - Version 7: About/release-notes-v7.md
   - Version 6: About/release-notes-v6.md
   - Version 5: About/release-notes-v5.md
