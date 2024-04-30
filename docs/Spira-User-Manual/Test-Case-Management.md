@@ -504,9 +504,9 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
-| Association Tab Of | Available artifacts                                                                                                      |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| **Test cases**     | Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span> |
+| Association Tab Of | Available artifacts                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| **Test cases**     | Tasks and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
 
 Any tasks created during exploratory test execution will automatically be be shown here. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
