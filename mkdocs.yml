@@ -331,7 +331,7 @@ nav:
     - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
 - Developers:
-    - API Tutorial: Developers\API-Tutorial.md
+    - API Overview: Developers\API-Overview.md
     - SpiraApp Development:
       - Overview: Developers\SpiraApps-Overview.md
       - Tutorial: Developers\SpiraApps-Tutorial.md

@@ -2,7 +2,7 @@
 ## Introduction
 This page provides an overview of how SpiraApps work, what they can do, and how the development process works. This is in addition to [technical reference material](./SpiraApps-Reference.md) and the [manifest explanation](./SpiraApps-Manifest.md) useful for developers and a more [guided tutorial](./SpiraApps-Tutorial.md) to help you get started. 
 
-SpiraApps will often use Spira's REST API. We have extensive reference documentation for the API as part of each Spira install. Get started by following this [API tutorial](./API-Tutorial.md).
+SpiraApps will often use Spira's REST API. We have extensive reference documentation for the API as part of each Spira install. Get started by following this [API overview](./API-Overview.md).
 
 !!! info "What is a SpiraApp?"
     - [x] a small piece of client-side code 
