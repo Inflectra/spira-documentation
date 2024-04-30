@@ -117,7 +117,67 @@ The following CSS libraries and properties are available to SpiraApps:
 
 - Inflectra CSS utility library
 - Spira theming variables for light and dark mode
-- theme images 
+
+### Spira Artifact Images
+The following images are available for SpiraApps to access to help enhance the appearance of any UX. Use the [baseThemeUrl](./SpiraApps-Manager.md/#properties) property from the SpiraAppManager to aid in retrieval. Note that all of the images below are in SVG format and in the "Images" folder. 
+
+- artifact-UseCaseStep.svg
+- artifact-AutomationHost.svg
+- artifact-Baseline.svg
+- artifact-Build.svg
+- artifact-Capability.svg
+- artifact-CapabilitySummary.svg
+- artifact-Configuration.svg
+- artifact-Document.svg
+- artifactHighlight-planningBoard.gif
+- artifactHighlight-risk.gif
+- artifactHighlight-risk.png
+- artifactHighlight-sourceCode.gif
+- artifactHighlight-task.gif
+- artifact-Incident.svg
+- artifact-Iteration.svg
+- artifact-Planning.svg
+- artifact-PlanningBoard.svg
+- artifact-PortfolioMilestone.svg
+- artifact-ProgramMilestone.svg
+- artifact-Project.svg
+- artifact-PullRequest.svg
+- artifact-Release.svg
+- artifact-RepositoryTest.svg
+- artifact-Requirement.svg
+- artifact-RequirementStep.svg
+- artifact-RequirementSummary.svg
+- artifact-Resource.svg
+- artifact-Revision.svg
+- artifact-Revision-Add.svg
+- artifact-Revision-Delete.svg
+- artifact-Risk.svg
+- artifact-RiskMitigation.svg
+- artifact-SourceCode.svg
+- artifact-StrategicOutcome.svg
+- artifact-Task.svg
+- artifact-TestCase.svg
+- artifact-TestCaseNoSteps.svg
+- artifact-TestConfigurationSet.svg
+- artifact-TestLink.svg
+- artifact-TestRun.svg
+- artifact-TestSet.svg
+- artifact-TestStep.svg
+- artifact-UseCase.svg
+- FolderOpen.svg
+- Folder.svg
+- product-TaraVault.svg
+- org-Administration.svg
+- org-Component.svg
+- org-Enterprise.svg
+- org-Portfolio.svg
+- org-Program-outline.svg
+- org-Project-outline.svg
+- org-spiraApp.svg
+- org-Template-outline.svg
+- product-SpiraPlan.svg
+- product-SpiraTeam.svg
+- product-SpiraTest.svg
 
 ### Third party CSS libraries
 The following third party CSS libraries are available to SpiraApps:
