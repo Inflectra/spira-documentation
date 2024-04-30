@@ -113,10 +113,8 @@ Spira provides a number of resources that SpiraApps can use to provide rich, pow
 ### Inflectra CSS helpers
 HTML elements added to the page for a SpiraApp (like a menu or widget) is wrapped in a containing div that has the guid of the SpiraApp as a property. Any CSS added onto the page for the SpiraApp is nested with this same property on the page. This means the SpiraApp CSS cannot change any CSS elsewhere on the page
 
-The following CSS libraries and properties are available to SpiraApps:
+[Inflectra's Unity CSS library](https://github.com/Inflectra/inflectra-unity-css-library) is available to SpiraApps. While it exists within Spira, the basics and its classes are available to help you plan and review your css on GitHub.
 
-- Inflectra CSS utility library
-- Spira theming variables for light and dark mode
 
 ### Spira Artifact Images
 The following images are available for SpiraApps to access to help enhance the appearance of any UX. Use the [baseThemeUrl](./SpiraApps-Manager.md/#properties) property from the SpiraAppManager to aid in retrieval. Note that all of the images below are in SVG format and in the "Images" folder. 
