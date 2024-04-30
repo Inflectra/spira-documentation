@@ -266,11 +266,43 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
 
 ## UX generator
+### Dropdown list dialog
+This helper function handles the creation of a UX control that allows users to interact with it freely. It creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.
+
 === "Explanation"
-createComboDialog
+    The `createComboDialog` function takes the following parameters:
+
+    - **title**: the title of the dialog (string)
+    - **introText**: the introductory text, to explain to the user what to do and why (string)
+    - **button**: the text to use for the OK button (string)
+    - **entries**: the entries in the dropdown list (array of strings)
+    - **successCallback**: callback function for when they user clicks the OK button. This function receives the selected dropdown item as its parameter.
 
 === "Example"
 
+    ```js hl_lines="15-21" linenums="1"
+    // provide a list of entries to show in the dropdown
+    const dropdownEntries = [
+        "alpha",
+        "bravo",
+        "charlie",
+        "delta"
+    ];
+    // show the user the option they selected to validate our code
+    function showChosenOption(chosenOption) {
+        spiraAppManager.displaySuccessMessage(`You choose: ${chosenOption}`);
+    }
+
+    // this example code will run on first load
+    // in reality it should be tied to a user action like a menu click
+    spiraAppManager.createComboDialog(
+        "MySpiraApp Dropdown",
+        "Please choose one of the options from the dropdown".
+        "Choose!",
+        dropdownEntries,
+        showChosenOption
+    );
+    ```
 
 
 ## Logic helpers

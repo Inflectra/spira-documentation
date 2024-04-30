@@ -114,6 +114,9 @@ CSS styling can be done with classes provided to SpiraApps. To provide additiona
 
 
 ## Development Tips and Tricks
+### Localization
+SpiraApps do not currently provide native localization support. We encourage developers to implement localization where possible. SpiraApps have access to the user's preferred culture / language using the [currentCulture](./SpiraApps-Manager.md/#properties) helper function.
+
 ### Design patterns to follow
 - [x] Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources
 - [x] Use external URLs or APIs (make sure to provide details in submission)

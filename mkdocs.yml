@@ -334,7 +334,6 @@ nav:
     - API Tutorial: Developers\API-Tutorial.md
     - SpiraApp Development:
       - Overview: Developers\SpiraApps-Overview.md
-      - Tutorial: Developers\SpiraApps-Tutorial.md
       - Manifest File: Developers\SpiraApps-Manifest.md
       - Reference: Developers\SpiraApps-Reference.md
       - SpiraAppManager: Developers\SpiraApps-Manager.md
