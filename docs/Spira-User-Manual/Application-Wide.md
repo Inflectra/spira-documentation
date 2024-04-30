@@ -282,10 +282,10 @@ You can associate artifacts to one another. For instance, you can associate (or 
 - Incidents
 - Releases
 - Requirements
-- Risks
+- Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Source code commits
 - Source code files
-- Tasks
+- Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Test cases <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Program Capabilities <span class="pill">SpiraPlan</span>
 - Program Milestones <span class="pill">SpiraPlan</span>

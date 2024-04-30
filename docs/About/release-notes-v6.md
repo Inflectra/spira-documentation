@@ -1224,7 +1224,7 @@
 !!! info "Summary"
     **Additional Requirement List Views**: In addition to the current hierarchical list view of requirements, additional views will make it easier for users to work with requirements in ways that work for them at the time <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-    **Improved Risk Associations**: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements <span class="pill">SpiraPlan</span>
+    **Improved Risk Associations**: Now you can add links between risks to and from other risks, as well as incidents, test cases, and requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 ??? success "New features"
 
@@ -1347,7 +1347,7 @@
 ## Version 6.0 (April 2019)
 
 !!! info "Summary"
-    **Enterprise Risk Management**: Risks have their own types, statuses, workflows, and mitigations. New reports for risks, as well as charts and a risk cube have been added <span class="pill">SpiraPlan</span>
+    **Enterprise Risk Management**: Risks have their own types, statuses, workflows, and mitigations. New reports for risks, as well as charts and a risk cube have been added <span class="pill">SpiraPlan</span> <span class="pill">SpiraTeam</span>
 
     **Changes to certain names in the system**: Projects are now called Products; Project Groups are now Programs; and Iterations are now Sprints.
 
