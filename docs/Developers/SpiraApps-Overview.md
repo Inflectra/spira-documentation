@@ -114,6 +114,9 @@ CSS styling can be done with classes provided to SpiraApps. To provide additiona
 
 
 ## Development Tips and Tricks
+### Localization
+SpiraApps do not currently provide native localization support. We encourage developers to implement localization where possible. SpiraApps have access to the user's preferred culture / language using the [currentCulture](./SpiraApps-Manager.md/#properties) helper function.
+
 ### Design patterns to follow
 - [x] Use [officially provided](./SpiraApps-Reference.md/#available-resources) libraries or resources
 - [x] Use external URLs or APIs (make sure to provide details in submission)
@@ -167,7 +170,7 @@ Below the submissions process steps are outlined
 ### Prepare your code
 Host the SpiraApp in a repo on GitHub.
 
-Create a branch for the current work. Mke sure to commit to a feature branch and not the main branch to make PRs easier to manage.
+Create a branch for the current work. Make sure to commit to a feature branch and not the main branch to make PRs easier to manage.
 
 ### Prepare your documentation
 Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. 

@@ -158,12 +158,12 @@ A SpiraApp can run on a [wide number of product pages](./SpiraApps-Reference.md/
 The pageContents setting is an array of objects, one for each page that content should appear on. 
 
 === "Explanation"
-
-=== "Example"
     - **pageId**: an integer for the [page](./SpiraApps-Reference.md/#pages) the code should be embedded on
     - **name**: codeFriendlyName to describe the content (not currently used)
     - **code**: relative path to a single JS file to include on the page in the form of `file://{filename.js}`
     - **css**: relative path to a single CSS file to include on the page in the form of `file://{filename.css}`
+
+=== "Example"
 
     ```yaml
     pageContents:
@@ -258,4 +258,4 @@ The dashboards setting is an array of objects, with only one object per unique d
         isActive: true
         description: A hello world example widget
         code: file://widget.js
-  ```
+    ```
