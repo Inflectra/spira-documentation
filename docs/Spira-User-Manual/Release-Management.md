@@ -345,7 +345,20 @@ When you click on release item in the [release list](#release-list), you are tak
 This page is made up of *three* areas;
 
 1.  the left pane displays the releases list navigation;
-2.  the right pane's header, which displays: the operations toolbar; [the hierarchical structure the release is in](Application-Wide.md#breadcrumbs); the editable name of the selected release; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
+2.  the right pane's header, which displays: 
+
+    - the operations toolbar
+    - [the hierarchical structure the release is in](Application-Wide.md#breadcrumbs)
+    - the editable name of the selected release
+    - and the info bar (with a shaded background), showing:
+        
+        - the version number,
+        - Token ID
+        - release type 
+        - [workflow status transitions](#workflows-and-statuses)
+        - requirement completion 
+        - test coverage 
+
 3.  the right pane's tabbed interface with rich information related to the release.
 
 Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the releases list, on mobile devices a 'back' button is shown on the left of the operations toolbar.
@@ -360,7 +373,15 @@ The navigation pane consists of a link that will take you back to the release li
 
 The top part of the right pane allows you to view and/or edit the details of the particular release. In addition you can delete the current artifact by choosing "***Delete***", discard any changes made by clicking "***Refresh***", or print or export it by clicking one of the options from the Tools dropdown menu. 
 
-The lower part of the right pane can be in one of seven possible modes that can be selected: "Overview", "Incidents", "Reqs & Tasks", "Test Cases", "Test Runs", "Attachments", and "History". Each of the different views is described separately below.
+The lower part of the right pane has a number of tabs, described separately below:
+
+- Overview
+- Incidents
+- Reqs & Tasks
+- Test Cases
+- Test Runs
+- Attachments
+- History"
 
 
 ### Emailing
@@ -506,6 +527,8 @@ You can also filter the results by choosing items from the filter options displa
 ### Attachments
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
+### Associations
+Read about [how the associations tab works](Application-Wide.md#associations)
 
 ### Baselines
 NOTE: **Baselining is only available in SpiraTeam and SpiraPlan** and this tab will be only then be visible if baselining has been turned on for a product.
