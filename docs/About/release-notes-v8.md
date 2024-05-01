@@ -12,10 +12,10 @@
 ??? success "New Features"
     - **SpiraApps**
 
-        - As a system admin, I can install and manage SpiraApps created by developers with a dedicated developer mode and features, to help me prototype and test locally developed SpiraApps [RQ:4781]
-        - As a system admin, the SpiraApps system admin list page has an improved grid that makes it easier to review and act on installed SpiraApps [RQ:4780]
+        - As a system admin, I can install and manage SpiraApps created by developers with a [dedicated developer mode](../Spira-Administration-Guide/System.md/#general-settings) and features, to help me prototype and test locally developed SpiraApps [RQ:4781]
+        - As a system admin, the SpiraApps [system admin list page](../Spira-Administration-Guide/System.md/#spiraapps) has an improved grid that makes it easier to review and act on installed SpiraApps [RQ:4780]
         - As a system admin, I can install officially distributed SpiraApp bundles, to allow me to enhance my organization's Spira [RQ:4787]
-        - As a system admin, I can view history entries for when SpiraApps are added, deleted, activated, or deactivated, to provide me with a clear audit trail for SpiraApps [RQ:4782]
+        - As a system admin, I can view [history entries](../Spira-Administration-Guide/System.md/#system-history-changes) for when SpiraApps are added, deleted, activated, or deactivated, to provide me with a clear audit trail for SpiraApps [RQ:4782]
 
 ??? bug "Bug fixes and enhancements"
     - Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]

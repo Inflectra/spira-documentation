@@ -23,6 +23,7 @@ The available settings include:
 - **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
 - **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](Product-Planning.md/#testing-settings). 
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
+- **Enable Developer Mode**: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.
 
 ### TaraVault for Source code
 The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
@@ -244,7 +245,7 @@ Example settings for connecting to Gmail/Google Mail for sending notifications:
 ## SpiraApps
 The SpiraApps page shows system administrators every SpiraApp currently installed, sorted alphabetically[^app-compatibility].
 
-[^app-compatibility]: SpiraApps are shown even if they will not fully function in your application. For instance, the FMEA SpiraApp is only compatible with SpiraPlan but will still show in the list if you are using SpiraTest or SpiraTeam. 
+[^app-compatibility]: SpiraApps are shown even if they will not fully function in your application. For instance, the FMEA SpiraApp is not compatible with SpiraTest but will still show in the list if you are using SpiraTest. 
 
 ![SpiraApp list page view](img/System_SpiraApps_List.png)
 
@@ -253,15 +254,32 @@ For each SpiraApp in the list you see:
 - Its icon and name
 - The author organization (e.g. Inflectra Corporation)
 - A short summary description of what the SpiraApp does
-- If the SpiraApp has been activated for the system (in the screenshot above 4 of the7  SpiraApps are Active)
+- The version number
+- If the SpiraApp is active or not (in the screenshot all but 2 of the SpiraApps are active)
 - Available operations
 
-    - Settings: opens the [settings page](#spiraapp-settings) for the particular SpiraApp
-    - Activate/Deactivate: click the button to toggle if the SpiraApp is active or not
+    - Use the "power" icon to toggle if the SpiraApp is active or not
+    - Use the "cog" icon to open the [settings page](#spiraapp-settings) for that SpiraApp
+    - Use the "trash" icon (developer mode only) to fully delete the SpiraApp from the system
 
+### Installing SpiraApps
+Beneath the table of available SpiraApps, there is an upload area for installing new SpiraApps. To install a SpiraApp, take your `*.spab` bundle file and either drag it over the upload area, or click the upload area to locate the file. Then click "Install SpiraApp".
+
+If developer mode is turned on, there will be an additional section at the bottom of the page. This allows you to upload any developer generated `.spirapp` package file. 
+
+![SpiraApp dev mode section](img/System_SpiraApps_DevMode.png)
+
+!!! info "Staying Safe With SpiraApps"
+    During [development of a SpiraApp](../Developers/SpiraApps-Overview.md), developers write their code and then package it up into an `.spirapp` package file. These files can **only** by uploaded into Spira when developer mode is turned on. Anything you install in this way is at your own risk.
+
+    Once a SpiraApp is ready to be released to customers, it goes through a detailed [submission process](../Developers/SpiraApps-Overview.md/#submission-process). Once Inflectra approves a SpiraApp, Inflectra packages and securely bundles the SpiraApp into a special "spab" filetype (it stands for **Sp**ir**a**App **B**undle). These files can be safely distributed over the internet, much like apps can be. 
+
+    When you upload a SpiraApp (as an spab bundle), Spira performs a number of checks and validations against the file before it adds it to your system, to ensure it's origin. Spira does not need to have internet access to carry out these checks.
 
 ## SpiraApp Settings
-The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. For more detailed information about each SpiraApp, what they do, and how to work with them refer to the [dedicated SpiraApp documentation](../SpiraApps/index.md) 
+The SpiraApp Settings page shows any system wide settings available for the particular SpiraApp. 
+
+For more detailed information about each Inflectra created SpiraApp them refer to the [dedicated SpiraApp documentation](../SpiraApps/index.md). For third party SpiraApps, you will see a URL to get more information about that SpiraApp at the top of this settings page.
 
 If the SpiraApp has no settings you can still access the page but there will be no settings to edit.
 
@@ -283,9 +301,14 @@ Click the "Save" button to commit any edits.
 
 
 ## System History Changes
-This page displays a list of relevant changes made to system level artifacts. **Currently, only changes to product custom properties are recorded**.
+This page displays a list of relevant changes made to system level artifacts or other relevant information.
  
 ![system history list page](img/system-history-list.png)
+
+!!! info "What changes are tracked in system history?"
+    - Product template custom properties
+    - Product membership
+    - SpiraApps
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
 
