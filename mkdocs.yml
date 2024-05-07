@@ -52,6 +52,8 @@ plugins:
 theme:
   features:
     - instant
+    - content.code.annotate
+    - content.code.copy
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
@@ -329,8 +331,16 @@ nav:
     - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
     - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
+- Developers:
+    - API Overview: Developers\API-Overview.md
+    - SpiraApp Development:
+      - Overview: Developers\SpiraApps-Overview.md
+      - Manifest File: Developers\SpiraApps-Manifest.md
+      - Reference: Developers\SpiraApps-Reference.md
+      - SpiraAppManager: Developers\SpiraApps-Manager.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
+  - Version 8: About/release-notes-v8.md
   - Version 7: About/release-notes-v7.md
   - Version 6: About/release-notes-v6.md
   - Version 5: About/release-notes-v5.md

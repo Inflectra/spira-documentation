@@ -31,6 +31,13 @@ To install the add-in:
 * When you see the correct add-in developed by Inflectra, click on the "Add" button associated with it. 
 * You should now see the SpiraPlan icon labeled "Show Taskpane, SpiraPlan" in your home tab. Click on it to begin.
 
+!!! info "To update the add-in"
+    To update your add-in, just accept the new version when Excel asks you or manually check for new versions through the Add-ins menu.
+    
+    Due to technical limitations, sometimes Excel keeps old files cached, leading you to think the add-in was updated when it was actually not. Please follow the instructions in [this article](https://www.inflectra.com/Support/KnowledgeBase/KB830.aspx) to make sure you force it to run the most recent version.
+    
+    Learn more about our Addons and Integrations new releases and updates [here](https://spiradoc.inflectra.com/About/release-notes-addons-1/).
+
 
 ## 1. Connect to your Spira app
 You can use this add-in with SpiraTest®, SpiraTeam®, or SpiraPlan®. 

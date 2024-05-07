@@ -429,7 +429,18 @@ When you click on a requirement item in the requirements list described in [Requ
 This page is made up of *three* areas;
 
 1.  the left pane displays the requirements list navigation;
-2.  the right pane's header, which displays: the operations toolbar; [the hierarchical structure the requirement is in](Application-Wide.md#breadcrumbs); the editable name of the selected requirement; and the info bar (with a shaded background), which also contains the workflow status transitions (see below); and
+2.  the right pane's header, which displays
+
+    - the operations toolbar
+    - [the hierarchical structure the requirement is in](Application-Wide.md#breadcrumbs)
+    - the editable name of the selected requirement
+    - and the info bar (with a shaded background), which shows:
+    
+        - token ID
+        - requirement type 
+        - workflow status transitions (see below)
+        - test coverage 
+
 3.  the right pane's tabbed interface with rich information related to the requirement.
 
 Please note that on smaller screen sizes the navigation pane is not displayed. While the navigation pane has a link to take you back to the requirements list, on mobile devices a 'back' button is shown on the left of the operations toolbar.

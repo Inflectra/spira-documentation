@@ -9,6 +9,9 @@
 
 Inside Spira, administrators can browse the list of available SpiraApps. From here they can activate, configure, and then enable for relevant products. SpiraApps functionality is limited to each product they are enabled for - in other words, they do not work in programs, portfolios, or system wide.
 
+!!! example "For Developers"
+    Developers can make their own SpiraApps and have them published and distributed by Inflectra. See our [developer overview](../Developers/SpiraApps-Overview.md) for more information.
+
 ## Getting Started with a SpiraApp
 Here is a quick overview of how to start using a SpiraApp (we recommend also reading the documentation for the SpiraApp too):
 
