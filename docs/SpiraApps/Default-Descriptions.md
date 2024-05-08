@@ -13,7 +13,7 @@ This SpiraApp lets users to create artifacts from their details pages with pre-p
     - [x] runs automatically on the test case details page
     - [x] runs automatically on the incident details page
     - [x] runs automatically on the task details page (not available in SpiraTest)
-    - [x] runs automatically on the risk details page (not available in SpiraTest or SpiraTeam)
+    - [x] runs automatically on the risk details page (not available in SpiraTest)
 
 ## Setup
 ### Product Settings
