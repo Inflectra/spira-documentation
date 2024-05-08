@@ -9,14 +9,15 @@ The following artifact changes are recorded:
 - Requirements
 - Releases
 - Documents (including tracking when versions are added, removed, or the default version changed) 
-- Tasks
-- Incidents
 - Test Cases
 - Test Steps
 - Test Sets
 - Automation Hosts
+- Incidents
+- Tasks
+- Risks
 
-If baselining is enabled for this product, changes to assocations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.
+If baselining is enabled for this product, changes to associations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.
 
 Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).
  

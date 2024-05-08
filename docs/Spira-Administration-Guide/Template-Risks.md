@@ -9,7 +9,7 @@ The following screen is displayed when you choose the "Types" link from the Inci
 
 ![](img/Template_Risks_167.png)
 
-The screen displays a list of all the defined risk types for the current template. By default, the screen will be populated with the standard SpiraPlan® risk types. To edit an existing type, change the name, associated workflow, set a default type and/or change the active flag then click "Save".
+The screen displays a list of all the defined risk types for the current template. By default, the screen will be populated with the standard risk types. To edit an existing type, change the name, associated workflow, set a default type and/or change the active flag then click "Save".
 
 You can't delete an existing risk type, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new type, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -24,7 +24,7 @@ The following screen is displayed when you choose the "Statuses" link from the R
 
 ![](img/Template_Risks_168.png)
 
-The screen displays a list of all the defined risk statuses for the current template. By default, the screen will be populated with the standard SpiraPlan® risks statuses. To edit an existing status, change the name, open check-box, set it as the default status and/or change the active flag then click "Save".
+The screen displays a list of all the defined risk statuses for the current template. By default, the screen will be populated with the standard risks statuses. To edit an existing status, change the name, open check-box, set it as the default status and/or change the active flag then click "Save".
 
 You can't delete an existing risk status, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new risk status, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -37,7 +37,7 @@ The following screen is displayed when you choose the "Impact" link from the Ris
 
 ![](img/Template_Risks_169.png)
 
-The screen displays a list of all the defined risk impacts for the current template. By default, the screen will be populated with the standard SpiraPlan® risk impacts. To edit an existing impact: change the name, color, score (which is used, together with a risks probability to calculate its exposure), position, or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
+The screen displays a list of all the defined risk impacts for the current template. By default, the screen will be populated with the standard risk impacts. To edit an existing impact: change the name, color, score (which is used, together with a risks probability to calculate its exposure), position, or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
 You can't delete an existing impact, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new impact, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -48,7 +48,7 @@ The following screen is displayed when you choose the "Probability" link from th
 
 ![](img/Template_Risks_170.png)
 
-The screen displays a list of all the defined risk probabilities for the current template. By default, the screen will be populated with the standard SpiraPlan® risk probabilities. To edit an existing probability:
+The screen displays a list of all the defined risk probabilities for the current template. By default, the screen will be populated with the standard risk probabilities. To edit an existing probability:
 change the name, color, score (which is used, together with a risks impact to calculate its exposure), position, or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
 You can't delete an existing risk probability, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new risk probability, click the "Add" button and a new row will be added to the list which you can now edit.
@@ -60,7 +60,7 @@ Clicking on the "Workflows" link in the Administration menu brings up the list o
 
 ![](img/Template_Risks_171.png)
 
-To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard steps and transitions.
 
 You can have as many workflows as you like in a template, but only one can be marked as the default. Each risk type is assigned to a workflow;
 this allows you to have different risk types follow different paths from creation of closure. However, when a new risk type is created, it will be initially associated with the template's default workflow.
@@ -100,7 +100,7 @@ When you click on the incident status name link from either of the previous scre
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current risk status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various risk fields (i.e. those that are a standard part of SpiraPlan® such as probability):
+This page allows you to define the behavior of the various risk fields:
 
 ![](img/Template_Risks_175.png)
 
