@@ -4,9 +4,9 @@ The Spira™ family of applications from Inflectra® are a powerful set of tools
 
 SpiraTest® is our powerful and easy to use requirements, test and defect management system, ideal for quality assurance teams.
 
-SpiraTeam® is our integrated Application Lifecycle Management (ALM) system that manages your product's requirements, releases, test cases, issues and tasks in one unified environment.
+SpiraTeam® is our integrated Application Lifecycle Management (ALM) system that manages your product's requirements, releases, test cases, issues, tasks, and risks in one unified environment.
 
-SpiraPlan® expands on the features in SpiraTeam® to provide a complete Enterprise Agile Planning® solution that lets you manage risks, products, programs and the entire organization with ease.
+SpiraPlan® expands on the features in SpiraTeam® to provide a complete Enterprise Agile Planning® solution that lets you manage products, programs and the entire organization with ease.
 
 
 ## Quality Assurance

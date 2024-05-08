@@ -308,6 +308,8 @@ This page displays a list of relevant changes made to system level artifacts or 
 !!! info "What changes are tracked in system history?"
     - Product template custom properties
     - Product membership
+    - Capabilities
+    - Program Milestones
     - SpiraApps
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
