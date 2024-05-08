@@ -21,7 +21,7 @@ Read about [how to create and manage filters, and how to sort the artifact list]
 
 ### New Risk
 
-Clicking on the "***New Risk***" button takes you to the new risk screen. This is essentially the same screen as the [risk details](#risk-details) screen except, depending on how the workflow has been configured for your product, certain fields may be disabled. For more details on setting and up configuring workflow for your product, please refer to the *SpiraTest Administration Guide*.
+Click on the "New Risk" button to go to the new risk screen. This is a special version of the [risk details](#risk-details) screen except, depending on how the workflow has been configured for your product, certain fields may be disabled.
 
 
 ### Delete
