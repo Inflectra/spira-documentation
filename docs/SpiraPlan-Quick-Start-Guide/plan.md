@@ -308,7 +308,7 @@ Let's hook our tasks up to releases.
 
 
 ## What are the Risks
-!!! info "Skip this section if you are not using SpiraPlan"
+!!! info "Skip this section if you are not using SpiraTeam or SpiraPlan"
     [Skip ahead](do-the-work.md)
 
 {==
