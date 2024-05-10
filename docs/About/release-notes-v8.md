@@ -1,5 +1,12 @@
-## Version 8.0 (May 2024)
+# Release Notes for Spira v8
 
+## Version 8.0.0.1 (May 2023)
+
+!!! bug "Bug fixes"
+
+    - Improve handling when uploading larger SpiraApp bundles and packages [IN:9516]
+
+## Version 8.0 (May 2024)
 !!! info "Summary"
     Previously only available in SpiraPlan, now SpiraTeam users also have access to [risks and risk mitigations](../Spira-User-Manual/Risks-Management.md) to better manage their products.
 
