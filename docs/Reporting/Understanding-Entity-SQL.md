@@ -15,6 +15,7 @@ from entity collection as alias
 join other entity collections on relationship
 where conditions
 group by properties
+having properties
 order by properties
 ```
 
