@@ -1,6 +1,6 @@
 # Release Notes for Spira v8
 
-## Version 8.0.0.1 (May 2023)
+## Version 8.0.0.1 (May 2024)
 
 !!! bug "Bug fixes"
 
