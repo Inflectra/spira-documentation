@@ -147,7 +147,7 @@ We've made tasks directly from a requirement. These tasks are directly linked to
 - [x] Give this new task a name of `Set 'out of office' before launch day`
 - [x] Hit "Save"
 
-We now four tasks in total (two if you have only created standalone tasks). The task we made about our spacesuit fitting is actually part of our requirement (if you made it) to get a cool spacesuit. We made this task independently of that requirement, but we can still link them together.
+We now have four tasks in total (two if you have only created standalone tasks). The task we made about our spacesuit fitting is actually part of our requirement (if you made it) to get a cool spacesuit. We made this task independently of that requirement, but we can still link them together.
 
 - [x] Click on the name of the task "Book a spacesuit test fitting" to open the details page for that task
 - [x] On the Overview tab find the column called "Properties". You will see a field there called "Requirement". It is currently blank because it has no linked requirement. Click the "Change" button
