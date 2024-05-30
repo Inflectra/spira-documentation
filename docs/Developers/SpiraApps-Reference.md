@@ -42,24 +42,28 @@ The list below shows the relevant IDs for different artifacts in Spira.
 ### Pages
 The list below shows the relevant IDs for different pages where SpiraApps can run from. Every page below support [pageContents](./SpiraApps-Manifest.md/#page-contents) and [menus](./SpiraApps-Manifest.md/#menus), but only list pages support [columns](./SpiraApps-Manifest.md/#page-columns).
 
-| ID  | Page               | Supports columns |
-| --- | ------------------ | ---------------- |
-| 1   | TestCaseList       | Y                |
-| 2   | TestCaseDetails    | N                |
-| 3   | TestRunList        | Y                |
-| 4   | TestRunDetails     | N                |
-| 5   | ReleaseDetails     | N                |
-| 6   | RiskList           | Y                |
-| 7   | RiskDetails        | N                |
-| 8   | RequirementList    | Y                |
-| 9   | RequirementDetails | N                |
-| 10  | ReleaseList        | Y                |
-| 11  | TestSetList        | Y                |
-| 12  | TestSetDetails     | N                |
-| 13  | TaskList           | Y                |
-| 14  | TaskDetails        | N                |
-| 15  | DocumentList       | Y                |
-| 16  | DocumentDetails    | N                |
+| ID  | Page                  | Supports columns |
+| --- | --------------------- | ---------------- |
+| 1   | TestCaseList          | Y                |
+| 2   | TestCaseDetails       | N                |
+| 3   | TestRunList           | Y                |
+| 4   | TestRunDetails        | N                |
+| 5   | ReleaseDetails        | N                |
+| 6   | RiskList              | Y                |
+| 7   | RiskDetails           | N                |
+| 8   | RequirementList       | Y                |
+| 9   | RequirementDetails    | N                |
+| 10  | ReleaseList           | Y                |
+| 11  | TestSetList           | Y                |
+| 12  | TestSetDetails        | N                |
+| 13  | TaskList              | Y                |
+| 14  | TaskDetails           | N                |
+| 15  | DocumentList          | Y                |
+| 16  | DocumentDetails       | N                |
+| 17  | AutomationHostList    | Y                |
+| 18  | AutomationHostDetails | N                |
+| 19  | IncidentList          | Y                |
+| 20  | IncidentDetails       | N                |
 
 ### Action Types
 The list below shows the IDs for different action types.
