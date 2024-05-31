@@ -202,6 +202,7 @@ There are a number of events that a SpiraApp can register against. This allows S
     - **registerEvent_loaded**: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load
     - **registerEvent_dataFailure**: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.
     - **registerEvent_operationReverted**: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters
+    - **registerEvent_gridLoaded**: registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
     
 
 === "Example"
@@ -226,6 +227,11 @@ There are a number of events that a SpiraApp can register against. This allows S
     spiraAppManager.registerEvent_operationReverted(runOnStatusReverted);
     function runOnStatusReverted(statusId, isOpen) {
         console.log(`Current status is ${statusId} and it is ${isOpen ? "open" : "closed"}`);
+    };
+
+    spiraAppManager.registerEvent_gridLoaded(spiraAppManager.gridIds.requirementSteps, runOnGridLoaded);
+    function runOnGridLoaded() {
+        console.log(`The grid with id ${spiraAppManager.gridIds.requirementSteps} was (re)loaded`);
     };
     ```
 

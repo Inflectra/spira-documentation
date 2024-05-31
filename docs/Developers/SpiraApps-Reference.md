@@ -90,6 +90,8 @@ The list below shows the IDs for different dashboard pages in Spira.
 The following gridIDs are available when calling the `spiraAppManager.gridIds` [function](./SpiraApps-Manager.md/#properties).
 
 - requirementSteps
+- riskMitigations
+- testCaseTestSteps
 
 
 ## Available resources
