@@ -91,10 +91,10 @@ AWS CodeBuild can pass environmental variables into the build process, and also 
 - Go to the CodeBuild project and edit it
 - Navigate to the "Environment" section and expand the "Additional configuration" sub-section
 - Find the "Environment variables" area and click "Add environment variable"
-- Set the Name to `SpiraReleaseId` (case sensitive)
+- Set the Name to `SpiraReleaseId` (case insensitive)
 - Set the Value to the ID of the release (this needs to be the ID and not the version number, so if the release token is [RL:12] then the ID to enter here is 12)
 - Leave the Type as "Plaintext"
-- You can repeat the above steps to add additional environmental variables if you wish to log the build against multiple releases at once
+- You can repeat the above steps to add additional environmental variables if you wish to log the build against multiple releases at once. if you do this each variable needs to start with `SpiraReleaseId` and then have a different ending (like `SpiraReleaseId2`)
 - Click "Update Project" when done
 
 ![Adding environmental variables](img/aws-codebuild-environmental-variables.png)
