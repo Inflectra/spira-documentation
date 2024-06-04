@@ -4,6 +4,8 @@ For more information about using login providers see the [admin guide](../Spira-
 !!! warning "Please Note"
     We have tried to give up to date and accurate information, but many providers do not themselves have correct information on their site. Hopefully they do not change things too much, but if they do and you cannot figure out what to do please contact our support team.
 
+    The "Client Secret" field is very sensitive so do not share it. Once you enter it in Spira you will not be able to access it again. Store it somewhere safely, like a password manager, if required.
+
 ## Azure AD
 To set up an Azure AD provider app with Spira you will need an Azure account with Azure AD set up with users as needed. For the steps below we have assumed Azure AD is set up in relatively standard way.
 
