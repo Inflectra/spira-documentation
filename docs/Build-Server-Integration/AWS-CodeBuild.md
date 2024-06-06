@@ -8,12 +8,13 @@ You can easily configure your AWS CodeBuild projects to report against a release
 The integration requires minimal configuration in Spira, and some configuration in AWS.
 
 !!! tip "Summary"
-    1. Add at least one environmental variable to the AWS CodeBuild project called "SpiraReleaseId"
+    1. Add at least one environmental variable to the AWS CodeBuild project starting with "SpiraReleaseId" (case insensitive)
     2. Set the text value of the environmental variable to the ID of the release to record against (not the version number)
     3. Create a notification target against the CodeBuild project (an SNS topic)
     4. Add an HTTPS subscription to the SNS topic that points to the Spira webhook with a url in the form: `{{base url}}/services/external/webhooks/buildservers/aws-code-build?username={{username}}&api-key=%7B{{api key with no curly braces}}%7D`
     5. Go to the Spira event log to copy the subscription confirmation URL sent by AWS SNS
     6. Confirm the SNS subscription using the confirmation URL 
+    7. Add the user from step 4 to all relevant products and make sure they have permissions to create releases
 
 
 ## Setting up the integration
@@ -82,6 +83,13 @@ SubscribeURL: https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&To
 - Go back to AWS and to the SNS subscription
 - Select the subscription and click "Confirm subscription
 - Past the "SubscribeURL" value into the confirmation popup
+
+!!! info "Spira Permissions"
+    The user information provided in the subscription URL to the SNS topic is the user that will be used by Spira to create the builds.
+
+    Make sure to add that user from step 4 to all relevant products and make sure they have permissions to create releases.
+
+    We recommend creating a dedicated user called something like "aws-code-build" to help auditing.
 
 The integration between Spira, AWS CodeBuild and SNS is now complete.
 
