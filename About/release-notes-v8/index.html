@@ -7913,6 +7913,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-81-june-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1 (June 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-8001-may-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8272,6 +8283,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-81-june-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.1 (June 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-8001-may-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8311,6 +8333,37 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-81-june-2024">Version 8.1 (June 2024)<a class="headerlink" href="#version-81-june-2024" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>In addition to using AWS CodeCommit, <a href="../../Build-Server-Integration/AWS-CodeBuild/">AWS CodeBuild now integrates with Spira</a>, so you can see the CodeBuild results on releases and sprints.</p>
+<p>As part of our efforts to enhance the <a href="../../Spira-Administration-Guide/System/#system-history-changes">auditability</a> and traceability of administrator activities, all changes to product roles are now tracked in system history.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>As a system admin, I can see a read only history of product role changes in the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a>, so I can quickly audit changes to product roles [RQ:4776]</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add functionality to the SpiraApp manager so developers can <a href="../../Developers/SpiraApps-Manager/#events-handlers">listen to grids</a> loading for <a href="../../Developers/SpiraApps-Reference/#available-grid-ids">requirement steps, test steps, and risk mitigations</a> on their details pages [IN:9566]</li>
+<li>Add keyboard shortcuts for risks to the keyboard shortcut reference [IN:9512]</li>
+<li>Add the ability for Spira and AWS customers to record the results of <a href="../../Build-Server-Integration/AWS-CodeBuild/">AWS CodeBuilds</a> (including from CodePipeline) as builds against releases/sprints [IN:9523]</li>
+<li>Fix a user having a certain timezone set on their profile causing pages to load with an error [IN:9411]</li>
+<li>Fix text custom properties always sorting by descending in reports (introduced in 7.12) [IN:9451]</li>
+<li>Fix the <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-history-changes">product history pages</a> showing product membership changed by the user changed, not the admin who made the change, when deleting the membership from the user details page [IN:9458]</li>
+<li>Fix the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> details screen only showing the first 15 fields changed, instead of showing all changed fields [IN:9414]</li>
+<li>Fix the <a href="../../Spira-Administration-Guide/System/#system-history-changes">system history</a> list page showing a time that does not account for the admin's time-zone in tooltips for rows about changes to users [IN:9362]</li>
+<li>Improve performance and compatibility by streamlining recently added indexes to tests to exclude long text fields [IN:9476]</li>
+<li>Improve the label name for the <a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/#configure-the-plugin">Jira data sync custom01</a> field to avoid misinterpretation [IN:9277]</li>
+<li>Remove keyboard shortcuts relating to the legacy planning board from the keyboard shortcut reference [IN:9511]</li>
+<li>Remove the legacy planning board from the application as it is no longer needed given the new and improved main planning board [IN:9525]</li>
+<li>Show our cloud customers that our SaaS solution is proudly Powered by AWS [IN:9513]</li>
+<li>Update the test execution guided tours to describe the application as "Spira" not "SpiraTeam" [IN:9420]</li>
+</ul>
+</details>
 <h2 id="version-8001-may-2024">Version 8.0.0.1 (May 2024)<a class="headerlink" href="#version-8001-may-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition bug">
 <p class="admonition-title">Bug fixes</p>

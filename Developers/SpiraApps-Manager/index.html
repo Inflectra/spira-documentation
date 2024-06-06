@@ -8827,6 +8827,7 @@
 <li><strong>registerEvent_loaded</strong>: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load</li>
 <li><strong>registerEvent_dataFailure</strong>: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.</li>
 <li><strong>registerEvent_operationReverted</strong>: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters</li>
+<li><strong>registerEvent_gridLoaded</strong>: registers an event handler to trigger when a <a href="../SpiraApps-Reference/#available-grid-ids">specific grid</a> is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -8849,6 +8850,11 @@
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_operationReverted</span><span class="p">(</span><span class="nx">runOnStatusReverted</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnStatusReverted</span><span class="p">(</span><span class="nx">statusId</span><span class="p">,</span><span class="w"> </span><span class="nx">isOpen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Current status is </span><span class="si">${</span><span class="nx">statusId</span><span class="si">}</span><span class="sb"> and it is </span><span class="si">${</span><span class="nx">isOpen</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;open&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;closed&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_gridLoaded</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The grid with id </span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="si">}</span><span class="sb"> was (re)loaded`</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
 </div>
