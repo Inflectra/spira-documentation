@@ -2,6 +2,10 @@
 
 ## Version 8.1 (June 2024)
 !!! info "Summary"
+    In addition to using AWS CodeCommit, [AWS CodeBuild now integrates with Spira](../Build-Server-Integration/AWS-CodeBuild.md), so you can see the CodeBuild results on releases and sprints.
+
+    As part of our efforts to enhance the [auditability](../Spira-Administration-Guide/System.md/#system-history-changes) and traceability of administrator activities, all changes to product roles are now tracked in system history.
+
 
 
 ??? success "New Features"
