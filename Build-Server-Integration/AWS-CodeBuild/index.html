@@ -8283,12 +8283,13 @@
 <div class="admonition tip">
 <p class="admonition-title">Summary</p>
 <ol>
-<li>Add at least one environmental variable to the AWS CodeBuild project called "SpiraReleaseId"</li>
+<li>Add at least one environmental variable to the AWS CodeBuild project starting with "SpiraReleaseId" (case insensitive)</li>
 <li>Set the text value of the environmental variable to the ID of the release to record against (not the version number)</li>
 <li>Create a notification target against the CodeBuild project (an SNS topic)</li>
 <li>Add an HTTPS subscription to the SNS topic that points to the Spira webhook with a url in the form: <code>{{base url}}/services/external/webhooks/buildservers/aws-code-build?username={{username}}&amp;api-key=%7B{{api key with no curly braces}}%7D</code></li>
 <li>Go to the Spira event log to copy the subscription confirmation URL sent by AWS SNS</li>
 <li>Confirm the SNS subscription using the confirmation URL </li>
+<li>Add the user from step 4 to all relevant products and make sure they have permissions to create releases</li>
 </ol>
 </div>
 <h2 id="setting-up-the-integration">Setting up the integration<a class="headerlink" href="#setting-up-the-integration" title="Permanent link">&para;</a></h2>
@@ -8355,6 +8356,12 @@ SubscribeURL: https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&am
 <li>Select the subscription and click "Confirm subscription</li>
 <li>Past the "SubscribeURL" value into the confirmation popup</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Spira Permissions</p>
+<p>The user information provided in the subscription URL to the SNS topic is the user that will be used by Spira to create the builds.</p>
+<p>Make sure to add that user from step 4 to all relevant products and make sure they have permissions to create releases.</p>
+<p>We recommend creating a dedicated user called something like "aws-code-build" to help auditing.</p>
+</div>
 <p>The integration between Spira, AWS CodeBuild and SNS is now complete.</p>
 <h3 id="recording-against-the-correct-releases">Recording against the correct releases<a class="headerlink" href="#recording-against-the-correct-releases" title="Permanent link">&para;</a></h3>
 <p>AWS CodeBuild can pass environmental variables into the build process, and also sends these as part of the recording process in Spira. To set the release/s to record in Spira:</p>
