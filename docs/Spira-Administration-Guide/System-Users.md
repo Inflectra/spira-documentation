@@ -178,6 +178,8 @@ Below is a general set of instructions about how to set up the provider and Spir
 
 Before rolling out the provider to your users be aware that the provider likely communicates to your Spira application over the internet so your users may not be able to log in to Spira if that provider service goes down. Because of this, the root admin is not able to connect to Spira using a provider in this way. 
 
+!!! warning "Client Secret"
+    The "Client Secret" field is very sensitive so do not share it. Once you enter it in Spira you will not be able to access it again. Store it somewhere safely, like a password manager, if required.
 
 
 ## Active Sessions

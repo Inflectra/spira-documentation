@@ -1,5 +1,32 @@
 # Release Notes for Spira v8
 
+## Version 8.1 (June 2024)
+!!! info "Summary"
+    In addition to using AWS CodeCommit, [AWS CodeBuild now integrates with Spira](../Build-Server-Integration/AWS-CodeBuild.md), so you can see the CodeBuild results on releases and sprints.
+
+    As part of our efforts to enhance the [auditability](../Spira-Administration-Guide/System.md/#system-history-changes) and traceability of administrator activities, all changes to product roles are now tracked in system history.
+
+
+
+??? success "New Features"
+    - As a system admin, I can see a read only history of product role changes in the [system history](../Spira-Administration-Guide/System.md/#system-history-changes), so I can quickly audit changes to product roles [RQ:4776]
+
+??? bug "Bug fixes and enhancements"
+    - Add functionality to the SpiraApp manager so developers can [listen to grids](../Developers/SpiraApps-Manager.md/#events-handlers) loading for [requirement steps, test steps, and risk mitigations](../Developers/SpiraApps-Reference.md/#available-grid-ids) on their details pages [IN:9566]
+    - Add keyboard shortcuts for risks to the keyboard shortcut reference [IN:9512]
+    - Add the ability for Spira and AWS customers to record the results of [AWS CodeBuilds](../Build-Server-Integration/AWS-CodeBuild.md) (including from CodePipeline) as builds against releases/sprints [IN:9523]
+    - Fix a user having a certain timezone set on their profile causing pages to load with an error [IN:9411]
+    - Fix text custom properties always sorting by descending in reports (introduced in 7.12) [IN:9451]
+    - Fix the [product history pages](../Spira-Administration-Guide/Product-General-Settings.md/#product-history-changes) showing product membership changed by the user changed, not the admin who made the change, when deleting the membership from the user details page [IN:9458]
+    - Fix the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) details screen only showing the first 15 fields changed, instead of showing all changed fields [IN:9414]
+    - Fix the [system history](../Spira-Administration-Guide/System.md/#system-history-changes) list page showing a time that does not account for the admin's time-zone in tooltips for rows about changes to users [IN:9362]
+    - Improve performance and compatibility by streamlining recently added indexes to tests to exclude long text fields [IN:9476]
+    - Improve the label name for the [Jira data sync custom01](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md/#configure-the-plugin) field to avoid misinterpretation [IN:9277]
+    - Remove keyboard shortcuts relating to the legacy planning board from the keyboard shortcut reference [IN:9511]
+    - Remove the legacy planning board from the application as it is no longer needed given the new and improved main planning board [IN:9525]
+    - Show our cloud customers that our SaaS solution is proudly Powered by AWS [IN:9513]
+    - Update the test execution guided tours to describe the application as "Spira" not "SpiraTeam" [IN:9420]
+
 ## Version 8.0.0.1 (May 2024)
 
 !!! bug "Bug fixes"
@@ -13,7 +40,6 @@
     View test coverage for [requirements](../Spira-User-Manual/Requirements-Management.md/#requirement-details) and [releases](../Spira-User-Manual/Release-Management.md/#release-details) from their details pages, to make it easier than ever to assess test traceability.
 
     [SpiraApps](../SpiraApps/index.md) extend what is possible in Spira, addressing specific use cases. They are now open to [third party development](../Developers/SpiraApps-Overview.md), to give you far more options to tailor Spira to your needs.
-
 
 
 ??? success "New Features"

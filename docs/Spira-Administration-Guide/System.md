@@ -308,6 +308,7 @@ This page displays a list of relevant changes made to system level artifacts or 
 !!! info "What changes are tracked in system history?"
     - Product template custom properties
     - Product membership
+    - Product roles
     - Capabilities
     - Program Milestones
     - SpiraApps

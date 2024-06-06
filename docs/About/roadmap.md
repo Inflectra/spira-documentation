@@ -12,19 +12,17 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v7.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q2 2024
-- AWS Code Build integration <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+## Q3 2024
 - Extend Spira's powerful test set features even further, so users can add test cases from other products into a test set.
 - Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
-- Provide audit tracking of changes made by administrators to product roles.
+- Provide audit tracking of changes made by administrators to users.
 - Enhance the Spira timecard to record the date and time of activities against incidents and tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
-## Rest of 2024
+## Q4 2024
 - Enhance traceability with a new requirement view with integrated test case analysis and potentially other artifacts.
 - Further enhancements to Spira timecard features <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
 - Improve devops integrations and workflows based on user feedback <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Provide audit tracking of changes made by administrators to users.
 - Update the user experience for navigating the application.
 
 ## 2025
