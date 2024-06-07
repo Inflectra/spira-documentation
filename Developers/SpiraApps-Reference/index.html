@@ -7891,6 +7891,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#spiraappsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SpiraAppSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#third-party-javascript-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8535,6 +8546,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#spiraappsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SpiraAppSettings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#third-party-javascript-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8919,6 +8941,41 @@
 <p>Additionally, if a SpiraApp has any relevant settings these are stored in the <code>SpiraAppSettings</code> object. The settings for a SpiraApp can be accessed with <code>SpiraAppSettings[APP_GUID]</code>. This will store key/values based on each relevant setting and its <code>name</code> field as specific in the manifest. Product settings are loaded onto all product specific pages. System settings are loaded onto the My Page.</p>
 <h3 id="spiraappmanager">spiraAppManager<a class="headerlink" href="#spiraappmanager" title="Permanent link">&para;</a></h3>
 <p>The <a href="../SpiraApps-Manager/">spiraAppManager</a> is a helper class that provides a wide range of useful functions and operations to SpiraApps. Read its reference material <a href="../SpiraApps-Manager/">here</a>.</p>
+<h3 id="spiraappsettings">SpiraAppSettings<a class="headerlink" href="#spiraappsettings" title="Permanent link">&para;</a></h3>
+<p>SpiraApp admins can store settings at the <a href="../SpiraApps-Manifest/#system-admin-settings">system</a> and <a href="../SpiraApps-Manifest/#product-admin-settings">product level</a>. These allow admins to configure the SpiraApp and also set information that the SpiraApp can access. These settings are stored in a special on page resource called <code>SpiraAppSettings</code>. </p>
+<p>You can access the settings specific to your SpiraApp in JavaScript by calling <code>SpiraAppSettings[APP_GUID]</code>. This will provide a full JSON object of all relevant settings. Secure settings are not accessible clientside - these are designed for credentials storage to make external API calls.</p>
+<p>The different settings are accessible in the following places (note that not all settings are available in all places)</p>
+<table>
+<thead>
+<tr>
+<th>Spira Location</th>
+<th>System Settings</th>
+<th>Product Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product artifact pages</td>
+<td></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8m-7-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Product home page</td>
+<td></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8m-7-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span></td>
+</tr>
+<tr>
+<td>Product reporting</td>
+<td></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8m-7-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span></td>
+</tr>
+<tr>
+<td>My Page</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8m-7-6A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="third-party-javascript-libraries">Third party Javascript libraries<a class="headerlink" href="#third-party-javascript-libraries" title="Permanent link">&para;</a></h3>
 <p>The following third party Javascript libraries and tools are available to SpiraApps:</p>
 <ul>
