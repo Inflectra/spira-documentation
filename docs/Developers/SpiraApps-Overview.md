@@ -112,6 +112,8 @@ SpiraApps can show buttons in columns on [list pages](./SpiraApps-Reference.md/#
 
 CSS styling can be done with classes provided to SpiraApps. To provide additionally styling add a CSS file to the relevant page as [page contents](#page-contents).
 
+### Accessing settings
+SpiraApp settings stored by admins when they set up the SpiraApp [can be accessed by the SpiraApp](./SpiraApps-Reference.md/#spiraappsettings). This provides a way to tailor and customize the experience for users based on these settings.
 
 ## Development Tips and Tricks
 ### Localization
