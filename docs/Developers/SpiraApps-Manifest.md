@@ -192,7 +192,7 @@ The menu setting is an array of objects, one for each page the menu should be on
     - **name**: codeFriendlyUniqueName
     - **caption**: User facing name
     - **tooltip**: On hover tooltip
-    - **icon_class**: CSS classes to use for displaying an icon button. These can either be Font Awesome classes, or custom css classes from the SpiraApp
+    - **icon**: CSS classes to use for displaying an icon button. These can either be Font Awesome classes, or custom css classes from the SpiraApp
     - **isActive**: boolean whether the menu should be visible or not. If set to false or omitted the menu will not show
     - **actionTypeId**: an integer for the [type of action](./SpiraApps-Reference.md/#action-types) to run when the user clicks on the entry
     - **action**: the details of the action to run on user interaction (used for providing the URL to open if that is the action type)
@@ -209,7 +209,7 @@ The menu setting is an array of objects, one for each page the menu should be on
       - name: readingLevelScore
         caption: Reading Level Grade
         tooltip: Get the reading level grade score for the requirement description
-        icon_class: fa-light fa-graduation-cap
+        icon: fa-light fa-graduation-cap
         isActive: true
         actionTypeId: 2
         action: scoreDescriptionGrade

@@ -111,7 +111,7 @@ The [spiraAppManager](./SpiraApps-Manager.md) is a helper class that provides a 
 ### SpiraAppSettings
 SpiraApp admins can store settings at the [system](./SpiraApps-Manifest.md/#system-admin-settings) and [product level](./SpiraApps-Manifest.md/#product-admin-settings). These allow admins to configure the SpiraApp and also set information that the SpiraApp can access. These settings are stored in a special on page resource called `SpiraAppSettings`. 
 
-You can access the settings specific to your SpiraApp in JavaScript by calling `SpiraAppSettings[APP_GUID]`. This will provide a full JSON object of all relevant settings. Secure settings are not accessible clientside - these are designed for credentials storage to make external API calls.
+You can access the settings specific to your SpiraApp in JavaScript by calling `SpiraAppSettings[APP_GUID]`. This will provide a full JSON object of all relevant settings. Secure settings are not accessible client-side - these are designed for credentials storage to make external API calls.
 
 The different settings are accessible in the following places (note that not all settings are available in all places)
 
