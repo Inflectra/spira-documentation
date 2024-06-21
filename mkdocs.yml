@@ -182,6 +182,7 @@ nav:
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
   - Azure OpenAI: SpiraApps\Azure-OpenAI.md
+  - BDD Syntax Highlighter:  SpiraApps\Bdd-Highlighter.md
   - ChatGPT: SpiraApps\ChatGPT.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
