@@ -317,12 +317,13 @@ nav:
     - MS Test Manager (Legacy): Migration-and-Integration\Migrating-from-MS-Test-Manager.md
     - HP QualityCenter (Legacy): Migration-and-Integration\Migrating-from-HP-QualityCenter.md
   - Build Servers:
-    - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
-    - Azure DevOps Pipelines: Build-Server-Integration\Microsoft-Azure-DevOps-Pipelines.md
     - GitHub Actions: Build-Server-Integration\GitHub-Actions.md
     - GitLab Pipelines: Build-Server-Integration\GitLab-Pipelines.md
-    - CircleCI Pipelines: Build-Server-Integration\CircleCI-Pipelines.md
+    - Azure DevOps Pipelines: Build-Server-Integration\Microsoft-Azure-DevOps-Pipelines.md
+    - AWS CodeBuild: Build-Server-Integration\AWS-CodeBuild.md
+    - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
     - JetBrains TeamCity: Build-Server-Integration\JetBrains-TeamCity.md
+    - CircleCI Pipelines: Build-Server-Integration\CircleCI-Pipelines.md
     - Atlassian Bamboo: Build-Server-Integration\Atlassian-Bamboo.md
   - Requirements:
     - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
