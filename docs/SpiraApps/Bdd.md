@@ -1,4 +1,4 @@
-# BDD Syntax Highlighter
+# BDD
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest or SpiraTeam"
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
