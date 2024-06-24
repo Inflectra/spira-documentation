@@ -88,12 +88,12 @@ npm run build --input="C:\MySpiraApp" --output="C:\BundleStorage"
 ```
 
 ## Installing Your SpiraApp
-In order to install your SpiraApp, you must be a System Administrator. First, turn on developer mode in General Settings under the System heading in the System: Admin Home. Then go to the SpiraApps page in System: Admin Home and upload the .spiraapp package file at the bottom. Its name should have appeared in the list of SpiraApps above the upload area, click the red X button on its row to enable it.
+In order to install your SpiraApp, you must be a System Administrator. First, turn on developer mode in General Settings under the System heading in the System: Admin Home. Then go to the SpiraApps page in System: Admin Home and upload the .spiraapp package file at the bottom. Its name should have appeared in the list of SpiraApps above the upload area, click the red X button on its row to enable it for your system.
 
 ## Testing Your SpiraApp
-Now that you have installed your SpiraApp, go to the product you want to test it in and go to that product’s SpiraApps page. Enable it there and then navigate to Requirements. When you click on a requirement, immediately on loading the page you should see a popup message with the name and description of the requirement. It should look something like this:
+Now that you have installed your SpiraApp, go to the product you want to test it in and go to General Settings > SpiraApps. Enable it there and then navigate to Requirements. When you click on a requirement, immediately on loading the page you should see a popup message with the name and description of the requirement. It should look something like this:
 
-(INSERT SCREENSHOT FROM TEST HERE)
+![Popup on requirement details page with the requirement name and description](img\tutorial-requirement-popup.png)
 
 
 ## Using the REST API
@@ -122,11 +122,13 @@ function runOnRequirementSaved() {
 
 function requirementRetrieve_Success(requirement) {
   var wordsToReplace = SpiraAppSettings[APP_GUID].wordsToReplace.split(",");
-  wordsToReplace = wordsToReplace.map(str => "\b" + str.strip() + "\b");
+  wordsToReplace = wordsToReplace.map(str => "\\b" + str.trim() + "\\b");
   wordsToReplace = wordsToReplace.join("|");
-  replacementRegExp = new RegExp(`/${wordsToReplace}/`, "gi");
+  var replacementRegExp = new RegExp(`${wordsToReplace}`, "gi");
   var replacement = SpiraAppSettings[APP_GUID].replacementWord;
   var newDescription = requirement.Description.replaceAll(replacementRegExp, replacement);
+  var productId = spiraAppManager.projectId;
+  var url = `projects/${productId}/requirements`;
   requirement.Description = newDescription;
   spiraAppManager.executeApi(
     "myFirstSpiraApp",
