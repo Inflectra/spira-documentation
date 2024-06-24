@@ -1,5 +1,57 @@
 # Release Notes for Spira v8
 
+## Version 8.2 (July 2024)
+!!! info "Summary"
+    The product and team membership admin pages now provide a unified, modern, lightning fast experience. With improved performance and usability, they make managing a breeze, even those with tens of thousands of members.
+
+    Test sets can include test cases from multiple different products, allowing teams to execute and report against test sets more powerfully and flexibly than ever before.
+    
+    As part of our efforts to enhance the [auditability](../Spira-Administration-Guide/System.md/#system-history-changes) and traceability of administrator activities, all changes made to a user and their profile are tracked in system history.
+
+    Improvements to all list pages, makes it easier to edit and filter by tags.
+
+
+??? success "New Features"
+    * **User Management**
+
+        - As a system admin, I can see a read only history of admin changes made to user profiles in the system history, so I can quickly audit changes to users [RQ:4807]
+
+    * **Product Membership**
+
+        - As a product admin, I can easily view a list of active users who are not members of a product [RQ:4810]
+        - As a product admin, I can easily add, remove, or modify team and product memberships [RQ:4811]
+        - As a product admin, I can easily view, filter & sort the members of a product [RQ:4784]
+
+
+    * **As a test set manager, I can include test cases from other products in a test set, and ensure my team can execute and report against those test sets accurately**
+
+        - As a test set manager, I can add test cases to a test set from different products, to make the test set more powerful and useful [RQ:4806]
+        - As a test set user, I can execute Test Sets with cross-product Test Cases, so I can fully complete the test sets assigned to me [RQ:4802]
+        - As a test set user or manager, I can keep track of pending Test Sets with cross product Test Cases, so I can plan my work or my team's work efficiently [RQ:4803]
+        - As a test manager, I can see accurate execution statuses for test cases run as part of test sets in other products, so I can fully track execution history [RQ:4804]
+        - As a developer, I can use the Spira API to perform operations in Test Sets with cross product Test Cases in the same way as with those in the same product, so my integrations work consistently [RQ:4805]
+        - As a reporter user, I can see the complete data from Test Sets with shared Test Cases [RQ:4808]
+
+??? bug "Bug fixes and enhancements"
+    * **Product Membership**
+        - Add the email address column on the Product Membership pages [IN:7060]
+        - Improve administering large numbers of members of a product [IN:7280]
+        - Fix the product membership page sometimes removing the wrong users from the project, or throwing errors when it should not [IN:9082]
+    
+    * **Tags**
+        - Let users edit tags on list pages using the same dropdown control as they can on detail pages [IN:9172]
+        - Let users filter tags on list pages with a dropdown control [IN:9179]
+    
+    - Add the ability for SpiraApps to listen for changes to form dropdown fields on details pages of artifacts [IN:9574]
+    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the user profile page [IN:9584]
+    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the system admin edit user page [IN:9585]
+    - Create source code provider configuration API endpoints to allow users with many products to set it up without needing to load the UI page for it [IN:9506]
+    - Enable the field "EmailsEnabled" when system admins update users via the API [IN:9507]
+    - Ensure ordering reports by custom properties works consistently across all languages [IN:9578]
+    - Fix requirement statuses not being translated on the template admin requirement status page [IN:9503]
+    - Fix the 'Generate New RSS Key' button on the system admin user edit page to both create a new token and set RSS to enabled [IN:9599]
+    - Improve the usability of the email popup on artifact details pages to reduce the chance of people accidentally sending the same email multiple times [IN:9544]
+    
 ## Version 8.1 (June 2024)
 !!! info "Summary"
     In addition to using AWS CodeCommit, [AWS CodeBuild now integrates with Spira](../Build-Server-Integration/AWS-CodeBuild.md), so you can see the CodeBuild results on releases and sprints.
