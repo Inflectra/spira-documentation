@@ -157,4 +157,119 @@ function requirementUpdate_Failure(e) {
 
 Now is a good time to rebuild your .spiraapp package, install the new version in your test product, and test your changes to make sure everything works as expected. Make sure you enter values for the product settings "Words to Replace" and "Replacement Word" so that your code has the information it needs.
 
-Next we’ll add a button on the requirement details page to create a new 
+## Adding a Home Page Widget
+Next we’ll add a widget on the Product Home page to show the most recently created incident.
+
+First we need to add the widget to our manifest.yaml file.
+
+``` yaml
+dashboards:
+  - dashboardTypeId: 1
+    name: Latest Requirement
+    isActive: true
+    description: Displays the most recently created requirement
+    code: file://widget.js
+```
+
+Next we have to implement the code to render the widget in a new file, widget.js. We are going to use the HTML rendering library Mustache to fill in the widget template. First assign the widget elementId and the template to global constants.
+
+``` javascript
+const elementId = APP_GUID + "_content";
+const template = `
+{{^hasItems}}
+    <p class="alert alert-info">Sorry, there is no data to display</p>
+{{/hasItems}}
+{{#hasItems}}
+    <table class="WidgetGrid" role="grid" style="width:100%">
+        <tr role="rowHeader">
+            <th> colspan="2">Name</th>
+            <th>Type</th>
+            <th>Created By</th>
+            <th>Date Created</th>
+        <tr>
+        {{#dataItems}}
+            <tr role="row">
+                <td>
+                    <img src="{{ icon }}" class="w4 h4"></img>
+                </td>
+                <td>
+                    <a class="has-tooltip" href=" {{ incUrl }}">
+                        {{ name }}
+                        <div class="is-tooltip">[RQ:{{ reqID }}]</td>
+                    </a>
+                </td>
+                <td>{{ type }}</td>
+                <td>{{ creator }}</td>
+                <td>
+                    <span title="{{ datetime }}">{{ date }}</span>
+                </td>
+            <tr>
+        {{/dataItems}}
+    </table>
+{{/hasItems}}`;
+```
+
+Then we need to write the functions that will fill this template with the latest incident.
+
+``` javascript
+spiraAppManager.registerEvent_windowLoad(loadIncident);
+spiraAppManager.registerEvent_dashboardUpdated(loadIncident);
+
+function loadIncident() {
+    const REQ_TYPE_ID = 1;
+    const canViewReqs = spiraAppManager.canViewArtifactType(REQ_TYPE_ID);
+
+    if (!canViewReqs) {
+        var rendered = `<p class="alert alert-info">You are not able to view this data.</p>`;
+        document.getElementById(elementId).innerHTML = rendered;
+    }
+    else {
+        var projectId = spiraAppManager.projectId;
+        var url = `projects/${projectId}/incidents`;
+        spiraAppManager.executeApi(
+            'myFirstSpiraApp', 
+            '7.0',
+            'GET', 
+            url, 
+            null, 
+            loadIncidentSuccess,
+            loadIncidentFailure);
+    }
+}
+
+function loadIncidentSuccess(incidents) {
+    let model = {
+        dataItems: []
+    }
+    incidents = incidents.slice(0,1)
+
+    incidents.forEach(incident => {
+        var creationDate = ''
+        var creationDateTime = ''
+        if (incident.CreationDate) {
+            creationDate = spiraAppManager.formatDate(incident.CreationDate);
+            creationDateTime = spiraAppManager.formatDateTime(incident.CreationDate);
+        }
+        var item = {
+            incId: incident.IncidentId,
+            incUrl: `${spiraAppManager.baseUrl}${spiraAppManager.projectId}/Incident/${incident.IncidentId}.aspx`,
+            icon: `${spiraAppManager.baseThemeUrl}Images/artifact-Incident.svg`,
+            name: incident.Name,
+            type: incident.IncidentTypeName,
+            creator: incident.OpenerName,
+            date: creationDate,
+            datetime: creationDateTime
+        };
+        model.dataItems.push(item);
+    })
+
+    model.hasItems = model.dataItems.length ? true : false;
+
+    var rendered = Mustache.render(template, model);
+    document.getElementById(elementId).innerHTML = rendered;
+}
+
+function loadIncidentFailure(status, error) {
+    spiraAppManager.displayErrorMessage(`Latest Incident widget: ${status} - ${error}`);
+}
+```
