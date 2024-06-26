@@ -165,9 +165,9 @@ First we need to add the widget to our manifest.yaml file.
 ``` yaml
 dashboards:
   - dashboardTypeId: 1
-    name: Latest Requirement
+    name: Latest Incident
     isActive: true
-    description: Displays the most recently created requirement
+    description: Displays the most recently created incident
     code: file://widget.js
 ```
 
