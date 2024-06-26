@@ -273,3 +273,53 @@ function loadIncidentFailure(status, error) {
     spiraAppManager.displayErrorMessage(`Latest Incident widget: ${status} - ${error}`);
 }
 ```
+
+## Adding a Button to Requirement Details Page
+
+Next we're going to add a button that goes to an arbitrary link given in product settings to the requirement details page.
+First, let's add the product setting to our manifest.yaml, as another item under the "productSettings:" key:
+
+``` yaml
+# other settings are right above this line!
+  - settingTypeId: 1
+    name: quickLink
+    caption: Quick Link
+    position: 3
+    placeholder: https://www.inflectra.com/
+```
+
+Then we need to add the button to the requirement details page with a new "menu:" entry at the bottom of our manifest.yaml:
+
+``` yaml
+menus:
+  - pageId: 9
+    caption: Quick Links
+    icon: fa-regular fa-globe-pointer
+    isActive: true
+    entries:
+    - name: link
+      caption: Follow Link
+      tooltip: Follow the link specified in product settings
+      icon: fa-regular fa-globe-pointer
+      isActive: true
+      actionTypeId: 2
+      action: followLink
+```
+
+Finally, we add code to the bottom of requirement.js to handle the button being pressed.
+
+``` javascript
+spiraAppManager.registerEvent_menuEntryClick(
+  APP_GUID, 
+  "followLink", 
+  followLink
+  );
+
+function followLink() {
+  if (SpiraAppSettings[APP_GUID] && SpiraAppSettings[APP_GUID].quickLink) {
+    spiraAppManager.setWindowLocation(SpiraAppSettings[APP_GUID].quickLink);
+  } else {
+    spiraAppManager.displayErrorMessage("No quick link found in product settings")
+  }
+}
+```
