@@ -86,6 +86,7 @@ The list below shows the IDs for different dashboard pages in Spira.
 | 6   | EnterpriseHome | N                      |
 | 7   | ProgramReports | N                      |
 
+## SpiraApp Manager Lookups
 ### Available Grid IDs
 The following gridIDs are available when calling the `spiraAppManager.gridIds` [function](./SpiraApps-Manager.md/#properties).
 
@@ -93,6 +94,248 @@ The following gridIDs are available when calling the `spiraAppManager.gridIds` [
 - riskMitigations
 - testCaseTestSteps
 
+### Available Field Names
+The following field names are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
+
+=== "Test Cases"
+    - ActualDuration
+    - AuthorId
+    - AutomationChanged
+    - AutomationDocumentFolderId
+    - AutomationDocumentId
+    - AutomationDocumentTypeId
+    - AutomationEngineId
+    - AutomationFileIcon
+    - AutomationLink
+    - AutomationScript
+    - AutomationType
+    - AutomationVersion
+    - ComponentIds
+    - CreationDate
+    - Custom_01...Custom_99
+    - Description
+    - EstimatedDuration
+    - ExecutionDate
+    - ExecutionStatusId
+    - IsSuspect
+    - IsTestSteps
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - ReleaseId
+    - Tags
+    - TestCaseId
+    - TestCasePriorityId
+    - TestCaseStatusId
+    - TestCaseTypeId
+
+=== "Test Runs"
+    - ActualDuration
+    - AutomationHostId
+    - BuildId
+    - Custom_01...Custom_99
+    - Description
+    - EndDate
+    - EstimatedDuration
+    - ExecutionStatusId
+    - Name
+    - ProjectId
+    - ReleaseId
+    - RunnerMessage
+    - RunnerName
+    - RunnerTestName
+    - Tags
+    - TestCaseId
+    - TestRunId
+    - TestRunTypeId
+    - TestSetId
+    - TesterId
+
+=== "Releases"
+    - AvailableEffort
+    - AvailablePoints
+    - CountPassed
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - DaysNonWorking
+    - Description
+    - EndDate
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - PercentComplete
+    - PlannedEffort
+    - PlannedPoints
+    - ReleaseId
+    - ReleaseStatusId
+    - ReleaseTypeId
+    - RequirementCount
+    - RequirementPoints
+    - ResourceCount
+    - StartDate
+    - Tags
+    - TaskActualEffort
+    - TaskCount
+    - TaskEstimatedEffort
+    - TaskProjectedEffort
+    - TaskRemainingEffort
+    - VersionNumber
+
+=== "Risks"
+    - ClosedDate
+    - ComponentId
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - Description
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - ReleaseId
+    - ReviewDate
+    - RiskExposure
+    - RiskId
+    - RiskImpactId
+    - RiskProbabilityId
+    - RiskStatusId
+    - RiskTypeId
+    - Tags
+    - Title
+
+=== "Requirements"
+    - AuthorId
+    - ComponentId
+    - CoverageCountTotal
+    - CreationDate
+    - Custom_01...Custom_99
+    - Description
+    - EstimatedEffort
+    - EstimatePoints
+    - ImportanceId
+    - IsSummary
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - TaskCount
+    - ReleaseId
+    - RequirementId
+    - RequirementStatusId
+    - RequirementTypeId
+    - Tags
+    - TaskActualEffort
+    - TaskEstimatedEffort
+    - TaskProjectedEffort
+    - TaskRemainingEffort
+
+=== "Test Sets"
+    - ActualDuration
+    - AutomationHostId
+    - BuildExecuteTimeInterval
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - Description
+    - EstimatedDuration
+    - ExecutionDate
+    - ExecutionStatusId
+    - IsAutoScheduled
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - PlannedDate
+    - RecurrenceId
+    - ReleaseId
+    - Tags
+    - TestCaseReleaseId
+    - TestConfigurationSetId
+    - TestRunTypeId
+    - TestSetId
+    - TestSetStatusId
+
+=== "Tasks"
+    - ActualEffort
+    - CompletionPercent
+    - ComponentId
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - Description
+    - EndDate
+    - EstimatedEffort
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - ProgressId
+    - ProjectedEffort
+    - ReleaseId
+    - RemainingEffort
+    - RequirementId
+    - RiskId
+    - StartDate
+    - Tags
+    - TaskId
+    - TaskPriorityId
+    - TaskStatusId
+    - TaskTypeId
+
+=== "Documents"
+    - AttachmentId
+    - AuthorId
+    - CurrentVersion
+    - Custom_01...Custom_99
+    - Description
+    - DocumentStatusId
+    - DocumentTypeId
+    - DocumentVersions
+    - EditedDate
+    - EditorId
+    - Filename
+    - Filetype
+    - ProjectAttachmentFolderId
+    - Size
+    - Tags
+    - UploadDate
+
+=== "Automation Hosts"
+    - AutomationHostId
+    - Custom_01...Custom_99
+    - Description
+    - IsActive
+    - LastUpdateDate
+    - Name
+    - Token
+
+
+=== "Incidents"
+    - ActualEffort
+    - BuildId
+    - ClosedDate
+    - CompletionPercent
+    - ComponentIds
+    - CreationDate
+    - Custom_01...Custom_99
+    - Description
+    - DetectedReleaseId
+    - EstimatedEffort
+    - IncidentId
+    - IncidentStatusId
+    - IncidentTypeId
+    - LastUpdateDate
+    - Name
+    - OpenerId
+    - OwnerId
+    - PriorityId
+    - ProgressId
+    - ProjectedEffort
+    - RemainingEffort
+    - Resolution
+    - ResolvedReleaseId
+    - SeverityId
+    - StartDate
+    - Tags
+    - VerifiedReleaseId
+					
 
 ## Available resources
 ### Inflectra Javascript helpers
