@@ -2,19 +2,19 @@
 
 ## Version 8.2 (July 2024)
 !!! info "Summary"
-    The product and team membership admin pages now provide a unified, modern, lightning fast experience. With improved performance and usability, they make managing a breeze, even those with tens of thousands of members.
-
-    Test sets can include test cases from multiple different products, allowing teams to execute and report against test sets more powerfully and flexibly than ever before.
+    Test sets can include [test cases from multiple different products](../Spira-User-Manual/Test-Set-Management.md/#cross-product-test-cases), allowing teams to execute and report against test sets more powerfully and flexibly than ever before.
+    
+    The [product and team membership admin pages](../Spira-Administration-Guide/Product-Users.md/#product-membership) now provide a unified, modern, lightning fast experience. With improved performance and usability, they make managing membership a breeze, even in products with tens of thousands of members.
     
     As part of our efforts to enhance the [auditability](../Spira-Administration-Guide/System.md/#system-history-changes) and traceability of administrator activities, all changes made to a user and their profile are tracked in system history.
 
-    Improvements to all list pages, makes it easier to edit and filter by tags.
+    Improvements to all list pages, make it easier to edit and filter by tags.
 
 
 ??? success "New Features"
     * **User Management**
 
-        - As a system admin, I can see a read only history of admin changes made to user profiles in the system history, so I can quickly audit changes to users [RQ:4807]
+        - As a system admin, I can see a [read only history of admin changes made to user profiles in the system history](../Spira-Administration-Guide/System.md/#system-history-changes), so I can quickly audit changes to users [RQ:4807]
 
     * **Product Membership**
 
@@ -50,6 +50,7 @@
     - Ensure ordering reports by custom properties works consistently across all languages [IN:9578]
     - Fix requirement statuses not being translated on the template admin requirement status page [IN:9503]
     - Fix the 'Generate New RSS Key' button on the system admin user edit page to both create a new token and set RSS to enabled [IN:9599]
+    - Fix upgrading to v8+ not correctly updating data sync configuration files for on premise customers [IN:9653]
     - Improve the usability of the email popup on artifact details pages to reduce the chance of people accidentally sending the same email multiple times [IN:9544]
     
 ## Version 8.1 (June 2024)

@@ -730,6 +730,24 @@ Retrieves data about cross product associations
 | INCIDENT_EFFORT           |
 | TASK_EFFORT               |
 
+## Project Roles
+| R_ProjectRoles           |
+| ------------------------ |
+| PROJECT_ROLE_ID          |
+| NAME                     |
+| IS_ACTIVE                |
+| DESCRIPTION              |
+| IS_ADMIN                 |
+| IS_DISCUSSIONS_ADD       |
+| IS_SOURCE_CODE_VIEW      |
+| IS_SOURCE_CODE_EDIT      |
+| IS_DOCUMENT_FOLDERS_EDIT |
+| IS_LIMITED_VIEW          |
+| IS_TEMPLATE_ADMIN        |
+| ARTIFACT_TYPE_ID         |
+| ARTIFACT                 |
+| PERMISSION               |
+
 ## Project (Product) Tags
 | R_ProjectTags |
 | ------------- |
