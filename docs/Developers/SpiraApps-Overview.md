@@ -77,10 +77,14 @@ Code (JS) to add onto specified dashboard pages in widgets: dashboards
 ### Page Contents
 A SpiraApp can include the contents of a single CSS file and a single JS file on each / any of the [relevant pages](./SpiraApps-Reference.md/#pages). You specify what files to load on what pages in the [manifest](./SpiraApps-Manifest.md/#page-contents). The file contents are then loaded automatically onto the page(s). 
 
-CSS files are used for storing logos as SVGs, or helping to style widgets. You should primarily use class based selectors in your CSS. When loaded onto the page, the CSS contents is [nested](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) inside a class based off of the guid of the SpiraApp. Any UI elements created on the page will have a wrapper with this same class defined on it. In this way you can be flexible in how you use CSS as you are not able to pollute any other CSS.  
+**CSS files** are used for storing logos as SVGs, or helping to style widgets. You should primarily use class based selectors in your CSS. When loaded onto the page, the CSS contents is [nested](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) inside a class based off of the guid of the SpiraApp. Any UI elements created on the page will have a wrapper with this same class defined on it. In this way you can be flexible in how you use CSS as you are not able to pollute any other CSS.  
 
-JavaScript files are the core part of most SpiraApps and should be written in dedicated JS files. When dynamically inserted onto the page, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
+**JavaScript files** are the core part of most SpiraApps and should be written in dedicated JS files. When dynamically inserted onto the page, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
 
+### File references in CSS and JS
+You may wish to include file references in your css or js files. This is required if the CSS has an embedded image. For js files it can be useful if you have some code you wish to share across several files, or to help you organize your code. 
+
+To add a file reference in a CSS or JS file, you do so in the same way you do in the manifest. Add a reference like this: `file://nameOfFile.extension`. When the SpiraApp is packaged the file reference in any CSS or JS file will be automatically embedded into the final contents.
 
 ### Menus
 Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 

@@ -240,8 +240,8 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
 === "Explanation"
     - **reloadForm**: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the name of the field and the data property. There is currently no easy way to obtain a full list of fields. The best way to do so is to inspect the network requests on the details page and the data returned from a `Form_Retrieve` service call. The JSON will include a `Fields` object, with objects for each field. When you have found the object for the field, use the `FieldName` as the name property, and the `{type}Value` that has the data in as the data property. 
-    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the name of the field, the data property, and the new value. Obtain the data about the required field in the same way as is done for the "getDataItemField" function. 
+    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names) and the data property. 
+    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names), the data property, and the new value. 
     - **reloadGrid**: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds [property function](#properties) (string)
     - **setWindowLocation**: loads a new page in the browser. Takes a single parameter, which is the full URL (string)
 
@@ -250,18 +250,6 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     ```js
     spiraAppManager.reloadForm();
 
-    /* example extract of a single property from the Fields object from a Form_Retrieve
-    {
-        "__type": "DataItemField:tst.dataObjects",
-        "caption": "Name",
-        "editable": true,
-        "fieldName": "Name",
-        "fieldType": 6,
-        "hidden": false,
-        "lookupName": "",
-        "required": true,
-        "textValue": "Fix the icon used to save"
-    } */
     spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
     spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this tasks");
 

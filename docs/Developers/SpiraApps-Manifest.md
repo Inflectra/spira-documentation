@@ -38,7 +38,7 @@ The metadata below provides essential information to identify and explain the Sp
     - **productDescription**: Shown on the product admin SpiraApp details page
     - **author**: Organization who owns the SpiraApp
     - **url**: Where should users go to get help, documentation, and support for this SpiraApp?
-    - **icon**: Optionally provide the relative path to a single SVG file in the form of `"data:image/svg+xml;file://{filename.svg}"` (note the use of double quotes)
+    - **icon**: Optionally provide the relative path to a single SVG file in the form of `"data:image/svg+xml;base64,file://filename.svg"` (note the use of double quotes)
     - **license**: The type of license the SpiraApp is under
     - **copyright**: Any copyright information
     - **version**: Version number in the form a decimal
@@ -55,7 +55,7 @@ The metadata below provides essential information to identify and explain the Sp
     productDescription: The aim of this SpiraApp is to show a basic hello world style proof of concept
     author: My Company
     url: https://mycompany.com/help/spirapps/hello-world
-    icon: data:image/svg+xml;base64,PD...
+    icon: "data:image/svg+xml;base64,file://myIcon.svg"
     license: MIT License
     copyright: Copyright My Company
     version: 0.2
@@ -161,7 +161,7 @@ The pageContents setting is an array of objects, one for each page that content 
     - **pageId**: an integer for the [page](./SpiraApps-Reference.md/#pages) the code should be embedded on
     - **name**: codeFriendlyName to describe the content (not currently used)
     - **code**: relative path to a single JS file to include on the page in the form of `file://{filename.js}`
-    - **css**: relative path to a single CSS file to include on the page in the form of `file://{filename.css}`
+    - **css**: relative path to a single CSS file to include on the page in the form of `file://{filename.css}`. **NOTE** do not embed encoded images in CSS, if you need to include SVG images, then reference them in the form `"data:image/svg+xml;base64,file://icon.svg"`.
 
 === "Example"
 
