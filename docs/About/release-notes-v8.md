@@ -42,7 +42,7 @@
         - Let users edit tags on list pages using the same dropdown control as they can on detail pages [IN:9172]
         - Let users filter tags on list pages with a dropdown control [IN:9179]
     
-    - Add the ability for SpiraApps to listen for changes to form dropdown fields on details pages of artifacts [IN:9574]
+    - Add the ability for SpiraApps to listen for changes to [form dropdown fields](../Developers/SpiraApps-Manager.md/#page-actions) on details pages of artifacts (using a new registerEvent_dropdownChanged function) [IN:9574]
     - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the user profile page [IN:9584]
     - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the system admin edit user page [IN:9585]
     - Create source code provider configuration API endpoints to allow users with many products to set it up without needing to load the UI page for it [IN:9506]

@@ -97,6 +97,165 @@ The following gridIDs are available when calling the `spiraAppManager.gridIds` [
 ### Available Field Names
 The following field names are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
 
+=== "Automation Hosts"
+    - AutomationHostId
+    - Custom_01...Custom_99
+    - Description
+    - IsActive
+    - LastUpdateDate
+    - Name
+    - Token
+    
+=== "Documents"
+    - AttachmentId
+    - AuthorId
+    - CurrentVersion
+    - Custom_01...Custom_99
+    - Description
+    - DocumentStatusId
+    - DocumentTypeId
+    - DocumentVersions
+    - EditedDate
+    - EditorId
+    - Filename
+    - Filetype
+    - ProjectAttachmentFolderId
+    - Size
+    - Tags
+    - UploadDate
+
+=== "Incidents"
+    - ActualEffort
+    - BuildId
+    - ClosedDate
+    - CompletionPercent
+    - ComponentIds
+    - CreationDate
+    - Custom_01...Custom_99
+    - Description
+    - DetectedReleaseId
+    - EstimatedEffort
+    - IncidentId
+    - IncidentStatusId
+    - IncidentTypeId
+    - LastUpdateDate
+    - Name
+    - OpenerId
+    - OwnerId
+    - PriorityId
+    - ProgressId
+    - ProjectedEffort
+    - RemainingEffort
+    - Resolution
+    - ResolvedReleaseId
+    - SeverityId
+    - StartDate
+    - Tags
+    - VerifiedReleaseId
+
+=== "Releases"
+    - AvailableEffort
+    - AvailablePoints
+    - CountPassed
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - DaysNonWorking
+    - Description
+    - EndDate
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - PercentComplete
+    - PlannedEffort
+    - PlannedPoints
+    - ReleaseId
+    - ReleaseStatusId
+    - ReleaseTypeId
+    - RequirementCount
+    - RequirementPoints
+    - ResourceCount
+    - StartDate
+    - Tags
+    - TaskActualEffort
+    - TaskCount
+    - TaskEstimatedEffort
+    - TaskProjectedEffort
+    - TaskRemainingEffort
+    - VersionNumber
+
+=== "Requirements"
+    - AuthorId
+    - ComponentId
+    - CoverageCountTotal
+    - CreationDate
+    - Custom_01...Custom_99
+    - Description
+    - EstimatedEffort
+    - EstimatePoints
+    - ImportanceId
+    - IsSummary
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - TaskCount
+    - ReleaseId
+    - RequirementId
+    - RequirementStatusId
+    - RequirementTypeId
+    - Tags
+    - TaskActualEffort
+    - TaskEstimatedEffort
+    - TaskProjectedEffort
+    - TaskRemainingEffort
+
+=== "Risks"
+    - ClosedDate
+    - ComponentId
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - Description
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - ReleaseId
+    - ReviewDate
+    - RiskExposure
+    - RiskId
+    - RiskImpactId
+    - RiskProbabilityId
+    - RiskStatusId
+    - RiskTypeId
+    - Tags
+    - Title
+
+=== "Tasks"
+    - ActualEffort
+    - CompletionPercent
+    - ComponentId
+    - CreationDate
+    - CreatorId
+    - Custom_01...Custom_99
+    - Description
+    - EndDate
+    - EstimatedEffort
+    - LastUpdateDate
+    - Name
+    - OwnerId
+    - ProgressId
+    - ProjectedEffort
+    - ReleaseId
+    - RemainingEffort
+    - RequirementId
+    - RiskId
+    - StartDate
+    - Tags
+    - TaskId
+    - TaskPriorityId
+    - TaskStatusId
+    - TaskTypeId
+
 === "Test Cases"
     - ActualDuration
     - AuthorId
@@ -151,83 +310,6 @@ The following field names are available when calling various [page functions](./
     - TestSetId
     - TesterId
 
-=== "Releases"
-    - AvailableEffort
-    - AvailablePoints
-    - CountPassed
-    - CreationDate
-    - CreatorId
-    - Custom_01...Custom_99
-    - DaysNonWorking
-    - Description
-    - EndDate
-    - LastUpdateDate
-    - Name
-    - OwnerId
-    - PercentComplete
-    - PlannedEffort
-    - PlannedPoints
-    - ReleaseId
-    - ReleaseStatusId
-    - ReleaseTypeId
-    - RequirementCount
-    - RequirementPoints
-    - ResourceCount
-    - StartDate
-    - Tags
-    - TaskActualEffort
-    - TaskCount
-    - TaskEstimatedEffort
-    - TaskProjectedEffort
-    - TaskRemainingEffort
-    - VersionNumber
-
-=== "Risks"
-    - ClosedDate
-    - ComponentId
-    - CreationDate
-    - CreatorId
-    - Custom_01...Custom_99
-    - Description
-    - LastUpdateDate
-    - Name
-    - OwnerId
-    - ReleaseId
-    - ReviewDate
-    - RiskExposure
-    - RiskId
-    - RiskImpactId
-    - RiskProbabilityId
-    - RiskStatusId
-    - RiskTypeId
-    - Tags
-    - Title
-
-=== "Requirements"
-    - AuthorId
-    - ComponentId
-    - CoverageCountTotal
-    - CreationDate
-    - Custom_01...Custom_99
-    - Description
-    - EstimatedEffort
-    - EstimatePoints
-    - ImportanceId
-    - IsSummary
-    - LastUpdateDate
-    - Name
-    - OwnerId
-    - TaskCount
-    - ReleaseId
-    - RequirementId
-    - RequirementStatusId
-    - RequirementTypeId
-    - Tags
-    - TaskActualEffort
-    - TaskEstimatedEffort
-    - TaskProjectedEffort
-    - TaskRemainingEffort
-
 === "Test Sets"
     - ActualDuration
     - AutomationHostId
@@ -252,89 +334,6 @@ The following field names are available when calling various [page functions](./
     - TestRunTypeId
     - TestSetId
     - TestSetStatusId
-
-=== "Tasks"
-    - ActualEffort
-    - CompletionPercent
-    - ComponentId
-    - CreationDate
-    - CreatorId
-    - Custom_01...Custom_99
-    - Description
-    - EndDate
-    - EstimatedEffort
-    - LastUpdateDate
-    - Name
-    - OwnerId
-    - ProgressId
-    - ProjectedEffort
-    - ReleaseId
-    - RemainingEffort
-    - RequirementId
-    - RiskId
-    - StartDate
-    - Tags
-    - TaskId
-    - TaskPriorityId
-    - TaskStatusId
-    - TaskTypeId
-
-=== "Documents"
-    - AttachmentId
-    - AuthorId
-    - CurrentVersion
-    - Custom_01...Custom_99
-    - Description
-    - DocumentStatusId
-    - DocumentTypeId
-    - DocumentVersions
-    - EditedDate
-    - EditorId
-    - Filename
-    - Filetype
-    - ProjectAttachmentFolderId
-    - Size
-    - Tags
-    - UploadDate
-
-=== "Automation Hosts"
-    - AutomationHostId
-    - Custom_01...Custom_99
-    - Description
-    - IsActive
-    - LastUpdateDate
-    - Name
-    - Token
-
-
-=== "Incidents"
-    - ActualEffort
-    - BuildId
-    - ClosedDate
-    - CompletionPercent
-    - ComponentIds
-    - CreationDate
-    - Custom_01...Custom_99
-    - Description
-    - DetectedReleaseId
-    - EstimatedEffort
-    - IncidentId
-    - IncidentStatusId
-    - IncidentTypeId
-    - LastUpdateDate
-    - Name
-    - OpenerId
-    - OwnerId
-    - PriorityId
-    - ProgressId
-    - ProjectedEffort
-    - RemainingEffort
-    - Resolution
-    - ResolvedReleaseId
-    - SeverityId
-    - StartDate
-    - Tags
-    - VerifiedReleaseId
 					
 
 ## Available resources

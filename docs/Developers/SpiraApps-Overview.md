@@ -84,7 +84,7 @@ A SpiraApp can include the contents of a single CSS file and a single JS file on
 ### File references in CSS and JS
 You may wish to include file references in your css or js files. This is required if the CSS has embedded images. For js files it can be useful if you have code you wish to share across several files (such as for localization), or to help you organize your code. 
 
-To add a file reference in a CSS or JS file, you do so in the same way you do in the manifest. Add a reference like this: `file://nameOfFile.extension`. When the SpiraApp is packaged the file reference in any CSS or JS file will be automatically embedded into the final contents.
+To add a file reference in a CSS or JS file, you do so in the same way you do in the manifest. Add a reference like this: `file://nameOfFile.extension`. When the SpiraApp is packaged any file reference in any CSS or JS file will be automatically embedded into the final contents. Note that the file reference is replaced by the full contents of the file. 
 
 ### Menus
 Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 
