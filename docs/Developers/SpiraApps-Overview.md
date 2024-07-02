@@ -130,7 +130,7 @@ SpiraApps do not currently provide native localization support. We encourage dev
 - [x] Match browser compatibility to Spira’s standards
 - [x] Write code that can be reviewed by a web developer
 
-## Design patterns to avoid
+### Design patterns to avoid
 - [ ] Access the global namespace of the browser
 - [ ] Using internal Spira functions or properties
 - [ ] Links to or importing external libraries  (including any CDN)
