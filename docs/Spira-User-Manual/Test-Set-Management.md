@@ -290,8 +290,37 @@ You can then specify the values of the parameters that the test set will pass to
     In this way, the overall test set execution status may not always match what you see in the test case list. 
 
 #### Cross Product Test Cases
-XXX
+If another product [shares test cases](../Spira-Administration-Guide/Product-General-Settings.md/#product-associations) with the current product, then you will be able to add any test case from the other product (or products) to a test set in the current product.
 
+Cross product test cases in test sets let you build modular and powerful test sets that draw in test cases from multiple different locations.
+
+To add a test case from another product to a test set, click the "Add" button and select the product from the dropdown that says "Current Product". If you do not see this dropdown it means that no product is sharing test cases with the current product.
+
+In many ways cross product test cases will feel the same to a tester as another test case in the test set:
+
+- parameters will be visible and can be edited
+- parameters set on the test set will cascade to the test case
+- you can set the test case owner
+- during execution, all test cases from all products appear as normal
+- you can add actual results, screenshots, attachments, incidents, and tasks as relevant to any test run step- attachments, incidents, and tasks will be linked to the test run and visible on the test run pages
+- results of the execution are reflected against the test set's execution status when showing results for all releases (and will include cross product test cases)
+- test set reports include relevant test cases and test runs where possible
+- test run reports include all associated attachments and incidents 
+- cloning a test run brings over all associations and test cases, including those from other products
+
+In reality, a test case from another product always live in that other product, which presents some limitations to how cross product test sets work. Specifically:
+
+- the test run from a cross product test case:
+
+    - lives in the product of the test case, not that of the test set
+    - can not have any release set against it, because the release the test set runs against does not exist in the test run's product
+    - will only get custom properties set during execution if its product uses the same template as that of the test set
+    - cannot, after testing, have an attachment or an incident manually added to them
+
+- attachments (including screenshots), incidents, and tasks against a test run are part of the test set's product, not that of the test run's test case
+- a user can only access linked artifacts to a test run (like incidents) if they have the correct permissions in the test set's product, as well as that of the test run
+- the test set's execution status when showing results for a specific release will exclude any results from cross product test cases (because those test runs do not have any release data as explained above)
+- when cloning a product, cross product test cases are not copied over to the new test sets. Also, any attachments, incidents, and tasks created against test runs from other products are not correctly linked to the test set (note: this will be resolved in a future release) 
 
 ### Overview - Comments
 Read about [how the comments works](Application-Wide.md#comments)

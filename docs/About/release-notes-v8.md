@@ -8,7 +8,7 @@
     
     As part of our efforts to enhance the [auditability](../Spira-Administration-Guide/System.md/#system-history-changes) and traceability of administrator activities, all changes made to a user and their profile are tracked in system history.
 
-    Improvements to all list pages, make it easier to edit and filter by tags.
+    Improvements to relevant list pages, make it easier to [edit and filter by tags](../Spira-User-Manual/Application-Wide.md/#tags).
 
 
 ??? success "New Features"
@@ -16,14 +16,14 @@
 
         - As a system admin, I can see a [read only history of admin changes made to user profiles in the system history](../Spira-Administration-Guide/System.md/#system-history-changes), so I can quickly audit changes to users [RQ:4807]
 
-    * **Product Membership**
+    * **[Product Membership](../Spira-Administration-Guide/Product-Users.md/#product-membership)**
 
         - As a product admin, I can easily view a list of active users who are not members of a product [RQ:4810]
         - As a product admin, I can easily add, remove, or modify team and product memberships [RQ:4811]
         - As a product admin, I can easily view, filter & sort the members of a product [RQ:4784]
 
 
-    * **As a test set manager, I can include test cases from other products in a test set, and ensure my team can execute and report against those test sets accurately**
+    * **As a test set manager, I can [include test cases from other products in a test set](../Spira-User-Manual/Test-Set-Management.md/#cross-product-test-cases), and ensure my team can execute and report against those test sets accurately**
 
         - As a test set manager, I can add test cases to a test set from different products, to make the test set more powerful and useful [RQ:4806]
         - As a test set user, I can execute Test Sets with cross-product Test Cases, so I can fully complete the test sets assigned to me [RQ:4802]
@@ -33,25 +33,27 @@
         - As a reporter user, I can see the complete data from Test Sets with shared Test Cases [RQ:4808]
 
 ??? bug "Bug fixes and enhancements"
-    * **Product Membership**
+    * **[Product Membership](../Spira-Administration-Guide/Product-Users.md/#product-membership)**
+
         - Add the email address column on the Product Membership pages [IN:7060]
         - Improve administering large numbers of members of a product [IN:7280]
         - Fix the product membership page sometimes removing the wrong users from the project, or throwing errors when it should not [IN:9082]
     
-    * **Tags**
+    * **[Tags](../Spira-User-Manual/Application-Wide.md/#tags)**
+
         - Let users edit tags on list pages using the same dropdown control as they can on detail pages [IN:9172]
         - Let users filter tags on list pages with a dropdown control [IN:9179]
     
     - Add the ability for SpiraApps to listen for changes to [form dropdown fields](../Developers/SpiraApps-Manager.md/#page-actions) on details pages of artifacts (using a new registerEvent_dropdownChanged function) [IN:9574]
-    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the user profile page [IN:9584]
-    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the system admin edit user page [IN:9585]
+    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the [user profile page](../Spira-User-Manual/User-Product-Management.md/#my-profile) [IN:9584]
+    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the [system admin edit user page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) [IN:9585]
     - Create source code provider configuration API endpoints to allow users with many products to set it up without needing to load the UI page for it [IN:9506]
     - Enable the field "EmailsEnabled" when system admins update users via the API [IN:9507]
     - Ensure ordering reports by custom properties works consistently across all languages [IN:9578]
-    - Fix requirement statuses not being translated on the template admin requirement status page [IN:9503]
-    - Fix the 'Generate New RSS Key' button on the system admin user edit page to both create a new token and set RSS to enabled [IN:9599]
-    - Fix upgrading to v8+ not correctly updating data sync configuration files for on premise customers [IN:9653]
-    - Improve the usability of the email popup on artifact details pages to reduce the chance of people accidentally sending the same email multiple times [IN:9544]
+    - Fix requirement statuses not being translated on the template admin [requirement status page](../Spira-Administration-Guide/Template-Requirements.md/#statuses) [IN:9503]
+    - Fix the 'Generate New RSS Key' button on the [system admin user edit page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to both create a new token and set RSS to enabled [IN:9599]
+    - Fix upgrading to Spira v8+ not correctly updating data sync configuration files for on premise customers [IN:9653]
+    - Improve the usability of the [email popup on artifact details pages](../Spira-User-Manual/Application-Wide.md/#emailing) to reduce the chance of people accidentally sending the same email multiple times [IN:9544]
     
 ## Version 8.1 (June 2024)
 !!! info "Summary"

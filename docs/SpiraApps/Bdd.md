@@ -34,7 +34,7 @@ The BDD highlighting is automatically applied any time any user either opens a r
 ![Shows the following step description with @tags colored in red, "Scenario: ..." line bolded and colored in blue, Given/When/Then keywords bolded and colored green, "quoted strings" colored in bright cyan, and the comment line starting with # colored in gray: `@bdd @highlighting (new line) Scenario: BDD syntax highlighting is applied on saving a requirement step (new line) Given I have written a requirement step using BDD syntax using words like “Scenario:, Given, When, Then” (new line) When I save the requirement step (new line) Then I will see that the BDD highlighting has been applied automatically. (new line) # -describes feature requested by Customer A` ](img/bdd-highlight-example.png)
 
 ### Exporting from Details Pages
-If you can create documents, you can use the "BDD Actions" > "Export Feature" toolbar button to export the current artifact's steps or mitigations as a `.feature` file. You will be asked to name the feature file, and it will then be saved to Spira's document repository for that product (at the root level). The first line of the feature file will be the name of the artifact itself (e.g. the requirement name). 
+If you can create documents, you can use the "BDD Actions" > "Export Feature" toolbar button to export the current artifact's steps or mitigations as a `.feature` file. The file will be saved to Spira's document repository for that product (at the root level). The filename itself and first line of the feature file will be the name of the artifact (e.g. the requirement name). 
 
 Please note that a feature file is a plain text file. Indentation is preserved but all other formatting is removed (including images, tables, links).
 
