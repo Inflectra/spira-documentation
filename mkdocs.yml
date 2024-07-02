@@ -193,6 +193,7 @@ nav:
   - OctoPerf: SpiraApps\OctoPerf.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
+  - Introduction: Reporting\index.md
   - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
   - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
   - OData Tutorial: Reporting\OData-Tutorial.md

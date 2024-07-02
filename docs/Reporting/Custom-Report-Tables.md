@@ -2,7 +2,7 @@
 !!! info "How to use this page"
     Spira has a number of database views available for creating custom reports using ESQL queries. Below, each available table is listed with all of their exact field names. 
 
-    Many tables have a single field shown in **bold** - these are the Primary Keys for that table, which means that field can be used as the unique identifier for each row of data. 
+    Many tables have a single field shown in *italic* - these are the Primary Keys for that table, which means that field can be used as the unique identifier for each row of data. 
 
 ## Artifact Associations
 | R_ArtifactAssociations    |
@@ -48,14 +48,14 @@
 ## Artifact Types
 | R_ArtifactTypes      |
 | -------------------- |
-| **ARTIFACT_TYPE_ID** |
+| *ARTIFACT_TYPE_ID* |
 | NAME                 |
 | PREFIX               |
 
 ## Attachments
 | R_Attachments                  |
 | ------------------------------ |
-| **ATTACHMENT_ID**              |
+| *ATTACHMENT_ID*              |
 | ATTACHMENT_TYPE_ID             |
 | AUTHOR_ID                      |
 | EDITOR_ID                      |
@@ -88,7 +88,7 @@
 ## Attachment Folders
 | R_AttachmentFolders                 |
 | ----------------------------------- |
-| **PROJECT_ATTACHMENT_FOLDER_ID**    |
+| *PROJECT_ATTACHMENT_FOLDER_ID*    |
 | PROJECT_ID                          |
 | PARENT_PROJECT_ATTACHMENT_FOLDER_ID |
 | NAME                                |
@@ -98,7 +98,7 @@
 ## Attachment Versions
 | R_AttachmentVersions      |
 | ------------------------- |
-| **ATTACHMENT_VERSION_ID** |
+| *ATTACHMENT_VERSION_ID* |
 | ATTACHMENT_ID             |
 | AUTHOR_ID                 |
 | FILENAME                  |
@@ -115,7 +115,7 @@
 ## Automation Hosts
 | R_AutomationHosts      |
 | ---------------------- |
-| **AUTOMATION_HOST_ID** |
+| *AUTOMATION_HOST_ID* |
 | PROJECT_ID             |
 | NAME                   |
 | DESCRIPTION            |
@@ -136,7 +136,7 @@ See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for so
 
 | R_Baselines             |
 | ----------------------- |
-| **BASELINE_ID**         |
+| *BASELINE_ID*         |
 | PROJECT_ID              |
 | CREATOR_USER_ID         |
 | CHANGESET_ID            |
@@ -163,7 +163,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 
 | R_Builds        |
 | --------------- |
-| **BUILD_ID**    |
+| *BUILD_ID*    |
 | BUILD_STATUS_ID |
 | RELEASE_ID      |
 | PROJECT_ID      |
@@ -173,7 +173,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Capabilities
 | R_ProjectGroup_Capabilities |
 | --------------------------- |
-| **CAPABILITY_ID**           |
+| *CAPABILITY_ID*           |
 | PROJECT_GROUP_ID            |
 | MILESTONE_ID                |
 | STATUS_ID                   |
@@ -207,7 +207,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Capability Priorities
 | R_ProjectGroup_Capability_Priorities |
 | ------------------------------------ |
-| **PRIORITY_ID**                      |
+| *PRIORITY_ID*                      |
 | NAME                                 |
 | COLOR                                |
 | IS_ACTIVE                            |
@@ -227,7 +227,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Capability Statuses
 | R_ProjectGroup_Capability_Statuses |
 | ---------------------------------- |
-| **STATUS_ID**                      |
+| *STATUS_ID*                      |
 | NAME                               |
 | POSITION                           |
 | IS_ACTIVE                          |
@@ -239,7 +239,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Capability Types
 | R_ProjectGroup_Capability_Types |
 | ------------------------------- |
-| **TYPE_ID**                     |
+| *TYPE_ID*                     |
 | NAME                            |
 | IS_ACTIVE                       |
 | IS_DELETED                      |
@@ -260,7 +260,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Components
 | R_Components     |
 | ---------------- |
-| **COMPONENT_ID** |
+| *COMPONENT_ID* |
 | PROJECT_ID       |
 | NAME             |
 | IS_DELETED       |
@@ -271,7 +271,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Custom Lists
 | R_CustomLists               |
 | --------------------------- |
-| **CUSTOM_PROPERTY_LIST_ID** |
+| *CUSTOM_PROPERTY_LIST_ID* |
 | PROJECT_ID                  |
 | NAME                        |
 | IS_ACTIVE                   |
@@ -283,7 +283,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Custom List Values
 | R_CustomListValues                |
 | --------------------------------- |
-| **CUSTOM_PROPERTY_VALUE_ID**      |
+| *CUSTOM_PROPERTY_VALUE_ID*      |
 | CUSTOM_PROPERTY_LIST_ID           |
 | NAME                              |
 | PROJECT_ID                        |
@@ -299,7 +299,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Custom Property Definitions
 | R_CustomPropertyDefinitions  |
 | ---------------------------- |
-| **CUSTOM_PROPERTY_ID**       |
+| *CUSTOM_PROPERTY_ID*       |
 | CUSTOM_PROPERTY_TYPE_ID      |
 | PROJECT_ID                   |
 | ARTIFACT_TYPE_ID             |
@@ -319,7 +319,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Document Statuses
 | R_DocumentStatuses     |
 | ---------------------- |
-| **DOCUMENT_STATUS_ID** |
+| *DOCUMENT_STATUS_ID* |
 | PROJECT_TEMPLATE_ID    |
 | NAME                   |
 | POSITION               |
@@ -331,7 +331,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Document Types
 | R_DocumentTypes       |
 | --------------------- |
-| **DOCUMENT_TYPE_ID**  |
+| *DOCUMENT_TYPE_ID*  |
 | PROJECT_TEMPLATE_ID   |
 | DOCUMENT_WORKFLOW_ID  |
 | NAME                  |
@@ -363,7 +363,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Global / System Custom Property Definitions
 | R_GlobalCustomPropertyDefinitions |
 | --------------------------------- |
-| **CUSTOM_PROPERTY_ID**            |
+| *CUSTOM_PROPERTY_ID*            |
 | CUSTOM_PROPERTY_TYPE_ID           |
 | CUSTOM_PROPERTY_TYPE_NAME         |
 | WORKSPACE_TYPE_ID                 |
@@ -379,7 +379,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Global / System Custom Property Lists
 | R_GlobalCustomLists         |
 | --------------------------- |
-| **CUSTOM_PROPERTY_LIST_ID** |
+| *CUSTOM_PROPERTY_LIST_ID* |
 | NAME                        |
 | IS_ACTIVE                   |
 | IS_SORTED_ON_VALUE          |
@@ -387,7 +387,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Global / System Custom Property List Values
 | R_GlobalCustomListValues       |
 | ------------------------------ |
-| **CUSTOM_PROPERTY_VALUE_ID**   |
+| *CUSTOM_PROPERTY_VALUE_ID*   |
 | NAME                           |
 | IS_ACTIVE                      |
 | IS_DELETED                     |
@@ -398,7 +398,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Global / System History Change-Sets
 | R_Global_HistoryChangeSets |
 | -------------------------- |
-| **CHANGESET_ID**           |
+| *CHANGESET_ID*           |
 | USER_ID                    |
 | CHANGE_DATE                |
 | CHANGETYPE_ID              |
@@ -415,7 +415,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Global / System History Details
 | R_Global_HistoryDetails |
 | ----------------------- |
-| **ARTIFACT_HISTORY_ID** |
+| *ARTIFACT_HISTORY_ID* |
 | FIELD_NAME              |
 | OLD_VALUE               |
 | NEW_VALUE               |
@@ -435,7 +435,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## History Change-Sets
 | R_HistoryChangeSets |
 | ------------------- |
-| **CHANGESET_ID**    |
+| *CHANGESET_ID*    |
 | USER_ID             |
 | ARTIFACT_TYPE_ID    |
 | ARTIFACT_ID         |
@@ -475,7 +475,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Incidents
 | R_Incidents                     |
 | ------------------------------- |
-| **INCIDENT_ID**                 |
+| *INCIDENT_ID*                 |
 | PROJECT_ID                      |
 | PRIORITY_ID                     |
 | SEVERITY_ID                     |
@@ -531,7 +531,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Incident Priorities
 | R_IncidentPriorities  |
 | --------------------- |
-| **PRIORITY_ID**       |
+| *PRIORITY_ID*       |
 | PROJECT_TEMPLATE_ID   |
 | NAME                  |
 | COLOR                 |
@@ -542,7 +542,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Incident Severities
 | R_IncidentSeverities  |
 | --------------------- |
-| **SEVERITY_ID**       |
+| *SEVERITY_ID*       |
 | PROJECT_TEMPLATE_ID   |
 | NAME                  |
 | COLOR                 |
@@ -553,7 +553,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Incident Statuses
 | R_IncidentStatuses     |
 | ---------------------- |
-| **INCIDENT_STATUS_ID** |
+| *INCIDENT_STATUS_ID* |
 | PROJECT_TEMPLATE_ID    |
 | NAME                   |
 | IS_ACTIVE              |
@@ -564,7 +564,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Incident Types
 | R_IncidentTypes       |
 | --------------------- |
-| **INCIDENT_TYPE_ID**  |
+| *INCIDENT_TYPE_ID*  |
 | PROJECT_TEMPLATE_ID   |
 | WORKFLOW_ID           |
 | NAME                  |
@@ -576,7 +576,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Portfolios
 | R_Portfolios      |
 | ----------------- |
-| **PORTFOLIO_ID**  |
+| *PORTFOLIO_ID*  |
 | NAME              |
 | DESCRIPTION       |
 | IS_ACTIVE         |
@@ -588,7 +588,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Program Milestones
 | R_ProjectGroup_Milestones       |
 | ------------------------------- |
-| **PROJECT_GROUP_MILESTONE_ID**  |
+| *PROJECT_GROUP_MILESTONE_ID*  |
 | PROJECT_GROUP_ID                |
 | TYPE_ID                         |
 | STATUS_ID                       |
@@ -619,7 +619,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Program Milestone Releases
 | R_ProjectGroup_Milestone_Project_Releases |
 | ----------------------------------------- |
-| **PROJECT_GROUP_MILESTONE_ID**            |
+| *PROJECT_GROUP_MILESTONE_ID*            |
 | RELEASE_ID                                |
 | ARTIFACT_LINK_TYPE_ID                     |
 | PROJECT_GROUP_MILESTONE_NAME              |
@@ -629,7 +629,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Program Milestone Statuses
 | R_ProjectGroup_Milestone_Statuses |
 | --------------------------------- |
-| **STATUS_ID**                     |
+| *STATUS_ID*                     |
 | NAME                              |
 | IS_ACTIVE                         |
 | IS_DELETED                        |
@@ -639,7 +639,7 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 ## Program Milestone Types
 | R_ProjectGroup_Milestone_Types |
 | ------------------------------ |
-| **TYPE_ID**                    |
+| *TYPE_ID*                    |
 | NAME                           |
 | IS_ACTIVE                      |
 | IS_DELETED                     |
@@ -661,7 +661,7 @@ Retrieves data about cross product associations
 ## Projects (Products)
 | R_Projects                  |
 | --------------------------- |
-| **PROJECT_ID**              |
+| *PROJECT_ID*              |
 | PROJECT_GROUP_ID            |
 | NAME                        |
 | DESCRIPTION                 |
@@ -696,7 +696,7 @@ Retrieves data about cross product associations
 ## Project Groups (Programs)
 | R_ProjectGroups      |
 | -------------------- |
-| **PROJECT_GROUP_ID** |
+| *PROJECT_GROUP_ID* |
 | NAME                 |
 | DESCRIPTION          |
 | WEBSITE              |
@@ -735,7 +735,7 @@ Retrieves data about cross product associations
 ## Project Roles
 | R_ProjectRoles           |
 | ------------------------ |
-| **PROJECT_ROLE_ID**      |
+| *PROJECT_ROLE_ID*      |
 | NAME                     |
 | IS_ACTIVE                |
 | DESCRIPTION              |
@@ -760,7 +760,7 @@ Retrieves data about cross product associations
 ## Project (Product) Templates
 | R_ProjectTemplates      |
 | ----------------------- |
-| **PROJECT_TEMPLATE_ID** |
+| *PROJECT_TEMPLATE_ID* |
 | NAME                    |
 | DESCRIPTION             |
 | IS_ACTIVE               |
@@ -768,7 +768,7 @@ Retrieves data about cross product associations
 ## Releases
 | R_Releases               |
 | ------------------------ |
-| **RELEASE_ID**           |
+| *RELEASE_ID*           |
 | PROJECT_ID               |
 | CREATOR_ID               |
 | NAME                     |
@@ -840,7 +840,7 @@ Retrieves data about cross product associations
 ## Requirements
 | R_Requirements           |
 | ------------------------ |
-| **REQUIREMENT_ID**       |
+| *REQUIREMENT_ID*       |
 | AUTHOR_ID                |
 | OWNER_ID                 |
 | RELEASE_ID               |
@@ -941,7 +941,7 @@ Retrieves data about cross product associations
 ## Requirement Types
 | R_RequirementTypes      |
 | ----------------------- |
-| **REQUIREMENT_TYPE_ID** |
+| *REQUIREMENT_TYPE_ID* |
 | REQUIREMENT_WORKFLOW_ID |
 | PROJECT_TEMPLATE_ID     |
 | NAME                    |
@@ -955,7 +955,7 @@ Retrieves data about cross product associations
 ## Risks
 | R_Risks                  |
 | ------------------------ |
-| **RISK_ID**              |
+| *RISK_ID*              |
 | RISK_IMPACT_ID           |
 | RISK_STATUS_ID           |
 | RISK_PROBABILITY_ID      |
@@ -1002,7 +1002,7 @@ Retrieves data about cross product associations
 ## Risk Impacts
 | R_RiskImpacts         |
 | --------------------- |
-| **RISK_IMPACT_ID**    |
+| *RISK_IMPACT_ID*    |
 | PROJECT_TEMPLATE_ID   |
 | NAME                  |
 | COLOR                 |
@@ -1015,7 +1015,7 @@ Retrieves data about cross product associations
 | R_RiskMitigations        |
 | ------------------------ |
 | RISK_ID                  |
-| **RISK_MITIGATION_ID**   |
+| *RISK_MITIGATION_ID*   |
 | POSITION                 |
 | DESCRIPTION              |
 | IS_DELETED               |
@@ -1033,7 +1033,7 @@ Retrieves data about cross product associations
 ## Risk Probabilities
 | R_RiskProbabilities     |
 | ----------------------- |
-| **RISK_PROBABILITY_ID** |
+| *RISK_PROBABILITY_ID* |
 | PROJECT_TEMPLATE_ID     |
 | NAME                    |
 | COLOR                   |
@@ -1045,7 +1045,7 @@ Retrieves data about cross product associations
 ## Risk Statuses
 | R_RiskStatuses        |
 | --------------------- |
-| **RISK_STATUS_ID**    |
+| *RISK_STATUS_ID*    |
 | NAME                  |
 | IS_ACTIVE             |
 | IS_DEFAULT            |
@@ -1057,7 +1057,7 @@ Retrieves data about cross product associations
 ## Risk Types
 | R_RiskTypes           |
 | --------------------- |
-| **RISK_TYPE_ID**      |
+| *RISK_TYPE_ID*      |
 | NAME                  |
 | IS_ACTIVE             |
 | IS_DEFAULT            |
@@ -1083,7 +1083,7 @@ Retrieves data about cross product associations
 | ---------------------------------- |
 | VERSION_CONTROL_SYSTEM_ID          |
 | PROJECT_ID                         |
-| **REVISION_ID**                    |
+| *REVISION_ID*                    |
 | NAME                               |
 | REVISION_KEY                       |
 | AUTHOR_NAME                        |
@@ -1102,7 +1102,7 @@ Retrieves data about cross product associations
 ## Tasks
 | R_Tasks                |
 | ---------------------- |
-| **TASK_ID**            |
+| *TASK_ID*            |
 | TASK_STATUS_ID         |
 | PROJECT_ID             |
 | REQUIREMENT_ID         |
@@ -1145,7 +1145,7 @@ Retrieves data about cross product associations
 ## Task Priorities
 | R_TaskPriorities      |
 | --------------------- |
-| **TASK_PRIORITY_ID**  |
+| *TASK_PRIORITY_ID*  |
 | PROJECT_TEMPLATE_ID   |
 | NAME                  |
 | IS_ACTIVE             |
@@ -1156,7 +1156,7 @@ Retrieves data about cross product associations
 ## Task Types
 | R_TaskTypes           |
 | --------------------- |
-| **TASK_TYPE_ID**      |
+| *TASK_TYPE_ID*      |
 | PROJECT_TEMPLATE_ID   |
 | TASK_WORKFLOW_ID      |
 | NAME                  |
@@ -1169,7 +1169,7 @@ Retrieves data about cross product associations
 ## Test Cases
 | R_TestCases              |
 | ------------------------ |
-| **TEST_CASE_ID**         |
+| *TEST_CASE_ID*         |
 | EXECUTION_STATUS_ID      |
 | TEST_CASE_PRIORITY_ID    |
 | PROJECT_ID               |
@@ -1209,7 +1209,7 @@ Retrieves data about cross product associations
 ## Test Case Folders
 | R_TestCaseFolders          |
 | -------------------------- |
-| **TEST_CASE_FOLDER_ID**    |
+| *TEST_CASE_FOLDER_ID*    |
 | PARENT_TEST_CASE_FOLDER_ID |
 | PROJECT_ID                 |
 | NAME                       |
@@ -1240,7 +1240,7 @@ Retrieves data about cross product associations
 ## Test Case Types
 | R_TestCaseTypes       |
 | --------------------- |
-| **TEST_CASE_TYPE_ID** |
+| *TEST_CASE_TYPE_ID* |
 | PROJECT_TEMPLATE_ID   |
 | TEST_CASE_WORKFLOW_ID |
 | NAME                  |
@@ -1268,7 +1268,7 @@ Retrieves data about cross product associations
 ## Test Configuration Sets
 | R_TestConfigurationSets       |
 | ----------------------------- |
-| **TEST_CONFIGURATION_SET_ID** |
+| *TEST_CONFIGURATION_SET_ID* |
 | PROJECT_ID                    |
 | NAME                          |
 | DESCRIPTION                   |
@@ -1285,7 +1285,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 
 | R_TestRuns             |
 | ---------------------- |
-| **TEST_RUN_ID**        |
+| *TEST_RUN_ID*        |
 | TEST_CASE_ID           |
 | NAME                   |
 | DESCRIPTION            |
@@ -1342,7 +1342,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Test Run Steps
 | R_TestRunSteps        |
 | --------------------- |
-| **TEST_RUN_STEP_ID**  |
+| *TEST_RUN_STEP_ID*  |
 | EXECUTION_STATUS_ID   |
 | TEST_CASE_ID          |
 | TEST_STEP_ID          |
@@ -1364,7 +1364,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Test Sets
 | R_TestSets                  |
 | --------------------------- |
-| **TEST_SET_ID**             |
+| *TEST_SET_ID*             |
 | PROJECT_ID                  |
 | RELEASE_ID                  |
 | TEST_SET_STATUS_ID          |
@@ -1414,7 +1414,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Test Set Folders
 | R_TestSetFolders          |
 | ------------------------- |
-| **TEST_SET_FOLDER_ID**    |
+| *TEST_SET_FOLDER_ID*    |
 | PROJECT_ID                |
 | PARENT_TEST_SET_FOLDER_ID |
 | NAME                      |
@@ -1446,7 +1446,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Test Set Test Cases
 | R_TestSetTestCases        |
 | ------------------------- |
-| **TEST_SET_TEST_CASE_ID** |
+| *TEST_SET_TEST_CASE_ID* |
 | TEST_SET_ID               |
 | TEST_CASE_ID              |
 | OWNER_ID                  |
@@ -1462,7 +1462,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Test Steps
 | R_TestSteps           |
 | --------------------- |
-| **TEST_STEP_ID**      |
+| *TEST_STEP_ID*      |
 | TEST_CASE_ID          |
 | EXECUTION_STATUS_ID   |
 | DESCRIPTION           |
@@ -1486,7 +1486,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 ## Users
 | R_Users                         |
 | ------------------------------- |
-| **USER_ID**                     |
+| *USER_ID*                     |
 | USER_NAME                       |
 | EMAIL_ADDRESS                   |
 | IS_ACTIVE                       |
