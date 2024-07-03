@@ -109,6 +109,8 @@ The code is responsible for rendering the widget. You can render the contents of
 - mustache templating
 - React
 
+A dashboard widget SpiraApp has access to a single DOM element. This can be accessed using the following code: `const elementId = APP_GUID + "_content";`. You would render contents in this element using mustache like this: ` document.getElementById(elementId).innerHTML = rendered;`
+
 Note that the widget will not display by default on the dashboard. The end user will need to manually add the widget to show.
 
 ### Columns
