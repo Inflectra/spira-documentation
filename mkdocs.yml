@@ -341,6 +341,7 @@ nav:
       - Manifest File: Developers\SpiraApps-Manifest.md
       - Reference: Developers\SpiraApps-Reference.md
       - SpiraAppManager: Developers\SpiraApps-Manager.md
+      - SpiraApps Tutorial: SpiraApps\SpiraAppTutorial.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
   - Version 8: About/release-notes-v8.md
