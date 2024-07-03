@@ -1,5 +1,6 @@
 # Tutorial: Creating a SpiraApp
 In this tutorial, you’ll create a SpiraApp that:
+
 * Runs on the Requirement Details page
 * Uses product settings
 * Replaces specific words when you save the Requirements description
@@ -9,8 +10,8 @@ In this tutorial, you’ll create a SpiraApp that:
 
 ## Prerequisites
 * Node.js (the latest LTS version).
-* A github account
-* git installed on your computer (github desktop is helpful as well)
+* A GitHub account
+* Git installed on your computer (GitHub Desktop is helpful as well)
 * Familiarity with the basic development process for a SpiraApp, listed [here](https://spiradoc.inflectra.com/Developers/SpiraApps-Overview/).
 
 ## Create Your Manifest
@@ -18,7 +19,7 @@ The manifest is the heart of your SpiraApp. It contains all of the information t
 
 Create a new folder for your SpiraApp and create a new file in it called "manifest.yaml"
 
-(Optionally create a local git repository in this folder and publish to github to keep a backup of all your work. You will have to create a repository on github to submit your SpiraApp for approval, so this follows best practices. Once the repository is created, immediately create a new branch and do your development there, leaving the main branch mostly untouched. This makes it very simple to make a pull request for the official submission process later.)
+(Optionally create a local git repository in this folder and publish to GitHub to keep a backup of all your work. You will have to create a repository on GitHub to submit your SpiraApp for approval, so this follows best practices. Once the repository is created, immediately create a new branch and do your development there, leaving the main branch mostly untouched. This makes it very simple to make a pull request for the official submission process later.)
 
 Our SpiraApp will be very simple but we still need a complete manifest, so open your manifest file in your preferred code editor and copy and paste the following:
 
@@ -37,7 +38,7 @@ copyright: Copyright Inflectra
 version: 1.0
 ```
 
-An additional "icon: data:image/svg+xml;base64,file://filename.svg" line is optional, so we are not going to include it for now. 
+An additional `icon: data:image/svg+xml;base64,file://filename.svg` line is optional, so we are not going to include it for now. 
 
 **Replace the value for "guid" with a newly generated GUID** so your app has a unique identifier when you test and publish it. Using two SpiraApps with the same GUID could cause unexpected bugs.
 
@@ -93,7 +94,7 @@ npm run build --input="C:\MySpiraApp" --output="C:\BundleStorage"
 ```
 
 ## Installing Your SpiraApp
-In order to install your SpiraApp, you must be a System Administrator. First, turn on developer mode in General Settings under the System heading in the System: Admin Home. Then go to the SpiraApps page in System: Admin Home and upload the .spiraapp package file at the bottom. Its name should have appeared in the list of SpiraApps above the upload area, now click the red X button on its row to enable it for your system.
+In order to install your SpiraApp, you must be a Spira System Administrator. First, turn on developer mode in General Settings under the System heading in the System: Admin Home. Then go to the SpiraApps page in System: Admin Home and upload the .spiraapp package file at the bottom. Its name should have appeared in the list of SpiraApps above the upload area, now click the red X button on its row to enable it for your system.
 
 ## Testing Your SpiraApp
 Now that you have installed your SpiraApp, go to the product you want to test it in and go to General Settings > SpiraApps. Enable it there and then navigate to Requirements. When you click on a requirement, immediately on loading the page you should see a popup message with the name and description of the requirement. It should look something like this:
