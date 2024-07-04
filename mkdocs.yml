@@ -1,6 +1,6 @@
 # META
 site_name: SpiraDocs
-copyright: © Copyright 2006-2022 Inflectra Corporation, All Rights Reserved | en-US
+copyright: © Copyright 2006-2024 Inflectra Corporation, All Rights Reserved | en-US
 
 repo_name: Inflectra
 repo_url: https://www.inflectra.com
@@ -337,11 +337,11 @@ nav:
 - Developers:
     - API Overview: Developers\API-Overview.md
     - SpiraApp Development:
+      - Tutorial: Developers\SpiraApps-Tutorial.md
       - Overview: Developers\SpiraApps-Overview.md
       - Manifest File: Developers\SpiraApps-Manifest.md
       - Reference: Developers\SpiraApps-Reference.md
       - SpiraAppManager: Developers\SpiraApps-Manager.md
-      - SpiraApps Tutorial: SpiraApps\SpiraAppTutorial.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
   - Version 8: About/release-notes-v8.md
