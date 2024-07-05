@@ -13,7 +13,7 @@ These docs provide a number of resources to help you learn, understand, and deve
 - a tutorial about [how to use OData with Spira](./OData-Tutorial.md)
 - reference information about all of the [custom report tables](./Custom-Report-Tables.md), including names, fields, and primary keys
 - [Tips and tricks](#reporting-tips-and-tricks) to remember when making custom queries for report
-- Explanations about how report views fit together and how they be used to give you meaningful insights (below) 
+- Explanations about how report views fit together and how they be used to give you meaningful insights (below). Please note that in these examples only relevant fields are shown not all fields.
 
     - [Artifacts](#artifact-views)
     - [Traceability](#essential-traceability)
@@ -64,6 +64,10 @@ These docs provide a number of resources to help you learn, understand, and deve
     }
     R_RequirementTypes {
         type_key REQUIREMENT_TYPE_ID
+    }
+    R_RequirementSteps {
+        rq_key REQUIREMENT_ID
+        int POSITION
     }
     ```
 
@@ -126,6 +130,13 @@ These docs provide a number of resources to help you learn, understand, and deve
     R_IncidentStatuses ||--|{ R_Incidents : st_key
     R_IncidentTypes ||--|{ R_Incidents : tp_key
 
+    R_Incidents {
+        in_key INCIDENT_ID
+        pr_key PRIORITY_ID
+        se_key SEVERITY_ID
+        st_key INCIDENT_STATUS_ID
+        tp_key INCIDENT_TYPE_ID
+    }
     R_IncidentPriorities {
         pr_key PRIORITY_ID
     }
@@ -203,8 +214,41 @@ This is a collection of report views that capture traceability between key produ
     R_TestRuns {
         tr_key TEST_RUN_ID
     }
-    R_Incidents {
+    R_TestRunIncidents {
         tr_key TEST_RUN_ID
         in_key INCIDENT_ID
     }
     ```
+
+=== "Example Queries"
+    === "Requirements with linked test cases"
+    **Query**
+
+    ```sql
+    select
+        r.requirement_id,
+        r.name as requirement_name,
+        t.test_case_id,
+        t.name as test_case_name
+    from
+        SpiraTestEntities.R_Requirements as r
+    left join
+        SpiraTestEntities.R_RequirementTestCases as rt on
+        r.requirement_id = rt.requirement_id and
+        r.project_id = rt.project_id
+    join
+        SpiraTestEntities.R_TestCases as t on
+        t.test_case_id = rt.test_case_id and
+        t.project_id = rt.project_id
+    where
+        r.is_summary = False and
+        r.is_deleted = False
+    ```
+
+    **Example output**
+    
+    | requirement_id | requirement_name | test_case_id | test_case_name |
+    | -- | -- | -- | -- |
+    | 8 | Effective Authentication | 45 | Verify can login |
+    | 9 | Password reset is effective | 102 | Verify get email before password reset |
+    | 9 | Password reset is effective | 103 | Verify can reset password based on policy |
