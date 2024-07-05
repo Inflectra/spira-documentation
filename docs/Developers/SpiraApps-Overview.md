@@ -194,7 +194,7 @@ Host the SpiraApp in a repo on GitHub.
 Create a branch for the current work. Make sure to commit to a feature branch and not the main branch to make PRs easier to manage.
 
 ### Prepare your documentation
-Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. 
+Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. Link users to this with the URL parameter in the [manifest's metadata](./SpiraApps-Manifest.md/#spiraapp-metadata).
 
 This documentation should clearly list any third party URLs contacted by the SpiraApp with a brief explanation of why each is needed.
 
