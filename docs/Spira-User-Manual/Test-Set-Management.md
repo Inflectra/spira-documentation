@@ -310,6 +310,7 @@ In many ways cross product test cases will feel the same to a tester as another 
 
 In reality, a test case from another product always live in that other product, which presents some limitations to how cross product test sets work. Specifically:
 
+- a tester must have the necessary permissions to execute test runs in each of the products with test cases in the test
 - the test run from a cross product test case:
 
     - lives in the product of the test case, not that of the test set
@@ -320,6 +321,7 @@ In reality, a test case from another product always live in that other product, 
 - attachments (including screenshots), incidents, and tasks against a test run are part of the test set's product, not that of the test run's test case
 - a user can only access linked artifacts to a test run (like incidents) if they have the correct permissions in the test set's product, as well as that of the test run
 - the test set's execution status when showing results for a specific release will exclude any results from cross product test cases (because those test runs do not have any release data as explained above)
+- incidents created in the test set's product are not visible against the test case, if the test case is in a different product to the test set (this is a current known limitation)
 - when cloning a product, cross product test cases are not copied over to the new test sets. Also, any attachments, incidents, and tasks created against test runs from other products are not correctly linked to the test set (note: this will be resolved in a future release) 
 
 ### Overview - Comments
