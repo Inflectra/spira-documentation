@@ -33,9 +33,14 @@ We will start with a very simple SpiraApp and then add features to it later
 ### Create the Manifest
 The [manifest](./SpiraApps-Manifest.md) is the heart of your SpiraApp. It contains all of the information that describes what your SpiraApp is and where it will run within a user’s Spira web application. 
 
-Create a new folder for your SpiraApp and create a new file in it called "manifest.yaml"
+Create a new folder for your SpiraApp and create a new file in it called `manifest.yaml`.
 
-(Optionally create a local git repository in this folder and publish to GitHub to keep a backup of all your work. You will have to create a repository on GitHub to submit your SpiraApp for approval, so this follows best practices. Once the repository is created, immediately create a new branch and do your development there, leaving the main branch mostly untouched. This makes it very simple to make a pull request for the official submission process later.)
+??? info "Using Git is optional"
+    You do not need to use Git for this tutorial. It is optional. 
+    
+    If you wish to use Git, create a local git repository in this folder and publish to your remote over choice (e.g. GitHub or TaraVault) to keep a backup of your work. 
+    
+    Note that you will have to create a repository on GitHub to submit your SpiraApp for approval, so this follows best practices. Once the repository is created, immediately create a new branch and do your development there, leaving the main branch mostly untouched. This makes it very simple to make a pull request for the official submission process later.
 
 Our SpiraApp will be simple but it still needs a complete manifest. Open the manifest file in your preferred code editor and copy and paste the following:
 
@@ -84,7 +89,7 @@ productSettings:
 
 
 ### Add JavaScript
-SpiraApps use JavaScript to carry out most of their functionality. The line `code: file://requirement.js` in the manifest file above is used when creating the SpiraApp to take the contents of the file called "requirement.js" and embed it into the SpiraApp.
+SpiraApps use JavaScript to carry out most of their functionality. The line `code: file://requirement.js` in the manifest file above is used when creating the SpiraApp to take the contents of the file called `requirement.js` and embed it into the SpiraApp.
 
 We must therefore create this file and add logic to it. 
 
@@ -127,7 +132,7 @@ In order to install your SpiraApp, carry out the following steps
 - upload the .spiraapp package file generate above. 
 - if it could not be installed you will see a generic error message
 - it was correctly installed, it will appear in the list of SpiraApps
-- click the red X button on its row to enable it system wide
+- click the power (on/off toggle) button on its row to enable it system wide
 
 #### Test
 Now that you have installed your SpiraApp:
@@ -136,7 +141,7 @@ Now that you have installed your SpiraApp:
 - go to Product Admin > General Settings > SpiraApps.
 - enable the SpiraApp
 - navigate to Requirements (if there are no requirements create one now)
-- click on a requirement,
+- click on a requirement
 
 As soon as the page loads, the SpiraApp code will run and you should see a popup message with the name and description (as raw HTML) of the requirement. It should look something like this:
 
@@ -144,7 +149,7 @@ As soon as the page loads, the SpiraApp code will run and you should see a popup
 
 ## Add more functionality
 ## Details Page Automation
-Let’s add some more code to the "requirements.js" file. This new code will automatically replace the words given in the SpiraApp’s product settings. This makes use of the Spira REST API (its docs are accessible from the "Web Services" link in the Spira system admin menu). 
+Let’s add some more code to the "requirements.js" file. This new code will automatically replace the words given in the SpiraApp’s product settings every time the user makes a change to a requirement and saves it. This makes use of the Spira REST API (its docs are accessible from the "Web Services" link in the Spira system admin menu). 
 
 ``` javascript linenums="12" title="requirement.js"
 // Register 'runOnRequirementSaved' to run every time the page is saved
@@ -224,7 +229,7 @@ function requirementUpdate_Failure(e) {
 
 To get this new code into the SpiraApp, [rebuild](#build) and then [reinstall](#install) the SpiraApp. You can then [test](#test) the changes made to make sure everything works as expected. 
 
-**NOTE**: Before testing that the words are replaced, make sure you enter values for the product settings "Words to Replace" and "Replacement Word" so that your code has the information it needs.
+**NOTE**: Before testing that the words are replaced, make sure you enter values for the product settings "Words to Replace" and "Replacement Word" so that your code has the information it needs. This auto replace feature only works when a user saves the requirement, not when the requirement is first loaded.
 
 ## User interactivity
 Next we're going to add a [button](./SpiraApps-Overview.md/#menus) on the requirement details [page](./SpiraApps-Reference.md/#pages) that opens an arbitrary link set in product settings. This adds a way for the user to purposefully interact with the SpiraApp.
@@ -301,7 +306,7 @@ Next, create the html file to represent the data in each row of the column calle
 </p>
 ```
 
-When you [rebuild](#build) then [reinstall](#install) the SpiraApp, you can [test](#test) it by going to the requirement list page. Make sure to show the column, which should display a simple concatenated field in the form "1_3".
+When you [rebuild](#build) then [reinstall](#install) the SpiraApp, you can [test](#test) it by going to the requirement list page. The column will automatically be visible and will show a simple concatenated field in the form "1_3".
 
 ## Add a dashboard widget
 SpiraApps can be used to create rich and interactive [widgets](./SpiraApps-Overview.md/#widgets) on various [dashboard pages](./SpiraApps-Reference.md/#dashboard-types). This widget will be on the Product Dashboard / Home Page. It will show the most recently created incident.
@@ -328,7 +333,7 @@ const template = `
 {{#hasItems}}
     <table class="WidgetGrid" role="grid" style="width:100%">
         <tr role="rowHeader">
-            <th> colspan="2">Name</th>
+            <th colspan="2">Name</th>
             <th>Type</th>
             <th>Created By</th>
             <th>Date Created</th>
@@ -339,9 +344,9 @@ const template = `
                     <img src="{{ icon }}" class="w4 h4"></img>
                 </td>
                 <td>
-                    <a class="has-tooltip" href=" {{ incUrl }}">
+                    <a class="has-tooltip" href=" {{ incidentUrl }}">
                         {{ name }}
-                        <div class="is-tooltip">[RQ:{{ reqID }}]</td>
+                        <div class="is-tooltip">[RQ:{{ incidentID }}]</td>
                     </a>
                 </td>
                 <td>{{ type }}</td>
@@ -365,7 +370,7 @@ spiraAppManager.registerEvent_dashboardUpdated(loadIncident);
 function loadIncident() {
     // Check if the user can view incidents in the current product
     const ARTIFACT_TYPE_ID = 3;
-    const canViewIncidents = spiraAppManager.canViewArtifactType(REQ_TYPE_ID);
+    const canViewIncidents = spiraAppManager.canViewArtifactType(ARTIFACT_TYPE_ID);
     // Show a generic message if the user cannot view incidents (always handle error states and edge cases)
     if (!canViewIncidents) {
         var rendered = `<p class="alert alert-info">You are not able to view this data.</p>`;
@@ -399,8 +404,8 @@ function loadIncidentSuccess(incidents) {
     // Iterate over the array of incidents to generate a customized object for each
     selectedIncidents.forEach(incident => {
         var item = {
-            incId: incident.IncidentId,
-            incUrl: `${spiraAppManager.baseUrl}${spiraAppManager.projectId}/Incident/${incident.IncidentId}.aspx`,
+            incidentId: incident.IncidentId,
+            incidentUrl: `${spiraAppManager.baseUrl}${spiraAppManager.projectId}/Incident/${incident.IncidentId}.aspx`,
             icon: `${spiraAppManager.baseThemeUrl}Images/artifact-Incident.svg`,
             name: incident.Name,
             type: incident.IncidentTypeName,
