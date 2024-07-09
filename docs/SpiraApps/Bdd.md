@@ -28,8 +28,10 @@ The BDD highlighting is automatically applied any time any user either opens a r
 - Syntax highlighting is added to all BDD comments, quotes, and tags:
 
     - **Comments** are lines starting with a # sign
-    - **Quotes** are parts of a line enclosed in " " characters
+    - **Quotes** are parts of a line enclosed in `“ ”` characters (note the use of smart quotes here not `" "`. Smart quotes are added automatically when typing in Spira)[^quotes]
     - **Tags** start with an @ symbol and contain any characters other than whitespace.
+
+[^quotes]: Normal double and single quotes are not supported as the automatic syntax highlighter cannot differentiate them from hidden quote characters in the rich text field. If a quote is not getting highlighted try adding and removing a space from the end quote to resolve.
 
 ![Shows the following step description with @tags colored in red, "Scenario: ..." line bolded and colored in blue, Given/When/Then keywords bolded and colored green, "quoted strings" colored in bright cyan, and the comment line starting with # colored in gray: `@bdd @highlighting (new line) Scenario: BDD syntax highlighting is applied on saving a requirement step (new line) Given I have written a requirement step using BDD syntax using words like “Scenario:, Given, When, Then” (new line) When I save the requirement step (new line) Then I will see that the BDD highlighting has been applied automatically. (new line) # -describes feature requested by Customer A` ](img/bdd-highlight-example.png)
 
