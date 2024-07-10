@@ -117,7 +117,7 @@ function runOnRequirementLoaded(b) {
 #### Build
 Before you can test your new SpiraApp, you have to create a development build of it. To do that, first use git to clone the [SpiraApp package generator](https://github.com/Inflectra/spiraapp-package-generator) to your computer in a different directory. Follow the setup instructions in the package generator’s README. 
 
-To build your SpiraApp, open a terminal at the package generator's folder and run the command below, replacing "MySpiraAppFolder" with the path to your SpiraApp folder and "BundleStorageFolder" to the folder you want to save the generated .spiraapp file ton. 
+To build your SpiraApp, open a terminal at the package generator's folder and run the command below, replacing "MySpiraAppFolder" with the path to your SpiraApp folder and "BundleStorageFolder" to the folder you want to save the generated .spiraapp file. 
 
 ``` bash
 npm run build --input="C:\MySpiraAppFolder" --output="C:\BundleStorageFolder"
