@@ -3177,6 +3177,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/BDD.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/ChatGPT/" class="md-nav__link">
         
   
@@ -3491,6 +3518,33 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -7122,60 +7176,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/Jenkins--Hudson/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Jenkins/Hudson
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Azure DevOps Pipelines
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Build-Server-Integration/GitHub-Actions/" class="md-nav__link">
         
   
@@ -7230,13 +7230,67 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Build-Server-Integration/CircleCI-Pipelines/" class="md-nav__link">
+      <a href="../../Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    CircleCI Pipelines
+    Azure DevOps Pipelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/AWS-CodeBuild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS CodeBuild
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/Jenkins--Hudson/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins/Hudson
   
 
     
@@ -7264,6 +7318,33 @@
     
   
     JetBrains TeamCity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Build-Server-Integration/CircleCI-Pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CircleCI Pipelines
   
 
     
@@ -7654,6 +7735,33 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SpiraApps-Tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -8827,6 +8935,7 @@
 <li><strong>registerEvent_loaded</strong>: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load</li>
 <li><strong>registerEvent_dataFailure</strong>: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.</li>
 <li><strong>registerEvent_operationReverted</strong>: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters</li>
+<li><strong>registerEvent_dropdownChanged</strong>: Registers an event handler on the <a href="../SpiraApps-Reference/#available-field-names">specified dropdown field</a> for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  </li>
 <li><strong>registerEvent_gridLoaded</strong>: registers an event handler to trigger when a <a href="../SpiraApps-Reference/#available-grid-ids">specific grid</a> is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.</li>
 </ul>
 </div>
@@ -8852,6 +8961,14 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Current status is </span><span class="si">${</span><span class="nx">statusId</span><span class="si">}</span><span class="sb"> and it is </span><span class="si">${</span><span class="nx">isOpen</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;open&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;closed&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="p">};</span>
 
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dropdownChanged</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="w"> </span><span class="p">(</span><span class="nx">oldValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//arbitrarily block any attempts to set a value to above 20</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_gridLoaded</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The grid with id </span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="si">}</span><span class="sb"> was (re)loaded`</span><span class="p">);</span>
@@ -8867,8 +8984,8 @@
 <div class="tabbed-block">
 <ul>
 <li><strong>reloadForm</strong>: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.</li>
-<li><strong>getDataItemField</strong>: gets the current live value of a single field on a details page. This function takes two parameters: the name of the field and the data property. There is currently no easy way to obtain a full list of fields. The best way to do so is to inspect the network requests on the details page and the data returned from a <code>Form_Retrieve</code> service call. The JSON will include a <code>Fields</code> object, with objects for each field. When you have found the object for the field, use the <code>FieldName</code> as the name property, and the <code>{type}Value</code> that has the data in as the data property. </li>
-<li><strong>updateFormField</strong>: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the name of the field, the data property, and the new value. Obtain the data about the required field in the same way as is done for the "getDataItemField" function. </li>
+<li><strong>getDataItemField</strong>: gets the current live value of a single field on a details page. This function takes two parameters: the <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> and the data property. </li>
+<li><strong>updateFormField</strong>: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the <a href="../SpiraApps-Reference/#available-field-names">name of the field</a>, the data property, and the new value. </li>
 <li><strong>reloadGrid</strong>: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds <a href="#properties">property function</a> (string)</li>
 <li><strong>setWindowLocation</strong>: loads a new page in the browser. Takes a single parameter, which is the full URL (string)</li>
 </ul>
@@ -8876,18 +8993,6 @@
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadForm</span><span class="p">();</span>
 
-<span class="cm">/* example extract of a single property from the Fields object from a Form_Retrieve</span>
-<span class="cm">{</span>
-<span class="cm">    &quot;__type&quot;: &quot;DataItemField:tst.dataObjects&quot;,</span>
-<span class="cm">    &quot;caption&quot;: &quot;Name&quot;,</span>
-<span class="cm">    &quot;editable&quot;: true,</span>
-<span class="cm">    &quot;fieldName&quot;: &quot;Name&quot;,</span>
-<span class="cm">    &quot;fieldType&quot;: 6,</span>
-<span class="cm">    &quot;hidden&quot;: false,</span>
-<span class="cm">    &quot;lookupName&quot;: &quot;&quot;,</span>
-<span class="cm">    &quot;required&quot;: true,</span>
-<span class="cm">    &quot;textValue&quot;: &quot;Fix the icon used to save&quot;</span>
-<span class="cm">} */</span>
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Fix the icon used to save&quot;</span>
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this tasks&quot;</span><span class="p">);</span>
 
@@ -9074,7 +9179,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © Copyright 2006-2022 Inflectra Corporation, All Rights Reserved | en-US
+      © Copyright 2006-2024 Inflectra Corporation, All Rights Reserved | en-US
     </div>
   
   
