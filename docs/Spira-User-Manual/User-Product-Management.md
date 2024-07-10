@@ -107,7 +107,7 @@ You can add the additional widgets by selecting the appropriate checkbox, choosi
 - My News Feeds
 
 
-## Recent Products
+### Recent Products
 This widgets shows the most recent products you have visited. Each time you visit a page for a different product the list of most recent products is updated. By default, it shows the five most recent products -- this can be edited in the widget edit controls to any number fifty or less.
 
 For each recent product visited, the widget shows name for:
@@ -119,7 +119,7 @@ For each recent product visited, the widget shows name for:
 Each product name is a link to that product's home page. The program and portfolio names are links to the relevant home pages if you have access to view those home pages.  
 
 
-## Recent Artifacts
+### Recent Artifacts
 This widgets shows the most recent artifacts you have visited. If you last looked at Requirement X in Product Y then Requirement X will show at the top of the list. The widget will show specific artifacts across all artifact types and all products. By default, it shows the five most recent artifacts -- this can be edited in the widget edit controls to any number fifty or less.
 
 For each recent artifact, the widget shows:
@@ -134,19 +134,19 @@ If "All Products" is selected at the top of the My Page, the list shows the most
 If "Current Product" is selected at the top of the My Page, the list shows only the recent artifacts that are from the current product (if any).
 
 
-## My Saved Searches
+### My Saved Searches
 
 This section lists any filters/searches you have saved from the various artifact list screens throughout the application. This allows you to store specific combinations of searches that you need to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).
 
 The name of the saved search is displayed along with an icon that depicts which artifact it's for and the product it refers to. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. Clicking the "Delete" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.
 
 
-## My Assigned Requirements
+### My Assigned Requirements
 
 This section lists all the requirements you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for either developing the supporting test cases or decomposing the requirement into its detailed work breakdown structure of product tasks. The requirement name is displayed, along with its status (requested, accepted, in-progress, etc.) and its importance. Requirements are included based on their importance: the list is ordered by importance (highest at top) and requirements with the same importance are ordered by their IDs.
 
 
-## My Assigned Test Cases
+### My Assigned Test Cases
 
 This section lists all the test cases you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing these test scripts. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs. For each test case in the list you can see:
 
@@ -159,7 +159,7 @@ This section lists all the test cases you are the owner of, across *all products
 
 If you edit the widget you can: change the number of rows to show; show or hide the last executed date; and show or hide and the workflow status.
 
-## My Assigned Test Sets
+### My Assigned Test Sets
 
 This section lists all the test sets (groups of test cases) you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs. For each test set in the list you can see:
 
@@ -170,28 +170,28 @@ This section lists all the test sets (groups of test cases) you are the owner of
 - a play (execute) button. This will [execute the test set](Test-Case-Management.md/#execute-test-cases)
 
 
-## My Pending Test Runs
+### My Pending Test Runs
 
 This section lists any test runs that you started executing in the test case module but haven't yet completed. Until a test case or test set is fully executed, a pending test run entry is stored in the system so that you can continue execution at a later date.
 
 Any pending test run can be either deleted or resumed by clicking on the appropriate button. In addition, there is the option to reassign the test run to another user that is a member of the product.
 
 
-## My Assigned Tasks
+### My Assigned Tasks
 
 This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed by priority: tasks with no priority at the top, and after that the highest priority tasks. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](Task-Tracking.md) -- task management for details of the different progress indicators.
 
 Clicking on the task name hyperlink will take you to the task details page. This page will describe the task in more detail, illustrate which requirement and release it is associated with, and also allow you to view the change log of actions that have been performed on it.
 
 
-## My Assigned Incidents
+### My Assigned Incidents
 
 This section lists all the open incidents you are the owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for resolving the incident. In the case of a bug, this can mean actually fixing the problem, whereas for other incident types (e.g. training item) it may mean simply documenting a workaround. In either event, this section highlights the open incidents you need to manage, ranked by priority (incidents with no priority are at the top) and categorized by type, with the open date displayed to give you a sense of the age of the incident.
 
 Clicking on the incident name hyperlink takes you to the [incident details page](Incident-Tracking.md/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
-## My Detected Incidents
+### My Detected Incidents
 
 This section lists all the open incidents that you have detected, across
 *all the different products* you are a member of. These incidents are not necessarily ones that you need to take an active role in resolving, but since you were the originator -- either by executing a test case or just logging a standalone incident -- you can watch them to make sure that they are resolved in a timely manner. The incidents shown are ranked by last updated date (most recent at the top).
@@ -199,12 +199,12 @@ This section lists all the open incidents that you have detected, across
 Clicking on the incident name hyperlink takes you to the [incident details page](Incident-Tracking.md/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
-## Quick Launch
+### Quick Launch
 
 This widget allows users to quickly record a new incident in any of the products that they belong to. It's a shortcut that avoids having to first select a product, go to Tracking \> Incidents and then click "New Incident". Instead you simply choose the product from the dropdown list and click the arrow icon to bring up the new incident creation screen.
 
 
-## My Contacts
+### My Contacts
 
 This widget displays a list of any other users in the system that you have listed as a personal contact:
 
@@ -212,26 +212,26 @@ Each user is displayed along with their graphical avatar, department and a color
 button.
 
 
-## My Saved Reports
+### My Saved Reports
 
 This section lists any reports you have saved from the reports center. This allows you to store specific combinations of report elements, format, filters and sorts (see the section on Reporting for more details on how to configure a report) for reports that you need to run on a regular basis.
 
 
-## My Subscribed Artifacts
+### My Subscribed Artifacts
 
 This widget displays a list of all the artifacts in the system that you have subscribed to (by clicking on the Subscribe icon on the item). You can display the item by simply clicking on the hyperlink. In addition, if changes are made to any of the artifacts an email notification will be sent to you. You can click on the "Unsubscribe" button to remove the item from this list.
 
 
-## My News Feeds
+### My News Feeds
 
 This widget allows you to subscribe to an external newsfeed and have the results be displayed inside SpiraPlan. By default it will be set to the newsfeed from the Inflectra website that displays a list of recent company and product announcements. You can add multiple instances of the widget to the dashboard, allowing you to read multiple news sources at once. Typical uses for this widget are to add news from product management and testing news sites/blogs or to add information from other tools in your organization that can display their data in RSS format.
 
 
-## My Assigned Risks
+### My Assigned Risks
 <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 
 
-## My Assigned Documents
+### My Assigned Documents
 
 This section lists all the documents you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the documents details page. This page will describe the documents in more detail. The list is ranked by last updated date.
 
@@ -385,9 +385,7 @@ If you want to be able to subscribe to RSS feeds of the information assigned to 
 You can change your start page to be any of the following:
 
 -   **My Page** -- When you first log-in, you will be taken to your "My Page" dashboard
-
 -   **Last Opened Product** -- When you first login-in, you will be taken to the home page for the product you last had open
-
 -   **Last Opened Program** - When you first login-in, you will be taken to the home page for the program you last had open
 
 
