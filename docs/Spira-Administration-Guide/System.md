@@ -316,7 +316,7 @@ This page displays a list of relevant changes made to system level artifacts or 
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
 
-- **Change ID**: unique identified. Clicking this will open the history details page for that change (see below)
+- **Change ID**: unique identifier. Clicking this will open the history details page for that change (see below)
 - **Change date**: when the change was made
 - **Change by**: who is recorded as having made the change (the user's name and ID)
 - **Artifact Type**: the system level artifact (e.g. product)
