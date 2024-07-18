@@ -21,15 +21,25 @@ To record builds in SpiraPlan, you must [setup the webhook integration with GitL
 To configure this SpiraApp that lets users manually kick off a new Pipeline, you must additionally do the following:
 
 ### System settings
-- [x] Enter the [GitLab username](https://docs.gitlab.com/ee/user/profile/#change-your-username)
+- [x] Enter the **GitLab account name** - for example, if your URL is `https://gitlab.com/my-company/my-project` you should enter `my-company`
 - [x] Enter the [Personal Access Token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-tokens) - make sure the PAT has read and write API permissions
 
 ![system settings page](img/gitlab-system-settings.png)
 
 ### Product Settings
-- [x] Enter the name of the GitLab project
+- [x] Enter the URL friendly name of the **GitLab project** - for example, if your URL is `https://gitlab.com/my-company/my-project` you should enter `my-project`
 
 ![product settings page](img/gitlab-product-settings.png)
+
+!!! check "Handling GitLab Project Hierarchies"
+
+    If you have a more complex project hierarchy in GitLab, you will need to enter the project name as a URL fragment with the path separator `/` escaped as `%2F`.
+
+    For example, if you have GitLab URL: `https://gitlab.com/my-company/my-program/my-department/my-project` then you would use the following in the SpiraApp settings:
+
+    - **Username:** `my-company`
+    - **Project Name:** `my-program%2Fmy-department%2Fmy-project`
+
 
 ### Product Template Setup
 - [x] Add a plain text custom property called `gitlab-branch-name` for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.
