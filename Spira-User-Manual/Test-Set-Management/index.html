@@ -9194,9 +9194,9 @@ TG(Configuration) --&gt; TX;</code></pre>
 <li>test run reports include all associated attachments and incidents </li>
 <li>cloning a test run brings over all associations and test cases, including those from other products</li>
 </ul>
-<p>In reality, a test case from another product always live in that other product, which presents some limitations to how cross product test sets work. Specifically:</p>
+<p>In reality, a test case from another product always lives in that other product, which presents some limitations to how cross product test sets work. Specifically:</p>
 <ul>
-<li>a tester must have the necessary permissions to execute test runs in each of the products with test cases in the test</li>
+<li>a tester must have the necessary permissions to execute test runs in each of the products with test cases in the test set</li>
 <li>
 <p>the test run from a cross product test case:</p>
 <ul>
@@ -9207,7 +9207,7 @@ TG(Configuration) --&gt; TX;</code></pre>
 </ul>
 </li>
 <li>
-<p>attachments (including screenshots), incidents, and tasks against a test run are part of the test set's product, not that of the test run's test case</p>
+<p>attachments (including screenshots), incidents, and tasks against a test run are part of the test set's product, not the test run's product</p>
 </li>
 <li>a user can only access linked artifacts to a test run (like incidents) if they have the correct permissions in the test set's product, as well as that of the test run</li>
 <li>the test set's execution status when showing results for a specific release will exclude any results from cross product test cases (because those test runs do not have any release data as explained above)</li>
