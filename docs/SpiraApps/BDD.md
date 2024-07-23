@@ -2,7 +2,7 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest or SpiraTeam"
 
-This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
+This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
 !!! info "About this SpiraApp"
     - [ ] system settings
