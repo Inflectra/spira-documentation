@@ -3179,7 +3179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bdd/" class="md-nav__link">
+      <a href="../BDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8519,15 +8519,24 @@
 <p>To configure this SpiraApp that lets users manually kick off a new Pipeline, you must additionally do the following:</p>
 <h3 id="system-settings">System settings<a class="headerlink" href="#system-settings" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enter the <a href="https://docs.gitlab.com/ee/user/profile/#change-your-username">GitLab username</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enter the <strong>GitLab account name</strong> - for example, if your URL is <code>https://gitlab.com/my-company/my-project</code> you should enter <code>my-company</code></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enter the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-tokens">Personal Access Token</a> - make sure the PAT has read and write API permissions</li>
 </ul>
 <p><img alt="system settings page" src="../img/gitlab-system-settings.png" /></p>
 <h3 id="product-settings">Product Settings<a class="headerlink" href="#product-settings" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enter the name of the GitLab project</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enter the URL friendly name of the <strong>GitLab project</strong> - for example, if your URL is <code>https://gitlab.com/my-company/my-project</code> you should enter <code>my-project</code></li>
 </ul>
 <p><img alt="product settings page" src="../img/gitlab-product-settings.png" /></p>
+<div class="admonition check">
+<p class="admonition-title">Handling GitLab Project Hierarchies</p>
+<p>If you have a more complex project hierarchy in GitLab, you will need to enter the project name as a URL fragment with the path separator <code>/</code> escaped as <code>%2F</code>.</p>
+<p>For example, if you have GitLab URL: <code>https://gitlab.com/my-company/my-program/my-department/my-project</code> then you would use the following in the SpiraApp settings:</p>
+<ul>
+<li><strong>Username:</strong> <code>my-company</code></li>
+<li><strong>Project Name:</strong> <code>my-program%2Fmy-department%2Fmy-project</code></li>
+</ul>
+</div>
 <h3 id="product-template-setup">Product Template Setup<a class="headerlink" href="#product-template-setup" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Add a plain text custom property called <code>gitlab-branch-name</code> for Releases in the product's template. Note: you may already have a custom property for this already if you setup the webhook integration - if you have, do not create a second one.</li>
