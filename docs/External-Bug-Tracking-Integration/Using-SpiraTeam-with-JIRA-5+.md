@@ -243,7 +243,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 #### Incidents
 === "Type"
     
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
 
@@ -254,7 +254,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Status"
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
 
@@ -267,7 +267,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
 
@@ -278,7 +278,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Component"
-    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    !!! info "This field mapping is OPTIONAL"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
 
@@ -289,7 +289,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Severity"
-    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    !!! info "This field mapping is OPTIONAL"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
@@ -305,7 +305,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Requirements
 === "Status"
-    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
@@ -317,7 +317,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Importance"
-    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
@@ -329,7 +329,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
@@ -341,7 +341,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Component"
-    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
@@ -367,7 +367,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Tasks
 === "Status"
-    !!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-status.png)
@@ -379,7 +379,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-priority.png)
@@ -391,7 +391,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-type.png)
