@@ -36,7 +36,7 @@ Notes about syncing:
 - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
 - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
 - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
-- The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact.
+- The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
@@ -110,7 +110,7 @@ You need to fill in the following fields for the plugin to operate correctly:
     - NoRequirements: enter the word "NoRequirements" to use this mode
     - NoIncidents: enter the word "NoIncidents" to use this mode
     
-- **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all).
+- **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
 - **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
