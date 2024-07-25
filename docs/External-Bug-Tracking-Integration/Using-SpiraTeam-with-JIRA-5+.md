@@ -480,16 +480,16 @@ To start, go to the data mapping home page for the selected product you were on 
     The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.
 
 === "Issue Key Field"
-    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named aftr the plugin name
+    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named after the plugin name
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
-    To also see the Jira ID on the Incident list page:
+    **To also see the Jira ID on the Incident, Requirement, and/or Task list page(s):**
 
-    - create an incident custom property in Spira of type Text
+    - for each artifact (incident, requirement, and/or task) create a custom property in Spira of type Text
     - go to the product's Jira datasync configuration page (as used above)
-    - click on the hyperlink for the custom property you created
-    - enter "JiraIssueKey**" as the External Key of the custom property
+    - for the given artifact, click on the hyperlink for the custom property you created
+    - enter "**JiraIssueKey**" as the External Key of the custom property
     - click "Save"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
