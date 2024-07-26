@@ -10,7 +10,7 @@
 
     Improvements to relevant list pages, make it easier to [edit and filter by tags](../Spira-User-Manual/Application-Wide.md/#tags).
 
-    New [SpiraApp to enhance the experience of using Spira with BDD](../SpiraApps/Bdd.md), including automatic syntax highlighting and generating feature files from existing requirements, tests, and risks.
+    New [SpiraApp to enhance the experience of using Spira with BDD](../SpiraApps/BDD.md), including automatic syntax highlighting and generating feature files from existing requirements, tests, and risks.
 
 
 ??? success "New Features"
