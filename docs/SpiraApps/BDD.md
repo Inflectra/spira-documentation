@@ -1,12 +1,12 @@
 # BDD
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest or SpiraTeam"
+!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
 !!! info "About this SpiraApp"
     - [ ] system settings
-    - [ ] product settings 
+    - [x] product settings 
     - [ ] product template setup required
     - [x] runs automatically on the requirement details page
     - [x] runs automatically on the test case details page
@@ -15,6 +15,20 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
     - [x] toolbar button on test case details page
     - [x] toolbar button on risk details page
     - [x] officially supports Gherkin syntax in English, German, French, Portuguese, Spanish, and other languages.
+
+## Setup
+### Product Settings
+No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.
+
+There are optional settings that can be enabled per product, if desired.
+
+| Setting name                                 | Default value | Explanation                                                                                                          |
+| -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Restrict syntax highlighting to English only | unchecked     | When checked, only Gherkin syntax in English will be highlighted                                                     |
+| Disable all BDD functionality for Risks      | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |
+| Disable all BDD functionality for Test Cases | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |
+
+![product settings](img/bdd-product-settings.png)
 
 ## Using the SpiraApp
 ### Automatic Highlighting on Details Pages
