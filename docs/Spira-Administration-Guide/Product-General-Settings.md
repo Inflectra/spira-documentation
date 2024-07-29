@@ -130,7 +130,11 @@ When you share the above artifacts from the sharing product to another product, 
 
 - **Risks**: from the association panels of incidents, requirements, test cases, and risks
 - **Tasks**: from the association panels of incidents and tasks
-- **Test Cases**: from the test coverage panel of requirements; from the association panel of risks
+- **Test Cases**: 
+
+    - from the test coverage panel of requirements
+    - from the association panel of risks
+    - allows [test sets to include test cases from different products](../Spira-User-Manual/Test-Set-Management.md/#cross-product-test-cases) 
 
 To see artifacts from other products from association panels and similar parts of the application, click the dropdown that by default will say "Current Product". This will show you the list of associated products that you can select.
 
