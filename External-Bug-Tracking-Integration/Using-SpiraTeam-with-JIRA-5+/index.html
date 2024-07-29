@@ -9097,11 +9097,12 @@
 <li>The <strong>default</strong> sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.</li>
 <li>The <strong>bidirectional</strong> sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. </li>
 <li>The <strong>NoRequirements</strong> sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. </li>
-<li>The <strong>NoIncidents</strong> sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact.</li>
+<li>The <strong>NoIncidents</strong> sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  </li>
 <li>Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. </li>
 <li>Comments are always synced from Spira and to Spira.</li>
 <li>Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates</li>
 <li>If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira</li>
+<li>If you have two separated Jira instances to sync from/to, please follow <a href="../../HowTo-Guides/Integrations-Troubleshoot/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service">these instructions</a> to set up a second DataSync plugin without data duplication</li>
 </ul>
 <h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
 <p>For the data sync to work correctly make sure you meet <strong>all</strong> of the steps below:</p>
@@ -9175,7 +9176,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Requirement Types</strong>: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all).</p>
+<p><strong>Requirement Types</strong>: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.</p>
 </li>
 <li><strong>Link Type</strong>: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:</li>
 </ul>
@@ -9292,7 +9293,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_28.png" /></p>
 <p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen. The table lists each of the incident types available in Spira. Enter the matching Jira issue type ID for each one. </p>
@@ -9301,7 +9302,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_30.png" /></p>
 <p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen. The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.</p>
@@ -9311,7 +9312,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_32.png" /></p>
 <p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen. The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching Jira priority ID for each one.</p>
@@ -9320,7 +9321,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is OPTIONAL and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is OPTIONAL</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_34.png" /></p>
 <p>Click on the "Component" hyperlink under Incident Standard Fields to bring up the Incident component mapping configuration screen. The table lists each of the components available in Spira and provides you with the ability to enter the matching Jira component ID for each one.</p>
@@ -9329,7 +9330,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is OPTIONAL and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is OPTIONAL</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_36.png" /></p>
 <p>Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen. Unlike the other incident standard fields, Jira doesn't have a built-in severity field. If you want to see Spira incident severities in Jira, create a Jira custom list field to store the different severity values. If you don't want to synchronize severity values with Jira, you can skip the rest of this section.</p>
@@ -9346,7 +9347,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required if syncing requirements and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required if syncing requirements</p>
 <p>If you are not syncing requirements you can skip this section</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_39.png" /></p>
@@ -9356,7 +9357,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is optional if syncing requirements and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is optional if syncing requirements</p>
 <p>If you are not syncing requirements you can skip this section</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_40.png" /></p>
@@ -9366,7 +9367,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required if syncing requirements and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required if syncing requirements</p>
 <p>If you are not syncing requirements you can skip this section</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_41.png" /></p>
@@ -9376,7 +9377,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is optional if syncing requirements and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is optional if syncing requirements</p>
 <p>If you are not syncing requirements you can skip this section</p>
 </div>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_42.png" /></p>
@@ -9405,7 +9406,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is required if syncing tasks and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is required if syncing tasks</p>
 <p>If you are not syncing tasks you can skip this section</p>
 </div>
 <p><img alt="" src="../img/jira-task-mapping-status.png" /></p>
@@ -9415,7 +9416,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is optional if syncing tasks and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is optional if syncing tasks</p>
 <p>If you are not syncing tasks you can skip this section</p>
 </div>
 <p><img alt="" src="../img/jira-task-mapping-priority.png" /></p>
@@ -9425,7 +9426,7 @@
 </div>
 <div class="tabbed-block">
 <div class="admonition info">
-<p class="admonition-title">This field mapping is optional if syncing tasks and supports mapping multiple values</p>
+<p class="admonition-title">This field mapping is optional if syncing tasks</p>
 <p>If you are not syncing tasks you can skip this section</p>
 </div>
 <p><img alt="" src="../img/jira-task-mapping-type.png" /></p>
@@ -9505,14 +9506,14 @@
 <p>The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.</p>
 </div>
 <div class="tabbed-block">
-<p>Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named aftr the plugin name</p>
+<p>Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named after the plugin name</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_48.png" /></p>
-<p>To also see the Jira ID on the Incident list page:</p>
+<p><strong>To also see the Jira ID on the Incident, Requirement, and/or Task list page(s):</strong></p>
 <ul>
-<li>create an incident custom property in Spira of type Text</li>
+<li>for each artifact (incident, requirement, and/or task) create a custom property in Spira of type Text</li>
 <li>go to the product's Jira datasync configuration page (as used above)</li>
-<li>click on the hyperlink for the custom property you created</li>
-<li>enter "JiraIssueKey**" as the External Key of the custom property</li>
+<li>for the given artifact, click on the hyperlink for the custom property you created</li>
+<li>enter "<strong>JiraIssueKey</strong>" as the External Key of the custom property</li>
 <li>click "Save"</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_48.png" /></p>

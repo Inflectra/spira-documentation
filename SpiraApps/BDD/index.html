@@ -3237,6 +3237,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-spiraapp" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8408,6 +8436,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-the-spiraapp" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8476,14 +8532,14 @@
 
 <h1 id="bdd">BDD<a class="headerlink" href="#bdd" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
-<p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest or SpiraTeam</p>
+<p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest</p>
 </div>
 <p>This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.</p>
 <div class="admonition info">
 <p class="admonition-title">About this SpiraApp</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> system settings</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> product settings </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> product settings </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> product template setup required</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> runs automatically on the requirement details page</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> runs automatically on the test case details page</li>
@@ -8494,6 +8550,37 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> officially supports Gherkin syntax in English, German, French, Portuguese, Spanish, and other languages.</li>
 </ul>
 </div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="product-settings">Product Settings<a class="headerlink" href="#product-settings" title="Permanent link">&para;</a></h3>
+<p>No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.</p>
+<p>There are optional settings that can be enabled per product, if desired.</p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Default value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restrict syntax highlighting to English only</td>
+<td>unchecked</td>
+<td>When checked, only Gherkin syntax in English will be highlighted</td>
+</tr>
+<tr>
+<td>Disable all BDD functionality for Risks</td>
+<td>unchecked</td>
+<td>When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled)</td>
+</tr>
+<tr>
+<td>Disable all BDD functionality for Test Cases</td>
+<td>unchecked</td>
+<td>When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled)</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="product settings" src="../img/bdd-product-settings.png" /></p>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <h3 id="automatic-highlighting-on-details-pages">Automatic Highlighting on Details Pages<a class="headerlink" href="#automatic-highlighting-on-details-pages" title="Permanent link">&para;</a></h3>
 <p>The BDD highlighting is automatically applied any time any user either opens a relevant details page, or when they save the description of a Requirement Step, Test Step (from the test case details page), or Risk Mitigation. Note that the user must be able to modify the artifact for the syntax highlighting to be applied.</p>
