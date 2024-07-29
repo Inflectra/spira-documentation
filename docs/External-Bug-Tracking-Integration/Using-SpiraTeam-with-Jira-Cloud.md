@@ -41,7 +41,7 @@ Notes about syncing:
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
 - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
-
+- If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
 ## Checklist
 For the data sync to work correctly make sure you meet **all** of the steps below:
