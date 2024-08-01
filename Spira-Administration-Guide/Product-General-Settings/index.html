@@ -8797,7 +8797,7 @@
 <ul>
 <li><em>Viewing Details</em>: The detail screen for each change set can be viewed by clicking on the change ID #. This will take you to the history details screen, described below.</li>
 <li><em>Revert</em>: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.</li>
-<li><em>Purge All</em>: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored.</li>
+<li><em>Purge All</em>: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored. Note that purge all is not available if baselining is enabled for this product.</li>
 </ul>
 <h3 id="history-details-screen">History Details Screen<a class="headerlink" href="#history-details-screen" title="Permanent link">&para;</a></h3>
 <p>The history details screen displays information on the selected change set:</p>
@@ -8813,7 +8813,7 @@
 <p>Items that have been deleted by any user still remain in the database, but do not affect statistics or reports, and do not show up in reports and cannot be viewed. The artifacts are still in the database, however, and can be restored by clicking on the Restore button in the toolbar.</p>
 <p>Purging an individual item can only be done while viewing one of its history detail screens. Once an item is purged, you will be taken back to the history list screen. All the previous history items for the artifact will be removed, and replaced with a single "Purged" history item.</p>
 <p>Items that are purged cannot be restored into the database, as unique identifiers will be wiped from the database, so be sure that you are sure you want to purge an item before doing so.</p>
-<p>You can purge all items in the product at once by clicking the "Purge All" button located on the History List page. This will take some time depending on how many deleted items are in your database, and it is recommended that the database files be compressed in SQL Management Studio afterwards to free up space and compress clustered indexes.</p>
+<p>You can purge all items in the product at once by clicking the "Purge All" button located on the History List page. This will take some time depending on how many deleted items are in your database, and it is recommended that the database files be compressed in SQL Management Studio afterwards to free up space and compress clustered indexes. Note that purge all is not available if baselining is enabled for this product.</p>
 <h3 id="reverting-items">Reverting Items<a class="headerlink" href="#reverting-items" title="Permanent link">&para;</a></h3>
 <p>Reverting an artifact will attempt to reset all fields back to the selected change set, reverting all changes made after the selected change set as well. In certain cases, the artifact will not be able to be reverted -- cases like this could be caused by other items having been deleted or purged. (For example, if Requirement #1 was linked to Release #4, and that Release does not exist anymore.) In cases like this, no fields will be reverted and the artifact will remain unchanged.</p>
 <p>Reverting an item will cause it to be undeleted if it has been deleted.</p>
@@ -8844,7 +8844,7 @@
 <li>Tasks</li>
 <li>Test Cases</li>
 </ul>
-<p>When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).</p>
+<p>When you share the above artifacts from the sharing product to another product, members of that product can now see all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).</p>
 <ul>
 <li>
 <p><strong>Incidents</strong>: from the association panels of incidents, requirements, and risks</p>
