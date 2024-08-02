@@ -41,13 +41,13 @@
 
 - **Other**
     - Add enhanced database support for upcoming timesheet features, in particular around timesheet approval management [IN:9722]
-    - Add the product name and link to the heading of the product membership administration page, after it was removed in 8.2.0.0 [IN:9755]
+    - Add the product name and link to the heading of the [product membership administration page](../Spira-Administration-Guide/Product-Users.md/#product-membership), after it was removed in 8.2.0.0 [IN:9755]
     - Fix auto-refreshing incident tab content from release and test step details pages when switching artifacts from left side menu [IN:9746]
     - Fix error messages when running background threads sometimes causing exceptions [IN:9565]
     - Fix cross product test cases in test sets not being maintained correctly after cloning a product [IN:9611]
     - Fix not being able to view a test run details page or test run report if a test set linked to a test run is soft deleted [introduced in 8.2] [IN:9823]
     - Fix test run custom properties being saved to a cross-product test case's test run using a different template to that of the test set, when creating the test run with the API [IN:9696]
-    - Fix the default sort order of the product membership pages to be by Name ascending, and not userId ascending [introduced in 8.2.0.0] [IN:9735]
+    - Fix the default sort order of the [product membership page](../Spira-Administration-Guide/Product-Users.md/#product-membership) to be by Name ascending, and not userId ascending [introduced in 8.2.0.0] [IN:9735]
     - Fix the link to a test run result in the test case section on the test set details page when the test run is in another product [IN:9771]
     - Fix the test run tab for tests sets so that any test runs from other products are not editable [IN:9772]
     - Improve the error message when a test run generation failure is caused by product association revocation to let the user know the impacted product(s) or test cases [IN:9600]
