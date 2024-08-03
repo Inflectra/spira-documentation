@@ -332,6 +332,8 @@ The SpiraAppManager provides a number of helpers to let SpiraApps better underst
     - **formatDate**: formats an ISO datetime into the correct date format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter
     - **formatDateTime**: formats an ISO datetime into the correct datetime format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter
     - **formatCustomFieldName**: returns the custom property field name in the form `Custom_01`  for a passed in integer
+    - **convertHtmlToPlainText**: returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)
+    - **sanitizeHtml**: returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks 
 
 === "Example"
 
@@ -341,6 +343,10 @@ The SpiraAppManager provides a number of helpers to let SpiraApps better underst
     spiraAppManager.formatDateTime("1993-05-16T14:48:00.000Z"); // returns "5/16/1993 10:48:00 AM" if the user's culture is en-US
 
     spiraAppManager.formatCustomFieldName(5); // returns "Custom_07"
+
+    spiraAppManager.convertHtmlToPlainText("<p>Hello World</p>"); // returns "Hello World"
+
+    spiraAppManager.sanitizeHtml("<image/src/onerror=prompt(8)>"); // returns "&lt;image/src/onerror=prompt(8)&gt" 
     ```
 
 ## Local Storage
