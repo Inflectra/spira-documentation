@@ -27,7 +27,7 @@ This Guide is split into different parts, the different stages of our preparatio
 - We can't stop there, we have to check the work for mistakes or bugs (checking the work)
 - As we iron out bugs in the vacation plan, we should check in on the overview of the project to see if we are on track (big picture review) 
 
-We recommend doing things in order if you can. This will really let you see the power of how SpiraPlan helps you connect your work together. This in turn helps you better understand your progress and better meet your goals. That being said, this is your time and your time is precious. We have designed this guide so that you can dip into any part you want at ant time. However you approach it and whatever edition of Spira you have, there will be clear signposts and tips to guide you along the way.
+We recommend doing things in order if you can. This will really let you see the power of how SpiraPlan helps you connect your work together. This in turn helps you better understand your progress and better meet your goals. That being said, this is your time and your time is precious. We have designed this guide so that you can dip into any part you want at any time. However you approach it and whatever edition of Spira you have, there will be clear signposts and tips to guide you along the way.
 
 Enough explaining, let's start doing...
 
@@ -76,7 +76,7 @@ For this tutorial we want to start with an empty product that has no data in it.
 The "Sample Program" in this screenshot is a program. Programs are used to group products together. Programs can themselves get grouped together into portfolios. We are not going to get into that though.
 
 ### Artifacts
-Artifacts are the building blocks of a product in SpiraPlan. Artifacts contain all of the data in the product. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They work differently, and are not interchangable. There are artifacts to help you test, plan, track bugs and tasks, and more.
+Artifacts are the building blocks of a product in SpiraPlan. Artifacts contain all of the data in the product. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They work differently, and are not interchangeable. There are artifacts to help you test, plan, track bugs and tasks, and more.
 
 Throughout this guide we will be moving between the different artifacts in our sample product. This will help us focus on one type of activity at a time. You will also see how all these different artifacts fit together like neat little puzzle pieces.
 

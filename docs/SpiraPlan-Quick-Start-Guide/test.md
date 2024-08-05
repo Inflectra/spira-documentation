@@ -74,7 +74,7 @@ These actions link each test case to the correct requirement. Because the requir
 
 Now that we have a very simple test case, we can execute it to check if things are working as they should. Above, we said that test cases in SpiraPlan are made up of Test Steps, which are the steps the tester needs to go through and check. You can add as many steps as you want to a test case, and customize them to exactly your needs. 
 
-We didn't make any test steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These test steps are emtpy, but they are enough for us to try out executing tests.
+We didn't make any test steps on our test cases. Without steps there's nothing to actually verify! Don't worry, SpiraPlan automatically made a test step each time we made a test case. These test steps are empty, but they are enough for us to try out executing tests.
 
 - [x] Right (alt) click on the test case "Verify suitcase is well packed". This brings up the context menu
 - [x] Click "Execute" (with the play icon)
@@ -116,7 +116,7 @@ Before we finish testing, we have one more thing to do. We failed the test and n
 - [x] Click on the "Incidents" tab (this is just above where you typed in the actual result). This opens up a form we can fill in to record the incident
 - [x] Enter a name of `There are too many snacks to fit in the suitcase`
 - [x] Set the Type to "Bug"
-- [x] Pick any value you want for the "Difficulty", "Operating System", and "Web Browser" fields. These aren't relevant to us, but are a part of a more general incident workflow that is typically used for testing web applications. Noone thought to tweak it for interstellar vacations!
+- [x] Pick any value you want for the "Difficulty", "Operating System", and "Web Browser" fields. These aren't relevant to us, but are a part of a more general incident workflow that is typically used for testing web applications. No one thought to tweak it for interstellar vacations!
 - [x] Click the "Add" button at the bottom. You don't have to enter a description for the incident - this is automatically generated based on the test step and its actual result
 
 ![prepared incident form](img/04-test-09-execute.png)

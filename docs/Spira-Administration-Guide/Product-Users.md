@@ -2,43 +2,52 @@
 
 
 ## Product Membership
+!!! info "Teams feature are in beta, available in SpiraPlan only"
+    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
 
-The following page is displayed when you choose the "Product Membership" link from the Administration menu:
+The following page is displayed when you choose the "Product Membership" link from the Administration menu. If you have teams features enabled then the page will be called "Team / Product Membership"
 
 ![](img/Product_Users_107.png)
 
-This page displays the name of the current product together with a list of all the users who are currently members of the product along with their currently assigned product role. If you want to modify the membership for a different product, click the "Change Product" button to be taken back to View/Edit Products screen where you can select a different product.
+This page displays a row for each member of the current product, with the following columns:
 
-To modify the role of a user assigned to the product, change the role for that user's entry in the drop-down menu and click the "Save" button. 
+- Name of the user(firstname and lastname)
+- Username 
+- Department
+- Organization
+- Product Role
+- Team (if enabled) <span class="pill">SpiraPlan</span>
+- Email (not shown by default)
+- Active (not shown by default)
 
-To remove a user from the product, check the box to the left of the user's name and click the "Delete" button. Note that this only removes them from the product, not the entire system. See the [product roles documentation](System-Users.md#view-edit-roles) for more information.
+### Organizing and filtering
+By interacting with the header row of the grid you can:
 
-### Add a user to a product
-To add a user to the product, so that they can access its information, click the "Add" button and you will be taken to the following screen that lists all the users in the system that are not currently members of the product:
+- Move columns around by dragging and dropping them
+- Change the sorting of the grid by clicking on a header
+- Resize columns by dragging the handle between two columns
+- Manage columns by clicking the "hamburger" menu seen when hovering a header: click the grid tab in the popup to choose which columns to show.
+
+Below the header row is the **Query Builder**. You can either type or paste in a plain text search query to the input box (and then click "Apply"), or click the "Query Builder" button to bring up an interactive popup. Using the query builder you can create complex queries that you let filter the list of users to exactly what you need, including by columns not visible. To reset the query, blank out anything in the input box and click "Apply". Note that by default the list is not filtered at all. This means it will show inactive and active users.
+
+### Editing Users
+To edit the product or team of users, check the checkbox for all relevant rows (to select all rows in the current filter, check the checkbox in the header row). Then click the Edit button. The selected rows will change to edit mode, with dropdowns for the Product Role and Team fields. Select the correct values for each row. To update all rows being edited to the same value, right click on the cell with the correct new value, and click the menu entry in the context menu called "Paste cell value to rows being edited". Once you are finished editing, click the Save button, or the Cancel button to cancel.
+
+### Removing Users
+To remove user from the product, check the relevant checkboxes and click the "Delete" button from the toolbar at the far right. Note that this only removes them from the product, not the entire system. See the [product roles documentation](System-Users.md#view-edit-roles) for more information.
+
+### Add users to a product
+To add users to the product, so that they can access its information, click the Plus button. You will now see a list of all active users in the system that are not a member of the current product.
 
 ![](img/Product_Users_108.png)
 
-You now should narrow down the list of users by entering filter criteria and clicking \[Filter\]; you can also sort the results to make viewing easier. Once you have located the appropriate user(s), just select a product role for them from the drop-down list and click \[Add\] to add them to the product in the specified role.
+Filter the rows as required then select the rows for users you want to add to the product. Click the Edit (pencil) button from the toolbar to edit the chosen users. For each user select a product role and (if relevant) a team. To update all rows being edited to the same value, right click on the cell with the correct new value, and click the menu entry in the context menu called "Paste cell value to rows being edited". Once you are finished editing, click the Save button, or the Cancel button to cancel.
 
+Note that you cannot add a user with just a team, to be added to the product the user must be given a product role.
 
 ## Team Membership
-!!! info "In beta, available in SpiraPlan only"
-    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
-
 SpiraPlan lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
-![](img/Product_Users_109.png)
-
-This page displays the name of the current product and a list of all the users who are currently members of the product (sorted alphabetically by full name). For each product member you can see their:
-
-- Full name
-- User name
-- Department
-- Organization
-- Team
-
-To change a user's current team, change the selected value in the dropdown. Once all changes to teams are made click "Save" to commit the changes.
-
-Only currently active teams are shown. If a user is not in any team (for this product), or in an inactive or deleted team, their team will show as "-- None --".
+Team membership is managed by the combined Team and Product Membership page described above.
 
 

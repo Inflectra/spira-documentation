@@ -1,6 +1,10 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## July 2024
+- **[Excel365 import export tool](../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365).md)** v3.1.0.0: This version limits the maximum page size for Test Cases to 200 records to avoid crashes and memory errors [IN:9509]
+- **[Google Sheets](../Migration-and-Integration/Importing-from-Google-Sheets.md)** v3.1.0.0: This version limits the maximum page size for Test Cases to 200 records to avoid crashes and memory errors [IN:9509]
+
 ## April 2024
 - [Jira Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md): Enhanced bidirectional incident synchronization for both **Jira Cloud** and **Jira Server** plugins:
     - Apply more precise timestamp checking to prevent recent Jira updates from blocking a Spira change being processed

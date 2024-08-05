@@ -10,13 +10,12 @@
     If you have any feedback or suggestions regarding this roadmap, please email us at [support@inflectra.com](mailto:support@inflectra.com).
 
 ## What has been released
-Please take a look at our [release notes](release-notes-v7.md) to see a complete list of the changes (large and small) that we have recently delivered.
+Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q3 2024
-- Extend Spira's powerful test set features even further, so users can add test cases from other products into a test set.
-- Improve product membership administration with more streamlined ways to manage very large product membership, including easier bulk operations.
-- Provide audit tracking of changes made by administrators to users.
 - Enhance the Spira timecard to record the date and time of activities against incidents and tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Provide increased custom report views and options to help you better analyze more of the data in Spira
+- Support new functionalities in SpiraApps so that developers can create even more powerful and useful SpiraApps
 
 ## Q4 2024
 - Enhance traceability with a new requirement view with integrated test case analysis and potentially other artifacts.

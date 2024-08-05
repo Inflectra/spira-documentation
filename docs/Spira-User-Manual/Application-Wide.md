@@ -165,11 +165,11 @@ On attempting to save changes made after clicking a workflow operation that requ
 
 ### Emailing
 
-Using the "***Email***" button on the toolbar, you can send an email containing details of the artifact to an email address or another user on the system:
+Using the "***Email***" button on the toolbar, you can send an email containing details of the artifact to another user on the system or, in production versions, external email addresses.
 
 ![](img/Requirements_Management_97.png)
 
-You can specify the subject line for the email, and either a list of email addresses, separated by semicolons, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates). [Notification events](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes).
+You can specify the subject line for the email, and either a list of email addresses, separated by commas, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates). [Notification events](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes). After you send an email the form will automatically reset.
 
 
 ### Followers
@@ -424,7 +424,13 @@ From any rich text editor for a product artifact (including custom properties an
 In addition, where possible and relevant, when you @ mention someone, that person will be added as a [follower](#followers) of the current artifact. Please note that removing a mention will not remove that person as a follower of the artifact.
 
 ### Tags
-Each product has a unique set of tags that you can set and use on many artifacts. You can quickly add existing tags to an artifact or you can create a brand new tag. You can add as many tags as you want to an artifact (and its product). Any user who can edit an artifact can edit its tags or make new tags. The artifact that support tags are:
+Each product has a unique set of tags that you can set and use on many artifacts. You can quickly add existing tags to an artifact or you can create a brand new tag. You can add as many tags as you want to an artifact (and its product). Any user who can edit an artifact can edit its tags or make new tags. 
+
+On details pages tags, like other fields, can be managed using workflows so that they can be required, hidden, or disabled.
+
+On list pages, you can show or hide the tags columns. When visible you can filter the list by a specific tag. If you can edit the list, you can add or edit tags in the same way you do on a details page, and you can even paste tags from one row into all other rows being edited.
+
+The artifact that support tags are:
 
 - documents
 - incidents
