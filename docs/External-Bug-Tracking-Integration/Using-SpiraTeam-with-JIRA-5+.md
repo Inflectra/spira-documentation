@@ -36,12 +36,12 @@ Notes about syncing:
 - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
 - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
 - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
-- The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact.
+- The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
 - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
 - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
-
+- If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
 ## Checklist
 For the data sync to work correctly make sure you meet **all** of the steps below:
@@ -110,7 +110,7 @@ You need to fill in the following fields for the plugin to operate correctly:
     - NoRequirements: enter the word "NoRequirements" to use this mode
     - NoIncidents: enter the word "NoIncidents" to use this mode
     
-- **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all).
+- **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
 - **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
@@ -243,7 +243,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 #### Incidents
 === "Type"
     
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
 
@@ -254,7 +254,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Status"
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
 
@@ -267,7 +267,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is required and supports mapping multiple values"
+    !!! info "This field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
 
@@ -278,7 +278,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Component"
-    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    !!! info "This field mapping is OPTIONAL"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
 
@@ -289,7 +289,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Severity"
-    !!! info "This field mapping is OPTIONAL and supports mapping multiple values"
+    !!! info "This field mapping is OPTIONAL"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
@@ -305,7 +305,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Requirements
 === "Status"
-    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
@@ -317,7 +317,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Importance"
-    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
@@ -329,7 +329,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is required if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
@@ -341,7 +341,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Component"
-    !!! info "This field mapping is optional if syncing requirements and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing requirements"
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
@@ -367,7 +367,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Tasks
 === "Status"
-    !!! info "This field mapping is required if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is required if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-status.png)
@@ -379,7 +379,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-priority.png)
@@ -391,7 +391,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is optional if syncing tasks and supports mapping multiple values"
+    !!! info "This field mapping is optional if syncing tasks"
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-type.png)
@@ -480,16 +480,16 @@ To start, go to the data mapping home page for the selected product you were on 
     The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.
 
 === "Issue Key Field"
-    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named aftr the plugin name
+    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named after the plugin name
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
-    To also see the Jira ID on the Incident list page:
+    **To also see the Jira ID on the Incident, Requirement, and/or Task list page(s):**
 
-    - create an incident custom property in Spira of type Text
+    - for each artifact (incident, requirement, and/or task) create a custom property in Spira of type Text
     - go to the product's Jira datasync configuration page (as used above)
-    - click on the hyperlink for the custom property you created
-    - enter "JiraIssueKey**" as the External Key of the custom property
+    - for the given artifact, click on the hyperlink for the custom property you created
+    - enter "**JiraIssueKey**" as the External Key of the custom property
     - click "Save"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)

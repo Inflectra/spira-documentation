@@ -45,6 +45,7 @@ The migration tool will import the following artifacts from TestRail:
 - Test suites and their sections
 - Test cases with their steps (if defined)
 - Test plans with associated tests and test results
+- Attachments and images
 
 *Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually:
 **Spira\_TestRail\_Import.log**.*

@@ -34,14 +34,14 @@ By default, the product home page shows the "General" view. The following table 
 | Requirements Graphs              | Y       | Y           |         |
 | Requirements Regression Coverage |         |             | Y       |
 | Requirements Summary             | Y       | Y           | Y       |
-| Release Task Progress            | Y       | Y           |         |
-| Release Test Summary             | Y       |             | Y       |
+| Release Task Progress            |         | Y           |         |
+| Release Test Summary             |         |             | Y       |
 | Releases/Sprints Completion      | Y       |             |         |
 | Releases/Sprints Relative Size   | Y       |             |         |
 | Recent Builds                    |         | Y           |         |
 | Tag Cloud                        |         |             |         |
-| Test Case Progress By Day        |         |             | Y       |
-| Test Execution Status            | Y       |             | Y       |
+| Test Case Cumulative Progress    |         |             | Y       |
+| Test Execution Status            |         |             | Y       |
 | Test Set Status                  |         |             | Y       |
 | All Pending Test Runs            |         |             | Y       |
 | Test Run Progress                |         |             | Y       |

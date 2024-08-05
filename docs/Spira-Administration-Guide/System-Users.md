@@ -56,6 +56,7 @@ On this screen you can edit key information and security about the user:
 - last name
 - username
 - email address
+- RSS token
 - portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access)
 - system administration status
 - report administrator status

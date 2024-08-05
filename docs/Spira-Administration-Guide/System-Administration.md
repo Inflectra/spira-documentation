@@ -90,7 +90,7 @@ Product roles have two special flags. Changing these flags immediately affect an
 
 Permissions for programs are more simple and managed on a per program basis:
 
-- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have access, with a particular role, to that specific program. Program roles are either Executive or Owner. Program Owners can carry out any administration tasks on the program. NOTE: a user with a program role is given view-only permissions to all products within that program. This view-only access is superceded by any specific product roles they have on the individual products themselves.
+- **Access to view / edit a program**: to view a program dashboard or its pages, a user has to have access, with a particular role, to that specific program. Program roles are either Executive or Owner. Program Owners can carry out any administration tasks on the program. NOTE: a user with a program role is given view-only permissions to all products within that program. This view-only access is superseded by any specific product roles they have on the individual products themselves.
 
 Each user profile has two special flags about permissions, which affect the entire system, but only for one user at a time (they are completely separate to product and program permissions):
 

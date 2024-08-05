@@ -38,7 +38,7 @@ This screen allows the administrator several options (below). NOTE: if baselinin
 
 -   *Viewing Details*: The detail screen for each change set can be viewed by clicking on the change ID \#. This will take you to the history details screen, described below.
 -   *Revert*: This button will roll back all items in the list that are checked. You must have at least one row checked to revert. See the section on reverting below.
--   *Purge All*: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored.
+-   *Purge All*: This button will permanently purge all deleted items from the database. Once items are purged, they cannot be restored. Note that purge all is not available if baselining is enabled for this product.
 
 
 ### History Details Screen
@@ -65,7 +65,7 @@ Purging an individual item can only be done while viewing one of its history det
 
 Items that are purged cannot be restored into the database, as unique identifiers will be wiped from the database, so be sure that you are sure you want to purge an item before doing so.
 
-You can purge all items in the product at once by clicking the "Purge All" button located on the History List page. This will take some time depending on how many deleted items are in your database, and it is recommended that the database files be compressed in SQL Management Studio afterwards to free up space and compress clustered indexes.
+You can purge all items in the product at once by clicking the "Purge All" button located on the History List page. This will take some time depending on how many deleted items are in your database, and it is recommended that the database files be compressed in SQL Management Studio afterwards to free up space and compress clustered indexes. Note that purge all is not available if baselining is enabled for this product.
 
 
 ### Reverting Items
@@ -116,7 +116,7 @@ You can share the following artifacts from one product to another:
 - Tasks
 - Test Cases
 
-When you share the above artifacts from the sharing product to another product, members of that product can now see (read only) all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).
+When you share the above artifacts from the sharing product to another product, members of that product can now see all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).
 
 - **Incidents**: from the association panels of incidents, requirements, and risks
 
@@ -130,7 +130,11 @@ When you share the above artifacts from the sharing product to another product, 
 
 - **Risks**: from the association panels of incidents, requirements, test cases, and risks
 - **Tasks**: from the association panels of incidents and tasks
-- **Test Cases**: from the test coverage panel of requirements; from the association panel of risks
+- **Test Cases**: 
+
+    - from the test coverage panel of requirements
+    - from the association panel of risks
+    - allows [test sets to include test cases from different products](../Spira-User-Manual/Test-Set-Management.md/#cross-product-test-cases) 
 
 To see artifacts from other products from association panels and similar parts of the application, click the dropdown that by default will say "Current Product". This will show you the list of associated products that you can select.
 

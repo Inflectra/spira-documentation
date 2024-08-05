@@ -202,6 +202,7 @@ There are a number of events that a SpiraApp can register against. This allows S
     - **registerEvent_loaded**: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load
     - **registerEvent_dataFailure**: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.
     - **registerEvent_operationReverted**: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters
+    - **registerEvent_dropdownChanged**: Registers an event handler on the [specified dropdown field](./SpiraApps-Reference.md/#available-field-names) for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  
     - **registerEvent_gridLoaded**: registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
     
 
@@ -229,6 +230,14 @@ There are a number of events that a SpiraApp can register against. This allows S
         console.log(`Current status is ${statusId} and it is ${isOpen ? "open" : "closed"}`);
     };
 
+    spiraAppManager.registerEvent_dropdownChanged("PriorityId", runOnDropdownChange);
+    function runOnDropdownChange (oldValue, newValue) {
+        if (newValue > 20) {
+            //arbitrarily block any attempts to set a value to above 20
+            return false;
+        }
+    }
+
     spiraAppManager.registerEvent_gridLoaded(spiraAppManager.gridIds.requirementSteps, runOnGridLoaded);
     function runOnGridLoaded() {
         console.log(`The grid with id ${spiraAppManager.gridIds.requirementSteps} was (re)loaded`);
@@ -240,8 +249,8 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
 === "Explanation"
     - **reloadForm**: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the name of the field and the data property. There is currently no easy way to obtain a full list of fields. The best way to do so is to inspect the network requests on the details page and the data returned from a `Form_Retrieve` service call. The JSON will include a `Fields` object, with objects for each field. When you have found the object for the field, use the `FieldName` as the name property, and the `{type}Value` that has the data in as the data property. 
-    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the name of the field, the data property, and the new value. Obtain the data about the required field in the same way as is done for the "getDataItemField" function. 
+    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names) and the data property. 
+    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names), the data property, and the new value. 
     - **reloadGrid**: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds [property function](#properties) (string)
     - **setWindowLocation**: loads a new page in the browser. Takes a single parameter, which is the full URL (string)
 
@@ -250,18 +259,6 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     ```js
     spiraAppManager.reloadForm();
 
-    /* example extract of a single property from the Fields object from a Form_Retrieve
-    {
-        "__type": "DataItemField:tst.dataObjects",
-        "caption": "Name",
-        "editable": true,
-        "fieldName": "Name",
-        "fieldType": 6,
-        "hidden": false,
-        "lookupName": "",
-        "required": true,
-        "textValue": "Fix the icon used to save"
-    } */
     spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
     spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this tasks");
 

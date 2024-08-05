@@ -63,5 +63,4 @@ There are online resources to help you create an avatar in the right way, such a
 4. This opens your user profile. Scroll down until you see the label "Enable RSS Feeds"
 5. Make sure "Enable RSS Feeds" is set to "Yes"
 6. Look at the "RSS / API Key": if this is blank, click "Generate New"
-7. Wait for the RSS key to display and **click "Save"**
-8. You can now click on the RSS key to copy it automatically to your clipboard
+7. You can now click on the RSS key to copy it automatically to your clipboard

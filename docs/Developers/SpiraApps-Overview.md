@@ -77,10 +77,14 @@ Code (JS) to add onto specified dashboard pages in widgets: dashboards
 ### Page Contents
 A SpiraApp can include the contents of a single CSS file and a single JS file on each / any of the [relevant pages](./SpiraApps-Reference.md/#pages). You specify what files to load on what pages in the [manifest](./SpiraApps-Manifest.md/#page-contents). The file contents are then loaded automatically onto the page(s). 
 
-CSS files are used for storing logos as SVGs, or helping to style widgets. You should primarily use class based selectors in your CSS. When loaded onto the page, the CSS contents is [nested](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) inside a class based off of the guid of the SpiraApp. Any UI elements created on the page will have a wrapper with this same class defined on it. In this way you can be flexible in how you use CSS as you are not able to pollute any other CSS.  
+**CSS files** are used for storing logos as SVGs, or helping to style widgets. You should primarily use class based selectors in your CSS. When loaded onto the page, the CSS contents is [nested](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) inside a class based off of the guid of the SpiraApp. Any UI elements created on the page will have a wrapper with this same class defined on it. In this way you can be flexible in how you use CSS as you are not able to pollute any other CSS.  
 
-JavaScript files are the core part of most SpiraApps and should be written in dedicated JS files. When dynamically inserted onto the page, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
+**JavaScript files** are the core part of most SpiraApps and should be written in dedicated JS files. When dynamically inserted onto the page, the SpiraApp code is wrapped in an IIFE block and set to use strict. This means that code can be written relatively flexibly, and can declare "global" variables as they will be confined to the IIFE on load.
 
+### File references in CSS and JS
+You may wish to include file references in your css or js files. This is required if the CSS has embedded images. For js files it can be useful if you have code you wish to share across several files (such as for localization), or to help you organize your code. 
+
+To add a file reference in a CSS or JS file, you do so in the same way you do in the manifest. Add a reference like this: `file://nameOfFile.extension`. When the SpiraApp is packaged any file reference in any CSS or JS file will be automatically embedded into the final contents. Note that the file reference is replaced by the full contents of the file. 
 
 ### Menus
 Menus and their entries allow users to interact with SpiraApps on [relevant pages](./SpiraApps-Reference.md/#pages). You specify what menus to create on what pages in the [manifest](./SpiraApps-Manifest.md/#menus). SpiraApp menu entries can either call a URL or a JavaScript function. 
@@ -105,6 +109,8 @@ The code is responsible for rendering the widget. You can render the contents of
 - mustache templating
 - React
 
+A dashboard widget SpiraApp has access to a single DOM element. This can be accessed using the following code: `const elementId = APP_GUID + "_content";`. You would render contents in this element using mustache like this: ` document.getElementById(elementId).innerHTML = rendered;`
+
 Note that the widget will not display by default on the dashboard. The end user will need to manually add the widget to show.
 
 ### Columns
@@ -116,6 +122,17 @@ CSS styling can be done with classes provided to SpiraApps. To provide additiona
 SpiraApp settings stored by admins when they set up the SpiraApp [can be accessed by the SpiraApp](./SpiraApps-Reference.md/#spiraappsettings). This provides a way to tailor and customize the experience for users based on these settings.
 
 ## Development Tips and Tricks
+### Testing
+To test a SpiraApp you will need to package it into a SpiraApp package (*.spiraapp). You can then upload this to a Spira with developer mode turned on. This will allow you to install your app during development and test its functionality and user experience.
+
+To package the SpiraApp use the [helper node project](https://github.com/Inflectra/spiraapp-package-generator). Here are some tips for using the generator:
+
+- Make sure to download the latest version of the generator
+- Do not change the code of the generator in any way (Inflectra will always build the final SpiraApp directly from your source code with our internal package generator)
+- Do not include the generator in your SpiraApp project - always execute it independently
+- The generator will fail if your SpiraApp has relevant errors in it. The errors will be described in the console to help you debug
+- Minimal checks are made on any JS code, so do not rely on the generator to validate your JS or help debug it
+
 ### Localization
 SpiraApps do not currently provide native localization support. We encourage developers to implement localization where possible. SpiraApps have access to the user's preferred culture / language using the [currentCulture](./SpiraApps-Manager.md/#properties) helper function.
 
@@ -124,11 +141,13 @@ SpiraApps do not currently provide native localization support. We encourage dev
 - [x] Use external URLs or APIs (make sure to provide details in submission)
 - [x] Focus on code that is performant
 - [x] Match browser compatibility to Spira’s standards
+- [x] Handle all possible error states and edge cases to provide a clear user experience 
 - [x] Write code that can be reviewed by a web developer
 
-## Design patterns to avoid
+### Design patterns to avoid
 - [ ] Access the global namespace of the browser
-- [ ] Using internal Spira functions or properties
+- [ ] Using internal Spira functions or properties (any not explicitly mentioned in this SpiraApps developer documentation)
+- [ ] Avoid using document or window APIs. Any usage may be flagged as inappropriate by Inflectra during the submission process
 - [ ] Links to or importing external libraries  (including any CDN)
 - [ ] Editing or deleting any const or helper class provided by Spira for the SpiraApp, such as the spiraAppManager
 - [ ] External links to images
@@ -175,7 +194,7 @@ Host the SpiraApp in a repo on GitHub.
 Create a branch for the current work. Make sure to commit to a feature branch and not the main branch to make PRs easier to manage.
 
 ### Prepare your documentation
-Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. 
+Each SpiraApp should have useful and easy to follow documentation about how to setup and use the SpiraApp. Link users to this with the URL parameter in the [manifest's metadata](./SpiraApps-Manifest.md/#spiraapp-metadata).
 
 This documentation should clearly list any third party URLs contacted by the SpiraApp with a brief explanation of why each is needed.
 
