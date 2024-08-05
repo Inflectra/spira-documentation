@@ -14,7 +14,6 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 
 ## Q3 2024
 - Enhance the Spira timecard to record the date and time of activities against incidents and tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Provide increased custom report views and options to help you better analyze more of the data in Spira
 - Support new functionalities in SpiraApps so that developers can create even more powerful and useful SpiraApps
 
 ## Q4 2024
