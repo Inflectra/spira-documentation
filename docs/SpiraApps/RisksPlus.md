@@ -29,10 +29,12 @@ On the Risk Details page, you can press the Risks+ menu button and then **Move t
 
 - Create a new incident based off the risk
 - Copy the risk's name, description, owner, release, tags, component to this incident
-- Set this incident to the default status
-- Update the risk's status based off the product setting
+- Set this incident to the default status and the default type
+- Update the risk's status based off the product setting[^nostatus]
 - Update the risk's probability to the highest one (by score) available. 
 - Create a "related-to" association between the new incident and the existing risk
 - Create a comment on both the Risk and the new Incident, which includes the Artifact IDs and the date the incident was created. 
 
 When the "**Validate Risk Review Date**" product setting is enabled, any Risk that is saved must have a Review Date that comes before its Closed Date. If you save a Risk with a Review Date after its Closed Date, the Review Date will be automatically set to that of the Closed Date (if present) and a message will appear saying the previous value was invalid. Note that the overwritten Review Date will be shown in the Risk's History tab as the latest change, if you need to refer to it.
+
+[^nostastus]: If the product setting is empty, the SpiraApp will leave the status of the risk unchanged.
