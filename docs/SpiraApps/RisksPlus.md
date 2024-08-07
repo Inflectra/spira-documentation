@@ -12,7 +12,7 @@ This SpiraApp extends the built-in risk functionality by:
     - [x] product settings 
     - [ ] product template setup required
     - [x] runs automatically on the risk details page
-    - [x] adds a menu button the risk details page
+    - [x] adds a menu button to the risk details page
 
 ## Setup
 ### Product Settings
