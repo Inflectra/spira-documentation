@@ -3420,6 +3420,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/RisksPlus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Risks+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/OctoPerf/" class="md-nav__link">
         
   
@@ -8791,50 +8818,76 @@
 <h2 id="manifest-lookups">Manifest Lookups<a class="headerlink" href="#manifest-lookups" title="Permanent link">&para;</a></h2>
 <p>There are a number of places in the manifest file where lookups are required. The different lookups and what they relate to are listed below.</p>
 <h3 id="setting-types">Setting types<a class="headerlink" href="#setting-types" title="Permanent link">&para;</a></h3>
-<p>The following IDs are allowed for the settingTypeId property for system admin settings and product admin settings. Not all of these wil </p>
+<p>The following IDs are allowed for the settingTypeId property for system admin settings and product admin settings. Not all of these are currently supported, and some are not available in system settings.</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
 <th>Setting Type</th>
+<th>Product Settings</th>
+<th>System Settings</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>plain text</td>
+<td>Plain text</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Rich text (html)</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>3</td>
 <td>ArtifactCustomProperty</td>
+<td>Y</td>
+<td></td>
 </tr>
 <tr>
 <td>4</td>
 <td>Integer</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>5</td>
 <td>ArtifactStatusSingleSelect</td>
+<td>Y</td>
+<td></td>
 </tr>
 <tr>
 <td>6</td>
 <td>ArtifactStatusMultiSelect</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>7</td>
 <td>ArtifactStandardField</td>
+<td>Y</td>
+<td></td>
 </tr>
 <tr>
 <td>8</td>
 <td>ArtifactFlexibleCustomProperty</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>9</td>
 <td>Multi line plain text</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Boolean</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 </tbody>
 </table>

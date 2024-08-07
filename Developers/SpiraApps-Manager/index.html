@@ -3420,6 +3420,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/RisksPlus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Risks+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/OctoPerf/" class="md-nav__link">
         
   
@@ -9093,6 +9120,8 @@
 <li><strong>formatDate</strong>: formats an ISO datetime into the correct date format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter</li>
 <li><strong>formatDateTime</strong>: formats an ISO datetime into the correct datetime format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter</li>
 <li><strong>formatCustomFieldName</strong>: returns the custom property field name in the form <code>Custom_01</code>  for a passed in integer</li>
+<li><strong>convertHtmlToPlainText</strong>: returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)</li>
+<li><strong>sanitizeHtml</strong>: returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks </li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -9101,6 +9130,10 @@
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="s2">&quot;1993-05-16T14:48:00.000Z&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;5/16/1993 10:48:00 AM&quot; if the user&#39;s culture is en-US</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatCustomFieldName</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Custom_07&quot;</span>
+
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">convertHtmlToPlainText</span><span class="p">(</span><span class="s2">&quot;&lt;p&gt;Hello World&lt;/p&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Hello World&quot;</span>
+
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">sanitizeHtml</span><span class="p">(</span><span class="s2">&quot;&lt;image/src/onerror=prompt(8)&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;&amp;lt;image/src/onerror=prompt(8)&amp;gt&quot; </span>
 </code></pre></div>
 </div>
 </div>
