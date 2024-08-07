@@ -5,19 +5,20 @@ This page provides reference information for multiple parts of SpiraApp developm
 There are a number of places in the manifest file where lookups are required. The different lookups and what they relate to are listed below.
 
 ### Setting types
-The following IDs are allowed for the settingTypeId property for system admin settings and product admin settings. Not all of these wil 
+The following IDs are allowed for the settingTypeId property for system admin settings and product admin settings. Not all of these are currently supported, and some are not available in system settings.
 
-| ID  | Setting Type                   |
-| --- | ------------------------------ |
-| 1   | plain text                     |
-| 2   | Rich text (html)               |
-| 3   | ArtifactCustomProperty         |
-| 4   | Integer                        |
-| 5   | ArtifactStatusSingleSelect     |
-| 6   | ArtifactStatusMultiSelect      |
-| 7   | ArtifactStandardField          |
-| 8   | ArtifactFlexibleCustomProperty |
-| 9   | Multi line plain text          |
+| ID  | Setting Type                   | Product Settings | System Settings |
+| --- | ------------------------------ | ---------------- | --------------- |
+| 1   | Plain text                     | Y                | Y               |
+| 2   | Rich text (html)               | Y                | Y               |
+| 3   | ArtifactCustomProperty         | Y                |                 |
+| 4   | Integer                        | Y                | Y               |
+| 5   | ArtifactStatusSingleSelect     | Y                |                 |
+| 6   | ArtifactStatusMultiSelect      |                  |                 |
+| 7   | ArtifactStandardField          | Y                |                 |
+| 8   | ArtifactFlexibleCustomProperty |                  |                 |
+| 9   | Multi line plain text          | Y                | Y               |
+| 10  | Boolean                        | Y                | Y               |
 
 ### Artifact Types
 The list below shows the relevant IDs for different artifacts in Spira.
@@ -357,12 +358,12 @@ You can access the settings specific to your SpiraApp in JavaScript by calling `
 
 The different settings are accessible in the following places (note that not all settings are available in all places)
 
-| Spira Location | System Settings | Product Settings |
-| --- | --- | --- |
-| Product artifact pages |  | :material-checkbox-marked-circle: |
-| Product home page |  | :material-checkbox-marked-circle: |
-| Product reporting |  | :material-checkbox-marked-circle: |
-| My Page |  :material-checkbox-marked-circle: |  |
+| Spira Location         | System Settings                   | Product Settings                  |
+| ---------------------- | --------------------------------- | --------------------------------- |
+| Product artifact pages |                                   | :material-checkbox-marked-circle: |
+| Product home page      |                                   | :material-checkbox-marked-circle: |
+| Product reporting      |                                   | :material-checkbox-marked-circle: |
+| My Page                | :material-checkbox-marked-circle: |                                   |
 
 ### Third party Javascript libraries
 The following third party Javascript libraries and tools are available to SpiraApps:

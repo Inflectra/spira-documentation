@@ -1,4 +1,59 @@
 # Release Notes for Spira v8
+## Version 8.3 (August 2024)
+!!! info "Summary"
+    - Adds database support for upcoming timesheet functionality
+    - Adds and improves 15 [custom report views](../Reporting/Custom-Report-Tables.md) to help users create even more powerful reports more easily
+    - New and improved German localization
+
+
+??? bug "Bug fixes and enhancements"
+    - **New [custom report views](../Reporting/Custom-Report-Tables.md)**
+        - Add a custom report view for pending test runs [IN:3897]
+        - Add a custom report view R_ArtifactAssociation_Extended that extends the normal association view to include a 'Name' column [IN:9256]
+        - Add a custom report view R_RequirementIncidents_Extended that includes requirement and incident name columns [IN:9257]
+        - Add a custom report view R_BuildStatus so report admins to create more useful build custom reports [IN:9311]
+        - Add a custom report view for Task Folders [IN:9388]
+        - Add a custom report view for R_ProjectGroup_MembershipUsers [IN:9504]
+        - Add a custom report view for Requirement Importances [IN:9639]
+        - Add a custom report view for Test Case Priorities [IN:9640]
+
+    - **Improved [custom report views](../Reporting/Custom-Report-Tables.md)**
+        - Update the R_TestRunIncidents custom report to include a test step and test run step id columns [IN:7461]
+        - Update the R_TestCaseFolders custom report table to include HIERARCHY_LEVEL and INDENT_LEVEL columns [IN:8570]
+        - Update the TestConfigurationEntries custom report view to include a PROJECT_ID column [IN:8645]
+        - Update the R_RiskMitigations custom report view to include a Project_ID column [IN:9389]
+        - Update the R_TestSets custom report views to include a PROJECT_IS_ACTIVE field, in addition to the PROJECT_ACTIVE_YN field [IN:9391]
+        - Update the R_TestSetFolders custom report table to include HIERARCHY_LEVEL and INDENT_LEVEL columns [IN:9831]
+
+    - **[FMEA](../SpiraApps/FMEA.md) and Risk SpiraApps**
+        - Add a new Risk SpiraApp to force risk review dates to be required to be earlier than their closed dates within a project or workflow [IN:9410]
+        - Correct a small typo in the FMEA SpiraApp product settings description [IN:9485]
+        - Display Risk description in FMEA widget tooltip when highlighting Risk name [IN:7296]
+        - Fix the FMEA SpiraApp so that selecting an incorrect custom property type does not cause problems on the Product Home Page [IN:7309]
+        - Update the FMEA SpiraApp to the latest version to ensure users have access to additional features [IN:9816]
+        
+    - **SpiraApp developer tooling**
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely sanitize HMTL](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9629]
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely convert HMTL to plain text](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9630]
+        - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp product settings](../Developers/SpiraApps-Manifest.md/#product-admin-settings) [IN:9628]
+        - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp system settings](../Developers/SpiraApps-Manifest.md/#system-admin-settings) [IN:9767]
+        - Fix artifact status single select [product setting type](../Developers/SpiraApps-Reference.md/#setting-types) not working for SpiraApps [IN:9668]
+
+    - **Other**
+        - Add enhanced database support for upcoming timesheet features, in particular around timesheet approval management [IN:9722]
+        - Add the product name and link to the heading of the [product membership administration page](../Spira-Administration-Guide/Product-Users.md/#product-membership), after it was removed in 8.2.0.0 [IN:9755]
+        - Fix auto-refreshing incident tab content from release and test step details pages when switching artifacts from left side menu [IN:9746]
+        - Fix error messages when running background threads sometimes causing exceptions [IN:9565]
+        - Fix cross product test cases in test sets not being maintained correctly after cloning a product [IN:9611]
+        - Fix not being able to view a test run details page or test run report if a test set linked to a test run is soft deleted [introduced in 8.2] [IN:9823]
+        - Fix test run custom properties being saved to a cross-product test case's test run using a different template to that of the test set, when creating the test run with the API [IN:9696]
+        - Fix the default sort order of the [product membership page](../Spira-Administration-Guide/Product-Users.md/#product-membership) to be by Name ascending, and not userId ascending [introduced in 8.2.0.0] [IN:9735]
+        - Fix the link to a test run result in the test case section on the test set details page when the test run is in another product [IN:9771]
+        - Fix the test run tab for tests sets so that any test runs from other products are not editable [IN:9772]
+        - Improve the error message when a test run generation failure is caused by product association revocation to let the user know the impacted product(s) or test cases [IN:9600]
+        - Improve Spira's German localization with fully revised and corrected translations [IN:9740]
+
+
 
 ## Version 8.2 (July 2024)
 !!! info "Summary"
