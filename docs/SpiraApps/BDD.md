@@ -20,6 +20,8 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
 
 ## Setup
 ### Product Settings
+!!! warning "Checkbox setting functionality requires Spira 8.2"
+
 No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.
 
 There are optional settings that can be enabled per product, if desired.

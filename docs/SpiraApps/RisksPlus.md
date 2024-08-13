@@ -2,6 +2,8 @@
 
 !!! warning "This SpiraApp is not compatible with SpiraTest"
 
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.2"
+
 This SpiraApp extends the built-in risk functionality by:
 
 - adding a "Move to Incident" button on the Risk details page 
@@ -16,6 +18,8 @@ This SpiraApp extends the built-in risk functionality by:
 
 ## Setup
 ### Product Settings
+!!! warning "Checkbox setting functionality requires Spira 8.2"
+
 Once the Risks+ SpiraApp has been activated system wide, and enabled for a product, there are two settings:
 
 ![Shows two settings. Moved to Incident Status: with a dropdown select, and Validate Risk Review Date?: with a blank text box](img/risksplus-settings.png)
