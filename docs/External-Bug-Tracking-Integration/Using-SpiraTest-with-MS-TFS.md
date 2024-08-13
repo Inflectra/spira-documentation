@@ -45,8 +45,8 @@ You need to fill out the following fields for the TFS Plug-in to operate correct
 time-zones here.
 -   **Auto-Map Users**: This changes the way the plugin maps users in SpiraTeam to those in TFS:
 
-    -   **Auto-Map = True**: With this setting, all users in SpiraTeam need to have the same username as those in TFS. If this is the case then you do not need to perform the user-mapping task outlined in section 5.2.2. This is a big time-saver if you can guarantee that all usernames are the same in both systems.
-    -   **Auto-Map = False**: With this setting, users in SpiraTeam and TFS are free to have different usernames because you specify the corresponding TFS name for each user as outlined in 5.2.2.
+    -   **Auto-Map = True**: With this setting, all users in SpiraTeam need to have the same username as those in TFS. If this is the case then you do not need to perform the user-mapping task outlined [below](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
+    -   **Auto-Map = False**: With this setting, users in SpiraTeam and TFS are free to have different usernames because you specify the corresponding TFS name for each user as outlined [below](#configuring-the-user-mapping).
 
 -   **Windows Domain**: This is used to specify the Windows Active Directory Domain that the Windows user specified above is a member of. For Azure DevOps in the cloud, you should leave this field blank.
 -   **Task Types**: This field should contain a comma-separated list of work item types that you want to synchronize as Spira Tasks as opposed to Incidents. Normally you would want to list at least the ADO 'Task' work item type in this field.
