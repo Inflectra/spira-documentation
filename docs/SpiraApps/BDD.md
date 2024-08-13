@@ -2,7 +2,7 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
-!!! warning "Some of this SpiraApp's functionality requires Spira 8.2"
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.2 or 8.3"
 
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
@@ -20,7 +20,7 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
 
 ## Setup
 ### Product Settings
-!!! warning "Checkbox setting functionality requires Spira 8.2"
+!!! warning "Checkbox settings require Spira 8.3"
 
 No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.
 

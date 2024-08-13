@@ -2,7 +2,7 @@
 
 !!! warning "This SpiraApp is not compatible with SpiraTest"
 
-!!! warning "Some of this SpiraApp's functionality requires Spira 8.2"
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.3"
 
 This SpiraApp extends the built-in risk functionality by:
 
@@ -18,7 +18,7 @@ This SpiraApp extends the built-in risk functionality by:
 
 ## Setup
 ### Product Settings
-!!! warning "Checkbox setting functionality requires Spira 8.2"
+!!! warning "Checkbox settings require Spira 8.3"
 
 Once the Risks+ SpiraApp has been activated system wide, and enabled for a product, there are two settings:
 
