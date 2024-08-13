@@ -2,6 +2,8 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.2"
+
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
 !!! info "About this SpiraApp"
@@ -33,6 +35,8 @@ There are optional settings that can be enabled per product, if desired.
 
 ## Using the SpiraApp
 ### Automatic Highlighting on Details Pages
+!!! warning "This functionality requires Spira 8.2"
+
 The BDD highlighting is automatically applied any time any user either opens a relevant details page, or when they save the description of a Requirement Step, Test Step (from the test case details page), or Risk Mitigation. Note that the user must be able to modify the artifact for the syntax highlighting to be applied.
 
 - Syntax highlighting is added to all BDD/Gherkin titles and keywords at the start of lines:
