@@ -1,8 +1,6 @@
 # BDD
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
-
-!!! warning "Some of this SpiraApp's functionality requires Spira 8.2 or 8.3"
+!!! warning "This SpiraApp works with v8.3+ and some of its functionality is not compatible with SpiraTest"
 
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
@@ -20,8 +18,6 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
 
 ## Setup
 ### Product Settings
-!!! warning "Checkbox settings require Spira 8.3"
-
 No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.
 
 There are optional settings that can be enabled per product, if desired.
@@ -37,8 +33,6 @@ There are optional settings that can be enabled per product, if desired.
 
 ## Using the SpiraApp
 ### Automatic Highlighting on Details Pages
-!!! warning "This functionality requires Spira 8.2"
-
 The BDD highlighting is automatically applied any time any user either opens a relevant details page, or when they save the description of a Requirement Step, Test Step (from the test case details page), or Risk Mitigation. Note that the user must be able to modify the artifact for the syntax highlighting to be applied.
 
 - Syntax highlighting is added to all BDD/Gherkin titles and keywords at the start of lines:
@@ -61,7 +55,12 @@ If you can create documents, you can use the "BDD" > "Export Feature" toolbar bu
 
 Please note that a feature file is a plain text file. Indentation is preserved but all other formatting is removed (including images, tables, links).
 
-While viewing a document details page, if you can create Requirements, Test Cases, or Risks, you can use the "BDD" > "Create Requirement", "Create Test Case", or "Create Risk" toolbar buttons to create the respective Artifact out of the current file. This functionality is only available for `.feature` files and works best on well-formatted feature files. The "Feature: " line is used for the artifact name, and the filename is used instead if it is missing. All properly indented Scenarios are used for the artifact steps/mitigations. All other text in the file is used for the artifact description. The feature file is also added as an attachment to the newly created artifact.
+While viewing a document details page, if you can create Requirements, Test Cases, or Risks, you can use the "BDD" > "Create Requirement", "Create Test Case", or "Create Risk" toolbar buttons to create the respective Artifact out of the current file. This functionality is only available for `.feature` files and works best on well-formatted feature files:
+
+- The "Feature: " line is used for the artifact name, or the filename if this is missing
+- All properly indented "Scenarios" are used for the artifact steps/mitigations
+- All other text in the file is used for the artifact description
+- The feature file is added as an attachment to the newly created artifact
 
 ### Example Localizations
 === "French"
