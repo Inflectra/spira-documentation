@@ -2,6 +2,8 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.2 or 8.3"
+
 This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
 
 !!! info "About this SpiraApp"
@@ -18,12 +20,15 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
 
 ## Setup
 ### Product Settings
+!!! warning "Checkbox settings require Spira 8.3"
+
 No setup per product is required. All features of the BDD SpiraApp are enabled by default for all products.
 
 There are optional settings that can be enabled per product, if desired.
 
 | Setting name                                 | Default value | Explanation                                                                                                          |
 | -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Requirement Type                             | empty         | When set, determines what type Requirements created from Feature files will have.                                    |
 | Restrict syntax highlighting to English only | unchecked     | When checked, only Gherkin syntax in English will be highlighted                                                     |
 | Disable all BDD functionality for Risks      | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |
 | Disable all BDD functionality for Test Cases | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |
@@ -32,6 +37,8 @@ There are optional settings that can be enabled per product, if desired.
 
 ## Using the SpiraApp
 ### Automatic Highlighting on Details Pages
+!!! warning "This functionality requires Spira 8.2"
+
 The BDD highlighting is automatically applied any time any user either opens a relevant details page, or when they save the description of a Requirement Step, Test Step (from the test case details page), or Risk Mitigation. Note that the user must be able to modify the artifact for the syntax highlighting to be applied.
 
 - Syntax highlighting is added to all BDD/Gherkin titles and keywords at the start of lines:
@@ -50,9 +57,11 @@ The BDD highlighting is automatically applied any time any user either opens a r
 ![Shows the following step description with @tags colored in red, "Scenario: ..." line bolded and colored in blue, Given/When/Then keywords bolded and colored green, "quoted strings" colored in bright cyan, and the comment line starting with # colored in gray: `@bdd @highlighting (new line) Scenario: BDD syntax highlighting is applied on saving a requirement step (new line) Given I have written a requirement step using BDD syntax using words like “Scenario:, Given, When, Then” (new line) When I save the requirement step (new line) Then I will see that the BDD highlighting has been applied automatically. (new line) # -describes feature requested by Customer A` ](img/bdd-highlight-example.png)
 
 ### Exporting from Details Pages
-If you can create documents, you can use the "BDD Actions" > "Export Feature" toolbar button to export the current artifact's steps or mitigations as a `.feature` file. The file will be saved to Spira's document repository for that product (at the root level). The filename itself and first line of the feature file will be the name of the artifact (e.g. the requirement name). 
+If you can create documents, you can use the "BDD" > "Export Feature" toolbar button to export the current artifact's steps or mitigations as a `.feature` file. The file will be saved to Spira's document repository for that product (at the root level). The filename itself and first line of the feature file will be the name of the artifact (e.g. the requirement name). 
 
 Please note that a feature file is a plain text file. Indentation is preserved but all other formatting is removed (including images, tables, links).
+
+While viewing a document details page, if you can create Requirements, Test Cases, or Risks, you can use the "BDD" > "Create Requirement", "Create Test Case", or "Create Risk" toolbar buttons to create the respective Artifact out of the current file. This functionality is only available for `.feature` files and works best on well-formatted feature files. The "Feature: " line is used for the artifact name, and the filename is used instead if it is missing. All properly indented Scenarios are used for the artifact steps/mitigations. All other text in the file is used for the artifact description. The feature file is also added as an attachment to the newly created artifact.
 
 ### Example Localizations
 === "French"

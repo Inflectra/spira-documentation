@@ -2,6 +2,8 @@
 
 !!! warning "This SpiraApp is not compatible with SpiraTest"
 
+!!! warning "Some of this SpiraApp's functionality requires Spira 8.2"
+
 This SpiraApp extends the built-in risk functionality by supporting FMEA with a dedicated FMEA SpiraApp that calculates the Risk Priority Number (RPN) by multiplying together values for the risk's probability, impact, and detectability. It also provides a replacement "Top Open Risks" widget for the product home page and reporting home page that is ranked by and shows the RPN.
 
 !!! info "About this SpiraApp"
@@ -71,6 +73,8 @@ The RPN is shown in the dedicated RPN custom property. The Risk Exposure is stil
 !!! warning "On the risk list page: users can but should not edit the RPN; editing risk probability, impact, or detectability on the risk list page will not update the RPN"
 
 ### Using the Top Open Risks by Risk Priority Number Widget
+!!! warning "This widget requires Spira 8.2"
+
 This widget displays a breakdown of the top open risks in the product, in order of decreasing RPN score. The widget is available on any of the product home pages, and on the product reporting home page. 
 
 Risks in the widget are filtered by any release currently selected for the page. To add the widget to a page, edit the page and then open the "SpiraApp Widgets" section. Add the widget to the section of the page you want.
