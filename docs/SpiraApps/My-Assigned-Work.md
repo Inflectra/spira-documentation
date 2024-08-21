@@ -1,8 +1,8 @@
-# My Assigned Artifacts
+# My Assigned Work
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
-This SpiraApp adds a widget to the user's My Page that allows them to view their owned Artifacts in an interactive grid.
+This SpiraApp adds a widget to the user's My Page that allows them to view their owned Artifacts in an interactive grid. It provides an alterative way to use the My Page and can replace most of the "My Assigned..." widgets.
 
 !!! info "About this SpiraApp"
     - [ ] system settings
@@ -12,26 +12,27 @@ This SpiraApp adds a widget to the user's My Page that allows them to view their
 
 
 ## Setup
-### Adding the My Assigned Artifacts Widget to your My Page
-
+### Adding the My Assigned Work Widget to your My Page
 To add the widget to your My Page, edit the page and then open the "SpiraApp Widgets" section. Add the widget to the section of the page you want.
 
 
 ## Using the SpiraApp
-### Using the My Assigned Artifacts Widget
-This widget displays a grid of many of your owned (and open) artifacts. Included artifacts are: Requirements, Test Cases, Incidents, Tasks, Test Sets, Documents, and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>.
-When the My Page is filtering on **All Products**, for each row, you see:
+### Using the My Assigned Work Widget
+This widget displays a grid of the open artifacts that you own. Included artifacts are: Requirements, Test Cases, Incidents, Tasks, Test Sets, Documents, and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>.
 
-![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All".](img/assignedartifacts-all-products.png)
-- **ID**: Shows the type of Artifact and ID
-- **Name**: hovering shows the ID and full name, and clicking the name opens the artifact details page
+When the My Page is set to view **All Products**, for each row, you see:
+
+- **ID**: the artifact icon and token
+- **Name**: hovering shows the ID and full name, and clicking the name opens its details page
 - **Product**: hovering shows the full name
 - **Priority**: shows Importance for Requirements, and Exposure for Risks
 - **Status**
 - **Type**
-- **Due Date**: shows the End Date for Tasks, Review Date for Risks, Execution Date for Test Cases, and Planned Date for Test Sets. Shows the date in red text if the date has passed
+- **Due Date**: this is the End Date for Tasks, the Review Date for Risks, the Execution Date for Test Cases, and the Planned Date for Test Sets. The date turns red if the date is in the past
 
-When the My Page is filtering instead on **Current Product**, the **Product** column is replaced by **Release** and, if the user is allowed to see Releases in the product, a releases dropdown select is added above the filter buttons. For Incidents, the Planned Release field is used.
+![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All".](img/assignedartifacts-all-products.png)
+
+When the My Page is set to view the **Current Product**, the **Product** column is replaced by **Release**. If the user can see releases in the product, you will see a releases dropdown above the filter buttons. For Incidents, the Planned Release field is used.
 
 ![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All", and a selection box above the buttons that says "Any Release"](img/assignedartifacts-current-product.png)
 

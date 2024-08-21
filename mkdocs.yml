@@ -184,15 +184,16 @@ nav:
   - Azure OpenAI: SpiraApps\Azure-OpenAI.md
   - BDD:  SpiraApps\BDD.md
   - ChatGPT: SpiraApps\ChatGPT.md
+  - CircleCI: SpiraApps\CircleCI.md
+  - Default Descriptions: SpiraApps\Default-Descriptions.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
   - GitHub: SpiraApps\GitHub.md
-  - CircleCI: SpiraApps\CircleCI.md
-  - Default Descriptions: SpiraApps\Default-Descriptions.md
-  - Task and Test Presets: SpiraApps\Task-Test-Presets.md
+  - My Assigned Work: SpiraApps\My-Assigned-Work.md
+  - OctoPerf: SpiraApps\OctoPerf.md
   - Requirement Multi Approvers: SpiraApps\Requirement-Multi-Approvers.md
   - Risks+: SpiraApps\RisksPlus.md
-  - OctoPerf: SpiraApps\OctoPerf.md
+  - Task and Test Presets: SpiraApps\Task-Test-Presets.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Introduction: Reporting\index.md
