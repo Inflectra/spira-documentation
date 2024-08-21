@@ -31,7 +31,7 @@ When the My Page is filtering on **All Products**, for each row, you see:
 - **Type**
 - **Due Date**: shows the End Date for Tasks, Review Date for Risks, Execution Date for Test Cases, and Planned Date for Test Sets. Shows the date in red text if the date has passed
 
-When the My Page is filtering instead on **Current Product**, the **Product** column is replaced by **Release** and, if the user is allowed to see Releases in the product, a releases dropdown select is added above the filter buttons.
+When the My Page is filtering instead on **Current Product**, the **Product** column is replaced by **Release** and, if the user is allowed to see Releases in the product, a releases dropdown select is added above the filter buttons. For Incidents, the Planned Release field is used.
 
 ![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All", and a selection box above the buttons that says "Any Release"](img/assignedartifacts-current-product.png)
 
