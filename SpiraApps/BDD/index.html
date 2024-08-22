@@ -3357,6 +3357,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../CircleCI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CircleCI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Default-Descriptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Default Descriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../FMEA/" class="md-nav__link">
         
   
@@ -3438,67 +3492,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../CircleCI/" class="md-nav__link">
+      <a href="../OctoPerf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    CircleCI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Default-Descriptions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Default Descriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Task-Test-Presets/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Task and Test Presets
+    OctoPerf
   
 
     
@@ -3573,13 +3573,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../OctoPerf/" class="md-nav__link">
+      <a href="../Task-Test-Presets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    OctoPerf
+    Task and Test Presets
   
 
     
@@ -8559,7 +8559,7 @@
 
 <h1 id="bdd">BDD<a class="headerlink" href="#bdd" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
-<p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest</p>
+<p class="admonition-title">This SpiraApp works with v8.3+ and some of its functionality is not compatible with SpiraTest</p>
 </div>
 <p>This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.</p>
 <div class="admonition info">
@@ -8590,6 +8590,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Requirement Type</td>
+<td>empty</td>
+<td>When set, determines what type Requirements created from Feature files will have.</td>
+</tr>
 <tr>
 <td>Restrict syntax highlighting to English only</td>
 <td>unchecked</td>
@@ -8630,8 +8635,15 @@
 </ul>
 <p><img alt="Shows the following step description with @tags colored in red, &quot;Scenario: ...&quot; line bolded and colored in blue, Given/When/Then keywords bolded and colored green, &quot;quoted strings&quot; colored in bright cyan, and the comment line starting with # colored in gray: @bdd @highlighting (new line) Scenario: BDD syntax highlighting is applied on saving a requirement step (new line) Given I have written a requirement step using BDD syntax using words like “Scenario:, Given, When, Then” (new line) When I save the requirement step (new line) Then I will see that the BDD highlighting has been applied automatically. (new line) # -describes feature requested by Customer A " src="../img/bdd-highlight-example.png" /></p>
 <h3 id="exporting-from-details-pages">Exporting from Details Pages<a class="headerlink" href="#exporting-from-details-pages" title="Permanent link">&para;</a></h3>
-<p>If you can create documents, you can use the "BDD Actions" &gt; "Export Feature" toolbar button to export the current artifact's steps or mitigations as a <code>.feature</code> file. The file will be saved to Spira's document repository for that product (at the root level). The filename itself and first line of the feature file will be the name of the artifact (e.g. the requirement name). </p>
+<p>If you can create documents, you can use the "BDD" &gt; "Export Feature" toolbar button to export the current artifact's steps or mitigations as a <code>.feature</code> file. The file will be saved to Spira's document repository for that product (at the root level). The filename itself and first line of the feature file will be the name of the artifact (e.g. the requirement name). </p>
 <p>Please note that a feature file is a plain text file. Indentation is preserved but all other formatting is removed (including images, tables, links).</p>
+<p>While viewing a document details page, if you can create Requirements, Test Cases, or Risks, you can use the "BDD" &gt; "Create Requirement", "Create Test Case", or "Create Risk" toolbar buttons to create the respective Artifact out of the current file. This functionality is only available for <code>.feature</code> files and works best on well-formatted feature files:</p>
+<ul>
+<li>The "Feature: " line is used for the artifact name, or the filename if this is missing</li>
+<li>All properly indented "Scenarios" are used for the artifact steps/mitigations</li>
+<li>All other text in the file is used for the artifact description</li>
+<li>The feature file is added as an attachment to the newly created artifact</li>
+</ul>
 <h3 id="example-localizations">Example Localizations<a class="headerlink" href="#example-localizations" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="french" name="__tabbed_1" type="radio" /><input id="german" name="__tabbed_1" type="radio" /><input id="portuguese" name="__tabbed_1" type="radio" /><input id="spanish" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="french">French</label><label for="german">German</label><label for="portuguese">Portuguese</label><label for="spanish">Spanish</label></div>
 <div class="tabbed-content">

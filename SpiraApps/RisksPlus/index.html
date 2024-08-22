@@ -14,7 +14,7 @@
         <link rel="prev" href="../Requirement-Multi-Approvers/">
       
       
-        <link rel="next" href="../OctoPerf/">
+        <link rel="next" href="../Task-Test-Presets/">
       
       
         
@@ -3233,6 +3233,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../CircleCI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CircleCI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Default-Descriptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Default Descriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../FMEA/" class="md-nav__link">
         
   
@@ -3314,67 +3368,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../CircleCI/" class="md-nav__link">
+      <a href="../OctoPerf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    CircleCI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Default-Descriptions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Default Descriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Task-Test-Presets/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Task and Test Presets
+    OctoPerf
   
 
     
@@ -3551,13 +3551,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../OctoPerf/" class="md-nav__link">
+      <a href="../Task-Test-Presets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    OctoPerf
+    Task and Test Presets
   
 
     
@@ -8517,6 +8517,9 @@
 <div class="admonition warning">
 <p class="admonition-title">This SpiraApp is not compatible with SpiraTest</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Some of this SpiraApp's functionality requires Spira 8.3</p>
+</div>
 <p>This SpiraApp extends the built-in risk functionality by:</p>
 <ul>
 <li>adding a "Move to Incident" button on the Risk details page </li>
@@ -8534,25 +8537,28 @@
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="product-settings">Product Settings<a class="headerlink" href="#product-settings" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Checkbox settings require Spira 8.3</p>
+</div>
 <p>Once the Risks+ SpiraApp has been activated system wide, and enabled for a product, there are two settings:</p>
 <p><img alt="Shows two settings. Moved to Incident Status: with a dropdown select, and Validate Risk Review Date?: with a blank text box" src="../img/risksplus-settings.png" /></p>
 <ul>
-<li>When moving a risk to an incident, the risk should be moved to a specific status. Pick the status the risk should get using the "Moved to Incident Status" dropdown.</li>
+<li>When moving a risk to an incident, the risk should be moved to a specific status. Pick the status the risk should get using the "Moved to Incident Status" dropdown. If left blank the risk status will not be changed.</li>
 <li>To restrict Risk Review dates so they must be before the Risk Closed date, check the "Validate Risk Review Date" setting (defaults to unchecked).</li>
 </ul>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <h3 id="risk-details-page">Risk Details Page<a class="headerlink" href="#risk-details-page" title="Permanent link">&para;</a></h3>
-<p>On the Risk Details page, you can press the Risks+ menu button and then <strong>Move to Incident</strong> to create an Incident based on this Risk. This will</p>
+<p>On the Risk Details page, you can press the Risks+ menu button and then <strong>Move to Incident</strong> to create an Incident based on this Risk. This will:</p>
 <ul>
 <li>Create a new incident based off the risk</li>
 <li>Copy the risk's name, description, owner, release, tags, component to this incident</li>
-<li>Set this incident to the default status and the default type</li>
+<li>Set this incident to use the default status and the default type</li>
 <li>Update the risk's status based off the product setting<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
-<li>Update the risk's probability to the highest one (by score) available. </li>
+<li>Update the risk's probability to the highest one available (by score) </li>
 <li>Create a "related-to" association between the new incident and the existing risk</li>
-<li>Create a comment on both the Risk and the new Incident, which includes the Artifact IDs and the date the incident was created. </li>
+<li>Create a comment on both the Risk and the new Incident, which includes the Artifact IDs and the date the incident was created </li>
 </ul>
-<p>When the "<strong>Validate Risk Review Date</strong>" product setting is enabled, any Risk that is saved must have a Review Date that comes before its Closed Date. If you save a Risk with a Review Date after its Closed Date, the Review Date will be automatically set to that of the Closed Date (if present) and a message will appear saying the previous value was invalid. Note that the overwritten Review Date will be shown in the Risk's History tab as the latest change, if you need to refer to it.</p>
+<p>When the "<strong>Validate Risk Review Date</strong>" product setting is enabled, any Risk that is saved must have a Review Date that comes before its Closed Date. If you save a Risk with a Review Date <em>after</em> its Closed Date, the Review Date will be automatically set to that of the Closed Date and a message will appear saying the previous value was invalid. Note that the overwritten Review Date will be shown in the Risk's History tab as the latest change, if you need to refer to it.</p>
 <div class="footnote">
 <hr />
 <ol>
