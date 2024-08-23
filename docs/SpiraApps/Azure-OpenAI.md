@@ -1,10 +1,10 @@
 # Azure OpenAI SpiraApp
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest or SpiraTeam"
+!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
 This SpiraApp lets you generate test cases, tasks, risks, or BDD scenarios from requirements using Azure OpenAI. The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks.
 
-It can provide an easy and effective way for users to create a foundational set of items that they can refine and tailor easily and effectively. Note that Tasks are not available in SpiraTest and Risks are only supported in SpiraPlan.
+It can provide an easy and effective way for users to create a foundational set of items that they can refine and tailor easily and effectively. Note that Tasks and Risks are not available in SpiraTest.
 
 By using this SpiraApp users will, by necessity, share information with Azure OpenAI. For that reason, system admins must configure this SpiraApp to an existing Azure OpenAI subscription for your organization.
 
