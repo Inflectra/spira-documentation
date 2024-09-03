@@ -265,6 +265,7 @@ nav:
     - Setup: External-Bug-Tracking-Integration\Setting-up-Data-Synchronization.md
     - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
     - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
+    # - Jira Spira QA Coverage: External-Bug-Tracking-Integration\Jira-Spira-QA-Coverage.md
     - Azure DevOps: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
     - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
     - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
