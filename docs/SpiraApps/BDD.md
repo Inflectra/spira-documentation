@@ -24,7 +24,7 @@ There are optional settings that can be enabled per product, if desired.
 
 | Setting name                                 | Default value | Explanation                                                                                                          |
 | -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Requirement Type                             | empty         | When set, determines what type Requirements created from Feature files will have.                                    |
+| Requirement Type                             | empty         | Add a requirement type name to determine what type Requirements created from Feature files will have.                |
 | Restrict syntax highlighting to English only | unchecked     | When checked, only Gherkin syntax in English will be highlighted                                                     |
 | Disable all BDD functionality for Risks      | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |
 | Disable all BDD functionality for Test Cases | unchecked     | When checked, the SpiraApps features (syntax highlighting, and the ability to export to a feature file are disabled) |

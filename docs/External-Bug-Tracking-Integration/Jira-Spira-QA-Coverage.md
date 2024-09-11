@@ -1,4 +1,7 @@
 # Spira QA Coverage Jira app
+!!! info "Install the Spira QA Coverage App"
+    This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
+
 If you are syncing issues from Jira Cloud to Spira cloud, and are syncing requirements, you can install a Jira marketplace app. This lets users across all Jira projects see the QA coverage information in Jira from the Spira requirement. 
 
 This allows Jira users to always see the latest QA coverage information recorded in Spira directly from Jira.
