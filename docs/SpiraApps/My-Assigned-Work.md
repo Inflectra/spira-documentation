@@ -18,21 +18,21 @@ To add the widget to your My Page, edit the page and then open the "SpiraApp Wid
 
 ## Using the SpiraApp
 ### Using the My Assigned Work Widget
-This widget displays a grid of the open artifacts that you own. Included artifacts are: Requirements, Test Cases, Incidents, Tasks, Test Sets, Documents, and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>.
+This widget displays a grid of the most recent open artifacts that you have been assigned (open vs closed is defined differently for each artifact based on the status). Included artifacts are: Requirements, Test Cases, Incidents, Tasks, Test Sets, Documents, and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>.
 
 When the My Page is set to view **All Products**, for each row, you see:
 
 - **ID**: the artifact icon and token
 - **Name**: hovering shows the ID and full name, and clicking the name opens its details page
 - **Product**: hovering shows the full name
-- **Priority**: shows Importance for Requirements, and Exposure for Risks
+- **Priority**: shows Importance for Requirements, and Exposure for Risks. These are shown with any preset colors only when the page is shown for the current product
 - **Status**
 - **Type**
-- **Due Date**: this is the End Date for Tasks, the Review Date for Risks, the Execution Date for Test Cases, and the Planned Date for Test Sets. The date turns red if the date is in the past
+- **Due Date**: this is the End Date for Tasks, the Review Date for Risks, the Execution Date for Test Cases, the Planned Date for Test Sets, and is blank for other artifact types. The date turns red if it is in the past. 
 
 ![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All".](img/assignedartifacts-all-products.png)
 
-When the My Page is set to view the **Current Product**, the **Product** column is replaced by **Release**. If the user can see releases in the product, you will see a releases dropdown above the filter buttons. For Incidents, the Planned Release field is used.
+When the My Page is set to view the **Current Product** (from the top right of the page), the **Product** column is replaced by **Release**. If the user can see releases in the product, you will see a releases dropdown above the filter buttons. For Incidents, the Planned Release field is used, and releases is always blank for Releases and Test Cases.
 
 ![Widget showing owned artifacts in a table with a set of buttons above that include the artifact type names and "Show All", and a selection box above the buttons that says "Any Release"](img/assignedartifacts-current-product.png)
 
