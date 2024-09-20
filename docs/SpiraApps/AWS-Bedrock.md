@@ -20,6 +20,9 @@ By using this SpiraApp users will, by necessity, share information with AWS Bedr
     - [x] toolbar button on risk details page
     - [x] toolbar button on task details page
 
+## AWS Bedrock Setup
+TBD
+
 ## SpiraApp Setup
 ### System Settings
 - [x] Enter the AWS region you want to connect to. Leaving this setting blank uses the default region of `us-east-1`
@@ -45,21 +48,28 @@ This is where you can specify the general SpiraApp product settings:
 
 This is where you can specify settings specific to the Llama model:
 
-![product prompt settings](img/awsbedrock-product-settings-llama.png)
+![product llama settings](img/awsbedrock-product-settings-llama.png)
 
 | Setting name            | Default Value                                                                                                                         | Explanation                                                                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Temperature             | 0.2                                                                                                                                   | A number between 0 and 2, used to control the output's randomness. A higher temperature gives a more random output, a lower one give a more deterministic output |
-| Deployment Name                   | gpt-4o-mini                                                                                                                         | The name of the OpenAI model Deployment we want to use (not the model name, but the Deployment name you entered inside the Microsoft Azure control panel)                                                                                                                     |
-| Detailed Test Steps     | false                                                                                                                         | Should we create detailed test steps for test cases, or just a single step?                                                                                                                     |
-| Use Artifact Descriptions     | false                                                                                                                         | Should we use the artifact descriptions as well as the names in the prompts?                                                                   |
+| Model                   | meta.llama3-70b-instruct-v1:0                                                                                                                         | The name of the Llama model we want to use                                                                                                                     |
+| Temperature             | 0.2                                                                                                                                   | Use a lower value to decrease randomness in the response (minimum 0, maximum 1, default 0.5) |
+| Top p     | 0.9                                                                                                                         | Use a lower value to ignore less probable options. Set to 0 or 1.0 to disable (minimum 0, maximum 1, default 0.9)                                                                                                                     |
+| Max Generated Tokens     | 2048                                                                                                                         | Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 2048, default 2048)                                                 |
 
 
 #### Claude Model Settings
 
 This is where you can specify settings specific to the Claude model:
 
-![product prompt settings](img/awsbedrock-product-settings-claude.png)
+![product claude settings](img/awsbedrock-product-settings-claude.png)
+
+
+| Setting name            | Default Value                                                                                                                         | Explanation                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Model                   | anthropic.claude-3-haiku-20240307-v1:0                                                                                                                         | The name of the Claude model we want to use                                                                                                                    |
+| Temperature             | 0.5                                                                                                                                   | Use a lower value to decrease randomness in the response (minimum 0, maximum 1, default 0.5) |
+| Max Tokens     | 2048                                                                                                                         | Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 4096, default 2048)                                             |
 
 
 
