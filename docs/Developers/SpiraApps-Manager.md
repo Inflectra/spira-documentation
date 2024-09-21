@@ -144,6 +144,52 @@ Note that this function is carried out client side so it does have access to any
     ```
 
 
+## AWS Bedrock API Calls
+SpiraApps can make API calls to the Amazon Web Services (AWS) Generative Artificial Intelligence (GenAI) platform known as [AWS Bedrock](https://aws.amazon.com/bedrock). Since AWS uses a proprietary authentication system called SignatureV4, we have provided a special helper method to make these API calls easier.
+
+The **executeAwsBedrockRuntime** function call makes a REST API call to the AWS Bedrock Runtime service. It uses an AWS Access Key and Access Key Secret. The latter needs to be stored as a secure setting.
+
+=== "Explanation"
+    - **appGuid**: the APP_GUID of the SpiraApp used to access system settings like authentication tokens (string)
+    - **appName**: the name of the SpiraApp used for logging purposes only (string)
+    - **accessKeyId**: the value of the AWS Access Key that should be used to make the API call (string)
+    - **secretAccessKeySetting**: the name of the secure SpiraApp setting that is used to store the AWS Access Key Secret (string)
+    - **region**: The name of the AWS region that should be used, if not provided, the API call will use `us-east-1` (optional string)
+    - **model**: The name of the AWS Bedrock LLM model to use (string) 
+    - **body**: The JSON body to be sent to the LLM model, serialized as a string (string)
+    - **successCallback**: callback function to execute on success
+    - **errorCallback**: callback function to execute on failure
+
+=== "Example"
+
+    ```js hl_lines="16-26" linenums="1" title="myApp.js > executeAwsBedrockRuntime"
+    const accessKey = '...';
+    const region = 'us-east-1';
+    const model = 'anthropic.claude-3-haiku-20240307-v1:0';
+
+    var body = {
+        ...
+    };
+
+    function dataRetrieve_Success (response) { ... }
+    function dataRetrieve_Failure (response) { ... }
+
+    /* spiraAppManager.executeAwsBedrockRuntime(
+        appGuid, appName, accessKeyId, secretAccessKeySetting, region, model, body, successCallback, errorCallback
+    );*/
+    spiraAppManager.executeAwsBedrockRuntime(
+        APP_GUID,
+        "mySpiraApp",
+        accessKey,
+        'access_key_secret',
+        region,
+        model,
+        JSON.stringify(body),
+        modelInvoke_Success,
+        modelInvoke_Failure
+    );
+    ```
+
 ## Notifications
 SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message
 
