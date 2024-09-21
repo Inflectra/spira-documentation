@@ -21,7 +21,64 @@ By using this SpiraApp users will, by necessity, share information with AWS Bedr
     - [x] toolbar button on task details page
 
 ## AWS Bedrock Setup
-TBD
+Log into your AWS Console and navigate to the **Bedrock** services section. Then click on the sidebar menu entry for **Model access*:
+
+![AWS Bedrock Model Access](img/awsbedrock-aws-config1.png)
+
+On this page you can request access to various LLM model families and models. Please request access to at least one **Anthropic Claude** model and/or **Meta Llama** model:
+
+![AWS IAM Users](img/awsbedrock-aws-config2.png)
+
+Once you have been granted access to the models, navigate over to the **IAM** AWS Service page, and create a new IAM user called `aws-bedrock-service-user`.
+
+![AWS IAM Groups](img/awsbedrock-aws-config3.png)
+
+In line with AWS best practices, we will also create an IAM group called `aws-bedrock-service-group`. Make sure to add your new user to this new group.
+
+![AWS IAM Group Membership](img/awsbedrock-aws-config4.png)
+
+Now that you have the IAM group created, attach the following policies/permissions to the group: 
+
+![AWS IAM Group Policies](img/awsbedrock-aws-config5.png)
+
+- **AmazonBedrockReadOnly** - this is a built-in AWS managed permission
+- **Invoke-Any-Foundational-Model** - this is an inline permission that we need to create.
+
+To create the new Invoke Any Foundational Model permission, we need to use the inline policy editor:
+
+![AWS IAM Policy Creator](img/awsbedrock-aws-config6.png)
+
+To simplify things, simply use the following JSON policy:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": "bedrock:InvokeModel",
+			"Resource": "arn:aws:bedrock:*::foundation-model/*"
+		}
+	]
+}
+```
+
+Finally, we need to create an **Access Key** for this user so that we can call it from our SpiraApp. Click on the section **Access Keys**:
+
+![AWS IAM User Access Keys](img/awsbedrock-aws-config7.png)
+
+Click on the button **Create access key** to start the access key creation wizard. On the first page, choose **Application running outside AWS**.
+
+On the second page, enter in a description of what this access key will be used for. For example, `Used to connect the AWS SpiraApp to Bedrock`:
+
+![AWS Access Key Creation](img/awsbedrock-aws-config8.png)
+
+Once the access key has been created, you will be given two pieces of information:
+- Access Key
+- Secret Access Key
+
+Copy both of these values into your secure credential storage. You will need them in the next section for setting up the SpiraApp.
 
 ## SpiraApp Setup
 ### System Settings
