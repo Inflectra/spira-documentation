@@ -133,19 +133,15 @@ When you filter the product home by release/sprint, this widget will filter the 
 
 This widget lets you quickly view four different graphs used when measuring the progress of requirements in an agile methodology. They are described in more detail in [Reports](Reports-Center.md/#snapshot-graphs).
 
-1.  **Requirement Velocity** -- this graph shows the actual velocity delivered in each product release and/or sprint compared to the product average and the rolling average.
-
-2.  **Requirement Burnup** -- this graph shows the cumulative number of story points outstanding for each release/sprint in the product with separate lines for the actual and ideal burnup overlaid on top of a bar-graph that shows the completed story points per release/sprint.
-
-3.  **Requirement Burndown** -- this graph shows the remaining number of story points that needs to be done for each release/sprint in the product with separate lines for the actual and ideal burndown overlaid on top of a bar-graph that shows the completed story points per release/sprint.
-
-4.  **Requirements Coverage** -- this graph shows the number of requirements that have test cases that are passed, failed, blocked, cautioned, not run as well those requirements that do not have any test cases (not covered). Unlike the main Requirements Coverage graph on the home page, this one is segmented by requirement importance.
+1. **[Requirement Velocity](Reports-Center.md/#requirements-velocity-graph)**: this graph shows the actual velocity delivered in each product release and/or sprint compared to the product average and the rolling average.
+2. **[Requirement Burnup](Reports-Center.md/#requirements-burnup-graph**: this graph shows the cumulative number of story points outstanding for each release/sprint in the product with separate lines for the actual and ideal burnup overlaid on top of a bar-graph that shows the completed story points per release/sprint.
+3. **[Requirement Burndown](Reports-Center.md/#requirements-burndown-graph)**: this graph shows the remaining number of story points that needs to be done for each release/sprint in the product with separate lines for the actual and ideal burndown overlaid on top of a bar-graph that shows the completed story points per release/sprint.
+4. **[Requirements Coverage](Reports-Center.md/#requirements-coverage-graph)**: this graph shows the number of requirements that have test cases that are passed, failed, blocked, cautioned, not run as well those requirements that do not have any test cases (not covered). Unlike the main Requirements Coverage graph on the home page, this one is segmented by requirement importance.
 
 For each of the three graphs you can click on the "Display Data Grid" link to display a grid of the underlying data that is represented in the graph and also there are options to save the graph in a variety of different image formats.
 
 
 ## Requirements Regression Coverage
-
 This section consists of a bar graph that displays the aggregated count of requirements test coverage for the product in a similar fashion to the 'Requirements Coverage' widget:
 
 ![](img/UserProduct_Management_67.png)
@@ -154,12 +150,10 @@ However, unlike the 'Requirements Coverage' widget, when you filter the product 
 
 
 ## Requirements Summary
-
 This section consists of a summary table that displays the aggregate count of requirements in the system broken-down by importance (on the x-axis) and status (on the y-axis). This allows the product manager to determine how many critical vs. low priority enhancements are waiting to be implemented, vs. actually being implemented. In addition, it makes a distinction between those requirements simply requested and those actually planned for implementation, so the product manager can see what the backlog is between the customer's demands, and the plan in place. Clicking on the "***View Details***" button at the top of the table takes you to the Requirement list page. Clicking on the individual values in the cells will display the requirements list with the filter set to match the importance and status of the value.
 
 
 ## Release Task Progress
-
 This widget allows you to quickly ascertain the task progress of each of the active releases that make up the current product in one snapshot. Each release is displayed together with a graphical display that illustrates the completion percentage and status with different colored bars. In addition, if you hover the mouse over the graphical display it will display a tooltip that provides a more detailed description of the number of tasks in each status.
 
 ![](img/UserProduct_Management_64.png)
@@ -170,7 +164,6 @@ Each release will display the aggregate progress of any tasks directly assigned 
 
 
 ## Release Test Summary
-
 This widget allows you to quickly ascertain the test execution status of each of the active releases that make up the current product in one snapshot. Each release is displayed together with a graphical display that illustrates the execution status with different colored bars. In addition, if you hover the mouse over the graphical display it will display a tooltip that provides a more detailed description of the number of tests in each status.
 
 ![](img/UserProduct_Management_62.png)
@@ -239,7 +232,6 @@ In addition to the bar-chart, there is also a display of the total number of tes
 
 
 ## Test Set Status
-
 This section consists of a bar graph that displays the aggregated count of test cases in each execution status for each test set in the product:
 
 ![](img/UserProduct_Management_68.png)
@@ -250,7 +242,6 @@ If you position the mouse pointer over any of the five bars, the color of the ba
 
 
 ## All Pending Test Runs
-
 This section lists all the test runs that are currently being executed by testers in the product. Until a test case or test set is fully executed, a pending test run entry is stored in the system so that you can continue execution at a later date.
 
 ![](img/UserProduct_Management_74.png)
@@ -259,24 +250,20 @@ Any pending test run can be either deleted or reassigned to another member of th
 
 
 ## Test Run Progress
-
 This section consists of a chart that displays the last 30 days of test run activity, broken down, for each day, by the test run status. This is a useful chart to quickly track the testing activity of the product -- this is not the same as overall product status.
 
 ![](img/UserProduct_Management_71.png)
 
 
 ## Incident Aging
-
 This section displays the number of days incidents have been left open in the system. The chart is organized as a histogram, with the count of incidents on the y-axis and different age intervals on the x-axis.
 
 
 ## Incident Open Count
-
 This section show a bar chart to visualize the breakdown of all open incidents in the product by priority. The chart's bar match the color assigned to that priority. Clicking on the "View Details" link at the top of the widget opens the Incident list page.
 
 
 ## Incident Summary
-
 This section consists of a summary table that displays the aggregate count of incidents in the system broken-down by priority (on the x-axis) and status (on the y-axis). This allow the product manager to determine how many critical vs. low priority incidents are waiting to be addressed, and how many new items need to be categorized and assigned. Clicking on the "View Details" link at the top of the table opens the Incident list page. Clicking on the individual values in the cells will display the incident list with the filter set to match the priority and status of the value.
 
 By default this summary table displays the total count of all incidents
@@ -284,7 +271,6 @@ By default this summary table displays the total count of all incidents
 
 
 ## Incident Test Coverage
-
 This section displays a bar-graph that illustrates the execution status of any test cases that previously failed and resulted in the generation of an incident that has subsequently been resolved. This is very useful when a test case was executed in Release 1.0 and an incident was logged. That incident has now been resolved in Release 1.1 (and is in a closed status) but we need to know that the test case that caused the failure has been successfully re-run. Any test cases listed as Blocked, Caution, Not-Run, Not Applicable, or Failed in this graph need to be executed to verify that all resolved bugs in the release have truly been fixed.
 
 
@@ -297,7 +283,6 @@ This widget shows a breakdown of the top issues logged in the product, in order 
 
 
 ## Risk Summary
-
 This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.
 
 
@@ -314,12 +299,10 @@ You can edit the widget to: show/hide the risk owner column; show/hide the risk 
 
 
 ## Late Finishing Tasks
-
 This section displays the list of any product tasks that have not yet been completed, but whose scheduled end date has already elapsed. A graphical progress bar is included with each task in the grid, so that you can easily see which tasks are nearest completion.
 
 
 ## Late Starting Tasks
-
 This section displays the list of any product tasks that have not yet started, but whose scheduled start date has already elapsed:
 
 ![](img/UserProduct_Management_66.png)
@@ -328,12 +311,11 @@ Each task is listed along with its owner, priority and due-date so that you quic
 
 
 ## Task Graphs
+This widget lets you quickly view the three main graphs used when measuring the progress of tasks in an agile methodology. They are described in more detail in [Reports](Reports-Center.md/#snapshot-graphs).
 
-This widget lets you quickly view the three main graphs used when measuring the progress of tasks in an agile methodology:
-
-1.  **Task Velocity**: this graph shows the total estimated and actual effort delivered in each product release and/or sprint
-2.  **Task Burnup**: this graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
-3.  **Task Burndown**: Read more about how this graph works here [here](Reports-Center.md/#task-burndown-chart).
+1.  **[Task Velocity](Reports-Center.md/#task-velocity-chart)**: this graph shows the total estimated and actual effort delivered in each product release and/or sprint
+2.  **[Task Burnup](Reports-Center.md/#task-burnup-chart)**: this graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated, remaining and completed effort.
+3.  **[Task Burndown](Reports-Center.md/#task-burndown-chart)**: Read more about how this graph works here [here](Reports-Center.md/#task-burndown-chart).
 
 
 ## Source Code Commits
