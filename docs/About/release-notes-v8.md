@@ -1,4 +1,12 @@
 # Release Notes for Spira v8
+## Version 8.4 (October 2024)
+!!! info "Summary"
+
+??? success "New Features"
+
+
+??? bug "Bug fixes and enhancements"
+
 ## Version 8.3 (August 2024)
 !!! info "Summary"
     - Adds database support for upcoming timesheet functionality
@@ -52,7 +60,6 @@
         - Fix the test run tab for tests sets so that any test runs from other products are not editable [IN:9772]
         - Improve the error message when a test run generation failure is caused by product association revocation to let the user know the impacted product(s) or test cases [IN:9600]
         - Improve Spira's German localization with fully revised and corrected translations [IN:9740]
-
 
 
 ## Version 8.2 (July 2024)

@@ -115,6 +115,6 @@ Each incident is listed together with (by default) the type, status, priority, n
 
 ### Tasks
 
-This tab is only visible to users of SpiraPlan. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
+This tab is only visible to users of SpiraPlan or SpiraTeam. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
 
 ![](img/Test_Case_Management_209.png)
