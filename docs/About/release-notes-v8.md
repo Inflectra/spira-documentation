@@ -3,9 +3,56 @@
 !!! info "Summary"
 
 ??? success "New Features"
+    * **[As a developer, I can track the time I spend against my assigned work on what dates, so that I can keep clear records](../Spira-User-Manual/Timesheets.md/#my-timesheet)**
 
+        - As a developer, when I go to the "My Timesheet" page I see a grid with the current working week, so I can prepare to track my time [RQ:4835]
+        - As a developer, I can add a row to the current timesheet for any incident or task assigned to me in any product, so I will be able to log my work [RQ:4836]
+        - As a developer, I can add time data to any row in the current timesheet, so I can track my hours worked where [RQ:4856]
+        - As a developer, I can save time data to any row in the current timesheet, so I can track my hours worked where [RQ:4837]
+        - As a developer, when I update my timesheet data for a single task, then the actual effort is correctly updated on that task, so the work is logged correctly [RQ:4850]
+        - As a developer, when I update my timesheet data for multiple tasks at once, then the actual effort is correctly updated on those tasks, so the work is logged correctly [RQ:4838]
+        - As a developer, when I update my timesheet data for a single incident, then the actual effort is correctly updated on that incident, so the work is logged correctly [RQ:4851]
+        - As a developer, when I update my timesheet data for multiple incidents at once, then the actual effort is correctly updated on those incidents, so the work is logged correctly [RQ:4839]
+        - As a developer, when I update my timesheet data for tasks and incidents at the same time, then the actual effort is correctly updated on those artifacts, so the work is logged correctly [RQ:4852]
+        - As a developer, I can see the total time I spent working each day on the timesheet, so I can better understand my work [RQ:4853]
+        - As a developer, I can see the total time I spent working on each artifact on the timesheet, so I can better understand my work [RQ:4840]
+        - As a developer, I can see the total time I spent working across the entire timesheet, so I can better understand my work [RQ:4855]
+        - As a developer, I can clearly see the current date if relevant on my timesheet, so I can easily add time to today [RQ:4842]
+        - As a developer, I can view my old timesheets, so that I can review and add to my previous entries [RQ:4841]
+        - As a developer, I can clearly see all the columns on the timesheet, to give me an easy to use experience [RQ:4857]
 
 ??? bug "Bug fixes and enhancements"
+
+    - Test Case Test Step Section Edit buttons should be disabled based on the Workflow to stop unauthorized users being able to edit test steps when using live loading specifically [IN:9270]
+    - Test Case Parameter Refresh can Delete Parameters if DB error occurs [IN:9737]
+    - Fix product admin data tools not fixing indentation problems found with requirements [IN:9752]
+    - Update API v5 and v6 and maybe v7 to fully support cross product test sets (REST and SOAP) [IN:9785]
+    - Fix the test case details page test sets tab not showing test sets from other products that the test case is in [IN:9805]
+    - Add SpiraAppManager function(s) for getting and setting the value of a given field or custom property (in the UI for the user to then save) [IN:9820]
+    - Add event log entries when a user does an action in Data Tools [IN:9836]
+    - Add the product name and link to the heading of the product membership administration page when adding new users to the product [IN:9842]
+    - Fix often not being able to move a folder into one beneath it from the folder edit dialog (as the lower folders are missing from the dropdown) [IN:9845]
+    - The SOAP v6 and v7 APIs Don't Correctly Return Back the Credentials when using RSS Key Fallback [IN:9850]
+    - Fix the task details page sidebar showing incorrect or invalid tooltips for requirements when displaying for requirements and releases when displaying for releases (instead show no tooltip at all) [IN:9851]
+    - Update Jira dataSync details pages "Sync Mode" label to provide a summary about the optional NoAttachments flag [IN:9862]
+    - Move Teams out of 'Beta' so that all SpiraPlan customers can use its features without worrying about beta functions [IN:9893]
+    - Fix subversion repos not supporting revisions that have the same file added or removed [IN:9931]
+    - Fix product admin data tools not fixing indentation problems found with releases [IN:9937]
+    - SOAP v7.0 API only will not let you create users if you delete projectId 1 (LIS) [IN:9985]
+    - Localization is not working for the columns of the grid on the Product Membership page (and maybe other WebAPI places) [IN:10076]
+
+    * **SpiraApps**:
+
+        - Add a link at the top of the admin SpiraApps list pages to our website "marketplace" page so people can find more SpiraApps to install more easily [IN:9817]
+        - Add details page pre-save event to SpiraAppManager to allow SpiraApps to modify the results of a saved form without needing to make it's own API call to do so after the original save [IN:9800]
+        - Add Support for Calling AWS Bedrock APIs from SpiraAppManager [IN:10034]
+        - Fix the SpiraAppManager.myPageIsFilterByProject function not always returning the correct value on the My Page [IN:9765]
+    
+    * **Enhancements**:
+
+    * **Bug Fixes**:
+
+
 
 ## Version 8.3 (August 2024)
 !!! info "Summary"

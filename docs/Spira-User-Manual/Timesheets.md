@@ -26,7 +26,7 @@ If there are unsaved time entries in the timesheet the save button will be enabl
 Other features to note when using the timesheet grid:
 
 - The timesheet is sorted by the artifact name in alphabetical order
-- You cannot add timesheet entries to an artifact that you do not have permission to modify. In this case you will see a warning message identifying which artifacts were not updated
+- You cannot add timesheet entries to an artifact that you do not have permission to modify. In this case you will see a warning message identifying which artifacts were not updated. The same is true if the artifact has been deleted.
 - A single history record is recorded for each artifact modified in each save, even if multiple days are modified for a given artifact in a single save
 - You are not able to edit previously saved entries (which are shown as grayed out)
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet
