@@ -64,6 +64,13 @@ For those artifacts that are copied, the following fields are reset to be either
 
 The same limitations listed above for a full clone also apply to this reset copy option.
 
+
+!!! info "Product Association"
+    When cloning data from a product that is associated with another product(s) in Spira (i.e. when the product being cloned shares artifacts with other products), for security reasons, the association(s) won't be replicated in the new cloned product. This means that artifacts that were associated with different products in the original product will be cloned, but their external associations won't. Examples:
+    
+    - Cloned Test Cases that were originally part of a Test Set in a different product won't be associated with the external Test Set
+    - Cloned TestRuns that were originally created within a Test Set in a different product won't be associated with the external Test Set
+
 **Cloning the template**: this will create a clone of the original product's template and make sure that the new cloned/copied product uses this cloned template. This can be really useful if you want to create a new independent product and template compared to the original. 
 
 
