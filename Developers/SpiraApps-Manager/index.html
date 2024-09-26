@@ -3366,6 +3366,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/My-Assigned-Work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    My Assigned Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/OctoPerf/" class="md-nav__link">
         
   
@@ -8003,6 +8030,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#aws-bedrock-api-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS Bedrock API Calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8601,6 +8639,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#aws-bedrock-api-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS Bedrock API Calls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notifications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8918,9 +8967,81 @@
 </div>
 </div>
 </div>
+<h2 id="aws-bedrock-api-calls">AWS Bedrock API Calls<a class="headerlink" href="#aws-bedrock-api-calls" title="Permanent link">&para;</a></h2>
+<p>SpiraApps can make API calls to the Amazon Web Services (AWS) Generative Artificial Intelligence (GenAI) platform known as <a href="https://aws.amazon.com/bedrock">AWS Bedrock</a>. Since AWS uses a proprietary authentication system called SignatureV4, we have provided a special helper method to make these API calls easier.</p>
+<p>The <strong>executeAwsBedrockRuntime</strong> function call makes a REST API call to the AWS Bedrock Runtime service. It uses an AWS Access Key and Access Key Secret. The latter needs to be stored as a secure setting.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="explanation_4" name="__tabbed_5" type="radio" /><input id="example_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="example_4">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>appGuid</strong>: the APP_GUID of the SpiraApp used to access system settings like authentication tokens (string)</li>
+<li><strong>appName</strong>: the name of the SpiraApp used for logging purposes only (string)</li>
+<li><strong>accessKeyId</strong>: the value of the AWS Access Key that should be used to make the API call (string)</li>
+<li><strong>secretAccessKeySetting</strong>: the name of the secure SpiraApp setting that is used to store the AWS Access Key Secret (string)</li>
+<li><strong>region</strong>: The name of the AWS region that should be used, if not provided, the API call will use <code>us-east-1</code> (optional string)</li>
+<li><strong>model</strong>: The name of the AWS Bedrock LLM model to use (string) </li>
+<li><strong>body</strong>: The JSON body to be sent to the LLM model, serialized as a string (string)</li>
+<li><strong>successCallback</strong>: callback function to execute on success</li>
+<li><strong>errorCallback</strong>: callback function to execute on failure</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">myApp.js > executeAwsBedrockRuntime</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">accessKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;...&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;us-east-1&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;anthropic.claude-3-haiku-20240307-v1:0&#39;</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">dataRetrieve_Success</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">dataRetrieve_Failure</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+
+<span class="cm">/* spiraAppManager.executeAwsBedrockRuntime(</span>
+<span class="cm">    appGuid, appName, accessKeyId, secretAccessKeySetting, region, model, body, successCallback, errorCallback</span>
+<span class="cm">);*/</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">executeAwsBedrockRuntime</span><span class="p">(</span>
+<span class="hll"><span class="w">    </span><span class="nx">APP_GUID</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="s2">&quot;mySpiraApp&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">accessKey</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="s1">&#39;access_key_secret&#39;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">region</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">model</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">),</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">modelInvoke_Success</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">modelInvoke_Failure</span>
+</span><span class="hll"><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
 <p>SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="explanation_4" name="__tabbed_5" type="radio" /><input id="example_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="example_4">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="explanation_5" name="__tabbed_6" type="radio" /><input id="example_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="explanation_5">Explanation</label><label for="example_5">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -8945,7 +9066,7 @@
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
 <p>SpiraApps can create <a href="../SpiraApps-Overview/#menus">menu entries</a> on <a href="../SpiraApps-Reference/#pages">relevant pages</a>. If a menu entry's action is to run a JavaScript function, then the SpiraApp needs to register the function to call when the menu entry is clicked. A SpiraApp cannot use the "action" field in the manifest to set the function to run because the code for the SpiraApp is in an IIFE. Therefore the SpiraApp code has to register the function on initiation.</p>
 <p>Use the <code>registerEvent_menuEntryClick</code> function on the spiraAppManager to register the function to execute when a menu entry is clicked.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="explanation_5" name="__tabbed_6" type="radio" /><input id="example_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="explanation_5">Explanation</label><label for="example_5">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="explanation_6" name="__tabbed_7" type="radio" /><input id="example_6" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="explanation_6">Explanation</label><label for="example_6">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -8976,7 +9097,7 @@
 </div>
 <h2 id="events-handlers">Events handlers<a class="headerlink" href="#events-handlers" title="Permanent link">&para;</a></h2>
 <p>There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="explanation_6" name="__tabbed_7" type="radio" /><input id="example_6" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="explanation_6">Explanation</label><label for="example_6">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="explanation_7" name="__tabbed_8" type="radio" /><input id="example_7" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="explanation_7">Explanation</label><label for="example_7">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9033,7 +9154,7 @@
 </div>
 <h2 id="page-actions">Page actions<a class="headerlink" href="#page-actions" title="Permanent link">&para;</a></h2>
 <p>A SpiraApp can make requests to Spira to perform certain actions on certain pages.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="explanation_7" name="__tabbed_8" type="radio" /><input id="example_7" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="explanation_7">Explanation</label><label for="example_7">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio" /><input id="example_8" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9060,7 +9181,7 @@
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">&para;</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">&para;</a></h3>
 <p>This helper function handles the creation of a UX control that allows users to interact with it freely. It creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio" /><input id="example_8" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_9" name="__tabbed_10" type="radio" /><input id="example_9" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The <code>createComboDialog</code> function takes the following parameters:</p>
@@ -9120,7 +9241,7 @@
 </div>
 <h2 id="logic-helpers">Logic helpers<a class="headerlink" href="#logic-helpers" title="Permanent link">&para;</a></h2>
 <p>The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_9" name="__tabbed_10" type="radio" /><input id="example_9" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_10" name="__tabbed_11" type="radio" /><input id="example_10" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_10">Explanation</label><label for="example_10">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9140,7 +9261,7 @@
 </div>
 </div>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_10" name="__tabbed_11" type="radio" /><input id="example_10" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_10">Explanation</label><label for="example_10">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_11" name="__tabbed_12" type="radio" /><input id="example_11" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_11">Explanation</label><label for="example_11">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9167,7 +9288,7 @@
 </div>
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">&para;</a></h2>
 <p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use the SpiraApp guid.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_11" name="__tabbed_12" type="radio" /><input id="example_11" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_11">Explanation</label><label for="example_11">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="explanation_12" name="__tabbed_13" type="radio" /><input id="example_12" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_12">Explanation</label><label for="example_12">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
