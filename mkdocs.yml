@@ -181,6 +181,7 @@ nav:
     - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
+  - AWS Bedrock: SpiraApps\AWS-Bedrock.md
   - Azure OpenAI: SpiraApps\Azure-OpenAI.md
   - BDD:  SpiraApps\BDD.md
   - ChatGPT: SpiraApps\ChatGPT.md
