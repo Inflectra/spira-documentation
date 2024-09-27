@@ -57,6 +57,7 @@ theme:
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
+    annotation: material/chevron-right-circle
   language: en 
   name: material
   palette:

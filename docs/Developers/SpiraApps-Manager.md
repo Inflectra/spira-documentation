@@ -55,7 +55,7 @@ The following properties are available from the spiraAppManager. They are useful
 
     const isSpiraPlan = spiraAppManager.productType == "SpiraPlan"; // e.g. true
 
-    const stepsGridId = spiraAppManager.gridIds.requirementSteps; // e.g. "cplMainContent_grdScenarioSteps" 
+    const stepsGridId = spiraAppManager.gridIds().requirementSteps; // e.g. "cplMainContent_grdScenarioSteps" 
     ```
 
 ## External REST calls
@@ -294,11 +294,28 @@ There are a number of events that a SpiraApp can register against. This allows S
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
 
 === "Explanation"
-    - **reloadForm**: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-    - **getDataItemField**: gets the current live value of a single field on a details page. This function takes two parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names) and the data property. 
-    - **updateFormField**: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the [name of the field](./SpiraApps-Reference.md/#available-field-names), the data property, and the new value. 
-    - **reloadGrid**: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds [property function](#properties) (string)
-    - **setWindowLocation**: loads a new page in the browser. Takes a single parameter, which is the full URL (string)
+    ??? note "**reloadForm()**"
+        Reloads the current main overview on a details page. 
+        
+        Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
+    ??? note "**getDataItemField(fieldName: string, dataProperty?: string)**"
+        Retrieves a single field of the currently viewed artifact on a details page. 
+
+        - **fieldName**: The [name of a field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+        - **dataProperty**: The [data property] (./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
+    ??? note "**updateFormField(fieldName: string, dataProperty?: string)**" 
+        Updates a field on an artifact details page.
+        
+        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the form / piece of information about this field you want
+    ??? note "**reloadGrid(gridId: SpiraAppManager.gridIds)**" 
+        Refreshes the specified grid if it exists on the page. 
+        
+        - **gridId**: The ID of the grid to reload. [Available grid IDs](./SpiraApps-Reference.md/#available-grid-ids) (string)
+    ??? note "**setWindowLocation(URL: string)**" 
+        Loads a new page in the browser.
+
+        - **URL**: URL to navigate the user's browser to 
 
 === "Example"
 
@@ -308,7 +325,7 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
     spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this tasks");
 
-    spiraAppManager.reloadGrid(spiraAppManager.gridIds.requirementSteps);
+    spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps);
 
     spiraAppManager.setWindowLocation("https://inflectra.com");
     ```

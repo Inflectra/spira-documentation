@@ -336,6 +336,65 @@ The following field names are available when calling various [page functions](./
     - TestSetId
     - TestSetStatusId
 					
+### Available Data Properties
+The following data properties are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
+
+A given field may have data and metadata of multiple types, such as a label & an ID. in these cases, the field has multiple data properties for it's different components. This resource will summarize how to access these pieces of information on the details page as a SpiraApp developer & where to expect to find specific information available on artifact details pages.
+
+If you are unsure what is available, network requests in browser dev tools can be filtered by Form_Retrieve on details pages to capture the relevant response. the d.Fields object in the response contains field names as it's keys, and the values for a given field are the data properties available. This document is not an exhaustive list.
+
+=== "textValue"
+    This data property contains the string information about a field. 
+
+    This is the relevant database property for text, rich text, and multi-select based fields & if changed, will change the relevant data in the database upon save.
+        
+    ??? note "Example use cases"
+        - The name & description of artifacts as raw text are stored in this property (Including markup in rich text fields)
+        - Multi-select value IDs are stored here, where this contains a string with a comma separated list of integers, where the integers are the IDs of each selected value (Available values & label mappings are stored in lookups data property)
+
+
+=== "intValue"
+    This data property contains integer based data. Some fields may be integer based in the database, but are displayed differently via their UI controls. All single select dropdowns use integers for their underlying ID values. Often times, the int value is the "real" database value, but is not what gets displayed to the end user within Spira's UI.
+
+    This is the relevant database property for single select dropdowns and effort values & if changed, will change the relevant data in the database upon save.
+
+    ??? note "Example use cases"
+        - ID of a single item selected for a dropdown property 
+        - Effort values (Stored as number of minutes)
+        - Integer custom property values
+
+
+=== "dateValue"
+    This data property contains dates. 
+    ??? note "Example use cases"
+        - Start and End dates of artifacts
+        - Last executed dates for tests
+
+    This is the relevant database property for all dates & if changed, will change the relevant data in the database upon save (Creation & last update dates cannot be updated this way)
+
+=== "caption"
+    This data property contains the captions for the fields as displayed in the UI, localized to the user's language settings. This could be used for refering to the name of specific fields, such as "Owner" from the field OwnerId in a displayed message.
+
+=== "lookups" 
+    This data property contains an object of potential values for dropdowns with the relevant ID as the objects' keys & their label values as the objects' values. Users and release fields never have this information here. For most standard fields, this options information is not stored here. Keys start with "k" followed by an integer, and the integer is the relevant ID (k must be removed to use the value). Cases where this is available:
+    
+    - Custom property fields of type list or multi-list 
+    - Components on the incident details page
+
+=== "tooltip"
+    This data property contains tooltips information & sometimes alternate text formatting of certain data fields.
+
+    ??? note "Example Use Cases"
+        - Date fields have a user friendly string localized to the relevant culture's formatting
+        - Multi-select properties which are disabled have the list of selected items labels stored here as a 
+
+=== "Workflow Properties"
+    This is not a data property in itself, but it makes more sense to group these under the workflow category. The following are boolean properties that indicate specific workflow or custom property constraints for a specific field. Relevant data properties:
+
+    - editable
+    - required
+    - hidden
+
 
 ## Available resources
 ### Inflectra Javascript helpers
