@@ -341,7 +341,7 @@ The following data properties are available when calling various [page functions
 
 A given field may have data and metadata of multiple types, such as a label & an ID. in these cases, the field has multiple data properties for it's different components. This resource will summarize how to access these pieces of information on the details page as a SpiraApp developer & where to expect to find specific information available on artifact details pages.
 
-If you are unsure what is available, network requests in browser dev tools can be filtered by Form_Retrieve on details pages to capture the relevant response. the d.Fields object in the response contains field names as it's keys, and the values for a given field are the data properties available. This document is not an exhaustive list.
+If you are unsure what is available, network requests in browser dev tools can be filtered by Form_Retrieve on details pages to capture the relevant response. the d.Fields object in the response contains field names as it's keys, and the values for a given field are the data properties available. This document is not an exhaustive list of data properties, as many are not likely to be useful for SpiraApp developers. 
 
 === "textValue"
     This data property contains the string information about a field. 
@@ -373,12 +373,12 @@ If you are unsure what is available, network requests in browser dev tools can b
     This is the relevant database property for all dates & if changed, will change the relevant data in the database upon save (Creation & last update dates cannot be updated this way)
 
 === "caption"
-    This data property contains the captions for the fields as displayed in the UI, localized to the user's language settings. This could be used for refering to the name of specific fields, such as "Owner" from the field OwnerId in a displayed message.
+    This data property contains the captions for the fields as displayed in the UI, localized to the user's language settings. This could be used for referring to the name of specific fields, such as "Owner" from the field OwnerId in a displayed message.
 
 === "lookups" 
-    This data property contains an object of potential values for dropdowns with the relevant ID as the objects' keys & their label values as the objects' values. Users and release fields never have this information here. For most standard fields, this options information is not stored here. Keys start with "k" followed by an integer, and the integer is the relevant ID (k must be removed to use the value). Cases where this is available:
+    This data property contains an object of potential values for dropdowns with the relevant ID as the objects' keys & their label values as the objects' values. For most standard fields, this options information is not stored here. Keys start with "k" followed by an integer, and the integer is the relevant ID (k must be removed to use the value). Cases where this is available:
     
-    - Custom property fields of type list or multi-list 
+    - Custom property fields of type list, multi-list, or user 
     - Components on the incident details page
 
 === "tooltip"
@@ -389,7 +389,7 @@ If you are unsure what is available, network requests in browser dev tools can b
         - Multi-select properties which are disabled have the list of selected items labels stored here as a 
 
 === "Workflow Properties"
-    This is not a data property in itself, but it makes more sense to group these under the workflow category. The following are boolean properties that indicate specific workflow or custom property constraints for a specific field. Relevant data properties:
+    The following are boolean properties that indicate workflow or custom property constraints for a specific field. These could be written to to define more complex workflow constraints which are enforced via influencing the UI state for a given field based on some criteria. Relevant data properties:
 
     - editable
     - required

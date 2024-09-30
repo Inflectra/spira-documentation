@@ -293,7 +293,7 @@ There are a number of events that a SpiraApp can register against. This allows S
 ## Page actions
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
 
-=== "Explanation"
+=== "Available Actions"
     ??? note "**reloadForm()**"
         Reloads the current main overview on a details page. 
         
@@ -302,30 +302,31 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
         Retrieves a single field of the currently viewed artifact on a details page. 
 
         - **fieldName**: The [name of a field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-        - **dataProperty**: The [data property] (./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
-    ??? note "**updateFormField(fieldName: string, dataProperty?: string)**" 
+        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
+    ??? note "**updateFormField(fieldName: string, dataProperty?: string, newValue: any)**" 
         Updates a field on an artifact details page.
         
         - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the form / piece of information about this field you want
+        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the piece of information about this field you want to modify
+        - **newValue**: The new value to set the data property to on the given field.
     ??? note "**reloadGrid(gridId: SpiraAppManager.gridIds)**" 
         Refreshes the specified grid if it exists on the page. 
         
-        - **gridId**: The ID of the grid to reload. [Available grid IDs](./SpiraApps-Reference.md/#available-grid-ids) (string)
+        - **gridId**: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). [Available grid ID keys](./SpiraApps-Reference.md/#available-grid-ids)
     ??? note "**setWindowLocation(URL: string)**" 
         Loads a new page in the browser.
 
         - **URL**: URL to navigate the user's browser to 
 
-=== "Example"
+=== "Example Usage"
 
     ```js
     spiraAppManager.reloadForm();
 
     spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
-    spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this tasks");
+    spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this task");
 
-    spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps);
+    spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps); // Refreshes the requirement steps grid on requirement details pages
 
     spiraAppManager.setWindowLocation("https://inflectra.com");
     ```
