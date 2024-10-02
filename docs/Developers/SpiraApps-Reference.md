@@ -388,12 +388,43 @@ If you are unsure what is available, network requests in browser dev tools can b
         - Date fields have a user friendly string localized to the relevant culture's formatting
         - Multi-select properties which are disabled have the list of selected items labels stored here as a 
 
+=== "fieldType"
+    This data property contains an ID conveying which type a field is. 
+    
+    To understand what this means more closely, see the [reference section about field types below](./SpiraApps-Reference.md/#field-types). 
+
 === "Workflow Properties"
     The following are boolean properties that indicate workflow or custom property constraints for a specific field. These could be written to to define more complex workflow constraints which are enforced via influencing the UI state for a given field based on some criteria. Relevant data properties:
 
     - editable
     - required
     - hidden
+
+### Field Types
+Each field within Spira is one of a collection of standardized field types. This information is relevant to how the data for that field is displayed, formatted, and saved. 
+
+The following are the available field types with explanations and examples, so developers can build generic field handling around certain field types instead of writing code for each indvidual field. 
+
+Setting this value will likely break user saving & is not advised - SpiraApps which do so will not be published by Inflectra. 
+
+| ID  | Name           | Notes                  |
+| --- | -------------- | ---------------------- |
+| 1   | Text           | This type refers specifically to plain text fields, not rich text. Artifact names are also an exception to this. |
+| 2   | Lookup         | This type covers most single-select dropdowns - usually the database value for this field is an Integer of an ID, while the displayed value is a label for the selected item |
+| 3   | DateTime       | This type refers to date & time inputs such as start & end dates |
+| 4   | Identifier     | This type covers the current artifact's ID (Such as the IncidentId of an Incident) |
+| 5   | Equalizer      | This type is for progress & artifact status summary bars such as Test Execution status for test cases of a release or Progress for a task |
+| 6   | Name | This type is for artifact names. |
+| 7   | CustomPropertyLookup | This is for custom properties of type List |
+| 8   | Integer         | This type is for custom properties of type integer and planning points |
+| 9   | TimeInterval    | This is for fields where an amount of time is entered, such as Estimated Effort |
+| 10  | Flag            | This type covers boolean flags such as Test Case "Suspect?" and custom properties of type Boolean |
+| 11  | HierarchyLookup | This type covers lookups which are for Releases or Requirements, as they have special controls to show hierarhcy relations |
+| 12  | Html            | This type covers rich text properties, such as descriptions & text custom properties with the "Rich Text" option set to Yes | 
+| 13  | Decimal         | This type covers decimal custom properties |
+| 14  | CustomPropertyMultiList | This type covers custom properties of type Multiselect List |
+| 15  | CustomPropertyDate | This type covers date (Not Date & Time) custom properties |
+| 16  | MultiList       | This type covers multi-select standard fields, such as Incident Components and Tags. Tags have special handling, where the text value is a list of tags as text |
 
 
 ## Available resources
