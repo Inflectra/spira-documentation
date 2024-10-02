@@ -416,12 +416,12 @@ Setting this value will likely break user saving & is not advised - SpiraApps wh
 | 5   | Equalizer      | This type is for progress & artifact status summary bars such as Test Execution status for test cases of a release or Progress for a task |
 | 6   | Name | This type is for artifact names. |
 | 7   | CustomPropertyLookup | This is for custom properties of type List |
-| 8   | Integer         | This type is for custom properties of type integer and planning points |
+| 8   | Integer         | This type is for custom properties of type integer |
 | 9   | TimeInterval    | This is for fields where an amount of time is entered, such as Estimated Effort |
 | 10  | Flag            | This type covers boolean flags such as Test Case "Suspect?" and custom properties of type Boolean |
-| 11  | HierarchyLookup | This type covers lookups which are for Releases or Requirements, as they have special controls to show hierarhcy relations |
+| 11  | HierarchyLookup | This type covers lookups which are for Releases or Requirements, as they have special controls to show hierarchy relations |
 | 12  | Html            | This type covers rich text properties, such as descriptions & text custom properties with the "Rich Text" option set to Yes | 
-| 13  | Decimal         | This type covers decimal custom properties |
+| 13  | Decimal         | This type covers decimal custom properties and planning points |
 | 14  | CustomPropertyMultiList | This type covers custom properties of type Multiselect List |
 | 15  | CustomPropertyDate | This type covers date (Not Date & Time) custom properties |
 | 16  | MultiList       | This type covers multi-select standard fields, such as Incident Components and Tags. Tags have special handling, where the text value is a list of tags as text |
