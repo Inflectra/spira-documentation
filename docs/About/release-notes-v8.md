@@ -21,6 +21,28 @@
         - As a developer, I can view my old timesheets, so that I can review and add to my previous entries [RQ:4841]
         - As a developer, I can clearly see all the columns on the timesheet, to give me an easy to use experience [RQ:4857]
 
+    * **Add the ability for users to [download their current list page view to a CSV file](../Spira-User-Manual/Application-Wide.md/#download-as-csv)**
+
+        - As a requirement user, I can download the current data I see on the sortable list page as a csv file [RQ:4956]
+        - As a requirement user, I can download the current data I see on the hierarchical list page as a csv file [RQ:4918]
+        - As a release user, I can download the current data I see on the list page as a csv file [RQ:4919]
+        - As a requirement user, I can expand and collapse the hierarchical list page and then download the data I see as a CSV file [RQ:4921]
+        - As a document user, I can download the current data I see on the list page as a csv file [RQ:4924]
+        - As an automation host user, I can download the current data I see on the list page as a csv file [RQ:4923]
+        - As a test case user, I can download the current data I see on the list page as a csv file [RQ:4933]
+        - As a test configuration user, I can download the current data I see on the list page as a csv file [RQ:4934]
+        - As a test run user, I can download the current data I see on the list page as a csv file [RQ:4935]
+        - As a test set user, I can download the current data I see on the list page as a csv file [RQ:4936]
+        - As a pull request user, I can download the current data I see on the list page as a csv file [RQ:4929]
+        - As an incident user, I can download the current data I see on the list page as a csv file [RQ:4925]
+        - As a task user, I can download the current data I see on the list page as a csv file [RQ:4917]
+        - As a risk user, I can download the current data I see on the list page as a csv file [RQ:4922]
+        - As a resource user, I can download the current data I see on the list page as a csv file [RQ:4930]
+        - As a program release user, I can download the current data I see on the list page as a csv file [RQ:4920]
+        - As a program incident user, I can download the current data I see on the list page as a csv file [RQ:4926]
+        - As a program milestone user, I can download the current data I see on the list page as a csv file [RQ:4927]
+        - As a capability user, I can download the current data I see on the list page as a csv file [RQ:4928]
+
 ??? bug "Bug fixes and enhancements"
 
 
@@ -30,12 +52,13 @@
         - Add details page pre-save event to SpiraAppManager to allow SpiraApps to modify the results of a saved form without needing to make it's own API call to do so after the original save [IN:9800]
         - Add SpiraAppManager function(s) for getting and setting the value of a given field or custom property (in the UI for the user to then save) [IN:9820]
         - Add Support for Calling AWS Bedrock APIs from SpiraAppManager [IN:10034]
+        - Fix the boolean setting for SpiraApp settings causing a database violation error for some users who upgraded to 8.3 [IN:10145]
         - Fix the SpiraAppManager.myPageIsFilterByProject function not always returning the correct value on the My Page [IN:9765]
     
     * **Enhancements**:
         
-        - Add event log entries when a user does an action in Data Tools [IN:9836]
-        - Add the product name and link to the heading of the product membership administration page when adding new users to the product [IN:9842]
+        - Add event log entries when a user does an action in [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools) [IN:9836]
+        - Add the product name and link to the heading of the [product membership administration page](../Spira-Administration-Guide/Product-Users.md/#add-users-to-a-product) when adding new users to the product [IN:9842]
         - Move Teams out of 'Beta' so that all SpiraPlan customers can use its features without worrying about beta functions [IN:9893]
         - Update API v5, v6, and v7 to fully support cross product test sets [IN:9785]
         - Update Jira dataSync details pages "Sync Mode" label to provide a summary about the optional NoAttachments flag [IN:9862]
@@ -45,14 +68,19 @@
         - Disable Test Case Test Step Section Edit buttons based on the Workflow to stop unauthorized users being able to edit test steps when using live loading specifically [IN:9270]
         - Fix localization not working for the column names of the grid on the Product Membership page [IN:10076]
         - Fix often not being able to move a folder into one beneath it from the folder edit dialog (as the lower folders are missing from the dropdown) [IN:9845]
-        - Fix product admin data tools not fixing indentation problems found with releases [IN:9937]
-        - Fix product admin data tools not fixing indentation problems found with requirements [IN:9752]
+        - Fix product admin [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools) not fixing indentation problems found with releases [IN:9937]
+        - Fix product admin [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools) not fixing indentation problems found with requirements [IN:9752]
         - Fix subversion repos not supporting revisions that have the same file added or removed [IN:9931]
         - Fix Test Case Parameter Refresh potentially deleting parameters if a database error occurs [IN:9737]
+        - Fix the automation host Test Run List (and counting number) not including cross product executions [IN:10120]
         - Fix the task details page sidebar showing incorrect or invalid tooltips for requirements when displaying for requirements and releases when displaying for releases (instead show no tooltip at all) [IN:9851]
         - Fix the test case details page test sets tab not showing test sets from other products that the test case is in [IN:9805]
+        - Fix the test run counting number on the test Set details page not including cross product executions [IN:10121]
         - Fix the v6 and v7 SOAP APIs not correctly and consistently handling API key credentials [IN:9850]
         - Fix the v7.0 SOAP API not letting you create users if the product with ID 1 has been deleted [IN:9985]
+
+
+
 
 
 ## Version 8.3 (August 2024)

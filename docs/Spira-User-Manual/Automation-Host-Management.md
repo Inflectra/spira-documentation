@@ -16,34 +16,26 @@ In addition, you can view a more detailed description of the automation host by 
 
 One special column that is unique to automation hosts is the "Token" field. This needs to contain a short textual identifier that uniquely identifies each automation host in the product. This will be used by each host computer to identify itself to SpiraPlan.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### New Host
-
 Clicking on the "***New Host***" button adds a new automation host to the bottom of the automation host list with a default name and token.
 
-
 ### Delete
-
 Clicking on the "***Delete***" button deletes the automation hosts whose check-boxes have been selected in the host list.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button reloads the list of automation hosts; this is useful when new hosts are being added by other users, and you want to make sure you have the most up-to-date list displayed.
 
-
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the host list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Edit
-
 Each automation host in the list has an "***Edit***" button in its right-most column. When you click this button or just
 *double-click* on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column.
 
@@ -55,7 +47,6 @@ When you have made your updates, you can either click "***Save***"to commit the 
 
 
 ## Automation Host Details
-
 When you click on an automation host entry in the host list, you are taken to the automation host details page illustrated below:
 
 ![](img/Test_Case_Management_231.png)

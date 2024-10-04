@@ -17,6 +17,10 @@ This view lets you see all the releases, sprints, and phases with the following 
 
 You can expand and collapse the products and releases to display the appropriate level of detail as well as filter by the various fields in the grid.
 
+The toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
+
 ## Release Traceability and Coverage
 From the release list page you can see a number of columns that show calculated data for each release, based off:
 

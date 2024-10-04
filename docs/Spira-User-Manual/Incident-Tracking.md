@@ -20,6 +20,9 @@ The sidebar on the left gives you quick access to saved filters, along with some
 
 In addition, you can view a more detailed description of the incident (along with a resolution if any) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the incident name hyperlink, you will be taken to the incident details page described in [Incident Tracking > Incident Details](Incident-Tracking.md/#incident-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of incidents in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Filtering & Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).

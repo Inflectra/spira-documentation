@@ -12,29 +12,23 @@ The test configuration list screen displays all the test configurations for the 
 
 In addition, you can view a more detailed description of the test configuration by positioning the mouse pointer over the host name hyperlink and waiting for the popup "tooltip" to appear. If you click on the host name hyperlink, you will be taken to the [test configuration details page](#test-configuration-details). Clicking on any of the pagination links at the bottom of the page will advance you to the next set of hosts in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### New Test Configuration
-
 Clicking on the "***New Configuration***" button adds a new test configuration to the bottom of the list with a default name.
 
-
 ### Delete
-
 Clicking on the "***Delete***" button deletes the test configurations whose check-boxes have been selected in the host list.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button reloads the list of test configurations; this is useful when new configurations are being added by other users, and you want to make sure you have the most up-to-date list displayed.
 
-
 ### Edit
-
 Each test configuration in the list has an "***Edit***" button in its right-most column. When you click this button or just
 *double-click* on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column.
 
@@ -46,7 +40,6 @@ When you have made your updates, you can either click "***Save***"to commit the 
 
 
 ## Test Configuration Details
-
 When you click on a test configuration entry in the list, you are taken to the test configuration details page illustrated below:
 
 ![](img/Test_Case_Management_234.png)

@@ -10,12 +10,16 @@ Spira's timesheets functionality lets users track how much time they have spent 
 ## My Timesheet
 You can access "My Timesheet" from the User Profile dropdown on the [Global Navigation](./User-Product-Management.md/#global-navigation) menu.
 
+![My Timesheet in global navigation menu](img/my-timesheet-global-navigation.png)
+
 When you first load the My Timesheet the page will have the following parts:
 
 - **Navigation buttons**: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to
 - **Artifact dropdown**: this lists all the incidents and tasks you own across all active products you are a member of
 - **Timesheet data range**: a heading showing the start and end date of the current timesheet
 - **Timesheet grid**: a table for viewing and recording timesheet entries for each day of the timesheet. Each time you load the page it will start by showing the current week's timesheet.
+
+![My Timesheet page example](img/my-timesheet-page.png)
 
 The timesheet grid will be empty at first. To add information to it, select an artifact from the artifact dropdown and click the "+" button. You will then see a row added for the artifact. 
 

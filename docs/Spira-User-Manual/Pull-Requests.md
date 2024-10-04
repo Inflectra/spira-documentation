@@ -25,6 +25,7 @@ Above the list of pull requests is the action toolbar. This lets you perform the
 - Delete any selected pull requests
 - Refresh the list of to see any recent updates
 - Filter buttons to apply or clear the current filter
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 The list of pull requests shows the following information about each pull request:
 
