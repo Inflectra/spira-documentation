@@ -336,6 +336,96 @@ The following field names are available when calling various [page functions](./
     - TestSetId
     - TestSetStatusId
 					
+### Available Data Properties
+The following data properties are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
+
+A given field may have data and metadata of multiple types, such as a label & an ID. in these cases, the field has multiple data properties for it's different components. This resource will summarize how to access these pieces of information on the details page as a SpiraApp developer & where to expect to find specific information available on artifact details pages.
+
+If you are unsure what is available, network requests in browser dev tools can be filtered by Form_Retrieve on details pages to capture the relevant response. the d.Fields object in the response contains field names as it's keys, and the values for a given field are the data properties available. This document is not an exhaustive list of data properties, as many are not likely to be useful for SpiraApp developers. 
+
+=== "textValue"
+    This data property contains the string information about a field. 
+
+    This is the relevant database property for text, rich text, and multi-select based fields & if changed, will change the relevant data in the database upon save.
+        
+    ??? note "Example use cases"
+        - The name & description of artifacts as raw text are stored in this property (Including markup in rich text fields)
+        - Multi-select value IDs are stored here, where this contains a string with a comma separated list of integers, where the integers are the IDs of each selected value (Available values & label mappings are stored in lookups data property)
+
+
+=== "intValue"
+    This data property contains integer based data. Some fields may be integer based in the database, but are displayed differently via their UI controls. All single select dropdowns use integers for their underlying ID values. Often times, the int value is the "real" database value, but is not what gets displayed to the end user within Spira's UI.
+
+    This is the relevant database property for single select dropdowns and effort values & if changed, will change the relevant data in the database upon save.
+
+    ??? note "Example use cases"
+        - ID of a single item selected for a dropdown property 
+        - Effort values (Stored as number of minutes)
+        - Integer custom property values
+
+
+=== "dateValue"
+    This data property contains dates. 
+    ??? note "Example use cases"
+        - Start and End dates of artifacts
+        - Last executed dates for tests
+
+    This is the relevant database property for all dates & if changed, will change the relevant data in the database upon save (Creation & last update dates cannot be updated this way)
+
+=== "caption"
+    This data property contains the captions for the fields as displayed in the UI, localized to the user's language settings. This could be used for referring to the name of specific fields, such as "Owner" from the field OwnerId in a displayed message.
+
+=== "lookups" 
+    This data property contains an object of potential values for dropdowns with the relevant ID as the objects' keys & their label values as the objects' values. For most standard fields, this options information is not stored here. Keys start with "k" followed by an integer, and the integer is the relevant ID (k must be removed to use the value). Cases where this is available:
+    
+    - Custom property fields of type list, multi-list, or user 
+    - Components on the incident details page
+
+=== "tooltip"
+    This data property contains tooltips information & sometimes alternate text formatting of certain data fields.
+
+    ??? note "Example Use Cases"
+        - Date fields have a user friendly string localized to the relevant culture's formatting
+        - Multi-select properties which are disabled have the list of selected items labels stored here as a 
+
+=== "fieldType"
+    This data property contains an ID conveying which type a field is. 
+    
+    To understand what this means more closely, see the [reference section about field types below](./SpiraApps-Reference.md/#field-types). 
+
+=== "Workflow Properties"
+    The following are boolean properties that indicate workflow or custom property constraints for a specific field. These could be written to to define more complex workflow constraints which are enforced via influencing the UI state for a given field based on some criteria. Relevant data properties:
+
+    - editable
+    - required
+    - hidden
+
+### Field Types
+Each field within Spira is one of a collection of standardized field types. This information is relevant to how the data for that field is displayed, formatted, and saved. 
+
+The following are the available field types with explanations and examples, so developers can build generic field handling around certain field types instead of writing code for each indvidual field. 
+
+Setting this value will likely break user saving & is not advised - SpiraApps which do so will not be published by Inflectra. 
+
+| ID  | Name           | Notes                  |
+| --- | -------------- | ---------------------- |
+| 1   | Text           | This type refers specifically to plain text fields, not rich text. Artifact names are also an exception to this. |
+| 2   | Lookup         | This type covers most single-select dropdowns - usually the database value for this field is an Integer of an ID, while the displayed value is a label for the selected item |
+| 3   | DateTime       | This type refers to date & time inputs such as start & end dates |
+| 4   | Identifier     | This type covers the current artifact's ID (Such as the IncidentId of an Incident) |
+| 5   | Equalizer      | This type is for progress & artifact status summary bars such as Test Execution status for test cases of a release or Progress for a task |
+| 6   | Name | This type is for artifact names. |
+| 7   | CustomPropertyLookup | This is for custom properties of type List |
+| 8   | Integer         | This type is for custom properties of type integer |
+| 9   | TimeInterval    | This is for fields where an amount of time is entered, such as Estimated Effort |
+| 10  | Flag            | This type covers boolean flags such as Test Case "Suspect?" and custom properties of type Boolean |
+| 11  | HierarchyLookup | This type covers lookups which are for Releases or Requirements, as they have special controls to show hierarchy relations |
+| 12  | Html            | This type covers rich text properties, such as descriptions & text custom properties with the "Rich Text" option set to Yes | 
+| 13  | Decimal         | This type covers decimal custom properties and planning points |
+| 14  | CustomPropertyMultiList | This type covers custom properties of type Multiselect List |
+| 15  | CustomPropertyDate | This type covers date (Not Date & Time) custom properties |
+| 16  | MultiList       | This type covers multi-select standard fields, such as Incident Components and Tags. Tags have special handling, where the text value is a list of tags as text |
+
 
 ## Available resources
 ### Inflectra Javascript helpers
