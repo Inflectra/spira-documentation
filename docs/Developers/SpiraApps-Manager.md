@@ -250,7 +250,7 @@ There are a number of events that a SpiraApp can register against. This allows S
     - **registerEvent_operationReverted**: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters
     - **registerEvent_dropdownChanged**: Registers an event handler on the [specified dropdown field](./SpiraApps-Reference.md/#available-field-names) for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  
     - **registerEvent_gridLoaded**: registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
-    - **registerEvent_dataPreSave**: Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. This allows you to view or modify the values which will be saved in order to drive your SpiraApp's behaviors. 
+    - **registerEvent_dataPreSave**: Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. 
 
 
 === "Example"
