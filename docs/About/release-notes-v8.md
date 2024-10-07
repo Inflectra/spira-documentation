@@ -1,6 +1,12 @@
 # Release Notes for Spira v8
 ## Version 8.4 (October 2024)
 !!! info "Summary"
+    My Timecard has been replaced with a completely new My Timesheet page (not available in SpiraTest). Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features.
+
+    On every artifact list page there is a button that lets you download the current view of the grid (with its filters and columns) as a CSV file.
+
+    Teams functionality (SpiraPlan only) is now out of beta, and available for all users.
+    
 
 ??? success "New Features"
     * **[As a developer, I can track the time I spend against my assigned work on what dates, so that I can keep clear records](../Spira-User-Manual/Timesheets.md/#my-timesheet)**
