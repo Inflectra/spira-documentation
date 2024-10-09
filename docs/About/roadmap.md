@@ -12,23 +12,19 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q3 2024
-- Enhance the Spira timecard to record the date and time of activities against incidents and tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+## Q4 2024
+- Further enhancements to Spira timecard features so users can edit existing entries as we prepare to add support for timesheet approval processes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Support new functionalities in SpiraApps so that developers can create even more powerful and useful SpiraApps
 
-## Q4 2024
-- Enhance traceability with a new requirement view with integrated test case analysis and potentially other artifacts.
-- Further enhancements to Spira timecard features <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
-- Improve devops integrations and workflows based on user feedback <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Update the user experience for navigating the application.
-
 ## 2025
+- Enhance traceability with a new requirement view with integrated test case analysis and potentially other artifacts.
 - Evolve program level functionality with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
 - Further enhance administrative audit tracking with system and template level change tracking.
 - Further extend Spira’s powerful test set features to allow users to run test sets in series.
+- Improve association tracking when baselining is enabled for associations between risks and requirements, and risks to test cases. 
 - New product team features so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
 - New program level planning board. <span class="pill">SpiraPlan</span>
+- Update the user experience for navigating the application.
 - Upgrade the user experience for key parts of the application, based on user feedback in 2024.
 
 

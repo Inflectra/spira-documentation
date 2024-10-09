@@ -12,29 +12,24 @@ In addition, you can view a more detailed description of the test run by hoverin
 
 The sidebar shows a chart of the last 30 days of test run activity, broken down, for each day, by the test run status. This is a useful chart to quickly track the testing activity of the product -- this is not the same as overall product status. (For info, this chart matches that on the Product Homepage's  Test Run Progress widget)
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the test run list. This is useful as other people may be completing test runs, and after stepping away from the computer for a short-time, you can click this button to make sure you are viewing the most current test run list for the product.
 
-
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the test run list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### Printing Items
-
 To quickly print a single test run or list of test runs you can select the items' checkboxes and then click the Print icon. This will display a popup window containing a printable version of the selected items.
 
 
 ## Test Run Details
-
 When you click on any of the individual test runs in the test run list, you are taken to the Test Run details page (not to be confused with the Test Case details page) shown below:
 
 ![](img/Test_Case_Management_203.png)
@@ -115,6 +110,6 @@ Each incident is listed together with (by default) the type, status, priority, n
 
 ### Tasks
 
-This tab is only visible to users of SpiraPlan. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
+This tab is only visible to users of SpiraPlan or SpiraTeam. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
 
 ![](img/Test_Case_Management_209.png)

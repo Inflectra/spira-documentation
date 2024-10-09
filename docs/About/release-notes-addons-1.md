@@ -1,6 +1,18 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## September 2024
+- [Jira Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md):
+
+    - Support mapping 'JiraIssueKey' (if any) to custom property type ‘text’ for Requirements in Spira. This way, customers can have that value on the requirement’s list page
+    - Feature of syncing Tags and Labels between Spira and Jira
+    - Support of 'duedate' Jira field mapping, Jira -> Spira
+    - Improved handling of User custom properties from Jira > Spira Cloud
+    - Fixed issues with potential duplicates on next sync cycle
+    - Fixed reporter field updating issue, due to improper mapping
+    - Feature to turn off synchronization of attachments (after creation), Incidents or Requirements
+    - Fixed issue with new Releases creation in Spira
+
 ## July 2024
 - **[Excel365 import export tool](../Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365).md)** v3.1.0.0: This version limits the maximum page size for Test Cases to 200 records to avoid crashes and memory errors [IN:9509]
 - **[Google Sheets](../Migration-and-Integration/Importing-from-Google-Sheets.md)** v3.1.0.0: This version limits the maximum page size for Test Cases to 200 records to avoid crashes and memory errors [IN:9509]

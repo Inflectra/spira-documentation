@@ -23,6 +23,10 @@ There is a colored progress bar column called "Allocation" that graphically illu
 
 Clicking on a resource name will take you to the Resource Details page.
 
+The toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
+
 
 ## Resource Details
 

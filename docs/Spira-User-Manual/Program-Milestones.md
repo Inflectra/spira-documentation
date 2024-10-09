@@ -72,6 +72,7 @@ You can carry out a number of useful operations with the toolbar:
 - **Refresh**: this button will reload the program milestone list (not the entire page)
 - **Filter**: read about [how to create and manage filters](Application-Wide.md#filtering) - note that program milestones do not support saving or sharing filters
 - **Clone**: creates clones of all currently selected program milestones
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 - **Show / Hide Columns**: By default the following columns are shown: ID, name, progress, type, status, and owner. The columns dropdown lets you change the columns shown (for standard and custom properties). Toggle a column's visibility by clicking on it from the dropdown. The shown columns is saved for each user and for each program.
 
 ## Milestone Details

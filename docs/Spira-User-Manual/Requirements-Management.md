@@ -148,6 +148,10 @@ Each requirement is, by default, displayed along with its importance/priority (r
 
 The requirements list consists of a hierarchical arrangement of the various requirements and functionalities that need to be provided by the system in question. The structure is very similar to the Work Breakdown Structure (WBS) developed in Microsoft Product®, and users of that software package will find this very familiar to use. When you create a new product, this list will be empty.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
+
 ### Insert
 Click the `Insert` button to add requirements. This button let's you add requirements in different ways:
 
@@ -158,47 +162,34 @@ Click the `Insert` button to add requirements. This button let's you add require
 Once the new requirement has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose a priority, status and/or author.
 
 ### Delete
-
 Clicking on the "***Delete***" button deletes all the requirements whose check-boxes have been selected. If any of the items are summary items, the child requirements are also deleted. If all the children are deleted from a summary item, it changes back into a non-summary item.
 
 ### Indent
-
 Clicking on the "***Indent***" button indents all the requirements whose check-boxes have been selected. If any of the items are made children of a requirement that had no previous children, it will be changed from a detail item into a summary item.
 
 ### Outdent
-
 Clicking on the "***Outdent***" button de-indents all the requirements whose check-boxes have been selected. If any of the items were the only children of a summary requirement item, then that item will be changed back from a summary item to a detail item.
 
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the requirements list (not the entire page). This is useful as other people may be modifying the list of requirements at the same time as you, and after stepping away from the computer for a short-time, you should click this button to make sure you are viewing the most current requirements list for the product.
 
 ### Edit
-
 Each requirement in the list has an "**Edit**" button display in its right-most column. When you click this button or just *double-click* on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Update***" buttons are displayed in the last column:
 
 ![](img/Requirements_Management_84.png)
 
-
-
-
 If you click "***Edit***" on more than one row, the "***Update***" buttons are only displayed on the first row selected. You can make changes to all the editable rows and then update the changes by clicking the one "***Update***" button. Also, if you want to make the same change to multiple rows (e.g. to change five requirements from "In Progress" status to "Completed"), you can click on the "fill" icon to the right of the editable item, which will propagate the new value to all editable items in the same column.
 
 ![](img/Requirements_Management_85.png)
-
-
-
 
 If you want to edit lots of items, first select their checkboxes and then click the \[Edit\] button on the same row as the Filters and it will switch all the selected items into edit mode.
 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
 
 ### Show Level
-
 Choosing an indent level from the 'Show Level' drop down box allows you to quickly and easily view the entire requirements list at a specific indent level. For example you may want to see all requirements drilled-down to the *third* level of detail. To do this you would simply choose 'Level 3' from the list, and the requirements will be expanded / collapsed accordingly.
 
 ### Filtering
-
 Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 ### Show / Hide Columns
@@ -219,35 +210,26 @@ To move a requirement in the requirements hierarchy, there are two options:
 
 ![](img/Requirements_Management_88.png)
 
-
-
-
 Once you have the requirement positioned at the correct place that you want it inserted, just release the mouse button. To move multiple items simply select their checkboxes and then drag-and-drop one of the selected items.
 
 2.  Alternatively, you can select the check-boxes of the requirements you want to move and then select the Edit \> Cut menu option. This will cut the current requirements selection to the clipboard. Then you should select the place where you want the requirements to be inserted and choose the Edit \> Paste option. The requirements will now be moved into the destination location you specified.
 
 ### Exporting Requirements
-
 Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 ### Creating Test Cases from Requirements
-
 To quickly create test cases from a group of requirements, all you need to do is select the check-boxes of the appropriate requirements and then click Tools \> ***Create Test Cases***. This will then create new test cases based on the selected requirements.
 
 ### Creating a Test Set from Requirements
-
 To quickly create a new test set from a group of requirements, all you need to do is select the check-boxes of the appropriate requirements and then click Tools \> ***Create Test Set***. This will then create new test set containing the test cases that are already mapped to the selected requirement(s).
 
 ### Printing Items
-
 To quickly print a single requirement or list of requirements you can select the items' checkboxes and then click Tools \> ***Print Items***. This will open a new window containing a printable version of the selected items.
 
 ### Focus-On Branch
-
 Sometimes you will see a list of filtered requirements displayed and you would like to view all of the items that in the same branch of the requirements tree, even those that don't match the current filter. To view the branch, select the checkbox of the branch and then click Tools \> ***Focus on***, and the system will clear the current filters and then expand just the selected branch.
 
 ### Right-Click Context Menu
-
 SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the requirements list and the following menu will be displayed:
 
 ![](img/Requirements_Management_90.png)
@@ -255,11 +237,9 @@ SpiraPlan® provides a shortcut -- called the *context menu* - for accessing som
 You can now choose any of these options as an alternative to using the icons in the toolbar.
 
 ### Viewing Requirements from Shared Products
-
 If you are displaying the requirements list for a product has required shared from other products, you will see the option on the top-right to view the requirements from the shared product(s):
 
 ![](img/Requirements_Management_91.png)
-
 
 If you choose the option to show the requirement from 'All Products' and not just the current product, the shared products are displayed, grouped under the name of the product they are being shared from:
 
@@ -283,7 +263,6 @@ You can pick between each of these views using the view selection button group a
 Note: you can only view requirements from the current product in these four additional views, whether or not you are sharing requirements from other products with this product.
 
 ## Requirements Sorted List
-
 ![](img/requirements-sorted-list.png)
 
 This view lets you view the requirements in a flat, sortable list that does not show the requirements hierarchy. You can still see the hierarchy of an item by hovering the mouse over its name to display the tooltip.
@@ -298,6 +277,7 @@ One major benefit of this view is that when you filter by a field, you only get 
 - **Refresh**: Clicking this button reloads the requirements list (not the entire page).
 - **Edit**: this works the same way as on the requirements hierarchy list - see [above](#edit).
 - **Filter**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 - **Show / Hide Columns**: this works the same way as on the requirements hierarchy list - see [above](#show-hide-columns)
 - **Clone**: To clone a requirement, select it and click "***Clone***" from the New menu option. When cloning a parent requirement all of its children are also cloned. Cloned items are added to the hierarchical list at the same indent level as the previous bottom most requirement in the hierarchy.
 

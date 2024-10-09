@@ -47,6 +47,7 @@ You can carry out a number of useful operations with the toolbar:
     - **Cut Items**: to cut the selected capability/capabilities from their current position
     - **Paste Items**: to paste any capability/capabilities on the clipboard above the currently selected capability (make sure to only select a single capability)
 
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 - **Show / Hide Columns**: By default the following columns are shown: ID, name, progress, type, status, and owner. The columns dropdown lets you change the columns shown (for standard and custom properties). Toggle a column's visibility by clicking on it from the dropdown. The shown columns is saved for each user and for each program.
 
 Using the cut and paste buttons described above, you can move capabilities around the hierarchy. Alternatively, you can select the capabilities and drag and drop them into their new position.

@@ -146,14 +146,15 @@ For those releases that have at least one requirement task associated with them,
 
 Clicking on a release's hyperlink will take you to the [release details](#release-details) page for the item in question.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Filtering
-
 Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 
 ### Insert
-
 The "***Insert***" button has an attached dropdown menu that lets you:
 
 - insert a release (this is the default if you click the main "*Insert*" button)
@@ -167,29 +168,20 @@ If you insert a child release or sprint, the new item is inserted *below* the cu
 
 Once the new release has been inserted, the item is switched to "Edit" mode so you can change its name, version number or other information.
 
-
 ### Delete
-
 Clicking on the "***Delete***" button deletes all the releases whose check-boxes have been selected. If any of the releases have child releases/sprint, then the child releases and sprints are also deleted.
 
 
 ### Indent
-
 Clicking on the "***Indent***" button indents all the releases whose check-boxes have been selected. Note: you cannot indent a release or sprint if it is *below* a sprint, as sprints are not allowed to have child items.
 
-
 ### Outdent
-
 Clicking on the "***Outdent***" button de-indents all the releases whose check-boxes have been selected.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the release list. This is useful as other people may be modifying the list of releases at the same time as you, and after stepping away from the computer for a short-time, you should click this button to make sure you are viewing the most current release list for the product.
 
-
 ### Edit
-
 Each release/sprint in the list has an "***Edit***" button display in its right-most column. When you click this button or click on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column:
 
 ![](img/Release_Management_260.png)
@@ -200,21 +192,15 @@ If you want to edit lots of items, first select their checkboxes and then click 
 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
 
-
 ### Show Level
-
 Choosing an indent level from the 'Show Level' drop down box allows you to quickly and easily view the entire release list at a specific indent level. For example you may want to see all releases drilled-down to the
 *third* level of detail. To do this you would simply choose 'Level 3'
 from the list, and the releases will be expanded / collapsed accordingly.
 
-
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the release list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Copying Releases/Sprints
-
 To copy a release/sprint or set of releases/sprints, simply select the check-boxes of the release/sprint you want to copy and then select the Edit \> Copy Items menu option. This will copy the current release/sprint selection to the clipboard. Then you should select the place where you want the releases/sprints to be inserted and choose the Edit \> Paste Items option.
 
 The releases/sprints will now be copied into the destination location you specified. The name of the copied releases/sprints will be prefixed with "Copy of..." to distinguish them from the originals. Note that copied releases/sprints will also include the test mapping information from the originals.
@@ -223,7 +209,6 @@ The releases/sprints will now be copied into the destination location you specif
     If you want to copy a parent release and its children only select the parent release. You do not need to also select each of its child releases. 
 
 ### Cloning Releases/Sprints
-
 To clone a release/sprint or set of releases/sprints, open particular release and select "***Clone***" from the New menu option.
 Please note that if you're cloning from the child release details page then only child release will be cloned. If you're cloning the parent release then all the children releases is getting cloned as well.
 
@@ -237,7 +222,6 @@ When cloning (or copying) a release note that:
 - followers, comments, and history are *not* cloned
 
 ### Moving Releases/Sprints
-
 To move a release/sprint in the hierarchy, there are two options:
 
 1.  Click on the release/sprint you want to move and drag the icon to the location you want it moved. An empty space will appear to show you where it will be inserted. Once you have the requirement positioned at the correct place that you want it inserted, just release the mouse button. To move multiple items simply select their checkboxes and then drag-and-drop one of the selected items
@@ -247,28 +231,20 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 
 
 ### Exporting Releases/Sprints
-
 Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
-
 ### Creating Test Sets from Releases
-
 As a shortcut you can click the Tools \> Create Test Set option to create a new test set for each of selected releases. The created test sets will include all of the test cases associated with a release. This is useful in regression testing when you have created a new release and want to be able to quickly assign a tester to ensure that all the functionality in the release works as expected.
 
-
 ### Printing or Saving Items
-
 To quickly print a single release/sprint or list of releases/sprints you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
-
 ### Right-Click Context Menu
-
 SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the release list and the following menu will be displayed:
 
 ![](img/Release_Management_262.png)
 
 You can now choose any of these options as an alternative to using the icons in the toolbar
-
 
 
 ## Releases Additional List Views

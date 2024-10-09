@@ -33,6 +33,7 @@ The main toolbar has operations you can perform on the document list or selected
 - [add associations](#add-associations-in-bulk) to other artifacts in the same product
 - export selected documents to another product
 - apply, update, clear, and save [filters](Application-Wide.md#filtering)
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 - toggle whether to show documents in the current folder only or a flat list of all documents across all folders
 - show or hide specific fields on the main grid
 

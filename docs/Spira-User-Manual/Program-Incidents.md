@@ -11,3 +11,7 @@ The program incident list lets you see all of the incidents (bugs, enhancements,
 ![](img/Program_Management_455.png)
 
 You can access this feature by clicking on the **Incidents** menu entry in the program navigation. You can filter and sort by specific product, or by the various fields displayed in the table.
+
+The toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)

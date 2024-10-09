@@ -93,6 +93,13 @@ To export one or more of a particular artifact:
 
 ![](img/Incident_Tracking_241.png)
 
+### Download as CSV
+
+In the toolbar of many list pages is a button with a download button. Clicking this will download a CSV file of the data you are currently viewing. The CSV file will include only the columns you are currently viewing. Only the rows shown are downloaded. The file has the name of the artifact and the current date and time. 
+
+Certain fields like test coverage or progress look like little charts on the grid itself. In the CSV file these show text information about the field to make it easier to review. 
+
+The following artifacts support this feature on their lists pages: requirements, releases, documents, automation hosts, test cases, test configurations, test runs, test sets, pull requests, incidents, tasks, risks, resources, program releases, program incidents, program milestones, and capabilities.
 
 ## Artifact Details Pages
 

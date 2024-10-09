@@ -63,31 +63,30 @@ gray.
 
 To determine the exact aggregate test folder execution status information, position the mouse pointer over the bar-chart, and the number of tests in each of the execution statuses (passed, failed, not-run, blocked, caution) will be displayed as a "tooltip". Note that if you change the owner of a test folder, then all the child test cases will be assigned the same owner. This allows you to more easily associate entire folders to test cases to be executed by a specific user.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
+
 
 ### Add a Test Case
-
 Click the "***New Test Case***" button will add a test case in the currently displayed folder (ie the one marked in bolder on the folder tree and also shown in the yellow information box). The new test case will be added at the bottom of the list.
 
 Once the new test case has been inserted, the item is switched to "Edit" mode so that you can rename the default name and choose an owner and/or author. Note that all new test cases are initially set with an execution status of "Not Run".
 
 
 ### Delete
-
 Clicking on the "***Delete***" button deletes all the test cases and/or test folders whose check-boxes have been selected. If any of the items are test folders, then the contents of the folder(s) are not deleted, but instead moved to the root folder.
 
 
 ### Execute
-
 Clicking on the "***Execute Tests***" button (accessed from the "Tools" menu or context menu) executes all the test cases selected, together with all the test cases contained with any selected test folders. The test execution functionality of SpiraPlan® is explained in more detail in [Test Step Details](#test-step-details). NOTE: if the product does not allow you to execute test cases this button will not be available.
 
 
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the test case list. This is useful as other people may be modifying the list of test cases at the same time as you, or executing specific test cases, and after stepping away from the computer for a short-time, you can click this button to make sure you are viewing the most current test case list for the product.
 
 
 ### Editing a Test Case
-
 Each test case in the list has an "***Edit***" button in its right-most column. When you click this button (or *double-click* on any of the cells in the row), you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Update***" buttons are displayed in the last column:
 
 ![](img/Test_Case_Management_125.png)
@@ -100,7 +99,6 @@ When you have made your updates, you can either click "***Update***" to commit t
 
 
 ### Editing a Test Folder
-
 Test folders shown on the right hand list pane do not have an "***Edit***" button. To edit a test folder, first click the "***Edit***" button at the bottom of the left hand folder tree. This will place the whole folder tree into edit mode---each folder will get a small "Edit" button of its own.
 
 ![](img/Test_Case_Management_126.png)
@@ -111,19 +109,16 @@ Clicking on the "***Edit***" button of the folder you want to edit will display 
 
 
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the test case list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
 Note: If you hide the 'execution status' column, the test case folders will no longer show the count of test cases contained within the folder.
 
 
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 
 ### Viewing the Test Status for a Release
-
 By default, when you view the list of test cases, it will display an aggregate status for all releases of the product. I.e. the test list will include all the test cases in the system (regardless of which release they apply to) and the execution status will reflect the most recent test run -- regardless of which release it was for.
 
 To change the test case list to just display test cases and execution status for a particular active release, change the release selected in the drop-down list located in the top-right from "All Releases" to a specific release:
@@ -138,19 +133,16 @@ As a shortcut, when you select a specific release for viewing, subsequent execut
 
 
 ### Copying Test Cases
-
 To copy one or more test cases, select the check-boxes of the test cases (or test case folder) you want to copy and then select Edit > Copy Items from the menu. This will copy the current test case / test case folder selection to the clipboard. Then select the place you want the test cases to be inserted and choose the Edit > Paste Items option.
 
 The test cases will now be copied to the destination you specified. The name of the copied test cases will have " - Copy" added to the end to distinguish them from the originals. If you are copying test case folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.
 
 
 ### Blocking and Unblocking Test Cases
-
 To designate one or more test cases as blocked, select the check-boxes of the test cases and then select the Edit \> Block Test Cases menu option.  This temporarily blocks test cases so that testers know they are not available for testing. Unlike actually executing the test cases and recording an execution status, no test run is recorded and summary metrics (such as requirements test coverage and test set status) are not updated. Likewise, to unblock test cases, select their check-boxes and then select the Edit \> Unblock Test Cases menu option. This changes their Execution Status from Blocked to Not Run. The Edit menu will be enabled if the current user has Test Case \> Bulk Edit permission.   
 
 
 ### Moving Test Cases or Folders
-
 There are two options for moving test cases or folders:
 
 1.  Click on the test case/folder you want to move in the right hand list and drag it to the folder in the left hand folder tree you want it moved to. The background of the new folder will change to show where it will be inserted:

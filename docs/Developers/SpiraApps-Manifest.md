@@ -98,7 +98,7 @@ A SpiraApp can require system level settings to be configured and stored. These 
     - **placeholder**: Placeholder for the setting to help users
     - **position**: Optional int for the order to show the settings in
     - **tooltip**: On hover tooltip for users
-    - **settingGroupName**: Optional name of the settingGroup to use for this setting
+    - **settingGroup**: Optional name of the settingGroup to use for this setting
 
 === "Example"
 
@@ -111,7 +111,7 @@ A SpiraApp can require system level settings to be configured and stored. These 
         placeholder: 5
         position: 1
         tooltip: By default 5 rows are displayed
-        settingGroupName: groupAlpha
+        settingGroup: groupAlpha
     ```
 
 ### Product admin settings
@@ -134,7 +134,7 @@ The settings is an array of objects, each object must be in the form as below. S
     - **placeholder**: Placeholder for the setting to help users
     - **position**: Optional int for the order to show the settings in
     - **tooltip**: On hover tooltip for users
-    - **settingGroupName**: Optional name of the settingGroup to use for this setting
+    - **settingGroup**: Optional name of the settingGroup to use for this setting
 
 === "Example"
 
@@ -146,7 +146,7 @@ The settings is an array of objects, each object must be in the form as below. S
         artifactTypeId: 1
         position: 1
         tooltip: Please select a requirement custom property from the dropdown list
-        settingGroupName: groupAlpha
+        settingGroup: groupAlpha
     ```
 
 ## Pages

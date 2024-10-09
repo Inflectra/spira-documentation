@@ -48,24 +48,20 @@ Note: the test set status is separate from the execution status of the individua
 - **Blocked**: The tester or automation host was unable to execute the assigned test set because of a failure external to the actual test case.
 - **Deferred**: The test set was previously assigned, but: execution had not been completed (at least one test case does not have a recorded execution status); and the Tester deleted the Pending Test Run entry from their My Page.
 
+In addition to the features described below, the toolbar also lets you:
+
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
 ### Delete
-
 Clicking on the "***Delete***" button deletes the currently selected test sets. It will delete the association between the test set and its contained test cases, but it will not delete the test cases themselves.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the list of test sets. This is useful if other people are making changes to the test set list and you want to make sure that you have the most current version.
 
-
 ### Focus On
-
 The "***Focus On***" button is a useful when you have performed a filter on the list of test sets and then wish to quickly navigate to the folder of a particular test set shown in the list. After selecting a test set, clicking the button will move the left hand folder tree to the folder that contains the selected test set. It will also change the list view on the right to show all of the test sets within that folder (i.e. the selected test set and its siblings).
 
-
 ### Edit
-
 Each test set in the list has an "***Edit***" button in its right-most column. When you click this button, *double-click* on any of the cells in the row, or select a row and click the "***Edit***" button in the toolbar at the top of the page. This will change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" and "***Cancel***" buttons are displayed in the last column:
 
 ![](img/Test_Case_Management_212.png)
@@ -78,17 +74,12 @@ When you have made your updates, you can either click "***Save***" to commit the
 
 
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the test set list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Filtering & Sorting
-
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### Viewing the Test Status for a Release
-
 By default, when you view the list of test sets, it will display an aggregate status for all releases of the product. This means that the list shows:
 
 - all the test sets in the system (regardless of which release they apply to) 
@@ -108,14 +99,12 @@ As a shortcut, when you select a specific release for viewing, subsequent execut
 
 
 ### Copying Test Sets
-
 To copy one or more test sets, select the check-boxes of the test sets (or test set folder) you want to copy and then select Edit > Copy Items from the menu. This will copy the current test set / test set folder selection to the clipboard. Then select the place you want the test sets to be inserted and choose the Edit > Paste Items option.
 
 The test sets will now be copied to the destination you specified. The name of the copied test sets will have " - Copy" added to the end to distinguish them from the originals. If you are copying test set folders, only the top level folders' name(s) will will have " - Copy" added to the end - the new copies of items in the folder will have the same names as the originals.
 
 
 ### Moving Test Sets
-
 There are two options for moving test sets or folders:
 
 1.  Click on the test set/folder you want to move in the right hand list and drag it to the folder in the left hand folder tree you want it moved to. The background of the new folder will change to show where it will be inserted:
@@ -126,16 +115,12 @@ Once you have the test set/folder positioned at the correct place that you want 
 
 2.  Alternatively you can simply select the check-boxes of the test sets you want to move and then select the Edit \> Cut Items menu option. This will cut the current test set selection to the clipboard. Then select the place where you want the test cases to be inserted and choose the Edit \> Paste Items option. The test sets will now be moved into the destination specified.
 
-
 ### Printing or Exporting Items
-
 To quickly print a single test set, test set folder or list of test sets you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items.
 
 Alternatively you can save the selected items into a number of formats, available via the Tools dropdown.
 
-
 ### Right-Click Context Menu
-
 SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:
 
 ![](img/Test_Case_Management_215.png)

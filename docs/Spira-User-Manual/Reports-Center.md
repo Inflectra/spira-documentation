@@ -332,7 +332,8 @@ The y-axis of the graph displays the total remaining number of story points that
 The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: total remaining story points for each releases in the product
-- **Specific Release**: total remaining story points for each of the sprints in the selected release
+- **Specific Release with child sprints**: total remaining story points for each of the sprints in the selected release
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: total remaining story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
@@ -349,7 +350,8 @@ The y-axis of the graph displays the cumulative increase in number of story poin
 The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: increase in the story points for each releases in the product
-- **Specific Release**: increase in the story points for each of the sprints in the selected release
+- **Specific Release with child sprints**: increase in the story points for each of the sprints in the selected release
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: increase in the story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
@@ -364,7 +366,8 @@ The Requirements Velocity graph shows the total number of story points that have
 The y-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: total remaining story points for each releases in the product
-- **Specific Release**: total remaining story points for each of the sprints in the selected release
+- **Specific Release with child sprints**: total remaining story points for each of the sprints in the selected release
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: total remaining story points for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
@@ -397,7 +400,8 @@ The Task Velocity graph shows the total estimated and actual effort (in number o
 The y-axis of the graph displays the total estimated and actual effort delivered (in hours). The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: total estimated and actual effort for each releases in the product
-- **Specific Release**: total estimated and actual effort for each of the sprints in the selected release
+- **Specific Release with child sprints**: total estimated and actual effort for each of the sprints in the selected release
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: total estimated and actual effort for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
@@ -414,7 +418,8 @@ The y-axis of the graph displays the cumulative increase in work (in hours) for 
 The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: increase in work for each releases in the product
-- **Specific Release**: increase in work for each of the sprints in the selected release
+- **Specific Release with child sprints**: increase in work for each of the sprints in the selected release
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: increase in work for each working day in the date-range covered by the selected sprint
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
@@ -430,7 +435,8 @@ The blue line on the graphs indicates the ideal burndown. The other line shows t
 The x-axis display will change based on the selection of the [dropdown release picker](#overview):
 
 - **All Releases**: all active releases in the product
-- **Specific Release**: all sprints within the chosen release. If the release has no sprints, the chart will be empty -- child releases are not shown
+- **Specific Release with child sprints**: all sprints within the chosen release. If the release has no sprints, the chart will be empty -- child releases are not shown
+- **Specific Release with no child sprints**: nothing is shown
 - **Specific Sprint**: each day of the sprint, from its start to end date. In order for the chart to be meaningful, tasks must have start and end dates that are within the sprint's dates. 
 
 Clicking on the "***Display Data Grid***" button shows the underlying data used to generate the graph. Clicking the `Download Data as CSV` exports the data into Comma Separated Values (CSV) file. Some browsers support saving the graph as an image (JPEG, PNG and GIF formats).

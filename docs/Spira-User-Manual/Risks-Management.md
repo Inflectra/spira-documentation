@@ -14,33 +14,26 @@ The sidebar on the left gives you quick access to saved filters, along with usef
 
 In addition, you can view a more detailed description of the risk (along with any mitigations) by positioning the mouse pointer over the incident name hyperlink and waiting for the popup "tooltip" to appear. If you click on the risk name hyperlink, you will be taken to the [risk details](#risk-details) page. Clicking on any of the pagination links at the bottom of the page will advance you to the next set of risks in the list according to the applied filter and sort-order. There is also a drop-down-list at the bottom of the page which allows you to specify how many rows should be displayed in each page, helping accommodate different user preferences.
 
-### Filtering & Sorting
+In addition to the features described below, the toolbar also lets you:
 
+- [download the list to a CSV file](Application-Wide.md/#download-as-csv)
+
+### Filtering & Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
-
 ### New Risk
-
 Click on the "New Risk" button to go to the new risk screen. This is a special version of the [risk details](#risk-details) screen except, depending on how the workflow has been configured for your product, certain fields may be disabled.
 
-
 ### Delete
-
 Clicking on the "***Delete***" button deletes the risk(s) whose check-boxes have been selected in the risk list.
 
-
 ### Refresh
-
 Clicking on the "***Refresh***" button simply reloads the list of risks; this is useful when new risks are being added by other users, and you want to make sure you have the most up-to-date list displayed.
 
-
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the risk list as columns for the current product. To show a column that is not already displayed, select that column from the list of "Show..." column names and to hide an existing column, select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Edit
-
 Each risk in the list has an "***Edit***" button display in its right-most column. When you click this button or *double-click*
 on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column:
 
@@ -52,9 +45,7 @@ If you want to edit lots of items, first select their checkboxes and then click 
 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
 
-
 ### Cloning Risks
-
 To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit then "**Clone**". You can also clone a rsiks from its detailed view (using the dropdown next to the "New" button). Cloning a risk makes a copy of the selected risk with '... - Copy' added at the end of its name. When cloning risks note that:
 
 - all standard and custom properties are cloned
@@ -66,15 +57,11 @@ To create a clone of an existing risk or set of risks, select the check-boxes of
 - an association between the original risk and cloned risk is created
 - followers and history are *not* cloned
 
-
-
 ### Exporting Risks
-
 Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
 
 ### Printing Items
-
 To quickly print a single risk or list of risks you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 

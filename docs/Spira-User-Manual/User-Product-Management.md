@@ -269,7 +269,7 @@ Under some of the icons and headings are secondary menu options that display whe
 - **User Profile Icon**
 
     - [My Profile](#my-profile)
-    - [My Timecard](#my-timecard)
+    - [My Timesheet](./Timesheets.md/#my-timesheet)
     - [Documentation](#documentation)
     - [Show on boarding tours](#show-onboarding-tours)
     - [Keyboard shortcuts](Appendix-1-Keyboard-Shortcuts.md)
@@ -426,7 +426,7 @@ Click the `Unlink Account` button to stop using the external provider. The popup
 ![Unlink from a login provider](img/UserProduct_Management_oauth-myprofile-unlink.png)
 
 
-## Email Preferences
+### Email Preferences
 
 ![](img/UserProduct_Management_79.png)
 
@@ -435,7 +435,7 @@ Here you can configure the email address that the application will send notifica
 If the Enable Notifications cannot be changed, it means that the system is either not configured to send out notifications, or the administrator has disabled user's ability to opt out of notifications being sent.
 
 
-## Regional Settings
+### Regional Settings
 
 This tab will display the current culture and timezone associated with your profile:
 
@@ -446,7 +446,7 @@ By default all profiles will be set to use the application's default culture and
 Note: The system will only be installed with a certain number of language packs, so in some cases a selected culture will only change the number formats and not the languages displayed.
 
 
-## Actions
+### Actions
 
 This tab displays the list of recent actions that you have performed in the system (across all products):
 
@@ -455,19 +455,7 @@ This tab displays the list of recent actions that you have performed in the syst
 You can search and filter the grid to find changes by product, change date range, artifact type and type of change (added, deleted, or modified).
 
 
-## My Timecard
-
-When you click on My Page \> My Timecard the system will display a timecard that allows you to enter the effort worked on incidents and tasks currently assigned to you (across all your products):
-
-![](img/UserProduct_Management_82.png)
-
-The system will only include products that have time-tracking enabled for incidents and tasks, so if some of your assigned incidents or tasks are missing, please check with the product owner of the products affected to have them enable time-tracking.
-
-Each task or incident will be displayed along with its priority, severity, start-date, end-date, product name effort remaining and effort expended to date. For each item you can then indicate the additional actual effort performed (which will be added to the "actual effort") and modify the amount of hours remaining. Once you are satisfied, click
-\[Submit Timecard\] to commit the changes.
-
-
-
 ## Redirects
 - <span data-date="changed in 6.5 May 2020" id="product-home">[Product Homepage](Product-Homepage.md)</span>
 - <span data-date="changed in 6.5 May 2020" id="program-home">[Program Homepage](Program-Homepage.md)</span>
+- <span data-date="changed in 8.4 October 2024" id="timesheets">[Timesheets](Timesheets.md)</span>
