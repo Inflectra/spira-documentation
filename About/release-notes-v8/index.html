@@ -1542,6 +1542,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Timesheets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Timesheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Mobile-Access/" class="md-nav__link">
         
   
@@ -3130,6 +3157,33 @@
     
   
     Introduction to SpiraApps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraApps/AWS-Bedrock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Bedrock
   
 
     
@@ -8102,6 +8156,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-84-october-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4 (October 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-83-august-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8494,6 +8559,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-84-october-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.4 (October 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-83-august-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8566,6 +8642,106 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-84-october-2024">Version 8.4 (October 2024)<a class="headerlink" href="#version-84-october-2024" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>My Timecard has been replaced with a completely new My Timesheet page (not available in SpiraTest). Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features.</p>
+<p>On every artifact list page there is a button that lets you download the current view of the grid (with its filters and columns) as a CSV file.</p>
+<p>Teams functionality (SpiraPlan only) is now out of beta, and available for all users.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Timesheets/#my-timesheet">As a developer, I can track the time I spend against my assigned work on what dates, so that I can keep clear records</a></strong></p>
+<ul>
+<li>As a developer, when I go to the "My Timesheet" page I see a grid with the current working week, so I can prepare to track my time [RQ:4835]</li>
+<li>As a developer, I can add a row to the current timesheet for any incident or task assigned to me in any product, so I will be able to log my work [RQ:4836]</li>
+<li>As a developer, I can add time data to any row in the current timesheet, so I can track my hours worked where [RQ:4856]</li>
+<li>As a developer, I can save time data to any row in the current timesheet, so I can track my hours worked where [RQ:4837]</li>
+<li>As a developer, when I update my timesheet data for a single task, then the actual effort is correctly updated on that task, so the work is logged correctly [RQ:4850]</li>
+<li>As a developer, when I update my timesheet data for multiple tasks at once, then the actual effort is correctly updated on those tasks, so the work is logged correctly [RQ:4838]</li>
+<li>As a developer, when I update my timesheet data for a single incident, then the actual effort is correctly updated on that incident, so the work is logged correctly [RQ:4851]</li>
+<li>As a developer, when I update my timesheet data for multiple incidents at once, then the actual effort is correctly updated on those incidents, so the work is logged correctly [RQ:4839]</li>
+<li>As a developer, when I update my timesheet data for tasks and incidents at the same time, then the actual effort is correctly updated on those artifacts, so the work is logged correctly [RQ:4852]</li>
+<li>As a developer, I can see the total time I spent working each day on the timesheet, so I can better understand my work [RQ:4853]</li>
+<li>As a developer, I can see the total time I spent working on each artifact on the timesheet, so I can better understand my work [RQ:4840]</li>
+<li>As a developer, I can see the total time I spent working across the entire timesheet, so I can better understand my work [RQ:4855]</li>
+<li>As a developer, I can clearly see the current date if relevant on my timesheet, so I can easily add time to today [RQ:4842]</li>
+<li>As a developer, I can view my old timesheets, so that I can review and add to my previous entries [RQ:4841]</li>
+<li>As a developer, I can clearly see all the columns on the timesheet, to give me an easy to use experience [RQ:4857]</li>
+</ul>
+</li>
+<li>
+<p><strong>Add the ability for users to <a href="../../Spira-User-Manual/Application-Wide/#download-as-csv">download their current list page view to a CSV file</a></strong></p>
+<ul>
+<li>As a requirement user, I can download the current data I see on the sortable list page as a csv file [RQ:4956]</li>
+<li>As a requirement user, I can download the current data I see on the hierarchical list page as a csv file [RQ:4918]</li>
+<li>As a release user, I can download the current data I see on the list page as a csv file [RQ:4919]</li>
+<li>As a requirement user, I can expand and collapse the hierarchical list page and then download the data I see as a CSV file [RQ:4921]</li>
+<li>As a document user, I can download the current data I see on the list page as a csv file [RQ:4924]</li>
+<li>As an automation host user, I can download the current data I see on the list page as a csv file [RQ:4923]</li>
+<li>As a test case user, I can download the current data I see on the list page as a csv file [RQ:4933]</li>
+<li>As a test configuration user, I can download the current data I see on the list page as a csv file [RQ:4934]</li>
+<li>As a test run user, I can download the current data I see on the list page as a csv file [RQ:4935]</li>
+<li>As a test set user, I can download the current data I see on the list page as a csv file [RQ:4936]</li>
+<li>As a pull request user, I can download the current data I see on the list page as a csv file [RQ:4929]</li>
+<li>As an incident user, I can download the current data I see on the list page as a csv file [RQ:4925]</li>
+<li>As a task user, I can download the current data I see on the list page as a csv file [RQ:4917]</li>
+<li>As a risk user, I can download the current data I see on the list page as a csv file [RQ:4922]</li>
+<li>As a resource user, I can download the current data I see on the list page as a csv file [RQ:4930]</li>
+<li>As a program release user, I can download the current data I see on the list page as a csv file [RQ:4920]</li>
+<li>As a program incident user, I can download the current data I see on the list page as a csv file [RQ:4926]</li>
+<li>As a program milestone user, I can download the current data I see on the list page as a csv file [RQ:4927]</li>
+<li>As a capability user, I can download the current data I see on the list page as a csv file [RQ:4928]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>
+<p><strong>SpiraApps</strong>:</p>
+<ul>
+<li>Add a link at the top of the admin SpiraApps list pages to our website "marketplace" page so people can find more SpiraApps to install more easily [IN:9817]</li>
+<li>Add details page pre-save event to SpiraAppManager to allow SpiraApps to modify the results of a saved form without needing to make it's own API call to do so after the original save [IN:9800]</li>
+<li>Add Support for Calling <a href="../../Developers/SpiraApps-Manager/#aws-bedrock-api-calls">AWS Bedrock</a> APIs from SpiraAppManager [IN:10034]</li>
+<li>Fix the boolean setting for SpiraApp settings causing a database violation error for some users who upgraded to 8.3 [IN:10145]</li>
+<li>Fix the SpiraAppManager.myPageIsFilterByProject <a href="../../Developers/SpiraApps-Manager/#properties">property</a> not always returning the correct value on the My Page [IN:9765]</li>
+<li>Update SpiraAppManager function(s) getDataItemField and updateFormField to handle blank data properties, to allow developers to more easily access &amp; update the values of fields on details pages [IN:9820]</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhancements</strong>:</p>
+<ul>
+<li>Add event log entries when a user does an action in <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools">Data Tools</a> [IN:9836]</li>
+<li>Add the product name and link to the heading of the <a href="../../Spira-Administration-Guide/Product-Users/#add-users-to-a-product">product membership administration page</a> when adding new users to the product [IN:9842]</li>
+<li>Move Teams out of 'Beta' so that all SpiraPlan customers can use its features without worrying about beta functions [IN:9893]</li>
+<li>Update API v5, v6, and v7 to fully support cross product test sets [IN:9785]</li>
+<li>Update Jira dataSync details pages "Sync Mode" label to provide a summary about the optional NoAttachments flag [IN:9862]</li>
+</ul>
+</li>
+<li>
+<p><strong>Bug Fixes</strong>:</p>
+<ul>
+<li>Disable Test Case Test Step Section Edit buttons based on the Workflow to stop unauthorized users being able to edit test steps when using live loading specifically [IN:9270]</li>
+<li>Fix localization not working for the column names of the grid on the Product Membership page [IN:10076]</li>
+<li>Fix often not being able to move a folder into one beneath it from the folder edit dialog (as the lower folders are missing from the dropdown) [IN:9845]</li>
+<li>Fix product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools">Data Tools</a> not fixing indentation problems found with releases [IN:9937]</li>
+<li>Fix product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools">Data Tools</a> not fixing indentation problems found with requirements [IN:9752]</li>
+<li>Fix subversion repos not supporting revisions that have the same file added or removed [IN:9931]</li>
+<li>Fix Test Case Parameter Refresh potentially deleting parameters if a database error occurs [IN:9737]</li>
+<li>Fix the automation host Test Run List (and counting number) not including cross product executions [IN:10120]</li>
+<li>Fix the task details page sidebar showing incorrect or invalid tooltips for requirements when displaying for requirements and releases when displaying for releases (instead show no tooltip at all) [IN:9851]</li>
+<li>Fix the test case details page test sets tab not showing test sets from other products that the test case is in [IN:9805]</li>
+<li>Fix the test run counting number on the test Set details page not including cross product executions [IN:10121]</li>
+<li>Fix the v6 and v7 SOAP APIs not correctly and consistently handling API key credentials [IN:9850]</li>
+<li>Fix the v7.0 SOAP API not letting you create users if the product with ID 1 has been deleted [IN:9985]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-83-august-2024">Version 8.3 (August 2024)<a class="headerlink" href="#version-83-august-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

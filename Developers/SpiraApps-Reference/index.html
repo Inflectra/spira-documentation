@@ -1542,6 +1542,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Timesheets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Timesheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Mobile-Access/" class="md-nav__link">
         
   
@@ -3130,6 +3157,33 @@
     
   
     Introduction to SpiraApps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraApps/AWS-Bedrock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Bedrock
   
 
     
@@ -8068,6 +8122,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#available-data-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Data Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Types
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8745,6 +8821,28 @@
     <span class="md-ellipsis">
       
         Available Field Names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-data-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Data Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Types
       
     </span>
   </a>
@@ -9466,6 +9564,175 @@
 </div>
 </div>
 </div>
+<h3 id="available-data-properties">Available Data Properties<a class="headerlink" href="#available-data-properties" title="Permanent link">&para;</a></h3>
+<p>The following data properties are available when calling various <a href="../SpiraApps-Manager/#page-actions">page functions</a> related to artifact details pages like getDataItemField or updateFormField. </p>
+<p>A given field may have data and metadata of multiple types, such as a label and an ID. in these cases, the field has multiple data properties for it's different components. Below you can see how to access this data and metadata on the details pages. You will also see how to find specific information available on artifact details pages.</p>
+<p>If you are unsure what is available, network requests in browser dev tools can be filtered by Form_Retrieve on details pages to capture the relevant response. the d.Fields object in the response contains field names as it's keys, and the values for a given field are the data properties available. This document is not an exhaustive list of data properties, as many are not likely to be useful for SpiraApp developers. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:8"><input checked="checked" id="textvalue" name="__tabbed_2" type="radio" /><input id="intvalue" name="__tabbed_2" type="radio" /><input id="datevalue" name="__tabbed_2" type="radio" /><input id="caption" name="__tabbed_2" type="radio" /><input id="lookups" name="__tabbed_2" type="radio" /><input id="tooltip" name="__tabbed_2" type="radio" /><input id="fieldtype" name="__tabbed_2" type="radio" /><input id="workflow-properties" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="textvalue">textValue</label><label for="intvalue">intValue</label><label for="datevalue">dateValue</label><label for="caption">caption</label><label for="lookups">lookups</label><label for="tooltip">tooltip</label><label for="fieldtype">fieldType</label><label for="workflow-properties">Workflow Properties</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This data property contains the string information about a field. </p>
+<p>This is the relevant database property for text, rich text, and multi-select fields and if changed, will change the relevant data in the database upon save.</p>
+<details class="note">
+<summary>Example use cases</summary>
+<ul>
+<li>The name and description of artifacts as raw text are stored in this property (Including markup in rich text fields)</li>
+<li>Multi-select value IDs are stored here, as comma separated list of integers, where the integers are the IDs of each selected value (available values and label mappings are stored in the lookups data property)</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>This data property contains integer based data. Some fields may be integer based in the database, but are displayed differently via their UI controls. All single select dropdowns use integers for their underlying ID values. Often, the int value is the "real" database value, but is not what gets displayed to the end user within Spira's UI.</p>
+<p>This is the relevant database property for single select dropdowns, effort values, and integer custom properties and if changed, will change the relevant data in the database upon save.</p>
+<details class="note">
+<summary>Example use cases</summary>
+<ul>
+<li>ID of a single item selected for a dropdown property </li>
+<li>Effort values (Stored as number of minutes)</li>
+<li>Integer custom property values</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>This data property contains dates. </p>
+<p>This is the relevant database property for all dates and if changed, will change the relevant data in the database upon save (Creation and last update dates cannot be updated this way)</p>
+<details class="note">
+<summary>Example use cases</summary>
+<ul>
+<li>Start and End dates of artifacts</li>
+<li>Last executed dates for tests</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>This data property contains the captions for the fields as displayed in the UI, localized to the user's language settings. This could be used for referring to the name of specific fields, such as "Owner" from the field OwnerId in a displayed message.</p>
+</div>
+<div class="tabbed-block">
+<p>This data property contains an object of potential values for certain dropdowns with the relevant ID as the objects' keys and their label values as the objects' values. For most standard fields, this information is <em>not</em> stored here. Keys start with "k" followed by an integer, and the integer is the relevant ID (k must be removed to use the value). Cases where this is available:</p>
+<ul>
+<li>Custom property fields of type list, multi-list, or user </li>
+<li>Components on the incident details page</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>This data property contains tooltips information and sometimes alternate text formatting of certain data fields.</p>
+<details class="note">
+<summary>Example Use Cases</summary>
+<ul>
+<li>Date fields have a user friendly string localized to the relevant culture's formatting</li>
+<li>Multi-select properties which are disabled have the list of selected items labels stored here as a </li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>This data property contains an ID representing the field type. </p>
+<p>To understand what this means more closely, see the <a href="./#field-types">field types section below</a>. </p>
+</div>
+<div class="tabbed-block">
+<p>The following are boolean properties that indicate workflow or custom property constraints for a specific field. These could be written to to define more complex workflow constraints which are enforced via influencing the UI state for a given field based on some criteria. Relevant data properties:</p>
+<ul>
+<li>editable</li>
+<li>required</li>
+<li>hidden</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="field-types">Field Types<a class="headerlink" href="#field-types" title="Permanent link">&para;</a></h3>
+<p>Each field within Spira is one of a collection of standardized field types. This information is relevant to how the data for that field is displayed, formatted, and saved. </p>
+<p>The table below shows the available field types, so developers can build generic field handling around certain field types instead of writing code for each individual field. </p>
+<p>Setting this value will likely break user saving and SpiraApps which do so will therefore be rejected for publication. </p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Text</td>
+<td>This type refers specifically to plain text fields, not rich text. Artifact names are also an exception to this.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lookup</td>
+<td>This type covers most single-select dropdowns - usually the database value for this field is an Integer of an ID, while the displayed value is a label for the selected item</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DateTime</td>
+<td>This type refers to date and time inputs such as start and end dates</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Identifier</td>
+<td>This type covers the current artifact's ID (Such as the IncidentId of an Incident)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Equalizer</td>
+<td>This type is for progress and artifact status summary bars such as Test Execution status for test cases of a release or Progress for a task</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Name</td>
+<td>This type is for artifact names.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CustomPropertyLookup</td>
+<td>This is for custom properties of type List</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Integer</td>
+<td>This type is for custom properties of type integer</td>
+</tr>
+<tr>
+<td>9</td>
+<td>TimeInterval</td>
+<td>This is for fields where an amount of time is entered, such as Estimated Effort</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Flag</td>
+<td>This type covers boolean flags such as Test Case "Suspect?" and custom properties of type Boolean</td>
+</tr>
+<tr>
+<td>11</td>
+<td>HierarchyLookup</td>
+<td>This type covers lookups which are for Releases or Requirements, as they have special controls to show hierarchy relations</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Html</td>
+<td>This type covers rich text properties, such as descriptions and text custom properties with the "Rich Text" option set to Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Decimal</td>
+<td>This type covers decimal custom properties and planning points</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CustomPropertyMultiList</td>
+<td>This type covers custom properties of type Multiselect List</td>
+</tr>
+<tr>
+<td>15</td>
+<td>CustomPropertyDate</td>
+<td>This type covers date (Not Date and Time) custom properties</td>
+</tr>
+<tr>
+<td>16</td>
+<td>MultiList</td>
+<td>This type covers multi-select standard fields, such as Incident Components and Tags. Tags have special handling, where the text value is a list of tags as text</td>
+</tr>
+</tbody>
+</table>
 <h2 id="available-resources">Available resources<a class="headerlink" href="#available-resources" title="Permanent link">&para;</a></h2>
 <h3 id="inflectra-javascript-helpers">Inflectra Javascript helpers<a class="headerlink" href="#inflectra-javascript-helpers" title="Permanent link">&para;</a></h3>
 <p>Each Javascript contents for a SpiraApp is embedded on the relevant page wrapped in an IIFE block and set to use strict. The SpiraApp code is also prepended to include access to useful constants:</p>

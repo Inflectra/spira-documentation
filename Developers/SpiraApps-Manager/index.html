@@ -1542,6 +1542,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Spira-User-Manual/Timesheets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Timesheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Spira-User-Manual/Mobile-Access/" class="md-nav__link">
         
   
@@ -3130,6 +3157,33 @@
     
   
     Introduction to SpiraApps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SpiraApps/AWS-Bedrock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Bedrock
   
 
     
@@ -8833,7 +8887,7 @@
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">isSpiraPlan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">productType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;SpiraPlan&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// e.g. true</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">stepsGridId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">;</span><span class="w"> </span><span class="c1">// e.g. &quot;cplMainContent_grdScenarioSteps&quot; </span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">stepsGridId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">requirementSteps</span><span class="p">;</span><span class="w"> </span><span class="c1">// e.g. &quot;cplMainContent_grdScenarioSteps&quot; </span>
 </code></pre></div>
 </div>
 </div>
@@ -9112,6 +9166,7 @@
 <li><strong>registerEvent_operationReverted</strong>: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters</li>
 <li><strong>registerEvent_dropdownChanged</strong>: Registers an event handler on the <a href="../SpiraApps-Reference/#available-field-names">specified dropdown field</a> for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  </li>
 <li><strong>registerEvent_gridLoaded</strong>: registers an event handler to trigger when a <a href="../SpiraApps-Reference/#available-grid-ids">specific grid</a> is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.</li>
+<li><strong>registerEvent_dataPreSave</strong>: Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. </li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -9129,7 +9184,7 @@
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataFailure</span><span class="p">(</span><span class="nx">runOnDataFailure</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnDataFailure</span><span class="p">(</span><span class="nx">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The SpiraApp cannot proceed because Spira had this problem: </span><span class="si">${</span><span class="nx">exception</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_operationReverted</span><span class="p">(</span><span class="nx">runOnStatusReverted</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnStatusReverted</span><span class="p">(</span><span class="nx">statusId</span><span class="p">,</span><span class="w"> </span><span class="nx">isOpen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -9142,11 +9197,22 @@
 <span class="w">        </span><span class="c1">//arbitrarily block any attempts to set a value to above 20</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_gridLoaded</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The grid with id </span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="si">}</span><span class="sb"> was (re)loaded`</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataPreSave</span><span class="p">(</span><span class="nx">populateDefaultEffortForNewIncidents</span><span class="p">);</span><span class="w"> </span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">populateDefaultEffortForNewIncidents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">incidentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;IncidentId&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">estimatedEffort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;EstimatedEffort&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//if there is no incident id (new incident) and no estimated effort, add a default value</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">estimatedEffort</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">incidentId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;EstimatedEffort&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">120</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
 </div>
@@ -9154,24 +9220,53 @@
 </div>
 <h2 id="page-actions">Page actions<a class="headerlink" href="#page-actions" title="Permanent link">&para;</a></h2>
 <p>A SpiraApp can make requests to Spira to perform certain actions on certain pages.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio" /><input id="example_8" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="available-actions" name="__tabbed_9" type="radio" /><input id="example-usage" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="available-actions">Available Actions</label><label for="example-usage">Example Usage</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<details class="note">
+<summary><strong>reloadForm()</strong></summary>
+<p>Reloads the current main overview on a details page. </p>
+<p>Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.</p>
+</details>
+<details class="note">
+<summary><strong>getDataItemField(fieldName: string, dataProperty?: string)</strong></summary>
+<p>Retrieves a single field of the currently viewed artifact on a details page. </p>
 <ul>
-<li><strong>reloadForm</strong>: reloads the current main overview on a details page. Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.</li>
-<li><strong>getDataItemField</strong>: gets the current live value of a single field on a details page. This function takes two parameters: the <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> and the data property. </li>
-<li><strong>updateFormField</strong>: updates a single field on a details page, so that the UI updates with the new value immediately. This function takes three parameters: the <a href="../SpiraApps-Reference/#available-field-names">name of the field</a>, the data property, and the new value. </li>
-<li><strong>reloadGrid</strong>: refreshes the specified grid if it exists on the page. Takes a single parameter, which is the ID of the grid, that can be obtained from the gridIds <a href="#properties">property function</a> (string)</li>
-<li><strong>setWindowLocation</strong>: loads a new page in the browser. Takes a single parameter, which is the full URL (string)</li>
+<li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of a field</a> of an artifact</li>
+<li><strong>dataProperty</strong>: The <a href="../SpiraApps-Reference/#available-data-properties">data property</a> containing the type of information you want</li>
 </ul>
+</details>
+<details class="note">
+<summary><strong>updateFormField(fieldName: string, dataProperty?: string, newValue: any)</strong></summary>
+<p>Updates a field on an artifact details page.</p>
+<ul>
+<li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
+<li><strong>dataProperty</strong>: The <a href="../SpiraApps-Reference/#available-data-properties">data property</a> containing the piece of information about this field you want to modify</li>
+<li><strong>newValue</strong>: The new value to set the data property to on the given field.</li>
+</ul>
+</details>
+<details class="note">
+<summary><strong>reloadGrid(gridId: SpiraAppManager.gridIds)</strong></summary>
+<p>Refreshes the specified grid if it exists on the page. </p>
+<ul>
+<li><strong>gridId</strong>: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). <a href="../SpiraApps-Reference/#available-grid-ids">Available grid ID keys</a></li>
+</ul>
+</details>
+<details class="note">
+<summary><strong>setWindowLocation(URL: string)</strong></summary>
+<p>Loads a new page in the browser.</p>
+<ul>
+<li><strong>URL</strong>: URL to navigate the user's browser to </li>
+</ul>
+</details>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadForm</span><span class="p">();</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Fix the icon used to save&quot;</span>
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this tasks&quot;</span><span class="p">);</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this task&quot;</span><span class="p">);</span>
 
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">);</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">requirementSteps</span><span class="p">);</span><span class="w"> </span><span class="c1">// Refreshes the requirement steps grid on requirement details pages</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setWindowLocation</span><span class="p">(</span><span class="s2">&quot;https://inflectra.com&quot;</span><span class="p">);</span>
 </code></pre></div>
@@ -9181,7 +9276,7 @@
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">&para;</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">&para;</a></h3>
 <p>This helper function handles the creation of a UX control that allows users to interact with it freely. It creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_9" name="__tabbed_10" type="radio" /><input id="example_9" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_8" name="__tabbed_10" type="radio" /><input id="example_8" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The <code>createComboDialog</code> function takes the following parameters:</p>
@@ -9241,7 +9336,7 @@
 </div>
 <h2 id="logic-helpers">Logic helpers<a class="headerlink" href="#logic-helpers" title="Permanent link">&para;</a></h2>
 <p>The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_10" name="__tabbed_11" type="radio" /><input id="example_10" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_10">Explanation</label><label for="example_10">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_9" name="__tabbed_11" type="radio" /><input id="example_9" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9261,7 +9356,7 @@
 </div>
 </div>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_11" name="__tabbed_12" type="radio" /><input id="example_11" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_11">Explanation</label><label for="example_11">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_10" name="__tabbed_12" type="radio" /><input id="example_10" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_10">Explanation</label><label for="example_10">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9288,7 +9383,7 @@
 </div>
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">&para;</a></h2>
 <p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use the SpiraApp guid.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="explanation_12" name="__tabbed_13" type="radio" /><input id="example_12" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_12">Explanation</label><label for="example_12">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="explanation_11" name="__tabbed_13" type="radio" /><input id="example_11" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_11">Explanation</label><label for="example_11">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
