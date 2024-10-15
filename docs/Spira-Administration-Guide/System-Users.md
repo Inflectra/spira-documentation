@@ -274,8 +274,7 @@ This section lets you specify if the role allows users to add new documents to t
 
 
 ## View / Edit Teams
-!!! info "In beta, available in SpiraPlan only"
-    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
+!!! info "Available in SpiraPlan only"
 
 SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
