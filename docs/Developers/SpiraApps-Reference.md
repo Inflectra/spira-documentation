@@ -19,6 +19,7 @@ The following IDs are allowed for the settingTypeId property for system admin se
 | 8   | ArtifactFlexibleCustomProperty |                  |                 |
 | 9   | Multi line plain text          | Y                | Y               |
 | 10  | Boolean                        | Y                | Y               |
+| 11  | ArtifactTypeSingleSelect       | Y                |                |
 
 ### Artifact Types
 The list below shows the relevant IDs for different artifacts in Spira.
@@ -65,6 +66,7 @@ The list below shows the relevant IDs for different pages where SpiraApps can ru
 | 18  | AutomationHostDetails | N                |
 | 19  | IncidentList          | Y                |
 | 20  | IncidentDetails       | N                |
+| 21  | SpiraAppProductAdmin  | N                |
 
 ### Action Types
 The list below shows the IDs for different action types.

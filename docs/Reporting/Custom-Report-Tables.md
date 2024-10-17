@@ -1660,6 +1660,7 @@ This table combines the information from the timesheets table and the timesheet 
 | END_DATE               |
 | COMMENTS               |
 | APPROVER_COMMENTS      |
+| TIMESHEET_ENTRY_ID     |
 | ARTIFACT_TYPE_ID       |
 | ARTIFACT_TYPE_NAME     |
 | ARTIFACT_ID            |
