@@ -1,6 +1,18 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## October 2024
+- [TestRail Importer](../Migration-and-Integration/Migrating-from-TestRail.md):
+
+    - Handles TestRail API rate limiting when importing from TestRail cloud instances
+    - Imports custom fields for test cases and test runs
+    - Imports and maps test case priority, type, and status
+    - Handles TestRail test cases that don't have any defined steps
+    - Imports TestRail test templates as test case types
+    - Imports TestRail 'ref' field as Spira custom property
+    - Maps TestRail test run cases in a test plan to Spira test set test cases
+    - Handles embedded images that were not attached to the case in TestRail 
+
 ## September 2024
 - [Jira Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md):
 
