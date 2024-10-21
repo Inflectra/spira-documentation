@@ -39,7 +39,7 @@ Notes about syncing:
 - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are always synced from Spira and to Spira.
-- Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates
+- Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
 - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
 - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
@@ -109,6 +109,8 @@ You need to fill in the following fields for the plugin to operate correctly:
     - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
     - NoRequirements: enter the word "NoRequirements" to use this mode
     - NoIncidents: enter the word "NoIncidents" to use this mode
+
+    Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option *NoAttachments* to the sync mode field. Example: *NoRequirements,NoAttachments* or simply *NoAttachments* if you use the default mode
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
 - **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
