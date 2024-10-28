@@ -486,6 +486,7 @@ Each Javascript contents for a SpiraApp is embedded on the relevant page wrapped
 
 - `spiraAppManager`: an instance of a helper class, described more below
 - `APP_GUID`: string of the SpiraApp's guid
+- `WIDGET_ELEMENT`: HTMLElement object of the widget div when operating on a dashboard with a relevant SpiraApp widget (Such as the My Page)
 
 You can read the contents of these constants, but cannot write to them.
 
