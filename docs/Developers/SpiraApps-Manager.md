@@ -35,6 +35,11 @@ The following properties are available from the spiraAppManager. They are useful
     - **currentCulture**: returns the name of the user's chosen culture setting (string)
     - **productType**: returns the product type installed (string). The value will be one of "SpiraTest", "SpiraTeam", or "SpiraPlan".
     - **gridIds**: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are shown [here](./SpiraApps-Reference.md/#available-grid-ids)
+    - **artifactNames**: an object with artifact names localized to the end user's settings. Keys are Artifact type IDs & values are the localized names. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#artifact-types)
+    - **artifactTypes**: An object with the artifact names in english as keys & the artifact type IDs as the value. This is essentially the reverse of artifactNames. 
+    - **requirementStatuses**: An object with the requirement statuses lookups - keys are the names of the statuses in english & the value is the Status ID. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#requirement-statuses) 
+    - **releaseStatuses**: An object with release status lookups - keys are the names of the release statuses in english in camelcase. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#release-statuses)
+    - **testCaseStatuses**: An object with test case status lookups - keys are the names of the test cases statuses in english in camelcase. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#test-case-statuses)
 
 === "Example"
 
@@ -140,6 +145,15 @@ Note that this function is carried out client side so it does have access to any
         updatedIncidentBody,
         incidentRetrieve_Success,
         incidentRetrieve_Failure
+    );
+
+    //Uses JS Fetch API - returns the body of the API call already serialized to JSON or JSON Array   
+    let asAPromise: Promise<ResponseBody> = spiraAppManager.executeApiAsync(
+        "mySpiraApp",
+        "7.0",
+        "PUT",
+        url,
+        updatedIncidentBody
     );
     ```
 

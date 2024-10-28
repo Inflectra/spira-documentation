@@ -411,6 +411,7 @@ Setting this value will likely break user saving and SpiraApps which do so will 
 
 | ID  | Name                    | Notes                                                                                                                                                                        |
 | --- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 | 1   | Text                    | This type refers specifically to plain text fields, not rich text. Artifact names are also an exception to this.                                                             |
 | 2   | Lookup                  | This type covers most single-select dropdowns - usually the database value for this field is an Integer of an ID, while the displayed value is a label for the selected item |
 | 3   | DateTime                | This type refers to date and time inputs such as start and end dates                                                                                                         |
@@ -428,6 +429,56 @@ Setting this value will likely break user saving and SpiraApps which do so will 
 | 15  | CustomPropertyDate      | This type covers date (Not Date and Time) custom properties                                                                                                                  |
 | 16  | MultiList               | This type covers multi-select standard fields, such as Incident Components and Tags. Tags have special handling, where the text value is a list of tags as text              |
 
+### Artifact Statuses
+
+The following artifact statuses are not customizable, and as such, these lookups can be used to develop against these artifact's & their statuses. The property names are the object keys for the relevant spiraAppManager properties. 
+
+=== "Requirement Statuses"
+    Available on spiraAppManager.requirementStatuses
+
+    | ID | Name | Property Name |
+    | -- | ---- | ------------- |
+    | 1 | Requested | requested |
+    | 2 | Planned | planned |
+    | 3 | In Progress | inProgress |
+    | 4 | Developed | developed | 
+    | 5 | Accepted | accepted |
+    | 6 | Rejected | rejected |
+    | 7 | Under Review | underReview |
+    | 8 | Obsolete | obsolete |
+    | 9 | Tested | tested |
+    | 10 | Completed | completed |
+    | 11 | Ready for Review | readyForReview |
+    | 12 | Ready for Test | readyForTest |
+    | 13 | Released | released |
+    | 14 | Design in Progress | designInProgress |
+    | 15 | Design Approval | designApproval |
+    | 16 | Documented | documented |
+
+=== "Release Statuses"
+    Available on spiraAppManager.releaseStatuses
+
+    | ID | Name | Property Name |
+    | -- | ---- | ------------- |
+    | 1 | Planned | planned |
+    | 2 | In Progress | inProgress |
+    | 3 | Completed | completed | 
+    | 4 | Closed | closed |
+    | 5 | Deferred | deferred | 
+    | 6 | Cancelled | cancelled |
+
+=== "Test Case Statuses"
+    Available on spiraAppManager.testCaseStatuses
+
+    | ID | Name | Property Name |
+    | 1 | Draft | draft | 
+    | 2 | Ready for Review | readyForReview |
+    | 3 | Rejected | rejected |
+    | 4 | Approved | approved |
+    | 5 | Ready for Test | readyForTest |
+    | 6 | Obsolete | obsolete |
+    | 7 | Tested | tested | 
+    | 8 | Verified | verified |
 
 ## Available resources
 ### Inflectra Javascript helpers
