@@ -471,6 +471,7 @@ The following artifact statuses are not customizable, and as such, these lookups
     Available on spiraAppManager.testCaseStatuses
 
     | ID | Name | Property Name |
+    | -- | ---- | ------------- |
     | 1 | Draft | draft | 
     | 2 | Ready for Review | readyForReview |
     | 3 | Rejected | rejected |
