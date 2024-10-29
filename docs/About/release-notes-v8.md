@@ -1,4 +1,52 @@
 # Release Notes for Spira v8
+
+## Version 8.5 (November 2024)
+!!! info "Summary"
+    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page (not available in SpiraTest), this release lets users edit or reset existing timesheet entries.
+    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization.
+    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copy over all saved filters against a product to improve the user experience.
+    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page.
+
+??? success "New Features"
+    * **My Timesheet**
+
+        - As a developer, I can edit previously recorded timesheet entries, so that I can correct them [RQ:4938]
+        - As a developer, I can remove previously recorded timesheet entries by setting them to 0, so that I can correct them [RQ:4939]
+        - As a developer, I can update task actual effort recorded against timesheets by editing timesheets, so that I can correct them [RQ:4940]
+        - As a developer, I can update incident actual effort recorded against timesheets by editing timesheets, so that I can correct them [RQ:4941]
+
+    * **Timesheet reporting**
+
+        - As a report admin, I can access a custom report view for all [timesheets in the system](../Reporting/Custom-Report-Tables.md/#timesheets), to help create useful reports and analysis [RQ:4951]
+        - As a report admin, I can access a custom report view for all [timesheet statuses](../Reporting/Custom-Report-Tables.md/#timesheet-statuses), to help create useful reports and analysis [RQ:4952]
+        - As a report admin, I can access a custom report view for all [timesheets with their matching entries](../Reporting/Custom-Report-Tables.md/#timesheets-with-entries), to help create useful reports and analysis [RQ:4954]
+        - As a report admin, I can access a custom report view for all [timesheet entries](../Reporting/Custom-Report-Tables.md/#timesheet-entries) in the system, to help create useful reports and analysis [RQ:4953]
+
+    * **Product Cloning**
+
+        - When doing a reset [clone of a product](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning), and keeping the original template, also clone any saved filters on the product [RQ:4983]
+        - When doing a full [clone of a product](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning), and keeping the original template, also clone any saved filters on the product [RQ:4980]
+
+??? bug "Bug fixes and enhancements"
+
+    - Disable cells on My Timesheet for pre-existing rows when a user no longer has the ability to modify the related artifact [IN:10180]
+    - Fix add, edit, and remove icons not displaying on the [product membership admin page](../Spira-Administration-Guide/Product-Users.md/#editing-users) at narrower page widths [IN:10169]
+    - Fix data mappings for requirement, test case, and incident throwing an error on saving component mappings when a [product is cloned](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) or [created from an existing product](../Spira-Administration-Guide/System-Workspaces.md/#add-a-new-product) [IN:9982]
+    - Fix list and multi-list custom properties on the test run list page and test set test runs tab being displayed as blank or numbers instead of actual values for non cross product test runs [IN:10144]
+    - Fix not being able to add a tag to a new incident during test execution [IN:9997]
+    
+    * **SpiraApps**
+    
+        - Add a function to SpiraAppManager "[executeApiAsync](../Developers/SpiraApps-Manager.md/#internal-api-calls)" that returns a promise, to provide an alternative to the existing callback functionality [IN:9631]
+        - Add a helper to SpiraApp javascript loaded on home pages for "[WIDGET_ELEMENT](../Developers/SpiraApps-Reference.md/#inflectra-javascript-helpers)" to provide a streamlined way for developers to interact with the widget HTML element [IN:9872]
+        - Add [enums to the SpiraAppManager](../Developers/SpiraApps-Manager.md/#properties) to help developers more easily access and query data for artifact names, artifact types, requirement statuses, and test case statuses [IN:9876]
+        - Add functionality to the SpiraAppsManager to return [localized Spira Artifact names](../Developers/SpiraApps-Manager.md/#properties), to provide better user experiences [IN:9812]
+        - Add support for a SpiraApp [product admin setting](../Developers/SpiraApps-Manifest.md/#product-admin-settings) to show a dropdown of types for an artifact and allow admins to select a single type [IN:10124]
+        - Add support for a SpiraApp [product admin setting](../Developers/SpiraApps-Manifest.md/#product-admin-settings) to show a dropdown of types for an artifact and allow admins to select multiple types [IN:10225]
+        - Fix artifact status multi select [product setting type](../Developers/SpiraApps-Manifest.md/#product-admin-settings) does not working for SpiraApps on the SpiraApp product admin setting screen [IN:9766]
+        - Let SpiraApps provide more dynamic experiences on the SpiraApp [product details admin page](../Spira-Administration-Guide/Product-General-Settings.md/#spiraapp-settings), with the ability to run javascript and add interactive buttons [IN:10128]
+        - Transfer many SpiraApps that ship with Spira to the [marketplace](https://www.inflectra.com/Products/SpiraApps/) to improve discoverability for users [IN:10097]
+
 ## Version 8.4 (October 2024)
 !!! info "Summary"
     My Timecard has been replaced with a completely new My Timesheet page (not available in SpiraTest). Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features.
