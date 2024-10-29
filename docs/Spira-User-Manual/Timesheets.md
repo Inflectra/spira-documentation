@@ -25,6 +25,8 @@ The timesheet grid will be empty at first. To add information to it, select an a
 
 To add a time entry to an artifact, click into the cell for the relevant artifact and day. Type the time in the format hh:mm (min 00:01, max 23:59).
 
+To edit a newly entered or existing entry to an artifact, click into the relevant cell and adjust the time as needed. Setting the time to 0:00 will effectively delete the time in that cell (doing so for all cells for an artifact will delete the artifact from that timesheet). 
+
 If there are unsaved time entries in the timesheet the save button will be enabled. Click Save to commit the changes. This will update the actual effort for each task or incident. If you add 1 hour to a task for 3 different days on the timesheet, then the actual effort for that task will be increased by 3 hours. 
 
 Other features to note when using the timesheet grid:
@@ -32,7 +34,7 @@ Other features to note when using the timesheet grid:
 - The timesheet is sorted by the artifact name in alphabetical order
 - You cannot add timesheet entries to an artifact that you do not have permission to modify. In this case you will see a warning message identifying which artifacts were not updated. The same is true if the artifact has been deleted.
 - A single history record is recorded for each artifact modified in each save, even if multiple days are modified for a given artifact in a single save
-- You are not able to edit previously saved entries (which are shown as grayed out)
+- You are not able to edit previously saved entries for artifacts that you no longer have permissions to modify (in this case that artifact's row will be shown as grayed out with a lock symbol next to the artifact name)
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet
 - When viewing the timesheet for the current week, today will be highlighted to help you more easily add data for today
 - If you add an artifact to the timesheet but do not enter any time for any day then the artifact is not saved to the timesheet
