@@ -4,29 +4,32 @@
 
 This SpiraApp lets users create, complete, and view tasks from a convenient Product Home Page widget. 
 
+!!! info "About this SpiraApp"
+    - [ ] system settings
+    - [x] product settings 
+    - [ ] product template setup required
+    - [x] product home page widget
+
 ## Setup
-To effectively implement Quick Tasks in your product, you have to set up the Task Type that will be used and make it use a specific workflow. 
-
-### Product Template Setup
-You need to configure each product template for the product(s) you want to use Quick Tasks:
-
-1. Go to Tasks > Workflow and add a new Workflow called "Quick Task Workflow". Do not change anything else about this workflow.
-
-2. Go to Tasks > Type and add a new Type called "Quick Task" (or other name of your choice) and select the Workflow you just created
-
-![A row in the Task Type table containing the following: Type ID number, Type name, selected workflow, "No" (for pull request switcher), an empty radio button (for default type), "Yes" (for Active switcher). There is a red outlined box around the Type ID number and the selected workflow](img/quicktasks-task-type-setting.png)
-
-!!! info "Reusing a Task Type"
-    If your team already uses a special Task Type for miscellaneous to-do items, you can use that instead of creating a new one, just make sure to associate it with the Quick Task Workflow you created on step 1.
+To effectively implement Quick Tasks in your product, you have to set up the Task Type that will be used and optionally, make it use a specific workflow. 
 
 ### Product Settings
 For each product that uses Quick Tasks, a product administrator must select the default Quick Task Type in the Quick Tasks SpiraApp product settings.
 
-![SpiraApp product settings page with the Quick Task Type ID Number outlined by a red box](img/quicktasks-product-settings.png)
+![SpiraApp product settings page with the Quick Task Type option](img/quicktasks-product-settings.png)
+
+!!! tip "Creating a dedicated Workflow and Task Type for Quick Tasks"
+
+    Optionally, if you want to use a dedicated Task Type (e.g. "Quick Task") and use a dedicated Workflow for Quick Tasks, follow the steps below. This is useful when you have a highly customized Workflow in your template or just want to keep the Quick Tasks operations separated from the workflow rules of other Taks in your template.
+    
+    **To create a dedicated Task Workflow**, go to Administration > Tasks > Workflow and add a new Workflow (e.g. "Quick Task Workflow").
+
+    **To create a dedicated Task Type**, go to Administration > Tasks > Type and add a new Type (e.g."Quick Task").
 
 ## Using the SpiraApp
 
 !!! warning "Users must have 'Modify All' Tasks permission in order to complete their owned tasks using this widget"
+
 !!! warning "Users must have 'View' permissions for Releases in order to use this widget"
 
 ### Using the Quick Tasks Widget
