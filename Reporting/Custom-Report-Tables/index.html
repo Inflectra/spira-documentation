@@ -4835,6 +4835,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#timesheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheet-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet Entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheet-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet Statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheets-with-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets with Entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#users" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -10462,6 +10506,50 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#timesheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheet-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet Entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheet-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet Statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheets-with-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets with Entries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#users" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15051,6 +15139,224 @@
 </tr>
 <tr>
 <td>PRECONDITION</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timesheets">Timesheets<a class="headerlink" href="#timesheets" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>R_Timesheets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>TIMESHEET_ID</em></td>
+</tr>
+<tr>
+<td>SUBMITTER_USER_ID</td>
+</tr>
+<tr>
+<td>SUBMITTER_USER_NAME</td>
+</tr>
+<tr>
+<td>APPROVER_USER_ID</td>
+</tr>
+<tr>
+<td>APPROVER_USER_NAME</td>
+</tr>
+<tr>
+<td>TIMESHEET_STATUS_ID</td>
+</tr>
+<tr>
+<td>TIMESHEET_STATUS_NAME</td>
+</tr>
+<tr>
+<td>CREATION_DATE</td>
+</tr>
+<tr>
+<td>APPROVAL_DATE</td>
+</tr>
+<tr>
+<td>LAST_UPDATE_DATE</td>
+</tr>
+<tr>
+<td>START_DATE</td>
+</tr>
+<tr>
+<td>END_DATE</td>
+</tr>
+<tr>
+<td>COMMENTS</td>
+</tr>
+<tr>
+<td>APPROVER_COMMENTS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timesheet-entries">Timesheet Entries<a class="headerlink" href="#timesheet-entries" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>R_TimesheetEntries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>TIMESHEET_ENTRY_ID</em></td>
+</tr>
+<tr>
+<td>TIMESHEET_ID</td>
+</tr>
+<tr>
+<td>USER_ID</td>
+</tr>
+<tr>
+<td>USER_NAME</td>
+</tr>
+<tr>
+<td>ARTIFACT_TYPE_ID</td>
+</tr>
+<tr>
+<td>ARTIFACT_TYPE_NAME</td>
+</tr>
+<tr>
+<td>ARTIFACT_ID</td>
+</tr>
+<tr>
+<td>ARTIFACT_NAME</td>
+</tr>
+<tr>
+<td>EFFORT_MINUTES</td>
+</tr>
+<tr>
+<td>EFFORT_DATE</td>
+</tr>
+<tr>
+<td>PROJECT_ID</td>
+</tr>
+<tr>
+<td>PROJECT_NAME</td>
+</tr>
+<tr>
+<td>PROJECT_GROUP_ID</td>
+</tr>
+<tr>
+<td>PROJECT_GROUP_NAME</td>
+</tr>
+<tr>
+<td>RESOURCE_CATEGORY_ID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timesheet-statuses">Timesheet Statuses<a class="headerlink" href="#timesheet-statuses" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>R_TimesheetStatuses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>TIMESHEET_STATUS_ID</em></td>
+</tr>
+<tr>
+<td>TIMESHEET_STATUS_NAME</td>
+</tr>
+<tr>
+<td>IS_ACTIVE</td>
+</tr>
+<tr>
+<td>IS_OPEN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timesheets-with-entries">Timesheets with Entries<a class="headerlink" href="#timesheets-with-entries" title="Permanent link">&para;</a></h2>
+<p>This table combines the information from the timesheets table and the timesheet entries table to give a unified view of a timesheet and all of its key information. </p>
+<table>
+<thead>
+<tr>
+<th>R_TimesheetWithEntries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>TIMESHEET_ID</em></td>
+</tr>
+<tr>
+<td>SUBMITTER_USER_ID</td>
+</tr>
+<tr>
+<td>SUBMITTER_USER_NAME</td>
+</tr>
+<tr>
+<td>APPROVER_USER_ID</td>
+</tr>
+<tr>
+<td>APPROVER_USER_NAME</td>
+</tr>
+<tr>
+<td>TIMESHEET_STATUS_ID</td>
+</tr>
+<tr>
+<td>TIMESHEET_STATUS_NAME</td>
+</tr>
+<tr>
+<td>CREATION_DATE</td>
+</tr>
+<tr>
+<td>APPROVAL_DATE</td>
+</tr>
+<tr>
+<td>LAST_UPDATE_DATE</td>
+</tr>
+<tr>
+<td>START_DATE</td>
+</tr>
+<tr>
+<td>END_DATE</td>
+</tr>
+<tr>
+<td>COMMENTS</td>
+</tr>
+<tr>
+<td>APPROVER_COMMENTS</td>
+</tr>
+<tr>
+<td>TIMESHEET_ENTRY_ID</td>
+</tr>
+<tr>
+<td>ARTIFACT_TYPE_ID</td>
+</tr>
+<tr>
+<td>ARTIFACT_TYPE_NAME</td>
+</tr>
+<tr>
+<td>ARTIFACT_ID</td>
+</tr>
+<tr>
+<td>ARTIFACT_NAME</td>
+</tr>
+<tr>
+<td>EFFORT_MINUTES</td>
+</tr>
+<tr>
+<td>EFFORT_DATE</td>
+</tr>
+<tr>
+<td>PROJECT_ID</td>
+</tr>
+<tr>
+<td>PROJECT_NAME</td>
+</tr>
+<tr>
+<td>PROJECT_GROUP_ID</td>
+</tr>
+<tr>
+<td>PROJECT_GROUP_NAME</td>
+</tr>
+<tr>
+<td>RESOURCE_CATEGORY_ID</td>
 </tr>
 </tbody>
 </table>

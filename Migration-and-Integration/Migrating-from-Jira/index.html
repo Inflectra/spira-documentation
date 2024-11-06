@@ -7058,6 +7058,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#test-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Repositories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sets-and-test-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Sets and Test Plans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-executions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Executions
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8733,6 +8777,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#test-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Repositories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sets-and-test-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Sets and Test Plans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-executions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Executions
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8756,7 +8844,9 @@
 
 
 <h1 id="migrating-from-atlassian-jira">Migrating from Atlassian Jira<a class="headerlink" href="#migrating-from-atlassian-jira" title="Permanent link">&para;</a></h1>
-<p>This guide explains how to use Inflectra's "Jira Migration Tool" for importing projects, versions, requirements, issues, tasks and associated attachments from Atlassian Jira to SpiraTeam. This tool works with Jira Cloud, Server and Data Center editions.</p>
+<p>This guide explains how to use Inflectra's "Jira Migration Tool" for importing projects, versions, requirements, issues, tasks and associated attachments from Atlassian Jira to SpiraTeam. This tool works with <strong>Jira Cloud</strong>, <strong>Jira Server</strong> and <strong>Jira Data Center</strong> editions.</p>
+<p>This migration tool also includes options from migrating data from Jira
+plugins such as <strong>XRAY for test management</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Advanced Migration</p>
 <p>If the functions of this migration tool are not sufficient for your needs, please consider using our "<a href="https://github.com/Inflectra/spira-jira-migration-advanced">Advanced Jira to Spira Migration Tool</a>". This is an open source tool specifically for migration from Jira Server/DataCenter. It is developed by Inflectra's partner Tietoevry.</p>
@@ -8765,7 +8855,7 @@
 <p>This guide outlines how to install the migration tool for Jira onto a workstation so that you can then migrate whole projects from Jira to either SpiraTeam or SpiraPlan (hereafter referred to as SpiraTeam). It assumes that you already have a working installation of SpiraTeam v6.0 or later and a working version of Jira Cloud, Server or Data Center. </p>
 <div class="admonition warning">
 <p class="admonition-title">Minimum Version of Spira</p>
-<p><strong>You must be on at least SpiraTeam 6.13 to use this tool</strong>. If you have an earlier version of SpiraTeam you will need to upgrade to at least v6.13 before trying to migrate projects.</p>
+<p><strong>You must be on at least SpiraTeam 8.0 to use this tool</strong>. If you have an earlier version of SpiraTeam you will need to upgrade to at least v8.0 before trying to migrate projects.</p>
 </div>
 <p>The Windows installation package can be downloaded from the 'Add-Ons &amp; Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:</p>
 <p><img alt="" src="../img/jira-importer-1.png" /></p>
@@ -8779,7 +8869,29 @@
 <p>The first thing you need to do is to enter the URL for the instance of Jira that you want to import the information from (typically of the form <a href="http://servername/jira">http://servername/jira</a> for on-premise and <a href="https://myinstance.atlassian.net">https://myinstance.atlassian.net</a> for cloud) together with a valid username and password (or API Key if using Jira Cloud).</p>
 <p>Once you have entered this information, click the <strong>Login</strong> button and the list of possible Jira projects will be populated.</p>
 <p><img alt="" src="../img/jira-importer-4.png" /></p>
-<p>Select the Jira project that you want to <strong><em>import from</em></strong>, choose which artifacts (requirements, tasks incidents, users, attachments, etc.) you want to import, then click the <strong>Next</strong> button to move to the next page in the import wizard.</p>
+<p>Select the Jira project that you want to <strong><em>import from</em></strong>, choose which artifacts you want to import.
+The importer currently supports the following:</p>
+<ul>
+<li><strong>Jira issue types</strong><ul>
+<li>Requirements</li>
+<li>Tasks</li>
+<li>Incidents</li>
+</ul>
+</li>
+<li><strong>Other Jira artifacts</strong><ul>
+<li>Attachments</li>
+<li>Components</li>
+<li>Versions</li>
+<li>Users</li>
+</ul>
+</li>
+<li><strong>XRAY test objects</strong><ul>
+<li>Test Cases</li>
+<li>Test Runs</li>
+</ul>
+</li>
+</ul>
+<p>Once you have confirmed the artifacts, click the <strong>Next</strong> button to move to the next page in the import wizard.</p>
 <h3 id="connecting-to-spirateam">Connecting to SpiraTeam<a class="headerlink" href="#connecting-to-spirateam" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/jira-importer-5.png" /></p>
 <p>This page allows you to enter the URL, user name and password (or Api Key if using SSO) that you want to use to access the instance of SpiraTeam that you want to <strong><em>import to</em></strong> and click <strong>Login</strong>. (Typically the URL is of the form <a href="http://servername/SpiraTeam">http://servername/SpiraTeam</a> for on-premise and <a href="https://myinstance.spiraservice.net">https://myinstance.spiraservice.net</a> for cloud). The version of the importer being used must be compatible with the version of SpiraTeam you're importing into; if not you will receive an error message.</p>
@@ -8792,7 +8904,10 @@
 <p>On this page you will map the different SpiraTeam artifacts to the different issue types in Jira. Currently, the following artifact types in SpiraTeam can be mapped to Jira issues:
 - <strong>Requirements</strong> (used for user stories, features, epics, etc.)
 - <strong>Tasks</strong> (used for tasks and sub-tasks)
-- <strong>Incidents</strong> (used for all other issue types such as bugs, defects, issues)</p>
+- <strong>Incidents</strong> (used for all other issue types such as bugs, defects, issues)
+- <strong>Test Case</strong> (used for XRAY test cases and pre-conditions)
+- <strong>Test Set</strong> (used for XRAY test plans)
+- <strong>Test Run</strong> (used for XRAY test executions)</p>
 <p>Once you have mapped the artfiacts, click the <strong>Start Import</strong> button to actually begin the process of importing the various artifacts from Jira into SpiraTeam.</p>
 <h3 id="importer-progress">Importer Progress<a class="headerlink" href="#importer-progress" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/jira-importer-8.png" /></p>
@@ -8800,7 +8915,7 @@
 <p><img alt="" src="../img/jira-importer-9.png" /></p>
 <p>During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the <strong>Done</strong> button will be enabled. Clicking this button will close the importer. You should now log into SpiraTeam using the same user name and password that was used for the import to view the imported project.</p>
 <h2 id="what-is-imported">What is Imported?<a class="headerlink" href="#what-is-imported" title="Permanent link">&para;</a></h2>
-<p>The migration tool will import the following artifacts:</p>
+<p>The migration tool will import the following Jira artifacts:</p>
 <ul>
 <li>Product Definition together with components, priorities, types and statuses</li>
 <li>Custom Properties and Custom Lists</li>
@@ -8810,6 +8925,13 @@
 <li>Tasks</li>
 <li>Incidents, together with their associated lists of priorities and statuses</li>
 <li>Any attachments associated with the requirements, tasks and incidents</li>
+</ul>
+<p>The migration tool will import the following XRAY artifacts:</p>
+<ul>
+<li>Test case repositories</li>
+<li>Test steps</li>
+<li>Test sets and test plans</li>
+<li>Test executions</li>
 </ul>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <p>Any of the Jira issue types that are mapped to requirements in SpiraTeam:</p>
@@ -8826,6 +8948,24 @@
 <p><img alt="" src="../img/jira-incidents-1.png" /></p>
 <p>Will be imported into SpiraTeam as types of incident:</p>
 <p><img alt="" src="../img/jira-incidents-2.png" /></p>
+<h3 id="test-repositories">Test Repositories<a class="headerlink" href="#test-repositories" title="Permanent link">&para;</a></h3>
+<p>The test case folders, hierarchy and names are imported, along with the IDs of the various XRAY test cases:</p>
+<p><img alt="" src="../img/jira-xray-importer-1.png" /></p>
+<h3 id="test-steps">Test Steps<a class="headerlink" href="#test-steps" title="Permanent link">&para;</a></h3>
+<p>The migration tool will migrate XRAY test cases that contain standard steps with an Action, Description, Description and Sample Data:</p>
+<p><img alt="" src="../img/jira-xray-importer-2.png" /></p>
+<p>Note that it will convert XRAY parameters from the formal used in XRAY to those in SpiraTest. It also migrates over the test parameter values from the corresponding XRAY data set.</p>
+<p>It will also correctly migrate over any test cases that contain links to other test cases as their steps (or a combination of both):</p>
+<p><img alt="" src="../img/jira-xray-importer-3.png" /></p>
+<h3 id="test-sets-and-test-plans">Test Sets and Test Plans<a class="headerlink" href="#test-sets-and-test-plans" title="Permanent link">&para;</a></h3>
+<p>The migration tool will migrate the XRAY test sets and test plans into SpiraTest as test sets:</p>
+<p><img alt="" src="../img/jira-xray-importer-4.png" /></p>
+<p>The test sets will be imported into a flat list in SpiraTest (that you can organize by folder, post-migration), together with the mapping to the various test cases included in the XRAY test set or test plan.</p>
+<h3 id="test-executions">Test Executions<a class="headerlink" href="#test-executions" title="Permanent link">&para;</a></h3>
+<p>The XRAY test executions and sub-test executions will be imported into SpiraTest together with their mapped test cases and test runs. These will be migrated into SpiraTest as a test run. The various fields and statuses are faithfully migrated.</p>
+<p><img alt="" src="../img/jira-xray-importer-5.png" /></p>
+<p>The test run migration includes the test run step level of detail, with the appropriate XRAY test run step results imported, including the expected result, actual result and any test parameter values:</p>
+<p><img alt="" src="../img/jira-xray-importer-6.png" /></p>
 
 
 

@@ -8958,7 +8958,7 @@
 <li>or create a reset copy of the product</li>
 <li>and optionally clone the template for whichever of the above options you choose </li>
 </ul>
-<p>Whichever copy / clone option you choose, product settings (planning options and testing settings), components and product membership will all be copied over to the new product.</p>
+<p>Whichever copy / clone option you choose, product settings (planning options and testing settings), components, product membership, and saved filters<sup id="fnref:saved-filters"><a class="footnote-ref" href="#fn:saved-filters">1</a></sup> (shared and not shared) will all be copied over to the new product.</p>
 <p><strong>Full clone of the product</strong>: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin <a href="../Product-General-Settings/#product-data-tools">Data Tools page</a>, and after this coverage and traceability should look identical between the original and new product.</p>
 <p>While we attempt to create as perfect a clone as possible using this method, there are some limitations to this process:</p>
 <ul>
@@ -9004,7 +9004,7 @@
 <ul>
 <li>enter a name for the product (which cannot be the same as any already in use);</li>
 <li>select which program it belongs to and optionally enter a detailed description and/or web-site URL;</li>
-<li>decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, and customizations;</li>
+<li>decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, components and customizations;</li>
 <li>select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.</li>
 <li>decide whether the product should have baselining enabled or not. Read more about baselining <a href="../../Spira-User-Manual/Release-Management/#baselining">here</a> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
 <li>you should initially make sure that the product is marked as "Active";</li>
@@ -9149,6 +9149,14 @@
 <li>mark each user as inactive</li>
 </ul>
 <p>These inactive items will still be visible on the relevant administration pages, but no one will see them in the main application. </p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:saved-filters">
+<p>Saved filters are only cloned if you use the same template as the original product. If you clone the template, the filters are not cloned. Cloned saved filters have some limitations: any filters by a specific ID (eg incident ID) will still be there and will not work as they reference an ID in the original product. Additionally, custom properties of types automation host and release are not updated for the new product.&#160;<a class="footnote-backref" href="#fnref:saved-filters" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 

@@ -8156,6 +8156,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-85-november-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5 (November 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-84-october-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8559,6 +8570,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-85-november-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.5 (November 2024)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-84-october-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8642,6 +8664,72 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-85-november-2024">Version 8.5 (November 2024)<a class="headerlink" href="#version-85-november-2024" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Following the introduction of the new <a href="../../Spira-User-Manual/Timesheets/#my-timesheet">My Timesheet</a> page (not available in SpiraTest), this release lets users edit or reset existing timesheet entries.</li>
+<li>Timesheet <a href="../../Reporting/Custom-Report-Tables/">custom report views</a> are now available to help you analyze timesheets across your entire organization.</li>
+<li><a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">Product cloning</a> now copies over all saved filters against a product to improve the user experience.</li>
+<li>We continue to enhance what is possible with SpiraApps and improve the <a href="../../Developers/SpiraApps-Overview/">developer experience</a>, based on feedback. This includes SpiraApps being able to run from the product admin settings page.</li>
+</ul>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong>My Timesheet</strong></p>
+<ul>
+<li>As a developer, I can edit previously recorded timesheet entries, so that I can correct them [RQ:4938]</li>
+<li>As a developer, I can remove previously recorded timesheet entries by setting them to 0, so that I can correct them [RQ:4939]</li>
+<li>As a developer, I can update task actual effort recorded against timesheets by editing timesheets, so that I can correct them [RQ:4940]</li>
+<li>As a developer, I can update incident actual effort recorded against timesheets by editing timesheets, so that I can correct them [RQ:4941]</li>
+</ul>
+</li>
+<li>
+<p><strong>Timesheet reporting</strong></p>
+<ul>
+<li>As a report admin, I can access a custom report view for all <a href="../../Reporting/Custom-Report-Tables/#timesheets">timesheets in the system</a>, to help create useful reports and analysis [RQ:4951]</li>
+<li>As a report admin, I can access a custom report view for all <a href="../../Reporting/Custom-Report-Tables/#timesheet-statuses">timesheet statuses</a>, to help create useful reports and analysis [RQ:4952]</li>
+<li>As a report admin, I can access a custom report view for all <a href="../../Reporting/Custom-Report-Tables/#timesheets-with-entries">timesheets with their matching entries</a>, to help create useful reports and analysis [RQ:4954]</li>
+<li>As a report admin, I can access a custom report view for all <a href="../../Reporting/Custom-Report-Tables/#timesheet-entries">timesheet entries</a> in the system, to help create useful reports and analysis [RQ:4953]</li>
+</ul>
+</li>
+<li>
+<p><strong>Product Cloning</strong></p>
+<ul>
+<li>When doing a reset <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">clone of a product</a>, and keeping the original template, also clone any saved filters on the product [RQ:4983]</li>
+<li>When doing a full <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">clone of a product</a>, and keeping the original template, also clone any saved filters on the product [RQ:4980]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Disable cells on My Timesheet for pre-existing rows when a user no longer has the ability to modify the related artifact [IN:10180]</li>
+<li>Fix add, edit, and remove icons not displaying on the <a href="../../Spira-Administration-Guide/Product-Users/#editing-users">product membership admin page</a> at narrower page widths [IN:10169]</li>
+<li>Fix data mappings for requirement, test case, and incident throwing an error on saving component mappings when a <a href="../../Spira-Administration-Guide/System-Workspaces/#product-cloning">product is cloned</a> or <a href="../../Spira-Administration-Guide/System-Workspaces/#add-a-new-product">created from an existing product</a> [IN:9982]</li>
+<li>Fix list and multi-list custom properties on the test run list page and test set test runs tab being displayed as blank or numbers instead of actual values for non cross product test runs [IN:10144]</li>
+<li>
+<p>Fix not being able to add a tag to a new incident during test execution [IN:9997]</p>
+</li>
+<li>
+<p><strong>SpiraApps</strong></p>
+<ul>
+<li>Add a function to SpiraAppManager "<a href="../../Developers/SpiraApps-Manager/#internal-api-calls">executeApiAsync</a>" that returns a promise, to provide an alternative to the existing callback functionality [IN:9631]</li>
+<li>Add a helper to SpiraApp javascript loaded on home pages for "<a href="../../Developers/SpiraApps-Reference/#inflectra-javascript-helpers">WIDGET_ELEMENT</a>" to provide a streamlined way for developers to interact with the widget HTML element [IN:9872]</li>
+<li>Add <a href="../../Developers/SpiraApps-Manager/#properties">enums to the SpiraAppManager</a> to help developers more easily access and query data for artifact names, artifact types, requirement statuses, and test case statuses [IN:9876]</li>
+<li>Add functionality to the SpiraAppsManager to return <a href="../../Developers/SpiraApps-Manager/#properties">localized Spira Artifact names</a>, to provide better user experiences [IN:9812]</li>
+<li>Add support for a SpiraApp <a href="../../Developers/SpiraApps-Manifest/#product-admin-settings">product admin setting</a> to show a dropdown of types for an artifact and allow admins to select a single type [IN:10124]</li>
+<li>Add support for a SpiraApp <a href="../../Developers/SpiraApps-Manifest/#product-admin-settings">product admin setting</a> to show a dropdown of types for an artifact and allow admins to select multiple types [IN:10225]</li>
+<li>Fix artifact status multi select <a href="../../Developers/SpiraApps-Manifest/#product-admin-settings">product setting type</a> does not working for SpiraApps on the SpiraApp product admin setting screen [IN:9766]</li>
+<li>Let SpiraApps provide more dynamic experiences on the SpiraApp <a href="../../Spira-Administration-Guide/Product-General-Settings/#spiraapp-settings">product details admin page</a>, with the ability to run javascript and add interactive buttons [IN:10128]</li>
+<li>Transfer many SpiraApps that ship with Spira to the <a href="https://www.inflectra.com/Products/SpiraApps/">marketplace</a> to improve discoverability for users [IN:10097]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-84-october-2024">Version 8.4 (October 2024)<a class="headerlink" href="#version-84-october-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
