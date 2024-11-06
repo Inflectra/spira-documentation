@@ -1595,6 +1595,85 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | CONCURRENCY_DATE      |
 | PRECONDITION          |
 
+
+## Timesheets
+| R_Timesheets          |
+| --------------------- |
+| *TIMESHEET_ID*        |
+| SUBMITTER_USER_ID     |
+| SUBMITTER_USER_NAME   |
+| APPROVER_USER_ID      |
+| APPROVER_USER_NAME    |
+| TIMESHEET_STATUS_ID   |
+| TIMESHEET_STATUS_NAME |
+| CREATION_DATE         |
+| APPROVAL_DATE         |
+| LAST_UPDATE_DATE      |
+| START_DATE            |
+| END_DATE              |
+| COMMENTS              |
+| APPROVER_COMMENTS     |
+
+## Timesheet Entries
+| R_TimesheetEntries   |
+| -------------------- |
+| *TIMESHEET_ENTRY_ID* |
+| TIMESHEET_ID         |
+| USER_ID              |
+| USER_NAME            |
+| ARTIFACT_TYPE_ID     |
+| ARTIFACT_TYPE_NAME   |
+| ARTIFACT_ID          |
+| ARTIFACT_NAME        |
+| EFFORT_MINUTES       |
+| EFFORT_DATE          |
+| PROJECT_ID           |
+| PROJECT_NAME         |
+| PROJECT_GROUP_ID     |
+| PROJECT_GROUP_NAME   |
+| RESOURCE_CATEGORY_ID |
+
+## Timesheet Statuses
+| R_TimesheetStatuses   |
+| --------------------- |
+| *TIMESHEET_STATUS_ID* |
+| TIMESHEET_STATUS_NAME |
+| IS_ACTIVE             |
+| IS_OPEN               |
+
+## Timesheets with Entries
+This table combines the information from the timesheets table and the timesheet entries table to give a unified view of a timesheet and all of its key information. 
+
+| R_TimesheetWithEntries |
+| ---------------------- |
+| *TIMESHEET_ID*         |
+| SUBMITTER_USER_ID      |
+| SUBMITTER_USER_NAME    |
+| APPROVER_USER_ID       |
+| APPROVER_USER_NAME     |
+| TIMESHEET_STATUS_ID    |
+| TIMESHEET_STATUS_NAME  |
+| CREATION_DATE          |
+| APPROVAL_DATE          |
+| LAST_UPDATE_DATE       |
+| START_DATE             |
+| END_DATE               |
+| COMMENTS               |
+| APPROVER_COMMENTS      |
+| TIMESHEET_ENTRY_ID     |
+| ARTIFACT_TYPE_ID       |
+| ARTIFACT_TYPE_NAME     |
+| ARTIFACT_ID            |
+| ARTIFACT_NAME          |
+| EFFORT_MINUTES         |
+| EFFORT_DATE            |
+| PROJECT_ID             |
+| PROJECT_NAME           |
+| PROJECT_GROUP_ID       |
+| PROJECT_GROUP_NAME     |
+| RESOURCE_CATEGORY_ID   |
+
+
 ## Users
 | R_Users                         |
 | ------------------------------- |

@@ -150,10 +150,10 @@ The settings is an array of objects, each object must be in the form as below. S
     ```
 
 ## Pages
-SpiraApps will often run on specific [artifact pages](./SpiraApps-Reference.md/#pages). This can be as a code running in the background, functionality triggered by a user, or actions a user can take on rows on a grid. 
+SpiraApps will often run on specific [pages](./SpiraApps-Reference.md/#pages). This can be as a code running in the background, functionality triggered by a user, or actions a user can take on rows on a grid. 
 
 ### Page Contents
-A SpiraApp can run on a [wide number of product pages](./SpiraApps-Reference.md/#pages). The functionality comes from code (JS, HTML, and CSS) from the SpiraApp. This code is loaded onto the page based on the configuration provided in the manifest. You can load different javascript code on each page, or the same code. Different SpiraApp features use different code types (for example, only page columns uses HTML).
+A SpiraApp can run on a [wide number of pages](./SpiraApps-Reference.md/#pages) including the SpiraApp product admin settings page itself. The functionality comes from code (JS, HTML, and CSS) from the SpiraApp. This code is loaded onto the page based on the configuration provided in the manifest. You can load different javascript code on each page, or the same code. Different SpiraApp features use different code types (for example, only page columns uses HTML).
 
 The pageContents setting is an array of objects, one for each page that content should appear on. 
 
@@ -174,7 +174,7 @@ The pageContents setting is an array of objects, one for each page that content 
     ```
 
 ### Menus
-Users can proactively interact with a SpiraApp via menu buttons on [product pages](./SpiraApps-Reference.md/#pages). Each menu button has a number of entries. These entries provide the actual links to the SpiraApp code. For example, if users have 5 different actions they can take with a SpiraApp, then there will be 5 entries in the menu button - 5 menu entries in the button's dropdown.
+Users can proactively interact with a SpiraApp via menu buttons on [product pages](./SpiraApps-Reference.md/#pages) including the SpiraApp product admin settings page. Each menu button has a number of entries. These entries provide the actual links to the SpiraApp code. For example, if users have 5 different actions they can take with a SpiraApp, then there will be 5 entries in the menu button - 5 menu entries in the button's dropdown.
 
 The menu setting is an array of objects, one for each page the menu should be on. Each menu object will have an entries key that contains an array of "entry" objects.
 

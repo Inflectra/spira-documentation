@@ -30,7 +30,7 @@ The popup dialog gives you the following options:
 - or create a reset copy of the product
 - and optionally clone the template for whichever of the above options you choose 
 
-Whichever copy / clone option you choose, product settings (planning options and testing settings), components and product membership will all be copied over to the new product.
+Whichever copy / clone option you choose, product settings (planning options and testing settings), components, product membership, and saved filters[^saved-filters] (shared and not shared) will all be copied over to the new product.
 
 **Full clone of the product**: this option (the default) creates a new product that is effectively a clone of the original. The original product is not updated in any way. The new product will have copies of every artifact (including custom properties), along with all attachments, comments, and associations. This is very useful if you want to create an archived copy of a product, or want to split a product out into multiple products. Cloning creates the raw data but it does not also calculate test coverage or task progress for the new product. This final process can take a long time, and may not always be necessary. You can calculate this information at any time from the product admin [Data Tools page](Product-General-Settings.md/#product-data-tools), and after this coverage and traceability should look identical between the original and new product.
 
@@ -73,6 +73,7 @@ The same limitations listed above for a full clone also apply to this reset copy
 
 **Cloning the template**: this will create a clone of the original product's template and make sure that the new cloned/copied product uses this cloned template. This can be really useful if you want to create a new independent product and template compared to the original. 
 
+[^saved-filters]: Saved filters are only cloned if you use the same template as the original product. If you clone the template, the filters are not cloned. Cloned saved filters have some limitations: any filters by a specific ID (eg incident ID) will still be there and will not work as they reference an ID in the original product. Additionally, custom properties of types automation host and release are not updated for the new product.  
 
 ### Add a new product
 To add a new product to the system, click the "Add" button at the bottom of the product list, and a new screen will be displayed that allows you to enter the new product information:
@@ -83,7 +84,7 @@ You need to:
 
 - enter a name for the product (which cannot be the same as any already in use);
 - select which program it belongs to and optionally enter a detailed description and/or web-site URL;
-- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, and customizations;
+- decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, components and customizations;
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
 - decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - you should initially make sure that the product is marked as "Active";
