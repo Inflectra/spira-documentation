@@ -4,7 +4,7 @@
 !!! info "Summary"
     - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page (not available in SpiraTest), this release lets users edit or reset existing timesheet entries.
     - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization.
-    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copy over all saved filters against a product to improve the user experience.
+    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience.
     - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page.
 
 ??? success "New Features"
