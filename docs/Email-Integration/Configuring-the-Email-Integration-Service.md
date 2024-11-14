@@ -1,85 +1,114 @@
-# Configuring the Email Integration Service
+# Configuring the Email Integration Service for SpiraPLan
 Once you have completed the installation, you can configure the email integration service by going to Start \> Program Files \> Inflectra SpiraTeam \> Tools \> Email Integration which will bring up the management interface.
 
-![](img/Configuring_the_Email_Integration_Service_8.png)
+For SpiraPlan, the email importer will create a new incident for every imported email. The exception is that if the email is a reply to a notification email from SpiraPlan, the reply will be added as a comment to the artifact. For comments added to existing artifacts, the user that the email is from must be a member of the project. If they are not, the email will __NOT__ be imported.
 
+*Reminder*: After making any change, click the `Save` button, and changes will take effect at the next poll of the email accounts.
 
 ## Connecting to the SpiraTeam Server
-The first tab lets you specify the SpiraTeam instances that the email integration service will connect to. To add a new SpiraTeam server, click on the green Add (+) icon to switch the screen to allow you to enter a new server:
+Before connecting to any email server, you will need to use the first tab to specify the SpiraTeam instances that the email integration service will connect to. To add a new SpiraTeam server, click on the green Add (![](img/ico_add.png)) button to switch the screen to allow you to enter a new server:
 
-![](img/Configuring_the_Email_Integration_Service_9.png)
-
-You need to enter the following information:
-
-- **Server URL**: The URL to SpiraTeam server
-- **Account Login**: The account login that will be used to connect to SpiraTeam. It needs to be a user with the "administrator" role.
-- **Account Password**: This is the password for the account
-
-Click the "Test" button to verify the connection. Once it has passed, click the Save icon to save the new SpiraTeam server information.
-
-To modify an existing SpiraTeam server instance, just click on its name in the server list. To delete a server, select its name in the server list and click the Delete icon (X).
-
-Once you have entered all the SpiraTeam instances that you will be connecting to, click the "Next" button to move to the next tab and configure the mail server integration.
-
-## Connecting to the POP3 Mail Server
-
-The "POP3 Accounts" tab displays a list of all the configured mail servers:
-
-![](img/Configuring_the_Email_Integration_Service_10.png)
-
-Initially it will be empty, so just click the Add (+) icon to add a new mail server:
-
-![](img/Configuring_the_Email_Integration_Service_11.png)
+![](img/configure_1.png)
 
 You need to enter the following information:
 
-- **Account Email**: This should be the email address that will be polled for new support emails.
-- **Mail Server**: This should be the fully-qualified name or IP address of your POP3 mail server.
-- **Port**: This is the port that your mail server expects incoming POP3 requests to use. The default for unencrypted POP3 requests is 110 and the default for SSL encrypted POP3 requests is 995.
-- **Use SSL/TSL?**: You should check this option if your mail server requires a secure SSL/TSL connection (TSL versions supported 1.0, 1.1. and 1.2).
-- **Login/Password**: You should enter the login/password for the mail server that allows reading of inbound messages for the email address specified above.
-- **Remove Messages**: Checking this option will make the email integration service remove the email messages from in the Inbox of the user's email account. We recommend leaving this unchecked when first using the service. Once you are happy that the integration is correctly handling spam and not ignoring correct messages, you can check this option to prevent the email inbox getting too large.
-- **Attach Message**: Checking this option will attach the original email message to the new help desk ticket created in SpiraTeam as well as populating the ticket with the contents of the message. This is useful when debugging a new installation but typically would be unchecked during normal operation.
-- **Application Server**: You should specify the instance of SpiraTeam that this email account will be linked to.
-- **Default Project**: When creating new incidents, this will be the default project that the new incident will be created in, unless the Match Content option is selected below. For any incoming email that has an artifact token (For example: \[IN:45\] for Incident \#45, or \[RQ:912\] for Requirement \#912), and the user's email is registered to a user in that project, then the email will be imported as a comment to that artifact.
-- **RegEx Match Content**: Checking this option will allow the email integration service to do a name match in the body of the email for possible project names instead of just relying on the "default project". For example if your email contains "Project1" in the message text it will be routed to Product1 in SpiraTeam. Items looked for are Project tokens (\[PR:\#\#\]), and then the Project name in the subject line of the email and the text of the email.
+1. **Server Type**: The type of the system you are connecting to.
+2. **Server URL**: The URL to SpiraTeam server
+3. **Account Login** and **Account API Key**: The account login and associated API key that will be used to connect to SpiraTeam. It needs to be a user with the "System Admin" role or permission. 
+4. **Test**: After entering in all the information, click the `Test` button to verify the connection and user and password.
 
-!!! info "Using Gmail"
+![](img/configure_2.png)
 
-    If you use Google Workspace (gmail) make sure to take the following two steps. Note that personal gmail accounts are not supported.
+Once all information has been entered and the test completed successfully, click the Save icon to save the new SpiraTeam server information.
 
-    - enable POP - this defaults to disabled 
-    - allow for *less secure app access* in the security settings
+To modify an existing SpiraTeam server entry, just double-click on its name in the server list, or highlight it and click the Edit (![](img/ico_edit.png)) button. To delete a server, select its name in the server list and click the Delete button (![](img/ico_delete.png)).
 
-    To enable POP switch to an administrator account. This will open the Google Admin console. Follow https://support.google.com/a/answer/105694?hl=en to Google instructions to proceed.
+Once you have entered in the SpiraTeam instances that you will want to import emails into, click the 'Email Accounts' tab.
 
-    To allow *less secure app access* - starting from May 30, 2022, ​​Google no longer supports the use of third-party apps or devices which ask you to sign in to your Google Account using only your user name and password. This deadline does not apply to Google Workspace or Google Cloud Identity customers. For more information please refer to the Google Help: https://support.google.com/accounts/answer/6010255?hl=en#zippy=%2Cuse-more-secure-apps%2Cuse-an-app-password
+## Connecting to an EMail Server
 
+The "EMail Accounts" tab displays a list of all the configured mail servers:
+
+![](img/configure_3.png)
+
+Initially it will be empty, so just click the Add (![](img/ico_add.png)) icon to add a new mail server:
+
+![](img/configure_4.png)
+
+There are 4 sections to the EMail setup:
+1. The email address and server type.
+1. Server host and login information.
+1. Importing options.
+
+### Email Address & Server Type:
+Enter in the email address that this server will import from. This may not be the same as the username that is logged into the server. Then, select the type of email server that you will be connecting to:
+
+#### POP3 & IMAP
+For POP3 and IMAP servers, you will need to enter in all of the follwing information:
+1. The IP or DNS name of the server.
+1. The port to connect to. If blank, it will default to the standard port for that POP3 or IMAP.
+1. Whether or not TLS will be required. If left unchecked and the email importer cannot connect using SSL/TLS, it will try unencrypted.
+1. The login ID (which may or may not be the email address)
+1. The password or application key for the login.
+
+When all information is entered, clcik on the 'Test Login' button to verify that the email importer can conect to and talk to your email server.
+
+#### GMail
+Connecting to GMail/Google Workspaces will require you to set up an OAuth application. This is outside the scope of these help files - for more information, refer to Google Documentation on 'Registering your Application for OAuth 2.0 Authentication'. Once you have the application configuration in Google set up, you will be given a `Client ID` and `Client Secret`. Click the `Obtain Access` button and enter the information in the two fields:
+
+![](img/configure_5.png)
+
+After entering in the two field, click on the 'Obtain Access' button. Your browser will launch, and have you log into a Google Account. _Log into the account that you wish to import email from._ You will then be presented with some screens verifying your choice:
+
+![](img/configure_6.png)
+
+![](img/configure_7.png)
+
+Note that the screens could vary depending on how the application access was set up in Google. Once you verify it, you will be returned to the Email Configuration window, with a green status indicating that access is granted:
+
+![](img/configure_8.png)
+
+#### Exchange Web Services (EWS) / Office365
+Connecitng to an EWS/O365 account will require you to set up and register your organization and the email importer with Azure Portal. While setting this up in Azure, we recommend having the EWS Keys window up in the email importer. Click on the `Obtain Access` button to pop up the EWS Keys window:
+
+![](img/configure_9.png)
+
+The following fields are:
+* **Mailbox/Email**: This is the email address or mailbox ID that emails will be read from.
+* **Application ID**: When creating the email importer application in Azure, this is the Application ID assigned.
+* **Client Secret**: When setting up the client secret, this is the text contained in the `Value` for the secret (and not the `Client ID`!)
+* **Tenant/Directory ID**: This is the Tenant ID for your organization in which the application was registerd.
+
+After entering in all four fields, click the `Save` button. The importer will try to connect and verify the information entered. If you get an error, verify your information and try again.
+On success, you will be retrned to the email server screen with a success message:
+
+![](img/configure_10.png)
+
+### Importing Options
+This is where you define where you define options for handling these emails.
+
+* **Application Server**: The top two drop-downs are where you select which Application server (if you have more than one defined) to import into, and the default SpiraPlan Product to import and create new Incidents in.
+* **RegEx Match Content**: When selected, emails that do not reference an existing artifact will be scanned. If the name of a SpiraPlan Product is matched in the subject or body of the email, the new Incident will be created in that SpiraPlan Product. When unchecked, new items will always be created in the default SpiraPlan Product.
+* **Remove Messages?**: When selected, any email messages processed will be deleted. _NOTE_: Email servers will handle deletions differently. Some may send the messages to Trash, some may permanently delete them, while others may not delete them at all. 
+* **Attach All Messages?**: When selected, the email will be saved to the Artifact as an EML file for future reference.
+* **Attach 3rd Part Messages?**: This setting has no effect on importing into SpiraPlan.
 
 ## Configuring the Advanced Settings
-Once you have finished configuring the SpiraTeam server instances and POP3 mail accounts, you can click on the "Advanced Settings" tab to setup special rules that prevent emails from specific accounts being processed as well as allow the email integration service to look for special mail headers and subject tokens that might indicate bulk / spam messages that should be ignored.
+Once you have finished configuring the SpiraTeam server instances and Email accounts, you can click on the `Advanced Settings` tab to setup special rules that prevent certain emails from being processed as well as allow the email integration service to look for special mail headers and subject tokens that might indicate bulk / spam messages that should be ignored.
 
-![](img/Configuring_the_Email_Integration_Service_12.png)
+![](img/configure_11.png)
 
-You can configure the following settings:
+There are two sections to the Advanced tab:
 
-- **Enable Trace Logging**: When this option is checked, the email integration service will log information messages to the Windows Application Event Log on the machine running the integration service. This is useful when first deploying the system or when you are encountering issues and Inflectra support personnel have asked you switch on trace logging to aid in support. For normal use we recommend turning this setting off to avoid too many messages being logged in the Event Log.
-- **Minutes Between Polls**: This setting specifies the interval (in minutes) between each time the email integration service attempts to retrieve new email messages from the email server.
-- **Ignore Addresses**: In this section you can add a list of any email addresses that you want to ignore and not use for creating new SpiraTeam help desk tickets. If there are any known senders or internal email accounts, you should add them in this section.
+### 1. General settings:
+    
+1. **Enable Trace Logging**: With this sleected, debug messages will be logged to the system's Applicaton Event log, viewable by the 'Event Viewer'. This should be used for debugging only, as leaving it on could generate a lot of messages. __NOTE__: All error messages and warnings on messages that are NOT imported are always recorded to the Event Log, regardless of this setting.
+1. **Minutes Between Polls**: How many minutes to wait after each scan of the email account. By default this is set to ten minutes.
+1. **Allow Empty Return-Path**: Some email servers do not include a 'Return-Path' header on locally-sent emails. By default, the importer will skip over these as those are normally present (and absence could mean spam or automated reply that should not be impoted). Enabling this will import emails with no Return-Path header.
 
-In addition, there are two other sub-tabs to the Advanced Settings tab that provide configuration options:
-
-![](img/Configuring_the_Email_Integration_Service_13.png)
-
-The "Ignore Headers" section allows you to specify any email message headers that if present in an email message will be ignored by the email integration service.
-
-**Note**: Right now, the importer will only check the *presence* of a header, not its *contents*. As long as the header exists, even if it's value is null, the message will not be imported.
-
-![](img/Configuring_the_Email_Integration_Service_14.png)
-
-The "Ignore Keywords" section allows you to specify any keywords/phrases that if present in the subject-line or body of an email message will be ignored by the email integration service. Some mail servers that have built-in SPAM detection systems will automatically add SPAM-HIGH, SPAM-MEDIUM, SPAM-LOW to the subject line (for example).
-
-![](img/Configuring_the_Email_Integration_Service_15.png)
-
-The "SpamAssasin" section allows you to enable SpamAssasin utility, if you have a server that is running SpamAssasin. If this is enabled, messages marked as  spam will not be imported, and be left on the mail server.  You can use SpamAssasin's own level, or override the value. For information and support on SpamAssasin, see their website  http://spamassasin.appache.org
-
+### 2. Ignore/Blocking Lists, Spam Levels
+The first three tabs allow the administrator to block emails that contain certain values.
+1. **Ignore Addresses**: Any email address entered into the list will __NOT__ be imported into the server.
+1. **Ignore Headers**: Any email that contains a header that is listed here will __NOT__ be imported into the server. Note that this simply blocks based on the presense of a header - it does __not__ check the value.
+1. **Ignore Keywords**: Any word or phrase entered here, if present in the email's Subject or Body will cause the email to not be imported. Note that capitalization here does not affect matching, but spaces will. (eg ' spam' vs 'spam')
+1. **SpamAssassin**: If you have your own SpamAssassin service set up, you can have the Email Importer feed emails through your service and import based on the returned Spam level. You will need to enter in the DNS name or IP address of the server where SpamAssassin is running, and the port on which to connect to. __NOTE__: If the email importer gets an invalid or no responce from the server, the email address will be imported, assuming it does not match any other blocked/ignore rules. For more information on SpamAssassin, see their webite here: http://spamassasin.appache.org
