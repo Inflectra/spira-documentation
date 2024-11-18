@@ -1,12 +1,14 @@
-# Configuring the Email Integration Service for SpiraPLan
+# Configuring the Email Integration Service for SpiraPlan
 Once you have completed the installation, you can configure the email integration service by going to Start \> Program Files \> Inflectra SpiraTeam \> Tools \> Email Integration which will bring up the management interface.
+
+![](img/configure_12.png)
 
 For SpiraPlan, the email importer will create a new incident for every imported email. The exception is that if the email is a reply to a notification email from SpiraPlan, the reply will be added as a comment to the artifact. For comments added to existing artifacts, the user that the email is from must be a member of the project. If they are not, the email will __NOT__ be imported.
 
 *Reminder*: After making any change, click the `Save` button, and changes will take effect at the next poll of the email accounts.
 
 ## Connecting to the SpiraTeam Server
-Before connecting to any email server, you will need to use the first tab to specify the SpiraTeam instances that the email integration service will connect to. To add a new SpiraTeam server, click on the green Add (![](img/ico_add.png)) button to switch the screen to allow you to enter a new server:
+Before connecting to any email server, you will need to use the first tab to specify the SpiraTeam instances that the email integration service will connect to. To add a new SpiraTeam server, click on the green Add (![](img/ico_add.png)) button on the `Application Servers` tab to switch the screen to allow you to enter a new server:
 
 ![](img/configure_1.png)
 
@@ -89,7 +91,7 @@ This is where you define where you define options for handling these emails.
 
 * **Application Server**: The top two drop-downs are where you select which Application server (if you have more than one defined) to import into, and the default SpiraPlan Product to import and create new Incidents in.
 * **RegEx Match Content**: When selected, emails that do not reference an existing artifact will be scanned. If the name of a SpiraPlan Product is matched in the subject or body of the email, the new Incident will be created in that SpiraPlan Product. When unchecked, new items will always be created in the default SpiraPlan Product.
-* **Remove Messages?**: When selected, any email messages processed will be deleted. _NOTE_: Email servers will handle deletions differently. Some may send the messages to Trash, some may permanently delete them, while others may not delete them at all. 
+* **Remove Messages?**: When selected, any email messages processed will be deleted. _NOTE_: Email servers will handle deletions differently. Some may send the messages to Trash, some may permanently delete them, while others may not delete them at all. This is server-dependant at this time. 
 * **Attach All Messages?**: When selected, the email will be saved to the Artifact as an EML file for future reference.
 * **Attach 3rd Part Messages?**: This setting has no effect on importing into SpiraPlan.
 
@@ -102,8 +104,8 @@ There are two sections to the Advanced tab:
 
 ### 1. General settings:
     
-1. **Enable Trace Logging**: With this sleected, debug messages will be logged to the system's Applicaton Event log, viewable by the 'Event Viewer'. This should be used for debugging only, as leaving it on could generate a lot of messages. __NOTE__: All error messages and warnings on messages that are NOT imported are always recorded to the Event Log, regardless of this setting.
-1. **Minutes Between Polls**: How many minutes to wait after each scan of the email account. By default this is set to ten minutes.
+1. **Enable Trace Logging**: With this sleected, debug messages will be logged to the system's Applicaton Event log, viewable in the Window 'Event Viewer'. This should be used for debugging only, as leaving it on could generate a lot of messages. __NOTE__: All error messages and warnings on messages that are NOT imported are always recorded to the Event Log, regardless of this setting.
+1. **Minutes Between Polls**: How many minutes to wait after each scan of the email accounts. By default this is set to ten minutes.
 1. **Allow Empty Return-Path**: Some email servers do not include a 'Return-Path' header on locally-sent emails. By default, the importer will skip over these as those are normally present (and absence could mean spam or automated reply that should not be impoted). Enabling this will import emails with no Return-Path header.
 
 ### 2. Ignore/Blocking Lists, Spam Levels
