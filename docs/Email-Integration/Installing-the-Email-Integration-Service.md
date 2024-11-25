@@ -1,37 +1,28 @@
 # Installing the Email Integration Service
 
-This section outlines how to install the SpiraTeam email integration
-service onto your environment. Depending on your environment you can
-install the email integration service on:
+!!! info ""
+    This email integration service is able to integrate with both KronoDesk and Spira.
 
-1. Your SpiraTeam application server
-1. Your corporate mail server
-1. A separate workstation that can connect to both SpiraTeam and your
-mail server
+## Installation
+Depending on your environment you can install the email integration service on:
 
-If your SpiraTeam installation is installed on-premise, then you can use
-options (1), (2) or (3), if your SpiraTeam installation is hosted by
-Inflectra as a Software as a Service (SaaS) subscription then you'd need
-to use either option (2) or (3).
+1. Your Spira application server
+2. Your corporate mail server
+3. A separate workstation that can connect to both Spira and your mail server
 
-Once you have downloaded the SpiraTeam email integration installation
-package (InflectraEmailIntegration.msi) from the Inflectra website you
-should download it onto the appropriate computer and double-click on it
-to run the Windows installer package.
+If your Spira installation is installed on-premise, you can use options (1), (2) or (3).
 
-Installation is automatic, and will install the configuration and service
-into default locations.
+if your Spira installation is cloud hosted by Inflectra, you can use options (2) or (3).
 
-Once the installation has completed, you will see the following new
-service listed in the Control Panel \> Administrative Tools \> Windows
-Services section:
+After downloading the Spira email integration installation package (InflectraEmailIntegration.msi) from the Inflectra website onto the relevant machine, double-click it to run the Windows installer package. Installation is automatic, and will install the configuration and service into default locations.
+
+Once the installation has completed, you will see the following new service listed in the Control Panel > Administrative Tools > Windows Services section:
 
 ![](img/install_1.png)
 
-The service should be listed to run in Automatic mode and should already
-be started.
+The service should be listed to run in Automatic mode and should already be started.
 
-Note: This email integration service is able to integrate with both
-KronoDesk and SpiraTeam from Inflectra, however the focus of this guide
-is the integration with SpiraTest, SpiraPlan and SpiraTeam (hereafter
-SpiraTeam) only.
+
+## Next Steps
+1. [Configure the email integration](./Configuring-the-Email-Integration-Service.md)
+2. [Use the email integration](./Using-the-Email-Integration-Service-with-SpiraTeam.md)
