@@ -58,6 +58,7 @@ On this screen you can edit key information and security about the user:
 - email address
 - RSS token
 - portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access)
+- timesheet manager (SpiraPlan only - this setting gives access to the enterprise timesheet page and the ability to approve or reject any user's submitted timesheet)
 - system administration status
 - report administrator status
 - active status
