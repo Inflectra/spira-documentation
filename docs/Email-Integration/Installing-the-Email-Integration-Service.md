@@ -3,7 +3,6 @@
 !!! info ""
     This email integration service is able to integrate with both KronoDesk and Spira.
 
-## Installation
 Depending on your environment you can install the email integration service on:
 
 1. Your Spira application server
@@ -13,6 +12,16 @@ Depending on your environment you can install the email integration service on:
 If your Spira installation is installed on-premise, you can use options (1), (2) or (3).
 
 if your Spira installation is cloud hosted by Inflectra, you can use options (2) or (3).
+
+## Minimum Requirements:
+
+The email importer needs the following to be able to execute and import mail:
+1. A windows desktop (always on, Windows 10 or 11) or Server (2016 - 2022) ___Note:___ Headless servers are note suppoted at this time.
+1. .NET Framework v4.8 is required.
+1. Network access to your email server(s).
+1. Network access to your Spira application.
+
+## Installation
 
 After downloading the Spira email integration installation package (InflectraEmailIntegration.msi) from the Inflectra website onto the relevant machine, double-click it to run the Windows installer package. Installation is automatic, and will install the configuration and service into default locations.
 
