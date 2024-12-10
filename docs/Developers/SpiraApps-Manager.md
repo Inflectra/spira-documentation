@@ -163,7 +163,7 @@ SpiraApps can make API calls to the Amazon Web Services (AWS) Generative Artific
 
 The **executeAwsBedrockRuntime** function call makes a REST API call to the AWS Bedrock Runtime service. It uses an AWS Access Key and Access Key Secret. The latter needs to be stored as a secure setting.
 
-=== "Explanation"
+=== "Parameters"
     - **appGuid**: the APP_GUID of the SpiraApp used to access system settings like authentication tokens (string)
     - **appName**: the name of the SpiraApp used for logging purposes only (string)
     - **accessKeyId**: the value of the AWS Access Key that should be used to make the API call (string)
@@ -207,13 +207,17 @@ The **executeAwsBedrockRuntime** function call makes a REST API call to the AWS 
 ## Notifications
 SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message
 
-=== "Explanation"
-    - **displayErrorMessage**: shows an error message to the user, accepting a single string from the SpiraApp
-    - **displaySuccessMessage**: shows a success message to the user, accepting a single string from the SpiraApp
-    - **displayWarningMessage**: shows a warning to the user, accepting a single string from the SpiraApp
-    - **hideMessage**: hides the message, if any. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete
+=== "Available Actions"
+    ??? note "**displayErrorMessage(message: string)**" 
+        Shows an error message to the user 
+    ??? note "**displaySuccessMessage(message: string)**" 
+        Shows a success message to the user
+    ??? note "**displayWarningMessage(message: string)**" 
+        Shows a warning message to the user
+    ??? note "**hideMessage()**" 
+        Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. 
 
-=== "Example"
+=== "Example Usage"
 
     ```js
     spiraAppManager.displayErrorMessage("The operation could not complete due to the following error: " + errorMessage);
@@ -231,7 +235,7 @@ SpiraApps can create [menu entries](./SpiraApps-Overview.md/#menus) on [relevant
 
 Use the `registerEvent_menuEntryClick` function on the spiraAppManager to register the function to execute when a menu entry is clicked.
 
-=== "Explanation"
+=== "Parameters"
     - **appGuid**: the guid of the SpiraApp as stored in APP_GUID (string)
     - **menuEntry**: the exact "name" property as set in the manifest for the specific menu entry(string, case-sensitive)
     - **handler**: function to execute
@@ -252,20 +256,40 @@ Use the `registerEvent_menuEntryClick` function on the spiraAppManager to regist
 ## Events handlers
 There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page.
 
-=== "Explanation"
-    - **registerEvent_windowLoad**: registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.
-    - **registerEvent_dashboardUpdated**: registers an event handler on dashboard pages when the release dropdown is changed. This can be useful when a user changes the release on the product dashboard.
+=== "Details Page"
 
-    **Details page events**:
+    ??? note "registerEvent_dataSaved(handler: (operation: string, newId: number) => void)" 
+        Registers an event handler on a details page to trigger when the main form data is saved. 
 
-    - **registerEvent_dataSaved**: registers an event handler on a details page to trigger when the main form data is saved. When the handler is called, an operation and artifactId parameters are passed into the handler
-    - **registerEvent_loaded**: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load
-    - **registerEvent_dataFailure**: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.
-    - **registerEvent_operationReverted**: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters
-    - **registerEvent_dropdownChanged**: Registers an event handler on the [specified dropdown field](./SpiraApps-Reference.md/#available-field-names) for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  
+        - **operation**: Proprietary string detailing what kind of save was done - undefined for normal saves, but can be new, redirect (IN, RK only), or close when doing complex saves
+        - **artifactId**: If the operation created a new artifact, it's ID is put here. Always paired with the redirect or new operation, depending on whether the artifact has a separate redirect operation.
+    ??? note "registerEvent_loaded(handler: (dontClearMessages: boolean) => void)"
+        Registers an event handler on the details page to trigger when the main form data is loaded. This will be triggered each time the data is refreshed, including switching between artifacts without a full page load.
+
+        - **dontClearMessages**: Whether or not the page load being performed should clear any displayed errors native to Spira. Unlikely to be meaningful for a SpiraApp.
+    ??? note "registerEvent_dataFailure(handler: (errorMessage: PluginRestException) => void)"
+        Registers an event handler on the details page form manager for when data is not saved correctly. 
+
+        - **PluginRestException**: Object containing an exceptionType & message property
+    ??? note "registerEvent_operationReverted(handler: (statusId: number, isOpen: boolean) => void)" 
+        Registers an event handler on the details page form manager for when a status change is reverted back. 
+    ??? note "registerEvent_dropdownChanged(fieldName: string, <br> handler: (oldValue: string, newValue: string) => boolean): boolean" 
+        Registers an event handler on the [specified dropdown field](./SpiraApps-Reference.md/#available-field-names) for when its value changes. 
+
+        - **fieldName**: name of the artifact field this should listen to changes on
+        - **handler**: 
+            - **oldValue**: the value a dropdown had selected prior to user input
+            - **newValue**: the value a dropdown is changing to based on user input
+            - **return**: False to reject the transition & return the dropdown to the original value
+        - **return**: False if the SpiraAppManager could not find the field or otherwise was unable to mount the event listener 
     - **registerEvent_gridLoaded**: registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
     - **registerEvent_dataPreSave**: Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. 
 
+=== "All Pages"
+    - **registerEvent_windowLoad**: registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.
+
+=== "Dashboards"
+    - **registerEvent_dashboardUpdated**: registers an event handler on dashboard pages when the release dropdown is changed. This can be useful when a user changes the release on the product dashboard.
 
 === "Example"
 
