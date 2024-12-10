@@ -1,6 +1,6 @@
 # Release Notes for Spira v8
 
-## Version 8.5 (December 2024)
+## Version 8.6 (December 2024)
 !!! info "Summary"
     Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSVs files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
