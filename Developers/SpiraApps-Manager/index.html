@@ -9247,12 +9247,12 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
-<summary><strong>reloadForm()</strong></summary>
+<summary>reloadForm()</summary>
 <p>Reloads the current main overview on a details page. </p>
 <p>Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.</p>
 </details>
 <details class="note">
-<summary><strong>getDataItemField(fieldName: string, dataProperty?: string)</strong></summary>
+<summary>getDataItemField(fieldName: string, dataProperty?: string)</summary>
 <p>Retrieves a single field of the currently viewed artifact on a details page. </p>
 <ul>
 <li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of a field</a> of an artifact</li>
@@ -9260,7 +9260,7 @@
 </ul>
 </details>
 <details class="note">
-<summary><strong>updateFormField(fieldName: string, dataProperty?: string, newValue: any)</strong></summary>
+<summary>updateFormField(fieldName: string, dataProperty?: string, newValue: any)</summary>
 <p>Updates a field on an artifact details page.</p>
 <ul>
 <li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
@@ -9269,14 +9269,42 @@
 </ul>
 </details>
 <details class="note">
-<summary><strong>reloadGrid(gridId: SpiraAppManager.gridIds)</strong></summary>
+<summary>getDropdownItems(fieldName: string)</summary>
+<p>Retrieves an array of objects for the items listed in a particular dropdown. This works on details pages only after the page has fully loaded. It supports single select, multi select, user, and hierarchical dropdowns. It supports standard and custom fields. It does not support tag fields. The array of "DropdownListItem" objects. Note that dropdowns often show a "Please select" item at the top - these are not included in the array. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.</p>
+<ul>
+<li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
+</ul>
+<div class="highlight"><pre><span></span><code>class DropdownListItem {
+    id: number;
+    isActive: boolean;
+    text: string;
+}
+</code></pre></div>
+</details>
+<details class="note">
+<summary>setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean</summary>
+<p>Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of <code>getDropdownItems</code> and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. <code>isActive</code> values of false cause the item to be hidden from the dropdown list. <code>isActive</code> values of true cause the item to be shown from the dropdown list. Only the <code>isActive</code> flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.</p>
+<p>If the update is successful a true is returned to the function, otherwise a false is returned. </p>
+<ul>
+<li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
+<li><strong>items</strong>: array of DropdownListItem objects (see below)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>class DropdownListItem {
+    id: number;
+    isActive: boolean;
+    text: string;
+}
+</code></pre></div>
+</details>
+<details class="note">
+<summary>reloadGrid(gridId: SpiraAppManager.gridIds)</summary>
 <p>Refreshes the specified grid if it exists on the page. </p>
 <ul>
 <li><strong>gridId</strong>: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). <a href="../SpiraApps-Reference/#available-grid-ids">Available grid ID keys</a></li>
 </ul>
 </details>
 <details class="note">
-<summary><strong>setWindowLocation(URL: string)</strong></summary>
+<summary>setWindowLocation(URL: string)</summary>
 <p>Loads a new page in the browser.</p>
 <ul>
 <li><strong>URL</strong>: URL to navigate the user's browser to </li>
@@ -9288,6 +9316,10 @@
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Fix the icon used to save&quot;</span>
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this task&quot;</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDropdownItems</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns an array like { id: 1, isActive: true, text: &#39;1 - Critical&#39;}</span>
+<span class="nx">items</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// update an item to be hidden from the list</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setDropdownItemsIsActive</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">);</span><span class="w"> </span><span class="c1">// updates the dropdown to hide the relevant item in the UI, returns true if successful</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">requirementSteps</span><span class="p">);</span><span class="w"> </span><span class="c1">// Refreshes the requirement steps grid on requirement details pages</span>
 
