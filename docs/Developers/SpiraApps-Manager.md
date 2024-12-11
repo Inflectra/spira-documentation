@@ -320,26 +320,59 @@ There are a number of events that a SpiraApp can register against. This allows S
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
 
 === "Available Actions"
-    ??? note "**reloadForm()**"
+    ??? note "reloadForm()"
         Reloads the current main overview on a details page. 
         
         Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-    ??? note "**getDataItemField(fieldName: string, dataProperty?: string)**"
+
+    ??? note "getDataItemField(fieldName: string, dataProperty?: string)"
         Retrieves a single field of the currently viewed artifact on a details page. 
 
         - **fieldName**: The [name of a field](./SpiraApps-Reference.md/#available-field-names) of an artifact
         - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
-    ??? note "**updateFormField(fieldName: string, dataProperty?: string, newValue: any)**" 
+
+    ??? note "updateFormField(fieldName: string, dataProperty?: string, newValue: any)" 
         Updates a field on an artifact details page.
         
         - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
         - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the piece of information about this field you want to modify
         - **newValue**: The new value to set the data property to on the given field.
-    ??? note "**reloadGrid(gridId: SpiraAppManager.gridIds)**" 
+    
+    ??? note "getDropdownItems(fieldName: string)"
+        Retrieves an array of objects for the items listed in a particular dropdown. This works on details pages only after the page has fully loaded. It supports single select, multi select, user, and hierarchical dropdowns. It supports standard and custom fields. It does not support tag fields. The array of "DropdownListItem" objects. Note that dropdowns often show a "Please select" item at the top - these are not included in the array. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
+
+        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+
+        ```
+        class DropdownListItem {
+            id: number;
+            isActive: boolean;
+            text: string;
+        }
+        ```
+
+    ??? note "setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean"
+        Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of `getDropdownItems` and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. `isActive` values of false cause the item to be hidden from the dropdown list. `isActive` values of true cause the item to be shown from the dropdown list. Only the `isActive` flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
+
+        If the update is successful a true is returned to the function, otherwise a false is returned. 
+
+        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+        - **items**: array of DropdownListItem objects (see below)
+
+        ```
+        class DropdownListItem {
+            id: number;
+            isActive: boolean;
+            text: string;
+        }
+        ```
+        
+    ??? note "reloadGrid(gridId: SpiraAppManager.gridIds)" 
         Refreshes the specified grid if it exists on the page. 
         
         - **gridId**: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). [Available grid ID keys](./SpiraApps-Reference.md/#available-grid-ids)
-    ??? note "**setWindowLocation(URL: string)**" 
+
+    ??? note "setWindowLocation(URL: string)" 
         Loads a new page in the browser.
 
         - **URL**: URL to navigate the user's browser to 
@@ -351,6 +384,10 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
     spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
     spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this task");
+
+    let items = spiraAppManager.getDropdownItems("PriorityId"); // returns an array like { id: 1, isActive: true, text: '1 - Critical'}
+    items[x].isActive = false // update an item to be hidden from the list
+    spiraAppManager.setDropdownItemsIsActive("PriorityId", items); // updates the dropdown to hide the relevant item in the UI, returns true if successful
 
     spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps); // Refreshes the requirement steps grid on requirement details pages
 

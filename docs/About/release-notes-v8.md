@@ -1,11 +1,61 @@
 # Release Notes for Spira v8
 
+## Version 8.6 (December 2024)
+!!! info "Summary"
+    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSVs files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+    Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality. <span class="pill">SpiraPlan</span>
+
+??? success "New Features"
+    * **My Timesheet** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+        - As a developer, I can [download](../Spira-User-Manual/Timesheets.md/#downloading) the data in a timesheet to a CSV file, to help me track and analyze my time [RQ:4942]
+        - As a developer, I can [create a timesheet for any past date range](../Spira-User-Manual/Timesheets.md/#my-timesheet), so I can record my historical work correctly [RQ:4944]
+        - As a developer, I can easily [delete an artifact row](../Spira-User-Manual/Timesheets.md/#deleting) from a timesheet, so I can easily correct data entered by mistake [RQ:4947]
+        - As a developer, I can [delete a whole timesheet](../Spira-User-Manual/Timesheets.md/#deleting), so I can easily correct data entered by mistake [RQ:4948]
+    
+    * **As a developer, I can submit and manage my timesheets to get them approved by a manager, to officially record my time** <span class="pill">SpiraPlan</span>
+
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can see the status of any timesheet, to help me manage my timesheets [RQ:4963]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can submit any draft timesheet for approval, to get my timesheet reviewed by a manager [RQ:4969]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot edit a timesheet that has been submitted for approval, to ensure the manager works from the correct data [RQ:4972]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot delete a timesheet that has been submitted, to ensure the integrity of data a manager has reviewed [RQ:4973]
+
+    * **Timesheet administration** <span class="pill">SpiraPlan</span>
+
+        - As a system admin of SpiraPlan, I can [enable timesheet approvals](../Spira-Administration-Guide/System.md/#general-settings), so people can make use of that feature or not [RQ:4961]
+        - As a system admin of SpiraPlan, I can make people [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that they can approve timesheets as needed [RQ:4962]
+
+    * **Timesheet API functions** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+
+        - As an API user, I can create timesheets using the Spira APIs, to help me automate timesheet work [RQ:5029]
+        - As an API user, I can retrieve a single timesheet using the Spira APIs, to help me automate timesheet work [RQ:5035]
+        - As an API user, I can retrieve a filtered list of paginated timesheets using the Spira APIs, to help me automate timesheet work [RQ:5037]
+        - As an API user, I can retrieve all timesheet entries by timesheet using the Spira APIs, to help me automate timesheet work [RQ:5039]
+
+    * **My Page**
+        - Limit the My Page assigned artifact widgets to only show artifacts from products a user is a member of [RQ:5043]
+
+??? bug "Bug fixes and enhancements"
+    - Add "N/A" status to test set, test set folder, and test case folder progress bar tooltips, to keep the execution status tooltip count consistent with the count displayed next to the artifact / folder name [IN:9984]
+    - Add an api call to retrieve the total number of commits in a specific source code branch [IN:10269]
+    - Add database support for SpiraApps saving storage key value pairs for fast retrieval and provider rich integration options for developers (developer side features coming in early 2025) [IN:9895]
+    - Add the ability for SpiraApps to hide and show items from [dropdown lists programmatically](../Developers/SpiraApps-Manager.md/#page-actions) [IN:9575]
+    - Fix certain keyboard operations not operating correctly when navigating elements, due to a bug in how the user dropdown menu handled keyboard events [IN:9943]
+    - Fix filtering test runs by custom property column from the [test run tab on the test set details page](../Spira-User-Manual/Test-Set-Management.md/#test-runs) not working [IN:10178]
+    - Fix potential errors when [cloning a product](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) caused by test step parameter names not being correctly checked for uniqueness [IN:7825]
+    - Fix the [automated section on the test run details page](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) saving incorrectly when other parts of test runs are modified [IN:8003]
+    - Fix the custom dashboard types for SpiraApps potentially causing a database violation error for some users [IN:10163]
+    - Improve the usability of the p[roduct membership admin grid](../Spira-Administration-Guide/Product-Users.md) on smaller screens so it does not obscure other content [IN:9760]
+    - Make the dropdown options wider on the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) "Choose an artifact" selector [IN:10315]
+
+
 ## Version 8.5 (November 2024)
 !!! info "Summary"
-    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page (not available in SpiraTest), this release lets users edit or reset existing timesheet entries.
-    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization.
-    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience.
-    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page.
+    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page, this release lets users edit or reset existing timesheet entries. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 ??? success "New Features"
     * **My Timesheet**
@@ -49,11 +99,11 @@
 
 ## Version 8.4 (October 2024)
 !!! info "Summary"
-    My Timecard has been replaced with a completely new My Timesheet page (not available in SpiraTest). Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features.
+    My Timecard has been replaced with a completely new My Timesheet page. Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
     On every artifact list page there is a button that lets you download the current view of the grid (with its filters and columns) as a CSV file.
 
-    Teams functionality (SpiraPlan only) is now out of beta, and available for all users.
+    Teams functionality is now out of beta, and available for all users. <span class="pill">SpiraPlan</span>
     
 
 ??? success "New Features"
