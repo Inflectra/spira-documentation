@@ -68,7 +68,7 @@ To make REST calls to an external service, SpiraApps should always use the spira
 
 The **executeRest** function call takes a large set of parameters to fully prepare the API call. This includes callback functions for success and failure of the API call.
 
-=== "Explanation"
+=== "Parameters"
     - **appGuid**: the APP_GUID of the SpiraApp used to access system settings like authentication tokens (string)
     - **appName**: the name of the SpiraApp used for logging purposes only (string)
     - **method**: the verb to use for this call, with accepted values being "POST" (default), "GET", "PUT", "DELETE", "PATCH", "OPTIONS", or "MERGE" (string)
@@ -412,10 +412,9 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
 ## UX generator
 ### Dropdown list dialog
-This helper function handles the creation of a UX control that allows users to interact with it freely. It creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.
+The helper function `createComboDialog` creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.
 
-=== "Explanation"
-    The `createComboDialog` function takes the following parameters:
+=== "Parameters"
 
     - **title**: the title of the dialog (string)
     - **introText**: the introductory text, to explain to the user what to do and why (string)
@@ -453,7 +452,7 @@ This helper function handles the creation of a UX control that allows users to i
 ## User Permission Checks
 The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.
 
-=== "Explanation"
+=== "Available Checks"
     ??? note "canViewArtifactType(artifactTypeId: number)" 
         Returns true if the current user can **view** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product.
 
