@@ -449,10 +449,10 @@ The helper function `createComboDialog` creates a modal dialog box where users c
     ```
 
 
-## User Permission Checks
-The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.
+## User Context 
+The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.
 
-=== "Available Checks"
+=== "Available Context"
     ??? note "canViewArtifactType(artifactTypeId: number)" 
         Returns true if the current user can **view** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product.
 
