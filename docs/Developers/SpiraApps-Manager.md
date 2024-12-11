@@ -10,7 +10,7 @@ The following ID fields are available from the spiraAppManager. They are useful 
     - **artifactId**: returns the ID of the current artifact (integer). Note that this will be correctly populated on details pages only, and not when creating new incidents or risks
     - **displayReleaseId**: returns the ID of the release being displayed (integer). This is used on product and reporting home pages - otherwise it is an empty string.
    
-=== "Example"
+=== "Examples"
 
     ```js
     const userId = spiraAppManager.userId; // e.g. 5
@@ -217,7 +217,7 @@ SpiraApps can show and hide messages to the user to provide them with informatio
     ??? note "**hideMessage()**" 
         Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. 
 
-=== "Example Usage"
+=== "Examples"
 
     ```js
     spiraAppManager.displayErrorMessage("The operation could not complete due to the following error: " + errorMessage);
@@ -396,7 +396,7 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
 
         - **URL**: URL to navigate the user's browser to 
 
-=== "Example Usage"
+=== "Examples"
 
     ```js
     spiraAppManager.reloadForm();
@@ -467,7 +467,7 @@ The SpiraAppManager provides a number of helpers to let SpiraApps better underst
 
         - **artifactTypeId**: ID of the artifact type we want to check permissions for 
 
-=== "Example"
+=== "Examples"
 
     ```js
     spiraAppManager.canViewArtifactType(1); // returns true if the user can view requirements in this product
@@ -501,7 +501,7 @@ The SpiraAppManager provides a number of helpers to let SpiraApps better underst
 
         - **htmlToSanitize**: String of HTML which is going to be rendered to the DOM from user input, such as in a dashboard widget rendering the description of an artifact
 
-=== "Example"
+=== "Examples"
 
     ```js
     spiraAppManager.formatDate("1993-05-16T14:48:00.000Z"); // returns "5/16/1993" if the user's culture is en-US
@@ -540,9 +540,9 @@ Do not use this for storing secure information.
 === "Best Practices"
     Always use your APP_GUID as a prefix / suffix of the local storage keys your SpiraApp uses to avoid conflicts with other SpiraApps. Define these keys as constants at the top of the JS file. 
     
-    Your SpiraApp will likely not be distributed by Inflectra if you fail to follow this rule, since it puts localStorage based functionality of Spira & other SpiraApps at risk.
+    Your SpiraApp will likely not be distributed by Inflectra if you fail to follow this rule, since it could put localStorage based functionality of Spira & other SpiraApps at risk.
 
-=== "Example"
+=== "Examples"
 
     ```js linenums="1"
     // use a single object to store all the settings in memory
