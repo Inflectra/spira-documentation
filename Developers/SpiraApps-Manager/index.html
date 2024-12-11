@@ -8167,10 +8167,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic-helpers" class="md-nav__link">
+  <a href="#user-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logic helpers
+        User Context
       
     </span>
   </a>
@@ -8776,10 +8776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic-helpers" class="md-nav__link">
+  <a href="#user-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logic helpers
+        User Context
       
     </span>
   </a>
@@ -8830,7 +8830,7 @@
 <p>The spiraAppManager is a helper class that provides a wide range of useful functions and operations to SpiraApps.</p>
 <h2 id="ids">IDs<a class="headerlink" href="#ids" title="Permanent link">&para;</a></h2>
 <p>The following ID fields are available from the spiraAppManager. They are useful for making internal API calls</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="explanation" name="__tabbed_1" type="radio" /><input id="example" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="explanation">Explanation</label><label for="example">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="explanation" name="__tabbed_1" type="radio" /><input id="examples" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="explanation">Explanation</label><label for="examples">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -8857,7 +8857,7 @@
 </div>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <p>The following properties are available from the spiraAppManager. They are useful for displaying UI to users, or controlling UX logic. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="explanation_1" name="__tabbed_2" type="radio" /><input id="example_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="explanation_1">Explanation</label><label for="example_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="explanation_1" name="__tabbed_2" type="radio" /><input id="example" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="explanation_1">Explanation</label><label for="example">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -8900,7 +8900,7 @@
 <h2 id="external-rest-calls">External REST calls<a class="headerlink" href="#external-rest-calls" title="Permanent link">&para;</a></h2>
 <p>To make REST calls to an external service, SpiraApps should always use the spiraAppManager helper functions. The manager makes the REST call server side, avoiding any potential CORS problems and improving security for SpiraApps and end users.</p>
 <p>The <strong>executeRest</strong> function call takes a large set of parameters to fully prepare the API call. This includes callback functions for success and failure of the API call.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="explanation_2" name="__tabbed_3" type="radio" /><input id="example_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="explanation_2">Explanation</label><label for="example_2">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="parameters" name="__tabbed_3" type="radio" /><input id="example_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="parameters">Parameters</label><label for="example_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -8975,7 +8975,7 @@
 <h2 id="internal-api-calls">Internal API calls<a class="headerlink" href="#internal-api-calls" title="Permanent link">&para;</a></h2>
 <p>SpiraApps are able to make API calls to Spira on behalf of the current user, to allow rich and powerful automation. Authentication of the user, including their permissions and other security checks are handled by the spiraAppManager. This makes it very easy to safely perform actions, but the SpiraApp will need to correctly handle any errors.</p>
 <p>Note that this function is carried out client side so it does have access to any system settings.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="explanation_3" name="__tabbed_4" type="radio" /><input id="example_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="example_3">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="explanation_2" name="__tabbed_4" type="radio" /><input id="example_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="explanation_2">Explanation</label><label for="example_2">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9047,7 +9047,7 @@
 <h2 id="aws-bedrock-api-calls">AWS Bedrock API Calls<a class="headerlink" href="#aws-bedrock-api-calls" title="Permanent link">&para;</a></h2>
 <p>SpiraApps can make API calls to the Amazon Web Services (AWS) Generative Artificial Intelligence (GenAI) platform known as <a href="https://aws.amazon.com/bedrock">AWS Bedrock</a>. Since AWS uses a proprietary authentication system called SignatureV4, we have provided a special helper method to make these API calls easier.</p>
 <p>The <strong>executeAwsBedrockRuntime</strong> function call makes a REST API call to the AWS Bedrock Runtime service. It uses an AWS Access Key and Access Key Secret. The latter needs to be stored as a secure setting.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="explanation_4" name="__tabbed_5" type="radio" /><input id="example_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="example_4">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="parameters_1" name="__tabbed_5" type="radio" /><input id="example_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="parameters_1">Parameters</label><label for="example_3">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9118,15 +9118,25 @@
 </div>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
 <p>SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="explanation_5" name="__tabbed_6" type="radio" /><input id="example_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="explanation_5">Explanation</label><label for="example_5">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="available-actions" name="__tabbed_6" type="radio" /><input id="examples_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="available-actions">Available Actions</label><label for="examples_1">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ul>
-<li><strong>displayErrorMessage</strong>: shows an error message to the user, accepting a single string from the SpiraApp</li>
-<li><strong>displaySuccessMessage</strong>: shows a success message to the user, accepting a single string from the SpiraApp</li>
-<li><strong>displayWarningMessage</strong>: shows a warning to the user, accepting a single string from the SpiraApp</li>
-<li><strong>hideMessage</strong>: hides the message, if any. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete</li>
-</ul>
+<details class="note">
+<summary><strong>displayErrorMessage(message: string)</strong></summary>
+<p>Shows an error message to the user </p>
+</details>
+<details class="note">
+<summary><strong>displaySuccessMessage(message: string)</strong></summary>
+<p>Shows a success message to the user</p>
+</details>
+<details class="note">
+<summary><strong>displayWarningMessage(message: string)</strong></summary>
+<p>Shows a warning message to the user</p>
+</details>
+<details class="note">
+<summary><strong>hideMessage()</strong></summary>
+<p>Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. </p>
+</details>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayErrorMessage</span><span class="p">(</span><span class="s2">&quot;The operation could not complete due to the following error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">errorMessage</span><span class="p">);</span>
@@ -9143,7 +9153,7 @@
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">&para;</a></h2>
 <p>SpiraApps can create <a href="../SpiraApps-Overview/#menus">menu entries</a> on <a href="../SpiraApps-Reference/#pages">relevant pages</a>. If a menu entry's action is to run a JavaScript function, then the SpiraApp needs to register the function to call when the menu entry is clicked. A SpiraApp cannot use the "action" field in the manifest to set the function to run because the code for the SpiraApp is in an IIFE. Therefore the SpiraApp code has to register the function on initiation.</p>
 <p>Use the <code>registerEvent_menuEntryClick</code> function on the spiraAppManager to register the function to execute when a menu entry is clicked.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="explanation_6" name="__tabbed_7" type="radio" /><input id="example_6" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="explanation_6">Explanation</label><label for="example_6">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="parameters_2" name="__tabbed_7" type="radio" /><input id="example_4" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="parameters_2">Parameters</label><label for="example_4">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9173,24 +9183,102 @@
 </div>
 </div>
 <h2 id="events-handlers">Events handlers<a class="headerlink" href="#events-handlers" title="Permanent link">&para;</a></h2>
-<p>There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="explanation_7" name="__tabbed_8" type="radio" /><input id="example_7" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="explanation_7">Explanation</label><label for="example_7">Example</label></div>
+<p>There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page. Most have no return value &amp; do not use any returned values from the callback, unless otherwise specified. Function signatures are meant to match TypeScript type syntax.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="details-pages" name="__tabbed_8" type="radio" /><input id="all-pages" name="__tabbed_8" type="radio" /><input id="dashboards" name="__tabbed_8" type="radio" /><input id="examples_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="details-pages">Details Pages</label><label for="all-pages">All Pages</label><label for="dashboards">Dashboards</label><label for="examples_2">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<details class="note">
+<summary>registerEvent_dataSaved(handler: (operation: string, newId: number) =&gt; void)</summary>
+<p>Registers an event handler on a details page to trigger when the main form data is saved. </p>
 <ul>
-<li><strong>registerEvent_windowLoad</strong>: registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.</li>
-<li><strong>registerEvent_dashboardUpdated</strong>: registers an event handler on dashboard pages when the release dropdown is changed. This can be useful when a user changes the release on the product dashboard.</li>
+<li><strong>handler</strong>:<ul>
+<li><strong>operation</strong>: Proprietary string detailing what kind of save was done - undefined for normal saves, but can be new, redirect (IN, RK only), or close when doing complex saves</li>
+<li><strong>artifactId</strong>: If the operation created a new artifact, it's ID is put here. Always paired with the redirect or new operation, depending on whether the artifact has a separate redirect operation.</li>
 </ul>
-<p><strong>Details page events</strong>:</p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_loaded(handler: (dontClearMessages: boolean) =&gt; void)</summary>
+<p>Registers an event handler on the details page to trigger when the main form data is loaded. This will be triggered each time the data is refreshed, including switching between artifacts without a full page load.</p>
 <ul>
-<li><strong>registerEvent_dataSaved</strong>: registers an event handler on a details page to trigger when the main form data is saved. When the handler is called, an operation and artifactId parameters are passed into the handler</li>
-<li><strong>registerEvent_loaded</strong>: registers an event handler on the details page to trigger when the main form data is loaded. When the handler is called, a boolean is provided back to the SpiraApp as a parameter, which should be ignored (internal use only). Note that this will be triggered each time the data is refreshed, including switching between artifacts without a full page load</li>
-<li><strong>registerEvent_dataFailure</strong>: registers an event handler on the details page form manager for when data is not saved correctly. Receives an exception message from Spira - this may be useful to help a SpiraApp debug, but should not be presented to the user.</li>
-<li><strong>registerEvent_operationReverted</strong>: Registers an event handler on the details page form manager for when a status change is reverted back. When the handler is called, the current status id and a boolean on if it is an open status (where relevant) are provided as parameters</li>
-<li><strong>registerEvent_dropdownChanged</strong>: Registers an event handler on the <a href="../SpiraApps-Reference/#available-field-names">specified dropdown field</a> for when its value changes. When the handler is called, the old and new values are provided (as ints). The handler can block the update by returning false or an error. Note that on first registering the handler, this function returns true if the handler was registered, and false if the handler could not be registered.  </li>
-<li><strong>registerEvent_gridLoaded</strong>: registers an event handler to trigger when a <a href="../SpiraApps-Reference/#available-grid-ids">specific grid</a> is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.</li>
-<li><strong>registerEvent_dataPreSave</strong>: Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. </li>
+<li><strong>handler</strong>:<ul>
+<li><strong>dontClearMessages</strong>: Whether or not the page load being performed should clear any displayed errors native to Spira. Unlikely to be meaningful for a SpiraApp.</li>
 </ul>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_dataFailure(handler: (errorMessage: PluginRestException) =&gt; void)</summary>
+<p>Registers an event handler on the details page form manager for when data is not saved correctly. </p>
+<ul>
+<li><strong>handler</strong>:<ul>
+<li><strong>PluginRestException</strong>: Object containing an exceptionType &amp; message property</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_operationReverted(handler: (statusId: number, isOpen: boolean) =&gt; void)</summary>
+<p>Registers an event handler on the details page form manager for when a status change is reverted back. </p>
+<ul>
+<li><strong>handler</strong>:<ul>
+<li><strong>statusId</strong>: ID of the status this operation is reverting to</li>
+<li><strong>isOpen</strong>: Whether or not the status being reverted to is open (if supported by artifact)</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_dropdownChanged(fieldName: string, <br> handler: (oldValue: string, newValue: string) =&gt; boolean): boolean</summary>
+<p>Registers an event handler on the <a href="../SpiraApps-Reference/#available-field-names">specified dropdown field</a> for when its value changes. </p>
+<ul>
+<li><strong>fieldName</strong>: name of the artifact field this should listen to changes on</li>
+<li><strong>handler</strong>: <ul>
+<li><strong>oldValue</strong>: the value a dropdown had selected prior to user input</li>
+<li><strong>newValue</strong>: the value a dropdown is changing to based on user input</li>
+<li><strong>return</strong>: False to reject the transition &amp; return the dropdown to the original value</li>
+</ul>
+</li>
+<li><strong>return</strong>: False if the SpiraAppManager could not find the field or otherwise was unable to mount the event listener </li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_gridLoaded(gridId: string, handler: () =&gt; void)</summary>
+<p>Registers an event handler to trigger when a <a href="../SpiraApps-Reference/#available-grid-ids">specific grid</a> is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.</p>
+<ul>
+<li><strong>gridId</strong>: <a href="../SpiraApps-Reference/#available-grid-ids">ID of the relevant grid</a></li>
+<li><strong>handler</strong>: Callback for doing any setup which requires a grid on a details page to be loaded </li>
+</ul>
+</details>
+<details class="note">
+<summary>registerEvent_dataPreSave(handler: (operation: string) =&gt; void)</summary>
+<p>Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. </p>
+<ul>
+<li><strong>handler</strong>:<ul>
+<li><strong>operation</strong>: Proprietary string detailing what kind of save was done - undefined for normal saves, but can be new, redirect (IN, RK only, for new artifact creation), or close when doing complex saves</li>
+</ul>
+</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>registerEvent_windowLoad(handler: () =&gt; void)</summary>
+<p>Registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.</p>
+<ul>
+<li><strong>handler</strong>: Callback to perform any setup for the SpiraApp that requires window load, such as mounting other events or interacting with the page</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>registerEvent_dashboardUpdated(handler: () =&gt; void)</summary>
+<p>Registers an event handler on dashboard pages with a release dropdown when it is changed. This can be useful when a user changes the release on the product dashboard or product reporting page.</p>
+<ul>
+<li><strong>handler</strong>: Callback to perform actions or update a SpiraApp widget based on the newly applied release filter. The new releaseId will need to be retrieved separately - not passed as an argument.</li>
+</ul>
+</details>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_windowLoad</span><span class="p">(</span><span class="nx">runOnWindowLoad</span><span class="p">);</span>
@@ -9217,7 +9305,8 @@
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dropdownChanged</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="p">);</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="w"> </span><span class="p">(</span><span class="nx">oldValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//arbitrarily block any attempts to set a value to above 20</span>
+<span class="w">        </span><span class="c1">//arbitrarily block any attempts to select a value with an ID above 20</span>
+<span class="w">        </span><span class="c1">//Would be more useful to pull some configuration from a product setting related to these behaviors, but this example is simple</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
@@ -9243,7 +9332,7 @@
 </div>
 <h2 id="page-actions">Page actions<a class="headerlink" href="#page-actions" title="Permanent link">&para;</a></h2>
 <p>A SpiraApp can make requests to Spira to perform certain actions on certain pages.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="available-actions" name="__tabbed_9" type="radio" /><input id="example-usage" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="available-actions">Available Actions</label><label for="example-usage">Example Usage</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="available-actions_1" name="__tabbed_9" type="radio" /><input id="examples_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="available-actions_1">Available Actions</label><label for="examples_3">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -9330,11 +9419,10 @@
 </div>
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">&para;</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">&para;</a></h3>
-<p>This helper function handles the creation of a UX control that allows users to interact with it freely. It creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_8" name="__tabbed_10" type="radio" /><input id="example_8" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
+<p>The helper function <code>createComboDialog</code> creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="parameters_3" name="__tabbed_10" type="radio" /><input id="example_5" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="parameters_3">Parameters</label><label for="example_5">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The <code>createComboDialog</code> function takes the following parameters:</p>
 <ul>
 <li><strong>title</strong>: the title of the dialog (string)</li>
 <li><strong>introText</strong>: the introductory text, to explain to the user what to do and why (string)</li>
@@ -9389,16 +9477,32 @@
 </div>
 </div>
 </div>
-<h2 id="logic-helpers">Logic helpers<a class="headerlink" href="#logic-helpers" title="Permanent link">&para;</a></h2>
-<p>The SpiraAppManager provides a number of helpers to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_9" name="__tabbed_11" type="radio" /><input id="example_9" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
+<h2 id="user-context">User Context<a class="headerlink" href="#user-context" title="Permanent link">&para;</a></h2>
+<p>The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="available-context" name="__tabbed_11" type="radio" /><input id="examples_4" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_4">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<details class="note">
+<summary>canViewArtifactType(artifactTypeId: number)</summary>
+<p>Returns true if the current user can <strong>view</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product.</p>
 <ul>
-<li><strong>canViewArtifactType</strong>: returns true if the current user can <strong>view</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product. Takes the artifact type ID as the parameter (integer)</li>
-<li><strong>canCreateArtifactType</strong>: returns true if the current user can <strong>create</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product. Takes the artifact type ID as the parameter (integer)</li>
-<li><strong>canModifyArtifactType</strong>: returns true if the current user can <strong>modify</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product. Takes the artifact type ID as the parameter (integer). Note that this does not check if the actual artifact ID itself can be modified (only if they can ever modify the artifact, including limited view)</li>
+<li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
 </ul>
+</details>
+<details class="note">
+<summary>canCreateArtifactType(artifactTypeId: number)</summary>
+<p>Returns true if the current user can <strong>create</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product. </p>
+<ul>
+<li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
+</ul>
+</details>
+<details class="note">
+<summary>canModifyArtifactType(artifactTypeId: number)</summary>
+<p>Returns true if the current user can <strong>modify</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product. </p>
+<ul>
+<li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
+</ul>
+</details>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canViewArtifactType</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can view requirements in this product</span>
@@ -9411,16 +9515,44 @@
 </div>
 </div>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_10" name="__tabbed_12" type="radio" /><input id="example_10" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_10">Explanation</label><label for="example_10">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_3" name="__tabbed_12" type="radio" /><input id="examples_5" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_5">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<details class="note">
+<summary>formatDate(isoDate: string)</summary>
+<p>Formats an ISO 8601 datetime into a user friendly date format/timezone based on the user's cultural settings in Spira.</p>
 <ul>
-<li><strong>formatDate</strong>: formats an ISO datetime into the correct date format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter</li>
-<li><strong>formatDateTime</strong>: formats an ISO datetime into the correct datetime format/timezone based on the user's cultural settings in Spira. Takes a datetime item as its parameter</li>
-<li><strong>formatCustomFieldName</strong>: returns the custom property field name in the form <code>Custom_01</code>  for a passed in integer</li>
-<li><strong>convertHtmlToPlainText</strong>: returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)</li>
-<li><strong>sanitizeHtml</strong>: returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks </li>
+<li><strong>isoDate</strong>: String of a date in ISO 8601 format (how Spira provides it from the server)</li>
 </ul>
+</details>
+<details class="note">
+<summary>formatDateTime(isoDate: string)</summary>
+<p>Formats an ISO datetime into a user friendly datetime format/timezone based on the user's cultural settings in Spira.</p>
+<ul>
+<li><strong>isoDate</strong>: String of a date in ISO 8601 format (how Spira provides it from the server)</li>
+</ul>
+</details>
+<details class="note">
+<summary>formatCustomFieldName(propertyNumber: number)</summary>
+<p>Returns the custom property field name in the form <code>Custom_01</code> for a passed in property number</p>
+<ul>
+<li><strong>propertyNumber</strong>: Field # of the custom property we want the field name of (for <a href="./#page-actions">getDataItemField &amp; updateFormField functions</a>)</li>
+</ul>
+</details>
+<details class="note">
+<summary>convertHtmlToPlainText(htmlTemplate: string)</summary>
+<p>Returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)</p>
+<ul>
+<li><strong>htmlTemplate</strong>: Template string of some HTML to remove markup from. Useful for grabbing information from descriptions or rich text custom properties.</li>
+</ul>
+</details>
+<details class="note">
+<summary>sanitizeHtml(htmlToSanitize: string)</summary>
+<p>Returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks </p>
+<ul>
+<li><strong>htmlToSanitize</strong>: String of HTML which is going to be rendered to the DOM from user input, such as in a dashboard widget rendering the description of an artifact</li>
+</ul>
+</details>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDate</span><span class="p">(</span><span class="s2">&quot;1993-05-16T14:48:00.000Z&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;5/16/1993&quot; if the user&#39;s culture is en-US</span>
@@ -9437,15 +9569,38 @@
 </div>
 </div>
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">&para;</a></h2>
-<p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use the SpiraApp guid.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="explanation_11" name="__tabbed_13" type="radio" /><input id="example_11" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_11">Explanation</label><label for="example_11">Example</label></div>
+<p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use a string provided by a SpiraApp.
+Do not use this for storing secure information.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="explanation_4" name="__tabbed_13" type="radio" /><input id="best-practices" name="__tabbed_13" type="radio" /><input id="examples_6" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_6">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<details class="note">
+<summary>getLocalData(storageKey: string) =&gt; string</summary>
+<p>Retrieves the local storage object for this user, on this browser, for this SpiraApp. </p>
 <ul>
-<li><strong>getLocalData</strong>: retrieve the local storage object for this user, on this browser, for this SpiraApp. Takes the app guid as its parameter (string)</li>
-<li><strong>setLocalData</strong>: sets or updates the local storage. Takes the app guid (string) as the first parameter, and a string for the data to be set as the second parameter (string).</li>
-<li><strong>removeLocalData</strong>: deletes all local storage for this user, in this browser, for this SpiraApp. Takes the app guid as its parameter (string)</li>
+<li><strong>storageKey</strong>: Key to store the data in. Must contain the APP_GUID for key uniqueness.</li>
+<li><strong>returns</strong>: The data as a string, stored at that key, if any</li>
 </ul>
+</details>
+<details class="note">
+<summary>setLocalData(storageKey: string, data: any)</summary>
+<p>Sets or updates the local storage entry for this app guid. Takes the app guid (string) as the first parameter, and data to be put in localStorage as the second parameter (string).</p>
+<ul>
+<li><strong>storageKey</strong>: Key the data is stored in. Must contain the APP_GUID for key uniqueness.</li>
+<li><strong>data</strong>: Any data, as per localStorage restrictions. This data will be saved as a string. Complex types like objects will have .ToString called on them by the localStorage API, likely resulting in unintended outcomes. </li>
+</ul>
+</details>
+<details class="note">
+<summary>removeLocalData(storageKey: string)</summary>
+<p>Deletes the information stored in a given key. </p>
+<ul>
+<li><strong>storageKey</strong>: Key to remove from localStorage. Must contain the APP_GUID for key uniqueness.</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>Always use your APP_GUID as a prefix / suffix of the local storage keys your SpiraApp uses to avoid conflicts with other SpiraApps. Define these keys as constants at the top of the JS file. </p>
+<p>Your SpiraApp will likely not be distributed by Inflectra if you fail to follow this rule, since it could put localStorage based functionality of Spira &amp; other SpiraApps at risk.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
