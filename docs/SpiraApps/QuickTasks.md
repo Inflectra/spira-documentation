@@ -40,10 +40,10 @@ You can use the top row of the table to create a new Quick Task. This is automat
 
 If a release is selected using the Product Home Page release dropdown, only Quick Tasks for that release will be shown, and any newly created Quick Tasks will be added to that release.
 
-Below the New Task row, the widget displays up to fifty incomplete Quick Tasks, sorted first by latest Creation Date and then alphabetically by Owner. The widget considers any Quick Tasks with a Status of "Not Started", "In Progress", "Blocked", or "Needs Review" as incomplete, and includes only those tasks in this section. You can click the empty checkbox to the left of an incomplete Quick Task to mark it as Completed.
+Below the New Task row, the widget displays up to fifty incomplete Quick Tasks, sorted first by latest Creation Date and then alphabetically by Owner. The widget considers any Quick Tasks with a Status of "Not Started", "In Progress", "Blocked", or "Under Review" as incomplete, and includes only those tasks in this section. You can click the empty checkbox to the left of an incomplete Quick Task to mark it as Completed.
 
 Below the incomplete Quick Tasks, the widget also shows up to five Completed Quick Tasks, sorted by latest updated. You can click the filled checkbox to the left of a completed Quick Task to mark it as In Progress, which moves it back to the upper section.
 
 ![Product home page widget with four incomplete tasks and one completed task. Two different names across the five tasks are shown in the Owner column, and two of the incomplete tasks have a release in small text underneath the task name](img/quicktasks-widget.png)
 
-Note that when a release is selected on the product home page, the end date for the task will always match the end date for the release, and cannot be changed by the user. When entering a date, please note the widget rejects dates in the past, since the purpose of this widget is to help you plan out your next few tasks for the current day or week, not to keep track of work you have already done.
+Note that when a release is selected on the product home page, the end date for the task will always match the end date for the release, and cannot be changed by the user.
