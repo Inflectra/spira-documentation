@@ -2,7 +2,7 @@
 
 ## Version 8.6 (December 2024)
 !!! info "Summary"
-    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSVs files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
     Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality. <span class="pill">SpiraPlan</span>
 
