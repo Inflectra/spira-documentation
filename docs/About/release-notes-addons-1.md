@@ -1,6 +1,17 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## December 2024
+- [Jira Importer](../Migration-and-Integration/Migrating-from-Jira.md):
+
+    - Handles the import of the following test artifacts from XRAY Cloud as well as XRAY Datacenter and Server:
+        - test cases
+        - test steps
+        - test sets
+        - test plans
+        - test runs
+        - test run steps
+
 ## October 2024
 - [TestRail Importer](../Migration-and-Integration/Migrating-from-TestRail.md):
 

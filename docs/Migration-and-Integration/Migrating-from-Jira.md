@@ -55,6 +55,9 @@ The importer currently supports the following:
     - Test Cases
     - Test Runs
 
+### Importing from XRAY Cloud
+
+If you are importing test cases and test runs from XRAY Cloud (not Server or DataCenter), you will also need to enter in the XRAY API Client ID and Client Secret as well.
 
 Once you have confirmed the artifacts, click the **Next** button to move to the next page in the import wizard.
 
