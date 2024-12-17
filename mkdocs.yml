@@ -310,13 +310,14 @@ nav:
     - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
     - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
-    - HP ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
+    - OpenText ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
     - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
     - qTest: Migration-and-Integration\Migrating-from-qTest.md
     - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
     - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
+    - QAComplete: Migration-and-Integration\Migrating-from-QAComplete.md
     - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
     - Spira Migration Tool: Migration-and-Integration\Spira-Migration-Tool.md
     - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
