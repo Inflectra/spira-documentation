@@ -593,7 +593,7 @@ Read more about [how to manage and add associations to this artifact](Applicatio
 
 
 ### Use Case Diagrams
-Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
+<span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
 
 ![](img/requirements-use-case-diagram.png)
 
