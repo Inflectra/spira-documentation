@@ -46,7 +46,7 @@
     - Fix potential errors when [cloning a product](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) caused by test step parameter names not being correctly checked for uniqueness [IN:7825]
     - Fix the [automated section on the test run details page](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) saving incorrectly when other parts of test runs are modified [IN:8003]
     - Fix the custom dashboard types for SpiraApps potentially causing a database violation error for some users [IN:10163]
-    - Improve the usability of the p[roduct membership admin grid](../Spira-Administration-Guide/Product-Users.md) on smaller screens so it does not obscure other content [IN:9760]
+    - Improve the usability of the [product membership admin grid](../Spira-Administration-Guide/Product-Users.md) on smaller screens so it does not obscure other content [IN:9760]
     - Make the dropdown options wider on the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) "Choose an artifact" selector [IN:10315]
 
 
