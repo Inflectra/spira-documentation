@@ -36,7 +36,7 @@ Assuming that the login was successful, click the `Start Import` button to actua
 
  ![](img/Migrating_from_QAComplete_5.png)  
 
-During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the `Done` button will be enabled. Clicking this button closed the importer. You should now log into SpiraTest using the same user name and password that was used for the import to view the imported project.
+During the import process, as each of the types of artifacts are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the `Done` button will be enabled. Clicking this button closes the importer. You should now log into SpiraTest using the same user name and password that was used for the import to view the imported project.
 
 The migration tool will import the following artifacts from QAComplete:
 
