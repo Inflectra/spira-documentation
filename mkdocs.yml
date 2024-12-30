@@ -313,6 +313,7 @@ nav:
     - OpenText ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
     - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
+    - Jama: Migration-and-Integration\Migrating-from-Jama.md
     - qTest: Migration-and-Integration\Migrating-from-qTest.md
     - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
     - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
