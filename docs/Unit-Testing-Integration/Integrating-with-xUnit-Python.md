@@ -38,7 +38,7 @@ create a file named `spira.cfg` with the following:
 # Following are required
 url = http://localhost/spira
 username = administrator
-token = {XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}}
+token = {XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
 project_id = 1
 # Following are optional:
 release_id = 5
