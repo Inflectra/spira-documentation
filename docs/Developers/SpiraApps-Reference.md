@@ -115,8 +115,8 @@ The following field names are available when calling various [page functions](./
     - CurrentVersion
     - Custom_01...Custom_99
     - Description
-    - DocumentStatusId
-    - DocumentTypeId
+    - DocumentStatusId (Lookup)
+    - DocumentTypeId (Lookup)
     - DocumentVersions
     - EditedDate
     - EditorId
@@ -132,49 +132,49 @@ The following field names are available when calling various [page functions](./
     - BuildId
     - ClosedDate
     - CompletionPercent
-    - ComponentIds
+    - ComponentIds (Lookup)
     - CreationDate
     - Custom_01...Custom_99
     - Description
-    - DetectedReleaseId
+    - DetectedReleaseId (Lookup)
     - EstimatedEffort
     - IncidentId
-    - IncidentStatusId
-    - IncidentTypeId
+    - IncidentStatusId (Lookup)
+    - IncidentTypeId (Lookup)
     - LastUpdateDate
     - Name
-    - OpenerId
-    - OwnerId
-    - PriorityId
+    - OpenerId (Lookup)
+    - OwnerId (Lookup)
+    - PriorityId (Lookup)
     - ProgressId
     - ProjectedEffort
     - RemainingEffort
     - Resolution
-    - ResolvedReleaseId
-    - SeverityId
+    - ResolvedReleaseId (Lookup)
+    - SeverityId (Lookup)
     - StartDate
     - Tags
-    - VerifiedReleaseId
+    - VerifiedReleaseId (Lookup)
 
 === "Releases"
     - AvailableEffort
     - AvailablePoints
     - CountPassed
     - CreationDate
-    - CreatorId
+    - CreatorId (Lookup)
     - Custom_01...Custom_99
     - DaysNonWorking
     - Description
     - EndDate
     - LastUpdateDate
     - Name
-    - OwnerId
+    - OwnerId (Lookup)
     - PercentComplete
     - PlannedEffort
     - PlannedPoints
-    - ReleaseId
-    - ReleaseStatusId
-    - ReleaseTypeId
+    - ReleaseId (Lookup)
+    - ReleaseStatusId (Lookup)
+    - ReleaseTypeId (Lookup)
     - RequirementCount
     - RequirementPoints
     - ResourceCount
@@ -189,23 +189,23 @@ The following field names are available when calling various [page functions](./
 
 === "Requirements"
     - AuthorId
-    - ComponentId
+    - ComponentId (Lookup)
     - CoverageCountTotal
     - CreationDate
     - Custom_01...Custom_99
     - Description
     - EstimatedEffort
     - EstimatePoints
-    - ImportanceId
+    - ImportanceId (Lookup)
     - IsSummary
     - LastUpdateDate
     - Name
-    - OwnerId
+    - OwnerId (Lookup)
     - TaskCount
-    - ReleaseId
+    - ReleaseId (Lookup)
     - RequirementId
-    - RequirementStatusId
-    - RequirementTypeId
+    - RequirementStatusId (Lookup)
+    - RequirementTypeId (Lookup)
     - Tags
     - TaskActualEffort
     - TaskEstimatedEffort
@@ -214,54 +214,53 @@ The following field names are available when calling various [page functions](./
 
 === "Risks"
     - ClosedDate
-    - ComponentId
+    - ComponentId (Lookup)
     - CreationDate
     - CreatorId
     - Custom_01...Custom_99
     - Description
     - LastUpdateDate
     - Name
-    - OwnerId
-    - ReleaseId
+    - OwnerId (Lookup)
+    - ReleaseId (Lookup)
     - ReviewDate
     - RiskExposure
     - RiskId
-    - RiskImpactId
-    - RiskProbabilityId
-    - RiskStatusId
-    - RiskTypeId
+    - RiskImpactId (Lookup)
+    - RiskProbabilityId (Lookup)
+    - RiskStatusId (Lookup)
+    - RiskTypeId (Lookup)
     - Tags
-    - Title
 
 === "Tasks"
     - ActualEffort
     - CompletionPercent
     - ComponentId
     - CreationDate
-    - CreatorId
+    - CreatorId (Lookup)
     - Custom_01...Custom_99
     - Description
     - EndDate
     - EstimatedEffort
     - LastUpdateDate
     - Name
-    - OwnerId
+    - OwnerId (Lookup)
     - ProgressId
     - ProjectedEffort
-    - ReleaseId
+    - ReleaseId (Lookup)
     - RemainingEffort
     - RequirementId
     - RiskId
     - StartDate
     - Tags
     - TaskId
-    - TaskPriorityId
-    - TaskStatusId
-    - TaskTypeId
+    - TaskPriorityId (Lookup)
+    - TaskStatusId (Lookup)
+    - TaskTypeId (Lookup)
 
 === "Test Cases"
     - ActualDuration
-    - AuthorId
+    - AuthorId (Lookup)
     - AutomationChanged
     - AutomationDocumentFolderId
     - AutomationDocumentId
@@ -272,7 +271,7 @@ The following field names are available when calling various [page functions](./
     - AutomationScript
     - AutomationType
     - AutomationVersion
-    - ComponentIds
+    - ComponentIds (Lookup)
     - CreationDate
     - Custom_01...Custom_99
     - Description
@@ -283,18 +282,18 @@ The following field names are available when calling various [page functions](./
     - IsTestSteps
     - LastUpdateDate
     - Name
-    - OwnerId
-    - ReleaseId
+    - OwnerId (Lookup)
+    - ReleaseId (Lookup)
     - Tags
     - TestCaseId
-    - TestCasePriorityId
-    - TestCaseStatusId
-    - TestCaseTypeId
+    - TestCasePriorityId (Lookup)
+    - TestCaseStatusId (Lookup)
+    - TestCaseTypeId (Lookup)
 
 === "Test Runs"
     - ActualDuration
     - AutomationHostId
-    - BuildId
+    - BuildId (Lookup)
     - Custom_01...Custom_99
     - Description
     - EndDate
@@ -302,23 +301,23 @@ The following field names are available when calling various [page functions](./
     - ExecutionStatusId
     - Name
     - ProjectId
-    - ReleaseId
+    - ReleaseId (Lookup)
     - RunnerMessage
     - RunnerName
     - RunnerTestName
     - Tags
     - TestCaseId
     - TestRunId
-    - TestRunTypeId
+    - TestRunTypeId (Lookup)
     - TestSetId
-    - TesterId
+    - TesterId (Lookup)
 
 === "Test Sets"
     - ActualDuration
     - AutomationHostId
     - BuildExecuteTimeInterval
     - CreationDate
-    - CreatorId
+    - CreatorId (Lookup)
     - Custom_01...Custom_99
     - Description
     - EstimatedDuration
@@ -327,16 +326,16 @@ The following field names are available when calling various [page functions](./
     - IsAutoScheduled
     - LastUpdateDate
     - Name
-    - OwnerId
+    - OwnerId (Lookup)
     - PlannedDate
     - RecurrenceId
-    - ReleaseId
+    - ReleaseId (Lookup)
     - Tags
     - TestCaseReleaseId
-    - TestConfigurationSetId
-    - TestRunTypeId
+    - TestConfigurationSetId (Lookup)
+    - TestRunTypeId (Lookup)
     - TestSetId
-    - TestSetStatusId
+    - TestSetStatusId (Lookup)
 					
 ### Available Data Properties
 The following data properties are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
@@ -413,7 +412,6 @@ Setting this value will likely break user saving and SpiraApps which do so will 
 
 | ID  | Name                    | Notes                                                                                                                                                                        |
 | --- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
 | 1   | Text                    | This type refers specifically to plain text fields, not rich text. Artifact names are also an exception to this.                                                             |
 | 2   | Lookup                  | This type covers most single-select dropdowns - usually the database value for this field is an Integer of an ID, while the displayed value is a label for the selected item |
 | 3   | DateTime                | This type refers to date and time inputs such as start and end dates                                                                                                         |
