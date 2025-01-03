@@ -9315,9 +9315,9 @@
 TK{{"`**Task**`"}} --&gt; RL(Release);
 TK --&gt; RQ(Requirement);
 TK --&gt; IN(Incident);
-TK --&gt; TK;
+TK &lt;-.-&gt; TK2(Other tasks);
 TK -.-&gt; TC(Test Case);
-(Source code commits) -.-&gt; TK;</code></pre>
+SC(Source code commits) -.-&gt; TK;</code></pre>
 </div>
 </div>
 </div>
