@@ -29,9 +29,9 @@ Tasks have time tracking features so a user can record the expected time require
     TK{{"`**Task**`"}} --> RL(Release);
     TK --> RQ(Requirement);
     TK --> IN(Incident);
-    TK --> TK;
+    TK <-.-> TK2(Other tasks);
     TK -.-> TC(Test Case);
-    (Source code commits) -.-> TK;
+    SC(Source code commits) -.-> TK;
     ```
 
 ## Task List
