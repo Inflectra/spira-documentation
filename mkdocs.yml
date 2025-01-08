@@ -142,6 +142,7 @@ nav:
   - Testing: HowTo-Guides\Testing.md
   - Login Providers (Oauth): HowTo-Guides\Login-providers.md
   - Troubleshooting Integrations: HowTo-Guides\Integrations-Troubleshoot.md
+  - Security: HowTo-Guides\Security.md
 - Quick Start Guide:
   - Introduction: SpiraPlan-Quick-Start-Guide\index.md
   - Plan: SpiraPlan-Quick-Start-Guide\plan.md
