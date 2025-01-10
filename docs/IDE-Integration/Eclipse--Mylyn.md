@@ -41,7 +41,7 @@ display the Eclipse installation wizard:
 
 
 
-Enter <https://www.inflectra.com/Downloads/Eclipse> as the download site
+Enter `https://eclipse.inflectra.com` as the download site
 in the "Work with:" text box and uncheck the "Group items by category"
 checkbox. Once you hit enter, the wizard should display "SpiraTeam".
 Select the Feature's checkbox and click "Next" or "Finish" to tell
@@ -50,6 +50,10 @@ During this process you may be asked to agree to our software license
 and to allow the installation of unsigned software. Once you have
 completed these steps, you should now have our SpiraTeam plug-in
 installed and ready to use.
+
+!!! warning "Fixing Dependency Issues"
+    if you run into an issue with missing dependencies, please refer to this
+    [Knowledge Base Article - KB788](https://www.inflectra.com/Support/KnowledgeBase/KB788.aspx).
 
 To check that the individual plugins have been installed, you can go to
 Help \> About Eclipse and then click on the \[Installation Details\]
