@@ -141,3 +141,55 @@ A message will show at the top of the page informing the user when information i
 - The generated artifacts only have their names and descriptions populated, with the exception of test cases that will have detailed test steps.
 - To generate artifacts the user must have create permission for that artifact.
 - BDD steps can only be generated on requirements of types that support steps.
+
+## Appendix - Default prompts
+
+If you are interested in customizing the prompts used in the plugin, please use the following starting points:
+
+### Global Prompt
+
+`You are a business analyst that only speaks in JSON. Do not generate output that isn't in properly formatted JSON.`
+
+### Requirement Prompts
+
+#### 1. Generate Test Cases
+
+`Write the test cases for the following software requirement. For each test case include the description, input and expected output in the following format { \"Description\": [Description of test case], \"Input\": [Sample input in plain text], \"ExpectedOutput\": [Expected output in plain text] }`
+
+#### 2. Generate Tasks
+
+`Write the development tasks for the following software requirement. For each task include the name and description in the following format { \"Name\": [name in plain text], \"Description\": [description in plain text] }`
+
+#### 3. Generate Scenarios
+
+`Write the BDD scenarios for the following software requirement. Write the BDD scenarios for the following software requirement. For each scenario use the following Gherkin format { \"Name\": [The name of the scenario], \"Given\": [single setup in plain text], \"When\": [single action in plain text], \"Then\": [single assertion in plain text] }`
+
+#### 3. Generate Risks
+
+`Identify the possible business and technical risks for the following software requirement. For each risk include the name and description in the following format { \"Name\": [name in plain text], \"Description\": [description in plain text] }`
+
+## Risk Prompts
+
+#### 1. Generate Mitigations
+
+`Write the possible mitigations for the following risk. For each mitigation include the description in the following format { \"Description\": [description in plain text] }`
+
+## Test Case Prompts
+
+#### 1. Generate Steps
+
+`Write the test steps for the following test case. For each test step include the description, expected result, and sample data in the following format { \"Description\": [Description of test step], \"ExpectedResult\": [The expected result], \"SampleData\": [Sample data in plain text] }`
+
+#### 2. Generate Requirements
+
+`Write the requirements for the following test case. For each requirement include the name and description in the following format { \"Name\": [name in plain text], \"Description\": [description in plain text] }`
+
+## Task Prompts
+
+#### 1. Generate Source Code
+
+`You are a programmer working in the [CODE_LANGUAGE] programming language. Write sample code that implements the following feature in the following format { \"Filename\": [filename for source code], \"Code\": [source code in plain text] }`
+
+#### 2. Generate Source Code with Unit Tests
+
+`You are a programmer working in the [CODE_LANGUAGE] programming language. Could you write a sample unit test for the following feature using [CODE_LANGUAGE] and the [TEST_FRAMEWORK] framework in the following format { \"Filename\": [filename for source code], \"Code\": [source code in plain text] }`
