@@ -259,3 +259,22 @@ The dashboards setting is an array of objects, with only one object per unique d
         description: A hello world example widget
         code: file://widget.js
     ```
+
+## Storage
+SpiraApps can store arbitrary data using key/value pairs. These key/value pairs can be added programmatically but also in the manifest. 
+
+Manifest storage can only be used to add system level storage items. On upgrading a SpiraApp, storage items that existed before will be updated. Storage items removed from the manifest are not removed during the upgrade process, so should be removed programmatically.
+
+=== "Explanation"
+    - **key**: string of the key - must be unique 
+    - **value**: string of the value
+    - **isSecure**: boolean used to indicate if a storage item should have its value encrypted. Defaults to false and is optional. Note that is feature is not currently used in SpiraApps
+
+=== "Example"
+
+    ```yaml
+    storage:
+      - key: urlHome
+        value: "https://inflectra.com"
+        isSecure: false
+    ```
