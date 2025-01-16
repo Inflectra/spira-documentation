@@ -1,5 +1,5 @@
 # Timesheets
-Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past. 
+Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 
 !!! tip "Locking down actual efforts" 
     If you want to ensure that effort values are only updated by timesheet entries, and not by editing the individual task or incident, you can update the workflows to make the Actual Effort field read only for every status.
