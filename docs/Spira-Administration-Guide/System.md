@@ -256,7 +256,7 @@ For each SpiraApp in the list you see:
 - The author organization (e.g. Inflectra Corporation)
 - A short summary description of what the SpiraApp does
 - The version number
-- If the SpiraApp is active or not (in the screenshot all but 2 of the SpiraApps are active)
+- If the SpiraApp is active or not
 - Available operations
 
     - Use the "power" icon to toggle if the SpiraApp is active or not
