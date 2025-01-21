@@ -50,45 +50,45 @@
     
     * **SpiraApps**
 
-    - Add support to SpiraApps to retrieve the list of artifacts currently selected in a list [RQ:5116]
-    - As a SpiraApp developer, I can save system level storage data for my SpiraApp on installation, to enable richer user experiences [RQ:5057]
+    - Add support to SpiraApps to [retrieve the list of artifacts currently selected](../Developers/SpiraApps-Manager.md/#page-actions) in a list (using the function getGridSelectedItems) [RQ:5116]
+    - As a SpiraApp developer, I can save [system level storage data](../Developers/SpiraApps-Manager.md/#storage) for my SpiraApp on [installation](../Developers/SpiraApps-Manifest.md/#storage), to enable richer user experiences [RQ:5057]
     
-        * **SpiraApps Storage: create**
+        * **[SpiraApps Storage: create](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can create system storage data for my SpiraApp, to enable richer user experiences [RQ:5066]
             - As a SpiraApp developer, I can create user storage data for my SpiraApp, to enable richer user experiences [RQ:5067]
             - As a SpiraApp developer, I can create product storage data for my SpiraApp, to enable richer user experiences [RQ:5068]
             - As a SpiraApp developer, I can create product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5053]
             
-        * **SpiraApps Storage: retrieve a single value for a key**
+        * **[SpiraApps Storage: retrieve a single value for a key](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can retrieve a single system storage value for my SpiraApp, to enable richer user experiences [RQ:5055]
             - As a SpiraApp developer, I can retrieve a single user storage value for my SpiraApp, to enable richer user experiences [RQ:5075]
             - As a SpiraApp developer, I can retrieve a single product storage value for my SpiraApp, to enable richer user experiences [RQ:5076]
             - As a SpiraApp developer, I can retrieve a single product and user storage value for my SpiraApp, to enable richer user experiences [RQ:5077]
         
-        * **SpiraApps Storage: retrieve multiple storage items for specific scenarios**
+        * **[SpiraApps Storage: retrieve multiple storage items for specific scenarios](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can retrieve all system storage data for my SpiraApp, to enable richer user experiences [RQ:5069]
             - As a SpiraApp developer, I can retrieve all user storage data for my SpiraApp, to enable richer user experiences [RQ:5080]
             - As a SpiraApp developer, I can retrieve all product storage data for my SpiraApp, to enable richer user experiences [RQ:5079]
             - As a SpiraApp developer, I can retrieve all product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5078]
         
-        * **SpiraApps Storage: update a single value for a key**
+        * **[SpiraApps Storage: update a single value for a key](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can update system storage data for my SpiraApp, to enable richer user experiences [RQ:5054]
             - As a SpiraApp developer, I can update user storage data for my SpiraApp, to enable richer user experiences [RQ:5071]
             - As a SpiraApp developer, I can update product storage data for my SpiraApp, to enable richer user experiences [RQ:5072]
             - As a SpiraApp developer, I can update product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5073]
         
-        * **SpiraApps Storage: delete a single item**
+        * **[SpiraApps Storage: delete a single item](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can delete a single system storage item for my SpiraApp, to enable richer user experiences [RQ:5056]
             - As a SpiraApp developer, I can delete a single user storage item for my SpiraApp, to enable richer user experiences [RQ:5089]
             - As a SpiraApp developer, I can delete a single product storage item for my SpiraApp, to enable richer user experiences [RQ:5088]
             - As a SpiraApp developer, I can delete a single product with storage item for my SpiraApp, to enable richer user experiences [RQ:5087]
         
-        * **SpiraApps Storage: delete all by a filter**
+        * **[SpiraApps Storage: delete all by a filter](../Developers/SpiraApps-Manager.md/#storage)**
 
             - As a SpiraApp developer, I can delete all system storage data for my SpiraApp, to enable richer user experiences [RQ:5090]
             - As a SpiraApp developer, I can delete all user storage data for my SpiraApp, to enable richer user experiences [RQ:5093]
