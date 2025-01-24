@@ -5,20 +5,20 @@
 
 ??? success "New Features"
     * **Cross-Cutting Functionality**
-        - Enhance the history tab and product admin history details to display difference highlighting for text fields, to make it easier for people to see exactly what has changed and how [RQ:5102]
+        - Enhance the [history tab and product admin history details](../Spira-User-Manual/Application-Wide.md/#history) to display difference highlighting for text fields, to make it easier for people to see exactly what has changed and how [RQ:5102]
 
-    * **My Timesheet**
+    * **[My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet)**
 
         - As a developer, I can see the last time that a timesheet's status was changed, to help me better manage my timesheets [RQ:4964]
-        - As a developer with timesheet approvals enabled, I cannot delete a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4974]
-        - As a developer with timesheet approvals enabled, I cannot edit a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4975]
-        - As a developer with timesheet approvals enabled, I can edit a timesheet that has been rejected, so I can correct any issues a manager has flagged [RQ:4970]
-        - As a developer with timesheet approvals enabled, I can resubmit a previously rejected timesheet, to get the timesheet re-reviewed by a manager [RQ:4971]
-        - As a developer with timesheet approvals enabled, I can see any comment added to any timesheet, for my records [RQ:4977]
-        - As a developer, I can filter the list of my timesheets using "advanced filters", to help me quickly find the data I need [RQ:5117]
-        - As a developer, I can see a list in a grid of all of my timesheets, so can easily explore my timesheets [RQ:4965]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot delete a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4974]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot edit a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4975]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can edit a timesheet that has been rejected, so I can correct any issues a manager has flagged [RQ:4970]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can resubmit a previously rejected timesheet, to get the timesheet re-reviewed by a manager [RQ:4971]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can see any comment added to any timesheet, for my records [RQ:4977]
+        - As a developer, I can filter the [list of my timesheets](../Spira-User-Manual/Timesheets.md/#list-of-my-timesheets) using "advanced filters", to help me quickly find the data I need [RQ:5117]
+        - As a developer, I can see a [list in a grid of all of my timesheets](../Spira-User-Manual/Timesheets.md/#list-of-my-timesheets), so can easily explore my timesheets [RQ:4965]
 
-    * **Timesheet Managers**
+    * **[Timesheet Managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals)**
 
         - As a timesheet manager with approvals enabled, I can navigate to the enterprise level timesheets list page, so I can access the page as needed [RQ:5044]
         - As a timesheet manager with approvals enabled, I can access an enterprise level timesheet list page, so I can view all timesheets submitted for approval [RQ:5045]
@@ -44,9 +44,9 @@
     * **Product Artifacts**
 
         - Improve the user experience of deleting artifact folders via the sidebar by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5074]
-        - Improve the user experience of deleting test case folders from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5095]
+        - Improve the user experience of deleting [Test Case folders](../Spira-User-Manual/Test-Case-Management.md/#editing-a-test-folder) from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5095]
         - Improve the user experience of deleting Test Set folders from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5096]
-        - Improve the user experience of deleting Task folders from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5097]
+        - Improve the user experience of deleting [Task folders](../Spira-User-Manual/Task-Tracking.md/#task-folders) from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5097]
     
     * **SpiraApps**
 
