@@ -20,8 +20,10 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 ## Rest of 2025
 - Allow admins to customize requirement statuses to help them create more flexible workloads.
 - Enhancements to our GenAI SpiraApps.
-- Upgrade the user experience for key parts of the application, based on user feedback.
+- New GenAI features built directly into Spira.
 - Improve the program level planning boards. <span class="pill">SpiraPlan</span>
+- Improvements to source code integration with Git <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Upgrade the user experience for key parts of the application, based on user feedback.
 - More details about these and other areas to follow.
 
 
