@@ -8268,6 +8268,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8917,6 +8928,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9203,6 +9225,27 @@
 <span class="w">    </span><span class="nt">isActive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A hello world example widget</span>
 <span class="w">    </span><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file://widget.js</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
+<p>SpiraApps can store arbitrary data using key/value pairs. These key/value pairs can be added programmatically but also in the manifest. </p>
+<p>Manifest storage can only be used to add system level storage items. On upgrading a SpiraApp, storage items that existed before will be updated. Storage items removed from the manifest are not removed during the upgrade process, so should be removed programmatically.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio" /><input id="example_8" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>key</strong>: string of the key - must be unique </li>
+<li><strong>value</strong>: string of the value</li>
+<li><strong>isSecure</strong>: boolean used to indicate if a storage item should have its value encrypted. Defaults to false and is optional. Note that is feature is not currently used in SpiraApps</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">storage</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">urlHome</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://inflectra.com&quot;</span>
+<span class="w">    </span><span class="nt">isSecure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 </div>
 </div>

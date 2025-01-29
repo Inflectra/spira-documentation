@@ -8324,6 +8324,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#local-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8933,6 +8944,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#local-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9467,13 +9489,13 @@
 </div>
 <h2 id="page-actions">Page actions<a class="headerlink" href="#page-actions" title="Permanent link">&para;</a></h2>
 <p>A SpiraApp can make requests to Spira to perform certain actions on certain pages.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="available-actions_1" name="__tabbed_9" type="radio" /><input id="examples_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="available-actions_1">Available Actions</label><label for="examples_3">Examples</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <details class="note">
 <summary>reloadForm()</summary>
 <p>Reloads the current main overview on a details page. </p>
 <p>Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadForm</span><span class="p">();</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>getDataItemField(fieldName: string, dataProperty?: string)</summary>
@@ -9482,6 +9504,9 @@
 <li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of a field</a> of an artifact</li>
 <li><strong>dataProperty</strong>: The <a href="../SpiraApps-Reference/#available-data-properties">data property</a> containing the type of information you want</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>updateFormField(fieldName: string, dataProperty?: string, newValue: any)</summary>
@@ -9491,6 +9516,9 @@
 <li><strong>dataProperty</strong>: The <a href="../SpiraApps-Reference/#available-data-properties">data property</a> containing the piece of information about this field you want to modify</li>
 <li><strong>newValue</strong>: The new value to set the data property to on the given field.</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this task&quot;</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>getDropdownItems(fieldName: string)</summary>
@@ -9503,6 +9531,11 @@
     isActive: boolean;
     text: string;
 }
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDropdownItems</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns an array like { id: 1, isActive: true, text: &#39;1 - Critical&#39;}</span>
+<span class="nx">items</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// update an item to be hidden from the list</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setDropdownItemsIsActive</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">);</span><span class="w"> </span><span class="c1">// updates the dropdown to hide the relevant item in the UI, returns true if successful</span>
 </code></pre></div>
 </details>
 <details class="note">
@@ -9519,6 +9552,11 @@
     text: string;
 }
 </code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDropdownItems</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns an array like { id: 1, isActive: true, text: &#39;1 - Critical&#39;}</span>
+<span class="nx">items</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// update an item to be hidden from the list</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setDropdownItemsIsActive</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">);</span><span class="w"> </span><span class="c1">// updates the dropdown to hide the relevant item in the UI, returns true if successful</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>reloadGrid(gridId: SpiraAppManager.gridIds)</summary>
@@ -9526,6 +9564,29 @@
 <ul>
 <li><strong>gridId</strong>: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). <a href="../SpiraApps-Reference/#available-grid-ids">Available grid ID keys</a></li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Refreshes the main artifact grid when viewing an artifact list page</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">();</span>
+
+<span class="c1">// Refreshes the requirement steps grid on requirement details pages</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">requirementSteps</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>getGridSelectedItems(gridId: SpiraAppManager.gridIds)</summary>
+<p>Retrieves an array of IDs representing the currently selected rows in the specified grid. </p>
+<p>If the grid cannot be found, then nothing will be returned. If the grid has nothing selected, an empty array will be returned. </p>
+<p>If a folder is selected, its ID will be returned but as a negative number.</p>
+<ul>
+<li><strong>gridId</strong>: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). <a href="../SpiraApps-Reference/#available-grid-ids">Available grid ID keys</a></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Retrieves the list of IDs of the selected rows on the artifact grid when viewing an artifact list page</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getGridSelectedItems</span><span class="p">();</span>
+
+<span class="c1">// Retrieves the list of selected test steps when on the test case details page</span>
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getGridSelectedItems</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">testCaseTestSteps</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>setWindowLocation(URL: string)</summary>
@@ -9533,29 +9594,14 @@
 <ul>
 <li><strong>URL</strong>: URL to navigate the user's browser to </li>
 </ul>
-</details>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadForm</span><span class="p">();</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns &quot;Fix the icon used to save&quot;</span>
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">updateFormField</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;textValue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;MySpiraApp has changed the name of this task&quot;</span><span class="p">);</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDropdownItems</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns an array like { id: 1, isActive: true, text: &#39;1 - Critical&#39;}</span>
-<span class="nx">items</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// update an item to be hidden from the list</span>
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setDropdownItemsIsActive</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">);</span><span class="w"> </span><span class="c1">// updates the dropdown to hide the relevant item in the UI, returns true if successful</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">reloadGrid</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">().</span><span class="nx">requirementSteps</span><span class="p">);</span><span class="w"> </span><span class="c1">// Refreshes the requirement steps grid on requirement details pages</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setWindowLocation</span><span class="p">(</span><span class="s2">&quot;https://inflectra.com&quot;</span><span class="p">);</span>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setWindowLocation</span><span class="p">(</span><span class="s2">&quot;https://inflectra.com&quot;</span><span class="p">);</span>
 </code></pre></div>
-</div>
-</div>
-</div>
+</details>
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">&para;</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">&para;</a></h3>
 <p>The helper function <code>createComboDialog</code> creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="parameters_3" name="__tabbed_10" type="radio" /><input id="example_5" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="parameters_3">Parameters</label><label for="example_5">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="parameters_3" name="__tabbed_9" type="radio" /><input id="example_5" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="parameters_3">Parameters</label><label for="example_5">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -9614,7 +9660,7 @@
 </div>
 <h2 id="user-context">User Context<a class="headerlink" href="#user-context" title="Permanent link">&para;</a></h2>
 <p>The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="available-context" name="__tabbed_11" type="radio" /><input id="examples_4" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_4">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="available-context" name="__tabbed_10" type="radio" /><input id="examples_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_3">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -9650,7 +9696,7 @@
 </div>
 </div>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_3" name="__tabbed_12" type="radio" /><input id="examples_5" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_5">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_3" name="__tabbed_11" type="radio" /><input id="examples_4" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_4">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -9703,10 +9749,345 @@
 </div>
 </div>
 </div>
+<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
+<p>SpiraApps can store arbitrary data to the Spira server in the form of key value pairs. This is always scoped to the SpiraApp. Additionally, storage items can be scoped to different relevant dimensions, to let you create rich and diverse experiences for end users. SpiraApps can store information for the following dimensions:</p>
+<ul>
+<li>system wide</li>
+<li>for a specific user</li>
+<li>for a specific product</li>
+<li>for a user in a product</li>
+</ul>
+<p>Each storage item has 2 essential pieces of data: the key, and the value. Keys must be unique within the relevant dimension defined. For example, you can have multiple keys of "hello" for different users, or products, but a user can only have one key of "hello".</p>
+<p>Keys have a max length of 128 characters. Values can be of any length, unless they are loaded from a manifest file, where they have to be under 256 characters.</p>
+<p>Storage items can be added to the system in two ways:</p>
+<ul>
+<li>via the <a href="../SpiraApps-Manifest/#storage">manifest on installation or upgrade</a></li>
+<li>programmatically (see below)</li>
+</ul>
+<p>The SpiraAppManager has a range of functions to perform CRUD operations on storage items. Each of these functions runs asynchronously and takes 2 callback functions - one for success, the other for failure. These function let SpiraApps:</p>
+<ul>
+<li>Add a single storage item in each of the 4 dimensions</li>
+<li>Update a single storage item in each of the 4 dimensions</li>
+<li>Get a single storage item in each of the 4 dimensions</li>
+<li>Get an array of storage items in each of the 4 dimensions</li>
+<li>Delete a single storage item in each of the 4 dimensions</li>
+<li>Delete an array of storage items in each of the 4 dimensions</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Secure storage</p>
+<p>New storage items can be created as secure, meaning they are fully encrypted. To ensure full security, secure storage items cannot be sent to the client. There is currently no way to access or use secure storage items and functionality for this will be added in the future.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:6"><input checked="checked" id="insert" name="__tabbed_12" type="radio" /><input id="update" name="__tabbed_12" type="radio" /><input id="get-single-value" name="__tabbed_12" type="radio" /><input id="get-multiple-values" name="__tabbed_12" type="radio" /><input id="delete-single-item" name="__tabbed_12" type="radio" /><input id="delete-multiple-items" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="insert">Insert</label><label for="update">Update</label><label for="get-single-value">Get Single Value</label><label for="get-multiple-values">Get Multiple Values</label><label for="delete-single-item">Delete Single Item</label><label for="delete-multiple-items">Delete Multiple Items</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="note">
+<summary>storageInsertSystem(pluginGuid: string, pluginName: string, key: string, value: string, isSecure: boolean, successFunction, failureFunction)</summary>
+<p>Inserts a system level storage item with a specified key and value. </p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>isSecure: boolean if the storage is secure (defaults to false)</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageInsertUser(pluginGuid: string, pluginName: string, key: string, value: string, isSecure: boolean, successFunction, failureFunction)</summary>
+<p>Inserts a user storage item with a specified key and value for the currently logged in user. This is not tied to any product, so could, for example, be used to store system wide user settings for a SpiraApp.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>isSecure: boolean if the storage is secure (defaults to false)</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageInsertProduct(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, isSecure: boolean, successFunction, failureFunction)</summary>
+<p>Inserts a product level storage item with a specified key and value.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>productId: integer for the product id</li>
+<li>isSecure: boolean if the storage is secure (defaults to false)</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageInsertProductUser(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, isSecure: boolean, successFunction, failureFunction)</summary>
+<p>Inserts a product level storage item for the currently logged in user with a specified key and value.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>productId: integer for the product id</li>
+<li>isSecure: boolean if the storage is secure (defaults to false)</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>storageUpdateSystem(pluginGuid: string, pluginName: string, key: string, value: string, successFunction, failureFunction)</summary>
+<p>Updates a system level storage item. Matched by the key, with a new value. If a match is not found an error is returned.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageUpdateUser(pluginGuid: string, pluginName: string, key: string, value: string, successFunction, failureFunction)</summary>
+<p>Updates a user storage item. Matched by the key and currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageUpdateProduct(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, successFunction, failureFunction)</summary>
+<p>Updates a product level storage item. Matched by the key and the passed in product id.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageUpdateProductUser(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, successFunction, failureFunction)</summary>
+<p>Updates a product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>value: string of the storage item's value</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with true returned to it</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>storageGetSystem(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)</summary>
+<p>Gets the value of a single system level storage item. Matched by the key.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>success: success callback function, with the storage value returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetUser(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)</summary>
+<p>Gets the value of a single user storage item. Matched by the key and the currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>success: success callback function, with the storage value returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetProduct(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)</summary>
+<p>Gets the value of a single product level storage item. Matched by the key and the passed in product id.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with the storage value returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetProductUser(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)</summary>
+<p>Gets the value of a single product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with the storage value returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>storageGetSystemAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)</summary>
+<p>Gets all system level storage items as an object of key/value pairs.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>success: success callback function, with an object of key/values returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetUserAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)</summary>
+<p>Gets all system-wide user storage items as an object of key/value pairs. Matched by the currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>success: success callback function, with an object of key/values returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetProductAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)</summary>
+<p>Gets all product level storage items as an object of key/value pairs. Matched by the passed in product id.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with an object of key/values returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageGetProductUserAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)</summary>
+<p>Gets all product level storage items for a user as an object of key/value pairs. Matched by the passed in product id, and the currently logged in user.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function, with an object of key/values returned</li>
+<li>failure: failure callback function</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>storageDeleteSystem(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)</summary>
+<p>Deletes a system level storage item. Matched by the key, with a new value. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteUser(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)</summary>
+<p>Deletes a user storage item. Matched by the key, and the currently logged in user. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteProduct(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)</summary>
+<p>Deletes a product level storage item. Matched by the key, and the passed in product id. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteProductUser(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)</summary>
+<p>Deletes a product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>key: string of the storage item's key </li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>storageDeleteSystemAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)</summary>
+<p>Deletes all system level storage items. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteUserAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)</summary>
+<p>Deletes all system-wide user storage items. Matched by the currently logged in user. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteProductAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)</summary>
+<p>Deletes all product level storage items. Matched by the passed in product id. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteProductUserAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)</summary>
+<p>Deletes all product level storage items for a user. Matched by the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+<details class="note">
+<summary>storageDeleteProductUserAllUsers(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)</summary>
+<p>Deletes all product level storage items for <strong>all</strong> user. Matched by the passed in product id. This is destructive operation that cannot be reverted.</p>
+<ul>
+<li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
+<li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
+<li>productId: integer for the product id</li>
+<li>success: success callback function</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+</ul>
+</details>
+</div>
+</div>
+</div>
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">&para;</a></h2>
 <p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use a string provided by a SpiraApp.
 Do not use this for storing secure information.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="explanation_4" name="__tabbed_13" type="radio" /><input id="best-practices" name="__tabbed_13" type="radio" /><input id="examples_6" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_6">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="explanation_4" name="__tabbed_13" type="radio" /><input id="best-practices" name="__tabbed_13" type="radio" /><input id="examples_5" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_5">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">

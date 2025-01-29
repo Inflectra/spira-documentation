@@ -1672,7 +1672,18 @@
   <a href="#my-timesheet-approvals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        My timesheet approvals
+        My Timesheet approvals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-my-timesheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of My Timesheets
       
     </span>
   </a>
@@ -1684,6 +1695,34 @@
     <span class="md-ellipsis">
       
         Other features to note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheets-approvals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets Approvals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timesheets Approvals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timesheet-approval-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet approval details
       
     </span>
   </a>
@@ -8792,7 +8831,18 @@
   <a href="#my-timesheet-approvals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        My timesheet approvals
+        My Timesheet approvals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-my-timesheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of My Timesheets
       
     </span>
   </a>
@@ -8804,6 +8854,34 @@
     <span class="md-ellipsis">
       
         Other features to note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timesheets-approvals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheets Approvals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timesheets Approvals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timesheet-approval-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timesheet approval details
       
     </span>
   </a>
@@ -8833,7 +8911,7 @@
 
 
 <h1 id="timesheets">Timesheets<a class="headerlink" href="#timesheets" title="Permanent link">&para;</a></h1>
-<p>Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past. </p>
+<p>Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week or any week in the past. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
 <div class="admonition tip">
 <p class="admonition-title">Locking down actual efforts</p>
 <p>If you want to ensure that effort values are only updated by timesheet entries, and not by editing the individual task or incident, you can update the workflows to make the Actual Effort field read only for every status.</p>
@@ -8845,48 +8923,64 @@
 <h2 id="my-timesheet">My Timesheet<a class="headerlink" href="#my-timesheet" title="Permanent link">&para;</a></h2>
 <p>You can access "My Timesheet" from the User Profile dropdown on the <a href="../User-Product-Management/#global-navigation">Global Navigation</a> menu.</p>
 <p><img alt="My Timesheet in global navigation menu" src="../img/my-timesheet-global-navigation.png" /></p>
-<p>When you first load the My Timesheet the page will have the following parts:</p>
+<p>When you load the My Timesheet page, the page will have the following parts:</p>
 <ul>
-<li><strong>Navigation buttons</strong>: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to</li>
-<li><strong>Artifact dropdown</strong>: this lists all the incidents and tasks you own across all active products you are a member of</li>
+<li><strong>View all timesheets</strong>: chech this checkbox to open a summary list of all your timesheets. You can navigate to any timesheet by clicking on it. This only appears if you have at least 1 timesheet.</li>
+<li><strong>Navigation buttons</strong>: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to.</li>
+<li><strong>Artifact dropdown</strong>: this lists all the incidents and tasks you own across all active products you are a member of.</li>
 <li><strong>Timesheet data range</strong>: a heading showing the start and end date of the current timesheet. Click on it to bring up a datepicker. Selecting a date will navigate you to the timesheet for that relevant period. If there is no timesheet for that date then a new timesheet is automatically created.</li>
+<li><strong>Timesheet status &amp; submit</strong> <span class="pill">SpiraPlan</span>: when <a href="#my-timesheet-approvals">timesheet approvals</a> is enabled, you can see the status of the current timesheet.</li>
 <li><strong>Timesheet grid</strong>: a table for viewing and recording timesheet entries for each day of the timesheet. Each time you load the page it will start by showing the current week's timesheet.</li>
 </ul>
 <p><img alt="My Timesheet page example" src="../img/my-timesheet-page.png" /></p>
 <h3 id="viewing">Viewing<a class="headerlink" href="#viewing" title="Permanent link">&para;</a></h3>
 <p>When viewing the timesheet for the current week, today will be highlighted to help you more easily add data for today.</p>
 <h3 id="adding">Adding<a class="headerlink" href="#adding" title="Permanent link">&para;</a></h3>
-<p>The timesheet grid will be empty at first. To add information to it, select an artifact from the artifact dropdown and click the "+" button. You will then see a row added for the artifact. </p>
+<p>The timesheet grid will be empty at first. To add information, select an artifact from the artifact dropdown. This will automatically add a row for that artifact. </p>
 <p>To add a time entry to an artifact, click into the cell for the relevant artifact and day. Type the time in the format hh:mm (min 00:01, max 23:59).</p>
-<p>You cannot add timesheet entries to an artifact that you do not have permission to modify. In this case you will see a warning message identifying which artifacts were not updated. The same is true if the artifact has been deleted.</p>
+<p>You cannot add timesheet entries to an artifact that you do not have permission to modify. If you try to, then you will see a warning telling you which artifacts were not updated upon save. The same is true if the artifact has been deleted.</p>
 <p>If you add an artifact to the timesheet but do not enter any time for any day then the artifact is not saved to the timesheet.</p>
 <h3 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">&para;</a></h3>
 <p>To edit a newly entered or existing entry to an artifact on a timesheet, click into the relevant cell and adjust the time as needed. Setting the time to 0:00 will effectively delete the time in that cell (doing so for all cells for an artifact will delete the artifact from that timesheet). </p>
 <p>If there are unsaved time entries in the timesheet the save button will be enabled. Click Save to commit the changes. This will update the actual effort for each task or incident. If you add 1 hour to a task for 3 different days on the timesheet, then the actual effort for that task will be increased by 3 hours. </p>
 <h3 id="deleting">Deleting<a class="headerlink" href="#deleting" title="Permanent link">&para;</a></h3>
-<p>To delete any row of a relevant timesheet, access the context menu (right click) on that row and choose delete. Deleting a row will remove the effort against that artifact and record a new history entry for that change. You can not delete a row for an artifact that has been deleted, or if you no longer have permissions to change the artifact's effort.</p>
-<p>To delete an entire timesheet, click the trash can icon below the timesheet on the far right. Deleting a whole timesheet is equivalent to deleting each of its rows in turn (meaning that effort changes are made and history entries are created for each artifact row removed. The delete button will be disabled if there is any row on the timesheet that is disabled.</p>
-<p>You can not delete a timesheet that has been submitted for approval (or that later has been approved).</p>
+<p>To delete any row of a relevant timesheet, access the context menu (right click) on that row and choose delete. Deleting a row will remove the effort against that artifact and record a new history entry for that change. You can not delete a row for an artifact that has, itself, been deleted. You also cannot delete a row if you no longer have permissions to change the artifact's effort.</p>
+<p>To delete an entire timesheet, click the trash can icon below the timesheet on the far right. Deleting a whole timesheet is equivalent to deleting each of its rows in turn, meaning that effort changes are made and history entries are created for each artifact row removed. The delete button will be disabled if there is any row on the timesheet that is disabled.</p>
+<p>You can not delete a timesheet that has been submitted for approval or has been approved.</p>
 <h3 id="downloading">Downloading<a class="headerlink" href="#downloading" title="Permanent link">&para;</a></h3>
 <p>To download a timesheet in CSV format, access the context menu (right click) on any row and choose to download the timesheet as a CSV file.</p>
-<h3 id="my-timesheet-approvals">My timesheet approvals<a class="headerlink" href="#my-timesheet-approvals" title="Permanent link">&para;</a></h3>
-<p>If <a href="../../Spira-Administration-Guide/System/#general-settings">timesheet approvals</a> is enabled for your organization, then any timesheet with at least one entry in it will show the timesheet's status above it. </p>
-<p>There are four available timesheet statuses:</p>
+<h3 id="my-timesheet-approvals">My Timesheet approvals<a class="headerlink" href="#my-timesheet-approvals" title="Permanent link">&para;</a></h3>
+<p>If <a href="../../Spira-Administration-Guide/System/#general-settings">timesheet approvals</a> is enabled for your organization, then you will see the timesheet's status next to the artifact dropdown. This status indicator will only show if there is at least one entry will in the timesheet. </p>
+<p>There are four timesheet statuses:</p>
 <ul>
-<li>Draft: the default for any new timesheet</li>
-<li>Submitted: the timesheet has been submitted for approval by a timesheet manager. Timesheets in this status cannot be edited or deleted.</li>
-<li>Approved: the timesheet has been approved by a timesheet manager. Timesheets in this status cannot be edited or deleted.</li>
-<li>Rejected: the timesheet has been rejected by a timesheet manager. Timesheets in this status can be edited and even deleted, to allow you to make the changes required by the manager before you resubmit it.</li>
+<li><strong>Draft</strong>: the default for any new timesheet</li>
+<li><strong>Submitted</strong>: the timesheet has been submitted for approval. Timesheets in this status cannot be edited or deleted.</li>
+<li><strong>Approved</strong>: the timesheet (previously submitted) has been approved by a timesheet manager. Timesheets in this status cannot be edited or deleted.</li>
+<li><strong>Rejected</strong>: the timesheet (previously submitted) has been rejected by a timesheet manager. Timesheets in this status can be edited and even deleted, to allow you to make the changes required by the manager before you resubmit it.</li>
 </ul>
-<p><img alt="draft status button" src="../img/my-timesheet-draft-status.png" /></p>
-<p>Once you have fully completed a draft timesheet, you can submit it for approval. To do so click on the <code>Draft</code> button to the right of the artifact dropdown. You will see a confirmation message: "Do you wish to submit this timesheet for approval?" Click Yes to change the status to "Submitted".</p>
-<p><img alt="draft status button" src="../img/my-timesheet-submitted-status.png" /></p>
+<p><img alt="draft status button" src="../img/timesheet-draft-status.png" /></p>
+<p>Once you have fully completed a draft timesheet, you can submit it for approval. To do so click on the <code>Submit</code> button next to the status indicator. You will see a confirmation message: "Do you wish to submit this timesheet for approval?" Click Yes to change the status to "Submitted". </p>
+<p><img alt="submitted status button" src="../img/timesheet-submitted-status.png" /></p>
+<p>Once submitted, this timesheet is in the list of timesheets to be [reviewed by timesheet managers(#timesheets-approvals).</p>
+<h3 id="list-of-my-timesheets">List of My Timesheets<a class="headerlink" href="#list-of-my-timesheets" title="Permanent link">&para;</a></h3>
+<p>Check the "View all timesheets" checkbox to see a list of all of your timesheets. For each timesheet the list shows the start date, end date, total number of hours entered, and the last time it was updated. If timesheet approvals are enabled, you will also see the current status. You can click any row to open the details of that timesheet. You can filter the list by any column, apart from the total hours.</p>
+<p><img alt="My timesheet list of timesheets" src="../img/my-timesheet-all-sheets.png" /></p>
 <h3 id="other-features-to-note">Other features to note<a class="headerlink" href="#other-features-to-note" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The timesheet is sorted by the artifact name in alphabetical order</li>
 <li>A single history record is recorded for each artifact modified in each save, even if multiple days are modified for a given artifact in a single save</li>
 <li>You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet</li>
 </ul>
+<h2 id="timesheets-approvals">Timesheets Approvals<a class="headerlink" href="#timesheets-approvals" title="Permanent link">&para;</a></h2>
+<p>This page allows <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">timesheet managers</a> to review and approve any timesheet submitted by any user. Only timesheet managers are able to access this page, and only if <a href="../../Spira-Administration-Guide/System/#general-settings">approvals are enabled at the system level</a>. <span class="pill">SpiraPlan</span>.</p>
+<p>The page shows a list of all submitted timesheets. For each timesheet the list shows the timesheet owner (the person who submitted it), start date, end date, total number of hours entered, and the date and time it was submitted. This list can be sorted by any column and filtered by any column except the total hours.</p>
+<p><img alt="Timesheet approval summary grid" src="../img/timesheet-approval-summary.png" /></p>
+<h3 id="timesheet-approval-details">Timesheet approval details<a class="headerlink" href="#timesheet-approval-details" title="Permanent link">&para;</a></h3>
+<p>When a timesheet manager is ready to review a timesheet, they select it from the list. This opens a details section below the list. This lets you review full details about the timesheets, including all its entries against specific artifacts. </p>
+<p><img alt="Timesheet approval details section" src="../img/timesheet-approval-details.png" /></p>
+<p>After reviewing the timesheet, a manager can either approve or reject it. A comment can be provided in both cases, but is required for rejections to let the user know why it was rejected. </p>
+<p>When re-reviewing a previously rejected timesheet, the comment from the last review will be shown. This comment is also displayed on the users My Timesheet page, so they are aware of the reason it was rejected. </p>
+<p><img alt="Timesheet approval details section with rejection comment" src="../img/timesheet-approval-details2.png" /></p>
 
 
 

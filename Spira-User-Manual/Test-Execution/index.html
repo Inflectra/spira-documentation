@@ -8937,7 +8937,7 @@
 <li>clicking the "<strong><em>Execute</em></strong>" button on the test cases / test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".</li>
 </ol>
 <p>If you execute a test set then the values of the selected release and custom list properties for the test run are automatically populated from the test set, whereas if you directly execute a test case itself, those values can be chosen by the tester.</p>
-<p>If you attempt to execute a single test case that you are in the middle of testing (from either a test case, group of test cases, or a test set) a popup will ask if you want to resume one of those existing, not-yet-completed pending test runs, or start a new test run. The popup will show the five most recent relevant pending test runs with their dates and names. </p>
+<p>If you attempt to execute a single test case<sup id="fnref:execute-repeat-popup-where"><a class="footnote-ref" href="#fn:execute-repeat-popup-where">1</a></sup> that you are in the middle of testing<sup id="fnref:execute-repeat-popup-origin"><a class="footnote-ref" href="#fn:execute-repeat-popup-origin">2</a></sup> a popup will ask if you want to resume one of those existing, not-yet-completed pending test runs, or start a new test run. The popup will show the five most recent relevant pending test runs with their dates and names. </p>
 <p>Regardless of the route taken to launch the test execution module, the first screen that will be displayed will look like the following:</p>
 <p><img alt="" src="../img/Test_Case_Management_170.png" /></p>
 <p>Before actually executing the test scripts, you need to select the release (if not already set) and optionally the specific build of the system that you will be testing against. You can also specify any test run custom properties that have been defined by the product owner. This ensures that the resulting test runs and incidents are associated with the correct release of the system, and that the test runs are mapped to the appropriate custom properties (e.g. operating system, platform, browser, etc.).</p>
@@ -9030,7 +9030,7 @@
 <a href="../Incident-Tracking/">Incident Tracking</a>.</p>
 <p>If the inspector is visible, go to the "Incidents" tab. This will show any already linked incidents, show a detailed form for creating a new incident.</p>
 <p><img alt="" src="../img/Test_Case_Management_189.png" /></p>
-<p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button)<sup id="fnref:link-existing-incident"><a class="footnote-ref" href="#fn:link-existing-incident">1</a></sup>. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.</p>
+<p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button)<sup id="fnref:link-existing-incident"><a class="footnote-ref" href="#fn:link-existing-incident">3</a></sup>. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.</p>
 <p><img alt="" src="../img/Test_Case_Management_190.png" /></p>
 <p>When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking <code>Add</code> the incident will be immediately linked to the selected test step.</p>
 <p><strong>NOTE</strong>: via <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.</p>
@@ -9112,8 +9112,14 @@
 <div class="footnote">
 <hr />
 <ol>
+<li id="fn:execute-repeat-popup-where">
+<p>From the test case pages or the My Assigned Test Cases widget&#160;<a class="footnote-backref" href="#fnref:execute-repeat-popup-where" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:execute-repeat-popup-origin">
+<p>From either a test case, group of test cases, or a test set&#160;<a class="footnote-backref" href="#fnref:execute-repeat-popup-origin" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
 <li id="fn:link-existing-incident">
-<p>to link an existing incident to a test run step you must have permissions to modify incidents&#160;<a class="footnote-backref" href="#fnref:link-existing-incident" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>to link an existing incident to a test run step you must have permissions to modify incidents&#160;<a class="footnote-backref" href="#fnref:link-existing-incident" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
