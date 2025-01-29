@@ -13,7 +13,10 @@ You start test case execution in SpiraPlan by either:
 
 If you execute a test set then the values of the selected release and custom list properties for the test run are automatically populated from the test set, whereas if you directly execute a test case itself, those values can be chosen by the tester.
 
-If you attempt to execute a single test case that you are in the middle of testing (from either a test case, group of test cases, or a test set) a popup will ask if you want to resume one of those existing, not-yet-completed pending test runs, or start a new test run. The popup will show the five most recent relevant pending test runs with their dates and names. 
+If you attempt to execute a single test case[^execute-repeat-popup-where] that you are in the middle of testing[^execute-repeat-popup-origin] a popup will ask if you want to resume one of those existing, not-yet-completed pending test runs, or start a new test run. The popup will show the five most recent relevant pending test runs with their dates and names. 
+
+[^execute-repeat-popup-where]: From the test case pages or the My Assigned Test Cases widget
+[^execute-repeat-popup-origin]: From either a test case, group of test cases, or a test set
 
 Regardless of the route taken to launch the test execution module, the first screen that will be displayed will look like the following:
 

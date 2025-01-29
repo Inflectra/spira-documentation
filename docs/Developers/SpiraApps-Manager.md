@@ -371,78 +371,129 @@ There are a number of events that a SpiraApp can register against. This allows S
 ## Page actions
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
 
-=== "Available Actions"
-    ??? note "reloadForm()"
-        Reloads the current main overview on a details page. 
-        
-        Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
-
-    ??? note "getDataItemField(fieldName: string, dataProperty?: string)"
-        Retrieves a single field of the currently viewed artifact on a details page. 
-
-        - **fieldName**: The [name of a field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
-
-    ??? note "updateFormField(fieldName: string, dataProperty?: string, newValue: any)" 
-        Updates a field on an artifact details page.
-        
-        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-        - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the piece of information about this field you want to modify
-        - **newValue**: The new value to set the data property to on the given field.
+??? note "reloadForm()"
+    Reloads the current main overview on a details page. 
     
-    ??? note "getDropdownItems(fieldName: string)"
-        Retrieves an array of objects for the items listed in a particular dropdown. This works on details pages only after the page has fully loaded. It supports single select, multi select, user, and hierarchical dropdowns. It supports standard and custom fields. It does not support tag fields. The array of "DropdownListItem" objects. Note that dropdowns often show a "Please select" item at the top - these are not included in the array. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
+    Note that doing this may interrupt a user interaction so use this with caution. It is very helpful to do if the SpiraApp updates an artifact immediately after a user saves the artifact.
 
-        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-
-        ```
-        class DropdownListItem {
-            id: number;
-            isActive: boolean;
-            text: string;
-        }
-        ```
-
-    ??? note "setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean"
-        Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of `getDropdownItems` and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. `isActive` values of false cause the item to be hidden from the dropdown list. `isActive` values of true cause the item to be shown from the dropdown list. Only the `isActive` flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
-
-        If the update is successful a true is returned to the function, otherwise a false is returned. 
-
-        - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
-        - **items**: array of DropdownListItem objects (see below)
-
-        ```
-        class DropdownListItem {
-            id: number;
-            isActive: boolean;
-            text: string;
-        }
-        ```
-        
-    ??? note "reloadGrid(gridId: SpiraAppManager.gridIds)" 
-        Refreshes the specified grid if it exists on the page. 
-        
-        - **gridId**: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). [Available grid ID keys](./SpiraApps-Reference.md/#available-grid-ids)
-
-    ??? note "setWindowLocation(URL: string)" 
-        Loads a new page in the browser.
-
-        - **URL**: URL to navigate the user's browser to 
-
-=== "Examples"
-
+    Example:
+    
     ```js
     spiraAppManager.reloadForm();
+    ```
 
-    spiraAppManager.getDataItemField("Name", "textValue"); // returns "Fix the icon used to save"
+??? note "getDataItemField(fieldName: string, dataProperty?: string)"
+    Retrieves a single field of the currently viewed artifact on a details page. 
+
+    - **fieldName**: The [name of a field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+    - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the type of information you want
+
+    Example:
+
+    ```js
+    spiraAppManager.getDataItemField("Name", "textValue");
+    ```
+
+??? note "updateFormField(fieldName: string, dataProperty?: string, newValue: any)" 
+    Updates a field on an artifact details page.
+    
+    - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+    - **dataProperty**: The [data property](./SpiraApps-Reference.md/#available-data-properties) containing the piece of information about this field you want to modify
+    - **newValue**: The new value to set the data property to on the given field.
+
+    Example:
+
+    ```js
     spiraAppManager.updateFormField("Name", "textValue", "MySpiraApp has changed the name of this task");
+    ```
 
+??? note "getDropdownItems(fieldName: string)"
+    Retrieves an array of objects for the items listed in a particular dropdown. This works on details pages only after the page has fully loaded. It supports single select, multi select, user, and hierarchical dropdowns. It supports standard and custom fields. It does not support tag fields. The array of "DropdownListItem" objects. Note that dropdowns often show a "Please select" item at the top - these are not included in the array. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
+
+    - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+
+    ```
+    class DropdownListItem {
+        id: number;
+        isActive: boolean;
+        text: string;
+    }
+    ```
+
+    Example:
+
+    ```js
     let items = spiraAppManager.getDropdownItems("PriorityId"); // returns an array like { id: 1, isActive: true, text: '1 - Critical'}
     items[x].isActive = false // update an item to be hidden from the list
     spiraAppManager.setDropdownItemsIsActive("PriorityId", items); // updates the dropdown to hide the relevant item in the UI, returns true if successful
+    ```
 
-    spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps); // Refreshes the requirement steps grid on requirement details pages
+??? note "setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean"
+    Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of `getDropdownItems` and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. `isActive` values of false cause the item to be hidden from the dropdown list. `isActive` values of true cause the item to be shown from the dropdown list. Only the `isActive` flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
 
+    If the update is successful a true is returned to the function, otherwise a false is returned. 
+
+    - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+    - **items**: array of DropdownListItem objects (see below)
+
+    ```
+    class DropdownListItem {
+        id: number;
+        isActive: boolean;
+        text: string;
+    }
+    ```
+
+    Example:
+
+    ```js
+    let items = spiraAppManager.getDropdownItems("PriorityId"); // returns an array like { id: 1, isActive: true, text: '1 - Critical'}
+    items[x].isActive = false // update an item to be hidden from the list
+    spiraAppManager.setDropdownItemsIsActive("PriorityId", items); // updates the dropdown to hide the relevant item in the UI, returns true if successful
+    ```
+    
+??? note "reloadGrid(gridId: SpiraAppManager.gridIds)" 
+    Refreshes the specified grid if it exists on the page. 
+    
+    - **gridId**: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). [Available grid ID keys](./SpiraApps-Reference.md/#available-grid-ids)
+
+    Example:
+
+    ```js
+    // Refreshes the main artifact grid when viewing an artifact list page
+    spiraAppManager.reloadGrid();
+
+    // Refreshes the requirement steps grid on requirement details pages
+    spiraAppManager.reloadGrid(spiraAppManager.gridIds().requirementSteps); 
+    ```
+
+??? note "getGridSelectedItems(gridId: SpiraAppManager.gridIds)" 
+    Retrieves an array of IDs representing the currently selected rows in the specified grid. 
+    
+    If the grid cannot be found, then nothing will be returned. If the grid has nothing selected, an empty array will be returned. 
+
+    If a folder is selected, its ID will be returned but as a negative number.
+    
+    - **gridId**: The ID of the grid to reload (must be from the spiraAppManager.gridIds function). [Available grid ID keys](./SpiraApps-Reference.md/#available-grid-ids)
+
+    Example:
+
+    ```js
+    // Retrieves the list of IDs of the selected rows on the artifact grid when viewing an artifact list page
+    spiraAppManager.getGridSelectedItems();
+
+    // Retrieves the list of selected test steps when on the test case details page
+    spiraAppManager.getGridSelectedItems(spiraAppManager.gridIds().testCaseTestSteps); 
+    ```
+
+??? note "setWindowLocation(URL: string)" 
+    Loads a new page in the browser.
+
+    - **URL**: URL to navigate the user's browser to 
+
+    Example:
+
+    ```js
     spiraAppManager.setWindowLocation("https://inflectra.com");
     ```
 
@@ -551,6 +602,284 @@ The SpiraAppManager provides a number of functions to let SpiraApps better under
 
     spiraAppManager.sanitizeHtml("<image/src/onerror=prompt(8)>"); // returns "&lt;image/src/onerror=prompt(8)&gt" 
     ```
+
+## Storage
+SpiraApps can store arbitrary data to the Spira server in the form of key value pairs. This is always scoped to the SpiraApp. Additionally, storage items can be scoped to different relevant dimensions, to let you create rich and diverse experiences for end users. SpiraApps can store information for the following dimensions:
+
+- system wide
+- for a specific user
+- for a specific product
+- for a user in a product
+
+Each storage item has 2 essential pieces of data: the key, and the value. Keys must be unique within the relevant dimension defined. For example, you can have multiple keys of "hello" for different users, or products, but a user can only have one key of "hello".
+
+Keys have a max length of 128 characters. Values can be of any length, unless they are loaded from a manifest file, where they have to be under 256 characters.
+
+
+Storage items can be added to the system in two ways:
+
+- via the [manifest on installation or upgrade](SpiraApps-Manifest.md/#storage)
+- programmatically (see below)
+
+The SpiraAppManager has a range of functions to perform CRUD operations on storage items. Each of these functions runs asynchronously and takes 2 callback functions - one for success, the other for failure. These function let SpiraApps:
+
+- Add a single storage item in each of the 4 dimensions
+- Update a single storage item in each of the 4 dimensions
+- Get a single storage item in each of the 4 dimensions
+- Get an array of storage items in each of the 4 dimensions
+- Delete a single storage item in each of the 4 dimensions
+- Delete an array of storage items in each of the 4 dimensions
+
+!!! info "Secure storage"
+    New storage items can be created as secure, meaning they are fully encrypted. To ensure full security, secure storage items cannot be sent to the client. There is currently no way to access or use secure storage items and functionality for this will be added in the future.
+
+=== "Insert"
+    ??? note "storageInsertSystem(pluginGuid: string, pluginName: string, key: string, value: string, isSecure: boolean, successFunction, failureFunction)" 
+        Inserts a system level storage item with a specified key and value. 
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * isSecure: boolean if the storage is secure (defaults to false)
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageInsertUser(pluginGuid: string, pluginName: string, key: string, value: string, isSecure: boolean, successFunction, failureFunction)" 
+        Inserts a user storage item with a specified key and value for the currently logged in user. This is not tied to any product, so could, for example, be used to store system wide user settings for a SpiraApp.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * isSecure: boolean if the storage is secure (defaults to false)
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageInsertProduct(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, isSecure: boolean, successFunction, failureFunction)" 
+        Inserts a product level storage item with a specified key and value.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * productId: integer for the product id
+        * isSecure: boolean if the storage is secure (defaults to false)
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageInsertProductUser(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, isSecure: boolean, successFunction, failureFunction)" 
+        Inserts a product level storage item for the currently logged in user with a specified key and value.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * productId: integer for the product id
+        * isSecure: boolean if the storage is secure (defaults to false)
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+=== "Update"
+    ??? note "storageUpdateSystem(pluginGuid: string, pluginName: string, key: string, value: string, successFunction, failureFunction)" 
+        Updates a system level storage item. Matched by the key, with a new value. If a match is not found an error is returned.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageUpdateUser(pluginGuid: string, pluginName: string, key: string, value: string, successFunction, failureFunction)" 
+        Updates a user storage item. Matched by the key and currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageUpdateProduct(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, successFunction, failureFunction)" 
+        Updates a product level storage item. Matched by the key and the passed in product id.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * productId: integer for the product id
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+    ??? note "storageUpdateProductUser(pluginGuid: string, pluginName: string, key: string, value: string, productId: number, successFunction, failureFunction)" 
+        Updates a product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * value: string of the storage item's value
+        * productId: integer for the product id
+        * success: success callback function, with true returned to it
+        * failure: failure callback function
+
+=== "Get Single Value"
+    ??? note "storageGetSystem(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)" 
+        Gets the value of a single system level storage item. Matched by the key.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * success: success callback function, with the storage value returned
+        * failure: failure callback function
+
+    ??? note "storageGetUser(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)" 
+        Gets the value of a single user storage item. Matched by the key and the currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * success: success callback function, with the storage value returned
+        * failure: failure callback function
+
+    ??? note "storageGetProduct(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)" 
+        Gets the value of a single product level storage item. Matched by the key and the passed in product id.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * productId: integer for the product id
+        * success: success callback function, with the storage value returned
+        * failure: failure callback function
+
+    ??? note "storageGetProductUser(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)"
+        Gets the value of a single product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * productId: integer for the product id
+        * success: success callback function, with the storage value returned
+        * failure: failure callback function
+
+=== "Get Multiple Values"
+    ??? note "storageGetSystemAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
+        Gets all system level storage items as an object of key/value pairs.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * success: success callback function, with an object of key/values returned
+        * failure: failure callback function
+
+    ??? note "storageGetUserAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
+        Gets all system-wide user storage items as an object of key/value pairs. Matched by the currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * success: success callback function, with an object of key/values returned
+        * failure: failure callback function
+
+    ??? note "storageGetProductAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)" 
+        Gets all product level storage items as an object of key/value pairs. Matched by the passed in product id.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * productId: integer for the product id
+        * success: success callback function, with an object of key/values returned
+        * failure: failure callback function
+
+    ??? note "storageGetProductUserAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)"
+        Gets all product level storage items for a user as an object of key/value pairs. Matched by the passed in product id, and the currently logged in user.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * productId: integer for the product id
+        * success: success callback function, with an object of key/values returned
+        * failure: failure callback function
+
+=== "Delete Single Item"
+    ??? note "storageDeleteSystem(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)" 
+        Deletes a system level storage item. Matched by the key, with a new value. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteUser(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)" 
+        Deletes a user storage item. Matched by the key, and the currently logged in user. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteProduct(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)" 
+        Deletes a product level storage item. Matched by the key, and the passed in product id. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * productId: integer for the product id
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteProductUser(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)"
+        Deletes a product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * key: string of the storage item's key 
+        * productId: integer for the product id
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+=== "Delete Multiple Items"
+    ??? note "storageDeleteSystemAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
+        Deletes all system level storage items. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteUserAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
+        Deletes all system-wide user storage items. Matched by the currently logged in user. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteProductAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)" 
+        Deletes all product level storage items. Matched by the passed in product id. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * productId: integer for the product id
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteProductUserAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)"
+        Deletes all product level storage items for a user. Matched by the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * productId: integer for the product id
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
+    ??? note "storageDeleteProductUserAllUsers(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)"
+        Deletes all product level storage items for **all** user. Matched by the passed in product id. This is destructive operation that cannot be reverted.
+
+        * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
+        * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
+        * productId: integer for the product id
+        * success: success callback function
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+
 
 ## Local Storage
 Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use a string provided by a SpiraApp.

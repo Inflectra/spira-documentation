@@ -103,7 +103,7 @@ Test folders shown on the right hand list pane do not have an "***Edit***" butto
 
 ![](img/Test_Case_Management_126.png)
 
-Clicking on the "***Edit***" button of the folder you want to edit will display a pop up dialog. This allows you to: move the folder into a new or different parent folder; edit the name of the folder; or add a more detailed description. Click "***Update***" to commit the changes, "***Cancel***" to revert back to the original information, or "Delete" to delete the folder (and all of its contents). Note that on clicking "***Delete***" a warning box will appear to make sure you don't accidentally delete something.
+Clicking on the "***Edit***" button of the folder you want to edit will display a pop up dialog. This allows you to: move the folder into a new or different parent folder; edit the name of the folder; or add a more detailed description. Click "***Update***" to commit the changes, "***Cancel***" to revert back to the original information, or "Delete" to delete the folder (and all of its contents). When you attempt to delete a folder you will need to type in a confirmation to proceed.
 
 ![](img/Test_Case_Management_127.png)
 

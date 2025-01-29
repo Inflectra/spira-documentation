@@ -72,7 +72,7 @@ buttons beneath the folder tree, this lets you add, edit and delete task folders
 Choose the parent folder that you want to add the new folder under (or None if you are adding a new top-level folder) from the dropdown list and then enter the name of the new folder. Then click
 '***Add'*** to save the new folder.
 
-To edit or delete an existing folder, simply click the "***Edit***" button to switch the folder tree to edit mode. To edit or delete a specific folder, click on the "***Edit***" button next to the folder:
+To edit or delete an existing folder, click the "***Edit***" button to switch the folder tree to edit mode. To edit or delete a specific folder, click on the "***Edit***" button next to the folder. When you attempt to delete a folder you will need to type in a confirmation to proceed.
 ![](img/Task_Tracking_290.png)
 
 You can change the parent folder and/or name of the folder and click "***Update***" to commit the change or click "***Delete***" to delete the folder entirely.

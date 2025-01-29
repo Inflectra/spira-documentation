@@ -277,8 +277,11 @@ This tab displays the list of changes that have been performed on the artifact s
 
 ![](img/Requirements_Management_117.png)
 
-The change history displays the date that each change was made, together with the fields that were changed, the old and new values and the person
-who made the change. This allows a complete audit trail to be maintained of all changes in the system. In addition, if you are logged in as a product administrator you can also click on the "Admin View" hyperlink to revert any unwanted changes.
+The change history displays the date that each change was made, together with the fields that were changed, the old and new values and the person who made the change. This allows a complete audit trail to be maintained of all changes in the system. In addition, if you are logged in as a product administrator you can also click on the "Admin View" hyperlink to revert any unwanted changes.
+
+Changes made to text fields are shown with their differences highlighted. Rich text fields are shown in plain text to make it easier to see how the text itself has changed. This lets you clearly see which lines were added, removed, or changed.
+
+![history diff view](img/history-diff.png)
 
 
 ### Associations

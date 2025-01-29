@@ -17,11 +17,12 @@ This opens the TaraVault product administration page. In the screenshot below we
 To provision this product with TaraVault:
 
 - enter a **Product Name**: this should normally be the name of the SpiraPlan product. This name forms part of the connection URL so it should be alphanumeric only.
-- select the **Product Type**: this is the type of source code management to use for this product. You can choose between [Git](Using-Git.md) (default) or [Subversion](Using-Subversion.md). *Note*: once you choose the repository type for a product it cannot be changed without deleting the entire repository, so make sure you understand the differences between the two technologies beforehand.
 
-Click 'Activate' to complete the TaraVault setu for this product.
+Click 'Activate' to complete the TaraVault setup for this product. 
 
-In the screenshot below we have chosen 'libraryinformationsystem' as the product name and 'Git' as the type. The application will now:
+!!! info "For new products, TaraVault only supports Git."
+
+In the screenshot below 'libraryinformationsystem' is the product name and 'Git' is the type. The application will now:
 
 - show that TaraVault is active (there is a repository configured) and enabled (the repository is set to be in use)
 - fills in the 'Client Connection' with the URL you need to connect to this TaraVault product

@@ -1,5 +1,126 @@
 # Release Notes for Spira v8
 
+## Version 8.7 (February 2025)
+!!! info "Summary"
+    On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can resubmit rejected timesheets, see the status of a timesheet <span class="pill">SpiraPlan</span>, and easily view all their timesheets in a list.
+
+    [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid <span class="pill">SpiraPlan</span>.
+
+    The [history view](../Spira-User-Manual/Application-Wide.md/#history) now shows detailed tracked changes for any text change, to see what was added, changed, or deleted.
+
+    Folder deletion now provides more details about the impact and requires a text prompt confirmation, to reduce the risks of this destructive operation being performed by accident.
+
+    [SpiraApps has a powerful new feature set for developers](../Developers/SpiraApps-Manager.md/#storage), with a persistent storage system allowing SpiraApps to store data (like user settings or product information) in key-value pairs.
+
+??? success "New Features"
+    * **Cross-Cutting Functionality**
+        - Enhance the [history tab and product admin history details](../Spira-User-Manual/Application-Wide.md/#history) to display difference highlighting for text fields, to make it easier for people to see exactly what has changed and how [RQ:5102]
+
+    * **[My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet)**
+
+        - As a developer, I can see the last time that a timesheet's status was changed, to help me better manage my timesheets [RQ:4964]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot delete a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4974]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot edit a timesheet that has been approved, to ensure the integrity of data a manager has reviewed [RQ:4975]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can edit a timesheet that has been rejected, so I can correct any issues a manager has flagged [RQ:4970]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can resubmit a previously rejected timesheet, to get the timesheet re-reviewed by a manager [RQ:4971]
+        - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can see any comment added to any timesheet, for my records [RQ:4977]
+        - As a developer, I can filter the [list of my timesheets](../Spira-User-Manual/Timesheets.md/#list-of-my-timesheets) using "advanced filters", to help me quickly find the data I need [RQ:5117]
+        - As a developer, I can see a [list in a grid of all of my timesheets](../Spira-User-Manual/Timesheets.md/#list-of-my-timesheets), so can easily explore my timesheets [RQ:4965]
+
+    * **[Timesheet Managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals)**
+
+        - As a timesheet manager with approvals enabled, I can navigate to the enterprise level timesheets list page, so I can access the page as needed [RQ:5044]
+        - As a timesheet manager with approvals enabled, I can access an enterprise level timesheet list page, so I can view all timesheets submitted for approval [RQ:5045]
+        - As a timesheet manager with approvals enabled, I can view a list of all timesheets submitted for approval, so I can review relevant timesheets [RQ:5046]
+        - As a timesheet manager with approvals enabled, I can filter the list of timesheets by owner & dates using "advanced filters", to help me quickly find the data I need [RQ:5094]
+        - As a timesheet manager with approvals enabled, I can sort the list of timesheets by relevant columns, to help me quickly find the data I need [RQ:5047]
+        - As a timesheet manager with approvals enabled, I can export the current list of timesheets as a CSV file, to help me do more detailed analysis outside of Spira [RQ:5048]
+        - As a timesheet manager with approvals enabled, I can view all details about a timesheet submitted for approval, so I can inspect each relevant timesheet [RQ:5049]
+        - As a timesheet manager with approvals enabled, I can approve a timesheet submitted for approval, to formally approve and lock the timesheet [RQ:5050]
+        - As a timesheet manager with approvals enabled, I can reject a timesheet submitted for approval, to request the developer makes changes [RQ:5051]
+
+    * **Timesheet APIs**
+
+        - As an API user, I can update a timesheet using the Spira APIs, to help me automate timesheet work [RQ:5031]
+        - As an API user, I can create timesheet entries using the Spira APIs, to help me automate timesheet work [RQ:5032]
+        - As an API user, I can update timesheet entries using the Spira APIs, to help me automate timesheet work [RQ:5033]
+        - As an API user, I can retrieve timesheet status data using the Spira APIs, to help me automate timesheet work [RQ:5034]
+        - As an API user, I can retrieve all my timesheets using the Spira APIs, to help me automate timesheet work [RQ:5036]
+        - As an API user, I can retrieve a filtered list of paginated timesheet entries using the Spira APIs, to help me automate timesheet work [RQ:5040]
+        - As an API user, I can delete relevant timesheets using the Spira APIs, to help me automate timesheet work [RQ:5041]
+        - As an API user, I can delete relevant timesheet entries using the Spira APIs, to help me automate timesheet work [RQ:5042]
+
+    * **Product Artifacts**
+
+        - Improve the user experience of deleting artifact folders via the sidebar by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5074]
+        - Improve the user experience of deleting [Test Case folders](../Spira-User-Manual/Test-Case-Management.md/#editing-a-test-folder) from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5095]
+        - Improve the user experience of deleting Test Set folders from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5096]
+        - Improve the user experience of deleting [Task folders](../Spira-User-Manual/Task-Tracking.md/#task-folders) from the list by giving users more information about the impacts and making the act of deletion more purposeful [RQ:5097]
+    
+    * **SpiraApps**
+
+    - Add support to SpiraApps to [retrieve the list of artifacts currently selected](../Developers/SpiraApps-Manager.md/#page-actions) in a list (using the function getGridSelectedItems) [RQ:5116]
+    - As a SpiraApp developer, I can save [system level storage data](../Developers/SpiraApps-Manager.md/#storage) for my SpiraApp on [installation](../Developers/SpiraApps-Manifest.md/#storage), to enable richer user experiences [RQ:5057]
+    
+        * **[SpiraApps Storage: create](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can create system storage data for my SpiraApp, to enable richer user experiences [RQ:5066]
+            - As a SpiraApp developer, I can create user storage data for my SpiraApp, to enable richer user experiences [RQ:5067]
+            - As a SpiraApp developer, I can create product storage data for my SpiraApp, to enable richer user experiences [RQ:5068]
+            - As a SpiraApp developer, I can create product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5053]
+            
+        * **[SpiraApps Storage: retrieve a single value for a key](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can retrieve a single system storage value for my SpiraApp, to enable richer user experiences [RQ:5055]
+            - As a SpiraApp developer, I can retrieve a single user storage value for my SpiraApp, to enable richer user experiences [RQ:5075]
+            - As a SpiraApp developer, I can retrieve a single product storage value for my SpiraApp, to enable richer user experiences [RQ:5076]
+            - As a SpiraApp developer, I can retrieve a single product and user storage value for my SpiraApp, to enable richer user experiences [RQ:5077]
+        
+        * **[SpiraApps Storage: retrieve multiple storage items for specific scenarios](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can retrieve all system storage data for my SpiraApp, to enable richer user experiences [RQ:5069]
+            - As a SpiraApp developer, I can retrieve all user storage data for my SpiraApp, to enable richer user experiences [RQ:5080]
+            - As a SpiraApp developer, I can retrieve all product storage data for my SpiraApp, to enable richer user experiences [RQ:5079]
+            - As a SpiraApp developer, I can retrieve all product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5078]
+        
+        * **[SpiraApps Storage: update a single value for a key](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can update system storage data for my SpiraApp, to enable richer user experiences [RQ:5054]
+            - As a SpiraApp developer, I can update user storage data for my SpiraApp, to enable richer user experiences [RQ:5071]
+            - As a SpiraApp developer, I can update product storage data for my SpiraApp, to enable richer user experiences [RQ:5072]
+            - As a SpiraApp developer, I can update product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5073]
+        
+        * **[SpiraApps Storage: delete a single item](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can delete a single system storage item for my SpiraApp, to enable richer user experiences [RQ:5056]
+            - As a SpiraApp developer, I can delete a single user storage item for my SpiraApp, to enable richer user experiences [RQ:5089]
+            - As a SpiraApp developer, I can delete a single product storage item for my SpiraApp, to enable richer user experiences [RQ:5088]
+            - As a SpiraApp developer, I can delete a single product with storage item for my SpiraApp, to enable richer user experiences [RQ:5087]
+        
+        * **[SpiraApps Storage: delete all by a filter](../Developers/SpiraApps-Manager.md/#storage)**
+
+            - As a SpiraApp developer, I can delete all system storage data for my SpiraApp, to enable richer user experiences [RQ:5090]
+            - As a SpiraApp developer, I can delete all user storage data for my SpiraApp, to enable richer user experiences [RQ:5093]
+            - As a SpiraApp developer, I can delete all product storage data for my SpiraApp, to enable richer user experiences [RQ:5092]
+            - As a SpiraApp developer, I can delete all product with user storage data for my SpiraApp, to enable richer user experiences [RQ:5091]
+            - As a SpiraApp developer, I can delete all product with any user storage data for my SpiraApp, to enable richer user experiences [RQ:5098]
+
+??? bug "Bug fixes and enhancements"
+    - Allow users to view history detail records that happened prior to an artifact being deleted [IN:10215]
+    - Convert adding an artifact to the timesheet from a 2 step process to a 1 step process, by immediately creating the row when it is selected from the dropdown [IN:10317]
+    - Do not let TaraVault users create new repositories of type Subversion, and display a message on the TaraVault Configuration page to this effect [IN:10547]
+    - Fix system admins, who are not also timesheet managers, from being able to update other users' timesheets via the API [IN:10545]
+    - Fix the API to retrieve an individual timesheet throwing an error when requesting a timesheet that does not exist [IN:10507]
+    - Fix the label under the My Timesheet grid to always show and to be called "Last Update" [IN:10572]
+    - Fix the my timesheet grid to properly updated the disabled state of timesheet rows, after you switch timesheets using the calendar control [IN:10436]
+    - Fix timesheets not being fully editable or able to be deleted when timesheet approvals are disabled, regardless of the timesheet's status [IN:10410]
+    - Improve performance when refreshing the test case parameters hierarchy (by an estimated 45%) [IN:10306]
+    - Improve the performance of inserting a new requirement [IN:7974]
+    - Improve the SpiraApp reloadGrid function to allow it to refresh the full artifact list grid [IN:10565]
+    - Log the initial database version in the installer's log file when performing any upgrade task [IN:10387]
+    - Prevent drag and drop mouse operations on time inputs on my timesheet, to ensure times are always correctly recorded [IN:10424]
+    - Return the user's MFA status in v7 API calls that return user information, to provide this useful extra information to API end users [IN:10396]
+
 ## Version 8.6 (December 2024)
 !!! info "Summary"
     Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>

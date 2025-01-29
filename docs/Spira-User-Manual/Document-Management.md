@@ -98,7 +98,7 @@ To edit or delete an existing folder, click the 'Edit' button to switch the fold
 
 ![](img/Document_Management_322.png)
 
-To edit or delete a specific folder, click on the 'Edit' button next to the folder:
+To edit or delete a specific folder, click on the 'Edit' button next to the folder. When you attempt to delete a folder you will need to type in a confirmation to proceed.
 
 ![](img/Document_Management_323.png)
 

@@ -96,6 +96,8 @@ The following gridIDs are available when calling the `spiraAppManager.gridIds` [
 - requirementSteps
 - riskMitigations
 - testCaseTestSteps
+- testSetTestCases
+- artifactGrid (this refers to the main grid when viewing any artifact's list page)
 
 ### Available Field Names
 The following field names are available when calling various [page functions](./SpiraApps-Manager.md/#page-actions) related to artifact details pages like getDataItemField or updateFormField. 
