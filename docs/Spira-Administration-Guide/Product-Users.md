@@ -2,9 +2,6 @@
 
 
 ## Product Membership
-!!! info "Teams feature are in beta, available in SpiraPlan only"
-    System admins [can enable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users from the System Admin > General Settings page.
-
 The following page is displayed when you choose the "Product Membership" link from the Administration menu. If you have teams features enabled then the page will be called "Team / Product Membership"
 
 ![](img/Product_Users_107.png)
