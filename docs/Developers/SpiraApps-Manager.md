@@ -451,6 +451,18 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     items[x].isActive = false // update an item to be hidden from the list
     spiraAppManager.setDropdownItemsIsActive("PriorityId", items); // updates the dropdown to hide the relevant item in the UI, returns true if successful
     ```
+
+??? note "getLiveFormFieldValue(fieldName: string): object"
+    Retrieves an object representing the current live value(s) of the specified fieldName. If the fieldName is not present on the page undefined is returned. Otherwise, an object containing one or more of the following key value pairs will be returned: dateValue, intValue, textValue. Note that multiselect lists return the values as a comma separated list in the textValue field.
+
+    - **fieldName**: The [name of the field](./SpiraApps-Reference.md/#available-field-names) of an artifact
+
+    Example:
+
+    ```js
+    let items = spiraAppManager.getLiveFormFieldValue("PriorityId"); 
+    // returns an object { intValue: 1 }
+    ```
     
 ??? note "reloadGrid(gridId: SpiraAppManager.gridIds)" 
     Refreshes the specified grid if it exists on the page. 
