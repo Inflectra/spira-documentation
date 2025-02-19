@@ -45,6 +45,12 @@ Custom properties are supported, and must be listed like "Custom_01" for the fie
 
 The menu button at the bottom the settings page can be used to validate your settings. It will check each settings box for valid field names and make sure none of the rules conflict. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules.
 
+If multiple rules apply to a single dropdown at once, the dropdown will be limited to 
+the values shared between the limiting rules. Take this example:
+![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/linked-lists-requirement-overlap-effected.png)  
+In this case, if a Task has the Development type, its Owner field would be limited to the four users listed. If it also has the Administration Component,
+then its owner field will be limited to just the Product Manager, because that is the only option included in both rules.
+
 ## Using the SpiraApp
 
 This SpiraApp works automatically on the details page for Requirements, Releases, Test Cases, Incidents, Documents, Tasks, and Risks.
