@@ -24,7 +24,7 @@
 ??? bug "Bug fixes and enhancements"
     - Add a flat requirement count API endpoint to help users count only requirements that specifically match the passed in filter, and that excludes any parents of those matches [IN:10363]
     - Add a new function to the [SpiraAppManager called getLiveFormFieldValue](../Developers/SpiraApps-Manager.md/#page-actions) that retrieves the current form data for a specific field, to provide SpiraApps with greater functionality [IN:10566]
-    - Allow [data syncs](../Spira-Administration-Guide/System-Integration,md/#data-synchronization) to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]
+    - Allow [data syncs](../Spira-Administration-Guide/System-Integration.md#data-synchronization) to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]
     - Correct the explanatory text on the [template custom list page](../Spira-Administration-Guide/Template-Custom-Properties.md/#edit-custom-lists) to not reference "products" - but instead the template [IN:7555]
     - Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]
     - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) to enhance SpiraApp capabilities [IN:10675]
