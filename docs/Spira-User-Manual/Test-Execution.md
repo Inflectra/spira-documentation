@@ -181,7 +181,7 @@ If the inspector is visible, go to the "Incidents" tab. This will show any alrea
 
 ![](img/Test_Case_Management_189.png)
 
-You can instead link the test step to an existing incident (by clicking the "***Link Existing Incident***" button)[^link-existing-incident]. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list. A user must have the "incident-view" permission in a given product to see the incidents from that product in this popup. 
+You can instead link the test step to an existing incident (by clicking the "***Link Existing Incident***" button)[^link-existing-incident]. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list. A user must have the "incident-view" permission in a given product to see the incidents from that product in this popup. Incidents in any product which shares incidents with the test run product can be used.
 
 ![](img/Test_Case_Management_190.png)
 

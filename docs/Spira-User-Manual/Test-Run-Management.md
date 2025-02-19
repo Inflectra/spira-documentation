@@ -73,6 +73,8 @@ Clicking on the link will open up a popup dialog box that displays a list of all
 
 If you have create permissions for test runs you will be able to click the small link button at the right of the test run step. This is the "link existing incident" button. This will display a popup that lets you link an existing incident to the selected test run step. You must also have permissions to view incidents in a given product to see the list of incidents to link.
 
+![](img/Test_Case_Management_238.png)
+
 ### Console Output
 
 In the case of an automated test run, this tab will display the details of the test run as reported from the test runner application. These details will vary depending on the type of automated tool being used, but typically they include the name of the automated test runner, the number of assertions raised, the name of the corresponding test case in the tool, the status of the test run and a detailed error message, and the stack-trace in the case of a failure. An example test run as reported from the NUnit automated test runner is illustrated below:
