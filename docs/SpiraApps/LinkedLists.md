@@ -12,6 +12,7 @@ This SpiraApp helps you link artifact list fields so that if a specific field is
     - [x] runs automatically on the requirement details page
     - [x] runs automatically on the release details page
     - [x] runs automatically on the test case details page
+    - [x] runs automatically on the test set details page
     - [x] runs automatically on the incident details page
     - [x] runs automatically on the document details page
     - [x] runs automatically on the task details page (not available in SpiraTest)
@@ -53,7 +54,7 @@ then its owner field will be limited to just the Product Manager, because that i
 
 ## Using the SpiraApp
 
-This SpiraApp works automatically on the details page for Requirements, Releases, Test Cases, Incidents, Documents, Tasks, and Risks.
+This SpiraApp works automatically on the details page for Requirements, Releases, Test Cases, Test Sets, Incidents, Documents, Tasks, and Risks.
 
 The SpiraApp applies the appropriate rules to the dropdown menus on a page in two instances: When a user first opens the details page, and whenever a dropdown that is used as a primary field is changed. This way the dropdown options will always be limited to what the rules specify whenever an artifact is being edited on the details page.
 
