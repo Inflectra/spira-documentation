@@ -97,9 +97,23 @@ This is where you can specify the general SpiraApp product settings:
 
 ![product general settings](img/awsbedrock-product-settings.png)
 
-- [x] **Model Family:** Which LLM model family do you want to use in this product. The only accepted values currently are `llama` or `claude`, the default is `claude`.
+- [x] **Model Family:** Which LLM model family do you want to use in this product. The only accepted values currently are `nova`, `llama` or `claude`, the default is `claude`.
 - [x] **Detailed Test Steps:** Should we create detailed test steps for test cases, or just a single step
 - [x] **Use Artifact Descriptions:** Should we use the artifact descriptions as well as the names in the prompts
+
+#### Nova Model Settings
+
+This is where you can specify settings specific to the Nova model:
+
+![product nova settings](img/awsbedrock-product-settings-nova.png)
+
+| Setting name            | Default Value                                                                                                                         | Explanation                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Model                   | amazon.nova-micro-v1:0                                                                                                                         | The name of the Nova model we want to use                                                                                                                     |
+| Temperature             | 0.5                                                                                                                                   | Use a lower value to decrease randomness in the response (minimum 0, maximum 1, default 0.5) |
+| Top p     | 0.9                                                                                                                         | Use a lower value to ignore less probable options. Set to 0 or 1.0 to disable (minimum 0, maximum 1, default 0.9)                                                                                                                     |
+| Top k | n/a                                                                                                                         | Will restrict the model to using the top k options for each token. Similar to top P but an integer value (minimum 1, default not used)
+| Max Generated Tokens     | 2048                                                                                                                         | Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 5000, default 2048)                                                 |
 
 #### Llama Model Settings
 
@@ -171,7 +185,7 @@ When a user goes to the requirement details page, they will see an extra button 
 
 ![toolbar button](img/azureopenai-toolbar-button.png)
 
-- This will send the requirement name (and optionally the description) to Azure OpenAI
+- This will send the requirement name (and optionally the description and any scenarios) to Azure OpenAI
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -179,7 +193,7 @@ A message will show at the top of the page informing the user when information i
 
 ### Test Case Details Page
 
-When a user goes to the testc ase details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
+When a user goes to the test case details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
 - Click the "Azure OpenAI" button
 - Select the artifact to generate (e.g. Test Steps)
