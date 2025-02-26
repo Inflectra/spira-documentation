@@ -180,12 +180,12 @@ The user can navigate to different pages to use the SpiraApp, each one will have
 
 When a user goes to the requirement details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Tasks)
 
-![toolbar button](img/azureopenai-toolbar-button.png)
+![toolbar button](img/awsbedrock-requirement-toolbar-button.png)
 
-- This will send the requirement name (and optionally the description and any scenarios) to Azure OpenAI
+- This will send the requirement name (and optionally the description and any scenarios) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -195,12 +195,12 @@ A message will show at the top of the page informing the user when information i
 
 When a user goes to the test case details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Test Steps)
 
-![toolbar button](img/azureopenai-toolbar-button-2.png)
+![toolbar button](img/awsbedrock-testcase-toolbar-button.png)
 
-- This will send the test case name (and optionally the description) to Azure OpenAI
+- This will send the test case name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -209,16 +209,16 @@ A message will show at the top of the page informing the user when information i
 
 When a user goes to the task details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the type of code to generate (e.g. Source Code)
 
-![toolbar button](img/azureopenai-toolbar-button-4.png)
+![toolbar button](img/awsbedrock-task-toolbar-button.png)
 
 Once you choose the appropriate code generation option, a dialog box will be displayed where you can choose which programming langauage (and optionally unit test framework) to use:
 
-![code generation dialog box](img/azureopenai-code-dialog-box.png)
+![code generation dialog box](img/awsbedrock-task-toolbar-button-dropdown.png)
 
-- This will send the task name (and optionally the description) to Azure OpenAI
+- This will send the task name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -227,12 +227,12 @@ A message will show at the top of the page informing the user when information i
 
 When a user goes to the risk details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Mitigations)
 
-![toolbar button](img/azureopenai-toolbar-button-3.png)
+![toolbar button](img/awsbedrock-risk-toolbar-button.png)
 
-- This will send the risk name (and optionally the description) to Azure OpenAI
+- This will send the risk name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
