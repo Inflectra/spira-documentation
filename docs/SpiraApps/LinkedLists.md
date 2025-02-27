@@ -50,7 +50,7 @@ See the following screenshot for an example:
     - finally, you need to provide the list of values that the priority field should show when the incident type is Security (with all other values being hidden). For example, because security incidents are so important, let's assume we want to hide the lowest priorities, and instead want to show only the critical, high, and medium priorities. To do this copy and paste these values are displayed in the application, separated by commas. The setting should now look like this: `IncidentTypeId=Security | PriorityId = 1 - Critical, 2 - High, 3 - Medium`
     - to add extra settings, place them on a new line
 
-You can also use **multiple primary fields** so that the linked list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:
+You can also use **multiple primary fields** (up to a maximum of 10) so that the linked list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:
 
 ![Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Backend Developer](img/linked-lists-requirement-multiple-primary.png)  
 

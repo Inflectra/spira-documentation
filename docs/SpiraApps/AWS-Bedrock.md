@@ -3,6 +3,7 @@
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
 This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using a variety of LLM models hosted in AWS Bedrock.
+
 The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely
 development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks.
 It also will let you generate the test steps for an existing test case, and suggest mitigations for an existing risk.
@@ -25,7 +26,7 @@ Log into your AWS Console and navigate to the **Bedrock** services section. Then
 
 ![AWS Bedrock Model Access](img/awsbedrock-aws-config1.png)
 
-On this page you can request access to various LLM model families and models. Please request access to at least one **Anthropic Claude** model and/or **Meta Llama** model:
+On this page you can request access to various LLM model families and models. Please request access to at least one supported model family in AWS Bedrock (**Nova**, Anthropic Claude, or Llama).
 
 ![AWS IAM Users](img/awsbedrock-aws-config2.png)
 
@@ -102,7 +103,6 @@ This is where you can specify the general SpiraApp product settings:
 - [x] **Use Artifact Descriptions:** Should we use the artifact descriptions as well as the names in the prompts
 
 #### Nova Model Settings
-
 This is where you can specify settings specific to the Nova model:
 
 ![product nova settings](img/awsbedrock-product-settings-nova.png)
@@ -116,7 +116,6 @@ This is where you can specify settings specific to the Nova model:
 | Max Generated Tokens     | 2048                                                                                                                         | Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 5000, default 2048)                                                 |
 
 #### Llama Model Settings
-
 This is where you can specify settings specific to the Llama model:
 
 ![product llama settings](img/awsbedrock-product-settings-llama.png)
@@ -130,7 +129,6 @@ This is where you can specify settings specific to the Llama model:
 
 
 #### Claude Model Settings
-
 This is where you can specify settings specific to the Claude model:
 
 ![product claude settings](img/awsbedrock-product-settings-claude.png)
@@ -145,7 +143,6 @@ This is where you can specify settings specific to the Claude model:
 
 
 #### Code Generation
-
 This is where you can customize the list of programming languages available:
 
 ![product settings page](img/awsbedrock-product-settings-code.png)
@@ -155,7 +152,6 @@ This is where you can customize the list of programming languages available:
 
 
 #### Prompt Customization
-
 This is where you can customize the prompts sent to the LLM:
 
 ![product prompt settings](img/awsbedrock-product-settings-prompts.png)
