@@ -79,6 +79,11 @@ Check the "View all timesheets" checkbox to see a list of all of your timesheets
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet
 
 ## Timesheets Approvals 
+To access the timesheet approvals page:
+
+- navigate to the Enterprise workspace from the workspace dropdown in the global navigation
+- if not automatically selected, select "Timesheets" from the artifact dropdown
+
 This page allows [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to review and approve any timesheet submitted by any user. Only timesheet managers are able to access this page, and only if [approvals are enabled at the system level](../Spira-Administration-Guide/System.md/#general-settings). <span class="pill">SpiraPlan</span>.
 
 The page shows a list of all submitted timesheets. For each timesheet the list shows the timesheet owner (the person who submitted it), start date, end date, total number of hours entered, and the date and time it was submitted. This list can be sorted by any column and filtered by any column except the total hours.

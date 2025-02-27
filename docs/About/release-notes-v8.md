@@ -6,6 +6,10 @@
 
     Building on our cross-product testing features, testers can now [link a test run to an incident in an associated product during or after execution](../Spira-User-Manual/Test-Execution.md/#incidents), to more easily track and record testing bugs across products.
 
+    Improve the [AWS Bedrock SpiraApp](../SpiraApps/AWS-Bedrock.md) to provide more consistent and improved responses, as well as supporting Amazon's Nova models
+
+    Adds a new [Linked List SpiraApp](../SpiraApps/LinkedLists.md) that lets admins limit what options are shown in list field dropdowns based on the values of other list fields.
+
 ??? success "New Features"
     * **[As a product user, I can see associated incidents of test artifacts in different products](../Spira-User-Manual/Test-Execution.md/#incidents)**
 
@@ -38,6 +42,13 @@
     - Remove "SpiraApp" from the list of available artifacts on the product admin [Product Associations page](../Spira-Administration-Guide/Product-General-Settings.md/#product-associations), to avoid confusion [IN:9654]
     - Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]
     - When using the timesheet overview grid on My Timesheet, make sure the highlight row always reflect the live timesheet, even when switching timesheets is canceled [IN:10600]
+
+    - **[AWS Bedrock SpiraApp](../SpiraApps/AWS-Bedrock.md)**
+
+        - Add support for the Amazon Nova models (micro, lite, and pro) [IN:10697]
+        - Fix test steps sometimes being added in the incorrect order when creating Test Cases from a Requirement [IN:10663]
+        - Fix test steps and other artifacts sometimes failing to generate [IN:10668]
+        - When creating test cases, tasks, or risks from a requirement, include any scenarios if the description is being included [IN:10635]
 
 ## Version 8.7 (February 2025)
 !!! info "Summary"
