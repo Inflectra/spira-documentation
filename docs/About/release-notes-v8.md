@@ -8,7 +8,7 @@
 
     Improve the [AWS Bedrock SpiraApp](../SpiraApps/AWS-Bedrock.md) to provide more consistent and improved responses, as well as supporting Amazon's Nova models
 
-    Adds a new [Linked List SpiraApp](../SpiraApps/LinkedLists.md) that lets admins limit what options are shown in list field dropdowns based on the values of other list fields.
+    Adds a new [Conditional List SpiraApp](../SpiraApps/ConditionalLists.md) that lets admins limit what options are shown in list field dropdowns based on the values of other list fields.
 
 ??? success "New Features"
     * **[As a product user, I can see associated incidents of test artifacts in different products](../Spira-User-Manual/Test-Execution.md/#incidents)**
