@@ -90,8 +90,20 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Caption**: this is the plugin's display name. Put something like "Jira" or leave it blank. If you have multiple Jira instances, you will need a separate plugin for each one. Each plugin needs the same name so use the caption field to make it clear each one is different
 - **Description**: this is an optional field you can use to help describe to your future self the setup and use of the plugin
 - **Jira URL**: enter the full URL of the Jira instance to connect with (make sure to include any custom port numbers). Entering this URL into a web browser should bring up the Jira login page and is typically of the form: `https://mycompany.atlassian.net`
-- **Jira Login**: enter a valid login to the Jira instance that has permissions to create and view Jira issues and versions. Typically this is your Atlassian email address.
-- **Jira API Key**: enter the **API Key** (*not password*) for the Atlassian login you are using
+
+### Using Basic Authentication
+
+If you are using a Jira login and password to authenticate:
+
+- **Jira Login**: enter a valid login name to the Jira instance that has permissions to create and view Jira issues and versions.
+- **Jira Password**: enter the password for the Jira login you are using
+
+### Using a Personal Access Token (PAT)
+
+If you are using a Jira Personal Access Token (PAT) or API Key to authenticate:
+
+- **Jira Login**: enter the exact word `accesstoken` as the Jira Login value.
+- **Jira API Key**: enter the **API Key** (also known as a **Personal Access Token**) for the Jira user you are using
 
 ![](img/JiraCloud-Plugin-Config2.png)
 
