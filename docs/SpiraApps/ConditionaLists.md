@@ -33,9 +33,9 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
 ### Product Settings
 Once the SpiraApp has been activated system wide and enabled for a product you can edit its product settings.
 
-This is where you define the rules that create the effects between List fields on artifacts. Use the following format for each rule in an artifact's setting textbox:  
+This is where you define the rules to conditionally control List fields on artifacts. Use the following format for each rule in an artifact's setting textbox:  
 
-`{primary field name}={field value} | {effected field name}={comma separated list of field values}`  
+`{primary field name}={field value} | {affected field name}={comma separated list of field values}`  
 
 See the following screenshot for an example:  
 
@@ -44,13 +44,13 @@ See the following screenshot for an example:
 !!! info "Example admin configuration"
     Here is a more detailed worked example for the incident artifact window:
 
-    - select the **primary field** using the [field names](../Developers/SpiraApps-Reference.md/#available-field-names). This is the field that, when changed, will conditionally limit what is shown in the effected list's dropdown. This field must be a list (dropdown) field. For example, if you want the primary field to be the incident type, enter `IncidentTypeId`. The setting should now look like this: `IncidentTypeId`
-    - for the primary field's **field value** enter the exact text as it appears in the dropdown for the field on the details page. This is the value that, when selected, will change the values visible in the effected list chosen. For example, if you want to control what happens when the incident type is a "Security", enter `Security`. This setting should now look like this: `IncidentTypeId=Security`
-    - next, you need to specify the list that you want the primary field to effect. This must also be a list (dropdown) field. For example, if you want the effected field to be the incident priority field, enter `PriorityId`. The setting should now look like this: `IncidentTypeId=Security |  PriorityId`
+    - select the **primary field** using the [field names](../Developers/SpiraApps-Reference.md/#available-field-names). This is the field that, when changed, will conditionally limit what is shown in the affected list's dropdown. This field must be a list (dropdown) field. For example, if you want the primary field to be the incident type, enter `IncidentTypeId`. The setting should now look like this: `IncidentTypeId`
+    - for the primary field's **field value** enter the exact text as it appears in the dropdown for the field on the details page. This is the value that, when selected, will change the values visible in the affected list chosen. For example, if you want to control what happens when the incident type is a "Security", enter `Security`. This setting should now look like this: `IncidentTypeId=Security`
+    - next, you need to specify the list that you want the primary field to affect. This must also be a list (dropdown) field. For example, if you want the affected field to be the incident priority field, enter `PriorityId`. The setting should now look like this: `IncidentTypeId=Security |  PriorityId`
     - finally, you need to provide the list of values that the priority field should show when the incident type is Security (with all other values being hidden). For example, because security incidents are so important, let's assume we want to hide the lowest priorities, and instead want to show only the critical, high, and medium priorities. To do this copy and paste these values as displayed in the application, separated by commas. The setting should now look like this: `IncidentTypeId=Security | PriorityId = 1 - Critical, 2 - High, 3 - Medium`
     - to add extra settings, place them on a new line
 
-You can also use **multiple primary fields** (up to a maximum of 10) so that the effected list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:
+You can also use **multiple primary fields** (up to a maximum of 10) so that the affected list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:
 
 ![Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Backend Developer](img/conditional-lists-requirement-multiple-primary.png)  
 
@@ -58,9 +58,9 @@ This rule specifies that if a requirement has both a Type of Feature *and* a Com
 
 **Custom properties** are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields.
 
-You can also set multiple rules to effect the same list field. In this case, if both rules apply at the same time then the effected list's dropdown will be limited to the values shared between the limiting rules. For example:
+You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:
 
-![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/conditional-lists-requirement-overlap-effected.png)  
+![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/conditional-lists-requirement-overlap-affected.png)  
 
 In this case, there are 2 task rules that both apply to the owner field - one with a primary field of type, and the other of component.
 
