@@ -3321,6 +3321,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nova-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nova Model Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#llama-model-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3745,6 +3756,33 @@
     
   
     CircleCI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConditionalLists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Condititional Lists
   
 
     
@@ -9063,6 +9101,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nova-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nova Model Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#llama-model-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9404,8 +9453,8 @@
 <div class="admonition warning">
 <p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest</p>
 </div>
-<p>This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using a variety of LLM models hosted in AWS Bedrock.
-The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely
+<p>This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using a variety of LLM models hosted in AWS Bedrock.</p>
+<p>The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely
 development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks.
 It also will let you generate the test steps for an existing test case, and suggest mitigations for an existing risk.</p>
 <p>It can provide an easy and effective way for users to create a foundational set of items that they can refine and tailor easily and effectively. Note that Tasks and Risks are not available in SpiraTest.</p>
@@ -9425,7 +9474,7 @@ It also will let you generate the test steps for an existing test case, and sugg
 <h2 id="aws-bedrock-setup">AWS Bedrock Setup<a class="headerlink" href="#aws-bedrock-setup" title="Permanent link">&para;</a></h2>
 <p>Log into your AWS Console and navigate to the <strong>Bedrock</strong> services section. Then click on the sidebar menu entry for **Model access*:</p>
 <p><img alt="AWS Bedrock Model Access" src="../img/awsbedrock-aws-config1.png" /></p>
-<p>On this page you can request access to various LLM model families and models. Please request access to at least one <strong>Anthropic Claude</strong> model and/or <strong>Meta Llama</strong> model:</p>
+<p>On this page you can request access to various LLM model families and models. Please request access to at least one supported model family in AWS Bedrock (<strong>Nova</strong>, Anthropic Claude, or Llama).</p>
 <p><img alt="AWS IAM Users" src="../img/awsbedrock-aws-config2.png" /></p>
 <p>Once you have been granted access to the models, navigate over to the <strong>IAM</strong> AWS Service page, and create a new IAM user called <code>aws-bedrock-service-user</code>.</p>
 <p><img alt="AWS IAM Groups" src="../img/awsbedrock-aws-config3.png" /></p>
@@ -9475,10 +9524,49 @@ It also will let you generate the test steps for an existing test case, and sugg
 <p>This is where you can specify the general SpiraApp product settings:</p>
 <p><img alt="product general settings" src="../img/awsbedrock-product-settings.png" /></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Model Family:</strong> Which LLM model family do you want to use in this product. The only accepted values currently are <code>llama</code> or <code>claude</code>, the default is <code>claude</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Model Family:</strong> Which LLM model family do you want to use in this product. The only accepted values currently are <code>nova</code>, <code>llama</code> or <code>claude</code>, the default is <code>claude</code>.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Detailed Test Steps:</strong> Should we create detailed test steps for test cases, or just a single step</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Use Artifact Descriptions:</strong> Should we use the artifact descriptions as well as the names in the prompts</li>
 </ul>
+<h4 id="nova-model-settings">Nova Model Settings<a class="headerlink" href="#nova-model-settings" title="Permanent link">&para;</a></h4>
+<p>This is where you can specify settings specific to the Nova model:</p>
+<p><img alt="product nova settings" src="../img/awsbedrock-product-settings-nova.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Setting name</th>
+<th>Default Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>amazon.nova-micro-v1:0</td>
+<td>The name of the Nova model we want to use</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>0.5</td>
+<td>Use a lower value to decrease randomness in the response (minimum 0, maximum 1, default 0.5)</td>
+</tr>
+<tr>
+<td>Top p</td>
+<td>0.9</td>
+<td>Use a lower value to ignore less probable options. Set to 0 or 1.0 to disable (minimum 0, maximum 1, default 0.9)</td>
+</tr>
+<tr>
+<td>Top k</td>
+<td>n/a</td>
+<td>Will restrict the model to using the top k options for each token. Similar to top P but an integer value (minimum 1, default not used)</td>
+</tr>
+<tr>
+<td>Max Generated Tokens</td>
+<td>2048</td>
+<td>Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 5000, default 2048)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="llama-model-settings">Llama Model Settings<a class="headerlink" href="#llama-model-settings" title="Permanent link">&para;</a></h4>
 <p>This is where you can specify settings specific to the Llama model:</p>
 <p><img alt="product llama settings" src="../img/awsbedrock-product-settings-llama.png" /></p>
@@ -9608,50 +9696,50 @@ It also will let you generate the test steps for an existing test case, and sugg
 <h3 id="requirement-details-page">Requirement Details Page<a class="headerlink" href="#requirement-details-page" title="Permanent link">&para;</a></h3>
 <p>When a user goes to the requirement details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:</p>
 <ul>
-<li>Click the "Azure OpenAI" button</li>
+<li>Click the "AWS Bedrock" button</li>
 <li>Select the artifact to generate (e.g. Tasks)</li>
 </ul>
-<p><img alt="toolbar button" src="../img/azureopenai-toolbar-button.png" /></p>
+<p><img alt="toolbar button" src="../img/awsbedrock-requirement-toolbar-button.png" /></p>
 <ul>
-<li>This will send the requirement name (and optionally the description) to Azure OpenAI</li>
+<li>This will send the requirement name (and optionally the description and any scenarios) to AWS Bedrock</li>
 <li>The information coming back is parsed and analyzed by the SpiraApp and then created in Spira</li>
 </ul>
 <p>A message will show at the top of the page informing the user when information is sent or if there was a problem.</p>
 <h3 id="test-case-details-page">Test Case Details Page<a class="headerlink" href="#test-case-details-page" title="Permanent link">&para;</a></h3>
-<p>When a user goes to the testc ase details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:</p>
+<p>When a user goes to the test case details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:</p>
 <ul>
-<li>Click the "Azure OpenAI" button</li>
+<li>Click the "AWS Bedrock" button</li>
 <li>Select the artifact to generate (e.g. Test Steps)</li>
 </ul>
-<p><img alt="toolbar button" src="../img/azureopenai-toolbar-button-2.png" /></p>
+<p><img alt="toolbar button" src="../img/awsbedrock-testcase-toolbar-button.png" /></p>
 <ul>
-<li>This will send the test case name (and optionally the description) to Azure OpenAI</li>
+<li>This will send the test case name (and optionally the description) to AWS Bedrock</li>
 <li>The information coming back is parsed and analyzed by the SpiraApp and then created in Spira</li>
 </ul>
 <p>A message will show at the top of the page informing the user when information is sent or if there was a problem.</p>
 <h3 id="task-details-page">Task Details Page<a class="headerlink" href="#task-details-page" title="Permanent link">&para;</a></h3>
 <p>When a user goes to the task details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:</p>
 <ul>
-<li>Click the "Azure OpenAI" button</li>
+<li>Click the "AWS Bedrock" button</li>
 <li>Select the type of code to generate (e.g. Source Code)</li>
 </ul>
-<p><img alt="toolbar button" src="../img/azureopenai-toolbar-button-4.png" /></p>
+<p><img alt="toolbar button" src="../img/awsbedrock-task-toolbar-button.png" /></p>
 <p>Once you choose the appropriate code generation option, a dialog box will be displayed where you can choose which programming langauage (and optionally unit test framework) to use:</p>
-<p><img alt="code generation dialog box" src="../img/azureopenai-code-dialog-box.png" /></p>
+<p><img alt="code generation dialog box" src="../img/awsbedrock-task-toolbar-button-dropdown.png" /></p>
 <ul>
-<li>This will send the task name (and optionally the description) to Azure OpenAI</li>
+<li>This will send the task name (and optionally the description) to AWS Bedrock</li>
 <li>The information coming back is parsed and analyzed by the SpiraApp and then created in Spira</li>
 </ul>
 <p>A message will show at the top of the page informing the user when information is sent or if there was a problem.</p>
 <h3 id="risk-details-page">Risk Details Page<a class="headerlink" href="#risk-details-page" title="Permanent link">&para;</a></h3>
 <p>When a user goes to the risk details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:</p>
 <ul>
-<li>Click the "Azure OpenAI" button</li>
+<li>Click the "AWS Bedrock" button</li>
 <li>Select the artifact to generate (e.g. Mitigations)</li>
 </ul>
-<p><img alt="toolbar button" src="../img/azureopenai-toolbar-button-3.png" /></p>
+<p><img alt="toolbar button" src="../img/awsbedrock-risk-toolbar-button.png" /></p>
 <ul>
-<li>This will send the risk name (and optionally the description) to Azure OpenAI</li>
+<li>This will send the risk name (and optionally the description) to AWS Bedrock</li>
 <li>The information coming back is parsed and analyzed by the SpiraApp and then created in Spira</li>
 </ul>
 <p>A message will show at the top of the page informing the user when information is sent or if there was a problem.</p>

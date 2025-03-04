@@ -3339,6 +3339,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/ConditionalLists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Condititional Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/Default-Descriptions/" class="md-nav__link">
         
   
@@ -8291,6 +8318,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-88-march-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.8 (March 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-87-february-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8727,6 +8765,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-88-march-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.8 (March 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-87-february-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8843,6 +8892,69 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-88-march-2025">Version 8.8 (March 2025)<a class="headerlink" href="#version-88-march-2025" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Users can now <a href="../../Spira-User-Manual/Product-Homepage/#custom-graphs">add any custom graph to any of their product home pages</a>, to further personalize and improve this dashboard view.</p>
+<p>Building on our cross-product testing features, testers can now <a href="../../Spira-User-Manual/Test-Execution/#incidents">link a test run to an incident in an associated product during or after execution</a>, to more easily track and record testing bugs across products.</p>
+<p>Improve the <a href="../../SpiraApps/AWS-Bedrock/">AWS Bedrock SpiraApp</a> to provide more consistent and improved responses, as well as supporting Amazon's Nova models</p>
+<p>Adds a new <a href="../../SpiraApps/ConditionalLists/">Conditional List SpiraApp</a> that lets admins limit what options are shown in list field dropdowns based on the values of other list fields.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Test-Execution/#incidents">As a product user, I can see associated incidents of test artifacts in different products</a></strong></p>
+<ul>
+<li>As an incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Run-Management/#incidents">test runs</a> which are from other products [RQ:5123]</li>
+<li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Case-Management/#incidents">test cases</a> which are from other products [RQ:5126]</li>
+<li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Set-Management/#incidents">test sets</a> which are from other products [RQ:5127]</li>
+<li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Case-Management/#incidents-1">test steps</a> which are from other products [RQ:5124]</li>
+<li>As a tester, <a href="../../Spira-User-Manual/Test-Execution/#incidents">I can associate incidents to a test run step</a> which are from a different product [RQ:5125]</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="../../Spira-User-Manual/Product-Homepage/#custom-graphs">Product Home Page</a></strong></p>
+<ul>
+<li>As a product member, I can add custom graphs to the <a href="../../Spira-User-Manual/Product-Homepage/#custom-graphs">product home general page</a>, so that I can quickly audit the product's state [RQ:5120]</li>
+<li>As a product member, I can add custom graphs to the <a href="../../Spira-User-Manual/Product-Homepage/#custom-graphs">product home development page</a>, so that I can quickly audit the product's state [RQ:5187]</li>
+<li>As a product member, I can add custom graphs to the <a href="../../Spira-User-Manual/Product-Homepage/#custom-graphs">product home testing page</a>, so that I can quickly audit the product's state [RQ:5188]</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add a flat requirement count API endpoint to help users count only requirements that specifically match the passed in filter, and that excludes any parents of those matches [IN:10363]</li>
+<li>Add a new function to the <a href="../../Developers/SpiraApps-Manager/#page-actions">SpiraAppManager called getLiveFormFieldValue</a> that retrieves the current form data for a specific field, to provide SpiraApps with greater functionality [IN:10566]</li>
+<li>Allow <a href="../../Spira-Administration-Guide/System-Integration/#data-synchronization">data syncs</a> to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]</li>
+<li>Correct the explanatory text on the <a href="../../Spira-Administration-Guide/Template-Custom-Properties/#edit-custom-lists">template custom list page</a> to not reference "products" - but instead the template [IN:7555]</li>
+<li>Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]</li>
+<li>Fix tags dropdowns not being a valid recipient of <a href="../../Developers/SpiraApps-Manager/#event-handlers">SpiraAppManager.registerEvent_dropdownChanged</a> to enhance SpiraApp capabilities [IN:10675]</li>
+<li>Fix the incident list page tools buttons to "Export to Excel/Word/Acrobat" not correctly generating the requested report (introduced in 8.7.0.0) [IN:10671]</li>
+<li>Fix the My Page so that when widgets in the "Top" or "Bottom" sections can be more easily closed or configured in dark mode, by making the editing buttons visible [IN:6979]</li>
+<li>Fix the possibility of getting an error on the Planning Board if the release selected in the release dropdown has been deleted [IN:10192]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Program-Homepage/#product-test-summary">Product Test Summary widget</a> on the program home page so that it does not show inactive products or any information about them [IN:10508]</li>
+<li>Fix the REST API for creating a timesheet entry closing the connection instead of throwing an error if the entry object has errors (such as missing fields or the time is over 23:59 hours) [IN:10607]</li>
+<li>Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the <a href="../../Developers/SpiraApps-Manager/#event-handlers">spiraAppManager.registerEvent_dropdownChanged</a> function [IN:10573]</li>
+<li>Improve the incident association panel(s) when adding an incident, to only allow users to see incidents to add if the user has view incident permissions in the selected product [IN:10630]</li>
+<li>Remove "SpiraApp" from the list of available artifacts on the product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-associations">Product Associations page</a>, to avoid confusion [IN:9654]</li>
+<li>Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]</li>
+<li>
+<p>When using the timesheet overview grid on My Timesheet, make sure the highlight row always reflect the live timesheet, even when switching timesheets is canceled [IN:10600]</p>
+</li>
+<li>
+<p><strong><a href="../../SpiraApps/AWS-Bedrock/">AWS Bedrock SpiraApp</a></strong></p>
+<ul>
+<li>Add support for the Amazon Nova models (micro, lite, and pro) [IN:10697]</li>
+<li>Fix test steps sometimes being added in the incorrect order when creating Test Cases from a Requirement [IN:10663]</li>
+<li>Fix test steps and other artifacts sometimes failing to generate [IN:10668]</li>
+<li>When creating test cases, tasks, or risks from a requirement, include any scenarios if the description is being included [IN:10635]</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="version-87-february-2025">Version 8.7 (February 2025)<a class="headerlink" href="#version-87-february-2025" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>

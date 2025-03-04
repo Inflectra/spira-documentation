@@ -3339,6 +3339,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/ConditionalLists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Condititional Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/Default-Descriptions/" class="md-nav__link">
         
   
@@ -9556,6 +9583,17 @@
 <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDropdownItems</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns an array like { id: 1, isActive: true, text: &#39;1 - Critical&#39;}</span>
 <span class="nx">items</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// update an item to be hidden from the list</span>
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setDropdownItemsIsActive</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">items</span><span class="p">);</span><span class="w"> </span><span class="c1">// updates the dropdown to hide the relevant item in the UI, returns true if successful</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>getLiveFormFieldValue(fieldName: string): object</summary>
+<p>Retrieves an object representing the current live value(s) of the specified fieldName. If the fieldName is not present on the page undefined is returned. Otherwise, an object containing one or more of the following key value pairs will be returned: dateValue, intValue, textValue. Note that multiselect lists return the values as a comma separated list in the textValue field.</p>
+<ul>
+<li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getLiveFormFieldValue</span><span class="p">(</span><span class="s2">&quot;PriorityId&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="c1">// returns an object { intValue: 1 }</span>
 </code></pre></div>
 </details>
 <details class="note">

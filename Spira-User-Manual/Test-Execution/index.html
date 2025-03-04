@@ -3529,6 +3529,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../SpiraApps/ConditionalLists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Condititional Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../SpiraApps/Default-Descriptions/" class="md-nav__link">
         
   
@@ -9030,7 +9057,7 @@
 <a href="../Incident-Tracking/">Incident Tracking</a>.</p>
 <p>If the inspector is visible, go to the "Incidents" tab. This will show any already linked incidents, show a detailed form for creating a new incident.</p>
 <p><img alt="" src="../img/Test_Case_Management_189.png" /></p>
-<p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button)<sup id="fnref:link-existing-incident"><a class="footnote-ref" href="#fn:link-existing-incident">3</a></sup>. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list.</p>
+<p>You can instead link the test step to an existing incident (by clicking the "<strong><em>Link Existing Incident</em></strong>" button)<sup id="fnref:link-existing-incident"><a class="footnote-ref" href="#fn:link-existing-incident">3</a></sup>. The following popup will be displayed, where you can either enter an incident ID (if known), or choose one from the list. A user must have the "incident-view" permission in a given product to see the incidents from that product in this popup. Incidents in any product which shares incidents with the test run product can be used.</p>
 <p><img alt="" src="../img/Test_Case_Management_190.png" /></p>
 <p>When in the table display mode, open the "+" dropdown menu to show options to either add a new incident or link an existing incident. Click on the option required to display the appropriate popup. Note that on clicking <code>Add</code> the incident will be immediately linked to the selected test step.</p>
 <p><strong>NOTE</strong>: via <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> the product admin can require every test step to have an incident linked to it. If this setting has been enabled and the test step does NOT have an incident already AND you are not passing the step, in order to move to the next step you will need to create a new incident or link to an existing one.</p>
