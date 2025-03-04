@@ -23,11 +23,11 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     
     This SpiraApp does not: 
     
-        - work on artifact list pages
-        - work with any fields that are not lists
-        - change the actual value of any field (only the items shown in its dropdown)
-        - restrict any changes made on list pages or via the API 
-        - modify or impact the workflow (including control the available transitions based on a list field)
+    - work on artifact list pages
+    - work with any fields that are not lists
+    - change the actual value of any field (only the items shown in its dropdown)
+    - restrict any changes made on list pages or via the API 
+    - modify or impact the workflow (including control the available transitions based on a list field)
 
 ## Setup
 ### Product Settings
@@ -60,7 +60,7 @@ This rule specifies that if a requirement has both a Type of Feature *and* a Com
 
 You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:
 
-![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/conditional-lists-requirement-overlap-affected.png)  
+![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/conditional-lists-requirement-overlap-effected.png)
 
 In this case, there are 2 task rules that both apply to the owner field - one with a primary field of type, and the other of component.
 
