@@ -159,7 +159,7 @@ This widget displays a list of the most recent builds for each active release (o
 You can change the number of builds the widget should show in the widget's settings (the default is 15).
 
 ## Product Test Summary
-This table shows an information-dense, but easy to understand assessment of each product by a number of key metrics. It shows each product in the program, together with:
+This table shows an information-dense, but easy to understand assessment of each product by a number of key metrics. It shows each active product in the program, together with:
 
 - the product ID and name
 - the end date of the product (which is the furthest out end date of the product's active releases)

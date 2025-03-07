@@ -3,6 +3,7 @@
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
 This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using a variety of LLM models hosted in AWS Bedrock.
+
 The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely
 development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks.
 It also will let you generate the test steps for an existing test case, and suggest mitigations for an existing risk.
@@ -25,7 +26,7 @@ Log into your AWS Console and navigate to the **Bedrock** services section. Then
 
 ![AWS Bedrock Model Access](img/awsbedrock-aws-config1.png)
 
-On this page you can request access to various LLM model families and models. Please request access to at least one **Anthropic Claude** model and/or **Meta Llama** model:
+On this page you can request access to various LLM model families and models. Please request access to at least one supported model family in AWS Bedrock (**Nova**, Anthropic Claude, or Llama).
 
 ![AWS IAM Users](img/awsbedrock-aws-config2.png)
 
@@ -97,12 +98,24 @@ This is where you can specify the general SpiraApp product settings:
 
 ![product general settings](img/awsbedrock-product-settings.png)
 
-- [x] **Model Family:** Which LLM model family do you want to use in this product. The only accepted values currently are `llama` or `claude`, the default is `claude`.
+- [x] **Model Family:** Which LLM model family do you want to use in this product. The only accepted values currently are `nova`, `llama` or `claude`, the default is `claude`.
 - [x] **Detailed Test Steps:** Should we create detailed test steps for test cases, or just a single step
 - [x] **Use Artifact Descriptions:** Should we use the artifact descriptions as well as the names in the prompts
 
-#### Llama Model Settings
+#### Nova Model Settings
+This is where you can specify settings specific to the Nova model:
 
+![product nova settings](img/awsbedrock-product-settings-nova.png)
+
+| Setting name            | Default Value                                                                                                                         | Explanation                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Model                   | amazon.nova-micro-v1:0                                                                                                                         | The name of the Nova model we want to use                                                                                                                     |
+| Temperature             | 0.5                                                                                                                                   | Use a lower value to decrease randomness in the response (minimum 0, maximum 1, default 0.5) |
+| Top p     | 0.9                                                                                                                         | Use a lower value to ignore less probable options. Set to 0 or 1.0 to disable (minimum 0, maximum 1, default 0.9)                                                                                                                     |
+| Top k | n/a                                                                                                                         | Will restrict the model to using the top k options for each token. Similar to top P but an integer value (minimum 1, default not used)
+| Max Generated Tokens     | 2048                                                                                                                         | Specify the maximum number of tokens to use in the generated response. The model truncates the response once the generated text exceeds (minimum 1, maximum 5000, default 2048)                                                 |
+
+#### Llama Model Settings
 This is where you can specify settings specific to the Llama model:
 
 ![product llama settings](img/awsbedrock-product-settings-llama.png)
@@ -116,7 +129,6 @@ This is where you can specify settings specific to the Llama model:
 
 
 #### Claude Model Settings
-
 This is where you can specify settings specific to the Claude model:
 
 ![product claude settings](img/awsbedrock-product-settings-claude.png)
@@ -131,7 +143,6 @@ This is where you can specify settings specific to the Claude model:
 
 
 #### Code Generation
-
 This is where you can customize the list of programming languages available:
 
 ![product settings page](img/awsbedrock-product-settings-code.png)
@@ -141,7 +152,6 @@ This is where you can customize the list of programming languages available:
 
 
 #### Prompt Customization
-
 This is where you can customize the prompts sent to the LLM:
 
 ![product prompt settings](img/awsbedrock-product-settings-prompts.png)
@@ -166,12 +176,12 @@ The user can navigate to different pages to use the SpiraApp, each one will have
 
 When a user goes to the requirement details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Tasks)
 
-![toolbar button](img/azureopenai-toolbar-button.png)
+![toolbar button](img/awsbedrock-requirement-toolbar-button.png)
 
-- This will send the requirement name (and optionally the description) to Azure OpenAI
+- This will send the requirement name (and optionally the description and any scenarios) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -179,14 +189,14 @@ A message will show at the top of the page informing the user when information i
 
 ### Test Case Details Page
 
-When a user goes to the testc ase details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
+When a user goes to the test case details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Test Steps)
 
-![toolbar button](img/azureopenai-toolbar-button-2.png)
+![toolbar button](img/awsbedrock-testcase-toolbar-button.png)
 
-- This will send the test case name (and optionally the description) to Azure OpenAI
+- This will send the test case name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -195,16 +205,16 @@ A message will show at the top of the page informing the user when information i
 
 When a user goes to the task details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the type of code to generate (e.g. Source Code)
 
-![toolbar button](img/azureopenai-toolbar-button-4.png)
+![toolbar button](img/awsbedrock-task-toolbar-button.png)
 
 Once you choose the appropriate code generation option, a dialog box will be displayed where you can choose which programming langauage (and optionally unit test framework) to use:
 
-![code generation dialog box](img/azureopenai-code-dialog-box.png)
+![code generation dialog box](img/awsbedrock-task-toolbar-button-dropdown.png)
 
-- This will send the task name (and optionally the description) to Azure OpenAI
+- This will send the task name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
@@ -213,12 +223,12 @@ A message will show at the top of the page informing the user when information i
 
 When a user goes to the risk details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
-- Click the "Azure OpenAI" button
+- Click the "AWS Bedrock" button
 - Select the artifact to generate (e.g. Mitigations)
 
-![toolbar button](img/azureopenai-toolbar-button-3.png)
+![toolbar button](img/awsbedrock-risk-toolbar-button.png)
 
-- This will send the risk name (and optionally the description) to Azure OpenAI
+- This will send the risk name (and optionally the description) to AWS Bedrock
 - The information coming back is parsed and analyzed by the SpiraApp and then created in Spira
 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.

@@ -327,3 +327,10 @@ This section consists of a chart that displays the last 3 months of code commits
 Above the chart is a branch selector. This shows you the current branch and lets you choose which branch in the source code repository to view. This is stored for your user across the whole product, which means that you will see information for this same branch in other relevant places - eg when viewing files, or when viewing commits.
 
 Below the chart is a list of the five most recent commits, along with the date they were made (hovering over the commit name will show a tooltip with the commit message and exact time of the commit). Click the "View All" button to open the [commit list](Commits.md/#commit-list) page.
+
+## Custom Graphs
+[Custom graphs](../Reporting/Custom-Graph-Tutorial.md) are created by report administrators. You can add any product level custom graph to any product home page. 
+
+When a specific release is selected to display, this will work the same way as it does on the Reporting page, where the custom graph query will have any {ReleaseId} or {ReleaseAndChildIds} tokens replaced with the appropriate values. 
+
+To learn more about how to create custom graphs, check out the [reporting documentation](../Reporting/index.md).

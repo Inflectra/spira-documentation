@@ -1,5 +1,55 @@
 # Release Notes for Spira v8
 
+## Version 8.8 (March 2025)
+!!! info "Summary"
+    Users can now [add any custom graph to any of their product home pages](../Spira-User-Manual/Product-Homepage.md/#custom-graphs), to further personalize and improve this dashboard view.
+
+    Building on our cross-product testing features, testers can now [link a test run to an incident in an associated product during or after execution](../Spira-User-Manual/Test-Execution.md/#incidents), to more easily track and record testing bugs across products.
+
+    Improve the [AWS Bedrock SpiraApp](../SpiraApps/AWS-Bedrock.md) to provide more consistent and improved responses, as well as supporting Amazon's Nova models
+
+    Adds a new [Conditional List SpiraApp](../SpiraApps/ConditionalLists.md) that lets admins limit what options are shown in list field dropdowns based on the values of other list fields.
+
+??? success "New Features"
+    * **[As a product user, I can see associated incidents of test artifacts in different products](../Spira-User-Manual/Test-Execution.md/#incidents)**
+
+        - As an incident user, I can see associated incidents on [test runs](../Spira-User-Manual/Test-Run-Management.md/#incidents) which are from other products [RQ:5123]
+        - As an Incident user, I can see associated incidents on [test cases](../Spira-User-Manual/Test-Case-Management.md/#incidents) which are from other products [RQ:5126]
+        - As an Incident user, I can see associated incidents on [test sets](../Spira-User-Manual/Test-Set-Management.md/#incidents) which are from other products [RQ:5127]
+        - As an Incident user, I can see associated incidents on [test steps](../Spira-User-Manual/Test-Case-Management.md/#incidents-1) which are from other products [RQ:5124]
+        - As a tester, [I can associate incidents to a test run step](../Spira-User-Manual/Test-Execution.md/#incidents) which are from a different product [RQ:5125]
+
+    * **[Product Home Page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs)**
+
+        - As a product member, I can add custom graphs to the [product home general page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs), so that I can quickly audit the product's state [RQ:5120]
+        - As a product member, I can add custom graphs to the [product home development page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs), so that I can quickly audit the product's state [RQ:5187]
+        - As a product member, I can add custom graphs to the [product home testing page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs), so that I can quickly audit the product's state [RQ:5188]
+    
+??? bug "Bug fixes and enhancements"
+    - Add a flat requirement count API endpoint to help users count only requirements that specifically match the passed in filter, and that excludes any parents of those matches [IN:10363]
+    - Add a new function to the [SpiraAppManager called getLiveFormFieldValue](../Developers/SpiraApps-Manager.md/#page-actions) that retrieves the current form data for a specific field, to provide SpiraApps with greater functionality [IN:10566]
+    - Allow [data syncs](../Spira-Administration-Guide/System-Integration.md#data-synchronization) to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]
+    - Correct the explanatory text on the [template custom list page](../Spira-Administration-Guide/Template-Custom-Properties.md/#edit-custom-lists) to not reference "products" - but instead the template [IN:7555]
+    - Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]
+    - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) to enhance SpiraApp capabilities [IN:10675]
+    - Fix the incident list page tools buttons to "Export to Excel/Word/Acrobat" not correctly generating the requested report (introduced in 8.7.0.0) [IN:10671]
+    - Fix the My Page so that when widgets in the "Top" or "Bottom" sections can be more easily closed or configured in dark mode, by making the editing buttons visible [IN:6979]
+    - Fix the possibility of getting an error on the Planning Board if the release selected in the release dropdown has been deleted [IN:10192]
+    - Fix the [Product Test Summary widget](../Spira-User-Manual/Program-Homepage.md/#product-test-summary) on the program home page so that it does not show inactive products or any information about them [IN:10508]
+    - Fix the REST API for creating a timesheet entry closing the connection instead of throwing an error if the entry object has errors (such as missing fields or the time is over 23:59 hours) [IN:10607]
+    - Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the [spiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) function [IN:10573]
+    - Improve the incident association panel(s) when adding an incident, to only allow users to see incidents to add if the user has view incident permissions in the selected product [IN:10630]
+    - Remove "SpiraApp" from the list of available artifacts on the product admin [Product Associations page](../Spira-Administration-Guide/Product-General-Settings.md/#product-associations), to avoid confusion [IN:9654]
+    - Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]
+    - When using the timesheet overview grid on My Timesheet, make sure the highlight row always reflect the live timesheet, even when switching timesheets is canceled [IN:10600]
+
+    - **[AWS Bedrock SpiraApp](../SpiraApps/AWS-Bedrock.md)**
+
+        - Add support for the Amazon Nova models (micro, lite, and pro) [IN:10697]
+        - Fix test steps sometimes being added in the incorrect order when creating Test Cases from a Requirement [IN:10663]
+        - Fix test steps and other artifacts sometimes failing to generate [IN:10668]
+        - When creating test cases, tasks, or risks from a requirement, include any scenarios if the description is being included [IN:10635]
+
 ## Version 8.7 (February 2025)
 !!! info "Summary"
     On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can resubmit rejected timesheets, see the status of a timesheet <span class="pill">SpiraPlan</span>, and easily view all their timesheets in a list.
