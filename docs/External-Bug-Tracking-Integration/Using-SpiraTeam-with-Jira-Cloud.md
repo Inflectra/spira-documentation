@@ -19,29 +19,31 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
+**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs.
 
-| Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        | NoIncidents                                           |
-| ---------------- | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-| **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-| **incidents**    | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | (no syncing)                                          |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
-| **tasks**        | new            | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            |
+| Artifact           | Type of Change | Default                                               | Bidirectional                                         | Complete                                              | NoRequirements                                        | NoIncidents                                           |
+| ------------------ | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| **releases**       | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
+|                    | updates        | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **requirements**   | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
+|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
+| **incidents**      | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | (no syncing)                                          |
+|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
+| **tasks**          | new            | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             |
+|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            |
 
 Notes about syncing:
 
-- The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
-- The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **Default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
+- The **Bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **Complete** sync mode allows fully bidirectional sync upon creation and update of all the supported artifacts (Releases, Requirements, Incidents, and Tasks).
 - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
 - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
-- Comments are always synced from Spira and to Spira.
+- Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.
 - Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode
-- Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
-- If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
+- Attachments are created in the other system when new artifacts/issues are created or updated. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
+- If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. 
 - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
 ## Checklist
@@ -99,25 +101,30 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Jira are not being updated in Spira (especially if comments are not syncing), try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also Jira is on a server set to a different time-zone, you should add in the number of hours difference between the servers time-zones here.
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
-!!! info "In normal use, keep the fields below blank"
-    For most users, we recommend leaving these fields blank: "Jira Custom Fields"; "Task Types"; and "Sync Mode". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements (not valid for the NoIncidents mode).
+!!! info "Configuration Tip"
+    For most users, we recommend leaving "Jira Custom Fields" blank. If you want to sync Tasks and/or Requirements, do not forget to configure "Task Types" and/or "Requirement Types", and chose the proper "Sync Mode". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements (not valid for the NoIncidents mode).
 
-- **Jira Custom Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Jira Special Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
 - **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synched with Jira at all.
 - **Sync Mode**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
     - Default (leave blank): *recommended for most users.*
     - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
+    - Complete: enter the word "Complete" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, for all artifacts, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
     - NoRequirements: enter the word "NoRequirements" to use this mode
     - NoIncidents: enter the word "NoIncidents" to use this mode
     
     Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option *NoAttachments* to the sync mode field. Example: *NoRequirements,NoAttachments* or simply *NoAttachments* if you use the default mode
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
-- **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
+- **Link Type**: This field should either be set to a **single** name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
+- **Types to Skip**: This optional field can be used to ignore some Jira issue types during the sync. To do this, enter a comma-separated list of IDs of any Jira issue types that you want to exclude from synchronization. If you leave this blank, all Jira issue types will be considered for synchronization.
+- **Skip Comments**: Set this field to *Yes* if you want the dataSync to ignore comments in both directions. Please note old comments already synced won't be deleted.
+- **Auto-Map Properties**: TODO
+- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. Please note that Spira allows more complex Requirement hierarchy than Jira by default, and the dataSync cannot create forbidden hierarchical relations in Jira.
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
@@ -311,9 +318,11 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     !!! info "This field mapping is required if syncing requirements"
         If you are not syncing requirements you can skip this section
 
-    ![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_39b_Cloud8.png)
 
     Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+    
+    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -373,9 +382,11 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     !!! info "This field mapping is required if syncing tasks"
         If you are not syncing tasks you can skip this section
 
-    ![](img/jira-task-mapping-status.png)
+    ![](img/jira-task-mapping-status-cloud8.png)
 
     Click on the "Status" hyperlink under Task Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the task statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+
+    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -419,7 +430,7 @@ To start, go to the data mapping home page for the selected product you were on 
 === "Scalar properties"
     ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Release, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
     Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
