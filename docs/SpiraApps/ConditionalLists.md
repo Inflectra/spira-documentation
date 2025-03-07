@@ -2,7 +2,7 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
-This SpiraApp helps admins create dynamic and powerful customizations for end users when they work with artifacts on details pages. It lets you conditionally control what values are available in one list dropdown, based on the selected values of other list fields. In other words, changing one list dynamically updates the options in other lists. For example, an Incident of Type 'Enhancement' could have it's owner field limited to a certain group of users, but an incident of type "Bug" could have the owner field limited to a different group of users. The SpiraApp is highly customizable using the product settings to meet a variety of different use cases.
+This SpiraApp helps admins create dynamic and powerful customizations for end users when they work with artifacts on details pages. It lets you conditionally control what values are available in one list dropdown, based on the selected values of other list fields. In other words, changing one list dynamically updates the options in other lists. For example, an Incident of Type 'Enhancement' could have its owner field limited to a certain group of users, but an incident of type "Bug" could have the owner field limited to a different group of users. The SpiraApp is highly customizable using the product settings to meet a variety of different use cases.
 
 !!! info "About this SpiraApp"
     - [ ] system settings
