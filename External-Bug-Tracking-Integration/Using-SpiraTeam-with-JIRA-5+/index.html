@@ -4987,6 +4987,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configure the Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-personal-access-token-pat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using a Personal Access Token (PAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -6070,6 +6098,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configure the Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-personal-access-token-pat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using a Personal Access Token (PAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9099,6 +9155,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configure the Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Basic Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-personal-access-token-pat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using a Personal Access Token (PAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -9448,8 +9532,18 @@
 <li><strong>Caption</strong>: this is the plugin's display name. Put something like "Jira" or leave it blank. If you have multiple Jira instances, you will need a separate plugin for each one. Each plugin needs the same name so use the caption field to make it clear each one is different</li>
 <li><strong>Description</strong>: this is an optional field you can use to help describe to your future self the setup and use of the plugin</li>
 <li><strong>Jira URL</strong>: enter the full URL of the Jira instance to connect with (make sure to include any custom port numbers). Entering this URL into a web browser should bring up the Jira login page and is typically of the form: <code>https://mycompany.atlassian.net</code></li>
-<li><strong>Jira Login</strong>: enter a valid login to the Jira instance that has permissions to create and view Jira issues and versions. Typically this is your Atlassian email address.</li>
-<li><strong>Jira API Key</strong>: enter the <strong>API Key</strong> (<em>not password</em>) for the Atlassian login you are using</li>
+</ul>
+<h3 id="using-basic-authentication">Using Basic Authentication<a class="headerlink" href="#using-basic-authentication" title="Permanent link">&para;</a></h3>
+<p>If you are using a Jira login and password to authenticate:</p>
+<ul>
+<li><strong>Jira Login</strong>: enter a valid login name to the Jira instance that has permissions to create and view Jira issues and versions.</li>
+<li><strong>Jira Password</strong>: enter the password for the Jira login you are using</li>
+</ul>
+<h3 id="using-a-personal-access-token-pat">Using a Personal Access Token (PAT)<a class="headerlink" href="#using-a-personal-access-token-pat" title="Permanent link">&para;</a></h3>
+<p>If you are using a Jira Personal Access Token (PAT) or API Key to authenticate:</p>
+<ul>
+<li><strong>Jira Login</strong>: enter the exact word <code>accesstoken</code> as the Jira Login value.</li>
+<li><strong>Jira API Key</strong>: enter the <strong>API Key</strong> (also known as a <strong>Personal Access Token</strong>) for the Jira user you are using</li>
 </ul>
 <p><img alt="" src="../img/JiraCloud-Plugin-Config2.png" /></p>
 <ul>
