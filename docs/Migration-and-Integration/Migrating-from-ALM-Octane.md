@@ -88,7 +88,7 @@ The ALM Octane requirements:
 
 are both imported as Spira requirements:
 
-[TBD]
+ ![](img/octane-spira-1.png)
 
 ### Test Cases
 
@@ -98,4 +98,5 @@ The ALM Octane test cases include a single field that contains all of the test s
 
 These test cases are imported into Spira such that the test steps are decomposed from this single field into discrete Spira test steps:
 
-[TBD]
+ ![](img/octane-spira-2.png)
+ 
