@@ -285,7 +285,6 @@ The following field names are available when calling various [page functions](./
     - LastUpdateDate
     - Name
     - OwnerId (Lookup)
-    - ReleaseId (Lookup)
     - Tags
     - TestCaseId
     - TestCasePriorityId (Lookup)
