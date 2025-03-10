@@ -313,6 +313,7 @@ nav:
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
     - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
     - OpenText ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
+    - OpenText ALM Octane: Migration-and-Integration\Migrating-from-ALM-Octane.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
     - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
     - Jama: Migration-and-Integration\Migrating-from-Jama.md
