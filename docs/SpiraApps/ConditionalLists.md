@@ -130,7 +130,6 @@ There are specific fields that can be used by the Conditional Lists SpiraApp. Th
 - Tags
 
 === "Tasks"
-- ComponentId
 - CreatorId
 - Custom_01...Custom_99
 - OwnerId
