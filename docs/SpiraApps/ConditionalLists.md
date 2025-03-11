@@ -80,7 +80,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - Custom_01...Custom_99
     - DocumentTypeId
     - EditorId
-    - Tags
+    - Tags (Primary field only)
 
 === "Incidents"
     - ComponentIds
@@ -92,7 +92,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - PriorityId
     - ResolvedReleaseId
     - SeverityId
-    - Tags
+    - Tags (Primary field only)
     - VerifiedReleaseId
 
 === "Releases"
@@ -100,7 +100,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - Custom_01...Custom_99
     - OwnerId
     - ReleaseTypeId
-    - Tags
+    - Tags (Primary field only)
 
 === "Requirements"
     - AuthorId
@@ -110,7 +110,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - OwnerId
     - ReleaseId
     - RequirementTypeId
-    - Tags
+    - Tags (Primary field only)
 
 === "Risks"
     - ComponentId
@@ -121,14 +121,14 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - RiskImpactId
     - RiskProbabilityId
     - RiskTypeId
-    - Tags
+    - Tags (Primary field only)
 
 === "Tasks"
     - CreatorId
     - Custom_01...Custom_99
     - OwnerId
     - ReleaseId
-    - Tags
+    - Tags (Primary field only)
     - TaskPriorityId
     - TaskTypeId
 
@@ -137,7 +137,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ComponentIds
     - Custom_01...Custom_99
     - OwnerId
-    - Tags
+    - Tags (Primary field only)
     - TestCasePriorityId
     - TestCaseTypeId
 
@@ -147,12 +147,9 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - Custom_01...Custom_99
     - OwnerId
     - ReleaseId
-    - Tags
+    - Tags (Primary field only)
     - TestConfigurationSetId
     - TestSetTypeId
-
-!!! info "Current liimitations"
-    - Tags can only by used as Primary fields, not affected fields
 
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
