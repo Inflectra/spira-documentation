@@ -78,7 +78,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
 === "Documents"
     - AuthorId
     - Custom_01...Custom_99
-    - DocumentStatusId
     - DocumentTypeId
     - EditorId
     - Tags
@@ -87,7 +86,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ComponentIds
     - Custom_01...Custom_99
     - DetectedReleaseId
-    - IncidentStatusId
     - IncidentTypeId
     - OpenerId
     - OwnerId
@@ -101,7 +99,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - CreatorId
     - Custom_01...Custom_99
     - OwnerId
-    - ReleaseStatusId
     - ReleaseTypeId
     - Tags
 
@@ -112,7 +109,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ImportanceId
     - OwnerId
     - ReleaseId
-    - RequirementStatusId
     - RequirementTypeId
     - Tags
 
@@ -124,7 +120,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ReleaseId
     - RiskImpactId
     - RiskProbabilityId
-    - RiskStatusId
     - RiskTypeId
     - Tags
 
@@ -135,7 +130,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ReleaseId
     - Tags
     - TaskPriorityId
-    - TaskStatusId
     - TaskTypeId
 
 === "Test Cases"
@@ -145,7 +139,6 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - OwnerId
     - Tags
     - TestCasePriorityId
-    - TestCaseStatusId
     - TestCaseTypeId
 
 === "Test Sets"
@@ -156,11 +149,9 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ReleaseId
     - Tags
     - TestConfigurationSetId
-    - TestSetStatusId
     - TestSetTypeId
 
 !!! info "Current liimitations"
-    - Status fields can only by used as Primary fields, not affected fields
     - Tags can only by used as Primary fields, not affected fields
 
 ## Using the SpiraApp
