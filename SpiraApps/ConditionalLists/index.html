@@ -7092,33 +7092,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Migration-and-Integration/Migrating-from-ALM-Octane/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenText ALM Octane
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Migration-and-Integration/Migrating-from-Jira/" class="md-nav__link">
         
   
@@ -8879,56 +8852,42 @@
 <p>The menu button at the bottom of the settings page can be used to <strong>validate your settings</strong>. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console. Be sure to double check the field <strong>values</strong> yourself, since the SpiraApp does not validate them for you.</p>
 <h4 id="valid-fields">Valid Fields<a class="headerlink" href="#valid-fields" title="Permanent link">&para;</a></h4>
 <p>Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="documents" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="documents">Documents</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="documents" name="__tabbed_1" type="radio" /><input id="incidents" name="__tabbed_1" type="radio" /><input id="releases" name="__tabbed_1" type="radio" /><input id="requirements" name="__tabbed_1" type="radio" /><input id="risks" name="__tabbed_1" type="radio" /><input id="tasks" name="__tabbed_1" type="radio" /><input id="test-cases" name="__tabbed_1" type="radio" /><input id="test-sets" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="documents">Documents</label><label for="incidents">Incidents</label><label for="releases">Releases</label><label for="requirements">Requirements</label><label for="risks">Risks</label><label for="tasks">Tasks</label><label for="test-cases">Test Cases</label><label for="test-sets">Test Sets</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>AuthorId</li>
 <li>Custom_01...Custom_99</li>
-<li>DocumentStatusId</li>
 <li>DocumentTypeId</li>
 <li>EditorId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="incidents" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="incidents">Incidents</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>ComponentIds</li>
 <li>Custom_01...Custom_99</li>
 <li>DetectedReleaseId</li>
-<li>IncidentStatusId</li>
 <li>IncidentTypeId</li>
 <li>OpenerId</li>
 <li>OwnerId</li>
 <li>PriorityId</li>
 <li>ResolvedReleaseId</li>
 <li>SeverityId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 <li>VerifiedReleaseId</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="releases" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="releases">Releases</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>CreatorId</li>
 <li>Custom_01...Custom_99</li>
 <li>OwnerId</li>
-<li>ReleaseStatusId</li>
 <li>ReleaseTypeId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="requirements" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="requirements">Requirements</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>AuthorId</li>
 <li>ComponentId</li>
@@ -8936,15 +8895,11 @@
 <li>ImportanceId</li>
 <li>OwnerId</li>
 <li>ReleaseId</li>
-<li>RequirementStatusId</li>
 <li>RequirementTypeId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="risks" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="risks">Risks</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>ComponentId</li>
 <li>CreatorId</li>
@@ -8953,62 +8908,45 @@
 <li>ReleaseId</li>
 <li>RiskImpactId</li>
 <li>RiskProbabilityId</li>
-<li>RiskStatusId</li>
 <li>RiskTypeId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="tasks" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="tasks">Tasks</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>CreatorId</li>
 <li>Custom_01...Custom_99</li>
 <li>OwnerId</li>
 <li>ReleaseId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 <li>TaskPriorityId</li>
-<li>TaskStatusId</li>
 <li>TaskTypeId</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="test-cases" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="test-cases">Test Cases</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>AuthorId</li>
 <li>ComponentIds</li>
 <li>Custom_01...Custom_99</li>
 <li>OwnerId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 <li>TestCasePriorityId</li>
-<li>TestCaseStatusId</li>
 <li>TestCaseTypeId</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="test-sets" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="test-sets">Test Sets</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
 </div>
-</div>
+<div class="tabbed-block">
 <ul>
 <li>AutomationHostId</li>
 <li>CreatorId</li>
 <li>Custom_01...Custom_99</li>
 <li>OwnerId</li>
 <li>ReleaseId</li>
-<li>Tags</li>
+<li>Tags (Primary field only)</li>
 <li>TestConfigurationSetId</li>
-<li>TestSetStatusId</li>
 <li>TestSetTypeId</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Current liimitations</p>
-<ul>
-<li>Status fields can only by used as Primary fields, not affected fields</li>
-<li>Tags can only by used as Primary fields, not affected fields</li>
-</ul>
+</div>
+</div>
 </div>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <p>This SpiraApp works automatically on the details page for the following artifacts:</p>
