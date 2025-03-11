@@ -76,92 +76,80 @@ The menu button at the bottom of the settings page can be used to **validate you
 Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.
 
 === "Documents"
-- AuthorId
-- Custom_01...Custom_99
-- DocumentStatusId
-- DocumentTypeId
-- EditorId
-- Tags
+    - AuthorId
+    - Custom_01...Custom_99
+    - DocumentTypeId
+    - EditorId
+    - Tags (Primary field only)
 
 === "Incidents"
-- ComponentIds
-- Custom_01...Custom_99
-- DetectedReleaseId
-- IncidentStatusId
-- IncidentTypeId
-- OpenerId
-- OwnerId
-- PriorityId
-- ResolvedReleaseId
-- SeverityId
-- Tags
-- VerifiedReleaseId
+    - ComponentIds
+    - Custom_01...Custom_99
+    - DetectedReleaseId
+    - IncidentTypeId
+    - OpenerId
+    - OwnerId
+    - PriorityId
+    - ResolvedReleaseId
+    - SeverityId
+    - Tags (Primary field only)
+    - VerifiedReleaseId
 
 === "Releases"
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseStatusId
-- ReleaseTypeId
-- Tags
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseTypeId
+    - Tags (Primary field only)
 
 === "Requirements"
-- AuthorId
-- ComponentId
-- Custom_01...Custom_99
-- ImportanceId
-- OwnerId
-- ReleaseId
-- RequirementStatusId
-- RequirementTypeId
-- Tags
+    - AuthorId
+    - ComponentId
+    - Custom_01...Custom_99
+    - ImportanceId
+    - OwnerId
+    - ReleaseId
+    - RequirementTypeId
+    - Tags (Primary field only)
 
 === "Risks"
-- ComponentId
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- RiskImpactId
-- RiskProbabilityId
-- RiskStatusId
-- RiskTypeId
-- Tags
+    - ComponentId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - RiskImpactId
+    - RiskProbabilityId
+    - RiskTypeId
+    - Tags (Primary field only)
 
 === "Tasks"
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- Tags
-- TaskPriorityId
-- TaskStatusId
-- TaskTypeId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - Tags (Primary field only)
+    - TaskPriorityId
+    - TaskTypeId
 
 === "Test Cases"
-- AuthorId
-- ComponentIds
-- Custom_01...Custom_99
-- OwnerId
-- Tags
-- TestCasePriorityId
-- TestCaseStatusId
-- TestCaseTypeId
+    - AuthorId
+    - ComponentIds
+    - Custom_01...Custom_99
+    - OwnerId
+    - Tags (Primary field only)
+    - TestCasePriorityId
+    - TestCaseTypeId
 
 === "Test Sets"
-- AutomationHostId
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- Tags
-- TestConfigurationSetId
-- TestSetStatusId
-- TestSetTypeId
-
-!!! info "Current liimitations"
-    - Status fields can only by used as Primary fields, not affected fields
-    - Tags can only by used as Primary fields, not affected fields
+    - AutomationHostId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - Tags (Primary field only)
+    - TestConfigurationSetId
+    - TestSetTypeId
 
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
