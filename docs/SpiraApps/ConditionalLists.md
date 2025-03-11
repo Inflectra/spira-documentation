@@ -77,88 +77,88 @@ The menu button at the bottom of the settings page can be used to **validate you
 There are specific fields that can be used by the Conditional Lists SpiraApp. This includes all lookup fields, Tags, Custom properties, and a couple user fields not marked as lookups. The full list is below.
 
 === "Documents"
-- AuthorId
-- Custom_01...Custom_99
-- DocumentStatusId
-- DocumentTypeId
-- EditorId
-- Tags
+    - AuthorId
+    - Custom_01...Custom_99
+    - DocumentStatusId
+    - DocumentTypeId
+    - EditorId
+    - Tags
 
 === "Incidents"
-- ComponentIds
-- Custom_01...Custom_99
-- DetectedReleaseId
-- IncidentStatusId
-- IncidentTypeId
-- OpenerId
-- OwnerId
-- PriorityId
-- ResolvedReleaseId
-- SeverityId
-- Tags
-- VerifiedReleaseId
+    - ComponentIds
+    - Custom_01...Custom_99
+    - DetectedReleaseId
+    - IncidentStatusId
+    - IncidentTypeId
+    - OpenerId
+    - OwnerId
+    - PriorityId
+    - ResolvedReleaseId
+    - SeverityId
+    - Tags
+    - VerifiedReleaseId
 
 === "Releases"
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseStatusId
-- ReleaseTypeId
-- Tags
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseStatusId
+    - ReleaseTypeId
+    - Tags
 
 === "Requirements"
-- AuthorId
-- ComponentId
-- Custom_01...Custom_99
-- ImportanceId
-- OwnerId
-- ReleaseId
-- RequirementStatusId
-- RequirementTypeId
-- Tags
+    - AuthorId
+    - ComponentId
+    - Custom_01...Custom_99
+    - ImportanceId
+    - OwnerId
+    - ReleaseId
+    - RequirementStatusId
+    - RequirementTypeId
+    - Tags
 
 === "Risks"
-- ComponentId
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- RiskImpactId
-- RiskProbabilityId
-- RiskStatusId
-- RiskTypeId
-- Tags
+    - ComponentId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - RiskImpactId
+    - RiskProbabilityId
+    - RiskStatusId
+    - RiskTypeId
+    - Tags
 
 === "Tasks"
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- Tags
-- TaskPriorityId
-- TaskStatusId
-- TaskTypeId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - Tags
+    - TaskPriorityId
+    - TaskStatusId
+    - TaskTypeId
 
 === "Test Cases"
-- AuthorId
-- ComponentIds
-- Custom_01...Custom_99
-- OwnerId
-- Tags
-- TestCasePriorityId
-- TestCaseStatusId
-- TestCaseTypeId
+    - AuthorId
+    - ComponentIds
+    - Custom_01...Custom_99
+    - OwnerId
+    - Tags
+    - TestCasePriorityId
+    - TestCaseStatusId
+    - TestCaseTypeId
 
 === "Test Sets"
-- AutomationHostId
-- CreatorId
-- Custom_01...Custom_99
-- OwnerId
-- ReleaseId
-- Tags
-- TestConfigurationSetId
-- TestSetStatusId
-- TestSetTypeId
+    - AutomationHostId
+    - CreatorId
+    - Custom_01...Custom_99
+    - OwnerId
+    - ReleaseId
+    - Tags
+    - TestConfigurationSetId
+    - TestSetStatusId
+    - TestSetTypeId
 
 #### Current Limitations
 
