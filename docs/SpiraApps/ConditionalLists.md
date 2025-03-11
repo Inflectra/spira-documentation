@@ -9,12 +9,12 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     - [x] product settings 
     - [ ] product template setup required
     - [x] toolbar button on product settings page
-    - [x] runs automatically on the requirement details page
+    - [x] runs automatically on the document details page
+    - [x] runs automatically on the incident details page
     - [x] runs automatically on the release details page
+    - [x] runs automatically on the requirement details page
     - [x] runs automatically on the test case details page
     - [x] runs automatically on the test set details page
-    - [x] runs automatically on the incident details page
-    - [x] runs automatically on the document details page
     - [x] runs automatically on the task details page (not available in SpiraTest)
     - [x] runs automatically on the risk details page (not available in SpiraTest)
 
@@ -168,14 +168,14 @@ Status fields only work on page load or on save in Spira 8.8, and are only inten
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
 
-- Requirements
+- Documents
+- Incidents
 - Releases
+- Requirements
+- Risks
+- Tasks
 - Test Cases
 - Test Sets
-- Incidents
-- Documents
-- Tasks
-- Risks
 
 The SpiraApp applies the appropriate rules to the dropdown menus on a page in three cases: 
 
