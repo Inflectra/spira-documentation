@@ -73,8 +73,7 @@ In this case, there are 2 task rules that both apply to the owner field - one wi
 The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console. Be sure to double check the field **values** yourself, since the SpiraApp does not validate them for you.
 
 #### Valid Fields
-
-There are specific fields that can be used by the Conditional Lists SpiraApp. This includes all lookup fields, Tags, Custom properties, and a couple user fields not marked as lookups. The full list is below.
+Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.
 
 === "Documents"
 - AuthorId
@@ -160,9 +159,9 @@ There are specific fields that can be used by the Conditional Lists SpiraApp. Th
 - TestSetStatusId
 - TestSetTypeId
 
-#### Current Limitations
-
-Status fields only work on page load or on save in Spira 8.8, and are only intended to work as Primary fields, not affected fields. Tags are supported only for Primary fields and cannot be used as affected fields in Spira 8.8.
+!!! info "Current liimitations"
+    - Status fields can only by used as Primary fields, not affected fields
+    - Tags can only by used as Primary fields, not affected fields
 
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
