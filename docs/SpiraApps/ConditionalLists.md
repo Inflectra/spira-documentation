@@ -24,6 +24,8 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     This SpiraApp does not: 
     
     - work on artifact list pages
+    - work on boards
+    - work when creating artifacts during test execution
     - work with any fields that are not lists
     - change the actual value of any field (only the items shown in its dropdown)
     - restrict any changes made on list pages or via the API 
@@ -68,7 +70,7 @@ In this case, there are 2 task rules that both apply to the owner field - one wi
 - When a task has the Administration component, its owner field would be limited to the two users listed.
 - When a task has both a type of Development and a component of Administration, then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just the Product Manager, because that is the only option included in both rules.
 
-The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console.
+The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console. Be sure to double check the field **values** yourself, since the SpiraApp does not validate them for you.
 
 #### Valid Fields
 
