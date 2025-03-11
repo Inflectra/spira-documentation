@@ -9,12 +9,12 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     - [x] product settings 
     - [ ] product template setup required
     - [x] toolbar button on product settings page
-    - [x] runs automatically on the requirement details page
+    - [x] runs automatically on the document details page
+    - [x] runs automatically on the incident details page
     - [x] runs automatically on the release details page
+    - [x] runs automatically on the requirement details page
     - [x] runs automatically on the test case details page
     - [x] runs automatically on the test set details page
-    - [x] runs automatically on the incident details page
-    - [x] runs automatically on the document details page
     - [x] runs automatically on the task details page (not available in SpiraTest)
     - [x] runs automatically on the risk details page (not available in SpiraTest)
 
@@ -24,6 +24,8 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     This SpiraApp does not: 
     
     - work on artifact list pages
+    - work on boards
+    - work when creating artifacts during test execution
     - work with any fields that are not lists
     - change the actual value of any field (only the items shown in its dropdown)
     - restrict any changes made on list pages or via the API 
@@ -68,19 +70,110 @@ In this case, there are 2 task rules that both apply to the owner field - one wi
 - When a task has the Administration component, its owner field would be limited to the two users listed.
 - When a task has both a type of Development and a component of Administration, then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just the Product Manager, because that is the only option included in both rules.
 
-The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console.
+The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console. Be sure to double check the field **values** yourself, since the SpiraApp does not validate them for you.
+
+#### Valid Fields
+Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.
+
+=== "Documents"
+- AuthorId
+- Custom_01...Custom_99
+- DocumentStatusId
+- DocumentTypeId
+- EditorId
+- Tags
+
+=== "Incidents"
+- ComponentIds
+- Custom_01...Custom_99
+- DetectedReleaseId
+- IncidentStatusId
+- IncidentTypeId
+- OpenerId
+- OwnerId
+- PriorityId
+- ResolvedReleaseId
+- SeverityId
+- Tags
+- VerifiedReleaseId
+
+=== "Releases"
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseStatusId
+- ReleaseTypeId
+- Tags
+
+=== "Requirements"
+- AuthorId
+- ComponentId
+- Custom_01...Custom_99
+- ImportanceId
+- OwnerId
+- ReleaseId
+- RequirementStatusId
+- RequirementTypeId
+- Tags
+
+=== "Risks"
+- ComponentId
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- RiskImpactId
+- RiskProbabilityId
+- RiskStatusId
+- RiskTypeId
+- Tags
+
+=== "Tasks"
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- Tags
+- TaskPriorityId
+- TaskStatusId
+- TaskTypeId
+
+=== "Test Cases"
+- AuthorId
+- ComponentIds
+- Custom_01...Custom_99
+- OwnerId
+- Tags
+- TestCasePriorityId
+- TestCaseStatusId
+- TestCaseTypeId
+
+=== "Test Sets"
+- AutomationHostId
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- Tags
+- TestConfigurationSetId
+- TestSetStatusId
+- TestSetTypeId
+
+!!! info "Current liimitations"
+    - Status fields can only by used as Primary fields, not affected fields
+    - Tags can only by used as Primary fields, not affected fields
 
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
 
-- Requirements
+- Documents
+- Incidents
 - Releases
+- Requirements
+- Risks
+- Tasks
 - Test Cases
 - Test Sets
-- Incidents
-- Documents
-- Tasks
-- Risks
 
 The SpiraApp applies the appropriate rules to the dropdown menus on a page in three cases: 
 
