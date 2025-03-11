@@ -71,95 +71,97 @@ In this case, there are 2 task rules that both apply to the owner field - one wi
 The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console.
 
 #### Valid Fields
-=== "Requirements"
-    - RequirementTypeId
-    - ImportanceId
-    - ComponentId
-    - OwnerId
-    - AuthorId
-    - RequirementStatusId
-    - ReleaseId
-    - Tags
-    - Custom_01...Custom_99
 
-=== "Test Cases"
-    - TestCaseTypeId
-    - TestCasePriorityId
-    - ComponentIds
-    - OwnerId
-    - AuthorId
-    - TestCaseStatusId
-    - Tags
-    - Custom_01...Custom_99
-
-=== "Test Sets"
-    - CreatorId
-    - TestSetTypeId
-    - TestSetStatusId
-    - ReleaseId
-    - OwnerId
-    - Tags
-    - AutomationHostId
-    - TestConfigurationSetId
-    - Custom_01...Custom_99
-
-=== "Incidents"
-    - IncidentTypeId
-    - PriorityId
-    - ComponentIds
-    - OwnerId
-    - OpenerId
-    - IncidentStatusId
-    - SeverityId
-    - DetectedReleaseId
-    - ResolvedReleaseId
-    - VerifiedReleaseId
-    - Tags
-    - Custom_01...Custom_99
-
-=== "Risks"
-    - CreatorId
-    - RiskTypeId
-    - ComponentId
-    - OwnerId
-    - ReleaseId
-    - RiskImpactId
-    - RiskProbabilityId
-    - RiskStatusId
-    - Tags
-    - Custom_01...Custom_99
-
-=== "Tasks"
-    - TaskTypeId
-    - ComponentId
-    - CreatorId
-    - OwnerId
-    - ReleaseId
-    - TaskPriorityId
-    - TaskStatusId
-    - Tags
-    - Custom_01...Custom_99
+There are specific fields that can be used by the Conditional Lists SpiraApp. This includes all lookup fields, Tags, Custom properties, and a couple user fields not marked as lookups. The full list is below.
 
 === "Documents"
-    - DocumentTypeId
-    - AuthorId
-    - EditorId
-    - DocumentStatusId
-    - Tags
-    - Custom_01...Custom_99
+- AuthorId
+- Custom_01...Custom_99
+- DocumentStatusId
+- DocumentTypeId
+- EditorId
+- Tags
+
+=== "Incidents"
+- ComponentIds
+- Custom_01...Custom_99
+- DetectedReleaseId
+- IncidentStatusId
+- IncidentTypeId
+- OpenerId
+- OwnerId
+- PriorityId
+- ResolvedReleaseId
+- SeverityId
+- Tags
+- VerifiedReleaseId
 
 === "Releases"
-    - ReleaseTypeId
-    - OwnerId
-    - ReleaseStatusId
-    - Tags
-    - CreatorId
-    - Custom_01...Custom_99
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseStatusId
+- ReleaseTypeId
+- Tags
 
+=== "Requirements"
+- AuthorId
+- ComponentId
+- Custom_01...Custom_99
+- ImportanceId
+- OwnerId
+- ReleaseId
+- RequirementStatusId
+- RequirementTypeId
+- Tags
+
+=== "Risks"
+- ComponentId
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- RiskImpactId
+- RiskProbabilityId
+- RiskStatusId
+- RiskTypeId
+- Tags
+
+=== "Tasks"
+- ComponentId
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- Tags
+- TaskPriorityId
+- TaskStatusId
+- TaskTypeId
+
+=== "Test Cases"
+- AuthorId
+- ComponentIds
+- Custom_01...Custom_99
+- OwnerId
+- Tags
+- TestCasePriorityId
+- TestCaseStatusId
+- TestCaseTypeId
+
+=== "Test Sets"
+- AutomationHostId
+- CreatorId
+- Custom_01...Custom_99
+- OwnerId
+- ReleaseId
+- Tags
+- TestConfigurationSetId
+- TestSetStatusId
+- TestSetTypeId
 
 #### Current Limitations
 
-Status fields only work on page load or on save in this version, and are only intended to work as Primary fields, not affected fields. Tags are supported only for Primary fields and cannot be used as affected fields in the current version.
+Status fields only work on page load or on save in Spira 8.8, and are only intended to work as Primary fields, not affected fields. Tags are supported only for Primary fields and cannot be used as affected fields in Spira 8.8.
 
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
