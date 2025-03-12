@@ -8840,7 +8840,7 @@
 <p>You can also use <strong>multiple primary fields</strong> (up to a maximum of 10) so that the affected list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:</p>
 <p><img alt="Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Backend Developer" src="../img/conditional-lists-requirement-multiple-primary.png" />  </p>
 <p>This rule specifies that if a requirement has both a Type of Feature <em>and</em> a Component of Database, then owner dropdown list will be limited to only "Backend Developer". In reality, 'Backend Developer' would be replaced by the first and last name of a user in your Spira instance.</p>
-<p><strong>Custom properties</strong> are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields.</p>
+<p><strong>Custom properties</strong> are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields. Multiselect custom properties are only supported for affected fields, not primary fields. Other custom property types like List, User, Release, and Automation Host are supported for both primary and affected fields.</p>
 <p>You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:</p>
 <p><img alt="Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert" src="../img/conditional-lists-requirement-overlap-effected.png" /></p>
 <p>In this case, there are 2 task rules that both apply to the owner field - one with a primary field of type, and the other of component.</p>
@@ -8865,7 +8865,7 @@
 </div>
 <div class="tabbed-block">
 <ul>
-<li>ComponentIds</li>
+<li>ComponentIds (Affected field only)</li>
 <li>Custom_01...Custom_99</li>
 <li>DetectedReleaseId</li>
 <li>IncidentTypeId</li>
@@ -8926,7 +8926,7 @@
 <div class="tabbed-block">
 <ul>
 <li>AuthorId</li>
-<li>ComponentIds</li>
+<li>ComponentIds (Affected field only)</li>
 <li>Custom_01...Custom_99</li>
 <li>OwnerId</li>
 <li>Tags (Primary field only)</li>
@@ -8943,10 +8943,14 @@
 <li>ReleaseId</li>
 <li>Tags (Primary field only)</li>
 <li>TestConfigurationSetId</li>
-<li>TestSetTypeId</li>
+<li>TestRunTypeId (<strong>NOT Test*Set*TypeId</strong>)</li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">About Multiselect Lists</p>
+<p>Multiselect fields can only be <strong>Affected fields</strong>, including Components on Incidents and Test Cases as well as multiselect custom properties. They are not supported as primary fields.</p>
 </div>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <p>This SpiraApp works automatically on the details page for the following artifacts:</p>
