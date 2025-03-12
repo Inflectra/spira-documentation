@@ -72,13 +72,11 @@ In this case, there are 2 task rules that both apply to the owner field - one wi
 - When a task has both a type of "Development" and a component of "Administration", then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just "Dynamic Donna", because that is the only option included in both rules.
 
 #### Validate Field Names and Rules 
-The menu button at the bottom of the settings page can be used to **validate your settings**.
-It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact.
+The menu button at the bottom of the settings page can be used to **validate your settings**. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact.
+
 If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console.
-Be sure to double check the field **values** yourself, since the SpiraApp does not validate them for you.
-After that, remember to hit **Save** at the bottom of the page so the SpiraApp can use the new rules.
-You can still save the rules if some are invalid, if you need to finish writing them later.
-However, if an artifact has any invalid rules, the SpiraApp will not run at all on that artifact's details page. 
+
+Be sure to double check the field **values** yourself, since the SpiraApp does not validate them for you. After that, remember to hit **Save** at the bottom of the page so the SpiraApp can use the new rules. You can still save the rules if some are invalid, if you need to finish writing them later. However, if an artifact has any invalid rules, the SpiraApp will not run at all on that artifact's details page. 
 
 #### Valid Fields
 Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.
