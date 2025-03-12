@@ -55,21 +55,21 @@ See the following screenshot for an example:
 
 You can also use **multiple primary fields** (up to a maximum of 10) so that the affected list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:
 
-![Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Backend Developer](img/conditional-lists-requirement-multiple-primary.png)  
+![Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Agile Adam](img/conditional-lists-requirement-multiple-primary.png)  
 
-This rule specifies that if a requirement has both a type of "Feature" *and* a component of "Database", then owner dropdown list will be limited to only "Backend Developer". In reality, 'Backend Developer' would be replaced by the first and last name of a user in your Spira instance.
+This rule specifies that if a requirement has both a type of "Feature" *and* a component of "Database", then the owner dropdown list will be limited to only "Agile Adam". In this case, 'Agile Adam' is the first and last name of a user in this Spira instance.
 
 **Custom properties** are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields. Multiselect custom properties are only supported for affected fields, not primary fields. Other custom property types like List, User, Release, and Automation Host are supported for both primary and affected fields.
 
 You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:
 
-![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert](img/conditional-lists-requirement-overlap-effected.png)
+![Task Rules: (first rule): TaskTypeId = Development | OwnerId = Agile Adam, Balanced Barbara, Classy Cameron, Dynamic Donna. (Second rule): ComponentId = Administration | OwnerId = Dynamic Donna, Eccentric Eli](img/conditional-lists-task-overlap-effected.png)
 
 In this case, there are 2 task rules that both apply to the owner field - one with a primary field of type, and the other of component.
 
 - When a task has the "Development" type, its owner field would be limited to the four users listed. 
 - When a task has the "Administration" component, its owner field would be limited to the two users listed.
-- When a task has both a type of "Development" and a component of "Administration", then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just the "Product Manager", because that is the only option included in both rules.
+- When a task has both a type of "Development" and a component of "Administration", then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just "Dynamic Donna", because that is the only option included in both rules.
 
 #### Validate Field Names and Rules 
 The menu button at the bottom of the settings page can be used to **validate your settings**.
