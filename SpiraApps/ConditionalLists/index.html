@@ -3423,6 +3423,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#validate-field-names-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Field Names and Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#valid-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8762,6 +8773,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#validate-field-names-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Field Names and Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#valid-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8814,7 +8836,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Some of this SpiraApp's functionality is not compatible with SpiraTest</p>
 </div>
-<p>This SpiraApp helps admins create dynamic and powerful customizations for end users when they work with artifacts on details pages. It lets you conditionally control what values are available in one list dropdown, based on the selected values of other list fields. In other words, changing one list dynamically updates the options in other lists. For example, an Incident of Type 'Enhancement' could have its owner field limited to a certain group of users, but an incident of type "Bug" could have the owner field limited to a different group of users. The SpiraApp is highly customizable using the product settings to meet a variety of different use cases.</p>
+<p>This SpiraApp helps admins create dynamic and powerful customizations for end users when they work with artifacts on details pages. It lets you conditionally control what values are available in one list dropdown, based on the selected values of other list fields. In other words, changing one list dynamically updates the options in other lists. For example, an incident of type 'Enhancement' could have its owner field limited to a certain group of users, but an incident of type "Bug" could have the owner field limited to a different group of users. The SpiraApp is highly customizable using the product settings to meet a variety of different use cases.</p>
 <div class="admonition info">
 <p class="admonition-title">About this SpiraApp</p>
 <ul class="task-list">
@@ -8849,7 +8871,7 @@
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="product-settings">Product Settings<a class="headerlink" href="#product-settings" title="Permanent link">&para;</a></h3>
 <p>Once the SpiraApp has been activated system wide and enabled for a product you can edit its product settings.</p>
-<p>This is where you define the rules to conditionally control List fields on artifacts. Use the following format for each rule in an artifact's setting textbox:  </p>
+<p>This is where you define the rules to conditionally control list fields on artifacts. Use the following format for each rule in an artifact's setting textbox:  </p>
 <p><code>{primary field name}={field value} | {affected field name}={comma separated list of field values}</code>  </p>
 <p>See the following screenshot for an example:  </p>
 <p><img alt="Incident Rules: IncidentTypeId = Security | PriorityId = 1 - Critical, 2 - High, 3 - Medium" src="../img/conditional-lists-incident-rules.png" /></p>
@@ -8860,23 +8882,27 @@
 <li>select the <strong>primary field</strong> using the <a href="../../Developers/SpiraApps-Reference/#available-field-names">field names</a>. This is the field that, when changed, will conditionally limit what is shown in the affected list's dropdown. This field must be a list (dropdown) field. For example, if you want the primary field to be the incident type, enter <code>IncidentTypeId</code>. The setting should now look like this: <code>IncidentTypeId</code></li>
 <li>for the primary field's <strong>field value</strong> enter the exact text as it appears in the dropdown for the field on the details page. This is the value that, when selected, will change the values visible in the affected list chosen. For example, if you want to control what happens when the incident type is a "Security", enter <code>Security</code>. This setting should now look like this: <code>IncidentTypeId=Security</code></li>
 <li>next, you need to specify the list that you want the primary field to affect. This must also be a list (dropdown) field. For example, if you want the affected field to be the incident priority field, enter <code>PriorityId</code>. The setting should now look like this: <code>IncidentTypeId=Security |  PriorityId</code></li>
-<li>finally, you need to provide the list of values that the priority field should show when the incident type is Security (with all other values being hidden). For example, because security incidents are so important, let's assume we want to hide the lowest priorities, and instead want to show only the critical, high, and medium priorities. To do this copy and paste these values as displayed in the application, separated by commas. The setting should now look like this: <code>IncidentTypeId=Security | PriorityId = 1 - Critical, 2 - High, 3 - Medium</code></li>
+<li>finally, you need to provide the list of values that the priority field should show when the incident type is "Security" (with all other values being hidden). For example, because security incidents are so important, let's assume we want to hide the lowest priorities, and instead want to show only the critical, high, and medium priorities. To do this copy and paste these values as displayed in the application, separated by commas. The setting should now look like this: <code>IncidentTypeId=Security | PriorityId = 1 - Critical, 2 - High, 3 - Medium</code></li>
 <li>to add extra settings, place them on a new line</li>
+<li>use the Conditional Lists menu at the bottom of the page to validate your rules, which checks if you have any typos in field names or formatting.</li>
 </ul>
 </div>
 <p>You can also use <strong>multiple primary fields</strong> (up to a maximum of 10) so that the affected list is only changed if each specific primary field's value is set as specified. In the example below we have a setting for requirements:</p>
-<p><img alt="Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Backend Developer" src="../img/conditional-lists-requirement-multiple-primary.png" />  </p>
-<p>This rule specifies that if a requirement has both a Type of Feature <em>and</em> a Component of Database, then owner dropdown list will be limited to only "Backend Developer". In reality, 'Backend Developer' would be replaced by the first and last name of a user in your Spira instance.</p>
+<p><img alt="Requirement Rules: RequirementTypeId = Feature,  ComponentId = Database | OwnerId = Agile Adam" src="../img/conditional-lists-requirement-multiple-primary.png" />  </p>
+<p>This rule specifies that if a requirement has both a type of "Feature" <em>and</em> a component of "Database", then the owner dropdown list will be limited to only "Agile Adam". In this case, 'Agile Adam' is the first and last name of a user in this Spira instance.</p>
 <p><strong>Custom properties</strong> are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields. Multiselect custom properties are only supported for affected fields, not primary fields. Other custom property types like List, User, Release, and Automation Host are supported for both primary and affected fields.</p>
 <p>You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:</p>
-<p><img alt="Task Rules: (first rule): TaskTypeId = Development | OwnerId = Intern, Developer1, Developer2, Product Manager. (Second rule): ComponentId = Administration | OwnerId = Product Manager, Permissions Expert" src="../img/conditional-lists-requirement-overlap-effected.png" /></p>
+<p><img alt="Task Rules: (first rule): TaskTypeId = Development | OwnerId = Agile Adam, Balanced Barbara, Classy Cameron, Dynamic Donna. (Second rule): ComponentId = Administration | OwnerId = Dynamic Donna, Eccentric Eli" src="../img/conditional-lists-task-overlap-effected.png" /></p>
 <p>In this case, there are 2 task rules that both apply to the owner field - one with a primary field of type, and the other of component.</p>
 <ul>
-<li>When a task has the Development type, its owner field would be limited to the four users listed. </li>
-<li>When a task has the Administration component, its owner field would be limited to the two users listed.</li>
-<li>When a task has both a type of Development and a component of Administration, then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just the Product Manager, because that is the only option included in both rules.</li>
+<li>When a task has the "Development" type, its owner field would be limited to the four users listed. </li>
+<li>When a task has the "Administration" component, its owner field would be limited to the two users listed.</li>
+<li>When a task has both a type of "Development" and a component of "Administration", then its owner field will be limited to the overlap between the four users and the two users in each rule, which will be just "Dynamic Donna", because that is the only option included in both rules.</li>
 </ul>
-<p>The menu button at the bottom of the settings page can be used to <strong>validate your settings</strong>. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact. If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console. Be sure to double check the field <strong>values</strong> yourself, since the SpiraApp does not validate them for you.</p>
+<h4 id="validate-field-names-and-rules">Validate Field Names and Rules<a class="headerlink" href="#validate-field-names-and-rules" title="Permanent link">&para;</a></h4>
+<p>The menu button at the bottom of the settings page can be used to <strong>validate your settings</strong>. It will check each settings box for valid field names and make sure none of the rules conflict with any other for a specific artifact.</p>
+<p>If there are any conflicts or a field name is spelled incorrectly, it will say which artifact setting has invalid rules and log detailed error messages in the browser console.</p>
+<p>Be sure to double check the field <strong>values</strong> yourself, since the SpiraApp does not validate them for you. After that, remember to hit <strong>Save</strong> at the bottom of the page so the SpiraApp can use the new rules. You can still save the rules if some are invalid, if you need to finish writing them later. However, if an artifact has any invalid rules, the SpiraApp will not run at all on that artifact's details page. </p>
 <h4 id="valid-fields">Valid Fields<a class="headerlink" href="#valid-fields" title="Permanent link">&para;</a></h4>
 <p>Below is a full list of the field names that the SpiraApp can use, by artifact. This includes lookup fields, tags, Custom properties, and user fields.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="documents" name="__tabbed_1" type="radio" /><input id="incidents" name="__tabbed_1" type="radio" /><input id="releases" name="__tabbed_1" type="radio" /><input id="requirements" name="__tabbed_1" type="radio" /><input id="risks" name="__tabbed_1" type="radio" /><input id="tasks" name="__tabbed_1" type="radio" /><input id="test-cases" name="__tabbed_1" type="radio" /><input id="test-sets" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="documents">Documents</label><label for="incidents">Incidents</label><label for="releases">Releases</label><label for="requirements">Requirements</label><label for="risks">Risks</label><label for="tasks">Tasks</label><label for="test-cases">Test Cases</label><label for="test-sets">Test Sets</label></div>
@@ -8977,7 +9003,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">About Multiselect Lists</p>
-<p>Multiselect fields can only be <strong>Affected fields</strong>, including Components on Incidents and Test Cases as well as multiselect custom properties. They are not supported as primary fields.</p>
+<p>Multiselect fields can only be <strong>Affected fields</strong>, including components on incidents and test cases as well as multiselect custom properties. They are not supported as primary fields.</p>
 </div>
 <h2 id="using-the-spiraapp">Using the SpiraApp<a class="headerlink" href="#using-the-spiraapp" title="Permanent link">&para;</a></h2>
 <p>This SpiraApp works automatically on the details page for the following artifacts:</p>
