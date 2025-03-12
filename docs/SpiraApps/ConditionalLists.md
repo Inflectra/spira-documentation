@@ -58,7 +58,7 @@ You can also use **multiple primary fields** (up to a maximum of 10) so that the
 
 This rule specifies that if a requirement has both a Type of Feature *and* a Component of Database, then owner dropdown list will be limited to only "Backend Developer". In reality, 'Backend Developer' would be replaced by the first and last name of a user in your Spira instance.
 
-**Custom properties** are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields.
+**Custom properties** are supported. These must be listed like "Custom_01" for the field name. For the field values, you use the user-defined text values as they appear on the details page, just like built-in fields. Multiselect custom properties are only supported for affected fields, not primary fields. Other custom property types like List, User, Release, and Automation Host are supported for both primary and affected fields.
 
 You can also set multiple rules to affect the same list field. In this case, if both rules apply at the same time then the affected list's dropdown will be limited to the values shared between the limiting rules. For example:
 
@@ -83,7 +83,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - Tags (Primary field only)
 
 === "Incidents"
-    - ComponentIds
+    - ComponentIds (Affected field only)
     - Custom_01...Custom_99
     - DetectedReleaseId
     - IncidentTypeId
@@ -134,7 +134,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
 
 === "Test Cases"
     - AuthorId
-    - ComponentIds
+    - ComponentIds (Affected field only)
     - Custom_01...Custom_99
     - OwnerId
     - Tags (Primary field only)
@@ -149,8 +149,12 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
     - ReleaseId
     - Tags (Primary field only)
     - TestConfigurationSetId
-    - TestSetTypeId
+    - TestRunTypeId (**NOT Test*Set*TypeId**)
 
+
+!!! info "About Multiselect Lists"
+    In Spira 8.8, multiselect fields can only be **Affected fields**, including Components on Incidents and Test Cases as well as multiselect custom properties. They are not supported as primary fields.
+    
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
 
