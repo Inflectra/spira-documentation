@@ -153,7 +153,7 @@ Below is a full list of the field names that the SpiraApp can use, by artifact. 
 
 
 !!! info "About Multiselect Lists"
-    In Spira 8.8, multiselect fields can only be **Affected fields**, including Components on Incidents and Test Cases as well as multiselect custom properties. They are not supported as primary fields.
+    Multiselect fields can only be **Affected fields**, including Components on Incidents and Test Cases as well as multiselect custom properties. They are not supported as primary fields.
     
 ## Using the SpiraApp
 This SpiraApp works automatically on the details page for the following artifacts:
