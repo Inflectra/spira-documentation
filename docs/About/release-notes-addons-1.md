@@ -12,7 +12,7 @@ This page shows summary information about releases in Spira's addons, data syncs
         - test runs
         - test run steps
 
-- [RemoteLaunch](../RemoteLaunch-User-Guide/RemoteLaunch-Guide.md):
+- [RemoteLaunch](../RemoteLaunch-User-Guide/RemoteLaunch-Guide.md) v6.0.4.0:
 
     - RemoteLaunch to support cross-project Test Case executions [IN:10109]
     - Allow all users to login with their RSS token, however they authenticate when logging in to Spira [IN:7579]
