@@ -9448,10 +9448,9 @@
 <li><strong>handler</strong>: <ul>
 <li><strong>oldValue</strong>: the value a dropdown had selected prior to user input</li>
 <li><strong>newValue</strong>: the value a dropdown is changing to based on user input</li>
-<li><strong>return</strong>: False to reject the transition &amp; return the dropdown to the original value</li>
 </ul>
 </li>
-<li><strong>return</strong>: False if the SpiraAppManager could not find the field or otherwise was unable to mount the event listener </li>
+<li><strong>return</strong>: boolean of true if the change was successful, false if the field is not found, in other error states an error is thrown</li>
 </ul>
 </details>
 <details class="note">
