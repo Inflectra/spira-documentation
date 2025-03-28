@@ -291,8 +291,7 @@ There are a number of events that a SpiraApp can register against. This allows S
         - **handler**: 
             - **oldValue**: the value a dropdown had selected prior to user input
             - **newValue**: the value a dropdown is changing to based on user input
-            - **return**: False to reject the transition & return the dropdown to the original value
-        - **return**: False if the SpiraAppManager could not find the field or otherwise was unable to mount the event listener 
+        - **return**: boolean of true if the change was successful, false if the field is not found, in other error states an error is thrown
     
     ??? note "registerEvent_gridLoaded(gridId: string, handler: () => void)" 
         Registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
