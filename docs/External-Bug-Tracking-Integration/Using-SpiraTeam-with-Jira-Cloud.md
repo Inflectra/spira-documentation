@@ -42,7 +42,7 @@ Notes about syncing:
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.
 - Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode
-- Attachments are created in the other system when new artifacts/issues are created or updated. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
+- Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
 - If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. 
 - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
@@ -108,11 +108,11 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synched with Jira at all.
 - **Sync Mode**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
-    - Default (leave blank): *recommended for most users.*
-    - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
-    - Complete: enter the word "Complete" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, for all artifacts, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
-    - NoRequirements: enter the word "NoRequirements" to use this mode
-    - NoIncidents: enter the word "NoIncidents" to use this mode
+    - ***Default*** (leave blank): *recommended for most users.*
+    - ***Bidirectional***: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
+    - ***Complete***: enter the word "Complete" to use this mode. *Recommended for advanced users only*. Like the bidirectional sync mode, only use this mode if you have a well-defined set of workflows that make sense in both systems, for all artifacts, and *make the polling interval as short as possible*, to avoid conflicting changes in the two systems. This mode syncs all the artifacts bidirectionally, but you can also use the field *Types to Skip* to ignore the sync of some Jira types.
+    - ***NoRequirements***: enter the word "NoRequirements" to use this mode
+    - ***NoIncidents***: enter the word "NoIncidents" to use this mode
     
     Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option *NoAttachments* to the sync mode field. Example: *NoRequirements,NoAttachments* or simply *NoAttachments* if you use the default mode
     
@@ -121,10 +121,11 @@ You need to fill in the following fields for the plugin to operate correctly:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
-- **Types to Skip**: This optional field can be used to ignore some Jira issue types during the sync. To do this, enter a comma-separated list of IDs of any Jira issue types that you want to exclude from synchronization. If you leave this blank, all Jira issue types will be considered for synchronization.
+- **Types to Skip**: This optional field can be used to ignore some Jira issue types during the sync. To do this, enter a comma-separated list of IDs of any Jira issue types that you want to exclude from synchronization. If you leave this blank, all Jira issue types will be considered for synchronization, sync mode permitting.
 - **Skip Comments**: Set this field to *Yes* if you want the dataSync to ignore comments in both directions. Please note old comments already synced won't be deleted.
-- **Auto-Map Properties**: TODO
-- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. Please note that Spira allows more complex Requirement hierarchy than Jira by default, and the dataSync cannot create forbidden hierarchical relations in Jira.
+- **Auto-Map Properties**: Set this field to *Yes* if you want the dataSync to try to automatically map the standard and custom properties based on name matching. Even if this option is enabled, you can still manually map properties as explained in this documentation. The system will try to auto-map only the blank mappings.
+- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. Please note that Spira allows more complex Requirement hierarchy than Jira by default, and the dataSync cannot create forbidden hierarchical relations in Jira. If that happens, the dataSync will move the artifact/work item to root level. Please refer to the [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/configure-the-issue-type-hierarchy/) to learn how to modify your work item hierarchy configuration.
+- **Use Plain Text**: Set this field to *Yes* to remove any formatting from the text fields when using either the *bidirectional* or the *complete* sync modes. This is useful if you need to see the updated text in both systems and don't use complex text formatting or embedded images, files, etc.
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
@@ -218,7 +219,7 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
 
 When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.
 
-If you are syncing an existing product with releases in it to Jira, you should manually add the mapping information to Spira releases, to make sure you don't get duplicates being made. For each release/version that exists in both Spira and Jira at the time of starting the datasync for the first time:
+If you are syncing an existing product with releases in it to Jira, you should manually add the mapping information to Spira releases before turning the sync ON, to make sure you don't get duplicates being made. For each release/version that exists in both Spira and Jira at the time of starting the datasync for the first time:
 
 - Find the ID of the Jira version you want to map to a release in Spira
 - Go to the product in Spira
