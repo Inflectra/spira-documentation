@@ -104,7 +104,7 @@ You need to fill in the following fields for the plugin to operate correctly:
 !!! info "Configuration Tip"
     For most users, we recommend leaving "Jira Custom Fields" blank. If you want to sync Tasks and/or Requirements, do not forget to configure "Task Types" and/or "Requirement Types", and chose the proper "Sync Mode". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements (not valid for the NoIncidents mode).
 
-- **Jira Special Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+- **Jira Special Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties. Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. Also, use this field to activate Time Tracking fields sync. This can be left empty for now and will be discussed below in [Configuring Jira Special Fields](#special-jira-fields).
 - **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synched with Jira at all.
 - **Sync Mode**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
@@ -509,6 +509,30 @@ To start, go to the data mapping home page for the selected product you were on 
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
+=== "Time Tracking"
+    If you would like to sync the Time Tracking values from Jira to Spira and vice-versa, please enter "timetracking" in the Jira Special Fields setting:
+
+    ![](img/JiraCloud-Plugin-ConfigSpecial1.png)
+
+    !!! info "You also need to activate and configure this in Jira"
+        In Jira, you need to enable Time Tracking in your project, as explained [here](https://support.atlassian.com/jira-cloud-administration/docs/configure-time-tracking/). Once this is active for your project, you need to add the Time Tracking field to all the Issue types that sync against Spira artifacts, by going to:
+
+        - Settings > Projects
+        - In the left menu, Issues (Work Items) > Screens
+        - Then, for each Isse (Work Item) type you sync to Spira:
+            - Click on the pencil (edit)
+            - Then, for each Screen, click on its name
+            - Then, at the bottom of the page, select 'Time Tracking'
+
+    ![](img/JiraCloud-Plugin-ConfigSpecial2.png)
+
+    By following these instructions, you will see the fields syncing:
+
+    - Estimated Effort <=> Original Estimate
+    - Remaining Effort <=> Time Remaining
+    - Time Spent => Actual Effort
+
+    Please note Jira does not allow updates to the field 'Time Spent', so the plugin will ignore it when syncing Jira to Spira.
 
 ## Using Spira with Jira
 Now that all the mappings are done, you are now ready to use the integration.
