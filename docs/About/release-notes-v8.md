@@ -1,5 +1,15 @@
 # Release Notes for Spira v8
 
+## Version 8.9 (April 2025)
+
+!!! success "New Features"
+    - When a system admin changes a setting on the General Settings page, history will be recorded in the System History Changes [RQ:5228]
+    - Add a new API endpoint to let developers retrieve the parents for a particular requirement [IN:10747]
+    - Fix source code and document file previews no longer having syntax highlighting (introduced in 8.7) [IN:10699]
+    - Update the data synchronization system admin settings to support more properties to allow for greater future customization [RQ:5185]
+    - Update the data synchronization system admin settings to support Yes/No settings for an improved user experience [IN:10860]
+    - Update the last updated field for requirements, when moving them (indent or outdent) in the ui of the application [RQ:5185]
+
 ## Version 8.8 (March 2025)
 !!! info "Summary"
     Users can now [add any custom graph to any of their product home pages](../Spira-User-Manual/Product-Homepage.md/#custom-graphs), to further personalize and improve this dashboard view.
