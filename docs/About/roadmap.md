@@ -12,9 +12,8 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q1 2025
-- Improvements to the Jira data sync, including hierarchy syncing from Jira and more sync options.
-- Ability to link an incident in another product during test execution
+## Q2 2025
+- Release of Inflectra.ai features in Spira to provide users with a quick, seamless, and easy way to leverage generative AI technologies to improve quality and productivity
 - Ability to export test sets and their test cases to another product
 
 ## Rest of 2025
