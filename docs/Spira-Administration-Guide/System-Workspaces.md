@@ -88,7 +88,7 @@ You need to:
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
 - decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - you should initially make sure that the product is marked as "Active";
-- if available, you can disable Inflectra AI for this product if not approved for this product but has been purchased
+- if available, you can disable Inflectra AI for this product <span class="pill" title="Inflectra AI settings are only available in the cloud, after purchasing the add-on">Inflectra AI</span>
 
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new product.
@@ -108,7 +108,7 @@ On this screen you can:
 - enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
-- toggle Inflectra AI <span class="pill">Inflectra AI</span>
+- toggle Inflectra AI <span class="pill" title="Inflectra AI settings are only available in the cloud, after purchasing the add-on">Inflectra AI</span>
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
