@@ -47,7 +47,7 @@ When generating code, the user is prompted to enter either a programming languag
 
 You can enter a value in the text input & hit enter to submit it, or select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. 
 
-![](img/Inflectra_ai_task_detail_input.png)
+<span style="border: 2px solid var(--md-accent-bg-color--light); height: auto; width: fit-content; display: block;">![](img/Inflectra_ai_task_detail_input.png)</span>
 
 | Generated Artifact                  | Description| 
 |-------------------------------------|------------|
@@ -69,4 +69,4 @@ Inflectra AI will store your chat history in your browser to allow you to look b
 
 ## Responsible AI Usage
 
-Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra AI may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](www.inflectra.com/support).
+Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra AI may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
