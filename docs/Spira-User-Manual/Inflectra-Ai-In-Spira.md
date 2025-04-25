@@ -1,14 +1,14 @@
-# Inflectra AI
+# Inflectra.ai
 
 ## Overview
 
-This page describes the Inflectra AI functionality available in Spira. This feature is a separately purchased product, only available for Spira users hosted by Inflectra in the cloud. 
+This page describes the Inflectra.ai functionality available in Spira. This feature is a separately purchased product, only available for Spira users hosted by Inflectra in the cloud. 
 
-Inflectra AI gives users various options for creating content from existing artifacts, to cut down on the manual work needed for fleshing out the different pieces of your process required to deliver features at a high level of quality. We intend to continue to improve the prompts for existing functionality as well as add new features, to continue to expand what is possible within the Spira family of products. 
+Inflectra.ai gives users various options for creating content from existing artifacts, to cut down on the manual work needed for fleshing out the different pieces of your process required to deliver features at a high level of quality. We intend to continue to improve the prompts for existing functionality as well as add new features, to continue to expand what is possible within the Spira family of products. 
 
 ## Details Pages
 
-This section will describe the available functionality on details pages within Inflectra AI as well as what each of them do, to help you get started with workflows including generative AI. Inflectra AI handles both generating the content of the other artifacts, creating those artifacts, and associating them to the original artifact they were based on. 
+This section will describe the available functionality on details pages within Inflectra.ai as well as what each of them do, to help you get started with workflows including generative AI. Inflectra.ai handles both generating the content of the other artifacts, creating those artifacts, and associating them to the original artifact they were based on. 
 
 
 ### Requirements
@@ -43,7 +43,7 @@ The task details page allows users to generate code to cover a given development
 
 ![](img/Inflectra_ai_task_details.png)
 
-When generating code, the user is prompted to enter either a programming language or a testing framework. Additional details can be provided to help guide Inflectra AI to use specific tooling relevant to your codebase. For instance, if I am a web developer who works on a Java Spring Boot based application, I can enter "Java (Spring Boot)" as my programming language. The same goes for testing framework - for example: NUnit 3 (ASP.NET Web API).
+When generating code, the user is prompted to enter either a programming language or a testing framework. Additional details can be provided to help guide Inflectra.ai to use specific tooling relevant to your codebase. For instance, if I am a web developer who works on a Java Spring Boot based application, I can enter "Java (Spring Boot)" as my programming language. The same goes for testing framework - for example: NUnit 3 (ASP.NET Web API).
 
 You can enter a value in the text input & hit enter to submit it, or select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. 
 
@@ -64,9 +64,9 @@ The risk details page allows mitigations to be automatically generated to help b
 
 ## Chat history
 
-Inflectra AI will store your chat history in your browser to allow you to look back at what you have done previously, up to 50 previous messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
+Inflectra.ai will store your chat history in your browser to allow you to look back at what you have done previously, up to 50 previous messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
 
 
 ## Responsible AI Usage
 
-Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra AI may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
+Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
