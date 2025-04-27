@@ -25,7 +25,7 @@ The available settings include:
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 - **Enable Developer Mode**: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.
 - **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span>
-- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling. This is only available for cloud instances, once purchased. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the product level). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
 
 ### TaraVault for Source code
 The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
@@ -315,6 +315,7 @@ This page displays a list of relevant changes made to system level artifacts or 
     - Product Roles
     - SpiraApps
     - User profiles
+    - System admin General Settings
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
 
