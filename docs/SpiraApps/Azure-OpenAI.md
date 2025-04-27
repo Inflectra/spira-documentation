@@ -5,7 +5,7 @@
 !!! info "Upgrade to Inflectra.ai"
 	Inflectra.ai is available for all cloud Spira customers. It is easy to set up and manage, and is deeply integrated into Spira. Inflectra.ai provides more powerful features than is possible with this SpiraApp.
 
-	[Explore all of its features](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) and contact [us to find out how to upgrade](mailto:sales@inflectra.com).
+	[Explore all of its features](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) and [contact us to find out how to upgrade](mailto:sales@inflectra.com).
 
 This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using the Azure OpenAI engine developed by OpenAI and provided by Microsoft.
 The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely

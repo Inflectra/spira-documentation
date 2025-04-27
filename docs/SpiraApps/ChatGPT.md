@@ -2,6 +2,11 @@
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
+!!! info "Upgrade to Inflectra.ai"
+	Inflectra.ai is available for all cloud Spira customers. It is easy to set up and manage, and is deeply integrated into Spira. Inflectra.ai provides more powerful features than is possible with this SpiraApp.
+
+	[Explore all of its features](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) and [contact us to find out how to upgrade](mailto:sales@inflectra.com).
+
 This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases and risks using one of the GPT Large Language Models (LLM) developed by OpenAI. The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks. It also will let you generate the test steps for an existing test case, and suggest mitigations for an existing risk. 
 
 It can provide an easy and effective way for users to create a foundational set of items that they can refine and tailor easily and effectively. Note that Tasks and Risks are not available in SpiraTest.
