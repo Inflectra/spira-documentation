@@ -29,7 +29,7 @@ From the requirement details page you can generate the following content:
 | Generated Content  | Description                                                                                                   |
 |--------------------|---------------------------------------------------------------------------------------------------------------|
 | Test Cases         | Creates a set of test cases with steps to cover this requirement, to get a head start on test planning        | 
-| Task               | Creates a set of work tasks needed to deliver the functionality in this requirements (SpiraTeam and SpiraPlan only)                          | 
+| Task               | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                          | 
 | Scenarios          | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
 
