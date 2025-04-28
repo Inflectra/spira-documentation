@@ -573,7 +573,6 @@ The following images are available for SpiraApps to access to help enhance the a
 - artifact-UseCase.svg
 - FolderOpen.svg
 - Folder.svg
-- product-TaraVault.svg
 - org-Administration.svg
 - org-Component.svg
 - org-Enterprise.svg

@@ -538,7 +538,7 @@
 
         - Omit the "Source Code Commits" widget on Development Home page in SpiraTest [IN:4090]
         - Source code file details and commit details association tabs: should require source code edit permissions to be able to manage associations [IN:5987]
-        - [Source code clone popup](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#connecting-to-the-source-code-repository) for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
+        - Source code clone popup for TaraVault users should only display on products the user has TaraVault access to [IN:5996]
         - Improve the design of the [build details](../Spira-User-Manual/Release-Management.md/#build-details) page to make it easier to use [IN:5665]
         - [Build details](../Spira-User-Manual/Release-Management.md/#build-details) page truncates very large console logs to improve performance page load time [IN:6056]
         - Add ability to copy to clipboard the full canonical commit ids for git and subversion (not the shorthand version) on the commit details page [IN:6026]
@@ -548,8 +548,8 @@
         - Add preview and syntax highlighting for a range of common development file formats (including csv, sql, scss, log, swift) and image formats (ico and webp) [IN:6037]
         - Add preview and syntax highlighting for all powershell file types [IN:6067]
         - Fix not being able to activate TaraVault if host site name is too long or contains the word "demo" [IN:6063]
-        - Fix [activating TaraVault](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#provisioning-products) for a product causing errors in other products that use the TestProvider for source code [IN:6066]
-        - With new cloud instance, [activating and deactivating TaraVault](../TaraVault-User-Manual/Provisioning-Projects-&-Users.md/#provisioning-products) on a product should not cause any errors [IN:6069]
+        - Fix activating TaraVault for a product causing errors in other products that use the TestProvider for source code [IN:6066]
+        - With new cloud instance, activating and deactivating TaraVault on a product should not cause any errors [IN:6069]
         - Display list of products using source code on TaraVault's main administration page [IN:6013]
         - [Source code product admin](../Spira-Administration-Guide/Product-General-Settings.md/#source-code) page: do not display "source code up to date" if it has never been initialized successfully [IN:6034]
         - [Source code product admin](../Spira-Administration-Guide/Product-General-Settings.md/#source-code) page: the test button should correctly check and verify the connection to git repositories [IN:6035]
@@ -588,8 +588,8 @@
     **View rendered markdown files** directly in Spira with rich previews for documents and source code files. John Gruber's markdown format is an incredibly popular and easy way to write human readable plain text that renders as html with images, headings, lists, and more.
 
 ??? success "New Features"
-    - Improve functionality and performance of Git source code control (for [GitProvider](../Version-Control-Integration/Integrating-with-Git.md) and [TaraVault-Git](../TaraVault-User-Manual/Using-Git.md)) [RQ:3033]
-    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../Version-Control-Integration/Integrating-with-Subversion.md) and [TaraVault-Subversion](../TaraVault-User-Manual/Using-Subversion.md)) [RQ:3034]
+    - Improve functionality and performance of Git source code control (for [GitProvider](../Version-Control-Integration/Integrating-with-Git.md) and TaraVault-Git) [RQ:3033]
+    - Improve functionality and performance of Subversion source code control (for [SubversionProvider](../Version-Control-Integration/Integrating-with-Subversion.md) and TaraVault-Subversion) [RQ:3034]
     - Improve the performance and data integrity of source code by moving commits from a file cache to the database [RQ:3026]
     - Enhance and improve the Source Code [File list](../Spira-User-Manual/Source-Code.md/#source-code-file-list) page [RQ:3016]
     - Enhance and improve the Source Code [File details](../Spira-User-Manual/Source-Code.md/#source-code-file-details) page [RQ:3018]
