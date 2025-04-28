@@ -94,6 +94,7 @@ nav:
   - Application Overview and Tips: Spira-User-Manual\Functionality-Overview.md
   - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
   - User Management: Spira-User-Manual\User-Product-Management.md
+  - Inflectra.ai: Spira-User-Manual\Inflectra-Ai-In-Spira.md
   - Products:
     - Homepage: Spira-User-Manual\Product-Homepage.md
     - Planning:
@@ -118,7 +119,6 @@ nav:
       - Task Tracking: Spira-User-Manual\Task-Tracking.md
       - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
     - Reporting: Spira-User-Manual\Reports-Center.md
-    - Inflectra AI: Spira-User-Manual\Inflectra-Ai-In-Spira.md
   - Programs: 
     - Homepage: Spira-User-Manual\Program-Homepage.md
     - Products: Spira-User-Manual\Program-Products.md

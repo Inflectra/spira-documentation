@@ -10,6 +10,8 @@ Please see our statement on [responsible AI usage](https://www.inflectra.com/Com
 !!! info
     Inflectra.ai is only available for cloud hosted sites. It is available in all versions of Spira (SpiraTest, SpiraTeam, and SpiraPlan).
 
+    It is available to try for free in any cloud trial. To add Inflectra.ai to your production site, you can do so from your customer area or [contact us to find out how to upgrade](mailto:sales@inflectra.com).
+
 ## Details Pages
 Inflectra.ai can generate content based on the current artifact being viewed from its details page. This content can either augment the artifact itself or create linked artifacts. Various key pieces of information about the artifact itself and its context are used to generate the content.
 
