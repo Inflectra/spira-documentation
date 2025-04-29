@@ -108,7 +108,7 @@ On this screen you can:
 - enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
-- toggle Inflectra.ai. Note that Inflectra.ai also needs to be enabled system wide for users to access it in the product. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
