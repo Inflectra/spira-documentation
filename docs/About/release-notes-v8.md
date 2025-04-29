@@ -1,5 +1,26 @@
 # Release Notes for Spira v8
 
+## Version 8.10 (May 2025)
+!!! info "Summary"
+    Cloud users can now benefit from Infectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
+
+    For cloud customers, source code integrations with third party services like GitLab and GitHub is now simpler and clearer (SpiraTeam and SpiraPlan).
+
+??? success "New Features"
+    - See [Inflectra.ai dedicated release notes](./release-notes-inflectra.ai-v1.md) for more
+    - As a system admin, I can turn Inflectra AI features on or off as needed, to manage this feature set across my organization [RQ:5225]
+    - As a system admin, I can enable Inflectra AI features when creating a new product, to ensure the product team can start using the features straight away [RQ:5226]
+    - As a system admin, I can turn Inflectra AI features on or off as needed for a product, to manage this feature set in that product [RQ:5224]
+    - As an Inflectra AI user, when AI has been enabled system wide and for a product, I can access AI features from that product [RQ:5230]
+    - As a source code admin in the cloud, integration with third party service like GitLab and GitHub is now simpler and clearer to setup and configure [RQ:5257]
+
+??? bug "Bug fixes and enhancements"
+    - Add the ability to filter on execution status on the test case list page by multiple values at once [IN:1204]
+    - Fix the link in the left hand sidebar to the test case/set/release on the test run detail page so that it opens the right item on normal click (fyi it works correctly when you alt+click on the link) [IN:6254]
+    - Improve the compatibility of the DataSyncService with plugins using v4 APIs or below (introduced in 8.9) [IN:10980]
+    - Improve the experience for cloud trial users by turning on Inflectra.ai for all sample products for new installations [IN:10994]
+    - Update the Cloud dataSync service project to handle extended custom properties [IN:10935]
+
 ## Version 8.9 (April 2025)
 !!! info "Summary"
     This release is focused on behind the scenes upgrades and improvements ahead of the launch of Inflectra.ai features inside Spira (to be released before 8.10).

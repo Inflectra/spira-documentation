@@ -13,18 +13,15 @@
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q2 2025
-- Release of Inflectra.ai features in Spira to provide users with a quick, seamless, and easy way to leverage generative AI technologies to improve quality and productivity
+- Improve the quality and consistency of artifact generation using Inflectra.ai to further enhance leverage generative AI technologies to improve quality and productivity
 - Ability to export test sets and their test cases to another product
 
 ## Rest of 2025
 - Allow admins to customize requirement statuses to help them create more flexible workloads.
-- Enhancements to our GenAI SpiraApps.
-- New GenAI features built directly into Spira.
+- Additional features in Inflectra.ai to provide greater flexibility, customization, and benefits to cloud customers 
 - Improve the program level planning boards. <span class="pill">SpiraPlan</span>
-- Improvements to source code integration with Git <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - Upgrade the user experience for key parts of the application, based on user feedback.
 - More details about these and other areas to follow.
-
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
@@ -35,7 +32,7 @@ The list below are features that we are focused on delivering but not in the abo
 - New **product team features** so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
 - **Portfolio level planning** with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
-- **Enhanced source code management**: the ability to tie a branch to a sprint or release. Code review tools built into the application.
+- **Enhanced source code management**: improve integration with Git cloud providers, the ability to tie a branch to a sprint or release.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.
 - **Improved report templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
