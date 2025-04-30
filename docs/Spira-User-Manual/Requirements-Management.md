@@ -401,6 +401,9 @@ You can **edit requirements** straight from the mindmap. Users with bulk edit pe
 
 ## Requirement Details
 
+!!! tip "Inflectra.ai"
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#requirement-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+
 When you click on a requirement item in the requirements list described in [Requirements Management > Requirements List](Requirements-Management.md/#requirements-list), you are taken to the requirement details page illustrated below:
 
 ![](img/Requirements_Management_93.png)

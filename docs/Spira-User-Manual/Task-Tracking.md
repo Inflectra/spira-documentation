@@ -224,6 +224,9 @@ You can **edit releases and tasks** straight from the Gantt chart. Users with bu
 
 ## Task Details
 
+!!! tip "Inflectra.ai"
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#task-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+
 When you click on a task item in the lists displayed on either the main task list page or on the requirement / release details pages, you are taken to the task details page illustrated below:
 
 ![](img/Task_Tracking_294.png)

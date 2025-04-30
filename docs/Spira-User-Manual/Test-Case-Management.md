@@ -184,6 +184,9 @@ You can now choose any of these options as an alternative to using the icons in 
 
 ## Test Case Details
 
+!!! tip "Inflectra.ai"
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#test-case-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+
 When you click on a test case item in the [test case list](#test-case-list), you are taken to the test case details page illustrated below:
 
 ![](img/Test_Case_Management_136.png)
