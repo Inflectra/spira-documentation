@@ -2,12 +2,12 @@
 
 This section outlines how to:
 
-- prepare your system for installation of SpiraPlan<sup>®</sup>
+- prepare your system for installation of Spira (the same instructions are valid for SpiraTest<sup>®</sup>, SpiraTeam<sup>®</sup>, and SpiraPlan<sup>®</sup>)
 - install the software
 - ensure that your web-server is correctly configured to ensure secure operation
 
 ## Hardware and Software Requirements
-The minimum hardware and software requirements for running the SpiraPlan<sup>®</sup> system are:
+The minimum hardware and software requirements for running the Spira system are:
 
 | **Server Requirements** |                                                   |
 |-------------------------|---------------------------------------------------|
@@ -27,12 +27,12 @@ Please consider there are some limitations for FREE SQL Express [That may signif
 | **Web Browser:**        | Microsoft Edge <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera                                             |
 | **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional) <br> Microsoft Project 2010+ (optional)                |
 
-\*Note that SpiraPlan<sup>®</sup> can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
+\*Note that Spira can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
 
 
 ## System Prerequisites
 
-Assuming that you have already installed the appropriate version of Microsoft Windows onto your computer (or that has been pre-installed for you), make sure that the various prerequisites have been correctly added to your installation before trying to install SpiraPlan<sup>®</sup>. The SpiraPlan<sup>®</sup> installer will check to ensure that the various prerequisites are in place, and will abort the installation if any are missing, indicating to you what action needs to be taken.
+Assuming that you have already installed the appropriate version of Microsoft Windows onto your computer (or that has been pre-installed for you), make sure that the various prerequisites have been correctly added to your installation before trying to install Spira. The Spira installer will check to ensure that the various prerequisites are in place, and will abort the installation if any are missing, indicating to you what action needs to be taken.
 
 We recommend that you install / configure the prerequisites in the following order:
 
@@ -212,7 +212,7 @@ You should see a section called "ASP.NET" occupying the top third of the IIS scr
 
 ## Installing the Software
 
-Once all of the prerequisites are correctly installed, you are now ready to install SpiraPlan<sup>®</sup>. To start and successfully finish the installation you will need the items listed below (all of which are available in the customer area of the Inflectra<sup>®</sup> website):
+Once all of the prerequisites are correctly installed, you are now ready to install Spira. To start and successfully finish the installation you will need the items listed below (all of which are available in the customer area of the Inflectra<sup>®</sup> website):
 
 - **The installation package** - can be found under "My Downloads" section:
 
@@ -223,7 +223,7 @@ Once all of the prerequisites are correctly installed, you are now ready to inst
 
 ![](img/Installing_SpiraPlan_18_2.png)
 
-To start the installation, double-click on the SpiraPlan<sup>®</sup> installation package (it will have a filename in the form of SpiraPlan-vX.X.X.exe). The Installer will display the following dialog box:
+To start the installation, double-click on the Spira installation package (it will have a filename in the form of SpiraPlan-vX.X.X.exe). The Installer will display the following dialog box:
 
 ![](img/Installing_SpiraPlan_19.png)
 
@@ -237,7 +237,7 @@ Click the "Next" button to start the installation wizard. The wizard will gather
 
 ### Review the License Agreement and Prerequisites
 
-If installing a fresh installation or upgrading, after making your selection the next screen provides a copy of the SpiraPlan<sup>®</sup> End User License Agreement (EULA). Please read this carefully as it describes the legal contract between you -- the user of the software -- and Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have read the agreement and understood your rights and obligations, select the radio button marked "I accept the terms in the License Agreement" and click the "Next" button.
+If installing a fresh installation or upgrading, after making your selection the next screen provides a copy of the Spira End User License Agreement (EULA). Please read this carefully as it describes the legal contract between you -- the user of the software -- and Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have read the agreement and understood your rights and obligations, select the radio button marked "I accept the terms in the License Agreement" and click the "Next" button.
 
 ![](img/Installing_SpiraPlan_21.png)
 
@@ -270,7 +270,7 @@ If you checked "advanced" at the start of the installation process, you will hav
 
 ![](img/Installing_SpiraPlan_24.png)
 
-Choose which web site to install SpiraPlan<sup>®</sup> into using the available dropdown, which should list all available web sites in IIS on this machine. The Default Web Site will be preselected and is the best option in most circumstances.
+Choose which web site to install Spira into using the available dropdown, which should list all available web sites in IIS on this machine. The Default Web Site will be preselected and is the best option in most circumstances.
 
 **Virtual Directory (advanced mode only)**
 
@@ -281,13 +281,13 @@ Note: The installer will check to make sure that the name you have chosen is not
 
 ### Connect to the Database
 
-SpiraPlan<sup>®</sup> has an application (installed into a default folder on your system), a website (configured above), and a database. The next screen tells the installer how to connect to the database server on your system.
+Spira has an application (installed into a default folder on your system), a website (configured above), and a database. The next screen tells the installer how to connect to the database server on your system.
 
 ![](img/Installing_SpiraPlan_25.png)
 
 **a) Windows Authentication**
 
-This is the easiest option when the application and database will be residing on the *same* server. It is the only option available for authentication during a standard installation. In this case, choose the "Windows Authentication" option and the Login/Password boxes will be disabled. In this case, the installer will connect to the database using your current Windows login to create the application database objects, and SpiraPlan<sup>®</sup> will connect to the database during normal operation using either the ASPNET or NETWORK SERVICE Windows accounts (it depends on the version of the operating system).
+This is the easiest option when the application and database will be residing on the *same* server. It is the only option available for authentication during a standard installation. In this case, choose the "Windows Authentication" option and the Login/Password boxes will be disabled. In this case, the installer will connect to the database using your current Windows login to create the application database objects, and Spira will connect to the database during normal operation using either the ASPNET or NETWORK SERVICE Windows accounts (it depends on the version of the operating system).
 
 **b) SQL Server Authentication (advanced mode only)**
 
@@ -322,11 +322,11 @@ Once you have entered the various pieces of information, click "Next". The insta
 
 ![](img/Installing_SpiraPlan_26.png)
 
-Once you have confirmed that everything is correct, click the **"Install"** button to actually begin the process of installing SpiraPlan<sup>®</sup> onto your system. The installer will then display a progress bar as the installation proceeds. Once the installation is complete, the installer will provide confirmation, or display information about any problems it encountered.
+Once you have confirmed that everything is correct, click the **"Install"** button to actually begin the process of installing Spira onto your system. The installer will then display a progress bar as the installation proceeds. Once the installation is complete, the installer will provide confirmation, or display information about any problems it encountered.
 
 Click the "Finish" button to complete the installation.
 
-Congratulations! You have successfully installed SpiraPlan<sup>®</sup> onto your system. If you type <http://localhost/SpiraPlan> into your browser you should see the SpiraPlan<sup>®</sup> login page. If for any reason you don't see the login page, please contact Inflectra<sup>®</sup> [support team](http://www.inflectra.com/Support). 
+Congratulations! You have successfully installed Spira onto your system. If you type <http://localhost/SpiraPlan> into your browser you should see the Spira login page. If for any reason you don't see the login page, please contact Inflectra<sup>®</sup> [support team](http://www.inflectra.com/Support). 
 
 
 ### Upgrading
@@ -345,7 +345,7 @@ To upgrade an existing installation:
 
 ### Review the License Agreement and Prerequisites
 
-The next screen provides a copy of the SpiraPlan<sup>®</sup> End User License Agreement (EULA). Please read this carefully as it describes the legal contract between you -- the user of the software -- and Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have read the agreement and understood your rights and obligations, select the radio button marked "I accept the terms in the License Agreement" and click the "Next" button.
+The next screen provides a copy of the Spira End User License Agreement (EULA). Please read this carefully as it describes the legal contract between you -- the user of the software -- and Inflectra<sup>®</sup> Corporation, the developer and publisher. Once you have read the agreement and understood your rights and obligations, select the radio button marked "I accept the terms in the License Agreement" and click the "Next" button.
 
 ![](img/Installing_SpiraPlan_21.png)
 
@@ -386,7 +386,7 @@ To recover your system, restore the backup over top of the existing corrupted da
 If problems persist, please contact the Inflectra support team, and they will explain how to retrieve the logs for remediation.
 
 ## Advanced Install Scenarios
-There may be a few cases where you need to customize the installation or upgrade of SpiraPlan<sup>®</sup>. To enable the installer's advanced mode, make sure to check the "Advanced" checkbox at the relevant screen of the wizard.
+There may be a few cases where you need to customize the installation or upgrade of Spira. To enable the installer's advanced mode, make sure to check the "Advanced" checkbox at the relevant screen of the wizard.
 
 Including the options listed above with "(advanced mode only)" next to them, Advanced mode lets you:
 
@@ -435,7 +435,7 @@ The Microsoft Internet Information Services (IIS) web-server and SQL Server data
 
 <http://www.iis.net/learn/manage/configuring-security>
 
-In addition to the steps outlined in this article, it is important to note that by default, all web pages served by IIS using the HTTP protocol are unencrypted, and as such, the usernames and passwords used by SpiraPlan<sup>®</sup> to log into the application can be read by network sniffing tools. If you are using SpiraPlan<sup>®</sup> purely within an intranet environment, this may not be an issue. However, if you are externally hosting SpiraPlan<sup>®</sup> onto a publicly accessible website, we recommend installing a Secure Sockets Layer (SSL) encryption certificate, and restricting all web-traffic to the secure HTTPS protocol instead.
+In addition to the steps outlined in this article, it is important to note that by default, all web pages served by IIS using the HTTP protocol are unencrypted, and as such, the usernames and passwords used by Spira to log into the application can be read by network sniffing tools. If you are using Spira purely within an intranet environment, this may not be an issue. However, if you are externally hosting Spira onto a publicly accessible website, we recommend installing a Secure Sockets Layer (SSL) encryption certificate, and restricting all web-traffic to the secure HTTPS protocol instead.
 
 ## Troubleshooting
 Every time the installer attempts an operation (like an install or upgrade), it stores a log file. This is located at "c:\ProgramData\Inflectra\SpiraPlan". Each log file is labelled with the date and time of the operation. Please share the relevant files with the Inflectra support team if you need help troubleshooting the required operation.

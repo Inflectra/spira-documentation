@@ -204,26 +204,26 @@ tab and the dropdowns in the sidebar show the correct project and
 artifact type.*
 
 After the correct/required fields have been entered, click the \[ Send
-to SpiraPlan\] button to send your data to SpiraPlan®. You will see a
+to Spira\] button to send your data to Spira. You will see a
 popup showing overall progress.
 
 When the artifact has been successfully created an ID number will be
-placed in the ID column. This is the ID straight from SpiraPlan.
+placed in the ID column. This is the ID straight from Spira.
 
 If there are any errors for a particular row (eg if required fields have
 not all been filled in, or if there was some other problem with the data
-or on the SpiraPlan server) that row will be highlighted with a comment
+or on the Spira server) that row will be highlighted with a comment
 in column A explain the problem.
 
 For hierarchical artifacts (ones with parents and children), the import
-process will stop as soon as any error is found, to ensure SpiraPlan
+process will stop as soon as any error is found, to ensure Spira
 does not create an incorrect hierarchy
 
 ## Get data From SpiraPlan
 
 To get all the data for the specified project and artifact from
-SpiraPlan, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into SpiraPlan](#import-into-spiraplan)
-above, click the \[ Get From SpiraPlan \] button. This will first load
+Spira, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into SpiraPlan](#import-into-spiraplan)
+above, click the \[ Get From Spira \] button. This will first load
 up the template on the current sheet then automatically retrieve all
-data from SpiraPlan and add it to the sheet.
+data from Spira and add it to the sheet.
 

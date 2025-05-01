@@ -3,13 +3,13 @@
 This section outlines how to use the included Importer for importing
 folders, projects, modules and requirements from an IBM Rational DOORS
 database into a project in SpiraTest®, SpiraPlan® or SpiraTeam®
-(hereafter referred to as SpiraTeam).
+(hereafter referred to as Spira).
 
 ## Installing the Importer
 
 This section outlines how to install the importer onto a workstation so
-that you can then import requirements from DOORS into SpiraTeam. It
-assumes that you already have a working installation of SpiraTeam v3.0
+that you can then import requirements from DOORS into Spira. It
+assumes that you already have a working installation of Spira v3.0
 or later and a working installation of DOORS 9.0 or later.
 
 You can download the Importer from the Inflectra's website under
@@ -39,20 +39,20 @@ login/password to access the system:
 
 
 Once you have successfully authenticated with DOORS, you have the option
-of importing ALL the requirements in the DOORS database into a SpiraTeam
+of importing ALL the requirements in the DOORS database into a Spira
 project or selecting just a specific item (folder, project or module) in
 the DOORS hierarchy. To select a specific item, click on the "Populate
 Item List" button and choose the item from the dropdown list.
 
 Then click *Next* to continue to the screen where you enter your
-SpiraTeam server and project information:
+Spira server and project information:
 
 ![](img/Importing_From_DOORS_35.png)
 
 
 
 
-On this screen, you need to enter the SpiraTeam Server URL, the username
+On this screen, you need to enter the Spira Server URL, the username
 and password you use to log onto the system, then click the *Get
 Projects* button. The program will connect to the server and get a list
 of all available projects. Select the project you want to import into
@@ -63,12 +63,12 @@ all the DOORS elements into. If left blank, then the importer will
 create a single placeholder requirement that all of the DOORS folders,
 projects, modules and requirements will be nested under.
 
-If you have a requirement already in SpiraTeam, and want the DOORS items
+If you have a requirement already in Spira, and want the DOORS items
 to appear inside it, then you need to enter the requirement number into
 the *Root Requirement* text box. For example, if you have a requirement
 named "DOORS Requirements" with a number of RQ1920, then put 1920 into
 the *Root Requirement* field and run the import. When import is
-finished, the SpiraTeam requirements will be nested underneath.
+finished, the Spira requirements will be nested underneath.
 
 Note: At this time, Link Modules are **not** imported from
 DOORS databases.
@@ -133,16 +133,16 @@ last import you just ran.
 the wizard back to the first screen, allowing new input options
 to be set.
 
-## DOORS & SpiraTeam Importing Notes
+## DOORS & Spira Importing Notes
 
-At this time, only formal modules are imported into SpiraTeam from
+At this time, only formal modules are imported into Spira from
 DOORS. The folders, projects and modules in DOORS become summary
-requirements in SpiraTeam and the actual requirements in each module are
-simply nested as child requirements in SpiraTeam. In addition, the
-following fields are brought over into SpiraTeam from DOORS according to
+requirements in Spira and the actual requirements in each module are
+simply nested as child requirements in Spira. In addition, the
+following fields are brought over into Spira from DOORS according to
 the following mapping table:
 
-**DOORS Field**   **SpiraTeam Field**
+**DOORS Field**   **Spira Field**
 Heading           Name
 Short Text        Description
 Long Text         Description
@@ -151,19 +151,19 @@ DOORS Object ID   Custom Text Property TEXT\_01
 
 Using this adapter, you can manage the appropriate artifacts in IBM
 Rational DOORS and then periodically re-run the import application to
-update SpiraTeam. The application will remember that the project was
+update Spira. The application will remember that the project was
 already used for an initial load and will simply update the requirements
 as appropriate as well as add any additional ones added.
 
 Note that any changes to the requirement hierarchy are not reflected.
-This allows you to change the organization of the artifacts in SpiraTeam
+This allows you to change the organization of the artifacts in Spira
 to make them easier to use without the changes being overwritten on the
 next import cycle.
 
 Finally, should you want to start again and re-import a project from
 scratch that has already been imported once before, you may do so by
 re-running the Importer, and entering in **-1** as the *Root
-Requirement*. This will not delete requirements from SpiraTeam, only
+Requirement*. This will not delete requirements from Spira, only
 remove mappings, so the next time you run the importer on this file, all
 new requirements will be created.
 
