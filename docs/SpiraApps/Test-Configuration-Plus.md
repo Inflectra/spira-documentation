@@ -1,4 +1,4 @@
-# Test Configuration Plus
+# Test Configurations Plus
 This SpiraApp helps you generate static test sets based off of a test set with an attached test configuration. This means you can easily reorder, edit, or remove test cases from the new test set, to fine tune your testing, while maintaining the rich and dynamic parameters provided by test configurations. It takes a Test Set that is linked to a Test Configuration Set and will generate a new test set that contains all of the permutations converted into discrete test set test cases with individual parameters set. Also this SpiraApp lets you choose whether to group by test case or test configuration.
 
 !!! info "About this SpiraApp"

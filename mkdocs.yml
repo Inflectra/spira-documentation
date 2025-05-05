@@ -200,7 +200,7 @@ nav:
   - Requirement Multi Approvers: SpiraApps\Requirement-Multi-Approvers.md
   - Risks+: SpiraApps\RisksPlus.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
-  - Test Configuration+: SpiraApps\Test-Configuration-Plus.md
+  - Test Configurations+: SpiraApps\Test-Configuration-Plus.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Introduction: Reporting\index.md
