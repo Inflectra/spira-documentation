@@ -1,31 +1,31 @@
 # Importing from Microsoft Word
 
-The web-based interface of SpiraTeam® is ideal for creating and managing requirements, test cases and incidents for a new project. However often an organization will often have existing requirements documentation and test case templates in Microsoft Word format that need to get easily migrated into SpiraTeam.
+The web-based interface of Spira is ideal for creating and managing requirements, test cases and incidents for a new project. However often an organization will often have existing requirements documentation and test case templates in Microsoft Word format that need to get easily migrated into Spira.
 
-To simplify this task, SpiraTeam® comes with a Microsoft Word Add-In that can export requirements and test cases from a populated Word document into SpiraTeam®. Note that this guide refers to SpiraTeam®, but the Word Add-In can be used with SpiraTest® and SpiraPlan® as well. The only difference is that the Test Case import functionality will not be applicable for SpiraPlan® users.
+To simplify this task, Spira comes with a Microsoft Word Add-In that can export requirements and test cases from a populated Word document into Spira. Note that this guide refers to Spira, but the Word Add-In works with SpiraTest®, SpiraTeam® and SpiraPlan®.
 
 
 ## Installing the Microsoft Word Add-In
 
-The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or SpiraTeam sections), and download the **MS-Office Add-Ins**
+The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or Spira sections), and download the **MS-Office Add-Ins**
 installation package. There are separate packages for the following versions of MS Office:
 
 **MS-Office 2003 Add-Ins** -- these are compatible with Microsoft Office
-2003 and 2007. They can connect to SpiraTeam v2.3 or later. They also require Microsoft .NET 3.5.
+2003 and 2007. They can connect to Spira v2.3 or later. They also require Microsoft .NET 3.5.
 
 **MS-Office 2007 Add-Ins** -- these are compatible with Microsoft Office
-2007 and 2010. They can connect to SpiraTeam v3.0 or later. They also require Microsoft .NET 4.0.
+2007 and 2010. They can connect to Spira v3.0 or later. They also require Microsoft .NET 4.0.
 
 **MS-Office 2010 Add-Ins** -- these are compatible with Microsoft Office
-2010 and later. They can connect to SpiraTeam v5.0 or later. They also require Microsoft .NET 4.0.
+2010 and later. They can connect to Spira v5.0 or later. They also require Microsoft .NET 4.0.
 
 This installation package will install the add-ins for Microsoft Excel, Word and Project at the same time. If you don't have the correct version of Microsoft .NET installed or some of the necessary prerequisites, you will be given the opportunity to install them when you first run the installation package.
 
-Once you have the Word Add-In installed, the second thing you'll need to download is the **SampleWordDocument** document. This sample document contains some example requirements and test cases that be exported into SpiraTeam. Also the documents make good templates if you're looking for a way to standardize the import of requirements and test cases. There are two versions of the document available -
+Once you have the Word Add-In installed, the second thing you'll need to download is the **SampleWordDocument** document. This sample document contains some example requirements and test cases that be exported into Spira. Also the documents make good templates if you're looking for a way to standardize the import of requirements and test cases. There are two versions of the document available -
 **SampleWordDocument.doc** for Word 2003 and
 **SampleWordDocument.docx** for Word 2007 and later.
 
-Once you have downloaded the template, please double-click on it to open it up in MS-Word. You will notice that there is an additional toolbar displayed in Word which is used for exporting requirements and test cases to SpiraTeam:
+Once you have downloaded the template, please double-click on it to open it up in MS-Word. You will notice that there is an additional toolbar displayed in Word which is used for exporting requirements and test cases to Spira:
 
 ![](img/Importing_from_Microsoft_Word_34.png)
 
@@ -37,12 +37,12 @@ If you are using the MS-Word 2007 or 2010 Add-In, you will see a modified versio
 
 
 
-This toolbar allows you to connect to SpiraTeam, and perform the export. The process for using this toolbar is described below:
+This toolbar allows you to connect to Spira, and perform the export. The process for using this toolbar is described below:
 
 
-## Connecting to SpiraTeam®
+## Connecting to Spira
 
-The first thing you need to do is to click on the \[Connect\] button to specify the information used to connect to your instance of SpiraTeam:
+The first thing you need to do is to click on the \[Connect\] button to specify the information used to connect to your instance of Spira:
 
 ![](img/Importing_from_Microsoft_Word_36.png)
 
@@ -50,13 +50,13 @@ The first thing you need to do is to click on the \[Connect\] button to specify 
 
 Please enter the following information into the dialog box:
 
--   **Spira URL:** Please enter the web address that you use to access SpiraTeam® in your browser. This is usually of the form http://<hostname\>/SpiraTeam. Make sure that you remove any suffixes from the address (e.g. Default.aspx).
+-   **Spira URL:** Please enter the web address that you use to access Spira in your browser. This is usually of the form http://<hostname\>/Spira. Make sure that you remove any suffixes from the address (e.g. Default.aspx).
 
--   **User Name:** Please enter the username that you use for logging in to SpiraTeam
+-   **User Name:** Please enter the username that you use for logging in to Spira
 
--   **Password:** Please enter the password that you use for logging in to SpiraTeam
+-   **Password:** Please enter the password that you use for logging in to Spira
 
--   **Remember Password:** If you are using this Add-In on a private computer, you can check this option to have the system remember your credentials locally. Please do not use this option on a public computer and it will compromise the security of your SpiraTeam installation.
+-   **Remember Password:** If you are using this Add-In on a private computer, you can check this option to have the system remember your credentials locally. Please do not use this option on a public computer and it will compromise the security of your Spira installation.
 
 Once you have entered the necessary information, please click
 \[Connect\] to authenticate with the server. If the login information is invalid, you will see an error message appear, otherwise you will be connected and the list of projects and artifacts will be populated. If you want to end your session, you should just click the \[Disconnect\]
@@ -65,7 +65,7 @@ button and the Add-In will close your connection.
 
 ## Choosing the Project and Artifact
 
-Once you have successfully connected to SpiraTeam, you should now choose the appropriate Project and Artifact in the system that you will be importing / exporting:
+Once you have successfully connected to Spira, you should now choose the appropriate Project and Artifact in the system that you will be importing / exporting:
 
 ![](img/Importing_from_Microsoft_Word_37.png)
 
@@ -79,14 +79,14 @@ Or
 
 Once you have selected the project and artifact, there are two buttons that you can now use:
 
--   **Export:** Clicking this button will take the *currently selected data* in the document and use it to add new items in SpiraTeam.
+-   **Export:** Clicking this button will take the *currently selected data* in the document and use it to add new items in Spira.
 
 -   **Style Mappings:** This button allows you to change the parameters used by the Add-In when scanning the Word document to know where each requirement, test case and test step beings and ends.
 
 The parameters selection varies by the type of information being exported, and will be discussed in the relevant artifact section below:
 
 
-## Exporting Requirements into SpiraTeam
+## Exporting Requirements into Spira
 
 To export requirements, first you need to open up the MS-Word document that contains the requirements to be exported. Then you need to click on the "Style Mappings" icon to display the style mapping configuration dialog box:
 
@@ -105,7 +105,7 @@ Once you have verified that the styles match those used in your document, {==hig
 -   Any embedded images will be added to the requirement as a file Attachment, with an embedded image tag added to Description field
 
 
-## Exporting Test Cases into SpiraTeam
+## Exporting Test Cases into Spira
 
 To export test cases (and their test steps), first you need to open up the MS-Word document that contains the test cases to be exported. Then you need to click on the "Style Mappings" icon to display the style mapping configuration dialog box:
 

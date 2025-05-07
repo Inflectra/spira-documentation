@@ -38,7 +38,7 @@ Create a new folder for your SpiraApp and create a new file in it called `manife
 ??? info "Using Git is optional"
     You do not need to use Git for this tutorial. It is optional. 
     
-    If you wish to use Git, create a local git repository in this folder and publish to your remote over choice (e.g. GitHub or TaraVault) to keep a backup of your work. 
+    If you wish to use Git, create a local git repository in this folder and publish to your remote over choice (e.g. GitHub or GitLab) to keep a backup of your work. 
     
     Note that you will have to create a repository on GitHub to submit your SpiraApp for approval, so this follows best practices. Once the repository is created, immediately create a new branch and do your development there, leaving the main branch mostly untouched. This makes it very simple to make a pull request for the official submission process later.
 

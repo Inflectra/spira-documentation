@@ -2,7 +2,12 @@
 
 !!! warning "This SpiraApp works with v8.3+ and some of its functionality is not compatible with SpiraTest"
 
-This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, Test Case Steps, and Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. It also adds a toolbar button to these details pages to export the artifact steps as an attached .feature file.
+This SpiraApp:
+
+- automatically highlights Gherkin syntax within Requirement Steps and Test Case Steps
+- automatically highlights Gherkin syntax for Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. 
+- adds a toolbar button to relevant details pages to export the artifact steps as an attached .feature file. 
+- adds a toolbar button to the document details page, to convert any open .feature file into an artifact with BDD items
 
 !!! info "About this SpiraApp"
     - [ ] system settings
@@ -12,6 +17,7 @@ This SpiraApp automatically highlights Gherkin syntax within Requirement Steps, 
     - [x] runs automatically on the test case details page
     - [x] runs automatically on the risk details page
     - [x] toolbar button on requirement details page
+    - [x] toolbar button on document details page
     - [x] toolbar button on test case details page
     - [x] toolbar button on risk details page
     - [x] officially supports Gherkin syntax in English, German, French, Portuguese, Spanish, and other languages.
@@ -61,6 +67,13 @@ While viewing a document details page, if you can create Requirements, Test Case
 - All properly indented "Scenarios" are used for the artifact steps/mitigations
 - All other text in the file is used for the artifact description
 - The feature file is added as an attachment to the newly created artifact
+
+### Creating Artifacts
+On the Document Details page you will see the "BDD" button, that will let you create various artifacts from a .feature file, when viewing a file of that type. If the .feature file is correctly formatted, a new artifact will be created, based on the options in the BDD button dropdown. In each case the artifact name is the feature name, its description the notes on the feature, and the steps/mitigations are the scenarios themselves
+
+- **Create Requirement**: requirements steps for each scenario, and with a type that is the first type that includes steps
+- **Create Test Case**: test steps for each scenario (description field only)
+- **Create Risk**: mitigations for each scenario (description field only)
 
 ### Example Localizations
 === "French"

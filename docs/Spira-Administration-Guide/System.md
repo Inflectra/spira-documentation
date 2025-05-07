@@ -27,22 +27,6 @@ The available settings include:
 - **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span>
 - **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
 
-### TaraVault for Source code
-The below toggle is only available in cloud hosted versions of SpiraTeam and SpiraPlan.
-
-- **Use TaraVault for source code**: When enabled (the default), every Spira product will use [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) for source code management. If disabled (set the toggle to no) each product can either use TaraVault or an external (and cloud accessible) Git or Subversion provider of your choice, such as BitBucket, GitLab or Azure DevOps. **Note**: You can enable/disable this setting at anytime, but doing so may impact your ability to access your source code settings.
-
-!!! question "Not exclusively using TaraVault"
-    If you set/leave the "Use TaraVault for source code" toggle discussed above to Yes, then you will only have access to the TaraVault admin pages at both the system and product level administration.
-
-    If you set the "Use TaraVault for source code" toggle to No, the administration menu will work a little differently for you. The system admin menu will always show two links for source code management in the Integration sub-section. This allows to easily access and configure TaraVault and any third party providers at any time. Meanwhile, the product admin menu will adapt to how you have setup source code for that particular product:
-
-    - If TaraVault is already enabled, the product admin "Source Code" link will open the product TaraVault page
-    - If instead a third party source code provide provider is configured for the product, the product admin "Source Code" link will open the admin page for that provider
-    - If no source code provider has been set up (neither TaraVault nor a third party) then the product admin menu will show two links, one for configuring TaraVault, and the other for configuring a third party provider (see below)
-
-    ![product admin menu with TaraVault and third party provider links](img/System_58b.png)
-
 
 ## File Type Icons
 
@@ -152,52 +136,6 @@ The following settings can be changed within the system, once you are satisfied,
 - **Authentication Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.
 - **Keep Me Logged-In Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.
 - **Allowed Domains**: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. https://www.domain1.com, http://www.domain2.com) or an asterisk (\*) to denote all domains are allowed (not recommended).
-
-
-## TaraVault®
-
-*This section refers to the functionality available to hosted/cloud customers of SpiraPlan. If you are using the on-premise version of SpiraPlan, please refer to [Version Control Integration](System-Integration.md/#version-control-integration-on-premise-customers-only) instead.*
-
-TaraVault® is the hosted source code repository and software configuration management (SCM) system provided by Inflectra. When you signed-up or purchased a subscription to either SpiraPlan or SpiraTeam, it will have come with an entry-level subscription to TaraVault.
-
-When you first click on the Administration \> TaraVault administration page, you will see the following screen:
-
-![](img/System_65.png)
-
-This lets you know that you have not yet activated your TaraVault account with Inflectra. When you click on the \[Activate TaraVault\]
-button you will see the following:
-
-![](img/System_66.png)
-
-This will let you see how many TaraVault SCM users your subscription allows and also the name of the TaraVault instance that your SpiraPlan instance is associated with.
-
-![](img/System_67.png)
-
-Each product in SpiraPlan has its own corresponding TaraVault product, and each TaraVault product can be configured to use one of the two different SCM providers:
-
--   **Subversion (SVN)** -- This is a simple, centralized version control system (VCS) that works best for teams that want to have a centralized SCM environment with only one central instance of the SCM repository. Subversion only allows a single branch to be managed and is generally easier to understand conceptually.
-
--   **Git** -- This is a more powerful, distributed version control system (DVCS) that works best for teams that want to have multiple distributed instances of their source code repository. Git offers superior merging and branching functionality to Subversion but is generally more complicated to understand conceptually.
-
-For the current SpiraPlan product you can choose the type of provider you wish to use, enter the name of the TaraVault product and click Activate:
-
-![](img/System_68.png)
-
-Since you cannot change the type or name of the TaraVault product once activated, please review your entries and click \[OK\] to confirm the new product activation.
-
-Once the product activation has been completed, the screen will display the following:
-
-![](img/System_69.png)
-
-The screen will display the name of the linked TaraVault product as well as the list of TaraVault SCM users that are configured to use this TaraVault product -- this list will not necessarily be all of the users in the SpiraPlan product, just those that need to connect to TaraVault to commit source code into the repository.
-
-If you want to deactivate this TaraVault product, click the
-\[Deactivate\] button and the product will be removed from TaraVault.
-
-To improve performance, SpiraPlan will cache some of the data it receives from TaraVault. Normally SpiraPlan will know when to update the cached data based on changes made in TaraVault automatically. However sometimes you may wish to flush the cached data completed, to do this, click on the \[Clear Cache\] button.
-
-To add new SCM users to the TaraVault product, click on the 'Add Users'
-link to add new SCM users to the product.
 
 
 ## Event Log

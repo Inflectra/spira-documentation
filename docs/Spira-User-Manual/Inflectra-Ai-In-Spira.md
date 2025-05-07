@@ -12,16 +12,39 @@ Please see our statement on [responsible AI usage](https://www.inflectra.com/Com
 
     It is available to try for free in any cloud trial. To add Inflectra.ai to your production site, you can do so from your customer area or [contact us to find out how to upgrade](mailto:sales@inflectra.com).
 
-## Details Pages
-Inflectra.ai can generate content based on the current artifact being viewed from its details page. This content can either augment the artifact itself or create linked artifacts. Various key pieces of information about the artifact itself and its context are used to generate the content.
+## Getting started
+Trial customers can start using Inflectra.ai right away. Relevant settings are automatically turned on for trial customers.
+
+Production customers need to proactively turn on Inflectra.ai inside Spira, before you can start using it. These actions need to be done by a system admin.
+
+- System Admin > [General Settings](../Spira-Administration-Guide/System.md/#general-settings): set "Inflectra.ai" to yes
+- System Admin > Workspaces > [View/Edit Product](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product): set "Inflectra.ai" to yes for any existing product you wish to use Inflectra.ai (note that new products will have Inflectra.ai on by default, as will sample products if the site was created at 8.10.0.0 or later)
+
+### Where is Inflectra.ai available
+You can tell if a page has Inflectra.ai functionality because you will see the Inflectra.ai icon in the navigation bar.
+
+Inflectra.ai is available in the following places:
+
+- **Details pages**: Inflectra.ai can generate content based on the current artifact being viewed from its details page. This content can either augment the artifact or create new artifacts.
+ 
+    - Requirement details page
+    - Test case details page
+    - Task details page
+    - Risk details page
 
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
 Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.
 
+### Chat history
+Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
 
-### Requirements
+### Responsible AI Usage
+Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
+
+
+## Requirement details page
 From the requirement details page you can generate the following content: 
 
 ![](img/Inflectra_ai_requirements_details.png)
@@ -34,7 +57,7 @@ From the requirement details page you can generate the following content:
 | Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
 
 
-### Test Cases
+## Test Case details page
 From the test case details page you can generate the following content:
 
 ![](img/Inflectra_ai_testcase_details.png)
@@ -45,7 +68,7 @@ From the test case details page you can generate the following content:
 | Requirement        | Creates requirement for the functionality this test case is going to cover, especially useful within TDD (Test Driven Development) processes | 
 
 
-### Tasks 
+## Task details page
 From the task details page (SpiraTeam and SpiraPlan only) you can generate the following content: 
 
 ![](img/Inflectra_ai_task_details.png)
@@ -66,7 +89,7 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
 
 
-### Risks
+## Risks details page
 From the risk details page (SpiraTeam and SpiraPlan only) you can generate the following content:
 
 ![](img/Inflectra_ai_risk_details.png)
@@ -74,11 +97,3 @@ From the risk details page (SpiraTeam and SpiraPlan only) you can generate the f
 | Generated Content  | Description                                         |
 |--------------------|-----------------------------------------------------|
 | Risk Mitigations   | Generates mitigations for the current risk          | 
-
-
-## Chat history
-Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
-
-
-## Responsible AI Usage
-Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).

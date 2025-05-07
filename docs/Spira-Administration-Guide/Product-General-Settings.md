@@ -156,9 +156,9 @@ This page contains several different data management tools that can be used to i
 
 ![](img/Product_General_Settings_104.png)
 
-1. **Database Indexes**: In order to improve the performance of SpiraPlan®, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all SpiraPlan products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.
+1. **Database Indexes**: In order to improve the performance of Spira™, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all SpiraPlan products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.
 
-2. **Data Caching**: In order to improve the performance of SpiraPlan®, certain types of product data are cached. Very occassionally, the cache can get behind the data in the actual database. In such cases, refreshing the cache will make sure the cache is fully up to date and correct data is therefore displayed in the application. If users report this kind of problem in one of the cache areas, click the relevant Refresh Cache button.
+2. **Data Caching**: In order to improve the performance of Spira™, certain types of product data are cached. Very occassionally, the cache can get behind the data in the actual database. In such cases, refreshing the cache will make sure the cache is fully up to date and correct data is therefore displayed in the application. If users report this kind of problem in one of the cache areas, click the relevant Refresh Cache button.
 
 3. **Indentation Hierarchy**: The Requirement and Releases pages use an "Indent" system for managing the hierarchy of information. This allows requirements and test cases to be nested under parent items and be rapidly searched and filtered on. Sometimes if a move/copy operation is interrupted (due to a network outage, etc.) the hierarchy may get corrupted. If you suspect a problem with either of these artifacts, click the "Check" button. Once the check has run, if you see a red Error message instead of the Green OK that means problems were found. If that happens, click the "Correct" button and the system will correct the indent levels.
 
@@ -177,7 +177,7 @@ Now you can decide whether you want to override any of the default settings for 
 
 To improve performance, SpiraPlan will cache some of the data it receives from the source code provider. Normally SpiraPlan will know when to update the cached data based on changes made in the source code system automatically. However, sometimes you may wish to force the cache to refresh right now. To do so, click the "Refresh Cache" button. If you ever want to wipe the cache completely and have it rebuild from scratch, click  "Clear Cache".
 
-You are now ready to use SpiraPlan® in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see [here](../Spira-User-Manual/Source-Code.md).
+You are now ready to use Spira™ in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see [here](../Spira-User-Manual/Source-Code.md).
 
 
 ## Baselines

@@ -31,10 +31,7 @@ Above the table you can add a new data sync or refresh the status of the page to
 
 
 ## Source Code Integration
-
-*This section refers to the functionality available to on-premise customers of SpiraPlan or those customers that have disabled TaraVault. If you are using the cloud / hosted version of SpiraPlan and have not disabled TaraVault, please refer to [TaraVault Configuration](System.md/#taravault) instead.*
-
-SpiraPlan® is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the SpiraPlan web interface, and more importantly link commits in these tools to artifacts in SpiraPlan. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
+Spira is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the Spira web interface, and more importantly link commits in these tools to artifacts in Spira. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.
 
 The information on using the various source code providers for SpiraPlan® and the steps for configuring the provider-specific settings are described elsewhere - for example for [Git](../Version-Control-Integration/Integrating-with-Git.md).
 

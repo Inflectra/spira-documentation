@@ -9,15 +9,15 @@ SpiraTeam®'s and SpiraPlan®'s source code integration features let you:
 - link source code commits and files to SpiraPlan artifacts. 
 - view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.
 
-SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using Inflectra's cloud-hosted  [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or plugins for the different SCM's (including [Git](../Version-Control-Integration/Integrating-with-Git.md) and [Subversion](../Version-Control-Integration/Integrating-with-Subversion.md)). If you want to learn more about using a source code provider, read our intro guides to  [using Git](../TaraVault-User-Manual/Using-Git.md) and [using Subversion](../TaraVault-User-Manual/Using-Subversion.md).
+SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using plugins for the different SCM's (including [Git](../Version-Control-Integration/Integrating-with-Git.md) and [Subversion](../Version-Control-Integration/Integrating-with-Subversion.md)).
 
 This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](Commits.md) outlines viewing and working with commits and the changes made in them.
 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
 
-1. a system administrator has setup the source code provider (for example, Inflectra's cloud-hosted [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spiraplan))
-2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, using [TaraVault](../TaraVault-User-Manual/Activating-TaraVault.md) or [Git](../Version-Control-Integration/Integrating-with-Git.md/#use-git-for-your-product))
+1. a system administrator has setup the source code provider (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spiraplan))
+2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#use-git-for-your-product))
 3. SpiraPlan users have a [role](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
 
 Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.

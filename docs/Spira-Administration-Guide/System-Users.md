@@ -82,7 +82,6 @@ In addition, there are up to four tabs at the bottom of the page called "Members
 - add/remove the user from products
 - view the user's program membership
 - update the data-mapping used when synchronizing artifacts that are assigned or created by the current user
-- where relevant, specify whether the user can access the linked TaraVault™ source code management service
 
 If you click on the "Product Membership" tab you will be shown a list of products that the user is currently a member of:
 
@@ -109,11 +108,8 @@ To view/change the list of usernames that a user has in an external bug-tracking
 
 Please see the documentation for the relevant data sync for more details on using the data-mapping tab.
 
-If you click on the TaraVault membership tab, you can choose whether or not the user has access the linked TaraVault source code repository. This service is only available for hosted/cloud instances of SpiraPlan, and more details can be found in [LDAP Configuration](System.md/#ldap-configuration).
-
 
 ## Importing LDAP Users
-
 If your organization already has an LDAP compatible user management system in place (e.g. Windows Active Directory, Novell eDirectory, OpenLDAP, IBM Tivoli, etc.), then instead of having to manually enter users one by one into SpiraPlan®, you can simply import them from your LDAP Server. Before doing this however, you need to first setup the [LDAP Configuration](System.md/#ldap-configuration).
 
 Once you have setup your LDAP server configuration in SpiraPlan®, clicking on the "Import Users From and LDAP Server" will bring up the following screen:

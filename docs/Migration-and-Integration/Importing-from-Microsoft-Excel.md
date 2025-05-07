@@ -22,7 +22,7 @@ server.
 
 Note that this guide refers to SpiraTeam®, but the Excel Add-In can be
 used with SpiraTest® and SpiraPlan® as well. The only difference is that
-some of the artifact types may not be available in SpiraPlan/Test.
+some of the artifact types may not be available in SpiraTest.
 
 ## Installing the Microsoft Excel Add-In
 

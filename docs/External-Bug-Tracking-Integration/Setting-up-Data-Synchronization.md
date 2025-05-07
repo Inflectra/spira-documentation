@@ -41,7 +41,7 @@ For example, if you use Spira in the cloud, and the application to sync with is 
     - make purchases
     - change contact information
     - change subscriptions
-    - configure addons like the "Spira DataSync", TaraVault, or Rapise floating licenses
+    - configure addons like the "Spira DataSync", Inflectra.ai, or Rapise floating licenses
 
     Access to the [Customer Area](https://www.inflectra.com/CustomerArea/) is restricted to very limited set of authorized people in an organization. 
 
