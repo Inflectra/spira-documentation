@@ -128,7 +128,11 @@ You need to fill in the following fields for the plugin to operate correctly:
 !!! info "Configuration Tip"
     If you are using the Auto-Map Properties option, please remember you still need to activate the sync for your project and provide an External Key as explained [below](#activate-the-datasync). The auto-mapping will occur when the datasync runs for the first time after activation, but you won't see the values on the mapping pages, so you can still provide different values for manual mapping.
 
-- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. Please note that Spira allows more complex Requirement hierarchy than Jira by default, and the dataSync cannot create forbidden hierarchical relations in Jira. If that happens, the dataSync will move the artifact/work item to root level. Please refer to the [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/configure-the-issue-type-hierarchy/) to learn how to modify your work item hierarchy configuration.
+- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. 
+
+!!! info "Hierarchy Limitations"
+    Spira supports multi-level Requirement hierarchies that are more complex than Jira's default capabilities. The dataSync plugin cannot create hierarchical relationships in Jira that aren't supported by its configuration. When encountering an unsupported hierarchy structure, the dataSync will place the affected work item at the root level instead. To customize your work item hierarchy settings in Jira, please refer to the [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/configure-the-issue-type-hierarchy/).
+
 - **Use Plain Text**: Set this field to *Yes* to remove any formatting from the text fields when using either the *bidirectional* or the *complete* sync modes. This is useful if you need to see the updated text in both systems and don't use complex text formatting or embedded images, files, etc.
 
 ## User Mapping
