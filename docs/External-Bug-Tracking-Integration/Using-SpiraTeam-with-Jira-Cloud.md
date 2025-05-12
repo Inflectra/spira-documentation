@@ -262,7 +262,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 #### Incidents
 === "Type"
     
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
 
@@ -273,7 +273,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Status"
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
 
@@ -286,7 +286,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
 
@@ -297,7 +297,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Component"
-    !!! info "This field mapping is OPTIONAL"
+    !!! info "This field mapping is OPTIONAL. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
 
@@ -308,7 +308,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Severity"
-    !!! info "This field mapping is OPTIONAL"
+    !!! info "This field mapping is OPTIONAL. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
@@ -324,7 +324,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Requirements
 === "Status"
-    !!! info "This field mapping is required if syncing requirements"
+    !!! info "This field mapping is required if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_39b_Cloud8.png)
@@ -338,7 +338,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Importance"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
@@ -350,7 +350,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is required if syncing requirements"
+    !!! info "This field mapping is required if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
@@ -362,7 +362,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Component"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
@@ -374,13 +374,13 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Estimate Points"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the [Jira configuration helper](#jira-configuration-helper) to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the [Datasync configuration page](#configure-the-plugin). For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
 
 === "Due Date"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     To sync Due Date from Jira with Spira Requirements, create a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter *duedate* as its external key. This field only syncs Jira to Spira.
@@ -388,7 +388,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Tasks
 === "Status"
-    !!! info "This field mapping is required if syncing tasks"
+    !!! info "This field mapping is required if syncing tasks. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-status-cloud8.png)
@@ -402,7 +402,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is optional if syncing tasks"
+    !!! info "This field mapping is optional if syncing tasks. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-priority.png)
@@ -414,7 +414,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is optional if syncing tasks"
+    !!! info "This field mapping is optional if syncing tasks. You can save using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-type.png)
@@ -431,6 +431,8 @@ You can map:
 
 - custom properties in Spira to custom fields in Jira
 - custom properties in Spira to standard fields in Jira (for example fields like Environment, Resolution, or SecurityLevel that don't exist in Spira)
+
+You can save time using [Auto-Map](#using-the-auto-map-properties-feature).
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
 
@@ -542,7 +544,7 @@ To start, go to the data mapping home page for the selected product you were on 
 
     Please note Jira does not allow updates to the field 'Time Spent', so the plugin will ignore it when syncing Jira to Spira.
 
-### Using Auto-Map Properties Feature
+### Using the Auto-Map Properties Feature
 
 When the "Auto-Map Properties" option is enabled in the plugin configuration, the dataSync will attempt to automatically map standard and custom properties between Spira and Jira based on name matching. This feature can significantly reduce the manual configuration needed for property mapping.
 
