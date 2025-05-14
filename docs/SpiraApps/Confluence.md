@@ -27,7 +27,6 @@ This SpiraApp lets you integrate Spira Requirements and Confluence so that you c
 - **`confluenceParentPageId` (Target Parent Page ID - Optional):** If you want new Confluence pages to be created as children of a specific existing page in Confluence, enter that parent page's numerical ID here. If left blank, pages will be created at the root of the specified space.
 
 ## Using the SpiraApp
-
 If you have an existing Confluence page to link to a requirement, paste its link into the Confluence Page Link custom field, and save it
 
 To use the SpiraApp go to any requirement and click the Confluence SpiraApp button in the toolbar. The SpiraApp will do one of two actions:
