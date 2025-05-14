@@ -1,5 +1,9 @@
 # Release Notes for Spira v8
 
+## Version 8.10.0.1 (May 2025)
+!!! bug "Bug fix"
+    - Fix system admins being unable to [activate or edit inactive users](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) (introduced in 8.10) [IN:11067]
+
 ## Version 8.10 (May 2025)
 !!! info "Summary"
     Cloud users can now benefit from Infectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
