@@ -56,6 +56,14 @@ From the requirement details page you can generate the following content:
 | Scenarios          | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
 
+When generating content for a requirement, the following information is provided to Inflectra.ai:
+
+- Name and description
+- Type
+- Component
+- Any existing requirement steps
+- Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
+- The product name of the product the requirement is in
 
 ## Test Case details page
 From the test case details page you can generate the following content:
@@ -67,6 +75,17 @@ From the test case details page you can generate the following content:
 | Test Steps         | Creates test steps to anticipate some of the individual items that will need to be tested to cover the test case topic                       | 
 | Requirement        | Creates requirement for the functionality this test case is going to cover, especially useful within TDD (Test Driven Development) processes | 
 
+When generating content for a test case, the following information is provided to Inflectra.ai:
+
+- Name and description
+- Type
+- Components
+- Any existing test steps
+
+    - For linked test steps, only the name as shown on the test step grid is shared
+    - For test case parameters, only the text as displayed for the test step (the parameter token) is shared
+
+- The product name of the product the test case is in
 
 ## Task details page
 From the task details page (SpiraTeam and SpiraPlan only) you can generate the following content: 
@@ -97,3 +116,12 @@ From the risk details page (SpiraTeam and SpiraPlan only) you can generate the f
 | Generated Content  | Description                                         |
 |--------------------|-----------------------------------------------------|
 | Risk Mitigations   | Generates mitigations for the current risk          | 
+
+When generating content for a risk, the following information is provided to Inflectra.ai:
+
+- Name and description
+- Type
+- Probability
+- Impact
+- Any existing risk mitigations
+- The product name of the product the risk is in
