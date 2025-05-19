@@ -190,6 +190,7 @@ nav:
   - ChatGPT: SpiraApps\ChatGPT.md
   - CircleCI: SpiraApps\CircleCI.md
   - Conditional Lists: SpiraApps\ConditionalLists.md
+  - Confluence: SpiraApps\Confluence.md
   - Default Descriptions: SpiraApps\Default-Descriptions.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
