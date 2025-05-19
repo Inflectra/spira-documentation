@@ -818,6 +818,16 @@ Retrieves data about cross product associations
 | TAG           |
 | PROJECT_NAME  |
 
+## Project Teams Users
+| R_Project_Team_Users |
+| -------------------- |
+| PROJECT_ID           |
+| PROJECT_NAME         |
+| USER_ID              |
+| USER_NAME            |
+| TEAM_ID              |
+| TEAM_NAME            |
+
 ## Project (Product) Templates
 | R_ProjectTemplates    |
 | --------------------- |
@@ -1259,6 +1269,15 @@ For normal use we strongly recommend using the standard artifact association vie
 | IS_DEFAULT            |
 | IS_PULL_REQUEST       |
 | PROJECT_TEMPLATE_NAME |
+
+## Teams
+| R_Teams     |
+| ----------- |
+| *TEAM_ID*   |
+| NAME        |
+| DESCRIPTION |
+| IS_ACTIVE   |
+| IS_DELETED  |
 
 ## Test Cases
 | R_TestCases              |

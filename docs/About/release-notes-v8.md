@@ -1,5 +1,14 @@
 # Release Notes for Spira v8
 
+## Version 8.11 (June 2025)
+!!! info "Summary"
+    
+
+??? success "New Features"
+    
+??? bug "Bug fixes and enhancements"
+    - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]
+
 ## Version 8.10.0.1 (May 2025)
 !!! bug "Bug fix"
     - Fix system admins being unable to [activate or edit inactive users](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) (introduced in 8.10) [IN:11067]
