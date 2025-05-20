@@ -150,6 +150,17 @@ Each event entry is displayed along with the date-time it occurred, the type of 
 
 The popup dialog box will display the full error message log and stack trace in a moveable dialog box. This information should be provided to Inflectra customer support if you log a help desk ticket.
 
+### Event Log Types
+The Spira event log has five different event types. Each message must be one of these types. The usage and suggested guidance for each of these types is explained below.
+
+| Event Type    | Typical contents                                                                                          | Suggested Guidance                                                                                        |
+| ------------- | :-------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| Error         | Errors detected in the application. These may or may not be displayed to the end user.                    | These should be reviewed to see if any action is needed.                                                  |
+| Failure Audit | Attempts to authenticate or authorize with a specific resource that fail.                                 | These should be reviewed with the InfoSec team to make sure it is in line with their access control list. |
+| Success Audit | Attempts to authenticate or authorize with a specific resource that succeed.                              | These should be reviewed with the InfoSec team to make sure it is in line with their access control list. |
+| Warning       | Diagnostic messages that are useful for Inflectra support team when diagnosing a specific customer issue. | These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.        |
+| Information   | Information on successful events that have occurred, that may be useful for diagnosing customer issues.   | These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.        |
+
 
 ## Email Configuration
 

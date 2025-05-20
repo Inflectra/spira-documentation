@@ -81,7 +81,7 @@ The below works for any artifact that has a workflow. Below we are changing the 
 8. Hit `Save`
 
 ### Custom properties
-Custom properties have a special option that says whether a blank value is allowed or not. If a blank value is allowed, then the field will onyl be required if the workflow step/status says so. If a blank value is *not* allowed then anytime you try to save an artifact with that field and the value is blank it will prompt you for a value.
+Custom properties have a special option that says whether a blank value is allowed or not. If a blank value is allowed, then the field will only be required if the workflow step/status says so. If a blank value is *not* allowed then anytime you try to save an artifact with that field and the value is blank it will prompt you for a value.
 
 To change if a blank value is allowed or not for a custom property:
 1. Find the template that your product is using
