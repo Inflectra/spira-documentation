@@ -35,6 +35,7 @@ The following properties are available from the spiraAppManager. They are useful
     - **baseThemeUrl**: returns the base theme url for the Spira instance (string). This can be used to retrieve and display SVG assets such as artifact icons
     - **currentUtcOffset**: returns the user's offset from UTC (string)
     - **currentCulture**: returns the name of the user's chosen culture setting (string)
+    - **currentTheme**: returns the current visual theme of the user. Possible values: 'light' or 'dark'.
     - **productType**: returns the product type installed (string). The value will be one of "SpiraTest", "SpiraTeam", or "SpiraPlan".
     - **gridIds**: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are shown [here](./SpiraApps-Reference.md/#available-grid-ids)
     - **artifactNames**: an object with artifact names localized to the end user's settings. Keys are Artifact type IDs & values are the localized names. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#artifact-types)
