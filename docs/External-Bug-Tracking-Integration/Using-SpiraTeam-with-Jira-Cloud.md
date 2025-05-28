@@ -133,7 +133,12 @@ You need to fill in the following fields for the plugin to operate correctly:
 !!! info "Hierarchy Limitations"
     Spira supports multi-level Requirement hierarchies that are more complex than Jira's default capabilities. The dataSync plugin cannot create hierarchical relationships in Jira that aren't supported by its configuration. When encountering an unsupported hierarchy structure, the dataSync will place the affected work item at the root level instead. To customize your work item hierarchy settings in Jira, please refer to the [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/configure-the-issue-type-hierarchy/).
 
-- **Use Plain Text**: Set this field to *Yes* to remove any formatting from the text fields when using either the *bidirectional* or the *complete* sync modes. This is useful if you need to see the updated text in both systems and don't use complex text formatting or embedded images, files, etc.
+- **Use Plain Text**: Set this field to *Yes* to remove any formatting from the description fields when using either the *bidirectional* or the *complete* sync modes. This allows the description fields to sync **bidirectionally** (two ways) depending on the sync mode. This option is useful if you don't require complex text formatting.
+
+!!! info "Rich Text vs Plain Text"
+    If you normally don't add text formatting, embedded images, or files to your descriptions and need updated text to be visible in both systems, use **Plain Text**.
+    However, if you need embedded images, colors, tables, etc., in your descriptions, use **Rich Text**. 
+    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. The plugin will add a warning message to the affected description fields.
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
