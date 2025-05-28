@@ -6,8 +6,8 @@
 
 !!! success "New Features"
     - **Timesheets**
-        - As a system admin, I can enable "remaining effort" for Timesheets, so end users can adjust remaining effort for an artifact directly on the Timesheet [RQ:5310]
-        - As a timesheet user, I can optionally adjust remaining effort for an artifact directly on my Timesheet, to streamline my workflow [RQ:5310]
+        - As a system admin, I can enable "[remaining effort](../Spira-User-Manual/Timesheets.md/#remaining-effort)" for Timesheets, so end users can adjust remaining effort for an artifact directly on the Timesheet [RQ:5310]
+        - As a timesheet user, I can optionally adjust [remaining effort](../Spira-User-Manual/Timesheets.md/#remaining-effort) for an artifact directly on my Timesheet, to streamline my workflow [RQ:5310]
     
 ??? bug "Bug fixes and enhancements"
     - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]

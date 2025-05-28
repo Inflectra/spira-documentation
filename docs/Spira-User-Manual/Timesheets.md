@@ -100,3 +100,6 @@ After reviewing the timesheet, a manager can either approve or reject it. A comm
 When re-reviewing a previously rejected timesheet, the comment from the last review will be shown. This comment is also displayed on the users My Timesheet page, so they are aware of the reason it was rejected. 
 
 ![Timesheet approval details section with rejection comment](./img/timesheet-approval-details2.png)
+
+
+## Remaining Effort
