@@ -8,8 +8,8 @@ The following ID fields are available from the spiraAppManager. They are useful 
     - **projectId**: returns the ID of the current product (integer)
     - **projectTemplateId**: returns the ID of the product template for the current product (integer)
     - **artifactId**: returns the ID of the current artifact (integer). Note that this will be correctly populated on details pages only, and not when creating new incidents or risks
-    - **artifactTypeId**: returns the numeric type ID of the artifact(s) displayed on the current detail or list page. Note that this will be null on home pages and other non-artifact pages.
-    - **pageId**: returns the name of the current page as a unique string.
+    - **artifactTypeId**: returns the numeric type ID of the artifact(s) displayed on the current details or list page. Note that this will be null on home pages and other non-artifact pages.
+    - **pageId**: returns the name of the current page as a unique string. For example, this is `Inflectra.Spira.Web.RequirementDetails` while the user is on a Requirement details page, and `Inflectra.Spira.Web.TestCaseList` on the Test Case list page.
     - **displayReleaseId**: returns the ID of the release being displayed (integer). This is used on product and reporting home pages - otherwise it is an empty string.
    
 === "Examples"
