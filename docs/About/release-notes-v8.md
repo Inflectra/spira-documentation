@@ -16,15 +16,15 @@
     - Fix Subversion repos that have leading folders with spaces not showing commit files [IN:11107]
     - **[Inflectra.ai enhancements](./release-notes-inflectra.ai-v1.md/#may-30-2025)**
     - **SpiraApps**
-        - Add a function to the SpiraAppsManager to check whether the user is in Dark mode [IN:9763]
-        - Add a function to the SpiraAppsManager to provide the current page the user is on [IN:9900]
+        - Add a function to the SpiraAppsManager to check whether the user is in [dark or light mode](../Developers/SpiraApps-Manager.md/#properties) [IN:9763]
+        - Add a function to the SpiraAppsManager to provide the [current page](../Developers/SpiraApps-Manager.md/#properties) the user is on [IN:9900]
+        - Allow SpiraApps to listen to Status field changes with [registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) [IN:10723]
+        - Allow system-level SpiraApps to run code and display menu buttons on their product settings pages even if they are disabled for that product [IN:10762]
         - Fix only one SpiraApp's CSS being loaded when you have multiple SpiraApps active on the same page [IN:11028]
 
-        - Allow SpiraApps to listen to Status field changes with registerEvent_dropdownChanged [IN:10723]
-        - Allow system-level SpiraApps to run code and display menu buttons on their product settings pages even if they are disabled for that product [IN:10762]
-        - Fix getLiveFormFieldValue not getting the text value of Custom List fields on first page load [IN:10725]
-        - Fix multi-select dropdowns not firing the event related to SpiraAppManager.registerEvent_dropdownChanged when a user changes the selected values using checkboxes [IN:10687]
-        - Fix SpiraAppManager.executeApiAsync function causing the "Loading..." message to appear forever [IN:10579]
+        - Fix [getLiveFormFieldValue](../Developers/SpiraApps-Manager.md/#page-actions) not getting the text value of Custom List fields on first page load [IN:10725]
+        - Fix multi-select dropdowns not firing the event related to [registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) when a user changes the selected values using checkboxes [IN:10687]
+        - Fix [executeApiAsync](../Developers/SpiraApps-Manager.md/#internal-api-calls) function causing the "Loading..." message to appear forever [IN:10579]
 
 ## Version 8.10.0.1 (May 2025)
 !!! bug "Bug fix"
