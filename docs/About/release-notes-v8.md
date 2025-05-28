@@ -4,10 +4,27 @@
 !!! info "Summary"
     
 
-??? success "New Features"
+!!! success "New Features"
+    - **Timesheets**
+        - As a system admin, I can enable "remaining effort" for Timesheets, so end users can adjust remaining effort for an artifact directly on the Timesheet [RQ:5310]
+        - As a timesheet user, I can optionally adjust remaining effort for an artifact directly on my Timesheet, to streamline my workflow [RQ:5310]
     
 ??? bug "Bug fixes and enhancements"
     - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]
+    - Create a new API endpoint to retrieve dataSync system extended custom properties [IN:10659]
+    - Fix not being able to clone a product or update the data sync mappings if two external keys are the same for 2 different fields [IN:11099]
+    - Fix Subversion repos that have leading folders with spaces not showing commit files [IN:11107]
+    - **[Inflectra.ai enhancements](./release-notes-inflectra.ai-v1.md/#may-30-2025)**
+    - **SpiraApps**
+        - Add a function to the SpiraAppsManager to check whether the user is in Dark mode [IN:9763]
+        - Add a function to the SpiraAppsManager to provide the current page the user is on [IN:9900]
+        - Fix only one SpiraApp's CSS being loaded when you have multiple SpiraApps active on the same page [IN:11028]
+
+        - Allow SpiraApps to listen to Status field changes with registerEvent_dropdownChanged [IN:10723]
+        - Allow system-level SpiraApps to run code and display menu buttons on their product settings pages even if they are disabled for that product [IN:10762]
+        - Fix getLiveFormFieldValue not getting the text value of Custom List fields on first page load [IN:10725]
+        - Fix multi-select dropdowns not firing the event related to SpiraAppManager.registerEvent_dropdownChanged when a user changes the selected values using checkboxes [IN:10687]
+        - Fix SpiraAppManager.executeApiAsync function causing the "Loading..." message to appear forever [IN:10579]
 
 ## Version 8.10.0.1 (May 2025)
 !!! bug "Bug fix"
