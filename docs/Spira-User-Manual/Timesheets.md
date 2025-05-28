@@ -4,9 +4,6 @@ Spira's timesheets functionality lets users track how much time they have spent 
 !!! tip "Locking down actual efforts" 
     If you want to ensure that effort values are only updated by timesheet entries, and not by editing the individual task or incident, you can update the workflows to make the Actual Effort field read only for every status.
 
-!!! info "Timesheets will continue to evolve"
-    Currently timesheets provide valuable features that let users track their time quickly and conveniently. We will be adding more features to timesheets in future releases to make this even more powerful, including with support for reporting, approval workflows, and more. 
-
 ## My Timesheet
 You can access "My Timesheet" from the User Profile dropdown on the [Global Navigation](./User-Product-Management.md/#global-navigation) menu.
 
@@ -76,7 +73,7 @@ Check the "View all timesheets" checkbox to see a list of all of your timesheets
 ### Other features to note
 - The timesheet is sorted by the artifact name in alphabetical order
 - A single history record is recorded for each artifact modified in each save, even if multiple days are modified for a given artifact in a single save
-- You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet
+- You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet. The total across an artifact or all artifacts in a week does not include [remaining effort](./Timesheets.md#remaining-effort). 
 
 ## Timesheets Approvals 
 To access the timesheet approvals page:
@@ -103,3 +100,9 @@ When re-reviewing a previously rejected timesheet, the comment from the last rev
 
 
 ## Remaining Effort
+
+If [enabled at the system level](../Spira-Administration-Guide/System.md#general-settings), users can modify the remaining effort of the artifacts on their timesheet. This allows users to adjust the effort estimates from a single view, rather than needing to navigate to each artifact to update the remaining efforts. Values in the remaining effort column do not contribute to the "Total" column values. 
+
+You can use the left arrow key to go further to the left to add additional digits to the hours remaining, as remaining effort does not have the same 24 hour constraint as the completed effort reporting cells.
+
+![My Timesheet with remaining column displayed](./img/timesheet-remaining-effort.png)
