@@ -1,5 +1,11 @@
 # Release Notes for Inflectra.ai
 
+## May 30 2025
+    - Add syntax highlighting to BDD scenarios created for a [requirement](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page) [IN:10978]
+    - Fix Inflectra.ai showing chat history from multiple demos in the same region when accessed from the same browser [IN:11041]
+    - Improve the performance of Inflectra.ai in Singapore by upgrading the model used to Amazon Nova [IN:11101]
+    - Improve the quality of generated BDD scenarios, including to ensure they always exclude the requirement name [IN:11079]
+
 ## May 16 2025
 !!! success "New Features"
     - As a [requirement user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page), when I use Inflecta.ai to create content the requirement hierarchy is given as extra context [RQ:5266]
