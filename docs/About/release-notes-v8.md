@@ -13,7 +13,6 @@
     - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]
     - Create a new API endpoint to retrieve dataSync system extended custom properties [IN:10659]
     - Fix not being able to clone a product or update the data sync mappings if two external keys are the same for 2 different fields [IN:11099]
-    - Fix Subversion repos that have leading folders with spaces not showing commit files [IN:11107]
     - **[Inflectra.ai enhancements](./release-notes-inflectra.ai-v1.md/#may-30-2025)**
     - **SpiraApps**
         - Add a function to the SpiraAppsManager to check whether the user is in [dark or light mode](../Developers/SpiraApps-Manager.md/#properties) [IN:9763]
