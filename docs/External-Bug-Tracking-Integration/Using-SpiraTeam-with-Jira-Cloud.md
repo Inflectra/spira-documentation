@@ -19,18 +19,15 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs.
+**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you a range different syncing modes, depending on your workflows and needs.
 
-| Artifact           | Type of Change | Default                                               | Bidirectional                                         | Complete                                              | NoRequirements                                        | NoIncidents                                           |
-| ------------------ | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **releases**       | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-|                    | updates        | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-| **requirements**   | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-| **incidents**      | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | (no syncing)                                          |
-|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
-| **tasks**          | new            | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             |
-|                    | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            |
+| Sync Mode      | Releases       | Requirements   | Incidents                                     | Tasks                                         |
+| -------------- | -------------- | -------------- | --------------------------------------------- | --------------------------------------------- |
+| Default        | Jira <-> Spira | Jira <- Spira  | New: Jira <-> Spira<br>Updates: Jira -> Spira | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| Bidirectional  | Jira <-> Spira | Jira <- Spira  | Jira <-> Spira                                | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| Complete       | Jira <-> Spira | Jira <-> Spira | Jira <-> Spira                                | Jira <-> Spira                                |
+| NoRequirements | Jira <-> Spira | (not synced)   | New: Jira -> Spira<br>Updates: Jira <- Spira  | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| NoIncidents    | Jira <-> Spira | Jira <- Spira  | (not synced)                                  | New: Jira -> Spira<br>Updates: Jira <-> Spira |
 
 Notes about syncing:
 
