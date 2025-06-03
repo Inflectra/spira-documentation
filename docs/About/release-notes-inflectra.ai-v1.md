@@ -1,6 +1,7 @@
 # Release Notes for Inflectra.ai
 
 ## May 30 2025
+!!! bug "Bug fixes and enhancements"
     - Add syntax highlighting to BDD scenarios created for a [requirement](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page) [IN:10978]
     - Fix Inflectra.ai showing chat history from multiple demos in the same region when accessed from the same browser [IN:11041]
     - Improve the performance of Inflectra.ai in Singapore by upgrading the model used to Amazon Nova [IN:11101]
