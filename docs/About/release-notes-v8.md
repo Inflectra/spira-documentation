@@ -1,9 +1,6 @@
 # Release Notes for Spira v8
 
 ## Version 8.11 (June 2025)
-!!! info "Summary"
-    
-
 !!! success "New Features"
     - **Timesheets**
         - As a system admin, I can enable "[remaining effort](../Spira-User-Manual/Timesheets.md/#remaining-effort)" for Timesheets, so end users can adjust remaining effort for an artifact directly on the Timesheet [RQ:5310]
