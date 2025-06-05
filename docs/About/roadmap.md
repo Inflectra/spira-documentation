@@ -13,8 +13,9 @@
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
 ## Q2 2025
-- Improve the quality and consistency of artifact generation using Inflectra.ai to further enhance leverage generative AI technologies to improve quality and productivity
+- Ability to use Inflectra.ai features for requirements on the requirement list page to more easily automate action against multiple requirements at once
 - Ability to export test sets and their test cases to another product
+- More power, flexibility, and ease of use in our Jira cloud data sync
 
 ## Rest of 2025
 - Allow admins to customize requirement statuses to help them create more flexible workloads.
