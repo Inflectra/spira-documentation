@@ -25,6 +25,7 @@ The available settings include:
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 - **Enable Developer Mode**: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.
 - **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span>
+- **Enable Timesheet 'Remaining Effort'**: (default = no) Enabling this will allow users on their [My Timesheet page](../Spira-User-Manual/Timesheets.md#remaining-effort) to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
 - **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
 
 
@@ -149,6 +150,17 @@ Each event entry is displayed along with the date-time it occurred, the type of 
 ![](img/System_71.png)
 
 The popup dialog box will display the full error message log and stack trace in a moveable dialog box. This information should be provided to Inflectra customer support if you log a help desk ticket.
+
+### Event Log Types
+The Spira event log has five different event types. Each message must be one of these types. The usage and suggested guidance for each of these types is explained below.
+
+| Event Type    | Typical contents                                                                                          | Suggested Guidance                                                                                        |
+| ------------- | :-------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| Error         | Errors detected in the application. These may or may not be displayed to the end user.                    | These should be reviewed to see if any action is needed.                                                  |
+| Failure Audit | Attempts to authenticate or authorize with a specific resource that fail.                                 | These should be reviewed with the InfoSec team to make sure it is in line with their access control list. |
+| Success Audit | Attempts to authenticate or authorize with a specific resource that succeed.                              | These should be reviewed with the InfoSec team to make sure it is in line with their access control list. |
+| Warning       | Diagnostic messages that are useful for Inflectra support team when diagnosing a specific customer issue. | These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.        |
+| Information   | Information on successful events that have occurred, that may be useful for diagnosing customer issues.   | These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.        |
 
 
 ## Email Configuration
