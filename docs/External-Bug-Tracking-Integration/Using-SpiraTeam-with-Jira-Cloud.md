@@ -249,6 +249,9 @@ If you are syncing an existing product with releases in it to Jira, you should m
 
 
 ### Standard Field Data Mapping
+
+!!! info "You can use [Auto-Map](#using-the-auto-map-properties-feature) to simplify and potentially skip the manual mapping process described in this section."
+
 Mapping field values between Spira and Jira is a very important part of the configuration. Without this step, the datasync will not know what values to match things up with. For example, it will not know that an Jira issue with a type of "New Feature" should become an incident in Spira with a type of "Enhancement"
 
 This process starts on data mapping home page for the selected product you were on to [activate the datasync](#activate-the-datasync). On this page you will see a large list of options like in the screenshot below. This shows different fields across different artifacts. 
@@ -429,6 +432,9 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 
 ### Custom Property Mapping
+
+!!! info "You can use [Auto-Map](#using-the-auto-map-properties-feature) to simplify and potentially skip the manual mapping process described in this section."
+
 You can map:
 
 - custom properties in Spira to custom fields in Jira
