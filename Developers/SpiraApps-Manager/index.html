@@ -9277,6 +9277,8 @@
 <li><strong>projectId</strong>: returns the ID of the current product (integer)</li>
 <li><strong>projectTemplateId</strong>: returns the ID of the product template for the current product (integer)</li>
 <li><strong>artifactId</strong>: returns the ID of the current artifact (integer). Note that this will be correctly populated on details pages only, and not when creating new incidents or risks</li>
+<li><strong>artifactTypeId</strong>: returns the numeric type ID of the artifact(s) displayed on the current details or list page. Note that this will be null on home pages and other non-artifact pages.</li>
+<li><strong>pageId</strong>: returns the name of the current page as a unique string. For example, this is <code>Inflectra.Spira.Web.RequirementDetails</code> while the user is on a Requirement details page, and <code>Inflectra.Spira.Web.TestCaseList</code> on the Test Case list page.</li>
 <li><strong>displayReleaseId</strong>: returns the ID of the release being displayed (integer). This is used on product and reporting home pages - otherwise it is an empty string.</li>
 </ul>
 </div>
@@ -9305,6 +9307,7 @@
 <li><strong>baseThemeUrl</strong>: returns the base theme url for the Spira instance (string). This can be used to retrieve and display SVG assets such as artifact icons</li>
 <li><strong>currentUtcOffset</strong>: returns the user's offset from UTC (string)</li>
 <li><strong>currentCulture</strong>: returns the name of the user's chosen culture setting (string)</li>
+<li><strong>currentTheme</strong>: returns the current visual theme of the user. Possible values: 'light' or 'dark'.</li>
 <li><strong>productType</strong>: returns the product type installed (string). The value will be one of "SpiraTest", "SpiraTeam", or "SpiraPlan".</li>
 <li><strong>gridIds</strong>: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are shown <a href="../SpiraApps-Reference/#available-grid-ids">here</a></li>
 <li><strong>artifactNames</strong>: an object with artifact names localized to the end user's settings. Keys are Artifact type IDs &amp; values are the localized names. Relevant mappings can be seen <a href="../SpiraApps-Reference/#artifact-types">here</a></li>

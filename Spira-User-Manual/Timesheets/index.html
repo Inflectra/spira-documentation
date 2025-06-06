@@ -1811,6 +1811,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#remaining-effort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remaining Effort
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9175,6 +9186,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#remaining-effort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remaining Effort
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9197,10 +9219,6 @@
 <div class="admonition tip">
 <p class="admonition-title">Locking down actual efforts</p>
 <p>If you want to ensure that effort values are only updated by timesheet entries, and not by editing the individual task or incident, you can update the workflows to make the Actual Effort field read only for every status.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Timesheets will continue to evolve</p>
-<p>Currently timesheets provide valuable features that let users track their time quickly and conveniently. We will be adding more features to timesheets in future releases to make this even more powerful, including with support for reporting, approval workflows, and more. </p>
 </div>
 <h2 id="my-timesheet">My Timesheet<a class="headerlink" href="#my-timesheet" title="Permanent link">&para;</a></h2>
 <p>You can access "My Timesheet" from the User Profile dropdown on the <a href="../User-Product-Management/#global-navigation">Global Navigation</a> menu.</p>
@@ -9251,7 +9269,7 @@
 <ul>
 <li>The timesheet is sorted by the artifact name in alphabetical order</li>
 <li>A single history record is recorded for each artifact modified in each save, even if multiple days are modified for a given artifact in a single save</li>
-<li>You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet</li>
+<li>You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet. The total across an artifact or all artifacts in a week does not include <a href="./#remaining-effort">remaining effort</a>. </li>
 </ul>
 <h2 id="timesheets-approvals">Timesheets Approvals<a class="headerlink" href="#timesheets-approvals" title="Permanent link">&para;</a></h2>
 <p>To access the timesheet approvals page:</p>
@@ -9268,6 +9286,10 @@
 <p>After reviewing the timesheet, a manager can either approve or reject it. A comment can be provided in both cases, but is required for rejections to let the user know why it was rejected. </p>
 <p>When re-reviewing a previously rejected timesheet, the comment from the last review will be shown. This comment is also displayed on the users My Timesheet page, so they are aware of the reason it was rejected. </p>
 <p><img alt="Timesheet approval details section with rejection comment" src="../img/timesheet-approval-details2.png" /></p>
+<h2 id="remaining-effort">Remaining Effort<a class="headerlink" href="#remaining-effort" title="Permanent link">&para;</a></h2>
+<p>If <a href="../../Spira-Administration-Guide/System/#general-settings">enabled at the system level</a>, users can modify the remaining effort of the artifacts on their timesheet. This allows users to adjust the effort estimates from a single view, rather than needing to navigate to each artifact to update the remaining efforts. Values in the remaining effort column do not contribute to the "Total" column values. </p>
+<p>You can use the left arrow key to go further to the left to add additional digits to the hours remaining, as remaining effort does not have the same 24 hour constraint as the completed effort reporting cells.</p>
+<p><img alt="My Timesheet with remaining column displayed" src="../img/timesheet-remaining-effort.png" /></p>
 
 
 

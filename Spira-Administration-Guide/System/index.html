@@ -2625,6 +2625,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Event Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-log-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Log Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -9102,6 +9119,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Event Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-log-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Log Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -9204,6 +9238,7 @@
 <li><strong>Enable Beta Features</strong>: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.</li>
 <li><strong>Enable Developer Mode</strong>: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.</li>
 <li><strong>Enable Timesheet Approvals</strong>: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span></li>
+<li><strong>Enable Timesheet 'Remaining Effort'</strong>: (default = no) Enabling this will allow users on their <a href="../../Spira-User-Manual/Timesheets/#remaining-effort">My Timesheet page</a> to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
 <li><strong>Inflectra.ai</strong>: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the <a href="../System-Workspaces/#edit-a-product">product level</a>). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span></li>
 </ul>
 <h2 id="file-type-icons">File Type Icons<a class="headerlink" href="#file-type-icons" title="Permanent link">&para;</a></h2>
@@ -9304,6 +9339,44 @@ need to reinstall SpiraPlan®. All you need to do is change the
 <p>Each event entry is displayed along with the date-time it occurred, the type of event (error, warning, information, success audit, failure audit), category (application, source code provider, data-synchronization) and the short name. To view the full message, click on the "View Item" hyperlink:</p>
 <p><img alt="" src="../img/System_71.png" /></p>
 <p>The popup dialog box will display the full error message log and stack trace in a moveable dialog box. This information should be provided to Inflectra customer support if you log a help desk ticket.</p>
+<h3 id="event-log-types">Event Log Types<a class="headerlink" href="#event-log-types" title="Permanent link">&para;</a></h3>
+<p>The Spira event log has five different event types. Each message must be one of these types. The usage and suggested guidance for each of these types is explained below.</p>
+<table>
+<thead>
+<tr>
+<th>Event Type</th>
+<th style="text-align: left;">Typical contents</th>
+<th style="text-align: left;">Suggested Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Error</td>
+<td style="text-align: left;">Errors detected in the application. These may or may not be displayed to the end user.</td>
+<td style="text-align: left;">These should be reviewed to see if any action is needed.</td>
+</tr>
+<tr>
+<td>Failure Audit</td>
+<td style="text-align: left;">Attempts to authenticate or authorize with a specific resource that fail.</td>
+<td style="text-align: left;">These should be reviewed with the InfoSec team to make sure it is in line with their access control list.</td>
+</tr>
+<tr>
+<td>Success Audit</td>
+<td style="text-align: left;">Attempts to authenticate or authorize with a specific resource that succeed.</td>
+<td style="text-align: left;">These should be reviewed with the InfoSec team to make sure it is in line with their access control list.</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td style="text-align: left;">Diagnostic messages that are useful for Inflectra support team when diagnosing a specific customer issue.</td>
+<td style="text-align: left;">These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.</td>
+</tr>
+<tr>
+<td>Information</td>
+<td style="text-align: left;">Information on successful events that have occurred, that may be useful for diagnosing customer issues.</td>
+<td style="text-align: left;">These can be ignored unless requested by Inflectra support to help in diagnosing a customer issue.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="email-configuration">Email Configuration<a class="headerlink" href="#email-configuration" title="Permanent link">&para;</a></h2>
 <p>The Email Configuration page is split into two sections. The first section covers email notification details, and the second section configures how email from the application is sent.</p>
 <p><img alt="" src="../img/System_73.png" /></p>
