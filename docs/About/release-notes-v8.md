@@ -1,5 +1,23 @@
 # Release Notes for Spira v8
 
+## Version 8.12 (August 2025)
+!!! info "Summary"
+    - The save button on artifact details pages is enabled when there are actual changes to save
+    
+!!! success "New Features"
+    - Improved save button on details pages
+
+        - As an artifact editor, when I update an artifact's dropdown on its details page, the save button is only enabled if there are actual changes [RQ:5327]
+        - As an artifact editor, when I update an artifact's text or number field on its details page, the save button is only enabled if there are actual changes [RQ:5328]
+        - As an artifact editor, when I update an artifact's boolean field on its details page, the save button is only enabled if there are actual changes [RQ:5329]
+        - As an artifact editor, when I update an artifact's tag field on its details page, the save button is only enabled if there are actual changes [RQ:5330]
+        - As an artifact editor, when I update an artifact's date field on its details page, the save button is only enabled if there are actual changes [RQ:5331]
+        - As an artifact editor, when I update an artifact's status on its details page, the save button is only enabled if there are actual changes [RQ:5332]
+        - As an artifact editor, when I first go to an artifact's details page, the save button is disabled until I make any changes [RQ:5333]
+        - As an artifact editor, when I refresh an artifact's details page, the save button is disabled until I make any changes [RQ:5334]
+        - As an artifact editor, when I navigate between artifact's details page using the sidebar, the save button is disabled afresh for each new artifact [RQ:5336]
+
+
 ## Version 8.11 (June 2025)
 !!! success "New Features"
     - **Timesheets**
