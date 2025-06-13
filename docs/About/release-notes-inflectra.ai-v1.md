@@ -1,5 +1,9 @@
 # Release Notes for Inflectra.ai
 
+## June 13 2025
+!!! bug "Bug fixes and enhancements"
+    - Improve the reliability of Inflectra.ai producing consistent outputs for artifacts created from requirements, test cases, and risks [IN:11125]
+
 ## May 30 2025
 !!! bug "Bug fixes and enhancements"
     - Add syntax highlighting to BDD scenarios created for a [requirement](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page) [IN:10978]
