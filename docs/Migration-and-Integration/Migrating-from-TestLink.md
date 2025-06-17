@@ -28,13 +28,13 @@ The first thing you need to do is to enter the URL for the instance of TestLink 
 
 ![](img/Migrating_from_TestLink_82.png)
 
-Once you have entered this information, click the <Authenticate\> button and the list of projects will be populated. Select TestLink project that you want to ***import from*** then click the <Next\> button to move to the next page in the import wizard:
+Once you have entered this information, click the `Authenticate` button and the list of projects will be populated. Select TestLink project that you want to ***import from*** then click the `Next` button to move to the next page in the import wizard:
 
 ![](img/Migrating_from_TestLink_83.png)
 
-This page allows you to enter the URL, user name and password that you want to use to access the instance of SpiraTest that you want to ***import to*** and click <Login\>. Typically, the URL is of the form (https://xxxx.spiraservice.net). The version of the importer being used must be compatible with the version of SpiraTest you're importing into; if not you will receive an error message.
+This page allows you to enter the URL, user name and password that you want to use to access the instance of SpiraTest that you want to ***import to*** and click `Login`. Typically, the URL is of the form (https://xxxx.spiraservice.net). The version of the importer being used must be compatible with the version of SpiraTest you're importing into; if not you will receive an error message.
 
-Assuming that the login was successful, click the <Start Import\> button to actually begin the process of importing the various artifacts from TestLink into SpiraTest. Note that the importer will automatically create a new project in SpiraTest to hold all the artifacts with the same name as that used in TestLink.
+Assuming that the login was successful, click the `Start Import` button to actually begin the process of importing the various artifacts from TestLink into SpiraTest. Note that the importer will automatically create a new project in SpiraTest to hold all the artifacts with the same name as that used in TestLink.
 
  ![](img/Migrating_from_TestLink_84.png)  
 
@@ -45,6 +45,9 @@ The migration tool will import the following artifacts from TestLink:
 - The project name and description
 - Test suites
 - Test cases with their steps (if defined)
+- Test plans
+- Test runs
+- Test case attachments
 
 For example, the following TestLink project:
 
@@ -55,4 +58,7 @@ Now looks like this in SpiraTest (v5.4):
 ![](img/Migrating_from_TestLink_86.png)
 
 *Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually:
-**Spira\_TestLink\_Import.log**.*
+
+`Spira_TestLink_Import_XXXXXX_yyyyMMddhhmmss.log`
+
+where the 'XXXXX' is the ID of the project in TestLink.
