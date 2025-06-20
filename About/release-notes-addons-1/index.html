@@ -8758,6 +8758,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#june-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        June 2025
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#december-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9053,6 +9064,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#june-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        June 2025
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#december-2024" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9214,6 +9236,51 @@
 
 <h1 id="release-notes-for-spira-addons">Release Notes for Spira Addons<a class="headerlink" href="#release-notes-for-spira-addons" title="Permanent link">&para;</a></h1>
 <p>This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. </p>
+<h2 id="june-2025">June 2025<a class="headerlink" href="#june-2025" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">Jira Cloud Data Synchronization</a> v8.0.0.0:</p>
+<ul>
+<li>
+<p>New features:</p>
+<ul>
+<li>New sync mode "Complete", with support for bidirectional sync of Requirements and Tasks between Jira and Spira</li>
+<li>Bidirectional sync of Releases with no need for artifact association</li>
+<li>Option for automatic mapping of standard and custom properties based on name matching</li>
+<li>Option to sync Epic/Story hierarchy into Spira Requirements and vice-versa</li>
+<li>Support for syncing custom fields of type Release</li>
+<li>Support for mapping multiple Jira statuses to one Spira status for Tasks and Requirements</li>
+<li>Option to not sync comments</li>
+<li>Option to not sync some Jira Types</li>
+<li>Attachment sync on updates</li>
+<li>Rich text enhancements, including support for embedded images and files</li>
+<li>Option to force plain text conversion for descriptions, to keep bidirectional sync of that field</li>
+<li>Option to sync standard time tracking fields</li>
+</ul>
+</li>
+<li>
+<p>Bug Fixes:</p>
+<ul>
+<li>[IN:9764] [IN:10543] Release type and tags standard fields never resetting</li>
+<li>[IN:9432] Updates from Spira to Jira may fail if field is required in destination status</li>
+<li>[IN:8830] DataSync service may fail if API Key is used in some contexts</li>
+<li>[IN:10846] [IN:10748] [IN:10835] [IN:10837] General code performance and logging updates</li>
+<li>[IN:10761] Component sync may fail in some bidirectional contexts</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Desktop Data-Synchronization Utility</a> v4.1.0.0:</p>
+<ul>
+<li>Support for extended DataSync plugin properties</li>
+</ul>
+</li>
+<li><a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Standalone Data-Synchronization Windows Service</a> v8.1.0.0:<ul>
+<li>Support for extended DataSync plugin properties</li>
+</ul>
+</li>
+</ul>
 <h2 id="december-2024">December 2024<a class="headerlink" href="#december-2024" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -9259,13 +9326,13 @@
 <li>
 <p><a href="../../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud/">Jira Data Synchronization</a>:</p>
 <ul>
-<li>Support mapping 'JiraIssueKey' (if any) to custom property type ‘text’ for Requirements in Spira. This way, customers can have that value on the requirement’s list page</li>
+<li>Support mapping 'JiraIssueKey' (if any) to custom property type 'text' for Requirements in Spira. This way, customers can have that value on the requirement's list page</li>
 <li>Feature of syncing Tags and Labels between Spira and Jira</li>
 <li>Support of 'duedate' Jira field mapping, Jira -&gt; Spira</li>
 <li>Improved handling of User custom properties from Jira &gt; Spira Cloud</li>
 <li>Fixed issues with potential duplicates on next sync cycle</li>
 <li>Fixed reporter field updating issue, due to improper mapping</li>
-<li>Feature to turn off synchronization of attachments (after creation), Incidents or Requirements</li>
+<li>Feature to turn off synchronization of attachments (after creation), Incidents or Requirements</li>
 <li>Fixed issue with new Releases creation in Spira</li>
 </ul>
 </li>
