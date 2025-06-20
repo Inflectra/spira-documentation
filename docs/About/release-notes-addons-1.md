@@ -1,6 +1,35 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## June 2025
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.0.0.0:
+
+    - New features:
+        - New sync mode "Complete", with support for bidirectional sync of Requirements and Tasks between Jira and Spira
+        - Bidirectional sync of Releases with no need for artifact association
+        - Option for automatic mapping of standard and custom properties based on name matching
+        - Option to sync Epic/Story hierarchy into Spira Requirements and vice-versa
+        - Support for syncing custom fields of type Release
+        - Support for mapping multiple Jira statuses to one Spira status for Tasks and Requirements
+        - Option to not sync comments
+        - Option to not sync some Jira Types
+        - Attachment sync on updates
+        - Rich text enhancements, including support for embedded images and files
+        - Option to force plain text conversion for descriptions, to keep bidirectional sync of that field
+        - Option to sync standard time tracking fields
+    
+    - Bug Fixes:
+        - [IN:9764] [IN:10543] Release type and tags standard fields never resetting
+        - [IN:9432] Updates from Spira to Jira may fail if field is required in destination status
+        - [IN:8830] DataSync service may fail if API Key is used in some contexts
+        - [IN:10846] [IN:10748] [IN:10835] [IN:10837] General code performance and logging updates
+        - [IN:10761] Component sync may fail in some bidirectional contexts
+
+- [Desktop Data-Synchronization Utility](../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization.md) v4.1.0.0:
+    - Support for extended DataSync plugin properties
+- [Standalone Data-Synchronization Windows Service](../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization.md) v8.1.0.0:
+    - Support for extended DataSync plugin properties
+
 ## December 2024
 - [Jira Importer](../Migration-and-Integration/Migrating-from-Jira.md):
 
@@ -32,13 +61,13 @@ This page shows summary information about releases in Spira's addons, data syncs
 ## September 2024
 - [Jira Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md):
 
-    - Support mapping 'JiraIssueKey' (if any) to custom property type ‘text’ for Requirements in Spira. This way, customers can have that value on the requirement’s list page
+    - Support mapping 'JiraIssueKey' (if any) to custom property type 'text' for Requirements in Spira. This way, customers can have that value on the requirement's list page
     - Feature of syncing Tags and Labels between Spira and Jira
     - Support of 'duedate' Jira field mapping, Jira -> Spira
     - Improved handling of User custom properties from Jira > Spira Cloud
     - Fixed issues with potential duplicates on next sync cycle
     - Fixed reporter field updating issue, due to improper mapping
-    - Feature to turn off synchronization of attachments (after creation), Incidents or Requirements
+    - Feature to turn off synchronization of attachments (after creation), Incidents or Requirements
     - Fixed issue with new Releases creation in Spira
 
 ## July 2024
@@ -120,6 +149,3 @@ This page shows summary information about releases in Spira's addons, data syncs
 
 ## September 2022
 - **[Monday.com datasync](../External-Bug-Tracking-Integration/Using-Spira-with-Monday.md)** v1.0: synchronizes incidents and tasks between Spira and Monday.com
-
-
-

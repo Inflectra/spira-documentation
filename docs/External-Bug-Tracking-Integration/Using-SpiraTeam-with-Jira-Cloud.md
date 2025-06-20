@@ -19,29 +19,28 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you three different syncing modes, depending on your workflows and needs. 
+**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you a range different syncing modes, depending on your workflows and needs.
 
-| Artifact         | Type of Change | Default                                               | Bidirectional                                         | NoRequirements                                        | NoIncidents                                           |
-| ---------------- | -------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| **releases**     | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira |
-| **requirements** | new            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          | Jira :fontawesome-solid-arrow-right: Spira            |
-| **incidents**    | new            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-left: Spira             | (no syncing)                                          |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right-arrow-left: Spira | Jira :fontawesome-solid-arrow-right: Spira            | (no syncing)                                          |
-| **tasks**        | new            | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             | Jira :fontawesome-solid-arrow-left: Spira             |
-|                  | updates        | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            | Jira :fontawesome-solid-arrow-right: Spira            |
+| Sync Mode      | Releases       | Requirements   | Incidents                                     | Tasks                                         |
+| -------------- | -------------- | -------------- | --------------------------------------------- | --------------------------------------------- |
+| Default        | Jira <-> Spira | Jira <- Spira  | New: Jira <-> Spira<br>Updates: Jira -> Spira | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| Bidirectional  | Jira <-> Spira | Jira <- Spira  | Jira <-> Spira                                | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| Complete       | Jira <-> Spira | Jira <-> Spira | Jira <-> Spira                                | Jira <-> Spira                                |
+| NoRequirements | Jira <-> Spira | (not synced)   | New: Jira -> Spira<br>Updates: Jira <- Spira  | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| NoIncidents    | Jira <-> Spira | Jira <- Spira  | (not synced)                                  | New: Jira -> Spira<br>Updates: Jira <-> Spira |
 
 Notes about syncing:
 
-- The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
-- The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **Default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
+- The **Bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **Complete** sync mode allows fully bidirectional sync upon creation and update of all the supported artifacts (Releases, Requirements, Incidents, and Tasks).
 - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
 - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
-- Comments are always synced from Spira and to Spira.
+- Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.
 - Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode
-- Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
-- If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
+- Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
+- If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. 
 - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
 ## Checklist
@@ -99,32 +98,51 @@ You need to fill in the following fields for the plugin to operate correctly:
 - **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Jira are not being updated in Spira (especially if comments are not syncing), try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also Jira is on a server set to a different time-zone, you should add in the number of hours difference between the servers time-zones here.
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
-!!! info "In normal use, keep the fields below blank"
-    For most users, we recommend leaving these fields blank: "Jira Custom Fields"; "Task Types"; and "Sync Mode". Leave "Requirement Types" blank if you do *not* want sync user stories/requirements (not valid for the NoIncidents mode).
+!!! info "Configuration Tip"
+    For most users, we recommend leaving "Jira Custom Fields" blank. If you want to sync Tasks and/or Requirements, do not forget to configure "Task Types" and/or "Requirement Types", and choose the proper "Sync Mode". Leave "Requirement Types" blank if you do *not* want to sync user stories/requirements (not valid for the NoIncidents mode).
 
-- **Jira Custom Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties . Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
-- **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synched with Jira at all.
+- **Jira Special Fields**: This is used to specify the value(s) for Spira Incident Severity and/or Requirement Estimate Points based on Jira custom properties. Please enter the Jira custom property IDs separated by a comma. Both fields are optional, but if you want to skip one, please enter it as 0. Also, use this field to activate Time Tracking fields sync. This can be left empty for now and will be discussed below in [Configuring Jira Special Fields](#special-jira-fields).
+- **Task Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira tasks instead of incidents. If you leave this blank, tasks in Spira will not be synced with Jira at all.
 - **Sync Mode**: This determines how the synchronization works. How each mode works is explained [above](#overview):
 
-    - Default (leave blank): *recommended for most users.*
-    - Bidirectional: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
-    - NoRequirements: enter the word "NoRequirements" to use this mode
-    - NoIncidents: enter the word "NoIncidents" to use this mode
+    - ***Default*** (leave blank): *recommended for most users.*
+    - ***Bidirectional***: enter the word "Bidirectional" to use this mode. *Recommended for advanced users only*. Only use this mode if you have a well-defined set of workflows that make sense in both systems, and that do not conflict. If using this mode *make the polling interval as short as possible* (to avoid conflicting changes in the two systems) as the integration works at the record-level, not the field level.
+    - ***Complete***: enter the word "Complete" to use this mode. *Recommended for advanced users only*. Like the bidirectional sync mode, only use this mode if you have a well-defined set of workflows that make sense in both systems, for all artifacts, and *make the polling interval as short as possible*, to avoid conflicting changes in the two systems. This mode syncs all the artifacts bidirectionally, but you can also use the field *Types to Skip* to ignore the sync of some Jira types.
+    - ***NoRequirements***: enter the word "NoRequirements" to use this mode
+    - ***NoIncidents***: enter the word "NoIncidents" to use this mode
     
     Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option *NoAttachments* to the sync mode field. Example: *NoRequirements,NoAttachments* or simply *NoAttachments* if you use the default mode
     
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
-- **Link Type**: This field should either be set to the name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based off of existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based off data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
+- **Link Type**: This field should either be set to a **single** name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based on existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based on data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_18.png)
 
+- **Types to Skip**: This optional field can be used to ignore some Jira issue types during the sync. To do this, enter a comma-separated list of IDs of any Jira issue types that you want to exclude from synchronization. If you leave this blank, all Jira issue types will be considered for synchronization, sync mode permitting.
+- **Skip Comments**: Set this field to *Yes* if you want the dataSync to ignore comments in both directions. Please note old comments already synced won't be deleted.
+- **Auto-Map Properties**: Set this field to *Yes* if you want the dataSync to try to automatically map the standard and custom properties based on name matching. When enabled, the system will automatically map properties with matching names between Spira and Jira, significantly reducing the need for manual mapping. Even if this option is enabled, you can still manually map properties as explained in this documentation. The system will try to auto-map only the blank mappings. Learn more [here](#using-auto-map-properties-feature).
+
+!!! info "Configuration Tip"
+    If you are using the Auto-Map Properties option, please remember you still need to activate the sync for your project and provide an External Key as explained [below](#activate-the-datasync). The auto-mapping will occur when the datasync runs for the first time after activation, but you won't see the values on the mapping pages, so you can still provide different values for manual mapping.
+
+- **Sync Epic/Story hierarchy**: Set this field to *Yes* if you want to see the Epic/Story hierarchy reflected in Spira Requirements and vice-versa, depending on the sync mode. 
+
+!!! info "Hierarchy Limitations"
+    Spira supports multi-level Requirement hierarchies that are more complex than Jira's default capabilities. The dataSync plugin cannot create hierarchical relationships in Jira that aren't supported by its configuration. When encountering an unsupported hierarchy structure, the dataSync will place the affected work item at the root level instead. To customize your work item hierarchy settings in Jira, please refer to the [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/configure-the-issue-type-hierarchy/).
+
+- **Use Plain Text**: Set this field to *Yes* to remove any formatting from the description fields when using either the *bidirectional* or the *complete* sync modes. This allows the description fields to sync **bidirectionally** (two ways) depending on the sync mode. This option is useful if you don't require complex text formatting.
+
+!!! info "Rich Text vs Plain Text"
+    If you normally don't add text formatting, embedded images, or files to your descriptions and need updated text to be visible in both systems, use **Plain Text**.
+    However, if you need embedded images, colors, tables, etc., in your descriptions, use **Rich Text**. 
+    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. The plugin will add a warning message to the affected description fields.
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
 
 User mapping has two different modes: auto-mapping users; and manual user mapping.
 
-Set the "auto-map" field describe above to yes to use auto-mapping. In this mode, all users in Spira need to have the same username as users in Jira. This is a big time-saver but only works if you can guarantee that all usernames are the same in both systems.
+Set the "auto-map" field described above to yes to use auto-mapping. In this mode, all users in Spira need to have the same username as users in Jira. This is a big time-saver but only works if you can guarantee that all usernames are the same in both systems.
 
 If you are not auto mapping users (the field is set to no in the plugin configuration) follow these steps:
 
@@ -133,8 +151,8 @@ If you are not auto mapping users (the field is set to no in the plugin configur
 - For each user you want to manually map to a Jira user:
 
     - Click the "Edit" on that user's row:
-    - Click the "Data Mapping" tab at the bottom to list see the list of datasync plugins you can set for this user.
-    - Enter a valid Jira identifier for that user In the text box called "Jira ID" (see below)
+    - Click the "Data Mapping" tab at the bottom to see the list of datasync plugins you can set for this user.
+    - Enter a valid Jira identifier for that user in the text box called "Jira ID" (see below)
     - Click "Save"
 
 ![User Profile in Spira](img/JiraCloud-User-Mapping-1.png)
@@ -153,7 +171,7 @@ If you are not auto mapping users (the field is set to no in the plugin configur
 
 
 ## Product Configuration
-Now that the datasync and user mapping has been setup system wide, you are ready to configure the datasync at the product level. This is an important and necessary part of the process. It tells the datasync what products to sync with, what to sync it with in Jira, and how to sync up all the different fields.
+Now that the datasync and user mapping have been set up system-wide, you are ready to configure the datasync at the product level. This is an important and necessary part of the process. It tells the datasync what products to sync with, what to sync it with in Jira, and how to sync up all the different fields.
 
 ??? info "How to copy datasync configuration to another product"
     Once you have successfully configured the product for the datasync, you can clone the datasync configuration. When creating a new product, make sure to choose the option to "Create product from Existing product" rather than "Use Default Template" so that all the product mappings get copied across to the new product.
@@ -211,26 +229,10 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
 
 When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.
 
-If you are syncing an existing product with releases in it to Jira, you should manually add the mapping information to Spira releases, to make sure you don't get duplicates being made. For each release/version that exists in both Spira and Jira at the time of starting the datasync for the first time:
-
-- Find the ID of the Jira version you want to map to a release in Spira
-- Go to the product in Spira
-- Open the Release list page
-- Go to the overview tab of the release
-- Look for the field called **Jira ID** (used to store the identifier of the equivalent version in Jira)
-- Set the value to the Jira version ID
-- Click "Save"
-
-![](img/Using_SpiraTeam_with_JIRA_5+_25.png)
-
-
-??? info "How to find the Jira version ID"
-    The Jira ID for a version can be found using the [Jira Configuration Helper](#jira-configuration-helper) on the **Versions** tab.
-
-    ![](img/Using_SpiraTeam_with_JIRA_5+_26.png)
-
-
 ### Standard Field Data Mapping
+
+!!! info "You can use [Auto-Map](#using-the-auto-map-properties-feature) to simplify and potentially skip the manual mapping process described in this section."
+
 Mapping field values between Spira and Jira is a very important part of the configuration. Without this step, the datasync will not know what values to match things up with. For example, it will not know that an Jira issue with a type of "New Feature" should become an incident in Spira with a type of "Enhancement"
 
 This process starts on data mapping home page for the selected product you were on to [activate the datasync](#activate-the-datasync). On this page you will see a large list of options like in the screenshot below. This shows different fields across different artifacts. 
@@ -246,7 +248,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 #### Incidents
 === "Type"
     
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_28.png)
 
@@ -257,7 +259,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Status"
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_30.png)
 
@@ -270,7 +272,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is required"
+    !!! info "If not using [Auto-Map](#using-the-auto-map-properties-feature), this field mapping is required"
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_32.png)
 
@@ -281,7 +283,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Component"
-    !!! info "This field mapping is OPTIONAL"
+    !!! info "This field mapping is OPTIONAL. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_34.png)
 
@@ -292,7 +294,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Severity"
-    !!! info "This field mapping is OPTIONAL"
+    !!! info "This field mapping is OPTIONAL."
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_36.png)
 
@@ -308,19 +310,21 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Requirements
 === "Status"
-    !!! info "This field mapping is required if syncing requirements"
+    !!! info "This field mapping is required if syncing requirements. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
-    ![](img/Using_SpiraTeam_with_JIRA_5+_39.png)
+    ![](img/Using_SpiraTeam_with_JIRA_5+_39b_Cloud8.png)
 
     Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+    
+    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Importance"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_40.png)
@@ -332,7 +336,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is required if syncing requirements"
+    !!! info "This field mapping is required if syncing requirements. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_41.png)
@@ -344,7 +348,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_29.png)
 
 === "Component"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing requirements you can skip this section
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_42.png)
@@ -356,13 +360,13 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_35.png)
 
 === "Estimate Points"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements."
         If you are not syncing requirements you can skip this section
 
     To sync Estimate Points for Requirements in Spira, make sure you [add Estimates to your Jira issues](https://support.atlassian.com/Jira-software-cloud/docs/enable-estimation/) as "Story points" or have a *numeric* custom property in Jira to map against. Use the [Jira configuration helper](#jira-configuration-helper) to find its ID (under the "Custom Fields" tab). Enter this ID in Spira, as the second attribute (after a comma ',') of the "Severity/Est. Points Field" on the [Datasync configuration page](#configure-the-plugin). For example: '`10001,10033`' where 10001 is the Incident Severity property ID in Jira and 10033 is the field we are configuring, the Estimate Points property ID in Jira. Make sure this field was created as a numeric field in Jira, otherwise the sync won't happen.
 
 === "Due Date"
-    !!! info "This field mapping is optional if syncing requirements"
+    !!! info "This field mapping is optional if syncing requirements."
         If you are not syncing requirements you can skip this section
 
     To sync Due Date from Jira with Spira Requirements, create a custom property type Date for your Requirements in Spira and in the dataSync mappings, enter *duedate* as its external key. This field only syncs Jira to Spira.
@@ -370,19 +374,21 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 #### Tasks
 === "Status"
-    !!! info "This field mapping is required if syncing tasks"
+    !!! info "This field mapping is required if syncing tasks. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
-    ![](img/jira-task-mapping-status.png)
+    ![](img/jira-task-mapping-status-cloud8.png)
 
     Click on the "Status" hyperlink under Task Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the task statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
+
+    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_31.png)
 
 === "Priority"
-    !!! info "This field mapping is optional if syncing tasks"
+    !!! info "This field mapping is optional if syncing tasks. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-priority.png)
@@ -394,7 +400,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     ![](img/Using_SpiraTeam_with_JIRA_5+_33.png)
 
 === "Type"
-    !!! info "This field mapping is optional if syncing tasks"
+    !!! info "This field mapping is optional if syncing tasks. You can save time using [Auto-Map](#using-the-auto-map-properties-feature)."
         If you are not syncing tasks you can skip this section
 
     ![](img/jira-task-mapping-type.png)
@@ -407,10 +413,15 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
 
 ### Custom Property Mapping
+
+!!! info "You can use [Auto-Map](#using-the-auto-map-properties-feature) to simplify and potentially skip the manual mapping process described in this section."
+
 You can map:
 
 - custom properties in Spira to custom fields in Jira
 - custom properties in Spira to standard fields in Jira (for example fields like Environment, Resolution, or SecurityLevel that don't exist in Spira)
+
+You can save time using [Auto-Map](#using-the-auto-map-properties-feature).
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
 
@@ -419,7 +430,7 @@ To start, go to the data mapping home page for the selected product you were on 
 === "Scalar properties"
     ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Release, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
     Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -497,6 +508,58 @@ To start, go to the data mapping home page for the selected product you were on 
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
+=== "Time Tracking"
+    If you would like to sync the Time Tracking values from Jira to Spira and vice-versa, please enter "timetracking" in the Jira Special Fields setting:
+
+    ![](img/JiraCloud-Plugin-ConfigSpecial1.png)
+
+    !!! info "You also need to activate and configure this in Jira"
+        In Jira, you need to enable Time Tracking in your project, as explained [here](https://support.atlassian.com/jira-cloud-administration/docs/configure-time-tracking/). Once this is active for your project, you need to add the Time Tracking field to all the Issue types that sync against Spira artifacts, by going to:
+
+        - Settings > Projects
+        - In the left menu, Issues (Work Items) > Screens
+        - Then, for each Isse (Work Item) type you sync to Spira:
+            - Click on the pencil (edit)
+            - Then, for each Screen, click on its name
+            - Then, at the bottom of the page, select 'Time Tracking'
+
+    ![](img/JiraCloud-Plugin-ConfigSpecial2.png)
+
+    By following these instructions, you will see the fields syncing:
+
+    - Estimated Effort <=> Original Estimate
+    - Remaining Effort <=> Time Remaining
+    - Time Spent => Actual Effort
+
+    Please note Jira does not allow updates to the field 'Time Spent', so the plugin will ignore it when syncing Jira to Spira.
+
+### Using the Auto-Map Properties Feature
+
+When the "Auto-Map Properties" option is enabled in the plugin configuration, the dataSync will attempt to automatically map standard and custom properties between Spira and Jira based on name matching. This feature can significantly reduce the manual configuration needed for property mapping.
+
+#### How Auto-Mapping Works
+
+1. **Name-Based Matching**: The system looks for properties with identical or similar names in both systems and creates mappings automatically.
+2. **Blank Mappings Only**: Auto-mapping only applies to properties that haven't been manually mapped yet.
+3. **Manual Mappings Still Available**: You can still manually map properties and your previous manually mapped values are not overridden.
+
+#### Benefits of Auto-Mapping
+
+- **Reduced Configuration Time**: Minimizes the need to manually map each property
+- **Simplified Setup**: Just provide the product's External Key and activate the sync
+- **Flexibility**: You can still manually map properties to override any auto-mapping if needed
+!!! info "Best Practices for Auto-Mapping"
+    
+    For optimal results with auto-mapping:
+
+    - try to use consistent naming conventions between your Spira and Jira environments. Properties with identical or very similar names will be automatically matched, saving significant configuration time;
+    - after the first sync run, review the auto-created mappings to ensure they meet your needs. The dataSync will add a warning in the Event Log to indicate the properties that could not be automatically mapped;
+    - remember to check your custom list values as well;
+    
+    ???+ note "Rules for name matching"
+        The system ignores special characters, capitalization, spaces, and leading numbers when comparing names for auto-mapping. For example, "1-Medium-Priority", "Medium Priority", and "mediumPriority" would all be considered similar enough to match.
+
+Even with auto-mapping enabled, you may still need to manually map some properties, especially if they have different names in the two systems or if you need specific mapping configurations.
 
 ## Using Spira with Jira
 Now that all the mappings are done, you are now ready to use the integration.
