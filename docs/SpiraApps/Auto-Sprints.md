@@ -1,6 +1,6 @@
 # Auto-Sprints
 
-<!-- // is it compatiable with the spiratest, or teams -->
+<!-- // is it compatible with the spiratest, or teams -->
 !!! warning "This SpiraApp works with v8.3+" 
 
 This SpiraApp automates sprint creation based on your product's settings for a selected major or minor release within the Release List page.
@@ -22,18 +22,9 @@ Once the SpiraApp has been activated system-wide and enabled for a specific prod
 
 #### Length
 
-This is where you can customize the sprint days and sprint gap:
-
-![product settings page](img/Length.png)
-
-- **Sprint Days**: In this text box, provide an interger values between 2-60. The values entered here will determine how many days long each generated sprint will be. 
-- **Sprint Gap**: In this text box, provide an interger values between 0-30. The values entered here will determine how many days gap each sprint will have before starting anew one.
-
-#### Length
-
 This section allows you to define the duration of your sprints and any gaps between them.
 
-![product settings page](img/Length.png)
+![product settings page](img/auto-sprints-product-length.png)
 
   * **Sprint Days:** Enter an integer value between 2 and 60. This value determines the length, in days, of each generated sprint. This is a **required** field.
   * **Sprint Gap:** Enter an integer value between 0 and 30. This value determines the number of days between the end of one sprint and the start of the next. A value of `0` means sprints will start immediately after the previous one ends.
@@ -42,7 +33,7 @@ This section allows you to define the duration of your sprints and any gaps betw
 
 Configure the number of parallel and sequential sprints you wish to generate, along with naming conventions to differentiate parallel sprints.
 
-![product settings page](img/Parallel&Sequential.png)
+![product settings page](img/auto-sprints-product-parallel&sequential.png)
 
   * **Parallel Options:** Provide up to 3 comma-separated integer values, each between 1 and 5. These values determine how many parallel sprints will run concurrently.
   * **Parallel Increment List:** Provide up to 5 comma-separated names. These names are used to uniquely identify parallel sprints that start at the same time. If "Parallel Options" is set to `1`, this field can be left empty. Otherwise, you must provide enough names to match the maximum number of parallel sprints specified.
@@ -52,7 +43,7 @@ Configure the number of parallel and sequential sprints you wish to generate, al
 
 Customize the naming and versioning conventions for your generated sprints using a combination of predefined tokens.
 
-![product settings page](img/NamingTemplates.png)
+![product settings page](img/auto-sprints-product-namingTemplates.png)
  
   * **Sprint Naming Template:** Define how your sprints will be named. You can use the following allowed tokens:
 
@@ -82,7 +73,7 @@ Customize the naming and versioning conventions for your generated sprints using
 
 These buttons allow you to validate your settings and preview the generated sprint details.
 
-![product settings page](img/productActions.png)
+![product settings page](img/auto-sprints-product-actions-button.png)
 
   * **Validate Sprint Details:** It's crucial to use this button to **verify your configurations are valid** before saving. If any validation fails, the app will clearly indicate what needs to be corrected, preventing sprint generation failures on the Release List page.
   * **Preview Details:** Use this button to **see a sample of your sprint names and versions** based on your current template configurations. 
@@ -91,7 +82,7 @@ These buttons allow you to validate your settings and preview the generated spri
     * The preview will display a maximum of the first four example names and versions.
     * If your settings are invalid, a pop-up error will inform you which fields need to be fixed, and no preview will be available.
 
-!!! info "Example Product Admin Configurations"
+##### Example of Product Admin Configuration
 Here is a detailed worked example demonstrating how to configure the SpiraApp for automated sprint generation.
 
 * **Scenario:** You want to generate sprints for a new major/minor release with the following requirements:
@@ -128,19 +119,15 @@ Here is a detailed worked example demonstrating how to configure the SpiraApp fo
 
 Once the Auto-Sprints app is configured in the product settings, its functionality becomes available directly from the Release List page, allowing you to generate sprints for your major or minor releases.
 
-### Requirement List Page
+### Release List Page
+
+To use this SpiraApp, navigate to the Releases list page of your project and follow the steps below:
 
 1.  **Select a Release:** Navigate to the Release List page. Select a **single major or minor release** by checking its corresponding checkbox.
-
-![Release list page](../img/auto-sprints-release-list-page.png)
-
+![Release list page](img/auto-sprints-release-list-page.png)
 2.  **Access Auto-Sprints:** Click the **"Auto-Sprints"** toolbar button.
 3.  **Initiate Sprint Creation:** From the "Auto-Sprints" dropdown menu, select **"Create Sprints"**.
-
-![Auto-Sprints button](../img/auto-sprints-button.png)
-
+![Auto-Sprints button](img/auto-sprints-button.png)
 4.  **Choose Sprint Configuration:** A pop-up window will appear presenting a dropdown list of available sprint configurations. These options are generated based on your "Parallel Options" and "Sequential Options" defined in the product settings.
-
-![Create Sprints](../img/auto-sprints-create-sprints-dropdown.png)
-
+![Create Sprints](img/auto-sprints-create-sprints-dropdown.png)
 5.  **Generate Sprints:** Select your desired configuration from the dropdown. Once selected, click "Confirm" and the Auto-Sprints app will automatically generate the specified number of sprints as children of your selected major or minor release, adhering to all your configured product settings.
