@@ -5517,28 +5517,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-spira" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About Spira
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installing-the-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9028,28 +9006,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-spira" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About Spira
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installing-the-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9161,28 +9117,26 @@
 
 
 <h1 id="spira-xunit-integration-python">Spira xUnit Integration (Python)<a class="headerlink" href="#spira-xunit-integration-python" title="Permanent link">&para;</a></h1>
-<p>This repository contains the source code for the Spira add-on that lets you read <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> XML files and import the test results into Spira. This add-on
-works with SpiraTest, SpiraTeam and SpiraPlan editions on Spira.</p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>When you run automated tests using a framework such as JUnit, the test results are often generated in a standard XML format known as the xUnit format. This XML file contains a list of the test cases that were executed, the results that occured and potentially a list of associated screenshots or other attachments.</p>
-<p>This application will read and parse the xUnit XML file and import the test results into the <a href="https://www.inflectra.com/SpiraTest/">Spira test management</a> platform from <a href="https://www.inflectra.com/">Inflectra</a>. Spira already comes with a variety of dedicated integrations for different test automation frameworks such as JUnit, NUnit, PyTest, etc. however as new frameworks (such as WebDriver.io and Playwright) are released, this new <strong>general purpose integration</strong> will able to handle the integration from day one.</p>
-<h2 id="about-spira">About Spira<a class="headerlink" href="#about-spira" title="Permanent link">&para;</a></h2>
-<p>Spira is the end-to-end platform from <a href="https://www.inflectra.com">Inflectra</a> for product creation, from idea to release. Whether you are building software yourself, or deploying third-party systems, Spira is the integrated hub into which you can plug in specialized tools for the rest of the software development lifecycle. </p>
-<p>Spira comes in three flavors:
-- <a href="https://www.inflectra.com/SpiraTest/">SpiraTest</a>, powerful requirements and test management
-- <a href="https://www.inflectra.com/SpiraTeam/">SpiraTeam</a>, agile planning and test management for teams
-- <a href="https://www.inflectra.com/SpiraPlan/">SpiraPlan</a>, enterprise planning and testing platform</p>
+<p>When you run automated tests using a framework such as PlayWright or JUnit, the test results are often generated in a standard XML format. This is known as the <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> format. This XML file contains a list of the test cases that were executed, the results for each test case, and potentially a list of associated screenshots or other attachments.</p>
+<p>This library reads xUnit format XML files and import the test results in them into Spira. Once installed, it will be able to read the configuration file for your testing framework, which it uses to report to Spira as test cases and test sets (optional), against a particular release.</p>
+<div class="admonition info">
+<p class="admonition-title">What works with xUnit?</p>
+<p>Many different libraries have native support for xUnit. It is a generic and portable way to share test results from a framework. PlayWright, JUnit, NUnit and many other libraries support the xUnit format. </p>
+<p>This makes this library perfect for environments where you are executing tests with multiple different libraries.</p>
+</div>
 <h2 id="installing-the-integration">Installing the Integration<a class="headerlink" href="#installing-the-integration" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the Spira plugin for xUnit. It assumes that you already have a working installation of Spira v6.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v6.0 before trying to use this plugin. You will also need to have Python (with pip) installed.</p>
-<p>To obtain the latest version of the plugin, simply run the following command:</p>
-<p><code>pip install spira-addons-xunit</code></p>
-<p>This command will install the latest version of the plugin straight from the Python Package Index (PyPI). Once the Spira plugin is successfully installed, all you need to do is configure the plugin, map your xUnit test cases to Spira test cases, then you can begin testing!</p>
+<p>Prerequisites:</p>
+<ul>
+<li>Spira v6+</li>
+<li>Python 3+</li>
+<li>pip</li>
+</ul>
+<p>Install the library with this command: <code>pip install spira-addons-xunit request</code></p>
 <h2 id="how-to-use-the-integration">How to Use the Integration<a class="headerlink" href="#how-to-use-the-integration" title="Permanent link">&para;</a></h2>
-<p>The integration consists of a Python module called <code>spira_xunit_reader.py</code> that is executed after your xUnit tests are executed, and the appropriate XML report file has been created. This module will then read the results in the xUnit report file and send the results to Spira, mapping each xUnit <strong>test case</strong> to a matching Spira test case.</p>
+<p>The integration consists of a Python module called <code>spira_xunit_reader.py</code> that you call after the unit tests have completed and the XML report file created. </p>
 <p>For advanced users, you can also optionally map the xUnit <strong>test suites</strong> to corresponding Spira <strong>test sets</strong>, and/or have the plugin generate a new <strong>build</strong> in Spira that contains all of executed test cases and test suites.</p>
 <h3 id="configuring-the-spira-connection">Configuring the Spira connection<a class="headerlink" href="#configuring-the-spira-connection" title="Permanent link">&para;</a></h3>
-<p>In your test root folder (the folder you have your xUnit tests),
-create a file named <code>spira.cfg</code> with the following:</p>
+<p>In your test root folder create a file named <code>spira.cfg</code> based on the template below:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[credentials]</span>
 <span class="c1"># Following are required</span>
 <span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">http://localhost/spira</span>
@@ -9219,23 +9173,18 @@ create a file named <code>spira.cfg</code> with the following:</p>
 <span class="na">LIS.Authentication</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span>
 <span class="na">LIS.Authentication.Login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span>
 </code></pre></div>
-<p>For the plugin to work, you must have the following in the credentials group:</p>
+<p><strong>Required credential fields</strong>:</p>
 <ul>
-<li><strong>url</strong> -- The base url to your Spira installation, without a '/' at
-the end.</li>
-<li><strong>username</strong> -- The username you use to sign into Spira.</li>
-<li><strong>token</strong> -- Your API Key / RSS Token. Found in your profile page as the "RSS
-Token" field, you must have RSS Feeds enabled for this to work.</li>
-<li><strong>project_id</strong> -- The ID of the project you would like the test runs to
-be sent to</li>
+<li><strong>url</strong>: The base url to your Spira installation, without a '/' at the end.</li>
+<li><strong>username</strong>: The username to sign into Spira (we recommend creating a dedicated "xUnit" user to help with auditability).</li>
+<li><strong>token</strong>: The user's API Key / RSS Token, found in their profile page as the "RSS Token" field. Note that this is a secret and should not be stored directly in version control.</li>
+<li><strong>project_id</strong>: The ID of the project you would like the test runs to be sent to.</li>
 </ul>
-<p>In addition, you can set the following <strong>optional</strong> configuration parameters as well:</p>
+<p><strong>Optional credential fields</strong>:</p>
 <ul>
-<li><strong>release_id</strong> -- Use if you would like to associate the
-test run with a release.</li>
-<li><strong>test_set_id</strong> -- Use if you would like to associate the
-test run with a default test set.</li>
-<li><strong>create_build</strong> -- Set to true if you would like the plugin to create a new Spira build artifact with every run that all the individual test case runs get associated with.</li>
+<li><strong>release_id</strong>: Use if you would like to associate the test run with a release.</li>
+<li><strong>test_set_id</strong>: Use if you would like to associate the test run with a default test set.</li>
+<li><strong>create_build</strong>: include this key, with a value of true to create a new Spira build for each run. Exclude the key completely to not create a build.</li>
 </ul>
 <h3 id="mapping-the-test-cases">Mapping The Test Cases<a class="headerlink" href="#mapping-the-test-cases" title="Permanent link">&para;</a></h3>
 <p>This section is required, and is where you map the <code>classname.name</code> of the test case in the xUnit XML file to the appropriate test case in Spira. For details of which attribute is needed from the XML file, please refer to the sample XML files included at the end of this file.</p>
@@ -9251,17 +9200,15 @@ test run with a default test set.</li>
 <h3 id="executing-the-tests">Executing the Tests<a class="headerlink" href="#executing-the-tests" title="Permanent link">&para;</a></h3>
 <p>Now you are ready to execute your tests and send the results back so Spira. This happens in two steps:
 - Execute the unit tests and generate the <code>output.xml</code> xUnit style report file
-- Parse the <code>output.xml</code> report file and send the results to Spira</p>
+- Use the Spira xUnit reader on the <code>output.xml</code> file to send the results to Spira</p>
 <p>First run your tests using your existing framework code. That will generate an output file. We have two supplied example files you can use:</p>
 <ul>
-<li><code>junit-basic.xml</code> -- this is a minimalistic jUnit style example that contains several test cases nested in test suites with one test failure. It uses only the minimum set of attributes.</li>
-<li><code>junit-complete.xml</code> -- this is a more advanced, complete example that includes file attachments, URL attachments, errors, warnings, failures and additional optional xUnit attributes such as assertions, properties and standard error/output streams.</li>
+<li><code>junit-basic.xml</code>: a minimalistic jUnit style example with several test cases nested in test suites with one test failure</li>
+<li><code>junit-complete.xml</code>: a more advanced, complete example that includes file attachments, URL attachments, errors, warnings, failures and additional optional xUnit attributes such as assertions, properties and standard error/output streams.</li>
 </ul>
-<p>Next, you need to run the Spira results parser module <code>spira_xunit_reader.py</code> to upload the results to Spira. For example, with the sample tests you can use either:</p>
-<p><code>python spira_xunit_reader.py samples\junit-basic.xml spira.cfg</code></p>
-<p>OR</p>
-<p><code>python spira_xunit_reader.py samples\junit-complete.xml spira.cfg</code></p>
-<p>The second parameter is the location and name of the Spira configuration file <code>spira.cfg</code>. One you run the XML parser, you should see a message similar to the following:</p>
+<p>Next, you need to run the Spira XUnit reader <code>spira_xunit_reader</code> to upload the results to Spira. For example, with the basic example:</p>
+<p><code>python -m spira_xunit_reader samples\junit-basic.xml spira.cfg</code></p>
+<p>The first parameter is the filepath (relative) of the xUnit XML file. The second parameter is the location and name of the Spira configuration file <code>spira.cfg</code>. After running the python command, you should see a message similar to the following:</p>
 <div class="highlight"><pre><span></span><code>Sending test results to Spira at URL &#39;https://myserver/spiraservice.net&#39;.
 Successfully reported 4 test cases to Spira.
 </code></pre></div>
