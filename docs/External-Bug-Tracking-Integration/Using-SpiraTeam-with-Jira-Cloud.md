@@ -586,41 +586,6 @@ You are now able to perform test coverage and incident reporting inside Spira us
 
 
 ## Using the Jira Cloud Connector
-!!! success "Migrate to the new Spira app in Jira"
-    The Jira Cloud Connector has been replaced with a new Jira app called "Spira QA Coverage".
+The Jira Cloud Connector is now "[Spira QA Coverage](./Jira-Spira-QA-Coverage.md)".
 
-    This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
-
-??? note "Jira Cloud Connector Documentation"
-    ![](img/Using_SpiraTeam_with_JIRA_5+_49.png)
-
-    You can install the connector by following these instructions:
-
-    1.  Log into your Jira instance as an admin.
-    2.  Click the admin dropdown and choose Add-ons. The Find new apps or Find new add-ons screen loads.
-    3.  Locate the "SpiraTest" app for Jira.
-    4.  Click Install to download and install your app.
-    5.  Click Close in the "Installed and ready to go" dialog.
-    6.  Now you need to configure the add-on to connect to your Spira instance.
-
-    ![](img/Using_SpiraTeam_with_JIRA_5+_50.png)
-
-    Please enter the following information:
-
-    -   **Spira URL**: this needs to be the base URL for your Spira instance, typically of the form:
-    -   <https://mysite.spiraservice.net>
-    -   <https://demo.spiraservice.net/mysite>
-    -   **Username**: This is the login you use to connect to Spira (set this to a user who only has read-only permissions so that they are not able to write to any product or part of your Spira instance)
-    -   **API Key / RSS Token**: This is the RSS Token / API key for the user name you specified.
-
-    You can get the Spira API Key from within the User Profile screen of Spira :
-
-    ![](img/Using_SpiraTeam_with_JIRA_5+_51.png)
-
-    !!! warning "What to do if you cannot connect"
-        If you get a message in the connector on a user story saying that it can't connect, please try the following:
-
-        1. Check your URL is your BASE url - it should not include a "/" at the end. It should not have anything like "login.aspx" at the end
-        2. Make sure your API key includes the "{" and "}" and matches what you see on your Profile page after you go away from and then go back to the Profile page
-        3. Ask your Spira system admin to go to System Administration > System > Security Settings. There is a field called "Allowed Domains". Add "https://Jira.inflectra.com" and hit `Save`
-        4. Make sure you are on at least version 6.3.0.1 of Spira
+This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
