@@ -2,15 +2,15 @@
 
 ## June 27 2025
 !!! success "New Features"
-- **[Requirement list page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirements-list-pages)**
+    - **[Requirement list page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirements-list-pages)**
 
-    - As an Inflectra.ai and requirement user, I can see the Inflectra.ai button on the requirement list pages [RQ:5317]
-    - As an Inflectra.ai and requirement user, I can open the Inflectra.ai side panel on the requirement list pages [RQ:5318]
-    - As an Inflectra.ai and requirement user, from the requirement list page I can select 1 to 10 requirements to perform Inflectra.ai actions on [RQ:5319]
-    - As an Inflectra.ai and requirement user, from the requirement list page I can create test cases for 1 to 10 requirements using Inflectra.ai [RQ:5320]
-    - As an Inflectra.ai and requirement user, from the requirement list page I can create tasks for 1 to 10 requirements using Inflectra.ai [RQ:5321]
-    - As an Inflectra.ai and requirement user, from the requirement list page I can create scenarios for 1 to 10 requirements using Inflectra.ai [RQ:5341]
-    - As an Inflectra.ai and requirement user, from the requirement list page I can create risks for 1 to 10 requirements using Inflectra.ai [RQ:5322]
+        - As an Inflectra.ai and requirement user, I can see the Inflectra.ai button on the requirement list pages [RQ:5317]
+        - As an Inflectra.ai and requirement user, I can open the Inflectra.ai side panel on the requirement list pages [RQ:5318]
+        - As an Inflectra.ai and requirement user, from the requirement list page I can select 1 to 10 requirements to perform Inflectra.ai actions on [RQ:5319]
+        - As an Inflectra.ai and requirement user, from the requirement list page I can create test cases for 1 to 10 requirements using Inflectra.ai [RQ:5320]
+        - As an Inflectra.ai and requirement user, from the requirement list page I can create tasks for 1 to 10 requirements using Inflectra.ai [RQ:5321]
+        - As an Inflectra.ai and requirement user, from the requirement list page I can create scenarios for 1 to 10 requirements using Inflectra.ai [RQ:5341]
+        - As an Inflectra.ai and requirement user, from the requirement list page I can create risks for 1 to 10 requirements using Inflectra.ai [RQ:5322]
 
 !!! bug "Bug fixes and enhancements"
     - Fix Inflectra.ai Sidebar sometimes not appearing due to race condition between loading scripts and setting the necessary data on the page [IN:11172]
