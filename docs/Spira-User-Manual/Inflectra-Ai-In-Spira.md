@@ -32,6 +32,11 @@ Inflectra.ai is available in the following places:
     - Task details page
     - Risk details page
 
+- **List pages**: Inflectra.ai can generate content based on a selected list of artifacts on its list page. This content can either augment the artifact or create new artifacts.
+
+    - Requirement list page (hierarchical)
+    - Requirement list page (sortable)
+
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
@@ -44,7 +49,10 @@ Inflectra.ai stores your chat history in the browser to allow you to look back o
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
 
 
-## Requirement details page
+## Artifact details pages
+On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. 
+
+### Requirement details page
 From the requirement details page you can generate the following content: 
 
 ![](img/Inflectra_ai_requirements_details.png)
@@ -65,7 +73,7 @@ When generating content for a requirement, the following information is provided
 - Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
 - The product name of the product the requirement is in
 
-## Test Case details page
+### Test Case details page
 From the test case details page you can generate the following content:
 
 ![](img/Inflectra_ai_testcase_details.png)
@@ -87,7 +95,7 @@ When generating content for a test case, the following information is provided t
 
 - The product name of the product the test case is in
 
-## Task details page
+### Task details page
 From the task details page (SpiraTeam and SpiraPlan only) you can generate the following content: 
 
 ![](img/Inflectra_ai_task_details.png)
@@ -104,11 +112,11 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
     You can enter a value in the text input and hit enter to submit it, or quick select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. 
 
-<span style="border: 2px solid var(--md-accent-bg-color--light); height: auto; width: fit-content; display: block;">![](img/Inflectra_ai_task_detail_input.png)</span>
+![](img/Inflectra_ai_task_detail_input.png){.border-all}
 
 
 
-## Risks details page
+### Risks details page
 From the risk details page (SpiraTeam and SpiraPlan only) you can generate the following content:
 
 ![](img/Inflectra_ai_risk_details.png)
@@ -125,3 +133,32 @@ When generating content for a risk, the following information is provided to Inf
 - Impact
 - Any existing risk mitigations
 - The product name of the product the risk is in
+
+## Artifact list pages
+When using Inflectra.ai on the list page, you can select a small number of artifacts at a time. 
+
+Please make sure to keep the list page and the Inflectra.ai sidebar open while the operation completes (this may take a few minutes based on the amount of processing required). 
+
+If Inflectra.ai encounters any problems for a specific artifact it will give you a clear message, to help you understand which artifacts were successfully acted upon and which ones were not. See example below:
+
+![](img/Inflectra_ai_list_errors.png){.border-all}
+
+### Requirements list pages
+From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:
+
+![](img/Inflectra_ai_requirements_details.png)
+
+| Generated Content  | Description                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| Test Cases         | Creates a set of test cases with steps to cover each requirement, to get a head start on test planning        | 
+| Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                          | 
+| Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)              | 
+| Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                      | 
+
+When generating content for a requirement on the list page, the following information is provided to Inflectra.ai:
+
+- Name and description
+- Type
+- Component
+- Any existing requirement steps
+- The product name of the product the requirement is in
