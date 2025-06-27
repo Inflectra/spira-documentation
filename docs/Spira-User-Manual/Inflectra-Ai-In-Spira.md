@@ -112,7 +112,7 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
     You can enter a value in the text input and hit enter to submit it, or quick select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. 
 
-![](img/Inflectra_ai_task_detail_input.png)
+![](img/Inflectra_ai_task_detail_input.png){.border-all}
 
 
 
@@ -141,7 +141,7 @@ Please make sure to keep the list page and the Inflectra.ai sidebar open while t
 
 If Inflectra.ai encounters any problems for a specific artifact it will give you a clear message, to help you understand which artifacts were successfully acted upon and which ones were not. See example below:
 
-![](img/Inflectra_ai_list_errors.png)
+![](img/Inflectra_ai_list_errors.png){.border-all}
 
 ### Requirements list pages
 From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:

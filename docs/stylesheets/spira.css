@@ -69,6 +69,10 @@
   padding: 2rem 0 .5rem 0;
 }
 
+.border-all {
+  border: 1px solid var(--md-accent-bg-color--light);
+}
+
 .pill {
   background-color: var(--yolk);
   border-radius: 0.25rem;
