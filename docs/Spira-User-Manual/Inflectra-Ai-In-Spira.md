@@ -32,6 +32,11 @@ Inflectra.ai is available in the following places:
     - Task details page
     - Risk details page
 
+- **List pages**: Inflectra.ai can generate content based on a selected list of artifacts on its list page. This content can either augment the artifact or create new artifacts.
+
+    - Requirement list page (hierarchical)
+    - Requirement list page (sortable)
+
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
@@ -45,7 +50,7 @@ Please see [our page on responsible AI usage](https://www.inflectra.com/Company/
 
 
 ## Artifact details pages
-On artifact details pages, you can perform AI actions against 1 artifact at a time, while viewing the complete data. This provides more detailed overview of what items were created in each operation, and may provide additional details to the AI model for processing in some cases. 
+On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. 
 
 ### Requirement details page
 From the requirement details page you can generate the following content: 
@@ -107,7 +112,7 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
     You can enter a value in the text input and hit enter to submit it, or quick select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. 
 
-<span style="border: 2px solid var(--md-accent-bg-color--light); height: auto; width: fit-content; display: block;">![](img/Inflectra_ai_task_detail_input.png)</span>
+![](img/Inflectra_ai_task_detail_input.png)
 
 
 
@@ -130,16 +135,16 @@ When generating content for a risk, the following information is provided to Inf
 - The product name of the product the risk is in
 
 ## Artifact list pages
-When using Inflectra.ai on the list page, you can select up to 10 artifacts to perform an AI operation on at a time. This helps streamline the process of supporting an artifact with associated artifacts & child artifacts using generative workflows. 
+When using Inflectra.ai on the list page, you can select a small number of artifacts at a time. 
 
-You must keep the relevant list page tab on the list page until the operation completes. It is not advised to run multiple tabs of Inflectra.ai operations at once, but you can have 1 tab in the background for running Inflectra.ai while you do other work. 
+Please make sure to keep the list page and the Inflectra.ai sidebar open while the operation completes (this may take a few minutes based on the amount of processing required). 
 
-Errors will be provided on a per-artifact basis, to help you understand which artifacts were successfully updated and which ones were not, if any. See example below:
+If Inflectra.ai encounters any problems for a specific artifact it will give you a clear message, to help you understand which artifacts were successfully acted upon and which ones were not. See example below:
 
-<span style="border: 2px solid var(--md-accent-bg-color--light); height: auto; width: fit-content; display: block;">![](img/Inflectra_ai_list_errors.png)</span>
+![](img/Inflectra_ai_list_errors.png)
 
-### Requirements list page
-From the requirements list page you can generate the following content:
+### Requirements list pages
+From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:
 
 ![](img/Inflectra_ai_requirements_details.png)
 
