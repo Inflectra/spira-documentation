@@ -1,6 +1,18 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## July 2025
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.1.0.0:
+
+   - Bug Fixes:
+        - [IN:11274] [IN:11273] Improves consistency of release/version creation
+        - [IN:11271] Fixes a bug where error messages would flood the Event Log when Jira credentials lack permissions
+        - [IN:11269] Fixes a bug where Releases were always marked to update
+        - [IN:11251] Fixes a bug where Releases were never updated to 'In Progress'
+        - [IN:11250] Fixes a bug where Releases with no StartDate would not sync
+        - [IN:11258] Fixes a bug where invalid artifact associations would be tempted to be created
+        - [IN:11195] Fixes syncing bold text issues from Spira to Jira
+
 ## June 2025
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.0.0.0:
 
