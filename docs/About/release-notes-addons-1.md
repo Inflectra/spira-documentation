@@ -4,7 +4,7 @@ This page shows summary information about releases in Spira's addons, data syncs
 ## July 2025
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.1.0.0:
 
-   - Bug Fixes:
+    - Bug Fixes:
         - [IN:11274] [IN:11273] Improves consistency of release/version creation
         - [IN:11271] Fixes a bug where error messages would flood the Event Log when Jira credentials lack permissions
         - [IN:11269] Fixes a bug where Releases were always marked to update
