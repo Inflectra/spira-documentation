@@ -2,6 +2,7 @@
 
 ## July 11 2025
 !!! success "New Features"
+    - As an Inflectra.ai and requirement user, from the [requirement hierarchy list page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirements-list-pages) I can create child requirements for a requirement using Inflectra.ai [RQ:5357]
     - Improve the performance of Inflectra.ai in Australia by upgrading it to be able to use Amazon Nova models [IN:11290]
 
 !!! bug "Bug fixes and enhancements"
