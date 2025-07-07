@@ -120,7 +120,7 @@ SpiraApps are able to make API calls to Spira on behalf of the current user, to 
 
 Note that this function is carried out client side so it does have access to any system settings.
 
-!!! info "Using the **body** parameter correctly"
+!!! info "Using the body parameter correctly"
     When making POST requests, you should stringify any object before you pass it as the **body** parameter. When making PUT requests, you should pass the object itself as the **body** parameter, without turning it into a string.
 
 === "Explanation"
