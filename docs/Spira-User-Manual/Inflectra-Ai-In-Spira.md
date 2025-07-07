@@ -146,7 +146,7 @@ If Inflectra.ai encounters any problems for a specific artifact it will give you
 ### Requirements list pages
 From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:
 
-![](img/Inflectra_ai_requirements_details.png)
+![](img/Inflectra_ai_requirements_list.png)
 
 | Generated Content  | Description                                                                                                   |
 |--------------------|---------------------------------------------------------------------------------------------------------------|
@@ -154,6 +154,7 @@ From the requirements list page (both the hierarchical and sortable pages) you c
 | Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                          | 
 | Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                      | 
+| Child requirements | Generates child requirements for each selected requirement, to split them up into distinct user stories (available on the hierarchical list page only) |
 
 When generating content for a requirement on the list page, the following information is provided to Inflectra.ai:
 
