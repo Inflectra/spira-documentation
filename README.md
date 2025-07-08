@@ -23,7 +23,9 @@ We can fully change the theme used and its features using a basic templating lan
 2. We use the Material theme for mkdocs. This has two versions - a public and an Insiders version.
     
     - **Public**: run `pip install mkdocs-material` it should also install MKdocs. 
-    - **Insiders** run `pip install git+https://${token}@github.com/squidfunk/mkdocs-material-insiders.git` - replace {token} with your relevant token
+    - **Insiders** run in PowerShell:
+        - `$env:GH_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"` - replace with your relevant token
+        - `pip install git+https://$env:GH_TOKEN@github.com/squidfunk/mkdocs-material-insiders.git`
 
 3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
 4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
