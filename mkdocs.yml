@@ -94,7 +94,6 @@ nav:
   - Application Overview and Tips: Spira-User-Manual\Functionality-Overview.md
   - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
   - User Management: Spira-User-Manual\User-Product-Management.md
-  - Inflectra.ai: Spira-User-Manual\Inflectra-Ai-In-Spira.md
   - Products:
     - Homepage: Spira-User-Manual\Product-Homepage.md
     - Planning:
@@ -184,13 +183,12 @@ nav:
     - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
 - SpiraApps: 
   - Introduction to SpiraApps: SpiraApps\index.md
+  - Auto-Sprints: SpiraApps\Auto-Sprints.md
   - AWS Bedrock: SpiraApps\AWS-Bedrock.md
   - Azure OpenAI: SpiraApps\Azure-OpenAI.md
   - BDD:  SpiraApps\BDD.md
   - ChatGPT: SpiraApps\ChatGPT.md
   - CircleCI: SpiraApps\CircleCI.md
-  - Conditional Lists: SpiraApps\ConditionalLists.md
-  - Confluence: SpiraApps\Confluence.md
   - Default Descriptions: SpiraApps\Default-Descriptions.md
   - FMEA: SpiraApps\FMEA.md
   - GitLab: SpiraApps\GitLab.md
@@ -201,7 +199,7 @@ nav:
   - Requirement Multi Approvers: SpiraApps\Requirement-Multi-Approvers.md
   - Risks+: SpiraApps\RisksPlus.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
-  - Test Configurations+: SpiraApps\Test-Configuration-Plus.md
+  - Test Configuration+: SpiraApps\Test-Configuration-Plus.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Introduction: Reporting\index.md
@@ -212,6 +210,11 @@ nav:
   - Custom Report Tokens: Reporting\Custom-Reporting-Tokens.md
   - Available Report Tables: Reporting\Custom-Report-Tables.md
 - Optional Features:
+  - TaraVault:
+    - Activating: TaraVault-User-Manual\Activating-TaraVault.md
+    - Provisioning Projects & Users: TaraVault-User-Manual\Provisioning-Projects-&-Users.md
+    - Using Git: TaraVault-User-Manual\Using-Git.md
+    - Using Subversion: TaraVault-User-Manual\Using-Subversion.md
   - RemoteLaunch:
     - Guide: RemoteLaunch-User-Guide\RemoteLaunch-Guide.md
     - UFT/QTP: RemoteLaunch-User-Guide\HP-UFT--QTP.md
@@ -310,7 +313,6 @@ nav:
     - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
     - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
     - OpenText ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
-    - OpenText ALM Octane: Migration-and-Integration\Migrating-from-ALM-Octane.md
     - Jira: Migration-and-Integration\Migrating-from-Jira.md
     - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
     - Jama: Migration-and-Integration\Migrating-from-Jama.md
@@ -353,7 +355,6 @@ nav:
       - SpiraAppManager: Developers\SpiraApps-Manager.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
-  - Inflectra.ai: About/release-notes-inflectra.ai-v1.md
   - Version 8: About/release-notes-v8.md
   - Version 7: About/release-notes-v7.md
   - Version 6: About/release-notes-v6.md
