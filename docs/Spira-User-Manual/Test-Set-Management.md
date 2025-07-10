@@ -156,7 +156,11 @@ The operations toolbar lets you, amongst standard operations like save and delet
     - associated test runs and incidents are *not* cloned
     - followers, comments, execution status and history are *not* cloned
 
-- export to a number of files formats or print it via one of the options in the `Tools` dropdown menu
+- export to a number of files formats, to a different product, or print it via one of the options in the `Tools` dropdown menu
+
+!!! info "Exporting a Test Set to a different product"
+    To export a Test Set to a different product, from its details page, click on `Tools` > `Export to Product`. Then, select a destination product from the list and click `Export`. This will copy the Test Set along with its Test Cases and Test Steps. In case any of the Test Cases have a linked Test Step, they will also be copied to the destination product. Please note that the copied Test Cases are placed in a folder named after the Test Set token (`[TX:nnn]`). Also, note that if you export the same Test Set more than once, or export a different Test Set that contains a Test Step with a link to the same Test Case, it will get duplicated in the destination product.
+
 - the `Execute` button will execute all the test cases in the set against the release specified in the test set and then take you to the
 [test execution screen](#execute-test-cases)
 - Emailing: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing)
@@ -171,7 +175,6 @@ At the top of the pane, you will see the test set's:
 - current execution status in a mini bar chart - this matches the execution status on the list page and is determined based on if you are [viewing the Test Status for a release or not](#viewing-the-test-status-for-a-release). You can see the release currently being displayed in the Overview tab.
 
 Initially the pane will be set to the "Overview" tab, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" tabs. Each of these is described separately below.
-
 
 ### Overview -- Details
 
