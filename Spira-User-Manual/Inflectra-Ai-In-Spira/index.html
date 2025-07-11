@@ -8968,6 +8968,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#loading-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#responsible-ai-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9132,6 +9143,10 @@
 <p>Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.</p>
 <h3 id="chat-history">Chat history<a class="headerlink" href="#chat-history" title="Permanent link">&para;</a></h3>
 <p>Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. </p>
+<h3 id="loading-indicator">Loading Indicator<a class="headerlink" href="#loading-indicator" title="Permanent link">&para;</a></h3>
+<p>When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. </p>
+<p>In the following example, the task is for 10 requirements, and 5 requirements have finished. For the 6<sup>th</sup> requirement (RQ:800), half of the 10 tasks have already been created:</p>
+<p><img alt="" src="../img/Inflectra_ai_requirement_list_progress.png" /></p>
 <h3 id="responsible-ai-usage">Responsible AI Usage<a class="headerlink" href="#responsible-ai-usage" title="Permanent link">&para;</a></h3>
 <p>Please see <a href="https://www.inflectra.com/Company/Responsible-AI-Statement.aspx">our page on responsible AI usage</a>. Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at <a href="https://www.inflectra.com/support">www.inflectra.com/support</a>.</p>
 <h2 id="artifact-details-pages">Artifact details pages<a class="headerlink" href="#artifact-details-pages" title="Permanent link">&para;</a></h2>
@@ -9272,7 +9287,7 @@
 <p><img alt="" class="border-all" src="../img/Inflectra_ai_list_errors.png" /></p>
 <h3 id="requirements-list-pages">Requirements list pages<a class="headerlink" href="#requirements-list-pages" title="Permanent link">&para;</a></h3>
 <p>From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:</p>
-<p><img alt="" src="../img/Inflectra_ai_requirements_details.png" /></p>
+<p><img alt="" src="../img/Inflectra_ai_requirements_list.png" /></p>
 <table>
 <thead>
 <tr>
@@ -9296,6 +9311,10 @@
 <tr>
 <td>Risks</td>
 <td>Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)</td>
+</tr>
+<tr>
+<td>Child requirements</td>
+<td>Generates child requirements for each selected requirement, to split them up into distinct user stories (available on the hierarchical list page only)</td>
 </tr>
 </tbody>
 </table>
