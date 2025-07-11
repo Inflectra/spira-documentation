@@ -46,11 +46,10 @@ Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" ad
 Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
 
 ### Loading Indicator
-When an AI workflow is taking place, a progress bar is displayed. The progress bar shows the % completion for the AI workflow for the artifact currently being processed. The progress bar will have a label which indicates what Inflectra.ai is currently doing. When the generated artifacts are being uploaded to Spira, the number & type of generated items will be displayed as well. 
+When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. 
 
-On list pages, the progress bar label will also contain a count of the number of artifacts which have already had the workflow completed. 
+In the following example, the task is for 10 requirements, and 5 requirements have finished. For the 6th requirement (RQ:800), half of the 10 tasks have already been created:
 
-In the following example, 5 requirements have already been processed out of 10 selected, and 10 tasks are currently being created for RQ:800 in particular, being 50% done doing so:
 ![](img/Inflectra_ai_requirement_list_progress.png)
 
 ### Responsible AI Usage
