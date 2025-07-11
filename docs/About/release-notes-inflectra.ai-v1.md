@@ -1,5 +1,15 @@
 # Release Notes for Inflectra.ai
 
+## July 11 2025
+!!! success "New Features"
+    - As an Inflectra.ai and requirement user, from the [requirement hierarchy list page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirements-list-pages) I can create child requirements for a requirement using Inflectra.ai [RQ:5357]
+    - Improve the performance of Inflectra.ai in Australia by upgrading it to be able to use Amazon Nova models [IN:11290]
+
+!!! bug "Bug fixes and enhancements"
+    - Improve how the inflectra.ai sidebar chat provides feedback to the end user with a progress bar for artifacts being created in Spira [IN:10960]
+    - Update Inflectra.ai to better handle single and plural phrases AND Match the case of the Button [IN:11051]
+    
+
 ## June 27 2025
 !!! success "New Features"
     - **[Requirement list page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirements-list-pages)**

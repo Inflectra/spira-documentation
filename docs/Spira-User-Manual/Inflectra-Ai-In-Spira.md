@@ -45,6 +45,13 @@ Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" ad
 ### Chat history
 Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
 
+### Loading Indicator
+When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. 
+
+In the following example, the task is for 10 requirements, and 5 requirements have finished. For the 6th requirement (RQ:800), half of the 10 tasks have already been created:
+
+![](img/Inflectra_ai_requirement_list_progress.png)
+
 ### Responsible AI Usage
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
 
@@ -146,7 +153,7 @@ If Inflectra.ai encounters any problems for a specific artifact it will give you
 ### Requirements list pages
 From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:
 
-![](img/Inflectra_ai_requirements_details.png)
+![](img/Inflectra_ai_requirements_list.png)
 
 | Generated Content  | Description                                                                                                   |
 |--------------------|---------------------------------------------------------------------------------------------------------------|
@@ -154,6 +161,7 @@ From the requirements list page (both the hierarchical and sortable pages) you c
 | Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                          | 
 | Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                      | 
+| Child requirements | Generates child requirements for each selected requirement, to split them up into distinct user stories (available on the hierarchical list page only) |
 
 When generating content for a requirement on the list page, the following information is provided to Inflectra.ai:
 
