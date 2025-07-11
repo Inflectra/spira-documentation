@@ -158,9 +158,6 @@ The operations toolbar lets you, amongst standard operations like save and delet
 
 - export to a number of files formats, to a different product, or print it via one of the options in the `Tools` dropdown menu
 
-!!! info "Exporting a Test Set to a different product"
-    To export a Test Set to a different product, from its details page, click on `Tools` > `Export to Product`. Then, select a destination product from the list and click `Export`. This will copy the Test Set along with its Test Cases and Test Steps. In case any of the Test Cases have a linked Test Step, they will also be copied to the destination product. Please note that the copied Test Cases are placed in a folder named after the Test Set token (`[TX:nnn]`). Also, note that if you export the same Test Set more than once, or export a different Test Set that contains a Test Step with a link to the same Test Case, it will get duplicated in the destination product.
-
 - the `Execute` button will execute all the test cases in the set against the release specified in the test set and then take you to the
 [test execution screen](#execute-test-cases)
 - Emailing: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing)
@@ -225,7 +222,6 @@ Use the **Schedule on Build** field:
 - Using the **Post Build Wait Time** field you can add an offset (in seconds) for how long after the build to kick off the test sets
 - Only builds that finish against the release or sprint that the test set is set to will trigger the test set to execute
 - With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.
-
 
 ### Overview - Parameters
 
@@ -315,6 +311,13 @@ In reality, a test case from another product always lives in that other product,
 ### Overview - Comments
 Read about [how the comments works](Application-Wide.md#comments)
 
+### Exporting a Test Set to a different product
+
+Read about [how to export artifacts from one product to another](Application-Wide.md/#export-to-another-product).
+
+This will copy the Test Set along with its Test Cases and Test Steps. In case any of the Test Cases have a linked Test Step, they will also be copied to the destination product. 
+
+Please note that the copied Test Cases are placed in a folder named after the Test Set token (`[TX:123]`). Also, note that if you export the same Test Set more than once, or export a different Test Set that contains a Test Step with a link to the same Test Case, it will get duplicated in the destination product.
 
 ### Test Runs
 

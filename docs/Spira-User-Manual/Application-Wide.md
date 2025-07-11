@@ -78,6 +78,7 @@ You can export the following artifacts from the current product to any other pro
 - risks
 - tasks
 - test cases
+- test sets
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
