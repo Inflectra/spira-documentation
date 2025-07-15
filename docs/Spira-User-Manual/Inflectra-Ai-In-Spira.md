@@ -70,6 +70,7 @@ From the requirement details page you can generate the following content:
 | Task               | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                          | 
 | Scenarios          | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
+| Analysis           | Returns an analysis of the requirement based on a chosen ruleset, such as EARS.|
 
 When generating content for a requirement, the following information is provided to Inflectra.ai:
 
