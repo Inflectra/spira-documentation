@@ -70,7 +70,7 @@ From the requirement details page you can generate the following content:
 | Task               | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                          | 
 | Scenarios          | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps)              | 
 | Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
-| Analysis           | Returns an analysis of the requirement based on a chosen ruleset, such as EARS.|
+| EARS Analysis           | Returns an analysis of the requirement based on the EARS ruleset.*|
 
 When generating content for a requirement, the following information is provided to Inflectra.ai:
 
@@ -80,6 +80,10 @@ When generating content for a requirement, the following information is provided
 - Any existing requirement steps
 - Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
 - The product name of the product the requirement is in
+
+!!! info "*EARS Analysis"
+
+    EARS stands for "the Easy Approach to Requirements Syntax", which you can learn more about [here]()
 
 ### Test Case details page
 From the test case details page you can generate the following content:
