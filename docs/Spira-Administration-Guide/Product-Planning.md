@@ -32,7 +32,6 @@ The Planning Options page lets you configure the schedule and calendar options f
 ![](img/Product_Planning_TasksIncidents.png)
 
 - **Default Effort**: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.
-- **Time Tracking**: Spira™ has integrated [time tracking](../Spira-User-Manual/Timesheets.md) for users to enter hours spent on assigned incidents and tasks. This setting allows administrators to specify if they want these features enabled for both incidents or tasks (or neither).
 
 ### Kanban Work In Progress Limits
 ![](img/Product_Planning_WIP.png)

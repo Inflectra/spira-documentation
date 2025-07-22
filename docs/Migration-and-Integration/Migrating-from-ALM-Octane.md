@@ -1,7 +1,7 @@
 #  Migrating from ALM Octane
 This page outlines how to use the ALM Octane Migration Tool to import projects from OpenText ALM Octane into Spira.
 
-Note that this should not be confused with "traditional" **OpenText ALM**, which has its own, [separate migration tool](Migrating-from-HP-ALM/).
+Note that this should not be confused with "traditional" **OpenText ALM**, which has its own, [separate migration tool](./Migrating-from-HP-ALM.md).
 
 !!! info "What can be imported from ALM Octane?"
     The migration tool will currently import the following artifacts:

@@ -510,7 +510,7 @@ Boards also have a number of other useful features:
 The toolbar configuration button (cogs) lets you control how the board will look and what data it will show. Different boards may show different options, but in general you can:
 
 - Set the **display type** (some boards only): for example the Planning Board has three options here "Product Backlog", "Release Backlog", and "Sprint Backlog"
-- Filter the **release** to either show items across all releases, or a specific release (or, if relevant, a sprint)
+- Filter the **release** to either show items across all releases, or a specific release (or, if relevant, a sprint). Only active releases[^active-release] are shown, and with "All Releases" only cards that have an active release are shown.
 - Choose a field for **columns** so that each column is a value of that field. Note that the options available may change based off the display type and release selected
 - Choose a field for **rows** to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected
 - Choose a **group** option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you
@@ -519,7 +519,7 @@ The toolbar configuration button (cogs) lets you control how the board will look
 
 [^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release
 
-
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
 #### Board card options
 The toolbar card customization button (a mini card) lets you customize what information will be visible on the cards. You will always see the following information on a card:

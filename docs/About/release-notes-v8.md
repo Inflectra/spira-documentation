@@ -6,7 +6,7 @@
     - Saving from a details page is now more user friendly, only asking you to save when there are relevant changes to the current artifact.
     
 ??? success "New Features"
-    - Export a Test Set to another product
+    - [Export a Test Set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product)
 
         - As a test set user, I can export a test set to another product I am a member of with valid permissions in [RQ:5342]
         - As a test set user, I can export a test set with its test cases to another product I am a member of, that uses a different template [RQ:5343]
@@ -37,14 +37,14 @@
     - Fix associating requirements to tests cases in other products so that you can not do so when the other product is inactive [IN:11001]
     - Fix broken links in the 8.11 Product Tour [IN:11180]
     - Fix not being able to delete a custom list if a custom property using it is deleted but was "linked" to a workflow step (required, hidden, disabled) [IN:6266]
-    - Fix product boards showing items assigned to closed releases when "All Releases" is selected (items should instead be hidden) [IN:10585]
+    - Fix [product boards](../Spira-User-Manual/Application-Wide.md/#board-configuration-options) showing items assigned to closed releases when "All Releases" is selected (items should instead be hidden) [IN:10585]
     - Fix Subversion repos that have leading folders with spaces not showing commit files correctly [IN:11107]
     - Fix Test Case API endpoints in all API versions to allow associations with requirements from associated products [IN:11029]
     - Fix the API to not fail creating a user profile when a 'Middle Initial' of more than one character is provided [IN:11060]
     - Fix the v7 API for updating a user to properly update the user's information [IN:11282]
     - Improve horizontal scrolling on pages with tables or boards that can extend beyond the edge of the screen, by having the table or board scroll and not the whole page [IN:11285]
-    - Improve performance of the test run list page by improving the way the data is retrieved to use fewer resources [IN:11164]
-    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > planning options page) [IN:11017]
+    - Improve performance of the [test run list page](../Spira-User-Manual/Test-Run-Management.md/#test-run-list) by improving the way the data is retrieved to use fewer resources [IN:11164]
+    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task--incidents)) [IN:11017]
 
 
 ## Version 8.11 (June 2025)

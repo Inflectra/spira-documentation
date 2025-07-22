@@ -315,9 +315,13 @@ Read about [how the comments works](Application-Wide.md#comments)
 
 Read about [how to export artifacts from one product to another](Application-Wide.md/#export-to-another-product).
 
-This will copy the Test Set along with its Test Cases and Test Steps. In case any of the Test Cases have a linked Test Step, they will also be copied to the destination product. 
+This will copy the Test Set along with its Test Cases and Test Steps. In case any of the Test Cases have a linked Test Step, they will also be copied to the destination product. Parameters will also be exported. 
 
-Please note that the copied Test Cases are placed in a folder named after the Test Set token (`[TX:123]`). Also, note that if you export the same Test Set more than once, or export a different Test Set that contains a Test Step with a link to the same Test Case, it will get duplicated in the destination product.
+Please note:
+
+- Copied Test Cases are placed in a folder named after the Test Set token (`[TX:123]`)
+- If you export the same Test Set more than once, it will get duplicated in the destination product as it will its test cases
+- These properties of the Test Set are not exported: Automation Host, Test Configuration
 
 ### Test Runs
 
