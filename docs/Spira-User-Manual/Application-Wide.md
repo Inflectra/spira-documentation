@@ -78,10 +78,18 @@ You can export the following artifacts from the current product to any other pro
 - risks
 - tasks
 - test cases
+- test sets
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
-*Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.*
+**Note**: 
+
+- when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
+- The artifact's embedded images are part of the source product. When the artifact (except for test sets) is being moved to another product, the embedded images are still a part of the source product (while
+attachments being exported together with artifact). There are two solutions:
+
+   - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
+   - Re-attach the images so these can be copied over to the destination product and become a part of it
 
 To export one or more of a particular artifact:
 
@@ -602,4 +610,4 @@ Click on a card to select it. Click on more cards to add them to your selection.
 
 **Editing cards**: users with bulk edit permissions can edit a planning board card at any time when viewing the popup of that card (this includes letting you add a new comment). To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
     
-**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
+**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card. 
