@@ -82,7 +82,11 @@ When generating content for a requirement, the following information is provided
 - The product name of the product the requirement is in
 
 #### EARS Analysis
-*EARS stands for "the Easy Approach to Requirements Syntax", which you can learn more about [here]()
+
+!!! info "*EARS"
+    EARS stands for the Easy Approach to Requirements Syntax, which is a system for writing straightforward requirements.
+
+The analysis includes a score from 1 to 5 and tells you how to improve the requirement using the EARS ruleset. This way, it can help make your requirements clear and concise for developers, testers, and other stakeholders. A score of 5 is given when the requirement is fully aligned with EARS, and 1 is given when it needs significant work to be usable.
 
 ### Test Case details page
 From the test case details page you can generate the following content:
