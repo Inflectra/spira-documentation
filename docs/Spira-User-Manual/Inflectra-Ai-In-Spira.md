@@ -60,17 +60,18 @@ Please see [our page on responsible AI usage](https://www.inflectra.com/Company/
 On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. 
 
 ### Requirement details page
-From the requirement details page you can generate the following content: 
 
 ![](img/Inflectra_ai_requirements_details.png)
 
-| Generated Content  | Description                                                                                                   |
-|--------------------|---------------------------------------------------------------------------------------------------------------|
-| Test Cases         | Creates a set of test cases with steps to cover this requirement, to get a head start on test planning        | 
-| Task               | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                          | 
-| Scenarios          | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps)              | 
-| Risks              | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                      | 
-| EARS Analysis           | Returns an analysis of the requirement based on the EARS ruleset, to help fine-tune your requirements.*|
+#### Content Generation from Requirements
+From the requirement details page you can generate the following content: 
+
+| Generated Content | Description                                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Cases        | Creates a set of test cases with steps to cover this requirement, to get a head start on test planning                                           |
+| Task              | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                               |
+| Scenarios         | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps) |
+| Risks             | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                          |
 
 When generating content for a requirement, the following information is provided to Inflectra.ai:
 
@@ -81,22 +82,30 @@ When generating content for a requirement, the following information is provided
 - Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
 - The product name of the product the requirement is in
 
-#### EARS Analysis
+#### Requirement Analysis
+From the requirement details page you can analyze the requirement to see how well it is written and organized, based off specific frameworks. This provides valuable insights into the quality of the text and how effectively it may communicate its meaning to others.
 
+The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
+
+
+| Analytical framework | Description                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| EARS                 | Provides an analysis of the requirement based on the EARS ruleset |
+
+#### EARS
 !!! info "*EARS"
-    EARS stands for the Easy Approach to Requirements Syntax, which is a system for writing straightforward requirements.
+    The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.
 
-The analysis includes a score from 1 to 5 and tells you how to improve the requirement using the EARS ruleset. This way, it can help make your requirements clear and concise for developers, testers, and other stakeholders. A score of 5 is given when the requirement is fully aligned with EARS, and 1 is given when it needs significant work to be usable.
 
 ### Test Case details page
 From the test case details page you can generate the following content:
 
 ![](img/Inflectra_ai_testcase_details.png)
 
-| Generated Content  | Description                                                                                                                                  | 
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Test Steps         | Creates test steps to anticipate some of the individual items that will need to be tested to cover the test case topic                       | 
-| Requirement        | Creates requirement for the functionality this test case is going to cover, especially useful within TDD (Test Driven Development) processes | 
+| Generated Content | Description                                                                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Test Steps        | Creates test steps to anticipate some of the individual items that will need to be tested to cover the test case topic                       |
+| Requirement       | Creates requirement for the functionality this test case is going to cover, especially useful within TDD (Test Driven Development) processes |
 
 When generating content for a test case, the following information is provided to Inflectra.ai:
 
@@ -115,10 +124,10 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
 ![](img/Inflectra_ai_task_details.png)
 
-| Generated Content                   | Description| 
-|-------------------------------------|------------|
-| Document (code file)                | Generates a code snippet in the specified programming language, to allow the user to get a head start on development or get pointed in the right direction in terms of applicable APIs | 
-| Document (unit test and code files) | From a given test framework, generates a unit test file and an associated code snippet that can be used to cover that code snippet. Programming language is determined by the testing framework provided, however you can specify that if the testing framework spans multiple languages | 
+| Generated Content                   | Description                                                                                                                                                                                                                                                                              |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Document (code file)                | Generates a code snippet in the specified programming language, to allow the user to get a head start on development or get pointed in the right direction in terms of applicable APIs                                                                                                   |
+| Document (unit test and code files) | From a given test framework, generates a unit test file and an associated code snippet that can be used to cover that code snippet. Programming language is determined by the testing framework provided, however you can specify that if the testing framework spans multiple languages |
 
 !!! tip "Generating code"
     When generating code, you are prompted to pick a programming language or a testing framework.
@@ -136,9 +145,9 @@ From the risk details page (SpiraTeam and SpiraPlan only) you can generate the f
 
 ![](img/Inflectra_ai_risk_details.png)
 
-| Generated Content  | Description                                         |
-|--------------------|-----------------------------------------------------|
-| Risk Mitigations   | Generates mitigations for the current risk          | 
+| Generated Content | Description                                |
+| ----------------- | ------------------------------------------ |
+| Risk Mitigations  | Generates mitigations for the current risk |
 
 When generating content for a risk, the following information is provided to Inflectra.ai:
 
@@ -163,12 +172,12 @@ From the requirements list page (both the hierarchical and sortable pages) you c
 
 ![](img/Inflectra_ai_requirements_list.png)
 
-| Generated Content  | Description                                                                                                   |
-|--------------------|---------------------------------------------------------------------------------------------------------------|
-| Test Cases         | Creates a set of test cases with steps to cover each requirement, to get a head start on test planning        | 
-| Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                          | 
-| Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)              | 
-| Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                      | 
+| Generated Content  | Description                                                                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Test Cases         | Creates a set of test cases with steps to cover each requirement, to get a head start on test planning                                                 |
+| Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                                     |
+| Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)      |
+| Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                  |
 | Child requirements | Generates child requirements for each selected requirement, to split them up into distinct user stories (available on the hierarchical list page only) |
 
 When generating content for a requirement on the list page, the following information is provided to Inflectra.ai:

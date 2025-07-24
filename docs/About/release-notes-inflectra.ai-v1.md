@@ -2,7 +2,7 @@
 
 ## July 25 2025
 !!! success "New Features"
-    - **[Requirement analysis against EARS](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#ears-analysis)**
+    - **[Requirement analysis against EARS](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#ears)**
         - As a requirement user, I see a button to analyze the current requirement against "EARS" on the Inflectra.ai sidebar of the details page [RQ:5353]
         - As a requirement user, when I use Inflectra.ai to analyze a requirement, I can analyze it using EARS, to give me a score out of 5 about the requirement [RQ:5355]
         - As a requirement user, when I use Inflectra.ai to analyze a requirement, I can analyze it using EARS, to give me guidance about how I can improve the requirement [RQ:5359]
