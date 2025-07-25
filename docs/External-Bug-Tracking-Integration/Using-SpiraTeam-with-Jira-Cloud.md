@@ -23,11 +23,11 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 
 | Sync Mode      | Releases       | Requirements   | Incidents                                     | Tasks                                         |
 | -------------- | -------------- | -------------- | --------------------------------------------- | --------------------------------------------- |
-| Default        | Jira <-> Spira | Jira <- Spira  | New: Jira <-> Spira<br>Updates: Jira -> Spira | New: Jira -> Spira<br>Updates: Jira <- Spira  |
-| Bidirectional  | Jira <-> Spira | Jira <- Spira  | Jira <-> Spira                                | New: Jira -> Spira<br>Updates: Jira <- Spira  |
+| Default        | Jira <-> Spira | Jira -> Spira  | New: Jira <-> Spira<br>Updates: Jira -> Spira | New: Jira <- Spira<br>Updates: Jira -> Spira  |
+| Bidirectional  | Jira <-> Spira | Jira -> Spira  | Jira <-> Spira                                | New: Jira <- Spira<br>Updates: Jira -> Spira  |
 | Complete       | Jira <-> Spira | Jira <-> Spira | Jira <-> Spira                                | Jira <-> Spira                                |
-| NoRequirements | Jira <-> Spira | (not synced)   | New: Jira -> Spira<br>Updates: Jira <- Spira  | New: Jira -> Spira<br>Updates: Jira <- Spira  |
-| NoIncidents    | Jira <-> Spira | Jira <- Spira  | (not synced)                                  | New: Jira -> Spira<br>Updates: Jira <-> Spira |
+| NoRequirements | Jira <-> Spira | (not synced)   | New: Jira <- Spira<br>Updates: Jira -> Spira  | New: Jira <- Spira<br>Updates: Jira -> Spira  |
+| NoIncidents    | Jira <-> Spira | Jira -> Spira  | (not synced)                                  | New: Jira <- Spira<br>Updates: Jira -> Spira |
 
 Notes about syncing:
 
