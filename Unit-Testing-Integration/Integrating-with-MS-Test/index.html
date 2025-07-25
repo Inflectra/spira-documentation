@@ -9089,7 +9089,7 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
 <span class="w">        </span><span class="c1">/// Test fixture state</span>
 <span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
-<span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
 <span class="w">        </span><span class="c1">/// Constructor method</span>
@@ -9099,7 +9099,7 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <span class="w">            </span><span class="c1">//Delegates to base</span>
 
 <span class="w">            </span><span class="c1">//Set the state to 2</span>
-<span class="w">            </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">            </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9111,10 +9111,10 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SampleFail</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Failure Assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9126,10 +9126,10 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SamplePass</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Successful assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9142,10 +9142,10 @@ to begin using your MS-Test test fixtures with SpiraTest.</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SampleIgnore</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Failure Assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -9187,7 +9187,7 @@ to record the MS-Test test run are illustrated below:</p>
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
 <span class="w">        </span><span class="c1">/// Test fixture state</span>
 <span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
-<span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
 <span class="w">        </span><span class="c1">/// Constructor method</span>
@@ -9197,7 +9197,7 @@ to record the MS-Test test run are illustrated below:</p>
 <span class="w">            </span><span class="c1">//Delegates to base</span>
 
 <span class="w">            </span><span class="c1">//Set the state to 2</span>
-<span class="w">            </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">            </span><span class="n">testFixtureState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9211,10 +9211,10 @@ to record the MS-Test test run are illustrated below:</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SampleFail</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Failure Assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9227,10 +9227,10 @@ to record the MS-Test test run are illustrated below:</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SamplePass</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Successful assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Passed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
@@ -9243,10 +9243,10 @@ to record the MS-Test test run are illustrated below:</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SampleIgnore</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Verify the state</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">testFixtureState</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*Real Error*: State not persisted&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">//Failure Assertion</span>
-<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="n">AreEqual</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Failed as Expected&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>

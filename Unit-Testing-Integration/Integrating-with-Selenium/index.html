@@ -9092,7 +9092,7 @@ Selenium with SpiraTest:</p>
 <span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetupTest</span><span class="p">()</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">//Instantiate the selenium .NET proxy</span>
-<span class="w">            </span><span class="n">selenium</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultSelenium</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4444</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*iexplore&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;http://www.google.com&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">selenium</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultSelenium</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">4444</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*iexplore&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;http://www.google.com&quot;</span><span class="p">);</span>
 <span class="w">            </span><span class="n">selenium</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 
@@ -9230,29 +9230,29 @@ back to SpiraTest as 'Selenium' rather than "PyUnit' so you can
 distinguish between them.</p>
 <p>Supplied with the SpiraTest PyUnit extension is a sample test for using
 Selenium with SpiraTest:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">selenium</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">spiratestextension</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">selenium</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">spiratestextension</span>
 
 <span class="c1">#   A sample Selenium test using the ability to return results back to SpiraTest</span>
 <span class="c1">#</span>
 <span class="c1">#   Author      Inflectra Corporation</span>
 <span class="c1">#   Version     2.3.0</span>
 <span class="c1">#</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">TestSeleniumSample</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">TestSeleniumSample</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
     <span class="n">seleniumHost</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
     <span class="n">seleniumPort</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">4444</span><span class="p">)</span>
     <span class="n">browserStartCommand</span> <span class="o">=</span> <span class="s2">&quot;*firefox&quot;</span>
     <span class="n">browserURL</span> <span class="o">=</span> <span class="s2">&quot;http://www.google.com&quot;</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span> <span class="s2">&quot;Using selenium server at &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumHost</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumPort</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span> <span class="o">=</span> <span class="n">selenium</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seleniumHost</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">seleniumPort</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">browserStartCommand</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">browserURL</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">testGoogle__4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">testGoogle__4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">selenium</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span>
         <span class="n">selenium</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://www.google.com/webhp?hl=en&quot;</span><span class="p">)</span>
 
@@ -9266,7 +9266,7 @@ Selenium with SpiraTest:</p>
         <span class="n">selenium</span><span class="o">.</span><span class="n">wait_for_page_to_load</span><span class="p">(</span><span class="s2">&quot;5000&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;Selenium OpenQA - Google Search&quot;</span><span class="p">,</span> <span class="n">selenium</span><span class="o">.</span><span class="n">get_title</span><span class="p">())</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">selenium</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
 <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSeleniumSample</span><span class="p">)</span>

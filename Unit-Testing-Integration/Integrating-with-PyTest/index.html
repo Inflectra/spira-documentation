@@ -9047,22 +9047,22 @@ need to do is configure the extension, then you can begin testing!</p>
 It assumes that you are familiar with pytest, and already have some
 working tests configured.</p>
 <p>Here is a sample test file:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
 
 <span class="c1"># Function we are testing</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
 
 <span class="c1"># Successful test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_1</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">test_add_1</span><span class="p">():</span>
   <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
 <span class="c1"># Failed test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_2</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">test_add_2</span><span class="p">():</span>
   <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
 <span class="c1"># Failed test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_3</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">test_add_3</span><span class="p">():</span>
   <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
 </code></pre></div>
 <p>Note how test_add_2 is used in the configuration file discussed below.</p>
