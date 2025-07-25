@@ -86,7 +86,6 @@ These buttons let you to validate your settings and preview the generated sprint
 
 - **Validate Sprint Details:** It is very important to use this button to **verify your configurations are valid** before saving. If any validation fails, the app will clearly indicate what needs to be corrected, preventing sprint generation failures for end users on the Release List page.
 - **Preview Details:** Use this button to **see a sample of your sprint names and versions** based on your current template configurations. Notes:
-    - For preview purposes, tokens like `{release}`, `{product}`, and `{version}` use static example values (e.g., 'R1' for release, 'ProdX' for product, '1.0' for version). The actual values will be used during final sprint generation.
     - The preview will display a maximum of the first four example names and versions.
     - If your settings are invalid, a pop-up error will inform you which fields need to be fixed, and no preview will be available.
 
@@ -117,7 +116,7 @@ Here is a detailed worked example demonstrating how to configure the SpiraApp fo
 
 **Preview:**
 
-Assuming the product is called "Web App", the chosen release is called "Release 1", the chosen release has a version number of "1", and a starting date of June 20, 2025, here's what the generated sprints *would look like* in the preview:
+Assuming the product is called "Web App", the chosen release is called "Release 1", the chosen release has a version number of "1.0", and a starting date of June 20, 2025, here's what the generated sprints *would look like* in the preview:
 
 | Sprint Names                          | Sprint Version Numbers |
 | :------------------------------------ | :--------------------- |
