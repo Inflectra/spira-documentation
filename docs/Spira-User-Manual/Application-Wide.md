@@ -278,6 +278,8 @@ You can also associate an existing document (that's already stored in SpiraPlan)
 
 You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
 
+!!! info "Maximum file size"
+    The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.
 
 ### History
 
