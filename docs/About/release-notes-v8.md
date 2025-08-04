@@ -1,5 +1,52 @@
 # Release Notes for Spira v8
 
+## Version 8.12 (August 2025)
+!!! info "Summary"
+    - Users can now export test sets to another product, including all test cases, steps, parameters, and attachments.
+    - Saving from a details page is now more user friendly, only asking you to save when there are relevant changes to the current artifact.
+    
+??? success "New Features"
+    - [Export a Test Set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product)
+
+        - As a test set user, I can export a test set to another product I am a member of with valid permissions in [RQ:5342]
+        - As a test set user, I can export a test set with its test cases to another product I am a member of, that uses a different template [RQ:5343]
+        - As a test set user, I can export a test set with its test cases to another product I am a member of, that uses the same template [RQ:5344]
+        - As a test set user, I can export a test set with its test cases and parameters to another product I am a member of [RQ:5345]
+        - As a test set user, I can export a test set with its test cases and test set test case owners to another product I am a member of [RQ:5346]
+        - As a test set user, I can export a test set with its test cases and linked test steps to another product I am a member of [RQ:5183]
+        - As a test set user, I can see embedded images in Rich Text fields of an exported test set with its test cases and test steps in another product I am a member of [RQ:5358]
+        - As a test set user, I can see attachments in an exported test set with its test cases and test steps in another product I am a member of [RQ:5352]
+
+    - Improved save button on details pages
+
+        - As an artifact editor, when I update an artifact's dropdown on its details page, the save button is only enabled if there are actual changes [RQ:5327]
+        - As an artifact editor, when I update an artifact's text or number field on its details page, the save button is only enabled if there are actual changes [RQ:5328]
+        - As an artifact editor, when I update an artifact's boolean field on its details page, the save button is only enabled if there are actual changes [RQ:5329]
+        - As an artifact editor, when I update an artifact's tag field on its details page, the save button is only enabled if there are actual changes [RQ:5330]
+        - As an artifact editor, when I update an artifact's date field on its details page, the save button is only enabled if there are actual changes [RQ:5331]
+        - As an artifact editor, when I update an artifact's status on its details page, the save button is only enabled if there are actual changes [RQ:5332]
+        - As an artifact editor, when I first go to an artifact's details page, the save button is disabled until I make any changes [RQ:5333]
+        - As an artifact editor, when I refresh an artifact's details page, the save button is disabled until I make any changes [RQ:5334]
+        - As an artifact editor, when I navigate between artifact's details page using the sidebar, the save button is disabled afresh for each new artifact [RQ:5336]
+
+??? bug "Bug fixes and enhancements"
+    - Add an API call that lets users add an array of test steps, to improve latency when uploading test steps in order [IN:11031]
+    - Allow users to link an existing incident to a test run step when they have test run create permission [IN:10703]
+    - Define new custom Jira dataSync default property values to improve the experience for users on new installations [IN:11026]
+    - Fix a typo in the application onboarding tour in the "Get to know SpiraPlan" > "Artifacts" Section [IN:9700]
+    - Fix associating requirements to tests cases in other products so that you can not do so when the other product is inactive [IN:11001]
+    - Fix broken links in the 8.11 Product Tour [IN:11180]
+    - Fix not being able to delete a custom list if a custom property using it is deleted but was "linked" to a workflow step (required, hidden, disabled) [IN:6266]
+    - Fix [product boards](../Spira-User-Manual/Application-Wide.md/#board-configuration-options) showing items assigned to closed releases when "All Releases" is selected (items should instead be hidden) [IN:10585]
+    - Fix Subversion repos that have leading folders with spaces not showing commit files correctly [IN:11107]
+    - Fix Test Case API endpoints in all API versions to allow associations with requirements from associated products [IN:11029]
+    - Fix the API to not fail creating a user profile when a 'Middle Initial' of more than one character is provided [IN:11060]
+    - Fix the v7 API for updating a user to properly update the user's information [IN:11282]
+    - Improve horizontal scrolling on pages with tables or boards that can extend beyond the edge of the screen, by having the table or board scroll and not the whole page [IN:11285]
+    - Improve performance of the [test run list page](../Spira-User-Manual/Test-Run-Management.md/#test-run-list) by improving the way the data is retrieved to use fewer resources [IN:11164]
+    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task--incidents)) [IN:11017]
+
+
 ## Version 8.11 (June 2025)
 !!! success "New Features"
     - **Timesheets**

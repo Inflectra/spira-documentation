@@ -63,6 +63,9 @@ The `Add New` button has a dropdown with more options - each option shows you a 
 
 Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.
 
+!!! info "Maximum file size"
+    The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.
+
 #### Add New Inline Documents
 The `Add New` dropdown has options for creating several files that are not uploaded at all. Instead you choose a file name (and enter description and tag and type information), then when you click "Add" you are taken straight to the blank document, so you can start editing it live inside SpiraPlan itself from the [document details](#edit) page.
 

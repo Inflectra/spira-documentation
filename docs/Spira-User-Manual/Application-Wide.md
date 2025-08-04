@@ -78,10 +78,18 @@ You can export the following artifacts from the current product to any other pro
 - risks
 - tasks
 - test cases
+- test sets
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
-*Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.*
+**Note**: 
+
+- when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
+- The artifact's embedded images are part of the source product. When the artifact (except for test sets) is being moved to another product, the embedded images are still a part of the source product (while
+attachments being exported together with artifact). There are two solutions:
+
+   - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
+   - Re-attach the images so these can be copied over to the destination product and become a part of it
 
 To export one or more of a particular artifact:
 
@@ -270,6 +278,8 @@ You can also associate an existing document (that's already stored in SpiraPlan)
 
 You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
 
+!!! info "Maximum file size"
+    The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.
 
 ### History
 
@@ -502,7 +512,7 @@ Boards also have a number of other useful features:
 The toolbar configuration button (cogs) lets you control how the board will look and what data it will show. Different boards may show different options, but in general you can:
 
 - Set the **display type** (some boards only): for example the Planning Board has three options here "Product Backlog", "Release Backlog", and "Sprint Backlog"
-- Filter the **release** to either show items across all releases, or a specific release (or, if relevant, a sprint)
+- Filter the **release** to either show items across all releases, or a specific release (or, if relevant, a sprint). Only active releases[^active-release] are shown, and with "All Releases" only cards that have an active release are shown.
 - Choose a field for **columns** so that each column is a value of that field. Note that the options available may change based off the display type and release selected
 - Choose a field for **rows** to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected
 - Choose a **group** option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you
@@ -511,7 +521,7 @@ The toolbar configuration button (cogs) lets you control how the board will look
 
 [^unassigned-data]: The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release
 
-
+[^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
 #### Board card options
 The toolbar card customization button (a mini card) lets you customize what information will be visible on the cards. You will always see the following information on a card:
@@ -602,4 +612,4 @@ Click on a card to select it. Click on more cards to add them to your selection.
 
 **Editing cards**: users with bulk edit permissions can edit a planning board card at any time when viewing the popup of that card (this includes letting you add a new comment). To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).
     
-**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  
+**Add new cards**: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card. 

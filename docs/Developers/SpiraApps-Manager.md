@@ -120,6 +120,9 @@ SpiraApps are able to make API calls to Spira on behalf of the current user, to 
 
 Note that this function is carried out client side so it does have access to any system settings.
 
+!!! info "Using the body parameter correctly"
+    When making POST requests, you should stringify any object before you pass it as the **body** parameter. When making PUT requests, you should pass the object itself as the **body** parameter, without turning it into a string.
+
 === "Explanation"
     - **pluginName**: name of the plugin - not currently used (string)
     - **apiVersion**: override the default API version number used (currently v6) if required (string, in the form of "6.0")
@@ -132,7 +135,8 @@ Note that this function is carried out client side so it does have access to any
 === "Example"
 
     ```js hl_lines="9-17" linenums="1" title="myApp.js > executeApi"
-    const updatedIncidentBody = JSON.stringify(updatedIncidentObject);
+    // Do not turn the object into a string for PUT requests.
+    const updatedIncidentBody = updatedIncidentObject;
     const url = `projects/${spiraAppManager.projectId}/incidents/${spiraAppManager.artifactId}`;
     function incidentRetrieve_Success (response) { ... }
     function incidentRetrieve_Failure (response) { ... }
