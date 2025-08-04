@@ -9445,6 +9445,10 @@
 <h2 id="internal-api-calls">Internal API calls<a class="headerlink" href="#internal-api-calls" title="Permanent link">&para;</a></h2>
 <p>SpiraApps are able to make API calls to Spira on behalf of the current user, to allow rich and powerful automation. Authentication of the user, including their permissions and other security checks are handled by the spiraAppManager. This makes it very easy to safely perform actions, but the SpiraApp will need to correctly handle any errors.</p>
 <p>Note that this function is carried out client side so it does have access to any system settings.</p>
+<div class="admonition info">
+<p class="admonition-title">Using the body parameter correctly</p>
+<p>When making POST requests, you should stringify any object before you pass it as the <strong>body</strong> parameter. When making PUT requests, you should pass the object itself as the <strong>body</strong> parameter, without turning it into a string.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="explanation_2" name="__tabbed_4" type="radio" /><input id="example_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="explanation_2">Explanation</label><label for="example_2">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -9484,15 +9488,17 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">updatedIncidentBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">updatedIncidentObject</span><span class="p">);</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Do not turn the object into a string for PUT requests.</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">updatedIncidentBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">updatedIncidentObject</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`projects/</span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">projectId</span><span class="si">}</span><span class="sb">/incidents/</span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">artifactId</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">incidentRetrieve_Success</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">incidentRetrieve_Failure</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 
 <span class="cm">/*spiraAppManager.executeApi(</span>
 <span class="cm">    pluginName, apiVersion, method, url, body, successFunction, errorFunction</span>
-<span class="cm">);*/</span>
-<span class="hll"><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">executeApi</span><span class="p">(</span>
+<span class="hll"><span class="cm">);*/</span>
+</span><span class="hll"><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">executeApi</span><span class="p">(</span>
 </span><span class="hll"><span class="w">    </span><span class="s2">&quot;mySpiraApp&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="s2">&quot;7.0&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span>
@@ -9500,8 +9506,8 @@
 </span><span class="hll"><span class="w">    </span><span class="nx">updatedIncidentBody</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="nx">incidentRetrieve_Success</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="nx">incidentRetrieve_Failure</span>
-</span><span class="hll"><span class="p">);</span>
-</span>
+</span><span class="p">);</span>
+
 <span class="c1">//Uses JS Fetch API - returns the body of the API call already serialized to JSON or JSON Array   </span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">asAPromise</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResponseBody</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">executeApiAsync</span><span class="p">(</span>
 <span class="w">    </span><span class="s2">&quot;mySpiraApp&quot;</span><span class="p">,</span>

@@ -9855,9 +9855,21 @@
 <li>risks</li>
 <li>tasks</li>
 <li>test cases</li>
+<li>test sets</li>
 </ul>
 <p>The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).</p>
-<p><em>Note: when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.</em></p>
+<p><strong>Note</strong>: </p>
+<ul>
+<li>when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.</li>
+<li>
+<p>The artifact's embedded images are part of the source product. When the artifact (except for test sets) is being moved to another product, the embedded images are still a part of the source product (while
+attachments being exported together with artifact). There are two solutions:</p>
+</li>
+<li>
+<p>Give the user access to source product, artifact has been moved from (even read-only to documents artifact)</p>
+</li>
+<li>Re-attach the images so these can be copied over to the destination product and become a part of it</li>
+</ul>
 <p>To export one or more of a particular artifact:</p>
 <ol>
 <li>go to the list page for that artifact in the right product. </li>
@@ -9978,6 +9990,10 @@ Users can delete comments that were made in error or that are no longer relevant
 <p><img alt="" src="../img/Requirements_Management_115.png" /></p>
 <p><img alt="" src="../img/Requirements_Management_116.png" /></p>
 <p>You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.</p>
+<div class="admonition info">
+<p class="admonition-title">Maximum file size</p>
+<p>The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.</p>
+</div>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>This tab displays the list of changes that have been performed on the artifact since its creation. An example change history for a requirement is shown below:</p>
 <p><img alt="" src="../img/Requirements_Management_117.png" /></p>
@@ -10245,7 +10261,7 @@ Users can delete comments that were made in error or that are no longer relevant
 <p>The toolbar configuration button (cogs) lets you control how the board will look and what data it will show. Different boards may show different options, but in general you can:</p>
 <ul>
 <li>Set the <strong>display type</strong> (some boards only): for example the Planning Board has three options here "Product Backlog", "Release Backlog", and "Sprint Backlog"</li>
-<li>Filter the <strong>release</strong> to either show items across all releases, or a specific release (or, if relevant, a sprint)</li>
+<li>Filter the <strong>release</strong> to either show items across all releases, or a specific release (or, if relevant, a sprint). Only active releases<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> are shown, and with "All Releases" only cards that have an active release are shown.</li>
 <li>Choose a field for <strong>columns</strong> so that each column is a value of that field. Note that the options available may change based off the display type and release selected</li>
 <li>Choose a field for <strong>rows</strong> to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected</li>
 <li>Choose a <strong>group</strong> option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you</li>
@@ -10367,12 +10383,15 @@ Users can delete comments that were made in error or that are no longer relevant
 <h4 id="editing-and-viewing-cards">Editing and viewing cards<a class="headerlink" href="#editing-and-viewing-cards" title="Permanent link">&para;</a></h4>
 <p><strong>Viewing cards</strong>: to view more information about the card you can click on the card's name to open a popup with much more detail; or ctrl/cmd+click on the card's name to open the full details page for that artifact. Information shown in the popup includes all standard and custom fields with fields being shown or hidden based on the workflow step that applies to that specific card. Users who cannot bulk edit the artifact but who can add comments can add comments when viewing the card.</p>
 <p><strong>Editing cards</strong>: users with bulk edit permissions can edit a planning board card at any time when viewing the popup of that card (this includes letting you add a new comment). To save any changes you must fill in all required fields. Please note: you cannot change the status in this edit mode, to do so open the artifact's detail page (you can do this from the popup by clicking the button next to the artifact's id at the top).</p>
-<p><strong>Add new cards</strong>: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card.  </p>
+<p><strong>Add new cards</strong>: if you are able to create the primary artifact for a board (e.g. requirements on the Planning Board) then you will see plus ("+") symbols at the top of each board cell. Clicking any of these will open a popup screen with all relevant fields available. Some of these fields may be pre-populated based on what cell you click the add button for. For instance, if your cell is for a specific status and release, both of those fields will preselected. The fields visible and required is driven based on what workflow step will apply to that new card. </p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:unassigned-data">
 <p>The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release&#160;<a class="footnote-backref" href="#fnref:unassigned-data" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:active-release">
+<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
