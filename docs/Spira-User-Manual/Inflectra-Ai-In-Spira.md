@@ -88,13 +88,22 @@ From the requirement details page you can analyze the requirement to see how wel
 The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
 
 
-| Analytical framework | Description                                                                                             |
-| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| Analytical framework | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
 | EARS                 | Provides an analysis of the requirement based on the EARS ruleset |
 
 #### EARS Analysis
 !!! info "*EARS"
     The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.
+
+    Analytical scores are given from 1 to 5 (worst to best). This is a subjective and ultimately qualitative measure but a guide to each score is below:
+
+    - **Score of 5**: perfectly clear, unambiguous, complete, and adheres strictly EARS patterns. It is easily testable and requires no further clarification.
+    - **Score of 4**: largely clear and complete, with minor deviations from EARS. It might be missing a keyword or have a slight structural imperfection, but the intent is still very clear and it's easily understandable and testable.
+    - **Score of 3**: understandable, but has noticeable issues with EARS compliance or clarity. It might be a natural language requirement that could be easily refactored into an EARS pattern, or it has some ambiguity that requires minor clarification.
+    - **Score of 2**: difficult to understand, ambiguous, or incomplete. It significantly deviates from EARS principles, making it hard to interpret the true intent or to test the requirement effectively. It requires substantial rework.
+    - **Score of 1**: poorly written and can not be readily interpreted. It provides little to no actionable information, is highly ambiguous, and offers no discernible path for testing. It may be contradictory.
+
 
 
 ### Test Case details page
