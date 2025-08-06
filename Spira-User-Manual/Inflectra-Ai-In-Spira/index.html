@@ -9487,6 +9487,14 @@
 <div class="admonition info">
 <p class="admonition-title">*EARS</p>
 <p>The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.</p>
+<p>Analytical scores are given from 1 to 5 (worst to best). This is a subjective and ultimately qualitative measure but a guide to each score is below:</p>
+<ul>
+<li><strong>Score of 5</strong>: perfectly clear, unambiguous, complete, and adheres strictly EARS patterns. It is easily testable and requires no further clarification.</li>
+<li><strong>Score of 4</strong>: largely clear and complete, with minor deviations from EARS. It might be missing a keyword or have a slight structural imperfection, but the intent is still very clear and it's easily understandable and testable.</li>
+<li><strong>Score of 3</strong>: understandable, but has noticeable issues with EARS compliance or clarity. It might be a natural language requirement that could be easily refactored into an EARS pattern, or it has some ambiguity that requires minor clarification.</li>
+<li><strong>Score of 2</strong>: difficult to understand, ambiguous, or incomplete. It significantly deviates from EARS principles, making it hard to interpret the true intent or to test the requirement effectively. It requires substantial rework.</li>
+<li><strong>Score of 1</strong>: poorly written and can not be readily interpreted. It provides little to no actionable information, is highly ambiguous, and offers no discernible path for testing. It may be contradictory.</li>
+</ul>
 </div>
 <h3 id="test-case-details-page">Test Case details page<a class="headerlink" href="#test-case-details-page" title="Permanent link">&para;</a></h3>
 <p>From the test case details page you can generate the following content:</p>
