@@ -91,6 +91,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
 | Analytical framework | Description                                                       |
 | -------------------- | ----------------------------------------------------------------- |
 | EARS                 | Provides an analysis of the requirement based on the EARS ruleset |
+| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only) |
 
 #### EARS Analysis
 !!! info "*EARS"
@@ -104,6 +105,12 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
     - **Score of 2**: difficult to understand, ambiguous, or incomplete. It significantly deviates from EARS principles, making it hard to interpret the true intent or to test the requirement effectively. It requires substantial rework.
     - **Score of 1**: poorly written and can not be readily interpreted. It provides little to no actionable information, is highly ambiguous, and offers no discernible path for testing. It may be contradictory.
 
+!!! info "*Improving a description"
+    If a requirement has a score of 2, 3, or 4, you can click the "Improve" button to generate a new description for the requirement. This will use the existing description, along with the already created analysis to provide a new description that is more aligned with the EARS framework. 
+
+    The new description will overwrite the existing one, but the artifact is not saved. You must review the new description to decide whether or not to accept the changes. 
+    
+    Note that screenshots should be preserved in the updated description.
 
 
 ### Test Case details page
