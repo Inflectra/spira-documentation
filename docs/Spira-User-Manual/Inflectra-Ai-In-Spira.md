@@ -94,7 +94,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
 | ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only) |
 
 #### EARS Analysis
-!!! info "*EARS"
+!!! info "EARS"
     The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.
 
     Analytical scores are given from 1 to 5 (worst to best). This is a subjective and ultimately qualitative measure but a guide to each score is below:

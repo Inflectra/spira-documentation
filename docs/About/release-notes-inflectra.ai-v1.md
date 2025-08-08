@@ -8,9 +8,9 @@
         - As a requirement user, when I click the "Improve?" button, I can improve the requirement for EARS using Inflectra.ai [RQ:5362]
     
 !!! bug "Bug fixes and enhancements"
-    Ensure localizations fall back to English for individual strings not currently translated [IN:11403]
-    Improve how Inflectra.ai updates in Spira after a new release by improving its cache expiration mechanisms [IN:11398] and [IN:11402]
-    Improve the consistency of creating artifacts using Inflectra.ai by using an agentic flow to ensure data is correctly formatted more reliably [IN:11252]
+    - Ensure localizations fall back to English for individual strings not currently translated [IN:11403]
+    - Improve how Inflectra.ai updates in Spira after a new release by improving its cache expiration mechanisms [IN:11398] and [IN:11402]
+    - Improve the consistency of creating artifacts using Inflectra.ai by using an agentic flow to ensure data is correctly formatted more reliably [IN:11252]
     
 
 ## July 25 2025
