@@ -1,5 +1,13 @@
 # Release Notes for Spira v8
 
+## Version 8.13 (September 2025)
+!!! info "Summary"
+
+??? success "New Features"
+
+??? bug "Bug fixes and enhancements"
+
+
 ## Version 8.12 (August 2025)
 !!! info "Summary"
     - Users can now export test sets to another product, including all test cases, steps, parameters, and attachments.
