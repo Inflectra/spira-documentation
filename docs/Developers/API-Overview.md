@@ -269,19 +269,59 @@ If something goes wrong with your request, the system will return the error code
 
 !!! danger "Access Denied"
     - Verify the provided username and API Key
+    - Verify the Provided URL is correct (should be similar to https://companyname.spiraservice.net/services/v7_0/RestService.svc/YOUR_API_ENDPOINT)
     - Generate a new API Key ([here's how](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key)) and try again
     - Check if the user is not locked out
     - Check if the user is part of the workspace (product, program, etc.)
+    - Check the syntax: make sure to only use the "?" once in the URL
+    - Temporarily set "Allowed Domains" to * under [security settings](../Spira-Administration-Guide/System.md/#security-settings) so all domains to be allowed
+    - Check the headers: specify the format of data that will be returned (XML or JSON) by passing the correct HTTP Headers (it is safest to always include both "Content-Type" and "Accept" headers)
+
+        ```json
+            Content-Type: application/xml - Sends data in XML format
+            Accept: application/xml - Returns data in XML format
+            Content-Type: application/json - Sends data in JSON format
+            ​​​​​​​Accept: application/json - Returns data in JSON format
+        ```
+
+        !!! tip "When sending data to Spira as XML, you must send all tags in alphabetical order"
+
+        An example basic GET API call should look like: 
+        ```json
+            GET https://COMPANY.spiraservice.net/Services/v7_0/RestService.svc/users?username=administrator&api-key={XXXXXX-YYYY-4D29-ZZZZ-5E300XYZ0AC2}
+            content-type: application/json
+            Accept: application/json
+
+            { body content }
+        ``` 
 
 !!! danger "You need to be a Product Administrator to use this function!"
     - For security reasons, some operations require higher System Administrator privileges. Change the provided credentials to a system administrator one and try again.
 
 !!! danger "Method not allowed"
-    - Check the API documentation to make sure the given method is indeed supported. Example: Trying to use POST, but the method only supports GET.
+    - Check the API documentation to make sure the given method is indeed supported. Example: Trying to use POST, but the method only supports GET
+    - The method is correct, but your network switches/routers aren't allowing it through (for example, there is block on all PUT commands)
 
 !!! danger "Unable to locate requested artifact"
     - Check if the artifact was not deleted
     - Make sure the provided workspaceId (product, program, etc.) matches the artifact's workspaceId
+
+
+!!! danger "An error occurred while updating an entry"
+    - PUT operations must be updated with the most recent version of the artifact only. To ensure this do a GET, update the object in your code, then PUT it 
+    - Make sure the user account has enough permissions to modify the artifact
+    - If you're modifying the execution status of a test case, then consider it can only be updated by recording a new result against it, using  this POST + Automated Test Run API
+    - The test run results are immutable. If you want different results then you should create a new test run for the same release etc., using the API
+
+!!! danger "Error code 405 - HTTP verb used to access this page is not allowed"
+    - Check internal network appliances (routers, proxies) that may be blocking the HTTP method you are using
+    - Make sure the network settings is not blocking REST, or specific verbs, or specific content
+
+!!! danger "HTTP/1.1 409 Conflict"
+    - This usually means either no changes were made in this request, or for some reason the changes you requested could not be made
+    - First retrieve an artifact by it's id using a GET method. Make modifications to the object you are returned from that and then use that on the PUT call
+    - Exact GET response sent back with the modified data will guarantee no explicit parameter is missing from the API call using PUT method
+
 
 ## Learn More
 The following articles explores different use cases for the Spira API:
