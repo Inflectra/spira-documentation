@@ -88,11 +88,12 @@ From the requirement details page you can analyze the requirement to see how wel
 The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
 
 
-| Analytical framework | Description                                                       |
-| -------------------- | ----------------------------------------------------------------- |
-| EARS                 | Provides an analysis of the requirement based on the EARS ruleset |
-| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only) |
-| ... Attachment       | Create a new document with this analysis and attach it to the requirement |
+| Analytical framework | Description                                                                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                  |
+| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                |
+| ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                          |
+| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 2 and 4 only)<br>The owner and priority will be automatically set based on the requirement |
 
 #### EARS Analysis
 !!! info "EARS"
