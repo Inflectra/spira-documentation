@@ -111,8 +111,19 @@ You need to fill in the following fields for the plugin to operate correctly:
     - ***NoRequirements***: enter the word "NoRequirements" to use this mode
     - ***NoIncidents***: enter the word "NoIncidents" to use this mode
     
-    Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option *NoAttachments* to the sync mode field. Example: *NoRequirements,NoAttachments* or simply *NoAttachments* if you use the default mode
+    Optionally, you can enter extra parameters to modify the standard behavior of any sync mode. These parameters are added after the sync mode, separated by commas:
+
+    - **NoAttachments**: Prevents syncing of file attachments between systems
+    - **createReleasesOnly**: Creates new releases/versions but never updates existing ones (useful to prevent the plugin from modifying your Jira versions)
+
+    ***Examples:***
+
+    `Bidirectional,NoAttachments`
     
+    `Complete,NoAttachments,createReleasesOnly`
+    
+    `Default,NoAttachments` (or just `NoAttachments` for default mode)
+
 - **Requirement Types**: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.
 - **Link Type**: This field should either be set to a **single** name of a Jira issue link type or be left blank. If you want the datasync to create links between Jira issues, based on existing associations between Spira incidents and/or requirements, then enter in an issue link type name. If you do not want Jira to create these links between issues based on data in Spira, then leave this field blank. The artifact associations from Spira will sync to Jira as links of that type. All the link types from Jira will sync to Spira as 'Related-to'. You can get the list of issue link types from the following screen in Jira:
 
