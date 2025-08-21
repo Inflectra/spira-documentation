@@ -43,3 +43,16 @@ You can get the Spira [API Key](../HowTo-Guides/Users-profile-management.md/#how
 ![](img/jira-spira-qa-coverage-issue.png)
 
 Note that if the issue does not sync with any Spira requirement you will instead see an info message that says that "This issue is not linked to a Spira requirement."
+
+- Click on the details underneath the mini bar chart to show information about the specific test cases covering the requirement
+- Click on the details section again to hide the test case information
+
+![](img/jira-spira-qa-coverage-issue-expanded.png)
+
+The test cases are shown in the order that matches the mini bar chart. Click on the test case to open it in a new tab For each test case you can see:
+
+- Execution Status (hover over it to see the execution status name and the date of last execution)
+- ID
+- Name
+
+Note that test cases in other products to the requirement will not display properly and will always show with a status of "Not Run".

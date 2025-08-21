@@ -1,6 +1,12 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## August 2025
+- [Jira Spira QA Coverage app](../External-Bug-Tracking-Integration/Jira-Spira-QA-Coverage.md) v2.2.0:
+
+    - New features: 
+        - Improve the addon to optionally show all test cases directly covering a requirement with details about their execution status and date
+
 ## July 2025
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.1.0.0:
 
