@@ -1,5 +1,17 @@
 # Release Notes for Inflectra.ai
 
+## August 22 2025
+!!! success "New Features"
+    - **[Requirement analysis against EARS](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#ears-analysis)**
+        - As a requirement user, when I use Inflectra.ai to analyze a requirement, I can save the analysis as an attachment to the requirement [RQ:5400]
+        - As a requirement user, when I use Inflectra.ai to analyze a requirement, I can create a task against the requirement of how to improve the requirement [RQ:5401]
+    
+!!! bug "Bug fixes and enhancements"
+    - Fix Inflectra.ai action buttons text not being lined wrapped with long phrases or on small screens [IN:11430]
+    - Fix the tag ai-augmented being added multiple times to a requirement if you click to Improve its description more than once in a row [IN:11457]
+    - Stop text wrapping on list page grids when Inflectra.ai is enabled [IN:11468]
+    - Update Inflectra.ai deterministic messages to handle single and plural phrases consistently [IN:11051]
+
 ## August 7 2025
 !!! success "New Features"
     - **[Requirement analysis against EARS](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#ears-analysis)**
