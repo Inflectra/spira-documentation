@@ -9886,7 +9886,15 @@
 <li><strong><em>NoRequirements</em></strong>: enter the word "NoRequirements" to use this mode</li>
 <li><strong><em>NoIncidents</em></strong>: enter the word "NoIncidents" to use this mode</li>
 </ul>
-<p>Optionally, you can avoid the sync of attachments between the systems by adding the extra sync option <em>NoAttachments</em> to the sync mode field. Example: <em>NoRequirements,NoAttachments</em> or simply <em>NoAttachments</em> if you use the default mode</p>
+<p>Optionally, you can enter extra parameters to modify the standard behavior of any sync mode. These parameters are added after the sync mode, separated by commas:</p>
+<ul>
+<li><strong>NoAttachments</strong>: Prevents syncing of file attachments between systems</li>
+<li><strong>createReleasesOnly</strong>: Creates new releases/versions but never updates existing ones (useful to prevent the plugin from modifying your Jira versions)</li>
+</ul>
+<p><strong><em>Examples:</em></strong></p>
+<p><code>Bidirectional,NoAttachments</code></p>
+<p><code>Complete,NoAttachments,createReleasesOnly</code></p>
+<p><code>Default,NoAttachments</code> (or just <code>NoAttachments</code> for default mode)</p>
 </li>
 <li>
 <p><strong>Requirement Types</strong>: This should be set to a comma-separated list of IDs of any Jira issue types that you want to be synchronized with Spira requirements instead of incidents. If you leave this blank, all Jira issue types will be synchronized with incidents (user stories/epics will not be synced at all). This field is ignored when using the sync mode "noIncidents", as Requirements are the main artifact of this mode.</p>
