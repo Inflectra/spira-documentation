@@ -5,7 +5,8 @@
 This SpiraApp:
 
 - automatically highlights Gherkin syntax within Requirement Steps and Test Case Steps
-- automatically highlights Gherkin syntax for Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. 
+- automatically highlights Gherkin syntax for Risk Mitigations
+    {: .edition-spiraplan .edition-spirateam}
 - adds a toolbar button to relevant details pages to export the artifact steps as an attached .feature file. 
 - adds a toolbar button to the document details page, to convert any open .feature file into an artifact with BDD items
 

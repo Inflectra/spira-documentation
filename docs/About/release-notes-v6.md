@@ -127,11 +127,13 @@
 ## Version 6.14 (December 2021)
 
 !!! info "Summary"
-    View, edit, and add releases inline on the [release mindmap](../Spira-User-Manual/Release-Management.md/#mindmap-inline-editing), [release Gantt chart](../Spira-User-Manual/Release-Management.md/#gantt-chart-inline-editing), or [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    View, edit, and add releases inline on the [release mindmap](../Spira-User-Manual/Release-Management.md/#mindmap-inline-editing), [release Gantt chart](../Spira-User-Manual/Release-Management.md/#gantt-chart-inline-editing), or [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each release without leaving the mindmap or Gantt chart, or edit and save changes right there. 
+        {: .edition-spiraplan .edition-spirateam}
 
-    View, edit, and add tasks inline on the [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    View, edit, and add tasks inline on the [task Gantt chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) pages in a new popup View full details about each task without leaving the Gantt chart, or edit and save changes right there. 
+        {: .edition-spiraplan .edition-spirateam}
     
-    Support for two new Single Sign On (SSO) providers:  the popular OneLogin service and a generic OpenID provider. This makes it even easiser to integrate your external authentication system with Spira.
+    Support for two new Single Sign On (SSO) providers:  the popular OneLogin service and a generic OpenID provider. This makes it even easier to integrate your external authentication system with Spira.
 
 ??? success "New Features"
 
@@ -140,13 +142,15 @@
         - OneLogin [RQ:3876]
         - Generic OpenID Connect [RQ:3877]
 
-    * **Product Release List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
+    * **Product Release List Page Changes**
+        {: .edition-spiraplan .edition-spirateam}
 
         - Allow releases to be edited inline on [Release Mind Map View](../Spira-User-Manual/Release-Management.md/#mindmap-inline-editing) [RQ:3716]
         - Allow releases to be edited inline on [Release Gantt Chart](../Spira-User-Manual/Release-Management.md/#gantt-chart-inline-editing) [RQ:3714]
         - Allow releases to be added on the [Release Gantt Chart view](../Spira-User-Manual/Release-Management.md/#release-gantt-chart) [RQ:3715]
 
-    * **Product Task List Page Changes <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>**
+    * **Product Task List Page Changes**
+        {: .edition-spiraplan .edition-spirateam}
 
         - Allow tasks to be edited inline on [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) [RQ:3686]
         - Allow tasks to be added on the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#gantt-chart-inline-editing) [RQ:3713]
@@ -168,8 +172,10 @@
     - Fix the [diagram tab](../Spira-User-Manual/Release-Management.md/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
 
     - Fix details pages for artifacts that use workflows so that the comments settings in the workflow always control the comment box [IN:4917]
-    - Fix the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) not showing child sprints as part of their parent release <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6494]
-    - Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> [IN:6747]
+    - Fix the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) not showing child sprints as part of their parent release [IN:6494]
+        {: .edition-spiraplan .edition-spirateam}
+    - Let users change the release using a dropdown on the Release and Task Gantt Charts. This syncs with release dropdowns used on product home page and elsewhere [IN:6747]
+        {: .edition-spiraplan .edition-spirateam}
 
 
 ## Version 6.13 (November 2021)
@@ -396,7 +402,8 @@
 
     * **Report Customization**
 
-        - Allow access to custom report views via API using the ODATA standard - read our [in-depth tutorial](../Reporting/OData-Tutorial.md) <span class="pill">SpiraPlan</span> [RQ:3037]
+        - Allow access to custom report views via API using the ODATA standard - read our [in-depth tutorial](../Reporting/OData-Tutorial.md) [RQ:3037]
+            {: .edition-spiraplan}
         - Users can have a dedicated [Report Admin role](../Spira-Administration-Guide/System-Users.md/#add-a-new-user), which lets them view, edit, and manage custom reports (in the app, via ODATA, and via the API) [RQ:2984]
 
     * **Other**

@@ -165,11 +165,11 @@
     - resubmit rejected timesheets 
         {: .edition-spiraplan}
     - see the status of a timesheet 
-        {: .edition-spiraplan .edition-spirateam}
+        {: .edition-spiraplan}
     - easily view all their timesheets in a list
 
     [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid. 
-        {: .edition-spirateam}
+        {: .edition-spiraplan}
 
     The [history view](../Spira-User-Manual/Application-Wide.md/#history) now shows detailed tracked changes for any text change, to see what was added, changed, or deleted.
 
