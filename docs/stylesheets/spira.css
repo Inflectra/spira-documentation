@@ -81,3 +81,39 @@
   padding: 0.125rem 0.5rem;
   vertical-align: middle;
 }
+
+/*
+  This CSS uses the :not() pseudo-class to handle three distinct cases:
+  1. An element has ONLY the .edition-spiraplan class.
+  2. An element has ONLY the .edition-spirateam class.
+  3. An element has BOTH .edition-spiraplan and .edition-spirateam classes.
+  This ensures only one pill is ever displayed.
+*/
+
+/* --- Case 1: SpiraPlan ONLY --- */
+[class^='edition-']::after {
+  content: "";
+  background-color: var(--yolk);
+  border-radius: 0.25rem;
+  font-size: 66%;
+  font-weight: bold;
+  padding: 0.125rem 0.5rem;
+  vertical-align: middle;
+  color: var(--md-default-fg-color--inverted);
+  margin-left: 0.5em;
+  display: inline-block;
+}
+
+.edition-spiraplan:not(.edition-spirateam)::after {
+  content: "SpiraPlan";
+}
+
+/* --- Case 2: SpiraTeam ONLY --- */
+.edition-spirateam:not(.edition-spiraplan)::after {
+  content: "SpiraTeam";
+}
+
+/* --- Case 3: BOTH SpiraPlan and SpiraTeam --- */
+.edition-spiraplan.edition-spirateam::after {
+  content: "SpiraTeam / SpiraPlan";
+}

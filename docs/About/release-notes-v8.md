@@ -160,9 +160,16 @@
 
 ## Version 8.7 (February 2025)
 !!! info "Summary"
-    On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can resubmit rejected timesheets, see the status of a timesheet <span class="pill">SpiraPlan</span>, and easily view all their timesheets in a list.
+    On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can:
+    
+    - resubmit rejected timesheets 
+        {: .edition-spiraplan}
+    - see the status of a timesheet 
+        {: .edition-spiraplan .edition-spirateam}
+    - easily view all their timesheets in a list
 
-    [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid <span class="pill">SpiraPlan</span>.
+    [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid. 
+        {: .edition-spirateam}
 
     The [history view](../Spira-User-Manual/Application-Wide.md/#history) now shows detailed tracked changes for any text change, to see what was added, changed, or deleted.
 
