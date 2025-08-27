@@ -1,4 +1,6 @@
 # Program Homepage
+!!! info "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 When you navigate to a Program from the global navigation bar or from any link to it in the application, you will be taken to the homepage of that program:
 
@@ -6,7 +8,8 @@ When you navigate to a Program from the global navigation bar or from any link t
 
 This page summarizes all of the information about the program in a "one-stop-shop". The Program Homepage has 3 versions you can quickly switch between. While each of these can be customized as you want, by default they are designed to help different types of user: general users, those using capabilities, and QA.
 
-<span class="pill">SpiraPlan</span> You can choose to filter relevant widgets by any open program milestone, or to view widgets by the whole program, by using the "Displaying" dropdown at the top of the page to choose either "All Program Milestones" or a specific open program milestone.
+You can choose to filter relevant widgets by any open program milestone, or to view widgets by the whole program, by using the "Displaying" dropdown at the top of the page to choose either "All Program Milestones" or a specific open program milestone.
+    {: .edition-spiraplan}
 
 You will see a small "i" in a circle at the top right of each widget. Hovering or clicking on this will show you information about that chart.
 
@@ -171,17 +174,25 @@ This table shows an information-dense, but easy to understand assessment of each
 - the number of open incidents and the priority distribution of them
 
 ## Capability Open Count 
-<span class="pill">SpiraPlan</span> This chart shows the proportion of capabilities which are open, as well as the breakdown of all open capabilities in the program by priority. The bar chart's bars are colored to match the configured color of each priority. (Works with the program milestone filter at the top of the page).
+!!! info "Available in SpiraPlan"
+
+This chart shows the proportion of capabilities which are open, as well as the breakdown of all open capabilities in the program by priority. The bar chart's bars are colored to match the configured color of each priority. (Works with the program milestone filter at the top of the page).
 
 
 ## Capability Summary
-<span class="pill">SpiraPlan</span> This widget shows a table of capabilities split by their status (on the y axis) and their priority (on the x axis). It provides a count of capabilities with each status/priority combination (for instance, how many capabilities are high priority with a status of to do). Clicking on any of the counts for a given status/priority will open the capability list page filtered to that combination of status and priority. (Works with the program milestone filter at the top of the page).
+!!! info "Available in SpiraPlan"
+
+This widget shows a table of capabilities split by their status (on the y axis) and their priority (on the x axis). It provides a count of capabilities with each status/priority combination (for instance, how many capabilities are high priority with a status of to do). Clicking on any of the counts for a given status/priority will open the capability list page filtered to that combination of status and priority. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Capability Progress
-<span class="pill">SpiraPlan</span> This widget shows a list of all open program milestones. For each program milestone it shows the name (click to see more), number of associated capabilities (click to see more), and its overall progress. (Works with the program milestone filter at the top of the page).
+!!! info "Available in SpiraPlan"
+
+This widget shows a list of all open program milestones. For each program milestone it shows the name (click to see more), number of associated capabilities (click to see more), and its overall progress. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Completion
-<span class="pill">SpiraPlan</span> This chart shows the proportion of planned days remaining as well as the proportion of all active capabilities that have been completed across currently open milestones in this program. It highlights the data in different colors depending on the proportion of capabilities and days remaining, to give an idea of how well program milestones are sticking to their planned timeframes. (Works with the program milestone filter at the top of the page).
+!!! info "Available in SpiraPlan"
+
+This chart shows the proportion of planned days remaining as well as the proportion of all active capabilities that have been completed across currently open milestones in this program. It highlights the data in different colors depending on the proportion of capabilities and days remaining, to give an idea of how well program milestones are sticking to their planned timeframes. (Works with the program milestone filter at the top of the page).
 
 Chart color definitions:
 

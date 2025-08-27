@@ -33,7 +33,8 @@ On this screen, you can:
 - enter information about the user, such as their name, email address, and department
 - make the user a system administrator
 - make the user a report administrator (this allows the user to administer custom reports and graphs. The can create, edit, and delete reports and graphs, and can also access custom report data in 3rd party tools via OData)
-- <span class="pill">SpiraPlan</span> make the user a portfolio viewer. This controls who can access both the homepages of all portfolios and the enterprise homepage
+- make the user a portfolio viewer. This controls who can access both the homepages of all portfolios and the enterprise homepage
+    {: .edition-spiraplan}
 - create their password, password reset question and answer. 
 - if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
 

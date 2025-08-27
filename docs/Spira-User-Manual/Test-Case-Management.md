@@ -24,7 +24,8 @@ Use properties on test cases themselves like their type and component, and test 
 === "Key Artifact Links"
     - **Releases**: each test case can be added to many releases - every release that the test case should be used to provide test coverage / validate
     - **Requirements**: each test case be added to many requirements, in cases where a test case helps validate multiple pieces of functionality 
-    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid
@@ -499,9 +500,11 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
-| Association Tab Of | Available artifacts                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------- |
-| **Test cases**     | Tasks and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
+!!! info "Available in SpiraTeam, SpiraPlan"
+
+| Association Tab Of | Available artifacts  |
+| ------------------ | -------------------- |
+| **Test cases**     | Tasks and Risks      |
 
 Any tasks created during exploratory test execution will automatically be be shown here. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 

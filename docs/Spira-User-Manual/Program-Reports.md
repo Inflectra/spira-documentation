@@ -1,5 +1,7 @@
 # Program Reports
-<span class="pill">SpiraPlan</span> With program level reporting, users can see and generate reports relevant to their program, to help you monitor the progress of work and to analyze current performance.
+!!! info "Available in SpiraPlan"
+
+With program level reporting, users can see and generate reports relevant to their program, to help you monitor the progress of work and to analyze current performance.
 
 ## Reporting Home Page 
 ![](img/program-reports-homepage.png)

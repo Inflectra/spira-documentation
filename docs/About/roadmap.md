@@ -25,7 +25,8 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
     - Automatic sprint notes. Append analysis of the sprint contents to its description in an easily understandable way.
 
 - Allow admins to customize requirement statuses to help them create more flexible workloads.
-- Improve the program level planning boards. <span class="pill">SpiraPlan</span>
+- Improve the program level planning boards.
+    {: .edition-spiraplan}
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
@@ -40,10 +41,13 @@ The list below are features that we are focused on delivering but not in the abo
     - Deeper contextual searching and analysis of artifact data and associations to provide new insights and faster workflows
 
 - **Enhance traceability** with a new requirement view with integrated test case analysis and potentially other artifacts.
-- Evolve **program level functionality** with comment and attachment functionality, and enhanced associations to product level artifacts. <span class="pill">SpiraPlan</span>
+- Evolve **program level functionality** with comment and attachment functionality, and enhanced associations to product level artifacts.
+    {: .edition-spiraplan}
 - Further enhance **administrative audit tracking** with system and template level change tracking.
-- New **product team features** so that members can receive notifications and let users assign a team to artifacts. <span class="pill">SpiraPlan</span>
-- **Portfolio level planning** with "Strategic Outcomes" and "Portfolio Milestones" <span class="pill">SpiraPlan</span>
+- New **product team features** so that members can receive notifications and let users assign a team to artifacts.
+    {: .edition-spiraplan}
+- **Portfolio level planning** with "Strategic Outcomes" and "Portfolio Milestones"
+    {: .edition-spiraplan}
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
 - **Enhanced source code management**: improve integration with Git cloud providers, the ability to tie a branch to a sprint or release.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.

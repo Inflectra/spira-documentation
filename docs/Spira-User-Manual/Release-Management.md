@@ -19,7 +19,8 @@ Spira uses releases and sprints differently. Sprints cannot have child releases/
 === "Key Artifact Links"
     - Almost every artifact can have a release set on it, to denote when the work is planned, or what release it relates to
     - **Builds**: results of CI/CD processes recorded against a release, giving you insights about the latest state of the product and its build steps 
-    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid

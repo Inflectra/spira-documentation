@@ -22,8 +22,10 @@ Also known as features or user stories, requirements are used for tracking large
 === "Key Artifact Links"
     - **Releases**: link a requirement directly to the release it was first delivered in. You can add associate it to other releases as well, as needed
     - **Test cases**: called "Requirement Test Coverage" this lets you track testing all aspects of a feature and see if all test cases have passed or not
-    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - **Capabilities**: oversee requirements at the program level by linking them to program capabilities <span class="pill">SpiraPlan</span>
+    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything
+        {: .edition-spiraplan .edition-spirateam}
+    - **Capabilities**: oversee requirements at the program level by linking them to program capabilities 
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid
@@ -596,7 +598,8 @@ Read more about [how to manage and add associations to this artifact](Applicatio
 
 
 ### Use Case Diagrams
-<span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
+!!! info "Available in SpiraTeam, SpiraPlan"
+Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
 
 ![](img/requirements-use-case-diagram.png)
 

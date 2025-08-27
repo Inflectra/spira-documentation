@@ -82,16 +82,8 @@
   vertical-align: middle;
 }
 
-/*
-  This CSS uses the :not() pseudo-class to handle three distinct cases:
-  1. An element has ONLY the .edition-spiraplan class.
-  2. An element has ONLY the .edition-spirateam class.
-  3. An element has BOTH .edition-spiraplan and .edition-spirateam classes.
-  This ensures only one pill is ever displayed.
-*/
-
-/* --- Case 1: SpiraPlan ONLY --- */
-[class^='edition-']::after {
+[class^='edition-']::after,
+[class^='feature-']::after {
   content: "";
   background-color: var(--yolk);
   border-radius: 0.25rem;
@@ -104,6 +96,7 @@
   display: inline-block;
 }
 
+/* --- Case 2: SpiraPlan ONLY --- */
 .edition-spiraplan:not(.edition-spirateam)::after {
   content: "SpiraPlan";
 }
@@ -116,4 +109,9 @@
 /* --- Case 3: BOTH SpiraPlan and SpiraTeam --- */
 .edition-spiraplan.edition-spirateam::after {
   content: "SpiraTeam / SpiraPlan";
+}
+
+/* --- Inflectra.ai --- */
+.feature-inflectraai::after {
+  content: "Inflectra.ai";
 }

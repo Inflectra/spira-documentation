@@ -114,7 +114,8 @@ For each recent product visited, the widget shows name for:
 
 - the product itself
 - the product's program
-- the product's portfolio <span class="pill">SpiraPlan</span>
+- the product's portfolio
+    {: .edition-spiraplan}
 
 Each product name is a link to that product's home page. The program and portfolio names are links to the relevant home pages if you have access to view those home pages.  
 
@@ -228,7 +229,9 @@ This widget allows you to subscribe to an external newsfeed and have the results
 
 
 ### My Assigned Risks
-<span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
+!!! info "Available in SpiraTeam, SpiraPlan"
+
+This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 
 
 ### My Assigned Documents
