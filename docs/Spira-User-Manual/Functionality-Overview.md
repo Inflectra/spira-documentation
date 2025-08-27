@@ -13,7 +13,10 @@ This guide will hopefully be a useful learning resource, reference, and companio
     - SpiraTeam, which is SpiraTest plus some extra features
     - SpiraPlan, which takes all the features of SpiraTeam and adds a few more
 
-    Where a feature is not available in all editions, you will see a little tag next to it showing the editions support. They look like this: <span class="pill">SpiraPlan</span>
+    Where a feature is not available in all editions, you will see a little tag next to it showing the editions support. They look like this:
+    
+    - A SpiraPlan only feature
+        {: .edition-spiraplan}
 
 ## Core concepts
 Spira's features are grouped together into different places that match up with different ways of using the tool.
@@ -28,7 +31,8 @@ The most common and important workspace is the **product**. This is where you an
 
 Each product lives inside a specific **program**. One program can have many products. Programs are where you group similar areas of work, outputs, or processes together. A program is more than a folder to store things. Programs give you insights into what is happening across all the products inside of it. Programs can also be used to track and manage higher-level goals than the ones in products.
 
-<span class="pill">SpiraPlan</span> Programs live inside a **portfolio**. Portfolios can have many programs, and are another way to store and organize your work, and see insights about a collection of programs.
+Programs live inside a **portfolio**. Portfolios can have many programs, and are another way to store and organize your work, and see insights about a collection of programs.
+    {: .edition-spiraplan}
 
 You can have as many products, programs, and portfolios as you need or want. Below is an example diagram showing how these different workspace related to each other.
 

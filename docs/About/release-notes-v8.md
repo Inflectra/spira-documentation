@@ -288,31 +288,37 @@
 
 ## Version 8.6 (December 2024)
 !!! info "Summary"
-    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025).
+        {: .edition-spiraplan .edition-spirateam}
 
-    Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality. <span class="pill">SpiraPlan</span>
+    Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality.
+        {: .edition-spiraplan}
 
 ??? success "New Features"
-    * **My Timesheet** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **My Timesheet**
+        {: .edition-spiraplan .edition-spirateam}
 
         - As a developer, I can [download](../Spira-User-Manual/Timesheets.md/#downloading) the data in a timesheet to a CSV file, to help me track and analyze my time [RQ:4942]
         - As a developer, I can [create a timesheet for any past date range](../Spira-User-Manual/Timesheets.md/#my-timesheet), so I can record my historical work correctly [RQ:4944]
         - As a developer, I can easily [delete an artifact row](../Spira-User-Manual/Timesheets.md/#deleting) from a timesheet, so I can easily correct data entered by mistake [RQ:4947]
         - As a developer, I can [delete a whole timesheet](../Spira-User-Manual/Timesheets.md/#deleting), so I can easily correct data entered by mistake [RQ:4948]
     
-    * **As a developer, I can submit and manage my timesheets to get them approved by a manager, to officially record my time** <span class="pill">SpiraPlan</span>
+    * **As a developer, I can submit and manage my timesheets to get them approved by a manager, to officially record my time** 
+        {: .edition-spiraplan}
 
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can see the status of any timesheet, to help me manage my timesheets [RQ:4963]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can submit any draft timesheet for approval, to get my timesheet reviewed by a manager [RQ:4969]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot edit a timesheet that has been submitted for approval, to ensure the manager works from the correct data [RQ:4972]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot delete a timesheet that has been submitted, to ensure the integrity of data a manager has reviewed [RQ:4973]
 
-    * **Timesheet administration** <span class="pill">SpiraPlan</span>
+    * **Timesheet administration** 
+        {: .edition-spiraplan}
 
         - As a system admin of SpiraPlan, I can [enable timesheet approvals](../Spira-Administration-Guide/System.md/#general-settings), so people can make use of that feature or not [RQ:4961]
         - As a system admin of SpiraPlan, I can make people [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that they can approve timesheets as needed [RQ:4962]
 
-    * **Timesheet API functions** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **Timesheet API functions**
+        {: .edition-spiraplan .edition-spirateam}
 
         - As an API user, I can create timesheets using the Spira APIs, to help me automate timesheet work [RQ:5029]
         - As an API user, I can retrieve a single timesheet using the Spira APIs, to help me automate timesheet work [RQ:5035]

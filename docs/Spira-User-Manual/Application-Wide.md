@@ -302,13 +302,18 @@ You can associate artifacts to one another. For instance, you can associate (or 
 - Incidents
 - Releases
 - Requirements
-- Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Risks 
+    {: .edition-spiraplan .edition-spirateam}
 - Source code commits
 - Source code files
-- Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Test cases <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Program Capabilities <span class="pill">SpiraPlan</span>
-- Program Milestones <span class="pill">SpiraPlan</span>
+- Tasks 
+    {: .edition-spiraplan .edition-spirateam}
+- Test cases 
+    {: .edition-spiraplan .edition-spirateam}
+- Program Capabilities 
+    {: .edition-spiraplan}
+- Program Milestones 
+    {: .edition-spiraplan}
 
 From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.
 
