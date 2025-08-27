@@ -322,6 +322,7 @@ Please note:
 - Copied Test Cases are placed in a folder named after the Test Set token (`[TX:123]`)
 - If you export the same Test Set more than once, it will get duplicated in the destination product as it will its test cases
 - These properties of the Test Set are not exported: Automation Host, Test Configuration
+- The cross-product Test Cases of the Test Set are not exported
 
 ### Test Runs
 
