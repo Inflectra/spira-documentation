@@ -344,10 +344,14 @@
 
 ## Version 8.5 (November 2024)
 !!! info "Summary"
-    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page, this release lets users edit or reset existing timesheet entries. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page, this release lets users edit or reset existing timesheet entries. 
+        {: .edition-spiraplan .edition-spirateam}
+    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization. 
+        {: .edition-spiraplan .edition-spirateam}
+    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience. 
+        {: .edition-spiraplan .edition-spirateam}
+    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page. 
+        {: .edition-spiraplan .edition-spirateam}
 
 ??? success "New Features"
     * **My Timesheet**
@@ -391,11 +395,13 @@
 
 ## Version 8.4 (October 2024)
 !!! info "Summary"
-    My Timecard has been replaced with a completely new My Timesheet page. Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    My Timecard has been replaced with a completely new My Timesheet page. Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features. 
+        {: .edition-spiraplan .edition-spirateam}
 
     On every artifact list page there is a button that lets you download the current view of the grid (with its filters and columns) as a CSV file.
 
-    Teams functionality is now out of beta, and available for all users. <span class="pill">SpiraPlan</span>
+    Teams functionality is now out of beta, and available for all users. 
+        {: .edition-spiraplan}
     
 
 ??? success "New Features"

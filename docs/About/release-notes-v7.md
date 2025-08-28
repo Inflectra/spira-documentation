@@ -3,7 +3,8 @@
 ## Version 7.13 (April 2024)
 !!! info "Summary"
     - Easily focus on what is important, with a new default view that declutters the [My Page](../Spira-User-Manual/User-Product-Management.md/#my-page) by hiding all empty widgets. Less really is more.
-    - This release introduces a brand new program level [capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board) to track and manage capabilities in powerful new ways, including tracking them against program milestones <span class="pill">SpiraPlan</span>.
+    - This release introduces a brand new program level [capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board) to track and manage capabilities in powerful new ways, including tracking them against program milestones.
+        {: .edition-spiraplan}
     - As part of our efforts to enhance the auditability and traceability of administrator activities, every change to product membership (adding a user, removing them, changing roles) is now tracked in both product history and system history.
     - Tags are now available for test runs, test cases, test sets, and risks, giving you even more flexibility. Additionally, tag changes can be reverted, and you can build out custom reports with tags.
     - Due to popular demand, we are expanding our GenAI integrations, with a new [Azure OpenAI SpiraApp](../SpiraApps/Azure-OpenAI.md) to auto-generate test cases, scenarios, or tasks from a requirement
@@ -80,15 +81,18 @@
 
 ## Version 7.12 (February 2024)
 !!! info "Summary"
-    This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. 
+        {: .edition-spiraplan .edition-spirateam}
  
 
 !!! success "New Features"
-    * **Requirement Views** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **Requirement Views** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - As a requirement user, I can manage requirements on a [dedicated requirements board](../Spira-User-Manual/Requirements-Management.md/#requirements-agile-board) that matches the style of the Planning Board [RQ:4755]
     
-    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board)** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board)** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]
         - As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]
@@ -99,7 +103,8 @@
         - Let template admins sort [incident statuses](../Spira-Administration-Guide/Template-Incidents.md/#edit-statuses) with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
 
 ??? bug "Bug fixes and enhancements"
-    - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - **Board improvements** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
         - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
