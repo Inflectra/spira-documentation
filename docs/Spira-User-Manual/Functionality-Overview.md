@@ -49,11 +49,11 @@ graph TD
 ```
 
 !!! info "Workspace glossary"
-    | Workspace icon and name                    | Token | Description                                                           |
-    | ------------------------------------------ | ----- | --------------------------------------------------------------------- |
-    | ![](img/workspace-pr.png) &nbsp; Product   | PR    | Long running areas of work and deliverables                           |
-    | ![](img/workspace-pg.png) &nbsp; Program   | PG    | Groups of products sharing similar overarching milestones             |
-    | ![](img/workspace-pf.png) &nbsp; Portfolio | PF    | Strategic collections of programs <span class="pill">SpiraPlan</span> |
+    | Workspace icon and name                    | Token | Description                                               | Edition   |
+    | ------------------------------------------ | ----- | --------------------------------------------------------- | --------- |
+    | ![](img/workspace-pr.png) &nbsp; Product   | PR    | Long running areas of work and deliverables               | All       |
+    | ![](img/workspace-pg.png) &nbsp; Program   | PG    | Groups of products sharing similar overarching milestones | All       |
+    | ![](img/workspace-pf.png) &nbsp; Portfolio | PF    | Strategic collections of programs                         | SpiraPlan |
 
 ### Artifacts
 Artifacts are the building blocks of a product or program and contain all of their data. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They work differently, and are not interchangeable. There are artifacts to help you test, plan, track bugs and tasks, and more.
@@ -61,39 +61,39 @@ Artifacts are the building blocks of a product or program and contain all of the
 You can use each artifact by itself and tag them in many different ways. An artifact can have sub types, a current status, priorities, components, owners, tags, and more. By linking one artifact to another, you unlock even more powerful features, letting you, for example, see which top priority user stories planned for the next sprint have failing tests still.
 
 !!! info "Product artifact glossary"
-    | Artifact icon and name                                                 | Token | Description                                                                                                                                            |
-    | ---------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | ![](img/artifact-rq.png) &nbsp; Requirement                            | RQ    | Tracks large pieces of work or product features                                                                                                        |
-    | ![](img/artifact-rq-parent.png) &nbsp; Requirement (parent)            | RQ    | Any requirement that has one or more child requirements                                                                                                |
-    | ![](img/artifact-rq-use-case.png) &nbsp; Requirement (has use cases)   | RQ    | Any requirement of a type that allows for use case steps                                                                                               |
-    | ![](img/artifact-rs.png) &nbsp; Requirement Step                       | RS    | Small steps or scenarios on a requirement that show how that feature works                                                                             |
-    | ![](img/artifact-rl.png) &nbsp; Release                                | RL    | A way to group work together to deliver by a certain deadline                                                                                          |
-    | ![](img/artifact-rl-sprint.png) &nbsp; Release (sprint)                | RL    | A mini release, popular in agile workflows                                                                                                             |
-    | ![](img/artifact-bl.png) &nbsp; Build                                  | BL    | Results of CI/CD processes recorded against a release                                                                                                  |
-    | ![](img/artifact-baseline.png) &nbsp; Baseline                         |       | Take a snapshot of the entire product at a specific point in time <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>              |
-    | ![](img/artifact-ts.png) &nbsp; Test Step                              | TS    | A single scenario or step to validate during a test                                                                                                    |
-    | ![](img/artifact-ts-linked.png) &nbsp; Test Step (linked)              | TS    | A step in a test case that contains a whole other test case inside it                                                                                  |
-    | ![](img/artifact-tc.png) &nbsp; Test Case (with test steps)            | TC    | Stores how to test a feature or process, and tracks the results of each test                                                                           |
-    | ![](img/artifact-tc-no-step.png) &nbsp; Test Case (without test steps) | TC    | Like a normal test case, but usually used for automated tests where steps are not required                                                             |
-    | ![](img/artifact-tx.png) &nbsp; Test Set                               | TX    | Combine test cases together to create                                                                                                                  |
-    | ![](img/artifact-tr.png) &nbsp; Test Run                               | TR    | Immutable results of testing (from a test case or a test set)                                                                                          |
-    | ![](img/artifact-ah.png) &nbsp; Automation Host                        | AH    | A machine where you run automated tests, kicked off from Spira itself                                                                                  |
-    | ![](img/artifact-tg.png) &nbsp; Configuration                          | TG    | Create complex sets of parameters or sample data to use in dynamically generated test sets                                                             |
-    | ![](img/artifact-in.png) &nbsp; Incident                               | IN    | Track bugs, enhancements, and more                                                                                                                     |
-    | ![](img/artifact-tk.png) &nbsp; Task                                   | TK    | Manage small pieces of work with tasks, especially useful against requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
-    | ![](img/artifact-pr.png) &nbsp; Task (pull request)                    | TK    | Review pull requests in Spira <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                  |
-    | ![](img/artifact-rk.png) &nbsp; Risk                                   | RK    | Assess and manage risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                        |
-    | ![](img/artifact-rm.png) &nbsp; Risk Mitigation                        | RM    | Track individual mitigations against a risk <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                    |
-    | ![](img/artifact-code.png) &nbsp; Source Code                          |       | Source code files (if connected to Spira) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                      |
-    | ![](img/artifact-commit.png) &nbsp; Commit                             |       | Source code files (if connected to Spira) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                      |
-    | ![](img/artifact-component.png) &nbsp; Component                       | CP    | Used to represent common parts of your product that any artifact can be tagged with components.                                                        |
+    | Artifact icon and name                                                 | Token | Description                                                                                     | Edition              |
+    | ---------------------------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------- | -------------------- |
+    | ![](img/artifact-rq.png) &nbsp; Requirement                            | RQ    | Tracks large pieces of work or product features                                                 | All                  |
+    | ![](img/artifact-rq-parent.png) &nbsp; Requirement (parent)            | RQ    | Any requirement that has one or more child requirements                                         | All                  |
+    | ![](img/artifact-rq-use-case.png) &nbsp; Requirement (has use cases)   | RQ    | Any requirement of a type that allows for use case steps                                        | All                  |
+    | ![](img/artifact-rs.png) &nbsp; Requirement Step                       | RS    | Small steps or scenarios on a requirement that show how that feature works                      | All                  |
+    | ![](img/artifact-rl.png) &nbsp; Release                                | RL    | A way to group work together to deliver by a certain deadline                                   | All                  |
+    | ![](img/artifact-rl-sprint.png) &nbsp; Release (sprint)                | RL    | A mini release, popular in agile workflows                                                      | All                  |
+    | ![](img/artifact-bl.png) &nbsp; Build                                  | BL    | Results of CI/CD processes recorded against a release                                           | All                  |
+    | ![](img/artifact-baseline.png) &nbsp; Baseline                         |       | Take a snapshot of the entire product at a specific point in time                               | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-ts.png) &nbsp; Test Step                              | TS    | A single scenario or step to validate during a test                                             | All                  |
+    | ![](img/artifact-ts-linked.png) &nbsp; Test Step (linked)              | TS    | A step in a test case that contains a whole other test case inside it                           | All                  |
+    | ![](img/artifact-tc.png) &nbsp; Test Case (with test steps)            | TC    | Stores how to test a feature or process, and tracks the results of each test                    | All                  |
+    | ![](img/artifact-tc-no-step.png) &nbsp; Test Case (without test steps) | TC    | Like a normal test case, but usually used for automated tests where steps are not required      | All                  |
+    | ![](img/artifact-tx.png) &nbsp; Test Set                               | TX    | Combine test cases together to create                                                           | All                  |
+    | ![](img/artifact-tr.png) &nbsp; Test Run                               | TR    | Immutable results of testing (from a test case or a test set)                                   | All                  |
+    | ![](img/artifact-ah.png) &nbsp; Automation Host                        | AH    | A machine where you run automated tests, kicked off from Spira itself                           | All                  |
+    | ![](img/artifact-tg.png) &nbsp; Configuration                          | TG    | Create complex sets of parameters or sample data to use in dynamically generated test sets      | All                  |
+    | ![](img/artifact-in.png) &nbsp; Incident                               | IN    | Track bugs, enhancements, and more                                                              | All                  |
+    | ![](img/artifact-tk.png) &nbsp; Task                                   | TK    | Manage small pieces of work with tasks, especially useful against requirements                  | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-pr.png) &nbsp; Task (pull request)                    | TK    | Review pull requests in Spira                                                                   | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-rk.png) &nbsp; Risk                                   | RK    | Assess and manage risks                                                                         | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-rm.png) &nbsp; Risk Mitigation                        | RM    | Track individual mitigations against a risk                                                     | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-code.png) &nbsp; Source Code                          |       | Source code files (if connected to Spira)                                                       | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-commit.png) &nbsp; Commit                             |       | Source code files (if connected to Spira)                                                       | SpiraTeam, SpiraPlan |
+    | ![](img/artifact-component.png) &nbsp; Component                       | CP    | Used to represent common parts of your product that any artifact can be tagged with components. | All                  |
 
 !!! info "Program artifact glossary"
-    | Artifact icon and name                                     | Token | Description                                                                                                    |
-    | ---------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------- |
-    | ![](img/artifact-cp.png) &nbsp; Capability                 | CP    | Tracks program-scale features <span class="pill">SpiraPlan</span>                                              |
-    | ![](img/artifact-cp-parent.png) &nbsp; Capability (parent) | CP    | Any capability that has one or more child capabilities <span class="pill">SpiraPlan</span>                     |
-    | ![](img/artifact-gm.png) &nbsp; Program Milestone          | GM    | A way to group large scale deliverables together to hit a certain deadline <span class="pill">SpiraPlan</span> |
+    | Artifact icon and name                                     | Token | Description                                                                | Edition   |
+    | ---------------------------------------------------------- | ----- | -------------------------------------------------------------------------- | --------- |
+    | ![](img/artifact-cp.png) &nbsp; Capability                 | CP    | Tracks program-scale features                                              | SpiraPlan |
+    | ![](img/artifact-cp-parent.png) &nbsp; Capability (parent) | CP    | Any capability that has one or more child capabilities                     | SpiraPlan |
+    | ![](img/artifact-gm.png) &nbsp; Program Milestone          | GM    | A way to group large scale deliverables together to hit a certain deadline | SpiraPlan |
 
 ## Guidance and Tips
 Below are explanations and guidance about how to do different things in Spira, or use its different features and artifacts (or links for where to read more). This includes good practice tips, tricks, do's and don'ts, and how different artifacts link to others. These are designed to help you get the most of out of Spira, and to help you work with the design of the tool, and not against it.

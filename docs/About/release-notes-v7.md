@@ -122,8 +122,10 @@
     
     - **Other fixes and enhancements**
 
-        - Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029] <span class="pill">SpiraPlan</span>
+        - Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] 
+            {: .edition-spiraplan .edition-spirateam}
+        - Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029]
+            {: .edition-spiraplan}
         - Fix changes to custom properties not being saved when editing documents of type URL [IN:7710]
         - Fix product level custom reports containing PROJECT_GROUP_ID and ${ProjectId} in a single query not being able to be generated [IN:9099]
         - Fix the API to retrieve an associated test run [IN:9126]
@@ -157,8 +159,10 @@
 
 !!! info "Summary"
 
-    - Brings new widgets to the [program home page](../Spira-User-Manual/Program-Homepage.md), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
-    - Improves [program level reporting](../Spira-User-Manual/Program-Reports.md) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
+    - Brings new widgets to the [program home page](../Spira-User-Manual/Program-Homepage.md), letting you see meaningful information about capabilities and program milestones 
+        {: .edition-spiraplan}
+    - Improves [program level reporting](../Spira-User-Manual/Program-Reports.md) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page 
+        {: .edition-spiraplan}
     - Adds [tagging](../Spira-User-Manual/Application-Wide.md/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
     - Let users leverage the power of [ChatGPT](../SpiraApps/ChatGPT.md) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
 
@@ -490,7 +494,8 @@
         - As a task board user, I can change the way a task card looks, so I can see the most meaningful information at that moment [RQ:4411]
         - As a task board user, I can view more information about a task and, if I have permissions, edit the task right from the task board, so I can work more efficiently [RQ:4412]
 
-    * **Administration <span class="pill">SpiraPlan</span>**
+    * **Administration**
+        {: .edition-spiraplan}
 
         - As an administrator, I want to see a [list of changes made in the system](../Spira-Administration-Guide/System.md/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
@@ -587,12 +592,14 @@
 
             - When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]
             - Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]
-            - Teams/Tracks Support in Boards <span class="pill">SpiraPlan</span> [RQ:2316]
+            - Teams/Tracks Support in Boards [RQ:2316]
+                {: .edition-spiraplan}
 
     * **System Administration**
 
         - System admins [can enable or disable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users [RQ:4317]
-        - System admins can create and manage [a list of team names](../Spira-Administration-Guide/System-Users.md/#view--edit-teams) <span class="pill">SpiraPlan</span> [RQ:3689]
+        - System admins can create and manage [a list of team names](../Spira-Administration-Guide/System-Users.md/#view--edit-teams) [RQ:3689]
+            {: .edition-spiraplan}
         - Product admins can [associate product users to specific teams](../Spira-Administration-Guide/Product-Users.md/#team-membership) [RQ:3690]
 
 
@@ -633,7 +640,8 @@
 ## Version 7.2 (October 2022)
 
 !!! info "Summary"
-    Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more. <span class="pill">SpiraPlan</span>
+    Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more.
+        {: .edition-spiraplan}
 
     Along with existing support for creating and editing dynamic documents inside Spira (including diagrams and documents), the new spreadsheet editor lets you create simple spreadsheets to better organize your teams and track work. You can have multiple sheets, apply formatting to cells, use a wide number of functions, and even import from and export to Excel spreadsheets.
 

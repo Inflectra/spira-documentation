@@ -378,10 +378,12 @@ You can add a comment that explains the rationale for the association and choose
     | **Source code commits**                                      | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
     | **Source code files**                                        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
     | **Tasks**                                                    | Tasks, Incidents                                                                                                         |
-    | **Test cases**                                               | Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span> |
-    | **Program Capabilities** <span class="pill">SpiraPlan</span> | Requirements (the tab is called requirements, comments and association type not supported)                               |
-    | **Program Milestones** <span class="pill">SpiraPlan</span>   | Releases (the tab is called releases, comments and association type not supported)                                       |
+    | **Test cases**                                               | Tasks [^STSP], Risks [^SP] |
+    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                               |
+    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                                       |
 
+[^STSP]: Available in SpiraTeam & SpiraPlan
+[^SP]: Available in SpiraPlan
 
 ### Rich Text Editor
 There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](Document-Management.md/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
