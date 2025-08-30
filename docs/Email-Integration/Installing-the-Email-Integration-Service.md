@@ -1,7 +1,5 @@
 # Installing the Email Integration Service
-
-!!! info ""
-    This email integration service is able to integrate with both KronoDesk and Spira.
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 Depending on your environment you can install the email integration service on:
 

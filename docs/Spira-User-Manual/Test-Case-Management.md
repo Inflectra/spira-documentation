@@ -500,7 +500,7 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
-!!! info "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam, SpiraPlan"
 
 | Association Tab Of | Available artifacts  |
 | ------------------ | -------------------- |

@@ -1,5 +1,5 @@
 # Inflectra.ai
-!!! info "Available in SpiraTest, SpiraTeam, SpiraPlan - cloud only"
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan - cloud only"
     It is available to try for free in any cloud trial. 
     
     To add Inflectra.ai to your production site, you can do so from your customer area or [contact us to find out how to upgrade](mailto:sales@inflectra.com).

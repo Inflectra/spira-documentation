@@ -272,7 +272,7 @@ This section lets you specify if the role allows users to add new documents to t
 
 
 ## View / Edit Teams
-!!! info "Available in SpiraPlan only"
+!!! abstract "Available in SpiraPlan only"
 
 SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 

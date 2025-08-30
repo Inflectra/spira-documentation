@@ -1,5 +1,5 @@
 # Timesheets
-!!! info "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam, SpiraPlan"
 
 Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week or any week in the past. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past.
 
@@ -79,7 +79,7 @@ Check the "View all timesheets" checkbox to see a list of all of your timesheets
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet. The total across an artifact or all artifacts in a week does not include [remaining effort](./Timesheets.md#remaining-effort). 
 
 ## Timesheets Approvals 
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 To access the timesheet approvals page:
 

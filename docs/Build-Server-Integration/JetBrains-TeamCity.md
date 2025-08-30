@@ -1,7 +1,7 @@
 # JetBrains TeamCity
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-This section outlines how to use SpiraTest, SpiraPlan or Spira (hereafter referred to as Spira) in conjunction with the JetBrains' TeamCity continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v6.0 or later and a working installation of TeamCity v9.0.4 or later. If you have an earlier version of Spira, you will need to upgrade to at least v6.0.
+This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the JetBrains' TeamCity continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v6.0 or later and a working installation of TeamCity v9.0.4 or later. If you have an earlier version of Spira, you will need to upgrade to at least v6.0.
 
 ## Overview
 TeamCity provides continuous integration services for software development, primarily in the Java programming language. It is a server-based system running that supports a variety of different version control systems and build runners. It supports SCM tools including CVS, Subversion, Git, Mercurial, Perforce and Borland StarTeam, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands.

@@ -1,4 +1,6 @@
 # Using Spira with GitHub
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Teams can work seamlessly using both Spira and GitHub, using Inflectra's GitHub data sync engine to keep key information in sync between both applications.
 

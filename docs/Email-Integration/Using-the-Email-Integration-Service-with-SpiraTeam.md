@@ -1,5 +1,5 @@
-
 # Using the Email Integration Service
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 Once you have the email integration service configured, we recommend that you initially clear the Windows Application Log on the machine. This will allow you to quickly see any errors that occur due to misconfiguration. The event viewer can be found in Control Panel > Administrative Tools > Event Viewer.
 

@@ -229,7 +229,7 @@ This widget allows you to subscribe to an external newsfeed and have the results
 
 
 ### My Assigned Risks
-!!! info "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam, SpiraPlan"
 
 This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 

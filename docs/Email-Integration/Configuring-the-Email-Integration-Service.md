@@ -1,4 +1,6 @@
 # Configuring the Email Integration Service
+!!! info "Compatible in SpiraTest, SpiraTeam, SpiraPlan"
+
 Once you have completed the installation, you can configure the email integration service by going to Start > Program Files > Inflectra Spira > Tools > Email Integration which will bring up the management interface.
 
 ![](img/configure_12.png)

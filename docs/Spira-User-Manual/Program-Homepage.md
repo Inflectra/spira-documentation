@@ -1,5 +1,5 @@
 # Program Homepage
-!!! info "Available in SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Overview
 When you navigate to a Program from the global navigation bar or from any link to it in the application, you will be taken to the homepage of that program:
@@ -174,23 +174,23 @@ This table shows an information-dense, but easy to understand assessment of each
 - the number of open incidents and the priority distribution of them
 
 ## Capability Open Count 
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 This chart shows the proportion of capabilities which are open, as well as the breakdown of all open capabilities in the program by priority. The bar chart's bars are colored to match the configured color of each priority. (Works with the program milestone filter at the top of the page).
 
 
 ## Capability Summary
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 This widget shows a table of capabilities split by their status (on the y axis) and their priority (on the x axis). It provides a count of capabilities with each status/priority combination (for instance, how many capabilities are high priority with a status of to do). Clicking on any of the counts for a given status/priority will open the capability list page filtered to that combination of status and priority. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Capability Progress
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 This widget shows a list of all open program milestones. For each program milestone it shows the name (click to see more), number of associated capabilities (click to see more), and its overall progress. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Completion
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 This chart shows the proportion of planned days remaining as well as the proportion of all active capabilities that have been completed across currently open milestones in this program. It highlights the data in different colors depending on the proportion of capabilities and days remaining, to give an idea of how well program milestones are sticking to their planned timeframes. (Works with the program milestone filter at the top of the page).
 

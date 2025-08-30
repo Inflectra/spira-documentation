@@ -1,5 +1,5 @@
 # Atlassian Bamboo
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Atlassian's Bamboo continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v4.0 or later and a working installation of Bamboo v 5.0 or later. If you have an earlier version of Spira, you will need to upgrade to at least v4.0.
 

@@ -1,4 +1,6 @@
 # Using Spira with Jira Server (or DataCenter)
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Teams can work seamlessly using both Spira and Jira Server or Jira DataCenter (hereafter just Jira Server or Jira), using Inflectra's Jira data sync engine to keep key information in sync between both applications.
 

@@ -1,5 +1,5 @@
 # Jenkins / Hudson
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as Spira in conjunction with either the Jenkins or Hudson (hereafter referred to as Jenkins) continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraTeam or Spira v3.2 or later and a working installation of Jenkins/Hudson v2.7.3 or later. If you have an earlier version of Spira, you will need to upgrade to at least v3.2, and if you have any earlier version of Jenkins you will also need to upgrade it too.
 

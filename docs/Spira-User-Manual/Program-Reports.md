@@ -1,5 +1,5 @@
 # Program Reports
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 With program level reporting, users can see and generate reports relevant to their program, to help you monitor the progress of work and to analyze current performance.
 

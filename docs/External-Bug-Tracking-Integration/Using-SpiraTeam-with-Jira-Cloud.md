@@ -1,4 +1,6 @@
 # Using Spira with Jira Cloud
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jira Cloud data sync engine to keep key information in sync between both applications.
 

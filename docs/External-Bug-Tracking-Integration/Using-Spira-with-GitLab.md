@@ -1,4 +1,6 @@
 # Using Spira with GitLab
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. 
 
 You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).

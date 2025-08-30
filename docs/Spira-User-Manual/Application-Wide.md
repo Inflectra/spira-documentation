@@ -1,5 +1,5 @@
 # Common Elements Across the Application
-!!! info "Available in SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 There are lots of different artifacts in the application (described [here](Functionality-Overview.md)). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. Each artifact is different but they also share many similarities. These are explained below. 
 

@@ -1,5 +1,5 @@
 # AWS CodeBuild
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction
 SpiraTest, SpiraTeam, and SpiraPlan (from here on called Spira) integrated seamlessly with AWS Code tools in a number of ways. In this section we discuss Spira's AWS CodeBuild integration. This work with self-hosted and cloud Spira - if you are self-hosted make sure Spira is accessible over the internet.

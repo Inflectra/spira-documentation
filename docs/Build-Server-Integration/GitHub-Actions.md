@@ -1,5 +1,5 @@
 # GitHub Actions
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction
 SpiraTest, SpiraTeam, and SpiraPlan (from here on called Spira) integrated seamlessly with GitHub in a number of ways. In this section we discuss Spira's GitHub Actions reporting integration.

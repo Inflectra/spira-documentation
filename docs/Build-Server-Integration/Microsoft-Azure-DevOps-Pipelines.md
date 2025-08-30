@@ -1,5 +1,5 @@
 # Microsoft Azure DevOps Pipelines
-!!! info "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to use SpiraTest, SpiraTeam, SpiraPlan (hereafter referred to as Spira) in conjunction with Microsoft's Azure DevOps continuous integration platform called **Azure DevOps Pipelines**. It assumes that you already have a working installation of Spira v5.0 or later and have already setup Microsoft Azure DevOps Pipelines. If you have an earlier version of Spira, you will need to upgrade to at least v5.0.
 

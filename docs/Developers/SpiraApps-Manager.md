@@ -1,3 +1,6 @@
+# SpiraAppManager
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 The spiraAppManager is a helper class that provides a wide range of useful functions and operations to SpiraApps.
 
 ## IDs

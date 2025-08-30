@@ -1,5 +1,5 @@
 # System: Workspaces
-!!! info "Available in SpiraTest, SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 There are up to 3 levels of workspaces that you can use to organize all of your data within Spira. Products are where all your tests, requirements, and bugs live. These are grouped inside of Programs. In SpiraPlan you can group programs inside of Portfolios. Each of these workspaces is discussed below, as are Templates - a special type of workspace for controlling parts of how products and programs work.
 
@@ -208,7 +208,7 @@ This tab allows you to see the list of products that are contained within the cu
 
 
 ## View/Edit Portfolios
-!!! info "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan"
 
 The following screen is displayed when you choose the "View/Edit Portfolios" link from the Administration menu:
 

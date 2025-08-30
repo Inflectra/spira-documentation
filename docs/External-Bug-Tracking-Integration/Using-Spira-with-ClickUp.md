@@ -1,4 +1,6 @@
 # Using Spira with ClickUp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ClickUp is a cloud based project management system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This data sync lets you:
 
 - create and update incidents, requirements, and tasks in Spira from ClickUp tasks
