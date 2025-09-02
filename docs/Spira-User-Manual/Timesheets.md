@@ -79,7 +79,7 @@ Check the "View all timesheets" checkbox to see a list of all of your timesheets
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet. The total across an artifact or all artifacts in a week does not include [remaining effort](./Timesheets.md#remaining-effort). 
 
 ## Timesheets Approvals 
-!!! abstract "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan only"
 
 To access the timesheet approvals page:
 

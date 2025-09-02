@@ -208,7 +208,7 @@ This tab allows you to see the list of products that are contained within the cu
 
 
 ## View/Edit Portfolios
-!!! abstract "Available in SpiraPlan"
+!!! abstract "Available in SpiraPlan only"
 
 The following screen is displayed when you choose the "View/Edit Portfolios" link from the Administration menu:
 

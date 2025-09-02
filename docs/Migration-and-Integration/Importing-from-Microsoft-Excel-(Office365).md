@@ -1,6 +1,7 @@
 #  Importing from Microsoft Excel (Office 2016+, iOS, web)
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-This add-in works with Microsoft Excel 2016+, Excel in the cloud (via a web browser), and Excel on iPad OS. The add-in lets you import or export data to and from any product in your SpiraTest, SpiraTeam, or SpiraPlan application. 
+This add-in works with Microsoft Excel 2016+, Excel in the cloud (via a web browser), and Excel on iPad OS. The add-in lets you import or export data to and from any product in Spira. 
 
 **The add-in works for:** 
 
@@ -8,9 +9,11 @@ This add-in works with Microsoft Excel 2016+, Excel in the cloud (via a web brow
 2.  Releases
 3.  Incidents
 4.  Tasks
+    {: .edition-spiraplan .edition-spirateam}
 5.  Test cases with their Test steps
 6.  Test sets
 7.  Risks
+    {: .edition-spiraplan .edition-spirateam}
 8.  Components[^1]
 9.  Folders[^1]
 10. Custom Lists and Values[^1]
@@ -247,12 +250,16 @@ Following is an example of how to add Test Cases and Test Steps to Spira:
 **Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
 
 ### Tasks
+!!! abstract "Available in SpiraTeam, SpiraPlan"
+
 This artifact does not have any special factors to take into account.
 
 ### Test Sets
 This artifact does not have any special factors to take into account.
 
 ### Risks
+!!! abstract "Available in SpiraTeam, SpiraPlan"
+
 This artifact does not have any special factors to take into account.
 
 ### Components
@@ -273,7 +280,6 @@ Only system administrators can Add/Edit Custom Lists and Values going to the sec
 
 ### Users
 Only system administrators can create new users going to the first option of the "Product Template/System Admin Operations" menu. You can also add each user to a product and assign any role so the user is ready to get started working in Spira once they have their password. 
-
 
 ## Other actions you can do after you have logged in to the add-in
 * **Back**: Go back to select which add-in mode to run
@@ -298,4 +304,4 @@ Only system administrators can create new users going to the first option of the
 - work with version of Spira older than 6.3.0.1
 - work with versions of Excel pre Excel 2016
 
-**NOTE** The classic version of our Excel importer can create test runs. Please refer to the [SpiraPlan TestRunner](../Unit-Testing-Integration/Using-Test-Runner-For-Excel.md) for Excel 365 add-in to use these functionalities in our new generation of add-ins.
+**NOTE** The classic version of our Excel importer can create test runs. Please refer to the [Spira TestRunner](../Unit-Testing-Integration/Using-Test-Runner-For-Excel.md) for Excel 365 add-in to use these functionalities in our new generation of add-ins.
