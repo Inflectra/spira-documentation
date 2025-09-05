@@ -1,4 +1,12 @@
 # Release Notes for Inflectra.ai
+## September 5 2025
+!!! success "New Features"
+    - Sidebar design and user experience
+        - As an Inflectra.ai user, when I open the sidebar, actions I can take are grouped together clearly, so I can easily see and understand what I can do [RQ:5404] 
+        - As an Inflectra.ai user, when I open the sidebar, I can collapse action groups so I can focus on the actions I need [RQ:5405] 
+        - As an Inflectra.ai user, when I open the sidebar, I can expand a collapsed action group so I can focus on the actions I need [RQ:5408] 
+        - As an Inflectra.ai user, when I open the sidebar, it remembers for my machine and browser the state of action group (whether they are expanded or collapsed) [RQ:5409] 
+        - As an Inflectra.ai user, I can invoke any action inside a sidebar group, so I can use the functionality I need [RQ:5410] 
 
 ## August 22 2025
 !!! success "New Features"
