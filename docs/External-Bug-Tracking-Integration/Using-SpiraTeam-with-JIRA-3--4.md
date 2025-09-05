@@ -246,7 +246,7 @@ Next for each of the Property Values in the table (in the lower half of the page
 
 g) JIRA's Issue Key Field (JIRA 4.x Plug-In Only)
 
-It can be convenient to create a Spira custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incients in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in Spira of type 'TEXT' that will be used to store the JIRA issue key within Spira.
+It can be convenient to create a Spira custom property to store the JIRA Issue Key (the ID used to identify an issue in JIRA). This allows you to display a list of incidents in SpiraTest and see the corresponding JIRA ID in the same list. You first need to create an incident custom property in Spira of type 'TEXT' that will be used to store the JIRA issue key within Spira.
 
 Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:
 

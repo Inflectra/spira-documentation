@@ -26,7 +26,7 @@ After Jenkins has restarted, connect to your Jenkins server.
 
 
 ## Setting-Up the Spira Jenkins Plug-in
-Now that the plugin has been installed, you need to go back to the Jenkins homepage and click on the "Manage Jenkins" hyperlink followed by the "Configure System" hyperlink. This will bring up the main Jenkins configuration page. Scroll down to find the "**Spira Integeration**" section:
+Now that the plugin has been installed, you need to go back to the Jenkins homepage and click on the "Manage Jenkins" hyperlink followed by the "Configure System" hyperlink. This will bring up the main Jenkins configuration page. Scroll down to find the "**Spira Integration**" section:
 
 ![](img/Jenkins__Hudson_8.png)
 

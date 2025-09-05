@@ -270,7 +270,7 @@ Next for each of the Property Values in the table (in the lower half of the page
 
 c) OnTime's Replication Procedures Field
 
-If you want new defects in OnTime to be loaded with the "replication prodcedures" standard text field populated, then you will need to fill out this section. You first need to create an incident custom property in Spira of type 'TEXT' that will be used to store the environment description within Spira.
+If you want new defects in OnTime to be loaded with the "replication procedures" standard text field populated, then you will need to fill out this section. You first need to create an incident custom property in Spira of type 'TEXT' that will be used to store the environment description within Spira.
 
 Then click on the hyperlink of this new list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen:
 

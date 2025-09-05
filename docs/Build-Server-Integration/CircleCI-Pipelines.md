@@ -37,7 +37,7 @@ The first step in Spira is to **create a release custom property**:
 
 Next, we have to add the CircleCI project name into the Spira product description, so that the two are linked together.
 
-- As a system administrator, go to System Administrtation > View/Edit Products
+- As a system administrator, go to System Administration > View/Edit Products
 - Edit the relevant product 
 - Add the name of the CircleCI project, surrounded by square brackets, into the product description (e.g. "[my-new-circle-ci-project]") 
 - Click "Save"
@@ -63,7 +63,7 @@ In CircleCI we now need to setup our repo to talk to the Spira each time a Pipel
 - Enter a Webhook name (Spira does not use this field)
 - Enter the URL (see below)
 - The secret token is not used by Spira can be left blank
-- Make sure "Certificat verification" is checked (default)
+- Make sure "Certificate verification" is checked (default)
 - Make sure that in the Events section, "Workflow Completed" is checked
 - Click "Add Webhook"
 

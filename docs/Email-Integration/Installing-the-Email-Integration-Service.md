@@ -14,7 +14,7 @@ if your Spira installation is cloud hosted by Inflectra, you can use options (2)
 ## Minimum Requirements:
 The email importer needs the following to be able to execute and import mail:
 
-- A windows desktop (always on, Windows 10 or 11) or Server (2016 - 2022) ___Note:___ Headless servers are note suppoted at this time.
+- A windows desktop (always on, Windows 10 or 11) or Server (2016 - 2022) ___Note:___ Headless servers are note supported at this time.
 - .NET Framework v4.8 is required.
 - Network access to your email server(s).
 - Network access to your Spira application.

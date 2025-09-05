@@ -107,7 +107,7 @@ Here are the corresponding statuses in ServiceNow
 
 ### Configuring the Incident/Requirement Type Mappings
 
-Click the "Type" button for the relevant artifact to map the Incident or Requirent types between Spira and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.
+Click the "Type" button for the relevant artifact to map the Incident or Requirement types between Spira and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.
 
 ![](img/Using_Spira_with_ServiceNow_242.png)
 

@@ -59,7 +59,7 @@ Click on the "View Project Mappings" dropdown for the YouTrack Data Sync. Select
 
 
 ## Configuring  Standard Fields Mappings for Incidents and Tasks
-In the YouTrackDataSync Product Data Mapping of your Spira project, you can map the Spira standard fields for incidents and tasks to a specific field value in YouTrack. To do that, click on the stardard property under the artifact type menu you want to map:
+In the YouTrackDataSync Product Data Mapping of your Spira project, you can map the Spira standard fields for incidents and tasks to a specific field value in YouTrack. To do that, click on the standard property under the artifact type menu you want to map:
 
 ![](img/YouTrack_04.png)
 

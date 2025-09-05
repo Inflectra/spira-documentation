@@ -116,7 +116,7 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 ### Conversion Problems
 - Table formatting is generally a huge pain and needs to be done manually
 - Code usually isn't formatted and generally has excessive escape characters (I just pasted the code directly from word as it was easier)
-- The script will spit out an uneccesary `Introduction` or `Legal` file if it was present or put a legal notice in the `.md` file who's corresponding section in the word file was at the bottom of the word file.
+- The script will spit out an unnecessary `Introduction` or `Legal` file if it was present or put a legal notice in the `.md` file who's corresponding section in the word file was at the bottom of the word file.
 - Unnecessary escape characters: Just do a find and replace in your editor of choice in the `docs\` directory with the criteria below:
     - \\< to <
     - \\> to > **IFF THE OCCURANCE IS IN A CODE BLOCK, OTHERWISE NECESSARY** 

@@ -23,7 +23,7 @@ Once you have the email integration enabled and running, any users that email in
     > <https://localhost/spirateam/6/Incident/2196.aspx>
 
 - The user will not be subscribed to the ticket unless the user falls under normal Workflow Notification or Event Notification settings
-- Any time the user gets a notification email from the server, they can reply to the email -- leaving the token in the subject line unaltered -- and their reply will be put into the ticket as a new comment. It's important that -- if enabled in the SpiraTeam application -- the separator line is not altered, and the reply is kept above the line. Any text under that line will not be inclued in the new comment. (If the separator line is altered, or the option is disabled in the SpiraTeam administration, then the entire email including quotes and reply text will be inserted into the comment.)
+- Any time the user gets a notification email from the server, they can reply to the email -- leaving the token in the subject line unaltered -- and their reply will be put into the ticket as a new comment. It's important that -- if enabled in the SpiraTeam application -- the separator line is not altered, and the reply is kept above the line. Any text under that line will not be included in the new comment. (If the separator line is altered, or the option is disabled in the SpiraTeam administration, then the entire email including quotes and reply text will be inserted into the comment.)
 
 
 ## Important Notes:

@@ -97,7 +97,7 @@ Click on the "View Project Mappings" dropdown for the Salesforce Data Sync. Sele
 
 A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in Spira based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to Spira. Other fields (unless linked to a custom field in Spira) will not be synced.
 
-- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be splitted in these 2 different fileds in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
+- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be split into these 2 different fields in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
 - **Description**: Users can sync the artifact description from/to Spira if their object has a field named like that.
 - **Priority**: Users can sync Incidents'Priority from/to Spira if their object has a field named like that.
 - **Importance**: Users can sync Requirements'Importance from/to Spira if their object has a field named like that.
@@ -138,7 +138,7 @@ Click the **Priority** button within the **Incident** section to map incident pr
 You must map every priority/importance in Spira to Salesforce. Descriptions of the field are below:
 
 - **External Key**: If state is a dropdown in Salesforce, it's the value you see when using the dropdown in the Salesforce UI. If state is a string in Salesforce, write the value of the string to be mapped to the Spira status. Please take care to match it exactly (case, spaces, etc).
-- **Primary**: You must have exactly one primary key for each Salesforce status. This is what prioriy the plug-in should set the incident in Spira to when the record from Salesforce has a priority that matches to multiple Incident priorities. This is of consequence if there are more priority options in Spira than in Salesforce.
+- **Primary**: You must have exactly one primary key for each Salesforce status. This is what priority the plug-in should set the incident in Spira to when the record from Salesforce has a priority that matches to multiple Incident priorities. This is of consequence if there are more priority options in Spira than in Salesforce.
 
 ## Configuring Custom Properties
 This section assumes the custom properties in Spira and Salesforce are of the same type (integer -> integer, text -> text, etc.). Custom property syncing **will not** work otherwise. This applies to both requirement and incident custom properties.

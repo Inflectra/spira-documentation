@@ -75,7 +75,7 @@
 
 ## Version 8.10 (May 2025)
 !!! info "Summary"
-    Cloud users can now benefit from Infectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
+    Cloud users can now benefit from Inflectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
 
     For cloud customers, source code integrations with third party services like GitLab and GitHub is now simpler and clearer (SpiraTeam and SpiraPlan).
 
@@ -519,8 +519,8 @@
         - Update the FMEA SpiraApp to the latest version to ensure users have access to additional features [IN:9816]
         
     - **SpiraApp developer tooling**
-        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely sanitize HMTL](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9629]
-        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely convert HMTL to plain text](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9630]
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely sanitize HTML](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9629]
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely convert HTML to plain text](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9630]
         - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp product settings](../Developers/SpiraApps-Manifest.md/#product-admin-settings) [IN:9628]
         - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp system settings](../Developers/SpiraApps-Manifest.md/#system-admin-settings) [IN:9767]
         - Fix artifact status single select [product setting type](../Developers/SpiraApps-Reference.md/#setting-types) not working for SpiraApps [IN:9668]

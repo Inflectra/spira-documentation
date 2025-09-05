@@ -531,7 +531,7 @@ To start, go to the data mapping home page for the selected product you were on 
 
         - Settings > Projects
         - In the left menu, Issues (Work Items) > Screens
-        - Then, for each Isse (Work Item) type you sync to Spira:
+        - Then, for each Issue (Work Item) type you sync to Spira:
             - Click on the pencil (edit)
             - Then, for each Screen, click on its name
             - Then, at the bottom of the page, select 'Time Tracking'

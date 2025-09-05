@@ -995,7 +995,7 @@
         - Release updates in the system trigger changes in all relevant releases and workspaces [RQ:2829]
         - Product changes trigger updates in all parent workspaces [RQ:2830]
         - Program changes trigger updates in all parent workspaces [RQ:2831]
-        - Porfolio changes trigger updates to the enterprise level [RQ:2832]
+        - Portfolio changes trigger updates to the enterprise level [RQ:2832]
         - Requirements calculations for counts and completion work as expected [RQ:2855]
         - [Task Effort calculations for requirements](../Spira-User-Manual/Requirements-Management.md/#task-effort) work as expected (for fields shown on the requirements list page) [RQ:2863]
         - [Task effort calculations for releases](../Spira-User-Manual/Release-Management.md/#task-effort) work as expected (for fields shown on the release list page) [RQ:2856]

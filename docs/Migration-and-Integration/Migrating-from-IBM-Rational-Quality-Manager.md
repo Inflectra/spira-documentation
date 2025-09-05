@@ -1,4 +1,5 @@
 # Migrating from IBM Rational Quality Manager (RQM)
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to use the free Migration Tool for importing test plans, test cases, test suites, test scripts and test executions from IBM Rational Quality Manager (RQM) into Spira (SpiraTest, SpiraTeam or SpiraPlan).
 
@@ -50,11 +51,9 @@ The migration tool will import the following artifacts from RQM:
 `Spira_RQM_Import.log`.*
 
 ## How The Migration Looks
-
 When you migrate an RQM project to Spira, the data will migrate as described below.
 
 ### Test Plans and Test Cases
-
 The test plans and associated test cases from RQM will migrate into Spira test case folders and test cases:
 
 ![Test plans and associated test cases in RQM](img/rqm_migration_6.png)
@@ -80,7 +79,6 @@ Therefore when we migrate over the test cases from RQM to Spira, we create linke
 ![Test cases and test linked steps in Spira](img/rqm_migration_10.png)
 
 ### Test Runs and Test Run Steps
-
 The test executions from RQM contain test steps:
 
 ![Test case in RQM with execution records](img/rqm_migration_11.png)

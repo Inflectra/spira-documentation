@@ -75,7 +75,7 @@ Note that the screens could vary depending on how the application access was set
 ![](img/configure_8.png)
 
 #### Exchange Web Services (EWS) / Office365
-Connecitng to an EWS/O365 account will require you to set up and register your organization and the email importer with Azure Portal. While setting this up in Azure, we recommend having the EWS Keys window up in the email importer. Click on the `Obtain Access` button to pop up the EWS Keys window:
+Connecting to an EWS/O365 account will require you to set up and register your organization and the email importer with Azure Portal. While setting this up in Azure, we recommend having the EWS Keys window up in the email importer. Click on the `Obtain Access` button to pop up the EWS Keys window:
 
 ![](img/configure_9.png)
 

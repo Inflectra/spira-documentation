@@ -69,7 +69,7 @@ To log a new incident in Spira based on the current help desk ticket, click on d
 
 ![](img/KronoDesk_11.png)
 
-This will display a dialog that lets you add a new incident to the linked instance of Spira. The system will prepopulate the description of the incident with the ticket description. You can edit this text or clear it completely and enter in custom content:
+This will display a dialog that lets you add a new incident to the linked instance of Spira. The system will pre-populate the description of the incident with the ticket description. You can edit this text or clear it completely and enter in custom content:
 
 ![](img/KronoDesk_12.png)
 
