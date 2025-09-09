@@ -203,6 +203,7 @@ nav:
   - Risks+: SpiraApps\RisksPlus.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
   - Test Configurations+: SpiraApps\Test-Configuration-Plus.md
+  - Versioning: SpiraApps\Versioning.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Introduction: Reporting\index.md

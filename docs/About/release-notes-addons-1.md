@@ -1,6 +1,9 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## September 2025
+- [Versioning SpiraApp](../SpiraApps/Versioning.md) released at v1.0
+
 ## August 2025
 - [Jira Spira QA Coverage app](../External-Bug-Tracking-Integration/Jira-Spira-QA-Coverage.md) v2.2.0:
 
