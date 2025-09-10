@@ -388,6 +388,17 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     spiraAppManager.reloadForm();
     ```
 
+??? note "saveForm()"
+    Saves all unsaved changes on the current main overview on a details page. 
+    
+    Note that doing this will save all unsaved changes, without user confirmation. It should be used with caution to reduce the chance of saving changes a user may not have intended to make. 
+
+    Example:
+    
+    ```js
+    spiraAppManager.saveForm();
+    ```
+
 ??? note "getDataItemField(fieldName: string, dataProperty?: string)"
     Retrieves a single field of the currently viewed artifact on a details page. 
 

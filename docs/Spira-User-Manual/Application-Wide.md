@@ -72,32 +72,31 @@ SpiraPlan® provides a shortcut -- called the *context menu* - for accessing som
 
 You can export the following artifacts from the current product to any other product that you have access to:
 
-- incidents
-- releases
-- requirements
-- risks
-- tasks
-- test cases
-- test sets
+| Artifact     | Export from List Page | Export from Details Page | Updates screenshots |
+| ------------ | --------------------- | ------------------------ | ------------------- |
+| Incidents    | Y                     | N                        | Y                   |
+| Releases     | Y                     | N                        | N                   |
+| Requirements | Y                     | N                        | N                   |
+| Risks        | Y                     | N                        | N                   |
+| Tasks        | Y                     | N                        | N                   |
+| Test cases   | Y                     | N                        | Y                   |
+| Test sets    | N                     | Y                        | Y                   |
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
-**Note**: 
+!!! info "Notes" 
+    - when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
+    - If an artifact's screenshots are not updated this means that the the embedded images are still a part of the source product (while the attachments themselves are exported together with artifact). To resolve thism either:
 
-- when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
-- The artifact's embedded images are part of the source product. When the artifact (except for test sets) is being moved to another product, the embedded images are still a part of the source product (while
-attachments being exported together with artifact). There are two solutions:
-
-   - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
-   - Re-attach the images so these can be copied over to the destination product and become a part of it
+    - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
+    - Re-attach the images so these can be copied over to the destination product and become a part of it
 
 To export one or more of a particular artifact:
 
-1. go to the list page for that artifact in the right product. 
-2. check the check-boxes of the artifact(s) you want to export
-3. click `Tools` > `Export to Product` from the toolbar
-4. this will then bring up a list of possible destination products (below is an example for exporting incidents)
-5. select the destination product and click `Export`
+1. go to the list or details page for that artifact (if on the list page, check the check-boxes of the artifact(s) you want to export)
+2. click `Tools` > `Export to Product` from the toolbar
+3. this will then bring up a list of possible destination products (below is an example for exporting incidents)
+4. select the destination product and click `Export`
 
 ![](img/Incident_Tracking_241.png)
 
@@ -472,7 +471,7 @@ Boards allow users to see artifacts visually in columns and/or rows, and move ca
     | Page           | Board format |
     | -------------- | ------------ |
     | Requirements   | New          |
-    | Planning Board | New, Legacy  |
+    | Planning Board | New          |
     | Incident Board | New          |
     | Task Board     | New          |
     | Program Board  | Legacy       |
@@ -589,6 +588,8 @@ What cards show on the board depends on how the board is configured (what displa
 | Priority "High"        | Component "Admin"       | Items with a priority of "High" and component of "Admin" |
 | Priority "High"        | Component unassigned    | Items with a priority of "High" and no component set     |
 | Priority is unassigned | Component is unassigned | Items with no priority and no component set              |
+
+Note that only the first 500 cards in any column will show. If rows or groups are shown then this number applies to the total cards in a column across all its rows (and groups).
 
 #### Moving and ordering cards
 Cards can be moved between any cell of the board. Moving a card updates all relevant fields about that item. For instance, moving a card to a different row and column will change the values for both of those fields for the card at once.

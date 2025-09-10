@@ -1,5 +1,31 @@
 # Release Notes for Spira v8
 
+## Version 8.13 (September 2025)
+??? success "New Features"
+    - Fix [planning board](../Spira-User-Manual/Planning-Board.md) Incident Cards in the same column as Requirement cards not always staying where dragged and dropped [RQ:5403]
+
+??? bug "Bug fixes and enhancements"
+    - Add ability for SpiraAppManager to automatically save the current artifact directly using a new [SpiraAppManager.saveForm()](../Developers/SpiraApps-Manager.md/#page-actions) function [IN:11077]
+    - Add an API endpoint for updating a Release Type, so that only the selected workflow can be changed [IN:11432]
+    - Fine tune the new horizontal scroll bar beneath grids on list pages to improve usability with long lists [IN:11477]
+    - Fix being unable to see a test case's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11377]
+    - Fix being unable to see an incident's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11375]
+    - Fix dragging cards in the Unassigned Items column on [product boards](../Spira-User-Manual/Application-Wide.md/#boards) not placing the cards in the correct place, but instead always putting them at the bottom [IN:11416]
+    - Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]
+    - Fix onboarding link for 8.12 for export to test set feature [IN:11448]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) not being able to export a test set that contains test cases from other products without error, by not exporting such test cases [IN:11478]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) so that so exported Test Set Test Cases with Parameters have their values properly set for test execution [IN:11458]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) so that Test Case Automation files are kept in place [IN:11459]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) when Test Set has same Test Case in the Test Set multiple times [IN:11453]
+    - Fix the artifact details page save button not being enabled after SpiraAppManager updates a form value [IN:11431]
+    - Fix the save button not enabling on details pages when a date only field is emptied [IN:11482]
+    - Fix the save button so it does not activate when loading an artifact with incorrectly formatted HTML/rich text [IN:11483]
+    - Impose a strict limit on the maximum number of cards that can be retrieved for any column in total (including across rows) on all [product boards](../Spira-User-Manual/Application-Wide.md/#boards) to 500, to improve performance [IN:11410]
+    - Improve the usability of time formats shown and edited on list and details pages from hours as a decimal to hours:minutes, to make it easier for users to work with time fields [IN:9884]
+    - Remove the Test Set Notification Event field "Last Executed" from the list of possible fields [IN:7235]
+    - Stop text wrapping on list page grids when Inflectra.ai is enabled [IN:11468]
+
+
 ## Version 8.12 (August 2025)
 !!! info "Summary"
     - Users can now export test sets to another product, including all test cases, steps, parameters, and attachments.
