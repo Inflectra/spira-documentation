@@ -12,20 +12,16 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q2 2025
-- Ability to use Inflectra.ai features for requirements on the requirement list page to more easily automate action against multiple requirements at once
-- Ability to export test sets and their test cases to another product
-- More power, flexibility, and ease of use in our Jira cloud data sync
-
-## Rest of 2025
+## Q4 2025
 - **Inflectra.ai**
 
-    - Artifact description analysis. This will give feedback, recommendations, and rewrites, to ensure descriptions adhere to writing standards (like "plain English", EARS, and more).
-    - Summarization of an artifact or its comments.
     - Automatic sprint notes. Append analysis of the sprint contents to its description in an easily understandable way.
 
-- Allow admins to customize requirement statuses to help them create more flexible workloads.
-- Improve the program level planning boards. <span class="pill">SpiraPlan</span>
+- Allow admins to customize test case statuses to help them create more flexible workloads.
+- Under the hood performance improvements through internal optimizations of our database communication layers.
+
+## Q1 2026
+- Allow admins to customize task statuses to help them create more flexible workloads. This will be followed (likely further out in 2026) with the ability to customize requirement statuses.
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
