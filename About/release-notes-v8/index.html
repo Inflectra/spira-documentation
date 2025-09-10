@@ -8618,6 +8618,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-813-september-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.13 (September 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-812-august-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9131,6 +9142,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-813-september-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.13 (September 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-812-august-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9313,6 +9335,37 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-813-september-2025">Version 8.13 (September 2025)<a class="headerlink" href="#version-813-september-2025" title="Permanent link">&para;</a></h2>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>Fix <a href="../../Spira-User-Manual/Planning-Board/">planning board</a> Incident Cards in the same column as Requirement cards not always staying where dragged and dropped [RQ:5403]</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add ability for SpiraAppManager to automatically save the current artifact directly using a new <a href="../../Developers/SpiraApps-Manager/#page-actions">SpiraAppManager.saveForm()</a> function [IN:11077]</li>
+<li>Add an API endpoint for updating a Release Type, so that only the selected workflow can be changed [IN:11432]</li>
+<li>Fine tune the new horizontal scroll bar beneath grids on list pages to improve usability with long lists [IN:11477]</li>
+<li>Fix being unable to see a test case's embedded images when <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">exported to another product</a>, if the user is not a member of the source product [IN:11377]</li>
+<li>Fix being unable to see an incident's embedded images when <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">exported to another product</a>, if the user is not a member of the source product [IN:11375]</li>
+<li>Fix dragging cards in the Unassigned Items column on <a href="../../Spira-User-Manual/Application-Wide/#boards">product boards</a> not placing the cards in the correct place, but instead always putting them at the bottom [IN:11416]</li>
+<li>Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]</li>
+<li>Fix onboarding link for 8.12 for export to test set feature [IN:11448]</li>
+<li>Fix <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">Test Set Export</a> not being able to export a test set that contains test cases from other products without error, by not exporting such test cases [IN:11478]</li>
+<li>Fix <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">Test Set Export</a> so that so exported Test Set Test Cases with Parameters have their values properly set for test execution [IN:11458]</li>
+<li>Fix <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">Test Set Export</a> so that Test Case Automation files are kept in place [IN:11459]</li>
+<li>Fix <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">Test Set Export</a> when Test Set has same Test Case in the Test Set multiple times [IN:11453]</li>
+<li>Fix the artifact details page save button not being enabled after SpiraAppManager updates a form value [IN:11431]</li>
+<li>Fix the save button not enabling on details pages when a date only field is emptied [IN:11482]</li>
+<li>Fix the save button so it does not activate when loading an artifact with incorrectly formatted HTML/rich text [IN:11483]</li>
+<li>Impose a strict limit on the maximum number of cards that can be retrieved for any column in total (including across rows) on all <a href="../../Spira-User-Manual/Application-Wide/#boards">product boards</a> to 500, to improve performance [IN:11410]</li>
+<li>Improve the usability of time formats shown and edited on list and details pages from hours as a decimal to hours:minutes, to make it easier for users to work with time fields [IN:9884]</li>
+<li>Remove the Test Set Notification Event field "Last Executed" from the list of possible fields [IN:7235]</li>
+<li>Stop text wrapping on list page grids when Inflectra.ai is enabled [IN:11468]</li>
+</ul>
+</details>
 <h2 id="version-812-august-2025">Version 8.12 (August 2025)<a class="headerlink" href="#version-812-august-2025" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
