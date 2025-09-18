@@ -1,4 +1,9 @@
 # Release Notes for Inflectra.ai
+## September 19 2025
+!!! bug "Bug fixes and enhancements"
+    - Prepare Inflectra.ai for upcoming integration with Rapise 8.6
+    - Show hand icon when hovering cursor over button group titles, so users know they can interact with the title [IN:11561]
+
 ## September 5 2025
 !!! success "New Features"
     - Sidebar design and user experience
