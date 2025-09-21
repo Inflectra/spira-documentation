@@ -9401,6 +9401,9 @@
 
 
 <h1 id="product-general-settings">Product: General Settings<a class="headerlink" href="#product-general-settings" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="product-history-changes">Product History Changes<a class="headerlink" href="#product-history-changes" title="Permanent link">&para;</a></h2>
 <p>This page displays a list of changes made to items within the selected product. By default, items are shown in chronological order - with the most recent at the top.</p>
 <p>The following artifact changes are recorded:</p>
@@ -9413,8 +9416,8 @@
 <li>Test Sets</li>
 <li>Automation Hosts</li>
 <li>Incidents</li>
-<li>Tasks</li>
-<li>Risks</li>
+<li class="edition-spiraplan edition-spirateam">Tasks</li>
+<li class="edition-spiraplan edition-spirateam">Risks</li>
 </ul>
 <p>If baselining is enabled for this product, changes to associations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.</p>
 <p>Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).</p>
@@ -9455,7 +9458,7 @@
 <p>Reverting an item will cause it to be undeleted if it has been deleted.</p>
 <p>You can revert multiple items from the History List page -- however, the only items that can be reverted back are Deletes and Modifications. All other types will be ignored. When selecting multiple items, you can select more than a single change set for a specific artifact, the artifact will be rolled back to the earliest change set selected.</p>
 <h2 id="product-associations">Product Associations<a class="headerlink" href="#product-associations" title="Permanent link">&para;</a></h2>
-<p>By default, all products in SpiraPlan are completely self-contained. Artifacts in one product can only be linked or associated with artifacts in the same product. However, sometimes you may need to share artifacts between products. This administration screen lets the product admin specify which other products can access artifacts in the current product:</p>
+<p>By default, all products in Spira are completely self-contained. Artifacts in one product can only be linked or associated with artifacts in the same product. However, sometimes you may need to share artifacts between products. This administration screen lets the product admin specify which other products can access artifacts in the current product:</p>
 <p><img alt="" src="../img/Product_General_Settings_101.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Permissions when sharing artifacts across products</p>
@@ -9468,7 +9471,7 @@
 <p><img alt="" src="../img/Product_General_Settings_102.png" /></p>
 <p>Select the name of the product you want to share with and choose which artifact(s) you want to share with this product:</p>
 <p><img alt="" src="../img/Product_General_Settings_103.png" /></p>
-<p>When you click the 'Add' button, SpiraPlan will add the new product association to the list.</p>
+<p>When you click the 'Add' button, Spira will add the new product association to the list.</p>
 <p>You can change the product association (for example to change which artifacts are shared) by clicking on the 'Edit' button to the right. This updates the association list.</p>
 <p>To remove an association, select its checkbox and click 'Remove'.</p>
 <h3 id="what-artifacts-can-be-shared-across-products">What artifacts can be shared across products<a class="headerlink" href="#what-artifacts-can-be-shared-across-products" title="Permanent link">&para;</a></h3>
@@ -9476,8 +9479,8 @@
 <ul>
 <li>Incidents</li>
 <li>Requirements</li>
-<li>Risks</li>
-<li>Tasks</li>
+<li class="edition-spiraplan edition-spirateam">Risks</li>
+<li class="edition-spiraplan edition-spirateam">Tasks</li>
 <li>Test Cases</li>
 </ul>
 <p>When you share the above artifacts from the sharing product to another product, members of that product can now see all artifacts of that type from the sharing product. Users can see these artifacts and often link them to an artifact in a number of places in the other product (the one being shared with).</p>
@@ -9495,9 +9498,9 @@
 <p><img alt="" src="../img/Product_General_Settings_101_3.png" /></p>
 </li>
 <li>
-<p><strong>Risks</strong>: from the association panels of incidents, requirements, test cases, and risks</p>
+<p class="edition-spiraplan edition-spirateam"><strong>Risks</strong>: from the association panels of incidents, requirements, test cases, and risks</p>
 </li>
-<li><strong>Tasks</strong>: from the association panels of incidents and tasks</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Tasks</strong>: from the association panels of incidents and tasks</li>
 <li>
 <p><strong>Test Cases</strong>: </p>
 <ul>
@@ -9519,24 +9522,30 @@
 <p><img alt="" src="../img/Product_General_Settings_104.png" /></p>
 <ol>
 <li>
-<p><strong>Database Indexes</strong>: In order to improve the performance of Spira™, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all SpiraPlan products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.</p>
+<p><strong>Database Indexes</strong>: In order to improve the performance of Spira™, it can be beneficial to refresh the database indexes. Clicking the "Refresh" button illustrated above will refresh all relevant database indexes across all Spira products. If for any reason performance seems to be slower than usual after a large import of data (for instance from Excel, or using the product migration tool) or after a recent database upgrade, you should consider refreshing the indexes. Depending on the size of the database, this could take some time. Please keep the web page open throughout the process to ensure it can complete successfully.</p>
 </li>
 <li>
-<p><strong>Data Caching</strong>: In order to improve the performance of Spira™, certain types of product data are cached. Very occassionally, the cache can get behind the data in the actual database. In such cases, refreshing the cache will make sure the cache is fully up to date and correct data is therefore displayed in the application. If users report this kind of problem in one of the cache areas, click the relevant Refresh Cache button.</p>
+<p><strong>Data Caching</strong>: In order to improve the performance of Spira™, certain types of product data are cached. Very occasionally, the cache can get behind the data in the actual database. In such cases, refreshing the cache will make sure the cache is fully up to date and correct data is therefore displayed in the application. If users report this kind of problem in one of the cache areas, click the relevant Refresh Cache button.</p>
 </li>
 <li>
 <p><strong>Indentation Hierarchy</strong>: The Requirement and Releases pages use an "Indent" system for managing the hierarchy of information. This allows requirements and test cases to be nested under parent items and be rapidly searched and filtered on. Sometimes if a move/copy operation is interrupted (due to a network outage, etc.) the hierarchy may get corrupted. If you suspect a problem with either of these artifacts, click the "Check" button. Once the check has run, if you see a red Error message instead of the Green OK that means problems were found. If that happens, click the "Correct" button and the system will correct the indent levels.</p>
 </li>
 </ol>
 <h2 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>Clicking on the Source Code link in the administration menu will, if a source code provider has been set up by a system administrator, show a screen like the one below.</p>
 <p><img alt="" src="../img/Product_General_Settings_105.png" /></p>
 <p>The first thing you need to do (regardless of whether you'll be overriding any of the settings) is to make the provider active for the current product. To do this, change the toggle to "Yes" and click [Save]:</p>
 <p><img alt="" src="../img/Product_General_Settings_106.png" /></p>
 <p>Now you can decide whether you want to override any of the default settings for this product. Any field left blank will automatically get its settings from the default values entered at the <a href="../System-Integration/#source-code-integration">system level</a>. In the example above, we have specified a product-specific repository path, login and password. Once you have correctly configured the product, click [Save] to commit the changes.</p>
-<p>To improve performance, SpiraPlan will cache some of the data it receives from the source code provider. Normally SpiraPlan will know when to update the cached data based on changes made in the source code system automatically. However, sometimes you may wish to force the cache to refresh right now. To do so, click the "Refresh Cache" button. If you ever want to wipe the cache completely and have it rebuild from scratch, click  "Clear Cache".</p>
-<p>You are now ready to use Spira™ in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of SpiraPlan, please see <a href="../../Spira-User-Manual/Source-Code/">here</a>.</p>
+<p>To improve performance, Spira will cache some of the data it receives from the source code provider. Normally Spira will know when to update the cached data based on changes made in the source code system automatically. However, sometimes you may wish to force the cache to refresh right now. To do so, click the "Refresh Cache" button. If you ever want to wipe the cache completely and have it rebuild from scratch, click  "Clear Cache".</p>
+<p>You are now ready to use Spira™ in conjunction with the source code tool you selected. For details on how to use the Source Code integration features of Spira, please see <a href="../../Spira-User-Manual/Source-Code/">here</a>.</p>
 <h2 id="baselines">Baselines<a class="headerlink" href="#baselines" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>NOTE: read about how baselining works and how to get started with it <a href="../../Spira-User-Manual/Release-Management/#baselining">here</a></p>
 <p>This page displays a list of all baselines in the product. You can only access this page in products where baselining has been turned on. </p>
 <p><img alt="product baseline list page" src="../img/product_baseline_list.png" /></p>
@@ -9558,6 +9567,9 @@
 </ul>
 <p>To filter and sort the list of baselines, use the filter and sort controls at the top of the table.</p>
 <h2 id="baseline-details">Baseline Details<a class="headerlink" href="#baseline-details" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This page displays detailed information about a single baseline. You cannot edit information about the baseline on this page. That can only be done from the <a href="../../Spira-User-Manual/Release-Management/#baselines">release details page</a>.</p>
 <p>Information about the baseline is divided into 4 sections:</p>
 <ol>
@@ -9585,6 +9597,9 @@
 <li>Change Type (this lists all of the types of change that the artifact went through during this baseline. Each type is only listed once, so if an artifact was added, then modified 10 times, it will show "Modified, Added")</li>
 </ul>
 <h2 id="baseline-artifact-details">Baseline Artifact Details<a class="headerlink" href="#baseline-artifact-details" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This page displays detailed information about the changes made to a specific artifact for a specific baseline. This is a great way to see what happened to an artifact in the baseline.</p>
 <p><img alt="product baseline artifact details page" src="../img/product_baseline_artifact_details.png" /></p>
 <p>Information about the artifact at this baseline is divided into 3 sections:</p>
@@ -9644,7 +9659,7 @@
 <hr />
 <ol>
 <li id="fn:app-compatibility">
-<p>SpiraApps are shown even if they will not fully function in your application. For instance, the FMEA SpiraApp is only compatible with SpiraPlan but will still show in the list if you are using SpiraTest or SpiraTeam.&#160;<a class="footnote-backref" href="#fnref:app-compatibility" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>SpiraApps are shown even if they will not fully function in your application. For instance, the FMEA SpiraApp is only compatible with SpiraPlan and SpiraTeam but will still show in the list if you are using SpiraTest.&#160;<a class="footnote-backref" href="#fnref:app-compatibility" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

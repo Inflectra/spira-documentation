@@ -9057,11 +9057,14 @@
 
 
 <h1 id="template-custom-properties">Template: Custom Properties<a class="headerlink" href="#template-custom-properties" title="Permanent link">&para;</a></h1>
-<p>SpiraPlan allows you to customize many of its artifacts<sup id="fnref:custom-artifacts"><a class="footnote-ref" href="#fn:custom-artifacts">1</a></sup> by adding user-defined custom properties in addition to the built-in fields. Custom properties show in the application in the following places.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>Spira allows you to customize many of its artifacts<sup id="fnref:custom-artifacts"><a class="footnote-ref" href="#fn:custom-artifacts">1</a></sup> by adding user-defined custom properties in addition to the built-in fields. Custom properties show in the application in the following places.</p>
 <ul>
 <li><strong>Artifact list pages</strong>: you can choose to show or hide them the same as standard fields</li>
 <li><strong>Artifact details pages</strong>: the visibility is controlled with the workflow as with standard fields. Each custom property is shown in the section on the page with other fields of that type - all rich text fields are shown together, all date fields together etc. In each section, custom properties are shown after standard fields. By default, custom properties are ordered based off of their number (the row number they are at on the custom property admin page), but you can change this by setting the properties' display positions (see below). Custom properties with position numbers are shown after those that do not. All custom properties with position numbers are shown in the order of their position numbers.</li>
-<li><strong>Planning board</strong> pages when viewing / adding an artifact (visible as per workflow)</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Planning board</strong> pages when viewing / adding an artifact (visible as per workflow)</li>
 <li><strong>Test execution pages</strong></li>
 <li><strong>Reports</strong> (standard and custom)</li>
 <li><strong>API</strong></li>
@@ -9071,7 +9074,7 @@
 <p>To access an artifact's custom properties, open the template admin menu and click the relevant link (artifacts with their own sub-sections in the menu list "Custom Properties" in that sub-section, all other artifacts are listed under the "Custom Properties" sub-section). This opens the custom property page for that artifact where you can quickly see the name, field number, type, legacy name, and actions (edit and delete) for each custom property.</p>
 <p>In the example below we are looking at the requirements custom property page, which currently has 7 custom properties defined. The custom properties page has rows for available custom properties for that artifact type in the current template.</p>
 <p><img alt="requirements custom property page" src="../img/Template_Custom_Properties_180.png" /></p>
-<p>Artifacts in SpiraPlan can have up to 99 different custom properties per artifact-type, per template. </p>
+<p>Artifacts in Spira can have up to 99 different custom properties per artifact-type, per template. </p>
 <p>To edit an existing custom property definition click the "Edit Definition" button for that specific property. To add a new definition click the "Add Definition" button. In either case the following dialog will be displayed:</p>
 <p><img alt="" src="../img/Template_Custom_Properties_181.png" /></p>
 <p>For each custom property you set the following fields on the main definition tab:</p>

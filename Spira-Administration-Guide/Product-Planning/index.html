@@ -9179,6 +9179,9 @@
 
 
 <h1 id="product-planning">Product: Planning<a class="headerlink" href="#product-planning" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="planning-options">Planning Options<a class="headerlink" href="#planning-options" title="Permanent link">&para;</a></h2>
 <p>The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product. The page is divided into a number of collapsible sections. </p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
@@ -9199,9 +9202,9 @@
 </ul>
 <p><img alt="" src="../img/Product_Planning_112.png" /></p>
 <ul>
-<li><strong>Auto-Create Tasks</strong>: When you change the status of a Requirement in the system to "In-Progress" the system will automatically add a default Task to that requirement if no tasks already exist. This is a useful shortcut that makes planning with requirements easier in the case when the requirements are of a size where they don't need to be formally decomposed into multiple developer tasks. However if you don't want the system to automatically create tasks in, you can deselect the option for the current product and it will turn off the feature.</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Auto-Create Tasks</strong>: When you change the status of a Requirement in the system to "In-Progress" the system will automatically add a default Task to that requirement if no tasks already exist. This is a useful shortcut that makes planning with requirements easier in the case when the requirements are of a size where they don't need to be formally decomposed into multiple developer tasks. However if you don't want the system to automatically create tasks in, you can deselect the option for the current product and it will turn off the feature.</li>
 <li><strong>Auto-Planned</strong>: When this option is enabled, if you assign a release/sprint to a requirement, and the requirement is not already in the 'Planned' status, the system will automatically switch the status of the requirement to 'Planned'. Once a requirement is then in 'Planned' status, transitioning to a different status may blank out the release field. This happens when you transition to any of the following statuses (as they are considered to be earlier in the requirement process): 'Requested', 'Accepted', or 'Under Review'. </li>
-<li><strong>Use Task Status</strong>: When this option is enabled, if you add any tasks to a requirement, the status of the requirement will be automatically governed by the aggregate status of the associated tasks. On adding a new task to a new requirement, the requirement will move to "Planned." Once a requirement has reached the "Planned" status, if any of its tasks are started and incomplete, the requirement status moves to "In Progress". Once all of a requirement's tasks have been completed, its status will move to "Developed" or a "later" status in the requirement workflow.</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Use Task Status</strong>: When this option is enabled, if you add any tasks to a requirement, the status of the requirement will be automatically governed by the aggregate status of the associated tasks. On adding a new task to a new requirement, the requirement will move to "Planned." Once a requirement has reached the "Planned" status, if any of its tasks are started and incomplete, the requirement status moves to "In Progress". Once all of a requirement's tasks have been completed, its status will move to "Developed" or a "later" status in the requirement workflow.</li>
 <li><strong>Use Test Status</strong> - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from "Developed" to "Tested" when all the associated test cases are passed.</li>
 </ul>
 <h3 id="task-incidents">Task &amp; Incidents<a class="headerlink" href="#task-incidents" title="Permanent link">&para;</a></h3>
@@ -9210,9 +9213,12 @@
 <li><strong>Default Effort</strong>: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.</li>
 </ul>
 <h3 id="kanban-work-in-progress-limits">Kanban Work In Progress Limits<a class="headerlink" href="#kanban-work-in-progress-limits" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p><img alt="" src="../img/Product_Planning_WIP.png" /></p>
 <p>Work In Progress (WIP) limits set the maximum number of requirements that the product team can efficiently manage at each stage of their Kanban process. Using WIP limits can be a useful way for teams to manage their work, allowing them to get through their work faster. This is done by focusing only tasks that can be done now (in other words, the work that can in-progress at any one time).</p>
-<p>This feature, not available in SpiraTest, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.</p>
+<p>This feature, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.</p>
 <p>To make use of WIP limits you need to:</p>
 <ul>
 <li>set the <strong>number of resources</strong> for each release and sprint. This represents the number of people working on the release. This defaults to 1 when you create a new release, but can be edited at any time.</li>
@@ -9240,7 +9246,7 @@
 <li>
 <p><strong>Test Case Execution</strong>: the following settings affect the test execution rules / experience of all testers in the products</p>
 <ul>
-<li><strong>Display Build During Test Execution</strong>: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".</li>
+<li><strong>Display Build During Test Execution</strong>: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using Spira in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".</li>
 <li><strong>Disable users from PASSING ALL test steps at once</strong>: (default = no) normally in testing on the first step testers have the options of selecting "Pass All" to mark every step at once as passed. This can be a useful shortcut. If you don't want testers to use this shortcut turn this setting on.</li>
 <li><strong>Disable users from marking a test step as BLOCKED</strong>: (default = no) testing in Spira has five different execution statuses: Pass, Fail, Blocked, Caution, and N/A. Pass or Fail cannot be disabled. To disable "Blocked" turn this setting on. Testers will no longer see a "Blocked" button during testing.</li>
 <li><strong>Disable users from marking a test step as CAUTION</strong>: (default = no) to disable "Caution" turn this setting on. Testers will no longer see a "Caution" button during testing.</li>
@@ -9266,7 +9272,7 @@
 <li><strong>Refresh Parameters Product-Wide</strong>: (default = no) setting this to yes will potentially speed up the refresh of test case parameters on large products that have complex hierarchies of nested, linked test cases. This should not be done unless you have been told by the Inflectra Support team to do so.</li>
 </ul>
 <h2 id="edit-components">Edit Components<a class="headerlink" href="#edit-components" title="Permanent link">&para;</a></h2>
-<p>SpiraPlan lets you define a list of Components for each product. These components represent the main functional areas of the system and artifacts can be associated with each of the defined components.</p>
+<p>Spira lets you define a list of Components for each product. These components represent the main functional areas of the system and artifacts can be associated with each of the defined components.</p>
 <p><img alt="" src="../img/Product_Planning_109.png" /></p>
 <p>This page lets you display the list of components based on three predefined filters:</p>
 <ul>

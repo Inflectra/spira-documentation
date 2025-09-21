@@ -9267,6 +9267,9 @@
 
 
 <h1 id="product-changing-the-template-a-product-uses">Product: Changing the Template a Product Uses<a class="headerlink" href="#product-changing-the-template-a-product-uses" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Each product in Spira has a template that controls the bulk of how that product is configured and will work for end users. Each product is controlled by one template, though each template can control many products at once. A template affects a product’s fields, custom properties, workflows, and more.</p>
 <p>If you change a product’s template, you are not changing the core data inside the product. But you are changing how that product will work. This is not something to do lightly. There is a deep connection between a product and its template. When you change templates, you are changing the workflows, and also all the links in the product from the old template to the new template. </p>
@@ -9311,7 +9314,7 @@
 <li>A progress meter will show. When it disappears, the product’s template has been successfully changed.</li>
 </ol>
 <h2 id="what-happens-to-standard-fields">What happens to standard fields<a class="headerlink" href="#what-happens-to-standard-fields" title="Permanent link">&para;</a></h2>
-<p>As mentioned above, only those standard fields controlled by templates can change when changing templates for a product. Let’s call these fields “dynamic fields” No other standard fields (i.e. non custom fields) in the product will change in any way. The dynamic fields in SpiraPlan are below (not all of these are available in SpiraTeam or SpiraTest):</p>
+<p>As mentioned above, only those standard fields controlled by templates can change when changing templates for a product. Let’s call these fields “dynamic fields” No other standard fields (i.e. non custom fields) in the product will change in any way. The dynamic fields in Spira are below (not all of these are available in SpiraTeam or SpiraTest):</p>
 <ul>
 <li>Requirement Importance</li>
 <li>Requirement Type</li>
@@ -9323,12 +9326,12 @@
 <li>Incident Severity</li>
 <li>Incident Status</li>
 <li>Incident Type</li>
-<li>Task Priority</li>
-<li>Task Type</li>
-<li>Risk Impact</li>
-<li>Risk Probability</li>
-<li>Risk Status</li>
-<li>Risk Type</li>
+<li class="edition-spiraplan edition-spirateam">Task Priority</li>
+<li class="edition-spiraplan edition-spirateam">Task Type</li>
+<li class="edition-spiraplan edition-spirateam">Risk Impact</li>
+<li class="edition-spiraplan edition-spirateam">Risk Probability</li>
+<li class="edition-spiraplan edition-spirateam">Risk Status</li>
+<li class="edition-spiraplan edition-spirateam">Risk Type</li>
 </ul>
 <p>For each of the dynamic fields above the system will:</p>
 <ol>

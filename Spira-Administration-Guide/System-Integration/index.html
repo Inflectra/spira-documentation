@@ -9101,9 +9101,12 @@
 
 
 <h1 id="system-integration">System: Integration<a class="headerlink" href="#system-integration" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="data-synchronization">Data Synchronization<a class="headerlink" href="#data-synchronization" title="Permanent link">&para;</a></h2>
-<p>SpiraPlan® is capable of synchronizing its data with a variety of other systems, including but not limited to requirements management systems and standalone bug-tracking tools. The various integration plug-ins for SpiraPlan® and the steps for configuring the data-synchronization settings are described in the <em><a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">SpiraTest External Bug-Tracking Integration Guide</a></em>. Each individual tool has its own separate guide that builds on this setup guide.</p>
-<p>If you are synchronizing data between SpiraPlan and one of these other systems, the 'Data Synchronization' administration page will show a list of available data-synchronizations services:</p>
+<p>Spira is capable of synchronizing its data with a variety of other systems, including but not limited to requirements management systems and standalone bug-tracking tools. The various integration plug-ins for Spira and the steps for configuring the data-synchronization settings are described in the <em><a href="../../External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">Spira External Bug-Tracking Integration Guide</a></em>. Each individual tool has its own separate guide that builds on this setup guide.</p>
+<p>If you are synchronizing data between Spira and one of these other systems, the 'Data Synchronization' administration page will show a list of available data-synchronizations services:</p>
 <p><img alt="" src="../img/System_Integration_Data_Synchronization_List.png" /></p>
 <p>In the example above, we have six plug-ins available, with only Azure DevOps (ADO) active. For ADO, the data sync is active for a single product: Library Information System (Sample).</p>
 <p>This table shows the following information about each data sync plug-in:</p>
@@ -9116,7 +9119,7 @@
 <li>
 <p>operations you can perform on each data sync: </p>
 <ul>
-<li>Reset sync. You should not routinely use the <strong>Reset Sync</strong> (see image below). This opens a dialog to let you reset the date of last sync for that plug-in. The dialog lets you reset the sync to 1 hour ago, 1 day ago, 1 week ago, or for all time. Each of these options forces the plug-in to re-examine all records in the system within the relevant time period to see if any were not synchronized - this can take a long time (especially for "all time" which should almost never be used). The recommended procedure for forcing a re-sync is to temporarily stop the SpiraPlan service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.</li>
+<li>Reset sync. You should not routinely use the <strong>Reset Sync</strong> (see image below). This opens a dialog to let you reset the date of last sync for that plug-in. The dialog lets you reset the sync to 1 hour ago, 1 day ago, 1 week ago, or for all time. Each of these options forces the plug-in to re-examine all records in the system within the relevant time period to see if any were not synchronized - this can take a long time (especially for "all time" which should almost never be used). The recommended procedure for forcing a re-sync is to temporarily stop the Spira service, click the button to reset the last-sync date, and then start the service. This will ensure that the resetting doesn't happen mid-sync.</li>
 <li>Edit: this will open the data sync plug-in settings page. For many plug-ins this settings page will guide you in how to set up that specific data sync. Each data sync plug-in has detailed documentation about how to set it up (see the Integrations &gt; Bug Tracking/DataSync section of the main SpiraDoc menu)</li>
 <li>Delete</li>
 <li>View data sync errors in the event log, </li>
@@ -9126,8 +9129,11 @@
 <p><img alt="" src="../img/System_Integration_reset-data-sync.png" /></p>
 <p>Above the table you can add a new data sync or refresh the status of the page to ensure that you are seeing the most up to date information. </p>
 <h2 id="source-code-integration">Source Code Integration<a class="headerlink" href="#source-code-integration" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>Spira is capable of integrating with a variety of source code / Software Configuration Management (SCM) tools such as Git, Subversion, CVS and TFS. This allows you to browse the source code repositories using the Spira web interface, and more importantly link commits in these tools to artifacts in Spira. This provides the end-to-end traceability from code commits/check-ins to the tasks, incidents and requirements that necessitated the code change.</p>
-<p>The information on using the various source code providers for SpiraPlan® and the steps for configuring the provider-specific settings are described elsewhere - for example for <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>.</p>
+<p>The information on using the various source code providers for Spira and the steps for configuring the provider-specific settings are described elsewhere - for example for <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a>.</p>
 <p>To configure a source code provider, you need to click on the System Administration &gt; Integration &gt; Source Code link in the Administration navigation to bring up the list of configured source code providers:</p>
 <p><img alt="" src="../img/System_Integration_76.png" /></p>
 <p>By default the only provider listed will be the TestVersionControlProvider which is used for demonstration purposes only, and can be deleted from a production system by clicking on the "Delete" button to the right of it.</p>
@@ -9150,8 +9156,8 @@
 <p>When finished, click the "Insert" button and you will be taken back to the Source Code integration list page, with new provider listed as an available plug-in:</p>
 <p><img alt="" src="../img/System_Integration_78.png" /></p>
 <h2 id="test-automation">Test Automation<a class="headerlink" href="#test-automation" title="Permanent link">&para;</a></h2>
-<p>SpiraPlan® can be used to manage the development, scheduling and execution of automated unit, functional and load tests written using a variety of test automation engines (e.g. HP QuickTest Pro, SmarteScript, TestComplete, etc.). This section allows you to configure the different engines that are available in your environment so that the testers know which tools they can use to schedule tests with.</p>
-<p>The information on using the various test automation engines for SpiraPlan® and the steps for configuring the engine-specific settings are described in the <em>SpiraTest/Team RemoteLaunch Automated Testing Integration Guide</em>.</p>
+<p>Spira can be used to manage the development, scheduling and execution of automated unit, functional and load tests written using a variety of test automation engines (e.g. HP QuickTest Pro, SmarteScript, TestComplete, etc.). This section allows you to configure the different engines that are available in your environment so that the testers know which tools they can use to schedule tests with.</p>
+<p>The information on using the various test automation engines for Spira and the steps for configuring the engine-specific settings are described in the <em>Spira RemoteLaunch Automated Testing Integration Guide</em>.</p>
 <p>To configure a test automation engine, you need to click on the Administration &gt; Integration &gt; Test Automation link in the Administration navigation to bring up the list of configured test automation engines:</p>
 <p><img alt="" src="../img/System_Integration_79.png" /></p>
 <p>To add a new test automation engine, click the "Add" button to enter the Automation Engine details page. The fields required are as follows:</p>
@@ -9167,20 +9173,20 @@
 <p><strong>Active</strong>: If checked, the automation engine is active and able to be used in any product.</p>
 </li>
 <li>
-<p><strong>Token:</strong> This needs to match the name of the Automation Engine DLL file that you're using (see the <em>SpiraTest/Team Automated Testing Integration Guide</em> for more details on your specific tool) for the specific automation engine.</p>
+<p><strong>Token:</strong> This needs to match the name of the Automation Engine DLL file that you're using (see the <em>Spira/Team Automated Testing Integration Guide</em> for more details on your specific tool) for the specific automation engine.</p>
 </li>
 </ul>
 <p>When finished, click the "Insert" button and you will be taken back to the test automation engine list page, with new automation engine listed.</p>
 <p>To edit the settings for an existing test automation engine, just click on the "Edit" link next to the name of the engine and you will be able to edit the same settings that were shown above when you first created it.</p>
 <p><img alt="" src="../img/System_Integration_81.png" /></p>
 <p>Once you have made the appropriate changes, click the [Save] button to commit them.</p>
-<p>You are now ready to use SpiraPlan® in conjunction with the test automation engine you added. For details on how to use the test automation features of SpiraPlan, please refer to the <em>SpiraPlan® User Manual</em>.</p>
+<p>You are now ready to use Spira in conjunction with the test automation engine you added. For details on how to use the test automation features of Spira, please refer to the <em>Spira User Manual</em>.</p>
 <h2 id="floating-licenses">Floating Licenses<a class="headerlink" href="#floating-licenses" title="Permanent link">&para;</a></h2>
-<p>Cloud users of SpiraPlan who have a floating license subscription addon to your SpiraPlan will see a "Floating Licenses" section in the Integrations section of the system administration menu. For example, if you have <a href="https://www.inflectra.com/Rapise/">Rapise</a> floating licenses, you will see this menu item and page.</p>
+<p>Cloud users of Spira who have a floating license subscription addon to your Spira will see a "Floating Licenses" section in the Integrations section of the system administration menu. For example, if you have <a href="https://www.inflectra.com/Rapise/">Rapise</a> floating licenses, you will see this menu item and page.</p>
 <p>Read more about how to purchase and use <a href="https://rapisedoc.inflectra.com/Manuals/Rapise_Installation_Guide/#floating-license">Rapise floating licenses</a>.</p>
 <p>When you go to the Floating Licenses page you will see how many floating licenses are available as well as how many are currently in use (initially the list will be empty):</p>
 <p><img alt="floating licenses page" src="../img/System_Integration_floating_licenses.png" /></p>
-<p>Once you have floating licenses available, when you connect, for example, Rapise to Spira, Rapise automatically requests a floating license from Spira. The application will use that license until Rapise is closed or a SpiraPlan administrator clicks the End Session button in SpiraPlan.</p>
+<p>Once you have floating licenses available, when you connect, for example, Rapise to Spira, Rapise automatically requests a floating license from Spira. The application will use that license until Rapise is closed or a Spira administrator clicks the End Session button in Spira.</p>
 <p>The floating licenses page will show how many licenses are available and information about each currently active session. A system admin can end a session at any time by clicking the "End Session" button on a specific session.</p>
 <p><img alt="floating licenses page" src="../img/System_Integration_floating_licenses2.png" /></p>
 

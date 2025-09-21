@@ -9099,43 +9099,30 @@
 
 
 <h1 id="system-administration">System Administration<a class="headerlink" href="#system-administration" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Now that you have successfully installed SpiraPlan®, this section of the guide outlines how to perform the typical administrative tasks necessary for setting up products and programs in the system, managing users and verifying the license information.</p>
+<p>This section of the guide outlines how to perform the typical administrative tasks necessary for setting up products and programs in the system, managing users and verifying the license information.</p>
 <h2 id="types-of-administrator">Types of administrator<a class="headerlink" href="#types-of-administrator" title="Permanent link">&para;</a></h2>
 <p>To perform these tasks, you need to login to the system with a user that has some level of "administration" permissions within the system. There are four different sections to administration, and each has its own permission. These sections and their permissions are:</p>
 <ol>
-<li>
-<p><strong>System Administration</strong>: tasks like approving new users, creating new products, changing security settings, or viewing the logs all happen at the system-wide level of administration. There is a special "System Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any system administrator task. <em>Please note that a special "administrator" user is created by the installer. You should initially login to SpiraPlan® with the username <code>administrator</code>, and the password <code>PleaseChange</code>. Change this password as soon as possible to something that is secure yet memorable by clicking on the "User Profile" link.</em></p>
-</li>
-<li>
-<p><strong>Product Administration:</strong> a product admin can make changes specific to that product and that product only. For instance, they can add or remove users from a product. Once a user is made a product admin, they can perform all the actions in the product administration section. <em>Each individual product has a defined set of users who are members of that product. Each member is assigned a specific role (many users can share the same role), and a role can be set to be a product admin.</em> <em>Please note, that when a system admin creates a product, they are automatically added as "Product Owner</em>".</p>
-</li>
-<li>
-<p><strong>Program Administration:</strong> just like with products, some aspects of a program are managed in the program section of administration. Anyone who is assigned the role of "Program Owner" on a program can perform these administrative functions.</p>
-</li>
-<li>
-<p><strong>Template Administration:</strong> end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
-<em>Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work <a href="../System-Users/#view-edit-product-roles">here</a>.</em></p>
-</li>
-<li>
-<p><strong>Report Administration:</strong> a report admin can administer custom reports and graphs (create, edit, delete). They can also access custom report data in 3<sup>rd</sup> party tools via OData and the API. These functions are also available to system admins under System Administration. However report admins can <strong>only</strong> access the reporting functions and pages - they have no access to any other admin functions. There is a special "Report Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any report administrator task.</p>
-</li>
+<li><strong>System Administration</strong>: tasks like approving new users, creating new products, changing security settings, or viewing the logs all happen at the system-wide level of administration. There is a special "System Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any system administrator task. <em>Please note that a special "administrator" user is created by the installer. You should initially login to Spira with the username <code>administrator</code>, and the password <code>PleaseChange</code>. Change this password as soon as possible to something that is secure yet memorable by clicking on the "User Profile" link.</em></li>
+<li><strong>Product Administration:</strong> a product admin can make changes specific to that product and that product only. For instance, they can add or remove users from a product. Once a user is made a product admin, they can perform all the actions in the product administration section. <em>Each individual product has a defined set of users who are members of that product. Each member is assigned a specific role (many users can share the same role), and a role can be set to be a product admin.</em> <em>Please note, that when a system admin creates a product, they are automatically added as "Product Owner</em>".</li>
+<li><strong>Program Administration:</strong> just like with products, some aspects of a program are managed in the program section of administration. Anyone who is assigned the role of "Program Owner" on a program can perform these administrative functions.</li>
+<li><strong>Template Administration:</strong> end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.</li>
+<li><strong>Report Administration:</strong> a report admin can administer custom reports and graphs (create, edit, delete). They can also access custom report data in 3<sup>rd</sup> party tools via OData and the API. These functions are also available to system admins under System Administration. However report admins can <strong>only</strong> access the reporting functions and pages - they have no access to any other admin functions. There is a special "Report Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any report administrator task.</li>
 </ol>
+<p><em>Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work <a href="../System-Users/#view-edit-product-roles">here</a>.</em></p>
 <h2 id="administration-menu">Administration Menu<a class="headerlink" href="#administration-menu" title="Permanent link">&para;</a></h2>
 <p>Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:</p>
 <p><img alt="" src="../img/System_Administration_28.png" /></p>
 <p>This will display the context aware administration menu popup. This menu will show different sections depending on where you are in the application and your administrative privileges. For example, only system administrators see the "System: Admin Home" section shown at the bottom of the screenshot below.</p>
 <p>In the screenshot below you can see that administration links are being shown for three different sections:</p>
 <ol>
-<li>
-<p>Library Information System -- which is a product</p>
-</li>
-<li>
-<p>The template called Sample Template: Agile (this is the template the controls the above product)</p>
-</li>
-<li>
-<p>System wide administration</p>
-</li>
+<li>Library Information System -- which is a product</li>
+<li>The template called Sample Template: Agile (this is the template the controls the above product)</li>
+<li>System wide administration</li>
 </ol>
 <p>This menu only shows the links to one product, one template, or one program at a time (and System Admin all the time to system administrators). Because this user is currently viewing a page in the product 'Library Information System', admin items for that product and its template are visible.</p>
 <p>You can see that the "Requirements" sub section is highlighted. This is because the user is currently on a requirements page of the 'Library Information System' product (either in the main application or in template administration). The highlighting serves no function other than to guide the user to where they may wish to focus.</p>
@@ -9149,12 +9136,8 @@
 <p><img alt="" src="../img/System_Administration_32.png" /></p>
 <p>The Administration home page, like all admin pages, is divided into two areas:</p>
 <ol>
-<li>
-<p>the skinny left-hand bar. Clicking this will show the context-aware administration menu discussed above</p>
-</li>
-<li>
-<p>the main pane that displays the available options for the selected page.</p>
-</li>
+<li>the skinny left-hand bar. Clicking this will show the context-aware administration menu discussed above</li>
+<li>the main pane that displays the available options for the selected page.</li>
 </ol>
 <p>This home page shows a number of useful widgets with information about the system. You can edit these widgets, their position, and what is shown, using the two buttons in the top right (the cog and the plus).</p>
 <p>Product and Template administration home pages also show useful data and links relevant to them. On most admin pages for products and templates the name of the current product or template is shown at the top of the page in a heading. These names are hyperlinks that will open the product or template administration home page.</p>

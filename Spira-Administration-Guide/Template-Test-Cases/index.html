@@ -9179,17 +9179,20 @@
 
 
 <h1 id="template-test-cases">Template: Test Cases<a class="headerlink" href="#template-test-cases" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>This section contains administrative options that are specific to the testing functionality in the system.</p>
 <h2 id="priority">Priority<a class="headerlink" href="#priority" title="Permanent link">&para;</a></h2>
 <p>The following screen is displayed when you choose the "Priority" link from the Test Cases section of the administration menu:</p>
 <p><img alt="" src="../img/Template_Test_Cases_136.png" /></p>
-<p>The screen displays a list of all the defined test case priorities for the current template. By default, the screen will be populated with the standard SpiraPlan® test case priorities. To edit an existing test case priority, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".</p>
+<p>The screen displays a list of all the defined test case priorities for the current template. By default, the screen will be populated with the standard Spira test case priorities. To edit an existing test case priority, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".</p>
 <p>Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.</p>
 <p>You can't delete an existing test case priority, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new test case priority, click the "Add" button and a new row will be added to the list which you can now edit.</p>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <p>The following screen is displayed when you choose the "Types" link from the Test Cases section of the administration menu:</p>
 <p><img alt="" src="../img/Template_Test_Cases_137.png" /></p>
-<p>The screen displays a list of all the defined test case types for the current template. By default, the screen will be populated with the standard SpiraPlan® test case types. To edit an existing test case type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".</p>
+<p>The screen displays a list of all the defined test case types for the current template. By default, the screen will be populated with the standard Spira test case types. To edit an existing test case type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".</p>
 <p>You can't delete an existing test case type, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new test case type, click the "Add" button and a new row will be added to the list which you can now edit.</p>
 <p>The associated workflow drop-down list allows you to specify which workflow the test case type will follow. This is a very powerful feature since it allows you to configure different workflows for different test case types; i.e. a User Story may follow a simpler review process than a Feature or Use Case test case.</p>
 <p>The Is Exploratory check-box allows you to specify if the test case type should be able to be executed in exploratory mode (which allows more editing of the test case and its steps during execution). Note that this mode is only available to users with a certain permission level and when executing an individual test case.</p>
@@ -9197,7 +9200,7 @@
 <h2 id="test-case-workflows">Test Case Workflows<a class="headerlink" href="#test-case-workflows" title="Permanent link">&para;</a></h2>
 <p>Clicking on the "Workflows" link under the Test Cases section, brings up the list of defined test case workflows for the current template. A workflow is a predefined sequence of test cases statuses linked together by "workflow transitions" to enable a newly created test case to be reviewed, prioritized, assigned, and tested, as well as to handle exception cases such as the case of a rejected or obsolete test case. The workflow list screen for the sample template is illustrated below:</p>
 <p><img alt="" src="../img/Template_Test_Cases_138.png" /></p>
-<p>You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions. The steps and transitions that make up the default workflow are illustrated in the diagram below:</p>
+<p>You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard Spira steps and transitions. The steps and transitions that make up the default workflow are illustrated in the diagram below:</p>
 <pre class="mermaid"><code>flowchart LR
   Draft --&gt; Rejected;
   Draft &lt;--&gt; Ready-for-Review;
@@ -9229,7 +9232,7 @@
 <p>When you click on the test case status name link from either of the previous screens, you are taken to the workflow step details screen:</p>
 <p><img alt="" src="../img/Template_Test_Cases_141.png" /></p>
 <p>The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current test case status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.</p>
-<p>This page allows you to define the behavior of the various test case fields (i.e. those that are a standard part of SpiraPlan® such as Priority):</p>
+<p>This page allows you to define the behavior of the various test case fields (i.e. those that are a standard part of Spira such as Priority):</p>
 <p><img alt="" src="../img/Template_Test_Cases_142.png" /></p>
 <p>This page also allows you to define the behavior of the various test case custom properties for this particular step in the workflow:</p>
 <p><img alt="" src="../img/Template_Test_Cases_143.png" /></p>
