@@ -16,7 +16,7 @@ This section outlines SpiraPlan's source code features, whatever type of source 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
 
-1. a system administrator has setup the source code provider (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spiraplan))
+1. a system administrator has setup the source code provider (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spira))
 2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#use-git-for-your-product))
 3. SpiraPlan users have a [role](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
 

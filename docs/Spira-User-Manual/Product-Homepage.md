@@ -114,7 +114,7 @@ This chart shows the proportion of all active requirements that have been comple
 
 ## Requirement Incident Count
 This section displays a count of the total number of incidents, and the number of open incidents mapped against requirements in the system, sorted by the requirements that have the most open incidents first. This section is useful for determining the parts of the application that have the most instability, as you can look at the requirements that have yielded the greatest number of incidents. Clicking on any of the requirements hyperlinks will take you to the 
-[detail page](Requirements-Management.md/#requirements-details) for the requirement in question. *You can configure in the settings whether to include requirements with no open incidents, and also how many rows of data to display.*
+[detail page](Requirements-Management.md/#requirement-details) for the requirement in question. *You can configure in the settings whether to include requirements with no open incidents, and also how many rows of data to display.*
 
 
 ## Requirements Coverage

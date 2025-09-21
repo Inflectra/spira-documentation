@@ -1,4 +1,4 @@
-# Installing SpiraPlan®
+# Installing Spira
 
 This section outlines how to:
 
@@ -408,11 +408,11 @@ The 'sa' account is a built-in SQL account ('system admin'), and the password is
 Leave 'Database Settings' section unchanged, as filled by default (make sure the Database name is the actual database you'd like to upgrade).
 
 ### Adding An Application Server
-Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#Installing-the-Software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
+Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#installing-the-software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
 
 ![](img/Installing_SpiraPlan_db-options.png)
 
-All other actions during this install matches those in a [standard installation](#Installing-the-Software).
+All other actions during this install matches those in a [standard installation](#installing-the-software).
 
 ### Upgrading an existing Database
 Use this option in two rare cases:
@@ -420,7 +420,7 @@ Use this option in two rare cases:
 - where an application was upgraded but the installer did not upgrade the database
 - if so instructed by the Inflectra support team
 
-These steps in this option are the same as if you were [upgrading the application normally](#Upgrading). You will be asked for the SQL Server and Database information for your database.
+These steps in this option are the same as if you were [upgrading the application normally](#upgrading). You will be asked for the SQL Server and Database information for your database.
 
 ![](img/Installing_SpiraPlan_db-options.png)
 

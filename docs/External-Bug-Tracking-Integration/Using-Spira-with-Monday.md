@@ -46,7 +46,7 @@ plugin to offset timestamps.
     - "incidents_only"
     - "both"
 
-- **Sync subitems?**: Ignore this setting if you are using the *spira_to_monday* sync mode. Otherwise, if you want the *monday.com* subitems to be synced to Spira, please enter *yes* to this field. If you want the datasync to skip *monday.com* subitems, enter *no*. You can learn more about this [below](#monday-sub-items).
+- **Sync subitems?**: Ignore this setting if you are using the *spira_to_monday* sync mode. Otherwise, if you want the *monday.com* subitems to be synced to Spira, please enter *yes* to this field. If you want the datasync to skip *monday.com* subitems, enter *no*. You can learn more about this [below](#mondaycom-sub-items).
 
 Once all those fields have been filled out, click the "Save" button to save your changes.
 

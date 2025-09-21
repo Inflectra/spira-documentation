@@ -105,5 +105,5 @@ For hierarchical artifacts (ones with parents and children), the import process 
 
 ## Get data From Spira
 
-To get all the data for the specified project and artifact from Spira, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into Spira](#import-into-spiraplan) above, click the \[ Get From Spira \] button. This will first load up the template on the current sheet then automatically retrieve all data from Spira and add it to the sheet.
+To get all the data for the specified project and artifact from Spira, instead of going through the steps outlined in [Preparing your Template](#preparing-your-template) to [Import Into Spira](#import-into-spira) above, click the \[ Get From Spira \] button. This will first load up the template on the current sheet then automatically retrieve all data from Spira and add it to the sheet.
 

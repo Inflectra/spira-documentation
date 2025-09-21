@@ -68,7 +68,7 @@ To quickly print a single risk or list of risks you can select the items' checkb
 ## Risk Details
 
 !!! tip "Inflectra.ai"
-    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#risk-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#risks-details-page), available to all cloud customers with an active Inflectra.ai subscription.
 
 When you click on a risk item in the [risks list](#risks-list), you are taken to the risk details page illustrated below:
 

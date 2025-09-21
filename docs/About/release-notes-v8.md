@@ -70,7 +70,7 @@
     - Fix the v7 API for updating a user to properly update the user's information [IN:11282]
     - Improve horizontal scrolling on pages with tables or boards that can extend beyond the edge of the screen, by having the table or board scroll and not the whole page [IN:11285]
     - Improve performance of the [test run list page](../Spira-User-Manual/Test-Run-Management.md/#test-run-list) by improving the way the data is retrieved to use fewer resources [IN:11164]
-    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task--incidents)) [IN:11017]
+    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task-incidents)) [IN:11017]
 
 
 ## Version 8.11 (June 2025)
@@ -80,7 +80,7 @@
         - As a timesheet user, I can optionally adjust [remaining effort](../Spira-User-Manual/Timesheets.md/#remaining-effort) for an artifact directly on my Timesheet, to streamline my workflow [RQ:5310]
     
 ??? bug "Bug fixes and enhancements"
-    - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]
+    - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#project-teams-users) [IN:10729]
     - Create a new API endpoint to retrieve dataSync system extended custom properties [IN:10659]
     - Fix not being able to clone a product or update the data sync mappings if two external keys are the same for 2 different fields [IN:11099]
     - **[Inflectra.ai enhancements](./release-notes-inflectra.ai-v1.md/#may-30-2025)**
@@ -150,7 +150,7 @@
         - As an incident user, I can see associated incidents on [test runs](../Spira-User-Manual/Test-Run-Management.md/#incidents) which are from other products [RQ:5123]
         - As an Incident user, I can see associated incidents on [test cases](../Spira-User-Manual/Test-Case-Management.md/#incidents) which are from other products [RQ:5126]
         - As an Incident user, I can see associated incidents on [test sets](../Spira-User-Manual/Test-Set-Management.md/#incidents) which are from other products [RQ:5127]
-        - As an Incident user, I can see associated incidents on [test steps](../Spira-User-Manual/Test-Case-Management.md/#incidents-1) which are from other products [RQ:5124]
+        - As an Incident user, I can see associated incidents on [test steps](../Spira-User-Manual/Test-Case-Management.md/#incidents_1) which are from other products [RQ:5124]
         - As a tester, [I can associate incidents to a test run step](../Spira-User-Manual/Test-Execution.md/#incidents) which are from a different product [RQ:5125]
 
     * **[Product Home Page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs)**
@@ -165,13 +165,13 @@
     - Allow [data syncs](../Spira-Administration-Guide/System-Integration.md#data-synchronization) to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]
     - Correct the explanatory text on the [template custom list page](../Spira-Administration-Guide/Template-Custom-Properties.md/#edit-custom-lists) to not reference "products" - but instead the template [IN:7555]
     - Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]
-    - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) to enhance SpiraApp capabilities [IN:10675]
+    - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) to enhance SpiraApp capabilities [IN:10675]
     - Fix the incident list page tools buttons to "Export to Excel/Word/Acrobat" not correctly generating the requested report (introduced in 8.7.0.0) [IN:10671]
     - Fix the My Page so that when widgets in the "Top" or "Bottom" sections can be more easily closed or configured in dark mode, by making the editing buttons visible [IN:6979]
     - Fix the possibility of getting an error on the Planning Board if the release selected in the release dropdown has been deleted [IN:10192]
     - Fix the [Product Test Summary widget](../Spira-User-Manual/Program-Homepage.md/#product-test-summary) on the program home page so that it does not show inactive products or any information about them [IN:10508]
     - Fix the REST API for creating a timesheet entry closing the connection instead of throwing an error if the entry object has errors (such as missing fields or the time is over 23:59 hours) [IN:10607]
-    - Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the [spiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) function [IN:10573]
+    - Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the [spiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) function [IN:10573]
     - Improve the incident association panel(s) when adding an incident, to only allow users to see incidents to add if the user has view incident permissions in the selected product [IN:10630]
     - Remove "SpiraApp" from the list of available artifacts on the product admin [Product Associations page](../Spira-Administration-Guide/Product-General-Settings.md/#product-associations), to avoid confusion [IN:9654]
     - Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]

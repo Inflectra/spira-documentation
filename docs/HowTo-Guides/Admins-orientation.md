@@ -69,4 +69,4 @@ Only product or system administrators can add or remove a user from a product. W
 1. Login as a system administrator or product administrator and open the [product administration menu](#how-to-access-the-administration-menu)
 2. Look for the "Users" section and click the "Product Membership" link
 3. This will open the "Product Membership" page.
-4. From here follow these [instructions](../Spira-Administration-Guide/Product-Users.md/#add-a-user-to-a-product) to add an existing user to that product by given them the correct role
+4. From here follow these [instructions](../Spira-Administration-Guide/Product-Users.md/#add-users-to-a-product) to add an existing user to that product by given them the correct role

@@ -292,7 +292,7 @@ When cloning the requirements note that:
 - associated incidents, requirements and risks are *not* cloned
 - followers, comments, and history are *not* cloned
 
-- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#create-a-test-cases-from-requirements) or [create test sets](#create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
+- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#creating-test-cases-from-requirements) or [create test sets](#creating-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
 
 
 ### Right-Click Context Menu
@@ -336,7 +336,7 @@ The following fields are displayed by default (but can be hidden) in a header ba
 The following fields are always displayed, and below the header bar:
 
 - Description
-- [Use case diagram](#use-case-diagram) (if the requirement has steps)
+- [Use case diagram](#use-case-diagrams) (if the requirement has steps)
 
 Additionally you can choose to show the following fields in the header bar:
 

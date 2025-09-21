@@ -69,7 +69,7 @@ This tab shows the fields and description associated with the automation host. S
 
 ### Test Runs
 
-This tab displays the list of all the test runs executed against the automation host. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual [test run details](#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
+This tab displays the list of all the test runs executed against the automation host. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual [test run details](#test-runs). In addition, you can choose to display any of the custom properties associated with the test run.
 
 ![](img/Test_Case_Management_232.png)
 

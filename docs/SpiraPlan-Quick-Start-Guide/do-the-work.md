@@ -27,7 +27,7 @@ For example, a task going from not done to done. In SpiraPlan the task starts as
 
 ### Completing Tasks
 !!! info "Using SpiraTest or did not follow all steps on the Plan page?"
-    [Skip ahead](#requirements-only)
+    [Skip ahead](#completing-standalone-requirements)
 
 - [x] Open the Artifact dropdown from the global navigation and click "Requirements"
 - [x] Look at the "Task Progress" and "Status" columns on each requirement. This is our starting state before we do any work. None of the tasks are started and all the requirements are still "Planned".

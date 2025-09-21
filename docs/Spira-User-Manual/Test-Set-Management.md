@@ -159,7 +159,7 @@ The operations toolbar lets you, amongst standard operations like save and delet
 - export to a number of files formats, to a different product, or print it via one of the options in the `Tools` dropdown menu
 
 - the `Execute` button will execute all the test cases in the set against the release specified in the test set and then take you to the
-[test execution screen](#execute-test-cases)
+[test execution screen](./Test-Case-Management.md/#execute-test-cases)
 - Emailing: read about [emailing an artifact to colleagues using Spira](Application-Wide.md#emailing)
 {: #emailing}
 - Followers: read about [how to add and manage followers to an artifact](Application-Wide.md#followers)
@@ -326,7 +326,7 @@ Please note:
 
 ### Test Runs
 
-This tab displays the list of all the test runs executed against the test set. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the [actual test run details](#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
+This tab displays the list of all the test runs executed against the test set. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the [actual test run details](./Test-Run-Management.md/#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
 
 ![](img/Test_Case_Management_227.png)
 

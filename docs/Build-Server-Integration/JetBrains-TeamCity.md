@@ -43,7 +43,7 @@ Now that you have setup the Global Spira and Notifications settings in TeamCity,
 
 ![Figure04](img/JetBrains_TeamCity_25.jpeg)
 
-In this page you can check the URL of the Spira Server. If it is wrong, you can change it in the [Spira Global Settings menu](#setting-up-the-spirateam-teamcity-plug-in). It is also possible to check the Project ID associated with the project in TeamCity. This information can be useful for debugging/checking reasons.
+In this page you can check the URL of the Spira Server. If it is wrong, you can change it in the [Spira Global Settings menu](#setting-up-the-spira-teamcity-plug-in). It is also possible to check the Project ID associated with the project in TeamCity. This information can be useful for debugging/checking reasons.
 
 To associate a TeamCity Project with a Spira Project, enter the following values:
 

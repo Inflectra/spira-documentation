@@ -93,7 +93,7 @@ In the example below, is a card with all of the features above turned on.
 
 ![planning board fully featured card](img/Planning_Board_card-all.png)
 
-Finally, you can, based on your view, toggle other artifact cards to show. When this option is available you can toggle relevant artifact cards (eg Incidents) on or off. See below to learn [what cards and card artifact show when](#what-cards-show-when).
+Finally, you can, based on your view, toggle other artifact cards to show. When this option is available you can toggle relevant artifact cards (eg Incidents) on or off. See below to learn [what cards and card artifact show when](#board-cards).
 
 
 ## Special board views
@@ -148,7 +148,7 @@ The following cards will show in this view (in combination with the relevant pri
 - incidents with no planned release
 
 ### What cards show in the release backlog
-In addition to [how releases show on the board](Application-Wide.md/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
+In addition to [how releases show on the board](./Application-Wide.md/#board-by-release-or-sprint), the following rules apply to what cards will show:
 
 | View selected                   | Requirements shown                                          | Incidents shown                                    |
 | ------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
@@ -189,6 +189,6 @@ Finally, you can drill down to look at an individual sprint and see the team's p
 ![daily standups](img/Planning_Board_daily-standups.png)
 
 ### Kanban Projects
-For Kanban projects, in addition to the functionality described above, you have the ability to see the different releases by status, with the [Work In Progress Limits](#status-and-work-in-progress-limits) clearly visible in each of the swim-lanes. In this example, we are showing the release backlog for a specific release, with the columns set to display by status and the planning options set to include WIP limits for the In-Progress and Developed columns.
+For Kanban projects, in addition to the functionality described above, you have the ability to see the different releases by status, with the [Work In Progress Limits](../Spira-Administration-Guide/Product-Planning.md/#kanban-work-in-progress-limits) clearly visible in each of the swim-lanes. In this example, we are showing the release backlog for a specific release, with the columns set to display by status and the planning options set to include WIP limits for the In-Progress and Developed columns.
 
 ![kanban project](img/Planning_Board_kanban.png)
