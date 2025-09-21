@@ -51,11 +51,11 @@ This allows you to determine which types of information to include in the report
 ![](img/Reports_Center_339.png)
 
 ### Filters
-**Standard Field Filters** -- This allows you to constrain the range of data being reported on, based on the various fields associated with the artifact in question. These filters are typically selections from multi-valued-dropdown lists and date-ranges.
+**Standard Field Filters**: This allows you to constrain the range of data being reported on, based on the various fields associated with the artifact in question. These filters are typically selections from multi-valued-dropdown lists and date-ranges.
 
 ![](img/Reports_Center_340.png)
 
-**Custom Property Filters** -- This allows you to constrain the range of data being reported on, based on the custom fields associated with the artifact by your product administrator. These filters can be either freetext or drop-down lists.
+**Custom Property Filters**: This allows you to constrain the range of data being reported on, based on the custom fields associated with the artifact by your product administrator. These filters can be either freetext or drop-down lists.
 
 ![](img/Reports_Center_341.png)
 
@@ -65,7 +65,7 @@ This allows you to determine which types of information to include in the report
 
 
 ### Saving and Sharing
-**Report Name** -- If you would like to save the report configuration so that you can quickly re-run it at a later date, you just need to enter a name for the report and indicate (by selecting the checkbox or not) whether you want this report to be private or shared by all members of the product.
+**Report Name**: If you would like to save the report configuration so that you can quickly re-run it at a later date, you just need to enter a name for the report and indicate (by selecting the checkbox or not) whether you want this report to be private or shared by all members of the product.
 
 ![](img/Reports_Center_343.png)
 

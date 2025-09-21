@@ -22,18 +22,18 @@ If you already see an entry for **RedmineDataSync** you should click on its "Edi
 
 You need to fill out the following fields for the Redmine Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **RedmineDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the RedmineDataSync.dll file for any reason, then you need to change the name here to match.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should be the base URL of the Redmine installation. As an example, for the public demo installation of Redmine, it would be: http://demo.redmine.org
--   **Login** -- this should be set to a valid login to the Redmine installation -- the login needs to have permissions to create and view bugs and versions within Redmine.
--   **Password** -- this should be set to the password of the login specified above.
--   **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in Redmine are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your Redmine installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
--   **Auto-Map Users** -- This changes the way that the plugin maps users in Spira to those in Redmine:
+-   **Name**: this needs to be set to **RedmineDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the RedmineDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should be the base URL of the Redmine installation. As an example, for the public demo installation of Redmine, it would be: http://demo.redmine.org
+-   **Login**: this should be set to a valid login to the Redmine installation -- the login needs to have permissions to create and view bugs and versions within Redmine.
+-   **Password**: this should be set to the password of the login specified above.
+-   **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Redmine are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your Redmine installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
+-   **Auto-Map Users**: This changes the way that the plugin maps users in Spira to those in Redmine:
 -   **Auto-Map = True **With this setting, all users in Spira need to have the same username as those in Redmine. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
 -   **Auto-Map = False **With this setting, users in Spira and Redmine are free to have different usernames because you specify the corresponding Redmine name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).
--   **Custom 01** -- This should be set to the word "**false**" if you want to have the plugin restrict synchronization to not create any new incidents in Spira.
--   **Custom 02** -- This should be set to the word "**false**" if you want to have the plugin restrict synchronization to not create any new issues in Redmine.
--   **Custom 03 -- 05** -- these are not currently used by the Redmine data-sync plug-in and can be left blank.
+-   **Custom 01**: This should be set to the word "**false**" if you want to have the plugin restrict synchronization to not create any new incidents in Spira.
+-   **Custom 02**: This should be set to the word "**false**" if you want to have the plugin restrict synchronization to not create any new issues in Redmine.
+-   **Custom 03 -- 05**: these are not currently used by the Redmine data-sync plug-in and can be left blank.
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between Spira and Redmine. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Duplicate" incident in Spira is the same as a "Rejected" bug in Redmine (for example).
@@ -57,9 +57,9 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with Redmine, you need to enter:
 
-**External Key** -- This should be set to the name of the equivalent project in Redmine.
+**External Key**: This should be set to the name of the equivalent project in Redmine.
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

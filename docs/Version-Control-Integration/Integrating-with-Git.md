@@ -37,8 +37,8 @@ Complete the form on this page as below:
 - **Active**: If checked, the plug-in is active and able to be used for any product
 - **Connection Info**: This field holds the clone URL of the defaults repository for any product accessing the plug-in, unless overridden in the product admin
 - **Login / Password**: The default user id and password (this should be a Personal Access Token (PAT) for many providers) to use while accessing and retrieving information from the remote repositories. If you are accessing a public repository anonymously enter "*anonymous*" for both the username and password fields
-- **Custom 01** -- By default, SpiraPlan will store a copy of the Git working directory in the C:\ProgramData\Inflectra\Spira\GitProvider\URL folder (where URL is the Git connection URL). If you would like to use an override location for the Git repository, specify the full filepath here (e.g. C:\Git\Repositories)
-- **Custom 02 -- Custom 05** -- Not used by this plugin.
+- **Custom 01**: By default, SpiraPlan will store a copy of the Git working directory in the C:\ProgramData\Inflectra\Spira\GitProvider\URL folder (where URL is the Git connection URL). If you would like to use an override location for the Git repository, specify the full filepath here (e.g. C:\Git\Repositories)
+- **Custom 02 -- Custom 05**: Not used by this plugin.
 
 ![](img/Integrating_with_Git_16.png)
 

@@ -81,26 +81,26 @@ test_add_2 = 22
 For the plugin to work, you must have both settings groups (credentials
 and test_cases) with the following in the credentials group:
 
-- **url** -- The base url to your SpiraTest installation, without a '/' at
+- **url**: The base url to your SpiraTest installation, without a '/' at
 the end.
 
-- **username** -- The username you use to sign into SpiraTest.
+- **username**: The username you use to sign into SpiraTest.
 
-- **token** -- Your RSS Token. Found in your profile page as the "RSS
+- **token**: Your RSS Token. Found in your profile page as the "RSS
 Token" field, you must have RSS Feeds enabled for this to work.
 
-- **project_id** -- The ID of the project you would like the test runs to
+- **project_id**: The ID of the project you would like the test runs to
 be sent to
 
-- **release_id** -- OPTIONAL -- Use if you would like to associate the
+- **release_id**: OPTIONAL -- Use if you would like to associate the
 test run with a release.
 
-- **test_set_id** -- OPTIONAL -- Use if you would like to associate the
+- **test_set_id**: OPTIONAL -- Use if you would like to associate the
 test run with a test set.
 
 Under the test_cases group, put the following:
 
-- **default** -- The default test case ID for functions without an
+- **default**: The default test case ID for functions without an
 assigned test case
 
 - **\<function name>** - Used to override the default setting for a

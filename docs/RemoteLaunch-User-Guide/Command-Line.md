@@ -31,14 +31,14 @@ You may need to modify the Command-Line configuration for some of the specific a
 
 The following fields can be specified on this screen:
 
-- **RunAs Administrator** -- This normally should not be checked. However if your automation tool requires Windows UAC elevation to operate, you will need to select this option. We recommend initially trying your tool with the value unchecked. Then, if you get an error message "requires elevation" in the test results you will need to select the option.
-- **Log Results** -- Normally the command-line engine will capture the output results from the command-line and send the results back to Spira as the test result. When you are executing a tool that directly integrates with Spira (e.g. a NUnit test suite that is already integrated with Spira) you don't want two different results to be sent back. In such a scenario, deselecting this option will prevent the command-line engine from sending back its own test result.
-- **Default Status** -- This specifies the execution status that will be returned to Spira in the event that none of the regular expressions (Regex) specified match the results returned from the test application. By default, the system will return "Passed" if none of the other regular expressions match correctly.
-- **Pass Regex** -- This is the regular expression that is used to match a passed test result. By default the system will search for the phrase "Pass" in the test output and return a Passed status if the match is successful.
-- **Fail Regex** -- This is the regular expression that is used to match a failed test result. By default the system will search for the phrases "Fail", "Error" and "Fatal" in the test output and return a Fail status if any of the matches are successful.
-- **Caution Regex** -- This is the regular expression that is used to match a caution test result. By default the system will search for the phrases "Warning" and "Caution" in the test output and return a Caution status if any of the matches are successful.
-- **Blocked Regex** -- This is the regular expression that is used to match a blocked test result. By default the system will search for the phrase "Blocked" in the test output and return a Blocked status if the match is successful.
-- **Test Regular Expressions** -- This text box lets you enter in some sample text and see how the Command-Line extension would interpret it. Once you have entered in the text, click "Test Regular Expression..." and the system will display a popup message box letting you know what the outcome of such a test would be interpreted as:
+- **RunAs Administrator**: This normally should not be checked. However if your automation tool requires Windows UAC elevation to operate, you will need to select this option. We recommend initially trying your tool with the value unchecked. Then, if you get an error message "requires elevation" in the test results you will need to select the option.
+- **Log Results**: Normally the command-line engine will capture the output results from the command-line and send the results back to Spira as the test result. When you are executing a tool that directly integrates with Spira (e.g. a NUnit test suite that is already integrated with Spira) you don't want two different results to be sent back. In such a scenario, deselecting this option will prevent the command-line engine from sending back its own test result.
+- **Default Status**: This specifies the execution status that will be returned to Spira in the event that none of the regular expressions (Regex) specified match the results returned from the test application. By default, the system will return "Passed" if none of the other regular expressions match correctly.
+- **Pass Regex**: This is the regular expression that is used to match a passed test result. By default the system will search for the phrase "Pass" in the test output and return a Passed status if the match is successful.
+- **Fail Regex**: This is the regular expression that is used to match a failed test result. By default the system will search for the phrases "Fail", "Error" and "Fatal" in the test output and return a Fail status if any of the matches are successful.
+- **Caution Regex**: This is the regular expression that is used to match a caution test result. By default the system will search for the phrases "Warning" and "Caution" in the test output and return a Caution status if any of the matches are successful.
+- **Blocked Regex**: This is the regular expression that is used to match a blocked test result. By default the system will search for the phrase "Blocked" in the test output and return a Blocked status if the match is successful.
+- **Test Regular Expressions**: This text box lets you enter in some sample text and see how the Command-Line extension would interpret it. Once you have entered in the text, click "Test Regular Expression..." and the system will display a popup message box letting you know what the outcome of such a test would be interpreted as:
 
 ![](img/Command-Line_60.png)  
 
@@ -53,8 +53,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Command-Line Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Attached for this case
-- **Filename** -- This needs to consist of the following sections separated by a pipe (\|) character:
+- **Script Type**: This should be set to Attached for this case
+- **Filename**: This needs to consist of the following sections separated by a pipe (\|) character:
 
     - The full path to the command-line tool. To make this easier across different machines, you can use several constants for standard Windows locations:
 
@@ -73,10 +73,10 @@ You need to enter the following fields:
 
     - An example filename would be: C:\\Temp\\TestApp.exe\|-arg1 -arg2 "-arg3={filename}"\|
 
-- **Document Type** -- If using Spira (not Spira) you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- If using Spira (not Spira) you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- This needs to contain the complete test script in whatever language and syntax is being expected by the command-line application
+- **Document Type**: If using Spira (not Spira) you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: If using Spira (not Spira) you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: This needs to contain the complete test script in whatever language and syntax is being expected by the command-line application
 
 If you would like to have Spira pass any parameter values to this test script (this will be discussed in more detail later) you can specify them by using the syntax ${parameterName} inside the test script.
 
@@ -90,8 +90,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Command-Line Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked for this case
-- **Filename** -- This needs to consist of the following sections separated by a pipe (\|) character:
+- **Script Type**: This should be set to Linked for this case
+- **Filename**: This needs to consist of the following sections separated by a pipe (\|) character:
 
     - The full path to the command-line tool. To make this easier across different machines, you can use several constants for standard Windows locations:
 
@@ -116,10 +116,10 @@ You need to enter the following fields:
 
     - An example filename would be: C:\\Temp\\TestApp.exe\|-arg1 -arg2\|-name=value
 
-- **Document Type** -- If using Spira (not Spira) you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- If using Spira (not Spira) you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used when you are using the linked test script option*
+- **Document Type**: If using Spira (not Spira) you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: If using Spira (not Spira) you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used when you are using the linked test script option*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -160,18 +160,18 @@ Create a new Test Set to hold the Command-Line automated test cases and click on
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/Command-Line_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/Command-Line_18.png)
 
@@ -179,7 +179,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/Command-Line_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/Command-Line_19.png)
 
@@ -191,10 +191,10 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the command-line test:
 
-- **Passed** -- The automated test ran successfully and the results output to the console did not include any of the phrases -- FAIL, ERROR, FATAL, WARNING, CAUTION
-- **Failed** -- The automated test ran successfully, but one of the phrases -- FAIL, ERROR, FATAL -- was included in the console output
-- **Caution** -- The automated test ran successfully, but one of the phrases -- WARNING, CAUTION -- was included in the console output
-- **Blocked** -- The automated test did not run successfully
+- **Passed**: The automated test ran successfully and the results output to the console did not include any of the phrases -- FAIL, ERROR, FATAL, WARNING, CAUTION
+- **Failed**: The automated test ran successfully, but one of the phrases -- FAIL, ERROR, FATAL -- was included in the console output
+- **Caution**: The automated test ran successfully, but one of the phrases -- WARNING, CAUTION -- was included in the console output
+- **Blocked**: The automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

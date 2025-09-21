@@ -95,9 +95,9 @@ For this step, please ensure that you are in the SpiraPlan product you would lik
 
 Click on the "View product Mappings" button for GitHub Data Sync. You need to fill out the following fields to sync correctly:
 
--   **External Key** -- The name of your GitHub repository. In the example above, where the URL in GitLab was <https://github.com/octocat/Hello-World>, you would simply enter "Hello-World" for this setting.
+-   **External Key**: The name of your GitHub repository. In the example above, where the URL in GitLab was <https://github.com/octocat/Hello-World>, you would simply enter "Hello-World" for this setting.
 
--   **Active** -- Set this to yes so that the Data Sync plug-in knows to synchronize with this product.
+-   **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this product.
 
 ### Configuring Issue Mappings
 
@@ -109,9 +109,9 @@ Now click the "Status" button within the "Incident" section to map the Incident 
 
 You must map every status in the system. Descriptions of the field are below:
 
--   **External Key** -- Either **open** or **closed**, which are the only two statuses in GitHub
+-   **External Key**: Either **open** or **closed**, which are the only two statuses in GitHub
 
--   **Primary** -- You must have exactly one primary key for **open** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitHub changes.
+-   **Primary**: You must have exactly one primary key for **open** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitHub changes.
 
 Click "Save" and assuming everything was done correctly, the plug-in should work. Start your Data Sync service and verify that issues in GitHub appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 

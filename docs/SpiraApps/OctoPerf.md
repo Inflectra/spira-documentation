@@ -1,4 +1,5 @@
 # OctoPerf SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate SpiraPlan (and SpiraTest and SpiraTeam) and OctoPerf so users can launch Actions from Spira and see their results in Spira as builds.
 

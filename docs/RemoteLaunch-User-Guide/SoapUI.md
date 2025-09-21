@@ -31,10 +31,10 @@ You will need to modify the SoapUI configuration for each of the specific automa
 
 The following fields can be specified on this screen:
 
-- **SOAP-UI Location** -- This should be SOAP-UI Bin folder that contains the "TestRunner.bat" batch file that will be used to actually run the automated tests.
-- **Installation Type** -- This allows you to take advantage of the enhanced reporting available in the commercial "Pro" edition of SoapUI. Check the "SOAP-UI Pro Installation" box only if you are using the commercial version of SoapUI (known as SoapUI Pro).
-- **Execution Type** -- If this is a LoadUI performance test rather than a standard SoapUI functional test, check the box and RemoteLaunch will know to parse the load-test report format.
-- **Trace Logging** -- Normally this can be left unchecked unless you are diagnosing configuration issues and need additional logging.
+- **SOAP-UI Location**: This should be SOAP-UI Bin folder that contains the "TestRunner.bat" batch file that will be used to actually run the automated tests.
+- **Installation Type**: This allows you to take advantage of the enhanced reporting available in the commercial "Pro" edition of SoapUI. Check the "SOAP-UI Pro Installation" box only if you are using the commercial version of SoapUI (known as SoapUI Pro).
+- **Execution Type**: If this is a LoadUI performance test rather than a standard SoapUI functional test, check the box and RemoteLaunch will know to parse the load-test report format.
+- **Trace Logging**: Normally this can be left unchecked unless you are diagnosing configuration issues and need additional logging.
 
 ## Setting up the Automated Test Cases
 This section describes the process for setting up a test case in Spira for automation and linking it to an existing SoapUI test suite and test case.
@@ -47,8 +47,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the SoapUI Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked for this case
-- **Filename** -- This needs to be the full path to the SoapUi test project XML file or composite folder together with the test suite name and test case name separated by the pipe (\|) symbol. You can also pass custom command line switches as an optional final segment
+- **Script Type**: This should be set to Linked for this case
+- **Filename**: This needs to be the full path to the SoapUi test project XML file or composite folder together with the test suite name and test case name separated by the pipe (\|) symbol. You can also pass custom command line switches as an optional final segment
 
     - For standard tests, you use the format:
     > Project XML File\|Test Suite Name\|Test Case Name\|Switches
@@ -67,10 +67,10 @@ You need to enter the following fields:
         - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
         - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- You can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- You can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used when you are using the linked test script option*
+- **Document Type**: You can choose which document type the automated test script will be categorized under.
+- **Document Folder**: You can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used when you are using the linked test script option*
 
 Note: The example filename shown above was taken from a test project in SoapUI that has the following structure:
 
@@ -113,18 +113,18 @@ Create a new Test Set to hold the SoapUI automated test cases and click on its h
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/SoapUI_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/SoapUI_18.png)
 
@@ -132,7 +132,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/SoapUI_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/SoapUI_19.png)
 
@@ -147,9 +147,9 @@ If you want to run the tests as part of a build script, just call RemoteLaunch.e
 
 In all cases, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the SoapUI test:
 
-- **Passed** -- The SoapUI automated test ran successfully and all the assertions in the test script passed
-- **Failed** -- The SoapUI automated test ran successfully, but at least one assertion in the test script failed.
-- **Blocked** -- The SoapUI automated test did not run successfully
+- **Passed**: The SoapUI automated test ran successfully and all the assertions in the test script passed
+- **Failed**: The SoapUI automated test ran successfully, but at least one assertion in the test script failed.
+- **Blocked**: The SoapUI automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

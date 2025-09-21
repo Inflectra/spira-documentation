@@ -422,13 +422,13 @@ To change between the three modes outlined above, select the desired mode from t
 
 You can perform the following actions:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
+**Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
 
 You can **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen. This functionality is limited to product owners.
+**Edit**: Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen. This functionality is limited to product owners.
 
-**Show/Hide Columns** -- Allows you to choose which incident columns are visible
+**Show/Hide Columns**: Allows you to choose which incident columns are visible
 
 
 ### Reqs & Tasks

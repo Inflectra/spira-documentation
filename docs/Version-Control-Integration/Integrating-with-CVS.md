@@ -71,6 +71,6 @@ Since the integration with CVS requires that a working copy of the CVS repositor
 To permanently remove a repository from the SpiraTeam server, you need to locate the following path:
 
 -   **(Windows XP, 2003)** - C:\\Documents and Settings\\All Users\\Application Data
--   **(Windows 2008, 7, Vista)** -- C:\\ProgramData
+-   **(Windows 2008, 7, Vista)**: C:\\ProgramData
 
 If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "CvsProvider". If you open up this subfolder, you will see a list of all the CVS modules that have been accessed through SpiraTeam. To purge a module, just select it and choose the Delete Folder option in Windows.

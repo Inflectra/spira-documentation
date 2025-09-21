@@ -34,10 +34,10 @@ You will need to modify the Squish configuration for each of the specific automa
 
 The following fields can be specified on this screen:
 
-- **Squish Location** -- This should be folder containing the "SquishRunner" executable that will be used to actually run the automated tests.
-- **Server Host** -- This field can be set to the name of a remote Squish server if you did not install RemoteLaunch on the machine running the Squish server (optional).
-- **Server Port** -- This field can be set to the port being used by a remote Squish server if you did not install RemoteLaunch on the machine running the Squish server (optional).
-- **Trace Logging** -- This checkbox can be selected if you need to provide debugging information to Inflectra support personnel. Normally this should remain unchecked
+- **Squish Location**: This should be folder containing the "SquishRunner" executable that will be used to actually run the automated tests.
+- **Server Host**: This field can be set to the name of a remote Squish server if you did not install RemoteLaunch on the machine running the Squish server (optional).
+- **Server Port**: This field can be set to the port being used by a remote Squish server if you did not install RemoteLaunch on the machine running the Squish server (optional).
+- **Trace Logging**: This checkbox can be selected if you need to provide debugging information to Inflectra support personnel. Normally this should remain unchecked
 
 *Note: In most cases, the second and third fields can be left empty.*
 
@@ -54,16 +54,16 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Squish Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Attached for this case
-- **Filename** -- Since the test script is going to be entered directly into Spira you can enter any filename you like as long as the file extension matches the scripting language that you're using. After that you need to add any command-line parameters after the filename, separated by a pipe (\|) symbol.
+- **Script Type**: This should be set to Attached for this case
+- **Filename**: Since the test script is going to be entered directly into Spira you can enter any filename you like as long as the file extension matches the scripting language that you're using. After that you need to add any command-line parameters after the filename, separated by a pipe (\|) symbol.
 
     - For example, to launch a web test using Javascript, you'd use: `address\_test.js\|\--wrapper Web`
     - For example, to launch an application test using Python, you'd use: `address\_test.py\|\--aut <application\>`
 
-- **Document Type** -- If using Spira you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- If using Spira you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- This needs to contain the complete Squish test script. Squish test scripts can be written in JavaScript, Python or TCL.
+- **Document Type**: If using Spira you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: If using Spira you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: This needs to contain the complete Squish test script. Squish test scripts can be written in JavaScript, Python or TCL.
 
     - If you would like to have Spira pass any parameter values to this test script (this will be discussed in more detail later) you can specify them by using the syntax ${parameterName}.
 
@@ -132,8 +132,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Squish Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked for this case
-- **Filename** -- This needs to be the full path to the Squish test case or test suite folder.
+- **Script Type**: This should be set to Linked for this case
+- **Filename**: This needs to be the full path to the Squish test case or test suite folder.
 
     - If specifying a test case folder, you need to also provide the configuration command-line parameters after the filename, separated by a pipe (\|) symbol. These are not needed if executing a test suite, since they are contained in the suite.conf file instead.
 
@@ -149,10 +149,10 @@ You need to enter the following fields:
         - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
         - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- choose which document type the automated test script will be categorized under.
-- **Document Folder** -- choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used when you are using the linked test script option*
+- **Document Type**: choose which document type the automated test script will be categorized under.
+- **Document Folder**: choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used when you are using the linked test script option*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -192,18 +192,18 @@ Create a new Test Set to hold the Squish automated test cases and click on its h
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/Squish_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/Squish_18.png)
 
@@ -211,7 +211,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/Squish_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/Squish_19.png)
 
@@ -223,9 +223,9 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the Squish test:
 
-- **Passed** -- The Squish automated test ran successfully and all the test conditions in the test script passed
-- **Failed** -- The Squish automated test ran successfully, but at least one test condition in the test script failed.
-- **Blocked** -- The Squish automated test did not run successfully
+- **Passed**: The Squish automated test ran successfully and all the test conditions in the test script passed
+- **Failed**: The Squish automated test ran successfully, but at least one test condition in the test script failed.
+- **Blocked**: The Squish automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

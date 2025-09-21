@@ -35,18 +35,18 @@ If you already see an entry for **VersionOneDataSync** you should click on its "
 
 You need to fill out the following fields for the V1 Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **VersionOneDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files (x86)\\Spira\\Bin folder (minus the .dll file extension). If you renamed the OnTimeDataSync.dll file for any reason, then you need to change the name here to match.
--   **Caption** -- this is the display name of the V1 plugin and it can be meaningful name such as "Version One", "V1", or "V1 Instance 1".
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should the full URL to V1. This is typically something like: https://www1.v1host.com/CompanyName.
--   **Login** -- this should be set to the login that you use to access V1 through its web interface. If you are using a V1 Access Token instead of a login and password, please use `"accesstoken"` as the login instead.
--   **Password** -- this should be set to the password that you use to access V1 through its web interface or the API access token. If the latter, please make sure to use the login name `"accesstoken"`.
--   **Time Offset** -- normally this should be set to zero, but if you find that defects being changed in V1 are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps.
--   **Auto-Map Users** -- This changes the way that the plugin maps users in Spira to those in V1:
+-   **Name**: this needs to be set to **VersionOneDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files (x86)\\Spira\\Bin folder (minus the .dll file extension). If you renamed the OnTimeDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Caption**: this is the display name of the V1 plugin and it can be meaningful name such as "Version One", "V1", or "V1 Instance 1".
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should the full URL to V1. This is typically something like: https://www1.v1host.com/CompanyName.
+-   **Login**: this should be set to the login that you use to access V1 through its web interface. If you are using a V1 Access Token instead of a login and password, please use `"accesstoken"` as the login instead.
+-   **Password**: this should be set to the password that you use to access V1 through its web interface or the API access token. If the latter, please make sure to use the login name `"accesstoken"`.
+-   **Time Offset**: normally this should be set to zero, but if you find that defects being changed in V1 are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps.
+-   **Auto-Map Users**: This changes the way that the plugin maps users in Spira to those in V1:
 -   **Auto-Map = True **With this setting, all users in Spira need to have the same username as those in V1. If this is the case then you do not need to perform the user-mapping task outlined in section 12.2.2. This is a big time-saver if you can guarantee that all usernames are the same in both systems.
 -   **Auto-Map = False **With this setting, users in Spira and V1are free to have different usernames because you specify the corresponding V1login for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).
--   **Custom 01** -- this should be set to "True" if you want the plugin to log warnings about missing user mappings
--   **Custom 02-05** -- these are not currently used by the V1 data-sync plug-in and can be left blank.
+-   **Custom 01**: this should be set to "True" if you want the plugin to log warnings about missing user mappings
+-   **Custom 02-05**: these are not currently used by the V1 data-sync plug-in and can be left blank.
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between Spira and V1. This allows the various projects, users, releases, incident statuses, priorities, severities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Open" incident in Spira is the same as an "Open" defect in V1 (for example).
@@ -70,7 +70,7 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with V1, you need to enter:
 
-**External Key** -- This should be set to the **name** of the project in V1:
+**External Key**: This should be set to the **name** of the project in V1:
 
 ![](img/Using_Spira_with_VersionOne_186.png)
 
@@ -78,7 +78,7 @@ To enable this project for data-synchronization with V1, you need to enter:
 
 If you have sub-projects, you can map to one of those using the syntax: **Project/SubProject**
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

@@ -34,7 +34,7 @@ The Badboy 2.x engine adds its own tab to this page which allows you to configur
 
 The following fields can be specified on this screen:
 
-- **Trace Logging** -- When selected, this will log additional trace and debugging information to the Windows Event Log. This should not be selected in a production environment.
+- **Trace Logging**: When selected, this will log additional trace and debugging information to the Windows Event Log. This should not be selected in a production environment.
 
 ## Setting up the Automated Test Cases
 This section describes the process for setting up a test case in Spira for automation and linking it to an automated Badboy test script.
@@ -46,8 +46,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Badboy Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked as the integration with Badboy only supports referencing Badboy test script files and not physically uploading the test scripts into Spira.
-- **Filename** -- This needs to be the full path to the Badboy test script. To make this easier across different machines, you can use several constants for standard Windows locations (see example in screenshot):
+- **Script Type**: This should be set to Linked as the integration with Badboy only supports referencing Badboy test script files and not physically uploading the test scripts into Spira.
+- **Filename**: This needs to be the full path to the Badboy test script. To make this easier across different machines, you can use several constants for standard Windows locations (see example in screenshot):
 
     - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated is the user that ran RemoteLaunch.
     - \[CommonDocuments\] -- The Public Document's folder.
@@ -55,10 +55,10 @@ You need to enter the following fields:
     - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
     - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- This allows you to choose which document type the automated test script will be categorized under.
+- **Document Type**: This allows you to choose which document type the automated test script will be categorized under.
 - **Document Folder** --This allows you to choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used with the Badboy Engine since it only supports linked test scripts.*
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used with the Badboy Engine since it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -98,18 +98,18 @@ Create a new Test Set to hold the Badboy automated test cases and click on its h
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/BadBoy_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/BadBoy_18.png)
 
@@ -117,7 +117,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/BadBoy_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 ![](img/BadBoy_19.png)
 
 ### Executing the Test Sets
@@ -127,10 +127,10 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the Badboy test:
 
-- **Passed** -- The Badboy automated test ran successfully and all the test steps in the test script passed and no assertions were thrown.
-- **Failed** -- The Badboy automated test ran successfully, but at least one test step failed or at least one assertion failed.
-- **Caution** -- The Badboy automated test run successfully, but at least one warning was logged in one of the test steps.
-- **Blocked** -- The Badboy automated test did not run successfully or at least one timeout error was recorded.
+- **Passed**: The Badboy automated test ran successfully and all the test steps in the test script passed and no assertions were thrown.
+- **Failed**: The Badboy automated test ran successfully, but at least one test step failed or at least one assertion failed.
+- **Caution**: The Badboy automated test run successfully, but at least one warning was logged in one of the test steps.
+- **Blocked**: The Badboy automated test did not run successfully or at least one timeout error was recorded.
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

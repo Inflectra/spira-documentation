@@ -1,4 +1,5 @@
 # Confluence SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate Spira Requirements and Confluence so that you can:
 

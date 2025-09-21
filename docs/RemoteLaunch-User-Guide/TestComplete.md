@@ -38,9 +38,9 @@ The TestComplete engine adds its own tab to this page which allows you to config
 
 The following fields can be specified on this screen:
 
-- **Wait Time** -- This should be set to the amount of time TestComplete needs on this workstation to close the currently open test. The default value is 10000ms (10 seconds). If you get error messages that TestComplete is still open, you need to increase this value.
-- **Application Visible** -- This allows you to configure whether the TestComplete application is displayed during test execution or is kept hidden. The default is for it to be hidden.
-- **Close TC After Each Test** -- When this is selected, the plugin will close the TestComplete application after each test executes. We generally recommend leaving this disabled as the startup and closedown of TestComplete can sometimes interfere with the tests being executed.
+- **Wait Time**: This should be set to the amount of time TestComplete needs on this workstation to close the currently open test. The default value is 10000ms (10 seconds). If you get error messages that TestComplete is still open, you need to increase this value.
+- **Application Visible**: This allows you to configure whether the TestComplete application is displayed during test execution or is kept hidden. The default is for it to be hidden.
+- **Close TC After Each Test**: When this is selected, the plugin will close the TestComplete application after each test executes. We generally recommend leaving this disabled as the startup and closedown of TestComplete can sometimes interfere with the tests being executed.
 
 ## Setting up the Automated Test Cases
 This section describes the process for setting up a test case in Spira for automation and linking it to an automated TestComplete test script.
@@ -52,8 +52,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the TestComplete Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked as the integration with TestComplete only supports referencing TestComplete test project/suite file paths and not physically uploading the test scripts into Spira.
-- **Filename** -- This is actually a compound of several different components that need to be entered, separated by the pipe (\|) symbol. The syntax depends on whether we want to associate the Spira test case with a specific *project item* or with a specific *test routine*. If you want to use parameterized test cases, you need to link it with a specific routine (see below for more details on parameters).
+- **Script Type**: This should be set to Linked as the integration with TestComplete only supports referencing TestComplete test project/suite file paths and not physically uploading the test scripts into Spira.
+- **Filename**: This is actually a compound of several different components that need to be entered, separated by the pipe (\|) symbol. The syntax depends on whether we want to associate the Spira test case with a specific *project item* or with a specific *test routine*. If you want to use parameterized test cases, you need to link it with a specific routine (see below for more details on parameters).
 
     - If you want to execute a specific **project item**, the filename should consist of `Suite Filename\|Project Name\|Project Item Name` (e.g. `[CommonDocuments]\TestComplete 7 > Samples\Open Apps\OrdersDemo\C#\TCProject\Orders.pjs|Orders_C#_C#Script|ProjectTestItem1`)
     - If you want to execute a specific **test routine**, the filename should consist of `Suite Filename\|Project Name\|Unit Name\|Routine Name` (e.g. `[CommonDocuments]\TestComplete 7 > Samples\Scripts\Hello\Hello.pjs|Hello_C#Script|hello_cs|Hello`)
@@ -67,10 +67,10 @@ You need to enter the following fields:
         - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
         - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- Spira choose which document type the automated test script will be categorized under.
-- **Document Folder** -- Spira choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used with the TestComplete Engine since it only supports linked test scripts.*
+- **Document Type**: Spira choose which document type the automated test script will be categorized under.
+- **Document Folder**: Spira choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used with the TestComplete Engine since it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -112,18 +112,18 @@ Create a new Test Set to hold the TestComplete automated test cases and click on
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/TestComplete_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/TestComplete_18.png)
 
@@ -131,7 +131,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/TestComplete_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/TestComplete_19.png)
 
@@ -143,9 +143,9 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the TestComplete test:
 
-- **Passed** -- The TestComplete automated test ran successfully and all the test conditions in the test script passed
-- **Failed** -- The TestComplete automated test ran successfully, but at least one test condition in the test script failed.
-- **Blocked** -- The TestComplete automated test did not run successfully
+- **Passed**: The TestComplete automated test ran successfully and all the test conditions in the test script passed
+- **Failed**: The TestComplete automated test ran successfully, but at least one test condition in the test script failed.
+- **Blocked**: The TestComplete automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

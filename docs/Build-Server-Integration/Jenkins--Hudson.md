@@ -49,8 +49,8 @@ Scroll down in the Build Triggers page to the Build Environment Section. Under t
 
 Now you need to enter the following values:
 
-- **Product ID** -- The numeric ID of the Spira Product that the Build belongs to. (e.g. for Product PR1 enter "1")
-- **Release Version Number** -- The **active** version number of the Spira Release/Sprint that the Build belongs to. (e.g. for Release RL4 with version number 1.0.0.0 you'd enter "1.0.0.0")
+- **Product ID**: The numeric ID of the Spira Product that the Build belongs to. (e.g. for Product PR1 enter "1")
+- **Release Version Number**: The **active** version number of the Spira Release/Sprint that the Build belongs to. (e.g. for Release RL4 with version number 1.0.0.0 you'd enter "1.0.0.0")
 
 ![](img/Jenkins__Hudson_10.png)
 

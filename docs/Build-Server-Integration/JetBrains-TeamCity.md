@@ -47,8 +47,8 @@ In this page you can check the URL of the Spira Server. If it is wrong, you can 
 
 To associate a TeamCity Project with a Spira Project, enter the following values:
 
-- **Project ID** -- The numeric ID of the Spira Project that the Build belongs to. (e.g. for Project PR00001 just enter 1)
-- **Release Version Number** -- The version number of the Spira Release/Iteration that the Build belongs to. (e.g. for Release RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
+- **Project ID**: The numeric ID of the Spira Project that the Build belongs to. (e.g. for Project PR00001 just enter 1)
+- **Release Version Number**: The version number of the Spira Release/Iteration that the Build belongs to. (e.g. for Release RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
 
 Once you have entered in the Project ID and Release version number, click the \[Save\] button and the plugin will connect to Spira and verify that the project exists, that the current user can connect to that project, and that the specified release/iteration exists in the project. Once it has verified successfully, it will save your Project configuration settings. In case of error, follow the instructions on-screen and try again. You are now ready to use TeamCity with Spira.
 

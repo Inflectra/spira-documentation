@@ -1,8 +1,7 @@
 # Risks+ SpiraApp
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-!!! warning "This SpiraApp is not compatible with SpiraTest"
-
-!!! warning "Some of this SpiraApp's functionality requires Spira 8.3"
+!!! warning "Some of this SpiraApp's functionality requires Spira v8.3+"
 
 This SpiraApp extends the built-in risk functionality by:
 

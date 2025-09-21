@@ -91,7 +91,7 @@ Now that you have configured how the Salesforce data-sync works at the system le
 Click on the "View Project Mappings" dropdown for the Salesforce Data Sync. Select your product, then click the arrow to the right. This takes you to the Product Admin Salesforce Data Sync screen. You need to fill out the following fields before the plug-in is ready:
 
 - **External Key** – A specific value that the object field listed in the *"Incidents Object" / "Requirements Object"* fields should have to map with this project. For example, if the object field in Salesforce that stores your project names is called "Project Name Field", and that column contains values like "alpha", "beta", "gamma", type "alpha" to map every alpha item to this product.
-- **Active** -- Set this to *yes* so that the Data Sync plug-in knows to synchronize with this project.
+- **Active**: Set this to *yes* so that the Data Sync plug-in knows to synchronize with this project.
 
 ![](img/SalesforceDotCom_07.png)
 

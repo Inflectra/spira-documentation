@@ -387,8 +387,8 @@ If you want to be able to subscribe to RSS feeds of the information assigned to 
 
 You can change your start page to be any of the following:
 
--   **My Page** -- When you first log-in, you will be taken to your "My Page" dashboard
--   **Last Opened Product** -- When you first login-in, you will be taken to the home page for the product you last had open
+-   **My Page**: When you first log-in, you will be taken to your "My Page" dashboard
+-   **Last Opened Product**: When you first login-in, you will be taken to the home page for the product you last had open
 -   **Last Opened Program** - When you first login-in, you will be taken to the home page for the program you last had open
 
 

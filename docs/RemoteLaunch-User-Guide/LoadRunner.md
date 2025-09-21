@@ -34,8 +34,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 -   **Automation Engine** - Choose the LoadRunner Automation Engine that you created in the previous section from the drop-down list.
--   **Script Type** -- For LoadRunner, all scenarios must be stored on the local testing machine so 'Linked' must be selected. If you select 'Attached', when the scenario is attempted to be executed it will be marked as blocked and skipped.
--   **Filename** -- This needs to be the full path to the LoadRunner Scenario (\*.lrs) file. Certain tokens are allowed to be able to specify common locations across different operating systems. Note that the tokens are case-sensitive, and there are no spaces in them. A list of tokens are:
+-   **Script Type**: For LoadRunner, all scenarios must be stored on the local testing machine so 'Linked' must be selected. If you select 'Attached', when the scenario is attempted to be executed it will be marked as blocked and skipped.
+-   **Filename**: This needs to be the full path to the LoadRunner Scenario (\*.lrs) file. Certain tokens are allowed to be able to specify common locations across different operating systems. Note that the tokens are case-sensitive, and there are no spaces in them. A list of tokens are:
 
     -   \[MyDocuments\] -- The user's "My Documents" folder. The user     indicated is the user that ran RemoteLaunch.
     -   \[CommonDocuments\] -- The Public Document's folder.
@@ -43,10 +43,10 @@ You need to enter the following fields:
     -   \[ProgramFiles\] -- Translated to the Program Files directory.     For 64-bit machines, it's the 64-bit directory.
     -   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files     directory.
 
--   **Document Type** -- If using Spira you can choose which document type the automated scenario will be categorized under.
--   **Document Folder** -- If using Spira you can choose which document folder the automated scenario will be stored in.
--   **Version** -- The version of the scenario (1.0 is used if no value specified)
--   **Test Script** -- *Not used.*
+-   **Document Type**: If using Spira you can choose which document type the automated scenario will be categorized under.
+-   **Document Folder**: If using Spira you can choose which document folder the automated scenario will be stored in.
+-   **Version**: The version of the scenario (1.0 is used if no value specified)
+-   **Test Script**: *Not used.*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -84,18 +84,18 @@ Create a new Test Set to hold the LoadRunner test cases and click on its hyperli
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/LoadRunner_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/LoadRunner_18.png)
 
@@ -103,7 +103,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/LoadRunner_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 ![](img/LoadRunner_19.png)
 
 ### Executing the Test Sets
@@ -114,9 +114,9 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the LoadRunner execution:
 
--   **Passed** -- The Scenario ran and reported no error messages. Warning, Debug, and Informational messages may have been logged, however.
--   **Failed** -- The Scenario ran and at least one error message was reported.
--   **Blocked** -- There was an error with the Test Set or LoadRunner application.
+-   **Passed**: The Scenario ran and reported no error messages. Warning, Debug, and Informational messages may have been logged, however.
+-   **Failed**: The Scenario ran and at least one error message was reported.
+-   **Blocked**: There was an error with the Test Set or LoadRunner application.
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

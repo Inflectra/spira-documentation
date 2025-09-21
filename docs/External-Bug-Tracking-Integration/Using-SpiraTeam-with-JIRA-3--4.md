@@ -21,17 +21,17 @@ If you already see an entry for **JiraDataSync** you should click on its "Edit" 
 
 You need to fill out the following fields for the JIRA Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **JiraDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the JiraDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Name**: this needs to be set to **JiraDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the JiraDataSync.dll file for any reason, then you need to change the name here to match.
 
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
 
--   **Connection Info** -- this should the full URL to the JIRA installation's web-service API. This is typically http://<jira server name\>/rpc/soap/jirasoapservice-v2.
+-   **Connection Info**: this should the full URL to the JIRA installation's web-service API. This is typically http://<jira server name\>/rpc/soap/jirasoapservice-v2.
 
--   **Login** -- this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
+-   **Login**: this should be set to a valid login to the JIRA installation. The login needs to have permissions to create and view issues and versions within JIRA.
 
--   **Password** -- this should be set to the password of the login specified above.
+-   **Password**: this should be set to the password of the login specified above.
 
--   **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
+-   **Time Offset**: normally this should be set to zero, but if you find that issues being changed in JIRA are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your JIRA installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
 
 The remaining fields work differently depending on which version of the plugin you are using (JIRA 3.x or JIRA 4.x):
@@ -40,21 +40,21 @@ a) JIRA 3.x Plugin
 
 Please fill out the fields as follows:
 
--   **Auto-Map Users** -- this is not currently used and can be ignored.
--   **Custom 01** -- This is used to specify a JIRA custom property that should be mapped to the built-in Spira Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
--   **Custom 02 -- 05** -- these are not currently used by the plug-in and should be left blank.
+-   **Auto-Map Users**: this is not currently used and can be ignored.
+-   **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in Spira Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+-   **Custom 02 -- 05**: these are not currently used by the plug-in and should be left blank.
 
 b) JIRA 4.x Plugin
 
 Please fill out the fields as follows:
 
--   **Auto-Map Users** -- This changes the way that the plugin maps users in Spira to those in JIRA:
+-   **Auto-Map Users**: This changes the way that the plugin maps users in Spira to those in JIRA:
 -   **Auto-Map = True **With this setting, all users in Spira need to have the same username as those in JIRA. If this is the case then you do not need to perform the [user-mapping task](#configuring-the-user-mapping). This is a big time-saver if you can guarantee that all usernames are the same in both systems.
 -   **Auto-Map = False **With this setting, users in Spira and JIRA are free to have different usernames because you specify the corresponding JIRA name for each user as outlined in [Configuring the User Mapping](#configuring-the-user-mapping).** **
--   **Custom 01** -- This is used to specify a JIRA custom property that should be mapped to the built-in Spira Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
--   **Custom 02** -- This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.
--   **Custom 03** -- This should be set to the word "True" if you want to have the plugin restrict synchronization to only loading new incidents from Spira to JIRA and updating existing items. This is useful if you want to prevent existing issues in JIRA from being loaded into Spira. Leave blank if you want the plugin to synchronize normally.
--   **Custom 04** -- This should be set to the word "True" if you want to have the plugin copy file attachments from Spira to JIRA. This can use additional system resources and may fail if the files are too large for JIRA's API to handle. Leave the field blank if you want the default behavior -- which is to not synchronize attachments.
+-   **Custom 01**: This is used to specify a JIRA custom property that should be mapped to the built-in Spira Incident Severity field (which does not exist in JIRA). This can be left empty for now and will be discussed below in [Configuring the Data Mapping](#configuring-the-data-mapping).
+-   **Custom 02**: This should be set to the word "True" if you want to have the new issues submitted to JIRA be submitted using a specified SecurityLevel. If you're not using the security level feature of JIRA, leave the field blank.
+-   **Custom 03**: This should be set to the word "True" if you want to have the plugin restrict synchronization to only loading new incidents from Spira to JIRA and updating existing items. This is useful if you want to prevent existing issues in JIRA from being loaded into Spira. Leave blank if you want the plugin to synchronize normally.
+-   **Custom 04**: This should be set to the word "True" if you want to have the plugin copy file attachments from Spira to JIRA. This can use additional system resources and may fail if the files are too large for JIRA's API to handle. Leave the field blank if you want the default behavior -- which is to not synchronize attachments.
 -   **Custom 05** - When you click "Force Resync" inside Spira it will attempt to resynchronize all incidents/issues from 1/1/1900. Sometimes that causes the JIRA API to timeout or exceed the maximum allowed number of results if there are a large number of existing issues in JIRA.
 
 You can set this field to a specific year (e.g. 1995) or year and month (e.g. 2010-11) to restrict how far back the system will look for existing issues. If you leave this field blank it will use the default value of "1900-01".
@@ -83,9 +83,9 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with JIRA, you need to enter:
 
-**External Key** -- This should be set to the name of the project token in JIRA. Typically this is a three-letter acronym for the project.
+**External Key**: This should be set to the name of the project token in JIRA. Typically this is a three-letter acronym for the project.
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

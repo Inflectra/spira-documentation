@@ -118,22 +118,22 @@ If you already see an entry for **OnTimeDataSync** you should click on its "Edit
 
 You need to fill out the following fields for the OnTime Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **OnTimeDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the OnTimeDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Name**: this needs to be set to **OnTimeDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the OnTimeDataSync.dll file for any reason, then you need to change the name here to match.
 
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
 
--   **Connection Info** -- this should the full URL to the OnTime SDK. This is typically something like: http://<OnTime server name\>/OnTimeSdk. You may need to check in the IIS Management Console of the OnTime server to verify the virtual directory name.
+-   **Connection Info**: this should the full URL to the OnTime SDK. This is typically something like: http://<OnTime server name\>/OnTimeSdk. You may need to check in the IIS Management Console of the OnTime server to verify the virtual directory name.
 
--   **Login** -- this should be set to the GUID that you specified in the Web.Config file in step 13.1.1 above.
+-   **Login**: this should be set to the GUID that you specified in the Web.Config file in step 13.1.1 above.
 
--   **Password** -- this should be left blank as it's not used by the OnTime data-sync plug-in.
+-   **Password**: this should be left blank as it's not used by the OnTime data-sync plug-in.
 
--   **Time Offset** -- normally this should be set to zero, but if you find that defects being changed in OnTime are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your OnTime installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
+-   **Time Offset**: normally this should be set to zero, but if you find that defects being changed in OnTime are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your OnTime installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers'
 time-zones here.
 
--   **Auto-Map Users** -- this is not currently used by the OnTime data-sync plug-in and can be ignored.
+-   **Auto-Map Users**: this is not currently used by the OnTime data-sync plug-in and can be ignored.
 
--   **Custom 01 -- 05** -- these are not currently used by the OnTime data-sync plug-in and can be left blank.
+-   **Custom 01 -- 05**: these are not currently used by the OnTime data-sync plug-in and can be left blank.
 
 
 ## Configuring the Data Mapping
@@ -165,12 +165,12 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with OnTime, you need to enter:
 
-**External Key** -- This should be set to the numeric ID of the project token in OnTime. You can find this in OnTime by selecting the project in the project explorer inside OnTime and then clicking the Edit icon. This brings up the project details screen:
+**External Key**: This should be set to the numeric ID of the project token in OnTime. You can find this in OnTime by selecting the project in the project explorer inside OnTime and then clicking the Edit icon. This brings up the project details screen:
 ![](img/Using_Spira_with_OnTime_11_202.png)
 
 The ID of the project is the value listed in the browser URL directly after the "ProjectId=" text. In the example above, the project ID would be 3.
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

@@ -21,18 +21,18 @@ If you already see an entry for **RtcDataSync** you should click on its "Edit" l
 
 You need to fill out the following fields for the RTC Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **RtcDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the RtcDataSync.dll file for any reason, then you need to change the name here to match.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should be the base URL for connecting to your instance of RTC (for example <https://servername:9443/ccm>).
--   **Login** -- this should be set to a valid login for your RTC installation. The login needs to have permissions to create and view work items within RTC.
--   **Password** -- this should be set to the password of the login specified above.
--   **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in RTC are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your RTC installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
--   **Auto-Map Users** -- this is not currently used and can be ignored.
--   **Custom 01** -- this is not currently used and can be ignored
--   **Custom 02** -- this is not currently used and can be ignored
--   **Custom 03** -- this is not currently used and can be ignored
--   **Custom 04** -- this is not currently used and can be ignored
--   **Custom 05** -- this is not currently used and can be ignored
+-   **Name**: this needs to be set to **RtcDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the RtcDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should be the base URL for connecting to your instance of RTC (for example <https://servername:9443/ccm>).
+-   **Login**: this should be set to a valid login for your RTC installation. The login needs to have permissions to create and view work items within RTC.
+-   **Password**: this should be set to the password of the login specified above.
+-   **Time Offset**: normally this should be set to zero, but if you find that issues being changed in RTC are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your RTC installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
+-   **Auto-Map Users**: this is not currently used and can be ignored.
+-   **Custom 01**: this is not currently used and can be ignored
+-   **Custom 02**: this is not currently used and can be ignored
+-   **Custom 03**: this is not currently used and can be ignored
+-   **Custom 04**: this is not currently used and can be ignored
+-   **Custom 05**: this is not currently used and can be ignored
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between Spira and RTC. This allows the various projects, users, incident statuses, priorities, severities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that a "New" item in Spira is equivalent to a "New" item in RTC (for example).
@@ -54,8 +54,8 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with RTC, you need to enter:
 
-- **External Key** -- This should be set to the display name of the project in RTC that will be mapped to the specific Spira project.
-- **Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+- **External Key**: This should be set to the display name of the project in RTC that will be mapped to the specific Spira project.
+- **Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

@@ -1,4 +1,6 @@
 # Available Custom Reports Tables
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 !!! info "How to use this page"
     Spira has a number of database views available for creating custom reports using ESQL queries. Below, each available table is listed with all of their exact field names. 
 
@@ -152,6 +154,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | LAST_CONTACT_DATE    |
 
 ## Baselines
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for some examples of using this custom report table
 
 | R_Baselines             |
@@ -198,6 +202,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | IS_ACTIVE       |
 
 ## Capabilities
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capabilities |
 | --------------------------- |
 | *CAPABILITY_ID*             |
@@ -232,6 +238,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | CUST_30                     |
 
 ## Capability Priorities
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capability_Priorities |
 | ------------------------------------ |
 | *PRIORITY_ID*                        |
@@ -242,6 +250,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | SCORE                                |
 
 ## Capability Requirement Associations
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capability_Project_Requirements |
 | ---------------------------------------------- |
 | CAPABILITY_ID                                  |
@@ -252,6 +262,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | ARTIFACT_LINK_TYPE_NAME                        |
 
 ## Capability Statuses
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capability_Statuses |
 | ---------------------------------- |
 | *STATUS_ID*                        |
@@ -264,6 +276,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | ON_BOARD                           |
 
 ## Capability Types
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capability_Types |
 | ------------------------------- |
 | *TYPE_ID*                       |
@@ -622,6 +636,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | PROJECT_NAME           |
 
 ## Portfolios
+!!! abstract "Available in SpiraPlan only"
+
 | R_Portfolios      |
 | ----------------- |
 | *PORTFOLIO_ID*    |
@@ -634,6 +650,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | REQUIREMENT_COUNT |
 
 ## Program Milestones
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestones       |
 | ------------------------------- |
 | *PROJECT_GROUP_MILESTONE_ID*    |
@@ -665,6 +683,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | CUST_30                         |
 
 ## Program Milestone Releases
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Project_Releases |
 | ----------------------------------------- |
 | *PROJECT_GROUP_MILESTONE_ID*              |
@@ -675,6 +695,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | ARTIFACT_LINK_TYPE_NAME                   |
 
 ## Program Milestone Statuses
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Statuses |
 | --------------------------------- |
 | *STATUS_ID*                       |
@@ -685,6 +707,8 @@ Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeed
 | IS_OPEN                           |
 
 ## Program Milestone Types
+!!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Types |
 | ------------------------------ |
 | *TYPE_ID*                      |
@@ -819,6 +843,8 @@ Retrieves data about cross product associations
 | PROJECT_NAME  |
 
 ## Project Teams Users
+!!! abstract "Available in SpiraPlan only"
+
 | R_Project_Team_Users |
 | -------------------- |
 | PROJECT_ID           |
@@ -1046,6 +1072,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME   |
 
 ## Risks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_Risks                  |
 | ------------------------ |
 | *RISK_ID*                |
@@ -1093,6 +1121,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | TAGS                     |
 
 ## Risk Impacts
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskImpacts         |
 | --------------------- |
 | *RISK_IMPACT_ID*      |
@@ -1105,6 +1135,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Risk Mitigations
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskMitigations        |
 | ------------------------ |
 | RISK_ID                  |
@@ -1125,6 +1157,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_ID               |
 
 ## Risk Probabilities
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskProbabilities   |
 | --------------------- |
 | *RISK_PROBABILITY_ID* |
@@ -1137,6 +1171,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Risk Statuses
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskStatuses        |
 | --------------------- |
 | *RISK_STATUS_ID*      |
@@ -1149,6 +1185,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Risk Types
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskTypes           |
 | --------------------- |
 | *RISK_TYPE_ID*        |
@@ -1160,6 +1198,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Source Code Associations
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_SourceCodeAssociations         |
 | -------------------------------- |
 | ARTIFACT_SOURCE_CODE_REVISION_ID |
@@ -1173,6 +1213,8 @@ For normal use we strongly recommend using the standard artifact association vie
 
 
 ## Source Code Commits
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_SourceCodeCommits                |
 | ---------------------------------- |
 | VERSION_CONTROL_SYSTEM_ID          |
@@ -1194,6 +1236,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | BRANCH_IS_HEAD                     |
 
 ## Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_Tasks                |
 | ---------------------- |
 | *TASK_ID*              |
@@ -1237,6 +1281,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | TAGS                   |
 
 ## Task Folders
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskFolders         |
 | --------------------- |
 | *TASK_FOLDER_ID*      |
@@ -1247,6 +1293,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | INDENT_LEVEL          |
 
 ## Task Priorities
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskPriorities      |
 | --------------------- |
 | *TASK_PRIORITY_ID*    |
@@ -1258,6 +1306,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Task Types
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskTypes           |
 | --------------------- |
 | *TASK_TYPE_ID*        |
@@ -1271,6 +1321,8 @@ For normal use we strongly recommend using the standard artifact association vie
 | PROJECT_TEMPLATE_NAME |
 
 ## Teams
+!!! abstract "Available in SpiraPlan only"
+
 | R_Teams     |
 | ----------- |
 | *TEAM_ID*   |
@@ -1616,6 +1668,8 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 
 
 ## Timesheets
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_Timesheets          |
 | --------------------- |
 | *TIMESHEET_ID*        |
@@ -1634,6 +1688,8 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | APPROVER_COMMENTS     |
 
 ## Timesheet Entries
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TimesheetEntries   |
 | -------------------- |
 | *TIMESHEET_ENTRY_ID* |
@@ -1653,6 +1709,7 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | RESOURCE_CATEGORY_ID |
 
 ## Timesheet Statuses
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 | R_TimesheetStatuses   |
 | --------------------- |
 | *TIMESHEET_STATUS_ID* |
@@ -1661,6 +1718,8 @@ Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 | IS_OPEN               |
 
 ## Timesheets with Entries
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This table combines the information from the timesheets table and the timesheet entries table to give a unified view of a timesheet and all of its key information. 
 
 | R_TimesheetWithEntries |

@@ -538,11 +538,11 @@ In this mode, the main pane displays a list of any incidents that are associated
 
 Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
+**Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
 
 You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
+**Edit**: Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
 
 To create a new association between this test step and an existing incident, click the "***Link Incident***" button which will display the following panel:
 

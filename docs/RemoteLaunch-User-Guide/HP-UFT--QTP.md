@@ -40,8 +40,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the QTP/UFT Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked as the integration with QTP/UFT only supports referencing QTP/UFT test script folder paths and not physically uploading the test scripts into Spira.
-- **Filename** -- This needs to be the full path to the QTP/UFT test script folder (i.e. the folder that you open in QTP/UFT to run the test). To make this easier across different machines, you can use several constants for standard Windows locations (see example in screenshot):
+- **Script Type**: This should be set to Linked as the integration with QTP/UFT only supports referencing QTP/UFT test script folder paths and not physically uploading the test scripts into Spira.
+- **Filename**: This needs to be the full path to the QTP/UFT test script folder (i.e. the folder that you open in QTP/UFT to run the test). To make this easier across different machines, you can use several constants for standard Windows locations (see example in screenshot):
 
     - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated is the user that ran RemoteLaunch.
     - \[CommonDocuments\] -- The Public Document's folder.
@@ -49,10 +49,10 @@ You need to enter the following fields:
     - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
     - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used with the QTP*/UFT *Engine since it only supports linked test scripts.*
+- **Document Type**: you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used with the QTP*/UFT *Engine since it only supports linked test scripts.*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -96,18 +96,18 @@ You need to add at least one automated test case to the test set:
 
 Then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/HP_UFT__QTP_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/HP_UFT__QTP_18.png)
 
@@ -115,7 +115,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/HP_UFT__QTP_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/HP_UFT__QTP_19.png)
 
@@ -127,9 +127,9 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the QTP/UFT test:
 
-- **Passed** -- The QTP/UFT automated test ran successfully and all the test conditions in the test script passed
-- **Failed** -- The QTP/UFT automated test ran successfully, but at least one test condition in the test script failed.
-- **Blocked** -- The QTP/UFT automated test did not run successfully
+- **Passed**: The QTP/UFT automated test ran successfully and all the test conditions in the test script passed
+- **Failed**: The QTP/UFT automated test ran successfully, but at least one test condition in the test script failed.
+- **Blocked**: The QTP/UFT automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

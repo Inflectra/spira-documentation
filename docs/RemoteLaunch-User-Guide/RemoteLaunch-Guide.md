@@ -205,12 +205,12 @@ default-test-status = Not Run
 
 The following changes need to be made to this configuration file:
 
--   **server-url** -- This is the URL of the Spira or Spira installation (hereafter referred to as just Spira). Be sure to not put /Login.aspx or any other page in the string, this should be just the root URL of the application's install.
--   **server-login** -- This is the Spira login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.
--   **server-token** -- The RSS Token of the Spira login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.
--   **host-token** -- This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on Spira will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  ***Important***: This field must match the string that is entered into the Automation Host Details screen in the **Token**: field, or scheduled tests will not be recognized.
--   **license-organization** -- The name of the "Organization" that your RemoteLaunch license key was issued to. This is listed in the Customer Area of the Inflectra website alongside the license key. Note: RemoteLaunch and RemoteLaunchX use the same license keys, so you don't need to have a separate RemoteLaunchX one.
--   **license-key** -- The RemoteLaunch license key that is listed in the secure Customer Area of the Inflectra website
+-   **server-url**: This is the URL of the Spira or Spira installation (hereafter referred to as just Spira). Be sure to not put /Login.aspx or any other page in the string, this should be just the root URL of the application's install.
+-   **server-login**: This is the Spira login id of the user that you want the tests reported as. Note that while the application is polling and updating test results, if the user is logged into a web browser session, they will get kicked out.
+-   **server-token**: The RSS Token of the Spira login listed above. Found in users profile page under the "RSS Token" field; you must have RSS Feeds enabled for this to work.
+-   **host-token**: This field is required, and uniquely identifies the local testing machine. Any scheduled tests assigned to the Automation Host on Spira will get polled for this machine. Except in special circumstances, this ID should be unique among all testing machines.  ***Important***: This field must match the string that is entered into the Automation Host Details screen in the **Token**: field, or scheduled tests will not be recognized.
+-   **license-organization**: The name of the "Organization" that your RemoteLaunch license key was issued to. This is listed in the Customer Area of the Inflectra website alongside the license key. Note: RemoteLaunch and RemoteLaunchX use the same license keys, so you don't need to have a separate RemoteLaunchX one.
+-   **license-key**: The RemoteLaunch license key that is listed in the secure Customer Area of the Inflectra website
 
 You should leave the four **regex** settings alone for now, they can be changed when you start executing tests and need to fine-tune how RemoteLaunchX interprets the results.
 
@@ -359,8 +359,8 @@ If you have parameterized test cases inside the automated test set you can set t
 ![](img/RemoteLaunch_Guide_19.png)
 
 #### RemoteLaunchX Command Line Options
-- **testset** -- If you would like to force execution of a test set regardless of its status, you can use the `-testset` command-line option just as in RemoteLaunch. Simply add `-testset:[ID]` where \[ID\] is the ID of the test set you would like to execute. e.g. `java -jar RemoteLaunchX.jar -testset:24 -testset:37`
-- **project** -- If you would like to limit the projects scanned by RemoteLaunchX, you can use the `-project` command-line option. Simply add `-project:[ID]` where \[ID\] is the ID of the project. e.g. `java -jar RemoteLaunchX.jar -project:1 project:6`
+- **testset**: If you would like to force execution of a test set regardless of its status, you can use the `-testset` command-line option just as in RemoteLaunch. Simply add `-testset:[ID]` where \[ID\] is the ID of the test set you would like to execute. e.g. `java -jar RemoteLaunchX.jar -testset:24 -testset:37`
+- **project**: If you would like to limit the projects scanned by RemoteLaunchX, you can use the `-project` command-line option. Simply add `-project:[ID]` where \[ID\] is the ID of the project. e.g. `java -jar RemoteLaunchX.jar -project:1 project:6`
 
 ### Running RemoteLaunchX
 Once you have set the various test set fields (as described above), you are now ready to execute RemoteLaunchX. You can execute the RemoteLaunchX console application by either running the provided batch / shell command or just executing the JAR file directly: 

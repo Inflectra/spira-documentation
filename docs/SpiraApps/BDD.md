@@ -1,6 +1,5 @@
 # BDD
-
-!!! warning "This SpiraApp works with v8.3+ and some of its functionality is not compatible with SpiraTest"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp:
 

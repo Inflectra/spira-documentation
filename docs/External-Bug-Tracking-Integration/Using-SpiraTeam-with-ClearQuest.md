@@ -86,18 +86,18 @@ If you already see an entry for **ClearQuestDataSync** you should click on its "
 
 You need to fill out the following fields for the ClearQuest Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **ClearQuestDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the ClearQuestDataSync.dll file for any reason, then you need to change the name here to match.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should the name of the ClearQuest *master database.* In most installations this is simply called "MASTR".
--   **Login** -- this should be set to a valid login for your ClearQuest installation. The login needs to have permissions to create and view defects within ClearQuest.
--   **Password** -- this should be set to the password of the login specified above.
--   **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in ClearQuest are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your ClearQuest installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
--   **Auto-Map Users** -- this is not currently used and can be ignored.
--   **Custom 01** -- This should be set to the word "True" if you want to have the plugin restrict synchronization to only loading new incidents from Spira \> ClearQuest and updating existing items. This is useful if you want to prevent existing issues in ClearQuest from being loaded into Spira. Leave blank if you want the plugin to synchronize normally.
--   **Custom 02** -- Sometimes you don't want all the incidents in Spira to be added to ClearQuest. You can optionally enter a filter definition in this box to restrict the incidents that get synchronized. The filter uses the following syntax: `[Property\]=\[Value\|\*\]:\[Property\]=\[Value\|\*\]`. For example, to limit the incidents to only have those where List01 = 5 and Text08 = "Hello" and Text05 is not blank you would use: `List01=5:Text08=Hello:Text05=\*`
--   **Custom 03** -- ClearQuest doesn't have a built-in Detected in Release field. If you would like to map a custom ClearQuest field to the Spira Detected in Release, simply enter in the name of the ClearQuest field here.
--   **Custom 04** -- ClearQuest doesn't have a built-in Resolved in Release field. If you would like to map a custom ClearQuest field to the Spira Resolved in Release, simply enter in the name of the ClearQuest field here.
--   **Custom 05** -- This is the optional "DBset" value, when you have installations with more than one database set. If you have a single database set you can just leave this blank.
+-   **Name**: this needs to be set to **ClearQuestDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the ClearQuestDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should the name of the ClearQuest *master database.* In most installations this is simply called "MASTR".
+-   **Login**: this should be set to a valid login for your ClearQuest installation. The login needs to have permissions to create and view defects within ClearQuest.
+-   **Password**: this should be set to the password of the login specified above.
+-   **Time Offset**: normally this should be set to zero, but if you find that issues being changed in ClearQuest are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your ClearQuest installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
+-   **Auto-Map Users**: this is not currently used and can be ignored.
+-   **Custom 01**: This should be set to the word "True" if you want to have the plugin restrict synchronization to only loading new incidents from Spira \> ClearQuest and updating existing items. This is useful if you want to prevent existing issues in ClearQuest from being loaded into Spira. Leave blank if you want the plugin to synchronize normally.
+-   **Custom 02**: Sometimes you don't want all the incidents in Spira to be added to ClearQuest. You can optionally enter a filter definition in this box to restrict the incidents that get synchronized. The filter uses the following syntax: `[Property\]=\[Value\|\*\]:\[Property\]=\[Value\|\*\]`. For example, to limit the incidents to only have those where List01 = 5 and Text08 = "Hello" and Text05 is not blank you would use: `List01=5:Text08=Hello:Text05=\*`
+-   **Custom 03**: ClearQuest doesn't have a built-in Detected in Release field. If you would like to map a custom ClearQuest field to the Spira Detected in Release, simply enter in the name of the ClearQuest field here.
+-   **Custom 04**: ClearQuest doesn't have a built-in Resolved in Release field. If you would like to map a custom ClearQuest field to the Spira Resolved in Release, simply enter in the name of the ClearQuest field here.
+-   **Custom 05**: This is the optional "DBset" value, when you have installations with more than one database set. If you have a single database set you can just leave this blank.
 
 *If you enter a field name in either Custom 03 or Custom 04, you will need to also map the various releases in Spira to their corresponding equivalent field value in ClearQuest. To do that, click on Planning \> Releases and choose a specific release. Then in the "ClearQuest DataSync ID" field under the "Custom Properties" tab you need to enter the name of the equivalent ClearQuest release.*
 
@@ -123,8 +123,8 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with ClearQuest, you need to enter:
 
-- **External Key** -- This should be set to the name of the project database in ClearQuest that will be mapped to the specific Spira project.
-- **Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+- **External Key**: This should be set to the name of the project database in ClearQuest that will be mapped to the specific Spira project.
+- **Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

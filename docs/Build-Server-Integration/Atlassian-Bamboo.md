@@ -40,8 +40,8 @@ After that, you will see some new fields to fill, they are:
 - **URL** - It is the URL you use to access your instance of Spira;
 - **User Name**: Your Spira user name;
 - **Password**: Your Spira password;
-- **Project ID** -- The numeric ID of the Spira Project that the Build belongs to. (e.g. for Project PR00001 just enter 1)
-- **Release Version Number** -- The version number of the Spira Release/Iteration that the Build belongs to. (e.g. for Release RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
+- **Project ID**: The numeric ID of the Spira Project that the Build belongs to. (e.g. for Project PR00001 just enter 1)
+- **Release Version Number**: The version number of the Spira Release/Iteration that the Build belongs to. (e.g. for Release RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)
 
 After filling this boxes with appropriate information, click on *Add* button. Bamboo will then try to connect to the Spira Server, and check the Project/Release provided info. Once it validates your information, the connection settings will be saved. In case of error, follow the instructions on-screen and try again.
 

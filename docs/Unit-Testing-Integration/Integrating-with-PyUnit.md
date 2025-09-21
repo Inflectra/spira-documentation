@@ -132,7 +132,7 @@ The following attributes need to be set on the instance of the
 `SpiraTestExtension()` object so that the extension can access the
 SpiraTest repository:
 
-- **spiraTestExtension.projectId** -- The ID of the project inside
+- **spiraTestExtension.projectId**: The ID of the project inside
 SpiraTest (this can be found on the project homepage in the "Project
 Overview" section)
 

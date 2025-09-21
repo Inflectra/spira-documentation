@@ -22,18 +22,18 @@ If you already see an entry for **MantisDataSync** you should click on its "Edit
 
 You need to fill out the following fields for the Mantis Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **MantisDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the MantisDataSync.dll file for any reason, then you need to change the name here to match.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should the URL that you use to access your instance of Mantis (e.g. https://www.mycompany.com/bugs)
--   **Login** -- this should be set to a valid login to the Mantis installation. The login needs to have permissions to create and view issues and versions within Mantis for the projects that you will be syncing to Spira.
--   **Password** -- this should be set to the password of the login specified above.
--   **Time Offset** -- The time offset between the two servers, if the Mantis server is on a different server than Spira. For example, if the Mantis server's clock is set to Pacific Standard Time (PST) and the Spira server is set to Eastern Standard Time (EST), the Mantis server would be three hours behind Spira, so you would need to put **-3** into this field.
--   **Auto-Map Users** -- If enabled and a mapped user is not found between the two systems, a search will be made comparing logins between Spira and Mantis for matching UserIDs. If one is found, than that user will be used. If not enabled and a match is not found, then the UserID used will be the connecting user for the Data Sync. (The Spira User for issues coming into Spira, and the Mantis Login for issues imported into Mantis.)
--   **Custom 01** -- This field specifies whether or not a Resolution item in Spira, or a Note item in Mantis will be created when an issue is created in either system for a new issue. Valid values are **True** or **False**. Default (or blank) is **True**.
--   **Custom 02** -- This field indicates whether or not to convert Carriage Returns and spaces in Mantis issues when synchronizing them into Spira. If enabled, then carriage returns will be converted to HTML breaks, and multiple spaces will be converted to non-breaking spaces to preserve formatting when importing into Spira. If disabled, then carriage returns and spaces will be left as-is. Valid values are **True** or **False**. Default (or blank) is **True**.
--   **Custom 03** -- This field is only used when 'Auto-Map Users' is enabled and for Incidents synchronized from Spira into Mantis. If enabled, and the Auto-Map User did not find a user with a matching Login ID, then the Login ID will be set to the User in Spira, even if that user may not exist in Mantis. Depending on Mantis configuration, the user may be accepted, or it may default back to the Mantis UserID that the Data Sync runs under. Valid values are **True** or **False**. Default (or blank) is **False**.
--   **Custom 04** -- If enabled, this option specifies whether or not to append the "Additional Information" and "Steps To Reproduce" fields to the end of the Description field in Spira. During transfer of new issues from Mantis to Spira, the Description field in Spira will consist of the Description field in Mantis appended by the Additional Information field in Mantis, and finally the Steps To Reproduce field in Mantis. If this option is disabled, only the Description will be transferred over. Valid values are **True** or **False**. Default (or blank) is **False**.
--   **Custom 05** -- This is not currently used by the MantisDataSync, and can be left blank.
+-   **Name**: this needs to be set to **MantisDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the MantisDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should the URL that you use to access your instance of Mantis (e.g. https://www.mycompany.com/bugs)
+-   **Login**: this should be set to a valid login to the Mantis installation. The login needs to have permissions to create and view issues and versions within Mantis for the projects that you will be syncing to Spira.
+-   **Password**: this should be set to the password of the login specified above.
+-   **Time Offset**: The time offset between the two servers, if the Mantis server is on a different server than Spira. For example, if the Mantis server's clock is set to Pacific Standard Time (PST) and the Spira server is set to Eastern Standard Time (EST), the Mantis server would be three hours behind Spira, so you would need to put **-3** into this field.
+-   **Auto-Map Users**: If enabled and a mapped user is not found between the two systems, a search will be made comparing logins between Spira and Mantis for matching UserIDs. If one is found, than that user will be used. If not enabled and a match is not found, then the UserID used will be the connecting user for the Data Sync. (The Spira User for issues coming into Spira, and the Mantis Login for issues imported into Mantis.)
+-   **Custom 01**: This field specifies whether or not a Resolution item in Spira, or a Note item in Mantis will be created when an issue is created in either system for a new issue. Valid values are **True** or **False**. Default (or blank) is **True**.
+-   **Custom 02**: This field indicates whether or not to convert Carriage Returns and spaces in Mantis issues when synchronizing them into Spira. If enabled, then carriage returns will be converted to HTML breaks, and multiple spaces will be converted to non-breaking spaces to preserve formatting when importing into Spira. If disabled, then carriage returns and spaces will be left as-is. Valid values are **True** or **False**. Default (or blank) is **True**.
+-   **Custom 03**: This field is only used when 'Auto-Map Users' is enabled and for Incidents synchronized from Spira into Mantis. If enabled, and the Auto-Map User did not find a user with a matching Login ID, then the Login ID will be set to the User in Spira, even if that user may not exist in Mantis. Depending on Mantis configuration, the user may be accepted, or it may default back to the Mantis UserID that the Data Sync runs under. Valid values are **True** or **False**. Default (or blank) is **False**.
+-   **Custom 04**: If enabled, this option specifies whether or not to append the "Additional Information" and "Steps To Reproduce" fields to the end of the Description field in Spira. During transfer of new issues from Mantis to Spira, the Description field in Spira will consist of the Description field in Mantis appended by the Additional Information field in Mantis, and finally the Steps To Reproduce field in Mantis. If this option is disabled, only the Description will be transferred over. Valid values are **True** or **False**. Default (or blank) is **False**.
+-   **Custom 05**: This is not currently used by the MantisDataSync, and can be left blank.
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between Spira and Mantis. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Enhancement" in Spira is the same as a "Feature" in Mantis (for example).
@@ -57,13 +57,13 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with Mantis, you need to enter:
 
-**External Key** -- This should be set to the ID of the project in Mantis. To get the ID of the Project in Mantis, log in as an administrator and go to Manage -\> Manage Projects:
+**External Key**: This should be set to the ID of the project in Mantis. To get the ID of the Project in Mantis, log in as an administrator and go to Manage -\> Manage Projects:
 
 ![Description: man\_project](img/Using_SpiraTeam_with_Mantis_125.png)
 
 Then hover the mouse over the project name. The project ID will be > displayed in the URL line as **project\_id=X** where **X** is the > numeric ID of the project.
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

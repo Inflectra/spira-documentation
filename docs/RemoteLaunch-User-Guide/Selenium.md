@@ -39,15 +39,15 @@ The Selenium 1.0 engine adds its own tab to this page which allows you to config
 
 The following fields can be specified on this screen:
 
-- **Server Host** -- This should be the name / IP address of the Selenium server. Typically this will be localhost because RemoteLaunch is usually installed on the Selenium server itself.
-- **Server Port** -- This should be set to the custom port that the Selenium server uses as a proxy when intercepting requests to the browser. The default value is 4444.
-- **Browser String** -- This needs to be the name of the browser that the Selenium server will launch. Common values include:
+- **Server Host**: This should be the name / IP address of the Selenium server. Typically this will be localhost because RemoteLaunch is usually installed on the Selenium server itself.
+- **Server Port**: This should be set to the custom port that the Selenium server uses as a proxy when intercepting requests to the browser. The default value is 4444.
+- **Browser String**: This needs to be the name of the browser that the Selenium server will launch. Common values include:
 
-    - **\*firefox** -- This will launch the Firefox web browser
-    - **\*iexplore** -- This will launch the Microsoft Internet Explorer web browser
-    - **\*safari** -- This will launch the Apple Safari web browser
+    - **\*firefox**: This will launch the Firefox web browser
+    - **\*iexplore**: This will launch the Microsoft Internet Explorer web browser
+    - **\*safari**: This will launch the Apple Safari web browser
 
-- **Browser URL** -- This needs to be the initial URL that you want the browser to open to a) Selenium WebDriver 2.x
+- **Browser URL**: This needs to be the initial URL that you want the browser to open to a) Selenium WebDriver 2.x
 
 The Selenium 2.x engine adds its own tab to this page which allows you to configure how Selenium operates:
 
@@ -55,8 +55,8 @@ The Selenium 2.x engine adds its own tab to this page which allows you to config
 
 The following fields can be specified on this screen:
 
-- **Browser Type** -- This needs to be set to the type of browser that the Selenium webdriver will launch.
-- **Browser URL** -- This needs to be the initial URL that you want the browser to open to
+- **Browser Type**: This needs to be set to the type of browser that the Selenium webdriver will launch.
+- **Browser URL**: This needs to be the initial URL that you want the browser to open to
 
 ## Setting up the Automated Test Cases
 This section describes the process for setting up a test case in Spira for automation and either linking it to an existing Selenium test script file or entering a Selenium test script directly into Spira.
@@ -69,12 +69,12 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Selenium Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Attached for this case
-- **Filename** -- Since the test script is going to be entered directly into Spira you can enter any name you like for the filename as long as it's logical and memorable.
-- **Document Type** -- you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- This needs to contain the complete Selenium test script written in Selenium IDE *Selenese*. Selenium IDE test scripts consist of three parts:
+- **Script Type**: This should be set to Attached for this case
+- **Filename**: Since the test script is going to be entered directly into Spira you can enter any name you like for the filename as long as it's logical and memorable.
+- **Document Type**: you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: This needs to contain the complete Selenium test script written in Selenium IDE *Selenese*. Selenium IDE test scripts consist of three parts:
 
     - The command          
     - The target of the command     
@@ -115,8 +115,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 - **Automation Engine** - Choose the Selenium Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type** -- This should be set to Linked for this case
-- **Filename** -- This needs to be the full path to the Selenium IDE test script file. To make this easier across different machines, you can use several constants for standard Windows locations:
+- **Script Type**: This should be set to Linked for this case
+- **Filename**: This needs to be the full path to the Selenium IDE test script file. To make this easier across different machines, you can use several constants for standard Windows locations:
 
     - \[MyDocuments\] -- The user's "My Documents" folder. The user indicated     is the user that ran RemoteLaunch.
     - \[CommonDocuments\] -- The Public Document's folder.
@@ -124,10 +124,10 @@ You need to enter the following fields:
     - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
     - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-- **Document Type** -- you can choose which document type the automated test script will be categorized under.
-- **Document Folder** -- you can choose which document folder the automated test script will be stored in.
-- **Version** -- The version of the test script (1.0 is used if no value specified)
-- **Test Script** -- *This is not used when you are using the linked test script option*
+- **Document Type**: you can choose which document type the automated test script will be categorized under.
+- **Document Folder**: you can choose which document folder the automated test script will be stored in.
+- **Version**: The version of the test script (1.0 is used if no value specified)
+- **Test Script**: *This is not used when you are using the linked test script option*
 
 The linked test script needs to be an HTML document that contains a table with *three columns*. Each row corresponds to a single Selenium action. Each of the columns in the row corresponds to the three Selenium command components:
 
@@ -248,18 +248,18 @@ Create a new Test Set to hold the Selenium automated test cases and click on its
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 If you have parameterized test cases inside the automated test set you can set their values in three different ways:
 
--   **Test Set Parameter Values** -- this lets you set the same value of a parameter for all the test cases in the test set:
+-   **Test Set Parameter Values**: this lets you set the same value of a parameter for all the test cases in the test set:
 
 ![](img/Selenium_17.png)
 
--   **Test Case Parameter Values** -- this lets you set a specific value for a parameter for a particular test case in the test set:
+-   **Test Case Parameter Values**: this lets you set a specific value for a parameter for a particular test case in the test set:
 
 ![](img/Selenium_18.png)
 
@@ -267,7 +267,7 @@ You set these values, by right-clicking on a row and choosing "Edit Parameters":
 
 ![](img/Selenium_27.png)
 
--   **Test Configurations** -- this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
+-   **Test Configurations**: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:
 
 ![](img/Selenium_19.png)
 
@@ -279,9 +279,9 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the Selenium test:
 
-- **Passed** -- The Selenium automated test ran successfully and all the test conditions in the test script passed
-- **Failed** -- The Selenium automated test ran successfully, but at least one test condition in the test script failed.
-- **Blocked** -- The Selenium automated test did not run successfully
+- **Passed**: The Selenium automated test ran successfully and all the test conditions in the test script passed
+- **Failed**: The Selenium automated test ran successfully, but at least one test condition in the test script failed.
+- **Blocked**: The Selenium automated test did not run successfully
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 

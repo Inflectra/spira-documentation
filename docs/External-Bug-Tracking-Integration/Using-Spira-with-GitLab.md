@@ -55,9 +55,9 @@ For this step, please ensure that you are in the SpiraPlan project you would lik
 
 Click on the "View Project Mappings" button for GitLab Data Sync. You need to fill out the following fields to sync correctly:
 
--   **External Key** -- The name of your GitLab repository. In the example above, where the URL in GitLab was <https://gitlab.com/gitlab-examples/velociraptor>, you would simply enter "velociraptor" for this setting.
+-   **External Key**: The name of your GitLab repository. In the example above, where the URL in GitLab was <https://gitlab.com/gitlab-examples/velociraptor>, you would simply enter "velociraptor" for this setting.
 
--   **Active** -- Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
+-   **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
 
 ![](img/Using_Spira_with_GitLab_219.png)
 
@@ -70,9 +70,9 @@ Now click the "Status" button within the "Incident" section to map the Incident 
 
 You must map every status in the system. Descriptions of the field are below:
 
--   **External Key** -- Either **opened** or **closed**, which are the only two statuses in GitLab
+-   **External Key**: Either **opened** or **closed**, which are the only two statuses in GitLab
 
--   **Primary** -- You must have exactly one primary key for **opened** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.
+-   **Primary**: You must have exactly one primary key for **opened** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.
 
 
 ### Configuring the User Mapping

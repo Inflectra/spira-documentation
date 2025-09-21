@@ -31,9 +31,9 @@ You will need to modify the NeoLoad configuration for each of the specific autom
 
 The following fields can be specified on this screen:
 
-- **NeoLoad Location** -- This should be folder containing the "NeoLoadCmd.exe" executable that will be used to actually run the automated tests.
+- **NeoLoad Location**: This should be folder containing the "NeoLoadCmd.exe" executable that will be used to actually run the automated tests.
 - **Attach PDF Report** *--* NeoLoad has a built-in report generator that can create detailed Acrobat (PDF) format reports. Enabling this option will attach these reports to the test runs recorded in Spira.
-- **Run as Administrator** -- Sometimes NeoLoad needs to be run as a Windows elevated process, in which case, choose the "Run as Administrator" option.
+- **Run as Administrator**: Sometimes NeoLoad needs to be run as a Windows elevated process, in which case, choose the "Run as Administrator" option.
 
 ## Setting up the Automated Test Cases
 This section describes the process for setting up a test case in Spira for automation and linking it to a NeoLoad project and scenario.
@@ -45,8 +45,8 @@ First you need to display the list of test cases in Spira (by clicking Testing \
 You need to enter the following fields:
 
 -   **Automation Engine** - Choose the NeoLoad Automation Engine that you created in the previous section from the drop-down list.
--   **Script Type** -- For NeoLoad, all scenarios must be stored on the local testing machine so 'Linked' must be selected. If you select 'Attached', when the scenario is attempted to be executed it will be marked as blocked and skipped.
--   **Filename** -- This needs to be the full path to the NeoLoad project file (\*.nlp) file followed by the name of the NeoLoad scenario. The two components need to be separated by a pipe (\|) character. <br>Certain tokens are allowed to be able to specify common locations across different operating systems. Note that the tokens are case-sensitive, and there are no spaces in them. A list of tokens are:
+-   **Script Type**: For NeoLoad, all scenarios must be stored on the local testing machine so 'Linked' must be selected. If you select 'Attached', when the scenario is attempted to be executed it will be marked as blocked and skipped.
+-   **Filename**: This needs to be the full path to the NeoLoad project file (\*.nlp) file followed by the name of the NeoLoad scenario. The two components need to be separated by a pipe (\|) character. <br>Certain tokens are allowed to be able to specify common locations across different operating systems. Note that the tokens are case-sensitive, and there are no spaces in them. A list of tokens are:
 
     -   \[MyDocuments\] -- The user's "My Documents" folder. The user indicated is the user that ran RemoteLaunch.
     -   \[CommonDocuments\] -- The Public Document's folder.
@@ -54,10 +54,10 @@ You need to enter the following fields:
     -   \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
     -   \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
--   **Document Type** -- You can choose which document type the automated scenario will be categorized under.
--   **Document Folder** -- You can choose which document folder the automated scenario will be stored in.
--   **Version** -- The version of the scenario (1.0 is used if no value specified)
--   **Test Script** -- *Not used.*
+-   **Document Type**: You can choose which document type the automated scenario will be categorized under.
+-   **Document Folder**: You can choose which document folder the automated scenario will be stored in.
+-   **Version**: The version of the scenario (1.0 is used if no value specified)
+-   **Test Script**: *Not used.*
 
 Once you are happy with the values, click \[Save\] to update the test case. Now you are ready to schedule the automated test case for execution.
 
@@ -92,10 +92,10 @@ Create a new Test Set to hold the NeoLoad test cases and click on its hyperlink 
 
 You need to add at least one automated test case to the test set and then configure the following fields:
 
--   **Automation Host** -- This needs to be set to the name of the automation host that will be running the automated test set.
--   **Planned Date** -- The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
--   **Status** -- This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
--   **Type** -- This needs to be set to "Automated" for automated testing
+-   **Automation Host**: This needs to be set to the name of the automation host that will be running the automated test set.
+-   **Planned Date**: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)
+-   **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
+-   **Type**: This needs to be set to "Automated" for automated testing
 
 ### Executing the Test Sets
 Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" --
@@ -105,10 +105,10 @@ If you want to immediately execute the test case on your local computer, instead
 
 In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the NeoLoad execution:
 
--   **Passed** -- The scenario ran and reported no error messages and all SLAs were passed.
--   **Caution** -- The scenario ran and at least one SLA reported back as acceptable
--   **Failed** -- The scenario ran and at least one error message was reported or at least one SLA was reported back as failed.
--   **Blocked** -- There was an error with the Test Set or NeoLoad application.
+-   **Passed**: The scenario ran and reported no error messages and all SLAs were passed.
+-   **Caution**: The scenario ran and at least one SLA reported back as acceptable
+-   **Failed**: The scenario ran and at least one error message was reported or at least one SLA was reported back as failed.
+-   **Blocked**: There was an error with the Test Set or NeoLoad application.
 
 If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.
 
@@ -120,10 +120,10 @@ Once the tests have completed, you can log back into Spira and see the execution
 
 This section of the screen indicates how long the test took to execute, the overall status, which release was being executed, which test set it was a part of and each of the key summary statistics, together with information on how they compared to the defined SLA:
 
--   **N/A** -- There was no SLA defined for this metric
--   **Passed** -- There is an SLA defined for this metric and it was passed.
--   **Caution** -- There is an SLA defined for this metric and it was considered less than a pass, but still acceptable.
--   **Failed** -- There is an SLA defined for this metric and it was not met successfully.
+-   **N/A**: There was no SLA defined for this metric
+-   **Passed**: There is an SLA defined for this metric and it was passed.
+-   **Caution**: There is an SLA defined for this metric and it was considered less than a pass, but still acceptable.
+-   **Failed**: There is an SLA defined for this metric and it was not met successfully.
 
 In addition, if you scroll down, in the "Console Output" section of the report there is more detailed information:
 

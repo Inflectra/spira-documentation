@@ -307,7 +307,7 @@ The following attributes need to be set on the instance of the
 *SpiraListener\_Listener*() object so that the extension can access the
 SpiraTest repository:
 
-**baseUrl** -- The base URL used to access your instance of SpiraTest
+**baseUrl**: The base URL used to access your instance of SpiraTest
 (e.g. <http://myserver/SpiraTest>). It should include the protocol (e.g.
 http/https), the server-name, the port number (if not 80/443) and the
 virtual directory (if there is one).
@@ -317,7 +317,7 @@ access to the project specified above
 
 **password** - A valid password for the user specified above
 
-**projectId** -- The ID of the project inside SpiraTest (this can be
+**projectId**: The ID of the project inside SpiraTest (this can be
 found on the project homepage in the "Project Overview" section)
 
 **releaseId** - The ID of the SpiraTest release to associate the test

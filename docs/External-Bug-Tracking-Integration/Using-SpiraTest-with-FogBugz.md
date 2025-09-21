@@ -21,22 +21,22 @@ If you already see an entry for **FogBugzDataSync** you should click on its "Edi
 
 You need to fill out the following fields for the FogBugz Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **FogBugzDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the FogBugzDataSync.dll file for any reason, then you need to change the name here to match.
--   **Caption** -- this is the display name of the plugin, typically just "FogBugz". If you have multiple instances of FogBugz, they could have different captions.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should the URL that you use to access your instance of FogBugz (e.g. https://mycompany.fogbugz.com)
--   **Login** -- this should be set to a valid login to the FogBugz installation. The login needs to have permissions to create and view cases and versions within FogBugz.
--   **Password** -- this should be set to the password of the login specified above.
+-   **Name**: this needs to be set to **FogBugzDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\Spira\\Bin folder (minus the .dll file extension). If you renamed the FogBugzDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Caption**: this is the display name of the plugin, typically just "FogBugz". If you have multiple instances of FogBugz, they could have different captions.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should the URL that you use to access your instance of FogBugz (e.g. https://mycompany.fogbugz.com)
+-   **Login**: this should be set to a valid login to the FogBugz installation. The login needs to have permissions to create and view cases and versions within FogBugz.
+-   **Password**: this should be set to the password of the login specified above.
 
 ![](img/Using_SpiraTest_with_FogBugz_105.png)
 
--   **Time Offset** -- normally this should be set to zero, but if you find that cases being changed in FogBugz are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your FogBugz installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
--   **Auto-Map Users** -- this is not currently used by the FogBugz data-sync plug-in and can be ignored.
--   **Custom 01** -- When connecting to FogBugz, sometimes the connection gets dropped by the server without notifying the plug-in. This happens when using HTTP 1.1 Keep-Alive connections. If you set this property to "**False**", it will tell the plug-in to **not-use** HTTP keep-alives when connecting to FogBugz, otherwise set it to "**True**".
--   **Custom 02** -- When connecting to a FogBugz instance that is running under HTTPS (SSL) this custom property can be set to determine if the plug-in should verify that the SSL certificate is a trusted root certificate. Set to "**True**" if you are using an SSL certificate that was issued by a trusted Certification Authority, and set to "**False**" if you are using a self-signed certificate.
--   **Custom 03** -- Normally all rich text (HTML) descriptions in Spira are converted into plain text when added to FogBugz. However, more recent version of FogBugz can now support rich text. So if you have rich-text enabled in your instance of FogBugz, you should enter the world "**True**" in Custom 03 to enable rich text description transfer.
--   **Custom 04** -- Normally you can leave this blank. However if you want to prevent the plugin from getting new cases from FogBugz (that did not originate in SpiraTest), set it to **"False"**.
--   **Custom 05** -- this is not currently used by the FogBugz data-sync plug-in and can be left blank.
+-   **Time Offset**: normally this should be set to zero, but if you find that cases being changed in FogBugz are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your FogBugz installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
+-   **Auto-Map Users**: this is not currently used by the FogBugz data-sync plug-in and can be ignored.
+-   **Custom 01**: When connecting to FogBugz, sometimes the connection gets dropped by the server without notifying the plug-in. This happens when using HTTP 1.1 Keep-Alive connections. If you set this property to "**False**", it will tell the plug-in to **not-use** HTTP keep-alives when connecting to FogBugz, otherwise set it to "**True**".
+-   **Custom 02**: When connecting to a FogBugz instance that is running under HTTPS (SSL) this custom property can be set to determine if the plug-in should verify that the SSL certificate is a trusted root certificate. Set to "**True**" if you are using an SSL certificate that was issued by a trusted Certification Authority, and set to "**False**" if you are using a self-signed certificate.
+-   **Custom 03**: Normally all rich text (HTML) descriptions in Spira are converted into plain text when added to FogBugz. However, more recent version of FogBugz can now support rich text. So if you have rich-text enabled in your instance of FogBugz, you should enter the world "**True**" in Custom 03 to enable rich text description transfer.
+-   **Custom 04**: Normally you can leave this blank. However if you want to prevent the plugin from getting new cases from FogBugz (that did not originate in SpiraTest), set it to **"False"**.
+-   **Custom 05**: this is not currently used by the FogBugz data-sync plug-in and can be left blank.
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between Spira and FogBugz. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Enhancement" in Spira is the same as a "Feature" in FogBugz (for example).
@@ -60,7 +60,7 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with FogBugz, you need to enter:
 
-**External Key** -- This should be set to the ID of the project in FogBugz. This can be found by navigating to Settings \> Projects in FogBugz:
+**External Key**: This should be set to the ID of the project in FogBugz. This can be found by navigating to Settings \> Projects in FogBugz:
 
 > ![](img/Using_SpiraTest_with_FogBugz_107.png)
 
@@ -68,7 +68,7 @@ To enable this project for data-synchronization with FogBugz, you need to enter:
 
 > > Then hover the mouse over the project name. The project ID will be > displayed in the URL line as ixProject-X where X is the numeric ID of > the project.
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

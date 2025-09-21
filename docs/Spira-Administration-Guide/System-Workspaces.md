@@ -189,9 +189,9 @@ This tab allows you to see which users are members of the program and which prog
 
 The two program roles are "Executive" and "Program Owner":
 
-**Executive** -- This role allows the user to see this [program's homepage](../Spira-User-Manual/Program-Homepage.md), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program (this excludes source code).
+**Executive**: This role allows the user to see this [program's homepage](../Spira-User-Manual/Program-Homepage.md), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program (this excludes source code).
 
-**Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
+**Program Owner**: This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
 
 To change the role of an existing program member, just change the role in the drop-down list and click \[Save\]. To remove a member from the program, just select the appropriate checkboxes and click \[Delete\]. Finally, to add a new user to the program, click on the \[Add\] button:
 

@@ -32,7 +32,7 @@ Complete the form on this page as below:
 -   For example: `<https://bitbucket.org/aragost/javahg> ssh://example.com/hg/`
 -   **Login / Password**: The user id and the password of the user to use while accessing and retrieving information from the remote Mercurial repository. If you are accessing a public repository anonymously, just use "*anonymous*" for both username and password and it will be handled correctly.
 -   **Custom 01 --** This needs to contain the path on the SpiraTeam server where the Mercurial executable (Hg.exe) can be found. If left blank, it will attempt to automatically discover Mercurial from the Windows %PATH% environment variable.
--   **Custom 02 -- Custom 05** -- Not used by this plugin.
+-   **Custom 02 -- Custom 05**: Not used by this plugin.
 
 ![](img/Integrating_with_Mercurial_48.png)
 

@@ -1,7 +1,7 @@
 # Quick Tasks SpiraApp
-This SpiraApp adds a widget on the product home page where you and your team can quickly and easily create and work on shared tasks in a streamlined user interface. Creating and checking off tasks in Spira has never been faster. 
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-!!! warning "This SpiraApp's functionality requires SpiraTeam or SpiraPlan to work."
+This SpiraApp adds a widget on the product home page where you and your team can quickly and easily create and work on shared tasks in a streamlined user interface. Creating and checking off tasks in Spira has never been faster. 
 
 !!! info "About this SpiraApp"
     - [ ] system settings

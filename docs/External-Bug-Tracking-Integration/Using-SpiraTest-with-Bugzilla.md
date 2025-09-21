@@ -21,16 +21,16 @@ If you already see an entry for **BugzillaDataSync** you should click on its "Ed
 
 You need to fill out the following fields for the Bugzilla Plug-in to operate correctly:
 
--   **Name** -- this needs to be set to **BugzillaDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\SpiraTeam\\Bin folder (minus the .dll file extension). If you renamed the BugzillaDataSync.dll file for any reason, then you need to change the name here to match.
--   **Description** -- this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
--   **Connection Info** -- this should the full URL to the Bugzilla installation's web-service API. This is typically http://<Bugzilla server name\>/xmlrpc.cgi
--   **Login** -- this should be set to a valid login to the Bugzilla installation -- typically an email address. The login needs to have permissions to create and view bugs within Bugzilla.
--   **Password** -- this should be set to the password of the login specified above.
--   **Time Offset** -- normally this should be set to zero, but if you find that issues being changed in Bugzilla are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your Bugzilla installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
--   **Auto-Map Users** -- this is not currently used by the Bugzilla data-sync plug-in and can be ignored.
--   **Custom 01** -- When connecting to Bugzilla, sometimes the connection gets dropped by the server without notifying the plug-in. This happens when using HTTP 1.1 Keep-Alive connections. If you set this property to "**False**", it will tell the plug-in to **not-use** HTTP keep-alives when connecting to Bugzilla, otherwise set it to "**True**".
--   **Custom 02** -- When connecting to a Bugzilla instance that is running under HTTPS (SSL) this custom property can be set to determine if the plug-in should verify that the SSL certificate is a trusted root certificate. Set to "**True**" if you are using an SSL certificate that was issued by a trusted Certification Authority, and set to "**False**" if you are using a self-signed certificate.
--   **Custom 03 -- 05** -- these are not currently used by the Bugzilla data-sync plug-in and can be left blank.
+-   **Name**: this needs to be set to **BugzillaDataSync**. This needs to match the name of the plug-in DLL assembly that was copied into the C:\\Program Files\\SpiraTeam\\Bin folder (minus the .dll file extension). If you renamed the BugzillaDataSync.dll file for any reason, then you need to change the name here to match.
+-   **Description**: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.
+-   **Connection Info**: this should the full URL to the Bugzilla installation's web-service API. This is typically http://<Bugzilla server name\>/xmlrpc.cgi
+-   **Login**: this should be set to a valid login to the Bugzilla installation -- typically an email address. The login needs to have permissions to create and view bugs within Bugzilla.
+-   **Password**: this should be set to the password of the login specified above.
+-   **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Bugzilla are not being updated in SpiraTeam, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your Bugzilla installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.
+-   **Auto-Map Users**: this is not currently used by the Bugzilla data-sync plug-in and can be ignored.
+-   **Custom 01**: When connecting to Bugzilla, sometimes the connection gets dropped by the server without notifying the plug-in. This happens when using HTTP 1.1 Keep-Alive connections. If you set this property to "**False**", it will tell the plug-in to **not-use** HTTP keep-alives when connecting to Bugzilla, otherwise set it to "**True**".
+-   **Custom 02**: When connecting to a Bugzilla instance that is running under HTTPS (SSL) this custom property can be set to determine if the plug-in should verify that the SSL certificate is a trusted root certificate. Set to "**True**" if you are using an SSL certificate that was issued by a trusted Certification Authority, and set to "**False**" if you are using a self-signed certificate.
+-   **Custom 03 -- 05**: these are not currently used by the Bugzilla data-sync plug-in and can be left blank.
 
 ## Configuring the Data Mapping
 Next, you need to configure the data mapping between SpiraTeam and Bugzilla. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Duplicate" incident in SpiraTeam is the same as an "UNCONFIRMED" bug in Bugzilla (for example).
@@ -54,9 +54,9 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with Bugzilla, you need to enter:
 
-**External Key** -- This should be set to the name of the equivalent Product in Bugzilla.
+**External Key**: This should be set to the name of the equivalent Product in Bugzilla.
 
-**Active Flag** -- Set this to 'Yes' so that SpiraTeam knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that SpiraTeam knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 

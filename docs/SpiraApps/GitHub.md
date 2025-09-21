@@ -1,4 +1,5 @@
 # GitHub SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate SpiraPlan and GitHub so users can launch Actions from Spira and see their results in Spira as builds.
 

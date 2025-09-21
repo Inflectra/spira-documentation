@@ -190,7 +190,7 @@ The following parameters need to be passed during the instantiation of
 the Test::Unit::SpiraTest::TestRunner object so that the custom test
 runner can access the SpiraTest repository:
 
-**suite** -- the reference to the Test::Unit test suite that contains
+**suite**: the reference to the Test::Unit test suite that contains
 the test cases being executed. In our example above, this is the
 TS\_Examples class.
 

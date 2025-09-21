@@ -113,7 +113,7 @@ If the project name does not match the name of the project you want to configure
 
 To enable this project for data-synchronization with TFS, you need to enter:
 
-**External Key** -- This should be set to the name of the project in TFS as visible from the Visual Studio Team Explorer or web interface:
+**External Key**: This should be set to the name of the project in TFS as visible from the Visual Studio Team Explorer or web interface:
 
 > ![](img/Using_SpiraTest_with_MS-TFS_82.png)
 
@@ -121,7 +121,7 @@ OR
 
 > ![](img/Using_SpiraTest_with_MS-TFS_82b.png)
 
-**Active Flag** -- Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
+**Active Flag**: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.
 
 Click \[Update\] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.
 
