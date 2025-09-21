@@ -1,24 +1,20 @@
 # Conditional Lists
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
-
 This SpiraApp helps admins create dynamic and powerful customizations for end users when they work with artifacts on details pages. It lets you conditionally control what values are available in one list dropdown, based on the selected values of other list fields. In other words, changing one list dynamically updates the options in other lists. For example, an incident of type "Enhancement" could have its owner field limited to a certain group of users, but an incident of type "Bug" could have the owner field limited to a different group of users. The SpiraApp is highly customizable using the product settings to meet a variety of different use cases.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] toolbar button on product settings page
-    - [x] runs automatically on the document details page
-    - [x] runs automatically on the incident details page
-    - [x] runs automatically on the release details page
-    - [x] runs automatically on the requirement details page
-    - [x] runs automatically on the test case details page
-    - [x] runs automatically on the test set details page
-    - [x] runs automatically on the task details page
+    - product settings 
+    - toolbar button on product settings page
+    - runs automatically on the document details page
+    - runs automatically on the incident details page
+    - runs automatically on the release details page
+    - runs automatically on the requirement details page
+    - runs automatically on the test case details page
+    - runs automatically on the test set details page
+    - runs automatically on the task details page
         {: .edition-spiraplan .edition-spirateam}
-    - [x] runs automatically on the risk details page
+    - runs automatically on the risk details page
         {: .edition-spiraplan .edition-spirateam}
 
 !!! warning "Limitations"

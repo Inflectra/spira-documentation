@@ -6,10 +6,8 @@
 This SpiraApp automates sprint creation based on your product's settings. It creates a set of sprints for a selected major or minor release, from the Release List page.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] toolbar button on the release list page
+    - product settings 
+    - toolbar button on the release list page
 
 ## Setup
 ### Product Settings

@@ -8,10 +8,10 @@ This SpiraApp lets you integrate Spira Requirements and Confluence so that you c
 
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product template setup required
-    - [x] product settings
-    - [x] toolbar button on requirement details page
+    - system settings
+    - product template setup required
+    - product settings
+    - toolbar button on requirement details page
 
 ## Setup
 ### System settings

@@ -4,10 +4,8 @@
 This SpiraApp adds a widget on the product home page where you and your team can quickly and easily create and work on shared tasks in a streamlined user interface. Creating and checking off tasks in Spira has never been faster. 
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] product home page widget
+    - product settings 
+    - product home page widget
 
 ## Setup
 ### Product Settings

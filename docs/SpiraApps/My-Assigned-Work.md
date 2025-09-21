@@ -4,10 +4,7 @@
 This SpiraApp adds a widget to the user's My Page that allows them to view their owned Artifacts in an interactive grid. It provides an alterative way to use the My Page and can replace most of the "My Assigned..." widgets.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [ ] product settings 
-    - [ ] product template setup required
-    - [x] my page widget
+    - my page widget
 
 
 ## Setup

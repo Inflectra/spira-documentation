@@ -6,11 +6,10 @@
 This SpiraApp helps you create incremental versions for requirements and test cases. This allows you to easily mark a requirement or test case as a new version. Versioning can be restricted by workflow as well.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product template setup required
-    - [x] product settings 
-    - [x] toolbar button on the requirement details page
-    - [x] toolbar button on the test case details page
+    - product template setup required
+    - product settings 
+    - toolbar button on the requirement details page
+    - toolbar button on the test case details page
 
 ## Setup
 ### Product Template Setup

@@ -6,12 +6,11 @@
 This SpiraApp extends the built-in risk functionality by supporting FMEA with a dedicated FMEA SpiraApp that calculates the Risk Priority Number (RPN) by multiplying together values for the risk's probability, impact, and detectability. It also provides a replacement "Top Open Risks" widget for the product home page and reporting home page that is ranked by and shows the RPN.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [x] product template setup required
-    - [x] runs automatically on the risk details page
-    - [x] product home page widget
-    - [x] reporting home page widget
+    - product settings 
+    - product template setup required
+    - runs automatically on the risk details page
+    - product home page widget
+    - reporting home page widget
 
 ## Setup
 To effectively implement FMEA in your product, you have to set up the fields that will store the FMEA data (detectability and the RPN itself). You can also optionally configure how the "Top Open Risks by Risk Priority Number" widget will display.

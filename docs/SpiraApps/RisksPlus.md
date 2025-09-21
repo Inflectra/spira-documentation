@@ -9,11 +9,9 @@ This SpiraApp extends the built-in risk functionality by:
 - adding optional validation for the Risk Review Date field
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] runs automatically on the risk details page
-    - [x] adds a menu button to the risk details page
+    - product settings 
+    - runs automatically on the risk details page
+    - adds a menu button to the risk details page
 
 ## Setup
 ### Product Settings

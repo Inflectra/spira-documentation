@@ -4,11 +4,11 @@
 This SpiraApp lets you integrate SpiraPlan (and SpiraTest and SpiraTeam) and OctoPerf so users can launch Actions from Spira and see their results in Spira as builds.
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product template setup required
-    - [x] toolbar button on test case details page
-    - [x] additional integration required to record results in Spira
-    - [x] configuration in OctoPerf (for recording results in Spira)
+    - system settings
+    - product template setup required
+    - toolbar button on test case details page
+    - additional integration required to record results in Spira
+    - configuration in OctoPerf (for recording results in Spira)
 
 ## Setup
 This SpiraApp has two interdependent parts that are both required for full functionality:

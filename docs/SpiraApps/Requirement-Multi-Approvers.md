@@ -4,10 +4,10 @@
 This SpiraApp lets you create groups of customizable tasks against requirements to ensure multiple named users must approve a requirement before it can progress through the workflow. Product admins can create groups of tasks with a consistent description and name style, but with specific assigned users and types. Requirement users can create these task groups that link to the relevant requirement. Widgets on the product home page and My Page help users manage these approval tasks. Note that Tasks are not available in SpiraTest.
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product settings 
-    - [x] product template setup required
-    - [x] toolbar button on requirement details page
+    - system settings
+    - product settings 
+    - product template setup required
+    - toolbar button on requirement details page
 
 
 ## Setup

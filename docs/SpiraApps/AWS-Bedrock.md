@@ -17,13 +17,14 @@ It can provide an easy and effective way for users to create a foundational set 
 By using this SpiraApp users will, by necessity, share information with AWS Bedrock. For that reason, system admins must configure this SpiraApp to an existing AWS Bedrock service for your organization.
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] toolbar button on requirement details page
-    - [x] toolbar button on test case details page
-    - [x] toolbar button on risk details page
-    - [x] toolbar button on task details page
+    - system settings
+    - product settings 
+    - toolbar button on requirement details page
+    - toolbar button on test case details page
+    - toolbar button on risk details page
+		{: .edition-spiraplan .edition-spirateam}
+    - toolbar button on task details page
+		{: .edition-spiraplan .edition-spirateam}
 
 ## AWS Bedrock Setup
 Log into your AWS Console and navigate to the **Bedrock** services section. Then click on the sidebar menu entry for **Model access*:
