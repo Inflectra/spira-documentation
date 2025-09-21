@@ -156,7 +156,7 @@ In addition to [how releases show on the board](./Application-Wide.md/#board-by-
 | **Release is a single release** | requirements with that release, or any of its child sprints | incidents with that release as its planned release |
 
 ### What cards show in the sprint backlog
-In addition to [how releases show on the board](Application-Wide.md/#board-viewing-by-release-or-sprint), the following rules apply to what cards will show:
+In addition to [how releases show on the board](Application-Wide.md/#board-by-release-or-sprint), the following rules apply to what cards will show:
 
 | View selected                   | Requirements shown                                          | Incidents shown                                    |
 | ------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
