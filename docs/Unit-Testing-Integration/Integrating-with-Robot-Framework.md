@@ -25,7 +25,7 @@ To obtain the latest version of the plugin, simply run the following command: `p
 This command will install the latest version of the plugin straight from the Python Package Index (PyPI). Once the Spira plugin is successfully installed, all you need to do is configure the plugin, annotate your Robot Framework test cases with Spira-specific tags, then you can begin testing!
 
 ## Using the Integration
-The integration consists of a Python module called `robot_spira_integration.py` that is executed after your Robot Framework tests are executed. This module will read the resulsts of the Robot Framework `output.xml` report file and send the results to Spira, mapping each Robot Framework test case to a matching Spira test case.
+The integration consists of a Python module called `robot_spira_integration.py` that is executed after your Robot Framework tests are executed. This module will read the results of the Robot Framework `output.xml` report file and send the results to Spira, mapping each Robot Framework test case to a matching Spira test case.
 
 ### Configuring the Spira connection
 In your test root folder (the folder you have your Robot Framework tests), create a file named `spira.cfg` with the following:
