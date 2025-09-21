@@ -9451,7 +9451,7 @@
 <li>Fix the v7 API for updating a user to properly update the user's information [IN:11282]</li>
 <li>Improve horizontal scrolling on pages with tables or boards that can extend beyond the edge of the screen, by having the table or board scroll and not the whole page [IN:11285]</li>
 <li>Improve performance of the <a href="../../Spira-User-Manual/Test-Run-Management/#test-run-list">test run list page</a> by improving the way the data is retrieved to use fewer resources [IN:11164]</li>
-<li>Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin &gt; <a href="../../Spira-Administration-Guide/Product-Planning/#task--incidents">planning options page</a>) [IN:11017]</li>
+<li>Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin &gt; <a href="../../Spira-Administration-Guide/Product-Planning/#task-incidents">planning options page</a>) [IN:11017]</li>
 </ul>
 </details>
 <h2 id="version-811-june-2025">Version 8.11 (June 2025)<a class="headerlink" href="#version-811-june-2025" title="Permanent link">&para;</a></h2>
@@ -9468,7 +9468,7 @@
 <details class="bug">
 <summary>Bug fixes and enhancements</summary>
 <ul>
-<li>Create custom report views that provide information about <a href="../../Reporting/Custom-Report-Tables/#teams">teams</a> and <a href="../../Reporting/Custom-Report-Tables/#team-project-users">team project users</a> [IN:10729]</li>
+<li>Create custom report views that provide information about <a href="../../Reporting/Custom-Report-Tables/#teams">teams</a> and <a href="../../Reporting/Custom-Report-Tables/#project-teams-users">team project users</a> [IN:10729]</li>
 <li>Create a new API endpoint to retrieve dataSync system extended custom properties [IN:10659]</li>
 <li>Fix not being able to clone a product or update the data sync mappings if two external keys are the same for 2 different fields [IN:11099]</li>
 <li><strong><a href="../release-notes-inflectra.ai-v1/#may-30-2025">Inflectra.ai enhancements</a></strong></li>
@@ -9557,7 +9557,7 @@
 <li>As an incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Run-Management/#incidents">test runs</a> which are from other products [RQ:5123]</li>
 <li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Case-Management/#incidents">test cases</a> which are from other products [RQ:5126]</li>
 <li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Set-Management/#incidents">test sets</a> which are from other products [RQ:5127]</li>
-<li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Case-Management/#incidents-1">test steps</a> which are from other products [RQ:5124]</li>
+<li>As an Incident user, I can see associated incidents on <a href="../../Spira-User-Manual/Test-Case-Management/#incidents_1">test steps</a> which are from other products [RQ:5124]</li>
 <li>As a tester, <a href="../../Spira-User-Manual/Test-Execution/#incidents">I can associate incidents to a test run step</a> which are from a different product [RQ:5125]</li>
 </ul>
 </li>
@@ -9579,13 +9579,13 @@
 <li>Allow <a href="../../Spira-Administration-Guide/System-Integration/#data-synchronization">data syncs</a> to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]</li>
 <li>Correct the explanatory text on the <a href="../../Spira-Administration-Guide/Template-Custom-Properties/#edit-custom-lists">template custom list page</a> to not reference "products" - but instead the template [IN:7555]</li>
 <li>Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]</li>
-<li>Fix tags dropdowns not being a valid recipient of <a href="../../Developers/SpiraApps-Manager/#event-handlers">SpiraAppManager.registerEvent_dropdownChanged</a> to enhance SpiraApp capabilities [IN:10675]</li>
+<li>Fix tags dropdowns not being a valid recipient of <a href="../../Developers/SpiraApps-Manager/#events-handlers">SpiraAppManager.registerEvent_dropdownChanged</a> to enhance SpiraApp capabilities [IN:10675]</li>
 <li>Fix the incident list page tools buttons to "Export to Excel/Word/Acrobat" not correctly generating the requested report (introduced in 8.7.0.0) [IN:10671]</li>
 <li>Fix the My Page so that when widgets in the "Top" or "Bottom" sections can be more easily closed or configured in dark mode, by making the editing buttons visible [IN:6979]</li>
 <li>Fix the possibility of getting an error on the Planning Board if the release selected in the release dropdown has been deleted [IN:10192]</li>
 <li>Fix the <a href="../../Spira-User-Manual/Program-Homepage/#product-test-summary">Product Test Summary widget</a> on the program home page so that it does not show inactive products or any information about them [IN:10508]</li>
 <li>Fix the REST API for creating a timesheet entry closing the connection instead of throwing an error if the entry object has errors (such as missing fields or the time is over 23:59 hours) [IN:10607]</li>
-<li>Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the <a href="../../Developers/SpiraApps-Manager/#event-handlers">spiraAppManager.registerEvent_dropdownChanged</a> function [IN:10573]</li>
+<li>Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the <a href="../../Developers/SpiraApps-Manager/#events-handlers">spiraAppManager.registerEvent_dropdownChanged</a> function [IN:10573]</li>
 <li>Improve the incident association panel(s) when adding an incident, to only allow users to see incidents to add if the user has view incident permissions in the selected product [IN:10630]</li>
 <li>Remove "SpiraApp" from the list of available artifacts on the product admin <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-associations">Product Associations page</a>, to avoid confusion [IN:9654]</li>
 <li>Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]</li>
