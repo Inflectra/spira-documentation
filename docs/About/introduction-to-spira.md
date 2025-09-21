@@ -1,13 +1,12 @@
 # Introduction to Spira
 
-The Spira™ family of applications from Inflectra® are a powerful set of tools that help you manage your software lifecycle.
+The Spira™ family of applications from Inflectra® are a powerful set of tools that help you manage your software lifecycle. Spira comes in 3 different editions:
 
-SpiraTest® is our powerful and easy to use requirements, test and defect management system, ideal for quality assurance teams.
+- **SpiraTest®** is our powerful and easy to use requirements, test and defect management system, ideal for quality assurance teams.
+- **SpiraTeam®** is our integrated Application Lifecycle Management (ALM) system that manages your product's requirements, releases, test cases, issues, tasks, and risks in one unified environment.
+- **SpiraPlan®** expands on the features in SpiraTeam® to provide a complete Enterprise Agile Planning® solution that lets you manage products, programs and the entire organization with ease.
 
-SpiraTeam® is our integrated Application Lifecycle Management (ALM) system that manages your product's requirements, releases, test cases, issues, tasks, and risks in one unified environment.
-
-SpiraPlan® expands on the features in SpiraTeam® to provide a complete Enterprise Agile Planning® solution that lets you manage products, programs and the entire organization with ease.
-
+[Compare features across the 3 Spira editions](./edition-comparison.md)
 
 ## Quality Assurance
 
