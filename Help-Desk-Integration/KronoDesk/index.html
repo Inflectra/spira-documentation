@@ -7024,10 +7024,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-spiraplan" class="md-nav__link">
+  <a href="#configuring-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring SpiraPlan
+        Configuring Spira
       
     </span>
   </a>
@@ -7046,10 +7046,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-kronodesk-with-spiraplan" class="md-nav__link">
+  <a href="#using-kronodesk-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using KronoDesk with SpiraPlan
+        Using KronoDesk with Spira
       
     </span>
   </a>
@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9001,10 +9029,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-spiraplan" class="md-nav__link">
+  <a href="#configuring-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring SpiraPlan
+        Configuring Spira
       
     </span>
   </a>
@@ -9023,10 +9051,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-kronodesk-with-spiraplan" class="md-nav__link">
+  <a href="#using-kronodesk-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using KronoDesk with SpiraPlan
+        Using KronoDesk with Spira
       
     </span>
   </a>
@@ -9051,14 +9079,17 @@
 
 
 <h1 id="kronodesk">KronoDesk<a class="headerlink" href="#kronodesk" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to integrate KronoDesk<sup>®</sup> into SpiraPlan<sup>®</sup>. This will enable KronoDesk agents to log incidents emerging from a ticket directly from the KronoDesk interface into SpiraPlan. They will also be able to see and review any SpiraPlan incidents already linked to existing KronoDesk tickets.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to integrate KronoDesk<sup>®</sup> into Spira<sup>®</sup>. This will enable KronoDesk agents to log incidents emerging from a ticket directly from the KronoDesk interface into Spira. They will also be able to see and review any Spira incidents already linked to existing KronoDesk tickets.</p>
 <p>The integration is built-in to KronoDesk out of the box, with no add-ons necessary.</p>
-<h2 id="configuring-spiraplan">Configuring SpiraPlan<a class="headerlink" href="#configuring-spiraplan" title="Permanent link">&para;</a></h2>
-<p>In order for KronoDesk to successfully connect to SpiraPlan to create incidents, you need to first enable the security permissions for REST API access. To do this, open up SpiraPlan and go to the Administration &gt; System &gt; Security Settings. Enter the URL domain of your KronoDesk into the "Allowed Domains" box. This tells SpiraPlan that REST API requests from this domain is authorized.</p>
+<h2 id="configuring-spira">Configuring Spira<a class="headerlink" href="#configuring-spira" title="Permanent link">&para;</a></h2>
+<p>In order for KronoDesk to successfully connect to Spira to create incidents, you need to first enable the security permissions for REST API access. To do this, open up Spira and go to the Administration &gt; System &gt; Security Settings. Enter the URL domain of your KronoDesk into the "Allowed Domains" box. This tells Spira that REST API requests from this domain is authorized.</p>
 <p><img alt="" src="../img/KronoDesk_3.png" /></p>
 <p>For non-production environments, you can set the value to "*" to allow all requests. We do not recommend this setting for production.</p>
 <p><img alt="" src="../img/KronoDesk_4.png" /></p>
-<p>Each agent who wants to integrate KronoDesk with SpiraPlan needs to enter a SpiraPlan username and RSS Token into their user profile. In SpiraPlan, go to your User Profile page (if it's your user) or the Administration &gt; Edit Users page, if you want to connect as a different user:</p>
+<p>Each agent who wants to integrate KronoDesk with Spira needs to enter a Spira username and RSS Token into their user profile. In Spira, go to your User Profile page (if it's your user) or the Administration &gt; Edit Users page, if you want to connect as a different user:</p>
 <p><img alt="" src="../img/KronoDesk_5.png" /></p>
 <p>Make sure that <strong>Enable RSS Feeds</strong> is set to Active = Yes, and that there is an RSS Token. This is used as the REST API Key too. Make sure you have the following:</p>
 <ul>
@@ -9069,7 +9100,7 @@
 <h2 id="configuring-kronodesk">Configuring KronoDesk<a class="headerlink" href="#configuring-kronodesk" title="Permanent link">&para;</a></h2>
 <p>Inside KronoDesk as an administrator, go to: Administration &gt; Help Desk Settings &gt; Spira Integration:</p>
 <p><img alt="" src="../img/KronoDesk_6.png" /></p>
-<p>Enter the following information for your SpiraPlan instance:</p>
+<p>Enter the following information for your Spira instance:</p>
 <ul>
 <li>Spira URL</li>
 <li>Login [only required for testing the connection]</li>
@@ -9078,24 +9109,24 @@
 <p>When you click "Test", you should see the following:</p>
 <p><img alt="" src="../img/KronoDesk_7.png" /></p>
 <p>If you see an authentication error, please check the login and RSS Token / API Key and try again.</p>
-<p>Next, each user support agent in KronoDesk needs to connect their SpiraPlan user to their KronoDesk profile (using the information collected above). Each user needs to go to their User Profile in KronoDesk:</p>
+<p>Next, each user support agent in KronoDesk needs to connect their Spira user to their KronoDesk profile (using the information collected above). Each user needs to go to their User Profile in KronoDesk:</p>
 <p><img alt="" src="../img/KronoDesk_8.png" /></p>
 <p>They should enter the Spira login and RSS Token and click Test:</p>
 <p><img alt="" src="../img/KronoDesk_9.png" /></p>
 <p>Then click <strong>Save Changes</strong> to update the profile with this information.</p>
-<h2 id="using-kronodesk-with-spiraplan">Using KronoDesk with SpiraPlan<a class="headerlink" href="#using-kronodesk-with-spiraplan" title="Permanent link">&para;</a></h2>
-<p>When you view a ticket in KronoDesk (and you have configured the connection to SpiraPlan), you will see a little toggle icon to show or hide incidents (the highlighted bug icon in the image below).</p>
+<h2 id="using-kronodesk-with-spira">Using KronoDesk with Spira<a class="headerlink" href="#using-kronodesk-with-spira" title="Permanent link">&para;</a></h2>
+<p>When you view a ticket in KronoDesk (and you have configured the connection to Spira), you will see a little toggle icon to show or hide incidents (the highlighted bug icon in the image below).</p>
 <p><img alt="" src="../img/KronoDesk_10.png" /></p>
-<p>This means you are connected to SpiraPlan and can view any incidents logged against this help desk ticket. </p>
-<p>To log a new incident in SpiraPlan based on the current help desk ticket, click on downward facing arrow on the right hand side of the ticket header (the "more actions" button). To "Add New Incident" make sure a SpiraPlan project is selected from the dropdown list (if the name of the product for the ticket matches the name of any SpiraPlan project, that project will be automatically selected for you):</p>
+<p>This means you are connected to Spira and can view any incidents logged against this help desk ticket. </p>
+<p>To log a new incident in Spira based on the current help desk ticket, click on downward facing arrow on the right hand side of the ticket header (the "more actions" button). To "Add New Incident" make sure a Spira project is selected from the dropdown list (if the name of the product for the ticket matches the name of any Spira project, that project will be automatically selected for you):</p>
 <p><img alt="" src="../img/KronoDesk_11.png" /></p>
-<p>This will display a dialog that lets you add a new incident to the linked instance of SpiraPlan. The system will prepopulate the description of the incident with the ticket description. You can edit this text or clear it completely and enter in custom content:</p>
+<p>This will display a dialog that lets you add a new incident to the linked instance of Spira. The system will pre-populate the description of the incident with the ticket description. You can edit this text or clear it completely and enter in custom content:</p>
 <p><img alt="" src="../img/KronoDesk_12.png" /></p>
-<p>Once you click <strong>Add</strong>, the new incident is logged in SpiraPlan and linked to the current ticket:</p>
+<p>Once you click <strong>Add</strong>, the new incident is logged in Spira and linked to the current ticket:</p>
 <p><img alt="" src="../img/KronoDesk_13.png" /></p>
-<p>If you click on the incident hyperlink, you will see that the incident is available in SpiraPlan:</p>
+<p>If you click on the incident hyperlink, you will see that the incident is available in Spira:</p>
 <p><img alt="" src="../img/KronoDesk_14.png" /></p>
-<p>In addition, in the Attachments tab of the Incident in Spiraplan, there is a hyperlink for the developers to see the original help desk ticket:</p>
+<p>In addition, in the Attachments tab of the Incident in Spira, there is a hyperlink for the developers to see the original help desk ticket:</p>
 <p><img alt="" src="../img/KronoDesk_15.png" /></p>
 
 

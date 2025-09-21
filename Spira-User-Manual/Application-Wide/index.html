@@ -9338,6 +9338,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9837,6 +9865,9 @@
 
 
 <h1 id="common-elements-across-the-application">Common Elements Across the Application<a class="headerlink" href="#common-elements-across-the-application" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>There are lots of different artifacts in the application (described <a href="../Functionality-Overview/">here</a>). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. Each artifact is different but they also share many similarities. These are explained below. </p>
 <h2 id="artifact-list-pages">Artifact List Pages<a class="headerlink" href="#artifact-list-pages" title="Permanent link">&para;</a></h2>
 <p>When you first visit an artifact section in the app (by clicking on the relevant link in the global navigation bar), you will be taken to the artifact list page. This may look something like below (this image is of the requirements list page) with a grid of data - each row representing a single artifact, and often a sidebar on the left with charts or links:</p>
@@ -10080,13 +10111,13 @@ Users can delete comments that were made in error or that are no longer relevant
 <li>Incidents</li>
 <li>Releases</li>
 <li>Requirements</li>
-<li>Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
+<li class="edition-spiraplan edition-spirateam">Risks </li>
 <li>Source code commits</li>
 <li>Source code files</li>
-<li>Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
-<li>Test cases <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
-<li>Program Capabilities <span class="pill">SpiraPlan</span></li>
-<li>Program Milestones <span class="pill">SpiraPlan</span></li>
+<li class="edition-spiraplan edition-spirateam">Tasks </li>
+<li class="edition-spiraplan edition-spirateam">Test cases </li>
+<li class="edition-spiraplan">Program Capabilities </li>
+<li class="edition-spiraplan">Program Milestones </li>
 </ul>
 <p>From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.</p>
 <p><img alt="" src="../img/Requirements_Management_118.png" /></p>
@@ -10168,14 +10199,14 @@ Users can delete comments that were made in error or that are no longer relevant
 </tr>
 <tr>
 <td><strong>Test cases</strong></td>
-<td>Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span></td>
+<td>Tasks <sup id="fnref:STSP"><a class="footnote-ref" href="#fn:STSP">1</a></sup>, Risks <sup id="fnref3:SP"><a class="footnote-ref" href="#fn:SP">2</a></sup></td>
 </tr>
 <tr>
-<td><strong>Program Capabilities</strong> <span class="pill">SpiraPlan</span></td>
+<td><strong>Program Capabilities</strong> <sup id="fnref2:SP"><a class="footnote-ref" href="#fn:SP">2</a></sup></td>
 <td>Requirements (the tab is called requirements, comments and association type not supported)</td>
 </tr>
 <tr>
-<td><strong>Program Milestones</strong> <span class="pill">SpiraPlan</span></td>
+<td><strong>Program Milestones</strong> <sup id="fnref:SP"><a class="footnote-ref" href="#fn:SP">2</a></sup></td>
 <td>Releases (the tab is called releases, comments and association type not supported)</td>
 </tr>
 </tbody>
@@ -10334,12 +10365,12 @@ Users can delete comments that were made in error or that are no longer relevant
 <p>The toolbar configuration button (cogs) lets you control how the board will look and what data it will show. Different boards may show different options, but in general you can:</p>
 <ul>
 <li>Set the <strong>display type</strong> (some boards only): for example the Planning Board has three options here "Product Backlog", "Release Backlog", and "Sprint Backlog"</li>
-<li>Filter the <strong>release</strong> to either show items across all releases, or a specific release (or, if relevant, a sprint). Only active releases<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> are shown, and with "All Releases" only cards that have an active release are shown.</li>
+<li>Filter the <strong>release</strong> to either show items across all releases, or a specific release (or, if relevant, a sprint). Only active releases<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">4</a></sup> are shown, and with "All Releases" only cards that have an active release are shown.</li>
 <li>Choose a field for <strong>columns</strong> so that each column is a value of that field. Note that the options available may change based off the display type and release selected</li>
 <li>Choose a field for <strong>rows</strong> to add an extra way to slice the data in the column. Note that you cannot select a field for rows if it is already in use for columns, and the options available may change based off the display type and release selected</li>
 <li>Choose a <strong>group</strong> option: if the current configuration supports it then the "Group By" option will display, otherwise it will be hidden. You can, for example, group by teams if rows is set to "By Person" and the teams feature is available to you</li>
 <li>Show or hide <strong>effort data</strong> (off by default): when shown, column and row titles show extra information for people, releases and sprints, parent requirement,  and statuses (for requirements in column mode only). See the <a href="#special-board-views">special board views</a> below and details about <a href="../Planning-Board/#work-in-progress-limits">work in progress limits</a> for more information about what data is shown.</li>
-<li>Show or hide <strong>unassigned</strong> items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column.<sup id="fnref:unassigned-data"><a class="footnote-ref" href="#fn:unassigned-data">1</a></sup></li>
+<li>Show or hide <strong>unassigned</strong> items (off by default): when shown, unassigned columns, rows, and groups, are added to the board, so that you can see relevant cards. For example, if you set columns to "Priority" and show unassigned items, then cards with*out* a priority will show in the unassigned column.<sup id="fnref:unassigned-data"><a class="footnote-ref" href="#fn:unassigned-data">3</a></sup></li>
 </ul>
 <h4 id="board-card-options">Board card options<a class="headerlink" href="#board-card-options" title="Permanent link">&para;</a></h4>
 <p>The toolbar card customization button (a mini card) lets you customize what information will be visible on the cards. You will always see the following information on a card:</p>
@@ -10461,11 +10492,17 @@ Users can delete comments that were made in error or that are no longer relevant
 <div class="footnote">
 <hr />
 <ol>
+<li id="fn:STSP">
+<p>Available in SpiraTeam &amp; SpiraPlan&#160;<a class="footnote-backref" href="#fnref:STSP" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SP">
+<p>Available in SpiraPlan&#160;<a class="footnote-backref" href="#fnref:SP" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:SP" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:SP" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
 <li id="fn:unassigned-data">
-<p>The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release&#160;<a class="footnote-backref" href="#fnref:unassigned-data" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>The following views show unassigned data: columns or rows set to parent, person, priority, or severity; grouping by component or team; releases is set to "all releases" unassigned data also shows if columns is set to by release&#160;<a class="footnote-backref" href="#fnref:unassigned-data" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:active-release">
-<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>any release / sprint / phase with a status that is <em>not</em> "Closed", "Deferred", or "Cancelled".&#160;<a class="footnote-backref" href="#fnref:active-release" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

@@ -5578,10 +5578,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-spiratest-reporter" class="md-nav__link">
+  <a href="#using-the-spira-reporter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the SpiraTest Reporter
+        Using the Spira Reporter
       
     </span>
   </a>
@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-spiratest-reporter" class="md-nav__link">
+  <a href="#using-the-spira-reporter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the SpiraTest Reporter
+        Using the Spira Reporter
       
     </span>
   </a>
@@ -9095,11 +9123,14 @@
 
 
 <h1 id="integrating-with-jest-js">Integrating with Jest JS<a class="headerlink" href="#integrating-with-jest-js" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="brief-overview">Brief Overview<a class="headerlink" href="#brief-overview" title="Permanent link">&para;</a></h2>
 <p>This reporter will integrate JestJS with Inflectra's ALM suite. It will create a test run in Spira for each test executed in Jest.</p>
 <h2 id="guide-basics">Guide Basics<a class="headerlink" href="#guide-basics" title="Permanent link">&para;</a></h2>
-<p>Unfortunately, this integration will work with SpiraTest/SpiraTeam/SpiraPlan (hereafter refered to as SpiraTest) version 5.0 and above and at least Jest 24.x. If you have an older version, you will need to update to use this reporter.</p>
-<p>This guide assumes a basic familiarity with both SpiraTest and the Jest testing framework. </p>
+<p>Unfortunately, this integration will work with Spira version 5.0 and above and at least Jest 24.x. If you have an older version, you will need to update to use this reporter.</p>
+<p>This guide assumes a basic familiarity with both Spira and the Jest testing framework. </p>
 <h2 id="setting-up-the-integration">Setting up the integration<a class="headerlink" href="#setting-up-the-integration" title="Permanent link">&para;</a></h2>
 <p>Install the integration by running <code>npm i jest-spiratest</code> in the root directory of your tests. Inside your <code>package.json</code> file, add the <code>jest</code> field with the format as shown below. Here is sample <code>package.json</code>.
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -9113,7 +9144,7 @@
 <span class="w">            </span><span class="p">[</span>
 <span class="w">                </span><span class="s2">&quot;jest-spiratest&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://doctor/SpiraPlan&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://doctor/Spira&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="s2">&quot;token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
 <span class="w">                    </span><span class="s2">&quot;projectId&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -9141,11 +9172,11 @@ Fields are required unless otherwise noted.</p>
 <tbody>
 <tr>
 <td><code>url</code></td>
-<td>The root URL of your SpiraTest instance without a '/' at the end</td>
+<td>The root URL of your Spira instance without a '/' at the end</td>
 </tr>
 <tr>
 <td><code>username</code></td>
-<td>The username you use to sign into SpiraTest</td>
+<td>The username you use to sign into Spira</td>
 </tr>
 <tr>
 <td><code>token</code></td>
@@ -9173,19 +9204,23 @@ Fields are required unless otherwise noted.</p>
 </tr>
 <tr>
 <td><code>&lt;test_name&gt;</code></td>
-<td><strong>OPTIONAL</strong> - Use <em>as many times as you would like</em> to map a the created test run to a particular test case in SpiraTest. Note that capitalization, special characters and spaces are ignored both in <code>testCases</code> <em>and</em> the test declaration</td>
+<td><strong>OPTIONAL</strong> - Use <em>as many times as you would like</em> to map a the created test run to a particular test case in Spira. Note that capitalization, special characters and spaces are ignored both in <code>testCases</code> <em>and</em> the test declaration</td>
 </tr>
 </tbody>
 </table>
 <p>Once you have added the SpiraReporter to jest as described above, you are all set!</p>
-<h2 id="using-the-spiratest-reporter">Using the SpiraTest Reporter<a class="headerlink" href="#using-the-spiratest-reporter" title="Permanent link">&para;</a></h2>
+<h2 id="using-the-spira-reporter">Using the Spira Reporter<a class="headerlink" href="#using-the-spira-reporter" title="Permanent link">&para;</a></h2>
 <p>Actually, you don't do anything different! Just run <code>npm test</code> or however you ran jest before and you should see test runs created in the project you specified!</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

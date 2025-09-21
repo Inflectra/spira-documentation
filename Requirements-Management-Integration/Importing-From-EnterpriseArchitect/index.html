@@ -8118,10 +8118,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enterprise-architect-spirateam-importing-notes" class="md-nav__link">
+  <a href="#enterprise-architect-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enterprise Architect &amp; SpiraTeam Importing Notes
+        Enterprise Architect &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -8957,6 +8957,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9045,10 +9073,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enterprise-architect-spirateam-importing-notes" class="md-nav__link">
+  <a href="#enterprise-architect-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enterprise Architect &amp; SpiraTeam Importing Notes
+        Enterprise Architect &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -9073,110 +9101,55 @@
 
 
 <h1 id="importing-from-enterprisearchitect">Importing From EnterpriseArchitect<a class="headerlink" href="#importing-from-enterprisearchitect" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the included Importer for importing
-Requirements, Features, and Screens from a Sparx Enterprise Architect
-(EA) project file into SpiraTeam.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the included Importer for importing Requirements, Features, and Screens from a Sparx Enterprise Architect (EA) project file into Spira.</p>
 <h2 id="installing-the-importer">Installing the Importer<a class="headerlink" href="#installing-the-importer" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the importer onto a desktop so that
-you can then import requirements and use cases from EA into SpiraTest.
-It assumes that you already have a working installation of SpiraTest
-v3.0 or later and a working installation of Enterprise Architect.</p>
-<p><strong>Important: You must install the integration adapter on
-the same desktop that has the installed copy of Enterprise Architect</strong>.</p>
-<p>You can download the Importer from the Inflectra's website under
-"Downloads and Add-Ons". When downloaded, double-click the MSI file.
-Follow the instructions in the MSI file to install the importer.</p>
+<p>This section outlines how to install the importer onto a desktop so that you can then import requirements and use cases from EA into Spira. It assumes that you already have a working installation of Spira v3.0 or later and a working installation of Enterprise Architect.</p>
+<p><strong>Important: You must install the integration adapter on the same desktop that has the installed copy of Enterprise Architect</strong>.</p>
+<p>You can download the Importer from the Inflectra's website under "Downloads and Add-Ons". When downloaded, double-click the MSI file. Follow the instructions in the MSI file to install the importer.</p>
 <h2 id="importing-from-an-ea-project-file">Importing from an EA Project File<a class="headerlink" href="#importing-from-an-ea-project-file" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the integration adapter, you can launch it
-at any time by going to Start &gt; Programs &gt; SpiraTeam &gt; Tools &gt;
-Enterprise Architect Importer. This will launch the import application
-itself. You will be shown an introduction screen. Click 'Next' to get to
-the second screen:</p>
+<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start &gt; Programs &gt; Spira &gt; Tools &gt; Enterprise Architect Importer. This will launch the import application itself. You will be shown an introduction screen. Click 'Next' to get to the second screen:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_10.png" /></p>
-<p>Click the folder button
-(<img alt="img_Folder" src="../img/Importing_From_EnterpriseArchitect_11.png" />) to open the file open dialog. In this
-dialog, select the Enterprise Architect Project file (*.EAP) that you
-want to use for importing. If the file has access credentials required,
-enter the username and password needed to access the file.</p>
-<p>Once the file is selected, click <em>Next</em> to continue to the screen where
-you enter your SpiraTeam project information:</p>
+<p>Click the folder button (<img alt="img_Folder" src="../img/Importing_From_EnterpriseArchitect_11.png" />) to open the file open dialog. In this dialog, select the Enterprise Architect Project file (*.EAP) that you want to use for importing. If the file has access credentials required, enter the username and password needed to access the file.</p>
+<p>Once the file is selected, click <em>Next</em> to continue to the screen where you enter your Spira project information:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_12.png" /></p>
-<p>If the file you selected in the previous step was already lined to a
-SpiraTeam project, that information will be automatically populated in
-the fields, and you can click <em>Next</em> to proceed.</p>
-<p>Otherwise, enter in the SpiraTeam Server URL, your username and password
-used to log onto the system with and click the <em>Get Projects</em> button.
-The program will connect to the server and get a list of all available
-projects. Select the project you want to import into under the <em>Project
-&amp; Requirement</em> section.</p>
-<p>The <em>Root Requirement</em> box is for specifying a base requirement to load
-all the EA elements into. If left blank, then the root folders in the
-EAP's model will be root requirement folders in the SpiraTeam Project.</p>
+<p>If the file you selected in the previous step was already lined to a Spira project, that information will be automatically populated in the fields, and you can click <em>Next</em> to proceed.</p>
+<p>Otherwise, enter in the Spira Server URL, your username and password used to log onto the system with and click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project &amp; Requirement</em> section.</p>
+<p>The <em>Root Requirement</em> box is for specifying a base requirement to load all the EA elements into. If left blank, then the root folders in the EAP's model will be root requirement folders in the Spira Project.</p>
 <p>For example, if your EAP file has a tree that looks like:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_13.png" /></p>
-<p>Then the requirements imported into SpiraTeam will appear like:</p>
+<p>Then the requirements imported into Spira will appear like:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_14.png" /></p>
-<p>Note that the folder "Non-Functional Requirements" does not appear in
-the list. Folders that have no importable elements will not get imported
-into SpiraTeam. At this time, only "Requirement", "Feature", and
-"Screen" elements are imported.</p>
-<p>If you had a requirement already in SpiraTeam, and wanted the
-"Requirements Model" to appear in it, then enter the requirement number
-into the <em>Root Requirement</em> text box. For example, if I have a
-requirement named "EA Requirements" with a number of RQ1920, then put
-1920 into the <em>Root Requirement</em> field and run the import. When import
-is finished, the SpiraTeam requirement tree will look like:</p>
+<p>Note that the folder "Non-Functional Requirements" does not appear in the list. Folders that have no importable elements will not get imported into Spira. At this time, only "Requirement", "Feature", and "Screen" elements are imported.</p>
+<p>If you had a requirement already in Spira, and wanted the "Requirements Model" to appear in it, then enter the requirement number into the <em>Root Requirement</em> text box. For example, if I have a requirement named "EA Requirements" with a number of RQ1920, then put 1920 into the <em>Root Requirement</em> field and run the import. When import is finished, the Spira requirement tree will look like:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_15.png" /></p>
-<p>Once the fields are entered, click <em>Next</em> to get to the summary screen.
-The summary screen tells you what will be done, and once it's reviewed,
-click the <em>Import</em> button to start importing:</p>
+<p>Once the fields are entered, click <em>Next</em> to get to the summary screen. The summary screen tells you what will be done, and once it's reviewed, click the <em>Import</em> button to start importing:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_16.png" /></p>
 <p>Anything flagged with a red
 <img alt="Error" src="../img/Importing_From_EnterpriseArchitect_17.png" /></p>
 <p>failed, green
 <img alt="Success" src="../img/Importing_From_EnterpriseArchitect_18.png" /></p>
-<p>means that they succeeded. Once finished,
-click <em>Finish</em> to get to the last page of the wizard:</p>
+<p>means that they succeeded. Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
 <p><img alt="" src="../img/Importing_From_EnterpriseArchitect_19.png" /></p>
-<p>If the <em>Minimize to System Tray</em> option is selected, when you click
-Finish or exit the form, the application will minmiize to the system
-tray and give you some quick actions to re-import from the same file or
-select another file. Otherwise the program will exit, and you can
-re-launch the importer to import from the same or another EAP file.</p>
+<p>If the <em>Minimize to System Tray</em> option is selected, when you click Finish or exit the form, the application will minimize to the system tray and give you some quick actions to re-import from the same file or select another file. Otherwise the program will exit, and you can re-launch the importer to import from the same or another EAP file.</p>
 <h2 id="using-the-system-tray-shortcut-menu">Using the System Tray Shortcut Menu<a class="headerlink" href="#using-the-system-tray-shortcut-menu" title="Permanent link">&para;</a></h2>
-<p>When the application is minimized to the system tray, there are several
-shortcuts available:</p>
+<p>When the application is minimized to the system tray, there are several shortcuts available:</p>
 <ul>
-<li>
-<p>Double-Clicking the icon will bring the importer back to the first
-screen, allowing you to import another EAP file.</p>
-</li>
-<li>
-<p>Right-clicking will give a shortcut menu with the following options:</p>
-</li>
-<li>
-<p>Exit -- Close the program entirely.</p>
-</li>
-<li>
-<p>Rerun Import -- Will provide you the screen to re-launch the
-last import you just ran.</p>
-</li>
-<li>
-<p>Show Window -- Same as double-clicking on the icon, this will
-cause the wizard to appear back on the first screen, allowing
-new input options to be set.</p>
-</li>
+<li>Double-Clicking the icon will bring the importer back to the first screen, allowing you to import another EAP file.</li>
+<li>Right-clicking will give a shortcut menu with the following options:</li>
+<li>Exit -- Close the program entirely.</li>
+<li>Rerun Import -- Will provide you the screen to re-launch the last import you just ran.</li>
+<li>Show Window -- Same as double-clicking on the icon, this will cause the wizard to appear back on the first screen, allowing new input options to be set.</li>
 </ul>
-<h2 id="enterprise-architect-spirateam-importing-notes">Enterprise Architect &amp; SpiraTeam Importing Notes<a class="headerlink" href="#enterprise-architect-spirateam-importing-notes" title="Permanent link">&para;</a></h2>
-<p>At this time, only elements that are Requirements, Features, or Screens
-are imported. All three types are imported into Requirements within
-SpiraTeam, and most fields are brought over into SpiraTeam from EA.
-Mapping for fields are as follows:</p>
+<h2 id="enterprise-architect-spira-importing-notes">Enterprise Architect &amp; Spira Importing Notes<a class="headerlink" href="#enterprise-architect-spira-importing-notes" title="Permanent link">&para;</a></h2>
+<p>At this time, only elements that are Requirements, Features, or Screens are imported. All three types are imported into Requirements within Spira, and most fields are brought over into Spira from EA. Mapping for fields are as follows:</p>
 <table>
 <thead>
 <tr>
 <th><strong>Enterprise Architect Field</strong></th>
-<th><strong>SpiraTeam Field</strong></th>
+<th><strong>Spira Field</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -9190,15 +9163,11 @@ Mapping for fields are as follows:</p>
 </tr>
 <tr>
 <td>Priority</td>
-<td>Importance: <br> <strong>EA Value</strong> : <strong>SpiraTeam Value</strong> <br>  High : High <br> Medium : Medium  <br> Low : Low</td>
+<td>Importance (maps as High to High, Medium to Medium, Low to Low)</td>
 </tr>
 <tr>
 <td>Status</td>
-<td>Status:</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>EA Value</strong> : <strong>SpiraTeam Value</strong> <br> Approved : Accepted <br> Implemented: In Progress <br> Validated : Completed <br> Mandatory : Requested <br> Proposed : Requested <br> (None) : Requested</td>
+<td>Status (see below for more details)</td>
 </tr>
 <tr>
 <td></td>
@@ -9238,18 +9207,41 @@ Mapping for fields are as follows:</p>
 </tr>
 </tbody>
 </table>
-<p>When a mapping is made, a Tagged Value is saved into the EAP file with
-the name of SPIRA::Mapping. The number of the value is the requirement
-number within SpiraTeam. If the requirement is deleted from SpiraTeam,
-and the mapping value in the EA project still exists, the item will not
-be re-imported into SpiraTeam. Similarly, folders are also given a
-SPIRA::Mapping value, and if a new Requirement element is created within
-a folder that was deleted in SpiraTeam, it will not be added. If you
-need to remove all mappings from the EAP file, you may do so by
-re-running the Importer, and entering in <strong>-1</strong> as the <em>Root
-Requirement</em>. Note that this will not delete requirements from
-SpiraTeam, only remove mappings, so the next time you run the importer
-on this file, all new requirements will be created.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Enterprise Architect Status</strong></th>
+<th><strong>Spira Status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Approved</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>Implemented</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>Validated</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>Mandatory</td>
+<td>Requested</td>
+</tr>
+<tr>
+<td>Proposed</td>
+<td>Requested</td>
+</tr>
+<tr>
+<td>(None)</td>
+<td>Requested</td>
+</tr>
+</tbody>
+</table>
+<p>When a mapping is made, a Tagged Value is saved into the EAP file with the name of SPIRA::Mapping. The number of the value is the requirement number within Spira. If the requirement is deleted from Spira, and the mapping value in the EA project still exists, the item will not be re-imported into Spira. Similarly, folders are also given a SPIRA::Mapping value, and if a new Requirement element is created within a folder that was deleted in Spira, it will not be added. If you need to remove all mappings from the EAP file, you may do so by re-running the Importer, and entering in <strong>-1</strong> as the <em>Root Requirement</em>. Note that this will not delete requirements from Spira, only remove mappings, so the next time you run the importer on this file, all new requirements will be created.</p>
 
 
 

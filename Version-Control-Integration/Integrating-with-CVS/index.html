@@ -6757,10 +6757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-cvs-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-cvs-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring CVS in SpiraPlan
+        Configuring CVS in Spira
       
     </span>
   </a>
@@ -6779,10 +6779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-cvs-with-spiraplan" class="md-nav__link">
+  <a href="#using-cvs-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using CVS with SpiraPlan
+        Using CVS with Spira
       
     </span>
   </a>
@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9034,10 +9062,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-cvs-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-cvs-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring CVS in SpiraPlan
+        Configuring CVS in Spira
       
     </span>
   </a>
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-cvs-with-spiraplan" class="md-nav__link">
+  <a href="#using-cvs-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using CVS with SpiraPlan
+        Using CVS with Spira
       
     </span>
   </a>
@@ -9095,18 +9123,23 @@
 
 
 <h1 id="integrating-with-cvs">Integrating with CVS<a class="headerlink" href="#integrating-with-cvs" title="Permanent link">&para;</a></h1>
-<p>The Concurrent Versions System (CVS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a CVS repository and view commits linked to SpiraTeam artifacts.</p>
-<p>The plug-in will download a working-copy of the CVS repository onto the SpiraTeam server and use that for displaying the list of files/folders. The list of commits will be queries dynamically from the CVS repository on an as-needed basis. The rest of this section outlines how to install and use the plug-in with SpiraTeam.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTeam and SpiraPlan</p>
+</div>
+<p>The Concurrent Versions System (CVS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of Spira to be able to browse a CVS repository and view commits linked to Spira artifacts.</p>
+<p>The plug-in will download a working-copy of the CVS repository onto the Spira server and use that for displaying the list of files/folders. The list of commits will be queries dynamically from the CVS repository on an as-needed basis. The rest of this section outlines how to install and use the plug-in with Spira.</p>
 <p><em>Note: The plug-in will allow users to download and view different commits of files and view commit logs, but no changes to the repository are allowed through the plug-in.</em></p>
 <h2 id="installing-the-cvs-plug-in">Installing the CVS Plug-In<a class="headerlink" href="#installing-the-cvs-plug-in" title="Permanent link">&para;</a></h2>
-<p>To install the CVS Version Control plug-in, copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraTeam installation:
--   CvsProvider.dll
--   DocsVision.Remoting.dll
--   ICSharpCode.SharpCvsLib.dll
--   ICSharpCode.SharpZipLib.dll
--   log4net.dll</p>
-<h2 id="configuring-cvs-in-spiraplan">Configuring CVS in SpiraPlan<a class="headerlink" href="#configuring-cvs-in-spiraplan" title="Permanent link">&para;</a></h2>
-<p>Before you can start using CVS in SpiraPlan you need to setup, at a system level, how CVS and SpiraPlan should work together: </p>
+<p>To install the CVS Version Control plug-in, copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:</p>
+<ul>
+<li>CvsProvider.dll</li>
+<li>DocsVision.Remoting.dll</li>
+<li>ICSharpCode.SharpCvsLib.dll</li>
+<li>ICSharpCode.SharpZipLib.dll</li>
+<li>log4net.dll</li>
+</ul>
+<h2 id="configuring-cvs-in-spira">Configuring CVS in Spira<a class="headerlink" href="#configuring-cvs-in-spira" title="Permanent link">&para;</a></h2>
+<p>Before you can start using CVS in Spira you need to setup, at a system level, how CVS and Spira should work together: </p>
 <ul>
 <li>Log in as a system admin, and go to System Admininstration &gt; Integration &gt; Source Code</li>
 <li>If there is not already an antry for "CvsProvider" click "Add" to go to the Plug-in details page</li>
@@ -9145,9 +9178,9 @@
 <li>Click "Save" after making any changes.</li>
 </ul>
 <p><img alt="" src="../img/Integrating_with_CVS_44.png" /></p>
-<h2 id="using-cvs-with-spiraplan">Using CVS with SpiraPlan<a class="headerlink" href="#using-cvs-with-spiraplan" title="Permanent link">&para;</a></h2>
+<h2 id="using-cvs-with-spira">Using CVS with Spira<a class="headerlink" href="#using-cvs-with-spira" title="Permanent link">&para;</a></h2>
 <p>Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.</p>
-<p>You can read more about working with source code in SpiraPlan at the links below:</p>
+<p>You can read more about working with source code in Spira at the links below:</p>
 <ul>
 <li><a href="../../Spira-User-Manual/Source-Code/#source-code-file-list">Source code files</a></li>
 <li><a href="../../Spira-User-Manual/Commits/#commit-list">Commits</a></li>
@@ -9155,13 +9188,13 @@
 <li><a href="../../Spira-User-Manual/Source-Code/#troubleshooting-source-code-integration">Troubleshooting source code integration</a></li>
 </ul>
 <h2 id="data-purging">Data Purging<a class="headerlink" href="#data-purging" title="Permanent link">&para;</a></h2>
-<p>Since the integration with CVS requires that a working copy of the CVS repository be stored on the SpiraTeam server, you may decide at some point to unlink a disused CVS repository from SpiraTeam to save disk-space. However unlinking the repository through the SpiraTeam web interface will not remove the working copy of the repository from the server.</p>
-<p>To permanently remove a repository from the SpiraTeam server, you need to locate the following path:</p>
+<p>Since the integration with CVS requires that a working copy of the CVS repository be stored on the Spira server, you may decide at some point to unlink a disused CVS repository from Spira to save disk-space. However unlinking the repository through the Spira web interface will not remove the working copy of the repository from the server.</p>
+<p>To permanently remove a repository from the Spira server, you need to locate the following path:</p>
 <ul>
 <li><strong>(Windows XP, 2003)</strong> - C:\Documents and Settings\All Users\Application Data</li>
-<li><strong>(Windows 2008, 7, Vista)</strong> -- C:\ProgramData</li>
+<li><strong>(Windows 2008, 7, Vista)</strong>: C:\ProgramData</li>
 </ul>
-<p>If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "CvsProvider". If you open up this subfolder, you will see a list of all the CVS modules that have been accessed through SpiraTeam. To purge a module, just select it and choose the Delete Folder option in Windows.</p>
+<p>If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "CvsProvider". If you open up this subfolder, you will see a list of all the CVS modules that have been accessed through Spira. To purge a module, just select it and choose the Delete Folder option in Windows.</p>
 
 
 

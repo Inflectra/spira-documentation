@@ -5276,10 +5276,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-pyunit-with-spiratest" class="md-nav__link">
+  <a href="#using-pyunit-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using PyUnit with SpiraTest
+        Using PyUnit with Spira
       
     </span>
   </a>
@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9012,10 +9040,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-pyunit-with-spiratest" class="md-nav__link">
+  <a href="#using-pyunit-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using PyUnit with SpiraTest
+        Using PyUnit with Spira
       
     </span>
   </a>
@@ -9051,21 +9079,15 @@
 
 
 <h1 id="integrating-with-pyunit">Integrating with PyUnit<a class="headerlink" href="#integrating-with-pyunit" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="installing-the-pyunit-extension">Installing the PyUnit Extension<a class="headerlink" href="#installing-the-pyunit-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest plugin for Python unittesting (pyunit). It
-assumes that you already have a working installation of SpiraTest v6.0
-or later. If you have an earlier version of SpiraTest you will need to
-upgrade to at least v6.0 before trying to use this plugin. You will also
-need to have Python v3.6 (with pip) or later.</p>
-<p>To obtain the latest version of the SpiraTest plugin, simply run the
-following command:</p>
-<p><code>pip install pyunit-spiratest</code></p>
-<p>This command will install the latest version of the plugin straight from
-the <a href="https://pypi.org/project/pyunit-spiratest/">Python Package Index</a>
-(PyPI). Once the SpiraTest plugin is successfully installed, you are now ready to begin using your PyUnit test fixtures with SpiraTest.</p>
-<h2 id="using-pyunit-with-spiratest">Using PyUnit with SpiraTest<a class="headerlink" href="#using-pyunit-with-spiratest" title="Permanent link">&para;</a></h2>
-<p>The typical code structure for a PyUnit test fixture coded in Python is
-as follows:</p>
+<p>This section outlines how to install the Spira plugin for Python unittesting (pyunit). It assumes that you already have a working installation of Spira v6.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v6.0 before trying to use this plugin. You will also need to have Python v3.6 (with pip) or later.</p>
+<p>To obtain the latest version of the Spira plugin, simply run the following command: <code>pip install pyunit-spiratest</code></p>
+<p>This command will install the latest version of the plugin straight from the <a href="https://pypi.org/project/pyunit-spiratest/">Python Package Index</a> (PyPI). Once the Spira plugin is successfully installed, you are now ready to begin using your PyUnit test fixtures with Spira.</p>
+<h2 id="using-pyunit-with-spira">Using PyUnit with Spira<a class="headerlink" href="#using-pyunit-with-spira" title="Permanent link">&para;</a></h2>
+<p>The typical code structure for a PyUnit test fixture coded in Python is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">unittest</span>
 
@@ -9095,25 +9117,9 @@ as follows:</p>
     <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">)</span>
     <span class="n">testResult</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
-<p>The Python class is marked as a PyUnit test fixture by inheriting from
-the unittest.TestCase base class, and the individual test methods are
-identified by using the <code>test</code> prefix, with special <code>setUp()</code> and
-<code>tearDown()</code> methods reserved for the respective purposes. When you open
-up the class in a PyUnit runner or execute from the command line it
-loads all the test classes and executes all the methods marked with
-<code>test...</code> in turn.</p>
-<p>Each of the Assert statements is used to test the state of the
-application after executing some sample code that calls the
-functionality being tested. If the condition in the assertion is true,
-then execution of the test continues, if it is false, then a failure is
-logged and PyUnit moves on to the next test method.</p>
-<p>So, to use SpiraTest with PyUnit, each of the test cases written for
-execution by PyUnit needs to have a corresponding test case in
-SpiraTest. These can be either existing test cases that have manual test
-steps or they can be new test cases designed specifically for automated
-testing and therefore have no defined test steps. In either case, the
-changes that need to be made to the PyUnit test fixture for SpiraTest to
-record the PyUnit test run are illustrated below:</p>
+<p>The Python class is marked as a PyUnit test fixture by inheriting from the unittest.TestCase base class, and the individual test methods are identified by using the <code>test</code> prefix, with special <code>setUp()</code> and <code>tearDown()</code> methods reserved for the respective purposes. When you open up the class in a PyUnit runner or execute from the command line it loads all the test classes and executes all the methods marked with <code>test...</code> in turn.</p>
+<p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and PyUnit moves on to the next test method.</p>
+<p>So, to use Spira with PyUnit, each of the test cases written for execution by PyUnit needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the PyUnit test fixture for Spira to record the PyUnit test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">unittest</span>
 <span class="kn">import</span> <span class="nn">spiratestextension</span>
@@ -9154,65 +9160,32 @@ record the PyUnit test run are illustrated below:</p>
     <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSequenceFunctions</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span>
     <span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">)</span>
 </code></pre></div>
-<p>Firstly, each of the individual test methods is appended with two
-underscores followed by the ID of the corresponding test case in
-SpiraTest. So for example <code>testshuffle()</code> is now <code>testshuffle__2()</code> as it
-maps to test case <code>TC:2</code> inside SpiraTest.</p>
-<p>Second, at the end of the test run, the <code>testResults</code> object generated by
-the test run is passed to a special <code>SpiraTestExtension()</code> class via the
-<code>recordResults()</code> method. This class takes the results from the test run
-and uses it to generate the web-service messages that are sent to
-SpiraTest to communicate the test results.</p>
-<p>The following attributes need to be set on the instance of the
-<code>SpiraTestExtension()</code> object so that the extension can access the
-SpiraTest repository:</p>
+<p>Firstly, each of the individual test methods is appended with two underscores followed by the ID of the corresponding test case in Spira. So for example <code>testshuffle()</code> is now <code>testshuffle__2()</code> as it maps to test case <code>TC:2</code> inside Spira.</p>
+<p>Second, at the end of the test run, the <code>testResults</code> object generated by the test run is passed to a special <code>SpiraTestExtension()</code> class via the <code>recordResults()</code> method. This class takes the results from the test run and uses it to generate the web-service messages that are sent to Spira to communicate the test results.</p>
+<p>The following attributes need to be set on the instance of the <code>SpiraTestExtension()</code> object so that the extension can access the Spira repository:</p>
 <ul>
-<li>
-<p><strong>spiraTestExtension.projectId</strong> -- The ID of the project inside
-SpiraTest (this can be found on the project homepage in the "Project
-Overview" section)</p>
-</li>
-<li>
-<p><strong>spiraTestExtension.url</strong> - The base url of your SpiraTest instance</p>
-</li>
-<li>
-<p><strong>spiraTestExtension.userName</strong> - A valid username for the instance of
-SpiraTest that has access to the project specified above</p>
-</li>
-<li>
-<p><strong>spiraTestExtension.apiKey</strong> - A valid API Key / RSS Token for the user
-specified above</p>
-</li>
+<li><strong>spiraTestExtension.projectId</strong>: The ID of the project inside Spira (this can be found on the project homepage in the "Project Overview" section)</li>
+<li><strong>spiraTestExtension.url</strong> - The base url of your Spira instance</li>
+<li><strong>spiraTestExtension.userName</strong> - A valid username for the instance of Spira that has access to the project specified above</li>
+<li><strong>spiraTestExtension.apiKey</strong> - A valid API Key / RSS Token for the user specified above</li>
 </ul>
-<p>In addition, when calling the <code>recordResults()</code> method, you should also
-pass the <strong>Release ID</strong> and the <strong>Test Set ID</strong> which is used to tell SpiraTest
-which release and/or test set to associate the test execution with.</p>
-<p>The Release ID can be found on the releases list page (click on the
-Planning &gt; Releases tab) -- just remove the RL prefix from the number
-as well as any leading zeros. Similarly, the Test Set ID can be found on
-the test set list page (click on the Testing &gt; Test Sets tab) -- just
-remove the TX prefix from the number as well as any leading zeros. If
-you don't want to associate the test run with a specific release or test
-set, just use the special value -1 to indicate N/A.</p>
-<p>Now all you need to do is save your code, launch PyUnit, run the test
-fixtures as you would normally do, and when you view the test cases in
-SpiraTest, you should see a PyUnit automated test run displayed in the
-list of executed test runs:</p>
+<p>In addition, when calling the <code>recordResults()</code> method, you should also pass the <strong>Release ID</strong> and the <strong>Test Set ID</strong> which is used to tell Spira which release and/or test set to associate the test execution with.</p>
+<p>The Release ID can be found on the releases list page (click on the Planning &gt; Releases tab) -- just remove the RL prefix from the number as well as any leading zeros. Similarly, the Test Set ID can be found on the test set list page (click on the Testing &gt; Test Sets tab) -- just remove the TX prefix from the number as well as any leading zeros. If you don't want to associate the test run with a specific release or test set, just use the special value -1 to indicate N/A.</p>
+<p>Now all you need to do is save your code, launch PyUnit, run the test fixtures as you would normally do, and when you view the test cases in Spira, you should see a PyUnit automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_PyUnit_14.png" /></p>
-<p>Clicking on one of the PyUnit test runs will bring up a screen that
-provides information regarding what PyUnit test method failed, what the
-error was, together with the associated code stack-trace:</p>
+<p>Clicking on one of the PyUnit test runs will bring up a screen that provides information regarding what PyUnit test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_PyUnit_15.png" /></p>
-<p>Congratulations... You are now able to run PyUnit automated tests and
-have the results be recorded within SpiraTest. The sample test fixture
-<code>testsequencefunctions.py</code> is provided with the
-installation.</p>
+<p>Congratulations... You are now able to run PyUnit automated tests and have the results be recorded within Spira. The sample test fixture <code>testsequencefunctions.py</code> is provided with the installation.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

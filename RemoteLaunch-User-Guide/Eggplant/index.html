@@ -4568,15 +4568,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-test-sets-from-spiraplan" class="md-nav__link">
+  <a href="#executing-the-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the Test Sets from SpiraPlan
+        Executing the Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the Test Sets from SpiraPlan">
+    <nav class="md-nav" aria-label="Executing the Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9008,6 +9008,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9119,15 +9147,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-test-sets-from-spiraplan" class="md-nav__link">
+  <a href="#executing-the-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the Test Sets from SpiraPlan
+        Executing the Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the Test Sets from SpiraPlan">
+    <nav class="md-nav" aria-label="Executing the Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9175,16 +9203,19 @@
 
 
 <h1 id="eggplant-dai">Eggplant DAI<a class="headerlink" href="#eggplant-dai" title="Permanent link">&para;</a></h1>
-<p>Eggplant Digital Automation Intelligence (DAI) is a functional test automation system. Eggplant uses a command-line tool to allow users to more easily triggering automated tests remotely. RemoteLaunch's dedicated Eggplant engine uses this command-line tool to run automated tests in Eggplant, once triggered for a SpiraPlan test set. RemoteLaunch's Eggplant engine reports the results of the output from Eggplant back to SpiraPlan as test run results.</p>
-<p>This page describes how you can use SpiraTest, SpiraTeam, or SpiraPlan (hereafter SpiraPlan) together with RemoteLaunch to schedule and remotely launch Eggplant DAI tests and have the results transmitted back to SpiraPlan. This allows you to extend your SpiraPlan's test management capabilities to include automation.</p>
-<p><em>Note: This integration requires at least: SpiraTest/Team v4.0, RemoteLaunch, and Eggplant DAI v6.2.</em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>Eggplant Digital Automation Intelligence (DAI) is a functional test automation system. Eggplant uses a command-line tool to allow users to more easily triggering automated tests remotely. RemoteLaunch's dedicated Eggplant engine uses this command-line tool to run automated tests in Eggplant, once triggered for a Spira test set. RemoteLaunch's Eggplant engine reports the results of the output from Eggplant back to Spira as test run results.</p>
+<p>This page describes how you can use SpiraTest, SpiraTeam, or Spira (hereafter Spira) together with RemoteLaunch to schedule and remotely launch Eggplant DAI tests and have the results transmitted back to Spira. This allows you to extend your Spira's test management capabilities to include automation.</p>
+<p><em>Note: This integration requires at least: Spira v4.0, RemoteLaunch, and Eggplant DAI v6.2.</em></p>
 <h2 id="installing-the-eggplant-engine">Installing the Eggplant Engine<a class="headerlink" href="#installing-the-eggplant-engine" title="Permanent link">&para;</a></h2>
-<p>This section assumes that you already have a working installation of SpiraPlan and of RemoteLaunch as described <a href="../RemoteLaunch-Guide/">here</a>. Once these prerequisites are in place, please follow these steps:</p>
+<p>This section assumes that you already have a working installation of Spira and of RemoteLaunch as described <a href="../RemoteLaunch-Guide/">here</a>. Once these prerequisites are in place, please follow these steps:</p>
 <ul>
 <li>Download the Eggplant Runner Tool for Windows and save it in a convenient directory, of your choice.</li>
 <li>Download and extract the <em>EggplantAutomationEngine.zip</em> file from the Inflectra website and locate the <em>Eggplant.dll</em></li>
 <li>Copy the file <em>Eggplant.dll</em> into the "extensions" sub-folder of the RemoteLaunch installation.</li>
-<li>Log in to SpiraPlan as a system administrator and go into SpiraPlan main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
 <li>
 <p>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</p>
 <ul>
@@ -9205,13 +9236,13 @@
 <p><img alt="" src="../img/Eggplant_2.png" /></p>
 <p>The following fields can be specified on this screen:</p>
 <ul>
-<li><strong>Log Results</strong>: The engine will save the Eggplant console output of every Test Case in the "Details" section of each respective Test Run. Enable this option to also export the Eggplant console outupt to a textfile, saved on a subfolder "logs" at the same directory RemoteLaunch is located. By default, this option is disabled.</li>
-<li><strong>Default Status</strong>: This specifies the execution status that will be returned to SpiraPlan in the event that Eggplant could not be reached due to external problems (e.g.: network issues, wrong command line, etc.) for each Test Case. By default, the system will save the Test Case as "Not Run".</li>
+<li><strong>Log Results</strong>: The engine will save the Eggplant console output of every Test Case in the "Details" section of each respective Test Run. Enable this option to also export the Eggplant console output to a textfile, saved on a subfolder "logs" at the same directory RemoteLaunch is located. By default, this option is disabled.</li>
+<li><strong>Default Status</strong>: This specifies the execution status that will be returned to Spira in the event that Eggplant could not be reached due to external problems (e.g.: network issues, wrong command line, etc.) for each Test Case. By default, the system will save the Test Case as "Not Run".</li>
 </ul>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
-<p>This section describes the process for setting up a test case in SpiraPlan for automation and either linking it to a command that triggers Eggplant DAI remote execution.</p>
+<p>This section describes the process for setting up a test case in Spira for automation and either linking it to a command that triggers Eggplant DAI remote execution.</p>
 <h3 id="attaching-a-command-line-test-script">Attaching a Command-Line Test Script<a class="headerlink" href="#attaching-a-command-line-test-script" title="Permanent link">&para;</a></h3>
-<p>First, you need to display the list of test cases in SpiraPlan (by clicking Testing &gt; Test Cases) and then add a new test case. Once you
+<p>First, you need to display the list of test cases in Spira (by clicking Testing &gt; Test Cases) and then add a new test case. Once you
 have added the new test case, click on it and select the "Automation" tab:</p>
 <p><img alt="" src="../img/Eggplant_3.png" /></p>
 <p>You need to enter the following fields:</p>
@@ -9244,21 +9275,21 @@ have added the new test case, click on it and select the "Automation" tab:</p>
 </ul>
 </li>
 <li>
-<p><strong>Document Type</strong>: If using SpiraPlan (not SpiraTest) you can choose which document type the automated test script will be categorized under.</p>
+<p><strong>Document Type</strong>: If using Spira (not SpiraTest) you can choose which document type the automated test script will be categorized under.</p>
 </li>
-<li><strong>Document Folder</strong>: If using SpiraPlan (not SpiraTest) you can choose which document folder the automated test script will be stored in.</li>
+<li><strong>Document Folder</strong>: If using Spira (not SpiraTest) you can choose which document folder the automated test script will be stored in.</li>
 <li><strong>Version</strong>: The version of the test script (1.0 is used if no value specified).</li>
 </ul>
 <p>Once you are happy with the values, click [Save] to update the test case. Now you are ready to schedule the automated test case for execution.</p>
-<h2 id="executing-the-test-sets-from-spiraplan">Executing the Test Sets from SpiraPlan<a class="headerlink" href="#executing-the-test-sets-from-spiraplan" title="Permanent link">&para;</a></h2>
-<p>There are two ways to execute automated test cases in SpiraPlan:</p>
+<h2 id="executing-the-test-sets-from-spira">Executing the Test Sets from Spira<a class="headerlink" href="#executing-the-test-sets-from-spira" title="Permanent link">&para;</a></h2>
+<p>There are two ways to execute automated test cases in Spira:</p>
 <ol>
 <li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
 <li>Execute the test cases right now on the local computer.</li>
 </ol>
-<p>We shall outline both of these two scenarios in this section. However, first we need to setup the appropriate automation hosts and test sets in SpiraPlan:</p>
+<p>We shall outline both of these two scenarios in this section. However, first we need to setup the appropriate automation hosts and test sets in Spira:</p>
 <h3 id="configuring-the-automation-hosts-and-test-sets">Configuring the Automation Hosts and Test Sets<a class="headerlink" href="#configuring-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
-<p>Go to Testing &gt; Automation Hosts in SpiraPlan to display the list of automation hosts:</p>
+<p>Go to Testing &gt; Automation Hosts in Spira to display the list of automation hosts:</p>
 <p><img alt="" src="../img/Eggplant_4.png" /></p>
 <p>Make sure that you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified in the RemoteLaunch application</strong> on that specific machine.</p>
 <p>Once you have at least one Automation Host configured, go to Testing &gt; Test Sets to create the test sets that will contain the automated test case.</p>
@@ -9273,7 +9304,7 @@ have added the new test case, click on it and select the "Automation" tab:</p>
 <li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
 <h3 id="executing-the-test-sets">Executing the Test Sets<a class="headerlink" href="#executing-the-test-sets" title="Permanent link">&para;</a></h3>
-<p>Once you have set the various test set fields (as described above), the RemoteLaunch instances will periodically poll SpiraPlan for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to execute. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine. If you want to immediately execute the test case on your local computer, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
+<p>Once you have set the various test set fields (as described above), the RemoteLaunch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to execute. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine. If you want to immediately execute the test case on your local computer, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
 <p>In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the Eggplant test:</p>
 <ul>
 <li><strong>Passed</strong>: The automated test ran successfully and the results output to the console include the SUCCESS status</li>
@@ -9282,11 +9313,11 @@ have added the new test case, click on it and select the "Automation" tab:</p>
 </ul>
 <p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.</p>
 <p><em>Note: While the tests are executing you may see application windows launch as the command-line tool server executes the appropriate tests. Please do not close them.</em></p>
-<p>Once the tests have been completed, you can log back into SpiraPlan and see the execution status of your test cases. If you click on a Test Run that was generated by the command-line tool, you will see the following information:</p>
+<p>Once the tests have been completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by the command-line tool, you will see the following information:</p>
 <p><img alt="" src="../img/Eggplant_6.png" /></p>
 <p>This screen indicates the status of the test run that was reported back from the engine together with any messages or other information. The execution status will be set according to the rules described above,
 the Message field will contain a weblink for the detailed online results at Eggplant and the large details box will contain the full console output from the Eggplant command-line tool.</p>
-<p>Congratulations! You are now able to run the Eggplant automated tests and have the results recorded within SpiraTest / SpiraPlan.</p>
+<p>Congratulations! You are now able to run the Eggplant automated tests and have the results recorded within SpiraTest / Spira.</p>
 
 
 

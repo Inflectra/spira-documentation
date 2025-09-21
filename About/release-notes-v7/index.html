@@ -9087,6 +9087,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../legal-notices/" class="md-nav__link">
         
   
@@ -9340,7 +9368,7 @@
 <p class="admonition-title">Summary</p>
 <ul>
 <li>Easily focus on what is important, with a new default view that declutters the <a href="../../Spira-User-Manual/User-Product-Management/#my-page">My Page</a> by hiding all empty widgets. Less really is more.</li>
-<li>This release introduces a brand new program level <a href="../../Spira-User-Manual/Program-Capabilities/#capability-board">capability board</a> to track and manage capabilities in powerful new ways, including tracking them against program milestones <span class="pill">SpiraPlan</span>.</li>
+<li class="edition-spiraplan">This release introduces a brand new program level <a href="../../Spira-User-Manual/Program-Capabilities/#capability-board">capability board</a> to track and manage capabilities in powerful new ways, including tracking them against program milestones.</li>
 <li>As part of our efforts to enhance the auditability and traceability of administrator activities, every change to product membership (adding a user, removing them, changing roles) is now tracked in both product history and system history.</li>
 <li>Tags are now available for test runs, test cases, test sets, and risks, giving you even more flexibility. Additionally, tag changes can be reverted, and you can build out custom reports with tags.</li>
 <li>Due to popular demand, we are expanding our GenAI integrations, with a new <a href="../../SpiraApps/Azure-OpenAI/">Azure OpenAI SpiraApp</a> to auto-generate test cases, scenarios, or tasks from a requirement</li>
@@ -9444,19 +9472,19 @@
 <h2 id="version-712-february-2024">Version 7.12 (February 2024)<a class="headerlink" href="#version-712-february-2024" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
-<p>This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<p class="edition-spiraplan edition-spirateam">This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. </p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">New Features</p>
 <ul>
 <li>
-<p><strong>Requirement Views</strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<p class="edition-spiraplan edition-spirateam"><strong>Requirement Views</strong> </p>
 <ul>
 <li>As a requirement user, I can manage requirements on a <a href="../../Spira-User-Manual/Requirements-Management/#requirements-agile-board">dedicated requirements board</a> that matches the style of the Planning Board [RQ:4755]</li>
 </ul>
 </li>
 <li>
-<p><strong>As an incident user, I can view and manage incidents on a <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">dedicated incident board</a></strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<p class="edition-spiraplan edition-spirateam"><strong>As an incident user, I can view and manage incidents on a <a href="../../Spira-User-Manual/Incident-Tracking/#incident-board">dedicated incident board</a></strong> </p>
 <ul>
 <li>As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]</li>
 <li>As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]</li>
@@ -9473,7 +9501,7 @@
 <summary>Bug fixes and enhancements</summary>
 <ul>
 <li>
-<p><strong>Board improvements</strong> <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></p>
+<p class="edition-spiraplan edition-spirateam"><strong>Board improvements</strong> </p>
 <ul>
 <li>Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]</li>
 <li>Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]</li>
@@ -9493,8 +9521,8 @@
 <li>
 <p><strong>Other fixes and enhancements</strong></p>
 <ul>
-<li>Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span></li>
-<li>Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029] <span class="pill">SpiraPlan</span></li>
+<li class="edition-spiraplan edition-spirateam">Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] </li>
+<li class="edition-spiraplan">Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029]</li>
 <li>Fix changes to custom properties not being saved when editing documents of type URL [IN:7710]</li>
 <li>Fix product level custom reports containing PROJECT_GROUP_ID and ${ProjectId} in a single query not being able to be generated [IN:9099]</li>
 <li>Fix the API to retrieve an associated test run [IN:9126]</li>
@@ -9534,8 +9562,8 @@
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
 <ul>
-<li>Brings new widgets to the <a href="../../Spira-User-Manual/Program-Homepage/">program home page</a>, letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span></li>
-<li>Improves <a href="../../Spira-User-Manual/Program-Reports/">program level reporting</a> with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span></li>
+<li class="edition-spiraplan">Brings new widgets to the <a href="../../Spira-User-Manual/Program-Homepage/">program home page</a>, letting you see meaningful information about capabilities and program milestones </li>
+<li class="edition-spiraplan">Improves <a href="../../Spira-User-Manual/Program-Reports/">program level reporting</a> with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page </li>
 <li>Adds <a href="../../Spira-User-Manual/Application-Wide/#tags">tagging</a> support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)</li>
 <li>Let users leverage the power of <a href="../../SpiraApps/ChatGPT/">ChatGPT</a> in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement</li>
 </ul>
@@ -9935,7 +9963,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Administration <span class="pill">SpiraPlan</span></strong></p>
+<p class="edition-spiraplan"><strong>Administration</strong></p>
 <ul>
 <li>As an administrator, I want to see a <a href="../../Spira-Administration-Guide/System/#system-history-changes">list of changes made in the system</a>, to be able to audit and review products and schedules more easily. [RQ:4477]</li>
 <li>As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]</li>
@@ -10054,7 +10082,7 @@
 <ul>
 <li>When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]</li>
 <li>Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]</li>
-<li>Teams/Tracks Support in Boards <span class="pill">SpiraPlan</span> [RQ:2316]</li>
+<li class="edition-spiraplan">Teams/Tracks Support in Boards [RQ:2316]</li>
 </ul>
 </li>
 </ul>
@@ -10063,7 +10091,7 @@
 <p><strong>System Administration</strong></p>
 <ul>
 <li>System admins <a href="../../Spira-Administration-Guide/System/#general-settings">can enable or disable</a> beta functionality across the application for their users [RQ:4317]</li>
-<li>System admins can create and manage <a href="../../Spira-Administration-Guide/System-Users/#view--edit-teams">a list of team names</a> <span class="pill">SpiraPlan</span> [RQ:3689]</li>
+<li class="edition-spiraplan">System admins can create and manage <a href="../../Spira-Administration-Guide/System-Users/#view--edit-teams">a list of team names</a> [RQ:3689]</li>
 <li>Product admins can <a href="../../Spira-Administration-Guide/Product-Users/#team-membership">associate product users to specific teams</a> [RQ:3690]</li>
 </ul>
 </li>
@@ -10116,7 +10144,7 @@
 <h2 id="version-72-october-2022">Version 7.2 (October 2022)<a class="headerlink" href="#version-72-october-2022" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
-<p>Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more. <span class="pill">SpiraPlan</span></p>
+<p class="edition-spiraplan">Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more.</p>
 <p>Along with existing support for creating and editing dynamic documents inside Spira (including diagrams and documents), the new spreadsheet editor lets you create simple spreadsheets to better organize your teams and track work. You can have multiple sheets, apply formatting to cells, use a wide number of functions, and even import from and export to Excel spreadsheets.</p>
 </div>
 <details class="success">

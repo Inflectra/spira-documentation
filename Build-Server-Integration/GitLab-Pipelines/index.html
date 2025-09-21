@@ -7817,10 +7817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-integration-in-spiraplan" class="md-nav__link">
+  <a href="#setting-up-the-integration-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting up the integration in Spiraplan
+        Setting up the integration in Spira
       
     </span>
   </a>
@@ -8957,6 +8957,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9023,10 +9051,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-integration-in-spiraplan" class="md-nav__link">
+  <a href="#setting-up-the-integration-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting up the integration in Spiraplan
+        Setting up the integration in Spira
       
     </span>
   </a>
@@ -9073,38 +9101,41 @@
 
 
 <h1 id="gitlab-pipelines">GitLab Pipelines<a class="headerlink" href="#gitlab-pipelines" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>SpiraTest, SpiraTeam, and SpiraPlan (from here on called SpiraPlan) integrated seamlessly with GitLab in a number of ways. In this section we discuss SpiraPlan's GitLab Pipelines reporting integration.</p>
-<p>You can easily configure your GitLab Pipelines to report against a release and create a new build in SpiraPlan each time they run. This let's you see the health of your CI/CD process within SpiraPlan. </p>
+<p>SpiraTest, SpiraTeam, and SpiraPlan (from here on called Spira) integrated seamlessly with GitLab in a number of ways. In this section we discuss Spira's GitLab Pipelines reporting integration.</p>
+<p>You can easily configure your GitLab Pipelines to report against a release and create a new build in Spira each time they run. This let's you see the health of your CI/CD process within Spira. </p>
 <div class="admonition check">
 <p class="admonition-title">GitLab SpiraApp</p>
-<p>You can also let end users start GitLab Pipelines from within SpiraPlan itself. To do so you will need to <a href="../../SpiraApps/GitLab/">enable and configure the GitLab SpiraApp</a></p>
+<p>You can also let end users start GitLab Pipelines from within Spira itself. To do so you will need to <a href="../../SpiraApps/GitLab/">enable and configure the GitLab SpiraApp</a></p>
 </div>
 <p>The integration has two parts, which are discussed below:</p>
 <ol>
-<li>Setting things up in SpiraPlan (in the product and in its template)</li>
+<li>Setting things up in Spira (in the product and in its template)</li>
 <li>Configuring GitLab (by adding a custom webhook to your repo)</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Summary</p>
 <ol>
-<li>Create a release custom property (plain text) called "gitlab-branch-name" in SpiraPlan</li>
-<li>Link a release to your CI/CD code branch by entering the branch name into the custom property on the release page in SpiraPlan</li>
+<li>Create a release custom property (plain text) called "gitlab-branch-name" in Spira</li>
+<li>Link a release to your CI/CD code branch by entering the branch name into the custom property on the release page in Spira</li>
 <li>Add the product token (e.g. "[PR:123]") into the project description of the GitLab repo</li>
 <li>In GitLab, create a webhook with a url in the form: <code>{{base url}}/Services/Webhooks/BuildService.svc/GitLab?username={{username}}&amp;api-key={{api key}}</code></li>
 <li>Make sure the user in the webhook has access to the product and can create releases in that product</li>
 </ol>
 </div>
-<h2 id="setting-up-the-integration-in-spiraplan">Setting up the integration in Spiraplan<a class="headerlink" href="#setting-up-the-integration-in-spiraplan" title="Permanent link">&para;</a></h2>
-<p>The integration with GitLab Pipelines works by having a dedicated custom field for GitLab. This lets you link a release or sprint to a specific branch in a GitLab repo. In SpiraPlan we need to specify the branch name only. Then from GitLab we configure our specific repo to talk to the correct SpiraPlan product.</p>
-<p>The first step in SpiraPlan is to <strong>create a release custom property</strong>:</p>
+<h2 id="setting-up-the-integration-in-spira">Setting up the integration in Spira<a class="headerlink" href="#setting-up-the-integration-in-spira" title="Permanent link">&para;</a></h2>
+<p>The integration with GitLab Pipelines works by having a dedicated custom field for GitLab. This lets you link a release or sprint to a specific branch in a GitLab repo. In Spira we need to specify the branch name only. Then from GitLab we configure our specific repo to talk to the correct Spira product.</p>
+<p>The first step in Spira is to <strong>create a release custom property</strong>:</p>
 <ul>
 <li>As a product template administrator open the template admin menu for the relevant product(s). These are products that you want to integrate with GitLab</li>
 <li>Go to the Releases Custom Properties page</li>
 <li>Add a new custom property called "gitlab-branch-name" that is of type Text (not rich text)</li>
 </ul>
 <p><img alt="Custom property definition popup" src="../img/gitlab-pipelines-custom-property-definition.png" /></p>
-<p>Next, in your SpiraPlan product:</p>
+<p>Next, in your Spira product:</p>
 <ul>
 <li>Find the release you want to connect to GitLab</li>
 <li>Set the "gitlab-branch-name" to the exact name of the branch in the relevant GitLab repo (for instance "develop")</li>
@@ -9112,23 +9143,23 @@
 </ul>
 <p><img alt="Release list page with custom property filled in" src="../img/gitlab-pipelines-release-page.png" /></p>
 <h2 id="setting-up-the-integration-in-gitlab">Setting up the integration in GitLab<a class="headerlink" href="#setting-up-the-integration-in-gitlab" title="Permanent link">&para;</a></h2>
-<p>In GitLab we now need to setup our repo to talk to the correct SpiraPlan product. Your GitLab repo/project will need to use Pipelines for the integration to work. You can add or edit Actions at any time - this will not impact the integration.</p>
-<p>First, we have to add information to link up the GitLab repo and SpiraPlan, by adding the SpiraPlan product reference into the repo. To do this:</p>
+<p>In GitLab we now need to setup our repo to talk to the correct Spira product. Your GitLab repo/project will need to use Pipelines for the integration to work. You can add or edit Actions at any time - this will not impact the integration.</p>
+<p>First, we have to add information to link up the GitLab repo and Spira, by adding the Spira product reference into the repo. To do this:</p>
 <ul>
 <li>Go to your GitLab repo</li>
 <li>Go to the Settings &gt; General page</li>
-<li>In the "Project description" box enter the SpiraPlan product token in the form of <code>[PR:{{product id}}]</code>. For example, "[PR:1]". You can have other text in the description, as long as the token is in there somewhere.</li>
+<li>In the "Project description" box enter the Spira product token in the form of <code>[PR:{{product id}}]</code>. For example, "[PR:1]". You can have other text in the description, as long as the token is in there somewhere.</li>
 <li>Click "Save Changes"</li>
 </ul>
 <p><img alt="Project description with the product token" src="../img/gitlab-pipelines-repo-description.png" /></p>
-<p>Second, you need to add a dedicated webhook. This means that when the GitLab Pipeline(s) completes, GitLab will send the results, along with the project description (and that SpiraPlan product token) to SpiraPlan via that webhook. SpiraPlan processes that data and adds it as a build.</p>
+<p>Second, you need to add a dedicated webhook. This means that when the GitLab Pipeline(s) completes, GitLab will send the results, along with the project description (and that Spira product token) to Spira via that webhook. Spira processes that data and adds it as a build.</p>
 <ul>
 <li>Go to the Settings &gt; Webhooks page of the GitLab repo</li>
 </ul>
 <p><img alt="Project settings" src="../img/gitlab-pipelines-repo-settings.png" /></p>
 <ul>
 <li>Enter the URL (see below)</li>
-<li>The secret token is not used by SpiraPlan can be left blank</li>
+<li>The secret token is not used by Spira can be left blank</li>
 <li>For triggers, you must enable "Pipelines events"</li>
 <li>For SSL verification, make sure "Enable SSL verification" is checked (default)</li>
 <li>Click "Add webhook"</li>
@@ -9138,17 +9169,17 @@
 <p class="admonition-title">The webhook URL</p>
 <p>The webhook URL is made of different parts.</p>
 <ul>
-<li>First get the base url of your instance - for instance <code>https://mysite.spiraservice.net</code>. This is the start of every URL you use when using SpiraPlan</li>
+<li>First get the base url of your instance - for instance <code>https://mysite.spiraservice.net</code>. This is the start of every URL you use when using Spira</li>
 <li>Add the following to the end of that URL <code>/Services/Webhooks/BuildService.svc/GitLab</code></li>
-<li>Add your SpiraPlan user authentication to the end of this url. This needs a username and an <a href="../../HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key">api-key</a>. The user must be a member of the relevant product and be able to create releases. This part of the URL looks like <code>?username={{username}}&amp;api-key={{api key}}</code></li>
+<li>Add your Spira user authentication to the end of this url. This needs a username and an <a href="../../HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key">api-key</a>. The user must be a member of the relevant product and be able to create releases. This part of the URL looks like <code>?username={{username}}&amp;api-key={{api key}}</code></li>
 </ul>
 <p>The final URL will look like this: <code>https://mysite.spiraservice.net/Services/Webhooks/BuildService.svc/GitLab?username=gitlab-pipelines&amp;api-key={11111111-1111-1111-1111-111111111111}</code></p>
 </div>
 <h2 id="run-the-action">Run the Action<a class="headerlink" href="#run-the-action" title="Permanent link">&para;</a></h2>
-<p>When an Action on the GitLab project next runs (either from GitLab, or with the GitLab SpiraApp)it will report its results to SpiraPlan. SpiraPlan reads the product token to know what product the Action is for. SpiraPlan then looks the first release in that product that has the repo branch in the correct custom property that the GitLab Pipeline was run against.</p>
-<p>SpiraPlan creates a build against that release, with the key information, including the build status.</p>
+<p>When an Action on the GitLab project next runs (either from GitLab, or with the GitLab SpiraApp)it will report its results to Spira. Spira reads the product token to know what product the Action is for. Spira then looks the first release in that product that has the repo branch in the correct custom property that the GitLab Pipeline was run against.</p>
+<p>Spira creates a build against that release, with the key information, including the build status.</p>
 <p><img alt="Build list on the release details page" src="../img/gitlab-pipelines-build-list.png" /></p>
-<p>You can click on the build name/link to open its build details page. The build will also appear on any relevant widgets in SpiraPlan.</p>
+<p>You can click on the build name/link to open its build details page. The build will also appear on any relevant widgets in Spira.</p>
 
 
 

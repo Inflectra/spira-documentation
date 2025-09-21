@@ -6673,10 +6673,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-mercurial-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-mercurial-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring Mercurial in SpiraPlan
+        Configuring Mercurial in Spira
       
     </span>
   </a>
@@ -6695,10 +6695,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-mercurial-with-spiraplan" class="md-nav__link">
+  <a href="#using-mercurial-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Mercurial with SpiraPlan
+        Using Mercurial with Spira
       
     </span>
   </a>
@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9034,10 +9062,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-mercurial-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-mercurial-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring Mercurial in SpiraPlan
+        Configuring Mercurial in Spira
       
     </span>
   </a>
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-mercurial-with-spiraplan" class="md-nav__link">
+  <a href="#using-mercurial-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Mercurial with SpiraPlan
+        Using Mercurial with Spira
       
     </span>
   </a>
@@ -9095,20 +9123,22 @@
 
 
 <h1 id="integrating-with-mercurial">Integrating with Mercurial<a class="headerlink" href="#integrating-with-mercurial" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTeam and SpiraPlan</p>
+</div>
 <p>Mercurial is a Distributed Version Control System (DVCS) system that keeps track of software commits and allows many developers to work on a given project without necessarily being connected to a common network since it doesn't rely on a central repository, but instead distributes copies of the entire source code repository to each user's workstation.</p>
-<p>The SpiraTeam plug-in for Mercurial allows users of SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a Mercurial repository and view commits linked to SpiraTeam artifacts.</p>
-<p>The plug-in will download a read-only working-copy of the Mercurial repository onto the SpiraTeam server and use that for displaying the list of files/folders. The list of commits will be queried dynamically from this local repository on an as-needed basis. The plug-in also performs 'pull' requests from the specified remote repository to ensure that the local repository remains up to date.</p>
-<p>The rest of this section outlines how to install and use the plug-in with SpiraTeam.</p>
+<p>The Spira plug-in for Mercurial allows users of Spira to be able to browse a Mercurial repository and view commits linked to Spira artifacts.</p>
+<p>The plug-in will download a read-only working-copy of the Mercurial repository onto the Spira server and use that for displaying the list of files/folders. The list of commits will be queried dynamically from this local repository on an as-needed basis. The plug-in also performs 'pull' requests from the specified remote repository to ensure that the local repository remains up to date.</p>
+<p>The rest of this section outlines how to install and use the plug-in with Spira.</p>
 <p><em>Note: The plug-in will allow users to download and view different commits of files and view commit logs, but no changes to the repository are allowed through the plug-in.</em></p>
 <h2 id="installing-the-mercurial-plug-in-to-install-the-mercurial-version-control-plug-in-follow-these-steps">Installing the Mercurial Plug-In To install the Mercurial Version Control plug-in, follow these steps:<a class="headerlink" href="#installing-the-mercurial-plug-in-to-install-the-mercurial-version-control-plug-in-follow-these-steps" title="Permanent link">&para;</a></h2>
-<p>Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraTeam installation:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>-   MercurialProvider.dll
--   Mercurial.Net.dll
-</code></pre></div></td></tr></table></div>
-
-<h2 id="configuring-mercurial-in-spiraplan">Configuring Mercurial in SpiraPlan<a class="headerlink" href="#configuring-mercurial-in-spiraplan" title="Permanent link">&para;</a></h2>
-<p>Before you can start using Mercurial in SpiraPlan you need to setup, at a system level, how Mercurial and SpiraPlan should work together: </p>
+<p>Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:</p>
+<ul>
+<li>MercurialProvider.dll</li>
+<li>Mercurial.Net.dll</li>
+</ul>
+<h2 id="configuring-mercurial-in-spira">Configuring Mercurial in Spira<a class="headerlink" href="#configuring-mercurial-in-spira" title="Permanent link">&para;</a></h2>
+<p>Before you can start using Mercurial in Spira you need to setup, at a system level, how Mercurial and Spira should work together: </p>
 <ul>
 <li>Log in as a system admin, and go to System Admininstration &gt; Integration &gt; Source Code</li>
 <li>If there is not already an antry for "MercurialProvider" click "Add" to go to the Plug-in details page</li>
@@ -9121,8 +9151,8 @@
 <li><strong>Connection Info</strong>: This field holds the clone URL of the repository for any project accessing the plug-in, unless overridden in the Project Settings:</li>
 <li>For example: <code>&lt;https://bitbucket.org/aragost/javahg&gt; ssh://example.com/hg/</code></li>
 <li><strong>Login / Password</strong>: The user id and the password of the user to use while accessing and retrieving information from the remote Mercurial repository. If you are accessing a public repository anonymously, just use "<em>anonymous</em>" for both username and password and it will be handled correctly.</li>
-<li><strong>Custom 01 --</strong> This needs to contain the path on the SpiraTeam server where the Mercurial executable (Hg.exe) can be found. If left blank, it will attempt to automatically discover Mercurial from the Windows %PATH% environment variable.</li>
-<li><strong>Custom 02 -- Custom 05</strong> -- Not used by this plugin.</li>
+<li><strong>Custom 01 --</strong> This needs to contain the path on the Spira server where the Mercurial executable (Hg.exe) can be found. If left blank, it will attempt to automatically discover Mercurial from the Windows %PATH% environment variable.</li>
+<li><strong>Custom 02 -- Custom 05</strong>: Not used by this plugin.</li>
 </ul>
 <p><img alt="" src="../img/Integrating_with_Mercurial_48.png" /></p>
 <p>When finished, click "Insert". You will be taken back to the Source Code list page, with MercurialProvider listed as an available plug-in.</p>
@@ -9139,9 +9169,9 @@
 <li>Click "Save" after making any changes.</li>
 </ul>
 <p><img alt="" src="../img/Integrating_with_Mercurial_49.png" /></p>
-<h2 id="using-mercurial-with-spiraplan">Using Mercurial with SpiraPlan<a class="headerlink" href="#using-mercurial-with-spiraplan" title="Permanent link">&para;</a></h2>
+<h2 id="using-mercurial-with-spira">Using Mercurial with Spira<a class="headerlink" href="#using-mercurial-with-spira" title="Permanent link">&para;</a></h2>
 <p>Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.</p>
-<p>You can read more about working with source code in SpiraPlan at the links below:</p>
+<p>You can read more about working with source code in Spira at the links below:</p>
 <ul>
 <li><a href="../../Spira-User-Manual/Source-Code/#source-code-file-list">Source code files</a></li>
 <li><a href="../../Spira-User-Manual/Commits/#commit-list">Commits</a></li>
@@ -9149,13 +9179,13 @@
 <li><a href="../../Spira-User-Manual/Source-Code/#troubleshooting-source-code-integration">Troubleshooting source code integration</a></li>
 </ul>
 <h2 id="data-purging">Data Purging<a class="headerlink" href="#data-purging" title="Permanent link">&para;</a></h2>
-<p>Since the integration with Mercurial requires that a working copy of the Mercurial repository be stored on the SpiraTeam server, you may decide at some point to unlink a disused Mercurial repository from SpiraTeam to save disk-space. However unlinking the repository through the SpiraTeam web interface will not remove the working copy of the repository from the server.</p>
-<p>To permanently remove a repository from the SpiraTeam server, you need to locate the following path:</p>
+<p>Since the integration with Mercurial requires that a working copy of the Mercurial repository be stored on the Spira server, you may decide at some point to unlink a disused Mercurial repository from Spira to save disk-space. However unlinking the repository through the Spira web interface will not remove the working copy of the repository from the server.</p>
+<p>To permanently remove a repository from the Spira server, you need to locate the following path:</p>
 <ul>
 <li><strong>(Windows XP, 2003)</strong>: C:\Documents and Settings\All Users\Application Data</li>
 <li><strong>(Windows 2008, 7, Vista)</strong>: C:\ProgramData</li>
 </ul>
-<p>If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "MercurialProvider". If you open up this subfolder, you will see a list of all the Mercurial repositories that have been accessed through SpiraTeam. To purge a module, just select it and choose the Delete Folder option in Windows.</p>
+<p>If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "MercurialProvider". If you open up this subfolder, you will see a list of all the Mercurial repositories that have been accessed through Spira. To purge a module, just select it and choose the Delete Folder option in Windows.</p>
 
 
 

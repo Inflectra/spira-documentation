@@ -8230,10 +8230,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#versionone-spirateam-importing-notes" class="md-nav__link">
+  <a href="#versionone-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VersionOne &amp; SpiraTeam Importing Notes
+        VersionOne &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -8957,6 +8957,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9045,10 +9073,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#versionone-spirateam-importing-notes" class="md-nav__link">
+  <a href="#versionone-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VersionOne &amp; SpiraTeam Importing Notes
+        VersionOne &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -9073,111 +9101,46 @@
 
 
 <h1 id="importing-from-versionone">Importing From VersionOne<a class="headerlink" href="#importing-from-versionone" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the included Importer for importing
-Iterations/Sprints, Epics and Stories/Backlog Items from projects
-residing in VersionOne projects into equivalent projects in SpiraTest®,
-SpiraPlan® or SpiraTeam® (hereafter referred to as SpiraTeam).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the included Importer for importing Iterations/Sprints, Epics and Stories/Backlog Items from projects residing in VersionOne projects into equivalent projects in Spira.</p>
 <h2 id="installing-the-importer">Installing the Importer<a class="headerlink" href="#installing-the-importer" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the importer onto a workstation so
-that you can then import requirements and use cases from VersionOne into
-SpiraTeam. It assumes that you already have a working installation of
-SpiraTeam v3.0 or later and a working installation of VersionOne 8.0 or
-later.</p>
-<p>You can download the Importer from the Inflectra's website under
-"Downloads and Add-Ons". When downloaded, double-click the MSI file.
-Follow the instructions in the MSI file to install the importer.</p>
+<p>This section outlines how to install the importer onto a workstation so that you can then import requirements and use cases from VersionOne into Spira. It assumes that you already have a working installation of Spira v3.0 or later and a working installation of VersionOne 8.0 or later.</p>
+<p>You can download the Importer from the Inflectra's website under "Downloads and Add-Ons". When downloaded, double-click the MSI file. Follow the instructions in the MSI file to install the importer.</p>
 <h2 id="importing-from-a-versionone-project">Importing from a VersionOne Project<a class="headerlink" href="#importing-from-a-versionone-project" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the integration adapter, you can launch it
-at any time by going to Start &gt; Programs &gt; SpiraTest &gt; Tools &gt;
-VersionOne Adapter. This will launch the import application itself. You
-will be shown an introduction screen. Click 'Next' to get to the second
-screen:</p>
+<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start &gt; Programs &gt; Spira &gt; Tools &gt; VersionOne Adapter. This will launch the import application itself. You will be shown an introduction screen. Click 'Next' to get to the second screen:</p>
 <p><img alt="" src="../img/Importing_From_VersionOne_28.png" /></p>
-<p>You need to enter the VersionOne Server URL (including the port number
-if appropriate), the username and password you use to log onto the
-system, then click the <em>Get Projects</em> button. If you choose 'Use Windows
-Authentication' it will use the credentials of the currently logged-in
-user and disable the username/password text boxes.</p>
-<p>The program will connect to the server and get a list of all available
-projects. Select the project you want to import into under the <em>Project</em>
-section. Once the project is selected, click <em>Next</em> to continue to the
-screen where you enter your SpiraTeam server and project information:</p>
+<p>You need to enter the VersionOne Server URL (including the port number if appropriate), the username and password you use to log onto the system, then click the <em>Get Projects</em> button. If you choose 'Use Windows Authentication' it will use the credentials of the currently logged-in user and disable the username/password text boxes.</p>
+<p>The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project</em> section. Once the project is selected, click <em>Next</em> to continue to the screen where you enter your Spira server and project information:</p>
 <p><img alt="" src="../img/Importing_From_VersionOne_29.png" /></p>
-<p>On this screen, you need to enter the SpiraTeam Server URL, the username
-and password you use to log onto the system, then click the <em>Get
-Projects</em> button. The program will connect to the server and get a list
-of all available projects. Select the project you want to import into
-under the <em>Project &amp; Requirement</em> section.</p>
-<p>The <em>Root Requirement</em> box is for specifying a base requirement to load
-all the VersionOne elements into. If left blank, then the importer will
-create a single placeholder requirement that all of the VersionOne epics
-and backlog items will be nested under.</p>
-<p>If you have a requirement already in SpiraTeam, and want the VersionOne
-items to appear inside it, then you need to enter the requirement number
-into the <em>Root Requirement</em> text box. For example, if you have a
-requirement named "VersionOne Requirements" with a number of RQ1920,
-then put 1920 into the <em>Root Requirement</em> field and run the import. When
-import is finished, the SpiraTeam requirements will be nested
-underneath.</p>
-<p>Note: At this time, change request and defect items are
-<strong>not</strong> imported from VersionOne projects.</p>
-<p>Once the fields have been populated, click <em>Next</em> to get to the summary
-screen.</p>
+<p>On this screen, you need to enter the Spira Server URL, the username and password you use to log onto the system, then click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project &amp; Requirement</em> section.</p>
+<p>The <em>Root Requirement</em> box is for specifying a base requirement to load all the VersionOne elements into. If left blank, then the importer will create a single placeholder requirement that all of the VersionOne epics and backlog items will be nested under.</p>
+<p>If you have a requirement already in Spira, and want the VersionOne items to appear inside it, then you need to enter the requirement number into the <em>Root Requirement</em> text box. For example, if you have a requirement named "VersionOne Requirements" with a number of RQ1920, then put 1920 into the <em>Root Requirement</em> field and run the import. When import is finished, the Spira requirements will be nested underneath.</p>
+<p>Note: At this time, change request and defect items are <strong>not</strong> imported from VersionOne projects.</p>
+<p>Once the fields have been populated, click <em>Next</em> to get to the summary screen.</p>
 <p><img alt="" src="../img/Importing_From_VersionOne_30.png" /></p>
-<p>The summary screen tells you what will actions will be performed, and
-once you have verified the information, click the <em>Import</em> button to
-start the import:</p>
+<p>The summary screen tells you what will actions will be performed, and once you have verified the information, click the <em>Import</em> button to start the import:</p>
 <p><img alt="" src="../img/Importing_From_VersionOne_31.png" /></p>
-<p>Anything flagged with a red
-<img alt="Error" src="../img/Importing_From_VersionOne_17.png" /></p>
-<p>failed, green
-<img alt="Success" src="../img/Importing_From_VersionOne_18.png" /></p>
-<p>means that they succeeded. Once finished,
-click <em>Finish</em> to get to the last page of the wizard:</p>
+<p>Anything flagged with a red <img alt="Error" src="../img/Importing_From_VersionOne_17.png" /> failed, green <img alt="Success" src="../img/Importing_From_VersionOne_18.png" /> means that they succeeded. Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
 <p><img alt="" src="../img/Importing_From_VersionOne_32.png" /></p>
-<p>If the <em>Minimize to System Tray</em> option is selected, when you click
-Finish or exit the from the application, it will minimize to the system
-tray. Once in the system tray, you can right-click on the icon and the
-it will give you the option to either re-import from the same project or
-select another project for a fresh import. If the option is not
-selected, the program will exit, and you can re-launch the importer to
-import from the same or another VersionOne project.</p>
+<p>If the <em>Minimize to System Tray</em> option is selected, when you click Finish or exit the from the application, it will minimize to the system tray. Once in the system tray, you can right-click on the icon and the it will give you the option to either re-import from the same project or select another project for a fresh import. If the option is not selected, the program will exit, and you can re-launch the importer to import from the same or another VersionOne project.</p>
 <h2 id="using-the-system-tray-shortcut-menu">Using the System Tray Shortcut Menu<a class="headerlink" href="#using-the-system-tray-shortcut-menu" title="Permanent link">&para;</a></h2>
-<p>When the application is minimized to the system tray, there are several
-shortcuts available:</p>
+<p>When the application is minimized to the system tray, there are several shortcuts available:</p>
 <ul>
-<li>
-<p>Double-Clicking the icon will bring the importer back to the first
-screen, allowing you to import another VersionOne project.</p>
-</li>
-<li>
-<p>Right-clicking will give a shortcut menu with the following options:</p>
-</li>
-<li>
-<p>Exit -- Close the program entirely.</p>
-</li>
-<li>
-<p>Rerun Import -- Will provide you the screen to re-launch the
-last import you just ran.</p>
-</li>
-<li>
-<p>Show Window -- Same as double-clicking on the icon, will bring
-the wizard back to the first screen, allowing new input options
-to be set.</p>
-</li>
+<li>Double-Clicking the icon will bring the importer back to the first screen, allowing you to import another VersionOne project.</li>
+<li>Right-clicking will give a shortcut menu with the following options:</li>
+<li>Exit -- Close the program entirely.</li>
+<li>Rerun Import -- Will provide you the screen to re-launch the last import you just ran.</li>
+<li>Show Window -- Same as double-clicking on the icon, will bring the wizard back to the first screen, allowing new input options to be set.</li>
 </ul>
-<h2 id="versionone-spirateam-importing-notes">VersionOne &amp; SpiraTeam Importing Notes<a class="headerlink" href="#versionone-spirateam-importing-notes" title="Permanent link">&para;</a></h2>
-<p>At this time, only requirements and iterations/sprints are imported into
-SpiraTeam from VersionOne. The epics in VersionOne become summary
-requirements in SpiraTeam and the backlog items / stories become child
-requirements in SpiraTeam. In addition, the following fields are brought
-over into SpiraTeam from VersionOne according to the following mapping
-table:</p>
+<h2 id="versionone-spira-importing-notes">VersionOne &amp; Spira Importing Notes<a class="headerlink" href="#versionone-spira-importing-notes" title="Permanent link">&para;</a></h2>
+<p>At this time, only requirements and iterations/sprints are imported into Spira from VersionOne. The epics in VersionOne become summary requirements in Spira and the backlog items / stories become child requirements in Spira. In addition, the following fields are brought over into Spira from VersionOne according to the following mapping table:</p>
 <table>
 <thead>
 <tr>
 <th><strong>VersionOne Field</strong></th>
-<th><strong>SpiraTeam Field</strong></th>
+<th><strong>Spira Field</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -9191,11 +9154,11 @@ table:</p>
 </tr>
 <tr>
 <td>Priority</td>
-<td>Importance: <br> <strong>VersionOne Value</strong> : <strong>SpiraTeam Value</strong> <br> High : High <br> Medium : Medium <br> Low : Low</td>
+<td>Importance: (maps as High to High, Medium to Medium, Low to Low)</td>
 </tr>
 <tr>
 <td>Status</td>
-<td>Status: <br> <strong>VersionOne Value</strong> : <strong>SpiraTeam Value</strong> <br> Future : Requested <br> Accepted : Accepted <br> Done : Completed <br> In Progress : In Progress</td>
+<td>Status (see below for more details)</td>
 </tr>
 <tr>
 <td></td>
@@ -9223,25 +9186,36 @@ table:</p>
 </tr>
 </tbody>
 </table>
-<p>Using this adapter, you can manage the appropriate artifacts in
-VersionOne and then periodically re-run the import application to update
-SpiraTeam. The application will remember that the project was already
-used for an initial load and will simply update the requirements as
-appropriate as well as add any additional ones added. If you are using
-SpiraTeam v3.1 or later, the update process will also delete any
-artifacts removed in VersionOne.</p>
-<p>Note that any changes to the requirement hierarchy are not reflected.
-This allows you to change the organization of the artifacts in SpiraTeam
-to make them easier to use without the changes being overwritten on the
-next import cycle.</p>
-<p>Finally, should you want to start again and re-import a project from
-scratch that has already been imported once before, you may do so by
-re-running the Importer, and entering in <strong>-1</strong> as the <em>Root
-Requirement</em>. This will not delete requirements from SpiraTeam, only
-remove mappings, so the next time you run the importer on this file, all
-new requirements will be created.</p>
-<p><strong><em>Note: This option is irreversible and should be performed with
-care.</em></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>VersionOne Status</strong></th>
+<th><strong>Spira Status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Future</td>
+<td>Requested</td>
+</tr>
+<tr>
+<td>Accepted</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>In Progress</td>
+<td>In Progress</td>
+</tr>
+</tbody>
+</table>
+<p>Using this adapter, you can manage the appropriate artifacts in VersionOne and then periodically re-run the import application to update Spira. The application will remember that the project was already used for an initial load and will simply update the requirements as appropriate as well as add any additional ones added. If you are using Spira v3.1 or later, the update process will also delete any artifacts removed in VersionOne.</p>
+<p>Note that any changes to the requirement hierarchy are not reflected. This allows you to change the organization of the artifacts in Spira to make them easier to use without the changes being overwritten on the next import cycle.</p>
+<p>Finally, should you want to start again and re-import a project from scratch that has already been imported once before, you may do so by re-running the Importer, and entering in <strong>-1</strong> as the <em>Root Requirement</em>. This will not delete requirements from Spira, only remove mappings, so the next time you run the importer on this file, all new requirements will be created.</p>
+<p><strong><em>Note: This option is irreversible and should be performed with care.</em></strong></p>
 
 
 

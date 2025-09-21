@@ -9002,6 +9002,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9163,109 +9191,65 @@
 
 
 <h1 id="cypress-reporter-for-spira">Cypress Reporter for Spira<a class="headerlink" href="#cypress-reporter-for-spira" title="Permanent link">&para;</a></h1>
-<p>This is a sample cypress project that uploads Cypress test results automatically to Inflectra's SpiraTest, SpiraTeam or SpiraPlan (hereafter just Spira).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This is a sample cypress project that uploads Cypress test results automatically to Inflectra's Spira.</p>
 <p>It is implemented as a custom reporter that you can easily add to your existing Cypress projects and have the benefit of the test results and screenshots automatically upload against the corresponding Spira test case.</p>
 <h2 id="installing-the-cypress-reporter">Installing the Cypress Reporter<a class="headerlink" href="#installing-the-cypress-reporter" title="Permanent link">&para;</a></h2>
 <p>To install the Spira custom reporter, simply download the <a href="https://github.com/Inflectra/cypress-sample/raw/main/Spira-Cypress-Reporter.zip">Spira-Cypress-Reporter.zip</a> zip file and extract the contents (consisting of the <code>reporter</code> folder) and place in your Cypress project at the same level as the <code>cypress</code> folder. For example:</p>
 <p><img alt="Sample file view of a Cypress project" src="../img/spira-reporter-1.png" /></p>
-<p>To use the custom Spira reporter in your Cypress project, you just add it to the Cypress command line:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npx cypress run --browser edge --spec &quot;cypress\e2e\1-getting-started\todo.cy.js&quot; --reporter &quot;reporter\SpiraReporter&quot;
-</code></pre></div></td></tr></table></div>
-
-<p>or you modify the <code>cypress.config.js</code> to include the report. We recommend this method since it avoids need to add it to the command-line each time.</p>
+<p>To use the custom Spira reporter in your Cypress project, you just add it to the Cypress command line: <code>npx cypress run --browser edge --spec "cypress\e2e\1-getting-started\todo.cy.js" --reporter "reporter\SpiraReporter"</code> or you modify the <code>cypress.config.js</code> to include the report. We recommend this method since it avoids need to add it to the command-line each time.</p>
 <p>However before you can use the reporter, you will need to configure it to point to Spira, and map the Cypress spec files to specified Spira test cases.</p>
 <h2 id="configuring-the-cypress-reporter">Configuring the Cypress Reporter<a class="headerlink" href="#configuring-the-cypress-reporter" title="Permanent link">&para;</a></h2>
 <p>Locate the <code>cypress.config.js</code> file from the root of your Cypress project. Open this up in your favorite text/code editor, for example Visual Studio Code. This file contain something similar to the following:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;cypress&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code>const { defineConfig } = require(&quot;cypress&quot;);
 
-<span class="n">module</span><span class="o">.</span><span class="n">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defineConfig</span><span class="p">({</span>
-<span class="w">    </span><span class="n">e2e</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">setupNodeEvents</span><span class="p">(</span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="nb">log</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">null</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">        </span><span class="p">})</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div></td></tr></table></div>
-
+module.exports = defineConfig({
+    e2e: {
+        setupNodeEvents(on, config) {
+        on(&#39;task&#39;, { 
+            log(message) {
+            console.log(message)
+            return null
+            },
+        })
+        },
+    }
+});
+</code></pre></div>
 <p>Depending on how you have Cypress configured, you may have additional settings.</p>
 <p>Now we need to modify it to enable the Spira custom reporter and configure its settings:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;cypress&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code>const { defineConfig } = require(&quot;cypress&quot;);
 
-<span class="n">module</span><span class="o">.</span><span class="n">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defineConfig</span><span class="p">({</span>
-<span class="w">    </span><span class="n">e2e</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">setupNodeEvents</span><span class="p">(</span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;task&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="nb">log</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb nb-Type">null</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">        </span><span class="p">})</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="n">reporter</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;reporter/SpiraReporter&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">reporterOptions</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">projectId</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="n">releaseId</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="n">testSetId</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span>
-<span class="w">        </span><span class="n">login</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">apiKey</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;{7A05FD06-83C3-4436-B37F-51BCF0060483}&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">protocol</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;https&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">host</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;demo-us.spiraservice.net&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">vdir</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;mysite&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">mapping</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s2">&quot;with a checked task&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;with a checked task 2&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
-</code></pre></div></td></tr></table></div>
-
+module.exports = defineConfig({
+    e2e: {
+        setupNodeEvents(on, config) {
+        on(&#39;task&#39;, { 
+            log(message) {
+            console.log(message)
+            return null
+            },
+        })
+        },
+    },
+    reporter: &#39;reporter/SpiraReporter&#39;,
+    reporterOptions: {
+        projectId: 1,
+        releaseId: 1,
+        testSetId: null,
+        login: &#39;fredbloggs&#39;,
+        apiKey: &#39;{7A05FD06-83C3-4436-B37F-51BCF0060483}&#39;,
+        protocol: &#39;https&#39;,
+        host: &#39;demo-us.spiraservice.net&#39;,
+        vdir: &#39;mysite&#39;,
+        mapping: {
+        &quot;with a checked task&quot;: 4,
+        &quot;with a checked task 2&quot;: 5
+        }
+    }
+});
+</code></pre></div>
 <p>Notice that we have added <code>reporterOptions</code> object that specifies how the Cypress reporter will communicate with Spira:</p>
 <ul>
 <li><strong>projectId</strong> - this should be the ID of the Spira project (e.g. <code>PR:5</code> would be just <code>5</code>)</li>
@@ -9292,44 +9276,26 @@ module.exports = defineConfig({
 </div>
 <h3 id="mapping-the-test-cases">Mapping the Test Cases<a class="headerlink" href="#mapping-the-test-cases" title="Permanent link">&para;</a></h3>
 <p>The <code>mapping</code> section is where we map the name of each test suite in a spec file with a corresponding Spira test case. For example, if we have a spec file that has this <code>context</code> section:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">context</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">with</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">checked</span><span class="w"> </span><span class="nx">task</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">cy</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">Pay</span><span class="w"> </span><span class="nx">electric</span><span class="w"> </span><span class="nx">bill</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">parent</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">input</span><span class="p">[</span><span class="k">type</span><span class="p">=</span><span class="nx">checkbox</span><span class="p">]</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">check</span><span class="p">()</span>
-<span class="w">    </span><span class="p">})</span>
-</code></pre></div></td></tr></table></div>
-
-<p>Then the name of the test suite wiuld be <code>with a checked task</code> and then we map that to a test case in SpiraTest, for example <code>TC:5</code>. For our sample tests, we have the following example mapping:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>mapping: {
+<div class="highlight"><pre><span></span><code>context(&#39;with a checked task&#39;, () =&gt; {
+    beforeEach(() =&gt; {
+    cy.contains(&#39;Pay electric bill&#39;)
+        .parent()
+        .find(&#39;input[type=checkbox]&#39;)
+        .check()
+    })
+</code></pre></div>
+<p>Then the name of the test suite wiuld be <code>with a checked task</code> and then we map that to a test case in Spira, for example <code>TC:5</code>. For our sample tests, we have the following example mapping:</p>
+<div class="highlight"><pre><span></span><code>mapping: {
     &quot;with a checked task&quot;: 4,
     &quot;with a checked task 2&quot;: 5
 }
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
 <p>So we are mapping:
 - <code>with a checked task</code> to Spira test case <code>TC:4</code>
 - <code>with a checked task 2</code> to Spira test case <code>TC:5</code></p>
 <p>We have now finished our configuration of the reporter, and can run the tests.</p>
 <h2 id="running-a-cypress-test">Running a Cypress Test<a class="headerlink" href="#running-a-cypress-test" title="Permanent link">&para;</a></h2>
-<p>You can execute the tests using the Cypress command-line, launch-pad, CI tool or whatever method you currently use. For example, to execute one of the sample tests in this repository, you can use:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npx cypress run --browser edge --spec &quot;cypress\e2e\1-getting-started\todo.cy.js&quot;
-</code></pre></div></td></tr></table></div>
-
-<p>to run the entire folder of tests, you can use:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npx cypress run --browser edge --spec &quot;cypress\e2e\1-getting-started&quot;
-</code></pre></div></td></tr></table></div>
-
+<p>You can execute the tests using the Cypress command-line, launch-pad, CI tool or whatever method you currently use. For example, to execute one of the sample tests in this repository, you can use: <code>npx cypress run --browser edge --spec "cypress\e2e\1-getting-started\todo.cy.js"</code>. To run the entire folder of tests, you can use: <code>npx cypress run --browser edge --spec "cypress\e2e\1-getting-started"</code></p>
 <p>The system will then execute the test and let you know that it is reporting back to Spira:</p>
 <p><img alt="Console output when running the test using the Spira reporter" src="../img/spira-reporter-2.png" /></p>
 <h3 id="viewing-the-results-in-spira">Viewing the Results in Spira<a class="headerlink" href="#viewing-the-results-in-spira" title="Permanent link">&para;</a></h3>
@@ -9343,16 +9309,22 @@ module.exports = defineConfig({
 <p><img alt="Viewing a test run screenshot in Spira" src="../img/spira-reporter-6.png" /></p>
 <p><strong>Congratulations! You have now run your first Cypress test and reported back the results to Spira!</strong></p>
 <h2 id="where-can-i-obtain-spira">Where Can I Obtain Spira?<a class="headerlink" href="#where-can-i-obtain-spira" title="Permanent link">&para;</a></h2>
-<p>If you would like to learn more about the Inflectra Spira suite, please go to the following website:
-- <a href="https://www.inflectra.com/SpiraTest/">SpiraTest</a>, powerful requirements and test management
-- <a href="https://www.inflectra.com/SpiraTeam/">SpiraTeam</a>, agile planning and test management for teams
-- <a href="https://www.inflectra.com/SpiraPlan/">SpiraPlan</a>, enterprise planning and testing platform</p>
+<p>If you would like to learn more about the Inflectra Spira suite, please go to the following website:</p>
+<ul>
+<li><a href="https://www.inflectra.com/SpiraTest/">SpiraTest</a>, powerful requirements and test management</li>
+<li><a href="https://www.inflectra.com/SpiraTeam/">SpiraTeam</a>, agile planning and test management for teams</li>
+<li><a href="https://www.inflectra.com/SpiraPlan/">SpiraPlan</a>, enterprise planning and testing platform</li>
+</ul>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

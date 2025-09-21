@@ -7650,10 +7650,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-spirateam" class="md-nav__link">
+  <a href="#connecting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to SpiraTeam®
+        Connecting to Spira
       
     </span>
   </a>
@@ -7684,10 +7684,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-from-spirateam" class="md-nav__link">
+  <a href="#importing-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Importing from SpiraTeam
+        Importing from Spira
       
     </span>
   </a>
@@ -7695,10 +7695,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-to-spirateam" class="md-nav__link">
+  <a href="#exporting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exporting to SpiraTeam
+        Exporting to Spira
       
     </span>
   </a>
@@ -8985,6 +8985,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9051,10 +9079,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-spirateam" class="md-nav__link">
+  <a href="#connecting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to SpiraTeam®
+        Connecting to Spira
       
     </span>
   </a>
@@ -9085,10 +9113,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-from-spirateam" class="md-nav__link">
+  <a href="#importing-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Importing from SpiraTeam
+        Importing from Spira
       
     </span>
   </a>
@@ -9096,10 +9124,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-to-spirateam" class="md-nav__link">
+  <a href="#exporting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exporting to SpiraTeam
+        Exporting to Spira
       
     </span>
   </a>
@@ -9129,194 +9157,75 @@
 
 
 <h1 id="importing-from-microsoft-project">Importing from Microsoft Project<a class="headerlink" href="#importing-from-microsoft-project" title="Permanent link">&para;</a></h1>
-<p>The web-based interface of SpiraTeam® is ideal for creating and managing
-requirements, releases/iterations and tasks for a new project. However
-when migrating requirements and tasks from an existing project, it is
-useful to be able to load in an existing project plan in batch and have
-SpiraTeam be able to interpret the data.</p>
-<p>To simplify this task, SpiraTeam® comes with a Microsoft Project Add-In
-that can export requirements, releases and tasks from a populated
-MS-Project plan into SpiraTeam®. In addition, the Add-In allows you to
-import those same artifacts back into the MS-Project plan to make batch
-updates which can then be used to update the master copies on the
-server.</p>
-<p>Note that this guide refers to SpiraTeam®, but the MS-Project Add-In can
-be used with SpiraPlan® as well.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>The web-based interface of Spira is ideal for creating and managing requirements, releases/iterations and tasks for a new project. However when migrating requirements and tasks from an existing project, it is useful to be able to load in an existing project plan in batch and have Spira be able to interpret the data.</p>
+<p>To simplify this task, Spira comes with a Microsoft Project Add-In that can export requirements, releases and tasks from a populated MS-Project plan into Spira. In addition, the Add-In allows you to import those same artifacts back into the MS-Project plan to make batch updates which can then be used to update the master copies on the server.</p>
+<p>Note that this guide refers to Spira, but the MS-Project Add-In can be used with SpiraPlan® as well.</p>
 <h2 id="installing-the-microsoft-project-add-in">Installing the Microsoft Project Add-In<a class="headerlink" href="#installing-the-microsoft-project-add-in" title="Permanent link">&para;</a></h2>
-<p>The first thing you need to do is to go to the "Add-Ons and Downloads"
-page of the Inflectra Website (it can be found in the SpiraPlan or
-SpiraTeam sections), and download the <strong>MS-Office Add-Ins</strong> installation
-package. There are separate packages for the following versions of MS
-Office:</p>
-<p><strong>MS-Office 2003 Add-Ins</strong> -- these are compatible with Microsoft Office
-2003 and 2007. They can connect to SpiraTeam v2.3 or later. They also
-require Microsoft .NET 3.5.</p>
-<p><strong>MS-Office 2007 Add-Ins</strong> -- these are compatible with Microsoft Office
-2007 and 2010. They can connect to SpiraTeam v3.0 or later. They also
-require Microsoft .NET 4.0.</p>
-<p><strong>MS-Office 2010 Add-Ins</strong> -- these are compatible with Microsoft Office
-2010 and all later versions. They can connect to SpiraTeam v5.0 or
-later. They also require Microsoft .NET 4.0.</p>
-<p>This installation package will install the add-ins for Microsoft Excel,
-Word and Project at the same time. If you don't have the correct version
-of Microsoft .NET installed or some of the necessary prerequisites, you
-will be given the opportunity to install them when you first run the
-installation package.</p>
-<p>Once you have the MS-Project Add-In installed, the second thing you may
-want to download is the <strong>SampleProjectFile.mpp</strong>
-MS-Project plan. This project file contains a fully-populated project
-plan and is a good sample to test the import/export before using a real
-project plan.</p>
-<p>Once you have downloaded the project file, please double-click on it to
-open it up in MS-Project. You will notice that there is an additional
-toolbar displayed in MS-Project which is used for importing/exporting
-data to/from SpiraTeam:</p>
+<p>The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraPlan or Spira sections), and download the <strong>MS-Office Add-Ins</strong> installation package. There are separate packages for the following versions of MS Office:</p>
+<ul>
+<li><strong>MS-Office 2003 Add-Ins</strong>: these are compatible with Microsoft Office 2003 and 2007. They can connect to Spira v2.3 or later. They also require Microsoft .NET 3.5.</li>
+<li><strong>MS-Office 2007 Add-Ins</strong>: these are compatible with Microsoft Office 2007 and 2010. They can connect to Spira v3.0 or later. They also require Microsoft .NET 4.0.</li>
+<li><strong>MS-Office 2010 Add-Ins</strong>: these are compatible with Microsoft Office 2010 and all later versions. They can connect to Spira v5.0 or later. They also require Microsoft .NET 4.0.</li>
+</ul>
+<p>This installation package will install the add-ins for Microsoft Excel, Word and Project at the same time. If you don't have the correct version of Microsoft .NET installed or some of the necessary prerequisites, you will be given the opportunity to install them when you first run the installation package.</p>
+<p>Once you have the MS-Project Add-In installed, the second thing you may want to download is the <strong>SampleProjectFile.mpp</strong> MS-Project plan. This project file contains a fully-populated project plan and is a good sample to test the import/export before using a real project plan.</p>
+<p>Once you have downloaded the project file, please double-click on it to open it up in MS-Project. You will notice that there is an additional toolbar displayed in MS-Project which is used for importing/exporting data to/from Spira:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Project_42.png" /></p>
-<p>If you are using the MS-Project 2010 Add-In, you will see a modified
-version of the toolbar that makes use of the MS-Office Ribbon:</p>
+<p>If you are using the MS-Project 2010 Add-In, you will see a modified version of the toolbar that makes use of the MS-Office Ribbon:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Project_43.png" /></p>
-<p>This toolbar allows you to connect to SpiraTeam, and perform the
-import/export. The process for using this toolbar is described below:</p>
-<h2 id="connecting-to-spirateam">Connecting to SpiraTeam®<a class="headerlink" href="#connecting-to-spirateam" title="Permanent link">&para;</a></h2>
-<p>The first thing you need to do is to click on the [Connect] button to
-specify the information used to connect to your instance of SpiraTeam:</p>
+<p>This toolbar allows you to connect to Spira, and perform the import/export. The process for using this toolbar is described below:</p>
+<h2 id="connecting-to-spira">Connecting to Spira<a class="headerlink" href="#connecting-to-spira" title="Permanent link">&para;</a></h2>
+<p>The first thing you need to do is to click on the [Connect] button to specify the information used to connect to your instance of Spira:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Project_44.png" /></p>
 <p>Please enter the following information into the dialog box:</p>
 <ul>
-<li>
-<p><strong>Spira URL:</strong> Please enter the web address that you use to access
-SpiraTeam® in your browser. This is usually of the form
-http://&lt;hostname&gt;/SpiraTeam. Make sure that you
-remove any suffixes from the address (e.g. Default.aspx).</p>
-</li>
-<li>
-<p><strong>User Name:</strong> Please enter the username that you use for logging in
-to SpiraTeam</p>
-</li>
-<li>
-<p><strong>Password:</strong> Please enter the password that you use for logging in
-to SpiraTeam</p>
-</li>
-<li>
-<p><strong>Remember Password:</strong> If you are using this Add-In on a private
-computer, you can check this option to have the system remember your
-credentials locally. Please do not use this option on a public
-computer and it will compromise the security of your SpiraTeam
-installation.</p>
-</li>
+<li><strong>Spira URL:</strong> Please enter the web address that you use to access Spira in your browser. This is usually of the form http://&lt;hostname&gt;/Spira. Make sure that you remove any suffixes from the address (e.g. Default.aspx).</li>
+<li><strong>User Name:</strong> Please enter the username that you use for logging in to Spira</li>
+<li><strong>Password:</strong> Please enter the password that you use for logging in to Spira</li>
+<li><strong>Remember Password:</strong> If you are using this Add-In on a private computer, you can check this option to have the system remember your credentials locally. Please do not use this option on a public computer and it will compromise the security of your Spira installation.</li>
 </ul>
 <p>Once you have entered the necessary information, please click
-[Connect] to authenticate with the server. If the login information is
-invalid, you will see an error message appear, otherwise you will be
-connected and the list of projects and artifacts will be populated. If
-you want to end your session, you should just click the [Disconnect]
+[Connect] to authenticate with the server. If the login information is invalid, you will see an error message appear, otherwise you will be connected and the list of projects and artifacts will be populated. If you want to end your session, you should just click the [Disconnect]
 button and the Add-In will close your connection.</p>
 <h2 id="choosing-the-project">Choosing the Project<a class="headerlink" href="#choosing-the-project" title="Permanent link">&para;</a></h2>
-<p>Once you have successfully connected to SpiraTeam, you should now choose
-the appropriate Project in the system that you will be importing /
+<p>Once you have successfully connected to Spira, you should now choose the appropriate Project in the system that you will be importing /
 exporting to / from:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Project_45.png" /></p>
 <p>Or</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Project_46.png" /></p>
-<p>Once you have selected the project, there are three buttons that you can
-now use:</p>
+<p>Once you have selected the project, there are three buttons that you can now use:</p>
 <ul>
-<li>
-<p><strong>Import:</strong> Clicking this button will retrieve the data from the
-SpiraTeam server and use that to populate the MS-Project file.</p>
-</li>
-<li>
-<p><strong>Export:</strong> Clicking this button will take the data in the currently
-opened MS-Project file and use it to add/update items in SpiraTeam.</p>
-</li>
-<li>
-<p><strong>Clear:</strong> This button allows you to quickly clear the data in the
-current Project file so that you can import a clean version from the
-server.</p>
-</li>
+<li><strong>Import:</strong> Clicking this button will retrieve the data from the Spira server and use that to populate the MS-Project file.</li>
+<li><strong>Export:</strong> Clicking this button will take the data in the currently opened MS-Project file and use it to add/update items in Spira.</li>
+<li><strong>Clear:</strong> This button allows you to quickly clear the data in the current Project file so that you can import a clean version from the server.</li>
 </ul>
 <h2 id="importingexporting-data">Importing/Exporting Data<a class="headerlink" href="#importingexporting-data" title="Permanent link">&para;</a></h2>
-<p>The MS-Project Add-In is capable of either importing data from SpiraTeam
-into the project file or exporting data from the project file to
-SpiraTeam. However it is important to understand how the system knows
-whether to add new items to SpiraTeam or whether to update existing
-items:</p>
+<p>The MS-Project Add-In is capable of either importing data from Spira into the project file or exporting data from the project file to Spira. However it is important to understand how the system knows whether to add new items to Spira or whether to update existing items:</p>
 <ul>
-<li>
-<p>If you start with a blank MS-Project file and enter tasks into it,
-they will not have a value set on their Text1 custom field. When you
-perform an Export, it will add these as new items in SpiraTeam</p>
-</li>
-<li>
-<p>If you start with a blank import MS-Project file and choose to
-Import data from SpiraTeam, those tasks imported will include the ID
-of the item in SpiraTeam as their Text1 custom field. You can either
-update those tasks or add new tasks in between. Any tasks that have
-the Text1 custom property populated will be <em>updated</em> in SpiraTeam
-when you choose Export, whereas any newly added tasks will be
-<em>inserted</em> in SpiraTeam.</p>
-</li>
+<li>If you start with a blank MS-Project file and enter tasks into it, they will not have a value set on their Text1 custom field. When you perform an Export, it will add these as new items in Spira</li>
+<li>If you start with a blank import MS-Project file and choose to Import data from Spira, those tasks imported will include the ID of the item in Spira as their Text1 custom field. You can either update those tasks or add new tasks in between. Any tasks that have the Text1 custom property populated will be <em>updated</em> in Spira when you choose Export, whereas any newly added tasks will be <em>inserted</em> in Spira.</li>
 </ul>
-<h3 id="importing-from-spirateam">Importing from SpiraTeam<a class="headerlink" href="#importing-from-spirateam" title="Permanent link">&para;</a></h3>
-<p>The Add-In will import the tasks from SpiraTeam into the MS-Project file
-based on the following rules:</p>
+<h3 id="importing-from-spira">Importing from Spira<a class="headerlink" href="#importing-from-spira" title="Permanent link">&para;</a></h3>
+<p>The Add-In will import the tasks from Spira into the MS-Project file based on the following rules:</p>
 <ul>
-<li>
-<p>Any Releases/Iterations in SpiraTeam will be added as zero-effort
-(milestone) tasks in the MS-Project plan.</p>
-</li>
-<li>
-<p>Any Requirements in SpiraTeam that have at least one task under
-them, will be added as summary tasks in the MS-Project plan. Their
-indentation in the project plan will match the requirements'
-indentation in SpiraTeam</p>
-</li>
-<li>
-<p>Any Tasks in SpiraTeam will be added as tasks in the MS-Project
-plan. The tasks will be nested directly under their parent
-requirement's equivalent task in MS-Project.</p>
-</li>
-<li>
-<p>Any Requirements in SpiraTeam that have no tasks under them, will be
-added as zero-effort (milestone) tasks in the MS-Project plan. Their
-indentation in the project plan will match the requirements'
-indentation in SpiraTeam</p>
-</li>
+<li>Any Releases/Iterations in Spira will be added as zero-effort (milestone) tasks in the MS-Project plan.</li>
+<li>Any Requirements in Spira that have at least one task under them, will be added as summary tasks in the MS-Project plan. Their indentation in the project plan will match the requirements' indentation in Spira</li>
+<li>Any Tasks in Spira will be added as tasks in the MS-Project plan. The tasks will be nested directly under their parent requirement's equivalent task in MS-Project.</li>
+<li>Any Requirements in Spira that have no tasks under them, will be added as zero-effort (milestone) tasks in the MS-Project plan. Their indentation in the project plan will match the requirements' indentation in Spira</li>
 </ul>
-<h3 id="exporting-to-spirateam">Exporting to SpiraTeam<a class="headerlink" href="#exporting-to-spirateam" title="Permanent link">&para;</a></h3>
-<p>The Add-In will export the tasks in the MS-Project file into SpiraTeam
-based on the following rules:</p>
+<h3 id="exporting-to-spira">Exporting to Spira<a class="headerlink" href="#exporting-to-spira" title="Permanent link">&para;</a></h3>
+<p>The Add-In will export the tasks in the MS-Project file into Spira based on the following rules:</p>
 <ul>
-<li>
-<p>Any summary tasks or top-level tasks in the MS-Project file will be
-treated as Requirements when being exported to SpiraTeam.</p>
-</li>
-<li>
-<p>Any non-summary tasks that have zero-effort (milestones) that are
-not originally Releases/Iterations will be treated as Requirements
-when being exported to SpiraTeam.</p>
-</li>
-<li>
-<p>Any non-summary tasks that are NOT at the top-level will be treated
-as Tasks when being exported to SpiraTeam. They will be attached to
-the requirement that is their parent task in MS-Project.</p>
-</li>
-<li>
-<p>The export function does not update any of the Release/Iteration
-items. They need to be updated in SpiraTeam.</p>
-</li>
-<li>
-<p>If you want to prevent an MS-Project Task from being imported into
-SpiraTeam simply set the value of its Text1 column to the text
-"IGNORE" (without the quotes).</p>
-</li>
+<li>Any summary tasks or top-level tasks in the MS-Project file will be treated as Requirements when being exported to Spira.</li>
+<li>Any non-summary tasks that have zero-effort (milestones) that are not originally Releases/Iterations will be treated as Requirements when being exported to Spira.</li>
+<li>Any non-summary tasks that are NOT at the top-level will be treated as Tasks when being exported to Spira. They will be attached to the requirement that is their parent task in MS-Project.</li>
+<li>The export function does not update any of the Release/Iteration items. They need to be updated in Spira.</li>
+<li>If you want to prevent an MS-Project Task from being imported into Spira simply set the value of its Text1 column to the text "IGNORE" (without the quotes).</li>
 </ul>
-<p><em>Be careful when you indent/outdent a task in MS-Project. If you take a
-non-summary item (which would be represented by a Task in SpiraTeam) and
-make it a summary item by adding child tasks, when you next run Export,
-it will get added as a new Requirement in SpiraTeam, with the child
-tasks added as Tasks. The old task will still remain in SpiraTeam and
-will need to be manually removed.</em></p>
+<p><em>Be careful when you indent/outdent a task in MS-Project. If you take a non-summary item (which would be represented by a Task in Spira) and make it a summary item by adding child tasks, when you next run Export, it will get added as a new Requirement in Spira, with the child tasks added as Tasks. The old task will still remain in Spira and will need to be manually removed.</em></p>
 
 
 

@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9051,9 +9079,12 @@
 
 
 <h1 id="migrating-from-qtest">Migrating from qTest<a class="headerlink" href="#migrating-from-qtest" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Defects, Releases, Requirements and Attachments from qTest into SpiraTest (or SpiraTeam, or SpiraPlan).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Defects, Releases, Requirements and Attachments from qTest into Spira.</p>
 <h2 id="installing-the-qtest-migration-tool">Installing the qTest Migration Tool<a class="headerlink" href="#installing-the-qtest-migration-tool" title="Permanent link">&para;</a></h2>
-<p>For the migration tool to work you need a working installation of SpiraTest/SpiraTeam/SpiraPlan v5.0 or later and a live instance of qTest to migrate from. You will also need a Windows machine to install the migration tool onto, that can access both SpiraPlan and qTest.</p>
+<p>For the migration tool to work you need a working installation of Spira v5.0 or later and a live instance of qTest to migrate from. You will also need a Windows machine to install the migration tool onto, that can access both SpiraPlan and qTest.</p>
 <p>First, download the Windows <a href="https://www.inflectra.com/Downloads/qTestImporter.msi">installation package</a> from the "Add-Ons &amp; Downloads" section of the Inflectra website. Double-click the msi file to start the installation wizard. The first screen of this wizard will look like this:</p>
 <p><img alt="" src="../img/qTest_01.png" /></p>
 <p>Click the <code>Next</code> button to choose the folder to install the migration tool to:</p>
@@ -9069,15 +9100,15 @@
 <li>password</li>
 </ul>
 <p>Next, select the qTest project that you want to <strong>import from</strong>. Now choose which artifacts you want to import from qTest (e.g. Defects, Requirements). <em>NOTE: to import test cases, test sets, or test runs, the wizard needs to also import releases.</em> </p>
-<p>Click <code>Next</code> to move to the Connect to SpiraTest part of the import wizard:</p>
+<p>Click <code>Next</code> to move to the Connect to Spira part of the import wizard:</p>
 <p><img alt="" src="../img/qTest_04.png" /></p>
-<p>On the Connect to SpiraTest page you have to enter your SpiraTest login information and click <code>Login</code>:</p>
+<p>On the Connect to Spira page you have to enter your Spira login information and click <code>Login</code>:</p>
 <ul>
 <li>URL (for hosted customers this is of the form <a href="https://xxxx.spiraservice.net">https://xxxx.spiraservice.net</a>)</li>
-<li>SpiraTest username</li>
-<li>SpiraTest password</li>
+<li>Spira username</li>
+<li>Spira password</li>
 </ul>
-<p>Once the wizard has verified its connection with SpiraTest and you are logged in, click the now enabled <code>Start Import</code> button. This begins the import process from qTest into SpiraPlan. The importer will automatically create a new product in SpiraPlan with the same name as that used in qTest. <strong>Note</strong>: if you run the importer on the same qTest project multiple times, it will create a new product in SpiraTest each time.</p>
+<p>Once the wizard has verified its connection with Spira and you are logged in, click the now enabled <code>Start Import</code> button. This begins the import process from qTest into SpiraPlan. The importer will automatically create a new product in SpiraPlan with the same name as that used in qTest. <strong>Note</strong>: if you run the importer on the same qTest project multiple times, it will create a new product in Spira each time.</p>
 <p><img alt="" src="../img/qTest_05.png" /></p>
 <p>During the import process, as each artifact is imported, the progress display will change (as illustrated above). Once the import finishes the <code>Done</code> button will be enabled. Click this button to close the importer. You can now log into SpiraPlan to view the imported project.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>

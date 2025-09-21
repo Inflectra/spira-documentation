@@ -8985,6 +8985,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9129,6 +9157,9 @@
 
 
 <h1 id="using-spira-with-gitlab">Using Spira with GitLab<a class="headerlink" href="#using-spira-with-gitlab" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. </p>
 <p>You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).</p>
 <div class="admonition danger">
@@ -9171,10 +9202,10 @@
 <p>Click on the "View Project Mappings" button for GitLab Data Sync. You need to fill out the following fields to sync correctly:</p>
 <ul>
 <li>
-<p><strong>External Key</strong> -- The name of your GitLab repository. In the example above, where the URL in GitLab was <a href="https://gitlab.com/gitlab-examples/velociraptor">https://gitlab.com/gitlab-examples/velociraptor</a>, you would simply enter "velociraptor" for this setting.</p>
+<p><strong>External Key</strong>: The name of your GitLab repository. In the example above, where the URL in GitLab was <a href="https://gitlab.com/gitlab-examples/velociraptor">https://gitlab.com/gitlab-examples/velociraptor</a>, you would simply enter "velociraptor" for this setting.</p>
 </li>
 <li>
-<p><strong>Active</strong> -- Set this to yes so that the Data Sync plug-in knows to synchronize with this project.</p>
+<p><strong>Active</strong>: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.</p>
 </li>
 </ul>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_219.png" /></p>
@@ -9184,10 +9215,10 @@
 <p>You must map every status in the system. Descriptions of the field are below:</p>
 <ul>
 <li>
-<p><strong>External Key</strong> -- Either <strong>opened</strong> or <strong>closed</strong>, which are the only two statuses in GitLab</p>
+<p><strong>External Key</strong>: Either <strong>opened</strong> or <strong>closed</strong>, which are the only two statuses in GitLab</p>
 </li>
 <li>
-<p><strong>Primary</strong> -- You must have exactly one primary key for <strong>opened</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.</p>
+<p><strong>Primary</strong>: You must have exactly one primary key for <strong>opened</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.</p>
 </li>
 </ul>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
@@ -9197,7 +9228,7 @@
 [Save] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
 <p><em>If you have set the "Auto-Map Users" option in the GitLab plugin, you can skip this section completely.</em></p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping<a class="headerlink" href="#configuring-the-release-mapping" title="Permanent link">&para;</a></h3>
-<p>When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Milesone" in GitLab. Similarly, if it comes across a new Milestone in GitLab that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Milestones in one system and let the data-synchronization service add them to the other system.</p>
+<p>When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Milestone" in GitLab. Similarly, if it comes across a new Milestone in GitLab that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Milestones in one system and let the data-synchronization service add them to the other system.</p>
 <p>However, you may start out with the situation where you already have pre-existing Releases / Milestones in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore, for any Releases/Iterations that already exist in BOTH systems please navigate to Planning &gt; Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_222.png" /></p>
 <p>In addition to the standard fields and custom properties, you will see an additional text property called "<strong>GitLab ID</strong>" that is used to store the mapped external identifier for the equivalent Milestone in GitLab. You need to locate the ID of the equivalent version in GitLab, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>

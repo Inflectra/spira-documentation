@@ -7845,10 +7845,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spirateam-build-plug-in-for-azure-devops" class="md-nav__link">
+  <a href="#installing-the-spira-build-plug-in-for-azure-devops" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraTeam Build Plug-in for Azure DevOps
+        Installing the Spira Build Plug-in for Azure DevOps
       
     </span>
   </a>
@@ -7878,10 +7878,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spirateam" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraTeam
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -8979,6 +8979,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9045,10 +9073,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spirateam-build-plug-in-for-azure-devops" class="md-nav__link">
+  <a href="#installing-the-spira-build-plug-in-for-azure-devops" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraTeam Build Plug-in for Azure DevOps
+        Installing the Spira Build Plug-in for Azure DevOps
       
     </span>
   </a>
@@ -9078,10 +9106,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spirateam" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraTeam
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -9117,129 +9145,71 @@
 
 
 <h1 id="microsoft-azure-devops-pipelines">Microsoft Azure DevOps Pipelines<a class="headerlink" href="#microsoft-azure-devops-pipelines" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraPlan) in conjunction with Microsoft's
-Azure DevOps continuous integration platform called <strong>Azure DevOps
-Pipelines</strong>. It assumes that you already have a working installation of
-SpiraPlan v5.0 or later and have already setup Microsoft Azure DevOps
-Pipelines. If you have an earlier version of SpiraTeam, you will need to
-upgrade to at least v5.0.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use SpiraTest, SpiraTeam, SpiraPlan (hereafter referred to as Spira) in conjunction with Microsoft's Azure DevOps continuous integration platform called <strong>Azure DevOps Pipelines</strong>. It assumes that you already have a working installation of Spira v5.0 or later and have already setup Microsoft Azure DevOps Pipelines. If you have an earlier version of Spira, you will need to upgrade to at least v5.0.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Microsoft Azure DevOps provides tools for managing the entire
-application lifecycle, including source code management, reporting,
-automated builds, testing and release capabilities, for example. It
-supports version control using either its native TFS source code
-management system or Git. SpiraTeam has version control plugins for both
-TFS native and TFS with Git source code management options.</p>
-<p>When you use the Spira Build Server Extension for Azure DevOps, it will allow you to associate different Azure DevOps projects with a corresponding project and release in SpiraPlan. Then, each time a DevOps pipeline creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.</p>
-<h2 id="installing-the-spirateam-build-plug-in-for-azure-devops">Installing the SpiraTeam Build Plug-in for Azure DevOps<a class="headerlink" href="#installing-the-spirateam-build-plug-in-for-azure-devops" title="Permanent link">&para;</a></h2>
-<p>Go to the Inflectra website and open up the page that lists the various
-downloads available for SpiraTeam
-(<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this
-page will be the Azure DevOps Pipeline Plug-In. When you click on the
-link on this page, it will take you to the Azure DevOps Marketplace,
-where you can install the Spira extension into your DevOps instance:</p>
+<p>Microsoft Azure DevOps provides tools for managing the entire application lifecycle, including source code management, reporting, automated builds, testing and release capabilities, for example. It supports version control using either its native TFS source code management system or Git. Spira has version control plugins for both TFS native and TFS with Git source code management options.</p>
+<p>When you use the Spira Build Server Extension for Azure DevOps, it will allow you to associate different Azure DevOps projects with a corresponding project and release in Spira. Then, each time a DevOps pipeline creates a new build, a new build artifact will be created in Spira. Each build in Spira will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.</p>
+<h2 id="installing-the-spira-build-plug-in-for-azure-devops">Installing the Spira Build Plug-in for Azure DevOps<a class="headerlink" href="#installing-the-spira-build-plug-in-for-azure-devops" title="Permanent link">&para;</a></h2>
+<p>Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this page will be the Azure DevOps Pipeline Plug-In. When you click on the link on this page, it will take you to the Azure DevOps Marketplace, where you can install the Spira extension into your DevOps instance:</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_43.png" /></p>
-<p>After that, the plugin will be available in your instance of Azure
-DevOps.</p>
+<p>After that, the plugin will be available in your instance of Azure DevOps.</p>
 <h2 id="authenticating-with-spira">Authenticating with Spira<a class="headerlink" href="#authenticating-with-spira" title="Permanent link">&para;</a></h2>
-<p>In DevOps, open the project you would like to have builds sync with
-Spira. Go to Project Settings &gt; Pipelines &gt; Service Connections</p>
-<p>Under Service connections, click the "New service connection" button
-and click "SpiraPlan Configuration." Under connection name, put
-something helpful like SpiraPlan Fred Bloggs</p>
-<p>For SpiraPlan URL put the 'root' directory of your Spira instance, not
-including the end slash. For username, put the username you use to
-sign-in to Spira. For RSS Token, go to your user profile page in Spira,
-enable RSS Feeds and copy the token into DevOps. Now verify the
-connection by clicking "Verify connection," if you entered everything
-correctly, you're good to go!</p>
+<p>In DevOps, open the project you would like to have builds sync with Spira. Go to Project Settings &gt; Pipelines &gt; Service Connections</p>
+<p>Under Service connections, click the "New service connection" button and click "Spira Configuration." Under connection name, put something helpful like Spira Fred Bloggs</p>
+<p>For Spira URL put the 'root' directory of your Spira instance, not including the end slash. For username, put the username you use to sign-in to Spira. For RSS Token, go to your user profile page in Spira, enable RSS Feeds and copy the token into DevOps. Now verify the connection by clicking "Verify connection," if you entered everything correctly, you're good to go!</p>
 <h2 id="adding-the-spira-build-task">Adding the Spira Build Task<a class="headerlink" href="#adding-the-spira-build-task" title="Permanent link">&para;</a></h2>
-<p>Now in the pipeline you would like to add Spira support to, open the
-pipeline's YAML file and in the assistant to the right, search
-"Spira" and select "Export data to Spira" Select the service
-connection name you put in earlier, enter the ID of the project in Spira
-you would like your results sent to, the ID of the release you would
-like the builds to be associated with, and the base url of your DevOps
-instance (like <a href="https://dev.azure.com/fabrikam">https://dev.azure.com/fabrikam</a> or
+<p>Now in the pipeline you would like to add Spira support to, open the pipeline's YAML file and in the assistant to the right, search "Spira" and select "Export data to Spira" Select the service connection name you put in earlier, enter the ID of the project in Spira you would like your results sent to, the ID of the release you would like the builds to be associated with, and the base url of your DevOps instance (like <a href="https://dev.azure.com/fabrikam">https://dev.azure.com/fabrikam</a> or
 <a href="https://fabrikam.visualstudio.com/">https://fabrikam.visualstudio.com</a>)</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_44.png" /></p>
-<p>The other fields are used internally by the plugin and should be left
-as-is - DO NOT CHANGE THEM. Click "Add" and add the condition:
-succeededOrFailed() above inputs in the YAML snippet. This makes sure
-that the Spira task can access the current build status.</p>
-<p>Now move the spira-build-task YAML Snippet to the end of the file so
-that it's executed last. This will make sure that the final result of
-the build gets recorded in Spira.</p>
+<p>The other fields are used internally by the plugin and should be left as-is - DO NOT CHANGE THEM. Click "Add" and add the condition:
+succeededOrFailed() above inputs in the YAML snippet. This makes sure that the Spira task can access the current build status.</p>
+<p>Now move the spira-build-task YAML Snippet to the end of the file so that it's executed last. This will make sure that the final result of the build gets recorded in Spira.</p>
 <p>Here is an example YAML file:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">trigger</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
-
-<span class="nt">pool</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">vmImage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;ubuntu-latest&#39;</span>
-
-<span class="nt">steps</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NodeTool@0</span>
-<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">versionSpec</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.x&#39;</span>
-<span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Install</span><span class="nv"> </span><span class="s">Node.js&#39;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="no">npm install</span>
-<span class="w">    </span><span class="no">npm test</span>
-<span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;npm</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">test&#39;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublishTestResults@2</span>
-<span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span>
-<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">testRunner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JUnit</span>
-<span class="w">    </span><span class="nt">testResultsFiles</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;**/junitresults-*.xml&#39;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spira-build-task@0</span>
-<span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">succeededOrFailed()</span>
-<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">connectedService</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;SpiraPlan</span><span class="nv"> </span><span class="s">Fred</span><span class="nv"> </span><span class="s">Bloggs&#39;</span>
-<span class="w">    </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2&#39;</span>
-<span class="w">    </span><span class="nt">releaseId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;20&#39;</span>
-<span class="w">    </span><span class="nt">baseUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://dev.azure.com/inflectra&#39;</span>
-<span class="w">    </span><span class="nt">buildNumber</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;$(Build.BuildNumber)&#39;</span>
-<span class="w">    </span><span class="nt">buildStatus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;$(Agent.JobStatus)&#39;</span>
-<span class="w">    </span><span class="nt">buildId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;$(Build.BuildId)&#39;</span>
-<span class="w">    </span><span class="nt">sourceVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;$(Build.SourceVersion)&#39;</span>
-<span class="w">    </span><span class="nt">projectName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;$(System.TeamProject)&#39;</span>
-</code></pre></div>
-<p>If everything had been configured correctly a new build in DevOps will
-create a new build in Spira!</p>
-<h2 id="viewing-the-build-results-in-spirateam">Viewing the Build Results in SpiraTeam<a class="headerlink" href="#viewing-the-build-results-in-spirateam" title="Permanent link">&para;</a></h2>
-<p>Now that you have associated your Azure DevOps pipeline with a specific
-SpiraTeam project and release/ iteration, you can now use Azure DevOps
-to manage your software builds and have the results of the build be
-reported back into SpiraPlan. For example, when a DevOps Pipeline runs,
-it will report in Azure DevOps something like the following:</p>
+<p>```yaml trigger:
+- master</p>
+<p>pool:
+  vmImage: 'ubuntu-latest'</p>
+<p>steps:
+- task: NodeTool@0   inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+- script: |
+    npm install     npm test   displayName: 'npm install and test'
+- task: PublishTestResults@2   condition: succeededOrFailed()   inputs:
+    testRunner: JUnit     testResultsFiles: '**/junitresults-*.xml'
+- task: spira-build-task@0   condition: succeededOrFailed()   inputs:
+    connectedService: 'Spira Fred Bloggs'
+    project: '2'
+    releaseId: '20'
+    baseUrl: '<a href="https://dev.azure.com/inflectra">https://dev.azure.com/inflectra</a>'
+    buildNumber: '<span class="arithmatex"><span class="MathJax_Preview">(Build.BuildNumber)'
+    buildStatus: '</span><script type="math/tex">(Build.BuildNumber)'
+    buildStatus: '</script></span>(Agent.JobStatus)'
+    buildId: '<span class="arithmatex"><span class="MathJax_Preview">(Build.BuildId)'
+    sourceVersion: '</span><script type="math/tex">(Build.BuildId)'
+    sourceVersion: '</script></span>(Build.SourceVersion)'
+    projectName: '$(System.TeamProject)'
+```</p>
+<p>If everything had been configured correctly a new build in DevOps will create a new build in Spira!</p>
+<h2 id="viewing-the-build-results-in-spira">Viewing the Build Results in Spira<a class="headerlink" href="#viewing-the-build-results-in-spira" title="Permanent link">&para;</a></h2>
+<p>Now that you have associated your Azure DevOps pipeline with a specific Spira project and release/ iteration, you can now use Azure DevOps to manage your software builds and have the results of the build be reported back into Spira. For example, when a DevOps Pipeline runs, it will report in Azure DevOps something like the following:</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_45.png" /></p>
-<p>The corresponding build entry will also be created in SpiraPlan under
-the specified project and release/iteration:</p>
+<p>The corresponding build entry will also be created in Spira under the specified project and release/iteration:</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_46.png" /></p>
-<p>If you have configured your Project Home to include the list of recent
-builds, the build information will also be displayed on the Project Home
-dashboard:</p>
+<p>If you have configured your Project Home to include the list of recent builds, the build information will also be displayed on the Project Home dashboard:</p>
 <p><img alt="Figure05" src="../img/Microsoft_Azure_DevOps_Pipelines_47.jpeg" /></p>
-<p>Clicking on either of the hyperlinks will allow you to navigate to the
-Build details page inside SpiraTeam:</p>
+<p>Clicking on either of the hyperlinks will allow you to navigate to the Build details page inside Spira:</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_48.png" /></p>
-<p>This page will display the status (success / failure) and details of the
-build.</p>
-<p>Congratulations! You are now able to use SpiraPlan and Azure DevOps to
-be able to manage your builds and have the build status integrated into
-your SpiraPlan project dashboard.</p>
+<p>This page will display the status (success / failure) and details of the build.</p>
+<p>Congratulations! You are now able to use Spira and Azure DevOps to be able to manage your builds and have the build status integrated into your Spira project dashboard.</p>
 <h2 id="scheduling-test-sets-upon-successful-builds">Scheduling Test Sets Upon Successful Builds<a class="headerlink" href="#scheduling-test-sets-upon-successful-builds" title="Permanent link">&para;</a></h2>
-<p>One additional feature of the integration with SpiraPlan is the ability
-to have SpiraPlan automatically schedule the execution of a test set
-whenever a build passes.</p>
-<p>To do that, make sure the Test Set is associated with the SpiraPlan
-release or iteration that is being built and then set the <strong>Schedule on
-Build</strong> field to "Yes" and optionally enter in the delay (after the
-build succeeds) that you want the test set to be scheduled for:</p>
+<p>One additional feature of the integration is the ability to have Spira automatically schedule the execution of a test set whenever a build passes.</p>
+<p>To do that, make sure the Test Set is associated with the Spira release or iteration that is being built and then set the <strong>Schedule on Build</strong> field to "Yes" and optionally enter in the delay (after the build succeeds) that you want the test set to be scheduled for:</p>
 <p><img alt="" src="../img/Microsoft_Azure_DevOps_Pipelines_19.png" /></p>
-<p>This means that you don't need to separately manage your build schedule
-in Azure DevOps and your test automation schedule in SpiraPlan.</p>
+<p>This means that you don't need to separately manage your build schedule in Azure DevOps and your test automation schedule in Spira.</p>
 
 
 

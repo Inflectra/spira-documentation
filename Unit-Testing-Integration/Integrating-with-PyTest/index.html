@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9051,29 +9079,16 @@
 
 
 <h1 id="integrating-with-pytest">Integrating with PyTest<a class="headerlink" href="#integrating-with-pytest" title="Permanent link">&para;</a></h1>
-<p>This section describes how to use SpiraTest/SpiraTeam/SpiraPlan
-(hereafter referred to as SpiraTest) in conjunction with python's pytest
-unit testing framework. The SpiraTest-pytest plugin enables the
-automated sending of unit test results from pytest to SpiraTest with a
-specified Test Case, and (optionally), a release and/or test set as
-well.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section describes how to use Spira in conjunction with python's pytest unit testing framework. The Spira pytest plugin enables the automated sending of unit test results from pytest to Spira with a specified Test Case, and (optionally), a release and/or test set as well.</p>
 <h2 id="installing-the-pytest-plugin">Installing the pytest plugin<a class="headerlink" href="#installing-the-pytest-plugin" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest plugin for pytest. It
-assumes that you already have a working installation of SpiraTest v6.0
-or later. If you have an earlier version of SpiraTest you will need to
-upgrade to at least v6.0 before trying to use this plugin. You will also
-need to have Python (with pip) and pytest version 3.0 or later.</p>
-<p>To obtain the latest version of the SpiraTest plugin, simply run the
-following command:</p>
-<p>pip install pytest-spiratest</p>
-<p>This command will install the latest version of the plugin straight from
-the <a href="https://pypi.org/project/pytest-spiratest/">Python Package Index</a>
-(PyPI). Once the SpiraTest plugin is successfully installed, all you
-need to do is configure the extension, then you can begin testing!</p>
+<p>This section outlines how to install the Spira plugin for pytest. It assumes that you already have a working installation of Spira v6.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v6.0 before trying to use this plugin. You will also need to have Python (with pip) and pytest version 3.0 or later.</p>
+<p>To obtain the latest version of the Spira plugin, simply run the following command: <code>pip install pytest-spiratest</code></p>
+<p>This command will install the latest version of the plugin straight from the <a href="https://pypi.org/project/pytest-spiratest/">Python Package Index</a> (PyPI). Once the Spira plugin is successfully installed, all you need to do is configure the extension, then you can begin testing!</p>
 <h2 id="configuring-the-pytest-plugin">Configuring the pytest plugin<a class="headerlink" href="#configuring-the-pytest-plugin" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to configure the SpiraTest plugin for pytest.
-It assumes that you are familiar with pytest, and already have some
-working tests configured.</p>
+<p>This section outlines how to configure the Spira plugin for pytest. It assumes that you are familiar with pytest, and already have some working tests configured.</p>
 <p>Here is a sample test file:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pytest</span>
 
@@ -9094,12 +9109,11 @@ working tests configured.</p>
   <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
 </code></pre></div>
 <p>Note how test_add_2 is used in the configuration file discussed below.</p>
-<p>In your test root folder (the folder you run the pytest command from),
-create a file named "spira.cfg" with the following:</p>
+<p>In your test root folder (the folder you run the pytest command from), create a file named "spira.cfg" with the following:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[credentials]</span>
 <span class="c1"># Following are required</span>
 
-<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost/SpiraTest</span>
+<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost/Spira</span>
 <span class="na">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fredbloggs</span>
 <span class="na">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
 <span class="na">project_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
@@ -9114,58 +9128,34 @@ create a file named "spira.cfg" with the following:</p>
 <span class="c1"># Test case for a specific function</span>
 <span class="na">test_add_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
 </code></pre></div>
-<p>For the plugin to work, you must have both settings groups (credentials
-and test_cases) with the following in the credentials group:</p>
+<p>For the plugin to work, you must have both settings groups (credentials and test_cases) with the following in the credentials group:</p>
 <ul>
-<li>
-<p><strong>url</strong> -- The base url to your SpiraTest installation, without a '/' at
-the end.</p>
-</li>
-<li>
-<p><strong>username</strong> -- The username you use to sign into SpiraTest.</p>
-</li>
-<li>
-<p><strong>token</strong> -- Your RSS Token. Found in your profile page as the "RSS
-Token" field, you must have RSS Feeds enabled for this to work.</p>
-</li>
-<li>
-<p><strong>project_id</strong> -- The ID of the project you would like the test runs to
-be sent to</p>
-</li>
-<li>
-<p><strong>release_id</strong> -- OPTIONAL -- Use if you would like to associate the
-test run with a release.</p>
-</li>
-<li>
-<p><strong>test_set_id</strong> -- OPTIONAL -- Use if you would like to associate the
-test run with a test set.</p>
-</li>
+<li><strong>url</strong>: The base url to your Spira installation, without a '/' at the end.</li>
+<li><strong>username</strong>: The username you use to sign into Spira.</li>
+<li><strong>token</strong>: Your RSS Token. Found in your profile page as the "RSS Token" field, you must have RSS Feeds enabled for this to work.</li>
+<li><strong>project_id</strong>: The ID of the project you would like the test runs to be sent to</li>
+<li><strong>release_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a release.</li>
+<li><strong>test_set_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a test set.</li>
 </ul>
 <p>Under the test_cases group, put the following:</p>
 <ul>
-<li>
-<p><strong>default</strong> -- The default test case ID for functions without an
-assigned test case</p>
-</li>
-<li>
-<p><strong>\<function name></strong> - Used to override the default setting for a
-function's test case ID in SpiraTest. Only include the function name,
-without the parentheses. </p>
-</li>
+<li><strong>default</strong>: The default test case ID for functions without an assigned test case</li>
+<li><strong>\<function name></strong> - Used to override the default setting for a function's test case ID in Spira. Only include the function name, without the parentheses. </li>
 </ul>
 <p><strong>NOTE</strong>: If your functions are in a class then add the class before the function name - for example <code>MyClass.myFunction</code>. The plugin is case insensitive.</p>
-<p>Once you have filled out all of the configurations, you are all set to
-go!</p>
-<p>Running the pytest (or py.test) command will run your unit tests, send
-the data to SpiraTest, and show the results to you. Here is an example
-of the test_add_3 function inside SpiraTest:</p>
+<p>Once you have filled out all of the configurations, you are all set to go!</p>
+<p>Running the pytest (or py.test) command will run your unit tests, send the data to Spira, and show the results to you. Here is an example of the test_add_3 function inside Spira:</p>
 <p><img alt="" src="../img/Integrating_with_PyTest_16.png" /></p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

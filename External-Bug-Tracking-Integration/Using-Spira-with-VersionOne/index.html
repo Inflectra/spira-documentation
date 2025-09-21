@@ -6382,10 +6382,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-v1" class="md-nav__link">
+  <a href="#using-spira-with-v1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with V1
+        Using Spira with V1
       
     </span>
   </a>
@@ -9035,6 +9035,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9201,10 +9229,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-v1" class="md-nav__link">
+  <a href="#using-spira-with-v1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with V1
+        Using Spira with V1
       
     </span>
   </a>
@@ -9229,343 +9257,133 @@
 
 
 <h1 id="using-spira-with-versionone">Using Spira with VersionOne<a class="headerlink" href="#using-spira-with-versionone" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Version One
-(V1) project management system from Collabnet (hereafter called V1).</p>
-<p>The built-in integration service allows the quality assurance team to
-manage their requirements and test cases in SpiraTeam, execute test runs
-in SpiraTeam, and then have the new incidents generated during the run
-be automatically loaded into V1 as new defects. In addition, user
-stories in V1 will be automatically added into SpiraTeam as new
-requirements that you can write test plans for.</p>
-<p>Once the incidents are loaded into V1 as defects, the development team
-can then manage the lifecycle of these defects in V1, and have the
-status changes in V1 be reflected back in SpiraTeam.</p>
-<div class="admonition danger">
-<p class="admonition-title">Set up data synchronization</p>
-<p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Version One (V1) project management system from Collabnet (hereafter called V1).</p>
+<p>The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into V1 as new defects. In addition, user stories in V1 will be automatically added into Spira as new requirements that you can write test plans for.</p>
+<p>Once the incidents are loaded into V1 as defects, the development team can then manage the lifecycle of these defects in V1, and have the status changes in V1 be reflected back in Spira.</p>
+<p>!!! danger "Set up data synchronization"     <strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to configure the integration service to
-connect to V1. It assumes that you already have a working installation
-of SpiraTeam v5.0 or later and an existing provisioned instance of V1.
-If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v5.0 before trying to integrate with V1.</p>
-<p>The steps that need to be performed to configure integration with V1 are
-as follows:</p>
-<p>Setup the plug-in in SpiraTeam to point to the correct instance of V1</p>
-<p>Configure the data field mappings between SpiraTeam and V1</p>
+<p>This section outlines how to configure the integration service to connect to V1. It assumes that you already have a working installation of Spira v5.0 or later and an existing provisioned instance of V1. If you have an earlier version of Spira, you will need to upgrade to at least v5.0 before trying to integrate with V1.</p>
+<p>The steps that need to be performed to configure integration with V1 are as follows:</p>
+<p>Setup the plug-in in Spira to point to the correct instance of V1</p>
+<p>Configure the data field mappings between Spira and V1</p>
 <p>Start synchronization and verify data transfer</p>
 <h3 id="configuring-the-plug-in_1">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in_1" title="Permanent link">&para;</a></h3>
-<p>The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the V1 instance. To start the configuration,
-please open up SpiraTeam in a web browser, log in using a valid account
-that has System-Administration level privileges and click on the System
-&gt; Data Synchronization administration option from the left-hand
-navigation:</p>
+<p>The next step is to configure the plug-in within Spira so that the system knows how to access the V1 instance. To start the configuration, please open up Spira in a web browser, log in using a valid account that has System-Administration level privileges and click on the System &gt; Data Synchronization administration option from the left-hand navigation:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_182.png" /></p>
-<p>This screen lists all the plug-ins already configured in the system.
-Depending on whether you chose the option to include sample data in your
-installation or not, you will see either an empty screen or a list of
-sample data-synchronization plug-ins.</p>
-<p>If you already see an entry for <strong>VersionOneDataSync</strong> you should click
-on its "Edit" link. If you don't see such an entry in the list, please
-click on the [Add] button instead. In either case you will be taken to
-the following screen where you can enter or modify the V1
-Data-Synchronization plug-in:</p>
+<p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>VersionOneDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the V1 Data-Synchronization plug-in:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_183.png" /></p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_184.png" /></p>
-<p>You need to fill out the following fields for the V1 Plug-in to operate
-correctly:</p>
+<p>You need to fill out the following fields for the V1 Plug-in to operate correctly:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- this needs to be set to <strong>VersionOneDataSync</strong>. This
-needs to match the name of the plug-in DLL assembly that was copied
-into the C:\Program Files (x86)\SpiraTeam\Bin folder (minus the
-.dll file extension). If you renamed the OnTimeDataSync.dll file for
-any reason, then you need to change the name here to match.</p>
-</li>
-<li>
-<p><strong>Caption</strong> -- this is the display name of the V1 plugin and it can
-be meaningful name such as "Version One", "V1", or "V1 Instance 1".</p>
-</li>
-<li>
-<p><strong>Description</strong> -- this should be set to a description of the
-plug-in. This is an optional field that is used for documentation
-purposes and is not actually used by the system.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong> -- this should the full URL to V1. This is
-typically something like:
-<a href="https://www1.v1host.com/CompanyName">https://www1.v1host.com/CompanyName</a>.</p>
-</li>
-<li>
-<p><strong>Login</strong> -- this should be set to the login that you use to access
-V1 through its web interface. If you are using a V1 Access Token instead of a login and password, please use <code>"accesstoken"</code> as the login instead.</p>
-</li>
-<li>
-<p><strong>Password</strong> -- this should be set to the password that you use to
-access V1 through its web interface or the API access token. If the latter, please make sure to use the login name <code>"accesstoken"</code>.</p>
-</li>
-<li>
-<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
-find that defects being changed in V1 are not being updated in
-SpiraTeam, try increasing the value as this will tell the
-data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps.</p>
-</li>
-<li>
-<p><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps
-users in SpiraTeam to those in V1:</p>
-</li>
-<li>
-<p>**Auto-Map = True
-**With this setting, all users in SpiraTeam need to have the
-same username as those in V1. If this is the case then you do
-not need to perform the user-mapping task outlined in section
-12.2.2. This is a big time-saver if you can guarantee that all
-usernames are the same in both systems.</p>
-</li>
-<li>
-<p>**Auto-Map = False
-**With this setting, users in SpiraTeam and V1are free to have
-different usernames because you specify the corresponding
-V1login for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>.</p>
-</li>
-<li>
-<p><strong>Custom 01</strong> -- this should be set to "True" if you want the plugin
-to log warnings about missing user mappings</p>
-</li>
-<li>
-<p><strong>Custom 02-05</strong> -- these are not currently used by the V1 data-sync
-plug-in and can be left blank.</p>
-</li>
+<li><strong>Name</strong>: this needs to be set to <strong>VersionOneDataSync</strong>. This needs to match the name of the plug-in DLL assembly that was copied into the C:\Program Files (x86)\Spira\Bin folder (minus the .dll file extension). If you renamed the OnTimeDataSync.dll file for any reason, then you need to change the name here to match.</li>
+<li><strong>Caption</strong>: this is the display name of the V1 plugin and it can be meaningful name such as "Version One", "V1", or "V1 Instance 1".</li>
+<li><strong>Description</strong>: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
+<li><strong>Connection Info</strong>: this should the full URL to V1. This is typically something like: <a href="https://www1.v1host.com/CompanyName">https://www1.v1host.com/CompanyName</a>.</li>
+<li><strong>Login</strong>: this should be set to the login that you use to access V1 through its web interface. If you are using a V1 Access Token instead of a login and password, please use <code>"accesstoken"</code> as the login instead.</li>
+<li><strong>Password</strong>: this should be set to the password that you use to access V1 through its web interface or the API access token. If the latter, please make sure to use the login name <code>"accesstoken"</code>.</li>
+<li><strong>Time Offset</strong>: normally this should be set to zero, but if you find that defects being changed in V1 are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps.</li>
+<li><strong>Auto-Map Users</strong>: This changes the way that the plugin maps users in Spira to those in V1:</li>
+<li>**Auto-Map = True **With this setting, all users in Spira need to have the same username as those in V1. If this is the case then you do not need to perform the user-mapping task outlined in section 12.2.2. This is a big time-saver if you can guarantee that all usernames are the same in both systems.</li>
+<li>**Auto-Map = False **With this setting, users in Spira and V1are free to have different usernames because you specify the corresponding V1login for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>.</li>
+<li><strong>Custom 01</strong>: this should be set to "True" if you want the plugin to log warnings about missing user mappings</li>
+<li><strong>Custom 02-05</strong>: these are not currently used by the V1 data-sync plug-in and can be left blank.</li>
 </ul>
 <h2 id="configuring-the-data-mapping">Configuring the Data Mapping<a class="headerlink" href="#configuring-the-data-mapping" title="Permanent link">&para;</a></h2>
-<p>Next, you need to configure the data mapping between SpiraTeam and V1.
-This allows the various projects, users, releases, incident statuses,
-priorities, severities and custom property values used in the two
-applications to be related to each other. This is important, as without
-a correct mapping, there is no way for the integration service to know
-that an "Open" incident in SpiraTeam is the same as an "Open" defect in
-V1 (for example).</p>
-<p>The following mapping information needs to be setup in SpiraTeam:</p>
-<p>The mapping of the project identifiers for the projects that need to be
-synchronized</p>
-<p>The mapping of users in the system</p>
-<p>The mapping of releases in the system</p>
-<p>The mapping of the various incident standard fields in the system</p>
-<p>The mapping of the various requirement standard fields in the system</p>
+<p>Next, you need to configure the data mapping between Spira and V1. This allows the various projects, users, releases, incident statuses, priorities, severities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Open" incident in Spira is the same as an "Open" defect in V1 (for example).</p>
+<p>The following mapping information needs to be setup in Spira:</p>
+<ul>
+<li>The mapping of the project identifiers for the projects that need to be synchronized</li>
+<li>The mapping of users in the system</li>
+<li>The mapping of releases in the system</li>
+<li>The mapping of the various incident standard fields in the system</li>
+<li>The mapping of the various requirement standard fields in the system</li>
+</ul>
 <p>Each of these is explained in turn below:</p>
 <h3 id="configuring-the-project-mapping">Configuring the Project Mapping<a class="headerlink" href="#configuring-the-project-mapping" title="Permanent link">&para;</a></h3>
-<p>From the data synchronization administration page, you need to click on
-the "View Project Mappings" hyperlink next to the V1 plug-in name. This
-will take you to the data-mapping home page for the currently selected
-project:</p>
+<p>From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the V1 plug-in name. This will take you to the data-mapping home page for the currently selected project:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_185.png" /></p>
-<p>If the project name does not match the name of the project you want to
-configure the data-mapping for, click on the "(Change Project)"
-hyperlink to change the current project.</p>
-<p>To enable this project for data-synchronization with V1, you need to
-enter:</p>
-<p><strong>External Key</strong> -- This should be set to the <strong>name</strong> of the project in
-V1:</p>
+<p>If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with V1, you need to enter:</p>
+<p><strong>External Key</strong>: This should be set to the <strong>name</strong> of the project in V1:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_186.png" /></p>
-<p>If you have sub-projects, you can map to one of those using the syntax:
-<strong>Project/SubProject</strong></p>
-<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
-want to synchronize data for this project. Once the project has been
-completed, setting the value to "No" will stop data synchronization,
-reducing network utilization.</p>
-<p>Click [Update] to confirm these settings. Once you have enabled the
-project for data-synchronization, you can now enter the other data
-mapping values outlined below.</p>
-<p><strong><em>Note: Once you have successfully configured the project, when
-creating a new project, you should choose the option to "Create Project
-from Existing Project" rather than "Use Default Template" so that all
-the project mappings get copied across to the new project.</em></strong></p>
+<p>If you have sub-projects, you can map to one of those using the syntax: <strong>Project/SubProject</strong></p>
+<p><strong>Active Flag</strong>: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.</p>
+<p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
-<p>(This section can be skipped if you enabled the 'AutoMap Users' option
-earlier).</p>
-<p>To configure the mapping of users in the two systems, you need to go to
-Administration &gt; Users &gt; View Edit Users, which will bring up the list
-of users in the system. Then click on the "Edit" button for a particular
-user that will be editing defects in V1:</p>
+<p>(This section can be skipped if you enabled the 'AutoMap Users' option earlier).</p>
+<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing defects in V1:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_187.png" /></p>
-<p>You will notice that in the <strong>Data Mapping</strong> tab for the user is a list
-of all the configured data-synchronization plug-ins. In the text box
-next to the V1 Data-Sync plug-in you need to enter the <strong>Login Name</strong>
-for this username in V1. This will allow the data-synchronization
-plug-in to know which user in SpiraTeam match which equivalent user in
-V1. Click [Update] once you've entered the appropriate login name. You
-should now repeat for the other users who will be active in both
-systems.</p>
+<p>You will notice that in the <strong>Data Mapping</strong> tab for the user is a list of all the configured data-synchronization plug-ins. In the text box next to the V1 Data-Sync plug-in you need to enter the <strong>Login Name</strong> for this username in V1. This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in V1. Click [Update] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
 <h3 id="configuring-the-releaseiteration-mapping">Configuring the Release/Iteration Mapping<a class="headerlink" href="#configuring-the-releaseiteration-mapping" title="Permanent link">&para;</a></h3>
-<p>When the data-synchronization service runs, when it comes across a new
-Release or Sprint/Timebox in V1 that it has not seen before, it will
-create a new Release or Iteration in SpiraTeam. Therefore, when using
-both systems together, it is recommended that you only enter new
-Releases in V1 and let the data-synchronization service add them to
-SpiraTeam.</p>
-<p>To see this mapping, inside SpiraTeam, navigate to Planning &gt; Releases
-and click on the Release/Iteration in question. Make sure you have the
-'Overview' tab visible and expand the "Details" section of the
-release/iteration:</p>
+<p>When the data-synchronization service runs, when it comes across a new Release or Sprint/Timebox in V1 that it has not seen before, it will create a new Release or Iteration in Spira. Therefore, when using both systems together, it is recommended that you only enter new Releases in V1 and let the data-synchronization service add them to Spira.</p>
+<p>To see this mapping, inside Spira, navigate to Planning &gt; Releases and click on the Release/Iteration in question. Make sure you have the
+'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_188.png" /></p>
-<p>In addition to the standard fields and custom properties configured for
-Releases, you will see an additional text property called "<strong>V1DataSync
-ID</strong>" that is used to store the mapped external identifier for the
-equivalent Version in V1.</p>
+<p>In addition to the standard fields and custom properties configured for Releases, you will see an additional text property called "<strong>V1DataSync ID</strong>" that is used to store the mapped external identifier for the equivalent Version in V1.</p>
 <h3 id="configuring-the-incident-field-mapping">Configuring the Incident Field Mapping<a class="headerlink" href="#configuring-the-incident-field-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the projects, user and releases have been mapped correctly, we
-need to configure the standard incident fields. To do this, go to
-Administration &gt; System &gt; Data Synchronization and click on the "View
-Project Mappings" for the V1DataSync plug-in entry:</p>
+<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration &gt; System &gt; Data Synchronization and click on the "View Project Mappings" for the V1DataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_189.png" /></p>
-<p>From this screen, you need to click on Status, Priority, Type in turn to
-configure their values (V1 doesn't support different defect severities):</p>
+<p>From this screen, you need to click on Status, Priority, Type in turn to configure their values (V1 doesn't support different defect severities):</p>
 <p>a) Incident Status</p>
-<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
-up the Incident status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_190.png" /></p>
-<p>The table lists each of the incident statuses available in SpiraTeam and
-provides you with the ability to enter the matching V1 defect status
-names for each one. You can map multiple SpiraTeam fields to the same V1
-fields (e.g. New and Open in SpiraTeam are both equivalent to Future in
-V1), in which case only one of the two values can be listed as Primary =
-Yes as that's the value that's used on the reverse synchronization (from
-V1 &gt; SpiraTeam).</p>
-<p>We recommend that you always point the New and Open statuses inside
-SpiraTeam to point to the "Future" status inside V1 and make Open in
-SpiraTeam the Primary status of the two. This is recommended so that as
-new incidents in SpiraTeam get synched over to V1, they will get
-switched to the Future status in V1 which will then be synched back to
-"Open" in SpiraTeam. That way you'll be able to see at a glance which
-incidents have been synched with V1 and those that haven't.</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the status inside V1. If you change the name of a status in V1, you'll
-need to update the value in the data-mapping configuration as well.</em></p>
+<p>The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching V1 defect status names for each one. You can map multiple Spira fields to the same V1 fields (e.g. New and Open in Spira are both equivalent to Future in V1), in which case only one of the two values can be listed as Primary =
+Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p>We recommend that you always point the New and Open statuses inside Spira to point to the "Future" status inside V1 and make Open in Spira the Primary status of the two. This is recommended so that as new incidents in Spira get synched over to V1, they will get switched to the Future status in V1 which will then be synched back to "Open" in Spira. That way you'll be able to see at a glance which incidents have been synched with V1 and those that haven't.</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the status inside V1. If you change the name of a status in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>b) Incident Priority</p>
-<p>Click on the "Priority" hyperlink under Incident Standard Fields to
-bring up the Incident Priority mapping configuration screen:</p>
+<p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_191.png" /></p>
-<p>The table lists each of the incident priorities available in SpiraTeam
-and provides you with the ability to enter the matching V1 priority name
-for each one. You can map multiple SpiraTeam fields to the same V1
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from V1 &gt; SpiraTeam).</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the priority inside V1. If you change the name of a priority in V1,
-you'll need to update the value in the data-mapping configuration as
-well.</em></p>
+<p>The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching V1 priority name for each one. You can map multiple Spira fields to the same V1 fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the priority inside V1. If you change the name of a priority in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>c) Incident Type</p>
-<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up
-the Incident type mapping configuration screen:</p>
+<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_192.png" /></p>
-<p>The table lists each of the incident types available in SpiraTeam and
-provides you with the ability to enter the matching V1 defect type name
-for each one. You can map multiple SpiraTeam fields to the same V1
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from V1 &gt; SpiraTeam).</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the defect type inside V1. If you change the name of a defect type in
-V1, you'll need to update the value in the data-mapping configuration as
-well.</em></p>
+<p>The table lists each of the incident types available in Spira and provides you with the ability to enter the matching V1 defect type name for each one. You can map multiple Spira fields to the same V1 fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the defect type inside V1. If you change the name of a defect type in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <h3 id="configuring-the-requirement-field-mapping">Configuring the Requirement Field Mapping<a class="headerlink" href="#configuring-the-requirement-field-mapping" title="Permanent link">&para;</a></h3>
-<p>Next, we need to configure the standard requirement fields. To do this,
-go to Administration &gt; System &gt; Data Synchronization and click on the
-"View Project Mappings" for the V1DataSync plug-in entry:</p>
+<p>Next, we need to configure the standard requirement fields. To do this, go to Administration &gt; System &gt; Data Synchronization and click on the "View Project Mappings" for the V1DataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_193.png" /></p>
-<p>From this screen, you need to click on Priority, Severity and Status in
-turn to configure their values (V1 doesn't support different defect
-types):</p>
+<p>From this screen, you need to click on Priority, Severity and Status in turn to configure their values (V1 doesn't support different defect types):</p>
 <p>a) Requirement Status</p>
-<p>Click on the "Status" hyperlink under Requirement Standard Fields to
-bring up the Requirement status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_194.png" /></p>
-<p>The table lists each of the requirement statuses available in SpiraTeam
-and provides you with the ability to enter the matching V1 user story
-status names for each one. You can map multiple SpiraTeam fields to the
-same V1 fields (e.g. Requested and Planned in SpiraTeam are both
-equivalent to Future in V1), in which case only one of the two values
-can be listed as Primary = Yes as that's the value that's used on the
-reverse synchronization (from V1 &gt; SpiraTeam).</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the status inside V1. If you change the name of a status in V1, you'll
-need to update the value in the data-mapping configuration as well.</em></p>
+<p>The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching V1 user story status names for each one. You can map multiple Spira fields to the same V1 fields (e.g. Requested and Planned in Spira are both equivalent to Future in V1), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the status inside V1. If you change the name of a status in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>b) Requirement Importance</p>
-<p>Click on the "Importance" hyperlink under Requirement Standard Fields to
-bring up the Requirement Importance mapping configuration screen:</p>
+<p>Click on the "Importance" hyperlink under Requirement Standard Fields to bring up the Requirement Importance mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_195.png" /></p>
-<p>The table lists each of the requirement importances available in
-SpiraTeam and provides you with the ability to enter the matching V1
-user story priority name for each one. You can map multiple SpiraTeam
-fields to the same V1 fields, in which case only one of the two values
-can be listed as Primary = Yes as that's the value that's used on the
-reverse synchronization (from V1 &gt; SpiraTeam).</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the priority inside V1. If you change the name of a priority in V1,
-you'll need to update the value in the data-mapping configuration as
-well.</em></p>
+<p>The table lists each of the requirement importances available in Spira and provides you with the ability to enter the matching V1 user story priority name for each one. You can map multiple Spira fields to the same V1 fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the priority inside V1. If you change the name of a priority in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>c) Requirement Type</p>
-<p>Click on the "Type" hyperlink under Requirement Standard Fields to bring
-up the requirement type mapping configuration screen:</p>
+<p>Click on the "Type" hyperlink under Requirement Standard Fields to bring up the requirement type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_196.png" /></p>
-<p>The table lists each of the requirement types available in SpiraTeam and
-provides you with the ability to enter the matching V1 user story type
-name for each one. You can map multiple SpiraTeam fields to the same V1
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from V1 &gt; SpiraTeam).</p>
-<p><em>Note: The V1 external key needs to exactly match the display name of
-the user story type inside V1. If you change the name of a user story
-type in V1, you'll need to update the value in the data-mapping
-configuration as well.</em></p>
+<p>The table lists each of the requirement types available in Spira and provides you with the ability to enter the matching V1 user story type name for each one. You can map multiple Spira fields to the same V1 fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from V1 &gt; Spira).</p>
+<p><em>Note: The V1 external key needs to exactly match the display name of the user story type inside V1. If you change the name of a user story type in V1, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <h3 id="mapping-a-custom-property-to-the-v1-display-id">Mapping a Custom Property to the V1 Display ID<a class="headerlink" href="#mapping-a-custom-property-to-the-v1-display-id" title="Permanent link">&para;</a></h3>
-<p>Version One has two unique IDs for all artifacts, a display ID (e.g.
-D-23232) and a physical ID (Defect:11291). Now the built in Data Sync ID
-in SpiraTeam will contain the physical ID of the V1 artifact.</p>
-<p>However, if you also want to see the V1 display IDs in SpiraTeam, you
-can map a custom property to the special <strong>V1DisplayId</strong> external key.
-This can be done for requirements:</p>
+<p>Version One has two unique IDs for all artifacts, a display ID (e.g. D-23232) and a physical ID (Defect:11291). Now the built in Data Sync ID in Spira will contain the physical ID of the V1 artifact.</p>
+<p>However, if you also want to see the V1 display IDs in Spira, you can map a custom property to the special <strong>V1DisplayId</strong> external key. This can be done for requirements:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_197.png" /></p>
 <p>And for incidents:</p>
 <p><img alt="" src="../img/Using_Spira_with_VersionOne_198.png" /></p>
-<p>Once you have updated the various mapping sections, you are now ready to
-use the service.</p>
-<h2 id="using-spirateam-with-v1">Using SpiraTeam with V1<a class="headerlink" href="#using-spirateam-with-v1" title="Permanent link">&para;</a></h2>
-<p>Now that the integration service has been configured and the service
-started, initially any incidents created in SpiraTeam for the specified
-projects will be imported into V1 and vice versa. In addition, any
-existing user stories in V1 will get added to SpiraTeam as requirements.</p>
-<p>At this point we recommend opening the Windows Event Viewer and choosing
-the Application Log. In this log any error messages raised by the
-SpiraTeam Data Sync Service will be displayed. If you see any error
-messages at this point, we recommend immediately stopping the SpiraTeam
-service and checking the various mapping entries. If you cannot see any
-defects with the mapping information, we recommend sending a copy of the
-event log message(s) to Inflectra customer services
-(<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
-<p>To use SpiraTeam with V1 on an ongoing basis, we recommend the following
-general processes be followed:</p>
-<p>When running tests in SpiraTeam, defects found should be logged through
-the 'Add Incident' option as normal.</p>
-<p>Developers can log new defects into either SpiraTeam or V1. In either
-case they will get loaded into the other system.</p>
-<p>Once created in one of the systems and successfully replicated to the
-other system, the incident should not be modified again inside SpiraTeam</p>
-<p>User stories created in V1 will get added to SpiraTeam as requirements.
-You can now write test cases and associate them in SpiraTeam with these
-requirements.</p>
-<p>As the defect progresses through the V1 workflow, changes to the status,
-priority, severity, and resolution will be updated automatically in
-SpiraTeam. In essence, SpiraTeam acts as a read-only viewer of these
-incidents.</p>
-<p>You are now able to perform test coverage and incident reporting inside
-SpiraTeam using the requirements and test cases managed by SpiraTeam and
-the incidents managed on behalf of SpiraTeam inside V1.</p>
+<p>Once you have updated the various mapping sections, you are now ready to use the service.</p>
+<h2 id="using-spira-with-v1">Using Spira with V1<a class="headerlink" href="#using-spira-with-v1" title="Permanent link">&para;</a></h2>
+<p>Now that the integration service has been configured and the service started, initially any incidents created in Spira for the specified projects will be imported into V1 and vice versa. In addition, any existing user stories in V1 will get added to Spira as requirements.</p>
+<p>At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the Spira Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the Spira service and checking the various mapping entries. If you cannot see any defects with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
+<p>To use Spira with V1 on an ongoing basis, we recommend the following general processes be followed:</p>
+<ul>
+<li>When running tests in Spira, defects found should be logged through the 'Add Incident' option as normal.</li>
+<li>Developers can log new defects into either Spira or V1. In either case they will get loaded into the other system.</li>
+<li>Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside Spira</li>
+<li>User stories created in V1 will get added to Spira as requirements. You can now write test cases and associate them in Spira with these requirements.</li>
+<li>As the defect progresses through the V1 workflow, changes to the status, priority, severity, and resolution will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.</li>
+<li>You are now able to perform test coverage and incident reporting inside Spira using the requirements and test cases managed by Spira and the incidents managed on behalf of Spira inside V1.</li>
+</ul>
 
 
 

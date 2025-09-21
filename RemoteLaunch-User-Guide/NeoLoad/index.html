@@ -4680,15 +4680,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-neoload-scenario-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-neoload-scenario-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the NeoLoad Scenario from SpiraTeam
+        Executing the NeoLoad Scenario from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the NeoLoad Scenario from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the NeoLoad Scenario from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9008,6 +9008,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9119,15 +9147,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-neoload-scenario-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-neoload-scenario-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the NeoLoad Scenario from SpiraTeam
+        Executing the NeoLoad Scenario from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the NeoLoad Scenario from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the NeoLoad Scenario from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9175,310 +9203,124 @@
 
 
 <h1 id="neoload">NeoLoad<a class="headerlink" href="#neoload" title="Permanent link">&para;</a></h1>
-<p>Neotys NeoLoad is a performance and load testing system that lets you
-record application performance by a number of 'virtual users' and
-measure the performance against specified Service Level Agreement (SLA)
-metrics for the application. When you use NeoLoad with SpiraTest you can
-report back pass/fail/caution by comparing the actual results against
-the specified SLA metrics.</p>
-<p>This section covers installing and using the Engine to report back
-statistics of run scenarios as well as the results of the test compared
-to the required SLAs.</p>
-<p><em><strong>Note</strong>: This integration requires at least version 4.0 of
-SpiraTest/Team and has been tested against version 5.0 of NeoLoad.</em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>Neotys NeoLoad is a performance and load testing system that lets you record application performance by a number of 'virtual users' and measure the performance against specified Service Level Agreement (SLA) metrics for the application. When you use NeoLoad with Spira you can report back pass/fail/caution by comparing the actual results against the specified SLA metrics.</p>
+<p>This section covers installing and using the Engine to report back statistics of run scenarios as well as the results of the test compared to the required SLAs.</p>
+<p><em><strong>Note</strong>: This integration requires at least version 4.0 of Spira and has been tested against version 5.0 of NeoLoad.</em></p>
 <h2 id="installing-the-neoload-engine">Installing the NeoLoad Engine<a class="headerlink" href="#installing-the-neoload-engine" title="Permanent link">&para;</a></h2>
-<p>This section assumes that you already have a working installation of
-SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>.
-Once those prerequisites are in place, please follow these steps:</p>
+<p>This section assumes that you already have a working installation of Spira and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
 <ul>
-<li>
-<p>Download and extract the NeoLoadEngine.zip file from
-the Inflectra website.</p>
-</li>
-<li>
-<p>Copy the files in the ZIP file into the "extensions" sub-folder of
-the RemoteLaunch installation.</p>
-</li>
-<li>
-<p>Log in to SpiraTeam as a system administrator and go into SpiraTeam
-main Administration page and click on the "Test Automation" link
-under <strong>Integration</strong>.</p>
-</li>
-<li>
-<p>Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:
-<img alt="" src="../img/NeoLoad_88.png" /></p>
-</li>
-<li>
-<p><strong>Name</strong>: This is the short display name of the automation
-engine. It can be anything that is meaningful to your users, and
-will be displayed in the dropdown when the user selects the
-Tester.</p>
-</li>
-<li>
-<p><strong>Description</strong>: This is the long description of the automation
-engine. It can be anything that is meaningful to your users.
-(Optional)</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the engine is active and able to be used
-for any project.</p>
-</li>
-<li>
-<p><strong>Token</strong>: This needs to be the assigned unique token for the
-automation engine and is used to tell RemoteLaunch which engine
-to actually use for a given test case. For NeoLoad, it needs to
-be simply "<strong>NeoLoad</strong>".</p>
-</li>
+<li>Download and extract the NeoLoadEngine.zip file from the Inflectra website.</li>
+<li>Copy the files in the ZIP file into the "extensions" sub-folder of the RemoteLaunch installation.</li>
+<li>Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</li>
 </ul>
-<p>Once you have finished, click the "Insert &amp; Close" button and you will
-be taken back to the Test Automation list page, with NeoLoad listed as
-an available automation engine.</p>
+<p><img alt="" src="../img/NeoLoad_88.png" /></p>
+<ul>
+<li><strong>Name</strong>: This is the short display name of the automation engine. It can be anything that is meaningful to your users, and will be displayed in the dropdown when the user selects the Tester.</li>
+<li><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</li>
+<li><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</li>
+<li><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine to actually use for a given test case. For NeoLoad, it needs to be simply "<strong>NeoLoad</strong>".</li>
+</ul>
+<p>Once you have finished, click the "Insert &amp; Close" button and you will be taken back to the Test Automation list page, with NeoLoad listed as an available automation engine.</p>
 <h3 id="neoload-remotelaunch-settings">NeoLoad RemoteLaunch Settings<a class="headerlink" href="#neoload-remotelaunch-settings" title="Permanent link">&para;</a></h3>
-<p>You will need to modify the NeoLoad configuration for each of the
-specific automation hosts, by right-clicking on the RemoteLaunch icon in
-the system tray and choosing "Configuration". That will bring up the
-RemoteLaunch configuration page. The NeoLoad engine adds its own tab to
-this page which allows you to configure how NeoLoad operates:</p>
+<p>You will need to modify the NeoLoad configuration for each of the specific automation hosts, by right-clicking on the RemoteLaunch icon in the system tray and choosing "Configuration". That will bring up the RemoteLaunch configuration page. The NeoLoad engine adds its own tab to this page which allows you to configure how NeoLoad operates:</p>
 <p><img alt="" src="../img/NeoLoad_89.png" /></p>
 <p>The following fields can be specified on this screen:</p>
-<p><strong>NeoLoad Location</strong> -- This should be folder containing the
-"NeoLoadCmd.exe" executable that will be used to actually run the
-automated tests.</p>
-<p><strong>Attach PDF Report</strong> <em>--</em> NeoLoad has a built-in report generator that
-can create detailed Acrobat (PDF) format reports. Enabling this option
-will attach these reports to the test runs recorded in SpiraTeam.</p>
-<p><strong>Run as Administrator</strong> -- Sometimes NeoLoad needs to be run as a
-Windows elevated process, in which case, choose the "Run as
-Administrator" option.</p>
+<ul>
+<li><strong>NeoLoad Location</strong>: This should be folder containing the "NeoLoadCmd.exe" executable that will be used to actually run the automated tests.</li>
+<li><strong>Attach PDF Report</strong> <em>--</em> NeoLoad has a built-in report generator that can create detailed Acrobat (PDF) format reports. Enabling this option will attach these reports to the test runs recorded in Spira.</li>
+<li><strong>Run as Administrator</strong>: Sometimes NeoLoad needs to be run as a Windows elevated process, in which case, choose the "Run as Administrator" option.</li>
+</ul>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
-<p>This section describes the process for setting up a test case in
-SpiraTeam for automation and linking it to a NeoLoad project and
-scenario.</p>
-<p>First you need to display the list of test cases in SpiraTeam (by
-clicking Testing &gt; Test Cases) and then add a new test case. Once you
-have added the new test case, click on it and go to the "Automation"
-section in the main "Overview" tab:</p>
+<p>This section describes the process for setting up a test case in Spira for automation and linking it to a NeoLoad project and scenario.</p>
+<p>First you need to display the list of test cases in Spira (by clicking Testing &gt; Test Cases) and then add a new test case. Once you have added the new test case, click on it and go to the "Automation" section in the main "Overview" tab:</p>
 <p><img alt="" src="../img/NeoLoad_90.png" /></p>
 <p>You need to enter the following fields:</p>
 <ul>
+<li><strong>Automation Engine</strong> - Choose the NeoLoad Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: For NeoLoad, all scenarios must be stored on the local testing machine so 'Linked' must be selected. If you select 'Attached', when the scenario is attempted to be executed it will be marked as blocked and skipped.</li>
 <li>
-<p><strong>Automation Engine</strong> - Choose the NeoLoad Automation Engine that
-you created in the previous section from the drop-down list.</p>
-</li>
-<li>
-<p><strong>Script Type</strong> -- For NeoLoad, all scenarios must be stored on the
-local testing machine so 'Linked' must be selected. If you select
-'Attached', when the scenario is attempted to be executed it will be
-marked as blocked and skipped.</p>
-</li>
-<li>
-<p><strong>Filename</strong> -- This needs to be the full path to the NeoLoad
-project file (*.nlp) file followed by the name of the NeoLoad
-scenario. The two components need to be separated by a pipe (|)
-character. <br>Certain tokens are allowed to be able to specify common locations
-across different operating systems. Note that the tokens are
-case-sensitive, and there are no spaces in them. A list of tokens
-are:</p>
+<p><strong>Filename</strong>: This needs to be the full path to the NeoLoad project file (*.nlp) file followed by the name of the NeoLoad scenario. The two components need to be separated by a pipe (|) character. <br>Certain tokens are allowed to be able to specify common locations across different operating systems. Note that the tokens are case-sensitive, and there are no spaces in them. A list of tokens are:</p>
 <ul>
-<li>
-<p>[MyDocuments] -- The user's "My Documents" folder. The user
-indicated is the user that ran RemoteLaunch.</p>
-</li>
-<li>
-<p>[CommonDocuments] -- The Public Document's folder.</p>
-</li>
-<li>
-<p>[DesktopDirectory] -- The user's Desktop folder. The user
-indicated is the user that ran RemoteLaunch.</p>
-</li>
-<li>
-<p>[ProgramFiles] -- Translated to the Program Files directory.
-For 64-bit machines, it's the 64-bit directory.</p>
-</li>
-<li>
-<p>[ProgramFilesX86] -- Translated to the 32-bit Program Files
-directory.</p>
-</li>
+<li>[MyDocuments] -- The user's "My Documents" folder. The user indicated is the user that ran RemoteLaunch.</li>
+<li>[CommonDocuments] -- The Public Document's folder.</li>
+<li>[DesktopDirectory] -- The user's Desktop folder. The user indicated is the user that ran RemoteLaunch.</li>
+<li>[ProgramFiles] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.</li>
+<li>[ProgramFilesX86] -- Translated to the 32-bit Program Files directory.</li>
 </ul>
 </li>
 <li>
-<p><strong>Document Type</strong> -- You can choose which document type the
-automated scenario will be categorized under.</p>
+<p><strong>Document Type</strong>: You can choose which document type the automated scenario will be categorized under.</p>
 </li>
-<li>
-<p><strong>Document Folder</strong> -- You can choose which document folder the
-automated scenario will be stored in.</p>
-</li>
-<li>
-<p><strong>Version</strong> -- The version of the scenario (1.0 is used if no value
-specified)</p>
-</li>
-<li>
-<p><strong>Test Script</strong> -- <em>Not used.</em></p>
-</li>
+<li><strong>Document Folder</strong>: You can choose which document folder the automated scenario will be stored in.</li>
+<li><strong>Version</strong>: The version of the scenario (1.0 is used if no value specified)</li>
+<li><strong>Test Script</strong>: <em>Not used.</em></li>
 </ul>
-<p>Once you are happy with the values, click [Save] to update the test
-case. Now you are ready to schedule the automated test case for
-execution.</p>
+<p>Once you are happy with the values, click [Save] to update the test case. Now you are ready to schedule the automated test case for execution.</p>
 <h3 id="using-parameterized-test-cases">Using Parameterized Test Cases<a class="headerlink" href="#using-parameterized-test-cases" title="Permanent link">&para;</a></h3>
-<p>Currently the NeoLoad automation engine does not support the passing of
-parameter values from SpiraTeam to NeoLoad.</p>
-<h2 id="executing-the-neoload-scenario-from-spirateam">Executing the NeoLoad Scenario from SpiraTeam<a class="headerlink" href="#executing-the-neoload-scenario-from-spirateam" title="Permanent link">&para;</a></h2>
-<p>There are three ways to execute automated test cases in SpiraTeam:</p>
+<p>Currently the NeoLoad automation engine does not support the passing of parameter values from Spira to NeoLoad.</p>
+<h2 id="executing-the-neoload-scenario-from-spira">Executing the NeoLoad Scenario from Spira<a class="headerlink" href="#executing-the-neoload-scenario-from-spira" title="Permanent link">&para;</a></h2>
+<p>There are three ways to execute automated test cases in Spira:</p>
 <ol>
-<li>
-<p>Schedule the test cases to be executed on a specific computer (local
-or remote) at a date/time in the future</p>
-</li>
-<li>
-<p>Execute the test cases right now on the local computer.</p>
-</li>
-<li>
-<p>Execute the test cases from the command-line or a build script</p>
-</li>
+<li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
+<li>Execute the test cases right now on the local computer.</li>
+<li>Execute the test cases from the command-line or a build script</li>
 </ol>
-<p>We shall outline each of these three scenarios in this section. However
-first we need to setup the appropriate automation hosts and test sets in
-SpiraTeam:</p>
+<p>We shall outline each of these three scenarios in this section. However first we need to setup the appropriate automation hosts and test sets in Spira:</p>
 <h3 id="configuring-the-automation-hosts-and-test-sets">Configuring the Automation Hosts and Test Sets<a class="headerlink" href="#configuring-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
-<p>Go to Testing &gt; Automation Hosts in SpiraTeam to display the list of
-automation hosts:</p>
+<p>Go to Testing &gt; Automation Hosts in Spira to display the list of automation hosts:</p>
 <p><img alt="" src="../img/NeoLoad_15.png" /></p>
-<p>Make sure that you have created an Automation Host for each computer
-that is going to run an automated test case. The name and description
-can be set to anything meaningful, but the Token field <strong>must be set to
-the same token that is specified as the Host name in the RemoteLaunch
-application</strong> on that specific machine.</p>
-<p>Once you have at least one Automation Host configured, go to Testing &gt;
-Test Sets to create the test sets that will contain the automated test
-case:</p>
+<p>Make sure that you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified as the Host name in the RemoteLaunch application</strong> on that specific machine.</p>
+<p>Once you have at least one Automation Host configured, go to Testing &gt; Test Sets to create the test sets that will contain the automated test case:</p>
 <p><img alt="" src="../img/NeoLoad_91.png" /></p>
-<p><strong>Note</strong>: Unlike manual test cases, automated test cases <em>must be
-executed within a test set</em> -- they cannot be executed directly from the
-test case.</p>
-<p>Create a new Test Set to hold the NeoLoad test cases and click on its
-hyperlink to display the test set details page:</p>
+<p><strong>Note</strong>: Unlike manual test cases, automated test cases <em>must be executed within a test set</em> -- they cannot be executed directly from the test case.</p>
+<p>Create a new Test Set to hold the NeoLoad test cases and click on its hyperlink to display the test set details page:</p>
 <p><img alt="" src="../img/NeoLoad_92.png" /></p>
-<p>You need to add at least one automated test case to the test set and
-then configure the following fields:</p>
+<p>You need to add at least one automated test case to the test set and then configure the following fields:</p>
 <ul>
-<li>
-<p><strong>Automation Host</strong> -- This needs to be set to the name of the
-automation host that will be running the automated test set.</p>
-</li>
-<li>
-<p><strong>Planned Date</strong> -- The date and time that you want the scenario to
-begin. (Note that multiple test sets scheduled at the exact same
-time will be scheduled by Test Set ID order.)</p>
-</li>
-<li>
-<p><strong>Status</strong> -- This needs to be set to "Not Started" for RemoteLaunch
-to pick up the scheduled test set. When you change the Planned Date,
-the status automatically switches back to "Not Started"</p>
-</li>
-<li>
-<p><strong>Type</strong> -- This needs to be set to "Automated" for automated
-testing</p>
-</li>
+<li><strong>Automation Host</strong>: This needs to be set to the name of the automation host that will be running the automated test set.</li>
+<li><strong>Planned Date</strong>: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</li>
+<li><strong>Status</strong>: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</li>
+<li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
 <h3 id="executing-the-test-sets">Executing the Test Sets<a class="headerlink" href="#executing-the-test-sets" title="Permanent link">&para;</a></h3>
-<p>Once you have set the various test set fields (as described above), the
-Remote Launch instances will periodically poll SpiraTeam for new test
-sets. Once they retrieve the new test set, they will add it to their
-list of test sets to be executed. Once execution begins they will change
-the status of the test set to "In Progress", and once test execution is
-done, the status of the test set will change to either "Completed" --
-the automation engine could be launched and the test has completed -- or
-"Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
-<p>If you want to immediately execute the test case on your local computer,
-instead of setting the "Automation Host", "Status" and "Planned Date"
-fields, you can instead click the [Execute] icon on the test set
-itself. This will cause RemoteLaunch on the local computer to
-immediately start executing the current test set.</p>
-<p>In either case, once all the test cases in the test set have been
-completed, the status of the test set will switch to "Completed" and the
-individual test cases in the set will display a status based on the
-results of the NeoLoad execution:</p>
+<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" --
+the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
+<p>If you want to immediately execute the test case on your local computer, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
+<p>In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the NeoLoad execution:</p>
 <ul>
-<li>
-<p><strong>Passed</strong> -- The scenario ran and reported no error messages and
-all SLAs were passed.</p>
-</li>
-<li>
-<p><strong>Caution</strong> -- The scenario ran and at least one SLA reported back
-as acceptable</p>
-</li>
-<li>
-<p><strong>Failed</strong> -- The scenario ran and at least one error message was
-reported or at least one SLA was reported back as failed.</p>
-</li>
-<li>
-<p><strong>Blocked</strong> -- There was an error with the Test Set or NeoLoad
-application.</p>
-</li>
+<li><strong>Passed</strong>: The scenario ran and reported no error messages and all SLAs were passed.</li>
+<li><strong>Caution</strong>: The scenario ran and at least one SLA reported back as acceptable</li>
+<li><strong>Failed</strong>: The scenario ran and at least one error message was reported or at least one SLA was reported back as failed.</li>
+<li><strong>Blocked</strong>: There was an error with the Test Set or NeoLoad application.</li>
 </ul>
-<p>If you receive the "Blocked" status for either the test set or the test
-cases you should open up the Windows Application Event Log on the
-computer running RemoteLaunch and look in the event log for error
-messages.</p>
-<p><em><strong>Note</strong>: While the tests are executing you may see browser or
-application windows launch as NeoLoad runs the scenario and connects
-VUsers to their tasks.</em></p>
-<p>Once the tests have completed, you can log back into SpiraTeam and see
-the execution status of your test cases. If you click on a Test Run that
-was generated by NeoLoad, you will see the following test run summary
-information:</p>
+<p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.</p>
+<p><em><strong>Note</strong>: While the tests are executing you may see browser or application windows launch as NeoLoad runs the scenario and connects VUsers to their tasks.</em></p>
+<p>Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by NeoLoad, you will see the following test run summary information:</p>
 <p><img alt="" src="../img/NeoLoad_93.png" /></p>
-<p>This section of the screen indicates how long the test took to execute,
-the overall status, which release was being executed, which test set it
-was a part of and each of the key summary statistics, together with
-information on how they compared to the defined SLA:</p>
+<p>This section of the screen indicates how long the test took to execute, the overall status, which release was being executed, which test set it was a part of and each of the key summary statistics, together with information on how they compared to the defined SLA:</p>
 <ul>
-<li>
-<p><strong>N/A</strong> -- There was no SLA defined for this metric</p>
-</li>
-<li>
-<p><strong>Passed</strong> -- There is an SLA defined for this metric and it was
-passed.</p>
-</li>
-<li>
-<p><strong>Caution</strong> -- There is an SLA defined for this metric and it was
-considered less than a pass, but still acceptable.</p>
-</li>
-<li>
-<p><strong>Failed</strong> -- There is an SLA defined for this metric and it was not
-met successfully.</p>
-</li>
+<li><strong>N/A</strong>: There was no SLA defined for this metric</li>
+<li><strong>Passed</strong>: There is an SLA defined for this metric and it was passed.</li>
+<li><strong>Caution</strong>: There is an SLA defined for this metric and it was considered less than a pass, but still acceptable.</li>
+<li><strong>Failed</strong>: There is an SLA defined for this metric and it was not met successfully.</li>
 </ul>
-<p>In addition, if you scroll down, in the "Console Output" section of the
-report there is more detailed information:</p>
+<p>In addition, if you scroll down, in the "Console Output" section of the report there is more detailed information:</p>
 <p><img alt="" src="../img/NeoLoad_94.png" /></p>
-<p>The Message of the test will report the number of total pages, number of
-total hits, number of total users, number of errors as well as the total
-count of virtual users.</p>
-<p>In addition, more detailed information is displayed in the test run
-details:</p>
+<p>The Message of the test will report the number of total pages, number of total hits, number of total users, number of errors as well as the total count of virtual users.</p>
+<p>In addition, more detailed information is displayed in the test run details:</p>
 <ul>
-<li>
-<p>Top 5 errors by page</p>
-</li>
-<li>
-<p>Top 5 alerts by page</p>
-</li>
-<li>
-<p>Top 5 average response times by page</p>
-</li>
-<li>
-<p>Top 5 maximum response times by page</p>
-</li>
+<li>Top 5 errors by page</li>
+<li>Top 5 alerts by page</li>
+<li>Top 5 average response times by page</li>
+<li>Top 5 maximum response times by page</li>
 </ul>
-<p>Finally, if you have chosen the option to attach the NeoLoad PDF report,
-in the Attachments section of the Test Run, that will be listed:</p>
+<p>Finally, if you have chosen the option to attach the NeoLoad PDF report, in the Attachments section of the Test Run, that will be listed:</p>
 <p><img alt="" src="../img/NeoLoad_95.png" /></p>
-<p>Congratulations... You are now able to run automated NeoLoad performance
-scenarios and have the results be recorded within SpiraTest / SpiraTeam.</p>
+<p>Congratulations... You are now able to run automated NeoLoad performance scenarios and have the results be recorded within Spira.</p>
 
 
 

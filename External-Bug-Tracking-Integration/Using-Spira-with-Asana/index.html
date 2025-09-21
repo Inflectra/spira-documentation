@@ -9024,6 +9024,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9207,142 +9235,73 @@
 
 
 <h1 id="using-spira-with-asana">Using Spira with Asana<a class="headerlink" href="#using-spira-with-asana" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan
-(hereafter referred to as Spira) in conjunction with the Asana
-task tracking system.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as Spira) in conjunction with the Asana task tracking system.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 </div>
 <p>Asana is a simple yet powerful cloud-based task management system used to track tasks. The built-in integration between Spira and Asana lets you create incidents and tasks in Spira and have them synchronize over to Asana as tasks.</p>
 <h2 id="configuring-the-integration-service">Configuring the Integration Service<a class="headerlink" href="#configuring-the-integration-service" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to set up the integration service between
-Asana and Spira. It assumes that you already have a working
-installation of Spira and a valid Asana account, workspace and project to integrate with.
-To setup the service, you must be logged into Spira as a user with
-System-Administrator level account.</p>
-<p>Inside Spira, go to the Administration page and navigate to the
-Integration &gt; Data Synchronization webpage. Check that you don't
-already have a Plug-In called "AsanaDataSync", as shown below:</p>
+<p>This section outlines how to set up the integration service between Asana and Spira. It assumes that you already have a working installation of Spira and a valid Asana account, workspace and project to integrate with. To setup the service, you must be logged into Spira as a user with System-Administrator level account.</p>
+<p>Inside Spira, go to the Administration page and navigate to the Integration &gt; Data Synchronization webpage. Check that you don't already have a Plug-In called "AsanaDataSync", as shown below:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_1.png" /></p>
-<p>If you already have a plug-in called <strong>AsanaDataSync</strong>, please click on
-its <code>edit</code> button, otherwise please click the <code>Add</code> button to create a
-new plug-in.</p>
+<p>If you already have a plug-in called <code>AsanaDataSync</code>, please click on its <code>edit</code> button, otherwise please click the <code>Add</code> button to create a new plug-in.</p>
 <p>Now fill out this configuration page as follows:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_2.png" /></p>
-<p>You need to fill out the following fields for the Asana Data Sync
-plugin to work properly:</p>
+<p>You need to fill out the following fields for the Asana Data Sync plugin to work properly:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- This needs to be set to <strong>AsanaDataSync</strong></p>
-</li>
-<li>
-<p><strong>Caption</strong> -- This is the display name of the plug-in, generally
-something generic like "Asana" would work, but you should change it
-if you will be syncing with multiple Asana workspaces.</p>
-</li>
-<li>
-<p><strong>Description</strong> -- The description of what you're using the plug-in
-for. This field is entirely optional and is not used by the system
-in any way.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong> -- The name of your Asana <strong>workspace</strong>, this is the name of your <em>workspace</em> or <em>organization</em>, not project.</p>
-</li>
-<li>
-<p><strong>Login</strong> -- Your Asana username / login</p>
-</li>
-<li>
-<p><strong>Password</strong> -- An Asana <strong>personal access token</strong>. For more information on personal access tokens, please refer to:
-<a href="https://asana.com/guide/help/api/api">https://asana.com/guide/help/api/api</a></p>
-</li>
-<li>
-<p><strong>Time Offset</strong> -- This should be set to 0, but if you find that
-changes are not being synced, try increasing the value to tell the
-plugin to offset timestamps</p>
-</li>
-<li>
-<p><strong>Custom 01-05</strong> -- These fields are not used for Asana and can be left blank.</p>
-</li>
+<li><strong>Name</strong>: This needs to be set to <code>AsanaDataSync</code></li>
+<li><strong>Caption</strong>: This is the display name of the plug-in, generally something generic like "Asana" would work, but you should change it if you will be syncing with multiple Asana workspaces.</li>
+<li><strong>Description</strong>: The description of what you're using the plug-in for. This field is entirely optional and is not used by the system in any way.</li>
+<li><strong>Connection Info</strong>: The name of your Asana <strong>workspace</strong>, this is the name of your <em>workspace</em> or <em>organization</em>, not project.</li>
+<li><strong>Login</strong>: Your Asana username / login</li>
+<li><strong>Password</strong>: An Asana <strong>personal access token</strong>. For more information on personal access tokens, please refer to: <a href="https://asana.com/guide/help/api/api">https://asana.com/guide/help/api/api</a></li>
+<li><strong>Time Offset</strong>: This should be set to 0, but if you find that changes are not being synced, try increasing the value to tell the plugin to offset timestamps</li>
+<li><strong>Custom 01-05</strong>: These fields are not used for Asana and can be left blank.</li>
 </ul>
-<p>Once all those fields have
-been filled out, click the <code>Add</code> or <code>Save</code> button to save your changes.</p>
+<p>Once all those fields have been filled out, click the <code>Add</code> or <code>Save</code> button to save your changes.</p>
 <h2 id="configuring-project-mappings">Configuring Project Mappings<a class="headerlink" href="#configuring-project-mappings" title="Permanent link">&para;</a></h2>
-<p>For this step, please ensure that you are in the Spira project you
-would like to sync with Asana. For this example, the project is called
-"Sample Empty Product 1".</p>
-<p>Click on the "View Project Mappings" button for Asana Data Sync. You
-need to fill out the following fields to sync correctly:</p>
+<p>For this step, please ensure that you are in the Spira project you would like to sync with Asana. For this example, the project is called "Sample Empty Product 1".</p>
+<p>Click on the "View Project Mappings" button for Asana Data Sync. You need to fill out the following fields to sync correctly:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_3.png" /></p>
 <ul>
-<li>
-<p><strong>External Key</strong> -- The name of your Asana project. In our
-example, the project is called "Sample Project".</p>
-</li>
-<li>
-<p><strong>Active</strong> -- Set this to yes so that the Data Sync plug-in knows to
-synchronize with this project.</p>
-</li>
+<li><strong>External Key</strong>: The name of your Asana project. In our example, the project is called "Sample Project".</li>
+<li><strong>Active</strong>: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.</li>
 </ul>
 <p>The project looks like this in Asana:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_4.png" /></p>
 <p>The Asana plugin will synchronize incidents and tasks, so you will need to setup the status mappings for incidents and tasks. We shall discuss each in turn.</p>
 <h3 id="configuring-the-incident-status-mapping">Configuring the Incident Status Mapping<a class="headerlink" href="#configuring-the-incident-status-mapping" title="Permanent link">&para;</a></h3>
-<p>Now click the "Status" button within the "Incident" section to map the
-incident statuses together. The purpose of this is so that the Asana
-Data Sync plug-in knows what the equivalent status is in Asana for an
-incident status in Spira.</p>
+<p>Now click the "Status" button within the "Incident" section to map the incident statuses together. The purpose of this is so that the Asana Data Sync plug-in knows what the equivalent status is in Asana for an incident status in Spira.</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_5.png" /></p>
-<p>You must map every status in the system. Descriptions of the field are
-below:</p>
+<p>You must map every status in the system. Descriptions of the field are below:</p>
 <ul>
-<li>
-<p><strong>External Key</strong> -- Either <strong>incomplete</strong> or <strong>completed</strong>, which are the
-only two statuses in Asana</p>
-</li>
-<li>
-<p><strong>Primary</strong> -- You must have exactly one primary key for <strong>incomplete</strong>
-and one for <strong>completed</strong>. This is what status the plug-in should set
-the incident in Spira to when the status in Asana changes.</p>
-</li>
+<li><strong>External Key</strong>: Either <strong>incomplete</strong> or <strong>completed</strong>, which are the only two statuses in Asana</li>
+<li><strong>Primary</strong>: You must have exactly one primary key for <strong>incomplete</strong> and one for <strong>completed</strong>. This is what status the plug-in should set the incident in Spira to when the status in Asana changes.</li>
 </ul>
 <h3 id="configuring-the-task-status-mapping">Configuring the Task Status Mapping<a class="headerlink" href="#configuring-the-task-status-mapping" title="Permanent link">&para;</a></h3>
-<p>Now click the "Status" button within the "Task" section to map the
-task statuses together. The purpose of this is so that the Asana
-Data Sync plug-in knows what the equivalent status is in Asana for an
-task status in Spira.</p>
+<p>Now click the "Status" button within the "Task" section to map the task statuses together. The purpose of this is so that the Asana Data Sync plug-in knows what the equivalent status is in Asana for an task status in Spira.</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_6.png" /></p>
-<p>You must map every status in the system. Descriptions of the field are
-below:</p>
+<p>You must map every status in the system. Descriptions of the field are below:</p>
 <ul>
 <li>
-<p><strong>External Key</strong> -- Either <strong>incomplete</strong> or <strong>completed</strong>, which are the
-only two statuses in Asana</p>
+<p><strong>External Key</strong>: Either <strong>incomplete</strong> or <strong>completed</strong>, which are the only two statuses in Asana</p>
 </li>
 <li>
-<p><strong>Primary</strong> -- You must have exactly one primary key for <strong>incomplete</strong>
-and one for <strong>completed</strong>. This is what status the plug-in should set
-the task in Spira to when the status in Asana changes.</p>
+<p><strong>Primary</strong>: You must have exactly one primary key for <strong>incomplete</strong> and one for <strong>completed</strong>. This is what status the plug-in should set the task in Spira to when the status in Asana changes.</p>
 </li>
 </ul>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
-<p>To configure the mapping of users in the two systems, you need to go to
-Administration &gt; Users &gt; View Edit Users, which will bring up the list
-of users in the system. Then click on the "Edit" button for a particular
-user that will be editing tasks in Asana:</p>
+<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing tasks in Asana:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_7.png" /></p>
-<p>Click on the 'Data Mapping' tab to list all the configured
-data-synchronization plug-ins for this user. In the text box next to the
-Asana Data-Sync plug-in you need to enter the login for this username
-in Asana. This will allow the data-synchronization plug-in to know
-which user in Spira match which equivalent user in Asana. Click
-<code>Save</code> once you've entered the appropriate login name. You should now
-repeat for the other users who will be active in both systems.</p>
-<p><em>If you have set the "Auto-Map Users" option in the Asana plugin, you
-can skip this section completely.</em></p>
+<p>Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box next to the Asana Data-Sync plug-in you need to enter the login for this username in Asana. This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in Asana. Click
+<code>Save</code> once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
+<p><em>If you have set the "Auto-Map Users" option in the Asana plugin, you can skip this section completely.</em></p>
 <h2 id="using-the-data-synchronization">Using the Data Synchronization<a class="headerlink" href="#using-the-data-synchronization" title="Permanent link">&para;</a></h2>
-<p>Assuming everything was done correctly, the plug-in should start
-working. If you are using Spira on-premise, start your Data Sync service and you can now start synchronizing incidents and tasks</p>
+<p>Assuming everything was done correctly, the plug-in should start working. If you are using Spira on-premise, start your Data Sync service and you can now start synchronizing incidents and tasks</p>
 <h3 id="synchronizing-spira-incidents">Synchronizing Spira Incidents<a class="headerlink" href="#synchronizing-spira-incidents" title="Permanent link">&para;</a></h3>
 <p>When you log a new incident in Spira, for example:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_8.png" /></p>
@@ -9372,8 +9331,7 @@ working. If you are using Spira on-premise, start your Data Sync service and you
 <p>In addition, the Spira task will automatically include a hyperlink to the corresponding item in Asana:</p>
 <p><img alt="" src="../img/Using_Spira_with_Asana_13.png" /></p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Congratulations, you have just integrated your Spira instance with
-the Asana task tracking system.</p>
+<p>Congratulations, you have just integrated your Spira instance with the Asana task tracking system.</p>
 
 
 

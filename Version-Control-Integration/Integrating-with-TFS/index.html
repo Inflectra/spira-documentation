@@ -6729,10 +6729,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-tfs-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-tfs-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring TFS in SpiraPlan
+        Configuring TFS in Spira
       
     </span>
   </a>
@@ -6751,10 +6751,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-tfs-with-spirateam" class="md-nav__link">
+  <a href="#using-tfs-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using TFS with SpiraTeam
+        Using TFS with Spira
       
     </span>
   </a>
@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9034,10 +9062,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-tfs-in-spiraplan" class="md-nav__link">
+  <a href="#configuring-tfs-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring TFS in SpiraPlan
+        Configuring TFS in Spira
       
     </span>
   </a>
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-tfs-with-spirateam" class="md-nav__link">
+  <a href="#using-tfs-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using TFS with SpiraTeam
+        Using TFS with Spira
       
     </span>
   </a>
@@ -9095,15 +9123,18 @@
 
 
 <h1 id="integrating-with-tfs">Integrating with TFS<a class="headerlink" href="#integrating-with-tfs" title="Permanent link">&para;</a></h1>
-<p>Microsoft Visual Studio Team System (VSTS) Team Foundation Server (TFS) from Microsoft® (hereafter referred to as TFS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a TFS repository and view commits linked to SpiraTeam artifacts. There are separate plug-ins for TFS 2005/2008, 2010 and 2012+. When connecting to a TFS 2010/2012+ repository, the connection URL will also need to be in a different format (see below).</p>
-<p>While users working on the code will usually have a complete copy of the repository on their local systems, this plug-in will access the TFS repository remotely. The rest of this section outlines how to install and use the plug-in with SpiraTeam.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTeam and SpiraPlan</p>
+</div>
+<p>Microsoft Visual Studio Team System (VSTS) Team Foundation Server (TFS) from Microsoft® (hereafter referred to as TFS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of Spira to be able to browse a TFS repository and view commits linked to Spira artifacts. There are separate plug-ins for TFS 2005/2008, 2010 and 2012+. When connecting to a TFS 2010/2012+ repository, the connection URL will also need to be in a different format (see below).</p>
+<p>While users working on the code will usually have a complete copy of the repository on their local systems, this plug-in will access the TFS repository remotely. The rest of this section outlines how to install and use the plug-in with Spira.</p>
 <p><em>Note: The plug-in will allow users to download and view different commits of files and view commit logs, but no changes to the repository are allowed through the plug-in.</em></p>
 <h2 id="installing-the-tfs-plug-in">Installing the TFS Plug-In<a class="headerlink" href="#installing-the-tfs-plug-in" title="Permanent link">&para;</a></h2>
 <p>To install the TFS Version Control plug-in, follow these steps:</p>
 <ul>
 <li>Download the appropriate TFS provider from the Inflectra website (<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>) -- there are separate versions for TFS 2005/2008, 2010 and TFS 2012 or later.</li>
 <li>
-<p>Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraTeam installation:</p>
+<p>Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:</p>
 <ul>
 <li>Microsoft.TeamFoundation.Client.dll</li>
 <li>Microsoft.TeamFoundation.Common.dll</li>
@@ -9116,8 +9147,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="configuring-tfs-in-spiraplan">Configuring TFS in SpiraPlan<a class="headerlink" href="#configuring-tfs-in-spiraplan" title="Permanent link">&para;</a></h2>
-<p>Before you can start using TFS in SpiraPlan you need to setup, at a system level, how TFS and SpiraPlan should work together: </p>
+<h2 id="configuring-tfs-in-spira">Configuring TFS in Spira<a class="headerlink" href="#configuring-tfs-in-spira" title="Permanent link">&para;</a></h2>
+<p>Before you can start using TFS in Spira you need to setup, at a system level, how TFS and Spira should work together: </p>
 <ul>
 <li>Log in as a system admin, and go to System Admininstration &gt; Integration &gt; Source Code</li>
 <li>If there is not already an antry for "TfsProvider" click "Add" to go to the Plug-in details page</li>
@@ -9157,9 +9188,9 @@
 <li>Click "Save" after making any changes.</li>
 </ul>
 <p><img alt="" src="../img/Integrating_with_TFS_25.png" /></p>
-<h2 id="using-tfs-with-spirateam">Using TFS with SpiraTeam<a class="headerlink" href="#using-tfs-with-spirateam" title="Permanent link">&para;</a></h2>
+<h2 id="using-tfs-with-spira">Using TFS with Spira<a class="headerlink" href="#using-tfs-with-spira" title="Permanent link">&para;</a></h2>
 <p>Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.</p>
-<p>You can read more about working with source code in SpiraPlan at the links below:</p>
+<p>You can read more about working with source code in Spira at the links below:</p>
 <ul>
 <li><a href="../../Spira-User-Manual/Source-Code/#source-code-file-list">Source code files</a></li>
 <li><a href="../../Spira-User-Manual/Commits/#commit-list">Commits</a></li>
@@ -9167,8 +9198,8 @@
 <li><a href="../../Spira-User-Manual/Source-Code/#troubleshooting-source-code-integration">Troubleshooting source code integration</a></li>
 </ul>
 <h2 id="enforcing-associations-with-a-custom-policy">Enforcing Associations with a Custom Policy<a class="headerlink" href="#enforcing-associations-with-a-custom-policy" title="Permanent link">&para;</a></h2>
-<p>As described in <a href="../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages">Linking to artifacts in commit messages</a>, you can easily associate check-ins of code in TFS with relevant SpiraTeam artifacts by adding the appropriate artifact identifier in the commit messages.</p>
-<p>In order to enforce this process, one of our customers has written a custom Visual Studio 2008 and 2010/2012+ Team System check-in policy that will force users to enter at least one SpiraTeam artifact in each of the check-in comments. This policy will also check the IDs of the supplied artifacts to make sure they exist in the appropriate SpiraTeam installation.</p>
+<p>As described in <a href="../../Spira-User-Manual/Commits/#linking-to-artifacts-in-commit-messages">Linking to artifacts in commit messages</a>, you can easily associate check-ins of code in TFS with relevant Spira artifacts by adding the appropriate artifact identifier in the commit messages.</p>
+<p>In order to enforce this process, one of our customers has written a custom Visual Studio 2008 and 2010/2012+ Team System check-in policy that will force users to enter at least one Spira artifact in each of the check-in comments. This policy will also check the IDs of the supplied artifacts to make sure they exist in the appropriate Spira installation.</p>
 <p>To install the custom check-in policy, you should download the SpiraPolicySetup.msi (for 2008) or SpiraPolicy.vsix (for 2010+) installation package from the Add-Ons/Downloads section of the Inflectra website (<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>) and run the installation package on each workstation that has Visual Studio installed. Once this installation has been completed, you need to tell Visual Studio to add the custom check-in policy:</p>
 <ul>
 <li>Inside Visual Studio, go to Team &gt; Team Project Settings &gt; Source Control to open up the Source Code extensions dialog box:</li>
@@ -9179,19 +9210,17 @@
 </ul>
 <p><img alt="" src="../img/Integrating_with_TFS_34.png" /></p>
 <ul>
-<li>
-<p>Click on the [Add...] button to add a new check-in policy:
-<img alt="" src="../img/Integrating_with_TFS_35.png" /></p>
-</li>
-<li>
-<p>Select the SpiraTeam/Plan TFS check-in Policy and click [OK]. This will bring up the SpiraTeam custom policy configuration dialog box:
-<img alt="" src="../img/Integrating_with_TFS_36.png" /></p>
-</li>
-<li>
-<p>Enter the URL for the SpiraTeam server (you only need the server name and virtual directory portion) as well as a valid login and password. Then click [Connect] to get the list of projects.</p>
-</li>
+<li>Click on the [Add...] button to add a new check-in policy:</li>
+</ul>
+<p><img alt="" src="../img/Integrating_with_TFS_35.png" /></p>
+<ul>
+<li>Select the Spira TFS check-in Policy and click [OK]. This will bring up the Spira custom policy configuration dialog box:</li>
+</ul>
+<p><img alt="" src="../img/Integrating_with_TFS_36.png" /></p>
+<ul>
+<li>Enter the URL for the Spira server (you only need the server name and virtual directory portion) as well as a valid login and password. Then click [Connect] to get the list of projects.</li>
 <li>Select the checkboxes for which artifact types you want to be included in the artifact enforcement and click the [OK] button to confirm the settings.</li>
-<li>Now when a user checks-in a change to the TFS source code repository, they will be required to enter at least one SpiraTeam artifact, and the system will check to make sure that artifact actually exists in the specified project.</li>
+<li>Now when a user checks-in a change to the TFS source code repository, they will be required to enter at least one Spira artifact, and the system will check to make sure that artifact actually exists in the specified project.</li>
 </ul>
 
 

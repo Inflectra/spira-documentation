@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9051,24 +9079,27 @@
 
 
 <h1 id="migrating-from-qacomplete-and-almcomplete">Migrating from QAComplete (and ALMComplete)<a class="headerlink" href="#migrating-from-qacomplete-and-almcomplete" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>This section outlines how to use the free Migration Tool for importing Projects, Test Suites, Test Cases, Test Steps, and Attachments from the SmartBear <strong>QAComplete</strong> and <strong>ALMComplete</strong> platforms.</p>
 <h2 id="installing-the-qacomplete-migration-tool">Installing the QAComplete Migration Tool<a class="headerlink" href="#installing-the-qacomplete-migration-tool" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the migration tool for QAComplete onto a workstation so that you can then migrate whole projects from QAComplete to either SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as SpiraTest). It assumes that you already have a working installation of SpiraTest v8.0 or later and a live instance of QAComplete to migrate from. If you have an earlier version of SpiraTest you will need to upgrade to at least v8.0 before trying to migrate projects.</p>
+<p>This section outlines how to install the migration tool for QAComplete onto a workstation so that you can then migrate whole projects from QAComplete to either SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as Spira). It assumes that you already have a working installation of Spira v8.0 or later and a live instance of QAComplete to migrate from. If you have an earlier version of Spira you will need to upgrade to at least v8.0 before trying to migrate projects.</p>
 <p>The Windows installation package can be downloaded from the 'Add-Ons &amp; Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:</p>
 <p><img alt="" src="../img/Migrating_from_QAComplete_1.png" />  </p>
 <p>Click the <code>Next</code> button, accept the software license, then click <code>Next</code> again to choose the folder to install the migration tool to:</p>
 <p><img alt="" src="../img/Migrating_from_QAComplete_2.png" />  </p>
 <p>Choose the folder to install to, and then decide whether the application should be accessible by all users on the workstation or just the current user. Then click the <code>Install</code> button to start the installation process. It will confirm if you want to proceed, click <code>Next</code> then wait for it to finish.</p>
 <h2 id="using-the-qacomplete-migration-tool">Using the QAComplete Migration Tool<a class="headerlink" href="#using-the-qacomplete-migration-tool" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; SpiraTest &gt; Tools &gt; QAComplete Importer. This will launch the migration tool application itself:</p>
+<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; Spira &gt; Tools &gt; QAComplete Importer. This will launch the migration tool application itself:</p>
 <p><img alt="" src="../img/Migrating_from_QAComplete_3.png" /></p>
 <p>The first thing you need to do is to enter the URL for the instance of QAComplete that you want to import the information from (typically of the form <code>https://rest.qacomplete.smartbear.com</code> or <code>http://myserver.mycompany.com</code>) together with a valid <strong>login</strong> and <strong>password</strong>.</p>
 <p>Once you have entered this information, click the <code>Authenticate</code> button and the list of projects will be populated. Select QAComplete project that you want to <strong><em>import from</em></strong> then click the <code>Next</code> button to move to the next page in the import wizard:</p>
 <p><img alt="" src="../img/Migrating_from_QAComplete_4.png" /></p>
-<p>This page allows you to enter the URL, user name and password that you want to use to access the instance of SpiraTest that you want to <strong><em>import to</em></strong> and click &lt;Login&gt;. Typically, the URL is of the form (<code>https://xxxx.spiraservice.net</code>). The version of the importer being used must be compatible with the version of SpiraTest you're importing into; if not you will receive an error message.</p>
-<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from QAComplete into SpiraTest. Note that the importer will automatically create a new project in SpiraTest to hold all the artifacts with the same name as that used in QAComplete.</p>
+<p>This page allows you to enter the URL, user name and password that you want to use to access the instance of Spira that you want to <strong><em>import to</em></strong> and click &lt;Login&gt;. Typically, the URL is of the form (<code>https://xxxx.spiraservice.net</code>). The version of the importer being used must be compatible with the version of Spira you're importing into; if not you will receive an error message.</p>
+<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from QAComplete into Spira. Note that the importer will automatically create a new project in Spira to hold all the artifacts with the same name as that used in QAComplete.</p>
 <p><img alt="" src="../img/Migrating_from_QAComplete_5.png" />  </p>
-<p>During the import process, as each of the types of artifacts are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the <code>Done</code> button will be enabled. Clicking this button closes the importer. You should now log into SpiraTest using the same user name and password that was used for the import to view the imported project.</p>
+<p>During the import process, as each of the types of artifacts are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the <code>Done</code> button will be enabled. Clicking this button closes the importer. You should now log into Spira using the same user name and password that was used for the import to view the imported project.</p>
 <p>The migration tool will import the following artifacts from QAComplete:</p>
 <ul>
 <li>The project name and description</li>
@@ -9078,8 +9109,7 @@
 <li>Attachments</li>
 </ul>
 <h2 id="debugging-any-import-failures">Debugging Any Import Failures<a class="headerlink" href="#debugging-any-import-failures" title="Permanent link">&para;</a></h2>
-<p>Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually of the format:
-<code>Spira_QAComplete_Import_yyyymmddHHmmss.log</code>.</p>
+<p>Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually of the format: <code>Spira_QAComplete_Import_yyyymmddHHmmss.log</code>.</p>
 <p>Please take this import log file and send it to Inflectra support who will be happy to assist you: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a>.</p>
 
 

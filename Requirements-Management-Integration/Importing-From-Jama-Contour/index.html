@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9095,12 +9123,15 @@
 
 
 <h1 id="importing-from-jama-contour">Importing From Jama Contour<a class="headerlink" href="#importing-from-jama-contour" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the included Importer for importing Requirements, Features, and Use Cases from projects residing in Jama Contour™ projects into equivalent projects in SpiraTest®, SpiraPlan® or SpiraTeam® (hereafter referred to as Spira).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the included Importer for importing Requirements, Features, and Use Cases from projects residing in Jama Contour™ projects into equivalent projects in Spira.</p>
 <h2 id="installing-the-importer">Installing the Importer<a class="headerlink" href="#installing-the-importer" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the importer onto a workstation so that you can then import requirements and use cases from Contour into Spira. It assumes that you already have a working installation of Spira v3.0 or later and a working installation of Jama Contour.</p>
 <p>You can download the Importer from the Inflectra's website under "Downloads and Add-Ons". When downloaded, double-click the MSI file. Follow the instructions in the MSI file to install the importer.</p>
 <h2 id="importing-from-a-contour-project">Importing from a Contour Project<a class="headerlink" href="#importing-from-a-contour-project" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start &gt; Programs &gt; SpiraTest &gt; Tools &gt; Jama Contour Adapter. This will launch the import application itself. You will be shown an introduction screen. Click 'Next' to get to the second screen:</p>
+<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start &gt; Programs &gt; Spira &gt; Tools &gt; Jama Contour Adapter. This will launch the import application itself. You will be shown an introduction screen. Click 'Next' to get to the second screen:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_20.png" /></p>
 <p>You need to enter the Contour Server URL (including the port number if appropriate), the username and password you use to log onto the system, then click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project</em> section. Once the project is selected, click <em>Next</em> to continue to the screen where you enter your Spira server and project information:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_21.png" /></p>
@@ -9118,31 +9149,17 @@
 <p><img alt="" src="../img/Importing_From_Jama_Contour_25.png" /></p>
 <p>The summary screen tells you what will actions will be performed, and once you have verified the information, click the <em>Import</em> button to start the import:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_26.png" /></p>
-<p>Anything flagged with a red
-<img alt="Error" src="../img/Importing_From_Jama_Contour_17.png" /></p>
-<p>failed, green
-<img alt="Success" src="../img/Importing_From_Jama_Contour_18.png" /></p>
-<p>means that they succeeded. Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
+<p>Anything flagged with a red <img alt="Error" src="../img/Importing_From_Jama_Contour_17.png" /> failed, green <img alt="Success" src="../img/Importing_From_Jama_Contour_18.png" /> means that they succeeded. Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
 <p><img alt="" src="../img/Importing_From_Jama_Contour_27.png" /></p>
 <p>If the <em>Minimize to System Tray</em> option is selected, when you click Finish or exit the from the application, it will minimize to the system tray. Once in the system tray, you can right-click on the icon and the it will give you the option to either re-import from the same project or select another project for a fresh import. If the option is not selected, the program will exit, and you can re-launch the importer to import from the same or another Contour project.</p>
 <h2 id="using-the-system-tray-shortcut-menu">Using the System Tray Shortcut Menu<a class="headerlink" href="#using-the-system-tray-shortcut-menu" title="Permanent link">&para;</a></h2>
 <p>When the application is minimized to the system tray, there are several shortcuts available:</p>
 <ul>
-<li>
-<p>Double-Clicking the icon will bring the importer back to the first screen, allowing you to import another Contour project.</p>
-</li>
-<li>
-<p>Right-clicking will give a shortcut menu with the following options:</p>
-</li>
-<li>
-<p>Exit -- Close the program entirely.</p>
-</li>
-<li>
-<p>Rerun Import -- Will provide you the screen to re-launch the last import you just ran.</p>
-</li>
-<li>
-<p>Show Window -- Same as double-clicking on the icon, will bring the wizard back to the first screen, allowing new input options to be set.</p>
-</li>
+<li>Double-Clicking the icon will bring the importer back to the first screen, allowing you to import another Contour project.</li>
+<li>Right-clicking will give a shortcut menu with the following options:</li>
+<li>Exit -- Close the program entirely.</li>
+<li>Rerun Import -- Will provide you the screen to re-launch the last import you just ran.</li>
+<li>Show Window -- Same as double-clicking on the icon, will bring the wizard back to the first screen, allowing new input options to be set.</li>
 </ul>
 <h2 id="jama-contour-spira-importing-notes">Jama Contour &amp; Spira Importing Notes<a class="headerlink" href="#jama-contour-spira-importing-notes" title="Permanent link">&para;</a></h2>
 <p>At this time, only requirements are imported into Spira from Contour. All the various types in Contour are imported as Requirements into Spira. In addition, the following fields are brought over into Spira from Contour according to the following mapping table:</p>
@@ -9164,11 +9181,11 @@
 </tr>
 <tr>
 <td>Priority</td>
-<td>Importance: <br>  <strong>Contour Value</strong> : <strong>Spira Value</strong> <br> High : High <br> Medium : Medium <br> Low : Low</td>
+<td>Importance (maps as High to High, Medium to Medium, Low to Low)</td>
 </tr>
 <tr>
 <td>Status</td>
-<td>Status: <br>  <strong>Contour Value</strong> : <strong>Spira Value</strong> <br> Draft : Requested <br> Approved : Accepted <br> Completed : Completed <br> Rejected : Rejected <br> (None) : Requested</td>
+<td>Status (see below for more details)</td>
 </tr>
 <tr>
 <td></td>
@@ -9197,6 +9214,36 @@
 <tr>
 <td>Item Type Category</td>
 <td>Custom Text Property #3</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Jama Contour  Status</strong></th>
+<th><strong>Spira Status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>Requested</td>
+</tr>
+<tr>
+<td>Approved</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>Rejected</td>
+<td>Rejected</td>
+</tr>
+<tr>
+<td>(None)</td>
+<td>Requested</td>
 </tr>
 </tbody>
 </table>

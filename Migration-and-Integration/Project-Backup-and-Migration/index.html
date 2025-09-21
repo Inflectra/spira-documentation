@@ -8968,6 +8968,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9095,214 +9123,160 @@
 
 
 <h1 id="project-backup-and-migration">Project Backup and Migration<a class="headerlink" href="#project-backup-and-migration" title="Permanent link">&para;</a></h1>
-<p>This application allows an entire project to be exported to a backup
-file, for archiving and offline storage of SpiraTeam projects. The base
-minimum SpiraTeam version required is 3.2 (014), and there is some data
-that is <a href="#data-transferred">not backed up</a>. Also there are
-separate versions of the backup and migration tool for SpiraTeam v3.2,
-v4.x and v5.x, and you need to use the appropriate version that matches
-your installations.</p>
-<p>The migration tool <strong>does not support upgrading versions</strong>, i.e. you
-need to have the same version of SpiraTeam for both the import and
-export phase. If you have two different versions of SpiraTeam, you must
-first upgrade the older installation to the same version as the newer
-one.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This application allows an entire project to be exported to a backup file, for archiving and offline storage of Spira projects. The base minimum Spira version required is 3.2 (014), and there is some data that is <a href="#data-transferred">not backed up</a>. Also there are separate versions of the backup and migration tool for Spira v3.2, v4.x and v5.x, and you need to use the appropriate version that matches your installations.</p>
+<p>The migration tool <strong>does not support upgrading versions</strong>, i.e. you need to have the same version of Spira for both the import and export phase. If you have two different versions of Spira, you must first upgrade the older installation to the same version as the newer one.</p>
 <h2 id="main-screen">Main Screen<a class="headerlink" href="#main-screen" title="Permanent link">&para;</a></h2>
-<p>When running the application, you will see the main screen, which gives
-you three main options: Export, Import, and Transfer:</p>
+<p>When running the application, you will see the main screen, which gives you three main options: Export, Import, and Transfer:</p>
 <p><img alt="main" src="../img/Project_Backup_and_Migration_53.png" /></p>
 <h2 id="project-export">Project Export<a class="headerlink" href="#project-export" title="Permanent link">&para;</a></h2>
-<p>Clicking the Export button will start the Export wizard, allowing you to
-save the project to a file.
-<img alt="" src="../img/Project_Backup_and_Migration_54.png" /></p>
-<p>On the first screen, enter in the SpiraTeam server URL, and the
-administrator account password. The administrator account must be used,
-so make sure that it is an active account (Active: Yes) in the
-application. When clicking the 'Next' button, it will verify the server
-and login information.</p>
-<p>The second screen gives you the selection of the project to export.
-Select the project, and then click the 'Next' button.</p>
+<p>Clicking the Export button will start the Export wizard, allowing you to save the project to a file.</p>
+<p><img alt="" src="../img/Project_Backup_and_Migration_54.png" /></p>
+<p>On the first screen, enter in the Spira server URL, and the administrator account password. The administrator account must be used, so make sure that it is an active account (Active: Yes) in the application. When clicking the 'Next' button, it will verify the server and login information.</p>
+<p>The second screen gives you the selection of the project to export. Select the project, and then click the 'Next' button.</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_55.png" /></p>
-<p>On the third screen, select the location and name of the file you wish
-to export the project to. If the file already exists, it will be
-overwritten.</p>
+<p>On the third screen, select the location and name of the file you wish to export the project to. If the file already exists, it will be overwritten.</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_56.png" /></p>
-<p>The next screen is the verification screen -- make sure you wish to
-start the export, and then click the 'Next' button. Once started, you
-cannot cancel or change any options. To change an option, click the
-'Back' button at any time before starting the process to go back a
-screen.</p>
+<p>The next screen is the verification screen -- make sure you wish to start the export, and then click the 'Next' button. Once started, you cannot cancel or change any options. To change an option, click the
+'Back' button at any time before starting the process to go back a screen.</p>
 <p><img alt="ready to export" src="../img/Project_Backup_and_Migration_57.png" /></p>
-<p>Once finished, your output file will be created. You can store and
-backup the file as you need.</p>
+<p>Once finished, your output file will be created. You can store and backup the file as you need.</p>
 <h2 id="project-import">Project Import<a class="headerlink" href="#project-import" title="Permanent link">&para;</a></h2>
-<p>To import a project file into a new project in SpiraTeam, select the
-Import button on the main screen. This will start the Import wizard:</p>
+<p>To import a project file into a new project in Spira, select the Import button on the main screen. This will start the Import wizard:</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_58.png" /></p>
-<p>On the first screen, enter in the SpiraTeam server URL, and the
-administrator account password. The administrator account must be used,
-so make sure that it is an active account (Active: Yes) in the
-application. When clicking the 'Next' button, it will verify the server
-and login information.</p>
+<p>On the first screen, enter in the Spira server URL, and the administrator account password. The administrator account must be used, so make sure that it is an active account (Active: Yes) in the application. When clicking the 'Next' button, it will verify the server and login information.</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_59.png" /></p>
-<p>The second screen allows you to enter in a name for the project created.
-You can enter in the name of an existing project, but a new project by
-that name will be created -- it will not import the project into an
-existing project.</p>
-<p>The third screen is only present on the SpiraTeam v4.0 version of the
-migration tool. This is because the SpiraTeam 4.0 API requires that new
-user's be created with passwords of specific strength. Any user in the
-project file that is not present in the destination system will be
-created with the password that you specify:</p>
+<p>The second screen allows you to enter in a name for the project created. You can enter in the name of an existing project, but a new project by that name will be created -- it will not import the project into an existing project.</p>
+<p>The third screen is only present on the Spira v4.0 version of the migration tool. This is because the Spira 4.0 API requires that new user's be created with passwords of specific strength. Any user in the project file that is not present in the destination system will be created with the password that you specify:</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_60.png" /></p>
-<p>You should enter a password, click the 'Test' button to make sure it
-will be accepted by SpiraTeam, and then click the 'Next' button. This
-will then display the fourth screen:</p>
+<p>You should enter a password, click the 'Test' button to make sure it will be accepted by Spira, and then click the 'Next' button. This will then display the fourth screen:</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_61.png" /></p>
-<p>The fourth screen will let you select the PRJ Project file. Select the
-file by clicking on the folder button, and the application will verify
-the integrity of the file before performing the import:</p>
+<p>The fourth screen will let you select the PRJ Project file. Select the file by clicking on the folder button, and the application will verify the integrity of the file before performing the import:</p>
 <p><img alt="" src="../img/Project_Backup_and_Migration_62.png" /></p>
-<p>The last screen will let you verify your settings before starting the
-import. If any changes need to be made, click the Back button. Once
-ready to import the project, click the 'Finish button to start the
-import.</p>
-<p>If any error occurs during import, it's not recommended to use the
-project created in the application, although you can log in and view the
-data that was imported.</p>
+<p>The last screen will let you verify your settings before starting the import. If any changes need to be made, click the Back button. Once ready to import the project, click the 'Finish button to start the import.</p>
+<p>If any error occurs during import, it's not recommended to use the project created in the application, although you can log in and view the data that was imported.</p>
 <h2 id="project-transfer">Project Transfer<a class="headerlink" href="#project-transfer" title="Permanent link">&para;</a></h2>
-<p>Selecting the 'Transfer' button will start the transfer wizard, which
-contains screens from both the Import and Export wizards, above.</p>
-<p>The first two screens will let you select the SpiraTeam application to
-pull the project from, following the same information as the first two
-screens in the Export wizard.</p>
-<p>The next three screens will ask for the new SpiraTeam application to
-create the project in and the default password for any new users that
-need to be created. These three screens follow the first three screens
-of the Import wizard, above. Note that the application will try to
-determine if you're trying to re-import the project into the same
-server, and advise that copying the project in the SpiraTeam UI is a
-better choice.</p>
-<p>The final screen will provide a summary of the chosen settings. Once you
-click 'Next', the transfer process will start:</p>
+<p>Selecting the 'Transfer' button will start the transfer wizard, which contains screens from both the Import and Export wizards, above.</p>
+<p>The first two screens will let you select the Spira application to pull the project from, following the same information as the first two screens in the Export wizard.</p>
+<p>The next three screens will ask for the new Spira application to create the project in and the default password for any new users that need to be created. These three screens follow the first three screens of the Import wizard, above. Note that the application will try to determine if you're trying to re-import the project into the same server, and advise that copying the project in the Spira UI is a better choice.</p>
+<p>The final screen will provide a summary of the chosen settings. Once you click 'Next', the transfer process will start:</p>
 <p><img alt="transfer" src="../img/Project_Backup_and_Migration_63.png" /></p>
-<p>Once transfer starts, the entire project will be unloaded into a
-temporary directory on the computer running the application, and then
-the project will be imported into the new system.</p>
+<p>Once transfer starts, the entire project will be unloaded into a temporary directory on the computer running the application, and then the project will be imported into the new system.</p>
 <h2 id="data-transferred">Data Transferred<a class="headerlink" href="#data-transferred" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th><strong><em>SpiraTeam v3.2</em></strong></th>
-<th><strong>Exported</strong></th>
-<th><strong>Imported</strong></th>
+<th>Spira</th>
+<th>Exported</th>
+<th>Imported</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Incidents</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Requirements</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Tasks</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Releases</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Test Cases</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Test Sets</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Test Runs</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Custom Properties</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Custom Lists</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Document Files</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Document Folders</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Document Types</td>
-<td>✓</td>
+<td>Y</td>
 <td></td>
 </tr>
 <tr>
-<td>Comments / Resolutions</td>
-<td>✓</td>
-<td>✓</td>
+<td>Comments</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Datasync Mappings</td>
-<td>✓</td>
+<td>Y</td>
 <td></td>
 </tr>
 <tr>
 <td>Automation Hosts</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Automation Engines</td>
-<td>✓</td>
-<td>✓</td>
+<td>Y</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>Project Roles</td>
-<td>✓</td>
+<td>Y</td>
 <td></td>
 </tr>
 <tr>
 <td>Project Users</td>
-<td>✓</td>
-<td>✓<sup>1</sup></td>
+<td>Y</td>
+<td>Y<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 </tr>
 </tbody>
 </table>
-<p>The table on the left shows what data is backed up and restored. Future
-versions of the Migration tool and SpiraTeam may support exporting and
-importing more data.</p>
-<p>The exported project file may be large, since the binary data of all the
-attachments are downloaded and contained within the file.</p>
-<p>Once an export is completed, the migration tool will not delete the
-project from the system -- you must still do that through the UI. Any
-changes in the project will not automatically be updated in the export
-file; you must re-run the export.</p>
-<p><strong><em>Notes:</em></strong></p>
-<p><sup>1</sup>Users imported back into v3.2 will be marked Active, even if they
-were originally inactive.</p>
+<p>The table on the left shows what data is backed up and restored. Future versions of the Migration tool and Spira may support exporting and importing more data.</p>
+<p>The exported project file may be large, since the binary data of all the attachments are downloaded and contained within the file.</p>
+<p>Once an export is completed, the migration tool will not delete the project from the system -- you must still do that through the UI. Any changes in the project will not automatically be updated in the export file; you must re-run the export.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>]Users imported back into v3.2 will be marked Active, even if they were originally inactive.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 

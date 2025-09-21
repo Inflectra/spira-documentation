@@ -8135,10 +8135,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reqif-spirateam-importing-notes" class="md-nav__link">
+  <a href="#reqif-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ReqIF &amp; SpiraTeam Importing Notes
+        ReqIF &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -8985,6 +8985,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9062,10 +9090,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reqif-spirateam-importing-notes" class="md-nav__link">
+  <a href="#reqif-spira-importing-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ReqIF &amp; SpiraTeam Importing Notes
+        ReqIF &amp; Spira Importing Notes
       
     </span>
   </a>
@@ -9129,94 +9157,68 @@
 
 
 <h1 id="importing-from-requirements-interchange-format-reqif-files">Importing From Requirements Interchange Format (ReqIF) Files<a class="headerlink" href="#importing-from-requirements-interchange-format-reqif-files" title="Permanent link">&para;</a></h1>
-<p>The SpiraTeam ReqIF Importer
-imports requirements, specifications, custom properties, relationships
-and other information from Requirements Interchange Format (ReqIF)
-files into SpiraTeam.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>The Spira ReqIF Importer imports requirements, specifications, custom properties, relationships and other information from Requirements Interchange Format (ReqIF) files into Spira.</p>
 <h2 id="installing-the-importer">Installing the Importer<a class="headerlink" href="#installing-the-importer" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the importer onto a desktop so that
-you can then import requirements from ReqIF files into SpiraTeam.
-It assumes that you already have a working installation of SpiraTest, SpiraTeam, or SpiraPlan (hereafter SpiraTeam) v6.0 or later.</p>
-<p>You can download the Importer from the Inflectra's website under
-"Downloads and Add-Ons". When downloaded, double-click the MSI file.
-Follow the instructions in the MSI file to install the importer.</p>
+<p>This section outlines how to install the importer onto a desktop so that you can then import requirements from ReqIF files into Spira. It assumes that you already have a working installation of Spira v6.0 or later.</p>
+<p>You can download the Importer from the Inflectra's website under "Downloads and Add-Ons". When downloaded, double-click the MSI file. Follow the instructions in the MSI file to install the importer.</p>
 <p><img alt="" src="../img/ReqIF-1.png" /></p>
 <h2 id="importing-from-a-reqif-requirements-file">Importing from a ReqIF Requirements File<a class="headerlink" href="#importing-from-a-reqif-requirements-file" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the integration adapter, you can launch it
-at any time by going to Start &gt; Programs &gt; SpiraTeam &gt; Tools &gt;
-ReqIF Importer. This will launch the import application
-itself. You will be shown an introduction screen.</p>
+<p>Now that you have installed the integration adapter, you can launch it at any time by going to Start &gt; Programs &gt; Spira &gt; Tools &gt; ReqIF Importer. This will launch the import application itself. You will be shown an introduction screen.</p>
 <p><img alt="" src="../img/ReqIF-2.png" /></p>
 <p>Click 'Next' to get to the second screen:</p>
 <p><img alt="" src="../img/ReqIF-3.png" /></p>
-<p>Click the folder button
-(<img alt="img_Folder" src="../img/Importing_From_EnterpriseArchitect_11.png" />) to open the file open dialog. In this
-dialog, select the Requirements Interchange Format (*.reqif) file that you
-want to use for importing.</p>
-<p><strong>Choose the requirements attributes you want from the .ReqIF file
-model to map to the Name and Description fields in SpiraTeam. Any
-other fields will be imported as custom properties.</strong></p>
-<p>The field mappings will depend on the tool you are importing from. The default values are:
-- <strong>Name:</strong> ReqIf.Name
-- <strong>Chapter Name:</strong> ReqIf.ChapterName
-- <strong>Description:</strong> ReqIf.Text</p>
-<p><em>See the appendix for how Rational DOORS and Rational Requirements Composer ReqIF Files Work</em></p>
-<p>Once the file is selected, and the name/description attributes mapped,
-click <em>Next</em> to continue to the screen where
-you enter your SpiraTeam project information:</p>
-<p><img alt="" src="../img/ReqIF-4.png" /></p>
-<p>If the file you selected in the previous step was already lined to a
-SpiraTeam project, that information will be automatically populated in
-the fields, and you can click <em>Next</em> to proceed.</p>
-<p>Otherwise, enter in the SpiraTeam Server URL, your username and password
-used to log onto the system with and click the <em>Get Projects</em> button.
-The program will connect to the server and get a list of all available
-projects. Select the project you want to import into under the <em>Project
-&amp; Requirement</em> section.</p>
-<p><img alt="" src="../img/ReqIF-5.png" /></p>
-<p>The <em>Root Requirement</em> box is for specifying the name of the parent requirement in SpiraTeam, that all the imported requirements will be nested under. The system will default this to the name of the ReqIF file unless you choose something else.</p>
-<p>Once the fields are entered, click <em>Next</em> to get to the summary screen.
-The summary screen tells you what will be done, and once it's reviewed,
-click the <em>Import</em> button to start importing:</p>
-<p><img alt="" src="../img/ReqIF-6.png" /></p>
-<p>Anything flagged with a:
-- red <img alt="Error" src="../img/Importing_From_EnterpriseArchitect_17.png" /> failed
-- green <img alt="Success" src="../img/Importing_From_EnterpriseArchitect_18.png" /> means that they succeeded</p>
-<p>Once finished,
-click <em>Finish</em> to get to the last page of the wizard:</p>
-<p><img alt="" src="../img/ReqIF-7.png" /></p>
-<p>If anything failed, you can view the details import log at the following location:</p>
-<pre>
-C:\ProgramData\SpiraTeamReqIFImporter.log
-</pre>
-
-<h2 id="reqif-spirateam-importing-notes">ReqIF &amp; SpiraTeam Importing Notes<a class="headerlink" href="#reqif-spirateam-importing-notes" title="Permanent link">&para;</a></h2>
+<p>Click the folder button (<img alt="img_Folder" src="../img/Importing_From_EnterpriseArchitect_11.png" />) to open the file open dialog. In this dialog, select the Requirements Interchange Format (*.reqif) file that you want to use for importing.</p>
+<p><strong>Choose the requirements attributes you want from the .ReqIF file model to map to the Name and Description fields in Spira. Any other fields will be imported as custom properties.</strong></p>
+<p>The field mappings will depend on the tool you are importing from. The default values are:</p>
 <ul>
-<li>The importer uses the <a href="https://reqifsharp.org/">ReqIFSharp library</a> and supports the following ReqIF versions:</li>
-<li>ReqIF v1.0.1</li>
-<li>ReqIF v1.1</li>
-<li>ReqIF v1.2</li>
+<li><strong>Name:</strong> ReqIf.Name</li>
+<li><strong>Chapter Name:</strong> ReqIf.ChapterName</li>
+<li><strong>Description:</strong> ReqIf.Text</li>
+</ul>
+<p><em>See the appendix for how Rational DOORS and Rational Requirements Composer ReqIF Files Work</em></p>
+<p>Once the file is selected, and the name/description attributes mapped, click <em>Next</em> to continue to the screen where you enter your Spira project information:</p>
+<p><img alt="" src="../img/ReqIF-4.png" /></p>
+<p>If the file you selected in the previous step was already lined to a Spira project, that information will be automatically populated in the fields, and you can click <em>Next</em> to proceed.</p>
+<p>Otherwise, enter in the Spira Server URL, your username and password used to log onto the system with and click the <em>Get Projects</em> button. The program will connect to the server and get a list of all available projects. Select the project you want to import into under the <em>Project &amp; Requirement</em> section.</p>
+<p><img alt="" src="../img/ReqIF-5.png" /></p>
+<p>The <em>Root Requirement</em> box is for specifying the name of the parent requirement in Spira, that all the imported requirements will be nested under. The system will default this to the name of the ReqIF file unless you choose something else.</p>
+<p>Once the fields are entered, click <em>Next</em> to get to the summary screen. The summary screen tells you what will be done, and once it's reviewed, click the <em>Import</em> button to start importing:</p>
+<p><img alt="" src="../img/ReqIF-6.png" /></p>
+<p>Anything flagged with a red <img alt="Error" src="../img/Importing_From_EnterpriseArchitect_17.png" /> failed, green <img alt="Success" src="../img/Importing_From_EnterpriseArchitect_18.png" /> means that they succeeded.</p>
+<p>Once finished, click <em>Finish</em> to get to the last page of the wizard:</p>
+<p><img alt="" src="../img/ReqIF-7.png" /></p>
+<p>If anything failed, you can view the details import log at the following location: <code>C:\ProgramData\SpiraReqIFImporter.log</code></p>
+<h2 id="reqif-spira-importing-notes">ReqIF &amp; Spira Importing Notes<a class="headerlink" href="#reqif-spira-importing-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The importer uses the <a href="https://reqifsharp.org/">ReqIFSharp library</a> and supports the following ReqIF versions: ReqIF v1.0.1, ReqIF v1.1, ReqIF v1.2</li>
 <li>The importer will bring across the requirements hierarchy from the ReqIF file.</li>
 <li>It will also import any cross-relationships between requirements.</li>
 <li>It will store the special unique ReqIF identifier field for each requirement in a special 'identifier' custom property. </li>
-<li>It will bring over any text, boolean and enumeration (list) attributes as the corresponding custom properties in SpiraTeam.</li>
+<li>It will bring over any text, boolean and enumeration (list) attributes as the corresponding custom properties in Spira.</li>
 </ul>
-<p>For example, if you import the sample <strong>Sample-Model.reqif</strong> file that is supplied with the importer, you will see the following requirements in SpiraTeam:</p>
+<p>For example, if you import the sample <strong>Sample-Model.reqif</strong> file that is supplied with the importer, you will see the following requirements in Spira:</p>
 <p><img alt="" src="../img/ReqIF-8.png" /></p>
 <p>In addition, the importer will create the necessary custom properties as needed automatically:</p>
 <p><img alt="" src="../img/ReqIF-9.png" /></p>
-<p>If you run the same import twice, the importer will create a new requirements hierarchy each time, but it will reuse the existing custom properties if they are already defined in the SpiraTeam product.</p>
+<p>If you run the same import twice, the importer will create a new requirements hierarchy each time, but it will reuse the existing custom properties if they are already defined in the Spira product.</p>
 <h2 id="appendix-a-ibm-rational-reqif-format-notes">Appendix A: IBM Rational ReqIF Format Notes<a class="headerlink" href="#appendix-a-ibm-rational-reqif-format-notes" title="Permanent link">&para;</a></h2>
 <h3 id="ibm-rational-doors">IBM Rational DOORS<a class="headerlink" href="#ibm-rational-doors" title="Permanent link">&para;</a></h3>
 <p>In the ReqIF files produced by IBM Rational DOORS, typically each Specification has its own type and only contains Items of a single type.</p>
 <p>Because the association between specification and item type is only defined indirectly via:Specification &gt; &gt; SpecHierarchy &gt; SpecObject &gt; SpecObjectType, the item type of an empty specification is undefined, and will be listed under the non-exclusive/shared item types.</p>
-<p>DOORS requirements also have (along with lots of other attributes), each a
-- <code>ReqIF.ChapterName</code>
-- <code>ReqIF.Name</code>
-- <code>ReqIF.Text</code></p>
-<p>But whether the attribute actually has a value, depends upon the type of the requirement:
-- A DOORS Heading has a value for the <code>ReqIF.ChapterName</code>, but <code>ReqIF.Name</code> and <code>ReqIF.Text</code> are typically empty.
-- Non-Heading types, for example requirement have a value for <code>ReqIF.Text</code>, but both, <code>ReqIF.ChapterName</code> and <code>ReqIF.Name</code> are typically empty.</p>
+<p>DOORS requirements also have (along with lots of other attributes), each a:</p>
+<ul>
+<li><code>ReqIF.ChapterName</code></li>
+<li><code>ReqIF.Name</code></li>
+<li><code>ReqIF.Text</code></li>
+</ul>
+<p>But whether the attribute actually has a value, depends upon the type of the requirement:</p>
+<ul>
+<li>A DOORS Heading has a value for the <code>ReqIF.ChapterName</code>, but <code>ReqIF.Name</code> and <code>ReqIF.Text</code> are typically empty.</li>
+<li>Non-Heading types, for example requirement have a value for <code>ReqIF.Text</code>, but both, <code>ReqIF.ChapterName</code> and <code>ReqIF.Name</code> are typically empty.</li>
+</ul>
 <h3 id="ibm-rational-doors-next-gen-requirements-composer">IBM Rational DOORS Next Gen / Requirements Composer<a class="headerlink" href="#ibm-rational-doors-next-gen-requirements-composer" title="Permanent link">&para;</a></h3>
 <p>In ReqIF files produced by IBM Rational Requirements Composer (aka DOORS Next Generation), Specifications typically contain items of different types, <em>for example,. Heading, Information, Requirement etc.</em></p>
 <p>Because all these items are mapped to the same target tracker, each item type must have a unique set of qualifiers, to identify items of this type in the tracker. <em>For example, Heading items are those items in the target tracker, where Type == Folder</em></p>

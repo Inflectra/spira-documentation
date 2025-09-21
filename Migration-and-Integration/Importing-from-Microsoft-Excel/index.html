@@ -7594,10 +7594,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-spirateam" class="md-nav__link">
+  <a href="#connecting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to SpiraTeam®
+        Connecting to Spira
       
     </span>
   </a>
@@ -7760,10 +7760,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functionality-differences-from-microsoft-excel-365-plugin" class="md-nav__link">
+  <a href="#functionality-differences-from-microsoft-excel-365-plugin-excel-classic-can-and-the-excel-365-plugin-cannot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Functionality Differences from Microsoft Excel 365 plugin
+        Functionality Differences from Microsoft Excel 365 plugin Excel Classic can (and the Excel 365 plugin cannot):
       
     </span>
   </a>
@@ -9101,6 +9101,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9167,10 +9195,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-spirateam" class="md-nav__link">
+  <a href="#connecting-to-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to SpiraTeam®
+        Connecting to Spira
       
     </span>
   </a>
@@ -9333,10 +9361,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functionality-differences-from-microsoft-excel-365-plugin" class="md-nav__link">
+  <a href="#functionality-differences-from-microsoft-excel-365-plugin-excel-classic-can-and-the-excel-365-plugin-cannot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Functionality Differences from Microsoft Excel 365 plugin
+        Functionality Differences from Microsoft Excel 365 plugin Excel Classic can (and the Excel 365 plugin cannot):
       
     </span>
   </a>
@@ -9361,171 +9389,77 @@
 
 
 <h1 id="importing-from-microsoft-excel">Importing from Microsoft Excel<a class="headerlink" href="#importing-from-microsoft-excel" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, Spira, SpiraPlan</p>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>If you are using recent versions of Excel and Spira, then do not use this Add-In. This is legacy addon only. </p>
+<p>If you are using recent versions of Excel and Spira, then do not use this Add-In. This is legacy addon only.</p>
 <p>Please use our <a href="../Importing-from-Microsoft-Excel-%28Office365%29/">Excel365 importer</a> instead.</p>
 </div>
-<p>The web-based interface of SpiraTeam® is ideal for creating and managing
-requirements, test cases and incidents for a new project. However when
-migrating requirements, test cases, test steps and incidents for an
-existing project from another system or Microsoft Office document (e.g.
-Excel), it is useful to be able to load in a batch of artifacts, rather
-than having to manually enter them one at a time.</p>
-<p>To simplify this task, SpiraTeam® comes with a Microsoft Excel Add-In
-that can export requirements, test cases, test steps and incidents from
-a populated Excel sheet into SpiraTeam®. In addition, the Add-In allows
-you to import those same artifacts back into the Excel sheet to make
-batch updates which can then be used to update the master copies on the
-server.</p>
-<p>Note that this guide refers to SpiraTeam®, but the Excel Add-In can be
-used with SpiraTest® and SpiraPlan® as well. The only difference is that
-some of the artifact types may not be available in SpiraTest.</p>
+<p>The web-based interface of Spira is ideal for creating and managing requirements, test cases and incidents for a new project. However when migrating requirements, test cases, test steps and incidents for an existing project from another system or Microsoft Office document (e.g. Excel), it is useful to be able to load in a batch of artifacts, rather than having to manually enter them one at a time.</p>
+<p>To simplify this task, Spira comes with a Microsoft Excel Add-In that can export requirements, test cases, test steps and incidents from a populated Excel sheet into Spira. In addition, the Add-In allows you to import those same artifacts back into the Excel sheet to make batch updates which can then be used to update the master copies on the server.</p>
+<p>Note that this guide refers to Spira, but the Excel Add-In can be used with SpiraTest® and SpiraPlan® as well. The only difference is that some of the artifact types may not be available in SpiraTest.</p>
 <h2 id="installing-the-microsoft-excel-add-in">Installing the Microsoft Excel Add-In<a class="headerlink" href="#installing-the-microsoft-excel-add-in" title="Permanent link">&para;</a></h2>
-<p>The first thing you need to do is to go to the "Add-Ons and Downloads"
-page of the Inflectra Website (it can be found in the SpiraTest,
-SpiraPlan or SpiraTeam sections), and download the <strong>MS-Office Add-Ins</strong>
-installation package. There are separate packages for the following
-versions of MS Office:</p>
-<p><strong>MS-Office 2003 Add-Ins</strong> -- these are compatible with Microsoft Office
-2003 and 2007. They can connect to SpiraTeam v2.3 or later. They also
-require Microsoft .NET 3.5.</p>
-<p><strong>MS-Office 2007 Add-Ins</strong> -- these are compatible with Microsoft Office
-2007 and 2010. They can connect to SpiraTeam v3.0 or later. They also
-require Microsoft .NET 4.0.</p>
-<p><strong>MS-Office 2010 Add-Ins</strong> -- these are compatible with Microsoft Office
-2010 and later. They can connect to SpiraTeam v5.0 or later. They also
-require Microsoft .NET 4.0.</p>
-<p>This installation package will install the add-ins for Microsoft Excel,
-Word and Project at the same time. If you don't have the correct version
-of Microsoft .NET installed or some of the necessary prerequisites, you
-will be given the opportunity to install them when you first run the
-installation package.</p>
-<p>Once you have the Excel Add-In installed, the second thing you'll need
-to download is the <strong>SpiraImportTemplate</strong> Excel Sheet. This spreadsheet
-contains the necessary pre-formatted columns that are needed for the
-Add-In to easily recognize the data and know how to handle it. There are
-<em>three</em> versions of the template available -
-<strong>SpiraImportTemplate.xls</strong> for the Excel 2003 Add-In,
-<strong>SpiraImportTemplate.xlsx</strong> for the Excel 2007 Add-In and
-<strong>SpiraImportTemplate2010.xslx</strong> for the Excel 2010
-Add-In.</p>
-<p>Once you have downloaded the template, please double-click on it to open
-it up in MS-Excel. You will notice that there is an additional toolbar
-displayed in Excel which is used for importing/exporting data to/from
-SpiraTeam:</p>
+<p>The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or Spira sections), and download the <strong>MS-Office Add-Ins</strong> installation package. There are separate packages for the following versions of MS Office:</p>
+<ul>
+<li><strong>MS-Office 2003 Add-Ins</strong>: these are compatible with Microsoft Office 2003 and 2007. They can connect to Spira v2.3 or later. They also require Microsoft .NET 3.5.</li>
+<li><strong>MS-Office 2007 Add-Ins</strong>: these are compatible with Microsoft Office 2007 and 2010. They can connect to Spira v3.0 or later. They also require Microsoft .NET 4.0.</li>
+<li><strong>MS-Office 2010 Add-Ins</strong>: these are compatible with Microsoft Office 2010 and later. They can connect to Spira v5.0 or later. They also require Microsoft .NET 4.0.</li>
+</ul>
+<p>This installation package will install the add-ins for Microsoft Excel, Word and Project at the same time. If you don't have the correct version of Microsoft .NET installed or some of the necessary prerequisites, you will be given the opportunity to install them when you first run the installation package.</p>
+<p>Once you have the Excel Add-In installed, the second thing you'll need to download is the <strong>SpiraImportTemplate</strong> Excel Sheet. This spreadsheet contains the necessary pre-formatted columns that are needed for the Add-In to easily recognize the data and know how to handle it. There are <em>three</em> versions of the template available - <strong>SpiraImportTemplate.xls</strong> for the Excel 2003 Add-In, <strong>SpiraImportTemplate.xlsx</strong> for the Excel 2007 Add-In and <strong>SpiraImportTemplate2010.xslx</strong> for the Excel 2010 Add-In.</p>
+<p>Once you have downloaded the template, please double-click on it to open it up in MS-Excel. You will notice that there is an additional toolbar displayed in Excel which is used for importing/exporting data to/from Spira:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_5.png" /></p>
-<p>If you are using the MS-Excel 2007 or 2010 Add-In, you will see a
-modified version of the toolbar that makes use of the MS-Office Ribbon:</p>
+<p>If you are using the MS-Excel 2007 or 2010 Add-In, you will see a modified version of the toolbar that makes use of the MS-Office Ribbon:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_6.png" /></p>
-<p>This toolbar allows you to connect to SpiraTeam, and perform the
-import/export. The process for using this toolbar is described below:</p>
-<h2 id="connecting-to-spirateam">Connecting to SpiraTeam®<a class="headerlink" href="#connecting-to-spirateam" title="Permanent link">&para;</a></h2>
-<p>The first thing you need to do is to click on the [Connect] button to
-specify the information used to connect to your instance of SpiraTeam:</p>
+<p>This toolbar allows you to connect to Spira, and perform the import/export. The process for using this toolbar is described below:</p>
+<h2 id="connecting-to-spira">Connecting to Spira<a class="headerlink" href="#connecting-to-spira" title="Permanent link">&para;</a></h2>
+<p>The first thing you need to do is to click on the [Connect] button to specify the information used to connect to your instance of Spira:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_7.png" /></p>
 <p>Please enter the following information into the dialog box:</p>
 <ul>
 <li>
-<p><strong>Spira URL:</strong> Please enter the web address that you use to access
-SpiraTeam® in your browser. This is usually of the form
-http://&lt;hostname&gt;/SpiraTeam. Make sure that you
-remove any suffixes from the address (e.g. Default.aspx).</p>
+<p><strong>Spira URL:</strong> Please enter the web address that you use to access Spira in your browser. This is usually of the form http://&lt;hostname&gt;/Spira. Make sure that you remove any suffixes from the address (e.g. Default.aspx).</p>
 </li>
 <li>
-<p><strong>User Name:</strong> Please enter the username that you use for logging in
-to SpiraTeam</p>
+<p><strong>User Name:</strong> Please enter the username that you use for logging in to Spira</p>
 </li>
 <li>
-<p><strong>Password:</strong> Please enter the password that you use for logging in
-to SpiraTeam</p>
+<p><strong>Password:</strong> Please enter the password that you use for logging in to Spira</p>
 </li>
 <li>
-<p><strong>Remember Password:</strong> If you are using this Add-In on a private
-computer, you can check this option to have the system remember your
-credentials locally. Please do not use this option on a public
-computer and it will compromise the security of your SpiraTeam
-installation.</p>
+<p><strong>Remember Password:</strong> If you are using this Add-In on a private computer, you can check this option to have the system remember your credentials locally. Please do not use this option on a public computer and it will compromise the security of your Spira installation.</p>
 </li>
 </ul>
 <p>Once you have entered the necessary information, please click
-[Connect] to authenticate with the server. If the login information is
-invalid, you will see an error message appear, otherwise you will be
-connected and the list of projects and artifacts will be populated. If
-you want to end your session, you should just click the [Disconnect]
+[Connect] to authenticate with the server. If the login information is invalid, you will see an error message appear, otherwise you will be connected and the list of projects and artifacts will be populated. If you want to end your session, you should just click the [Disconnect]
 button and the Add-In will close your connection.</p>
 <h2 id="choosing-the-project-and-artifact">Choosing the Project and Artifact<a class="headerlink" href="#choosing-the-project-and-artifact" title="Permanent link">&para;</a></h2>
-<p>Once you have successfully connected to SpiraTeam, you should now choose
-the appropriate Project and Artifact in the system that you will be
-importing / exporting:</p>
+<p>Once you have successfully connected to Spira, you should now choose the appropriate Project and Artifact in the system that you will be importing / exporting:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_8.png" /></p>
 <p>Or</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_9.png" /></p>
-<p>The artifact choice will match the name of the Excel sheet in the
-template, so if you are going to be importing/exporting Requirements,
-you should choose "Requirements" from the dropdown list and then click
-on the "Requirements" tab inside the Excel import template.</p>
-<p>Once you have selected the project and artifact, there are three buttons
-that you can now use:</p>
+<p>The artifact choice will match the name of the Excel sheet in the template, so if you are going to be importing/exporting Requirements, you should choose "Requirements" from the dropdown list and then click on the "Requirements" tab inside the Excel import template.</p>
+<p>Once you have selected the project and artifact, there are three buttons that you can now use:</p>
 <ul>
-<li>
-<p><strong>Import:</strong> Clicking this button will retrieve the data from the
-SpiraTeam server and use that to populate the spreadsheet.</p>
-</li>
-<li>
-<p><strong>Export:</strong> Clicking this button will take the data in the
-spreadsheet and use it to add/update items in SpiraTeam.</p>
-</li>
-<li>
-<p><strong>Clear:</strong> This button allows you to quickly clear the data in the
-import template while leaving all the necessary headings and other
-information that the Add-In needs to be able to import/export data.</p>
-</li>
-<li>
-<p><strong>Options:</strong> (Only in MS-Excel 2007/2010 Add-Inx). This button
-allows you to change some of the import/export options.</p>
-</li>
+<li><strong>Import:</strong> Clicking this button will retrieve the data from the Spira server and use that to populate the spreadsheet.</li>
+<li><strong>Export:</strong> Clicking this button will take the data in the spreadsheet and use it to add/update items in Spira.</li>
+<li><strong>Clear:</strong> This button allows you to quickly clear the data in the import template while leaving all the necessary headings and other information that the Add-In needs to be able to import/export data.</li>
+<li><strong>Options:</strong> (Only in MS-Excel 2007/2010 Add-Inx). This button allows you to change some of the import/export options.</li>
 </ul>
 <h2 id="importing-exporting-data">Importing / Exporting Data<a class="headerlink" href="#importing-exporting-data" title="Permanent link">&para;</a></h2>
-<p>The Excel Add-In is capable of either importing data from SpiraTeam into
-the Excel template or exporting data from the Excel template to
-SpiraTeam. However it is important to understand how the system knows
-whether to add new items to SpiraTeam or whether to update existing
-items:</p>
+<p>The Excel Add-In is capable of either importing data from Spira into the Excel template or exporting data from the Excel template to Spira. However it is important to understand how the system knows whether to add new items to Spira or whether to update existing items:</p>
 <ul>
-<li>
-<p>If you start with a blank import spreadsheet and enter items into
-it, they will not have a value set on their ID column in the
-spreadsheet (this is always the first column in each sheet). When
-you perform an Export, it will add these as new items in SpiraTeam</p>
-</li>
-<li>
-<p>If you start with a blank import spreadsheet and choose to Import
-data from SpiraTeam, those rows will include the ID of the item in
-the first column of the spreadsheet. You can either update those
-rows or add new rows in between. Any rows that have the ID column
-populated will be <em>updated</em> in SpiraTeam when you choose Export,
-whereas any newly added rows will be <em>inserted</em> in SpiraTeam.</p>
-</li>
+<li>If you start with a blank import spreadsheet and enter items into it, they will not have a value set on their ID column in the spreadsheet (this is always the first column in each sheet). When you perform an Export, it will add these as new items in Spira</li>
+<li>If you start with a blank import spreadsheet and choose to Import data from Spira, those rows will include the ID of the item in the first column of the spreadsheet. You can either update those rows or add new rows in between. Any rows that have the ID column populated will be <em>updated</em> in Spira when you choose Export, whereas any newly added rows will be <em>inserted</em> in Spira.</li>
 </ul>
 <h3 id="importingexporting-releases">Importing/Exporting Releases<a class="headerlink" href="#importingexporting-releases" title="Permanent link">&para;</a></h3>
-<p>To import/export releases, first you need to click on the "Releases" tab
-in the Excel sheet:</p>
+<p>To import/export releases, first you need to click on the "Releases" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_10.png" /></p>
-<p>Next if you want to import the list of existing Releases from SpiraTeam,
-you should click on the [Clear] icon to first remove the sample
-information from the spreadsheet, then click [Import] to load the list
-of existing releases into the sheet. These items will all have the "Rel
-#" column populated so that the system knows to update them rather than
-insert them when you subsequently click [Export].</p>
-<p>If you want to simply export a list of releases from a spreadsheet, then
-you need to either enter the releases into this specially formatted
-spreadsheet or cut and paste them in from another existing Excel sheet
-that you've been using to manage releases previously. Then click
-[Export] and the new items will be added to your instance of
-SpiraTeam.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
+<p>Next if you want to import the list of existing Releases from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing releases into the sheet. These items will all have the "Rel#" column populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of releases from a spreadsheet, then you need to either enter the releases into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage releases previously. Then click [Export] and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -9536,7 +9470,7 @@ data are listed below:</p>
 <tbody>
 <tr>
 <td>Rel #</td>
-<td>Stores the ID of the release. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the release. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Release Name</strong></td>
@@ -9604,7 +9538,7 @@ data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text         <br> -   <strong>Decimal</strong> -- enter the number (e.g. 1.0) <br> -   <strong>Integer</strong> -- enter the number (e.g. 2) <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong> -- enter the ID of the user <br> -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong>: enter the text, include HTML tags if rich-text         <br> -   <strong>Decimal</strong>: enter the number (e.g. 1.0) <br> -   <strong>Integer</strong>: enter the number (e.g. 2) <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong>: enter the ID of the user <br> -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -9614,23 +9548,11 @@ data are listed below:</p>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="importingexporting-requirements">Importing/Exporting Requirements<a class="headerlink" href="#importingexporting-requirements" title="Permanent link">&para;</a></h3>
-<p>To import/export requirements, first you need to click on the
-"Requirements" tab in the Excel sheet:</p>
+<p>To import/export requirements, first you need to click on the "Requirements" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_11.png" /></p>
-<p>Next if you want to import the list of existing Requirements from
-SpiraTeam, you should click on the [Clear] icon to first remove the
-sample information from the spreadsheet, then click [Import] to load
-the list of existing requirements into the sheet. These items will all
-have the "Req #" column populated so that the system knows to update
-them rather than insert them when you subsequently click [Export].</p>
-<p>If you want to simply export a list of requirements from a spreadsheet,
-then you need to either enter the requirements into this specially
-formatted spreadsheet or cut and paste them in from another existing
-Excel sheet that you've been using to manage requirements previously.
-Then click [Export] and the new items will be added to your instance
-of SpiraTeam.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
+<p>Next if you want to import the list of existing Requirements from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing requirements into the sheet. These items will all have the "Req #" column populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of requirements from a spreadsheet, then you need to either enter the requirements into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage requirements previously. Then click [Export] and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -9641,7 +9563,7 @@ data are listed below:</p>
 <tbody>
 <tr>
 <td>Req #</td>
-<td>Stores the ID of the requirement. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the requirement. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Requirement Name</strong></td>
@@ -9709,7 +9631,7 @@ data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br> -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text <br> -   <strong>Decimal</strong> -- enter the number (e.g. 1.0)  <br> -   <strong>Integer</strong> -- enter the number (e.g. 2)  <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong> -- enter the ID of the user <br> -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5") <br> -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br> -   <strong>Text</strong>: enter the text, include HTML tags if rich-text <br> -   <strong>Decimal</strong>: enter the number (e.g. 1.0)  <br> -   <strong>Integer</strong>: enter the number (e.g. 2)  <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong>: enter the ID of the user <br> -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -9719,23 +9641,11 @@ data are listed below:</p>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="importingexporting-test-sets">Importing/Exporting Test Sets<a class="headerlink" href="#importingexporting-test-sets" title="Permanent link">&para;</a></h3>
-<p>To import/export test sets, first you need to click on the "Test Sets"
-tab in the Excel sheet:</p>
+<p>To import/export test sets, first you need to click on the "Test Sets" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_12.png" /></p>
-<p>Next if you want to import the list of existing Test Sets from
-SpiraTeam, you should click on the [Clear] icon to first remove the
-sample information from the spreadsheet, then click [Import] to load
-the list of existing test sets into the sheet. These items will all have
-the "TX #" column populated so that the system knows to update them
-rather than insert them when you subsequently click [Export].</p>
-<p>If you want to simply export a list of test sets from a spreadsheet,
-then you need to either enter the test sets into this specially
-formatted spreadsheet or cut and paste them in from another existing
-Excel sheet that you've been using to manage test sets previously. Then
-click [Export] and the new items will be added to your instance of
-SpiraTeam.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
+<p>Next if you want to import the list of existing Test Sets from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing test sets into the sheet. These items will all have the "TX #" column populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of test sets from a spreadsheet, then you need to either enter the test sets into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage test sets previously. Then click [Export] and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -9746,7 +9656,7 @@ data are listed below:</p>
 <tbody>
 <tr>
 <td>TX #</td>
-<td>Stores the ID of the test set. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the test set. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Test Set Name</strong></td>
@@ -9802,7 +9712,7 @@ data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text         <br> -   <strong>Decimal</strong> -- enter the number (e.g. 1.0) <br> -   <strong>Integer</strong> -- enter the number (e.g. 2) <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe)  <br> -   <strong>User</strong> -- enter the ID of the user <br> -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong>: enter the text, include HTML tags if rich-text         <br> -   <strong>Decimal</strong>: enter the number (e.g. 1.0) <br> -   <strong>Integer</strong>: enter the number (e.g. 2) <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe)  <br> -   <strong>User</strong>: enter the ID of the user <br> -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -9812,24 +9722,11 @@ data are listed below:</p>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="importingexporting-test-cases">Importing/Exporting Test Cases<a class="headerlink" href="#importingexporting-test-cases" title="Permanent link">&para;</a></h3>
-<p>To import/export test cases, first you need to click on the "Test Cases"
-tab in the Excel sheet:</p>
+<p>To import/export test cases, first you need to click on the "Test Cases" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_13.png" /></p>
-<p>Next if you want to import the list of existing Test Cases from
-SpiraTeam, you should click on the [Clear] icon to first remove the
-sample information from the spreadsheet, then click [Import] to load
-the list of existing test cases into the sheet. These items will all
-have the "Test #" and "Step #" columns populated so that the system
-knows to update them rather than insert them when you subsequently click
-[Export].</p>
-<p>If you want to simply export a list of test cases from a spreadsheet,
-then you need to either enter the test cases (including any test steps)
-into this specially formatted spreadsheet or cut and paste them in from
-another existing Excel sheet that you've been using to manage test cases
-previously. Then click [Export] and the new items will be added to
-your instance of SpiraTeam.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
+<p>Next if you want to import the list of existing Test Cases from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing test cases into the sheet. These items will all have the "Test #" and "Step #" columns populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of test cases from a spreadsheet, then you need to either enter the test cases (including any test steps) into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage test cases previously. Then click [Export] and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -9840,7 +9737,7 @@ data are listed below:</p>
 <tbody>
 <tr>
 <td>Test #</td>
-<td>Stores the ID of the test case. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the test case. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Test Case Name</strong></td>
@@ -9936,29 +9833,17 @@ data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text          <br> -   <strong>Decimal</strong> -- enter the number (e.g. 1.0)  <br> -   <strong>Integer</strong> -- enter the number (e.g. 2)  <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong> -- enter the ID of the user <br> -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")  <br> -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong>: enter the text, include HTML tags if rich-text          <br> -   <strong>Decimal</strong>: enter the number (e.g. 1.0)  <br> -   <strong>Integer</strong>: enter the number (e.g. 2)  <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong>: enter the ID of the user <br> -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 </tbody>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="importingexporting-incidents">Importing/Exporting Incidents<a class="headerlink" href="#importingexporting-incidents" title="Permanent link">&para;</a></h3>
-<p>To import/export incidents, first you need to click on the "Incidents"
-tab in the Excel sheet:</p>
+<p>To import/export incidents, first you need to click on the "Incidents" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_14.png" /></p>
-<p>Next if you want to import the list of existing Incidents from
-SpiraTeam, you should click on the [Clear] icon to first remove the
-sample information from the spreadsheet, then click [Import] to load
-the list of existing incidents into the sheet. These items will all have
-the "Inc #" column populated so that the system knows to update them
-rather than insert them when you subsequently click [Export].</p>
-<p>If you want to simply export a list of incidents from a spreadsheet,
-then you need to either enter the incidents into this specially
-formatted spreadsheet or cut and paste them in from another existing
-Excel sheet that you've been using to manage incidents previously. Then
-click [Export] and the new items will be added to your instance of
-SpiraTeam.</p>
-<p>The various columns that can be imported/exported, and the rules for
-entering data are listed below:</p>
+<p>Next if you want to import the list of existing Incidents from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing incidents into the sheet. These items will all have the "Inc #" column populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of incidents from a spreadsheet, then you need to either enter the incidents into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage incidents previously. Then click [Export] and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported/exported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -9969,7 +9854,7 @@ entering data are listed below:</p>
 <tbody>
 <tr>
 <td>Inc #</td>
-<td>Stores the ID of the incident. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the incident. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Incident Name</strong></td>
@@ -10105,7 +9990,7 @@ entering data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br>  -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br>  -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text            <br> -   <strong>Decimal</strong> -- enter the number (e.g. 1.0)   <br> -   <strong>Integer</strong> -- enter the number (e.g. 2)  <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong> -- enter the ID of the user  <br>  -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property:  <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br>  -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3") <br>  -   <strong>Text</strong>: enter the text, include HTML tags if rich-text            <br> -   <strong>Decimal</strong>: enter the number (e.g. 1.0)   <br> -   <strong>Integer</strong>: enter the number (e.g. 2)  <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong>: enter the ID of the user  <br>  -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -10115,22 +10000,12 @@ entering data are listed below:</p>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="importingexporting-tasks">Importing/Exporting Tasks<a class="headerlink" href="#importingexporting-tasks" title="Permanent link">&para;</a></h3>
-<p>To import/export tasks, first you need to click on the "Tasks" tab in
-the Excel sheet:</p>
+<p>To import/export tasks, first you need to click on the "Tasks" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_15.png" /></p>
-<p>Next if you want to import the list of existing Tasks from SpiraTeam,
-you should click on the [Clear] icon to first remove the sample
-information from the spreadsheet, then click [Import] to load the list
-of existing tasks into the sheet. These items will all have the "Inc #"
-column populated so that the system knows to update them rather than
-insert them when you subsequently click [Export].</p>
-<p>If you want to simply export a list of tasks from a spreadsheet, then
-you need to either enter the tasks into this specially formatted
-spreadsheet or cut and paste them in from another existing Excel sheet
-that you've been using to manage tasks previously. Then click [Export]
-and the new items will be added to your instance of SpiraTeam.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
+<p>Next if you want to import the list of existing Tasks from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing tasks into the sheet. These items will all have the "Inc #" column populated so that the system knows to update them rather than insert them when you subsequently click [Export].</p>
+<p>If you want to simply export a list of tasks from a spreadsheet, then you need to either enter the tasks into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage tasks previously. Then click [Export]
+and the new items will be added to your instance of Spira.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
 <table>
 <thead>
 <tr>
@@ -10141,7 +10016,7 @@ data are listed below:</p>
 <tbody>
 <tr>
 <td>Task #</td>
-<td>Stores the ID of the task. Should be left blank for new items being added to SpiraTeam</td>
+<td>Stores the ID of the task. Should be left blank for new items being added to Spira</td>
 </tr>
 <tr>
 <td><strong>Task Name</strong></td>
@@ -10245,7 +10120,7 @@ data are listed below:</p>
 </tr>
 <tr>
 <td>CUS-01 -- CUS-30</td>
-<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong> -- provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br> -   <strong>MultiList</strong> -- provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong> -- enter the text, include HTML tags if rich-text                  <br>  -   <strong>Decimal</strong> -- enter the number (e.g. 1.0) <br> -   <strong>Integer</strong> -- enter the number (e.g. 2) <br> -   <strong>Date</strong> -- enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong> -- enter the ID of the user <br> -   <strong>Boolean</strong> -- Enter either "True" or "False"</td>
+<td>The thirty (30) custom fields defined in the project. The value entered depends on the type of custom property: <br> -   <strong>List</strong>: provide the numeric ID of the custom list value (e.g. PV00005 would be entered as just "5")   <br> -   <strong>MultiList</strong>: provide a comma-separated list of the numeric IDs of the custom list values (e.g. PV00005 and PV00003 would be entered as just "5,3")  <br> -   <strong>Text</strong>: enter the text, include HTML tags if rich-text                  <br>  -   <strong>Decimal</strong>: enter the number (e.g. 1.0) <br> -   <strong>Integer</strong>: enter the number (e.g. 2) <br> -   <strong>Date</strong>: enter the number in the current local time format (e.g. m/d/yyyy for the US, d/m/yyyy for Europe) <br> -   <strong>User</strong>: enter the ID of the user <br> -   <strong>Boolean</strong>: Enter either "True" or "False"</td>
 </tr>
 <tr>
 <td>Comment</td>
@@ -10255,77 +10130,43 @@ data are listed below:</p>
 </table>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h3 id="execute-test-cases-offline">Execute Test Cases Offline<a class="headerlink" href="#execute-test-cases-offline" title="Permanent link">&para;</a></h3>
-<p>As well as being able to import/export data, you can also use the import
-spreadsheet to execute test cases while disconnected from your network
-and then upload the results to SpiraTeam as a single batch.</p>
-<p>To do this, when connected to the network, connect to the server using
-the Add-In [Connect] icon, select the project and "Test Runs", then
-click on the "Test Runs" in the spreadsheet:</p>
+<p>As well as being able to import/export data, you can also use the import spreadsheet to execute test cases while disconnected from your network and then upload the results to Spira as a single batch.</p>
+<p>To do this, when connected to the network, connect to the server using the Add-In [Connect] icon, select the project and "Test Runs", then click on the "Test Runs" in the spreadsheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_16.png" /></p>
-<p>Now you should click on the [Import] button, and the Add-In will load
-the list of Test Cases (and in the case of the MS-Office 2007/2010
-Add-Ins, any Test Sets as well) that are currently assigned to you
-together with open cells (marked in green) that you can use to record
-the actual results of testing:</p>
+<p>Now you should click on the [Import] button, and the Add-In will load the list of Test Cases (and in the case of the MS-Office 2007/2010 Add-Ins, any Test Sets as well) that are currently assigned to you together with open cells (marked in green) that you can use to record the actual results of testing:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_17.png" /></p>
-<p>You can now disconnect from the network and perform the testing
-activities offline. Enter the following entries into the spreadsheet:</p>
-<p>Status          The execution status of that test step. It should be selected drop the dropdown list. The allowed values are: Failed / Passed / Blocked / Caution.
-Actual Result   The long description of the actual result experienced during testing. If you want it formatted, you need to add HTML tags such as &lt;b&gt; for bold
-Incident Name   If you want to log an incident associated with the test failure, enter the name of the incident here. The description of the incident will be pre-populated with the Test Step Description, Expected Result, and Actual Result.</p>
-<p>Once you have finished testing and are connected back on the network,
-just click on the [Connect] icon to have the Add-In connect with the
-SpiraTeam server, choose the project name and "Test Runs" and then click
-[Export]. The test results will now be uploaded to the server.</p>
-<p><em>Note: If you are using the MS-Excel 2007/2010 Add-Ins, you will also
-see the Test Set ID, Release ID and TX TC ID (Test-Set, Test Case unique
-ID). You can manually set a Release ID on test cases that were not part
-of a test set.</em></p>
+<p>You can now disconnect from the network and perform the testing activities offline. Enter the following entries into the spreadsheet:</p>
+<ul>
+<li>Status: The execution status of that test step. It should be selected drop the dropdown list. The allowed values are: Failed / Passed / Blocked / Caution. </li>
+<li>Actual Result: The long description of the actual result experienced during testing. If you want it formatted, you need to add HTML tags such as &lt;b&gt; for bold </li>
+<li>Incident Name: If you want to log an incident associated with the test failure, enter the name of the incident here. </li>
+<li>The description of the incident will be pre-populated with the Test Step Description, Expected Result, and Actual Result.</li>
+</ul>
+<p>Once you have finished testing and are connected back on the network, just click on the [Connect] icon to have the Add-In connect with the Spira server, choose the project name and "Test Runs" and then click [Export]. The test results will now be uploaded to the server.</p>
+<p><em>Note: If you are using the MS-Excel 2007/2010 Add-Ins, you will also see the Test Set ID, Release ID and TX TC ID (Test-Set, Test Case unique ID). You can manually set a Release ID on test cases that were not part of a test set.</em></p>
 <h3 id="importing-custom-property-list-values">Importing Custom Property List Values<a class="headerlink" href="#importing-custom-property-list-values" title="Permanent link">&para;</a></h3>
-<p>To import/export custom property values (for list custom properties),
-first you need to click on the "Custom Values" tab in the Excel sheet:</p>
+<p>To import/export custom property values (for list custom properties), first you need to click on the "Custom Values" tab in the Excel sheet:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_18.png" /></p>
-<p>Next if you want to import the list of existing custom list values from
-SpiraTeam, you should click on the [Clear] icon to first remove the
-sample information from the spreadsheet, then click [Import] to load
-the list of existing custom list values into the sheet. These items will
-all have the "Value #" column populated so that the system knows to
-update them rather than insert them when you subsequently click
+<p>Next if you want to import the list of existing custom list values from Spira, you should click on the [Clear] icon to first remove the sample information from the spreadsheet, then click [Import] to load the list of existing custom list values into the sheet. These items will all have the "Value #" column populated so that the system knows to update them rather than insert them when you subsequently click
 [Export].</p>
-<p>If you want to export a list of custom list values from a
-spreadsheet you first need to make sure that a list exists in the right template in Spira. You can only edit a list that already exists in Spira. Then you need to either enter the custom list ID and value
-name into this specially formatted spreadsheet or cut and paste them in
-from another existing Excel sheet that you've been using to manage the
-values previously. Then click [Export] and the new items will be added
-to your instance of SpiraTeam. NOTE: These values are initially added as inactive on the list. You will need to log into Spira to make the list values required active.</p>
-<p>The various columns that can be imported, and the rules for entering
-data are listed below:</p>
-<p><strong>Field name</strong>          <strong>Description</strong>
-Value #                Stores the ID of the custom list value. Should be left blank for new items being added to SpiraTeam
-<strong>Custom List #</strong>      The ID of the custom list that the value is being added to (with the CL prefix removed). For example custom list CL00005 would be entered as just "5"
-<strong>Custom Value Name</strong>   The name of the custom value that you are inserting/updating in SpiraTeam</p>
+<p>If you want to export a list of custom list values from a spreadsheet you first need to make sure that a list exists in the right template in Spira. You can only edit a list that already exists in Spira. Then you need to either enter the custom list ID and value name into this specially formatted spreadsheet or cut and paste them in from another existing Excel sheet that you've been using to manage the values previously. Then click [Export] and the new items will be added to your instance of Spira. NOTE: These values are initially added as inactive on the list. You will need to log into Spira to make the list values required active.</p>
+<p>The various columns that can be imported, and the rules for entering data are listed below:</p>
+<ul>
+<li><strong>Field name</strong>          </li>
+<li><strong>Description</strong> Value #  Stores the ID of the custom list value. Should be left blank for new items being added to Spira </li>
+<li><strong>Custom List #</strong> The ID of the custom list that the value is being added to (with the CL prefix removed). For example custom list CL00005 would be entered as just "5" </li>
+<li><strong>Custom Value Name</strong> The name of the custom value that you are inserting/updating in Spira</li>
+</ul>
 <p>Note: the columns that are required are listed in <strong>bold</strong> type.</p>
 <h2 id="changing-the-importexport-options">Changing the Import/Export Options<a class="headerlink" href="#changing-the-importexport-options" title="Permanent link">&para;</a></h2>
-<p>In the MS-Excel 2007 and 2010 Add-Ins, you can change how the
-import/export works by clicking on the Options icon. This brings up the
-Options dialog box:</p>
+<p>In the MS-Excel 2007 and 2010 Add-Ins, you can change how the import/export works by clicking on the Options icon. This brings up the Options dialog box:</p>
 <p><img alt="" src="../img/Importing_from_Microsoft_Excel_19.png" /></p>
 <h3 id="rich-text-setting">Rich Text Setting<a class="headerlink" href="#rich-text-setting" title="Permanent link">&para;</a></h3>
-<p>When you import artifacts from SpiraTeam into MS-Excel, if they have a
-formatted description, by default all the HTML tags that are used to
-describe the formatting will be loaded into the Excel cell. This is
-useful if you plan on making changes and then updating SpiraTeam (since
-it will preserve the formatting).</p>
-<p>However if you want to be able to more easily read the descriptions in
-Excel and do not plan on updating SpiraTeam, you can select the option
-to Remove the Formatting, which will convert the descriptions to
-plain-text before loading them into Excel.</p>
+<p>When you import artifacts from Spira into MS-Excel, if they have a formatted description, by default all the HTML tags that are used to describe the formatting will be loaded into the Excel cell. This is useful if you plan on making changes and then updating Spira (since it will preserve the formatting).</p>
+<p>However if you want to be able to more easily read the descriptions in Excel and do not plan on updating Spira, you can select the option to Remove the Formatting, which will convert the descriptions to plain-text before loading them into Excel.</p>
 <h3 id="test-run-date-setting">Test Run Date Setting<a class="headerlink" href="#test-run-date-setting" title="Permanent link">&para;</a></h3>
-<p>If you set a date for the 'Test Run Date', the importer will use that
-date to be the date the test runs were executed on, rather than the
-current date/time, which is used by default.</p>
-<h2 id="functionality-differences-from-microsoft-excel-365-plugin">Functionality Differences from Microsoft Excel 365 plugin<a class="headerlink" href="#functionality-differences-from-microsoft-excel-365-plugin" title="Permanent link">&para;</a></h2>
-<p>Excel Classic can (and the Excel 365 plugin cannot):</p>
+<p>If you set a date for the 'Test Run Date', the importer will use that date to be the date the test runs were executed on, rather than the current date/time, which is used by default.</p>
+<h2 id="functionality-differences-from-microsoft-excel-365-plugin-excel-classic-can-and-the-excel-365-plugin-cannot">Functionality Differences from Microsoft Excel 365 plugin Excel Classic can (and the Excel 365 plugin cannot):<a class="headerlink" href="#functionality-differences-from-microsoft-excel-365-plugin-excel-classic-can-and-the-excel-365-plugin-cannot" title="Permanent link">&para;</a></h2>
 <ul>
 <li>work with version of Spira older than 6.3.0.1 </li>
 <li>work with versions of Excel pre Excel 2015</li>

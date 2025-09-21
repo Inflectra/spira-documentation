@@ -5220,15 +5220,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-testng-with-spiratest" class="md-nav__link">
+  <a href="#using-testng-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using TestNG with SpiraTest
+        Using TestNG with Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using TestNG with SpiraTest">
+    <nav class="md-nav" aria-label="Using TestNG with Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -8963,6 +8963,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9029,15 +9057,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-testng-with-spiratest" class="md-nav__link">
+  <a href="#using-testng-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using TestNG with SpiraTest
+        Using TestNG with Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using TestNG with SpiraTest">
+    <nav class="md-nav" aria-label="Using TestNG with Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9085,62 +9113,26 @@
 
 
 <h1 id="integrating-with-testng">Integrating with TestNG<a class="headerlink" href="#integrating-with-testng" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="installing-the-testng-listener">Installing the TestNG Listener<a class="headerlink" href="#installing-the-testng-listener" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Listener for TestNG
-onto a workstation so that you can then run automated TestNG unit tests
-against a Java application and have the results be recorded as test runs
-inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v3.0 or later. If you have an earlier version
-of SpiraTest you will need to upgrade to at least v3.0 before trying to
-use this listener. You will also need to have at least version 1.0 of
-TestNG running under JDK 1.5 or later, since earlier versions do not
-have support for annotations and custom listeners. If you are using an
-earlier version, please visit <a href="https://testng.org">testng.org</a> to
-obtain the latest version.</p>
-<p>To obtain the latest version of the TestNG listener, you simply need to
-log-in as a project-level administrator to SpiraTest, go to the
-Administration home page and download the SpiraTest TestNG Listener
-compressed archive (.zip) from the section that lists downloads and
-add-ons. This process is described in the <em>SpiraTest Administration
-Guide</em> in more detail.</p>
-<p>The TestNG listener is provided as a compressed zipfile that includes
-both the binaries (packaged as a JAR-file) and the source code (stored
-in a folder structure that mirrors the Java classpath). The JAR-file
-binary was compiled for use on a Windows x86 platform, other platforms
-(e.g. Linux) will require you to compile the Java source files into the
-appropriate Java classfiles before using the extension. The rest of this
-section will assume that you are using the pre-compiled JAR-file.</p>
-<p>Once you have downloaded the Zip archive, you need to uncompress it into
-a folder of your choice on your local system. Assuming that you
-uncompressed it to the C:\Program
-Files\SpiraTestListener folder, you should have the
-following folder structure created:</p>
+<p>This section outlines how to install the Spira Listener for TestNG onto a workstation so that you can then run automated TestNG unit tests against a Java application and have the results be recorded as test runs inside Spira. It assumes that you already have a working installation of Spira v3.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v3.0 before trying to use this listener. You will also need to have at least version 1.0 of TestNG running under JDK 1.5 or later, since earlier versions do not have support for annotations and custom listeners. If you are using an earlier version, please visit <a href="https://testng.org">testng.org</a> to obtain the latest version.</p>
+<p>To obtain the latest version of the TestNG listener, you simply need to log-in as a project-level administrator to Spira, go to the Administration home page and download the Spira TestNG Listener compressed archive (.zip) from the section that lists downloads and add-ons. This process is described in the <em>Spira Administration Guide</em> in more detail.</p>
+<p>The TestNG listener is provided as a compressed zipfile that includes both the binaries (packaged as a JAR-file) and the source code (stored in a folder structure that mirrors the Java classpath). The JAR-file binary was compiled for use on a Windows x86 platform, other platforms (e.g. Linux) will require you to compile the Java source files into the appropriate Java classfiles before using the extension. The rest of this section will assume that you are using the pre-compiled JAR-file.</p>
+<p>Once you have downloaded the Zip archive, you need to uncompress it into a folder of your choice on your local system. Assuming that you uncompressed it to the C:\Program Files\SpiraTestListener folder, you should have the following folder structure created:</p>
 <p>C:\Program Files\SpiraTestListener</p>
 <p>C:\Program Files\SpiraTestListener\com</p>
 <p>C:\Program Files\SpiraTestListener\com\inflectra</p>
 <p>C:\Program Files\SpiraTestListener\com\inflectra\spiratest</p>
 <p>C:\Program Files\SpiraTestListener\com\inflectra\spiratest\addons</p>
-<p>C:\Program
-Files\SpiraTestListener\com\inflectra\spiratest\addons\testnglistener</p>
-<p>C:\Program
-Files\SpiraTestListener\Extension\com\inflectra\spiratest\addons\testnglistener\samples</p>
-<p>The JAR-file is located in the root folder, the source-code for the
-extension can be found in the "testnglistener" subfolder, and the sample
-test fixture can be found in the "samples" subfolder.</p>
-<p>Now to use the listener within your test cases, you need to first make
-sure that the JAR-file is added to the Java classpath. The method for
-doing this is dependent on the platform you're using, so please refer to
-FAQ on <a href="http://www.testngorg">www.testngorg</a> for details on the
-appropriate method for your platform. As an example, on a Windows
-platform, the JAR-file would be added to the classpath by typing the
-following:</p>
-<p>set CLASSPATH=%CLASSPATH%; C:\Program
-Files\SpiraTestListener\TestNGListener.jar</p>
-<p>Once you have completed this step, you are now ready to begin using your
-TestNG test fixtures with SpiraTest.</p>
-<h2 id="using-testng-with-spiratest">Using TestNG with SpiraTest<a class="headerlink" href="#using-testng-with-spiratest" title="Permanent link">&para;</a></h2>
-<p>The typical code structure for a TestNG test fixture coded in Java is as
-follows:</p>
+<p>C:\Program Files\SpiraTestListener\com\inflectra\spiratest\addons\testnglistener</p>
+<p>C:\Program Files\SpiraTestListener\Extension\com\inflectra\spiratest\addons\testnglistener\samples</p>
+<p>The JAR-file is located in the root folder, the source-code for the extension can be found in the "testnglistener" subfolder, and the sample test fixture can be found in the "samples" subfolder.</p>
+<p>Now to use the listener within your test cases, you need to first make sure that the JAR-file is added to the Java classpath. The method for doing this is dependent on the platform you're using, so please refer to FAQ on <a href="http://www.testngorg">www.testngorg</a> for details on the appropriate method for your platform. As an example, on a Windows platform, the JAR-file would be added to the classpath by typing the following: <code>set CLASSPATH=%CLASSPATH%; C:\\Program Files\\SpiraTestListener\\TestNGListener.jar</code></p>
+<p>Once you have completed this step, you are now ready to begin using your TestNG test fixtures with Spira.</p>
+<h2 id="using-testng-with-spira">Using TestNG with Spira<a class="headerlink" href="#using-testng-with-spira" title="Permanent link">&para;</a></h2>
+<p>The typical code structure for a TestNG test fixture coded in Java is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.testng.annotations.*</span><span class="p">;</span>
@@ -9149,7 +9141,7 @@ follows:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="cm"> * </span>
 <span class="cm"> * @author      Inflectra Corporation</span>
 <span class="cm"> * @version     2.3.0</span>
@@ -9219,25 +9211,9 @@ follows:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The Java class is marked as a TestNG test fixture by applying the @Test
-attribute to the class definition, and the @Test attribute to each of
-the test assertion methods individually -- highlighted in yellow above.
-In addition, special setup methods are marked with annotations such as
-@BeforeClass. When you open up the class in a TestNG runner or execute
-from the command line it loads all the test classes and executes all the
-methods marked with @Test in turn.</p>
-<p>Each of the Assert statements is used to test the state of the
-application after executing some sample code that calls the
-functionality being tested. If the condition in the assertion is true,
-then execution of the test continues, if it is false, then a failure is
-logged and TestNG moves on to the next test method.</p>
-<p>So, to use SpiraTest with TestNG, each of the test cases written for
-execution by TestNG needs to have a corresponding test case in
-SpiraTest. These can be either existing test cases that have manual test
-steps or they can be new test cases designed specifically for automated
-testing and therefore have no defined test steps. In either case, the
-changes that need to be made to the TestNG test fixture for SpiraTest to
-record the TestNG test run are illustrated below:</p>
+<p>The Java class is marked as a TestNG test fixture by applying the @Test attribute to the class definition, and the @Test attribute to each of the test assertion methods individually -- highlighted in yellow above. In addition, special setup methods are marked with annotations such as @BeforeClass. When you open up the class in a TestNG runner or execute from the command line it loads all the test classes and executes all the methods marked with @Test in turn.</p>
+<p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and TestNG moves on to the next test method.</p>
+<p>So, to use Spira with TestNG, each of the test cases written for execution by TestNG needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the TestNG test fixture for Spira to record the TestNG test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.testng.annotations.*</span><span class="p">;</span>
@@ -9248,14 +9224,14 @@ record the TestNG test run are illustrated below:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="cm"> * </span>
 <span class="cm"> * @author      Inflectra Corporation</span>
 <span class="cm"> * @version     2.3.0</span>
 <span class="cm"> *</span>
 <span class="cm"> */</span>
 <span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
-<span class="w">    </span><span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/SpiraTest&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/Spira&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">login</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">apiKey</span><span class="o">=</span><span class="s">&quot;{00000000-0000-0000-0000-000000000000}&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">projectId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -9330,66 +9306,41 @@ record the TestNG test run are illustrated below:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The overall class is marked with a new @SpiraTestConfiguration
-attribute that contains the following pieces of information needed to
-access the SpiraTest test repository:</p>
-<p><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This
-needs to start with http:// or https://</p>
-<p><strong>Login</strong> - A valid username for the instance of SpiraTest.</p>
-<p><strong>apiKey</strong> - A valid API Key / RSS Token for the instance of SpiraTest (for the user specified in Login).</p>
-<p><strong>Project Id</strong> - The ID of the project (this can be found on the project
-homepage in the "Project Overview" section)</p>
-<p><strong>Release Id</strong> (Optional) - The ID of the release to associate the test
-run with. This can be found on the releases list page (click on the
-Planning &gt; Releases tab). If you don't want to specify a release, just
-use the value -1.</p>
-<p><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the
-test run with. This can be found on the test set list page (click on the
-Testing &gt; Test Sets tab). If you don't want to specify a test set, just
-use the value -1. If you choose a test set that is associated with a
-release, then you don't need to explicitly set a release id (i.e. just
-use -1). However if you do set a release value, it will override the
-value associated with the test set.</p>
-<p>In addition, each of the individual test methods needs to be mapped to a
-specific test case within SpiraTest. This is done by adding a
-@SpiraTestCase attribute to the test method together with the ID of the
-corresponding test case in SpiraTest. The Test Case ID can be found on
-the test cases list page (click the "Test Cases" tab).</p>
-<p>For these attributes to be available in your test fixture, you also need
-to add a reference to the
-<em>com.inflectra.spiratest.addons.testnglistener</em> package. This package is
-bundled within the supplied JAR-file library for Windows machines, and
-can be compiled from the provided source .java files on other platforms.</p>
+<p>The overall class is marked with a new @SpiraTestConfiguration attribute that contains the following pieces of information needed to access the Spira test repository:</p>
+<ul>
+<li><strong>URL</strong> - The URL to the instance of Spira being accessed. This needs to start with http:// or https://</li>
+<li><strong>Login</strong> - A valid username for the instance of Spira.</li>
+<li><strong>apiKey</strong> - A valid API Key / RSS Token for the instance of Spira (for the user specified in Login).</li>
+<li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
+<li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to specify a release, just use the value -1.</li>
+<li><strong>Test Set Id</strong> (Optional) - The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
+</ul>
+<p>In addition, each of the individual test methods needs to be mapped to a specific test case within Spira. This is done by adding a @SpiraTestCase attribute to the test method together with the ID of the corresponding test case in Spira. The Test Case ID can be found on the test cases list page (click the "Test Cases" tab).</p>
+<p>For these attributes to be available in your test fixture, you also need to add a reference to the <em>com.inflectra.spiratest.addons.testnglistener</em> package. This package is bundled within the supplied JAR-file library for Windows machines, and can be compiled from the provided source .java files on other platforms.</p>
 <h3 id="running-the-testng-tests-from-the-command-line">Running the TestNG Tests from the Command-Line<a class="headerlink" href="#running-the-testng-tests-from-the-command-line" title="Permanent link">&para;</a></h3>
-<p>Now all you need to do is compile your code and then launch TestNG by
-executing the test fixture through the command line (or through your
-choice of IDE, e.g. Eclipse) with the SpiraTest listener option
-specified as a command argument. E.g. for our sample test, you would use
-the following command:</p>
-<p><code>java
--classpath "C:\Program
-Files\SpiraTestListener\TestNGListener.jar;C:\Program
-Files\TestNG-5.7\testng-5.7\testng-5.7-jdk15.jar" org.testng.TestNG
--listener
-com.inflectra.spiratest.addons.testnglistener.SpiraTestListener
-com\inflectra\spiratest\addons\testnglistener\samples\unittests.xml</code></p>
-<p>Once the test has run, you can view the test cases in SpiraTest, you
-should see a TestNG automated test run displayed in the list of executed
-test runs:</p>
+<p>Now all you need to do is compile your code and then launch TestNG by executing the test fixture through the command line (or through your choice of IDE, e.g. Eclipse) with the Spira listener option specified as a command argument. E.g. for our sample test, you would use the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="o">-</span><span class="n">classpath</span><span class="w"> </span><span class="s">&quot;C:\Program</span>
+<span class="s">Files\SpiraTestListener\TestNGListener.jar;C:\Program</span>
+<span class="s">Files\TestNG-5.7\testng-5.7\testng-5.7-jdk15.jar&quot;</span><span class="w"> </span><span class="n">org</span><span class="p">.</span><span class="na">testng</span><span class="p">.</span><span class="na">TestNG</span>
+<span class="o">-</span><span class="n">listener</span>
+<span class="n">com</span><span class="p">.</span><span class="na">inflectra</span><span class="p">.</span><span class="na">spiratest</span><span class="p">.</span><span class="na">addons</span><span class="p">.</span><span class="na">testnglistener</span><span class="p">.</span><span class="na">SpiraTestListener</span>
+<span class="n">com</span><span class="err">\</span><span class="n">inflectra</span><span class="err">\</span><span class="n">spiratest</span><span class="err">\</span><span class="n">addons</span><span class="err">\</span><span class="n">testnglistener</span><span class="err">\</span><span class="n">samples</span><span class="err">\</span><span class="n">unittests</span><span class="p">.</span><span class="na">xml</span>
+</code></pre></div>
+<p>Once the test has run, you can view the test cases in Spira, you should see a TestNG automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_TestNG_12.png" /></p>
-<p>Clicking on one of the TestNG test runs will bring up a screen that
-provides information regarding what TestNG test method failed, what the
-error was, together with the associated code stack-trace:</p>
+<p>Clicking on one of the TestNG test runs will bring up a screen that provides information regarding what TestNG test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_TestNG_13.png" /></p>
-<p>Congratulations... You are now able to run TestNG automated tests and
-have the results be recorded within SpiraTest. The sample test fixture
-SimpleText.java is provided with the installation.</p>
+<p>Congratulations... You are now able to run TestNG automated tests and have the results be recorded within Spira. The sample test fixture SimpleText.java is provided with the installation.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

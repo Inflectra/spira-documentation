@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-spirateam-with-ibm-rtc" class="md-skip">
+        <a href="#using-spira-with-ibm-rtc" class="md-skip">
           Skip to content
         </a>
       
@@ -6584,10 +6584,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-rtc" class="md-nav__link">
+  <a href="#using-spira-with-rtc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with RTC
+        Using Spira with RTC
       
     </span>
   </a>
@@ -8985,6 +8985,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9101,10 +9129,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-rtc" class="md-nav__link">
+  <a href="#using-spira-with-rtc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with RTC
+        Using Spira with RTC
       
     </span>
   </a>
@@ -9128,236 +9156,92 @@
 
 
 
-<h1 id="using-spirateam-with-ibm-rtc">Using SpiraTeam with IBM RTC<a class="headerlink" href="#using-spirateam-with-ibm-rtc" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the IBM
-Rational Team Concert (hereafter referred to as RTC) work item tracking
-system. The built-in integration service allows the quality assurance
-team to manage their requirements and test cases in SpiraTeam, execute
-test runs in SpiraTest, and then have the new incidents generated during
-the run be automatically loaded into RTC.</p>
-<p>Once the incidents are loaded into RTC as work items, the development
-team can then manage the lifecycle of these work items in RTC, and have
-the status changes in RTC be reflected back in SpiraTeam. In addition,
-any issues logged directly into RTC will get imported into SpiraTeam so
-that they can be linked to test cases and requirements.</p>
+<h1 id="using-spira-with-ibm-rtc">Using Spira with IBM RTC<a class="headerlink" href="#using-spira-with-ibm-rtc" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the IBM Rational Team Concert (hereafter referred to as RTC) work item tracking system. The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into RTC.</p>
+<p>Once the incidents are loaded into RTC as work items, the development team can then manage the lifecycle of these work items in RTC, and have the status changes in RTC be reflected back in Spira. In addition, any issues logged directly into RTC will get imported into Spira so that they can be linked to test cases and requirements.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 </div>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h2>
-<p>The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the RTC server. To start the configuration,
-please open up SpiraTeam in a web browser, log in using a valid account
-that has System-Administration level privileges and click on the System
-&gt; Data Synchronization administration option from the left-hand
-navigation:</p>
+<p>The next step is to configure the plug-in within Spira so that the system knows how to access the RTC server. To start the configuration, please open up Spira in a web browser, log in using a valid account that has System-Administration level privileges and click on the System &gt; Data Synchronization administration option from the left-hand navigation:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_147.png" /></p>
-<p>This screen lists all the plug-ins already configured in the system.
-Depending on whether you chose the option to include sample data in your
-installation or not, you will see either an empty screen or a list of
-sample data-synchronization plug-ins.</p>
-<p>If you already see an entry for <strong>RtcDataSync</strong> you should click on its
-"Edit" link. If you don't see such an entry in the list, please click on
-the [Add] button instead. In either case you will be taken to the
-following screen where you can enter or modify the RTC
-Data-Synchronization plug-in:</p>
+<p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>RtcDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the RTC Data-Synchronization plug-in:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_148.png" /></p>
-<p>You need to fill out the following fields for the RTC Plug-in to operate
-correctly:</p>
+<p>You need to fill out the following fields for the RTC Plug-in to operate correctly:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- this needs to be set to <strong>RtcDataSync</strong>. This needs to
-match the name of the plug-in DLL assembly that was copied into the
-C:\Program Files\SpiraTeam\Bin folder (minus the .dll file
-extension). If you renamed the RtcDataSync.dll file for any reason,
-then you need to change the name here to match.</p>
-</li>
-<li>
-<p><strong>Description</strong> -- this should be set to a description of the
-plug-in. This is an optional field that is used for documentation
-purposes and is not actually used by the system.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong> -- this should be the base URL for connecting to
-your instance of RTC (for example <a href="https://servername:9443/ccm">https://servername:9443/ccm</a>).</p>
-</li>
-<li>
-<p><strong>Login</strong> -- this should be set to a valid login for your RTC
-installation. The login needs to have permissions to create and view
-work items within RTC.</p>
-</li>
-<li>
-<p><strong>Password</strong> -- this should be set to the password of the login
-specified above.</p>
-</li>
-<li>
-<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
-find that issues being changed in RTC are not being updated in
-SpiraTeam, try increasing the value as this will tell the
-data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps. Also if your RTC installation is
-running on a server set to a different time-zone, then you should
-add in the number of hours difference between the servers'
-time-zones here.</p>
-</li>
-<li>
-<p><strong>Auto-Map Users</strong> -- this is not currently used and can be ignored.</p>
-</li>
-<li>
-<p><strong>Custom 01</strong> -- this is not currently used and can be ignored</p>
-</li>
-<li>
-<p><strong>Custom 02</strong> -- this is not currently used and can be ignored</p>
-</li>
-<li>
-<p><strong>Custom 03</strong> -- this is not currently used and can be ignored</p>
-</li>
-<li>
-<p><strong>Custom 04</strong> -- this is not currently used and can be ignored</p>
-</li>
-<li>
-<p><strong>Custom 05</strong> -- this is not currently used and can be ignored</p>
-</li>
+<li><strong>Name</strong>: this needs to be set to <strong>RtcDataSync</strong>. This needs to match the name of the plug-in DLL assembly that was copied into the C:\Program Files\Spira\Bin folder (minus the .dll file extension). If you renamed the RtcDataSync.dll file for any reason, then you need to change the name here to match.</li>
+<li><strong>Description</strong>: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
+<li><strong>Connection Info</strong>: this should be the base URL for connecting to your instance of RTC (for example <a href="https://servername:9443/ccm">https://servername:9443/ccm</a>).</li>
+<li><strong>Login</strong>: this should be set to a valid login for your RTC installation. The login needs to have permissions to create and view work items within RTC.</li>
+<li><strong>Password</strong>: this should be set to the password of the login specified above.</li>
+<li><strong>Time Offset</strong>: normally this should be set to zero, but if you find that issues being changed in RTC are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also if your RTC installation is running on a server set to a different time-zone, then you should add in the number of hours difference between the servers' time-zones here.</li>
+<li><strong>Auto-Map Users</strong>: this is not currently used and can be ignored.</li>
+<li><strong>Custom 01</strong>: this is not currently used and can be ignored</li>
+<li><strong>Custom 02</strong>: this is not currently used and can be ignored</li>
+<li><strong>Custom 03</strong>: this is not currently used and can be ignored</li>
+<li><strong>Custom 04</strong>: this is not currently used and can be ignored</li>
+<li><strong>Custom 05</strong>: this is not currently used and can be ignored</li>
 </ul>
 <h2 id="configuring-the-data-mapping">Configuring the Data Mapping<a class="headerlink" href="#configuring-the-data-mapping" title="Permanent link">&para;</a></h2>
-<p>Next, you need to configure the data mapping between SpiraTeam and RTC.
-This allows the various projects, users, incident statuses, priorities,
-severities and custom property values used in the two applications to be
-related to each other. This is important, as without a correct mapping,
-there is no way for the integration service to know that a "New" item in
-SpiraTeam is equivalent to a "New" item in RTC (for example).</p>
-<p>The following mapping information needs to be setup in SpiraTeam:</p>
-<p>The mapping of the project identifiers for the projects that need to be
-synchronized</p>
-<p>The mapping of the various standard fields in the system</p>
-<p>The mapping of the various custom properties in the system</p>
+<p>Next, you need to configure the data mapping between Spira and RTC. This allows the various projects, users, incident statuses, priorities, severities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that a "New" item in Spira is equivalent to a "New" item in RTC (for example).</p>
+<p>The following mapping information needs to be setup in Spira:</p>
+<ul>
+<li>The mapping of the project identifiers for the projects that need to be synchronized</li>
+<li>The mapping of the various standard fields in the system</li>
+<li>The mapping of the various custom properties in the system</li>
+</ul>
 <p>Each of these is explained in turn below:</p>
 <h3 id="configuring-the-project-mapping">Configuring the Project Mapping<a class="headerlink" href="#configuring-the-project-mapping" title="Permanent link">&para;</a></h3>
-<p>From the data synchronization administration page, you need to click on
-the "View Project Mappings" hyperlink next to the RTC plug-in name. This
-will take you to the data-mapping home page for the currently selected
-project:</p>
+<p>From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the RTC plug-in name. This will take you to the data-mapping home page for the currently selected project:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_149.png" /></p>
-<p>If the project name does not match the name of the project you want to
-configure the data-mapping for, click on the "(Change Project)"
-hyperlink to change the current project.</p>
-<p>To enable this project for data-synchronization with RTC, you need to
-enter:</p>
-<p><strong>External Key</strong> -- This should be set to the display name
-of the project in RTC that will be mapped to the specific SpiraTeam
-project.</p>
-<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
-want to synchronize data for this project. Once the project has been
-completed, setting the value to "No" will stop data synchronization,
-reducing network utilization.</p>
-<p>Click [Update] to confirm these settings. Once you have enabled the
-project for data-synchronization, you can now enter the other data
-mapping values outlined below.</p>
-<p><strong><em>Note: Once you have successfully configured the project, when
-creating a new project, you should choose the option to "Create Project
-from Existing Project" rather than "Use Default Template" so that all
-the project mappings get copied across to the new project.</em></strong></p>
+<p>If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with RTC, you need to enter:</p>
+<ul>
+<li><strong>External Key</strong>: This should be set to the display name of the project in RTC that will be mapped to the specific Spira project.</li>
+<li><strong>Active Flag</strong>: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.</li>
+</ul>
+<p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping<a class="headerlink" href="#configuring-the-standard-field-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the projects, user and releases have been mapped correctly, we
-need to configure the standard incident fields. To do this, go to
-Administration &gt; System &gt; Data Synchronization and click on the "View
-Project Mappings" for the RtcDataSync plug-in entry:</p>
+<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration &gt; System &gt; Data Synchronization and click on the "View Project Mappings" for the RtcDataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_149.png" /></p>
-<p>From this screen, you need to click on Status and Type in turn to
-configure their values:</p>
+<p>From this screen, you need to click on Status and Type in turn to configure their values:</p>
 <p>a) Incident Status</p>
-<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
-up the Incident status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_150.png" /></p>
-<p>The table lists each of the incident statuses available in SpiraTeam and
-provides you with the ability to enter the matching RTC work item status
-name for each one. You can map multiple SpiraTeam fields to the same RTC
-fields (e.g. Closed and Resolved in SpiraTeam are both equivalent to
-Complete in RTC), in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
-synchronization (from RTC &gt; SpiraTeam).</p>
+<p>The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching RTC work item status name for each one. You can map multiple Spira fields to the same RTC fields (e.g. Closed and Resolved in Spira are both equivalent to Complete in RTC), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from RTC &gt; Spira).</p>
 <p>b) Incident Type</p>
-<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up
-the Incident type mapping configuration screen:</p>
+<p>Click on the "Type" hyperlink under Incident Standard Fields to bring up the Incident type mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_151.png" /></p>
-<p>The table lists each of the incident types available in SpiraTeam and
-provides you with the ability to enter the matching RTC work item type
-name for each one. You can map multiple SpiraTeam fields to the same RTC
-fields, in which case only one of the two values can be listed as
-Primary = Yes as that's the value that's used on the reverse
-synchronization (from RTC &gt; SpiraTeam).</p>
+<p>The table lists each of the incident types available in Spira and provides you with the ability to enter the matching RTC work item type name for each one. You can map multiple Spira fields to the same RTC fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from RTC &gt; Spira).</p>
 <h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping<a class="headerlink" href="#configuring-the-custom-property-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the various SpiraTeam standard fields have been mapped
-correctly, we need to configure the custom property mappings. This is
-used to associate custom properties in SpiraTeam that map to custom
-fields in RTC. From the View/Edit Project Data Mapping screen, you need
-to click on the name of the Incident Custom Property that you want to
-add data-mapping information for.</p>
-<p>We will consider the two different types of mapping that you might want
-to enter:</p>
+<p>Now that the various Spira standard fields have been mapped correctly, we need to configure the custom property mappings. This is used to associate custom properties in Spira that map to custom fields in RTC. From the View/Edit Project Data Mapping screen, you need to click on the name of the Incident Custom Property that you want to add data-mapping information for.</p>
+<p>We will consider the two different types of mapping that you might want to enter:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_152.png" /></p>
 <p>a) Text Custom Properties</p>
-<p>Click on the hyperlink of the text custom property under Incident Custom
-Properties to bring up the custom property mapping configuration screen.
-For text custom properties there will be no values listed in the lower
-half of the screen.</p>
+<p>Click on the hyperlink of the text custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For text custom properties there will be no values listed in the lower half of the screen.</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_153.png" /></p>
-<p>You need to obtain the fully qualified XML name of the custom field in
-RTC that matches this custom property in SpiraTeam from the RTC
-documentation. Once you have entered the name of the custom field, click
-[Update].</p>
+<p>You need to obtain the fully qualified XML name of the custom field in RTC that matches this custom property in Spira from the RTC documentation. Once you have entered the name of the custom field, click "Update".</p>
 <p>b) List Custom Properties</p>
-<p>Click on the hyperlink of the list custom property under Incident Custom
-Properties to bring up the custom property mapping configuration screen.
-For list custom properties there will be a textbox for both the custom
-field itself and a mapping table for each of the custom property values
-that need to be mapped:</p>
+<p>Click on the hyperlink of the list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For list custom properties there will be a textbox for both the custom field itself and a mapping table for each of the custom property values that need to be mapped:</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_IBM_RTC_154.png" /></p>
-<p>First you need to obtain the fully qualified XML name of the field in
-RTC that matches this custom property in SpiraTeam. This should be
-entered in the 'External Key' field below the name of the custom
-property. Then you need enter the possible values in RTC for the custom
-property, mapping each one to the corresponding SpiraTeam custom
-property value.</p>
-<p>**Once you have updated the various mapping sections, you are now ready to use the service.
-**</p>
-<h2 id="using-spirateam-with-rtc">Using SpiraTeam with RTC<a class="headerlink" href="#using-spirateam-with-rtc" title="Permanent link">&para;</a></h2>
-<p>Now that the integration service has been configured and the service
-started, initially any incidents created in SpiraTeam for the specified
-projects will be imported into RTC and any existing work items in RTC
-will get loaded into SpiraTeam</p>
-<p>At this point we recommend opening the Windows Event Viewer and choosing
-the Application Log. In this log any error messages raised by the
-SpiraTeam Data Sync Service will be displayed. If you see any error
-messages at this point, we recommend immediately stopping the SpiraTeam
-service and checking the various mapping entries. If you cannot see any
-issues with the mapping information, we recommend sending a copy of the
-event log message(s) to Inflectra customer services
-(<a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>) who will help you troubleshoot the
-problem.</p>
-<p>To use SpiraTeam with RTC on an ongoing basis, we recommend the
-following general processes be followed:</p>
-<p>When running tests in SpiraTest or SpiraTeam, defects found should be
-logged through the Test Execution Wizard as normal.</p>
-<p>Developers using RTC can log new work items into either SpiraTeam or
-RTC. In either case they will get loaded into the other system.</p>
-<p>Once created in one of the systems and successfully replicated to the
-other system, the incident should not be modified again inside SpiraTeam</p>
-<p>At this point, the incident should not be acted upon inside SpiraTeam
-and all data changes to the issue should be made inside RTC. To enforce
-this, you should modify the workflows set up in SpiraTeam so that the
-various fields are marked as inactive for all the incident statuses
-other than the "New" status. This will allow someone to submit an
-incident in SpiraTeam, but will prevent them making changes in conflict
-with RTC after that point.</p>
-<p>As the issue progresses through the customized RTC workflow, changes to
-the type of work item, changes to its status, description and custom
-fields will be updated automatically in SpiraTeam. In essence, SpiraTeam
-acts as a read-only viewer of these incidents.</p>
-<p>You are now able to perform test coverage and incident reporting inside
-SpiraTest/SpiraTeam using the test cases managed by SpiraTest/SpiraTeam
-and the incidents managed on behalf of SpiraTest/SpiraTeam inside RTC.</p>
+<p>First you need to obtain the fully qualified XML name of the field in RTC that matches this custom property in Spira. This should be entered in the 'External Key' field below the name of the custom property. Then you need enter the possible values in RTC for the custom property, mapping each one to the corresponding Spira custom property value.</p>
+<p>**Once you have updated the various mapping sections, you are now ready to use the service. **</p>
+<h2 id="using-spira-with-rtc">Using Spira with RTC<a class="headerlink" href="#using-spira-with-rtc" title="Permanent link">&para;</a></h2>
+<p>Now that the integration service has been configured and the service started, initially any incidents created in Spira for the specified projects will be imported into RTC and any existing work items in RTC will get loaded into Spira</p>
+<p>At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the Spira Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the Spira service and checking the various mapping entries. If you cannot see any issues with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="http://www.inflectra.com/Support">http://www.inflectra.com/Support</a>) who will help you troubleshoot the problem.</p>
+<p>To use Spira with RTC on an ongoing basis, we recommend the following general processes be followed:</p>
+<p>When running tests in SpiraTest or Spira, defects found should be logged through the Test Execution Wizard as normal.</p>
+<p>Developers using RTC can log new work items into either Spira or RTC. In either case they will get loaded into the other system.</p>
+<p>Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside Spira</p>
+<p>At this point, the incident should not be acted upon inside Spira and all data changes to the issue should be made inside RTC. To enforce this, you should modify the workflows set up in Spira so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in Spira, but will prevent them making changes in conflict with RTC after that point.</p>
+<p>As the issue progresses through the customized RTC workflow, changes to the type of work item, changes to its status, description and custom fields will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.</p>
+<p>You are now able to perform test coverage and incident reporting inside SpiraTest/Spira using the test cases managed by SpiraTest/Spira and the incidents managed on behalf of SpiraTest/Spira inside RTC.</p>
 
 
 

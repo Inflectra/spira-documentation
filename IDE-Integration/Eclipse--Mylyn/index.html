@@ -5779,10 +5779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-the-spirateam-repository" class="md-nav__link">
+  <a href="#connecting-to-the-spira-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to the SpiraTeam Repository
+        Connecting to the Spira Repository
       
     </span>
   </a>
@@ -8979,6 +8979,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9045,10 +9073,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-the-spirateam-repository" class="md-nav__link">
+  <a href="#connecting-to-the-spira-repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to the SpiraTeam Repository
+        Connecting to the Spira Repository
       
     </span>
   </a>
@@ -9117,299 +9145,133 @@
 
 
 <h1 id="eclipse-mylyn">Eclipse / Mylyn<a class="headerlink" href="#eclipse-mylyn" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Eclipse
-integrated development environment (IDE) for implementing Requirements,
-completing Tasks and fixing Incidents. Rather than develop a new
-user-interface from scratch, the SpiraTeam plug-in uses the generic
-Mylyn task-based interface that allows Eclipse users to manage their
-local tasks and tasks from any compatible repository in a single
-interface.</p>
-<h2 id="installing-the-eclipse-plug-in">Installing the Eclipse Plug-In<a class="headerlink" href="#installing-the-eclipse-plug-in" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTeam plug-in for Eclipse.
-It assumes that you already have a working installation of SpiraTest,
-SpiraPlan or SpiraTeam v6.0 or later and a working installation of
-Eclipse v4.6 (Neon) or later with the Mylyn plug-in installed.</p>
-<p>If you have an earlier version of SpiraTeam, you will need to upgrade to
-at least v6.0 before trying to integrate with Eclipse.</p>
-<p>To obtain the Eclipse plug-in, open up the Eclipse application and click
-on Help &gt; Eclipse Marketplace. Enter "SpiraTeam" in the 'Find' text
-box. Once you hit enter, you should see the following result:</p>
-<p><img alt="" src="../img/Eclipse__Mylyn_16.png" /></p>
-<p>Click the Install button, accept the terms of the license and click
-"Finish". Eclipse will advise you that our software contains unsigned
-content, press "OK" to continue the installation. After you restart
-Eclipse, you can start to use our plug-in.</p>
-<p>Alternatively, you can click Help &gt; Install New Software. This will
-display the Eclipse installation wizard:</p>
-<p><img alt="" src="../img/Eclipse__Mylyn_17.png" /></p>
-<p>Enter <code>https://eclipse.inflectra.com</code> as the download site
-in the "Work with:" text box and uncheck the "Group items by category"
-checkbox. Once you hit enter, the wizard should display "SpiraTeam".
-Select the Feature's checkbox and click "Next" or "Finish" to tell
-Eclipse to download and install the feature and dependent plug-ins.
-During this process you may be asked to agree to our software license
-and to allow the installation of unsigned software. Once you have
-completed these steps, you should now have our SpiraTeam plug-in
-installed and ready to use.</p>
-<div class="admonition warning">
-<p class="admonition-title">Fixing Dependency Issues</p>
-<p>if you run into an issue with missing dependencies, please refer to this
-<a href="https://www.inflectra.com/Support/KnowledgeBase/KB788.aspx">Knowledge Base Article - KB788</a>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
-<p>To check that the individual plugins have been installed, you can go to
-Help &gt; About Eclipse and then click on the [Installation Details]
-button. On the page that appears, click on the Plugins tab and you will
-see the two Inflectra plugins listed (Core and UI).</p>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Eclipse integrated development environment (IDE) for implementing Requirements, completing Tasks and fixing Incidents. Rather than develop a new user-interface from scratch, the Spira plug-in uses the generic Mylyn task-based interface that allows Eclipse users to manage their local tasks and tasks from any compatible repository in a single interface.</p>
+<h2 id="installing-the-eclipse-plug-in">Installing the Eclipse Plug-In<a class="headerlink" href="#installing-the-eclipse-plug-in" title="Permanent link">&para;</a></h2>
+<p>This section outlines how to install the Spira plug-in for Eclipse. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v6.0 or later and a working installation of Eclipse v4.6 (Neon) or later with the Mylyn plug-in installed.</p>
+<p>If you have an earlier version of Spira, you will need to upgrade to at least v6.0 before trying to integrate with Eclipse.</p>
+<p>To obtain the Eclipse plug-in, open up the Eclipse application and click on Help &gt; Eclipse Marketplace. Enter "Spira" in the 'Find' text box. Once you hit enter, you should see the following result:</p>
+<p><img alt="" src="../img/Eclipse__Mylyn_16.png" /></p>
+<p>Click the Install button, accept the terms of the license and click "Finish". Eclipse will advise you that our software contains unsigned content, press "OK" to continue the installation. After you restart Eclipse, you can start to use our plug-in.</p>
+<p>Alternatively, you can click Help &gt; Install New Software. This will display the Eclipse installation wizard:</p>
+<p><img alt="" src="../img/Eclipse__Mylyn_17.png" /></p>
+<p>Enter <code>https://eclipse.inflectra.com</code> as the download site in the "Work with:" text box and uncheck the "Group items by category" checkbox. Once you hit enter, the wizard should display "Spira". Select the Feature's checkbox and click "Next" or "Finish" to tell Eclipse to download and install the feature and dependent plug-ins. During this process you may be asked to agree to our software license and to allow the installation of unsigned software. Once you have completed these steps, you should now have our Spira plug-in installed and ready to use.</p>
+<p>!!! warning "Fixing Dependency Issues"     if you run into an issue with missing dependencies, please refer to this <a href="https://www.inflectra.com/Support/KnowledgeBase/KB788.aspx">Knowledge Base Article - KB788</a>.</p>
+<p>To check that the individual plugins have been installed, you can go to Help &gt; About Eclipse and then click on the "Installation Details" button. On the page that appears, click on the Plugins tab and you will see the two Inflectra plugins listed (Core and UI).</p>
 <p>Now that you have the plug-ins installed, the next steps are:</p>
 <ol>
-<li>
-<p>Connect to the appropriate SpiraTeam repository</p>
-</li>
-<li>
-<p>Download your assigned SpiraTeam artifacts (Requirements, Tasks and
-Incidents)</p>
-</li>
-<li>
-<p>Work on the downloaded SpiraTeam artifacts</p>
-</li>
+<li>Connect to the appropriate Spira repository</li>
+<li>Download your assigned Spira artifacts (Requirements, Tasks and Incidents)</li>
+<li>Work on the downloaded Spira artifacts</li>
 </ol>
-<h2 id="connecting-to-the-spirateam-repository">Connecting to the SpiraTeam Repository<a class="headerlink" href="#connecting-to-the-spirateam-repository" title="Permanent link">&para;</a></h2>
-<p>To connect to a SpiraTeam repository, you need to first display the
-appropriate Eclipse views. To do this, go to Window &gt; Show View &gt;
-"Other..." and then under the Tasks section, display both the Task
-Repositories view and the Task List view:</p>
-<p><img alt="" src="../img/Eclipse__Mylyn_18.png" /></p>
-<p>Once you have chosen to select the Task Repositories, the following tab
-will be displayed:</p>
+<h2 id="connecting-to-the-spira-repository">Connecting to the Spira Repository<a class="headerlink" href="#connecting-to-the-spira-repository" title="Permanent link">&para;</a></h2>
+<p>To connect to a Spira repository, you need to first display the appropriate Eclipse views. To do this, go to Window &gt; Show View &gt; "Other..." and then under the Tasks section, display both the Task Repositories view and the Task List view:</p>
+<p><img alt="" src="../img/Eclipse__Mylyn_18.png" />  </p>
+<p>Once you have chosen to select the Task Repositories, the following tab will be displayed:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_19.png" /></p>
-<p>Where any existing repositories will listed along with the built-in
-"Local" repository that is used to manage tasks created natively within
-Eclipse/Mylyn.</p>
-<p>To connect to a new SpiraTeam repository, right-click on the window and
-choose "Add Task Repository..." which will bring up the following
-selection box:</p>
+<p>Where any existing repositories will listed along with the built-in "Local" repository that is used to manage tasks created natively within Eclipse/Mylyn.</p>
+<p>To connect to a new Spira repository, right-click on the window and choose "Add Task Repository..." which will bring up the following selection box:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_20.png" /></p>
-<p>Choose the "Spira" repository entry and click [Next]. This will bring
-up the repository configuration dialog box:</p>
+<p>Choose the "Spira" repository entry and click [Next]. This will bring up the repository configuration dialog box:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_21.png" /></p>
-<p>On this screen, you need to fill out the information used to connect to
-your SpiraTeam server:</p>
-<p><strong>Server</strong> -- This should be the URL to the SpiraTeam instance that you
-are accessing.</p>
-<p><strong>Label</strong> -- This is a "friendly" name for that server that will be used
-inside Eclipse.</p>
-<p><strong>User ID</strong> -- This needs to be a valid username that has access to
-SpiraTeam.</p>
-<p><strong>Password</strong> -- This needs to be the correct <strong>API Key</strong> for the username specified. <em>Although the Eclipse label says Password, you need to use the Spira username and API Key NOT password.</em></p>
-<p>Once you have entered the information, click <code>[Finish]</code> to complete the
-"Add Repository" wizard. Once this has been done, Eclipse will ask you
-if you would like to add a new query for this repository. You can choose
-either Yes or No. The process for adding a new query to the SpiraTeam
-repository is described in the next section.</p>
+<p>On this screen, you need to fill out the information used to connect to your Spira server:</p>
+<ul>
+<li><strong>Server</strong>: This should be the URL to the Spira instance that you are accessing.</li>
+<li><strong>Label</strong>: This is a "friendly" name for that server that will be used inside Eclipse.</li>
+<li><strong>User ID</strong>: This needs to be a valid username that has access to Spira.</li>
+<li><strong>Password</strong>: This needs to be the correct <strong>API Key</strong> for the username specified. <em>Although the Eclipse label says Password, you need to use the Spira username and API Key NOT password.</em></li>
+</ul>
+<p>Once you have entered the information, click <code>[Finish]</code> to complete the "Add Repository" wizard. Once this has been done, Eclipse will ask you if you would like to add a new query for this repository. You can choose either Yes or No. The process for adding a new query to the Spira repository is described in the next section.</p>
 <h2 id="adding-queries-to-the-repository">Adding Queries to the Repository<a class="headerlink" href="#adding-queries-to-the-repository" title="Permanent link">&para;</a></h2>
-<p>Once you have added the SpiraTeam repository, the repository list view
-should now look something like:</p>
+<p>Once you have added the Spira repository, the repository list view should now look something like:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_22.png" /></p>
-<p>You can now add a new query by right-clicking on the SpiraTeam
-repository instance and choosing "New Query...". This will bring up the
-new query wizard:</p>
+<p>You can now add a new query by right-clicking on the Spira repository instance and choosing "New Query...". This will bring up the new query wizard:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_23.png" /></p>
-<p>Currently the SpiraTeam Eclipse/Mylyn plugin only supports the three
-predefined queries listed above. You can choose to add a list of
-Requirements, Incidents or Tasks that are assigned to you. Once you have
-added the appropriate queries (depending on which types of artifact get
-assigned to you), the list of Requirements, Incidents and or Tasks will
-be downloaded from the server and added to your Task List in Eclipse:</p>
+<p>Currently the Spira Eclipse/Mylyn plugin only supports the three predefined queries listed above. You can choose to add a list of Requirements, Incidents or Tasks that are assigned to you. Once you have added the appropriate queries (depending on which types of artifact get assigned to you), the list of Requirements, Incidents and or Tasks will be downloaded from the server and added to your Task List in Eclipse:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_24.png" /></p>
-<p>When you hover the mouse over any of the items in the list of
-Requirements, Incidents or Tasks, you will see a popup tooltip that
-provides additional information:</p>
+<p>When you hover the mouse over any of the items in the list of Requirements, Incidents or Tasks, you will see a popup tooltip that provides additional information:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_25.png" /></p>
-<p>Artifacts in the list have various states, based on your interaction
-with them. Unread artifacts are those with new changes, which you
-haven't seen yet. These artifacts are denoted as having "incoming
-changes" (coming from repository). When you open and edit the artifact,
-it will have local modifications which haven't been sent to SpiraTeam
-repository yet (outgoing changes).</p>
-<p>The following UI Legend explains meaning of various icons which are
-displayed in the Eclipse/Mylyn Task List:</p>
+<p>Artifacts in the list have various states, based on your interaction with them. Unread artifacts are those with new changes, which you haven't seen yet. These artifacts are denoted as having "incoming changes" (coming from repository). When you open and edit the artifact, it will have local modifications which haven't been sent to Spira repository yet (outgoing changes).</p>
+<p>The following UI Legend explains meaning of various icons which are displayed in the Eclipse/Mylyn Task List:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_26.png" /></p>
-<p>As you can see, the different SpiraTeam artifacts are represented by
-different graphic overlays that let you know if the Eclipse/Mylyn task
-is really a SpiraTeam Requirement, Incident or Task.</p>
-<p>To refresh the list of tasks in Eclipse, you can either right-click on
-the appropriate query folder and choose "Synchronize" or just press the
-F5 key on the keyboard.</p>
-<p>Each of the different artifacts (Requirements, Incidents and Tasks)
-works slightly differently, so please refer to the appropriate section
-for details on how to view and edit.</p>
+<p>As you can see, the different Spira artifacts are represented by different graphic overlays that let you know if the Eclipse/Mylyn task is really a Spira Requirement, Incident or Task.</p>
+<p>To refresh the list of tasks in Eclipse, you can either right-click on the appropriate query folder and choose "Synchronize" or just press the F5 key on the keyboard.</p>
+<p>Each of the different artifacts (Requirements, Incidents and Tasks) works slightly differently, so please refer to the appropriate section for details on how to view and edit.</p>
 <h2 id="viewing-and-editing-requirements-in-eclipse">Viewing and Editing Requirements in Eclipse<a class="headerlink" href="#viewing-and-editing-requirements-in-eclipse" title="Permanent link">&para;</a></h2>
-<p>When you view the list of Requirements in the Eclipse task list, it will
-have the following general form:</p>
+<p>When you view the list of Requirements in the Eclipse task list, it will have the following general form:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_27.png" /></p>
-<p>Each Requirement is listed by name and number, together with its
-importance indicated by the equivalent Eclipse/Mylyn priority icon. To
-view the details of a specific Requirement, you should double-click on
-the Requirement, and the Requirements editor will be opened:</p>
+<p>Each Requirement is listed by name and number, together with its importance indicated by the equivalent Eclipse/Mylyn priority icon. To view the details of a specific Requirement, you should double-click on the Requirement, and the Requirements editor will be opened:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_28.png" /></p>
 <p>The Requirements editor screen is divided up into several sections:</p>
-<p><strong>Header</strong> -- this displays the name and ID of the Requirement, together
-with a graphical indication of its priority, its status, creation date
-and last-update date.</p>
-<p><strong>Attributes</strong> -- this displays the various SpiraTeam-specific
-attributes of the Requirement, including status, importance, scheduled
-release, component ID and planned effort. Any custom properties defined
-for the requirement will also be displayed.</p>
-<p><strong>Attachments</strong> -- this displays the list of documents, web-links and
-screenshots attached to the Requirement. You can also upload new files
-and screenshots to the Requirement from within Eclipse.</p>
-<p><strong>Description</strong> -- this displays the detailed description of the
-Requirement.</p>
-<p><strong>Comments</strong> -- this displays a threaded list of all the comments that
-have been added to the Requirement in SpiraTeam.</p>
-<p><strong>New Comment</strong> -- this allows you to add a new comment to the
-Requirement. The new comments will be sent to the SpiraTeam server when
-[Submit] is clicked.</p>
-<p><strong>People</strong> -- this displays the name and email address of the person who
-wrote the Requirement (author) and the person who it's currently
-assigned-to (owner).</p>
-<p><strong>Operations</strong> -- this contains the list of operations that can be
-performed on the Requirement. More information on operations can be
-found below.</p>
-<p>You can make changes to the Requirement by simply changing the values in
-the appropriate dropdown list or editing the information in any of the
-text boxes. Once you have happy with the changes, you can update the
-version on the SpiraTeam server by clicking the [Submit] button. If
-there are any data validation errors, they will be displayed. Once you
-have corrected them, the Requirement changes will be accepted by the
-system.</p>
-<p>In addition to making updates, you can perform the following actions on
-the Requirement:</p>
-<p><strong>Workflow Transitions</strong> -- these are the blue hyperlinks displayed
-directly above the [Submit] button in the actions tab. These allow you
-to <strong><em>change the status of the Requirement</em></strong> and when clicked, the
-fields in the Attributes section will change based on the new status.
-<em>Note: changing the Type of the Requirement will disable the workflow
-transition hyperlinks until [Submit] is clicked.</em></p>
-<p>Refresh the Requirement from the version on the server. This will update
-the local copy of the Requirement with the latest changes made on the
-SpiraTeam server.</p>
-<p>Browse the version of the Requirement on the server. Clicking the
-"globe" icon will open up a browser and display the Requirement directly
-in SpiraTeam.</p>
+<ul>
+<li><strong>Header</strong>: this displays the name and ID of the Requirement, together with a graphical indication of its priority, its status, creation date and last-update date.</li>
+<li><strong>Attributes</strong>: this displays the various Spira-specific attributes of the Requirement, including status, importance, scheduled release, component ID and planned effort. Any custom properties defined for the requirement will also be displayed.</li>
+<li><strong>Attachments</strong>: this displays the list of documents, web-links and screenshots attached to the Requirement. You can also upload new files and screenshots to the Requirement from within Eclipse.</li>
+<li><strong>Description</strong>: this displays the detailed description of the Requirement.</li>
+<li><strong>Comments</strong>: this displays a threaded list of all the comments that have been added to the Requirement in Spira.</li>
+<li><strong>New Comment</strong>: this allows you to add a new comment to the Requirement. The new comments will be sent to the Spira server when "Submit" is clicked.</li>
+<li><strong>People</strong>: this displays the name and email address of the person who wrote the Requirement (author) and the person who it's currently assigned-to (owner).</li>
+<li><strong>Operations</strong>: this contains the list of operations that can be performed on the Requirement. More information on operations can be found below.</li>
+</ul>
+<p>You can make changes to the Requirement by simply changing the values in the appropriate dropdown list or editing the information in any of the text boxes. Once you have happy with the changes, you can update the version on the Spira server by clicking the "Submit" button. If there are any data validation errors, they will be displayed. Once you have corrected them, the Requirement changes will be accepted by the system.</p>
+<p>In addition to making updates, you can perform the following actions on the Requirement:</p>
+<ul>
+<li><strong>Workflow Transitions</strong>: these are the blue hyperlinks displayed directly above the "Submit" button in the actions tab. These allow you to <strong><em>change the status of the Requirement</em></strong> and when clicked, the fields in the Attributes section will change based on the new status. <em>Note: changing the Type of the Requirement will disable the workflow transition hyperlinks until "Submit" is clicked.</em></li>
+</ul>
+<p>Refresh the Requirement from the version on the server. This will update the local copy of the Requirement with the latest changes made on the Spira server.</p>
+<p>Browse the version of the Requirement on the server. Clicking the "globe" icon will open up a browser and display the Requirement directly in Spira.</p>
 <h2 id="viewing-and-editing-tasks-in-eclipse">Viewing and Editing Tasks in Eclipse<a class="headerlink" href="#viewing-and-editing-tasks-in-eclipse" title="Permanent link">&para;</a></h2>
-<p>When you view the list of Tasks in the Eclipse task list, it will have
-the following general form:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTeam, SpiraPlan</p>
+</div>
+<p>When you view the list of Tasks in the Eclipse task list, it will have the following general form:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_29.png" /></p>
-<p>Each Task is listed by name and number, together with its priority
-indicated by the equivalent Eclipse/Mylyn priority icon. To view the
-details of a specific Task, you should double-click on the Task, and the
-Tasks editor will be opened:</p>
+<p>Each Task is listed by name and number, together with its priority indicated by the equivalent Eclipse/Mylyn priority icon. To view the details of a specific Task, you should double-click on the Task, and the Tasks editor will be opened:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_30.png" /></p>
 <p>The Tasks editor screen is divided up into several sections:</p>
-<p><strong>Header</strong> -- this displays the name and ID of the Task, together with a
-graphical indication of its priority, its status, creation date and
-last-update date.</p>
-<p><strong>Attributes</strong> -- this displays the various SpiraTeam-specific
-attributes of the Task, including status, scheduled release, priority,
-start-date, end-date, % complete, estimated effort, actual effort, the
-name/id of the Requirement it belongs to and its component. Any custom
-properties defined for the task will also be displayed.</p>
-<p><strong>Attachments</strong> -- this displays the list of documents, web-links and
-screenshots attached to the Task. You can also upload new files and
-screenshots to the Task from within Eclipse.</p>
-<p><strong>Description</strong> -- this displays the detailed description of the Task.</p>
-<p><strong>Comments</strong> -- this displays a threaded list of all the comments that
-have been added to the Task in SpiraTeam.</p>
-<p><strong>New Comment</strong> -- this allows you to add a new comment to the Task. The
-new comments will be sent to the SpiraTeam server when [Submit] is
-clicked.</p>
-<p><strong>People</strong> -- this displays the name and email address of the person who
-created the Task (creator) and the person who it's currently assigned-to
-(owner).</p>
-<p><strong>Operations</strong> -- this contains the list of operations that can be
-performed on the Task. More information on operations can be found
-below.</p>
-<p>You can make changes to the task by simply changing the values in the
-appropriate dropdown list or editing the information in any of the text
-boxes. Once you have happy with the changes, you can update the version
-on the SpiraTeam server by clicking the [Submit] button. If there are
-any data validation errors (e.g. you have to enter a start-date to make
-the Task In-Progress), they will be displayed. Once you have corrected
-them, the Task changes will be accepted by the system.</p>
-<p>In addition to making updates, you can perform the following actions on
-the Task:</p>
-<p><strong>Workflow Transitions</strong> -- these are the blue hyperlinks displayed
-directly above the [Submit] button in the actions tab. These allow you
-to <strong><em>change the status of the Task</em></strong> and when clicked, the fields in
-the Attributes section will change based on the new status.
-<em>Note: changing the Type of the Task will disable the workflow
-transition hyperlinks until [Submit] is clicked.</em></p>
-<p>Refresh the Task from the version on the server. This will update the
-local copy of the Task with the latest changes made on the SpiraTeam
-server.</p>
-<p>Browse the version of the Task on the server. Clicking the "globe" icon
-will open up a browser and display the Task directly in SpiraTeam.</p>
+<ul>
+<li><strong>Header</strong>: this displays the name and ID of the Task, together with a graphical indication of its priority, its status, creation date and last-update date.</li>
+<li><strong>Attributes</strong>: this displays the various Spira-specific attributes of the Task, including status, scheduled release, priority, start-date, end-date, % complete, estimated effort, actual effort, the name/id of the Requirement it belongs to and its component. Any custom properties defined for the task will also be displayed.</li>
+<li><strong>Attachments</strong>: this displays the list of documents, web-links and screenshots attached to the Task. You can also upload new files and screenshots to the Task from within Eclipse.</li>
+<li><strong>Description</strong>: this displays the detailed description of the Task.</li>
+<li><strong>Comments</strong>: this displays a threaded list of all the comments that have been added to the Task in Spira.</li>
+<li><strong>New Comment</strong>: this allows you to add a new comment to the Task. The new comments will be sent to the Spira server when "Submit" is clicked.</li>
+<li><strong>People</strong>: this displays the name and email address of the person who created the Task (creator) and the person who it's currently assigned-to (owner).</li>
+<li><strong>Operations</strong>: this contains the list of operations that can be performed on the Task. More information on operations can be found below.</li>
+</ul>
+<p>You can make changes to the task by simply changing the values in the appropriate dropdown list or editing the information in any of the text boxes. Once you have happy with the changes, you can update the version on the Spira server by clicking the "Submit" button. If there are any data validation errors (e.g. you have to enter a start-date to make the Task In-Progress), they will be displayed. Once you have corrected them, the Task changes will be accepted by the system.</p>
+<p>In addition to making updates, you can perform the following actions on the Task:</p>
+<ul>
+<li><strong>Workflow Transitions</strong>: these are the blue hyperlinks displayed directly above the "Submit" button in the actions tab. These allow you to <strong><em>change the status of the Task</em></strong> and when clicked, the fields in the Attributes section will change based on the new status. <em>Note: changing the Type of the Task will disable the workflow transition hyperlinks until "Submit" is clicked.</em></li>
+</ul>
+<p>Refresh the Task from the version on the server. This will update the local copy of the Task with the latest changes made on the Spira server.</p>
+<p>Browse the version of the Task on the server. Clicking the "globe" icon will open up a browser and display the Task directly in Spira.</p>
 <h2 id="viewing-and-editing-incidents-in-eclipse">Viewing and Editing Incidents in Eclipse<a class="headerlink" href="#viewing-and-editing-incidents-in-eclipse" title="Permanent link">&para;</a></h2>
-<p>When you view the list of Incidents in the Eclipse task list, it will
-have the following general form:</p>
+<p>When you view the list of Incidents in the Eclipse task list, it will have the following general form:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_31.png" /></p>
-<p>Each Incident is listed by name and number, together with its priority
-indicated by the equivalent Eclipse/Mylyn priority icon. To view the
-details of a specific Incident, you should double-click on the Incident,
-and the Incidents editor will be opened:</p>
+<p>Each Incident is listed by name and number, together with its priority indicated by the equivalent Eclipse/Mylyn priority icon. To view the details of a specific Incident, you should double-click on the Incident, and the Incidents editor will be opened:</p>
 <p><img alt="" src="../img/Eclipse__Mylyn_32.png" /></p>
 <p>The Incidents editor screen is divided up into several sections:</p>
-<p><strong>Header</strong> -- this displays the name and ID of the Incident, together
-with a graphical indication of its priority, its status, creation date
-and last-update date.</p>
-<p><strong>Attributes</strong> -- this displays the various SpiraTeam-specific
-attributes of the Incident, including priority, severity, status, type,
-detected release, resolved release, verified release, start-date,
-closed-date, % complete, estimated effort, actual effort and component
-Id's. Any custom properties defined for the incident will also be
-displayed.</p>
-<p><strong>Attachments</strong> -- this displays the list of documents, web-links and
-screenshots attached to the Incident. You can also upload new files and
-screenshots to the Task from within Eclipse.</p>
-<p><strong>Description</strong> -- this displays the detailed description of the
-Incident.</p>
-<p><strong>Comments</strong> -- this displays a threaded list of all the comments that
-have been added to the Incident in SpiraTeam.</p>
-<p><strong>New Comment</strong> -- this allows you to add a new comment to the Incident.
-The new comments will be sent to the SpiraTeam server when [Submit] is
-clicked.</p>
-<p><strong>People</strong> -- this displays the name and email address of the person who
-found the Incident (detector) and the person who it's currently
-assigned-to (owner).</p>
-<p><strong>Operations</strong> -- this contains the list of operations that can be
-performed on the Incident. See below for more information on how to use
-this section.</p>
-<p>You can make changes to the Incident by simply changing the values in
-the appropriate dropdown list or editing the information in any of the
-text boxes. Once you have happy with the changes, you can update the
-version on the SpiraTeam server by clicking the [Submit] button. If
-there are any data validation errors (e.g. you have to enter a
-start-date to make the Incident In-Progress), they will be displayed.
-Once you have corrected them, the Incident changes will be accepted by
-the system.</p>
-<p>In addition to making simple updates, you can perform the following
-actions on the Incident:</p>
-<p><strong>Submit</strong> -- clicking the submit button will commit the changes made on
-the Incident to the SpiraTeam Server.</p>
-<p><strong>Workflow Transitions</strong> -- these are the blue hyperlinks displayed
-directly above the [Submit] button in the actions tab. These allow you
-to <strong><em>change the status of the Incident</em></strong> and when clicked, the fields
-in the Attributes section will change based on the new status.
-<em>Note: changing the Type of the Incident will disable the workflow
-transition hyperlinks until [Submit] is clicked.</em></p>
-<p>Refresh the Incident from the version on the server. This will update
-the local copy of the Incident with the latest changes made on the
-SpiraTeam server.</p>
-<p>Browse the version of the Incident on the server. Clicking the "globe"
-icon will open up a browser and display the Incident directly in
-SpiraTeam.</p>
+<ul>
+<li><strong>Header</strong>: this displays the name and ID of the Incident, together with a graphical indication of its priority, its status, creation date and last-update date.</li>
+<li><strong>Attributes</strong>: this displays the various Spira-specific attributes of the Incident, including priority, severity, status, type, detected release, resolved release, verified release, start-date, closed-date, % complete, estimated effort, actual effort and component Id's. Any custom properties defined for the incident will also be displayed.</li>
+<li><strong>Attachments</strong>: this displays the list of documents, web-links and screenshots attached to the Incident. You can also upload new files and screenshots to the Task from within Eclipse.</li>
+<li><strong>Description</strong>: this displays the detailed description of the Incident.</li>
+<li><strong>Comments</strong>: this displays a threaded list of all the comments that have been added to the Incident in Spira.</li>
+<li><strong>New Comment</strong>: this allows you to add a new comment to the Incident. The new comments will be sent to the Spira server when "Submit" is clicked.</li>
+<li><strong>People</strong>: this displays the name and email address of the person who found the Incident (detector) and the person who it's currently assigned-to (owner).</li>
+<li><strong>Operations</strong>: this contains the list of operations that can be performed on the Incident. See below for more information on how to use this section.</li>
+</ul>
+<p>You can make changes to the Incident by simply changing the values in the appropriate dropdown list or editing the information in any of the text boxes. Once you have happy with the changes, you can update the version on the Spira server by clicking the "Submit" button. If there are any data validation errors (e.g. you have to enter a start-date to make the Incident In-Progress), they will be displayed. Once you have corrected them, the Incident changes will be accepted by the system.</p>
+<p>In addition to making simple updates, you can perform the following actions on the Incident:</p>
+<ul>
+<li><strong>Submit</strong>: clicking the submit button will commit the changes made on the Incident to the Spira Server.</li>
+<li><strong>Workflow Transitions</strong>: these are the blue hyperlinks displayed directly above the "Submit" button in the actions tab. These allow you to <strong><em>change the status of the Incident</em></strong> and when clicked, the fields in the Attributes section will change based on the new status. <em>Note: changing the Type of the Incident will disable the workflow transition hyperlinks until "Submit" is clicked.</em></li>
+</ul>
+<p>Refresh the Incident from the version on the server. This will update the local copy of the Incident with the latest changes made on the Spira server.</p>
+<p>Browse the version of the Incident on the server. Clicking the "globe" icon will open up a browser and display the Incident directly in Spira.</p>
 
 
 

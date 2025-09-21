@@ -4140,15 +4140,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-excel-and-spiraplan-using-odata" class="md-nav__link">
+  <a href="#connecting-excel-and-spira-using-odata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting Excel and SpiraPlan using OData
+        Connecting Excel and Spira using OData
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Connecting Excel and SpiraPlan using OData">
+    <nav class="md-nav" aria-label="Connecting Excel and Spira using OData">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4163,10 +4163,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connect-excel-and-spiraplan" class="md-nav__link">
+  <a href="#connect-excel-and-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connect Excel and SpiraPlan
+        Connect Excel and Spira
       
     </span>
   </a>
@@ -9072,6 +9072,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9138,15 +9166,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-excel-and-spiraplan-using-odata" class="md-nav__link">
+  <a href="#connecting-excel-and-spira-using-odata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting Excel and SpiraPlan using OData
+        Connecting Excel and Spira using OData
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Connecting Excel and SpiraPlan using OData">
+    <nav class="md-nav" aria-label="Connecting Excel and Spira using OData">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9161,10 +9189,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connect-excel-and-spiraplan" class="md-nav__link">
+  <a href="#connect-excel-and-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connect Excel and SpiraPlan
+        Connect Excel and Spira
       
     </span>
   </a>
@@ -9305,41 +9333,44 @@
 
 
 <h1 id="odata-tutorial">OData Tutorial<a class="headerlink" href="#odata-tutorial" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraPlan only</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><a href="https://en.wikipedia.org/wiki/Open_Data_Protocol">OData</a> is an open protocol that lets you easily query data, over the web. Exclusive to SpiraPlan (6.9+), with OData you can directly query the raw data in your database in a secure and safe way. Whenever you use OData in SpiraPlan you are communicating through a secure intermediary (the application itself) to get data from read-only <a href="../Custom-Report-Tables/">reporting views</a>. Tools like Excel, PowerBI, Tableau support OData and can therefore communicate with SpiraPlan to access this data with just a few clicks.</p>
-<p>With OData you don't need to be a SQL expert to generate rich and dynamic insights into your data. If you can fiddle with a spreadsheet, you can stich tables of data from SpiraPlan ("joins" in database language) to get just the data you need. What sort of insights can you get with OData and SpiraPlan reporting views? Here are some examples:</p>
+<p><a href="https://en.wikipedia.org/wiki/Open_Data_Protocol">OData</a> is an open protocol that lets you easily query data, over the web. With OData you can directly query the raw data in your database in a secure and safe way. Whenever you use OData in Spira you are communicating through a secure intermediary (the application itself) to get data from read-only <a href="../Custom-Report-Tables/">reporting views</a>. Tools like Excel, PowerBI, Tableau support OData and can therefore communicate with Spira to access this data with just a few clicks.</p>
+<p>With OData you don't need to be a SQL expert to generate rich and dynamic insights into your data. If you can fiddle with a spreadsheet, you can stich tables of data from Spira ("joins" in database language) to get just the data you need. What sort of insights can you get with OData and Spira reporting views? Here are some examples:</p>
 <ul>
-<li>a pie chart of how many users are members of each of SpiraPlan's products</li>
+<li>a pie chart of how many users are members of each of Spira's products</li>
 <li>a list of how long ago each open task was assigned to the current owner</li>
 <li>get the most recent test run for each test case against each requirement assigned to a sprint</li>
 <li>the top 5 most closed then reopened bugs in a product (or program)</li>
 </ul>
-<p>In this tutorial series we will be using Excel and its built-in Power Query to communicate with SpiraPlan. Over this series we will build up to creating the final example listed above: a list of the most reopened bugs. This is not meant as a tutorial of Power Query itself, there are lots of those online. But if you don't know how to use Power Query don't worry, you will still be able to follow along</p>
-<h2 id="connecting-excel-and-spiraplan-using-odata">Connecting Excel and SpiraPlan using OData<a class="headerlink" href="#connecting-excel-and-spiraplan-using-odata" title="Permanent link">&para;</a></h2>
+<p>In this tutorial series we will be using Excel and its built-in Power Query to communicate with Spira. Over this series we will build up to creating the final example listed above: a list of the most reopened bugs. This is not meant as a tutorial of Power Query itself, there are lots of those online. But if you don't know how to use Power Query don't worry, you will still be able to follow along</p>
+<h2 id="connecting-excel-and-spira-using-odata">Connecting Excel and Spira using OData<a class="headerlink" href="#connecting-excel-and-spira-using-odata" title="Permanent link">&para;</a></h2>
 <p>In the first tutorial you will learn how to: </p>
 <ul>
-<li>connect Excel to SpiraPlan</li>
+<li>connect Excel to Spira</li>
 <li>pick a table to explore (incidents in this case)</li>
 <li>filter incidents to those from just one product</li>
 <li>get rid of columns you don't need to make our data more readable</li>
 <li>get the data into Excel itself</li>
-<li>update the data directly from SpiraPlan without leaving Excel</li>
+<li>update the data directly from Spira without leaving Excel</li>
 </ul>
 <h3 id="who-can-use-odata">Who can use OData?<a class="headerlink" href="#who-can-use-odata" title="Permanent link">&para;</a></h3>
-<p>Not all SpiraPlan users can connect to OData to see live data. Access to OData lets you see all data across all products in your entire system - it is not restricted by product membership or product role permissions. Therefore you need to think carefully about who can and should have this read-only access.</p>
+<p>Not all Spira users can connect to OData to see live data. Access to OData lets you see all data across all products in your entire system - it is not restricted by product membership or product role permissions. Therefore you need to think carefully about who can and should have this read-only access.</p>
 <p>Two types of users can use OData:</p>
 <ul>
 <li>system administrators</li>
 <li>report administrators</li>
 </ul>
 <p>Each user can be one, both, or neither of these. Admins can turn these settings on or off in the admin user profile screens.</p>
-<p>Before carrying on with this tutorial make sure you are either a system or report admin, are using SpiraPlan, and are on at least version 6.9.0.0.</p>
-<h3 id="connect-excel-and-spiraplan">Connect Excel and SpiraPlan<a class="headerlink" href="#connect-excel-and-spiraplan" title="Permanent link">&para;</a></h3>
+<p>Before carrying on with this tutorial make sure you are either a system or report admin, are using Spira, and are on at least version 6.9.0.0.</p>
+<h3 id="connect-excel-and-spira">Connect Excel and Spira<a class="headerlink" href="#connect-excel-and-spira" title="Permanent link">&para;</a></h3>
 <p>Open Excel and find the Get Data &gt; From OData Feed button. This should be in the Data ribbon, under Get Data &gt; From Other Sources.</p>
 <p><img alt="Excel's From OData Feed menu location" src="../img/odata-1.png" /></p>
-<p>Once you click this button you will see a popup. Stick with "Basic" and enter the special OData url for your SpiraPlan. This is the "base url" for your application with "api/odata" added at the end. If your site is at <a href="https://mycompany.spiraservice.net/">https://mycompany.spiraservice.net/</a> then your OData url will be <a href="https://mycompany.spiraservice.net/api/odata">https://mycompany.spiraservice.net/api/odata</a>. Click OK.</p>
+<p>Once you click this button you will see a popup. Stick with "Basic" and enter the special OData url for your Spira. This is the "base url" for your application with "api/odata" added at the end. If your site is at <a href="https://mycompany.spiraservice.net/">https://mycompany.spiraservice.net/</a> then your OData url will be <a href="https://mycompany.spiraservice.net/api/odata">https://mycompany.spiraservice.net/api/odata</a>. Click OK.</p>
 <p><img alt="Entering your special OData Feed's url" src="../img/odata-2.png" /></p>
-<p>Once Excel connects to SpiraPlan you see a popup "Navigator" where you can see all the different data views you can access ("query"). There is a lot here and a lot to explore. You can access pretty much all the information in your application, across all its products and templates, from these views. But if you click on now to take a look you will not be able to see anything. That's because you have not authenticated yet with Spira. You have to authenticate to view this data for obvious security reasons.</p>
+<p>Once Excel connects to Spira you see a popup "Navigator" where you can see all the different data views you can access ("query"). There is a lot here and a lot to explore. You can access pretty much all the information in your application, across all its products and templates, from these views. But if you click on now to take a look you will not be able to see anything. That's because you have not authenticated yet with Spira. You have to authenticate to view this data for obvious security reasons.</p>
 <p>To authenticate you need to pieces of information:</p>
 <ul>
 <li>username</li>
@@ -9367,10 +9398,10 @@
 <p><img alt="Incident data from Spira in Excel" src="../img/odata-6.png" /></p>
 <p>You can now: connect Excel and Spira together using OData and view data from Spira live in Excel. In the next tutorial we will build a simple query to filter the data to just those parts we are interested in</p>
 <h2 id="writing-your-first-query">Writing your first query<a class="headerlink" href="#writing-your-first-query" title="Permanent link">&para;</a></h2>
-<p>In this tutorial you will learn how to use Excel's Power Query to filter down all the Incidents in your SpiraPlan application. You will end up with a list of incidents in a single product, sorted by priority. You do not need any coding or SQL skills - everything you do will feel very similar to how you normal use Excel itself.</p>
+<p>In this tutorial you will learn how to use Excel's Power Query to filter down all the Incidents in your Spira application. You will end up with a list of incidents in a single product, sorted by priority. You do not need any coding or SQL skills - everything you do will feel very similar to how you normal use Excel itself.</p>
 <p>To get started:</p>
 <ul>
-<li>connect SpiraPlan and Excel using the OData feed (explained in the previous tutorial)</li>
+<li>connect Spira and Excel using the OData feed (explained in the previous tutorial)</li>
 <li>click on the Incidents view in the Excel Navigator (just as we did in the last tutorial)</li>
 <li>click Transform Data at the bottom of the Excel Navigator popup to load the Power Query interface</li>
 <li>NOTE: if you followed along with the last tutorial and "loaded" your data into an Excel sheet, look to the "Queries and Connections" sidebar on the right. Double click where it says <strong>Incidents</strong>, <em>xx rows loaded</em>.</li>
@@ -9385,7 +9416,7 @@
 <li>query settings sidebar on the right. This is very useful and lets you see all the steps you took to change your query. You can also go back to see what the query looked like at an earlier stage</li>
 </ul>
 <h3 id="choose-columns">Choose columns<a class="headerlink" href="#choose-columns" title="Permanent link">&para;</a></h3>
-<p>To make the data easier to look at and filter, the first thing to do is get rid of columns we don't need. Ther are well over 100 columns (because of all the custom fields we include) and that is way too many.</p>
+<p>To make the data easier to look at and filter, the first thing to do is get rid of columns we don't need. There are well over 100 columns (because of all the custom fields we include) and that is way too many.</p>
 <p>Click on the "Choose Columns" button from the Home ribbon. Only select the following columns (make sure the rest are unchecked), and then click OK</p>
 <ul>
 <li>INCIDENT_ID</li>
@@ -9402,17 +9433,17 @@
 <li>Click on the arrow in the PROJECT_NAME column header. Select just one product. In the screenshot below we are going to only show incidents for "Kitten Monitor App"</li>
 <li>Click OK</li>
 </ul>
-<p>You have filtered your data! That's all there is to it. It is really easy. What is cool, is that we are not hiding rows of our table like we do in Excel normally. We are actually changing the query we are sending to SpiraPlan so that SpiraPlan is only sending us the information we have asked for.</p>
+<p>You have filtered your data! That's all there is to it. It is really easy. What is cool, is that we are not hiding rows of our table like we do in Excel normally. We are actually changing the query we are sending to Spira so that Spira is only sending us the information we have asked for.</p>
 <p><img alt="Filtering the PROJECT_NAME column" src="../img/odata-9.png" /></p>
 <p>Let's filter again. This time filter on the INCIDENT_TYPE_NAME column. Below we are filtering to show Bugs and Enhancements. So we are now seeing only certain types of incidents in a single product. You can see below we have a new entry in the list of Applied Steps in the right hand sidebar - for our Filtering Rows work.</p>
 <p><img alt="Filtering the INCIDENT_TYPE_NAME column" src="../img/odata-10.png" /></p>
 <h3 id="sorting-data">Sorting data<a class="headerlink" href="#sorting-data" title="Permanent link">&para;</a></h3>
 <p>Sorting data is just as easy as filtering data. Click on the dropdown arrow for the column you want to sort by and click "Sort Ascending" or "Sort Descending". That's all there is to it. You can, if you want, sort by multiple columns at once. In the example below, we are sorting ascending by the NAME column. Again, there is a new entry in the list of Applied Steps in the right hand sidebar - for our Sorting Rows.</p>
 <p><img alt="Sorting the NAME column" src="../img/odata-11.png" /></p>
-<p>Hopefully, this feels very straightforward, because it is. In the background Excel is creating the right OData query to send to SpiraPlan, which is then writing a secure query to the database to get just the data you need. But you don't need to think about any of that.</p>
+<p>Hopefully, this feels very straightforward, because it is. In the background Excel is creating the right OData query to send to Spira, which is then writing a secure query to the database to get just the data you need. But you don't need to think about any of that.</p>
 <p>In the next tutorial we are going to try another query with incidents and make things more complicated by combining data across two tables at once.</p>
 <h2 id="combining-two-lots-of-data">Combining two lots of data<a class="headerlink" href="#combining-two-lots-of-data" title="Permanent link">&para;</a></h2>
-<p>In this tutorial we will start to see the real power of reporting using OData. Until now we have been filtering and sorting a single list of incidents. Now we are going to do the same filtering and sorting but now across two tables joined together. Combining (joining) data in this way let's us do things with SpiraPlan's data like:</p>
+<p>In this tutorial we will start to see the real power of reporting using OData. Until now we have been filtering and sorting a single list of incidents. Now we are going to do the same filtering and sorting but now across two tables joined together. Combining (joining) data in this way let's us do things with Spira's data like:</p>
 <ul>
 <li>list the test case names that are covering each requirement (by joining test case and requirement coverage data together)</li>
 <li>find all the bugs in a portfolio (by joining a portfolio with programs, products, and incidents)</li>
@@ -9421,7 +9452,7 @@
 </ul>
 <p>We are going to focus on the final example above in this tutorial, and add to it in the next tutorial</p>
 <h3 id="preparing-our-incident-data">Preparing our incident data<a class="headerlink" href="#preparing-our-incident-data" title="Permanent link">&para;</a></h3>
-<p>From the end of our last tutorial we had a list of bugs and enhancements in a single product. We can see names for things like the product (project in database terms), status, and type. This is what we see in SpiraPlan itself. </p>
+<p>From the end of our last tutorial we had a list of bugs and enhancements in a single product. We can see names for things like the product (project in database terms), status, and type. This is what we see in Spira itself. </p>
 <p>Behind each status name is a unique number identified (ID). This lets us change, for example, the status name, but still make sure the incidents with that status show with that updated name.</p>
 <p>To properly match data across different tables of data we should match on this ID fields. Do this:</p>
 <ul>
@@ -9429,7 +9460,7 @@
 <li>you can now see all the fields available again. On top of the columns we are already showing, select to also show "INCIDENT_STATUS_ID".</li>
 <li>Click OK</li>
 </ul>
-<p>Excel has asked SpiraPlan for this extra data and is now showing it to us. But notice that you are now seeing all incidents again, and "Removed Other Columns" is highlighted in the list of Applied Steps. Click on the bottom step "Sorted Rows". This will apply all the steps that follow our now updated "Removed Other Columns." This is a great feature - we can, within limits, edit previous steps we have made to our query, then go back to our most current step in the process. We now have the same list of incidents we ended the last tutorial with, but showing this extra column.</p>
+<p>Excel has asked Spira for this extra data and is now showing it to us. But notice that you are now seeing all incidents again, and "Removed Other Columns" is highlighted in the list of Applied Steps. Click on the bottom step "Sorted Rows". This will apply all the steps that follow our now updated "Removed Other Columns." This is a great feature - we can, within limits, edit previous steps we have made to our query, then go back to our most current step in the process. We now have the same list of incidents we ended the last tutorial with, but showing this extra column.</p>
 <p><img alt="Adding ID columns to our query" src="../img/odata-12.png" /></p>
 <h3 id="joining-queries-together">Joining queries together<a class="headerlink" href="#joining-queries-together" title="Permanent link">&para;</a></h3>
 <p>The process for joining data across two tables (queries as Power Query calls them) is:</p>
@@ -9443,7 +9474,7 @@
 <ul>
 <li>Expand the Queries sidebar on the left hand side of the editor window</li>
 <li>Right click and select New Query &gt; Recent Sources &gt; and click on the name of your OData link (below this shows using localhost). Note: If you do not see the menu as in the screenshot you can get to this same place from the Home ribbon, new query section.</li>
-<li>This brings up the Navigator window showing all the different tables of data we can access in SpiraPlan</li>
+<li>This brings up the Navigator window showing all the different tables of data we can access in Spira</li>
 <li>Scroll down and click on "IncidentStatuses" then click OK</li>
 <li>This now loads up data from our second query on IncidentStatuses and selects this view</li>
 </ul>
@@ -9468,14 +9499,14 @@
 <p>The same principles can be used for combining data from many other tables together. The critical thing for this to work is that there are columns that match between the two tables you want to join. Imagine, for instance, if we match INCIDENT_ID from Incidents with INCIDENT_STATUS_ID from IncidentStatuses. The data may look interesting but it would be nonsense and not useable. It should almost always be obvious by the column name how it will match up with other columns in different tables.</p>
 <p>As a final step in this tutorial, let's do something with this extra data we have. We now know which incidents are open or closed but that IS_OPEN_STATUS flag (TRUE = open, FALSE = closed). Filter on the "IncidentStatuses.IS_OPEN_STATUS" column the same as any other column, and select only the open incidents (TRUE). This added a new Applied Step "Filtered Rows1."</p>
 <p><img alt="Only open incidents" src="../img/odata-17.png" /></p>
-<p>This query is really easy to do on the list of Incidents using SpiraPlan itself. We have replicated that functionality using OData to talk between Excel and SpiraPlan. In this way you can easily compare SpiraPlan and your query to see if the results match. As you can see the image above and the one below show the same exact incidents in the same order (because have applied the same filter and sorting in both places).</p>
+<p>This query is really easy to do on the list of Incidents using Spira itself. We have replicated that functionality using OData to talk between Excel and Spira. In this way you can easily compare Spira and your query to see if the results match. As you can see the image above and the one below show the same exact incidents in the same order (because have applied the same filter and sorting in both places).</p>
 <p><img alt="Only open incidents in Spira" src="../img/odata-18.png" /></p>
 <p>In the final tutorial we are going to build on the query we have built but rapidly extend it with a number of other joins and semi-advanced filtering.</p>
 <h2 id="building-complex-queries">Building complex queries<a class="headerlink" href="#building-complex-queries" title="Permanent link">&para;</a></h2>
 <p>In this tutorial we start with the output from the previous tutorial: a list of open bugs and enhancements for one product. By the end of this tutorial we will have a spreadsheet of data that shows, for a portfolio, the number of open bugs and enhancements each user is assigned. That's quite a transformation so let's get started.</p>
 <ul>
 <li>First, we need to show additional information about incidents. Go to the "Removed Other Columns" Applied Step and additionally show the PROJECT_ID, and OWNER_ID columns</li>
-<li>Now Go to the "Fitlered Rows" Applied Step and remove the filter on the PROJECT_NAME column</li>
+<li>Now Go to the "Filtered Rows" Applied Step and remove the filter on the PROJECT_NAME column</li>
 <li>Click on the "Filtered Rows1" Applied Step to show the results across all projects (products)</li>
 <li>Let's add some new queries we will need later in the sidebar: add Users, Projects, ProjectGroups (called Programs in the application itself), and Portfolios (use the select multiple checkbox in the popup window to add all of these at once)</li>
 <li>make sure to click on our main Incidents query from the sidebar so that it is selected</li>
@@ -9503,7 +9534,7 @@
 <li>Use the default "Left Outer" join kind and click OK</li>
 <li>Expand the "Portfolios" column to show the columns Name</li>
 </ul>
-<p>The query should now have a total of 14 columns. It combines data across 6 different tables from SpiraPlan to show us details about the user assigned to each incident and the program, and portfolio each incident is in. Your data should look something like that below (note the list of Applied Steps). If at anytime you have done something wrong, remember you can edit a step, or delete a step entirely and do it again.</p>
+<p>The query should now have a total of 14 columns. It combines data across 6 different tables from Spira to show us details about the user assigned to each incident and the program, and portfolio each incident is in. Your data should look something like that below (note the list of Applied Steps). If at anytime you have done something wrong, remember you can edit a step, or delete a step entirely and do it again.</p>
 <p><img alt="All the new columns and steps after 4 merges" src="../img/odata-20.png" /></p>
 <p>We're ready for the final stage: grouping data. This will let us count up the number of incidents assigned to each user. Follow the steps below:</p>
 <ul>
@@ -9516,7 +9547,7 @@
 <p>This results in a condensed query of data that has unique rows for each user in each portfolio. The right hand column is called Count and is the number of open bugs and enhancements that the user has in that portfolio.</p>
 <p><img alt="Grouped data" src="../img/odata-22.png" />.</p>
 <p>Click "Close and Load from the ribbon to load this data into Excel. From here you can do anything with the data you want. For instance, you can turn it into a pivot table to tell you how many open bugs and enhancements there are, in total, in each portfolio. </p>
-<p>This brings us to the end of the OData tutorial series. Hopefully you can see the power of OData and the ease with which you can interrogate your data and draw out insights from it. You can create much more complex data that we have done here, or use more complex reporting tools to create live data dashboards that let you extend SpiraPlan with customized queries that make sense to your organization. </p>
+<p>This brings us to the end of the OData tutorial series. Hopefully you can see the power of OData and the ease with which you can interrogate your data and draw out insights from it. You can create much more complex data that we have done here, or use more complex reporting tools to create live data dashboards that let you extend Spira with customized queries that make sense to your organization. </p>
 
 
 

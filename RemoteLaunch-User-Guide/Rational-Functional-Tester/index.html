@@ -4792,15 +4792,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-rft-test-sets-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-rft-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the RFT Test Sets from SpiraTeam
+        Executing the RFT Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the RFT Test Sets from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the RFT Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9008,6 +9008,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9119,15 +9147,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-rft-test-sets-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-rft-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the RFT Test Sets from SpiraTeam
+        Executing the RFT Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the RFT Test Sets from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the RFT Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9175,268 +9203,124 @@
 
 
 <h1 id="rational-functional-tester">Rational Functional Tester<a class="headerlink" href="#rational-functional-tester" title="Permanent link">&para;</a></h1>
-<p>IBM Rational Functional Tester (hereafter RFT) is software test
-automation tool used by quality assurance teams to perform automated
-regression testing. Testers create scripts by using a test recorder
-which captures a user's actions against their application under test.
-The recording mechanism creates a test script from the actions. The test
-script is produced as either a Java or Visual Basic.net application.</p>
-<p>This section describes how you can use SpiraTest / SpiraTeam (hereafter
-SpiraTeam) together with RemoteLaunch to schedule and remotely launch
-instances of RFT on different computers and have the testing results be
-transmitted back to SpiraTeam. This allows you to extend your
-SpiraTeam's test management capabilities to include automated RFT tests.</p>
-<p><em>Note: This integration requires at least version 3.0 of
-SpiraTest/Team.</em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>IBM Rational Functional Tester (hereafter RFT) is software test automation tool used by quality assurance teams to perform automated regression testing. Testers create scripts by using a test recorder which captures a user's actions against their application under test. The recording mechanism creates a test script from the actions. The test script is produced as either a Java or Visual Basic.net application.</p>
+<p>This section describes how you can use Spira together with RemoteLaunch to schedule and remotely launch instances of RFT on different computers and have the testing results be transmitted back to Spira. This allows you to extend your Spira's test management capabilities to include automated RFT tests.</p>
+<p><em>Note: This integration requires at least version 3.0 of Spira.</em></p>
 <h2 id="installing-the-rft-engine">Installing the RFT Engine<a class="headerlink" href="#installing-the-rft-engine" title="Permanent link">&para;</a></h2>
-<p>This section assumes that you already have a working installation of
-SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>.
-Once those prerequisites are in place, please follow these steps:</p>
+<p>This section assumes that you already have a working installation of Spira and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
 <ul>
-<li>
-<p>Download and extract the RFTEngine.zip file from the
-Inflectra website and locate the appropriate RFTAutomationEngine.dll
-for the version of RFT that you are using.</p>
-</li>
-<li>
-<p>If you don't see the version listed, just use the nearest
-version that is <em>lower</em> than your current version.</p>
-</li>
-<li>
-<p>Copy the file "RFTAutomationEngine.dll" into the "extensions"
-sub-folder of the RemoteLaunch installation.</p>
-</li>
-<li>
-<p>Log in to SpiraTeam as a system administrator and go into SpiraTeam
-main Administration page and click on the "Test Automation" link
-under <strong>Integration</strong>.</p>
-</li>
-<li>
-<p>Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:
-<img alt="" src="../img/Rational_Functional_Tester_120.png" /></p>
-</li>
-<li>
-<p><strong>Name</strong>: This is the short display name of the automation
-engine. It can be anything that is meaningful to your users.</p>
-</li>
-<li>
-<p><strong>Description</strong>: This is the long description of the automation
-engine. It can be anything that is meaningful to your users.
-(Optional)</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the engine is active and able to be used
-for any project.</p>
-</li>
-<li>
-<p><strong>Token</strong>: This needs to be the assigned unique token for the
-automation engine and is used to tell RemoteLaunch which engine
-to actually use for a given test case. For RFT this should
-always be <strong>RFTAutomationEngine</strong>.</p>
-</li>
-<li>
-<p>Once you have finished, click the "Insert &amp; Close" button and you
-will be taken back to the Test Automation list page, with RFT listed
-as an available automation engine.</p>
-</li>
+<li>Download and extract the RFTEngine.zip file from the Inflectra website and locate the appropriate RFTAutomationEngine.dll for the version of RFT that you are using.</li>
+<li>If you don't see the version listed, just use the nearest version that is <em>lower</em> than your current version.</li>
+<li>Copy the file "RFTAutomationEngine.dll" into the "extensions" sub-folder of the RemoteLaunch installation.</li>
+<li>Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</li>
+</ul>
+<p><img alt="" src="../img/Rational_Functional_Tester_120.png" /></p>
+<ul>
+<li><strong>Name</strong>: This is the short display name of the automation engine. It can be anything that is meaningful to your users.</li>
+<li><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</li>
+<li><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</li>
+<li><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine to actually use for a given test case. For RFT this should always be <strong>RFTAutomationEngine</strong>.</li>
+<li>Once you have finished, click the "Insert &amp; Close" button and you will be taken back to the Test Automation list page, with RFT listed as an available automation engine.</li>
 </ul>
 <p><img alt="" src="../img/Rational_Functional_Tester_121.png" /></p>
 <h3 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h3>
-<p>You can modify the RFT configuration for each of the specific automation
-hosts, by right-clicking on the RemoteLaunch icon in the system tray and
-choosing "Configuration". That will bring up the RemoteLaunch
-configuration page.</p>
-<p>The RFT engine adds its own tab to this page which allows you to
-configure how RFT operates:</p>
+<p>You can modify the RFT configuration for each of the specific automation hosts, by right-clicking on the RemoteLaunch icon in the system tray and choosing "Configuration". That will bring up the RemoteLaunch configuration page.</p>
+<p>The RFT engine adds its own tab to this page which allows you to configure how RFT operates:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_122.png" /></p>
 <p>The following fields can be specified on this screen:</p>
-<p><strong>RFT Location</strong> -- this is where the installation of RFT can be found.
-Typically it's C:\Program Files\IBM\SDP\FunctionalTester\bin</p>
-<p><strong>Workspace Location</strong> -- This is the folder where the RFT test scripts
-and generated log files will be stored. The currently logged-in user
-needs to have Read/Write permissions over this folder. Typically it's:</p>
-<p>C:\Documents and Settings\[User Name]\IBM\rationalsdp\workspace
-on a Windows XP workstation or Windows 2003 server.</p>
-<p>C:\Users\[User Name]\IBM\rationalsdp\workspace on a Windows
-Vista, 7, 2008 or 2008 R2 computer.</p>
-<p><strong>Trace Logging</strong> -- When selected, this will log additional trace and
-debugging information to the Windows Event Log. This should not be
-selected in a production environment.</p>
+<ul>
+<li><strong>RFT Location</strong>: this is where the installation of RFT can be found. Typically it's C:\Program Files\IBM\SDP\FunctionalTester\bin</li>
+<li>
+<p><strong>Workspace Location</strong>: This is the folder where the RFT test scripts and generated log files will be stored. The currently logged-in user needs to have Read/Write permissions over this folder. Typically it's:</p>
+<ul>
+<li>C:\Documents and Settings\[User Name]\IBM\rationalsdp\workspace on a Windows XP workstation or Windows 2003 server.</li>
+<li>C:\Users\[User Name]\IBM\rationalsdp\workspace on a Windows Vista, 7, 2008 or 2008 R2 computer.</li>
+</ul>
+</li>
+<li>
+<p><strong>Trace Logging</strong>: When selected, this will log additional trace and debugging information to the Windows Event Log. This should not be selected in a production environment.</p>
+</li>
+</ul>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
-<p>This section describes the process for setting up a test case in
-SpiraTeam for automation and linking it to an automated RFT test script.</p>
-<p>First you need to display the list of test cases in SpiraTeam (by
-clicking Testing &gt; Test Cases) and then add a new test case. Once you
-have added the new test case, click on it and select the "Automation"
-tab:</p>
+<p>This section describes the process for setting up a test case in Spira for automation and linking it to an automated RFT test script.</p>
+<p>First you need to display the list of test cases in Spira (by clicking Testing &gt; Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Automation" tab:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_123.png" /></p>
 <p>You need to enter the following fields:</p>
 <ul>
+<li><strong>Automation Engine</strong> - Choose the RFT Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: This should be set to Linked as the integration with RFT only supports referencing RFT test script files and not physically uploading the test scripts into Spira.</li>
 <li>
-<p><strong>Automation Engine</strong> - Choose the RFT Automation Engine that you
-created in the previous section from the drop-down list.</p>
-</li>
-<li>
-<p><strong>Script Type</strong> -- This should be set to Linked as the integration with
-RFT only supports referencing RFT test script files and not physically
-uploading the test scripts into SpiraTeam.</p>
-</li>
-<li>
-<p><strong>Filename</strong> -- This needs to consist of the following three components
-separated by a pipe (|) character (see the screenshot for an example):</p>
+<p><strong>Filename</strong>: This needs to consist of the following three components separated by a pipe (|) character (see the screenshot for an example):</p>
 <ul>
-<li>
-<p>The name of the RFT project that the test is mapped to</p>
-</li>
-<li>
-<p>The name of the RFT script in the project that the test is mapped to</p>
-</li>
-<li>
-<p>Either "java" or "net" depending on whether you have a Java or .NET test
-script</p>
-</li>
+<li>The name of the RFT project that the test is mapped to</li>
+<li>The name of the RFT script in the project that the test is mapped to</li>
+<li>Either "java" or "net" depending on whether you have a Java or .NET test script</li>
 </ul>
 </li>
 <li>
-<p><strong>Document Type</strong> -- This allows you to choose which document type the
-automated test script will be categorized under.</p>
+<p><strong>Document Type</strong>: This allows you to choose which document type the automated test script will be categorized under.</p>
 </li>
-<li>
-<p><strong>Document Folder</strong> --This allows you to choose which document folder
-the automated test script will be stored in.</p>
-</li>
-<li>
-<p><strong>Version</strong> -- The version of the test script (1.0 is used if no value
-specified)</p>
-</li>
-<li>
-<p><strong>Test Script</strong> -- <em>This is not used with the RFT Engine since it only
-supports linked test scripts.</em></p>
-</li>
+<li><strong>Document Folder</strong> --This allows you to choose which document folder the automated test script will be stored in.</li>
+<li><strong>Version</strong>: The version of the test script (1.0 is used if no value specified)</li>
+<li><strong>Test Script</strong>: <em>This is not used with the RFT Engine since it only supports linked test scripts.</em></li>
 </ul>
-<p>Once you are happy with the values, click [Save] to update the test
-case. Now you are ready to schedule the automated test case for
-execution.</p>
+<p>Once you are happy with the values, click [Save] to update the test case. Now you are ready to schedule the automated test case for execution.</p>
 <h3 id="using-parameterized-test-cases">Using Parameterized Test Cases<a class="headerlink" href="#using-parameterized-test-cases" title="Permanent link">&para;</a></h3>
-<p>There is an advanced feature of SpiraTest/Team and RemoteLaunch that
-lets you pass parameters from SpiraTeam to your RFT automated test
-suite. This is very useful if you have a data-driven RFT test suite that
-defines input variables from an external data source.</p>
-<p>To setup the automated test case for parameters, click on the "Test
-Steps" tab and click on "Edit Parameters":</p>
+<p>There is an advanced feature of Spira and RemoteLaunch that lets you pass parameters from Spira to your RFT automated test suite. This is very useful if you have a data-driven RFT test suite that defines input variables from an external data source.</p>
+<p>To setup the automated test case for parameters, click on the "Test Steps" tab and click on "Edit Parameters":</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_23.png" /></p>
-<p>The name of the parameter ${login} is actually not used when passing
-the data to RFT, only the values are passed. Therefore it's important
-that the parameters are stored in the order they are expected by your
-RFT test script.</p>
-<h2 id="executing-the-rft-test-sets-from-spirateam">Executing the RFT Test Sets from SpiraTeam<a class="headerlink" href="#executing-the-rft-test-sets-from-spirateam" title="Permanent link">&para;</a></h2>
-<p>There are two ways to execute automated test cases in SpiraTeam:</p>
+<p>The name of the parameter ${login} is actually not used when passing the data to RFT, only the values are passed. Therefore it's important that the parameters are stored in the order they are expected by your RFT test script.</p>
+<h2 id="executing-the-rft-test-sets-from-spira">Executing the RFT Test Sets from Spira<a class="headerlink" href="#executing-the-rft-test-sets-from-spira" title="Permanent link">&para;</a></h2>
+<p>There are two ways to execute automated test cases in Spira:</p>
 <ol>
-<li>
-<p>Schedule the test cases to be executed on a specific computer (local
-or remote) at a date/time in the future</p>
-</li>
-<li>
-<p>Execute the test cases right now on the local computer.</p>
-</li>
+<li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
+<li>Execute the test cases right now on the local computer.</li>
 </ol>
-<p>We shall outline both of these two scenarios in this section. However
-first we need to setup the appropriate automation hosts and test sets in
-SpiraTeam:</p>
+<p>We shall outline both of these two scenarios in this section. However first we need to setup the appropriate automation hosts and test sets in Spira:</p>
 <h3 id="configuring-the-automation-hosts-and-test-sets">Configuring the Automation Hosts and Test Sets<a class="headerlink" href="#configuring-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
-<p>Go to Testing &gt; Automation Hosts in SpiraTeam to display the list of
-automation hosts:</p>
+<p>Go to Testing &gt; Automation Hosts in Spira to display the list of automation hosts:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_15.png" /></p>
-<p>Make sure that you have created an Automation Host for each computer
-that is going to run an automated test case. The name and description
-can be set to anything meaningful, but the Token field <strong>must be set to
-the same token that is specified in the RemoteLaunch application</strong> on
-that specific machine.</p>
-<p>Once you have at least one Automation Host configured, go to Testing &gt;
-Test Sets to create the test sets that will contain the automated test
-case:</p>
+<p>Make sure that you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified in the RemoteLaunch application</strong> on that specific machine.</p>
+<p>Once you have at least one Automation Host configured, go to Testing &gt; Test Sets to create the test sets that will contain the automated test case:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_124.png" /></p>
-<p>Note: Unlike manual test cases, automated test cases <em>must be executed
-within a test set</em> -- they cannot be executed directly from the test
-case.</p>
-<p>Create a new Test Set to hold the RFT automated test cases and click on
-its hyperlink to display the test set details page:</p>
+<p>Note: Unlike manual test cases, automated test cases <em>must be executed within a test set</em> -- they cannot be executed directly from the test case.</p>
+<p>Create a new Test Set to hold the RFT automated test cases and click on its hyperlink to display the test set details page:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_125.png" /></p>
-<p>You need to add at least one automated test case to the test set and
-then configure the following fields:</p>
+<p>You need to add at least one automated test case to the test set and then configure the following fields:</p>
 <ul>
-<li>
-<p><strong>Automation Host</strong> -- This needs to be set to the name of the
-automation host that will be running the automated test set.</p>
-</li>
-<li>
-<p><strong>Planned Date</strong> -- The date and time that you want the scenario to
-begin. (Note that multiple test sets scheduled at the exact same
-time will be scheduled by Test Set ID order.)</p>
-</li>
-<li>
-<p><strong>Status</strong> -- This needs to be set to "Not Started" for RemoteLaunch
-to pick up the scheduled test set. When you change the Planned Date,
-the status automatically switches back to "Not Started"</p>
-</li>
-<li>
-<p><strong>Type</strong> -- This needs to be set to "Automated" for automated
-testing</p>
-</li>
+<li><strong>Automation Host</strong>: This needs to be set to the name of the automation host that will be running the automated test set.</li>
+<li><strong>Planned Date</strong>: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</li>
+<li><strong>Status</strong>: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</li>
+<li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
-<p>If you have parameterized test cases inside the automated test set you
-need to set their values by right-clicking on the test case and choosing
-"Edit Parameters":</p>
+<p>If you have parameterized test cases inside the automated test set you need to set their values by right-clicking on the test case and choosing "Edit Parameters":</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_126.png" /></p>
-<p>Enter the parameter values and click "Update" to commit the change. This
-allows you to have the same test case in the test set multiple times
-with different data for each instance.</p>
+<p>Enter the parameter values and click "Update" to commit the change. This allows you to have the same test case in the test set multiple times with different data for each instance.</p>
 <h3 id="executing-the-test-sets">Executing the Test Sets<a class="headerlink" href="#executing-the-test-sets" title="Permanent link">&para;</a></h3>
-<p>Once you have set the various test set fields (as described above), the
-Remote Launch instances will periodically poll SpiraTeam for new test
-sets. Once they retrieve the new test set, they will add it to their
-list of test sets to execute. Once execution begins they will change
-the status of the test set to "In Progress", and once test execution is
-done, the status of the test set will change to either "Completed" --
-the automation engine could be launched and the test has completed -- or
-"Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
-<p>If you want to immediately execute the test case on your local computer,
-instead of setting the "Automation Host", "Status" and "Planned Date"
-fields, you can instead click the [Execute] icon on the test set
-itself. This will cause RemoteLaunch on the local computer to
-immediately start executing the current test set.</p>
-<p>In either case, once all the test cases in the test set have been
-completed, the status of the test set will switch to "Completed" and the
-individual test cases in the set will display a status based on the
-results of the RFT test:</p>
-<p><strong>Passed</strong> -- The RFT automated test ran successfully and all the test
-steps in the test script passed and no assertions were thrown.</p>
-<p><strong>Failed</strong> -- The RFT automated test ran successfully, but at least one
-test step failed or at least one assertion failed.</p>
-<p><strong>Caution</strong> -- The RFT automated test run successfully, but at least one
-warning was logged in one of the test steps.</p>
-<p><strong>Blocked</strong> -- The RFT automated test did not run successfully.</p>
-<p>If you receive the "Blocked" status for either the test set or the test
-cases you should open up the Windows Application Event Log on the
-computer running RemoteLaunch and look in the event log for error
-messages.</p>
-<p><em>Note: While the tests are executing you will see browser windows launch
-as RFT executes the appropriate tests.</em></p>
-<p>Once the tests have completed, you can log back into SpiraTeam and see
-the execution status of your test cases. If you click on a Test Run that
-was generated by RFT, you will see the following information:</p>
+<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to execute. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" --
+the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
+<p>If you want to immediately execute the test case on your local computer, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
+<p>In either case, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the RFT test:</p>
+<ul>
+<li><strong>Passed</strong>: The RFT automated test ran successfully and all the test steps in the test script passed and no assertions were thrown.</li>
+<li><strong>Failed</strong>: The RFT automated test ran successfully, but at least one test step failed or at least one assertion failed.</li>
+<li><strong>Caution</strong>: The RFT automated test run successfully, but at least one warning was logged in one of the test steps.</li>
+<li><strong>Blocked</strong>: The RFT automated test did not run successfully.</li>
+</ul>
+<p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.</p>
+<p><em>Note: While the tests are executing you will see browser windows launch as RFT executes the appropriate tests.</em></p>
+<p>Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by RFT, you will see the following information:</p>
 <p><img alt="" src="../img/Rational_Functional_Tester_127.png" /></p>
-<p>This screen indicates the status of the test run that was reported back
-from RFT together with any messages or other information. The Test Name
-indicates the name of the test inside RFT and the execution status
-corresponds the matching status inside RFT as illustrated below:</p>
+<p>This screen indicates the status of the test run that was reported back from RFT together with any messages or other information. The Test Name indicates the name of the test inside RFT and the execution status corresponds the matching status inside RFT as illustrated below:</p>
 <table>
 <thead>
 <tr>
-<th><strong>RFT Status</strong></th>
-<th><strong>SpiraTeam Status</strong></th>
+<th>RFT Status</th>
+<th>Spira Status</th>
 </tr>
 </thead>
 <tbody>
@@ -9454,34 +9338,38 @@ corresponds the matching status inside RFT as illustrated below:</p>
 </tr>
 </tbody>
 </table>
-<p>In addition, the detailed test report from RFT is available in the large
-text-box below. It will contain messages such as:</p>
-<blockquote>
-<p>07-Nov-2011 03:00:05.004 PM: Script Start - INFORMATION - Script    <br />
-start [Script1]                                                     </p>
-<p>07-Nov-2011 03:00:05.035 PM: Simplified Script Group - INFORMATION -<br />
-firefox.exe: self improvement - QuickStart Tutorials for Rational   <br />
-Functional Tester (RFT) - Stack Overflow - Mozilla Firefox            </p>
-<p>07-Nov-2011 03:00:05.035 PM: Timer Start - INFORMATION - Start timer: 
-firefoxexeselfimprovementQuickSta_1                                  </p>
-<p>07-Nov-2011 03:00:25.535 PM: General - WARNING - Object Recognition <br />
-is weak (above the warning threshold)                                 </p>
-<p>07-Nov-2011 03:00:49.488 PM: General - FAIL - Script1.testMain had an 
-unhandled exception.                                                  </p>
-<p>07-Nov-2011 03:00:49.488 PM: Script End - FAIL - Script end         <br />
-[Script1]                                                           </p>
-<p>Exception occurred during playback of script [Script1]            <br />
-[CRFCN0019E: RationalTestScriptException on line 49 of script      <br />
-Script1 - com.rational.test.ft.ObjectNotFoundException: CRFCN0661W: <br />
+<p>In addition, the detailed test report from RFT is available in the large text-box below. It will contain messages such as:</p>
+<div class="highlight"><pre><span></span><code>07-Nov-2011 03:00:05.004 PM: Script Start - INFORMATION - Script      
+start \[Script1\]                                                     
+
+07-Nov-2011 03:00:05.035 PM: Simplified Script Group - INFORMATION -  
+firefox.exe: self improvement - QuickStart Tutorials for Rational     
+Functional Tester (RFT) - Stack Overflow - Mozilla Firefox            
+
+07-Nov-2011 03:00:05.035 PM: Timer Start - INFORMATION - Start timer: 
+firefoxexeselfimprovementQuickSta\_1                                  
+
+07-Nov-2011 03:00:25.535 PM: General - WARNING - Object Recognition   
+is weak (above the warning threshold)                                 
+
+07-Nov-2011 03:00:49.488 PM: General - FAIL - Script1.testMain had an 
+unhandled exception.                                                  
+
+07-Nov-2011 03:00:49.488 PM: Script End - FAIL - Script end           
+\[Script1\]                                                           
+
+Exception occurred during playback of script \[Script1\]              
+\[CRFCN0019E: RationalTestScriptException on line 49 of script        
+Script1 - com.rational.test.ft.ObjectNotFoundException: CRFCN0661W:   
 The recognition score of the found object does not qualify the object 
-as a match.                                                           </p>
-<p>Looking for [GuiSubitemTestObject(Name: goToAWebSitetext, Map:     <br />
-GoToAWebSite)], best failing candidate score was [22500] with best 
-failing description [{.class=.Text, .name=Go to a Web Site,        <br />
-.classIndex=0}].].                                                  </p>
-</blockquote>
-<p>Congratulations... You are now able to run RFT automated functional
-tests and have the results be recorded within SpiraTest / SpiraTeam.</p>
+as a match.                                                           
+
+Looking for \[GuiSubitemTestObject(Name: goToAWebSitetext, Map:       
+GoToAWebSite)\], best failing candidate score was \[22500\] with best 
+failing description \[{.class=.Text, .name=Go to a Web Site,          
+.classIndex=0}\].\].                                                  
+</code></pre></div>
+<p>Congratulations... You are now able to run RFT automated functional tests and have the results be recorded within Spira.</p>
 
 
 

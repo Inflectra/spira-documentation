@@ -5176,10 +5176,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-nunit-3-with-spiratest" class="md-nav__link">
+  <a href="#using-nunit-3-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using NUnit 3 with SpiraTest
+        Using NUnit 3 with Spira
       
     </span>
   </a>
@@ -5215,10 +5215,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-nunit-2x-with-spiratest" class="md-nav__link">
+  <a href="#using-nunit-2x-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using NUnit 2.x with SpiraTest
+        Using NUnit 2.x with Spira
       
     </span>
   </a>
@@ -9002,6 +9002,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9080,10 +9108,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-nunit-3-with-spiratest" class="md-nav__link">
+  <a href="#using-nunit-3-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using NUnit 3 with SpiraTest
+        Using NUnit 3 with Spira
       
     </span>
   </a>
@@ -9119,10 +9147,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-nunit-2x-with-spiratest" class="md-nav__link">
+  <a href="#using-nunit-2x-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using NUnit 2.x with SpiraTest
+        Using NUnit 2.x with Spira
       
     </span>
   </a>
@@ -9163,11 +9191,14 @@
 
 
 <h1 id="integrating-with-nunit">Integrating with NUnit<a class="headerlink" href="#integrating-with-nunit" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="nunit-3">NUnit 3<a class="headerlink" href="#nunit-3" title="Permanent link">&para;</a></h2>
-<p>SpiraTest/SpiraTeam/SpiraPlan (hereon called SpiraPlan) integrates seamlessly with NUnit 3, using our dedicated NUnit add-in. The add-in lets you run unit tests against a .NET application and get the results recorded in SpiraPlan as a test run against a specific test case. The add-in is designed to let you run your suite of unit tests against the application as part of your CI/CD pipeline. The add-in does not - and does not need to - integrate with your CI/CD engine. </p>
+<p>Spira integrates seamlessly with NUnit 3, using our dedicated NUnit add-in. The add-in lets you run unit tests against a .NET application and get the results recorded in Spira as a test run against a specific test case. The add-in is designed to let you run your suite of unit tests against the application as part of your CI/CD pipeline. The add-in does not - and does not need to - integrate with your CI/CD engine. </p>
 <p>To use the add-in you must have:</p>
 <ul>
-<li>a working installation of SpiraPlan v5.0 or later</li>
+<li>a working installation of Spira v5.0 or later</li>
 <li>NUnit v3+ installed</li>
 <li>Nunit v3+ Console Runner installed. This is required for batch execution, which is the expected use case for the add-in (either as a standalone installation or as a nuget package)</li>
 </ul>
@@ -9195,15 +9226,15 @@
 <li>If installing within a solution's packages folder instead of globally (not recommended), the files you are looking for will be within that solutions packages folder.</li>
 </ul>
 </div>
-<p>If you've followed all the steps correctly, the SpiraPlan NUnit add-in should now be properly installed. For reference your nunit.bundle.addins file may look something like this:
+<p>If you've followed all the steps correctly, the Spira NUnit add-in should now be properly installed. For reference your nunit.bundle.addins file may look something like this:</p>
 <div class="highlight"><pre><span></span><code>addins/nunit.v2.driver.dll
 addins/nunit-v2-result-writer.dll
 addins/nunit-project-loader.dll
 addins/vs-project-loader.dll
 addins/teamcity-event-listener.dll
 addins/SpiraTestNUnitAddIn.dll
-</code></pre></div></p>
-<h3 id="using-nunit-3-with-spiratest">Using NUnit 3 with SpiraTest<a class="headerlink" href="#using-nunit-3-with-spiratest" title="Permanent link">&para;</a></h3>
+</code></pre></div>
+<h3 id="using-nunit-3-with-spira">Using NUnit 3 with Spira<a class="headerlink" href="#using-nunit-3-with-spira" title="Permanent link">&para;</a></h3>
 <p>For this example, we will be using the following sample test fixture:</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">NUnit.Framework</span><span class="p">;</span>
 
@@ -9246,7 +9277,7 @@ addins/SpiraTestNUnitAddIn.dll
 <p>Create a new file called (exactly) <code>SpiraConfig.json</code>. We recommend creating one of these files for your entire solution and saving it in a convenient location. This can be in the root folder of your unit tests, or the root folder of your whole solution. </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/SpiraPlan&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/Spira&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -9265,7 +9296,7 @@ addins/SpiraTestNUnitAddIn.dll
 <p>A minimum JSON file, if only using properties for test case ids is:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/SpiraPlan&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost/Spira&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;project_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -9321,16 +9352,16 @@ addins/SpiraTestNUnitAddIn.dll
 <p>For the plugin to work, you must have credentials, and an assigned test case ID for each test either through the JSON file or the test file. Any combination of the 2 test case ID assignment methods can be used, and will not block the other one from working. The TestCaseId property assigned in test code will take priority over TestCaseId's assigned through the JSON file. If a test case id cannot be found for a given method in either of these locations and there is no default, a warning will be logged above the NUnit test summary which says which method was not reported to Spira.</p>
 <p>In the credentials group you must specify:</p>
 <ul>
-<li><strong>url</strong> -- The base url to your SpiraPlan installation, without a '/' at the end.</li>
-<li><strong>username</strong> -- The username you use to sign into SpiraTest.</li>
-<li><strong>token</strong> -- Your RSS Token. Found in your profile page as the "RSS Token" field, you must have RSS Feeds enabled for this to work.</li>
-<li><strong>project_id</strong> -- The ID of the project you would like the test runs to be sent to</li>
-<li><strong>release_id</strong> -- OPTIONAL -- Use if you would like to associate the test run with a release.</li>
-<li><strong>test_set_id</strong> -- OPTIONAL -- Use if you would like to associate the test run with a test set.</li>
+<li><strong>url</strong>: The base url to your Spira installation, without a '/' at the end.</li>
+<li><strong>username</strong>: The username you use to sign into Spira.</li>
+<li><strong>token</strong>: Your RSS Token. Found in your profile page as the "RSS Token" field, you must have RSS Feeds enabled for this to work.</li>
+<li><strong>project_id</strong>: The ID of the project you would like the test runs to be sent to</li>
+<li><strong>release_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a release.</li>
+<li><strong>test_set_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a test set.</li>
 </ul>
 <p>In the test_cases group, put the following:</p>
 <ul>
-<li><strong>default</strong> -- The default test case ID for functions without an assigned test case</li>
+<li><strong>default</strong>: The default test case ID for functions without an assigned test case</li>
 <li><strong>{method name}</strong> - Used to override the default setting above by providing the specific test case id for each method in your NUnit fixture(s).</li>
 </ul>
 <div class="admonition info">
@@ -9352,26 +9383,26 @@ addins/SpiraTestNUnitAddIn.dll
 <li>our SpiraConfig.json file is in the root folder of this project</li>
 <li>we have a test suite called SampleTestSuite that we want to execute</li>
 </ul>
-<p>To correctly run the tests and record the results to SpiraPlan, run the following two commands:</p>
+<p>To correctly run the tests and record the results to Spira, run the following two commands:</p>
 <ol>
 <li><code>cd C:\TestProject</code></li>
 <li><code>nunit3-console "C:\TestProject\bin\Release\SampleTestSuite.dll"</code> (If you installed NUnit via NuGet and have not assigned the PATH variable for this console command, you will have to manually reference the NUnit3-console.exe file using a file path instead - This must be inside of quotes just like the second part of the command is)</li>
 </ol>
 </div>
-<p>Once you run your tests with the NUnit Console Runner, you should see the results in SpiraPlan:</p>
+<p>Once you run your tests with the NUnit Console Runner, you should see the results in Spira:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_5.png" /></p>
 <p>Clicking on one of the test runs will show you the results:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_6.png" /></p>
-<p>Congratulations... You are now able to run NUnit automated tests and have the results be recorded within SpiraPlan.</p>
+<p>Congratulations... You are now able to run NUnit automated tests and have the results be recorded within Spira.</p>
 <h2 id="installing-the-nunit-2x-add-in">Installing the NUnit 2.x Add-In<a class="headerlink" href="#installing-the-nunit-2x-add-in" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Add-In for NUnit onto a workstation so that you can then run automated NUnit tests against a .NET application and have the results be recorded as test runs inside SpiraTest. It assumes that you already have a working installation of SpiraTest v2.2 or later. If you have an earlier version of SpiraTest you will need to upgrade to at least v2.2 before trying to use this add-in. You will also need to have either version <strong>v2.5.5</strong> or <strong>v2.6.3 of NUnit</strong>, since there are two versions of the add-in that have been compiled with the v2.5.5 and v2.6.3 NUnit APIs. If you are using a different version, please visit <a href="http://www.nunit.org/">www.nunit.org</a> to obtain the appropriate version (2.5.5 or 2.6.3).</p>
-<p>To obtain the version of the add-in that is compatible with your version of SpiraTest, you simply need to go to <a href="http://www.inflectra.com/SpiraTest/Downloads.aspx">http://www.inflectra.com/SpiraTest/Downloads.aspx</a> or <a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a> and download the NUnit Add-In zipfile.</p>
+<p>This section outlines how to install the Spira Add-In for NUnit onto a workstation so that you can then run automated NUnit tests against a .NET application and have the results be recorded as test runs inside Spira. It assumes that you already have a working installation of Spira v2.2 or later. If you have an earlier version of Spira you will need to upgrade to at least v2.2 before trying to use this add-in. You will also need to have either version <strong>v2.5.5</strong> or <strong>v2.6.3 of NUnit</strong>, since there are two versions of the add-in that have been compiled with the v2.5.5 and v2.6.3 NUnit APIs. If you are using a different version, please visit <a href="http://www.nunit.org/">www.nunit.org</a> to obtain the appropriate version (2.5.5 or 2.6.3).</p>
+<p>To obtain the version of the add-in that is compatible with your version of Spira, you simply need to go to <a href="http://www.inflectra.com/SpiraTest/Downloads.aspx">http://www.inflectra.com/SpiraTest/Downloads.aspx</a> or <a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a> and download the NUnit Add-In zipfile.</p>
 <p>Once you have obtained the NUnit Zipfile from our website, you should extract all the files from zip archive into a temporary folder on your computer (e.g. C:\Temp).</p>
 <p>Next, you should copy the add-in libraries to the folder NUnit expects to find them in. First, if you are running any instances of the NUnit GUI, close them. Then, copy the SpiraTestNUnitAddIn.dll assembly from its location in the temporary folder to the NUnit Add-In folder (typically C:\Program Files\NUnit 2.5.5\bin\net-2.0\addins).</p>
 <p>Now you can restart the NUnit GUI application. To check that the add-in was loaded successfully, click on Tools &gt; Addins... to bring up the list of loaded add-ins:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_7.png" />  </p>
 <p>You should see an entry marked "SpiraTest Addin" listed with its detailed description and status "Loaded". If this does not happen, try closing and reopening NUnit.</p>
-<h3 id="using-nunit-2x-with-spiratest">Using NUnit 2.x with SpiraTest<a class="headerlink" href="#using-nunit-2x-with-spiratest" title="Permanent link">&para;</a></h3>
+<h3 id="using-nunit-2x-with-spira">Using NUnit 2.x with Spira<a class="headerlink" href="#using-nunit-2x-with-spira" title="Permanent link">&para;</a></h3>
 <p>The typical code structure for an NUnit test fixture coded in C# is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">NUnit.Framework</span><span class="p">;</span>
@@ -9379,7 +9410,7 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="k">namespace</span><span class="w"> </span><span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
-<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration</span>
+<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit Spira integration</span>
 <span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
 <span class="w">    </span><span class="na">[TestFixture]</span>
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SampleTestFixture</span>
@@ -9424,7 +9455,7 @@ addins/SpiraTestNUnitAddIn.dll
 </code></pre></div>
 <p>The .NET class is marked as an NUnit test fixture by applying the [TestFixture] attribute to the class as a whole, and the [Test] attribute to each of the test assertion methods individually -- highlighted in yellow above. When you open up the class in NUnit and click the &lt;Run&gt; button it loads all the test classes marked with [TestFixture] and executes all the methods marked with [Test] in turn.</p>
 <p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and NUnit moves on to the next test method.</p>
-<p>So, to use SpiraTest with NUnit, each of the test cases written for execution by NUnit needs to have a corresponding test case in SpiraTest. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the NUnit test fixture for SpiraTest to record the NUnit test run are illustrated below:</p>
+<p>So, to use Spira with NUnit, each of the test cases written for execution by NUnit needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the NUnit test fixture for Spira to record the NUnit test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">NUnit.Framework</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework</span><span class="p">;</span>
@@ -9432,7 +9463,7 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="k">namespace</span><span class="w"> </span><span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SampleTestSuite</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
-<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration</span>
+<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit Spira integration</span>
 <span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
 <span class="w">    </span><span class="na">[</span>
 <span class="na">    TestFixture,</span>
@@ -9481,7 +9512,7 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="w">        </span><span class="p">}</span><span class="w">   </span>
 
 <span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
-<span class="w">        </span><span class="c1">/// Sample test that does not log to SpiraTest</span>
+<span class="w">        </span><span class="c1">/// Sample test that does not log to Spira</span>
 <span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
 <span class="w">        </span><span class="na">[</span>
 <span class="na">        Test</span>
@@ -9495,29 +9526,33 @@ addins/SpiraTestNUnitAddIn.dll
 <span class="p">}</span>
 </code></pre></div>
 <p>The overall class is marked with a new [SpiraTestConfiguration]
-attribute that contains the following pieces of information needed to access the SpiraTest test repository:</p>
+attribute that contains the following pieces of information needed to access the Spira test repository:</p>
 <ul>
-<li><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This needs to start with http:// or https://.</li>
-<li><strong>User Name</strong> - A valid username for the instance of SpiraTest.</li>
-<li><strong>Password</strong> - A valid password for the instance of SpiraTest.</li>
+<li><strong>URL</strong> - The URL to the instance of Spira being accessed. This needs to start with http:// or https://.</li>
+<li><strong>User Name</strong> - A valid username for the instance of Spira.</li>
+<li><strong>Password</strong> - A valid password for the instance of Spira.</li>
 <li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
 <li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to specify a release, just use the value -1.</li>
 <li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
-<li><strong>Runner Name</strong> -- This should be set to NUnit so that the test results recorded in SpiraTest have the name 'NUnit' associated with them.</li>
+<li><strong>Runner Name</strong>: This should be set to NUnit so that the test results recorded in Spira have the name 'NUnit' associated with them.</li>
 </ul>
-<p>In addition, each of the individual test methods needs to be mapped to a specific test case within SpiraTest. This is done by adding a [SpiraTestCase] attribute to the test method together with the ID of the corresponding test case in SpiraTest. The Test Case ID can be found on the test cases list page (click the "Test Cases" tab).</p>
+<p>In addition, each of the individual test methods needs to be mapped to a specific test case within Spira. This is done by adding a [SpiraTestCase] attribute to the test method together with the ID of the corresponding test case in Spira. The Test Case ID can be found on the test cases list page (click the "Test Cases" tab).</p>
 <p>For these attributes to be available in your test fixture, you also need to add a reference to the SpiraTestFramework.dll assembly. This assembly can be found in the temporary folder that you extracting the add-in to. It is recommended that you move this file from the temporary folder into a permanent folder located within your .NET project.</p>
-<p>Now all you need to do is compile your code, launch NUnit, run the test fixtures as you would normally do, and when you view the test cases in SpiraTest, you should see an NUnit automated test run displayed in the list of executed test runs:</p>
+<p>Now all you need to do is compile your code, launch NUnit, run the test fixtures as you would normally do, and when you view the test cases in Spira, you should see an NUnit automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_8.png" /></p>
 <p>Clicking on one of the NUnit test runs will bring up a screen that provides information regarding what NUnit test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_NUnit_9.png" /></p>
-<p>Congratulations... You are now able to run NUnit automated tests and have the results be recorded within SpiraTest. The sample test fixture SampleTestSuite.cs is provided with the installation.</p>
+<p>Congratulations... You are now able to run NUnit automated tests and have the results be recorded within Spira. The sample test fixture SampleTestSuite.cs is provided with the installation.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

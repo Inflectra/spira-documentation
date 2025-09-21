@@ -8957,6 +8957,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9073,30 +9101,16 @@
 
 
 <h1 id="integrating-with-selenium">Integrating with Selenium<a class="headerlink" href="#integrating-with-selenium" title="Permanent link">&para;</a></h1>
-<p>Selenium WebDriver is a test tool that allows you to write automated web
-application user interface tests in any programming language against any
-HTTP website using any mainstream JavaScript-enabled browser. Selenium
-WebDriver comes in two parts.</p>
-<p>An API or library for the web browser itself that is used to allow
-external applications to connect to the web browser and instruct it to
-perform certain operations.</p>
-<p>Client libraries for various computer languages - these are referred to
-as 'language bindings.</p>
-<p>Therefore to use SpiraTest with Selenium WebDriver (hereafter referred
-to as just Selenium), you need to decide which client driver you want to
-use, and then use the appropriate integration between SpiraTest and that
-driver's underlying platform/language. Any unit test framework listed in
-this guide can be used with Selenium (in addition to just running unit
-tests), we have some examples below for .NET, Java and Python.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>Selenium WebDriver is a test tool that allows you to write automated web application user interface tests in any programming language against any HTTP website using any mainstream JavaScript-enabled browser. Selenium WebDriver comes in two parts.</p>
+<p>An API or library for the web browser itself that is used to allow external applications to connect to the web browser and instruct it to perform certain operations.</p>
+<p>Client libraries for various computer languages - these are referred to as 'language bindings.</p>
+<p>Therefore to use Spira with Selenium WebDriver (hereafter referred to as just Selenium), you need to decide which client driver you want to use, and then use the appropriate integration between Spira and that driver's underlying platform/language. Any unit test framework listed in this guide can be used with Selenium (in addition to just running unit tests), we have some examples below for .NET, Java and Python.</p>
 <h2 id="using-the-net-driver">Using the .NET Driver<a class="headerlink" href="#using-the-net-driver" title="Permanent link">&para;</a></h2>
-<p>To use the .NET driver for Selenium with SpiraTest, you will need to run
-your Selenium tests within the context of an <a href="../Integrating-with-NUnit/">NUnit test fixture</a>. Once you have configured NUnit for use
-with SpriaTest, there is one change that needs to be made to the
-SpiraTest NUnit configuration so that the Selenium tests report back to
-SpiraTest as 'Selenium' rather than "NUnit' so you can distinguish
-between them.</p>
-<p>Supplied with the SpiraTest NUnit add-in is a sample test for using
-Selenium with SpiraTest:</p>
+<p>To use the .NET driver for Selenium with Spira, you will need to run your Selenium tests within the context of an <a href="../Integrating-with-NUnit/">NUnit test fixture</a>. Once you have configured NUnit for use with Spira, there is one change that needs to be made to the Spira NUnit configuration so that the Selenium tests report back to Spira as 'Selenium' rather than "NUnit' so you can distinguish between them.</p>
+<p>Supplied with the Spira NUnit add-in is a sample test for using Selenium with Spira:</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">NUnit.Framework</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">Inflectra.SpiraTest.AddOns.SpiraTestNUnitAddIn.SpiraTestFramework</span><span class="p">;</span>
@@ -9105,12 +9119,12 @@ Selenium with SpiraTest:</p>
 <span class="k">namespace</span><span class="w"> </span><span class="nn">SeleniumSampleTest</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
-<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit SpiraTest integration with the</span>
+<span class="w">    </span><span class="c1">/// Sample test fixture that tests the NUnit Spira integration with the</span>
 <span class="w">    </span><span class="c1">/// Selenium-RC .NET Driver</span>
 <span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
 <span class="w">    </span><span class="na">[</span>
 <span class="na">    TestFixture,</span>
-<span class="na">    SpiraTestConfiguration(&quot;http://localhost/SpiraTest&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2, SpiraTestConfigurationAttribute.RunnerName.Selenium)</span>
+<span class="na">    SpiraTestConfiguration(&quot;http://localhost/Spira&quot;, &quot;fredbloggs&quot;, &quot;fredbloggs&quot;, 1, 1, 2, SpiraTestConfigurationAttribute.RunnerName.Selenium)</span>
 <span class="na">    ]</span>
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GoogleTest</span>
 <span class="w">    </span><span class="p">{</span>
@@ -9156,29 +9170,12 @@ Selenium with SpiraTest:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The details of the sample itself are described in more detail on the
-Selenium website, and you can see that we have added the SpiraTest
-specific attributes onto the test case and test methods to indicate that
-they need to report back to SpiraTest.</p>
-<p>However there is one change that has been made to the
-<em>SpiraTestConfiguration</em> attribute applied to the test fixture -- an
-extra <strong>SpiraTestConfigurationAttribute.RunnerName.Selenium</strong> parameter
-has been specified. This tells the SpiraTest NUnit add-in to report the
-results back as being generated by Selenium rather than NUnit.</p>
+<p>The details of the sample itself are described in more detail on the Selenium website, and you can see that we have added the Spira specific attributes onto the test case and test methods to indicate that they need to report back to Spira.</p>
+<p>However there is one change that has been made to the <em>SpiraTestConfiguration</em> attribute applied to the test fixture -- an extra <strong>SpiraTestConfigurationAttribute.RunnerName.Selenium</strong> parameter has been specified. This tells the Spira NUnit add-in to report the results back as being generated by Selenium rather than NUnit.</p>
 <h2 id="using-the-java-driver">Using the Java Driver<a class="headerlink" href="#using-the-java-driver" title="Permanent link">&para;</a></h2>
-<p>To use the Java driver for Selenium with SpiraTest, you will need to run
-your Selenium tests within the context of a <a href="../Integrating-with-TestNG/">TestNG test fixture</a>. 
-Once you have configured TestNG for use
-with SpriaTest, there is one change that needs to be made to the
-SpiraTest TestNG configuration so that the Selenium tests report back to
-SpiraTest as 'Selenium' rather than "TestNG' so you can distinguish
-between them.</p>
-<p>Supplied with the SpiraTest TestNG listener is a sample test for using
-Selenium with SpiraTest:</p>
-<p>The details of the sample itself are described in more detail on the
-Selenium website, and you can see that we have added the SpiraTest
-specific attributes onto the test case and test methods to indicate that
-they need to report back to SpiraTest.</p>
+<p>To use the Java driver for Selenium with Spira, you will need to run your Selenium tests within the context of a <a href="../Integrating-with-TestNG/">TestNG test fixture</a>.  Once you have configured TestNG for use with Spira, there is one change that needs to be made to the Spira TestNG configuration so that the Selenium tests report back to Spira as 'Selenium' rather than "TestNG' so you can distinguish between them.</p>
+<p>Supplied with the Spira TestNG listener is a sample test for using Selenium with Spira:</p>
+<p>The details of the sample itself are described in more detail on the Selenium website, and you can see that we have added the Spira specific attributes onto the test case and test methods to indicate that they need to report back to Spira.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.testnglistener.samples</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.testng.annotations.*</span><span class="p">;</span>
@@ -9188,14 +9185,14 @@ they need to report back to SpiraTest.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.testnglistener.*</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * A sample Selenium test using the ability to return results back to SpiraTest</span>
+<span class="cm"> * A sample Selenium test using the ability to return results back to Spira</span>
 <span class="cm"> * </span>
 <span class="cm"> * @author      Inflectra Corporation</span>
 <span class="cm"> * @version     2.3.0</span>
 <span class="cm"> *</span>
 <span class="cm"> */</span>
 <span class="nd">@SpiraTestConfiguration</span><span class="p">(</span>
-<span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/SpiraTest&quot;</span><span class="p">,</span>
+<span class="n">url</span><span class="o">=</span><span class="s">&quot;http://localhost/Spira&quot;</span><span class="p">,</span>
 <span class="n">login</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="n">password</span><span class="o">=</span><span class="s">&quot;fredbloggs&quot;</span><span class="p">,</span>
 <span class="n">projectId</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -9243,27 +9240,16 @@ they need to report back to SpiraTest.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>However there is one change that has been made to the
-<em>SpiraTestConfiguration</em> attribute applied to the test fixture -- an
-extra <strong>runner=RunnerName.Selenium</strong> parameter has been specified. This
-tells the SpiraTest TestNG listener to report the results back as being
-generated by Selenium rather than TestNG.</p>
+<p>However there is one change that has been made to the <em>SpiraTestConfiguration</em> attribute applied to the test fixture -- an extra <strong>runner=RunnerName.Selenium</strong> parameter has been specified. This tells the Spira TestNG listener to report the results back as being generated by Selenium rather than TestNG.</p>
 <h2 id="using-the-python-driver">Using the Python Driver<a class="headerlink" href="#using-the-python-driver" title="Permanent link">&para;</a></h2>
-<p>To use the Python driver for Selenium with SpiraTest, you will need to
-run your Selenium tests within the context of a <a href="../Integrating-with-PyUnit/">PyUnit unit-test fixture</a>. 
-Once you have configured
-PyUnit for use with SpriaTest, there is one change that needs to be made
-to the SpiraTest PyUnit configuration so that the Selenium tests report
-back to SpiraTest as 'Selenium' rather than "PyUnit' so you can
-distinguish between them.</p>
-<p>Supplied with the SpiraTest PyUnit extension is a sample test for using
-Selenium with SpiraTest:</p>
+<p>To use the Python driver for Selenium with Spira, you will need to run your Selenium tests within the context of a <a href="../Integrating-with-PyUnit/">PyUnit unit-test fixture</a>.  Once you have configured PyUnit for use with Spira, there is one change that needs to be made to the Spira PyUnit configuration so that the Selenium tests report back to Spira as 'Selenium' rather than "PyUnit' so you can distinguish between them.</p>
+<p>Supplied with the Spira PyUnit extension is a sample test for using Selenium with Spira:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">selenium</span>
 <span class="kn">import</span> <span class="nn">unittest</span>
 <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">spiratestextension</span>
 
-<span class="c1">#   A sample Selenium test using the ability to return results back to SpiraTest</span>
+<span class="c1">#   A sample Selenium test using the ability to return results back to Spira</span>
 <span class="c1">#</span>
 <span class="c1">#   Author      Inflectra Corporation</span>
 <span class="c1">#   Version     2.3.0</span>
@@ -9305,26 +9291,23 @@ Selenium with SpiraTest:</p>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">projectId</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
-<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;SpiraTest&quot;</span>
+<span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;Spira&quot;</span>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;fredbloggs&quot;</span>
 <span class="n">spiraTestExtension</span><span class="o">.</span><span class="n">recordResults</span><span class="p">(</span><span class="n">TestSeleniumSample</span><span class="p">,</span> <span class="n">testResult</span><span class="p">,</span> <span class="n">releaseId</span><span class="p">,</span> <span class="n">testSetId</span><span class="p">,</span> <span class="s2">&quot;Selenium&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>The details of the sample itself are described in more detail on the
-Selenium website, and you can see that we have added the SpiraTest
-specific test case suffixes and reporting code into the test methods to
-indicate that they need to report back to SpiraTest.</p>
-<p>However there is one change that has been made to the
-<em>spiraTestExtension.recordResults</em> method called at the end of the test
-case. An extra string parameter has been specified that contains
-"Selenium". This tells the SpiraTest PyUnit extension to report the
-results back as being generated by Selenium rather than PyUnit.</p>
+<p>The details of the sample itself are described in more detail on the Selenium website, and you can see that we have added the Spira specific test case suffixes and reporting code into the test methods to indicate that they need to report back to Spira.</p>
+<p>However there is one change that has been made to the <em>spiraTestExtension.recordResults</em> method called at the end of the test case. An extra string parameter has been specified that contains "Selenium". This tells the Spira PyUnit extension to report the results back as being generated by Selenium rather than PyUnit.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

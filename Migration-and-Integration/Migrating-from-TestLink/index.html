@@ -8935,6 +8935,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9029,25 +9057,28 @@
 
 
 <h1 id="migrating-from-testlink">Migrating from TestLink<a class="headerlink" href="#migrating-from-testlink" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the free Migration Tool for importing Projects, Test Suites, Test Cases, and Test Steps from the open source TestLink application into SpiraTest.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the free Migration Tool for importing Projects, Test Suites, Test Cases, and Test Steps from the open source TestLink application into Spira.</p>
 <h2 id="installing-the-testlink-migration-tool">Installing the TestLink Migration Tool<a class="headerlink" href="#installing-the-testlink-migration-tool" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the migration tool for TestLink onto a workstation so that you can then migrate whole projects from TestLink to either SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as SpiraTest). It assumes that you already have a working installation of SpiraTest v5.0 or later and a live instance of TestLink to migrate from. If you have an earlier version of SpiraTest you will need to upgrade to at least v5.0 before trying to migrate projects.</p>
+<p>This section outlines how to install the migration tool for TestLink onto a workstation so that you can then migrate whole projects from TestLink to either SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as Spira). It assumes that you already have a working installation of Spira v5.0 or later and a live instance of TestLink to migrate from. If you have an earlier version of Spira you will need to upgrade to at least v5.0 before trying to migrate projects.</p>
 <p>The Windows installation package can be downloaded from the 'Add-Ons &amp; Downloads" section of the Inflectra website. Once you have obtained the Windows Installer package, simply double-click on the package to begin the installation wizard which should display the following welcome page:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_79.png" />  </p>
 <p>Click the &lt;Next&gt; button, accept the software license, then click &lt;Next&gt; again to choose the folder to install the migration tool to:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_80.png" />  </p>
 <p>Choose the folder to install to, and then decide whether the application should be accessible by all users on the workstation or just the current user. Then click the &lt;Install&gt; button to start the installation process. It will confirm if you want to proceed, click &lt;Next&gt; then wait for it to finish.</p>
 <h2 id="using-the-testlink-migration-tool">Using the TestLink Migration Tool<a class="headerlink" href="#using-the-testlink-migration-tool" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; SpiraTest &gt; Tools &gt; TestLink Importer. This will launch the migration tool application itself:</p>
+<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; Spira &gt; Tools &gt; TestLink Importer. This will launch the migration tool application itself:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_81.png" /></p>
 <p>The first thing you need to do is to enter the URL for the instance of TestLink that you want to import the information from (typically of the form <a href="http://myserver/testlink">http://myserver/testlink</a>) together with a valid API Key. If you don't have an API Key, you need to first login to TestLink using your normal username and password, then generate an API on the user profile page:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_82.png" /></p>
 <p>Once you have entered this information, click the <code>Authenticate</code> button and the list of projects will be populated. Select TestLink project that you want to <strong><em>import from</em></strong> then click the <code>Next</code> button to move to the next page in the import wizard:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_83.png" /></p>
-<p>This page allows you to enter the URL, user name and password that you want to use to access the instance of SpiraTest that you want to <strong><em>import to</em></strong> and click <code>Login</code>. Typically, the URL is of the form (<a href="https://xxxx.spiraservice.net">https://xxxx.spiraservice.net</a>). The version of the importer being used must be compatible with the version of SpiraTest you're importing into; if not you will receive an error message.</p>
-<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from TestLink into SpiraTest. Note that the importer will automatically create a new project in SpiraTest to hold all the artifacts with the same name as that used in TestLink.</p>
+<p>This page allows you to enter the URL, user name and password that you want to use to access the instance of Spira that you want to <strong><em>import to</em></strong> and click <code>Login</code>. Typically, the URL is of the form (<a href="https://xxxx.spiraservice.net">https://xxxx.spiraservice.net</a>). The version of the importer being used must be compatible with the version of Spira you're importing into; if not you will receive an error message.</p>
+<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from TestLink into Spira. Note that the importer will automatically create a new project in Spira to hold all the artifacts with the same name as that used in TestLink.</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_84.png" />  </p>
-<p>During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the &lt;Done&gt; button will be enabled. Clicking this button closed the importer. You should now log into SpiraTest using the same user name and password that was used for the import to view the imported project.</p>
+<p>During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the &lt;Done&gt; button will be enabled. Clicking this button closed the importer. You should now log into Spira using the same user name and password that was used for the import to view the imported project.</p>
 <p>The migration tool will import the following artifacts from TestLink:</p>
 <ul>
 <li>The project name and description</li>
@@ -9059,11 +9090,9 @@
 </ul>
 <p>For example, the following TestLink project:</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_85.png" /></p>
-<p>Now looks like this in SpiraTest (v5.4):</p>
+<p>Now looks like this in Spira (v5.4):</p>
 <p><img alt="" src="../img/Migrating_from_TestLink_86.png" /></p>
-<p>*Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually:</p>
-<p><code>Spira_TestLink_Import_XXXXXX_yyyyMMddhhmmss.log</code></p>
-<p>where the 'XXXXX' is the ID of the project in TestLink.</p>
+<p>*Should the import fail for any reason, there will be a log file created on the Desktop of the person doing the import. The filename is usually: <code>Spira_TestLink_Import_XXXXXX_yyyyMMddhhmmss.log</code> where the 'XXXXX' is the ID of the project in TestLink.</p>
 
 
 

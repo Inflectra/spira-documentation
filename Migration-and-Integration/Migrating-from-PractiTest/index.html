@@ -8935,6 +8935,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9029,24 +9057,27 @@
 
 
 <h1 id="migrating-from-practitest">Migrating from PractiTest<a class="headerlink" href="#migrating-from-practitest" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Issues, Requirements and Attachments from PractiTest into SpiraPlan.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Issues, Requirements and Attachments from PractiTest into Spira.</p>
 <h2 id="installing-the-practitest-migration-tool">Installing the PractiTest Migration Tool<a class="headerlink" href="#installing-the-practitest-migration-tool" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the migration tool for PractiTest onto a workstation so that you can then migrate whole projects from PractiTest to SpiraTest/SpiraTeam/SpiraPlan (SpiraPlan). It assumes that you already have a working installation of SpiraPlan v5.0 or later and a live instance of PractiTest to migrate from. If you have an earlier version of SpiraPlan you will need to upgrade to at least v5.0 before trying to migrate projects.</p>
+<p>This section outlines how to install the migration tool for PractiTest onto a workstation so that you can then migrate whole projects from PractiTest to SpiraTest/SpiraTeam/Spira (Spira). It assumes that you already have a working installation of Spira v5.0 or later and a live instance of PractiTest to migrate from. If you have an earlier version of Spira you will need to upgrade to at least v5.0 before trying to migrate projects.</p>
 <p>The Windows installation package can be downloaded from the "<a href="http://www.inflectra.com/SpiraPlan/Downloads.aspx">Add-Ons &amp; Downloads</a>" section of the Inflectra website. Double-click the package to begin the installation wizard. The wizard should display the following welcome page:</p>
 <p><img alt="" src="../img/Migrating_from_PractiTest_1.png" /></p>
 <p>Click the <code>Next</code> button to choose the folder to install the migration tool to:</p>
 <p><img alt="" src="../img/Migrating_from_PractiTest_2.png" /></p>
 <p>Choose the folder to install to, and then decide whether the application should be accessible by all users on the workstation or just the current user. Then, click <code>Next</code>. It will confirm if you want to proceed, click <code>Next</code> then wait for it to finish.</p>
 <h2 id="using-the-practitest-migration-tool">Using the PractiTest Migration Tool<a class="headerlink" href="#using-the-practitest-migration-tool" title="Permanent link">&para;</a></h2>
-<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; SpiraPlan &gt; Tools &gt; PractiTest Importer. This will launch the migration tool application itself:</p>
+<p>Now that you have installed the migration tool, you can launch it at any time by going to Start &gt; Programs &gt; Inflectra &gt; Spira &gt; Tools &gt; PractiTest Importer. This will launch the migration tool application itself:</p>
 <p><img alt="" src="../img/Migrating_from_PractiTest_3.png" /></p>
 <p>The first thing you need to do is to enter the user email for the instance of PractiTest that you want to import the information from, together with a valid API Token (provided under Account Settings on Practitest).</p>
 <p>Once you have entered this information, click <code>Authenticate</code> and the list of projects will be populated. Select the PractiTest project you want to <strong>import from</strong>. You can also choose to not import certain artifacts from PractiTest (e.g. Issues, etc.) then click the <code>Next</code> button to move to the next page in the import wizard:</p>
 <p><img alt="" src="../img/Migrating_from_PractiTest_4.png" /></p>
-<p>This page allows you to enter the URL, user name and password to access SpiraPlan that you want to <strong>import to</strong>. Enter the information and click <code>Login</code>. Typically, the URL is of the form (<em><a href="https://xxxx.spiraservice.net">https://xxxx.spiraservice.net</a></em>). The version of the importer being used must be compatible with the version of SpiraPlan you're importing into; if not you will receive an error message.</p>
-<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from PractiTest into SpiraPlan. Note that the importer will automatically create a new product in SpiraPlan to hold all the artifacts with the same name as that used in PractiTest. Note: if you run the importer on the same PractiTest project multiple times, it will create a new product in SpiraPlan each time.</p>
+<p>This page allows you to enter the URL, user name and password to access Spira that you want to <strong>import to</strong>. Enter the information and click <code>Login</code>. Typically, the URL is of the form (<em><a href="https://xxxx.spiraservice.net">https://xxxx.spiraservice.net</a></em>). The version of the importer being used must be compatible with the version of Spira you're importing into; if not you will receive an error message.</p>
+<p>Assuming that the login was successful, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from PractiTest into Spira. Note that the importer will automatically create a new product in Spira to hold all the artifacts with the same name as that used in PractiTest. Note: if you run the importer on the same PractiTest project multiple times, it will create a new product in Spira each time.</p>
 <p><img alt="" src="../img/Migrating_from_PractiTest_5.png" /></p>
-<p>During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the <code>Done</code> button will be enabled. Click this button to close the importer. You can now log into SpiraPlan to view the imported project.</p>
+<p>During the import process, as each of the types of artifact are imported, the progress display will change (as illustrated above). Once the import has finished, you will receive a message to that effect and the <code>Done</code> button will be enabled. Click this button to close the importer. You can now log into Spira to view the imported project.</p>
 <p>The migration tool will import the following artifacts from PractiTest:</p>
 <ul>
 <li>The project name</li>

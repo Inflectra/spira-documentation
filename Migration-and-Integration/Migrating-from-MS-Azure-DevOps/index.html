@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9051,6 +9079,9 @@
 
 
 <h1 id="migrating-from-ms-azure-devops-tfs">Migrating from MS Azure DevOps / TFS<a class="headerlink" href="#migrating-from-ms-azure-devops-tfs" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>This section outlines how to use the free Migration Tool for importing users, releases, requirements, test plans, test suites, test cases, test runs, tasks and defects from Microsoft Azure DevOps (ADO) also known as Microsoft Team Foundation Server (TFS) into Spira.</p>
 <h2 id="installing-the-ado-migration-tool">Installing the ADO Migration Tool<a class="headerlink" href="#installing-the-ado-migration-tool" title="Permanent link">&para;</a></h2>
 <p>This section outlines how to install the migration tool for ADO onto a workstation so that you can then migrate whole projects from ADO into Spira (SpiraTest, SpiraTeam or SpiraPlan). It assumes that you already have a working installation of Spira v7.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v7.0 before trying to migrate projects.</p>
@@ -9072,10 +9103,12 @@
 <p>Typically the URL is of the form <a href="http://server-name/Spira">http://server-name/Spira</a> for on-premise installations and <a href="https://mycompany.spiraservice.net">https://mycompany.spiraservice.net</a> for cloud instances. The version of the importer being used must be compatible with the version of Spira you're importing into; if not you will receive an error message.</p>
 <p>Assuming that the login was successful, click the <code>Next</code> button to go to the next screen where you will map the different types of work item to Spira artifacts:</p>
 <p><img alt="" src="../img/AzureDevOps-5.png" />  </p>
-<p>On this page you will map the different Spira artifacts to the different work item types in ADO. Currently, the following artifact types in Spira can be mapped to ADO work items:
-- <strong>Requirements</strong> (used for user stories, features, epics, etc.)
-- <strong>Tasks</strong> (used for tasks)
-- <strong>Incidents</strong> (used for all other issue types such as bugs, defects, issues)</p>
+<p>On this page you will map the different Spira artifacts to the different work item types in ADO. Currently, the following artifact types in Spira can be mapped to ADO work items:</p>
+<ul>
+<li><strong>Requirements</strong> (used for user stories, features, epics, etc.)</li>
+<li><strong>Tasks</strong> (used for tasks)</li>
+<li><strong>Incidents</strong> (used for all other issue types such as bugs, defects, issues)</li>
+</ul>
 <p><em>Note that you don't need to explicitly map <strong>test cases</strong> as they are automatically handled.</em></p>
 <p>Once you have mapped the work item types you will be importing, click the <code>Start Import</code> button to actually begin the process of importing the various artifacts from ADO into Spira. Note that the importer will automatically create a new project in Spira to hold all the artifacts with the same name as that used in ADO.</p>
 <p><img alt="" src="../img/AzureDevOps-6.png" />  </p>

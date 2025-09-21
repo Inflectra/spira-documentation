@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-the-junit-5-extension" class="md-skip">
+        <a href="#integrating-with-junit" class="md-skip">
           Skip to content
         </a>
       
@@ -5127,6 +5127,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -5169,6 +5171,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5188,15 +5192,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-junit-5-with-spiratest" class="md-nav__link">
+  <a href="#using-junit-5-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using JUnit 5 with SpiraTest
+        Using JUnit 5 with Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using JUnit 5 with SpiraTest">
+    <nav class="md-nav" aria-label="Using JUnit 5 with Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5222,10 +5226,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
+  <a href="#viewing-the-test-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Test Results in SpiraTest
+        Viewing the Test Results in Spira
       
     </span>
   </a>
@@ -5249,10 +5253,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-junit-4-with-spiratest" class="md-nav__link">
+  <a href="#using-junit-4-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using JUnit 4 with SpiraTest
+        Using JUnit 4 with Spira
       
     </span>
   </a>
@@ -9003,6 +9007,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9048,6 +9080,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -9067,15 +9101,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-junit-5-with-spiratest" class="md-nav__link">
+  <a href="#using-junit-5-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using JUnit 5 with SpiraTest
+        Using JUnit 5 with Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using JUnit 5 with SpiraTest">
+    <nav class="md-nav" aria-label="Using JUnit 5 with Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9101,10 +9135,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#viewing-the-test-results-in-spiratest" class="md-nav__link">
+  <a href="#viewing-the-test-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Test Results in SpiraTest
+        Viewing the Test Results in Spira
       
     </span>
   </a>
@@ -9128,10 +9162,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-junit-4-with-spiratest" class="md-nav__link">
+  <a href="#using-junit-4-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using JUnit 4 with SpiraTest
+        Using JUnit 4 with Spira
       
     </span>
   </a>
@@ -9166,61 +9200,30 @@
 
 
 
-  <h1>JUnit</h1>
-
+<h1 id="integrating-with-junit">Integrating with JUnit<a class="headerlink" href="#integrating-with-junit" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>The directions for using JUnit 5 and JUnit 4 are in different sections below:</p>
 <h2 id="installing-the-junit-5-extension">Installing the JUnit 5 Extension<a class="headerlink" href="#installing-the-junit-5-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Extension for JUnit 5
-onto a workstation so that you can then run automated JUnit tests
-against a Java application and have the results be recorded as test runs
-inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v5.0 or later. If you have an earlier version
-of SpiraTest you will need to upgrade to at least v5.0 before trying to
-use this extension. You will also need to have at least version 5.0 of
-Junit. If you are using an earlier version, please visit
+<p>This section outlines how to install the Spira Extension for JUnit 5 onto a workstation so that you can then run automated JUnit tests against a Java application and have the results be recorded as test runs inside Spira. It assumes that you already have a working installation of Spira v5.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v5.0 before trying to use this extension. You will also need to have at least version 5.0 of Junit. If you are using an earlier version, please visit
 <a href="http://www.junit.org">www.junit.org</a> to obtain the latest version.</p>
-<p>To obtain the version of the JUnit extension that is compatible with
-your version of SpiraTest, you simply need to log-in as a project-level
-administrator to SpiraTest, go to the Administration home page and
-download the JUnit Extension compressed archive (.zip). This process is
-described in the <em>SpiraTest Administration Guide</em> in more detail.</p>
-<p>The JUnit extension is provided as a compressed zipfile that includes
-both the binaries (packaged as a JAR-file) and the source code (stored
-in a folder structure that mirrors the Java classpath). The JAR-file
-binary was compiled for use on a Windows x86 platform, other platforms
-(e.g. Linux) will require you to compile the Java source files into the
-appropriate Java classfiles before using the extension. The rest of this
-section will assume that you are using the pre-compiled JAR-file.</p>
-<p>Once you have downloaded the Zip archive, you need to uncompress it into
-a folder of your choice on your local system. Assuming that you
-uncompressed it to the C:\Program Files\JUnit Extension
-folder, you should have the following folder structure created:</p>
+<p>To obtain the version of the JUnit extension that is compatible with your version of Spira, you simply need to log-in as a project-level administrator to Spira, go to the Administration home page and download the JUnit Extension compressed archive (.zip). This process is described in the <em>Spira Administration Guide</em> in more detail.</p>
+<p>The JUnit extension is provided as a compressed zipfile that includes both the binaries (packaged as a JAR-file) and the source code (stored in a folder structure that mirrors the Java classpath). The JAR-file binary was compiled for use on a Windows x86 platform, other platforms (e.g. Linux) will require you to compile the Java source files into the appropriate Java classfiles before using the extension. The rest of this section will assume that you are using the pre-compiled JAR-file.</p>
+<p>Once you have downloaded the Zip archive, you need to uncompress it into a folder of your choice on your local system. Assuming that you uncompressed it to the C:\Program Files\JUnit Extension folder, you should have the following folder structure created:</p>
 <p>C:\Program Files\JUnit Extension</p>
 <p>C:\Program Files\JUnit Extension\com</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra\spiratest</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons</p>
-<p>C:\Program Files\JUnit
-Extension\com\inflectra\spiratest\addons\junitextension</p>
-<p>C:\Program Files\JUnit
-Extension\com\inflectra\spiratest\addons\junitextension\samples</p>
-<p>The JAR-file is located in the root folder, the source-code for the
-extension can be found in the "junitextension" subfolder, and the sample
-test fixture can be found in the "samples" subfolder.</p>
-<p>Now to use the extension within your test cases, you need to first make
-sure that the JAR-file is added to the Java classpath. The method for
-doing this is dependent on the platform you're using, so please refer to
-FAQ on <a href="http://www.junit.org">www.junit.org</a> for details on the
-appropriate method for your platform. As an example, on a Windows
-platform, the JAR-file would be added to the classpath by typing the
-following:</p>
-<p><code>set CLASSPATH=%CLASSPATH%; C:\\Program Files\\JUnit
-Extension\\JUnitExtension.jar</code></p>
-<p>Once you have completed this step, you are now ready to begin using your
-JUnit test fixtures with SpiraTest.</p>
-<h2 id="using-junit-5-with-spiratest">Using JUnit 5 with SpiraTest<a class="headerlink" href="#using-junit-5-with-spiratest" title="Permanent link">&para;</a></h2>
-<p>The typical code structure for a JUnit test fixture coded in Java is as
-follows:</p>
+<p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons\junitextension</p>
+<p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons\junitextension\samples</p>
+<p>The JAR-file is located in the root folder, the source-code for the extension can be found in the "junitextension" subfolder, and the sample test fixture can be found in the "samples" subfolder.</p>
+<p>Now to use the extension within your test cases, you need to first make sure that the JAR-file is added to the Java classpath. The method for doing this is dependent on the platform you're using, so please refer to FAQ on <a href="http://www.junit.org">www.junit.org</a> for details on the appropriate method for your platform. As an example, on a Windows platform, the JAR-file would be added to the classpath by typing the following:</p>
+<p><code>set CLASSPATH=%CLASSPATH%; C:\\Program Files\\JUnit Extension\\JUnitExtension.jar</code></p>
+<p>Once you have completed this step, you are now ready to begin using your JUnit test fixtures with Spira.</p>
+<h2 id="using-junit-5-with-spira">Using JUnit 5 with Spira<a class="headerlink" href="#using-junit-5-with-spira" title="Permanent link">&para;</a></h2>
+<p>The typical code structure for a JUnit test fixture coded in Java is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.junitextension.samples</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.jupiter.api.BeforeEach</span><span class="p">;</span>
@@ -9230,7 +9233,7 @@ follows:</p>
 
 
 <span class="cm">/**</span>
-<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Inflectra Corporation</span>
 <span class="cm"> * @version 4.0.0</span>
@@ -9286,29 +9289,13 @@ follows:</p>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nd">@Test</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testSuccess</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//Successful test</span>
-<span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Successful test         assertEquals(12, 12);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The Java class is marked as a JUnit test fixture by applying the
-<code>@BeforeEach</code> attribute to the setup method, and the <code>@Test</code> attribute to
-each of the test assertion methods individually -- highlighted in yellow
-above. When you open up the class in a JUnit runner or execute from the
-command line it loads all the test classes and executes all the methods
-marked with <code>@Test</code> in turn.</p>
-<p>Each of the Assert statements is used to test the state of the
-application after executing some sample code that calls the
-functionality being tested. If the condition in the assertion is true,
-then execution of the test continues, if it is false, then a failure is
-logged and JUnit moves on to the next test method.</p>
-<p>So, to use SpiraTest with JUnit, each of the test cases written for
-execution by JUnit needs to have a corresponding test case in SpiraTest.
-These can be either existing test cases that have manual test steps or
-they can be new test cases designed specifically for automated testing
-and therefore have no defined test steps. In either case, the changes
-that need to be made to the JUnit test fixture for SpiraTest to record
-the JUnit test run are illustrated below:</p>
+<p>The Java class is marked as a JUnit test fixture by applying the <code>@BeforeEach</code> attribute to the setup method, and the <code>@Test</code> attribute to each of the test assertion methods individually -- highlighted in yellow above. When you open up the class in a JUnit runner or execute from the command line it loads all the test classes and executes all the methods marked with <code>@Test</code> in turn.</p>
+<p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and JUnit moves on to the next test method.</p>
+<p>So, to use Spira with JUnit, each of the test cases written for execution by JUnit needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the JUnit test fixture for Spira to record the JUnit test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.junitextension.samples</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.junitextension.*</span><span class="p">;</span>
@@ -9320,7 +9307,7 @@ the JUnit test run are illustrated below:</p>
 
 
 <span class="cm">/**</span>
-<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author Inflectra Corporation</span>
 <span class="cm"> * @version 5.0.0</span>
@@ -9391,119 +9378,62 @@ the JUnit test run are illustrated below:</p>
 <span class="w">    </span><span class="nd">@Test</span>
 <span class="w">    </span><span class="nd">@SpiraTestCase</span><span class="p">(</span><span class="n">testCaseId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testSuccess</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//Successful test</span>
-<span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">//Successful test         assertEquals(12, 12);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The overall class is marked with a new <code>@SpiraTestConfiguration</code>
-attribute that contains the following pieces of information needed to
-access the SpiraTest test repository:</p>
+<p>The overall class is marked with a new <code>@SpiraTestConfiguration</code> attribute that contains the following pieces of information needed to access the Spira test repository:</p>
 <ul>
-<li>
-<p><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This needs to start with http:// or https://.</p>
-</li>
-<li>
-<p><strong>Login</strong> - A valid username for the instance of SpiraTest.</p>
-</li>
-<li><strong>RSS Token</strong> -- Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
+<li><strong>URL</strong> - The URL to the instance of Spira being accessed. This needs to start with http:// or https://.</li>
+<li><strong>Login</strong> - A valid username for the instance of Spira.</li>
+<li><strong>RSS Token</strong>: Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
 <li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
 <li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to specify a release, just use the value -1.</li>
 <li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
 </ul>
-<p>In addition, each of the individual test methods needs to be mapped to a
-specific test case within SpiraTest. This is done by adding a
-<code>@SpiraTestCase</code> attribute to the test method together with the ID of the
-corresponding test case in SpiraTest. The Test Case ID can be found on
-the test cases list page (click the "Test Cases" tab).</p>
+<p>In addition, each of the individual test methods needs to be mapped to a specific test case within Spira. This is done by adding a <code>@SpiraTestCase</code> attribute to the test method together with the ID of the corresponding test case in Spira. The Test Case ID can be found on the test cases list page (click the "Test Cases" tab).</p>
 <p><strong>-- The test methods must be marked as <code>public</code> or the test results will not appear in Spira --</strong></p>
-<p>For these attributes to be available in your test fixture, you also need
-to add a reference to the
-<code>com.inflectra.spiratest.addons.junitextension</code> package. This package is
-bundled within the supplied JAR-file library for Windows, and can be
-compiled from the provided source .java files on other platforms.</p>
-<p>Now all you need to do is compile your code and then launch JUnit by
-executing the test fixture through the command line, or through your
-choice of IDE, e.g. Eclipse, IntelliJ). We shall show one example of each:</p>
+<p>For these attributes to be available in your test fixture, you also need to add a reference to the <code>com.inflectra.spiratest.addons.junitextension</code> package. This package is bundled within the supplied JAR-file library for Windows, and can be compiled from the provided source .java files on other platforms.</p>
+<p>Now all you need to do is compile your code and then launch JUnit by executing the test fixture through the command line, or through your choice of IDE, e.g. Eclipse, IntelliJ). We shall show one example of each:</p>
 <h3 id="a-executing-junit-5-tests-using-command-line">a) Executing JUnit 5 Tests using Command Line<a class="headerlink" href="#a-executing-junit-5-tests-using-command-line" title="Permanent link">&para;</a></h3>
 <p>To execute JUnit 5 tests using the command line, you need to download the <code>junit-platform-console-standalone.jar</code> JUnit 5 package from Maven and use that to run the tests.</p>
 <p>For our sample test, you would use the following command to launch the JUnit tests:</p>
 <p><code>java -jar "C:\AutomatedTesting\JUnitExtension\junit-platform-console-standalone-1.8.0-M1.jar"--classpath="C:\AutomatedTesting\JUnitExtension\JUnit 5\bin" -classpath="C:\AutomatedTesting\JUnitExtension\Jars\JUnit_5_Extension_jar\JUnit 5 Extension.jar" --select-class=com.inflectra.spiratest.addons.junitextension.samples.SimpleTest</code></p>
 <p><img alt="" src="../img/JUnit5-Command-Line-1.png" /></p>
-<p>This includes <strong>both</strong> the SpiraTest extension JAR and the sample tests being executed on the classpath and the class name of the sample tests in the select argument.</p>
+<p>This includes <strong>both</strong> the Spira extension JAR and the sample tests being executed on the classpath and the class name of the sample tests in the select argument.</p>
 <p>When executed it will report back to the command line:</p>
 <p><img alt="" src="../img/JUnit5-Command-Line-2.png" /></p>
-<p>and the results will also appear in SpiraTest.</p>
+<p>and the results will also appear in Spira.</p>
 <h3 id="b-executing-junit-5-tests-using-eclipse">b) Executing JUnit 5 Tests using Eclipse<a class="headerlink" href="#b-executing-junit-5-tests-using-eclipse" title="Permanent link">&para;</a></h3>
-<p>To execute the tests in Eclipse, simply open your automated test script in an Eclipse project, ensure you have the JUnit Eclipse plugin installed, and finally make sure you add a reference to the SpiraTest <code>JUnit 5 Extension.jar</code> JAR file:</p>
+<p>To execute the tests in Eclipse, simply open your automated test script in an Eclipse project, ensure you have the JUnit Eclipse plugin installed, and finally make sure you add a reference to the Spira <code>JUnit 5 Extension.jar</code> JAR file:</p>
 <p><img alt="" src="../img/JUnit5-Eclipse-1.png" /></p>
 <p>Then when you choose the option to Run As a JUnit 5 it will execute the tests:</p>
 <p><img alt="" src="../img/JUnit5-Eclipse-2.png" /></p>
-<p>If for any reason you don't see the test results appear in SpiraTest, make sure you have the correct test IDs mapped. If you still don't see the results, check the <strong>Console</strong> tab inside Eclipse for any errors connecting to SpiraTest:</p>
+<p>If for any reason you don't see the test results appear in Spira, make sure you have the correct test IDs mapped. If you still don't see the results, check the <strong>Console</strong> tab inside Eclipse for any errors connecting to Spira:</p>
 <p><img alt="" src="../img/JUnit5-Eclipse-3.png" /></p>
-<h3 id="viewing-the-test-results-in-spiratest">Viewing the Test Results in SpiraTest<a class="headerlink" href="#viewing-the-test-results-in-spiratest" title="Permanent link">&para;</a></h3>
-<p>Once the test has run using one of the previous methods, you can view the test cases in SpiraTest, you
-should see a JUnit automated test run displayed in the list of executed
-test runs:</p>
+<h3 id="viewing-the-test-results-in-spira">Viewing the Test Results in Spira<a class="headerlink" href="#viewing-the-test-results-in-spira" title="Permanent link">&para;</a></h3>
+<p>Once the test has run using one of the previous methods, you can view the test cases in Spira, you should see a JUnit automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_10.png" /></p>
-<p>Clicking on one of the JUnit test runs will bring up a screen that
-provides information regarding what JUnit test method failed, what the
-error was, together with the associated code stack-trace:</p>
+<p>Clicking on one of the JUnit test runs will bring up a screen that provides information regarding what JUnit test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_11.png" /></p>
-<p>Congratulations... You are now able to run JUnit 5 automated tests and
-have the results be recorded within SpiraTest. The sample test fixture
-SimpleText.java is provided with the installation.</p>
+<p>Congratulations... You are now able to run JUnit 5 automated tests and have the results be recorded within Spira. The sample test fixture SimpleText.java is provided with the installation.</p>
 <h2 id="installing-the-junit-4-extension">Installing the JUnit 4 Extension<a class="headerlink" href="#installing-the-junit-4-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Extension for JUnit
-onto a workstation so that you can then run automated JUnit tests
-against a Java application and have the results be recorded as test runs
-inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v3.0 or later. If you have an earlier version
-of SpiraTest you will need to upgrade to at least v3.0 before trying to
-use this extension. You will also need to have version 4.0 of JUnit. To
-use version 5.0 of JUnit, please visit <a href="#installing-the-junit-5-extension">Installing the JUnit 5 Extension</a></p>
-<p>To obtain the version of the JUnit extension that is compatible with
-your version of SpiraTest, you simply need to log-in as a project-level
-administrator to SpiraTest, go to the Administration home page and
-download the JUnit Extension compressed archive (.zip). This process is
-described in the <em>SpiraTest Administration Guide</em> in more detail.</p>
-<p>The JUnit extension is provided as a compressed zipfile that includes
-both the binaries (packaged as a JAR-file) and the source code (stored
-in a folder structure that mirrors the Java classpath). The JAR-file
-binary was compiled for use on a Windows x86 platform, other platforms
-(e.g. Linux) will require you to compile the Java source files into the
-appropriate Java classfiles before using the extension. The rest of this
-section will assume that you are using the pre-compiled JAR-file.</p>
-<p>Once you have downloaded the Zip archive, you need to uncompress it into
-a folder of your choice on your local system. Assuming that you
-uncompressed it to the C:\Program Files\JUnit Extension
-folder, you should have the following folder structure created:</p>
+<p>This section outlines how to install the Spira Extension for JUnit onto a workstation so that you can then run automated JUnit tests against a Java application and have the results be recorded as test runs inside Spira. It assumes that you already have a working installation of Spira v3.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v3.0 before trying to use this extension. You will also need to have version 4.0 of JUnit. To use version 5.0 of JUnit, please visit <a href="#installing-the-junit-5-extension">Installing the JUnit 5 Extension</a></p>
+<p>To obtain the version of the JUnit extension that is compatible with your version of Spira, you simply need to log-in as a project-level administrator to Spira, go to the Administration home page and download the JUnit Extension compressed archive (.zip). This process is described in the <em>Spira Administration Guide</em> in more detail.</p>
+<p>The JUnit extension is provided as a compressed zipfile that includes both the binaries (packaged as a JAR-file) and the source code (stored in a folder structure that mirrors the Java classpath). The JAR-file binary was compiled for use on a Windows x86 platform, other platforms (e.g. Linux) will require you to compile the Java source files into the appropriate Java classfiles before using the extension. The rest of this section will assume that you are using the pre-compiled JAR-file.</p>
+<p>Once you have downloaded the Zip archive, you need to uncompress it into a folder of your choice on your local system. Assuming that you uncompressed it to the C:\Program Files\JUnit Extension folder, you should have the following folder structure created:</p>
 <p>C:\Program Files\JUnit Extension</p>
 <p>C:\Program Files\JUnit Extension\com</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra\spiratest</p>
 <p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons</p>
-<p>C:\Program Files\JUnit
-Extension\com\inflectra\spiratest\addons\junitextension</p>
-<p>C:\Program Files\JUnit
-Extension\com\inflectra\spiratest\addons\junitextension\samples</p>
-<p>The JAR-file is located in the root folder, the source-code for the
-extension can be found in the "junitextension" subfolder, and the sample
-test fixture can be found in the "samples" subfolder.</p>
-<p>Now to use the extension within your test cases, you need to first make
-sure that the JAR-file is added to the Java classpath. The method for
-doing this is dependent on the platform you're using, so please refer to
-FAQ on <a href="http://www.junit.org">www.junit.org</a> for details on the
-appropriate method for your platform. As an example, on a Windows
-platform, the JAR-file would be added to the classpath by typing the
-following:</p>
-<p>set CLASSPATH=%CLASSPATH%; C:\Program Files\JUnit
-Extension\JUnitExtension.jar</p>
-<p>Once you have completed this step, you are now ready to begin using your
-JUnit test fixtures with SpiraTest.</p>
-<h2 id="using-junit-4-with-spiratest">Using JUnit 4 with SpiraTest<a class="headerlink" href="#using-junit-4-with-spiratest" title="Permanent link">&para;</a></h2>
-<p>The typical code structure for a JUnit test fixture coded in Java is as
-follows:</p>
+<p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons\junitextension</p>
+<p>C:\Program Files\JUnit Extension\com\inflectra\spiratest\addons\junitextension\samples</p>
+<p>The JAR-file is located in the root folder, the source-code for the extension can be found in the "junitextension" subfolder, and the sample test fixture can be found in the "samples" subfolder.</p>
+<p>Now to use the extension within your test cases, you need to first make sure that the JAR-file is added to the Java classpath. The method for doing this is dependent on the platform you're using, so please refer to FAQ on <a href="http://www.junit.org">www.junit.org</a> for details on the appropriate method for your platform. As an example, on a Windows platform, the JAR-file would be added to the classpath by typing the following: <code>set CLASSPATH=%CLASSPATH%; C:\\Program Files\\JUnit Extension\\JUnitExtension.jar</code></p>
+<p>Once you have completed this step, you are now ready to begin using your JUnit test fixtures with Spira.</p>
+<h2 id="using-junit-4-with-spira">Using JUnit 4 with Spira<a class="headerlink" href="#using-junit-4-with-spira" title="Permanent link">&para;</a></h2>
+<p>The typical code structure for a JUnit test fixture coded in Java is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.junitextension.samples</span><span class="p">;</span>
 
 <span class="kn">import static</span><span class="w"> </span><span class="nn">org.junit.Assert.*</span><span class="p">;</span>
@@ -9610,24 +9540,9 @@ follows:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The Java class is marked as a JUnit test fixture by applying the
-@Before attribute to the setup method, and the @Test attribute to each
-of the test assertion methods individually -- highlighted in yellow
-above. When you open up the class in a JUnit runner or execute from the
-command line it loads all the test classes and executes all the methods
-marked with @Test in turn.</p>
-<p>Each of the Assert statements is used to test the state of the
-application after executing some sample code that calls the
-functionality being tested. If the condition in the assertion is true,
-then execution of the test continues, if it is false, then a failure is
-logged and JUnit moves on to the next test method.</p>
-<p>So, to use SpiraTest with JUnit, each of the test cases written for
-execution by JUnit needs to have a corresponding test case in SpiraTest.
-These can be either existing test cases that have manual test steps or
-they can be new test cases designed specifically for automated testing
-and therefore have no defined test steps. In either case, the changes
-that need to be made to the JUnit test fixture for SpiraTest to record
-the JUnit test run are illustrated below:</p>
+<p>The Java class is marked as a JUnit test fixture by applying the @Before attribute to the setup method, and the @Test attribute to each of the test assertion methods individually -- highlighted in yellow above. When you open up the class in a JUnit runner or execute from the command line it loads all the test classes and executes all the methods marked with @Test in turn.</p>
+<p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and JUnit moves on to the next test method.</p>
+<p>So, to use Spira with JUnit, each of the test cases written for execution by JUnit needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the JUnit test fixture for Spira to record the JUnit test run are illustrated below:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.inflectra.spiratest.addons.junitextension.samples</span><span class="p">;</span>
 
 <span class="kn">import static</span><span class="w"> </span><span class="nn">org.junit.Assert.*</span><span class="p">;</span>
@@ -9642,7 +9557,7 @@ the JUnit test run are illustrated below:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="cm"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="cm"> * </span>
 <span class="cm"> * @author      Inflectra Corporation</span>
 <span class="cm"> * @version     2.3.0</span>
@@ -9750,67 +9665,38 @@ the JUnit test run are illustrated below:</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The overall class is marked with a new @SpiraTestConfiguration
-attribute that contains the following pieces of information needed to
-access the SpiraTest test repository:</p>
-<p><strong>URL</strong> - The URL to the instance of SpiraTest being accessed. This
-needs to start with http:// or https://.</p>
-<p><strong>Login</strong> - A valid username for the instance of SpiraTest.</p>
-<p><strong>Password</strong> - A valid password for the instance of SpiraTest.</p>
-<p><strong>Project Id</strong> - The ID of the project (this can be found on the project
-homepage in the "Project Overview" section)</p>
-<p><strong>Release Id</strong> (Optional) - The ID of the release to associate the test
-run with. This can be found on the releases list page (click on the
-Planning &gt; Releases tab). If you don't want to specify a release, just
-use the value -1.</p>
-<p><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the
-test run with. This can be found on the test set list page (click on the
-Testing &gt; Test Sets tab). If you don't want to specify a test set, just
-use the value -1. If you choose a test set that is associated with a
-release, then you don't need to explicitly set a release id (i.e. just
-use -1). However if you do set a release value, it will override the
-value associated with the test set.</p>
-<p>In addition, each of the individual test methods needs to be mapped to a
-specific test case within SpiraTest. This is done by adding a
-@SpiraTestCase attribute to the test method together with the ID of the
-corresponding test case in SpiraTest. The Test Case ID can be found on
-the test cases list page (click the "Test Cases" tab).</p>
-<p>For these attributes to be available in your test fixture, you also need
-to add a reference to the
-<em>com.inflectra.spiratest.addons.junitextension</em> package. This package is
-bundled within the supplied JAR-file library for Windows, and can be
-compiled from the provided source .java files on other platforms.</p>
-<p>Now all you need to do is compile your code and then launch JUnit by
-executing the test fixture through the command line (or through your
-choice of IDE, e.g. Eclipse). E.g. for our sample test, you would use
-the following command:</p>
+<p>The overall class is marked with a new @SpiraTestConfiguration attribute that contains the following pieces of information needed to access the Spira test repository:</p>
+<ul>
+<li><strong>URL</strong> - The URL to the instance of Spira being accessed. This needs to start with http:// or https://.</li>
+<li><strong>Login</strong> - A valid username for the instance of Spira.</li>
+<li><strong>Password</strong> - A valid password for the instance of Spira.</li>
+<li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
+<li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to specify a release, just use the value -1.</li>
+<li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
+</ul>
+<p>In addition, each of the individual test methods needs to be mapped to a specific test case within Spira. This is done by adding a @SpiraTestCase attribute to the test method together with the ID of the corresponding test case in Spira. The Test Case ID can be found on the test cases list page (click the "Test Cases" tab).</p>
+<p>For these attributes to be available in your test fixture, you also need to add a reference to the <em>com.inflectra.spiratest.addons.junitextension</em> package. This package is bundled within the supplied JAR-file library for Windows, and can be compiled from the provided source .java files on other platforms.</p>
+<p>Now all you need to do is compile your code and then launch JUnit by executing the test fixture through the command line (or through your choice of IDE, e.g. Eclipse). E.g. for our sample test, you would use the following command:</p>
 <p>java com.inflectra.spiratest.addons.junitextension.samples.SimpleTest</p>
-<p>Once the test has run, you can view the test cases in SpiraTest, you
-should see a JUnit automated test run displayed in the list of executed
-test runs:</p>
+<p>Once the test has run, you can view the test cases in Spira, you should see a JUnit automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_10.png" /></p>
-<p>Clicking on one of the JUnit test runs will bring up a screen that
-provides information regarding what JUnit test method failed, what the
-error was, together with the associated code stack-trace:</p>
+<p>Clicking on one of the JUnit test runs will bring up a screen that provides information regarding what JUnit test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_JUnit_11.png" /></p>
-<p>Congratulations... You are now able to run JUnit automated tests and
-have the results be recorded within SpiraTest. The sample test fixture
-SimpleText.java is provided with the installation.</p>
+<p>Congratulations... You are now able to run JUnit automated tests and have the results be recorded within Spira. The sample test fixture SimpleText.java is provided with the installation.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
 <p>If you are an Inflectra customer, please contact our customer support at:
 - Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
 - Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 

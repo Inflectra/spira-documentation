@@ -4635,15 +4635,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-soapui-test-sets-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-soapui-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the SoapUI Test Sets from SpiraTeam
+        Executing the SoapUI Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the SoapUI Test Sets from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the SoapUI Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4670,6 +4670,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soapui-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoapUI Pro
+      
+    </span>
+  </a>
   
 </li>
       
@@ -9019,6 +9030,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9141,15 +9180,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-the-soapui-test-sets-from-spirateam" class="md-nav__link">
+  <a href="#executing-the-soapui-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing the SoapUI Test Sets from SpiraTeam
+        Executing the SoapUI Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing the SoapUI Test Sets from SpiraTeam">
+    <nav class="md-nav" aria-label="Executing the SoapUI Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9179,6 +9218,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#soapui-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoapUI Pro
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9197,112 +9247,52 @@
 
 
 <h1 id="soapui-readyapi">SoapUI (ReadyAPI)<a class="headerlink" href="#soapui-readyapi" title="Permanent link">&para;</a></h1>
-<p>SmartBear SoapUI / ReadyAPI (hereafter SoapUI) is an open source Web Service
-testing tool for Service Oriented Architectures (SOAs). There is also a
-Pro version (Now known as ReadyAPI) that is released as a commercial product. Its functionality
-mainly covers Web Service Inspection, Invoking, Development, Simulation
-and Mocking, Functional testing, Load and Compliance testing.
-Productivity enhancement features can be found in ReadyAPI (previously known as SoapUI Pro).</p>
-<p>This section describes how you can use SpiraPlan / SpiraTest / SpiraTeam (hereafter
-SpiraTeam) together with RemoteLaunch to schedule and remotely launch
-instances of soapUI on different computers and have the testing results
-be transmitted back to SpiraTeam. This allows you to extend your
-SpiraTeam's test management capabilities to include automated web
-service testing.</p>
-<p><em>Note: This integration requires at least version 4.0 of SpiraPlan/Team/Test
-and an instance of SoapUI, SoapUI Pro, or ReadyAPI running on a Windows® platform.</em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>SmartBear SoapUI / ReadyAPI (hereafter SoapUI) is an open source Web Service testing tool for Service Oriented Architectures (SOAs). There is also a Pro version (Now known as ReadyAPI) that is released as a commercial product. Its functionality mainly covers Web Service Inspection, Invoking, Development, Simulation and Mocking, Functional testing, Load and Compliance testing. Productivity enhancement features can be found in ReadyAPI (previously known as SoapUI Pro).</p>
+<p>This section describes how you can use Spira together with RemoteLaunch to schedule and remotely launch instances of soapUI on different computers and have the testing results be transmitted back to Spira. This allows you to extend your Spira's test management capabilities to include automated web service testing.</p>
+<p><em>Note: This integration requires at least version 4.0 of Spira and an instance of SoapUI, SoapUI Pro, or ReadyAPI running on a Windows® platform.</em></p>
 <h2 id="installing-the-soapui-engine">Installing the SoapUI Engine<a class="headerlink" href="#installing-the-soapui-engine" title="Permanent link">&para;</a></h2>
-<p>This section assumes that you already have a working installation of
-SpiraTest or SpiraTeam and have installed RemoteLaunch on the various
-test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>.
-Once those prerequisites are in place, please follow these steps:</p>
+<p>This section assumes that you already have a working installation of Spira and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
 <ul>
-<li>
-<p>Download and extract the SoapUIEngine.zip file from the
-Inflectra website.</p>
-</li>
-<li>
-<p>Extract the file "soapUIEngine.dll" from the compressed archive into the "extensions" sub-folder of the RemoteLaunch installation. </p>
-</li>
-<li>
-<p>Log in to SpiraTeam as a system administrator and go into SpiraTeam main
-Administration page and click on the "Test Automation" link under
-<strong>Integration</strong>.</p>
-</li>
-<li>
-<p>Click the "Add" button to enter the new test automation engine
-details page. The fields required are as follows:
-<img alt="" src="../img/SoapUI_71.png" /></p>
-<ul>
-<li>
-<p><strong>Name</strong>: This is the short display name of the automation
-engine. It can be anything that is meaningful to your users.
-<strong>Description</strong>: This is the long description of the automation
-engine. It can be anything that is meaningful to your users.
-(Optional)</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the engine is active and able to be used
-for any project.</p>
-</li>
-<li>
-<p><strong>Token</strong>: This needs to be the assigned unique token for the
-automation engine and is used to tell RemoteLaunch which engine
-to actually use for a given test case. For soapUI this should be
-<strong>SoapUI</strong>.</p>
-</li>
+<li>Download and extract the SoapUIEngine.zip file from the Inflectra website.</li>
+<li>Extract the file "soapUIEngine.dll" from the compressed archive into the "extensions" sub-folder of the RemoteLaunch installation. </li>
+<li>Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</li>
 </ul>
-</li>
-<li>
-<p>Once you have finished, click the "Insert &amp; Close" button and you
-will be taken back to the Test Automation list page, with SoapUI
-listed as an available automation engine.</p>
-</li>
+<p><img alt="" src="../img/SoapUI_71.png" /></p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Name</span><span class="o">**:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">short</span><span class="w"> </span><span class="n">display</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">automation</span><span class="w">     </span><span class="n">engine</span><span class="p">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">anything</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">meaningful</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="w">     </span><span class="o">**</span><span class="n">Description</span><span class="o">**:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">long</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">automation</span><span class="w">     </span><span class="n">engine</span><span class="p">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">anything</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">meaningful</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="w">     </span><span class="p">(</span><span class="n">Optional</span><span class="p">)</span>
+<span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Active</span><span class="o">**:</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">checked</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">engine</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">able</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">project</span><span class="p">.</span>
+<span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Token</span><span class="o">**:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w">     </span><span class="n">automation</span><span class="w"> </span><span class="n">engine</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">tell</span><span class="w"> </span><span class="n">RemoteLaunch</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">engine</span><span class="w">     </span><span class="n">to</span><span class="w"> </span><span class="n">actually</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="k">case</span><span class="p">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">soapUI</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w">     </span><span class="o">**</span><span class="n">SoapUI</span><span class="o">**</span><span class="p">.</span>
+</code></pre></div></td></tr></table></div>
+
+<ul>
+<li>Once you have finished, click the "Insert &amp; Close" button and you will be taken back to the Test Automation list page, with SoapUI listed as an available automation engine.</li>
 </ul>
 <h3 id="soapui-remotelaunch-settings">SoapUI RemoteLaunch Settings<a class="headerlink" href="#soapui-remotelaunch-settings" title="Permanent link">&para;</a></h3>
-<p>You will need to modify the SoapUI configuration for each of the
-specific automation hosts, by right-clicking on the RemoteLaunch icon in
-the system tray and choosing "Configuration". That will bring up the
-RemoteLaunch configuration page. The SoapUI engine adds its own tab to
-this page which allows you to configure how SoapUI operates:</p>
+<p>You will need to modify the SoapUI configuration for each of the specific automation hosts, by right-clicking on the RemoteLaunch icon in the system tray and choosing "Configuration". That will bring up the RemoteLaunch configuration page. The SoapUI engine adds its own tab to this page which allows you to configure how SoapUI operates:</p>
 <p><img alt="" src="../img/SoapUI_72.png" /></p>
 <p>The following fields can be specified on this screen:</p>
-<p><strong>SOAP-UI Location</strong> -- This should be SOAP-UI Bin folder that contains
-the "TestRunner.bat" batch file that will be used to actually run the
-automated tests.</p>
-<p><strong>Installation Type</strong> -- This allows you to take advantage of the
-enhanced reporting available in the commercial "Pro" edition of SoapUI.
-Check the "SOAP-UI Pro Installation" box only if you are using the
-commercial version of SoapUI (known as SoapUI Pro).</p>
-<p><strong>Execution Type</strong> -- If this is a LoadUI performance test rather than a
-standard SoapUI functional test, check the box and RemoteLaunch will
-know to parse the load-test report format.</p>
-<p><strong>Trace Logging</strong> -- Normally this can be left unchecked unless you are
-diagnosing configuration issues and need additional logging.</p>
+<ul>
+<li><strong>SOAP-UI Location</strong>: This should be SOAP-UI Bin folder that contains the "TestRunner.bat" batch file that will be used to actually run the automated tests.</li>
+<li><strong>Installation Type</strong>: This allows you to take advantage of the enhanced reporting available in the commercial "Pro" edition of SoapUI. Check the "SOAP-UI Pro Installation" box only if you are using the commercial version of SoapUI (known as SoapUI Pro).</li>
+<li><strong>Execution Type</strong>: If this is a LoadUI performance test rather than a standard SoapUI functional test, check the box and RemoteLaunch will know to parse the load-test report format.</li>
+<li><strong>Trace Logging</strong>: Normally this can be left unchecked unless you are diagnosing configuration issues and need additional logging.</li>
+</ul>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
-<p>This section describes the process for setting up a test case in
-SpiraTeam for automation and linking it to an existing SoapUI test suite
-and test case.</p>
+<p>This section describes the process for setting up a test case in Spira for automation and linking it to an existing SoapUI test suite and test case.</p>
 <h3 id="linking-a-soapui-test-script">Linking a SoapUI Test Script<a class="headerlink" href="#linking-a-soapui-test-script" title="Permanent link">&para;</a></h3>
-<p>First you need to display the list of test cases in SpiraTeam (by
-clicking Testing &gt; Test Cases) and then add a new test case. Once you
-have added the new test case, click on it and expand the "Automation"
-section of the Test Case Overview tab:</p>
+<p>First you need to display the list of test cases in Spira (by clicking Testing &gt; Test Cases) and then add a new test case. Once you have added the new test case, click on it and expand the "Automation" section of the Test Case Overview tab:</p>
 <p><img alt="" src="../img/SoapUI_73.png" /></p>
 <p>You need to enter the following fields:</p>
 <ul>
+<li><strong>Automation Engine</strong> - Choose the SoapUI Automation Engine that you created in the previous section from the drop-down list.</li>
+<li><strong>Script Type</strong>: This should be set to Linked for this case</li>
 <li>
-<p><strong>Automation Engine</strong> - Choose the SoapUI Automation Engine that you
-created in the previous section from the drop-down list.</p>
-</li>
-<li>
-<p><strong>Script Type</strong> -- This should be set to Linked for this case</p>
-</li>
-<li>
-<p><strong>Filename</strong> -- This needs to be the full path to the SoapUi test
-project XML file or composite folder together with the test suite name
-and test case name separated by the pipe (|) symbol. You can also pass
-custom command line switches as an optional final segment</p>
+<p><strong>Filename</strong>: This needs to be the full path to the SoapUi test project XML file or composite folder together with the test suite name and test case name separated by the pipe (|) symbol. You can also pass custom command line switches as an optional final segment</p>
 <ul>
 <li>
 <p>For standard tests, you use the format:</p>
@@ -9317,216 +9307,102 @@ custom command line switches as an optional final segment</p>
 </blockquote>
 </li>
 <li>
-<p>For example if the test suite was named "Requirements Testing" and the
-test case was named "Get Requirements" you'd use:</p>
+<p>For example if the test suite was named "Requirements Testing" and the test case was named "Get Requirements" you'd use:</p>
 <blockquote>
-<p>[MyDocuments]\SpiraTest-4-0-Web-Service-soapui-project.xml|Requirements
-Testing|Get Requirements</p>
+<p>[MyDocuments]\SpiraTest-4-0-Web-Service-soapui-project.xml|Requirements     &gt; Testing|Get Requirements</p>
 </blockquote>
 </li>
 <li>
-<p>To make this easier across different machines, you can use several
-constants for standard Windows locations:</p>
+<p>To make this easier across different machines, you can use several constants for standard Windows locations:</p>
 <ul>
-<li>
-<p>[MyDocuments] -- The user's "My Documents" folder. The user indicated
-is the user that ran RemoteLaunch.</p>
-</li>
-<li>
-<p>[CommonDocuments] -- The Public Document's folder.</p>
-</li>
-<li>
-<p>[DesktopDirectory] -- The user's Desktop folder. The user indicated is
-the user that ran RemoteLaunch.</p>
-</li>
-<li>
-<p>[ProgramFiles] -- Translated to the Program Files directory. For
-64-bit machines, it's the 64-bit directory.</p>
-</li>
-<li>
-<p>[ProgramFilesX86] -- Translated to the 32-bit Program Files directory.</p>
-</li>
+<li>[MyDocuments] -- The user's "My Documents" folder. The user indicated is the user that ran RemoteLaunch.</li>
+<li>[CommonDocuments] -- The Public Document's folder.</li>
+<li>[DesktopDirectory] -- The user's Desktop folder. The user indicated is the user that ran RemoteLaunch.</li>
+<li>[ProgramFiles] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.</li>
+<li>[ProgramFilesX86] -- Translated to the 32-bit Program Files directory.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>Document Type</strong> -- You can choose which document type the automated
-test script will be categorized under.</p>
+<p><strong>Document Type</strong>: You can choose which document type the automated test script will be categorized under.</p>
 </li>
-<li>
-<p><strong>Document Folder</strong> -- You can choose which document folder the
-automated test script will be stored in.</p>
-</li>
-<li>
-<p><strong>Version</strong> -- The version of the test script (1.0 is used if no value
-specified)</p>
-</li>
-<li>
-<p><strong>Test Script</strong> -- <em>This is not used when you are using the linked test
-script option</em></p>
-</li>
+<li><strong>Document Folder</strong>: You can choose which document folder the automated test script will be stored in.</li>
+<li><strong>Version</strong>: The version of the test script (1.0 is used if no value specified)</li>
+<li><strong>Test Script</strong>: <em>This is not used when you are using the linked test script option</em></li>
 </ul>
-<p>Note: The example filename shown above was taken from a test project in
-SoapUI that has the following structure:</p>
+<p>Note: The example filename shown above was taken from a test project in SoapUI that has the following structure:</p>
 <p><img alt="" src="../img/SoapUI_74.png" /></p>
-<p>Once you are happy with the values, click [Save] to update the test
-case. Now you are ready to schedule the automated test case for
-execution.</p>
+<p>Once you are happy with the values, click [Save] to update the test case. Now you are ready to schedule the automated test case for execution.</p>
 <h3 id="using-parameterized-test-cases">Using Parameterized Test Cases<a class="headerlink" href="#using-parameterized-test-cases" title="Permanent link">&para;</a></h3>
-<p>There is an advanced feature of SpiraTest/Team and RemoteLaunch that
-lets you pass parameters from SpiraTeam to your SoapUI automated test.
-This is very useful if you have a data-driven SoapUI test that has
-custom project properties used that you would like to change based on
-the test.</p>
-<p>To setup the automated test case for parameters, click on the "Test
-Steps" tab and click on "Edit Parameters":</p>
-<p>The name of the parameter ${login} needs to match the name of the
-custom parameter defined in the SoapUI project properties. Invalid
-parameters will be silently ignored by the SoapUI engine. Parameters
-must have a unique name. <em>Note that the plugin currently only supports
-"Project Properties" and not Global or System Properties.</em></p>
-<h2 id="executing-the-soapui-test-sets-from-spirateam">Executing the SoapUI Test Sets from SpiraTeam<a class="headerlink" href="#executing-the-soapui-test-sets-from-spirateam" title="Permanent link">&para;</a></h2>
-<p>There are three ways to execute automated test cases in SpiraTeam:</p>
+<p>There is an advanced feature of Spira and RemoteLaunch that lets you pass parameters from Spira to your SoapUI automated test. This is very useful if you have a data-driven SoapUI test that has custom project properties used that you would like to change based on the test.</p>
+<p>To setup the automated test case for parameters, click on the "Test Steps" tab and click on "Edit Parameters":</p>
+<p>The name of the parameter ${login} needs to match the name of the custom parameter defined in the SoapUI project properties. Invalid parameters will be silently ignored by the SoapUI engine. Parameters must have a unique name. <em>Note that the plugin currently only supports "Project Properties" and not Global or System Properties.</em></p>
+<h2 id="executing-the-soapui-test-sets-from-spira">Executing the SoapUI Test Sets from Spira<a class="headerlink" href="#executing-the-soapui-test-sets-from-spira" title="Permanent link">&para;</a></h2>
+<p>There are three ways to execute automated test cases in Spira:</p>
 <ol>
-<li>
-<p>Schedule the test cases to be executed on a specific computer (local
-or remote) at a date/time in the future</p>
-</li>
-<li>
-<p>Execute the test cases right now on the local computer.</p>
-</li>
-<li>
-<p>Execute the test cases from the command-line or a build script</p>
-</li>
+<li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
+<li>Execute the test cases right now on the local computer.</li>
+<li>Execute the test cases from the command-line or a build script</li>
 </ol>
-<p>We shall outline each of these three scenarios in this section. However
-first we need to setup the appropriate automation hosts and test sets in
-SpiraTeam:</p>
+<p>We shall outline each of these three scenarios in this section. However first we need to setup the appropriate automation hosts and test sets in Spira:</p>
 <h3 id="configuring-the-automation-hosts-and-test-sets">Configuring the Automation Hosts and Test Sets<a class="headerlink" href="#configuring-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
-<p>Go to Testing &gt; Automation Hosts in SpiraTeam to display the list of
-automation hosts:</p>
+<p>Go to Testing &gt; Automation Hosts in Spira to display the list of automation hosts:</p>
 <p><img alt="" src="../img/SoapUI_15.png" /></p>
-<p>Make sure that you have created an Automation Host for each computer
-that is going to run an automated test case. The name and description
-can be set to anything meaningful, but the Token field <strong>must be set to
-the same token that is specified in the RemoteLaunch application</strong> on
-that specific machine.</p>
-<p>Once you have at least one Automation Host configured, go to Testing &gt;
-Test Sets to create the test sets that will contain the automated test
-case:</p>
+<p>Make sure that you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified in the RemoteLaunch application</strong> on that specific machine.</p>
+<p>Once you have at least one Automation Host configured, go to Testing &gt; Test Sets to create the test sets that will contain the automated test case:</p>
 <p><img alt="" src="../img/SoapUI_75.png" /></p>
-<p>Note: Unlike manual test cases, automated test cases <em>must be executed
-within a test set</em> -- they cannot be executed directly from the test
-case.</p>
-<p>Create a new Test Set to hold the SoapUI automated test cases and click
-on its hyperlink to display the test set details page:</p>
+<p>Note: Unlike manual test cases, automated test cases <em>must be executed within a test set</em> -- they cannot be executed directly from the test case.</p>
+<p>Create a new Test Set to hold the SoapUI automated test cases and click on its hyperlink to display the test set details page:</p>
 <p><img alt="" src="../img/SoapUI_76.png" /></p>
-<p>You need to add at least one automated test case to the test set and
-then configure the following fields:</p>
+<p>You need to add at least one automated test case to the test set and then configure the following fields:</p>
 <ul>
-<li>
-<p><strong>Automation Host</strong> -- This needs to be set to the name of the
-automation host that will be running the automated test set.</p>
-</li>
-<li>
-<p><strong>Planned Date</strong> -- The date and time that you want the scenario to
-begin. (Note that multiple test sets scheduled at the exact same
-time will be scheduled by Test Set ID order.)</p>
-</li>
-<li>
-<p><strong>Status</strong> -- This needs to be set to "Not Started" for RemoteLaunch
-to pick up the scheduled test set. When you change the Planned Date,
-the status automatically switches back to "Not Started"</p>
-</li>
-<li>
-<p><strong>Type</strong> -- This needs to be set to "Automated" for automated
-testing</p>
-</li>
+<li><strong>Automation Host</strong>: This needs to be set to the name of the automation host that will be running the automated test set.</li>
+<li><strong>Planned Date</strong>: The date and time that you want the scenario to begin. (Note that multiple test sets scheduled at the exact same time will be scheduled by Test Set ID order.)</li>
+<li><strong>Status</strong>: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"</li>
+<li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
-<p>If you have parameterized test cases inside the automated test set you
-can set their values in three different ways:</p>
+<p>If you have parameterized test cases inside the automated test set you can set their values in three different ways:</p>
 <ul>
-<li>
-<p><strong>Test Set Parameter Values</strong> -- this lets you set the same value of
-a parameter for all the test cases in the test set:
-<img alt="" src="../img/SoapUI_17.png" /></p>
-</li>
-<li>
-<p><strong>Test Case Parameter Values</strong> -- this lets you set a specific value
-for a parameter for a particular test case in the test set:
-<img alt="" src="../img/SoapUI_18.png" /></p>
-</li>
+<li><strong>Test Set Parameter Values</strong>: this lets you set the same value of a parameter for all the test cases in the test set:</li>
 </ul>
-<p>You set these values, by right-clicking on a row and choosing "Edit
-Parameters":
-<img alt="" src="../img/SoapUI_27.png" /></p>
+<p><img alt="" src="../img/SoapUI_17.png" /></p>
 <ul>
-<li><strong>Test Configurations</strong> -- this lets you create a data grid of
-possible test parameters and execute the test set multiple times,
-once for each unique combination:
-<img alt="" src="../img/SoapUI_19.png" /></li>
+<li><strong>Test Case Parameter Values</strong>: this lets you set a specific value for a parameter for a particular test case in the test set:</li>
 </ul>
+<p><img alt="" src="../img/SoapUI_18.png" /></p>
+<p>You set these values, by right-clicking on a row and choosing "Edit Parameters":</p>
+<p><img alt="" src="../img/SoapUI_27.png" /></p>
+<ul>
+<li><strong>Test Configurations</strong>: this lets you create a data grid of possible test parameters and execute the test set multiple times, once for each unique combination:</li>
+</ul>
+<p><img alt="" src="../img/SoapUI_19.png" /></p>
 <h3 id="executing-the-test-sets">Executing the Test Sets<a class="headerlink" href="#executing-the-test-sets" title="Permanent link">&para;</a></h3>
-<p>Once you have set the various test set fields (as described above), the
-Remote Launch instances will periodically poll SpiraTeam for new test
-sets. Once they retrieve the new test set, they will add it to their
-list of test sets to execute. Once execution begins they will change
-the status of the test set to "In Progress", and once test execution is
-done, the status of the test set will change to either "Completed" --
-the automation engine could be launched and the test has completed -- or
-"Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
-<p>If you want to <strong>immediately execute the test case on your local
-computer</strong>, instead of setting the "Automation Host", "Status" and
-"Planned Date" fields, you can instead click the [Execute] icon on the
-test set itself. This will cause RemoteLaunch on the local computer to
-immediately start executing the current test set.</p>
-<p>If you want to run the tests as part of a build script, just call
-RemoteLaunch.exe with the appropriate test set id passed into the
-command-line:</p>
+<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to execute. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either "Completed" -- the automation engine could be launched and the test has completed -- or "Blocked" -- RemoteLaunch was not able to start the automation engine.</p>
+<p>If you want to <strong>immediately execute the test case on your local computer</strong>, instead of setting the "Automation Host", "Status" and "Planned Date" fields, you can instead click the [Execute] icon on the test set itself. This will cause RemoteLaunch on the local computer to immediately start executing the current test set.</p>
+<p>If you want to run the tests as part of a build script, just call RemoteLaunch.exe with the appropriate test set id passed into the command-line:</p>
 <blockquote>
 <p>RemoteLaunch.exe --testset:18</p>
 </blockquote>
-<p>In all cases, once all the test cases in the test set have been
-completed, the status of the test set will switch to "Completed" and the
-individual test cases in the set will display a status based on the
-results of the SoapUI test:</p>
-<p><strong>Passed</strong> -- The SoapUI automated test ran successfully and all the
-assertions in the test script passed</p>
-<p><strong>Failed</strong> -- The SoapUI automated test ran successfully, but at least
-one assertion in the test script failed.</p>
-<p><strong>Blocked</strong> -- The SoapUI automated test did not run successfully</p>
-<p>If you receive the "Blocked" status for either the test set or the test
-cases you should open up the Windows Application Event Log on the
-computer running RemoteLaunch and look in the event log for error
-messages.</p>
-<p><em>Note: While the tests are executing you may see application or browser
-windows launch as the SoapUI server executes the appropriate tests.</em></p>
-<p>Once the tests have completed, you can log back into SpiraTeam and see
-the execution status of your test cases. If you click on a Test Run that
-was generated by SoapUI, you will see the following information:</p>
+<p>In all cases, once all the test cases in the test set have been completed, the status of the test set will switch to "Completed" and the individual test cases in the set will display a status based on the results of the SoapUI test:</p>
+<ul>
+<li><strong>Passed</strong>: The SoapUI automated test ran successfully and all the assertions in the test script passed</li>
+<li><strong>Failed</strong>: The SoapUI automated test ran successfully, but at least one assertion in the test script failed.</li>
+<li><strong>Blocked</strong>: The SoapUI automated test did not run successfully</li>
+</ul>
+<p>If you receive the "Blocked" status for either the test set or the test cases you should open up the Windows Application Event Log on the computer running RemoteLaunch and look in the event log for error messages.</p>
+<p><em>Note: While the tests are executing you may see application or browser windows launch as the SoapUI server executes the appropriate tests.</em></p>
+<p>Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by SoapUI, you will see the following information:</p>
 <p><img alt="" src="../img/SoapUI_77.png" /></p>
-<p>This screen indicates the status of the test run that was reported back
-from SoapUI together with any messages or other information. The
-execution status will be set according to the worst-case assessment
-reported back from SoapUI. If you have zero(0) failures, then the status
-will display as Passed, otherwise it will display as Failed.</p>
-<p>Under <strong>Console Output</strong> section you will see more detailed logging
-information (in both SoapUI and SoapUI Pro):</p>
+<p>This screen indicates the status of the test run that was reported back from SoapUI together with any messages or other information. The execution status will be set according to the worst-case assessment reported back from SoapUI. If you have zero(0) failures, then the status will display as Passed, otherwise it will display as Failed.</p>
+<p>Under <strong>Console Output</strong> section you will see more detailed logging information (in both SoapUI and SoapUI Pro):</p>
 <p><img alt="" src="../img/SoapUI_78.png" /></p>
-<p>The Message field will contain a summary of the number of test steps
-completed, the number of assertions and the number of failed assertions.
-The Details field will contain the detailed trace of what happened,
-captured from the summary output log that is generated by SoapUI.</p>
-<p><strong>SoapUI Pro</strong></p>
-<p>If you have the commercial SoapUI Pro product and have configured
-RemoteLaunch so that it knows to use SoapUI Pro, in addition, the <strong>Test
-Steps</strong> section of the test run will contain more detailed reporting:</p>
+<p>The Message field will contain a summary of the number of test steps completed, the number of assertions and the number of failed assertions. The Details field will contain the detailed trace of what happened, captured from the summary output log that is generated by SoapUI.</p>
+<h2 id="soapui-pro">SoapUI Pro<a class="headerlink" href="#soapui-pro" title="Permanent link">&para;</a></h2>
+<p>If you have the commercial SoapUI Pro product and have configured RemoteLaunch so that it knows to use SoapUI Pro, in addition, the <strong>Test Steps</strong> section of the test run will contain more detailed reporting:</p>
 <p><img alt="" src="../img/SoapUI_79.png" /></p>
-<p>Where each test step corresponds to a step recorded in the SoapUI Pro
-results file.</p>
-<p>Congratulations... You are now able to run SoapUI automated web-service
-tests and have the results be recorded within SpiraTest / SpiraTeam.</p>
+<p>Where each test step corresponds to a step recorded in the SoapUI Pro results file.</p>
+<p>Congratulations... You are now able to run SoapUI automated web-service tests and have the results be recorded within Spira.</p>
 
 
 

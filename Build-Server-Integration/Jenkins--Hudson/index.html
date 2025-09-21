@@ -7901,10 +7901,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spiraplan-plug-in-for-jenkins" class="md-nav__link">
+  <a href="#installing-the-spira-plug-in-for-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraPlan Plug-in for Jenkins
+        Installing the Spira Plug-in for Jenkins
       
     </span>
   </a>
@@ -7912,10 +7912,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-spiraplan-jenkins-plug-in" class="md-nav__link">
+  <a href="#setting-up-the-spira-jenkins-plug-in" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting-Up the SpiraPlan Jenkins Plug-in
+        Setting-Up the Spira Jenkins Plug-in
       
     </span>
   </a>
@@ -7934,10 +7934,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spiraplan" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraPlan
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -8990,6 +8990,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spiraplan-plug-in-for-jenkins" class="md-nav__link">
+  <a href="#installing-the-spira-plug-in-for-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraPlan Plug-in for Jenkins
+        Installing the Spira Plug-in for Jenkins
       
     </span>
   </a>
@@ -9067,10 +9095,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-spiraplan-jenkins-plug-in" class="md-nav__link">
+  <a href="#setting-up-the-spira-jenkins-plug-in" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting-Up the SpiraPlan Jenkins Plug-in
+        Setting-Up the Spira Jenkins Plug-in
       
     </span>
   </a>
@@ -9089,10 +9117,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spiraplan" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraPlan
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -9139,69 +9167,67 @@
 
 
 <h1 id="jenkins-hudson">Jenkins / Hudson<a class="headerlink" href="#jenkins-hudson" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as SpiraPlan in conjunction with either the Jenkins or Hudson (hereafter referred to as Jenkins) continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraTeam or SpiraPlan v3.2 or later and a working installation of Jenkins/Hudson v2.7.3 or later. If you have an earlier version of SpiraPlan, you will need to upgrade to at least v3.2, and if you have any earlier version of Jenkins you will also need to upgrade it too.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use SpiraTest, SpiraTeam or SpiraPlan (hereafter referred to as Spira in conjunction with either the Jenkins or Hudson (hereafter referred to as Jenkins) continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraTeam or Spira v3.2 or later and a working installation of Jenkins/Hudson v2.7.3 or later. If you have an earlier version of Spira, you will need to upgrade to at least v3.2, and if you have any earlier version of Jenkins you will also need to upgrade it too.</p>
 <p class="alert-box"><strong>Note:</strong> this integration is only available for Jenkins Freestyle Project items</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Jenkins provides continuous integration services for software development, primarily in the Java programming language. It is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including CVS, Subversion, Git, Mercurial, Perforce and Clearcase, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands.</p>
-<p>When you use the SpiraPlan plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in SpiraPlan. Then, each time Jenkins creates a new build, a new build artifact will be created in SpiraPlan. Each build in SpiraPlan will be automatically linked to the incidents fixed, source code commits committed, and any SpiraPlan tokens in the Jenkins changelog will be parsed and turned into SpiraPlan artifact hyperlinks.</p>
-<h2 id="installing-the-spiraplan-plug-in-for-jenkins">Installing the SpiraPlan Plug-in for Jenkins<a class="headerlink" href="#installing-the-spiraplan-plug-in-for-jenkins" title="Permanent link">&para;</a></h2>
-<p>The plug-in for SpiraPlan is available through the Jenkins Plugin Manager under the Available tab. Use the filter on the right of the screen to narrow down the plugins listed by typing spira. Check off Spira Importer and use the install that is best for your environment.</p>
+<p>When you use the Spira plugin for Jenkins, it will allow you to associate each Jenkins project with a corresponding project and release in Spira. Then, each time Jenkins creates a new build, a new build artifact will be created in Spira. Each build in Spira will be automatically linked to the incidents fixed, source code commits committed, and any Spira tokens in the Jenkins changelog will be parsed and turned into Spira artifact hyperlinks.</p>
+<h2 id="installing-the-spira-plug-in-for-jenkins">Installing the Spira Plug-in for Jenkins<a class="headerlink" href="#installing-the-spira-plug-in-for-jenkins" title="Permanent link">&para;</a></h2>
+<p>The plug-in for Spira is available through the Jenkins Plugin Manager under the Available tab. Use the filter on the right of the screen to narrow down the plugins listed by typing spira. Check off Spira Importer and use the install that is best for your environment.</p>
 <p><img alt="" src="../img/Jenkins__Hudson_4.png" /></p>
 <p>The Installing Plugins screen will show you the progress of  the install.</p>
 <p><img alt="" src="../img/Jenkins__Hudson_7.png" /></p>
 <p>After Jenkins has restarted, connect to your Jenkins server.</p>
-<h2 id="setting-up-the-spiraplan-jenkins-plug-in">Setting-Up the SpiraPlan Jenkins Plug-in<a class="headerlink" href="#setting-up-the-spiraplan-jenkins-plug-in" title="Permanent link">&para;</a></h2>
-<p>Now that the plugin has been installed, you need to go back to the Jenkins homepage and click on the "Manage Jenkins" hyperlink followed by the "Configure System" hyperlink. This will bring up the main Jenkins configuration page. Scroll down to find the "<strong>Spira Integeration</strong>" section:</p>
+<h2 id="setting-up-the-spira-jenkins-plug-in">Setting-Up the Spira Jenkins Plug-in<a class="headerlink" href="#setting-up-the-spira-jenkins-plug-in" title="Permanent link">&para;</a></h2>
+<p>Now that the plugin has been installed, you need to go back to the Jenkins homepage and click on the "Manage Jenkins" hyperlink followed by the "Configure System" hyperlink. This will bring up the main Jenkins configuration page. Scroll down to find the "<strong>Spira Integration</strong>" section:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_8.png" /></p>
-<p>Enter in the <strong>URL</strong> you use to access your instance of SpiraPlan, together with a valid <strong>username</strong> and <strong>RSS key</strong>. You can find or generate the RSS Key from your user profile page inside Spira - read
-how to do so <a href="http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key">here</a>. Make sure to include the curly braces - {ExampleRSS} - Once you have entered the values, click on the [Test Connection] button to verify that Jenkins can connect to SpiraPlan successfully. Once it has connected successfully, click the [Save] button at the bottom of the screen to save your connection settings.</p>
+<p>Enter in the <strong>URL</strong> you use to access your instance of Spira, together with a valid <strong>username</strong> and <strong>RSS key</strong>. You can find or generate the RSS Key from your user profile page inside Spira - read
+how to do so <a href="http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key">here</a>. Make sure to include the curly braces - {ExampleRSS} - Once you have entered the values, click on the [Test Connection] button to verify that Jenkins can connect to Spira successfully. Once it has connected successfully, click the [Save] button at the bottom of the screen to save your connection settings.</p>
 <h2 id="configuring-a-jenkins-job">Configuring a Jenkins Job<a class="headerlink" href="#configuring-a-jenkins-job" title="Permanent link">&para;</a></h2>
-<p>Now that you have setup the global SpiraPlan settings in Jenkins, next you need make a new item in Jenkins to associate each of your Jenkins Jobs with their corresponding SpiraPlan Product and Release/Sprint. To do this,  go to the Jenkins Home Page and click in the upper left on New Item.</p>
+<p>Now that you have setup the global Spira settings in Jenkins, next you need make a new item in Jenkins to associate each of your Jenkins Jobs with their corresponding Spira Product and Release/Sprint. To do this,  go to the Jenkins Home Page and click in the upper left on New Item.</p>
 <p><img alt="" src="../img/Jenkins__Hudson_2.png" /></p>
 <p>In the new Item page enter a meaningful name for the job and select Freestyle project.  At the bottom left of the page click the OK button.</p>
 <p><img alt="" src="../img/Jenkins__Hudson_3.png" /></p>
-<p>Scroll down in the Build Triggers page to the Build Environment Section. Under the section "<strong>Build Environment</strong>" select the checkbox marked "<strong>Enable Spira Integration</strong>". That will display the SpiraPlan configuration panel for this job:</p>
+<p>Scroll down in the Build Triggers page to the Build Environment Section. Under the section "<strong>Build Environment</strong>" select the checkbox marked "<strong>Enable Spira Integration</strong>". That will display the Spira configuration panel for this job:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_9.png" /></p>
 <p>Now you need to enter the following values:</p>
 <ul>
-<li>
-<p><strong>Product ID</strong> -- The numeric ID of the SpiraPlan Product that the Build belongs to. (e.g. for Product PR1 enter "1")</p>
-</li>
-<li>
-<p><strong>Release Version Number</strong> -- The <strong>active</strong> version number of the SpiraPlan Release/Sprint that the Build belongs to. (e.g. for Release RL4 with version number 1.0.0.0 you'd enter "1.0.0.0")</p>
-</li>
+<li><strong>Product ID</strong>: The numeric ID of the Spira Product that the Build belongs to. (e.g. for Product PR1 enter "1")</li>
+<li><strong>Release Version Number</strong>: The <strong>active</strong> version number of the Spira Release/Sprint that the Build belongs to. (e.g. for Release RL4 with version number 1.0.0.0 you'd enter "1.0.0.0")</li>
 </ul>
 <p><img alt="" src="../img/Jenkins__Hudson_10.png" /></p>
-<p>Once you have entered in the Product ID and Release version number, click the [Verify Release] button and the plugin will connect to SpiraPlan and verify that the product exists, that the release/sprint is currently active, that the specified release/sprint exists in the product, and that the current user can connect to that product.</p>
-<p>Once it has verified successfully, click the [Save] button at the bottom of the screen to save your Job configuration settings. You are now ready to use Jenkins with SpiraPlan.</p>
-<h2 id="viewing-the-build-results-in-spiraplan">Viewing the Build Results in SpiraPlan<a class="headerlink" href="#viewing-the-build-results-in-spiraplan" title="Permanent link">&para;</a></h2>
-<p>Now that you have associated your Jenkins job with a specific SpiraPlan product and active release/sprint, you can now use Jenkins to manage your software builds and have the results of the build be reported back into SpiraPlan. For example when the 'Build JUnit' job illustrated in the previous section is executed, it will report back the following result in Jenkins:</p>
+<p>Once you have entered in the Product ID and Release version number, click the [Verify Release] button and the plugin will connect to Spira and verify that the product exists, that the release/sprint is currently active, that the specified release/sprint exists in the product, and that the current user can connect to that product.</p>
+<p>Once it has verified successfully, click the [Save] button at the bottom of the screen to save your Job configuration settings. You are now ready to use Jenkins with Spira.</p>
+<h2 id="viewing-the-build-results-in-spira">Viewing the Build Results in Spira<a class="headerlink" href="#viewing-the-build-results-in-spira" title="Permanent link">&para;</a></h2>
+<p>Now that you have associated your Jenkins job with a specific Spira product and active release/sprint, you can now use Jenkins to manage your software builds and have the results of the build be reported back into Spira. For example when the 'Build JUnit' job illustrated in the previous section is executed, it will report back the following result in Jenkins:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_11.png" /></p>
-<p>The corresponding build entry will also be created in SpiraPlan under the specified product and release/sprint:</p>
+<p>The corresponding build entry will also be created in Spira under the specified product and release/sprint:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_12.png" /></p>
 <p>If you have configured your Product Home to include the list of recent builds, the build information will also be displayed on the Project Home dashboard:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_13.png" /></p>
-<p>Clicking on either of the hyperlinks will allow you to navigate to the Build details page inside SpiraPlan:</p>
+<p>Clicking on either of the hyperlinks will allow you to navigate to the Build details page inside Spira:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_14.png" /></p>
 <p>This page will display the status (success / failure) and details of the build (from the Jenkins Console Output) together with a list of the associated incidents, test runs and source code commits. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira Importer plugin and automatically link incidents and source code commits to the build information.</p>
 <h2 id="working-with-source-code-changesets">Working with Source Code Changesets<a class="headerlink" href="#working-with-source-code-changesets" title="Permanent link">&para;</a></h2>
-<p>When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in SpiraPlan. For example they may want to record that the commit fixes a specific incident or implements a specific feature (requirement).</p>
-<p>Linking an artifact is very simple. All the developer needs to do is enter the artifact token in the following format:</p>
-<p><strong>[PREFIX:ID]</strong></p>
-<p>The first half, the Artifact Identifier, is a two-letter code that is used throughout SpiraPlan, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the number of the artifact. So by creating a commit message that reads:</p>
-<p>SpiraPlan will automatically detect the tokens and will include links to them under the Associations tab for each commit detail in SpiraPlan.</p>
-<p>In addition, when Jenkins creates the next build (that includes this commit), the plugin will automatically parse the commit message and convert the tokens into hyperlinks to the corresponding SpiraPlan artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the SpiraPlan items:</p>
+<p>When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in Spira. For example they may want to record that the commit fixes a specific incident or implements a specific feature (requirement).</p>
+<p>Linking an artifact is very simple. All the developer needs to do is enter the artifact token in the following format: <code>\[PREFIX:ID\]</code></p>
+<p>The first half, the Artifact Identifier, is a two-letter code that is used throughout Spira, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the number of the artifact. So by creating a commit message that reads:</p>
+<p>Spira will automatically detect the tokens and will include links to them under the Associations tab for each commit detail in Spira.</p>
+<p>In addition, when Jenkins creates the next build (that includes this commit), the plugin will automatically parse the commit message and convert the tokens into hyperlinks to the corresponding Spira artifact. That way, when developers view the build changelog in Jenkins, it will automatically include links to the Spira items:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_15.png" /></p>
-<p>Meanwhile, inside SpiraPlan, the system will use the same information to automatically link the list of associated commits to the build record:</p>
+<p>Meanwhile, inside Spira, the system will use the same information to automatically link the list of associated commits to the build record:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_16.png" /></p>
 <p>If the commit message contains Incident tokens, the plugin will also automatically link those incidents to the appropriate build:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_17.png" /></p>
-<p>Similarly when you view the list of incidents inside SpiraPlan you will now be able to sort and filter the list by the associated build:</p>
+<p>Similarly when you view the list of incidents inside Spira you will now be able to sort and filter the list by the associated build:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_18.png" /></p>
-<p>Congratulations! You are now able to use SpiraPlan and Jenkins to be able to manage your builds and have the build status integrated into your SpiraPlan project dashboard.</p>
+<p>Congratulations! You are now able to use Spira and Jenkins to be able to manage your builds and have the build status integrated into your Spira project dashboard.</p>
 <h2 id="scheduling-test-sets-upon-successful-builds">Scheduling Test Sets Upon Successful Builds<a class="headerlink" href="#scheduling-test-sets-upon-successful-builds" title="Permanent link">&para;</a></h2>
-<p>One additional feature of the integration with SpiraTest, SpiaTeam, and SpiraPlan (hereafter just SpiraPlan) is the ability to have SpiraPlan automatically schedule the execution of a test set whenever a build passes.</p>
-<p>To do that, make sure the Test Set is associated with the SpiraPlan release or sprint that is being built and then set the <strong>Schedule on Build</strong> field to "Yes" and optionally enter in the delay (after the build succeeds) that you want the test set to be scheduled for:</p>
+<p>One additional feature of the integration is the ability to have Spira automatically schedule the execution of a test set whenever a build passes.</p>
+<p>To do that, make sure the Test Set is associated with the Spira release or sprint that is being built and then set the <strong>Schedule on Build</strong> field to "Yes" and optionally enter in the delay (after the build succeeds) that you want the test set to be scheduled for:</p>
 <p><img alt="" src="../img/Jenkins__Hudson_19.png" /></p>
 <p>This means that you don't need to separately manage your build schedule in Jenkins and your test automation schedule in SpiraTest.</p>
 

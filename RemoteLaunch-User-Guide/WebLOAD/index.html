@@ -4814,15 +4814,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-webload-test-sets-from-spiraplan" class="md-nav__link">
+  <a href="#executing-webload-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing WebLOAD Test Sets from SpiraPlan
+        Executing WebLOAD Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing WebLOAD Test Sets from SpiraPlan">
+    <nav class="md-nav" aria-label="Executing WebLOAD Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9002,6 +9002,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9107,15 +9135,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executing-webload-test-sets-from-spiraplan" class="md-nav__link">
+  <a href="#executing-webload-test-sets-from-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executing WebLOAD Test Sets from SpiraPlan
+        Executing WebLOAD Test Sets from Spira
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Executing WebLOAD Test Sets from SpiraPlan">
+    <nav class="md-nav" aria-label="Executing WebLOAD Test Sets from Spira">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -9163,39 +9191,37 @@
 
 
 <h1 id="webload">WebLOAD<a class="headerlink" href="#webload" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>RadView WebLoad is a WebLOAD is a performance, scalability, and reliability testing solution for internet applications.   WebLOAD is easy to use and delivers maximum testing performance and value. WebLOAD verifies the scalability and integrity of internet applications by generating a load composed of Virtual Clients that simulate real-world traffic. Probing Clients let you refine the testing process by acting as a single user that measures the performance of targeted activities, and provides individual performance statistics of the internet application under load.</p>
 <p>This section covers installing and using the Engine to report back the success of a WebLoad protocol test scripts/agendas for the WebLOAD environment.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This integration requires at least version 4.0 of SpiraTest/Plan and has been tested against version WebLOAD-Professional-12.2.0.087 of WebLoad.</p>
+<p>This integration requires at least version 4.0 of Spira and has been tested against version WebLOAD-Professional-12.2.0.087 of WebLoad.</p>
 </div>
 <h2 id="installing-the-webload-engine">Installing the WebLOAD Engine<a class="headerlink" href="#installing-the-webload-engine" title="Permanent link">&para;</a></h2>
-<p>This section assumes that you already have a working installation of SpiraTest or SpiraPplan and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
+<p>This section assumes that you already have a working installation of Spira and have installed RemoteLaunch on the various test automation hosts following the instructions in <a href="../RemoteLaunch-Guide/">RemoteLaunch Guide</a>. Once those prerequisites are in place, please follow these steps:</p>
 <ul>
 <li>Download and extract the WebLOADEngine.zip file from the Inflectra website and locate the appropriate WebLoad.dll for the version of WebLOAD that you are using.</li>
 <li>If you don't see the version listed, just use the nearest version that is <em>lower</em> than your current version.</li>
 <li>Copy the file "WebLoad.dll"  into the "extensions" sub-folder of the RemoteLaunch installation.</li>
-<li>Log in to SpiraPlan as a system administrator and go into SpiraPlan main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
+<li>Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under <strong>Integration</strong>.</li>
 </ul>
 <p><img alt="" src="../img/WebLOAD_1.png" /></p>
 <ul>
 <li>Click the "Add" button to enter the new test automation engine details page. The fields required are as follows:</li>
 </ul>
 <p><img alt="" src="../img/WebLOAD_2.png" /></p>
-<ul>
-<li>
-<p><strong>Name</strong>: This is the short display name of the automation engine.  It can be anything that is meaningful to your users, and will be displayed  in the Automation Host dropdown when the user selects it in the test set.</p>
-</li>
-<li>
-<p><strong>Description</strong>: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)</p>
-</li>
-<li>
-<p><strong>Active</strong>: If checked, the engine is active and able to be used for any project.</p>
-</li>
-<li>
-<p><strong>Token</strong>: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine, in this case WebLoad.dll, to actually use for a given test case. For WebLOAD, it needs to be simply "WebLoad".  This is case sensitive, and if it does not match an error will be written to a Blocked test run that will be phrased using what was entered as the token.  For example, if the token is misspelled, WebLpsd, the error message will say  “Extension 'WebLpsd' was not loaded or was in error condition.  Could not run TC:73 in TX:29”</p>
-</li>
-</ul>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Name</span><span class="o">**</span><span class="p">:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">short</span><span class="w"> </span><span class="n">display</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">automation</span><span class="w"> </span><span class="n">engine</span><span class="o">.</span><span class="w">  </span><span class="n">It</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">anything</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">meaningful</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">users</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">displayed</span><span class="w">  </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="n">Host</span><span class="w"> </span><span class="n">dropdown</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="n">selects</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">set</span><span class="o">.</span>
+<span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Description</span><span class="o">**</span><span class="p">:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">long</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">automation</span><span class="w"> </span><span class="n">engine</span><span class="o">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">anything</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">meaningful</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">users</span><span class="o">.</span><span class="w"> </span><span class="p">(</span><span class="n">Optional</span><span class="p">)</span>
+<span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Active</span><span class="o">**</span><span class="p">:</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">checked</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">engine</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">able</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">project</span><span class="o">.</span>
+<span class="o">-</span><span class="w">   </span><span class="o">**</span><span class="n">Token</span><span class="o">**</span><span class="p">:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">unique</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">automation</span><span class="w"> </span><span class="n">engine</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">tell</span><span class="w"> </span><span class="n">RemoteLaunch</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">engine</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">case</span><span class="w"> </span><span class="n">WebLoad</span><span class="o">.</span><span class="n">dll</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">actually</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">case</span><span class="o">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">WebLOAD</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">simply</span><span class="w"> </span><span class="s2">&quot;WebLoad&quot;</span><span class="o">.</span><span class="w">  </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">case</span><span class="w"> </span><span class="n">sensitive</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">written</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Blocked</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">phrased</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">entered</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">token</span><span class="o">.</span><span class="w">  </span><span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">misspelled</span><span class="p">,</span><span class="w"> </span><span class="n">WebLpsd</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">say</span><span class="w">  </span><span class="err">“</span><span class="n">Extension</span><span class="w"> </span><span class="s1">&#39;WebLpsd&#39;</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">condition</span><span class="o">.</span><span class="w">  </span><span class="n">Could</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">TC</span><span class="p">:</span><span class="mi">73</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">TX</span><span class="p">:</span><span class="mi">29</span><span class="err">”</span>
+</code></pre></div></td></tr></table></div>
+
 <p>Once you have finished, click the <code>Insert &amp; Close</code> button and you will be taken back to the Test Automation list page, with WebLOAD listed as an available automation engine.</p>
 <p><img alt="" src="../img/WebLOAD_3.png" /></p>
 <h2 id="webload-remotelaunch-settings">WebLOAD RemoteLaunch Settings<a class="headerlink" href="#webload-remotelaunch-settings" title="Permanent link">&para;</a></h2>
@@ -9222,13 +9248,13 @@
 </ul>
 </div>
 <h2 id="setting-up-the-automated-test-cases">Setting up the Automated Test Cases<a class="headerlink" href="#setting-up-the-automated-test-cases" title="Permanent link">&para;</a></h2>
-<p>This section describes the process for setting up a test case in SpiraPlan for automation and linking it to an automated WebLOAD test script.</p>
-<p>First you need to display the list of test cases in SpiraPlan (by clicking Testing &gt; Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Overview" tab and scroll down to the Automation section:</p>
+<p>This section describes the process for setting up a test case in Spira for automation and linking it to an automated WebLOAD test script.</p>
+<p>First you need to display the list of test cases in Spira (by clicking Testing &gt; Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Overview" tab and scroll down to the Automation section:</p>
 <p><img alt="" src="../img/WebLOAD_5.png" /></p>
 <p>You need to enter the following fields:</p>
 <ul>
 <li><strong>Automation Engine</strong>: Choose the WebLOAD Automation Engine that you created in the previous section from the drop-down list.</li>
-<li><strong>Script Type</strong>: This should be left as to Attached as the integration with WebLOAD only supports referencing WebLOAD test script .tpl files and not physically uploading the test scripts into SpiraPlan.</li>
+<li><strong>Script Type</strong>: This should be left as to Attached as the integration with WebLOAD only supports referencing WebLOAD test script .tpl files and not physically uploading the test scripts into Spira.</li>
 <li><strong>Filename</strong>: This is the full file path or keyword shortcut to the WebLOAD test script .tpl file. See "Tokens for Specifying File Locations" info panel above for more inforamtion about they keywords you can use</li>
 <li><strong>Document Type</strong>: Leave as Default</li>
 <li><strong>Document Folder</strong>: Leave as Root Folder</li>
@@ -9238,15 +9264,15 @@
 <p>Once you are happy with the values, click <code>Save</code> to update the test case. Now you are ready to schedule the automated test case for execution.</p>
 <p><img alt="" src="../img/WebLOAD_6.png" /></p>
 <h3 id="using-parameterized-test-cases">Using Parameterized Test Cases<a class="headerlink" href="#using-parameterized-test-cases" title="Permanent link">&para;</a></h3>
-<p>Currently the WebLOAD automation engine does not support the passing of parameter values from SpiraPlan to WebLOAD.  Only the file path to the WebLOAD project file (*.tpl) file can be passed.  Other parameters must be set in RemoteLaunch as illustrated earlier.</p>
-<h2 id="executing-webload-test-sets-from-spiraplan">Executing WebLOAD Test Sets from SpiraPlan<a class="headerlink" href="#executing-webload-test-sets-from-spiraplan" title="Permanent link">&para;</a></h2>
-<p>Before we can executed tests we need to setup the appropriate automation hosts and test sets in SpiraPlan. Once this is done, there are two ways to execute automated test cases in SpiraPlan:</p>
+<p>Currently the WebLOAD automation engine does not support the passing of parameter values from Spira to WebLOAD.  Only the file path to the WebLOAD project file (*.tpl) file can be passed.  Other parameters must be set in RemoteLaunch as illustrated earlier.</p>
+<h2 id="executing-webload-test-sets-from-spira">Executing WebLOAD Test Sets from Spira<a class="headerlink" href="#executing-webload-test-sets-from-spira" title="Permanent link">&para;</a></h2>
+<p>Before we can executed tests we need to setup the appropriate automation hosts and test sets in Spira. Once this is done, there are two ways to execute automated test cases in Spira:</p>
 <ol>
 <li>Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future</li>
 <li>Execute the test cases right now on the local computer.</li>
 </ol>
 <h3 id="setup-the-automation-hosts-and-test-sets">Setup the Automation Hosts and Test Sets<a class="headerlink" href="#setup-the-automation-hosts-and-test-sets" title="Permanent link">&para;</a></h3>
-<p>Go to Testing &gt; Automation Hosts from the main navbar in SpiraPlan to display the list of automation hosts.</p>
+<p>Go to Testing &gt; Automation Hosts from the main navbar in Spira to display the list of automation hosts.</p>
 <p><img alt="" src="../img/WebLOAD_7.png" /></p>
 <p>Make sure  you have created an Automation Host for each computer that is going to run an automated test case. The name and description can be set to anything meaningful, but the Token field <strong>must be set to the same token that is specified in the RemoteLaunch application</strong> on that specific machine.</p>
 <p><img alt="" src="../img/WebLOAD_8.png" /></p>
@@ -9266,7 +9292,7 @@
 <li><strong>Type</strong>: This needs to be set to "Automated" for automated testing</li>
 </ul>
 <h3 id="execute-the-test-sets">Execute the Test Sets<a class="headerlink" href="#execute-the-test-sets" title="Permanent link">&para;</a></h3>
-<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll SpiraPlan for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either:</p>
+<p>Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either:</p>
 <ol>
 <li><strong>Completed</strong>: the automation engine could be launched and the test has completed; or</li>
 <li><strong>Blocked</strong>: RemoteLaunch was not able to start the automation engine.</li>
@@ -9284,18 +9310,18 @@
 <p class="admonition-title">Info</p>
 <p>While the tests are executing you will see the WebLOAD application open as WebLOAD executes the appropriate tests.</p>
 </div>
-<p>Once the tests have completed, you can log back into SpiraPlan and see the execution status of your test cases. If you click on a Test Run that was generated by WebLOAD, you will see the following information:</p>
+<p>Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by WebLOAD, you will see the following information:</p>
 <p><img alt="" src="../img/WebLOAD_12.png" /></p>
 <p>This screen indicates the status of the test run that was reported back from WebLOAD together with any messages or other information. The Test Name indicates the name of the test inside WebLOAD and the execution status corresponds the rules described above.</p>
 <p><img alt="" src="../img/WebLOAD_13.png" /></p>
-<p>In addition, the details in the test run from WebLOAD lists the input script and the parameters passed to the script so testers will know the file created that are correlated with tis test run in the output directory.  Here is an example of a successful WebLOAD script run through SpiraPlan:</p>
+<p>In addition, the details in the test run from WebLOAD lists the input script and the parameters passed to the script so testers will know the file created that are correlated with tis test run in the output directory.  Here is an example of a successful WebLOAD script run through Spira:</p>
 <div class="highlight"><pre><span></span><code>Results from results.xml: Passed Test 
 File Name: C:\Users\suzanne.bauer\Documents\WebLOAD\Sessions\input\WebLOADFirstTest.tpl
 with arguments: C:\Users\su.be\Documents\WebLOAD\Sessions\output\WebLOADFirstTest20200228135424.ls /rc C:\Users\su.be\Documents\WebLOAD\Sessions\output\results.xml /ar 300 
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Congratulations</p>
-<p>You are now able to run WebLOAD automated functional tests and have the results be recorded within SpiraTest /SpiraTeam/ SpiraPlan.</p>
+<p>You are now able to run WebLOAD automated functional tests and have the results be recorded within Spira.</p>
 </div>
 
 

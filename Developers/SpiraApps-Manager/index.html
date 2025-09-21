@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ids" class="md-skip">
+        <a href="#spiraappmanager" class="md-skip">
           Skip to content
         </a>
       
@@ -8420,6 +8420,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -8461,6 +8463,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -9080,6 +9084,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9124,6 +9156,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -9320,8 +9354,10 @@
 
 
 
-  <h1>SpiraAppManager</h1>
-
+<h1 id="spiraappmanager">SpiraAppManager<a class="headerlink" href="#spiraappmanager" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <p>The spiraAppManager is a helper class that provides a wide range of useful functions and operations to SpiraApps.</p>
 <h2 id="ids">IDs<a class="headerlink" href="#ids" title="Permanent link">&para;</a></h2>
 <p>The following ID fields are available from the spiraAppManager. They are useful for making internal API calls</p>
@@ -9894,7 +9930,7 @@
 </details>
 <details class="note">
 <summary>setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean</summary>
-<p>Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of <code>getDropdownItems</code> and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. <code>isActive</code> values of false cause the item to be hidden from the dropdown list. <code>isActive</code> values of true cause the item to be shown from the dropdown list. Only the <code>isActive</code> flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.</p>
+<p>Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of <code>getDropdownItems</code> and should be used with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. <code>isActive</code> values of false cause the item to be hidden from the dropdown list. <code>isActive</code> values of true cause the item to be shown from the dropdown list. Only the <code>isActive</code> flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.</p>
 <p>If the update is successful a true is returned to the function, otherwise a false is returned. </p>
 <ul>
 <li><strong>fieldName</strong>: The <a href="../SpiraApps-Reference/#available-field-names">name of the field</a> of an artifact</li>
@@ -10353,7 +10389,7 @@
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>key: string of the storage item's key </li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10364,7 +10400,7 @@
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>key: string of the storage item's key </li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10376,7 +10412,7 @@
 <li>key: string of the storage item's key </li>
 <li>productId: integer for the product id</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10388,7 +10424,7 @@
 <li>key: string of the storage item's key </li>
 <li>productId: integer for the product id</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 </div>
@@ -10400,7 +10436,7 @@
 <li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10410,7 +10446,7 @@
 <li>pluginGuid: the Guid of the SpiraApp - pass in APP_GUID</li>
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10421,7 +10457,7 @@
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>productId: integer for the product id</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10432,7 +10468,7 @@
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>productId: integer for the product id</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 <details class="note">
@@ -10443,7 +10479,7 @@
 <li>pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging</li>
 <li>productId: integer for the product id</li>
 <li>success: success callback function</li>
-<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)</li>
+<li>failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)</li>
 </ul>
 </details>
 </div>

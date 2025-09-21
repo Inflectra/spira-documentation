@@ -9046,6 +9046,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9251,6 +9279,9 @@
 
 
 <h1 id="using-spira-with-github">Using Spira with GitHub<a class="headerlink" href="#using-spira-with-github" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Teams can work seamlessly using both Spira and GitHub, using Inflectra's GitHub data sync engine to keep key information in sync between both applications.</p>
 <div class="admonition example">
@@ -9378,10 +9409,10 @@
 <p>Click on the "View product Mappings" button for GitHub Data Sync. You need to fill out the following fields to sync correctly:</p>
 <ul>
 <li>
-<p><strong>External Key</strong> -- The name of your GitHub repository. In the example above, where the URL in GitLab was <a href="https://github.com/octocat/Hello-World">https://github.com/octocat/Hello-World</a>, you would simply enter "Hello-World" for this setting.</p>
+<p><strong>External Key</strong>: The name of your GitHub repository. In the example above, where the URL in GitLab was <a href="https://github.com/octocat/Hello-World">https://github.com/octocat/Hello-World</a>, you would simply enter "Hello-World" for this setting.</p>
 </li>
 <li>
-<p><strong>Active</strong> -- Set this to yes so that the Data Sync plug-in knows to synchronize with this product.</p>
+<p><strong>Active</strong>: Set this to yes so that the Data Sync plug-in knows to synchronize with this product.</p>
 </li>
 </ul>
 <h3 id="configuring-issue-mappings">Configuring Issue Mappings<a class="headerlink" href="#configuring-issue-mappings" title="Permanent link">&para;</a></h3>
@@ -9391,10 +9422,10 @@
 <p>You must map every status in the system. Descriptions of the field are below:</p>
 <ul>
 <li>
-<p><strong>External Key</strong> -- Either <strong>open</strong> or <strong>closed</strong>, which are the only two statuses in GitHub</p>
+<p><strong>External Key</strong>: Either <strong>open</strong> or <strong>closed</strong>, which are the only two statuses in GitHub</p>
 </li>
 <li>
-<p><strong>Primary</strong> -- You must have exactly one primary key for <strong>open</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitHub changes.</p>
+<p><strong>Primary</strong>: You must have exactly one primary key for <strong>open</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitHub changes.</p>
 </li>
 </ul>
 <p>Click "Save" and assuming everything was done correctly, the plug-in should work. Start your Data Sync service and verify that issues in GitHub appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>

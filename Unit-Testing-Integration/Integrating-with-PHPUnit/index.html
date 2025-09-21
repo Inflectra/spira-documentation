@@ -5444,10 +5444,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-phpunit-with-spiratest" class="md-nav__link">
+  <a href="#using-phpunit-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using PHPUnit with SpiraTest
+        Using PHPUnit with Spira
       
     </span>
   </a>
@@ -8946,6 +8946,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9012,10 +9040,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-phpunit-with-spiratest" class="md-nav__link">
+  <a href="#using-phpunit-with-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using PHPUnit with SpiraTest
+        Using PHPUnit with Spira
       
     </span>
   </a>
@@ -9051,37 +9079,18 @@
 
 
 <h1 id="integrating-with-phpunit">Integrating with PHPUnit<a class="headerlink" href="#integrating-with-phpunit" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="installing-the-phpunit-extension">Installing the PHPUnit Extension<a class="headerlink" href="#installing-the-phpunit-extension" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to install the SpiraTest Extension for PHPUnit
-onto a workstation so that you can then run automated PHPUnit tests
-against a PHP application and have the results be recorded as test runs
-inside SpiraTest. It assumes that you already have a working
-installation of SpiraTest v3 or later, and a working PHP development
-environment. If you have an earlier version of SpiraTest you will need
-to upgrade to at least v3 before trying to use this extension.</p>
-<p>To obtain the latest version of the SpiraTest PHPUnit extension you
-simply need to go to <a href="http://www.inflectra.com/SpiraTest/Downloads.aspx">http://www.inflectra.com/SpiraTest/Downloads.aspx</a>
-page and download the PHPUnit Extension compressed archive (.zip). This
-process is described in the <em>SpiraTest Administration Guide</em> in more
-detail.</p>
-<p>The PHPUnit extension is provided as a set of PHP source files that can
-be imported into your existing unit tests to add the SpiraTest reporting
-functionality. Once you have downloaded the Zip archive, you simply need
-to uncompress it into a folder of your choice on your local system (e.g.
-C:\Program Files\SpiraTest\PHPUnit Extension)</p>
-<p>Now to use the extension within your test cases, you need to first make
-sure that the folder is added to the PHP <em>include_path</em>. The method for
-doing this is dependent on the platform you're using, so please refer to
-the documentation on <a href="http://www.junit.org">php.org</a> for details on the
-appropriate method for your platform. Alternatively you can copy the
-PHPUnit extension files to the root of the PHP installation and then
-just include the extension files using the root folder syntax.</p>
-<p>Once you have completed these steps, you are now ready to begin using
-your PHPUnit test fixtures with SpiraTest.</p>
-<h2 id="using-phpunit-with-spiratest">Using PHPUnit with SpiraTest<a class="headerlink" href="#using-phpunit-with-spiratest" title="Permanent link">&para;</a></h2>
-<p>The typical code structure for a PHPUnit test suite and test case coded
-in PHP is as follows:</p>
-<p>a) Sample Test Suite
+<p>This section outlines how to install the Spira Extension for PHPUnit onto a workstation so that you can then run automated PHPUnit tests against a PHP application and have the results be recorded as test runs inside Spira. It assumes that you already have a working installation of Spira v3 or later, and a working PHP development environment. If you have an earlier version of Spira you will need to upgrade to at least v3 before trying to use this extension.</p>
+<p>To obtain the latest version of the Spira PHPUnit extension you simply need to go to <a href="http://www.inflectra.com/SpiraTest/Downloads.aspx">http://www.inflectra.com/SpiraTest/Downloads.aspx</a> page and download the PHPUnit Extension compressed archive (.zip). This process is described in the <em>Spira Administration Guide</em> in more detail.</p>
+<p>The PHPUnit extension is provided as a set of PHP source files that can be imported into your existing unit tests to add the Spira reporting functionality. Once you have downloaded the Zip archive, you simply need to uncompress it into a folder of your choice on your local system (e.g. C:\Program Files\Spira\PHPUnit Extension)</p>
+<p>Now to use the extension within your test cases, you need to first make sure that the folder is added to the PHP <em>include_path</em>. The method for doing this is dependent on the platform you're using, so please refer to the documentation on <a href="http://www.junit.org">php.org</a> for details on the appropriate method for your platform. Alternatively you can copy the PHPUnit extension files to the root of the PHP installation and then just include the extension files using the root folder syntax.</p>
+<p>Once you have completed these steps, you are now ready to begin using your PHPUnit test fixtures with Spira.</p>
+<h2 id="using-phpunit-with-spira">Using PHPUnit with Spira<a class="headerlink" href="#using-phpunit-with-spira" title="Permanent link">&para;</a></h2>
+<p>The typical code structure for a PHPUnit test suite and test case coded in PHP is as follows:</p>
+<p>a) Sample Test Suite</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * </span>
@@ -9110,6 +9119,8 @@ in PHP is as follows:</p>
  <span class="cp">?&gt;</span>
 
 <span class="x">b) Sample Test Case</span>
+
+<span class="x">```PHP</span>
 <span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework/TestCase.php&#39;</span><span class="p">;</span>
 
@@ -9184,30 +9195,14 @@ in PHP is as follows:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
-</code></pre></div></p>
-<p>The PHP class is marked as a PHPUnit test case by inheriting from the
-<em>PHPUnit_Framework_TestCase</em> base class, and the individual test
-methods are identified by using the 'test' prefix, with special setUp()
-and tearDown() methods reserved for the respective purposes. When you
-open up the class in a PHPUnit runner or execute from the command line
-it loads all the test classes and executes all the methods marked with
-'test...' in turn.</p>
-<p>Each of the Assert statements is used to test the state of the
-application after executing some sample code that calls the
-functionality being tested. If the condition in the assertion is true,
-then execution of the test continues, if it is false, then a failure is
-logged and PHPUnit moves on to the next test method.</p>
-<p>So, to use SpiraTest with PHPUnit, each of the test cases written for
-execution by PHPUnit needs to have a corresponding test case in
-SpiraTest. These can be either existing test cases that have manual test
-steps or they can be new test cases designed specifically for automated
-testing and therefore have no defined test steps. In either case, the
-changes that need to be made to the PHPUnit test case and test suite for
-SpiraTest to record the PHPUnit test run are illustrated below:</p>
+</code></pre></div>
+<p>The PHP class is marked as a PHPUnit test case by inheriting from the <em>PHPUnit_Framework_TestCase</em> base class, and the individual test methods are identified by using the 'test' prefix, with special setUp() and tearDown() methods reserved for the respective purposes. When you open up the class in a PHPUnit runner or execute from the command line it loads all the test classes and executes all the methods marked with 'test...' in turn.</p>
+<p>Each of the Assert statements is used to test the state of the application after executing some sample code that calls the functionality being tested. If the condition in the assertion is true, then execution of the test continues, if it is false, then a failure is logged and PHPUnit moves on to the next test method.</p>
+<p>So, to use Spira with PHPUnit, each of the test cases written for execution by PHPUnit needs to have a corresponding test case in Spira. These can be either existing test cases that have manual test steps or they can be new test cases designed specifically for automated testing and therefore have no defined test steps. In either case, the changes that need to be made to the PHPUnit test case and test suite for Spira to record the PHPUnit test run are illustrated below:</p>
 <p>a) Sample Test Suite</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
-<span class="sd"> * Passes a list of tests to be executed to PHPUnit and adds the custom SpiraTest Listener</span>
+<span class="sd"> * Passes a list of tests to be executed to PHPUnit and adds the custom Spira Listener</span>
 <span class="sd"> * </span>
 <span class="sd"> * @author      Inflectra Corporation</span>
 <span class="sd"> * @version     0</span>
@@ -9223,19 +9218,19 @@ SpiraTest to record the PHPUnit test run are illustrated below:</p>
  <span class="c1">// from the ArrayTest class</span>
   <span class="nv">$suite</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestSuite</span><span class="p">(</span><span class="s1">&#39;SimpleTest&#39;</span><span class="p">);</span>
 
- <span class="c1">//Set the timezone identifier to match that used by the SpiraTest server</span>
+ <span class="c1">//Set the timezone identifier to match that used by the Spira server</span>
  <span class="nb">date_default_timezone_set</span> <span class="p">(</span><span class="s2">&quot;US/Eastern&quot;</span><span class="p">);</span>
 
- <span class="c1">//Create a new SpiraTest listener instance and specify the connection info</span>
+ <span class="c1">//Create a new Spira listener instance and specify the connection info</span>
  <span class="nv">$spiraListener</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SpiraListener_Listener</span><span class="p">;</span>
- <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setBaseUrl</span> <span class="p">(</span><span class="s1">&#39;http://localhost/SpiraTeam&#39;</span><span class="p">);</span>
+ <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setBaseUrl</span> <span class="p">(</span><span class="s1">&#39;http://localhost/Spira&#39;</span><span class="p">);</span>
  <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setUserName</span> <span class="p">(</span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">);</span>
  <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setPassword</span> <span class="p">(</span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">);</span>
  <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setProjectId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
  <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setReleaseId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
  <span class="nv">$spiraListener</span><span class="o">-&gt;</span><span class="na">setTestSetId</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
- <span class="c1">// Create a test result and attach the SpiraTest listener</span>
+ <span class="c1">// Create a test result and attach the Spira listener</span>
  <span class="c1">// object as an observer to it (as well as the default console text listener)</span>
  <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_Framework_TestResult</span><span class="p">;</span>
  <span class="nv">$textPrinter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PHPUnit_TextUI_ResultPrinter</span><span class="p">;</span>
@@ -9253,7 +9248,7 @@ SpiraTest to record the PHPUnit test run are illustrated below:</p>
 <span class="k">require_once</span> <span class="s1">&#39;PHPUnit/Framework/TestCase.php&#39;</span><span class="p">;</span>
 
 <span class="sd">/**</span>
-<span class="sd"> * Some simple tests using the ability to return results back to SpiraTest</span>
+<span class="sd"> * Some simple tests using the ability to return results back to Spira</span>
 <span class="sd"> * </span>
 <span class="sd"> * @author      Inflectra Corporation</span>
 <span class="sd"> * @version     0</span>
@@ -9324,55 +9319,35 @@ SpiraTest to record the PHPUnit test run are illustrated below:</p>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<p>Firstly, each of the individual test methods is appended with two
-underscores followed by the ID of the corresponding test case in
-SpiraTest. So for example testSuccess() is now testSuccess__5() as it
-maps to test case TC00005 inside SpiraTest.</p>
-<p>Second, in the Test Suite class, the PHPUnit TestResult object is passed
-an additional PHPUnit listener (in addition to the default one). This
-special listener class intercepts the results from the test run during
-execution and uses it to generate the web-service messages that are sent
-to SpiraTest to communicate the test results.</p>
-<p>The following attributes need to be set on the instance of the
-<em>SpiraListener_Listener</em>() object so that the extension can access the
-SpiraTest repository:</p>
-<p><strong>baseUrl</strong> -- The base URL used to access your instance of SpiraTest
-(e.g. <a href="http://myserver/SpiraTest">http://myserver/SpiraTest</a>). It should include the protocol (e.g.
-http/https), the server-name, the port number (if not 80/443) and the
-virtual directory (if there is one).</p>
-<p><strong>userName</strong> - A valid username for the instance of SpiraTest that has
-access to the project specified above</p>
-<p><strong>password</strong> - A valid password for the user specified above</p>
-<p><strong>projectId</strong> -- The ID of the project inside SpiraTest (this can be
-found on the project homepage in the "Project Overview" section)</p>
-<p><strong>releaseId</strong> - The ID of the SpiraTest release to associate the test
-run with. This can be found on the releases list page (click on the
-Planning &gt; Releases tab). If you don't want to associate the test run
-with a specific release, just use the value -1 to indicate N/A.</p>
-<p><strong>testSetId</strong> - The ID of the SpiraTest test set to associate the test
-run with. This can be found on the test set list page (click on the
-Testing &gt; Test Sets tab). If you don't want to associate the test run
-with a specific test set, just use the value -1 to indicate N/A.</p>
+<p>Firstly, each of the individual test methods is appended with two underscores followed by the ID of the corresponding test case in Spira. So for example testSuccess() is now testSuccess__5() as it maps to test case TC00005 inside Spira.</p>
+<p>Second, in the Test Suite class, the PHPUnit TestResult object is passed an additional PHPUnit listener (in addition to the default one). This special listener class intercepts the results from the test run during execution and uses it to generate the web-service messages that are sent to Spira to communicate the test results.</p>
+<p>The following attributes need to be set on the instance of the <em>SpiraListener_Listener</em>() object so that the extension can access the Spira repository:</p>
+<ul>
+<li><strong>baseUrl</strong>: The base URL used to access your instance of Spira (e.g. <a href="http://myserver/Spira">http://myserver/Spira</a>). It should include the protocol (e.g. http/https), the server-name, the port number (if not 80/443) and the virtual directory (if there is one).</li>
+<li><strong>userName</strong> - A valid username for the instance of Spira that has access to the project specified above</li>
+<li><strong>password</strong> - A valid password for the user specified above</li>
+<li><strong>projectId</strong>: The ID of the project inside Spira (this can be found on the project homepage in the "Project Overview" section)</li>
+<li><strong>releaseId</strong> - The ID of the Spira release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to associate the test run with a specific release, just use the value -1 to indicate N/A.</li>
+<li><strong>testSetId</strong> - The ID of the Spira test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to associate the test run with a specific test set, just use the value -1 to indicate N/A.</li>
+</ul>
 <p>The SpiraListener_Listener class can also be called with the parameters
-as the constructor arguments:
-<div class="highlight"><pre><span></span><code><span class="x">//Create a new SpiraTest listener instance and specify the connection info</span>
+as the constructor arguments:</p>
+<div class="highlight"><pre><span></span><code><span class="x">//Create a new Spira listener instance and specify the connection info</span>
 <span class="x"> $spiraListener = new SpiraListener_Listener (</span>
-<span class="x">&#39;http://localhost/SpiraTeam&#39;,</span>
+<span class="x">&#39;http://localhost/Spira&#39;,</span>
 <span class="x">    &#39;fredbloggs&#39;,</span>
 <span class="x"> &#39;fredbloggs&#39;,</span>
 <span class="x">    1,</span>
 <span class="x">    1,</span>
 <span class="x">    1);</span>
-</code></pre></div></p>
-<p>You can also attach the listener to the class declaratively by adding it
-to the phpunit.xml configuration file instead of adding through PHP
-code:</p>
+</code></pre></div>
+<p>You can also attach the listener to the class declaratively by adding it to the phpunit.xml configuration file instead of adding through PHP code:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;phpunit&gt;</span>
 <span class="w">  </span><span class="nt">&lt;listeners&gt;</span>
 <span class="w">    </span><span class="nt">&lt;listener</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;SpiraListener_Listener&quot;</span><span class="w"> </span><span class="na">file=</span><span class="s">&quot;../SpiraListener/Listener.php&quot;</span><span class="nt">&gt;</span>
 <span class="w">          </span><span class="nt">&lt;arguments&gt;</span>
 <span class="w">              </span><span class="cm">&lt;!-- URL --&gt;</span>
-<span class="w">              </span><span class="nt">&lt;string&gt;</span>http://localhost/SpiraTeam<span class="nt">&lt;/string&gt;</span>
+<span class="w">              </span><span class="nt">&lt;string&gt;</span>http://localhost/Spira<span class="nt">&lt;/string&gt;</span>
 <span class="w">              </span><span class="cm">&lt;!-- User Name --&gt;</span>
 <span class="w">              </span><span class="nt">&lt;string&gt;</span>fredbloggs<span class="nt">&lt;/string&gt;</span>
 <span class="w">              </span><span class="cm">&lt;!-- User Password --&gt;</span>
@@ -9394,25 +9369,21 @@ code:</p>
 <span class="w">  </span><span class="nt">&lt;/testsuites&gt;</span>
 <span class="nt">&lt;/phpunit&gt;</span>
 </code></pre></div>
-<p>Now all you need to do is save your code, launch PHPUnit, run the test
-suite as you would normally do, and when you view the test cases in
-SpiraTest, you should see a PHPUnit automated test run displayed in the
-list of executed test runs:</p>
+<p>Now all you need to do is save your code, launch PHPUnit, run the test suite as you would normally do, and when you view the test cases in Spira, you should see a PHPUnit automated test run displayed in the list of executed test runs:</p>
 <p><img alt="" src="../img/Integrating_with_PHPUnit_23.png" /></p>
-<p>Clicking on one of the PHPUnit test runs will bring up a screen that
-provides information regarding what PHPUnit test method failed, what the
-error was, together with the associated code stack-trace:</p>
+<p>Clicking on one of the PHPUnit test runs will bring up a screen that provides information regarding what PHPUnit test method failed, what the error was, together with the associated code stack-trace:</p>
 <p><img alt="" src="../img/Integrating_with_PHPUnit_24.png" /></p>
-<p>Congratulations... You are now able to run PHPUnit automated tests and
-have the results be recorded within SpiraTest. The sample test suite
-SampleSuite.php and sample test case SampleTest.php are
-provided with the installation in the Samples subfolder.</p>
+<p>Congratulations... You are now able to run PHPUnit automated tests and have the results be recorded within Spira. The sample test suite SampleSuite.php and sample test case SampleTest.php are provided with the installation in the Samples subfolder.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

@@ -6186,10 +6186,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-axosoft" class="md-nav__link">
+  <a href="#using-spira-with-axosoft" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with Axosoft
+        Using Spira with Axosoft
       
     </span>
   </a>
@@ -9035,6 +9035,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9201,10 +9229,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-spirateam-with-axosoft" class="md-nav__link">
+  <a href="#using-spira-with-axosoft" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using SpiraTeam with Axosoft
+        Using Spira with Axosoft
       
     </span>
   </a>
@@ -9229,352 +9257,134 @@
 
 
 <h1 id="using-spira-with-axosoft-14">Using Spira with Axosoft 14+<a class="headerlink" href="#using-spira-with-axosoft-14" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the Axosoft
-defect tracking system (formerly known as OnTime). The built-in
-integration service allows the quality assurance team to manage their
-requirements and test cases in SpiraTeam, execute test runs in
-SpiraTest, and then have the new incidents generated during the run be
-automatically loaded into Axosoft.</p>
-<p>Once the incidents are loaded into Axosoft as defects, the development
-team can then manage the lifecycle of these defects in Axosoft, and have
-the status changes in Axosoft be reflected back in SpiraTeam.</p>
-<div class="admonition danger">
-<p class="admonition-title">Set up data synchronization</p>
-<p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Axosoft defect tracking system (formerly known as OnTime). The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into Axosoft.</p>
+<p>Once the incidents are loaded into Axosoft as defects, the development team can then manage the lifecycle of these defects in Axosoft, and have the status changes in Axosoft be reflected back in Spira.</p>
+<p>!!! danger "Set up data synchronization"     <strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to configure the integration service to export
-incidents into Axosoft and pick up subsequent status changes in Axosoft
-and have them update SpiraTeam. It assumes that you already have a
-working installation of SpiraTest, SpiraPlan or SpiraTeam v4.0 or later
-and a working installation of Axosoft 14 or later (either hosted in the
-cloud or on-premise). If you have an earlier version of SpiraTeam, you
-will need to upgrade to at least v4.0 before trying to integrate with
-Axosoft.</p>
-<p>The steps that need to be performed to configure integration with
-Axosoft are as follows:</p>
+<p>This section outlines how to configure the integration service to export incidents into Axosoft and pick up subsequent status changes in Axosoft and have them update Spira. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v4.0 or later and a working installation of Axosoft 14 or later (either hosted in the cloud or on-premise). If you have an earlier version of Spira, you will need to upgrade to at least v4.0 before trying to integrate with Axosoft.</p>
+<p>The steps that need to be performed to configure integration with Axosoft are as follows:</p>
 <p>Enable the REST API in Axosoft</p>
-<p>Setup the plug-in in SpiraTeam to point to the correct instance of
-Axosoft</p>
-<p>Configure the data field mappings between SpiraTeam and Axosoft</p>
+<p>Setup the plug-in in Spira to point to the correct instance of Axosoft</p>
+<p>Configure the data field mappings between Spira and Axosoft</p>
 <p>Start synchronization and verify data transfer</p>
 <h3 id="enable-the-rest-api-in-axosoft">Enable the REST API in Axosoft<a class="headerlink" href="#enable-the-rest-api-in-axosoft" title="Permanent link">&para;</a></h3>
-<p>First you will need to login to your instance of Axosoft and click on
-Tools &gt; System Options. Then click on the 'Axosoft API Settings'
+<p>First you will need to login to your instance of Axosoft and click on Tools &gt; System Options. Then click on the 'Axosoft API Settings'
 section:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_155.png" /></p>
 <p>Check the box to 'Enable API' and then click on the [Manage API Keys]
 button:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_156.png" /></p>
-<p>On this screen you will need to enter the name of the application you
-are creating an API key for (e.g. "Spira") and then record the following
-two pieces of information:</p>
+<p>On this screen you will need to enter the name of the application you are creating an API key for (e.g. "Spira") and then record the following two pieces of information:</p>
 <ul>
-<li>
-<p>Client ID</p>
-</li>
-<li>
-<p>Client Secret</p>
-</li>
+<li>Client ID</li>
+<li>Client Secret</li>
 </ul>
 <p>You will need these later on. Then click Save.</p>
 <p>The Axosoft Client Secret is a long hash that will be of the form:</p>
 <p>ykk8WD3eYfMJ6WbV1HtkutJv_w9jS2ah1tSbwqs-408Gp0_cPh5wTnjwfqPLN3-_oCSHPVG5tpFkETHBgxUBKbXaTzzVqYtKC9_S</p>
 <h3 id="configuring-the-plug-in_1">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in_1" title="Permanent link">&para;</a></h3>
-<p>The next step is to configure the plug-in within SpiraTeam so that the
-system knows how to access the Axosoft server. To start the
-configuration, please open up SpiraTeam in a web browser, log in using a
-valid account that has System-Administration level privileges and click
-on the System &gt; Data Synchronization administration option from the
-left-hand navigation:</p>
+<p>The next step is to configure the plug-in within Spira so that the system knows how to access the Axosoft server. To start the configuration, please open up Spira in a web browser, log in using a valid account that has System-Administration level privileges and click on the System &gt; Data Synchronization administration option from the left-hand navigation:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_157.png" /></p>
-<p>This screen lists all the plug-ins already configured in the system.
-Depending on whether you chose the option to include sample data in your
-installation or not, you will see either an empty screen or a list of
-sample data-synchronization plug-ins.</p>
-<p>If you already see an entry for <strong>AxosoftDataSync</strong> you should click on
-its "Edit" link. If you don't see such an entry in the list, please
-click on the [Add] button instead. In either case you will be taken to
-the following screen where you can enter or modify the Axosoft
-Data-Synchronization plug-in:</p>
+<p>This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.</p>
+<p>If you already see an entry for <strong>AxosoftDataSync</strong> you should click on its "Edit" link. If you don't see such an entry in the list, please click on the [Add] button instead. In either case you will be taken to the following screen where you can enter or modify the Axosoft Data-Synchronization plug-in:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_158.png" /></p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_159.png" /></p>
-<p>You need to fill out the following fields for the Axosoft Plug-in to
-operate correctly:</p>
+<p>You need to fill out the following fields for the Axosoft Plug-in to operate correctly:</p>
 <ul>
-<li>
-<p><strong>Name</strong> -- this needs to be set to <strong>AxosoftDataSync</strong>. This needs
-to match the name of the plug-in DLL assembly that was copied into
-the C:\Program Files\SpiraTeam\Bin folder (minus the .dll file
-extension). If you renamed the AxosoftDataSync.dll file for any
-reason, then you need to change the name here to match.</p>
-</li>
-<li>
-<p><strong>Description</strong> -- this should be set to a description of the
-plug-in. This is an optional field that is used for documentation
-purposes and is not actually used by the system.</p>
-</li>
-<li>
-<p><strong>Connection Info</strong> -- this should the full URL to Axosoft. This is
-typically something like: <a href="https://mysite.axosoft.com">https://mysite.axosoft.com</a>.</p>
-</li>
-<li>
-<p><strong>Login</strong> -- this should be set to the login that you use to access
-Axosoft through its web interface</p>
-</li>
-<li>
-<p><strong>Password</strong> -- this should be set to the password that you use to
-access Axosoft through its web interface</p>
-</li>
-<li>
-<p><strong>Time Offset</strong> -- normally this should be set to zero, but if you
-find that defects being changed in Axosoft are not being updated in
-SpiraTeam, try increasing the value as this will tell the
-data-synchronization plug-in to add on the time offset (in hours)
-when comparing date-time stamps.</p>
-</li>
-<li>
-<p><strong>Auto-Map Users</strong> -- This changes the way that the plugin maps
-users in SpiraTeam to those in Axosoft:</p>
-</li>
-<li>
-<p>**Auto-Map = True
-**With this setting, all users in SpiraTeam need to have the
-same username as those in Axosoft. If this is the case then you
-do not need to perform the user-mapping task outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>. This is a big time-saver if you can guarantee that all
-usernames are the same in both systems.</p>
-</li>
-<li>
-<p>**Auto-Map = False
-**With this setting, users in SpiraTeam and Axosoft are free to
-have different usernames because you specify the corresponding
-Axosoft login for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>.</p>
-</li>
-<li>
-<p><strong>Custom 01</strong> -- This should contain the <strong>Client ID</strong> value from
-the Axosoft API Key screen</p>
-</li>
-<li>
-<p><strong>Custom 02</strong> -- This should contain the Axosoft <strong>Client Secret</strong>
-that you obtained from the Axosoft API Key Screen.</p>
-</li>
-<li>
-<p><strong>Custom 03-05</strong> -- these are not currently used by the Axosoft
-data-sync plug-in and can be left blank.</p>
-</li>
+<li><strong>Name</strong>: this needs to be set to <strong>AxosoftDataSync</strong>. This needs to match the name of the plug-in DLL assembly that was copied into the C:\Program Files\Spira\Bin folder (minus the .dll file extension). If you renamed the AxosoftDataSync.dll file for any reason, then you need to change the name here to match.</li>
+<li><strong>Description</strong>: this should be set to a description of the plug-in. This is an optional field that is used for documentation purposes and is not actually used by the system.</li>
+<li><strong>Connection Info</strong>: this should the full URL to Axosoft. This is typically something like: <a href="https://mysite.axosoft.com">https://mysite.axosoft.com</a>.</li>
+<li><strong>Login</strong>: this should be set to the login that you use to access Axosoft through its web interface</li>
+<li><strong>Password</strong>: this should be set to the password that you use to access Axosoft through its web interface</li>
+<li><strong>Time Offset</strong>: normally this should be set to zero, but if you find that defects being changed in Axosoft are not being updated in Spira, try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps.</li>
+<li><strong>Auto-Map Users</strong>: This changes the way that the plugin maps users in Spira to those in Axosoft:</li>
+<li><strong>Auto-Map = True</strong>: With this setting, all users in Spira need to have the same username as those in Axosoft. If this is the case then you do not need to perform the user-mapping task outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>. This is a big time-saver if you can guarantee that all usernames are the same in both systems.</li>
+<li>**Auto-Map = False **With this setting, users in Spira and Axosoft are free to have different usernames because you specify the corresponding Axosoft login for each user as outlined in <a href="#configuring-the-user-mapping">Configuring the User Mapping</a>.</li>
+<li><strong>Custom 01</strong>: This should contain the <strong>Client ID</strong> value from the Axosoft API Key screen</li>
+<li><strong>Custom 02</strong>: This should contain the Axosoft <strong>Client Secret</strong> that you obtained from the Axosoft API Key Screen.</li>
+<li><strong>Custom 03-05</strong>: these are not currently used by the Axosoft data-sync plug-in and can be left blank.</li>
 </ul>
 <h2 id="configuring-the-data-mapping">Configuring the Data Mapping<a class="headerlink" href="#configuring-the-data-mapping" title="Permanent link">&para;</a></h2>
-<p>Next, you need to configure the data mapping between SpiraTeam and
-Axosoft. This allows the various projects, users, releases, incident
-statuses, priorities, severities and custom property values used in the
-two applications to be related to each other. This is important, as
-without a correct mapping, there is no way for the integration service
-to know that an "Open" incident in SpiraTeam is the same as an "Open"
-defect in Axosoft (for example).</p>
-<p>The following mapping information needs to be setup in SpiraTeam:</p>
-<p>The mapping of the project identifiers for the projects that need to be
-synchronized</p>
-<p>The mapping of users in the system</p>
-<p>The mapping of releases in the system</p>
-<p>The mapping of the various standard fields in the system</p>
-<p>The mapping of the various custom properties in the system</p>
+<p>Next, you need to configure the data mapping between Spira and Axosoft. This allows the various projects, users, releases, incident statuses, priorities, severities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that an "Open" incident in Spira is the same as an "Open" defect in Axosoft (for example).</p>
+<p>The following mapping information needs to be setup in Spira:</p>
+<ul>
+<li>The mapping of the project identifiers for the projects that need to be synchronized</li>
+<li>The mapping of users in the system</li>
+<li>The mapping of releases in the system</li>
+<li>The mapping of the various standard fields in the system</li>
+<li>The mapping of the various custom properties in the system</li>
+</ul>
 <p>Each of these is explained in turn below:</p>
 <h3 id="configuring-the-project-mapping">Configuring the Project Mapping<a class="headerlink" href="#configuring-the-project-mapping" title="Permanent link">&para;</a></h3>
-<p>From the data synchronization administration page, you need to click on
-the "View Project Mappings" hyperlink next to the Axosoft plug-in name.
-This will take you to the data-mapping home page for the currently
-selected project:</p>
+<p>From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the Axosoft plug-in name. This will take you to the data-mapping home page for the currently selected project:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_160.png" /></p>
-<p>If the project name does not match the name of the project you want to
-configure the data-mapping for, click on the "(Change Project)"
-hyperlink to change the current project.</p>
-<p>To enable this project for data-synchronization with Axosoft, you need
-to enter:</p>
-<p><strong>External Key</strong> -- This should be set to the <strong>name</strong> of the project
-token in Axosoft:
-<img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_161.png" /></p>
-<p>If you have a sub-project, you need to include both the parent and
-sub-project names separated by a forward slash (/), e.g.
-MyProject/SubProject1.</p>
-<p><strong>Active Flag</strong> -- Set this to 'Yes' so that SpiraTeam knows that you
-want to synchronize data for this project. Once the project has been
-completed, setting the value to "No" will stop data synchronization,
-reducing network utilization.</p>
-<p>Click [Update] to confirm these settings. Once you have enabled the
-project for data-synchronization, you can now enter the other data
-mapping values outlined below.</p>
-<p><strong><em>Note: Once you have successfully configured the project, when
-creating a new project, you should choose the option to "Create Project
-from Existing Project" rather than "Use Default Template" so that all
-the project mappings get copied across to the new project.</em></strong></p>
+<p>If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.</p>
+<p>To enable this project for data-synchronization with Axosoft, you need to enter:</p>
+<p><strong>External Key</strong>: This should be set to the <strong>name</strong> of the project token in Axosoft:</p>
+<p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_161.png" /></p>
+<p>If you have a sub-project, you need to include both the parent and sub-project names separated by a forward slash (/), e.g. MyProject/SubProject1.</p>
+<p><strong>Active Flag</strong>: Set this to 'Yes' so that Spira knows that you want to synchronize data for this project. Once the project has been completed, setting the value to "No" will stop data synchronization, reducing network utilization.</p>
+<p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
+<p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
-<p>(This section can be skipped if you enabled the 'AutoMap Users' option
-earlier).</p>
-<p>To configure the mapping of users in the two systems, you need to go to
-Administration &gt; Users &gt; View Edit Users, which will bring up the list
-of users in the system. Then click on the "Edit" button for a particular
-user that will be editing defects in Axosoft:</p>
+<p>(This section can be skipped if you enabled the 'AutoMap Users' option earlier).</p>
+<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing defects in Axosoft:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_162.png" /></p>
-<p>You will notice that in the <strong>Data Mapping</strong> tab for the user is a list
-of all the configured data-synchronization plug-ins. In the text box
-next to the Axosoft Data-Sync plug-in you need to enter the <strong>Login
-Name</strong> for this username in Axosoft. This will allow the
-data-synchronization plug-in to know which user in SpiraTeam match which
-equivalent user in Axosoft. Click [Update] once you've entered the
-appropriate login name. You should now repeat for the other users who
-will be active in both systems.</p>
+<p>You will notice that in the <strong>Data Mapping</strong> tab for the user is a list of all the configured data-synchronization plug-ins. In the text box next to the Axosoft Data-Sync plug-in you need to enter the <strong>Login Name</strong> for this username in Axosoft. This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in Axosoft. Click [Update] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping<a class="headerlink" href="#configuring-the-release-mapping" title="Permanent link">&para;</a></h3>
-<p>When the data-synchronization service runs, when it comes across a
-release/iteration in SpiraTeam that it has not seen before, it will
-create a corresponding Release in Axosoft. Similarly if it comes across
-a new Release in Axosoft that it has not seen before, it will create a
-new Release in SpiraTeam. Therefore when using both systems together, it
-is recommended that you only enter new Releases in one system and let
-the data-synchronization service add them to the other system.</p>
-<p>To see this mapping, inside SpiraTeam, navigate to Planning &gt; Releases
-and click on the Release/Iteration in question. Make sure you have the
-'Overview' tab visible and expand the "Details" section of the
-release/iteration:</p>
+<p>When the data-synchronization service runs, when it comes across a release/iteration in Spira that it has not seen before, it will create a corresponding Release in Axosoft. Similarly if it comes across a new Release in Axosoft that it has not seen before, it will create a new Release in Spira. Therefore when using both systems together, it is recommended that you only enter new Releases in one system and let the data-synchronization service add them to the other system.</p>
+<p>To see this mapping, inside Spira, navigate to Planning &gt; Releases and click on the Release/Iteration in question. Make sure you have the
+'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_163.png" /></p>
-<p>In addition to the standard fields and custom properties configured for
-Releases, you will see an additional text property called
-"<strong>AxosoftDataSync ID</strong>" that is used to store the mapped external
-identifier for the equivalent Version in Axosoft.</p>
+<p>In addition to the standard fields and custom properties configured for Releases, you will see an additional text property called "<strong>AxosoftDataSync ID</strong>" that is used to store the mapped external identifier for the equivalent Version in Axosoft.</p>
 <h3 id="configuring-the-standard-field-mapping">Configuring the Standard Field Mapping<a class="headerlink" href="#configuring-the-standard-field-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the projects, user and releases have been mapped correctly, we
-need to configure the standard incident fields. To do this, go to
-Administration &gt; System &gt; Data Synchronization and click on the "View
-Project Mappings" for the AxosoftDataSync plug-in entry:</p>
+<p>Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration &gt; System &gt; Data Synchronization and click on the "View Project Mappings" for the AxosoftDataSync plug-in entry:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_164.png" /></p>
-<p>From this screen, you need to click on Priority, Severity and Status in
-turn to configure their values (Axosoft doesn't support different defect
-types):</p>
+<p>From this screen, you need to click on Priority, Severity and Status in turn to configure their values (Axosoft doesn't support different defect types):</p>
 <p>a) Incident Status</p>
-<p>Click on the "Status" hyperlink under Incident Standard Fields to bring
-up the Incident status mapping configuration screen:</p>
+<p>Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_165.png" /></p>
-<p>The table lists each of the incident statuses available in SpiraTeam and
-provides you with the ability to enter the matching Axosoft defect
-status names for each one. You can map multiple SpiraTeam fields to the
-same Axosoft fields (e.g. New and Open in SpiraTeam are both equivalent
-to Open in Axosoft), in which case only one of the two values can be
-listed as Primary = Yes as that's the value that's used on the reverse
-synchronization (from Axosoft &gt; SpiraTeam).</p>
-<p>We recommend that you always point the New and Open statuses inside
-SpiraTeam to point to the "Open" status inside Axosoft and make Open in
-SpiraTeam the Primary status of the two. This is recommended so that as
-new incidents in SpiraTeam get synched over to Axosoft, they will get
-switched to the Open status in Axosoft which will then be synched back
-to "Open" in SpiraTeam. That way you'll be able to see at a glance which
-incidents have been synched with Axosoft and those that haven't.</p>
-<p><em>Note: The Axosoft external key needs to exactly match the display name
-of the status inside Axosoft. If you change the name of a status in
-Axosoft, you'll need to update the value in the data-mapping
-configuration as well.</em></p>
+<p>The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching Axosoft defect status names for each one. You can map multiple Spira fields to the same Axosoft fields (e.g. New and Open in Spira are both equivalent to Open in Axosoft), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from Axosoft &gt; Spira).</p>
+<p>We recommend that you always point the New and Open statuses inside Spira to point to the "Open" status inside Axosoft and make Open in Spira the Primary status of the two. This is recommended so that as new incidents in Spira get synched over to Axosoft, they will get switched to the Open status in Axosoft which will then be synched back to "Open" in Spira. That way you'll be able to see at a glance which incidents have been synched with Axosoft and those that haven't.</p>
+<p><em>Note: The Axosoft external key needs to exactly match the display name of the status inside Axosoft. If you change the name of a status in Axosoft, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>b) Incident Priority</p>
-<p>Click on the "Priority" hyperlink under Incident Standard Fields to
-bring up the Incident Priority mapping configuration screen:</p>
+<p>Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_166.png" /></p>
-<p>The table lists each of the incident priorities available in SpiraTeam
-and provides you with the ability to enter the matching Axosoft priority
-name for each one. You can map multiple SpiraTeam fields to the same
-Axosoft fields, in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
-synchronization (from Axosoft &gt; SpiraTeam).</p>
-<p><em>Note: The Axosoft external key needs to exactly match the display name
-of the priority inside Axosoft. If you change the name of a priority in
-Axosoft, you'll need to update the value in the data-mapping
-configuration as well.</em></p>
+<p>The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching Axosoft priority name for each one. You can map multiple Spira fields to the same Axosoft fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from Axosoft &gt; Spira).</p>
+<p><em>Note: The Axosoft external key needs to exactly match the display name of the priority inside Axosoft. If you change the name of a priority in Axosoft, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <p>c) Incident Severity</p>
-<p>Click on the "Severity" hyperlink under Incident Standard Fields to
-bring up the Incident severity mapping configuration screen:</p>
+<p>Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_167.png" /></p>
-<p>The table lists each of the incident severities available in SpiraTeam
-and provides you with the ability to enter the matching Axosoft severity
-name for each one. You can map multiple SpiraTeam fields to the same
-Axosoft fields, in which case only one of the two values can be listed
-as Primary = Yes as that's the value that's used on the reverse
-synchronization (from Axosoft &gt; SpiraTeam).</p>
-<p><em>Note: The Axosoft external key needs to exactly match the display name
-of the severity inside Axosoft. If you change the name of a severity in
-Axosoft, you'll need to update the value in the data-mapping
-configuration as well.</em></p>
+<p>The table lists each of the incident severities available in Spira and provides you with the ability to enter the matching Axosoft severity name for each one. You can map multiple Spira fields to the same Axosoft fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from Axosoft &gt; Spira).</p>
+<p><em>Note: The Axosoft external key needs to exactly match the display name of the severity inside Axosoft. If you change the name of a severity in Axosoft, you'll need to update the value in the data-mapping configuration as well.</em></p>
 <h3 id="configuring-the-custom-property-mapping">Configuring the Custom Property Mapping<a class="headerlink" href="#configuring-the-custom-property-mapping" title="Permanent link">&para;</a></h3>
-<p>Now that the various SpiraTeam standard fields have been mapped
-correctly, we need to configure the custom property mappings. This is
-used for both custom properties in SpiraTeam that map to custom fields
-in Axosoft and also for custom properties in SpiraTeam that are used to
-map to standard fields in Axosoft (currently only Replication
-Procedures) that don't exist in SpiraTeam.</p>
-<p>From the View/Edit Project Data Mapping screen, you need to click on the
-name of the Incident Custom Property that you want to add data-mapping
-information for. We will consider the <em>three</em> different types of mapping
-that you might want to enter:</p>
+<p>Now that the various Spira standard fields have been mapped correctly, we need to configure the custom property mappings. This is used for both custom properties in Spira that map to custom fields in Axosoft and also for custom properties in Spira that are used to map to standard fields in Axosoft (currently only Replication Procedures) that don't exist in Spira.</p>
+<p>From the View/Edit Project Data Mapping screen, you need to click on the name of the Incident Custom Property that you want to add data-mapping information for. We will consider the <em>three</em> different types of mapping that you might want to enter:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_168.png" /></p>
 <p>a) Scalar Custom Properties</p>
-<p>This refers to custom properties that have a simple user-entered value
-and don't need to have their specific options mapped between SpiraTeam
-and Axosoft. All of the custom property types except <strong>List</strong> and
-<strong>Multi-List</strong> fall into this category (e.g. Text, Date, User, Boolean,
-Decimal, Integer, etc.)</p>
-<p>Click on the hyperlink of the text custom property under Incident Custom
-Properties to bring up the custom property mapping configuration screen.
-For text custom properties there will be no values listed in the lower
-half of the screen.</p>
+<p>This refers to custom properties that have a simple user-entered value and don't need to have their specific options mapped between Spira and Axosoft. All of the custom property types except <strong>List</strong> and <strong>Multi-List</strong> fall into this category (e.g. Text, Date, User, Boolean, Decimal, Integer, etc.)</p>
+<p>Click on the hyperlink of the text custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For text custom properties there will be no values listed in the lower half of the screen.</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_169.png" /></p>
-<p>You need to lookup the display name of the custom field in Axosoft that
-matches this custom property in SpiraTeam. Once you have entered the id
-of the custom field, click [Update].</p>
+<p>You need to lookup the display name of the custom field in Axosoft that matches this custom property in Spira. Once you have entered the id of the custom field, click [Update].</p>
 <p>b) List Custom Properties</p>
-<p>Click on the hyperlink of the list custom property under Incident Custom
-Properties to bring up the custom property mapping configuration screen.
-For list custom properties there will be a textbox for both the custom
-field itself and a mapping table for each of the custom property values
-that need to be mapped:</p>
+<p>Click on the hyperlink of the list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For list custom properties there will be a textbox for both the custom field itself and a mapping table for each of the custom property values that need to be mapped:</p>
 <p><img alt="" src="../img/Using_Spira_with_Axosoft_14%2B_170.png" /></p>
-<p>First you need to lookup the display name of the custom field in Axosoft
-that matches this custom property in SpiraTeam. This should be entered
-in the 'External Key' field below the name of the custom property.</p>
-<p>Next for each of the Property Values in the table (in the lower half of
-the page) you need to enter the full name of the custom field value as
-specified in Axosoft.</p>
-<p>Once you have updated the various mapping sections, you are now ready to
-use the service.</p>
-<h2 id="using-spirateam-with-axosoft">Using SpiraTeam with Axosoft<a class="headerlink" href="#using-spirateam-with-axosoft" title="Permanent link">&para;</a></h2>
-<p>Now that the integration service has been configured and the service
-started, initially any incidents created in SpiraTeam for the specified
-projects will be imported into Axosoft and vice versa.</p>
-<p>At this point we recommend opening the Windows Event Viewer and choosing
-the Application Log. In this log any error messages raised by the
-SpiraTeam Data Sync Service will be displayed. If you see any error
-messages at this point, we recommend immediately stopping the SpiraTeam
-service and checking the various mapping entries. If you cannot see any
-defects with the mapping information, we recommend sending a copy of the
-event log message(s) to Inflectra customer services
-(<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
-<p>To use SpiraTeam with Axosoft on an ongoing basis, we recommend the
-following general processes be followed:</p>
-<p>When running tests in SpiraTeam, defects found should be logged through
-the 'Add Incident' option as normal.</p>
-<p>Developers can log new defects into either SpiraTeam or Axosoft. In
-either case they will get loaded into the other system.</p>
-<p>Once created in one of the systems and successfully replicated to the
-other system, the incident should not be modified again inside SpiraTeam</p>
-<p>At this point, the incident should not be acted upon inside SpiraTeam,
-and all data changes to the defect should be made inside Axosoft. To
-enforce this, you can modify the workflows set up in SpiraTeam so that
-the various fields are marked as inactive for all the incident statuses
-other than the "New" status. This will allow someone to submit an
-incident in SpiraTeam, but will prevent them making changes in conflict
-with Axosoft after that point.</p>
-<p>As the defect progresses through the Axosoft workflow, changes to the
-status, priority, severity, and resolution will be updated automatically
-in SpiraTeam. In essence, SpiraTeam acts as a read-only viewer of these
-incidents.</p>
-<p>You are now able to perform test coverage and incident reporting inside
-SpiraTeam using the test cases managed by SpiraTeam and the incidents
-managed on behalf of SpiraTeam inside Axosoft.</p>
+<p>First you need to lookup the display name of the custom field in Axosoft that matches this custom property in Spira. This should be entered in the 'External Key' field below the name of the custom property.</p>
+<p>Next for each of the Property Values in the table (in the lower half of the page) you need to enter the full name of the custom field value as specified in Axosoft.</p>
+<p>Once you have updated the various mapping sections, you are now ready to use the service.</p>
+<h2 id="using-spira-with-axosoft">Using Spira with Axosoft<a class="headerlink" href="#using-spira-with-axosoft" title="Permanent link">&para;</a></h2>
+<p>Now that the integration service has been configured and the service started, initially any incidents created in Spira for the specified projects will be imported into Axosoft and vice versa.</p>
+<p>At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the Spira Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the Spira service and checking the various mapping entries. If you cannot see any defects with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
+<p>To use Spira with Axosoft on an ongoing basis, we recommend the following general processes be followed:</p>
+<p>When running tests in Spira, defects found should be logged through the 'Add Incident' option as normal.</p>
+<p>Developers can log new defects into either Spira or Axosoft. In either case they will get loaded into the other system.</p>
+<p>Once created in one of the systems and successfully replicated to the other system, the incident should not be modified again inside Spira</p>
+<p>At this point, the incident should not be acted upon inside Spira, and all data changes to the defect should be made inside Axosoft. To enforce this, you can modify the workflows set up in Spira so that the various fields are marked as inactive for all the incident statuses other than the "New" status. This will allow someone to submit an incident in Spira, but will prevent them making changes in conflict with Axosoft after that point.</p>
+<p>As the defect progresses through the Axosoft workflow, changes to the status, priority, severity, and resolution will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.</p>
+<p>You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed on behalf of Spira inside Axosoft.</p>
 
 
 

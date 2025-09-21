@@ -5461,10 +5461,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-the-spiratest-mochajs-reporter" class="md-nav__link">
+  <a href="#using-the-spira-mochajs-reporter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the SpiraTest MochaJS Reporter
+        Using the Spira MochaJS Reporter
       
     </span>
   </a>
@@ -8935,6 +8935,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -8990,10 +9018,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-the-spiratest-mochajs-reporter" class="md-nav__link">
+  <a href="#using-the-spira-mochajs-reporter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the SpiraTest MochaJS Reporter
+        Using the Spira MochaJS Reporter
       
     </span>
   </a>
@@ -9029,313 +9057,151 @@
 
 
 <h1 id="integrating-unitjs-nodejs">Integrating UnitJS &amp; NodeJS<a class="headerlink" href="#integrating-unitjs-nodejs" title="Permanent link">&para;</a></h1>
-<p>UnitJS is an assertion library for JavaScript, running on Node.js or a
-web browser. It works with various test runner and unit testing
-frameworks, including Mocha, Karma, Protractor, and QUnit.</p>
-<p>SpiraTest currently includes a pre-built extension for the MochaJS test
-runner and our sample code illustrates it working with UnitJS. However,
-we supply the source code to the extension, so you can easily adapt it
-for other runners such as Protractor.</p>
-<h2 id="using-the-spiratest-mochajs-reporter">Using the SpiraTest MochaJS Reporter<a class="headerlink" href="#using-the-spiratest-mochajs-reporter" title="Permanent link">&para;</a></h2>
-<p>Mocha is a feature-rich JavaScript test framework running on Node.js and
-in the browser, making asynchronous testing simple and fun. Mocha tests
-run serially, allowing for flexible and accurate reporting, while
-mapping uncaught exceptions to the correct test cases.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>UnitJS is an assertion library for JavaScript, running on Node.js or a web browser. It works with various test runner and unit testing frameworks, including Mocha, Karma, Protractor, and QUnit.</p>
+<p>Spira currently includes a pre-built extension for the MochaJS test runner and our sample code illustrates it working with UnitJS. However, we supply the source code to the extension, so you can easily adapt it for other runners such as Protractor.</p>
+<h2 id="using-the-spira-mochajs-reporter">Using the Spira MochaJS Reporter<a class="headerlink" href="#using-the-spira-mochajs-reporter" title="Permanent link">&para;</a></h2>
+<p>Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.</p>
 <p>An example UnitJS test running Mocha looks something like:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;unit.js&#39;</span><span class="p">);</span>
-
-<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Example Test&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;sample pass&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="c1">// just for example of tested value</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">;</span>
-
-<span class="nx">test</span>
-
-<span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\[a-z\]/</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">given</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;you are welcome&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;you&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;&quot;example&quot; becomes an object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-
-<span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
-
-<span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Nico&#39;</span><span class="p">,</span>
-
-<span class="nx">job</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;developper&#39;</span><span class="p">,</span>
-
-<span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;France&#39;</span>
-
-<span class="p">};</span>
-
-<span class="p">})</span>
-
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="s1">&#39;test the &quot;example&quot; object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">test</span>
-
-<span class="p">.</span><span class="nx">object</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasValue</span><span class="p">(</span><span class="s1">&#39;developper&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">contains</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">})</span>
-
-<span class="p">;</span>
-
-<span class="p">})</span>
-
-<span class="p">.</span><span class="k">if</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;bad value&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">example</span><span class="p">.</span><span class="nx">badMethod</span><span class="p">();</span>
-
-<span class="p">})</span>
-
-<span class="p">;</span>
-
-<span class="p">});</span>
-
-<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;sample fail&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="c1">// just for example of tested value</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;not hello world&#39;</span><span class="p">;</span>
-
-<span class="nx">test</span>
-
-<span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\[a-z\]/</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">given</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;you are welcome&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;you&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;&quot;example&quot; becomes an object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-
-<span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
-
-<span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Nico&#39;</span><span class="p">,</span>
-
-<span class="nx">job</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;developper&#39;</span><span class="p">,</span>
-
-<span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;France&#39;</span>
-
-<span class="p">};</span>
-
-<span class="p">})</span>
-
-<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="s1">&#39;test the &quot;example&quot; object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">test</span>
-
-<span class="p">.</span><span class="nx">object</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasValue</span><span class="p">(</span><span class="s1">&#39;developper&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">contains</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">})</span>
-
-<span class="p">;</span>
-
-<span class="p">})</span>
-
-<span class="p">.</span><span class="k">if</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;bad value&#39;</span><span class="p">)</span>
-
-<span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-
-<span class="nx">example</span><span class="p">.</span><span class="nx">badMethod</span><span class="p">();</span>
-
-<span class="p">})</span>
-
-<span class="p">;</span>
-
-<span class="p">});</span>
-
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Example Test&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;sample pass&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// just for example of tested value</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">test</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\[a-z\]/</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">given</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;you are welcome&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;you&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;&quot;example&quot; becomes an object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Nico&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">job</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;developper&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;France&#39;</span>
+<span class="w">                </span><span class="p">};</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="s1">&#39;test the &quot;example&quot; object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">object</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasValue</span><span class="p">(</span><span class="s1">&#39;developper&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">contains</span><span class="p">({</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">                    </span><span class="p">;</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">.</span><span class="k">if</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;bad value&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">example</span><span class="p">.</span><span class="nx">badMethod</span><span class="p">();</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;sample fail&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// just for example of tested value</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;not hello world&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">test</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\[a-z\]/</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">given</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;you are welcome&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">string</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;you&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;&quot;example&quot; becomes an object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Nico&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">job</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;developper&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;France&#39;</span>
+<span class="w">                </span><span class="p">};</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="s1">&#39;test the &quot;example&quot; object&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">object</span><span class="p">(</span><span class="nx">example</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasValue</span><span class="p">(</span><span class="s1">&#39;developper&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">hasProperty</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">.</span><span class="nx">contains</span><span class="p">({</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;hello world&#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">                    </span><span class="p">;</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">.</span><span class="k">if</span><span class="p">(</span><span class="nx">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;bad value&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">example</span><span class="p">.</span><span class="nx">badMethod</span><span class="p">();</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
 <span class="p">});</span>
 </code></pre></div>
-<p>In this sample, we have one test suite "Example Test" that has two tests
--- "sample pass" and "sample fail" inside it. When you run this test
-using Mocha using the command line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js</p>
-<p>You get the following:</p>
+<p>In this sample, we have one test suite "Example Test" that has two tests -- "sample pass" and "sample fail" inside it. When you run this test using Mocha using the command line: <code>node ./node\_modules/mocha/bin/mocha .\\test\\example2.js</code>. You get the following:</p>
 <p><img alt="" src="../img/Integrating_UnitJS_%26_NodeJS_25.png" /></p>
-<p>What we want is to have this test suite report back against a matching
-test case in SpiraTest.</p>
-<p>To do that we need to download and unzip the
-<strong>UnitJS-MochaJS-Reporter.zip</strong> file from the Inflectra website and
-extract the contents to the same location as your test framework. The
-<strong>reporter</strong> subfolder contains two NodeJS modules:</p>
+<p>What we want is to have this test suite report back against a matching test case in Spira.</p>
+<p>To do that we need to download and unzip the <strong>UnitJS-MochaJS-Reporter.zip</strong> file from the Inflectra website and extract the contents to the same location as your test framework. The <strong>reporter</strong> subfolder contains two NodeJS modules:</p>
 <ul>
-<li>
-<p>SpiraReporter.js -- this contains the Mocha custom reporter used for
-sending the results to SpiraTest</p>
-</li>
-<li>
-<p>SpiraClient.js -- this contains the JavaScript module that sends a
-test result back to SpiraTest. It is used by SpiraReporter.js but
-can also be used directly in your code if you want to report back
-results without using Mocha.</p>
-</li>
+<li>SpiraReporter.js -- this contains the Mocha custom reporter used for sending the results to Spira</li>
+<li>SpiraClient.js -- this contains the JavaScript module that sends a test result back to Spira. It is used by SpiraReporter.js but can also be used directly in your code if you want to report back results without using Mocha.</li>
 </ul>
-<p>To use this custom reporter with your Mocha test framework, you simply
-need to do these two things:</p>
+<p>To use this custom reporter with your Mocha test framework, you simply need to do these two things:</p>
 <ol>
-<li>
-<p>Add the reporter name to the command line used to invoke Mocha</p>
-</li>
-<li>
-<p>Add some configuration code to your UnitJS test suite to tell Mocha
-how to connect to your instance of SpiraTest.</p>
-</li>
+<li>Add the reporter name to the command line used to invoke Mocha</li>
+<li>Add some configuration code to your UnitJS test suite to tell Mocha how to connect to your instance of Spira.</li>
 </ol>
-<p>The first part is very straightforward, just add the Reporter to your
-Mocha command line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js --reporter
-.\reporter\SpiraReporter</p>
-<p>For the second part, you need to add the following code to your test
-suite at the top:</p>
+<p>The first part is very straightforward, just add the Reporter to your Mocha command line: <code>node ./node\_modules/mocha/bin/mocha .\\test\\example2.js \--reporter .\\reporter\\SpiraReporter</code>. For the second part, you need to add the following code to your test suite at the top:</p>
 <p><div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">SpiraReporter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../reporter/SpiraReporter.js&#39;</span><span class="p">);</span>
 
-<span class="c1">//set the SpiraTest options</span>
-
+<span class="c1">//set the Spira options</span>
 <span class="nb">global</span><span class="p">.</span><span class="nx">spiraOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-
-<span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-
-<span class="nx">testCaseId</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
-
-<span class="nx">releaseId</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-
-<span class="nx">testSetId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-
-<span class="nx">login</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">,</span>
-
-<span class="nx">apiKey</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{7A05FD06-83C3-4436-B37F-51BCF0060483}&#39;</span><span class="p">,</span>
-
-<span class="nx">protocol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http&#39;</span><span class="p">,</span>
-
-<span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
-
-<span class="nx">vdir</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;spira&#39;</span>
-
+<span class="w">    </span><span class="nx">projectId</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">testCaseId</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">releaseId</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">testSetId</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">login</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;fredbloggs&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">apiKey</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{7A05FD06-83C3-4436-B37F-51BCF0060483}&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">protocol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">vdir</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;spira&#39;</span>
 <span class="p">};</span>
 </code></pre></div>
-The first line simply adds a reference to the SpiraTest Mocha reporter
-module.</p>
-<p>The second line defines the connection and test case information used
-for reporting back to SpiraTest. Here's what you need to put in each of
-the required configuration options:</p>
+The first line simply adds a reference to the Spira Mocha reporter module.</p>
+<p>The second line defines the connection and test case information used for reporting back to Spira. Here's what you need to put in each of the required configuration options:</p>
 <ul>
-<li>
-<p><strong>protocol</strong> -- this needs to be set to either "http" or "https"
-depending on how you connect to SpiraTest</p>
-</li>
-<li>
-<p><strong>host</strong> -- this needs to be the name or IP address of the host
-running SpiraTest. For cloud customers, it will be something like
-<strong>mycompany.spiraservice.net</strong></p>
-</li>
-<li>
-<p><strong>port</strong> -- this is usually 80 for http and 443 for https unless you
-are running SpiraTest on a custom port</p>
-</li>
-<li>
-<p><strong>vdir</strong> -- this is the name of any path used after the hostname.
-For example, if your URL is <a href="https://demo.spiraservice.net/mysite">https://demo.spiraservice.net/mysite</a>
-then the vdir would be "mysite". If your URL is just
-<a href="https://mycompany.spiraservice.net">https://mycompany.spiraservice.net</a> then you can leave the vdir
-blank or just not set a value for it.</p>
-</li>
-<li>
-<p><strong>login</strong> -- this should be a login that has access to the project
-in SpiraTest with permissions to create test runs.</p>
-</li>
-<li>
-<p><strong>apiKey</strong> -- this should be the API Key (also known as the RSS
-Token) for the login specified</p>
-</li>
-<li>
-<p><strong>projectId</strong> -- this should be the numeric ID of the project that
-the test case belongs to (e.g. if the project is PR56 just use 56)</p>
-</li>
-<li>
-<p><strong>testCaseId</strong> -- this should be the numeric ID of the test case
-that you want this Mocha test suite to report against (e.g. if the
-test case in question is TC23 just use 23)</p>
-</li>
+<li><strong>protocol</strong>: this needs to be set to either "http" or "https" depending on how you connect to Spira</li>
+<li><strong>host</strong>: this needs to be the name or IP address of the host running Spira. For cloud customers, it will be something like <strong>mycompany.spiraservice.net</strong></li>
+<li><strong>port</strong>: this is usually 80 for http and 443 for https unless you are running Spira on a custom port</li>
+<li><strong>vdir</strong>: this is the name of any path used after the hostname. For example, if your URL is <a href="https://demo.spiraservice.net/mysite">https://demo.spiraservice.net/mysite</a> then the vdir would be "mysite". If your URL is just <a href="https://mycompany.spiraservice.net">https://mycompany.spiraservice.net</a> then you can leave the vdir blank or just not set a value for it.</li>
+<li><strong>login</strong>: this should be a login that has access to the project in Spira with permissions to create test runs.</li>
+<li><strong>apiKey</strong>: this should be the API Key (also known as the RSS Token) for the login specified</li>
+<li><strong>projectId</strong>: this should be the numeric ID of the project that the test case belongs to (e.g. if the project is PR56 just use 56)</li>
+<li><strong>testCaseId</strong>: this should be the numeric ID of the test case that you want this Mocha test suite to report against (e.g. if the test case in question is TC23 just use 23)</li>
 </ul>
-<p>In addition, there are two optional configuration parameters you can
-use:</p>
+<p>In addition, there are two optional configuration parameters you can use:</p>
 <ul>
-<li>
-<p><strong>releaseId</strong> -- If you would like the recorded test run to be
-reported against a specific release, iteration or phase in
-SpiraTest, you need to specify the ID of the release in question
-(e.g. for release RL18 just use 18)</p>
-</li>
-<li>
-<p><strong>testSetId</strong> - If you would like the recorded test run to be
-reported against a specific test set in SpiraTest, you need to
-specify the ID of the test set in question (e.g. for test set TX35
-just use 35)</p>
-</li>
+<li><strong>releaseId</strong>: If you would like the recorded test run to be reported against a specific release, iteration or phase in Spira, you need to specify the ID of the release in question (e.g. for release RL18 just use 18)</li>
+<li><strong>testSetId</strong> - If you would like the recorded test run to be reported against a specific test set in Spira, you need to specify the ID of the test set in question (e.g. for test set TX35 just use 35)</li>
 </ul>
-<p>With those values set, when you run the test suite using the command
-line:</p>
-<p>node ./node_modules/mocha/bin/mocha .\test\example2.js --reporter
-.\reporter\SpiraReporter</p>
-<p>The results of the test suite will be displayed inside the Mocha
-console:</p>
+<p>With those values set, when you run the test suite using the command line: <code>node ./node\_modules/mocha/bin/mocha .\\test\\example2.js \--reporter .\\reporter\\SpiraReporter</code>. The results of the test suite will be displayed inside the Mocha console:</p>
 <p><img alt="" src="../img/Integrating_UnitJS_%26_NodeJS_26.png" /></p>
-<p>When you login to SpiraTest and view the test case being executed, you
-will now see the automated test runs reported back from Mocha:</p>
+<p>When you login to Spira and view the test case being executed, you will now see the automated test runs reported back from Mocha:</p>
 <p><img alt="" src="../img/Integrating_UnitJS_%26_NodeJS_27.png" /></p>
-<p>Clicking on one of the MochaJS Reporter test runs will bring up a screen
-that provides the detailed test run report from Mocha:</p>
+<p>Clicking on one of the MochaJS Reporter test runs will bring up a screen that provides the detailed test run report from Mocha:</p>
 <p><img alt="" src="../img/Integrating_UnitJS_%26_NodeJS_28.png" /></p>
 <p>The Console Output section gives more detailed information:</p>
 <p><img alt="" src="../img/Integrating_UnitJS_%26_NodeJS_29.png" /></p>
-<p>Congratulations... You are now able to run UnitJS automated tests using
-Mocha and the SpiraTest custom reporter and have the results be recorded
-within SpiraTest. The sample test suites <strong>example.js</strong> and
-<strong>example2.js</strong> are provided with the installation.</p>
+<p>Congratulations... You are now able to run UnitJS automated tests using Mocha and the Spira custom reporter and have the results be recorded within Spira. The sample test suites <strong>example.js</strong> and <strong>example2.js</strong> are provided with the installation.</p>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">&para;</a></h2>
-<p>If you are an Inflectra customer, please contact our customer support at:
-- Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>
-- Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></p>
-<p>Otherwise, please feel free to post a question on our public forums:
-- <a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></p>
+<p>If you are an Inflectra customer, please contact our customer support at:</p>
+<ul>
+<li>Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a></li>
+<li>Help Desk: <a href="https://www.inflectra.com/Support/">https://www.inflectra.com/Support/</a></li>
+</ul>
+<p>Otherwise, please feel free to post a question on our public forums:</p>
+<ul>
+<li><a href="https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx">Test Case Integration Forum</a></li>
+</ul>
 
 
 

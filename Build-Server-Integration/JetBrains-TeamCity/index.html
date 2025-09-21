@@ -7929,10 +7929,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spirateam-plug-in-for-teamcity" class="md-nav__link">
+  <a href="#installing-the-spira-plug-in-for-teamcity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraTeam Plug-in for TeamCity
+        Installing the Spira Plug-in for TeamCity
       
     </span>
   </a>
@@ -7940,10 +7940,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-spirateam-teamcity-plug-in" class="md-nav__link">
+  <a href="#setting-up-the-spira-teamcity-plug-in" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting-Up the SpiraTeam TeamCity Plug-in
+        Setting-Up the Spira TeamCity Plug-in
       
     </span>
   </a>
@@ -7962,10 +7962,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spirateam" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraTeam
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -8990,6 +8990,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../About/edition-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compare Spira Editions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../About/legal-notices/" class="md-nav__link">
         
   
@@ -9056,10 +9084,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-spirateam-plug-in-for-teamcity" class="md-nav__link">
+  <a href="#installing-the-spira-plug-in-for-teamcity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installing the SpiraTeam Plug-in for TeamCity
+        Installing the Spira Plug-in for TeamCity
       
     </span>
   </a>
@@ -9067,10 +9095,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-spirateam-teamcity-plug-in" class="md-nav__link">
+  <a href="#setting-up-the-spira-teamcity-plug-in" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting-Up the SpiraTeam TeamCity Plug-in
+        Setting-Up the Spira TeamCity Plug-in
       
     </span>
   </a>
@@ -9089,10 +9117,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-the-build-results-in-spirateam" class="md-nav__link">
+  <a href="#viewing-the-build-results-in-spira" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Viewing the Build Results in SpiraTeam
+        Viewing the Build Results in Spira
       
     </span>
   </a>
@@ -9139,159 +9167,66 @@
 
 
 <h1 id="jetbrains-teamcity">JetBrains TeamCity<a class="headerlink" href="#jetbrains-teamcity" title="Permanent link">&para;</a></h1>
-<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam
-(hereafter referred to as SpiraTeam) in conjunction with the JetBrains'
-TeamCity continuous integration build servers. It assumes that you
-already have a working installation of SpiraTest, SpiraPlan or SpiraTeam
-v6.0 or later and a working installation of TeamCity v9.0.4 or later. If
-you have an earlier version of SpiraTeam, you will need to upgrade to at
-least v6.0.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the JetBrains' TeamCity continuous integration build servers. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v6.0 or later and a working installation of TeamCity v9.0.4 or later. If you have an earlier version of Spira, you will need to upgrade to at least v6.0.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>TeamCity provides continuous integration services for software
-development, primarily in the Java programming language. It is a
-server-based system running that supports a variety of different version
-control systems and build runners. It supports SCM tools including CVS,
-Subversion, Git, Mercurial, Perforce and Borland StarTeam, and can
-execute Apache Ant and Apache Maven based projects as well as arbitrary
-shell scripts and Windows batch commands.</p>
-<p>When you use the SpiraTeam Plug-In for TeamCity, it will allow you to associate each TeamCity project with a corresponding project and release in SpiraTeam. Then, each time TeamCity creates a new build, a new build artifact will be created in SpiraTeam. Each build in SpiraTeam will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.</p>
-<h2 id="installing-the-spirateam-plug-in-for-teamcity">Installing the SpiraTeam Plug-in for TeamCity<a class="headerlink" href="#installing-the-spirateam-plug-in-for-teamcity" title="Permanent link">&para;</a></h2>
-<p>Go to the Inflectra website and open up the page that lists the various
-downloads available for SpiraTeam
-(<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this
-page will be the SpiraTeam Plug-In for TeamCity. Right-click on this
-link and save the Zip compressed folder to the TeamCity's Plug-In
-directory (<em>$TEAMCITY_USER_HOME/plugins</em>). After that, restart
-TeamCity for the plugin to take effect. It's also possible to install
-the Plug-In through the user interface of TeamCity via Administration &gt;
-Plugins List &gt; Upload Plugin Zip, choosing the zip-file from your
-file-system:</p>
+<p>TeamCity provides continuous integration services for software development, primarily in the Java programming language. It is a server-based system running that supports a variety of different version control systems and build runners. It supports SCM tools including CVS, Subversion, Git, Mercurial, Perforce and Borland StarTeam, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands.</p>
+<p>When you use the Spira Plug-In for TeamCity, it will allow you to associate each TeamCity project with a corresponding project and release in Spira. Then, each time TeamCity creates a new build, a new build artifact will be created in Spira. Each build in Spira will be automatically linked to the incidents fixed, tasks implemented, requirements developed and source code commits committed.</p>
+<h2 id="installing-the-spira-plug-in-for-teamcity">Installing the Spira Plug-in for TeamCity<a class="headerlink" href="#installing-the-spira-plug-in-for-teamcity" title="Permanent link">&para;</a></h2>
+<p>Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<a href="http://www.inflectra.com/SpiraTeam/Downloads.aspx">http://www.inflectra.com/SpiraTeam/Downloads.aspx</a>). Listed on this page will be the Spira Plug-In for TeamCity. Right-click on this link and save the Zip compressed folder to the TeamCity's Plug-In directory (<em>$TEAMCITY_USER_HOME/plugins</em>). After that, restart TeamCity for the plugin to take effect. It's also possible to install the Plug-In through the user interface of TeamCity via Administration &gt; Plugins List &gt; Upload Plugin Zip, choosing the zip-file from your file-system:</p>
 <p><img alt="Figure01" src="../img/JetBrains_TeamCity_20.jpeg" /></p>
 <p>Do not forget to restart TeamCity for the plugin to take effect.</p>
-<p>Once TeamCity has restarted, you can see the SpiraTeam Plug-In listed as
-one of the installed plugins:</p>
+<p>Once TeamCity has restarted, you can see the Spira Plug-In listed as one of the installed plugins:</p>
 <p><img alt="Figure02" src="../img/JetBrains_TeamCity_21.jpeg" /></p>
-<h2 id="setting-up-the-spirateam-teamcity-plug-in">Setting-Up the SpiraTeam TeamCity Plug-in<a class="headerlink" href="#setting-up-the-spirateam-teamcity-plug-in" title="Permanent link">&para;</a></h2>
-<p>Now that the plugin has been installed, you need to configure the Global
-Settings for integration with SpiraTeam. To do this, go to
-Administration &gt; Spira Global Settings:</p>
+<h2 id="setting-up-the-spira-teamcity-plug-in">Setting-Up the Spira TeamCity Plug-in<a class="headerlink" href="#setting-up-the-spira-teamcity-plug-in" title="Permanent link">&para;</a></h2>
+<p>Now that the plugin has been installed, you need to configure the Global Settings for integration with Spira. To do this, go to Administration &gt; Spira Global Settings:</p>
 <p><img alt="Figure03" src="../img/JetBrains_TeamCity_22.jpeg" /></p>
-<p>You will need TeamCity administrator privileges to access this
-configuration page. Once in the <em>Spira Global Settings</em> page, enter in
-the <strong>URL</strong> you use to access your instance of SpiraTeam, together with
-a valid <strong>username</strong> and <strong>API Key</strong>. Once you have entered the values,
-click on the [Save] button. TeamCity will then verify if it can
-connect to SpiraTeam successfully.</p>
-<p>Once it has connected successfully, your connection settings will be
-saved. In case of error, follow the instructions on-screen and try
-again.</p>
-<p>After setting the global configurations appropriately, you will need to
-enable the notifications in TeamCity. To do this, go to <em>My Settings &amp;
-Tools,</em> that can be accessed through clicking your TeamCity username
-(top right). Once there, click on the <em>Notification Rules</em> section, find the <em>Spira Notifier for TeamCity</em>
-section, and click its hyperlink:</p>
+<p>You will need TeamCity administrator privileges to access this configuration page. Once in the <em>Spira Global Settings</em> page, enter in the <strong>URL</strong> you use to access your instance of Spira, together with a valid <strong>username</strong> and <strong>API Key</strong>. Once you have entered the values, click on the [Save] button. TeamCity will then verify if it can connect to Spira successfully.</p>
+<p>Once it has connected successfully, your connection settings will be saved. In case of error, follow the instructions on-screen and try again.</p>
+<p>After setting the global configurations appropriately, you will need to enable the notifications in TeamCity. To do this, go to <em>My Settings &amp; Tools,</em> that can be accessed through clicking your TeamCity username (top right). Once there, click on the <em>Notification Rules</em> section, find the <em>Spira Notifier for TeamCity</em> section, and click its hyperlink:</p>
 <p><img alt="Figure09" src="../img/JetBrains_TeamCity_23.jpeg" /></p>
-<p>Once in the page, click in <em>Add new Rule</em>. Then, inside the <em>Send
-notification when</em> section, select the events you want TeamCity notify
-SpiraTeam:</p>
+<p>Once in the page, click in <em>Add new Rule</em>. Then, inside the <em>Send notification when</em> section, select the events you want TeamCity notify Spira:</p>
 <p><img alt="Figure10" src="../img/JetBrains_TeamCity_24.jpeg" /></p>
 <p>After selecting your preferences, click in the Save button.</p>
 <h2 id="configuring-a-teamcity-project">Configuring a TeamCity Project<a class="headerlink" href="#configuring-a-teamcity-project" title="Permanent link">&para;</a></h2>
-<p>Now that you have setup the Global SpiraTeam and Notifications settings
-in TeamCity, next you need to associate each of your TeamCity Projects
-with their corresponding SpiraTeam Project and Release/Iteration. To do
-this, click on the name of a project and then click on the "Spira
-Project Configuration" tab for that Project:</p>
+<p>Now that you have setup the Global Spira and Notifications settings in TeamCity, next you need to associate each of your TeamCity Projects with their corresponding Spira Project and Release/Iteration. To do this, click on the name of a project and then click on the "Spira Project Configuration" tab for that Project:</p>
 <p><img alt="Figure04" src="../img/JetBrains_TeamCity_25.jpeg" /></p>
-<p>In this page you can check the URL of the SpiraTeam Server. If it is
-wrong, you can change it in the <a href="#setting-up-the-spirateam-teamcity-plug-in">Spira Global Settings menu</a>. It is also possible to check the Project ID associated with
-the project in TeamCity. This information can be useful for
-debugging/checking reasons.</p>
-<p>To associate a TeamCity Project with a SpiraTeam Project, enter the
-following values:</p>
+<p>In this page you can check the URL of the Spira Server. If it is wrong, you can change it in the <a href="#setting-up-the-spirateam-teamcity-plug-in">Spira Global Settings menu</a>. It is also possible to check the Project ID associated with the project in TeamCity. This information can be useful for debugging/checking reasons.</p>
+<p>To associate a TeamCity Project with a Spira Project, enter the following values:</p>
 <ul>
-<li>
-<p><strong>Project ID</strong> -- The numeric ID of the SpiraTeam Project that the
-Build belongs to. (e.g. for Project PR00001 just enter 1)</p>
-</li>
-<li>
-<p><strong>Release Version Number</strong> -- The version number of the SpiraTeam
-Release/Iteration that the Build belongs to. (e.g. for Release
-RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)</p>
-</li>
+<li><strong>Project ID</strong>: The numeric ID of the Spira Project that the Build belongs to. (e.g. for Project PR00001 just enter 1)</li>
+<li><strong>Release Version Number</strong>: The version number of the Spira Release/Iteration that the Build belongs to. (e.g. for Release RL0004 with version number 1.0.0.0 you'd enter just 1.0.0.0)</li>
 </ul>
-<p>Once you have entered in the Project ID and Release version number,
-click the [Save] button and the plugin will connect to SpiraTeam and
-verify that the project exists, that the current user can connect to
-that project, and that the specified release/iteration exists in the
-project. Once it has verified successfully, it will save your Project
-configuration settings. In case of error, follow the instructions
-on-screen and try again. You are now ready to use TeamCity with
-SpiraTeam.</p>
-<h2 id="viewing-the-build-results-in-spirateam">Viewing the Build Results in SpiraTeam<a class="headerlink" href="#viewing-the-build-results-in-spirateam" title="Permanent link">&para;</a></h2>
-<p>Now that you have associated your TeamCity Project with a specific
-SpiraTeam project and release/ iteration, you can now use TeamCity to
-manage your software builds and have the results of the build be
-reported back into SpiraTeam. For example when the 'BuildConfigTest'
-build of Project 1 illustrated in the figure bellow is executed, it will
-report in TeamCity:</p>
+<p>Once you have entered in the Project ID and Release version number, click the [Save] button and the plugin will connect to Spira and verify that the project exists, that the current user can connect to that project, and that the specified release/iteration exists in the project. Once it has verified successfully, it will save your Project configuration settings. In case of error, follow the instructions on-screen and try again. You are now ready to use TeamCity with Spira.</p>
+<h2 id="viewing-the-build-results-in-spira">Viewing the Build Results in Spira<a class="headerlink" href="#viewing-the-build-results-in-spira" title="Permanent link">&para;</a></h2>
+<p>Now that you have associated your TeamCity Project with a specific Spira project and release/ iteration, you can now use TeamCity to manage your software builds and have the results of the build be reported back into Spira. For example when the 'BuildConfigTest' build of Project 1 illustrated in the figure bellow is executed, it will report in TeamCity:</p>
 <p><img alt="Figure05" src="../img/JetBrains_TeamCity_26.jpeg" /></p>
-<p>The corresponding build entry will also be created in SpiraTeam under
-the specified project and release/iteration:</p>
+<p>The corresponding build entry will also be created in Spira under the specified project and release/iteration:</p>
 <p><img alt="Figure06" src="../img/JetBrains_TeamCity_27.jpeg" /></p>
-<p>If you have configured your Project Home to include the list of recent
-builds, the build information will also be displayed on the Project Home
-dashboard:</p>
+<p>If you have configured your Project Home to include the list of recent builds, the build information will also be displayed on the Project Home dashboard:</p>
 <p><img alt="Figure07" src="../img/JetBrains_TeamCity_28.jpeg" /></p>
-<p>Clicking on either of the hyperlinks will allow you to navigate to the
-Build details page inside SpiraTeam:</p>
+<p>Clicking on either of the hyperlinks will allow you to navigate to the Build details page inside Spira:</p>
 <p><img alt="Figure08" src="../img/JetBrains_TeamCity_29.jpeg" /></p>
-<p>This page will display the status (success / failure) and details of the
-build (imported from the TeamCity Console Output) together with a list
-of the associated incidents, test runs and source code commits. The
-following section will explain how to use your Source Code Management
-(SCM) system to take advantage of the SpiraTeam plugin and automatically
-link incidents and source code commits to the build information.</p>
+<p>This page will display the status (success / failure) and details of the build (imported from the TeamCity Console Output) together with a list of the associated incidents, test runs and source code commits. The following section will explain how to use your Source Code Management (SCM) system to take advantage of the Spira plugin and automatically link incidents and source code commits to the build information.</p>
 <h2 id="working-with-source-code-changesets">Working with Source Code Changesets<a class="headerlink" href="#working-with-source-code-changesets" title="Permanent link">&para;</a></h2>
-<p>When your developers commit changes to your application's source into
-the SCM repository, they should make sure to link the commit to the
-appropriate artifacts in SpiraTeam. For example they may want to record
-that the commit fixes a specific incident or implements a specific
-feature (requirement).</p>
-<p>Linking an artifact is very simple. All the developer needs to do is
-enter the artifact token in the following format:</p>
-<p><strong>[PREFIX:ID]</strong></p>
-<p>The first half, the Artifact Identifier, is a two-letter code that is
-used throughout SpiraTeam, and is visible on almost every page in the
-application. For example, a requirement's identifier is "<strong>RQ</strong>".
-Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the
-number of the artifact. So by creating a commit message that reads:</p>
-<p>SpiraTeam will automatically detect the tokens and will include links to
-them under the Associations tab for each commit detail in SpiraTeam.</p>
-<p>Inside SpiraTeam, the system will use the same information to
-automatically link the list of associated commits to the build record:</p>
+<p>When your developers commit changes to your application's source into the SCM repository, they should make sure to link the commit to the appropriate artifacts in Spira. For example they may want to record that the commit fixes a specific incident or implements a specific feature (requirement).</p>
+<p>Linking an artifact is very simple. All the developer needs to do is enter the artifact token in the following format: <code>\[PREFIX:ID\]</code></p>
+<p>The first half, the Artifact Identifier, is a two-letter code that is used throughout Spira, and is visible on almost every page in the application. For example, a requirement's identifier is "<strong>RQ</strong>". Incidents are "<strong>IN</strong>", and tasks are "<strong>TK</strong>". The artifact ID is the number of the artifact. So by creating a commit message that reads:</p>
+<p>Spira will automatically detect the tokens and will include links to them under the Associations tab for each commit detail in Spira.</p>
+<p>Inside Spira, the system will use the same information to automatically link the list of associated commits to the build record:</p>
 <p><img alt="" src="../img/JetBrains_TeamCity_30.png" /></p>
-<p>If the commit message contains Incident tokens, the plugin will also
-automatically link those incidents to the appropriate build:</p>
+<p>If the commit message contains Incident tokens, the plugin will also automatically link those incidents to the appropriate build:</p>
 <p><img alt="" src="../img/JetBrains_TeamCity_31.png" /></p>
-<p>Similarly when you view the list of incidents inside SpiraTeam you will
-now be able to sort and filter the list by the associated build:</p>
+<p>Similarly when you view the list of incidents inside Spira you will now be able to sort and filter the list by the associated build:</p>
 <p><img alt="" src="../img/JetBrains_TeamCity_32.png" /></p>
-<p>Congratulations! You are now able to use SpiraTeam and TeamCity to be
-able to manage your builds and have the build status integrated into
-your SpiraTeam project dashboard.</p>
+<p>Congratulations! You are now able to use Spira and TeamCity to be able to manage your builds and have the build status integrated into your Spira project dashboard.</p>
 <h2 id="scheduling-test-sets-upon-successful-builds">Scheduling Test Sets Upon Successful Builds<a class="headerlink" href="#scheduling-test-sets-upon-successful-builds" title="Permanent link">&para;</a></h2>
-<p>One additional feature of the integration with SpiraTest and SpiraTeam
-(hereafter just SpiraTest) is the ability to have SpiraTest
-automatically schedule the execution of a test set whenever a build
-passes.</p>
-<p>To do that, make sure the Test Set is associated with the SpiraTest
-release or iteration that is being built and then set the <strong>Schedule on
-Build</strong> field to "Yes" and optionally enter in the delay (after the
-build succeeds) that you want the test set to be scheduled for:</p>
+<p>One additional feature of the integration is the ability to have SpiraTest automatically schedule the execution of a test set whenever a build passes.</p>
+<p>To do that, make sure the Test Set is associated with the SpiraTest release or iteration that is being built and then set the <strong>Schedule on Build</strong> field to "Yes" and optionally enter in the delay (after the build succeeds) that you want the test set to be scheduled for:</p>
 <p><img alt="" src="../img/JetBrains_TeamCity_19.png" /></p>
-<p>This means that you don't need to separately manage your build schedule
-in Jenkins and your test automation schedule in TeamCity.</p>
+<p>This means that you don't need to separately manage your build schedule in Jenkins and your test automation schedule in TeamCity.</p>
 
 
 
