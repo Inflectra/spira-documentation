@@ -64,11 +64,11 @@ Each edition shares the same core design and user experience. They differ by whi
 | Artifact Boards | N         | N         | Y         |
 
 ## Global Features
-| Feature | SpiraTest | SpiraTeam | SpiraPlan |
-| ------- | --------- | --------- | --------- |
-| Custom properties  | Y         | Y         | Y         |
-| Emails  | Y         | Y         | Y         |
-| Teams   | N         | N         | Y         |
+| Feature           | SpiraTest | SpiraTeam | SpiraPlan |
+| ----------------- | --------- | --------- | --------- |
+| Custom properties | N         | N         | Y         |
+| Emails            | Y         | Y         | Y         |
+| Teams             | N         | N         | Y         |
 
 
 ## Integrations

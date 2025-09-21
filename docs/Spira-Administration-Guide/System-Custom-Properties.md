@@ -1,6 +1,5 @@
 # System Custom Properties
-
-!!! info "These features are only available in SpiraPlan"
+!!! abstract "Available in SpiraPlan only"
 
 Spira allows you to customize different workspaces or program-level artifacts. For each type (e.g. products, program capabilities, or program milestones) you can create up to 30 system custom properties. System custom properties are shared across every relevant workspace or program-level artifact in the system. For example, all products will share the same set of available custom properties; and all capabilities will share a different set of available custom properties. These system custom properties are visible in the following places:
 

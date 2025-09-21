@@ -1,7 +1,7 @@
 # System: Workspaces
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
-There are up to 3 levels of workspaces that you can use to organize all of your data within Spira. Products are where all your tests, requirements, and bugs live. These are grouped inside of Programs. In SpiraPlan you can group programs inside of Portfolios. Each of these workspaces is discussed below, as are Templates - a special type of workspace for controlling parts of how products and programs work.
+There are up to 3 levels of workspaces that you can use to organize all of your data within Spira. Products are where all your tests, requirements, and bugs live. These are grouped inside of Programs. In Spira you can group programs inside of Portfolios. Each of these workspaces is discussed below, as are Templates - a special type of workspace for controlling parts of how products and programs work.
 
 All workspaces share certain ways of working: they all have a name and description, then can all be made active or inactive. An inactive workspace is completely inaccessible to any user.
 
@@ -53,6 +53,7 @@ All artifacts are cloned in the same way as the full clone option (e.g. comments
 For those artifacts that are copied, the following fields are reset to be either blank or to their default value:
 
 - task dates
+    {: .edition-spiraplan .edition-spirateam}
 - requirement statuses
 - release statuses
 - document statuses
@@ -60,7 +61,9 @@ For those artifacts that are copied, the following fields are reset to be either
 - test set statuses
 - incident statuses
 - task statuses
+    {: .edition-spiraplan .edition-spirateam}
 - risk statuses
+    {: .edition-spiraplan .edition-spirateam}
 - execution statuses for test cases, test steps, and test sets (all set to Not Run)
 
 The same limitations listed above for a full clone also apply to this reset copy option.
@@ -159,7 +162,6 @@ You need to enter:
 Once you are satisfied with the information, click the "Insert" button to actually create the new program.
 
 ### Edit a program
-
 In a similar way, to edit the details of an existing program, click the "Edit" button in the right-hand column of the program list box, and you will be taken to the following screen that allows you modify the program details. **Please note that this is the only administrative page in the program administration section.**
 
 ![](img/System_Workspaces_38.png)
@@ -182,7 +184,6 @@ Once you have made the necessary changes, click the "Save" button to commit them
 In addition, the lower part of the screen allows you to view/edit the users that are members of the program and also see which products are in the program:
 
 #### Program User Membership
-
 This tab allows you to see which users are members of the program and which program role they have:
 
 ![](img/System_Workspaces_39.png)
@@ -201,7 +202,6 @@ You now should narrow down the list of users by entering filter criteria and cli
 \[Add\] to add them to the program in the specified role.
 
 #### Program Product List
-
 This tab allows you to see the list of products that are contained within the current program. Clicking on the name of the product will take you to the details page for that product:
 
 ![](img/System_Workspaces_41.png)
@@ -234,7 +234,6 @@ You need to enter:
 Once you are satisfied with the information, click the "Insert" button to actually create the new portfolio.
 
 ### Edit a portfolio
-
 In a similar way, to edit the details of an existing portfolio, click the "Edit" button in the right-hand column of the portfolio list box, and you will be taken to the following screen that allows you modify the portfolio details.
 
 ![](img/System_Workspaces_Portfolios_3.png)
@@ -273,7 +272,7 @@ On this screen you can edit the template's:
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 ### Included Templates
-SpiraPlan ships with four different templates. Together these will cover most of your needs. You can easily clone and customize one of these templates to meet your exact needs. Or you can start from scratch. Below is a brief description of each of the includes templates:
+Spira ships with four different templates. Together these will cover most of your needs. You can easily clone and customize one of these templates to meet your exact needs. Or you can start from scratch. Below is a brief description of each of the includes templates:
 
 - **Default**: This basic default template matches the one the system automatically generates when you create a completely new template. It is a good basis for customizing your template if no other template fit your needs
 - **Library Information System (Sample)**: This template is designed to work with the sample product Library Information System. The template showcases a number of different parts of the system, through that product. It is not designed to be used for real life products.
@@ -310,4 +309,3 @@ If you click the "Delete" button, a popup will show a warning. If you decide to 
     - mark each user as inactive
     
     These inactive items will still be visible on the relevant administration pages, but no one will see them in the main application. 
-

@@ -1,4 +1,6 @@
 # Product: Home Page
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 The Product Administration Home page is accessible to users whose product role includes product admin permission. There are multiple ways to navigate to it: 
 
 - Click the "Administration" link in the upper right. This will display the context aware administration menu popup. Then click on the Product Name at the top.
@@ -23,6 +25,8 @@ This widget shows a list of product members. By default, 10 users are shown, but
 This widget shows the active components for the product. By default, 5 components are shown, but this number can be changed. To view or edit the complete list of components, click View All.
 
 ## Source Code
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 If a source code provider has been set up by a system administrator and is active for the current product, it will be displayed here. Click View Details to configure it. 
 
 ## SpiraApps

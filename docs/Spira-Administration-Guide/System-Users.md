@@ -1,4 +1,5 @@
 # System: Users
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## View / Edit Users
 
@@ -40,7 +41,8 @@ On this screen, you can:
 
 !!! info "System administrators and product roles"
     Note: if a user is a System Administrator, that user will always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If they stop being a system admin, they will then revert back to their true role.
-When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
+
+    When creating a new user, you can also set their role for products. A user can be assigned a role to multiple products at once, by checking the required checkboxes in the dropdown list of products. The same role will be applied across all products.
 
 !!! tip "Notifying Newly Created Users"
     The new user created as above will get an email with the subject "New Spira Account". The email contains the new user's assigned username and password, along with the login URL.
@@ -58,17 +60,19 @@ On this screen you can edit key information and security about the user:
 - username
 - email address
 - RSS token
-- portfolio viewer status (SpiraPlan only - this setting also controls the enterprise homepage access)
-- timesheet manager (SpiraPlan only - this setting gives access to the enterprise timesheet page and the ability to approve or reject any user's submitted timesheet)
+- portfolio viewer status (this setting also controls the enterprise homepage access)
+    {: .edition-spiraplan}
+- timesheet manager (this setting gives access to the enterprise timesheet page and the ability to approve or reject any user's submitted timesheet)
+    {: .edition-spiraplan}
 - system administration status
 - report administrator status
 - active status
-- password (if the user is managed by SpiraPlan)
-- secret question and answer (if the user is managed by SpiraPlan)
+- password (if the user is managed by Spira)
+- secret question and answer (if the user is managed by Spira)
 - LDAP connection (if managed by LDAP - see below)
 - 2-step authentication (if active for a user, admins can click the "Deactivate" button to deactivate this feature for the specific user)
 
-If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. SpiraPlan® will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](System.md/#ldap-configuration) for more details.
+If your Spira accounts are managed by an external LDAP directory server, you can edit a user's LDAP information on this page. In LDAP-Managed mode you enter the fully Distinguished Name (DN) for that user in your corporate LDAP server and provide no password. Spira will then query your corporate LDAP server for the password information, reducing the number of passwords that a user needs to remember. Please see the sections on [Importing LDAP Users](#importing-ldap-users) and [LDAP Configuration](System.md/#ldap-configuration) for more details.
 
 If a user's account uses an external provider for authentication (like LDAP or Okta) you can unlink the user from that authentication provider on this page. Click the `Unlink Account` button to display a popup that requires you to add the new security information for that user.
 
@@ -103,7 +107,7 @@ The program membership tab shows a list of all programs that the user is a membe
 - the program ID
 - the user's role in that program
 
-To view/change the list of usernames that a user has in an external bug-tracking system, click on the "Data Mapping" tab. This section is used by the SpiraPlan data-synchronization service to map incidents from SpiraPlan to other bug-tracking systems.
+To view/change the list of usernames that a user has in an external bug-tracking system, click on the "Data Mapping" tab. This section is used by the Spira data-synchronization service to map incidents from Spira to other bug-tracking systems.
 
 ![](img/System_Users_49.png)
 
@@ -111,20 +115,19 @@ Please see the documentation for the relevant data sync for more details on usin
 
 
 ## Importing LDAP Users
-If your organization already has an LDAP compatible user management system in place (e.g. Windows Active Directory, Novell eDirectory, OpenLDAP, IBM Tivoli, etc.), then instead of having to manually enter users one by one into SpiraPlan®, you can simply import them from your LDAP Server. Before doing this however, you need to first setup the [LDAP Configuration](System.md/#ldap-configuration).
+If your organization already has an LDAP compatible user management system in place (e.g. Windows Active Directory, Novell eDirectory, OpenLDAP, IBM Tivoli, etc.), then instead of having to manually enter users one by one into Spira, you can simply import them from your LDAP Server. Before doing this however, you need to first setup the [LDAP Configuration](System.md/#ldap-configuration).
 
-Once you have setup your LDAP server configuration in SpiraPlan®, clicking on the "Import Users From and LDAP Server" will bring up the following screen:
+Once you have setup your LDAP server configuration in Spira, clicking on the "Import Users From and LDAP Server" will bring up the following screen:
 
 ![](img/System_Users_50.png)
 
-This screen lists all the users available in the LDAP server that have not been already imported into SpiraPlan®. The users are listed by name along with their login, email address and fully distinguished LDAP name (DN). You can narrow down the list by entering partial name matches in any of the fields displayed and clicking
+This screen lists all the users available in the LDAP server that have not been already imported into Spira. The users are listed by name along with their login, email address and fully distinguished LDAP name (DN). You can narrow down the list by entering partial name matches in any of the fields displayed and clicking
 \[Filter\] and/or you can sort the results by clicking on the directional arrows in the field headings.
 
-Select the checkbox of any users you want to import and click "Import" to complete the operation. These users can now login to SpiraPlan® and use their existing LDAP login and password information.
+Select the checkbox of any users you want to import and click "Import" to complete the operation. These users can now login to Spira and use their existing LDAP login and password information.
 
 
 ## Login Providers
-
 You can connect your organization's identity provider for Single Sign On (SSO) authentication with Spira. This works for both on premise and cloud versions of the application. We currently support integration with:
 
 - [Azure AD](../HowTo-Guides/Login-providers.md/#azure-ad)
@@ -135,7 +138,6 @@ You can connect your organization's identity provider for Single Sign On (SSO) a
 - [Okta](../HowTo-Guides/Login-providers.md/#okta)
 - [OneLogin](../HowTo-Guides/Login-providers.md/#onelogin)
 - [OpenId Connect](../HowTo-Guides/Login-providers.md/#openid-connect)
-
 
 On the Provider List page you can see a list of all available providers, their status (active or inactive), and how many, if any, users are logging in to the application using that provider.  To configure a particular provide, click the "Edit" button for that row.
 
@@ -182,7 +184,6 @@ Before rolling out the provider to your users be aware that the provider likely 
 
 
 ## Active Sessions
-
 Sometimes a system administrator will want to know who is logged into the system right now, and how many total users are logged in. The 'Active User Sessions' page display a list of all the users who currently have active sessions in the system. Each user is displayed along with their user ID, whether they're connected through the application or via a third-party add-on, and the date they last logged-in.
 
 ![](img/System_Users_51.png)
@@ -195,16 +196,14 @@ Administrators can end a session that is in use to make it available for others.
 
 
 ## Pending Requests
-
-If you have enabled the ability for users to [register for new SpiraPlan accounts themselves](System.md/#security-settings), clicking on the "Pending Requests" administration option allows you to view a list of all the outstanding requests for new user accounts:
+If you have enabled the ability for users to [register for new Spira accounts themselves](System.md/#security-settings), clicking on the "Pending Requests" administration option allows you to view a list of all the outstanding requests for new user accounts:
 
 ![](img/System_Users_52.png)
 
 For each pending user request you can choose to either Approve or Deny the request:
 
-**Approve**: clicking this option will approve the user. They will get an email letting them know that they have been approved and can now log into the system.
-
-**Delete**: clicking this option will delete the pending user request from the system.
+- **Approve**: clicking this option will approve the user. They will get an email letting them know that they have been approved and can now log into the system.
+- **Delete**: clicking this option will delete the pending user request from the system.
 
 
 ## View / Edit Product Roles
@@ -224,7 +223,7 @@ There are six (6) default product roles that a user may be assigned to a product
     The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
 
 ### Role wide customizations
-You can make changes to the permissions associated with each of these default roles, and also create as many additional roles as you like. To customize the roles in your installation of SpiraPlan®, click on the "View / Edit Roles" link in the Administration menu:
+You can make changes to the permissions associated with each of these default roles, and also create as many additional roles as you like. To customize the roles in your installation of Spira, click on the "View / Edit Roles" link in the Administration menu:
 
 ![](img/System_Users_53.png)
 
@@ -274,7 +273,7 @@ This section lets you specify if the role allows users to add new documents to t
 ## View / Edit Teams
 !!! abstract "Available in SpiraPlan only"
 
-SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
+Spira lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
 ![](img/System_Users_57.png)
 

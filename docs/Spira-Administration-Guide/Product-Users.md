@@ -1,5 +1,5 @@
 # Product: Users
-
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Product Membership
 The following page is displayed when you choose the "Product Membership" link from the Administration menu. If you have teams features enabled then the page will be called "Team / Product Membership"
@@ -44,7 +44,9 @@ Filter the rows as required then select the rows for users you want to add to th
 Note that you cannot add a user with just a team, to be added to the product the user must be given a product role.
 
 ## Team Membership
-SpiraPlan lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
+!!! abstract "Available in SpiraPlan only"
+
+Spira lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
 Team membership is managed by the combined Team and Product Membership page described above.
 

@@ -1,13 +1,13 @@
 # Template: Documents
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
-SpiraPlan® includes a built-in web-based document management system that allows you to upload and share documents between product team members. These documents are stored in folders, categorized by a series of user-defined meta-tags and can also be associated with other artifacts in the system (e.g. requirements, incidents, etc.).
+Spira includes a built-in web-based document management system that allows you to upload and share documents between product team members. These documents are stored in folders, categorized by a series of user-defined meta-tags and can also be associated with other artifacts in the system (e.g. requirements, incidents, etc.).
 
 The set of administrative options located under the "Documents" heading allow the Template Owner to configure how the documents are organized in their particular template.
 
 
 ## Document Types
-
-When users upload documents into a SpiraPlan product, they are required to specify the type of document that is being uploaded. The list of document types is configurable by the Template Owner for each individual template.
+When users upload documents into a Spira product, they are required to specify the type of document that is being uploaded. The list of document types is configurable by the Template Owner for each individual template.
 
 When you click on Documents "Types", you can edit the list of types available:
 
@@ -19,12 +19,11 @@ The only requirement is that each template needs to have at least one active doc
 
 
 ## Document Statuses
-
 The following screen is displayed when you choose the "Statuses" link from the Documents section of the administration menu:
 
 ![](img/Template_Documents_129.png)
 
-The screen displays a list of all the defined document statuses for the current template. By default, the screen will be populated with the standard SpiraPlan® document statuses. To edit an existing document status, change the name, open check-box, set it as the default status and/or change the active flag then click "Save".
+The screen displays a list of all the defined document statuses for the current template. By default, the screen will be populated with the standard Spira document statuses. To edit an existing document status, change the name, open check-box, set it as the default status and/or change the active flag then click "Save".
 
 You can't delete an existing document status, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new document status, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -32,12 +31,11 @@ The open check-box allow you to specify if the document status should be conside
 
 
 ## Document Workflows
-
 Clicking on the "Workflows" link in the Administration menu Documents section brings up the list of defined document workflows for the current template. A workflow is a predefined sequence of document statuses linked together by "workflow transitions" to enable a newly created document to be reviewed, prioritized, assigned, resolved and closed, as well as to checking documents in and out of the system. The workflow list screen for a sample template is illustrated below:
 
 ![](img/Template_Documents_130.png)
 
-To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard Spira steps and transitions.
 
 You can have as many document workflows as you like in a template, but only one can be marked as the default. Each document type is assigned to a workflow; this allows you to have different document types follow different paths from creation of closure. However, when a new document type is created, it will be initially associated with the template's default workflow.
 
@@ -45,7 +43,6 @@ Note: You can only assign an active workflow to a document type, and similarly y
 
 
 ### Workflow Details
-
 Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Documents_131.png)
@@ -56,7 +53,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Documents_132.png)
@@ -69,14 +65,13 @@ Each transition has a series of conditions which need to be satisfied for a user
 
 
 ### Edit Workflow Step
-
 When you click on the document status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Documents_133.png)
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current document status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various document fields (i.e. those that are a standard part of SpiraPlan® such as Type):
+This page allows you to define the behavior of the various document fields (i.e. those that are a standard part of Spira such as Type):
 
 ![](img/Template_Documents_134.png)
 

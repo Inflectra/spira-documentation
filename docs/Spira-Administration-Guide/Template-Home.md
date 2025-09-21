@@ -1,4 +1,6 @@
 # Template: Home Page
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 The Template Administration Home page is accessible to users whose product role includes template admin permission. It provides template administrators with quick access to important information. There are multiple ways to navigate to it: 
 
 - In the main workspace dropdown, in the dedicated Templates section at the bottom, click on the template name.

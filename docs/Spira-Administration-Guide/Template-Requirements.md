@@ -1,15 +1,15 @@
 # Template: Requirements
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 This section contains administrative options that are specific to the requirements functionality in the system.
 
 
 ## Importance
-
 The following screen is displayed when you choose the "Importance" link from the Requirements section of the administration menu:
 
 ![](img/Template_Requirements_113.png)
 
-The screen displays a list of all the defined requirement importances for the current template. By default the screen will be populated with the standard SpiraPlan® requirement importances. To edit an existing requirement importance, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".
+The screen displays a list of all the defined requirement importances for the current template. By default the screen will be populated with the standard Spira requirement importances. To edit an existing requirement importance, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".
 
 Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
@@ -34,12 +34,11 @@ If you turn on one or more statuses to show on boards, then those statuses will 
 ![](img/Template_Requirements_Statuses.png)
 
 ## Types
-
 The following screen is displayed when you choose the "Types" link from the Requirements section of the administration menu:
 
 ![](img/Template_Requirements_114.png)
 
-The screen displays a list of all the defined requirement types for the current template. By default the screen will be populated with the standard SpiraPlan® requirement types. To edit an existing requirement type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
+The screen displays a list of all the defined requirement types for the current template. By default the screen will be populated with the standard Spira requirement types. To edit an existing requirement type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
 
 You can't delete an existing requirement type, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new requirement type, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -51,18 +50,16 @@ The default radio button allows you to specify which requirement type should be 
 
 
 ## Workflows
-
 Clicking on the "Workflow" link under the Requirements heading, brings up the list of defined requirement workflows for the current template. A workflow is a predefined sequence of requirement statuses linked together by "workflow transitions" to enable a newly created requirement to be reviewed, prioritized, assigned, developed and tested, as well as to handle exception cases such as the case of a rejected or obsolete requirement. The workflow list screen for the sample template is illustrated below:
 
 ![](img/Template_Requirements_115.png)
 
-You can have as many workflows as you like in a template, but only one can be marked as the default. Each requirement type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+You can have as many workflows as you like in a template, but only one can be marked as the default. Each requirement type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard Spira steps and transitions.
 
 Note: You cannot make a workflow inactive that is currently linked to a requirement type. This is important as all requirement types need to be linked to an active workflow at all times.
 
 
 ### Edit Workflow Details
-
 Clicking on the 'Steps' button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Requirements_116.png)
@@ -73,7 +70,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Requirements_117.png)
@@ -96,14 +92,13 @@ A user with a specified role can be allowed to execute the transition regardless
 
 
 ### Edit Workflow Step
-
 When you click on the requirement status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Requirements_118.png)
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current requirement status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various requirement fields (i.e. those that are a standard part of SpiraPlan® such as Importance):
+This page allows you to define the behavior of the various requirement fields (i.e. those that are a standard part of Spira such as Importance):
 
 ![](img/Template_Requirements_119.png)
 
