@@ -9133,12 +9133,10 @@
 <p>In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.</p>
 <div class="admonition info">
 <p class="admonition-title">About this SpiraApp</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> system settings</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> product settings </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> product template setup required</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> toolbar button on requirement details page</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> toolbar button on release details page</li>
+<ul>
+<li>product settings </li>
+<li>toolbar button on requirement details page</li>
+<li>toolbar button on release details page</li>
 </ul>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
@@ -9177,9 +9175,9 @@
 <ul>
 <li>The artifacts in a preset will not be created in the exact order they are listed in a preset. In other words, the order of artifacts names in a preset is not meaningful</li>
 <li>The artifacts are added at the root folder for that artifact</li>
-<li><strong>Requirement Task Presets</strong>: the tasks get Owner, Priority, and Release information from the requirement</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Requirement Task Presets</strong>: the tasks get Owner, Priority, and Release information from the requirement</li>
 <li><strong>Requirement Test Case Presets</strong>: the requirement's release (if set) is added to the test cases' release coverage</li>
-<li><strong>Release Task Presets</strong>: the tasks release is set to that of the release</li>
+<li class="edition-spiraplan edition-spirateam"><strong>Release Task Presets</strong>: the tasks release is set to that of the release</li>
 <li><strong>Release Test Case Presets</strong>: the release is added to the test cases' release coverage</li>
 <li><strong>Test case steps</strong>: are not added to test cases created using this SpiraApp, even in cases where the testing setting for the product states new test cases should have a default test step added</li>
 </ul>
