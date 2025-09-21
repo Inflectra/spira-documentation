@@ -1,21 +1,21 @@
 # WebLOAD
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 RadView WebLoad is a WebLOAD is a performance, scalability, and reliability testing solution for internet applications.   WebLOAD is easy to use and delivers maximum testing performance and value. WebLOAD verifies the scalability and integrity of internet applications by generating a load composed of Virtual Clients that simulate real-world traffic. Probing Clients let you refine the testing process by acting as a single user that measures the performance of targeted activities, and provides individual performance statistics of the internet application under load.
 
 This section covers installing and using the Engine to report back the success of a WebLoad protocol test scripts/agendas for the WebLOAD environment.
 
 !!! info 
-    This integration requires at least version 4.0 of SpiraTest/Plan and has been tested against version WebLOAD-Professional-12.2.0.087 of WebLoad.
-
+    This integration requires at least version 4.0 of Spira and has been tested against version WebLOAD-Professional-12.2.0.087 of WebLoad.
 
 ## Installing the WebLOAD Engine
 
-This section assumes that you already have a working installation of SpiraTest or SpiraPplan and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md). Once those prerequisites are in place, please follow these steps:
+This section assumes that you already have a working installation of Spira and have installed RemoteLaunch on the various test automation hosts following the instructions in [RemoteLaunch Guide](RemoteLaunch-Guide.md). Once those prerequisites are in place, please follow these steps:
 
 -   Download and extract the WebLOADEngine.zip file from the Inflectra website and locate the appropriate WebLoad.dll for the version of WebLOAD that you are using.
 -   If you don't see the version listed, just use the nearest version that is *lower* than your current version.
 -   Copy the file "WebLoad.dll"  into the "extensions" sub-folder of the RemoteLaunch installation.
--   Log in to SpiraPlan as a system administrator and go into SpiraPlan main Administration page and click on the "Test Automation" link under **Integration**.
+-   Log in to Spira as a system administrator and go into Spira main Administration page and click on the "Test Automation" link under **Integration**.
 
 ![](img/WebLOAD_1.png)
 
@@ -23,21 +23,16 @@ This section assumes that you already have a working installation of SpiraTest o
 
 ![](img/WebLOAD_2.png)
 
--   **Name**: This is the short display name of the automation engine.  It can be anything that is meaningful to your users, and will be displayed  in the Automation Host dropdown when the user selects it in the test set.
-
--   **Description**: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)
-
--   **Active**: If checked, the engine is active and able to be used for any project.
-
--   **Token**: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine, in this case WebLoad.dll, to actually use for a given test case. For WebLOAD, it needs to be simply "WebLoad".  This is case sensitive, and if it does not match an error will be written to a Blocked test run that will be phrased using what was entered as the token.  For example, if the token is misspelled, WebLpsd, the error message will say  “Extension 'WebLpsd' was not loaded or was in error condition.  Could not run TC:73 in TX:29”
+    -   **Name**: This is the short display name of the automation engine.  It can be anything that is meaningful to your users, and will be displayed  in the Automation Host dropdown when the user selects it in the test set.
+    -   **Description**: This is the long description of the automation engine. It can be anything that is meaningful to your users. (Optional)
+    -   **Active**: If checked, the engine is active and able to be used for any project.
+    -   **Token**: This needs to be the assigned unique token for the automation engine and is used to tell RemoteLaunch which engine, in this case WebLoad.dll, to actually use for a given test case. For WebLOAD, it needs to be simply "WebLoad".  This is case sensitive, and if it does not match an error will be written to a Blocked test run that will be phrased using what was entered as the token.  For example, if the token is misspelled, WebLpsd, the error message will say  “Extension 'WebLpsd' was not loaded or was in error condition.  Could not run TC:73 in TX:29”
 
 Once you have finished, click the `Insert & Close` button and you will be taken back to the Test Automation list page, with WebLOAD listed as an available automation engine.
 
 ![](img/WebLOAD_3.png)
 
-
 ## WebLOAD RemoteLaunch Settings
-
 You will need to modify the WebLOAD configuration for each of the specific automation hosts, by right-clicking on the RemoteLaunch icon in the system tray and choosing "Configuration". That will bring up the RemoteLaunch configuration page. The WebLOAD engine adds its own tab to this page which allows you to configure how WebLOAD operates:
 
 ![](img/WebLOAD_4.png)
@@ -60,19 +55,18 @@ The following fields can be specified on this screen (make sure to hit `Save` af
     - \[ProgramFiles\] -- Translated to the Program Files directory. For 64-bit machines, it's the 64-bit directory.
     - \[ProgramFilesX86\] -- Translated to the 32-bit Program Files directory.
 
-
 ## Setting up the Automated Test Cases
 
-This section describes the process for setting up a test case in SpiraPlan for automation and linking it to an automated WebLOAD test script.
+This section describes the process for setting up a test case in Spira for automation and linking it to an automated WebLOAD test script.
 
-First you need to display the list of test cases in SpiraPlan (by clicking Testing \> Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Overview" tab and scroll down to the Automation section:
+First you need to display the list of test cases in Spira (by clicking Testing \> Test Cases) and then add a new test case. Once you have added the new test case, click on it and select the "Overview" tab and scroll down to the Automation section:
 
 ![](img/WebLOAD_5.png)
 
 You need to enter the following fields:
 
 - **Automation Engine**: Choose the WebLOAD Automation Engine that you created in the previous section from the drop-down list.
-- **Script Type**: This should be left as to Attached as the integration with WebLOAD only supports referencing WebLOAD test script .tpl files and not physically uploading the test scripts into SpiraPlan.
+- **Script Type**: This should be left as to Attached as the integration with WebLOAD only supports referencing WebLOAD test script .tpl files and not physically uploading the test scripts into Spira.
 - **Filename**: This is the full file path or keyword shortcut to the WebLOAD test script .tpl file. See "Tokens for Specifying File Locations" info panel above for more inforamtion about they keywords you can use
 - **Document Type**: Leave as Default
 - **Document Folder**: Leave as Root Folder
@@ -83,22 +77,17 @@ Once you are happy with the values, click `Save` to update the test case. Now yo
 
 ![](img/WebLOAD_6.png)
 
-
 ### Using Parameterized Test Cases
+Currently the WebLOAD automation engine does not support the passing of parameter values from Spira to WebLOAD.  Only the file path to the WebLOAD project file (*.tpl) file can be passed.  Other parameters must be set in RemoteLaunch as illustrated earlier.
 
-Currently the WebLOAD automation engine does not support the passing of parameter values from SpiraPlan to WebLOAD.  Only the file path to the WebLOAD project file (*.tpl) file can be passed.  Other parameters must be set in RemoteLaunch as illustrated earlier.
-
-
-## Executing WebLOAD Test Sets from SpiraPlan
-
-Before we can executed tests we need to setup the appropriate automation hosts and test sets in SpiraPlan. Once this is done, there are two ways to execute automated test cases in SpiraPlan:
+## Executing WebLOAD Test Sets from Spira
+Before we can executed tests we need to setup the appropriate automation hosts and test sets in Spira. Once this is done, there are two ways to execute automated test cases in Spira:
 
 1.  Schedule the test cases to be executed on a specific computer (local or remote) at a date/time in the future
 2.  Execute the test cases right now on the local computer.
 
 ### Setup the Automation Hosts and Test Sets
-
-Go to Testing \> Automation Hosts from the main navbar in SpiraPlan to display the list of automation hosts.
+Go to Testing \> Automation Hosts from the main navbar in Spira to display the list of automation hosts.
 
 ![](img/WebLOAD_7.png)
 
@@ -124,10 +113,8 @@ You need to add at least one automated test case to the test set and then config
 - **Status**: This needs to be set to "Not Started" for RemoteLaunch to pick up the scheduled test set. When you change the Planned Date, the status automatically switches back to "Not Started"
 - **Type**: This needs to be set to "Automated" for automated testing
 
-
 ### Execute the Test Sets
-
-Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll SpiraPlan for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either:
+Once you have set the various test set fields (as described above), the Remote Launch instances will periodically poll Spira for new test sets. Once they retrieve the new test set, they will add it to their list of test sets to be executed. Once execution begins they will change the status of the test set to "In Progress", and once test execution is done, the status of the test set will change to either:
 
 1. **Completed**: the automation engine could be launched and the test has completed; or
 2. **Blocked**: RemoteLaunch was not able to start the automation engine.
@@ -147,7 +134,7 @@ If you receive the "Blocked" status for either the test set or the test cases yo
 !!! info
     While the tests are executing you will see the WebLOAD application open as WebLOAD executes the appropriate tests.
 
-Once the tests have completed, you can log back into SpiraPlan and see the execution status of your test cases. If you click on a Test Run that was generated by WebLOAD, you will see the following information:
+Once the tests have completed, you can log back into Spira and see the execution status of your test cases. If you click on a Test Run that was generated by WebLOAD, you will see the following information:
 
 ![](img/WebLOAD_12.png)
 
@@ -155,7 +142,7 @@ This screen indicates the status of the test run that was reported back from Web
 
 ![](img/WebLOAD_13.png)
 
-In addition, the details in the test run from WebLOAD lists the input script and the parameters passed to the script so testers will know the file created that are correlated with tis test run in the output directory.  Here is an example of a successful WebLOAD script run through SpiraPlan:
+In addition, the details in the test run from WebLOAD lists the input script and the parameters passed to the script so testers will know the file created that are correlated with tis test run in the output directory.  Here is an example of a successful WebLOAD script run through Spira:
 
 ```
 Results from results.xml: Passed Test 
@@ -164,4 +151,4 @@ with arguments: C:\Users\su.be\Documents\WebLOAD\Sessions\output\WebLOADFirstTes
 ```
 
 !!! success "Congratulations"
-    You are now able to run WebLOAD automated functional tests and have the results be recorded within SpiraTest /SpiraTeam/ SpiraPlan.
+    You are now able to run WebLOAD automated functional tests and have the results be recorded within Spira.
