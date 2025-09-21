@@ -1,4 +1,6 @@
 #  Migrating from HP ALM
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 This page outlines how to use the HP ALM Migration Tool to import projects from HP ALM (formerly known as HP Quality Center) into Spira.
 
 !!! info "What can be imported from HP ALM?"

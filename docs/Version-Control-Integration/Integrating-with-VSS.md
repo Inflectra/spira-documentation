@@ -1,22 +1,23 @@
 # Integrating with VSS
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-Visual SourceSafe® (VSS) from Microsoft® is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a VSS database and view commits linked to SpiraTeam artifacts.
+Visual SourceSafe® (VSS) from Microsoft® is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of Spira to be able to browse a VSS database and view commits linked to Spira artifacts.
 
-While users working on the code will usually have a complete copy of the repository on their local systems, this plug-in will access the VSS database remotely.The rest of this section outlines how to install and use the plug-in with SpiraTeam.
+While users working on the code will usually have a complete copy of the repository on their local systems, this plug-in will access the VSS database remotely.The rest of this section outlines how to install and use the plug-in with Spira.
 
 *Note: The plug-in will allow users to download and view different commits of files and view commit logs, but no changes to the repository are allowed through the plug-in.*
 
 ## Installing the VSS Plug-In 
 To install the VSS Version Control plug-in, follow these steps:
 
--   Install a copy of Visual SourceSafe on the same server that is running SpiraTeam (if it is already installed on the server, you can disregard this step).
--   Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraTeam installation:
+-   Install a copy of Visual SourceSafe on the same server that is running Spira (if it is already installed on the server, you can disregard this step).
+-   Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:
 
     -   VssProvider.dll
     -   SourceSafe.Interop.dll
 
-## Configuring VSS in SpiraPlan
-Before you can start using VSS in SpiraPlan you need to setup, at a system level, how VSS and SpiraPlan should work together: 
+## Configuring VSS in Spira
+Before you can start using VSS in Spira you need to setup, at a system level, how VSS and Spira should work together: 
 
 - Log in as a system admin, and go to System Admininstration > Integration > Source Code
 - If there is not already an antry for "VssProvider" click "Add" to go to the Plug-in details page
@@ -50,10 +51,10 @@ Once VSS has been configured at the system level, you are ready to use it for an
 ![](img/Integrating_with_VSS_38.png)
 
 
-## Using VSS with SpiraTeam
+## Using VSS with Spira
 Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
-You can read more about working with source code in SpiraPlan at the links below:
+You can read more about working with source code in Spira at the links below:
 
 - [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
 - [Commits](../Spira-User-Manual/Commits.md/#commit-list)
@@ -62,4 +63,4 @@ You can read more about working with source code in SpiraPlan at the links below
 
 
 ## Troubleshooting
-- If you have the VSS database located on a remote file-share on a > separate server to SpiraTeam, you will need to modify the identify > used by the IIS Application Pool running SpiraTeam. By default the > IIS Application Pool will run as the special Windows user "NETWORK > SERVICE". Whilst this is a secure account with low privileges for > normal use of the system, it may not have sufficient permissions > to access the VSS repository over your Local Area Network (LAN). > We recommend changing the IIS Application Pool to instead run as a > Windows Domain user that has permissions to access the remote > file-share containing the VSS database.
+If you have the VSS database located on a remote file-share on a > separate server to Spira, you will need to modify the identify > used by the IIS Application Pool running Spira. By default the > IIS Application Pool will run as the special Windows user "NETWORK > SERVICE". Whilst this is a secure account with low privileges for > normal use of the system, it may not have sufficient permissions > to access the VSS repository over your Local Area Network (LAN). > We recommend changing the IIS Application Pool to instead run as a > Windows Domain user that has permissions to access the remote > file-share containing the VSS database.

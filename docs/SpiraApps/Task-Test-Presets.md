@@ -1,8 +1,12 @@
 # Task and Test Presets SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
+This SpiraApp lets users quickly create presets for a specific requirement or release:
+- Tasks
+    {: .edition-spiraplan .edition-spirateam}
+- Tests cases
 
-This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.
+In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.
 
 !!! info "About this SpiraApp"
     - [ ] system settings

@@ -10,13 +10,13 @@ To simplify this task, Spira comes with a Microsoft Word Add-In that can export 
 The first thing you need to do is to go to the "Add-Ons and Downloads" page of the Inflectra Website (it can be found in the SpiraTest, SpiraPlan or Spira sections), and download the **MS-Office Add-Ins**
 installation package. There are separate packages for the following versions of MS Office:
 
-**MS-Office 2003 Add-Ins** -- these are compatible with Microsoft Office
+**MS-Office 2003 Add-Ins**: these are compatible with Microsoft Office
 2003 and 2007. They can connect to Spira v2.3 or later. They also require Microsoft .NET 3.5.
 
-**MS-Office 2007 Add-Ins** -- these are compatible with Microsoft Office
+**MS-Office 2007 Add-Ins**: these are compatible with Microsoft Office
 2007 and 2010. They can connect to Spira v3.0 or later. They also require Microsoft .NET 4.0.
 
-**MS-Office 2010 Add-Ins** -- these are compatible with Microsoft Office
+**MS-Office 2010 Add-Ins**: these are compatible with Microsoft Office
 2010 and later. They can connect to Spira v5.0 or later. They also require Microsoft .NET 4.0.
 
 This installation package will install the add-ins for Microsoft Excel, Word and Project at the same time. If you don't have the correct version of Microsoft .NET installed or some of the necessary prerequisites, you will be given the opportunity to install them when you first run the installation package.

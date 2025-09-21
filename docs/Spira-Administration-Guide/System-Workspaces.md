@@ -1,4 +1,6 @@
 # System: Workspaces
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 There are up to 3 levels of workspaces that you can use to organize all of your data within Spira. Products are where all your tests, requirements, and bugs live. These are grouped inside of Programs. In SpiraPlan you can group programs inside of Portfolios. Each of these workspaces is discussed below, as are Templates - a special type of workspace for controlling parts of how products and programs work.
 
 All workspaces share certain ways of working: they all have a name and description, then can all be made active or inactive. An inactive workspace is completely inaccessible to any user.
@@ -8,7 +10,6 @@ All workspaces share certain ways of working: they all have a name and descripti
 - if you make a portfolio inactive, it will not be accessible in the app. And, like with programs, none of its programs, and also none of their products will be accessible.
 
 ## View/Edit Products
-
 The following screen is displayed when you choose the "View/Edit Products" link from the administration menu:
 
 ![](img/System_Workspaces_33.png)
@@ -86,9 +87,11 @@ You need to:
 - select which program it belongs to and optionally enter a detailed description and/or web-site URL;
 - decide what to base the product on. It can either be a new empty product, or be based on another product already in the system. Doing the latter will copy across its membership, settings, data mappings, components and customizations;
 - select a template that will control the product. If you are creating an empty product (not based on an existing one) you can select any template in the system to use for this product, or you can start with a brand new template. If you are creating a product based on an existing one, then by default the template will be the same as the one the existing product uses. You can still create a new template in this case, which will effectively be a clone of the template the existing product uses.
-- decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) 
+    {: .edition-spiraplan .edition-spirateam}
 - you should initially make sure that the product is marked as "Active";
-- if available, you can disable Inflectra.ai for this product (it is enabled by default). Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- if available, you can disable Inflectra.ai for this product (it is enabled by default). Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. 
+    {: .feature-inflectraai}
 
 
 Once you are satisfied with the information, click the "Insert" button to actually create the new product.
@@ -105,10 +108,12 @@ On this screen you can:
 - edit the website URL
 - change the program
 - view the current template for the product. Next to the template name is a "Change" button. Clicking this will let you [change the product to use a different template](Product-Changing-Template.md)
-- enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) 
+    {: .edition-spiraplan .edition-spirateam}
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
-- toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. 
+    {: .feature-inflectraai}
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
@@ -117,12 +122,20 @@ Once you have made the necessary changes, click the "Save" button to commit them
 
 
 ## View/Edit Programs
-
 The following screen is displayed when you choose the "View/Edit Programs" link from the Administration menu:
 
 ![](img/System_Workspaces_36.png)
 
-This screen displays the list of programs in the system (both inactive and active) together with their portfolio <span class="pill">SpiraPlan</span>, template, web site URL, date of creation and active status. Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
+This screen displays the list of programs in the system (both inactive and active) together with their:
+
+- portfolio 
+    {: .edition-spiraplan}
+- template
+- web site URL
+- date of creation
+- active status
+
+Programs are used to relate products that are in the same department/division/organization or are for a common customer, client, etc. When products are in the same program, a user that is a member of the program can see the special Program Dashboard that displays key metrics from all the products in the program combined. Also, such users will have observer-level access to the contained products without needing to be explicitly added to each product.
 
 You can filter the list of programs by either choosing an active status, or entering a portion of the name, web-site or date into the appropriate text box. When you click the "Filter" button, the list of programs will be filtered by the criteria you entered. You can clear the filter selection by clicking the "Clear Filters" button. To sort the list of programs, just click on the appropriate arrow icon located in the header row of each field (one each for ascending / descending) In addition, the list of programs is paginated into groups of fifteen (15). You can step through the different pages by clicking the page numbers at the bottom of the list.
 
@@ -137,7 +150,8 @@ You need to enter:
 
 - a name for the program
 - optionally enter a detailed description and/or web-site URL
-- <span class="pill">SpiraPlan</span> optionally select a portfolio for the program to belong to, by default "none" is selected 
+- optionally select a portfolio for the program to belong to, by default "none" is selected
+    {: .edition-spiraplan}
 - you should initially make sure that the program is marked as "Active": this mean the program and its products will be accessible to users  
 - you can choose to make this program the default one (meaning that it cannot be deleted and products get added to it when their programs are deleted)
 - in addition you can optionally choose to associate the program with a product template. The template only controls the products that use it. It does not control the program, but it can affect what data is visible from some of the program pages
@@ -150,7 +164,17 @@ In a similar way, to edit the details of an existing program, click the "Edit" b
 
 ![](img/System_Workspaces_38.png)
 
-On the top part of this screen you can edit the name, description, website URL, portfolio <span class="pill">SpiraPlan</span>, active flag and default flag. Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
+On the top part of this screen you can edit the:
+
+- name
+- description
+- website URL
+- portfolio 
+    {: .edition-spiraplan}
+- active flag
+- default flag
+
+Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
 
 !!! question "What happens when you make a program inactive"
     If you set a programs's active flag to "No" then it will be hidden from the global navigation for all users. All products in that program will also be hidden from the global navigation for all users.
@@ -165,9 +189,9 @@ This tab allows you to see which users are members of the program and which prog
 
 The two program roles are "Executive" and "Program Owner":
 
-**Executive** -- This role allows the user to see this [program's homepage](../Spira-User-Manual/Program-Homepage.md), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program (this excludes source code).
+**Executive**: This role allows the user to see this [program's homepage](../Spira-User-Manual/Program-Homepage.md), which contains all the key metrics for the contained products displayed in an aggregated manner. In addition, the user is automatically granted 'observer' permissions for all the products in the program (this excludes source code).
 
-**Program Owner** -- This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
+**Program Owner**: This role consists of all the permissions granted to the "Executive" role above, but in addition allows the user to make changes to the Program itself in the Administration section.
 
 To change the role of an existing program member, just change the role in the drop-down list and click \[Save\]. To remove a member from the program, just select the appropriate checkboxes and click \[Delete\]. Finally, to add a new user to the program, click on the \[Add\] button:
 
@@ -184,9 +208,7 @@ This tab allows you to see the list of products that are contained within the cu
 
 
 ## View/Edit Portfolios
-
-!!! info ""
-    Please note that portfolios are only available in SpiraPlan
+!!! abstract "Available in SpiraPlan only"
 
 The following screen is displayed when you choose the "View/Edit Portfolios" link from the Administration menu:
 
@@ -226,7 +248,6 @@ At the bottom of the screen you can see all the programs that belong to this por
 
 
 ## View/Edit Templates
-
 The following screen is displayed when you choose the "View/Edit Templates" link from the administration menu:
 
 ![template list page](img/System_Workspaces_42.png)

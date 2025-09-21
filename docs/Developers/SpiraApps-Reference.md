@@ -1,4 +1,6 @@
 # SpiraApps Developer Reference
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 This page provides reference information for multiple parts of SpiraApp development. Separate reference information about the [manifest](./SpiraApps-Manifest.md) is also available.
 
 ## Manifest Lookups

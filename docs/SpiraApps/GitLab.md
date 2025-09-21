@@ -1,4 +1,5 @@
 # GitLab SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate SpiraPlan and GitLab so users can launch pipelines from Spira and see their results in Spira as builds.
 

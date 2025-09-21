@@ -24,9 +24,12 @@ The available settings include:
 - **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](Product-Planning.md/#testing-settings). 
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 - **Enable Developer Mode**: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.
-- **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span>
-- **Enable Timesheet 'Remaining Effort'**: (default = no) Enabling this will allow users on their [My Timesheet page](../Spira-User-Manual/Timesheets.md#remaining-effort) to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. 
+    {: .edition-spiraplan}
+- **Enable Timesheet 'Remaining Effort'**: (default = no) Enabling this will allow users on their [My Timesheet page](../Spira-User-Manual/Timesheets.md#remaining-effort) to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving.
+    {: .edition-spiraplan .edition-spirateam}
+- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances.
+    {: .feature-inflectraai}
 
 
 ## File Type Icons

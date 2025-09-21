@@ -89,9 +89,9 @@ After changing the name of the list, and specifying whether the values will be o
 
 This is the set of values that the user will select from the drop-down list when the custom property is displayed. You can change the display to include:
 
--   **All Active** -- displays only custom list values that are active
--   **All But Deleted** -- displays all custom list values that are active or inactive but have not been deleted
--   **All** -- displays all custom list values, including those that have been deleted
+-   **All Active**: displays only custom list values that are active
+-   **All But Deleted**: displays all custom list values that are active or inactive but have not been deleted
+-   **All**: displays all custom list values, including those that have been deleted
 
 To add a new custom list value, click the "Add Value" button and a new row will be added to the list which you can now edit. To edit an existing custom list value, change the name in the textbox and click "Save". To delete a custom list value, click on the "Delete" hyperlink. If you want to remove an item from the list temporarily, you can set its Active dropdown list to 'No', if you want to remove an item permanently, just click the 'Delete' button.
 

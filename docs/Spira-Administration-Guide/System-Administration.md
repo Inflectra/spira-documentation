@@ -94,7 +94,8 @@ Permissions for programs are more simple and managed on a per program basis:
 
 Each user profile has two special flags about permissions, which affect the entire system, but only for one user at a time (they are completely separate to product and program permissions):
 
-- <span class="pill">SpiraPlan</span> **Users can be granted portfolio viewer access**: The first special flag on the user profile is Portfolio Viewer access. This allows a user access to all portfolio pages and enterprise pages in the application. In other words, you do not control which portfolio a user can see, but only if they can access all portfolios or none of them. Only a system administrator can set this on a user.
+- **Users can be granted portfolio viewer access**: The first special flag on the user profile is Portfolio Viewer access. This allows a user access to all portfolio pages and enterprise pages in the application. In other words, you do not control which portfolio a user can see, but only if they can access all portfolios or none of them. Only a system administrator can set this on a user.
+    {: .edition-spiraplan}
 - **Users can be granted system administrator status**: this is the second special flag on a user profile and makes the user a system administrator. Only a system administrator can set this on a user.
 
 !!! info "System administrators and product roles"

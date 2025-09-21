@@ -1,7 +1,8 @@
 # Custom Graphs Tutorial and Introduction
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction
-One of the maxims I always tell developers is that regardless of what you build, customers will never be satisfied with the reports you offer or the integration that you provide. In fact, the two most underestimated tasks in software development are data feeds and reporting. So one of the nice features in our Spira platform is the ability to do custom graphing, so that you are not limited to just the graphs that ship with the system.
+Standard reports and graphs will never meet the needs of all users. That is why Spira has custom graphing, so that you are not limited to just the graphs that ship with the system.
 
 ## Creating Custom Graphs
 To create a custom report,  go to: Administration > System Administration > Reporting > Edit Graphs:

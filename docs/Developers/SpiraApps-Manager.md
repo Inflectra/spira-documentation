@@ -1,3 +1,6 @@
+# SpiraAppManager
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 The spiraAppManager is a helper class that provides a wide range of useful functions and operations to SpiraApps.
 
 ## IDs
@@ -446,7 +449,7 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     ```
 
 ??? note "setDropdownItemsIsActive(fieldName: string, items: DropdownListItem[]): boolean"
-    Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of `getDropdownItems` and should be used in conjuction with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. `isActive` values of false cause the item to be hidden from the dropdown list. `isActive` values of true cause the item to be shown from the dropdown list. Only the `isActive` flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
+    Updates the active status of the items in a specific dropdown. This works on details pages only after the page has fully loaded. It supports the same fields as those of `getDropdownItems` and should be used with that function. The array of "DropdownListItem" objects is used to update the isActive flag in the underlying dropdown. `isActive` values of false cause the item to be hidden from the dropdown list. `isActive` values of true cause the item to be shown from the dropdown list. Only the `isActive` flag is updated. This function cannot be used to alter the display text for a dropdown item. If an invalid field name or a field name that is not a supported type is provided then nothing is returned.
 
     If the update is successful a true is returned to the function, otherwise a false is returned. 
 
@@ -834,7 +837,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * key: string of the storage item's key 
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteUser(pluginGuid: string, pluginName: string, key: string, successFunction, failureFunction)" 
         Deletes a user storage item. Matched by the key, and the currently logged in user. This is destructive operation that cannot be reverted.
@@ -843,7 +846,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * key: string of the storage item's key 
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteProduct(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)" 
         Deletes a product level storage item. Matched by the key, and the passed in product id. This is destructive operation that cannot be reverted.
@@ -853,7 +856,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * key: string of the storage item's key 
         * productId: integer for the product id
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteProductUser(pluginGuid: string, pluginName: string, key: string, productId: number, successFunction, failureFunction)"
         Deletes a product level storage item for a user. Matched by the key, the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.
@@ -863,7 +866,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * key: string of the storage item's key 
         * productId: integer for the product id
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
 === "Delete Multiple Items"
     ??? note "storageDeleteSystemAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
@@ -872,7 +875,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteUserAll(pluginGuid: string, pluginName: string, successFunction, failureFunction)" 
         Deletes all system-wide user storage items. Matched by the currently logged in user. This is destructive operation that cannot be reverted.
@@ -880,7 +883,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginGuid: the Guid of the SpiraApp - pass in APP_GUID
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteProductAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)" 
         Deletes all product level storage items. Matched by the passed in product id. This is destructive operation that cannot be reverted.
@@ -889,7 +892,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * productId: integer for the product id
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteProductUserAll(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)"
         Deletes all product level storage items for a user. Matched by the passed in product id, and the currently logged in user. This is destructive operation that cannot be reverted.
@@ -898,7 +901,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * productId: integer for the product id
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
     ??? note "storageDeleteProductUserAllUsers(pluginGuid: string, pluginName: string, productId: number, successFunction, failureFunction)"
         Deletes all product level storage items for **all** user. Matched by the passed in product id. This is destructive operation that cannot be reverted.
@@ -907,7 +910,7 @@ The SpiraAppManager has a range of functions to perform CRUD operations on stora
         * pluginName: the Name of the SpiraApp - used to help with SpiraApp debugging
         * productId: integer for the product id
         * success: success callback function
-        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occured)
+        * failure: failure callback function (failure is not necessarily called if the item(s) were not deleted, but instead when a more serious error has occurred)
 
 
 ## Local Storage

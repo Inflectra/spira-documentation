@@ -1,4 +1,6 @@
 # Auto-Sprints
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 !!! warning "This SpiraApp works with Spira v8.3+" 
 
 This SpiraApp automates sprint creation based on your product's settings. It creates a set of sprints for a selected major or minor release, from the Release List page.

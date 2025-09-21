@@ -1,6 +1,5 @@
 # AWS Bedrock SpiraApp
-
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 !!! info "Upgrade to Inflectra.ai"
 	Inflectra.ai is available for all cloud Spira customers. It is easy to set up and manage, and is deeply integrated into Spira. Inflectra.ai provides more powerful features than is possible with this SpiraApp.
@@ -98,7 +97,6 @@ Copy both of these values into your secure credential storage. You will need the
 Once the SpiraApp has been activated system wide, and enabled for a product you can edit its product settings. **All of these settings are optional**. You can use the SpiraApp without editing any of the product settings. The settings are here to help you customize the results from the SpiraApp, including if using languages other than English.
 
 #### General Settings
-
 This is where you can specify the general SpiraApp product settings:
 
 ![product general settings](img/awsbedrock-product-settings.png)
@@ -148,6 +146,8 @@ This is where you can specify settings specific to the Claude model:
 
 
 #### Code Generation
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
+
 This is where you can customize the list of programming languages available:
 
 ![product settings page](img/awsbedrock-product-settings-code.png)
@@ -207,6 +207,7 @@ When a user goes to the test case details page, they will see an extra button in
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
 
 ### Task Details Page
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
 
 When a user goes to the task details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
@@ -225,6 +226,7 @@ Once you choose the appropriate code generation option, a dialog box will be dis
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
 
 ### Risk Details Page
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
 
 When a user goes to the risk details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
@@ -239,21 +241,17 @@ When a user goes to the risk details page, they will see an extra button in the 
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
 
 ### Extra details to be aware of
-
 - The generated artifacts only have their names and descriptions populated, with the exception of test cases that will have detailed test steps.
 - To generate artifacts the user must have create permission for that artifact.
 - BDD steps can only be generated on requirements of types that support steps.
 
 ## Appendix - Default prompts
-
 If you are interested in customizing the prompts used in the plugin, please use the following starting points:
 
 ### Global Prompt
-
 `You are a business analyst that only speaks in JSON. Do not generate output that isn't in properly formatted JSON.`
 
 ### Requirement Prompts
-
 #### 1. Generate Test Cases
 
 `Write the test cases for the following software requirement as { \"TestCases\": [] }. For each test case include the description, input and expected output in the following format { \"Description\": [Description of test case], \"Input\": [Sample input in plain text], \"ExpectedOutput\": [Expected output in plain text] }`

@@ -9,7 +9,7 @@
     - None
 
 
-This documentation is for the entire Spira suite of products: SpiraTest, SpiraTeam, SpiraPlan, and all relevant addons and extensions. 
+This documentation is for the entire Spira suite of products: [SpiraTest, SpiraTeam, SpiraPlan](./About/introduction-to-spira.md), and all relevant addons and extensions. Compare Spira editions [here](./About/edition-comparison.md).
 
 Use the menu on the left to navigate to the different documentation pages. On each page the navigation on the right helps you move around the section of that specific page.
 

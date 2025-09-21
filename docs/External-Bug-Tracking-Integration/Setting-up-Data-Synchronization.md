@@ -1,4 +1,6 @@
 # Setting up Data Synchronization
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Introduction
 To use any of Inflectra's data sync integrations, you need a special data sync service. This lives outside of Spira and the application it is syncing with. The data sync service needs to run 24/7 to keep everything in sync. It needs to be able to "see" both applications. In addition to the service, there are dedicated plugins for the most popular third-party applications.These plugins work with the data sync service to manage all communication between Spira and the application(s) it syncs with.
 

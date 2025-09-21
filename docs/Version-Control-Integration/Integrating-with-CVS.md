@@ -1,22 +1,24 @@
 # Integrating with CVS
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-The Concurrent Versions System (CVS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of SpiraPlan or SpiraTeam (hereafter referred to as SpiraTeam) to be able to browse a CVS repository and view commits linked to SpiraTeam artifacts.
+The Concurrent Versions System (CVS) is a Software Configuration Management (SCM) system that enables users to work on code simultaneously while preserving previous versions by avoiding collisions in code edits. This plug-in will allow users of Spira to be able to browse a CVS repository and view commits linked to Spira artifacts.
 
-The plug-in will download a working-copy of the CVS repository onto the SpiraTeam server and use that for displaying the list of files/folders. The list of commits will be queries dynamically from the CVS repository on an as-needed basis. The rest of this section outlines how to install and use the plug-in with SpiraTeam.
+The plug-in will download a working-copy of the CVS repository onto the Spira server and use that for displaying the list of files/folders. The list of commits will be queries dynamically from the CVS repository on an as-needed basis. The rest of this section outlines how to install and use the plug-in with Spira.
 
 *Note: The plug-in will allow users to download and view different commits of files and view commit logs, but no changes to the repository are allowed through the plug-in.*
 
 ## Installing the CVS Plug-In 
 
-To install the CVS Version Control plug-in, copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraTeam installation:
+To install the CVS Version Control plug-in, copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:
+
 -   CvsProvider.dll
 -   DocsVision.Remoting.dll
 -   ICSharpCode.SharpCvsLib.dll
 -   ICSharpCode.SharpZipLib.dll
 -   log4net.dll
 
-## Configuring CVS in SpiraPlan
-Before you can start using CVS in SpiraPlan you need to setup, at a system level, how CVS and SpiraPlan should work together: 
+## Configuring CVS in Spira
+Before you can start using CVS in Spira you need to setup, at a system level, how CVS and Spira should work together: 
 
 - Log in as a system admin, and go to System Admininstration > Integration > Source Code
 - If there is not already an antry for "CvsProvider" click "Add" to go to the Plug-in details page
@@ -54,10 +56,10 @@ Once CVS has been configured at the system level, you are ready to use it for an
 
 ![](img/Integrating_with_CVS_44.png)
 
-## Using CVS with SpiraPlan
+## Using CVS with Spira
 Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
-You can read more about working with source code in SpiraPlan at the links below:
+You can read more about working with source code in Spira at the links below:
 
 - [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
 - [Commits](../Spira-User-Manual/Commits.md/#commit-list)
@@ -66,11 +68,11 @@ You can read more about working with source code in SpiraPlan at the links below
 
 
 ## Data Purging
-Since the integration with CVS requires that a working copy of the CVS repository be stored on the SpiraTeam server, you may decide at some point to unlink a disused CVS repository from SpiraTeam to save disk-space. However unlinking the repository through the SpiraTeam web interface will not remove the working copy of the repository from the server.
+Since the integration with CVS requires that a working copy of the CVS repository be stored on the Spira server, you may decide at some point to unlink a disused CVS repository from Spira to save disk-space. However unlinking the repository through the Spira web interface will not remove the working copy of the repository from the server.
 
-To permanently remove a repository from the SpiraTeam server, you need to locate the following path:
+To permanently remove a repository from the Spira server, you need to locate the following path:
 
 -   **(Windows XP, 2003)** - C:\\Documents and Settings\\All Users\\Application Data
--   **(Windows 2008, 7, Vista)** -- C:\\ProgramData
+-   **(Windows 2008, 7, Vista)**: C:\\ProgramData
 
-If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "CvsProvider". If you open up this subfolder, you will see a list of all the CVS modules that have been accessed through SpiraTeam. To purge a module, just select it and choose the Delete Folder option in Windows.
+If you look inside this folder, you will see a subfolder called "Inflectra", and under that will be a subfolder called "CvsProvider". If you open up this subfolder, you will see a list of all the CVS modules that have been accessed through Spira. To purge a module, just select it and choose the Delete Folder option in Windows.

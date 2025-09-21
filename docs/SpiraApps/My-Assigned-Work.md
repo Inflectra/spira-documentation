@@ -1,6 +1,5 @@
 # My Assigned Work
-
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp adds a widget to the user's My Page that allows them to view their owned Artifacts in an interactive grid. It provides an alterative way to use the My Page and can replace most of the "My Assigned..." widgets.
 
@@ -18,7 +17,17 @@ To add the widget to your My Page, edit the page and then open the "SpiraApp Wid
 
 ## Using the SpiraApp
 ### Using the My Assigned Work Widget
-This widget displays a grid of the most recent open artifacts that you have been assigned (open vs closed is defined differently for each artifact based on the status). Included artifacts are: Requirements, Test Cases, Incidents, Tasks, Test Sets, Documents, and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>.
+This widget displays a grid of the most recent open artifacts that you have been assigned (open vs closed is defined differently for each artifact based on the status). Included artifacts are: 
+
+- Requirements
+- Test Cases
+- Incidents
+- Tasks 
+    {: .edition-spiraplan .edition-spirateam}
+- Test Sets
+- Documents
+- Risks 
+    {: .edition-spiraplan .edition-spirateam}
 
 When the My Page is set to view **All Products**, for each row, you see:
 

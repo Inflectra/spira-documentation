@@ -1,5 +1,7 @@
 # Timesheets
-Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week or any week in the past. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+!!! abstract "Available in SpiraTeam, SpiraPlan"
+
+Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week or any week in the past. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past.
 
 !!! tip "Locking down actual efforts" 
     If you want to ensure that effort values are only updated by timesheet entries, and not by editing the individual task or incident, you can update the workflows to make the Actual Effort field read only for every status.
@@ -15,7 +17,8 @@ When you load the My Timesheet page, the page will have the following parts:
 - **Navigation buttons**: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to.
 - **Artifact dropdown**: this lists all the incidents and tasks you own across all active products you are a member of.
 - **Timesheet data range**: a heading showing the start and end date of the current timesheet. Click on it to bring up a datepicker. Selecting a date will navigate you to the timesheet for that relevant period. If there is no timesheet for that date then a new timesheet is automatically created.
-- **Timesheet status & submit** <span class="pill">SpiraPlan</span>: when [timesheet approvals](#my-timesheet-approvals) is enabled, you can see the status of the current timesheet.
+- **Timesheet status & submit**: when [timesheet approvals](#my-timesheet-approvals) is enabled, you can see the status of the current timesheet.
+    {: .edition-spiraplan}
 - **Timesheet grid**: a table for viewing and recording timesheet entries for each day of the timesheet. Each time you load the page it will start by showing the current week's timesheet.
 
 ![My Timesheet page example](img/my-timesheet-page.png)
@@ -76,12 +79,14 @@ Check the "View all timesheets" checkbox to see a list of all of your timesheets
 - You can see totals for how much time you have recorded against each artifact, each day, and across the whole timesheet. The total across an artifact or all artifacts in a week does not include [remaining effort](./Timesheets.md#remaining-effort). 
 
 ## Timesheets Approvals 
+!!! abstract "Available in SpiraPlan only"
+
 To access the timesheet approvals page:
 
 - navigate to the Enterprise workspace from the workspace dropdown in the global navigation
 - if not automatically selected, select "Timesheets" from the artifact dropdown
 
-This page allows [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to review and approve any timesheet submitted by any user. Only timesheet managers are able to access this page, and only if [approvals are enabled at the system level](../Spira-Administration-Guide/System.md/#general-settings). <span class="pill">SpiraPlan</span>.
+This page allows [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to review and approve any timesheet submitted by any user. Only timesheet managers are able to access this page, and only if [approvals are enabled at the system level](../Spira-Administration-Guide/System.md/#general-settings).
 
 The page shows a list of all submitted timesheets. For each timesheet the list shows the timesheet owner (the person who submitted it), start date, end date, total number of hours entered, and the date and time it was submitted. This list can be sorted by any column and filtered by any column except the total hours.
 
@@ -100,7 +105,6 @@ When re-reviewing a previously rejected timesheet, the comment from the last rev
 
 
 ## Remaining Effort
-
 If [enabled at the system level](../Spira-Administration-Guide/System.md#general-settings), users can modify the remaining effort of the artifacts on their timesheet. This allows users to adjust the effort estimates from a single view, rather than needing to navigate to each artifact to update the remaining efforts. Values in the remaining effort column do not contribute to the "Total" column values. 
 
 You can use the left arrow key to go further to the left to add additional digits to the hours remaining, as remaining effort does not have the same 24 hour constraint as the completed effort reporting cells.

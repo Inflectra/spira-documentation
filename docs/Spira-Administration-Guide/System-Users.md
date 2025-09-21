@@ -33,7 +33,8 @@ On this screen, you can:
 - enter information about the user, such as their name, email address, and department
 - make the user a system administrator
 - make the user a report administrator (this allows the user to administer custom reports and graphs. The can create, edit, and delete reports and graphs, and can also access custom report data in 3rd party tools via OData)
-- <span class="pill">SpiraPlan</span> make the user a portfolio viewer. This controls who can access both the homepages of all portfolios and the enterprise homepage
+- make the user a portfolio viewer. This controls who can access both the homepages of all portfolios and the enterprise homepage
+    {: .edition-spiraplan}
 - create their password, password reset question and answer. 
 - if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
 
@@ -201,9 +202,9 @@ If you have enabled the ability for users to [register for new SpiraPlan account
 
 For each pending user request you can choose to either Approve or Deny the request:
 
-**Approve** -- clicking this option will approve the user. They will get an email letting them know that they have been approved and can now log into the system.
+**Approve**: clicking this option will approve the user. They will get an email letting them know that they have been approved and can now log into the system.
 
-**Delete** -- clicking this option will delete the pending user request from the system.
+**Delete**: clicking this option will delete the pending user request from the system.
 
 
 ## View / Edit Product Roles
@@ -212,12 +213,12 @@ Read an [overview](System-Administration.md/#how-user-permissions-are-set) of ho
 ### Default Product Roles
 There are six (6) default product roles that a user may be assigned to a product with:
 
-- **Product Owner** -- the same rights as a Manager, but in addition can access the product administration tools
-- **Manager** -- can see all screens and add/edit all artifacts, but cannot access product administration tools
-- **Developer** -- can see all screens, but can only add/edit incidents, tasks and tests and change requirement coverage
-- **Tester** -- can see all screens, but can only add/edit incidents and execute tests. Note: cannot delete incidents, only a Manager can do that.
-- **Observer** -- can see all screens, but cannot perform any write operations (insert / update / delete)
-- **Incident User** -- can only view and edit incidents. This user cannot even see the product's requirements, tasks, test cases or releases.
+- **Product Owner**: the same rights as a Manager, but in addition can access the product administration tools
+- **Manager**: can see all screens and add/edit all artifacts, but cannot access product administration tools
+- **Developer**: can see all screens, but can only add/edit incidents, tasks and tests and change requirement coverage
+- **Tester**: can see all screens, but can only add/edit incidents and execute tests. Note: cannot delete incidents, only a Manager can do that.
+- **Observer**: can see all screens, but cannot perform any write operations (insert / update / delete)
+- **Incident User**: can only view and edit incidents. This user cannot even see the product's requirements, tasks, test cases or releases.
 
 !!! info "The Special case of user administrator"
     The System Administrator (with a user id of 1) is automatically added to every product as a Product Owner, and can never be removed as Product Owner, made inactive or made a different role on the product.
@@ -271,7 +272,7 @@ This section lets you specify if the role allows users to add new documents to t
 
 
 ## View / Edit Teams
-!!! info "Available in SpiraPlan only"
+!!! abstract "Available in SpiraPlan only"
 
 SpiraPlan lets you define a list of Teams. These teams are created system wide, and product members can then be assigned any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
@@ -279,9 +280,9 @@ SpiraPlan lets you define a list of Teams. These teams are created system wide, 
 
 This page lets you display the list of teams sorted alphabetically by name, based on three predefined filters:
 
--   **All Active** -- This displays only the teams that are listed as Active = Yes. Only active teams will be displayed inside the main application.
--   **All But Deleted** -- This displays all the teams (active and inactive) except those that have been deleted.
--   **All** -- This displays all the teams (active, inactive, and deleted).
+-   **All Active**: This displays only the teams that are listed as Active = Yes. Only active teams will be displayed inside the main application.
+-   **All But Deleted**: This displays all the teams (active and inactive) except those that have been deleted.
+-   **All**: This displays all the teams (active, inactive, and deleted).
 
 Click the 'Add Team' button at the bottom of the list to add a new team:
 

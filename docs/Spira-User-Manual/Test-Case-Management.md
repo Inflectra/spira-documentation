@@ -24,7 +24,8 @@ Use properties on test cases themselves like their type and component, and test 
 === "Key Artifact Links"
     - **Releases**: each test case can be added to many releases - every release that the test case should be used to provide test coverage / validate
     - **Requirements**: each test case be added to many requirements, in cases where a test case helps validate multiple pieces of functionality 
-    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid
@@ -499,9 +500,11 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
-| Association Tab Of | Available artifacts                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------- |
-| **Test cases**     | Tasks and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
+!!! abstract "Available in SpiraTeam, SpiraPlan"
+
+| Association Tab Of | Available artifacts  |
+| ------------------ | -------------------- |
+| **Test cases**     | Tasks and Risks      |
 
 Any tasks created during exploratory test execution will automatically be be shown here. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
@@ -535,11 +538,11 @@ In this mode, the main pane displays a list of any incidents that are associated
 
 Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
+**Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
 
 You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
+**Edit**: Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
 
 To create a new association between this test step and an existing incident, click the "***Link Incident***" button which will display the following panel:
 

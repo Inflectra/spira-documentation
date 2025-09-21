@@ -1,4 +1,5 @@
 # Conditional Lists
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 !!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
 
@@ -15,8 +16,10 @@ This SpiraApp helps admins create dynamic and powerful customizations for end us
     - [x] runs automatically on the requirement details page
     - [x] runs automatically on the test case details page
     - [x] runs automatically on the test set details page
-    - [x] runs automatically on the task details page (not available in SpiraTest)
-    - [x] runs automatically on the risk details page (not available in SpiraTest)
+    - [x] runs automatically on the task details page
+        {: .edition-spiraplan .edition-spirateam}
+    - [x] runs automatically on the risk details page
+        {: .edition-spiraplan .edition-spirateam}
 
 !!! warning "Limitations"
     This SpiraApp is intended to guide your employees in best practices and simplify your workflows without adding extra permissions. It works specifically by limiting dropdown options on artifact details pages only for both single select and multi-select list fields.
@@ -169,7 +172,9 @@ This SpiraApp works automatically on the details page for the following artifact
 - Releases
 - Requirements
 - Risks
+    {: .edition-spiraplan .edition-spirateam}
 - Tasks
+    {: .edition-spiraplan .edition-spirateam}
 - Test Cases
 - Test Sets
 

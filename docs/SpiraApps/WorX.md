@@ -1,4 +1,5 @@
 # WorX SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate SpiraPlan and the Worx desktop application.
 

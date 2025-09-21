@@ -1,4 +1,6 @@
 # Using the Spira REST API
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Spira has extensive and powerful SOAP and REST API services. These APIs allow developers to build rich integrations with Spira, or automate Spira to help speed up how you work.
 

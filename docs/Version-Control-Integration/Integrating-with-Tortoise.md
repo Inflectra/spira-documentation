@@ -1,4 +1,5 @@
 # Integrating with Tortoise
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
 Tortoise is a family of Windows Explorer shell extensions that helps programmers manage different versions of the source code for their programs directly inside the standard Windows Explorer user interface.
 
@@ -18,7 +19,7 @@ In Windows Explorer, besides showing context menu items for Git commands, Tortoi
 TortoiseCVS is a [CVS](Integrating-with-CVS.md) client for Microsoft Windows. Unlike most CVS tools, it includes itself in Windows' shell by adding entries in the contextual menu of the file explorer, therefore it does not run in its own window. Moreover, it adds icons onto files and directories controlled by CVS, giving additional information to the user without having to run a full-scale stand-alone application.
 
 ## Using the Spira Plugin for Tortoise
-The Spira [issue-tracker plugin](https://tortoisesvn.net/issuetrackerplugins.html) for Tortoise (called **TurtleSpira**) works with all variants of Tortoise, including TortoiseGit,TortoiseSVN, and TortoiseCVS, and lets you streamline your workflow for linking source code commits / commits to assigned artifacts in SpiraTeam, SpiraPlan, or SpiraTest.
+The Spira [issue-tracker plugin](https://tortoisesvn.net/issuetrackerplugins.html) for Tortoise (called **TurtleSpira**) works with all variants of Tortoise, including TortoiseGit,TortoiseSVN, and TortoiseCVS, and lets you streamline your workflow for linking source code commits / commits to assigned artifacts in Spira.
 
 The Tortoise plugin system lets you integrate different issue trackers. With such plugins it is possible to fetch information directly from the issue tracker, interact with the user and provide information back to Tortoise about open issues, verify log messages entered by the user and even run actions after a successful commit to e.g, close an issue.
 

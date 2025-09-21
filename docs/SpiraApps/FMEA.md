@@ -1,6 +1,7 @@
 # FMEA SpiraApp
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-!!! warning "This SpiraApp works with v8.2+ and is not compatible with SpiraTest"
+!!! warning "This SpiraApp requires Spira v8.2+"
 
 This SpiraApp extends the built-in risk functionality by supporting FMEA with a dedicated FMEA SpiraApp that calculates the Risk Priority Number (RPN) by multiplying together values for the risk's probability, impact, and detectability. It also provides a replacement "Top Open Risks" widget for the product home page and reporting home page that is ranked by and shows the RPN.
 

@@ -1,15 +1,17 @@
 # Using Spira with Salesforce.com
-Salesforce objects are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on). This integration lets you carry out:
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-1. two-way syncing of incidents between a specific Salesforce object and SpiraPlan 
-2. one-way syncing requirements from a specific Salesforce object (a different one to that above) to SpiraPlan 
+Salesforce objects are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration lets you carry out:
+
+1. two-way syncing of incidents between a specific Salesforce object and Spira 
+2. one-way syncing requirements from a specific Salesforce object (a different one to that above) to Spira 
 
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
 
 ## Configuring Salesforce
-Before integrating with SpiraPlan, you need to properly configure Salesforce's Rest API service. To do this, create a dedicated "Connected App" in your Salesforce application, as described in [these instructions](https://help.salesforce.com/articleView?id=connected_app_create_basics.htm&type=5). 
+Before integrating with Spira, you need to properly configure Salesforce's Rest API service. To do this, create a dedicated "Connected App" in your Salesforce application, as described in [these instructions](https://help.salesforce.com/articleView?id=connected_app_create_basics.htm&type=5). 
 
 !!! info 
     In the Salesforce Connected App, the property “IP Relaxation” MUST BE defined as “Relax IP restrictions”, otherwise there may be connection problems.
@@ -18,14 +20,14 @@ Before integrating with SpiraPlan, you need to properly configure Salesforce's R
 
 
 ## Configuring the Integration Service
-This section outlines how to set up the integration service between Salesforce and SpiraPlan. It assumes you already have:
+This section outlines how to set up the integration service between Salesforce and Spira. It assumes you already have:
 
-- a working installation of SpiraPlan,
+- a working installation of Spira,
 - appropriate Salesforce objects
 - a working Connected App in Salesforce (discussed above)
 - install/enable the Data Sync service (discussed above)
 
-Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **SalesforceDataSync** as shown below:
+Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **SalesforceDataSync** as shown below:
 
 ![](img/SalesforceDotCom_02b.png)
 
@@ -65,8 +67,8 @@ The remaining two fields store information about the Salesforce objects to sync,
 
 **Enter the name of the object, then a comma, then the name of the project field of the object - if your object name or field name have spaces in them, you must replace them with a _.** For example if you have the object "My Requirement Object", which uses a field called "Project Name Field" you must enter "My_Requirement_Object,Project_Name_Field". In other words:
 
-- **Incidents Object**: The name of the object you would like to sync with incidents in SpiraPlan + comma + the name of the object field in Salesforce needed to decide which project an incident is created in. These values are case sensitive. Ex.: *My_Incident_Object,Project_Name_Field* (see image below)
-- **Requirements Object**: The name of the object you would like to sync with requirements in SpiraPlan + comma + the name of the object field in Salesforce needed to decide which project a requirement is created in. These values are case sensitive. Ex.: *My_Requirement_Object,Project_Name_Field* (see image below)
+- **Incidents Object**: The name of the object you would like to sync with incidents in Spira + comma + the name of the object field in Salesforce needed to decide which project an incident is created in. These values are case sensitive. Ex.: *My_Incident_Object,Project_Name_Field* (see image below)
+- **Requirements Object**: The name of the object you would like to sync with requirements in Spira + comma + the name of the object field in Salesforce needed to decide which project a requirement is created in. These values are case sensitive. Ex.: *My_Requirement_Object,Project_Name_Field* (see image below)
 
 ![](img/SalesforceDotCom_06.png)
 
@@ -84,18 +86,18 @@ NOTE: Leave any field called "(Not Used)" blank.
 *Salesforce automatically adds the "__c" characters after a custom object/field name. You should not add that yourself to the end of the object/field names.*
 
 ## Configuring Project Mappings
-Now that you have configured how the Salesforce data-sync works at the system level, you now need to configure the plug-in for each specific SpiraPlan product.
+Now that you have configured how the Salesforce data-sync works at the system level, you now need to configure the plug-in for each specific Spira product.
 
 Click on the "View Project Mappings" dropdown for the Salesforce Data Sync. Select your product, then click the arrow to the right. This takes you to the Product Admin Salesforce Data Sync screen. You need to fill out the following fields before the plug-in is ready:
 
 - **External Key** – A specific value that the object field listed in the *"Incidents Object" / "Requirements Object"* fields should have to map with this project. For example, if the object field in Salesforce that stores your project names is called "Project Name Field", and that column contains values like "alpha", "beta", "gamma", type "alpha" to map every alpha item to this product.
-- **Active** -- Set this to *yes* so that the Data Sync plug-in knows to synchronize with this project.
+- **Active**: Set this to *yes* so that the Data Sync plug-in knows to synchronize with this project.
 
 ![](img/SalesforceDotCom_07.png)
 
-A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in SpiraPlan based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to SpiraPlan. Other fields (unless linked to a custom field in SpiraPlan) will not be synced.
+A brief note about field syncing in Salesforce: The sheer customizability of Salesforce necessarily means we have had to make some assumptions. Specific field names of objects are mapped to their counterparts in Spira based on the **exact names** (case sensitive) in the list below. Fields with these exact names will be synced over to Spira. Other fields (unless linked to a custom field in Spira) will not be synced.
 
-- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be splitted in these 2 different fileds in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
+- **Name**: This is a mandatory field for every object in Salesforce. Optionally, a field named **Title** can be used to add extra information. The name of the artifact will be synced as "Name: Title" in Spira and the text strings will be split into these 2 different fields in Salesforce, if defined. Example: "Incident01: Console Bug" in Spira will become a record named Incident01 in Salesforce with "Console Bug" as the value for the field *Title*. This is valid for incidents' 2-way sync.
 - **Description**: Users can sync the artifact description from/to Spira if their object has a field named like that.
 - **Priority**: Users can sync Incidents'Priority from/to Spira if their object has a field named like that.
 - **Importance**: Users can sync Requirements'Importance from/to Spira if their object has a field named like that.
@@ -108,38 +110,38 @@ A brief note about field syncing in Salesforce: The sheer customizability of Sal
     
     Note 2: In case your Salesforce instance does not allow creating/updating the "Name" field of the record, the add-on will try to update/create the field "Title" instead. For that, make sure you have this field configured in your instance.
     
-    Note 3: If you would like to see the Spira Incident ID in your Salesforce instance, just add the "SpiraPlanID__c" field in your corresponding object in Salesforce.
+    Note 3: If you would like to see the Spira Incident ID in your Salesforce instance, just add the "SpiraID__c" field in your corresponding object in Salesforce.
 
 ![](img/SalesforceDotCom_07-2.png)
 
 ## Configuring the Incident/Requirement Status Mappings
 If you don't have a status equivalent in your table, you can ignore this section.
 
-Click the "Status" button within the "Incident" section to map the Incident statuses from SalesForce to SpiraPlan. This tells the Salesforce Data Sync plug-in what the equivalent status is in Salesforce for an incident status in SpiraPlan. 
+Click the "Status" button within the "Incident" section to map the Incident statuses from SalesForce to Spira. This tells the Salesforce Data Sync plug-in what the equivalent status is in Salesforce for an incident status in Spira. 
 
 If you are syncing Requirements, repeat this exact process for Requirement statuses, by clicking the Requirement > Status button.
 
 ![](img/SalesforceDotCom_08.png)
 
-You must map every status in SpiraPlan to Salesforce. Descriptions of the field are below:
+You must map every status in Spira to Salesforce. Descriptions of the field are below:
 
-- **External Key**: If status is a dropdown in Salesforce, it's the value you see when using the dropdown in the Salesforce UI. If status is a string in Salesforce, write the exact value of the string to be mapped to the SpiraPlan status. Please take care to match it exactly (case, spaces, etc).
-- **Primary**: This tells the plug-in which SpiraPlan status to set the incident/requirement to for a Salesforce record that has a status that is matched to multiple SpiraPlan statuses. You must have exactly one primary key for each Salesforce status. If each status maps one-to-one from Salesforce to Spira every row should have Primary set to Yes. If you need to map the same Salesforce status to more than one SpiraPlan status, then you must set only one of the rows with the same Salesforce status to Primary. 
+- **External Key**: If status is a dropdown in Salesforce, it's the value you see when using the dropdown in the Salesforce UI. If status is a string in Salesforce, write the exact value of the string to be mapped to the Spira status. Please take care to match it exactly (case, spaces, etc).
+- **Primary**: This tells the plug-in which Spira status to set the incident/requirement to for a Salesforce record that has a status that is matched to multiple Spira statuses. You must have exactly one primary key for each Salesforce status. If each status maps one-to-one from Salesforce to Spira every row should have Primary set to Yes. If you need to map the same Salesforce status to more than one Spira status, then you must set only one of the rows with the same Salesforce status to Primary. 
 
 ## Configuring the Priority/Importance Mapping
 If you don't have a priority equivalent in your Salesforce object, you can ignore this section.
 
-Click the **Priority** button within the **Incident** section to map incident priorities. This will tell the Salesforce Data Sync plug-in which priorities in Salesforce map to those in SpiraPlan. The process is identical for Requirement importance, so repeat these steps with *Requirement > Importance* instead if you are also/only syncing requirements.
+Click the **Priority** button within the **Incident** section to map incident priorities. This will tell the Salesforce Data Sync plug-in which priorities in Salesforce map to those in Spira. The process is identical for Requirement importance, so repeat these steps with *Requirement > Importance* instead if you are also/only syncing requirements.
 
 ![](img/SalesforceDotCom_09.png)
 
-You must map every priority/importance in SpiraPlan to Salesforce. Descriptions of the field are below:
+You must map every priority/importance in Spira to Salesforce. Descriptions of the field are below:
 
-- **External Key**: If state is a dropdown in Salesforce, it's the value you see when using the dropdown in the Salesforce UI. If state is a string in Salesforce, write the value of the string to be mapped to the SpiraPlan status. Please take care to match it exactly (case, spaces, etc).
-- **Primary**: You must have exactly one primary key for each Salesforce status. This is what prioriy the plug-in should set the incident in SpiraPlan to when the record from Salesforce has a priority that matches to multiple Incident priorities. This is of consequence if there are more priority options in SpiraPlan than in Salesforce.
+- **External Key**: If state is a dropdown in Salesforce, it's the value you see when using the dropdown in the Salesforce UI. If state is a string in Salesforce, write the value of the string to be mapped to the Spira status. Please take care to match it exactly (case, spaces, etc).
+- **Primary**: You must have exactly one primary key for each Salesforce status. This is what priority the plug-in should set the incident in Spira to when the record from Salesforce has a priority that matches to multiple Incident priorities. This is of consequence if there are more priority options in Spira than in Salesforce.
 
 ## Configuring Custom Properties
-This section assumes the custom properties in SpiraPlan and Salesforce are of the same type (integer -> integer, text -> text, etc.). Custom property syncing **will not** work otherwise. This applies to both requirement and incident custom properties.
+This section assumes the custom properties in Spira and Salesforce are of the same type (integer -> integer, text -> text, etc.). Custom property syncing **will not** work otherwise. This applies to both requirement and incident custom properties.
 
 Click on a custom property mapping for a property you would like to sync. For the "External Key" put the exact Salesforce field name.
 
@@ -147,11 +149,11 @@ If your custom property is a **single-select list**, for each custom value, put 
 
 ![](img/SalesforceDotCom_10.png)
 
-If you have a **multi-select list** in SpiraPlan repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:
+If you have a **multi-select list** in Spira repeat the same steps as for a single-select, except instead of putting the Salesforce "Label" in the external key, put the Salesforce "Value" instead. You should have something like this:
 
 ![](img/SalesforceDotCom_11.png)
 
-If, in Salesforce, you have list **dropdown that links to another Salesforce object** then the value you enter in SpiraPlan *must* be the string for the ID of the object, not the name. For example, if your dropdown says "Release 1" in Salesforce, and it has an ID of "6fghincx8dx", in SpiraPlan enter "6fghincx8dx" into the appropriate field.
+If, in Salesforce, you have list **dropdown that links to another Salesforce object** then the value you enter in Spira *must* be the string for the ID of the object, not the name. For example, if your dropdown says "Release 1" in Salesforce, and it has an ID of "6fghincx8dx", in Spira enter "6fghincx8dx" into the appropriate field.
 
 !!! warning
     Make sure the values provided for "External Key" meet the conditions required by Salesforce. For instance, "false/true" for boolean values, matching values for lists, etc. If the artifact synchronization fails because of that, you will see an error in the System log like this:
@@ -167,19 +169,19 @@ To configure the mapping of users in the two systems, you need to go to *Adminis
 
 ![](img/SalesforceDotCom_12.png)
 
-Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "Salesforce Data Sync ID," **enter the first and last name of the user as set in Salesforce**. This will allow the data-synchronization plug-in to know which user in SpiraPlan matches  an equivalent user in Salesforce. Click [Save] once you've entered the appropriate login name. 
+Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "Salesforce Data Sync ID," **enter the first and last name of the user as set in Salesforce**. This will allow the data-synchronization plug-in to know which user in Spira matches  an equivalent user in Salesforce. Click [Save] once you've entered the appropriate login name. 
 
 Repeat for other users who will be active in both systems.
 
 ## Attachments synchronization
-If an object in Salesforce has the "Notes & Attachments" section, the data sync will sync all files to SpiraPlan and any attachments on SpiraPlan Incidents will sync to Salesforce. If a new version of a pre-existing file is uploaded in Salesforce, this will be uploaded as a new version to the matching SpiraPlan attachment (new versions of attachments to SpiraPlan Incidents will be uploaded as new versions in Salesforce). Finally, if an attachment is deleted from a record in Salesforce, the file will be  removed from the equivalent artifact in SpiraPlan.
+If an object in Salesforce has the "Notes & Attachments" section, the data sync will sync all files to Spira and any attachments on Spira Incidents will sync to Salesforce. If a new version of a pre-existing file is uploaded in Salesforce, this will be uploaded as a new version to the matching Spira attachment (new versions of attachments to Spira Incidents will be uploaded as new versions in Salesforce). Finally, if an attachment is deleted from a record in Salesforce, the file will be  removed from the equivalent artifact in Spira.
 
 ## Comments synchronization
-If an object in Salesforce has the "Feed Post & Comments component" configured, the comments posted on it will be synced to SpiraPlan and vice-versa.
+If an object in Salesforce has the "Feed Post & Comments component" configured, the comments posted on it will be synced to Spira and vice-versa.
 
 ![](img/SalesforceDotCom_13.png)
 
 ## Using the Data Synchronization
-Once the above steps have been correctly carried out, the plug-in should start working. Start your Data Sync service and verify that records in Salesforce appear inside SpiraPlan as either incidents or requirements in the relevant product(s). Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
+Once the above steps have been correctly carried out, the plug-in should start working. Start your Data Sync service and verify that records in Salesforce appear inside Spira as either incidents or requirements in the relevant product(s). Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
-Congratulations, you have just integrated your SpiraPlan instance with Salesforce!
+Congratulations, you have just integrated your Spira instance with Salesforce!

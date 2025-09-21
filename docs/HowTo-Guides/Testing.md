@@ -15,7 +15,7 @@ If you really need to delete a test run then these are the steps to take:
 2. Create a new role with the special permission to delete Test Runs 
 3. Give the relevant user(s) this role for the product concerned
 4. The user then navigates to the test run pages and they will see a `Delete` button that lets them to delete test runs.
-5. NOTE: to update test execution statuses and traceability in the system following these deletes, you need to go to Product Admin > General Settings > Data Tools and click `Refersh Test Status Cache`
+5. NOTE: to update test execution statuses and traceability in the system following these deletes, you need to go to Product Admin > General Settings > Data Tools and click `Refresh Test Status Cache`
 
 NOTE: because we do not consider the above a usual workflow in SpiraPlan currently we do not maintain a history of test run deletions and modifications.
 
@@ -59,7 +59,7 @@ You may want to control who can edit test steps, and when they can edit them.
 **Control when anyone can edit test steps**: using the [test case workflow](../Spira-Administration-Guide/Template-Test-Cases.md/#edit-workflow-step), you can control what fields of the test case are editable, disabled, hidden, or required. For each workflow step, make sure to review the "Test Steps?" row. 
 
 - If "Test Steps?" is set to *enabled* for a status/step, anyone with a role that lets them edit test steps can edit test cases with that status
-- If "Test Steps?" is set to *disabled* for a status/step, noone will be able to edit test steps at all for test cases with that status
+- If "Test Steps?" is set to *disabled* for a status/step, no-one will be able to edit test steps at all for test cases with that status
 
 Together, controlling who, and when, give you a lot of flexibility in managing your test steps (and other artifacts too).
 

@@ -1,4 +1,6 @@
 # SpiraApp Manifest
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Introduction
 The manifest is a yaml file that stores all information about the SpiraApp, including its name, references to code files, settings, and where the SpiraApp is used in the application. It is an essential part of every SpiraApp, determining where and how the SpiraApp should run. 
 

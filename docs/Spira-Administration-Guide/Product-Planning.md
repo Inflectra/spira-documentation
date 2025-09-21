@@ -95,9 +95,9 @@ SpiraPlan lets you define a list of Components for each product. These component
 
 This page lets you display the list of components based on three predefined filters:
 
--   **All Active** -- This displays only the components that are listed as Active = Yes. Only active components will be displayed inside the main application.
--   **All But Deleted** -- This displays all the components (active and inactive) except those that have been deleted.
--   **All** -- This displays all the components (active, inactive, and deleted).
+-   **All Active**: This displays only the components that are listed as Active = Yes. Only active components will be displayed inside the main application.
+-   **All But Deleted**: This displays all the components (active and inactive) except those that have been deleted.
+-   **All**: This displays all the components (active, inactive, and deleted).
 
 From this page you can click on the 'Add Component' option to add a new component in the list:
 

@@ -13,7 +13,8 @@ This page displays a row for each member of the current product, with the follow
 - Department
 - Organization
 - Product Role
-- Team (if enabled) <span class="pill">SpiraPlan</span>
+- Team (if enabled)
+    {: .edition-spiraplan}
 - Email (not shown by default)
 - Active (not shown by default)
 

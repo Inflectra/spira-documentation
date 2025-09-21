@@ -1,31 +1,32 @@
 # Integrating with Git
 
 ## Introduction to Git
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
 Git is a Distributed Version Control System (DVCS) system that keeps track of software commits and allows many developers to work on a given project without necessarily being connected to a common network since it doesn't rely on a central repository. Instead Git distributes copies of relevant branches of the entire source code repository to each user's machine.
 
-SpiraPlan's Git plug-in allows users of SpiraTeam or SpiraPlan (hereafter referred to as SpiraPlan) to browse a Git repository and view commits linked to SpiraPlan artifacts.
+Spira's Git plug-in allows users of Spira to browse a Git repository and view commits linked to Spira artifacts.
 
-The plug-in will clone a read-only "bare" (i.e. no working folder) copy of the Git repository onto the SpiraPlan server. The plugin use that bare repository to parse data about the various branches, files, folders, and commits. The plug-in performs all necessary 'pull' requests from the remote repository to keep the local bare repository up to date. **Note: the plugin does not make any changes to the repo at all.**
+The plug-in will clone a read-only "bare" (i.e. no working folder) copy of the Git repository onto the Spira server. The plugin use that bare repository to parse data about the various branches, files, folders, and commits. The plug-in performs all necessary 'pull' requests from the remote repository to keep the local bare repository up to date. **Note: the plugin does not make any changes to the repo at all.**
 
-The current version of the Git plugin is compatible with SpiraPlan v4.2.0.2 or later.
+The current version of the Git plugin is compatible with Spira v4.2.0.2 or later.
 
 ## Installing the Git Plug-In 
-Cloud hosted users and on-premise users on SpiraPlan 6+ can skip this section: all required files are included as part of the normal installation process. 
+Cloud hosted users and on-premise users on Spira 6+ can skip this section: all required files are included as part of the normal installation process. 
 
-To install the Git plug-in on your SpiraPlan service:
+To install the Git plug-in on your Spira service:
 
-- Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the SpiraPlan installation:
+- Copy the following files from the plug-in zip-archive into the "VersionControl" sub-folder of the Spira installation:
 
     - GitProvider.dll
     - Inflectra.Global.dll
     - LibGit2Sharp.dll
 
-- If your server operating system is 64-bit, copy "**git2.dll**" from the "**x64**" directory of the downloaded plug-in zip file into the "VersionControl" sub-folder of the SpiraPlan installation. *Note: Do not create an x64 folder under VersionControl, make sure the file lives in the VersionControl folder itself.*
-- If your server operating system is 32-bit, then copy "**git2.dll**" from the "**x32**" directory of the downloaded plug-in zip file into the "VersionControl" sub-folder of the SpiraPlan installation. *Note: Do not create an x32 folder under VersionControl, make sure the file lives in the VersionControl folder itself.*
+- If your server operating system is 64-bit, copy "**git2.dll**" from the "**x64**" directory of the downloaded plug-in zip file into the "VersionControl" sub-folder of the Spira installation. *Note: Do not create an x64 folder under VersionControl, make sure the file lives in the VersionControl folder itself.*
+- If your server operating system is 32-bit, then copy "**git2.dll**" from the "**x32**" directory of the downloaded plug-in zip file into the "VersionControl" sub-folder of the Spira installation. *Note: Do not create an x32 folder under VersionControl, make sure the file lives in the VersionControl folder itself.*
 
-## Configuring Git in SpiraPlan
-Before you can start using Git in SpiraPlan you need to setup, at a system level, how Git and SpiraPlan should work together: 
+## Configuring Git in Spira
+Before you can start using Git in Spira you need to setup, at a system level, how Git and Spira should work together: 
 
 - Log in as a system admin, and go to System Admininstration > Integration > Source Code
 - If there is not already an antry for "GitProvider" click "Add" to go to the Plug-in details page
@@ -37,8 +38,8 @@ Complete the form on this page as below:
 - **Active**: If checked, the plug-in is active and able to be used for any product
 - **Connection Info**: This field holds the clone URL of the defaults repository for any product accessing the plug-in, unless overridden in the product admin
 - **Login / Password**: The default user id and password (this should be a Personal Access Token (PAT) for many providers) to use while accessing and retrieving information from the remote repositories. If you are accessing a public repository anonymously enter "*anonymous*" for both the username and password fields
-- **Custom 01** -- By default, SpiraPlan will store a copy of the Git working directory in the C:\ProgramData\Inflectra\Spira\GitProvider\URL folder (where URL is the Git connection URL). If you would like to use an override location for the Git repository, specify the full filepath here (e.g. C:\Git\Repositories)
-- **Custom 02 -- Custom 05** -- Not used by this plugin.
+- **Custom 01**: By default, Spira will store a copy of the Git working directory in the C:\ProgramData\Inflectra\Spira\GitProvider\URL folder (where URL is the Git connection URL). If you would like to use an override location for the Git repository, specify the full filepath here (e.g. C:\Git\Repositories)
+- **Custom 02 -- Custom 05**: Not used by this plugin.
 
 ![](img/Integrating_with_Git_16.png)
 
@@ -64,10 +65,10 @@ Once Git has been configured at the system level, you are ready to use it for an
 ![](img/Integrating_with_Git_17.png)
 
 
-## Using Git with SpiraPlan
+## Using Git with Spira
 Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
-You can read more about working with source code in SpiraPlan at the links below:
+You can read more about working with source code in Spira at the links below:
 
 - [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
 - [Commits](../Spira-User-Manual/Commits.md/#commit-list)
@@ -76,8 +77,8 @@ You can read more about working with source code in SpiraPlan at the links below
 
 
 ## Data Purging
-Git integration needs a bare copy of the Git repository to be stored on the SpiraPlan server. If you decide to deactivate a SpiraPlan product from using a Git repository, the bare repository will still exist on the server.
+Git integration needs a bare copy of the Git repository to be stored on the Spira server. If you decide to deactivate a Spira product from using a Git repository, the bare repository will still exist on the server.
 
-To permanently remove a repository from the SpiraPlan server, you need to locate the following path: `C:\ProgramData\Inflectra\Spira\GitProvider`
+To permanently remove a repository from the Spira server, you need to locate the following path: `C:\ProgramData\Inflectra\Spira\GitProvider`
 
-In this folder, you will see a list of all the Git repositories that have been accessed through SpiraPlan. To purge a repository, select it and choose the Delete Folder option in Windows.
+In this folder, you will see a list of all the Git repositories that have been accessed through Spira. To purge a repository, select it and choose the Delete Folder option in Windows.

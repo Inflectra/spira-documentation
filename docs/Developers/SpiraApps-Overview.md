@@ -1,4 +1,6 @@
 # SpiraApps Overview for Developers
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Introduction
 This page provides an overview of how SpiraApps work, what they can do, and how the development process works. This is in addition to [technical reference material](./SpiraApps-Reference.md), the [manifest explanation](./SpiraApps-Manifest.md), and details about [available APIs](./SpiraApps-Manager.md) to help you get started. 
 

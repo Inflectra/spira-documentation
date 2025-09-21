@@ -1,8 +1,8 @@
 # Task Tracking
-| Artifact icon and name                              | Token | Description                                                                                                                                            |
-| --------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
-| ![](img/artifact-pr.png) &nbsp; Task (pull request) | TK    | Review pull requests in Spira <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>                                                  |
+| Artifact icon and name                              | Token | Description                                                                    | Edition              |
+| --------------------------------------------------- | ----- | ------------------------------------------------------------------------------ | -------------------- |
+| ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements | SpiraTeam, SpiraPlan |
+| ![](img/artifact-pr.png) &nbsp; Task (pull request) | TK    | Review pull requests in Spira                                                  | SpiraTeam, SpiraPlan |
 
 ## Feature Overview and Tips
 A task is a single piece of work. Tasks are flexible and can be used for lots of different activities. If you link tasks to a specific release or sprint, you can easily see the progress of all tasks in that release - this makes tasks a very powerful part of release management. You can break down [requirements](Requirements-Management.md/#tasks) or user stories into smaller chunks of work using tasks, to more easily divide up and manage the work.
@@ -253,7 +253,7 @@ The navigation pane consists of a link that will take you back to the task list,
 
 -   **For Release** - The list of tasks assigned to the current release or sprint, grouped under that parent release/sprint.
 
--   **For Requirement** -- The list of tasks associated to the same requirement as the current task as well as other tasks at the same level in the requirement hierarchy.
+-   **For Requirement**: The list of tasks associated to the same requirement as the current task as well as other tasks at the same level in the requirement hierarchy.
 
 The lower part of the right pane can be in one of *four* possible tabs that can be selected: "Overview Properties", "Attachments", "History" and "Associations". Each of the different views is described separately below.
 
@@ -305,10 +305,10 @@ You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actu
 
 The different effort values mean the following:
 
-- **Estimated Effort** -- This is the original estimate for how long the task would take to complete.
-- **Actual Effort** -- This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
-- **Remaining Effort** -- This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
-- **Projected Effort** -- This is value that the system predicts it will take to complete the task:
+- **Estimated Effort**: This is the original estimate for how long the task would take to complete.
+- **Actual Effort**: This is the current amount of effort that has been expended in completing the task. This does not indicate the completion progress
+- **Remaining Effort**: This is the estimate for how it will take from the current state to complete the task. The % complete is calculated from this value in conjunction with the estimated effort: % Complete = 100% - (Remaining Effort / Estimated Effort) - read more about [task progress](#task-progress)
+- **Projected Effort**: This is value that the system predicts it will take to complete the task:
 
     - If the task is Not Started or Completed, projected effort = the actual effort, or if the actual effort is blank then the estimated effort
     - If the task is neither Not Started or Completed, projected effort = the actual effort + remaining effort, or if the actual effort is blank then the estimated effort
