@@ -94,9 +94,9 @@
     - As a [requirement user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page), when I use Inflectra.ai to create content the product name is given as extra context [RQ:5275]
     - As a [requirement user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page), when I use Inflectra.ai to create content the requirement type is given as part of the artifact info [RQ:5265]
     - As a [requirement user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-details-page), when I use Inflectra.ai, the quality of the content is more useful and of higher quality, to save me time improving the outputs manually [RQ:5267]
-    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risk-details-page), when I use Inflectra.ai to create content the product name is given as extra context [RQ:5276]
-    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risk-details-page), when I use Inflectra.ai to create content the risk type, probability and impact is given as artifact data [RQ:5271]
-    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risk-details-page), when I use Inflectra.ai, the quality of the content is more useful and of higher quality, to save me time improving the outputs manually [RQ:5269]
+    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risks-details-page), when I use Inflectra.ai to create content the product name is given as extra context [RQ:5276]
+    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risks-details-page), when I use Inflectra.ai to create content the risk type, probability and impact is given as artifact data [RQ:5271]
+    - As a [risk user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risks-details-page), when I use Inflectra.ai, the quality of the content is more useful and of higher quality, to save me time improving the outputs manually [RQ:5269]
     - As a [test case user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#test-case-details-page), when I use Inflectra.ai to create content the components are given as artifact data [RQ:5273]
     - As a [test case user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#test-case-details-page), when I use Inflectra.ai to create content the product name is given as extra context [RQ:5274]
     - As a [test case user](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#test-case-details-page), when I use Inflectra.ai to create content the test case type is given as artifact data [RQ:5270]
@@ -133,7 +133,7 @@
         - As an Inflectra.ai and task user, I can use the Inflectra.ai side panel to generate sample code with tests for a task in a variety of languages [RQ:5222]
         - As an Inflectra.ai and task user, I can use the Inflectra.ai side panel to generate sample code for a task in a variety of languages [RQ:5221]
 
-    - **[Risk details page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risk-details-page)**
+    - **[Risk details page](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#risks-details-page)**
     
         - As an Inflectra.ai user, I can see the Inflectra.ai icon on risk details page, so I can access the AI features for a risk [RQ:5199]
         - As an Inflectra.ai and risk user, I can use the Inflectra.ai side panel to generate risk mitigations for a risk [RQ:5223]

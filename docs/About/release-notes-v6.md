@@ -169,7 +169,7 @@
 
     - Fix text not wrapping when editing rich text fields of test steps on a test case details page (introduced in 6.13) [IN:6833]
     - Fix error message appearing when creating new items on details pages when changing the type and on boards (introduced in 6.13) [IN:6834]
-    - Fix the [diagram tab](../Spira-User-Manual/Release-Management.md/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
+    - Fix the [diagram tab](../Spira-User-Manual/Requirements-Management.md/#use-case-diagrams) for use case requirements with steps no longer rendering the diagram on the requirements details page (introduced in 6.13) [IN:6860]
 
     - Fix details pages for artifacts that use workflows so that the comments settings in the workflow always control the comment box [IN:4917]
     - Fix the [Task Gantt Chart](../Spira-User-Manual/Task-Tracking.md/#task-gantt-chart) not showing child sprints as part of their parent release [IN:6494]
@@ -409,7 +409,7 @@
     * **Other**
 
         - Release artifacts support [notification events and templates](../Spira-Administration-Guide/Template-Notifications.md) [RQ:2979]
-        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../Spira-Administration-Guide/System-Workspaces.md/#view-edit-templates) [RQ:3049]
+        - Let template admins prevent status changes by users with bulk edit permissions on artifact list and board pages via a new [product template setting](../Spira-Administration-Guide/System-Workspaces.md/#viewedit-templates) [RQ:3049]
         - Show warnings on login page to all users a week before a license expires and clearer messages after a license has expired [RQ:2649]
         - Carry out a security review of SpiraPlan and address vulnerabilities found [RQ:2673]
         - Improve [product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) by giving users two options: a full product clone or a product copy to use as a clean slate [RQ:3083]
@@ -496,7 +496,7 @@
     
         - Add a [product setting](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product) to filter list page name field by name only (not name and description as now) - this can speed up search for very large lists of artifacts [IN:5969]
         - [Build details](../Spira-User-Manual/Release-Management.md/#build-details) page: improve the display of logs and, for long logs, cut out the middle of the log not the end [IN:6145]
-        - Ignore extra spaces around a product or between words when attempting to [change templates](../Spira-Administration-Guide/Product-Changing-Template.md) or [delete a product](../Spira-Administration-Guide/System-Workspaces.md/#view-edit-products) [IN:5949]
+        - Ignore extra spaces around a product or between words when attempting to [change templates](../Spira-Administration-Guide/Product-Changing-Template.md) or [delete a product](../Spira-Administration-Guide/System-Workspaces.md/#viewedit-products) [IN:5949]
         - Fix [Data Tools](../Spira-Administration-Guide/Product-General-Settings.md/#product-data-tools) operation to fix releases missing the required field of Percent Complete [IN:6109]
         - Pull Request tasks should show the correct icon on the [task tab](../Spira-User-Manual/Requirements-Management.md/#tasks) of the requirement details page (currently shows no icon) [IN:6156]
         - Document detail page, [versions tab](../Spira-User-Manual/Document-Management.md/#document-versions): buttons should be hidden if the user does not have permission to edit the current document [IN:6214]
@@ -924,7 +924,7 @@
     **New release and task views to better manage workloads**: View all your relevant releases and tasks in new Gantt views. These let you see at a glance what is due when, and get an overview of the schedule of work and sprints 
         {: .edition-spiraplan .edition-spirateam}
 
-    *Learn: [release Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart); [release mind map](../Spira-User-Manual/Release-Management.md/#release-mind-map); [task Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart).*
+    *Learn: [release Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart); [release mind map](../Spira-User-Manual/Release-Management.md/#releases-mind-map); [task Gantt chart](../Spira-User-Manual/Release-Management.md/#release-gantt-chart).*
 
 ??? success "New features"
 

@@ -76,13 +76,13 @@ Once you have made these changes, save the file and proceed to the next stage.
 ### Configuring the Plug-In
 The next step is to configure the plug-in within Spira so that the system knows how to access the ClearQuest server. To start the configuration, please open up Spira in a web browser, log in using a valid account that has System-Administration level privileges and click on the System \> Data Synchronization administration option from the left-hand navigation:
 
-![](img/Using_Spira_with_ClearQuest_138.png)
+![](img/Using_SpiraTeam_with_ClearQuest_138.png)
 
 This screen lists all the plug-ins already configured in the system. Depending on whether you chose the option to include sample data in your installation or not, you will see either an empty screen or a list of sample data-synchronization plug-ins.
 
 If you already see an entry for **ClearQuestDataSync** you should click on its "Edit" link. If you don't see such an entry in the list, please click on the \[Add\] button instead. In either case you will be taken to the following screen where you can enter or modify the ClearQuest Data-Synchronization plug-in:
 
-![](img/Using_Spira_with_ClearQuest_139.png)
+![](img/Using_SpiraTeam_with_ClearQuest_139.png)
 
 You need to fill out the following fields for the ClearQuest Plug-in to operate correctly:
 
@@ -117,7 +117,7 @@ Each of these is explained in turn below:
 
 From the data synchronization administration page, you need to click on the "View Project Mappings" hyperlink next to the ClearQuest plug-in name. This will take you to the data-mapping home page for the currently selected project:
 
-![](img/Using_Spira_with_ClearQuest_140.png)
+![](img/Using_SpiraTeam_with_ClearQuest_140.png)
 
 If the project name does not match the name of the project you want to configure the data-mapping for, click on the "(Change Project)" hyperlink to change the current project.
 
@@ -133,14 +133,14 @@ Click \[Update\] to confirm these settings. Once you have enabled the project fo
 ### Configuring the User Mapping
 To configure the mapping of users in the two systems, you need to go to Administration \> Users \> View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing issues in ClearQuest:
 
-![](img/Using_Spira_with_ClearQuest_141.png)
+![](img/Using_SpiraTeam_with_ClearQuest_141.png)
 
 You will notice that in the Data Mapping tab for the user, there is a list of all the configured data-synchronization plug-ins. In the text box next to the ClearQuest Data-Sync plug-in you need to enter the login for this username in ClearQuest. This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in ClearQuest. Click \[Update\] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
 
 ### Configuring the Standard Field Mapping
 Now that the projects, user and releases have been mapped correctly, we need to configure the standard incident fields. To do this, go to Administration \> System \> Data Synchronization and click on the "View Project Mappings" for the ClearQuestDataSync plug-in entry:
 
-![](img/Using_Spira_with_ClearQuest_140.png)
+![](img/Using_SpiraTeam_with_ClearQuest_140.png)
 
 From this screen, you need to click on Priority, Severity and Status in turn to configure their values:
 
@@ -148,7 +148,7 @@ a) Incident Status
 
 Click on the "Status" hyperlink under Incident Standard Fields to bring up the Incident status mapping configuration screen:
 
-![](img/Using_Spira_with_ClearQuest_142.png)
+![](img/Using_SpiraTeam_with_ClearQuest_142.png)
 
 The table lists each of the incident statuses available in Spira and provides you with the ability to enter the matching ClearQuest issue status name for each one. You can map multiple Spira fields to the same ClearQuest fields (e.g. Open and Reopen in Spira are both equivalent to Opened in ClearQuest), in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from ClearQuest \> Spira).
 
@@ -156,7 +156,7 @@ b) Incident Priority
 
 Click on the "Priority" hyperlink under Incident Standard Fields to bring up the Incident Priority mapping configuration screen:
 
-![](img/Using_Spira_with_ClearQuest_143.png)
+![](img/Using_SpiraTeam_with_ClearQuest_143.png)
 
 The table lists each of the incident priorities available in Spira and provides you with the ability to enter the matching ClearQuest priority name for each one. You can map multiple Spira fields to the same ClearQuest fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from ClearQuest \> Spira).
 
@@ -164,7 +164,7 @@ c) Incident Severity
 
 Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen:
 
-![](img/Using_Spira_with_ClearQuest_144.png)
+![](img/Using_SpiraTeam_with_ClearQuest_144.png)
 
 The table lists each of the incident severities available in Spira and provides you with the ability to enter the matching ClearQuest severity name for each one. You can map multiple Spira fields to the same ClearQuest fields, in which case only one of the two values can be listed as Primary = Yes as that's the value that's used on the reverse synchronization (from ClearQuest \> Spira).
 
@@ -174,13 +174,13 @@ Now that the various Spira standard fields have been mapped correctly, we need t
 
 From the View/Edit Project Data Mapping screen, you need to click on the name of the Incident Custom Property that you want to add data-mapping information for. We will consider the two different types of mapping that you might want to enter:
 
-![](img/Using_Spira_with_ClearQuest_140.png)
+![](img/Using_SpiraTeam_with_ClearQuest_140.png)
 
 a) Text Custom Properties
 
 Click on the hyperlink of the text custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For text custom properties there will be no values listed in the lower half of the screen.
 
-![](img/Using_Spira_with_ClearQuest_61.png)
+![](img/Using_SpiraTeam_with_ClearQuest_61.png)
 
 You need to lookup the ID of the custom field in ClearQuest that matches this custom property in Spira. Once you have entered the id of the custom field, click \[Update\].
 
@@ -190,12 +190,12 @@ b) List Custom Properties
 
 Click on the hyperlink of the list custom property under Incident Custom Properties to bring up the custom property mapping configuration screen. For list custom properties there will be a textbox for both the custom field itself and a mapping table for each of the custom property values that need to be mapped:
 
-![](img/Using_Spira_with_ClearQuest_145.png)
+![](img/Using_SpiraTeam_with_ClearQuest_145.png)
 
 First you need to lookup the name of the field in ClearQuest that matches this custom property in Spira. This should be entered in the
 'External Key' field below the name of the custom property. The easiest way to determine this is to use the *ClearQuest Designer* which lets you see all the fields associated with a ClearQuest defect:
 
-![](img/Using_Spira_with_ClearQuest_146.png)
+![](img/Using_SpiraTeam_with_ClearQuest_146.png)
 
 Next for each of the Property Values in the table (in the lower half of the page) you need to enter the full name of the possible field values as displayed in the ClearQuest client application.
 
@@ -207,7 +207,7 @@ When Spira is installed, a Windows Service -- Spira Data Sync Service -- is inst
 
 To make these changes, open up the Windows Control Panel, click on the "Administrative Tools" link, and then choose the Services option. This will bring up the Windows Service control panel:
 
-![](img/Using_Spira_with_ClearQuest_10.png)
+![](img/Using_SpiraTeam_with_ClearQuest_10.png)
 
 Click on the 'Spira Data Sync Service' entry and click on the link to start the service. Then right-click the service entry and choose the option to set the startup type to 'Automatic'. This will ensure that synchronization continues between Spira and ClearQuest after a reboot of the server.
 

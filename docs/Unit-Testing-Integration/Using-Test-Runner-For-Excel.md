@@ -38,7 +38,7 @@ When you click the **Get from Spira** button you will see the Test Cases and the
 !!! info "Resuming Testing"
     The add-in only communicates to Spira when you first get data from Spira and then at the end when you send the new data into Spira. You can therefore carry out your testing described below completely offline if you wish. You can also work on tests over multiple sessions.
 
-    When you return to the spreadsheet with your Test Cases after the first session you need to resume your testing. To do this you can use the spreadsheet without opening the add-in. You only need to login to the add-in when you want to [send the Test Runs to Spira](#sending-test-runs-to-Spira). That is what the "**Use Current Sheet** button directly below the **Get from Spira** button is for.
+    When you return to the spreadsheet with your Test Cases after the first session you need to resume your testing. To do this you can use the spreadsheet without opening the add-in. You only need to login to the add-in when you want to [send the Test Runs to Spira](#sending-test-runs-to-spira). That is what the "**Use Current Sheet** button directly below the **Get from Spira** button is for.
 
 ## Running Tests
 On retrieving your assigned tests from Spira the add-in populates the sheet with the information in a format to make it clear how to run your tests.
