@@ -13,7 +13,7 @@ Once the incidents are loaded into OnTime as defects, the development team can t
 
 ## Configuring the Integration Service
 
-This section outlines how to configure the integration service to export incidents into OnTime and pick up subsequent status changes in OnTime and have them update Spira. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v2.3 or later and a working installation of OnTime 2010 or later. If you have an earlier version of Spira, you will need to upgrade to at least v2.3 before trying to integrate with OnTime.
+This section outlines how to configure the integration service to export incidents into OnTime and pick up subsequent status changes in OnTime and have them update Spira. It assumes that you already have a working installation of Spira v2.3 or later and a working installation of OnTime 2010 or later. If you have an earlier version of Spira, you will need to upgrade to at least v2.3 before trying to integrate with OnTime.
 
 The steps that need to be performed to configure integration with OnTime are as follows:
 
@@ -50,7 +50,7 @@ You need to make sure that you fill out the ConnectionString that points to the 
 
 Go to the Inflectra website and open up the page that lists the various downloads available for Spira (<http://www.inflectra.com/SpiraTeam/Downloads.aspx>). Listed on this page will be the OnTime11 Plug-In for Spira. Right-click on this link and save the Zip compressed folder to the hard-drive of the server where Spira is installed.
 
-Open up the compressed folder and extract the OnTimeDataSync.dll file and place it in the C:\\Program Files\\Spira\\Bin folder (it may be SpiraTest or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.
+Open up the compressed folder and extract the OnTimeDataSync.dll file and place it in the C:\\Program Files\\Spira\\Bin folder (folder can named as SpiraTest, SpiraTeam or SpiraPlan depending on which product you're running). This folder should already contain the DataSyncService.exe and DataSyncService.exe.config files that are the primary files used for managing the data synchronization between Spira and other systems.
 
 If you do not have an on-premise installation of Spira, but instead are using a hosted subscription provided by Inflectra (or a third party company) you will not have access to the DataSyncService background service. In such situations, you should use the Desktop DataSync application instead. This application is described in Appendix 1 and can be used instead of the server-based DataSyncService.
 

@@ -1,14 +1,14 @@
 # Using Spira with Axosoft 14+
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Axosoft defect tracking system (formerly known as OnTime). The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into Axosoft.
+This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Axosoft defect tracking system (formerly known as OnTime). The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into Axosoft.
 
 Once the incidents are loaded into Axosoft as defects, the development team can then manage the lifecycle of these defects in Axosoft, and have the status changes in Axosoft be reflected back in Spira.
 
 !!! danger "Set up data synchronization"     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
 ## Configuring the Plug-In
-This section outlines how to configure the integration service to export incidents into Axosoft and pick up subsequent status changes in Axosoft and have them update Spira. It assumes that you already have a working installation of SpiraTest, SpiraPlan or Spira v4.0 or later and a working installation of Axosoft 14 or later (either hosted in the cloud or on-premise). If you have an earlier version of Spira, you will need to upgrade to at least v4.0 before trying to integrate with Axosoft.
+This section outlines how to configure the integration service to export incidents into Axosoft and pick up subsequent status changes in Axosoft and have them update Spira. It assumes that you already have a working installation of Spira v4.0 or later and a working installation of Axosoft 14 or later (either hosted in the cloud or on-premise). If you have an earlier version of Spira, you will need to upgrade to at least v4.0 before trying to integrate with Axosoft.
 
 The steps that need to be performed to configure integration with Axosoft are as follows:
 

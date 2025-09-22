@@ -1,9 +1,9 @@
-# Using SpiraTest with Microsoft Azure DevOps (TFS)
+# Using Spira with Microsoft Azure DevOps (TFS)
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the work item tracking functionality of Microsoft Azure DevOps, also known as Microsoft Team Foundation Server (TFS) hereafter referred to as TFS for brevity.
 
-The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into TFS. Once the incidents are loaded into TFS as work items, the development team can then manage the lifecycle of these work items in TFS, and have the status changes in TFS be reflected back in Spira.
+The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into TFS. Once the incidents are loaded into TFS as work items, the development team can then manage the lifecycle of these work items in TFS, and have the status changes in TFS be reflected back in Spira.
 
 Similarly, as the requirements are decomposed into discrete project tasks in Spira, the integration service will automatically load these new tasks into TFS as task work items where the development team can manage their lifecycle, with schedule and progress changes in TFS being reflected back in Spira.
 
@@ -13,7 +13,7 @@ Similarly, as the requirements are decomposed into discrete project tasks in Spi
 
 ## Configuring the Plug-In
 
-The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **MsTfsDataSync**, as shown below:
+The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **MsTfsDataSync**, as shown below:
 
 ![](img/Using_SpiraTest_with_MS-TFS_77.png)
 
@@ -465,13 +465,13 @@ Now that the integration service has been configured and the service started, in
 
 To use Spira with TFS on an ongoing basis, we recommend the following general processes be followed:
 
-When running tests in SpiraTest or Spira, defects found should be logged through the Test Execution Wizard as normal.
+When running tests in Spira, defects found should be logged through the Test Execution Wizard as normal.
 
 Once an incident has been created during the running of the test, it will now be populated across into TFS as a work item of type corresponding to the types setup in the incident type mappings.
 
 At this point, the incident can be worked on in either system, with changes being synchronized to the other system. However in general we recommend that the QA/Testing team use Spira and the development team use TFS. E.g. the developers will mark the bugs as resolved in MSTS once they have completed fixing them and the QA team will either reopen or close then in Spira once they have had a change to verify the resolution.
 
-You are now able to perform test coverage and incident reporting inside SpiraTest/Spira using the test cases managed by SpiraTest/Spira and the incidents managed collaboratively between SpiraTest/Spira and TFS.
+You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed collaboratively between Spira and TFS.
 
 You can create project requirements and associated tasks in either Spira or TFS, however the synchronization service is only unidirectional for requirements and tasks, so when you create or update a requirement or task in TFS, the change will be reflected in Spira, but not the other way around.
 
