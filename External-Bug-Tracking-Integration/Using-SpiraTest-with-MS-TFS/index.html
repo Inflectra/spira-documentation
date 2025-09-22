@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-spiratest-with-microsoft-azure-devops-tfs" class="md-skip">
+        <a href="#using-spira-with-microsoft-azure-devops-tfs" class="md-skip">
           Skip to content
         </a>
       
@@ -9778,19 +9778,19 @@
 
 
 
-<h1 id="using-spiratest-with-microsoft-azure-devops-tfs">Using SpiraTest with Microsoft Azure DevOps (TFS)<a class="headerlink" href="#using-spiratest-with-microsoft-azure-devops-tfs" title="Permanent link">&para;</a></h1>
+<h1 id="using-spira-with-microsoft-azure-devops-tfs">Using Spira with Microsoft Azure DevOps (TFS)<a class="headerlink" href="#using-spira-with-microsoft-azure-devops-tfs" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the work item tracking functionality of Microsoft Azure DevOps, also known as Microsoft Team Foundation Server (TFS) hereafter referred to as TFS for brevity.</p>
-<p>The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in SpiraTest, and then have the new incidents generated during the run be automatically loaded into TFS. Once the incidents are loaded into TFS as work items, the development team can then manage the lifecycle of these work items in TFS, and have the status changes in TFS be reflected back in Spira.</p>
+<p>The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into TFS. Once the incidents are loaded into TFS as work items, the development team can then manage the lifecycle of these work items in TFS, and have the status changes in TFS be reflected back in Spira.</p>
 <p>Similarly, as the requirements are decomposed into discrete project tasks in Spira, the integration service will automatically load these new tasks into TFS as task work items where the development team can manage their lifecycle, with schedule and progress changes in TFS being reflected back in Spira.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 </div>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">&para;</a></h2>
-<p>The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside SpiraPlan, go to the Administration page and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>MsTfsDataSync</strong>, as shown below:</p>
+<p>The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside Spira, go to the Administration page and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>MsTfsDataSync</strong>, as shown below:</p>
 <p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_77.png" /></p>
 <div class="admonition question">
 <p class="admonition-title">What do if the plug-in is not there</p>
@@ -10042,10 +10042,10 @@ database (in TFS 2010 and later it will named after your project collection inst
 <h2 id="using-spira-with-tfs">Using Spira with TFS<a class="headerlink" href="#using-spira-with-tfs" title="Permanent link">&para;</a></h2>
 <p>Now that the integration service has been configured and the service started, initially any incidents already created in Spira for the specified projects will be imported into TFS and any requirements, tasks or bugs already created in TFS will be imported into Spira. At this point we recommend opening the Windows Event Viewer and choosing the Application Log. In this log any error messages raised by the Spira Data Sync Service will be displayed. If you see any error messages at this point, we recommend immediately stopping the Spira service and checking the various mapping entries. If you cannot see any work items with the mapping information, we recommend sending a copy of the event log message(s) to Inflectra customer services (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#110;&#102;&#108;&#101;&#99;&#116;&#114;&#97;&#46;&#99;&#111;&#109;</a>) who will help you troubleshoot the problem.</p>
 <p>To use Spira with TFS on an ongoing basis, we recommend the following general processes be followed:</p>
-<p>When running tests in SpiraTest or Spira, defects found should be logged through the Test Execution Wizard as normal.</p>
+<p>When running tests in Spira, defects found should be logged through the Test Execution Wizard as normal.</p>
 <p>Once an incident has been created during the running of the test, it will now be populated across into TFS as a work item of type corresponding to the types setup in the incident type mappings.</p>
 <p>At this point, the incident can be worked on in either system, with changes being synchronized to the other system. However in general we recommend that the QA/Testing team use Spira and the development team use TFS. E.g. the developers will mark the bugs as resolved in MSTS once they have completed fixing them and the QA team will either reopen or close then in Spira once they have had a change to verify the resolution.</p>
-<p>You are now able to perform test coverage and incident reporting inside SpiraTest/Spira using the test cases managed by SpiraTest/Spira and the incidents managed collaboratively between SpiraTest/Spira and TFS.</p>
+<p>You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed collaboratively between Spira and TFS.</p>
 <p>You can create project requirements and associated tasks in either Spira or TFS, however the synchronization service is only unidirectional for requirements and tasks, so when you create or update a requirement or task in TFS, the change will be reflected in Spira, but not the other way around.</p>
 <h2 id="description-handling">Description Handling<a class="headerlink" href="#description-handling" title="Permanent link">&para;</a></h2>
 <p>Whereas Spira has a single artifact <strong>Description</strong> field, ADO/TFS has three possible "Description" fields depending on the templates setup by an administrator:</p>

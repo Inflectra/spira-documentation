@@ -9161,14 +9161,14 @@
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
 <p>GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. </p>
-<p>You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).</p>
+<p>You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on).</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 </div>
 <h2 id="configuring-the-integration-service">Configuring the Integration Service<a class="headerlink" href="#configuring-the-integration-service" title="Permanent link">&para;</a></h2>
-<p>This section outlines how to set up the integration service between GitLab and SpiraPlan. It assumes that you already have a working installation of SpiraPlan and a GitLab repository with an issue tracker. To setup the service, you must be logged into SpiraPlan as a user with System-Administrator level privileges.</p>
-<p>Inside SpiraPlan, go to the Administration page and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>GitLabDataSync</strong> as shown below:</p>
+<p>This section outlines how to set up the integration service between GitLab and Spira. It assumes that you already have a working installation of Spira and a GitLab repository with an issue tracker. To setup the service, you must be logged into Spira as a user with System-Administrator level privileges.</p>
+<p>Inside Spira, go to the Administration page and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>GitLabDataSync</strong> as shown below:</p>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_216.png" /></p>
 <div class="admonition question">
 <p class="admonition-title">What do if the plug-in is not there</p>
@@ -9198,7 +9198,7 @@
 <p>Click the "Save" button.</p>
 <p>NOTE: Leave any field called "(Not Used)" blank. </p>
 <h2 id="configuring-project-mappings">Configuring Project Mappings<a class="headerlink" href="#configuring-project-mappings" title="Permanent link">&para;</a></h2>
-<p>For this step, please ensure that you are in the SpiraPlan project you would like to sync with GitLab. For this example, the project is called "GitLab Data Sync."</p>
+<p>For this step, please ensure that you are in the Spira project you would like to sync with GitLab. For this example, the project is called "GitLab Data Sync."</p>
 <p>Click on the "View Project Mappings" button for GitLab Data Sync. You need to fill out the following fields to sync correctly:</p>
 <ul>
 <li>
@@ -9210,7 +9210,7 @@
 </ul>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_219.png" /></p>
 <h3 id="configuring-the-incident-status-mapping">Configuring the Incident Status Mapping<a class="headerlink" href="#configuring-the-incident-status-mapping" title="Permanent link">&para;</a></h3>
-<p>Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitLab Data Sync plug-in knows what the equivalent status is in GitLab for an incident status in SpiraPlan.</p>
+<p>Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitLab Data Sync plug-in knows what the equivalent status is in GitLab for an incident status in Spira.</p>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_220.png" /></p>
 <p>You must map every status in the system. Descriptions of the field are below:</p>
 <ul>
@@ -9218,7 +9218,7 @@
 <p><strong>External Key</strong>: Either <strong>opened</strong> or <strong>closed</strong>, which are the only two statuses in GitLab</p>
 </li>
 <li>
-<p><strong>Primary</strong>: You must have exactly one primary key for <strong>opened</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.</p>
+<p><strong>Primary</strong>: You must have exactly one primary key for <strong>opened</strong> and one for <strong>closed</strong>. This is what status the plug-in should set the incident in Spira to when the status in GitLab changes.</p>
 </li>
 </ul>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">&para;</a></h3>
@@ -9233,7 +9233,7 @@
 <p><img alt="" src="../img/Using_Spira_with_GitLab_222.png" /></p>
 <p>In addition to the standard fields and custom properties, you will see an additional text property called "<strong>GitLab ID</strong>" that is used to store the mapped external identifier for the equivalent Milestone in GitLab. You need to locate the ID of the equivalent version in GitLab, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>
 <h2 id="using-the-data-synchronization">Using the Data Synchronization<a class="headerlink" href="#using-the-data-synchronization" title="Permanent link">&para;</a></h2>
-<p>Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>
+<p>Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>
 <p>Congratulations, you have just integrated your Spira instance with GitLab's integrated issue tracker!</p>
 
 
