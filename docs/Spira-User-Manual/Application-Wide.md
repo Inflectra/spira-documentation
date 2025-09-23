@@ -72,9 +72,9 @@ You can export the following artifacts from the current product to any other pro
 | ------------ | --------------------- | ------------------------ | ------------------- |
 | Incidents    | Y                     | N                        | Y                   |
 | Releases     | Y                     | N                        | N                   |
-| Requirements | Y                     | N                        | N                   |
-| Risks        | Y                     | N                        | N                   |
-| Tasks        | Y                     | N                        | N                   |
+| Requirements | Y                     | N                        | Y                   |
+| Risks        | Y                     | N                        | Y                   |
+| Tasks        | Y                     | N                        | Y                   |
 | Test cases   | Y                     | N                        | Y                   |
 | Test sets    | N                     | Y                        | Y                   |
 
@@ -368,19 +368,19 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Association Tab Of             | Available artifacts                                                                                             |
-    | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+    | Association Tab Of             | Available artifacts                                                                                                             |
+    | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
     | **Documents**                  | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
-    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                              |
-    | **Releases**                   | Releases, Requirements                                                                                          |
-    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                       |
-    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                      |
+    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                               |
+    | **Releases**                   | Releases, Requirements                                                                                                          |
+    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                                |
+    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                              |
     | **Source code commits**        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
     | **Source code files**          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
-    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                |
-    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                      |
-    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                              |
+    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                        |
+    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                                    |
+    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                                      |
+    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                                              |
 
 [^STSP]: Available in SpiraTeam & SpiraPlan
 [^SP]: Available in SpiraPlan

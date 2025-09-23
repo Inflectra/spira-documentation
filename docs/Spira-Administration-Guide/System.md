@@ -263,6 +263,9 @@ This page displays a list of relevant changes made to system level artifacts or 
     - SpiraApps
     - User profiles
     - System admin General Settings
+    - System admin Security Settings
+    - LDAP Configuration
+    - Email Configuration
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
 
